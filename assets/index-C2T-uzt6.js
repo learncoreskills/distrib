@@ -1,0 +1,5559 @@
+var e=Object.create,t=Object.defineProperty,n=Object.getOwnPropertyDescriptor,r=Object.getOwnPropertyNames,i=Object.getPrototypeOf,a=Object.prototype.hasOwnProperty,o=(e,t)=>()=>(t||(e((t={exports:{}}).exports,t),e=null),t.exports),s=(e,n)=>{let r={};for(var i in e)t(r,i,{get:e[i],enumerable:!0});return n||t(r,Symbol.toStringTag,{value:`Module`}),r},c=(e,i,o,s)=>{if(i&&typeof i==`object`||typeof i==`function`)for(var c=r(i),l=0,u=c.length,d;l<u;l++)d=c[l],!a.call(e,d)&&d!==o&&t(e,d,{get:(e=>i[e]).bind(null,d),enumerable:!(s=n(i,d))||s.enumerable});return e},l=(n,r,o)=>(o=n==null?{}:e(i(n)),c(r||!n||!n.__esModule||!a.call(n,`default`)?t(o,`default`,{value:n,enumerable:!0}):o,n));(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var u=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.portal`),r=Symbol.for(`react.fragment`),i=Symbol.for(`react.strict_mode`),a=Symbol.for(`react.profiler`),o=Symbol.for(`react.consumer`),s=Symbol.for(`react.context`),c=Symbol.for(`react.forward_ref`),l=Symbol.for(`react.suspense`),u=Symbol.for(`react.memo`),d=Symbol.for(`react.lazy`),f=Symbol.for(`react.activity`),p=Symbol.for(`react.view_transition`),m=Symbol.iterator;function h(e){return typeof e!=`object`||!e?null:(e=m&&e[m]||e[`@@iterator`],typeof e==`function`?e:null)}var g={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},_=Object.assign,v={};function y(e,t,n){this.props=e,this.context=t,this.refs=v,this.updater=n||g}y.prototype.isReactComponent={},y.prototype.setState=function(e,t){if(typeof e!=`object`&&typeof e!=`function`&&e!=null)throw Error(`takes an object of state variables to update or a function which returns an object of state variables.`);this.updater.enqueueSetState(this,e,t,`setState`)},y.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,`forceUpdate`)};function b(){}b.prototype=y.prototype;function x(e,t,n){this.props=e,this.context=t,this.refs=v,this.updater=n||g}var S=x.prototype=new b;S.constructor=x,_(S,y.prototype),S.isPureReactComponent=!0;var ee=Array.isArray;function te(){}var C={H:null,A:null,T:null,S:null},w=Object.prototype.hasOwnProperty;function T(e,n,r){var i=r.ref;return{$$typeof:t,type:e,key:n,ref:i===void 0?null:i,props:r}}function E(e,t){return T(e.type,t,e.props)}function D(e){return typeof e==`object`&&!!e&&e.$$typeof===t}function ne(e){var t={"=":`=0`,":":`=2`};return`$`+e.replace(/[=:]/g,function(e){return t[e]})}var re=/\/+/g;function ie(e,t){return typeof e==`object`&&e&&e.key!=null?ne(``+e.key):t.toString(36)}function ae(e){switch(e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason;default:switch(typeof e.status==`string`?e.then(te,te):(e.status=`pending`,e.then(function(t){e.status===`pending`&&(e.status=`fulfilled`,e.value=t)},function(t){e.status===`pending`&&(e.status=`rejected`,e.reason=t)})),e.status){case`fulfilled`:return e.value;case`rejected`:throw e.reason}}throw e}function oe(e,r,i,a,o){var s=typeof e;(s===`undefined`||s===`boolean`)&&(e=null);var c=!1;if(e===null)c=!0;else switch(s){case`bigint`:case`string`:case`number`:c=!0;break;case`object`:switch(e.$$typeof){case t:case n:c=!0;break;case d:return c=e._init,oe(c(e._payload),r,i,a,o)}}if(c)return o=o(e),c=a===``?`.`+ie(e,0):a,ee(o)?(i=``,c!=null&&(i=c.replace(re,`$&/`)+`/`),oe(o,r,i,``,function(e){return e})):o!=null&&(D(o)&&(o=E(o,i+(o.key==null||e&&e.key===o.key?``:(``+o.key).replace(re,`$&/`)+`/`)+c)),r.push(o)),1;c=0;var l=a===``?`.`:a+`:`;if(ee(e))for(var u=0;u<e.length;u++)a=e[u],s=l+ie(a,u),c+=oe(a,r,i,s,o);else if(u=h(e),typeof u==`function`)for(e=u.call(e),u=0;!(a=e.next()).done;)a=a.value,s=l+ie(a,u++),c+=oe(a,r,i,s,o);else if(s===`object`){if(typeof e.then==`function`)return oe(ae(e),r,i,a,o);throw r=String(e),Error(`Objects are not valid as a React child (found: `+(r===`[object Object]`?`object with keys {`+Object.keys(e).join(`, `)+`}`:r)+`). If you meant to render a collection of children, use an array instead.`)}return c}function se(e,t,n){if(e==null)return e;var r=[],i=0;return oe(e,r,``,``,function(e){return t.call(n,e,i++)}),r}function ce(e){if(e._status===-1){var t=e._result,n=t();n.then(function(t){(e._status===0||e._status===-1)&&(e._status=1,e._result=t,n.status===void 0&&(n.status=`fulfilled`,n.value=t))},function(t){(e._status===0||e._status===-1)&&(e._status=2,e._result=t,n.status===void 0&&(n.status=`rejected`,n.reason=t))}),e._status===-1&&(e._status=0,e._result=n)}if(e._status===1)return e._result.default;throw e._result}var le=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)};function ue(e){var t=C.T,n={};n.types=t===null?null:t.types,C.T=n;try{var r=e(),i=C.S;i!==null&&i(n,r),typeof r==`object`&&r&&typeof r.then==`function`&&r.then(te,le)}catch(e){le(e)}finally{t!==null&&n.types!==null&&(t.types=n.types),C.T=t}}function de(e){var t=C.T;if(t!==null){var n=t.types;n===null?t.types=[e]:n.indexOf(e)===-1&&n.push(e)}else ue(de.bind(null,e))}var fe={map:se,forEach:function(e,t,n){se(e,function(){t.apply(this,arguments)},n)},count:function(e){var t=0;return se(e,function(){t++}),t},toArray:function(e){return se(e,function(e){return e})||[]},only:function(e){if(!D(e))throw Error(`React.Children.only expected to receive a single React element child.`);return e}};e.Activity=f,e.Children=fe,e.Component=y,e.Fragment=r,e.Profiler=a,e.PureComponent=x,e.StrictMode=i,e.Suspense=l,e.ViewTransition=p,e.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=C,e.__COMPILER_RUNTIME={__proto__:null,c:function(e){return C.H.useMemoCache(e)}},e.addTransitionType=de,e.cache=function(e){return function(){return e.apply(null,arguments)}},e.cacheSignal=function(){return null},e.cloneElement=function(e,t,n){if(e==null)throw Error(`The argument must be a React element, but you passed `+e+`.`);var r=_({},e.props),i=e.key;if(t!=null)for(a in t.key!==void 0&&(i=``+t.key),t)!w.call(t,a)||a===`key`||a===`__self`||a===`__source`||a===`ref`&&t.ref===void 0||(r[a]=t[a]);var a=arguments.length-2;if(a===1)r.children=n;else if(1<a){for(var o=Array(a),s=0;s<a;s++)o[s]=arguments[s+2];r.children=o}return T(e.type,i,r)},e.createContext=function(e){return e={$$typeof:s,_currentValue:e,_currentValue2:e,_threadCount:0,Provider:null,Consumer:null},e.Provider=e,e.Consumer={$$typeof:o,_context:e},e},e.createElement=function(e,t,n){var r,i={},a=null;if(t!=null)for(r in t.key!==void 0&&(a=``+t.key),t)w.call(t,r)&&r!==`key`&&r!==`__self`&&r!==`__source`&&(i[r]=t[r]);var o=arguments.length-2;if(o===1)i.children=n;else if(1<o){for(var s=Array(o),c=0;c<o;c++)s[c]=arguments[c+2];i.children=s}if(e&&e.defaultProps)for(r in o=e.defaultProps,o)i[r]===void 0&&(i[r]=o[r]);return T(e,a,i)},e.createRef=function(){return{current:null}},e.forwardRef=function(e){return{$$typeof:c,render:e}},e.isValidElement=D,e.lazy=function(e){return{$$typeof:d,_payload:{_status:-1,_result:e},_init:ce}},e.memo=function(e,t){return{$$typeof:u,type:e,compare:t===void 0?null:t}},e.startTransition=ue,e.unstable_useCacheRefresh=function(){return C.H.useCacheRefresh()},e.use=function(e){return C.H.use(e)},e.useActionState=function(e,t,n){return C.H.useActionState(e,t,n)},e.useCallback=function(e,t){return C.H.useCallback(e,t)},e.useContext=function(e){return C.H.useContext(e)},e.useDebugValue=function(){},e.useDeferredValue=function(e,t){return C.H.useDeferredValue(e,t)},e.useEffect=function(e,t){return C.H.useEffect(e,t)},e.useEffectEvent=function(e){return C.H.useEffectEvent(e)},e.useId=function(){return C.H.useId()},e.useImperativeHandle=function(e,t,n){return C.H.useImperativeHandle(e,t,n)},e.useInsertionEffect=function(e,t){return C.H.useInsertionEffect(e,t)},e.useLayoutEffect=function(e,t){return C.H.useLayoutEffect(e,t)},e.useMemo=function(e,t){return C.H.useMemo(e,t)},e.useOptimistic=function(e,t){return C.H.useOptimistic(e,t)},e.useReducer=function(e,t,n){return C.H.useReducer(e,t,n)},e.useRef=function(e){return C.H.useRef(e)},e.useState=function(e){return C.H.useState(e)},e.useSyncExternalStore=function(e,t,n){return C.H.useSyncExternalStore(e,t,n)},e.useTransition=function(){return C.H.useTransition()},e.version=`19.3.0`})),d=o(((e,t)=>{t.exports=u()})),f=o((e=>{function t(e,t){var n=e.length;e.push(t);a:for(;0<n;){var r=n-1>>>1,a=e[r];if(0<i(a,t))e[r]=t,e[n]=a,n=r;else break a}}function n(e){return e.length===0?null:e[0]}function r(e){if(e.length===0)return null;var t=e[0],n=e.pop();if(n!==t){e[0]=n;a:for(var r=0,a=e.length,o=a>>>1;r<o;){var s=2*(r+1)-1,c=e[s],l=s+1,u=e[l];if(0>i(c,n))l<a&&0>i(u,c)?(e[r]=u,e[l]=n,r=l):(e[r]=c,e[s]=n,r=s);else if(l<a&&0>i(u,n))e[r]=u,e[l]=n,r=l;else break a}}return t}function i(e,t){var n=e.sortIndex-t.sortIndex;return n===0?e.id-t.id:n}if(e.unstable_now=void 0,typeof performance==`object`&&typeof performance.now==`function`){var a=performance;e.unstable_now=function(){return a.now()}}else{var o=Date,s=o.now();e.unstable_now=function(){return o.now()-s}}var c=[],l=[],u=1,d=null,f=3,p=!1,m=!1,h=!1,g=!1,_=typeof setTimeout==`function`?setTimeout:null,v=typeof clearTimeout==`function`?clearTimeout:null,y=typeof setImmediate<`u`?setImmediate:null;function b(e){for(var i=n(l);i!==null;){if(i.callback===null)r(l);else if(i.startTime<=e)r(l),i.sortIndex=i.expirationTime,t(c,i);else break;i=n(l)}}function x(e){if(h=!1,b(e),!m){if(n(c)!==null)m=!0,S||(S=!0,E());else{var t=n(l);t!==null&&re(x,t.startTime-e)}}}var S=!1,ee=-1,te=5,C=-1;function w(){return g?!0:!(e.unstable_now()-C<te)}function T(){if(g=!1,S){var t=e.unstable_now();C=t;var i=!0;try{a:{m=!1,h&&(h=!1,v(ee),ee=-1),p=!0;var a=f;try{b:{for(b(t),d=n(c);d!==null&&!(d.expirationTime>t&&w());){var o=d.callback;if(typeof o==`function`){d.callback=null,f=d.priorityLevel;var s=o(d.expirationTime<=t);if(t=e.unstable_now(),typeof s==`function`){d.callback=s,b(t),i=!0;break b}d===n(c)&&r(c),b(t)}else r(c);d=n(c)}if(d!==null)i=!0;else{var u=n(l);u!==null&&re(x,u.startTime-t),i=!1}}break a}finally{d=null,f=a,p=!1}i=void 0}}finally{i?E():S=!1}}}var E;if(typeof y==`function`)E=function(){y(T)};else if(typeof MessageChannel<`u`){var D=new MessageChannel,ne=D.port2;D.port1.onmessage=T,E=function(){ne.postMessage(null)}}else E=function(){_(T,0)};function re(t,n){ee=_(function(){t(e.unstable_now())},n)}e.unstable_IdlePriority=5,e.unstable_ImmediatePriority=1,e.unstable_LowPriority=4,e.unstable_NormalPriority=3,e.unstable_Profiling=null,e.unstable_UserBlockingPriority=2,e.unstable_cancelCallback=function(e){e.callback=null},e.unstable_forceFrameRate=function(e){0>e||125<e?console.error(`forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported`):te=0<e?Math.floor(1e3/e):5},e.unstable_getCurrentPriorityLevel=function(){return f},e.unstable_next=function(e){switch(f){case 1:case 2:case 3:var t=3;break;default:t=f}var n=f;f=t;try{return e()}finally{f=n}},e.unstable_requestPaint=function(){g=!0},e.unstable_runWithPriority=function(e,t){switch(e){case 1:case 2:case 3:case 4:case 5:break;default:e=3}var n=f;f=e;try{return t()}finally{f=n}},e.unstable_scheduleCallback=function(r,i,a){var o=e.unstable_now();switch(typeof a==`object`&&a?(a=a.delay,a=typeof a==`number`&&0<a?o+a:o):a=o,r){case 1:var s=-1;break;case 2:s=250;break;case 5:s=1073741823;break;case 4:s=1e4;break;default:s=5e3}return s=a+s,r={id:u++,callback:i,priorityLevel:r,startTime:a,expirationTime:s,sortIndex:-1},a>o?(r.sortIndex=a,t(l,r),n(c)===null&&r===n(l)&&(h?(v(ee),ee=-1):h=!0,re(x,a-o))):(r.sortIndex=s,t(c,r),m||p||(m=!0,S||(S=!0,E()))),r},e.unstable_shouldYield=w,e.unstable_wrapCallback=function(e){var t=f;return function(){var n=f;f=t;try{return e.apply(this,arguments)}finally{f=n}}}})),p=o(((e,t)=>{t.exports=f()})),m=o((e=>{var t=d();function n(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function r(){}var i={d:{f:r,r:function(){throw Error(n(522))},D:r,C:r,L:r,m:r,X:r,S:r,M:r},p:0,findDOMNode:null},a=Symbol.for(`react.portal`),o=Symbol.for(`react.recoverable`),s=Symbol.for(`react.optimistic_key`);function c(e,t,n){var r=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:a,key:r==null?null:r===s?s:``+r,children:e,containerInfo:t,implementation:n}}var l=t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function u(e,t){if(e===`font`)return``;if(typeof t==`string`)return t===`use-credentials`?t:``}e.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=i,e.browser=function(e){return{$$typeof:o,_reason:e}},e.createPortal=function(e,t){var r=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!t||t.nodeType!==1&&t.nodeType!==9&&t.nodeType!==11)throw Error(n(299));return c(e,t,null,r)},e.flushSync=function(e){var t=l.T,n=i.p;try{if(l.T=null,i.p=2,e)return e()}finally{l.T=t,i.p=n,i.d.f()}},e.preconnect=function(e,t){typeof e==`string`&&(t?(t=t.crossOrigin,t=typeof t==`string`?t===`use-credentials`?t:``:void 0):t=null,i.d.C(e,t))},e.prefetchDNS=function(e){typeof e==`string`&&i.d.D(e)},e.preinit=function(e,t){if(typeof e==`string`&&t&&typeof t.as==`string`){var n=t.as,r=u(n,t.crossOrigin),a=typeof t.integrity==`string`?t.integrity:void 0,o=typeof t.fetchPriority==`string`?t.fetchPriority:void 0;n===`style`?i.d.S(e,typeof t.precedence==`string`?t.precedence:void 0,{crossOrigin:r,integrity:a,fetchPriority:o}):n===`script`&&i.d.X(e,{crossOrigin:r,integrity:a,fetchPriority:o,nonce:typeof t.nonce==`string`?t.nonce:void 0})}},e.preinitModule=function(e,t){if(typeof e==`string`){if(typeof t==`object`&&t){if(t.as==null||t.as===`script`){var n=u(t.as,t.crossOrigin);i.d.M(e,{crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0})}}else t??i.d.M(e)}},e.preload=function(e,t){if(typeof e==`string`&&typeof t==`object`&&t&&typeof t.as==`string`){var n=t.as,r=u(n,t.crossOrigin);i.d.L(e,n,{crossOrigin:r,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,type:typeof t.type==`string`?t.type:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0,referrerPolicy:typeof t.referrerPolicy==`string`?t.referrerPolicy:void 0,imageSrcSet:typeof t.imageSrcSet==`string`?t.imageSrcSet:void 0,imageSizes:typeof t.imageSizes==`string`?t.imageSizes:void 0,media:typeof t.media==`string`?t.media:void 0})}},e.preloadModule=function(e,t){if(typeof e==`string`){if(t){var n=u(t.as,t.crossOrigin);i.d.m(e,{as:typeof t.as==`string`&&t.as!==`script`?t.as:void 0,crossOrigin:n,integrity:typeof t.integrity==`string`?t.integrity:void 0,nonce:typeof t.nonce==`string`?t.nonce:void 0,fetchPriority:typeof t.fetchPriority==`string`?t.fetchPriority:void 0})}else i.d.m(e)}},e.requestFormReset=function(e){i.d.r(e)},e.unstable_batchedUpdates=function(e,t){return e(t)},e.useFormState=function(e,t,n){return l.H.useFormState(e,t,n)},e.useFormStatus=function(){return l.H.useHostTransitionStatus()},e.version=`19.3.0`})),h=o(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=m()})),g=o((e=>{var t=p(),n=d(),r=h();function i(e){var t=`https://react.dev/errors/`+e;if(1<arguments.length){t+=`?args[]=`+encodeURIComponent(arguments[1]);for(var n=2;n<arguments.length;n++)t+=`&args[]=`+encodeURIComponent(arguments[n])}return`Minified React error #`+e+`; visit `+t+` for the full message or use the non-minified dev environment for full errors and additional helpful warnings.`}function a(e){return!(!e||e.nodeType!==1&&e.nodeType!==9&&e.nodeType!==11)}function o(e){for(var t=e,n=t;n&&!n.alternate;)t=n,t.flags&4098&&(e=t.return),n=t.return;for(;t.return;)t=t.return;return t.tag===3?e:null}function s(e){if(e.tag===13){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function c(e){if(e.tag===31){var t=e.memoizedState;if(t===null&&(e=e.alternate,e!==null&&(t=e.memoizedState)),t!==null)return t.dehydrated}return null}function l(e){if(o(e)!==e)throw Error(i(188))}function u(e){var t=e.alternate;if(!t){if(t=o(e),t===null)throw Error(i(188));return t===e?e:null}for(var n=e,r=t;;){var a=n.return;if(a===null)break;var s=a.alternate;if(s===null){if(r=a.return,r!==null){n=r;continue}break}if(a.child===s.child){for(s=a.child;s;){if(s===n)return l(a),e;if(s===r)return l(a),t;s=s.sibling}throw Error(i(188))}if(n.return!==r.return)n=a,r=s;else{for(var c=!1,u=a.child;u;){if(u===n){c=!0,n=a,r=s;break}if(u===r){c=!0,r=a,n=s;break}u=u.sibling}if(!c){for(u=s.child;u;){if(u===n){c=!0,n=s,r=a;break}if(u===r){c=!0,r=s,n=a;break}u=u.sibling}if(!c)throw Error(i(189))}}if(n.alternate!==r)throw Error(i(190))}if(n.tag!==3)throw Error(i(188));return n.stateNode.current===n?e:t}function f(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e;for(e=e.child;e!==null;){if(t=f(e),t!==null)return t;e=e.sibling}return null}function m(e,t,n,r,i,a){for(;e!==null;){if((e.tag===5||e.tag===27||e.tag===6)&&n(e,r,i,a)||(e.tag!==22||e.memoizedState===null)&&(t||e.tag!==5&&e.tag!==27)&&m(e.child,t,n,r,i,a))return!0;e=e.sibling}return!1}function g(e){for(e=e.return;e!==null;){if(e.tag===3||e.tag===5||e.tag===27)return e;e=e.return}return null}function _(e){var t=!1;for(e=e.return;e!==null&&(e.tag===4&&(t=!0),e.tag!==3&&e.tag!==5&&e.tag!==27);)e=e.return;return t}function v(e){var t=[null,null],n=g(e);return n===null||y(t,e,n.child,{foundSelf:!1}),t}function y(e,t,n,r){for(;n!==null;){if(n===t)r.foundSelf=!0;else if(n.tag===5||n.tag===27||n.tag===6){if(r.foundSelf)return e[1]=n,!0;e[0]=n}else if((n.tag!==22||n.memoizedState===null)&&y(e,t,n.child,r))return!0;n=n.sibling}return!1}function b(e){switch(e.tag){case 5:case 27:case 6:return e.stateNode;case 3:return e.stateNode.containerInfo;default:throw Error(i(559))}}var x=null,S=null;function ee(e,t,n){return e===n||e===t&&(x=e,!0)}function te(e,t,n){return e===n?(S=e,!1):e===t&&(S!==null&&(x=e),!0)}function C(e){if(e===null)return null;do e=e===null?null:e.return;while(e&&e.tag!==5&&e.tag!==27&&e.tag!==3);return e||null}function w(e,t,n){for(var r=0,i=e;i;i=n(i))r++;i=0;for(var a=t;a;a=n(a))i++;for(;0<r-i;)e=n(e),r--;for(;0<i-r;)t=n(t),i--;for(;r--;){if(e===t||t!==null&&e===t.alternate)return e;e=n(e),t=n(t)}return null}var T=Object.assign,E=Symbol.for(`react.element`),D=Symbol.for(`react.transitional.element`),ne=Symbol.for(`react.portal`),re=Symbol.for(`react.fragment`),ie=Symbol.for(`react.strict_mode`),ae=Symbol.for(`react.profiler`),oe=Symbol.for(`react.consumer`),se=Symbol.for(`react.context`),ce=Symbol.for(`react.forward_ref`),le=Symbol.for(`react.suspense`),ue=Symbol.for(`react.suspense_list`),de=Symbol.for(`react.memo`),fe=Symbol.for(`react.lazy`),pe=Symbol.for(`react.activity`),me=Symbol.for(`react.legacy_hidden`),he=Symbol.for(`react.memo_cache_sentinel`),ge=Symbol.for(`react.view_transition`),_e=Symbol.for(`react.recoverable`),ve=Symbol.iterator;function ye(e){return typeof e!=`object`||!e?null:(e=ve&&e[ve]||e[`@@iterator`],typeof e==`function`?e:null)}var be=Symbol.for(`react.client.reference`);function xe(e){if(e==null)return null;if(typeof e==`function`)return e.$$typeof===be?null:e.displayName||e.name||null;if(typeof e==`string`)return e;switch(e){case re:return`Fragment`;case ae:return`Profiler`;case ie:return`StrictMode`;case le:return`Suspense`;case ue:return`SuspenseList`;case pe:return`Activity`;case ge:return`ViewTransition`}if(typeof e==`object`)switch(e.$$typeof){case ne:return`Portal`;case se:return e.displayName||`Context`;case oe:return(e._context.displayName||`Context`)+`.Consumer`;case ce:var t=e.render;return e=e.displayName,e||=(e=t.displayName||t.name||``,e===``?`ForwardRef`:`ForwardRef(`+e+`)`),e;case de:return t=e.displayName||null,t===null?xe(e.type)||`Memo`:t;case fe:t=e._payload,e=e._init;try{return xe(e(t))}catch{}}return null}var Se=Array.isArray,O=n.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,k=r.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,Ce={pending:!1,data:null,method:null,action:null},we=[],Te=-1;function Ee(e){return{current:e}}function De(e){0>Te||(e.current=we[Te],we[Te]=null,Te--)}function A(e,t){Te++,we[Te]=e.current,e.current=t}var Oe=Ee(null),ke=Ee(null),Ae=Ee(null),je=Ee(null);function Me(e,t){switch(A(Ae,t),A(ke,e),A(Oe,null),t.nodeType){case 9:case 11:e=(e=t.documentElement)&&(e=e.namespaceURI)?up(e):0;break;default:if(e=t.tagName,t=t.namespaceURI)t=up(t),e=dp(t,e);else switch(e){case`svg`:e=1;break;case`math`:e=2;break;default:e=0}}De(Oe),A(Oe,e)}function Ne(){De(Oe),De(ke),De(Ae)}function Pe(e){var t=e.memoizedState;t!==null&&(sh._currentValue=t.memoizedState,A(je,e)),t=Oe.current;var n=dp(t,e.type);t!==n&&(A(ke,e),A(Oe,n))}function Fe(e){ke.current===e&&(De(Oe),De(ke)),je.current===e&&(De(je),sh._currentValue=Ce)}var Ie,Le;function Re(e){if(Ie===void 0)try{throw Error()}catch(e){var t=e.stack.trim().match(/\n( *(at )?)/);Ie=t&&t[1]||``,Le=-1<e.stack.indexOf(`
+    at`)?` (<anonymous>)`:-1<e.stack.indexOf(`@`)?`@unknown:0:0`:``}return`
+`+Ie+e+Le}var ze=!1;function Be(e,t){if(!e||ze)return``;ze=!0;var n=Error.prepareStackTrace;Error.prepareStackTrace=void 0;try{var r={DetermineComponentFrameRoot:function(){try{if(t){var n=function(){throw Error()};if(Object.defineProperty(n.prototype,"props",{set:function(){throw Error()}}),typeof Reflect==`object`&&Reflect.construct){try{Reflect.construct(n,[])}catch(e){var r=e}Reflect.construct(e,[],n)}else{try{n.call()}catch(e){r=e}n=!1;try{var i=Object.getOwnPropertyDescriptor(e.prototype,`props`);Object.defineProperty(e.prototype,"props",{configurable:!0,set:function(){throw Error()}}),n=!0,new e}finally{n&&(i===void 0?delete e.prototype.props:Object.defineProperty(e.prototype,"props",i))}}}else{try{throw Error()}catch(e){r=e}(n=e())&&typeof n.catch==`function`&&n.catch(function(){})}}catch(e){if(e&&r&&typeof e.stack==`string`)return[e.stack,r.stack]}return[null,null]}};r.DetermineComponentFrameRoot.displayName=`DetermineComponentFrameRoot`;var i=Object.getOwnPropertyDescriptor(r.DetermineComponentFrameRoot,`name`);i&&i.configurable&&Object.defineProperty(r.DetermineComponentFrameRoot,"name",{value:`DetermineComponentFrameRoot`});var a=r.DetermineComponentFrameRoot(),o=a[0],s=a[1];if(o&&s){var c=o.split(`
+`),l=s.split(`
+`);for(i=r=0;r<c.length&&!c[r].includes(`DetermineComponentFrameRoot`);)r++;for(;i<l.length&&!l[i].includes(`DetermineComponentFrameRoot`);)i++;if(r===c.length||i===l.length)for(r=c.length-1,i=l.length-1;1<=r&&0<=i&&c[r]!==l[i];)i--;for(;1<=r&&0<=i;r--,i--)if(c[r]!==l[i]){if(r!==1||i!==1)do if(r--,i--,0>i||c[r]!==l[i]){var u=`
+`+c[r].replace(` at new `,` at `);return e.displayName&&u.includes(`<anonymous>`)&&(u=u.replace(`<anonymous>`,e.displayName)),u}while(1<=r&&0<=i);break}}}finally{ze=!1,Error.prepareStackTrace=n}return(n=e?e.displayName||e.name:``)?Re(n):``}function Ve(e,t){switch(e.tag){case 26:case 27:case 5:return Re(e.type);case 16:return Re(`Lazy`);case 13:return e.child!==t&&t!==null?Re(`Suspense Fallback`):Re(`Suspense`);case 19:return Re(`SuspenseList`);case 0:case 15:return Be(e.type,!1);case 11:return Be(e.type.render,!1);case 1:return Be(e.type,!0);case 31:return Re(`Activity`);case 30:return Re(`ViewTransition`);default:return``}}function He(e){try{var t=``,n=null;do t+=Ve(e,n),n=e,e=e.return;while(e);return t}catch(e){return`
+Error generating stack: `+e.message+`
+`+e.stack}}var Ue=Object.prototype.hasOwnProperty,We=t.unstable_scheduleCallback,Ge=t.unstable_cancelCallback,Ke=t.unstable_shouldYield,qe=t.unstable_requestPaint,Je=t.unstable_now,Ye=t.unstable_getCurrentPriorityLevel,Xe=t.unstable_ImmediatePriority,Ze=t.unstable_UserBlockingPriority,Qe=t.unstable_NormalPriority,$e=t.unstable_LowPriority,et=t.unstable_IdlePriority,tt=t.log,nt=t.unstable_setDisableYieldValue,rt=null,it=null;function at(e){if(typeof tt==`function`&&nt(e),it&&typeof it.setStrictMode==`function`)try{it.setStrictMode(rt,e)}catch{}}var ot=Math.clz32?Math.clz32:lt,st=Math.log,ct=Math.LN2;function lt(e){return e>>>=0,e===0?32:31-(st(e)/ct|0)|0}var ut=256,dt=262144,ft=4194304;function pt(e){var t=e&42;if(t!==0)return t;switch(e&-e){case 1:return 1;case 2:return 2;case 4:return 4;case 8:return 8;case 16:return 16;case 32:return 32;case 64:return 64;case 128:return 128;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:return e&-e;case 262144:case 524288:case 1048576:case 2097152:return e&3932160;case 4194304:case 8388608:case 16777216:case 33554432:return e&62914560;case 67108864:return 67108864;case 134217728:return 134217728;case 268435456:return 268435456;case 536870912:return 536870912;case 1073741824:return 0;default:return e}}function mt(e,t,n){var r=e.pendingLanes;if(r===0)return 0;var i=0,a=e.suspendedLanes,o=e.pingedLanes;e=e.warmLanes;var s=r&134217727;return s===0?(s=r&~a,s===0?o===0?n||(n=r&~e,n!==0&&(i=pt(n))):i=pt(o):i=pt(s)):(r=s&~a,r===0?(o&=s,o===0?n||(n=s&~e,n!==0&&(i=pt(n))):i=pt(o)):i=pt(r)),i===0?0:t!==0&&t!==i&&(t&a)===0&&(a=i&-i,n=t&-t,a>=n||a===32&&n&4194048)?t:i}function ht(e,t){return(e.pendingLanes&~(e.suspendedLanes&~e.pingedLanes)&t)===0}function gt(e,t){t&8&&(t|=t&32);var n=e.entangledLanes;if(n!==0)for(e=e.entanglements,n&=t;0<n;){var r=31-ot(n),i=1<<r;t|=e[r],n&=~i}return t}function _t(e,t){switch(e){case 1:case 2:case 4:case 8:case 64:return t+250;case 16:case 32:case 128:case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:return t+5e3;case 4194304:case 8388608:case 16777216:case 33554432:return-1;case 67108864:case 134217728:case 268435456:case 536870912:case 1073741824:return-1;default:return-1}}function vt(){var e=ft;return ft<<=1,!(ft&62914560)&&(ft=4194304),e}function yt(e){for(var t=[],n=0;31>n;n++)t.push(e);return t}function bt(e,t){e.pendingLanes|=t,t!==268435456&&(e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0)}function xt(e,t,n,r,i,a){var o=e.pendingLanes;e.pendingLanes=n,e.suspendedLanes=0,e.pingedLanes=0,e.warmLanes=0,e.expiredLanes&=n,e.entangledLanes&=n,e.errorRecoveryDisabledLanes&=n,e.shellSuspendCounter=0;var s=e.entanglements,c=e.expirationTimes,l=e.hiddenUpdates;for(n=o&~n;0<n;){var u=31-ot(n),d=1<<u;s[u]=0,c[u]=-1;var f=l[u];if(f!==null)for(l[u]=null,u=0;u<f.length;u++){var p=f[u];p!==null&&(p.lane&=-536870913)}n&=~d}r!==0&&St(e,r,0),a!==0&&i===0&&e.tag!==0&&(e.suspendedLanes|=a&~(o&~t))}function St(e,t,n){e.pendingLanes|=t,e.suspendedLanes&=~t;var r=31-ot(t);e.entangledLanes|=t,e.entanglements[r]=e.entanglements[r]|1073741824|n&261930}function Ct(e,t){var n=e.entangledLanes|=t;for(e=e.entanglements;n;){var r=31-ot(n),i=1<<r;i&t|e[r]&t&&(e[r]|=t),n&=~i}}function wt(e,t){var n=t&-t;return n=n&42?1:Tt(n),(n&(e.suspendedLanes|t))===0?n:0}function Tt(e){switch(e){case 2:e=1;break;case 8:e=4;break;case 32:e=16;break;case 256:case 512:case 1024:case 2048:case 4096:case 8192:case 16384:case 32768:case 65536:case 131072:case 262144:case 524288:case 1048576:case 2097152:case 4194304:case 8388608:case 16777216:case 33554432:e=128;break;case 268435456:e=134217728;break;default:e=0}return e}function Et(e){return e&=-e,2<e?8<e?e&134217727?32:268435456:8:2}function Dt(){var e=k.p;return e===0?(e=window.event,e===void 0?32:Ch(e.type)):e}function Ot(e,t){var n=k.p;try{return k.p=e,t()}finally{k.p=n}}var kt=Math.random().toString(36).slice(2),At=`__reactFiber$`+kt,jt=`__reactProps$`+kt,Mt=`__reactContainer$`+kt,Nt=`__reactEvents$`+kt,Pt=`__reactListeners$`+kt,Ft=`__reactHandles$`+kt,It=`__reactResources$`+kt,Lt=`__reactMarker$`+kt,Rt=`__reactLoad$`+kt;function zt(e){delete e[At],delete e[jt],delete e[Pt],delete e[Ft]}function Bt(e){var t;if(t=e[At])return t;for(var n=e.parentNode;n;){if(t=n[Mt]||n[At]){if(n=t.alternate,t.child!==null||n!==null&&n.child!==null)for(e=fm(e);e!==null;){if(n=e[At])return n;e=fm(e)}return t}e=n,n=e.parentNode}return null}function Vt(e){if(e=e[At]||e[Mt]){var t=e.tag;if(t===5||t===6||t===13||t===31||t===26||t===27||t===3)return e}return null}function Ht(e){var t=e.tag;if(t===5||t===26||t===27||t===6)return e.stateNode;throw Error(i(33))}function Ut(e){var t=e[It];return t||=e[It]={hoistableStyles:new Map,hoistableScripts:new Map},t}function Wt(e){e[Lt]=!0}function Gt(e){e[Rt]=void 0}var Kt=new Set,qt={};function Jt(e,t){Yt(e,t),Yt(e+`Capture`,t)}function Yt(e,t){for(qt[e]=t,e=0;e<t.length;e++)Kt.add(t[e])}var Xt=RegExp(`^[:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD][:A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$`),Zt={},Qt={};function $t(e){return Ue.call(Qt,e)?!0:Ue.call(Zt,e)?!1:Xt.test(e)?Qt[e]=!0:(Zt[e]=!0,!1)}var j=!1;function en(){var e=j;return j=!1,e}function tn(e,t,n){if($t(t)){if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:e.removeAttribute(t);return;case`boolean`:var r=t.toLowerCase().slice(0,5);if(r!==`data-`&&r!==`aria-`){e.removeAttribute(t);return}}e.setAttribute(t,n)}}}function nn(e,t,n){if(n===null)e.removeAttribute(t);else{switch(typeof n){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(t);return}e.setAttribute(t,n)}}function rn(e,t,n,r){if(r===null)e.removeAttribute(n);else{switch(typeof r){case`undefined`:case`function`:case`symbol`:case`boolean`:e.removeAttribute(n);return}e.setAttributeNS(t,n,r)}}function an(e){switch(typeof e){case`bigint`:case`boolean`:case`number`:case`string`:case`undefined`:return e;case`object`:return e;default:return``}}function on(e){var t=e.type;return(e=e.nodeName)&&e.toLowerCase()===`input`&&(t===`checkbox`||t===`radio`)}function sn(e,t,n){var r=Object.getOwnPropertyDescriptor(e.constructor.prototype,t);if(!e.hasOwnProperty(t)&&r!==void 0&&typeof r.get==`function`&&typeof r.set==`function`){var i=r.get,a=r.set;return Object.defineProperty(e,t,{configurable:!0,get:function(){return i.call(this)},set:function(e){n=``+e,a.call(this,e)}}),Object.defineProperty(e,t,{enumerable:r.enumerable}),{getValue:function(){return n},setValue:function(e){n=``+e},stopTracking:function(){e._valueTracker=null,delete e[t]}}}}function cn(e){if(!e._valueTracker){var t=on(e)?`checked`:`value`;e._valueTracker=sn(e,t,``+e[t])}}function ln(e){if(!e)return!1;var t=e._valueTracker;if(!t)return!0;var n=t.getValue(),r=``;return e&&(r=on(e)?e.checked?`true`:`false`:e.value),e=r,e!==n&&(t.setValue(e),!0)}var un=/[\n"\\]/g;function dn(e){return e.replace(un,function(e){return`\\`+e.charCodeAt(0).toString(16)+` `})}function fn(e,t,n,r,i,a,o,s){e.name=``,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`?e.type=o:e.removeAttribute(`type`),t==null?o!==`submit`&&o!==`reset`||e.removeAttribute(`value`):o===`number`?(t===0&&e.value===``||e.value!=t)&&(e.value=``+an(t)):e.value!==``+an(t)&&(e.value=``+an(t)),t==null?n==null?r!=null&&e.removeAttribute(`value`):mn(e,an(n)):o===`number`&&e.value==t?mn(e,an(e.value)):mn(e,an(t)),i==null&&a!=null&&(e.defaultChecked=!!a),i!=null&&(e.checked=i&&typeof i!=`function`&&typeof i!=`symbol`),s!=null&&typeof s!=`function`&&typeof s!=`symbol`&&typeof s!=`boolean`?e.name=``+an(s):e.removeAttribute(`name`)}function pn(e,t,n,r,i,a,o,s){if(a!=null&&typeof a!=`function`&&typeof a!=`symbol`&&typeof a!=`boolean`&&(e.type=a),t!=null||n!=null){if(!(a!==`submit`&&a!==`reset`||t!=null)){cn(e);return}n=n==null?``:``+an(n),t=t==null?n:``+an(t),s||t===e.value||(e.value=t),e.defaultValue=t}r??=i,r=typeof r!=`function`&&typeof r!=`symbol`&&!!r,e.checked=s?e.checked:!!r,e.defaultChecked=!!r,o!=null&&typeof o!=`function`&&typeof o!=`symbol`&&typeof o!=`boolean`&&(e.name=o),cn(e)}function mn(e,t){e.defaultValue!==``+t&&(e.defaultValue=``+t)}function hn(e,t,n,r){if(e=e.options,t){t={};for(var i=0;i<n.length;i++)t[`$`+n[i]]=!0;for(n=0;n<e.length;n++)i=t.hasOwnProperty(`$`+e[n].value),e[n].selected!==i&&(e[n].selected=i),i&&r&&(e[n].defaultSelected=!0)}else{for(n=``+an(n),t=null,i=0;i<e.length;i++){if(e[i].value===n){e[i].selected=!0,r&&(e[i].defaultSelected=!0);return}t!==null||e[i].disabled||(t=e[i])}t!==null&&(t.selected=!0)}}function gn(e,t,n){if(t!=null&&(t=``+an(t),t!==e.value&&(e.value=t),n==null)){e.defaultValue!==t&&(e.defaultValue=t);return}e.defaultValue=n==null?``:``+an(n)}function _n(e,t,n,r){if(t==null){if(r!=null){if(n!=null)throw Error(i(92));if(Se(r)){if(1<r.length)throw Error(i(93));r=r[0]}n=r}n??=``,t=n}n=an(t),e.defaultValue=n,r=e.textContent,r===n&&r!==``&&r!==null&&(e.value=r),cn(e)}function vn(e,t){if(t){var n=e.firstChild;if(n&&n===e.lastChild&&n.nodeType===3){n.nodeValue=t;return}}e.textContent=t}var yn=new Set(`animationIterationCount aspectRatio borderImageOutset borderImageSlice borderImageWidth boxFlex boxFlexGroup boxOrdinalGroup columnCount columns flex flexGrow flexPositive flexShrink flexNegative flexOrder gridArea gridRow gridRowEnd gridRowSpan gridRowStart gridColumn gridColumnEnd gridColumnSpan gridColumnStart fontWeight lineClamp lineHeight opacity order orphans scale tabSize widows zIndex zoom fillOpacity floodOpacity stopOpacity strokeDasharray strokeDashoffset strokeMiterlimit strokeOpacity strokeWidth MozAnimationIterationCount MozBoxFlex MozBoxFlexGroup MozLineClamp msAnimationIterationCount msFlex msZoom msFlexGrow msFlexNegative msFlexOrder msFlexPositive msFlexShrink msGridColumn msGridColumnSpan msGridRow msGridRowSpan WebkitAnimationIterationCount WebkitBoxFlex WebKitBoxFlexGroup WebkitBoxOrdinalGroup WebkitColumnCount WebkitColumns WebkitFlex WebkitFlexGrow WebkitFlexPositive WebkitFlexShrink WebkitLineClamp`.split(` `));function bn(e,t,n){var r=t.indexOf(`--`)===0;n==null||typeof n==`boolean`||n===``?r?e.setProperty(t,``):t===`float`?e.cssFloat=``:e[t]=``:r?e.setProperty(t,n):typeof n!=`number`||n===0||yn.has(t)?t===`float`?e.cssFloat=n:e[t]=(``+n).trim():e[t]=n+`px`}function xn(e,t,n){if(t!=null&&typeof t!=`object`)throw Error(i(62));if(e=e.style,n!=null){for(var r in n)!n.hasOwnProperty(r)||t!=null&&t.hasOwnProperty(r)||(r.indexOf(`--`)===0?e.setProperty(r,``):r===`float`?e.cssFloat=``:e[r]=``,j=!0);for(var a in t)r=t[a],t.hasOwnProperty(a)&&n[a]!==r&&(bn(e,a,r),j=!0)}else for(var o in t)t.hasOwnProperty(o)&&bn(e,o,t[o])}function Sn(e){if(e.indexOf(`-`)===-1)return!1;switch(e){case`annotation-xml`:case`color-profile`:case`font-face`:case`font-face-src`:case`font-face-uri`:case`font-face-format`:case`font-face-name`:case`missing-glyph`:return!1;default:return!0}}var Cn=new Map([[`acceptCharset`,`accept-charset`],[`htmlFor`,`for`],[`httpEquiv`,`http-equiv`],[`crossOrigin`,`crossorigin`],[`accentHeight`,`accent-height`],[`alignmentBaseline`,`alignment-baseline`],[`arabicForm`,`arabic-form`],[`baselineShift`,`baseline-shift`],[`capHeight`,`cap-height`],[`clipPath`,`clip-path`],[`clipRule`,`clip-rule`],[`colorInterpolation`,`color-interpolation`],[`colorInterpolationFilters`,`color-interpolation-filters`],[`colorProfile`,`color-profile`],[`colorRendering`,`color-rendering`],[`dominantBaseline`,`dominant-baseline`],[`enableBackground`,`enable-background`],[`fillOpacity`,`fill-opacity`],[`fillRule`,`fill-rule`],[`floodColor`,`flood-color`],[`floodOpacity`,`flood-opacity`],[`fontFamily`,`font-family`],[`fontSize`,`font-size`],[`fontSizeAdjust`,`font-size-adjust`],[`fontStretch`,`font-stretch`],[`fontStyle`,`font-style`],[`fontVariant`,`font-variant`],[`fontWeight`,`font-weight`],[`glyphName`,`glyph-name`],[`glyphOrientationHorizontal`,`glyph-orientation-horizontal`],[`glyphOrientationVertical`,`glyph-orientation-vertical`],[`horizAdvX`,`horiz-adv-x`],[`horizOriginX`,`horiz-origin-x`],[`imageRendering`,`image-rendering`],[`letterSpacing`,`letter-spacing`],[`lightingColor`,`lighting-color`],[`markerEnd`,`marker-end`],[`markerMid`,`marker-mid`],[`markerStart`,`marker-start`],[`maskType`,`mask-type`],[`overlinePosition`,`overline-position`],[`overlineThickness`,`overline-thickness`],[`paintOrder`,`paint-order`],[`panose-1`,`panose-1`],[`pointerEvents`,`pointer-events`],[`renderingIntent`,`rendering-intent`],[`shapeRendering`,`shape-rendering`],[`stopColor`,`stop-color`],[`stopOpacity`,`stop-opacity`],[`strikethroughPosition`,`strikethrough-position`],[`strikethroughThickness`,`strikethrough-thickness`],[`strokeDasharray`,`stroke-dasharray`],[`strokeDashoffset`,`stroke-dashoffset`],[`strokeLinecap`,`stroke-linecap`],[`strokeLinejoin`,`stroke-linejoin`],[`strokeMiterlimit`,`stroke-miterlimit`],[`strokeOpacity`,`stroke-opacity`],[`strokeWidth`,`stroke-width`],[`textAnchor`,`text-anchor`],[`textDecoration`,`text-decoration`],[`textRendering`,`text-rendering`],[`transformOrigin`,`transform-origin`],[`underlinePosition`,`underline-position`],[`underlineThickness`,`underline-thickness`],[`unicodeBidi`,`unicode-bidi`],[`unicodeRange`,`unicode-range`],[`unitsPerEm`,`units-per-em`],[`vAlphabetic`,`v-alphabetic`],[`vHanging`,`v-hanging`],[`vIdeographic`,`v-ideographic`],[`vMathematical`,`v-mathematical`],[`vectorEffect`,`vector-effect`],[`vertAdvY`,`vert-adv-y`],[`vertOriginX`,`vert-origin-x`],[`vertOriginY`,`vert-origin-y`],[`wordSpacing`,`word-spacing`],[`writingMode`,`writing-mode`],[`xmlnsXlink`,`xmlns:xlink`],[`xHeight`,`x-height`]]),wn=/^[\u0000-\u001F ]*j[\r\n\t]*a[\r\n\t]*v[\r\n\t]*a[\r\n\t]*s[\r\n\t]*c[\r\n\t]*r[\r\n\t]*i[\r\n\t]*p[\r\n\t]*t[\r\n\t]*:/i;function Tn(e){return wn.test(``+e)?`javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')`:e}function En(){}var Dn=null;function On(e){return e=e.target||e.srcElement||window,e.correspondingUseElement&&(e=e.correspondingUseElement),e.nodeType===3?e.parentNode:e}var kn=null,An=null;function jn(e){var t=Vt(e);if(t&&(e=t.stateNode)){var n=e[jt]||null;a:switch(e=t.stateNode,t.type){case`input`:if(fn(e,n.value,n.defaultValue,n.defaultValue,n.checked,n.defaultChecked,n.type,n.name),t=n.name,n.type===`radio`&&t!=null){for(n=e;n.parentNode;)n=n.parentNode;for(n=n.querySelectorAll(`input[name="`+dn(``+t)+`"][type="radio"]`),t=0;t<n.length;t++){var r=n[t];if(r!==e&&r.form===e.form){var a=r[jt]||null;if(!a)throw Error(i(90));fn(r,a.value,a.defaultValue,a.defaultValue,a.checked,a.defaultChecked,a.type,a.name)}}for(t=0;t<n.length;t++)r=n[t],r.form===e.form&&ln(r)}break a;case`textarea`:gn(e,n.value,n.defaultValue);break a;case`select`:t=n.value,t!=null&&hn(e,!!n.multiple,t,!1)}}}var Mn=!1;function Nn(e,t,n){if(Mn)return e(t,n);Mn=!0;try{return e(t)}finally{if(Mn=!1,(kn!==null||An!==null)&&(zd(),kn&&(t=kn,e=An,An=kn=null,jn(t),e)))for(t=0;t<e.length;t++)jn(e[t])}}function Pn(e,t){var n=e.stateNode;if(n===null)return null;var r=n[jt]||null;if(r===null)return null;n=r[t];a:switch(t){case`onClick`:case`onClickCapture`:case`onDoubleClick`:case`onDoubleClickCapture`:case`onMouseDown`:case`onMouseDownCapture`:case`onMouseMove`:case`onMouseMoveCapture`:case`onMouseUp`:case`onMouseUpCapture`:case`onMouseEnter`:(r=!r.disabled)||(e=e.type,r=e!==`button`&&e!==`input`&&e!==`select`&&e!==`textarea`),e=!r;break a;default:e=!1}if(e)return null;if(n&&typeof n!=`function`)throw Error(i(231,t,typeof n));return n}var Fn=!(typeof window>`u`||window.document===void 0||window.document.createElement===void 0),In=!1;if(Fn)try{var Ln={};Object.defineProperty(Ln,"passive",{get:function(){In=!0}}),window.addEventListener(`test`,Ln,Ln),window.removeEventListener(`test`,Ln,Ln)}catch{In=!1}var Rn=null,zn=null,Bn=null;function Vn(){if(Bn)return Bn;var e,t=zn,n=t.length,r,i=`value`in Rn?Rn.value:Rn.textContent,a=i.length;for(e=0;e<n&&t[e]===i[e];e++);var o=n-e;for(r=1;r<=o&&t[n-r]===i[a-r];r++);return Bn=i.slice(e,1<r?1-r:void 0)}function Hn(e){var t=e.keyCode;return`charCode`in e?(e=e.charCode,e===0&&t===13&&(e=13)):e=t,e===10&&(e=13),32<=e||e===13?e:0}function Un(){return!0}function Wn(){return!1}function M(e){function t(t,n,r,i,a){for(var o in this._reactName=t,this._targetInst=r,this.type=n,this.nativeEvent=i,this.target=a,this.currentTarget=null,e)e.hasOwnProperty(o)&&(t=e[o],this[o]=t?t(i):i[o]);return this.isDefaultPrevented=(i.defaultPrevented==null?!1===i.returnValue:i.defaultPrevented)?Un:Wn,this.isPropagationStopped=Wn,this}return T(t.prototype,{preventDefault:function(){this.defaultPrevented=!0;var e=this.nativeEvent;e&&(e.preventDefault?e.preventDefault():typeof e.returnValue!=`unknown`&&(e.returnValue=!1),this.isDefaultPrevented=Un)},stopPropagation:function(){var e=this.nativeEvent;e&&(e.stopPropagation?e.stopPropagation():typeof e.cancelBubble!=`unknown`&&(e.cancelBubble=!0),this.isPropagationStopped=Un)},persist:function(){},isPersistent:Un}),t}var Gn={eventPhase:0,bubbles:0,cancelable:0,timeStamp:function(e){return e.timeStamp||Date.now()},defaultPrevented:0,isTrusted:0},Kn=M(Gn),qn=T({},Gn,{view:0,detail:0}),Jn=M(qn),Yn,Xn,Zn,Qn=T({},qn,{screenX:0,screenY:0,clientX:0,clientY:0,pageX:0,pageY:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,getModifierState:lr,button:0,buttons:0,relatedTarget:function(e){return e.relatedTarget===void 0?e.fromElement===e.srcElement?e.toElement:e.fromElement:e.relatedTarget},movementX:function(e){return`movementX`in e?e.movementX:(e!==Zn&&(Zn&&e.type===`mousemove`?(Yn=e.screenX-Zn.screenX,Xn=e.screenY-Zn.screenY):Xn=Yn=0,Zn=e),Yn)},movementY:function(e){return`movementY`in e?e.movementY:Xn}}),$n=M(Qn),er=M(T({},Qn,{dataTransfer:0})),tr=M(T({},qn,{relatedTarget:0})),nr=M(T({},Gn,{animationName:0,elapsedTime:0,pseudoElement:0})),rr=M(T({},Gn,{clipboardData:function(e){return`clipboardData`in e?e.clipboardData:window.clipboardData}})),ir=M(T({},Gn,{data:0})),ar={Esc:`Escape`,Spacebar:` `,Left:`ArrowLeft`,Up:`ArrowUp`,Right:`ArrowRight`,Down:`ArrowDown`,Del:`Delete`,Win:`OS`,Menu:`ContextMenu`,Apps:`ContextMenu`,Scroll:`ScrollLock`,MozPrintableKey:`Unidentified`},or={8:`Backspace`,9:`Tab`,12:`Clear`,13:`Enter`,16:`Shift`,17:`Control`,18:`Alt`,19:`Pause`,20:`CapsLock`,27:`Escape`,32:` `,33:`PageUp`,34:`PageDown`,35:`End`,36:`Home`,37:`ArrowLeft`,38:`ArrowUp`,39:`ArrowRight`,40:`ArrowDown`,45:`Insert`,46:`Delete`,112:`F1`,113:`F2`,114:`F3`,115:`F4`,116:`F5`,117:`F6`,118:`F7`,119:`F8`,120:`F9`,121:`F10`,122:`F11`,123:`F12`,144:`NumLock`,145:`ScrollLock`,224:`Meta`},sr={Alt:`altKey`,Control:`ctrlKey`,Meta:`metaKey`,Shift:`shiftKey`};function cr(e){var t=this.nativeEvent;return t.getModifierState?t.getModifierState(e):(e=sr[e])?!!t[e]:!1}function lr(){return cr}var ur=M(T({},qn,{key:function(e){if(e.key){var t=ar[e.key]||e.key;if(t!==`Unidentified`)return t}return e.type===`keypress`?(e=Hn(e),e===13?`Enter`:String.fromCharCode(e)):e.type===`keydown`||e.type===`keyup`?or[e.keyCode]||`Unidentified`:``},code:0,location:0,ctrlKey:0,shiftKey:0,altKey:0,metaKey:0,repeat:0,locale:0,getModifierState:lr,charCode:function(e){return e.type===`keypress`?Hn(e):0},keyCode:function(e){return e.type===`keydown`||e.type===`keyup`?e.keyCode:0},which:function(e){return e.type===`keypress`?Hn(e):e.type===`keydown`||e.type===`keyup`?e.keyCode:0}})),dr=M(T({},Qn,{pointerId:0,width:0,height:0,pressure:0,tangentialPressure:0,tiltX:0,tiltY:0,twist:0,pointerType:0,isPrimary:0})),fr=M(T({},Gn,{submitter:0})),pr=M(T({},qn,{touches:0,targetTouches:0,changedTouches:0,altKey:0,metaKey:0,ctrlKey:0,shiftKey:0,getModifierState:lr})),mr=M(T({},Gn,{propertyName:0,elapsedTime:0,pseudoElement:0})),hr=M(T({},Qn,{deltaX:function(e){return`deltaX`in e?e.deltaX:`wheelDeltaX`in e?-e.wheelDeltaX:0},deltaY:function(e){return`deltaY`in e?e.deltaY:`wheelDeltaY`in e?-e.wheelDeltaY:`wheelDelta`in e?-e.wheelDelta:0},deltaZ:0,deltaMode:0})),gr=M(T({},Gn,{newState:0,oldState:0,source:0})),_r=[9,13,27,32],vr=Fn&&`CompositionEvent`in window,yr=null;Fn&&`documentMode`in document&&(yr=document.documentMode);var br=Fn&&`TextEvent`in window&&!yr,xr=Fn&&(!vr||yr&&8<yr&&11>=yr),Sr=` `,Cr=!1;function wr(e,t){switch(e){case`keyup`:return _r.indexOf(t.keyCode)!==-1;case`keydown`:return t.keyCode!==229;case`keypress`:case`mousedown`:case`focusout`:return!0;default:return!1}}function Tr(e){return e=e.detail,typeof e==`object`&&`data`in e?e.data:null}var Er=!1;function Dr(e,t){switch(e){case`compositionend`:return Tr(t);case`keypress`:return t.which===32?(Cr=!0,Sr):null;case`textInput`:return e=t.data,e===Sr&&Cr?null:e;default:return null}}function Or(e,t){if(Er)return e===`compositionend`||!vr&&wr(e,t)?(e=Vn(),Bn=zn=Rn=null,Er=!1,e):null;switch(e){case`paste`:return null;case`keypress`:if(!(t.ctrlKey||t.altKey||t.metaKey)||t.ctrlKey&&t.altKey){if(t.char&&1<t.char.length)return t.char;if(t.which)return String.fromCharCode(t.which)}return null;case`compositionend`:return xr&&t.locale!==`ko`?null:t.data;default:return null}}var kr={color:!0,date:!0,datetime:!0,"datetime-local":!0,email:!0,month:!0,number:!0,password:!0,range:!0,search:!0,tel:!0,text:!0,time:!0,url:!0,week:!0};function Ar(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t===`input`?!!kr[e.type]:t===`textarea`}function jr(e,t,n,r){kn?An?An.push(r):An=[r]:kn=r,t=Jf(t,`onChange`),0<t.length&&(n=new Kn(`onChange`,`change`,null,n,r),e.push({event:n,listeners:t}))}var Mr=null,Nr=null;function Pr(e){Vf(e,0)}function Fr(e){if(ln(Ht(e)))return e}function Ir(e,t){if(e===`change`)return t}var Lr=!1;if(Fn){var Rr;if(Fn){var zr=`oninput`in document;if(!zr){var Br=document.createElement(`div`);Br.setAttribute(`oninput`,`return;`),zr=typeof Br.oninput==`function`}Rr=zr}else Rr=!1;Lr=Rr&&(!document.documentMode||9<document.documentMode)}function Vr(){Mr&&(Mr.detachEvent(`onpropertychange`,Hr),Nr=Mr=null)}function Hr(e){if(e.propertyName===`value`&&Fr(Nr)){var t=[];jr(t,Nr,e,On(e)),Nn(Pr,t)}}function Ur(e,t,n){e===`focusin`?(Vr(),Mr=t,Nr=n,Mr.attachEvent(`onpropertychange`,Hr)):e===`focusout`&&Vr()}function Wr(e){if(e===`selectionchange`||e===`keyup`||e===`keydown`)return Fr(Nr)}function Gr(e,t){if(e===`click`)return Fr(t)}function Kr(e,t){if(e===`input`||e===`change`)return Fr(t)}function qr(e,t){return e===t&&(e!==0||1/e==1/t)||e!==e&&t!==t}var Jr=typeof Object.is==`function`?Object.is:qr;function Yr(e,t){if(Jr(e,t))return!0;if(typeof e!=`object`||!e||typeof t!=`object`||!t)return!1;var n=Object.keys(e),r=Object.keys(t);if(n.length!==r.length)return!1;for(r=0;r<n.length;r++){var i=n[r];if(!Ue.call(t,i)||!Jr(e[i],t[i]))return!1}return!0}function Xr(e){if(e||=typeof document<`u`?document:void 0,e===void 0)return null;try{return e.activeElement||e.body}catch{return e.body}}function Zr(e){for(;e&&e.firstChild;)e=e.firstChild;return e}function Qr(e,t){var n=Zr(e);e=0;for(var r;n;){if(n.nodeType===3){if(r=e+n.textContent.length,e<=t&&r>=t)return{node:n,offset:t-e};e=r}a:{for(;n;){if(n.nextSibling){n=n.nextSibling;break a}n=n.parentNode}n=void 0}n=Zr(n)}}function $r(e,t){return e&&t?e===t?!0:e&&e.nodeType===3?!1:t&&t.nodeType===3?$r(e,t.parentNode):`contains`in e?e.contains(t):e.compareDocumentPosition?!!(e.compareDocumentPosition(t)&16):!1:!1}function ei(e){e=e!=null&&e.ownerDocument!=null&&e.ownerDocument.defaultView!=null?e.ownerDocument.defaultView:window;for(var t=Xr(e.document);t instanceof e.HTMLIFrameElement;){try{var n=typeof t.contentWindow.location.href==`string`}catch{n=!1}if(n)e=t.contentWindow;else break;t=Xr(e.document)}return t}function ti(e){var t=e&&e.nodeName&&e.nodeName.toLowerCase();return t&&(t===`input`&&(e.type===`text`||e.type===`search`||e.type===`tel`||e.type===`url`||e.type===`password`)||t===`textarea`||e.contentEditable===`true`)}var ni=Fn&&`documentMode`in document&&11>=document.documentMode,ri=null,ii=null,ai=null,oi=!1;function si(e,t,n){var r=n.window===n?n.document:n.nodeType===9?n:n.ownerDocument;oi||ri==null||ri!==Xr(r)||(r=ri,`selectionStart`in r&&ti(r)?r={start:r.selectionStart,end:r.selectionEnd}:(r=(r.ownerDocument&&r.ownerDocument.defaultView||window).getSelection(),r={anchorNode:r.anchorNode,anchorOffset:r.anchorOffset,focusNode:r.focusNode,focusOffset:r.focusOffset}),ai&&Yr(ai,r)||(ai=r,r=Jf(ii,`onSelect`),0<r.length&&(t=new Kn(`onSelect`,`select`,null,t,n),e.push({event:t,listeners:r}),t.target=ri)))}function ci(e,t){var n={};return n[e.toLowerCase()]=t.toLowerCase(),n[`Webkit`+e]=`webkit`+t,n[`Moz`+e]=`moz`+t,n}var li={animationend:ci(`Animation`,`AnimationEnd`),animationiteration:ci(`Animation`,`AnimationIteration`),animationstart:ci(`Animation`,`AnimationStart`),transitionrun:ci(`Transition`,`TransitionRun`),transitionstart:ci(`Transition`,`TransitionStart`),transitioncancel:ci(`Transition`,`TransitionCancel`),transitionend:ci(`Transition`,`TransitionEnd`)},ui={},di={};Fn&&(di=document.createElement(`div`).style,`AnimationEvent`in window||(delete li.animationend.animation,delete li.animationiteration.animation,delete li.animationstart.animation),`TransitionEvent`in window||delete li.transitionend.transition);function fi(e){if(ui[e])return ui[e];if(!li[e])return e;var t=li[e],n;for(n in t)if(t.hasOwnProperty(n)&&n in di)return ui[e]=t[n];return e}var pi=fi(`animationend`),mi=fi(`animationiteration`),hi=fi(`animationstart`),N=fi(`transitionrun`),gi=fi(`transitionstart`),_i=fi(`transitioncancel`),P=fi(`transitionend`),F=new Map,vi=`abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error fullscreenChange fullscreenError gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel`.split(` `);vi.push(`scrollEnd`);function yi(e,t){F.set(e,t),Jt(t,[e])}var bi=0;function xi(e,t){if(e.name!=null&&e.name!==`auto`)return e.name;if(t.autoName!==null)return t.autoName;e=bd.identifierPrefix;var n=bi++;return e=`_`+e+`t_`+n.toString(32)+`_`,t.autoName=e}function Si(e){if(e==null||typeof e==`string`)return e;var t=null,n=Od;if(n!==null)for(var r=0;r<n.length;r++){var i=e[n[r]];if(i!=null){if(i===`none`)return`none`;t=t==null?i:t+(` `+i)}}return t??e.default}function Ci(e,t){return e=Si(e),t=Si(t),t==null?e===`auto`?null:e:t===`auto`?null:t}var wi=typeof reportError==`function`?reportError:function(e){if(typeof window==`object`&&typeof window.ErrorEvent==`function`){var t=new window.ErrorEvent(`error`,{bubbles:!0,cancelable:!0,message:typeof e==`object`&&e&&typeof e.message==`string`?String(e.message):String(e),error:e});if(!window.dispatchEvent(t))return}else if(typeof process==`object`&&typeof process.emit==`function`){process.emit(`uncaughtException`,e);return}console.error(e)},Ti=[],Ei=0,Di=0;function Oi(){for(var e=Ei,t=Di=Ei=0;t<e;){var n=Ti[t];Ti[t++]=null;var r=Ti[t];Ti[t++]=null;var i=Ti[t];Ti[t++]=null;var a=Ti[t];if(Ti[t++]=null,r!==null&&i!==null){var o=r.pending;o===null?i.next=i:(i.next=o.next,o.next=i),r.pending=i}a!==0&&Mi(n,i,a)}}function ki(e,t,n,r){Ti[Ei++]=e,Ti[Ei++]=t,Ti[Ei++]=n,Ti[Ei++]=r,Di|=r,e.lanes|=r,e=e.alternate,e!==null&&(e.lanes|=r)}function Ai(e,t,n,r){return ki(e,t,n,r),Ni(e)}function ji(e,t){return ki(e,null,null,t),Ni(e)}function Mi(e,t,n){e.lanes|=n;var r=e.alternate;r!==null&&(r.lanes|=n);for(var i=!1,a=e.return;a!==null;)a.childLanes|=n,r=a.alternate,r!==null&&(r.childLanes|=n),a.tag===22&&(e=a.stateNode,e===null||e._visibility&1||(i=!0)),e=a,a=a.return;return e.tag===3?(a=e.stateNode,i&&t!==null&&(i=31-ot(n),e=a.hiddenUpdates,r=e[i],r===null?e[i]=[t]:r.push(t),t.lane=n|536870912),a):null}function Ni(e){if(50<kd)throw kd=0,Ad=null,Error(i(185));for(var t=e.return;t!==null;)e=t,t=e.return;return e.tag===3?e.stateNode:null}var Pi={};function Fi(e,t,n,r){this.tag=e,this.key=n,this.sibling=this.child=this.return=this.stateNode=this.type=this.elementType=null,this.index=0,this.refCleanup=this.ref=null,this.pendingProps=t,this.dependencies=this.memoizedState=this.updateQueue=this.memoizedProps=null,this.mode=r,this.subtreeFlags=this.flags=0,this.deletions=null,this.childLanes=this.lanes=0,this.alternate=null}function Ii(e,t,n,r){return new Fi(e,t,n,r)}function Li(e){return e=e.prototype,!(!e||!e.isReactComponent)}function Ri(e,t){var n=e.alternate;return n===null?(n=Ii(e.tag,t,e.key,e.mode),n.elementType=e.elementType,n.type=e.type,n.stateNode=e.stateNode,n.alternate=e,e.alternate=n):(n.pendingProps=t,n.type=e.type,n.flags=0,n.subtreeFlags=0,n.deletions=null),n.flags=e.flags&1206910976,n.childLanes=e.childLanes,n.lanes=e.lanes,n.child=e.child,n.memoizedProps=e.memoizedProps,n.memoizedState=e.memoizedState,n.updateQueue=e.updateQueue,t=e.dependencies,n.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext},n.sibling=e.sibling,n.index=e.index,n.ref=e.ref,n.refCleanup=e.refCleanup,n}function zi(e,t){e.flags&=1206910978;var n=e.alternate;return n===null?(e.childLanes=0,e.lanes=t,e.child=null,e.subtreeFlags=0,e.memoizedProps=null,e.memoizedState=null,e.updateQueue=null,e.dependencies=null,e.stateNode=null):(e.childLanes=n.childLanes,e.lanes=n.lanes,e.child=n.child,e.subtreeFlags=0,e.deletions=null,e.memoizedProps=n.memoizedProps,e.memoizedState=n.memoizedState,e.updateQueue=n.updateQueue,e.type=n.type,t=n.dependencies,e.dependencies=t===null?null:{lanes:t.lanes,firstContext:t.firstContext}),e}function Bi(e,t,n,r,a,o){var s=0;if(r=e,typeof r==`function`)Li(r)&&(s=1);else if(typeof r==`string`)s=qm(e,n,Oe.current)?26:e===`html`||e===`head`||e===`body`?27:5;else a:switch(r){case pe:return e=Ii(31,n,t,a),e.elementType=pe,e.lanes=o,e;case re:return Vi(n.children,a,o,t);case ie:s=8,a|=24;break;case ae:return e=Ii(12,n,t,a|2),e.elementType=ae,e.lanes=o,e;case le:return e=Ii(13,n,t,a),e.elementType=le,e.lanes=o,e;case ue:return e=Ii(19,n,t,a),e.elementType=ue,e.lanes=o,e;case me:case ge:return e=a|32,e=Ii(30,n,t,e),e.elementType=ge,e.lanes=o,e.stateNode={autoName:null,paired:null,clones:null,ref:null},e;default:if(typeof r==`object`&&r)switch(r.$$typeof){case se:s=10;break a;case oe:s=9;break a;case ce:s=11;break a;case de:s=14;break a;case fe:s=16,r=null;break a}s=29,n=Error(i(130,e===null?`null`:typeof e,``)),r=null}return t=Ii(s,n,t,a),t.elementType=e,t.type=r,t.lanes=o,t}function Vi(e,t,n,r){return e=Ii(7,e,r,t),e.lanes=n,e}function Hi(e,t,n){return e=Ii(6,e,null,t),e.lanes=n,e}function Ui(e){var t=Ii(18,null,null,0);return t.stateNode=e,t}function Wi(e,t,n){return t=Ii(4,e.children===null?[]:e.children,e.key,t),t.lanes=n,t.stateNode={containerInfo:e.containerInfo,pendingChildren:null,implementation:e.implementation},t}var Gi=new WeakMap;function Ki(e,t){if(typeof e==`object`&&e){var n=Gi.get(e);return n===void 0?(t={value:e,source:t,stack:He(t)},Gi.set(e,t),t):n}return{value:e,source:t,stack:He(t)}}var qi=[],Ji=0,Yi=null,Xi=0,Zi=[],Qi=0,$i=null,ea=1,ta=``;function na(e,t){qi[Ji++]=Xi,qi[Ji++]=Yi,Yi=e,Xi=t}function ra(e,t,n){Zi[Qi++]=ea,Zi[Qi++]=ta,Zi[Qi++]=$i,$i=e;var r=ea;e=ta;var i=32-ot(r)-1;r&=~(1<<i),n+=1;var a=32-ot(t)+i;if(30<a){var o=i-i%5;a=(r&(1<<o)-1).toString(32),r>>=o,i-=o,ea=1<<32-ot(t)+i|n<<i|r,ta=a+e}else ea=1<<a|n<<i|r,ta=e}function ia(e){e.return!==null&&(na(e,1),ra(e,1,0))}function aa(e){for(;e===Yi;)Yi=qi[--Ji],qi[Ji]=null,Xi=qi[--Ji],qi[Ji]=null;for(;e===$i;)$i=Zi[--Qi],Zi[Qi]=null,ta=Zi[--Qi],Zi[Qi]=null,ea=Zi[--Qi],Zi[Qi]=null}function oa(e,t){Zi[Qi++]=ea,Zi[Qi++]=ta,Zi[Qi++]=$i,ea=t.id,ta=t.overflow,$i=e}var sa=null,I=null,L=!1,ca=null,la=!1,ua=Error(i(519));function da(e){throw _a(Ki(Error(i(418,1<arguments.length&&arguments[1]!==void 0&&arguments[1]?`text`:`HTML`,``)),e)),ua}function fa(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[At]=e,t[jt]=r,n){case`dialog`:Q(`cancel`,t),Q(`close`,t);break;case`iframe`:case`object`:case`embed`:Q(`load`,t);break;case`video`:case`audio`:for(n=0;n<zf.length;n++)Q(zf[n],t);break;case`source`:Q(`error`,t);break;case`img`:case`image`:case`link`:Q(`error`,t),Q(`load`,t);break;case`details`:Q(`toggle`,t);break;case`input`:Q(`invalid`,t),pn(t,r.value,r.defaultValue,r.checked,r.defaultChecked,r.type,r.name,!0);break;case`select`:Q(`invalid`,t);break;case`textarea`:Q(`invalid`,t),_n(t,r.value,r.defaultValue,r.children)}n=r.children,typeof n!=`string`&&typeof n!=`number`&&typeof n!=`bigint`||t.textContent===``+n||!0===r.suppressHydrationWarning||ep(t.textContent,n)?(r.popover!=null&&(Q(`beforetoggle`,t),Q(`toggle`,t)),r.onScroll!=null&&Q(`scroll`,t),r.onScrollEnd!=null&&Q(`scrollend`,t),r.onClick!=null&&(t.onclick=En),t=!0):t=!1,t||da(e,!0)}function pa(e){for(sa=e.return;sa;)switch(sa.tag){case 5:case 31:case 13:la=!1;return;case 27:case 3:la=!0;return;default:sa=sa.return}}function ma(e){if(e!==sa)return!1;if(!L)return pa(e),L=!0,!1;var t=e.tag,n;if((n=t!==3&&t!==27)&&((n=t===5)&&(n=e.type,n=n===`form`||n===`button`||pp(e.type,e.memoizedProps)),n=!n),n&&I&&da(e),pa(e),t===13){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));I=dm(e)}else if(t===31){if(e=e.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(317));I=dm(e)}else t===27?(t=I,Sp(e.type)?(e=um,um=null,I=e):I=t):I=sa?lm(e.stateNode.nextSibling):null;return!0}function ha(){I=sa=null,L=!1}function ga(){var e=ca;return e!==null&&(fd===null?fd=e:fd.push.apply(fd,e),ca=null),e}function _a(e){ca===null?ca=[e]:ca.push(e)}var va=Ee(null),ya=null,ba=null;function xa(e,t,n){A(va,t._currentValue),t._currentValue=n}function Sa(e){e._currentValue=va.current,De(va)}function Ca(e,t,n){for(;e!==null;){var r=e.alternate;if((e.childLanes&t)===t?r!==null&&(r.childLanes&t)!==t&&(r.childLanes|=t):(e.childLanes|=t,r!==null&&(r.childLanes|=t)),e===n)break;e=e.return}}function wa(e,t,n,r){var a=e.child;for(a!==null&&(a.return=e);a!==null;){var o=a.dependencies;if(o!==null){var s=a.child;o=o.firstContext;a:for(;o!==null;){var c=o;o=a;for(var l=0;l<t.length;l++)if(c.context===t[l]){o.lanes|=n,c=o.alternate,c!==null&&(c.lanes|=n),Ca(o.return,n,e),r||(s=null);break a}o=c.next}}else if(a.tag===18){if(s=a.return,s===null)throw Error(i(341));s.lanes|=n,o=s.alternate,o!==null&&(o.lanes|=n),Ca(s,n,e),s=null}else a.tag===13&&a.memoizedState!==null&&a.memoizedState.dehydrated===null?(a.lanes|=n,s=a.alternate,s!==null&&(s.lanes|=n),Ca(a.return,n,e),s=a.child,s=s===null?null:s.sibling):s=a.child;if(s!==null)s.return=a;else for(s=a;s!==null;){if(s===e){s=null;break}if(a=s.sibling,a!==null){a.return=s.return,s=a;break}s=s.return}a=s}}function Ta(e,t,n,r){e=null;for(var a=t,o=!1;a!==null;){if(!o){if(a.flags&524288)o=!0;else if(a.flags&262144)break}if(a.tag===10){var s=a.alternate;if(s===null)throw Error(i(387));if(s=s.memoizedProps,s!==null){var c=a.type;Jr(a.pendingProps.value,s.value)||(e===null?e=[c]:e.push(c))}}else if(a===je.current){if(s=a.alternate,s===null)throw Error(i(387));s.memoizedState.memoizedState!==a.memoizedState.memoizedState&&(e===null?e=[sh]:e.push(sh))}a=a.return}return e!==null&&wa(t,e,n,r),t.flags|=262144,e!==null}function Ea(e){for(e=e.firstContext;e!==null;){if(!Jr(e.context._currentValue,e.memoizedValue))return!0;e=e.next}return!1}function Da(e){ya=e,ba=null,e=e.dependencies,e!==null&&(e.firstContext=null)}function Oa(e){return Aa(ya,e)}function ka(e,t){return ya===null&&Da(e),Aa(e,t)}function Aa(e,t){var n=t._currentValue;if(t={context:t,memoizedValue:n,next:null},ba===null){if(e===null)throw Error(i(308));ba=t,e.dependencies={lanes:0,firstContext:t},e.flags|=524288}else ba=ba.next=t;return n}var ja=typeof AbortController<`u`?AbortController:function(){var e=[],t=this.signal={aborted:!1,addEventListener:function(t,n){e.push(n)}};this.abort=function(){t.aborted=!0,e.forEach(function(e){return e()})}},Ma=t.unstable_scheduleCallback,Na=t.unstable_NormalPriority,Pa={$$typeof:se,Consumer:null,Provider:null,_currentValue:null,_currentValue2:null,_threadCount:0};function Fa(){return{controller:new ja,data:new Map,refCount:0}}function Ia(e){e.refCount--,e.refCount===0&&Ma(Na,function(){e.controller.abort()})}function La(e,t){if(e.pendingLanes&4194048){var n=e.transitionTypes;for(n===null&&(n=e.transitionTypes=[]),e=0;e<t.length;e++){var r=t[e];n.indexOf(r)===-1&&n.push(r)}}}var Ra=null;function za(e){var t=e.transitionTypes;return e.transitionTypes=null,t}var Ba=null,Va=0,Ha=0,Ua=null;function Wa(e,t){if(Ba===null){var n=Ba=[];Va=0,Ha=Pf(),Ua={status:`pending`,value:void 0,then:function(e){n.push(e)}}}return Va++,t.then(Ga,Ga),t}function Ga(){if(--Va===0&&(Ra=null,Ba!==null)){Ua!==null&&(Ua.status=`fulfilled`);var e=Ba;Ba=null,Ha=0,Ua=null;for(var t=0;t<e.length;t++)(0,e[t])()}}function Ka(e,t){var n=[],r={status:`pending`,value:null,reason:null,then:function(e){n.push(e)}};return e.then(function(){r.status=`fulfilled`,r.value=t;for(var e=0;e<n.length;e++)(0,n[e])(t)},function(e){for(r.status=`rejected`,r.reason=e,e=0;e<n.length;e++)(0,n[e])(void 0)}),r}var qa=O.S;O.S=function(e,t){if(hd=Je(),typeof t==`object`&&t&&typeof t.then==`function`&&Wa(e,t),Ra!==null)for(var n=bf;n!==null;)La(n,Ra),n=n.next;if(n=e.types,n!==null){for(var r=bf;r!==null;)La(r,n),r=r.next;if(Ha!==0){r=Ra,r===null&&(r=Ra=[]);for(var i=0;i<n.length;i++){var a=n[i];r.indexOf(a)===-1&&r.push(a)}}}qa!==null&&qa(e,t)};var Ja=Ee(null);function Ya(){var e=Ja.current;return e===null?q.pooledCache:e}function Xa(e,t){t===null?A(Ja,Ja.current):A(Ja,t.pool)}function Za(){var e=Ya();return e===null?null:{parent:Pa._currentValue,pool:e}}var R=Error(i(460)),z=Error(i(474)),B=Error(i(542)),Qa={then:function(){}};function $a(e){return e=e.status,e===`fulfilled`||e===`rejected`}function eo(e,t,n){switch(n=e[n],n===void 0?e.push(t):n!==t&&(t.then(En,En),t=n),t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,ro(e),e===void 0&&!(`reason`in t)?Error(i(600)):e;default:if(typeof t.status==`string`)t.then(En,En);else{if(e=q,e!==null&&100<e.shellSuspendCounter)throw Error(i(482));e=t,e.status=`pending`,e.then(function(e){if(t.status===`pending`){var n=t;n.status=`fulfilled`,n.value=e}},function(e){if(t.status===`pending`){var n=t;n.status=`rejected`,n.reason=e}})}switch(t.status){case`fulfilled`:return t.value;case`rejected`:throw e=t.reason,ro(e),e}throw V=t,R}}function to(e){try{var t=e._init;return t(e._payload)}catch(e){throw typeof e==`object`&&e&&typeof e.then==`function`?(V=e,R):e}}var V=null;function no(){if(V===null)throw Error(i(459));var e=V;return V=null,e}function ro(e){if(e===R||e===B)throw Error(i(483))}var io=null,ao=0;function oo(e){var t=ao;return ao+=1,io===null&&(io=[]),eo(io,e,t)}function so(e,t){t=t.props.ref,e.ref=t===void 0?null:t}function co(e,t){throw t.$$typeof===E?Error(i(525)):(e=Object.prototype.toString.call(t),Error(i(31,e===`[object Object]`?`object with keys {`+Object.keys(t).join(`, `)+`}`:e)))}function lo(e){function t(t,n){if(e){var r=t.deletions;r===null?(t.deletions=[n],t.flags|=16):r.push(n)}}function n(n,r){if(!e)return null;for(;r!==null;)t(n,r),r=r.sibling;return null}function r(e){for(var t=new Map;e!==null;)e.key===null?t.set(e.index,e):t.set(e.key,e),e=e.sibling;return t}function a(e,t){return e=Ri(e,t),e.index=0,e.sibling=null,e}function o(t,n,r){return t.index=r,e?(r=t.alternate,r===null?(t.flags|=134217730,n):(r=r.index,r<n?(t.flags|=2,n):r)):(t.flags|=1048576,n)}function s(t){return e&&t.alternate===null&&(t.flags|=134217730),t}function c(e,t,n,r){return t===null||t.tag!==6?(t=Hi(n,e.mode,r),t.return=e,t):(t=a(t,n),t.return=e,t)}function l(e,t,n,r){var i=n.type;return i===re?(e=d(e,t,n.props.children,r,n.key),so(e,n),e):t!==null&&(t.elementType===i||typeof i==`object`&&i&&i.$$typeof===fe&&to(i)===t.type)?(t=a(t,n.props),so(t,n),t.return=e,t):(t=Bi(n.type,n.key,n.props,null,e.mode,r),so(t,n),t.return=e,t)}function u(e,t,n,r){return t===null||t.tag!==4||t.stateNode.containerInfo!==n.containerInfo||t.stateNode.implementation!==n.implementation?(t=Wi(n,e.mode,r),t.return=e,t):(t=a(t,n.children||[]),t.return=e,t)}function d(e,t,n,r,i){return t===null||t.tag!==7?(t=Vi(n,e.mode,r,i),t.return=e,t):(t=a(t,n),t.return=e,t)}function f(e,t,n){if(typeof t==`string`&&t!==``||typeof t==`number`||typeof t==`bigint`)return t=Hi(``+t,e.mode,n),t.return=e,t;if(typeof t==`object`&&t){switch(t.$$typeof){case D:return n=Bi(t.type,t.key,t.props,null,e.mode,n),so(n,t),n.return=e,n;case ne:return t=Wi(t,e.mode,n),t.return=e,t;case fe:return t=to(t),f(e,t,n)}if(Se(t)||ye(t))return t=Vi(t,e.mode,n,null),t.return=e,t;if(typeof t.then==`function`)return f(e,oo(t),n);if(t.$$typeof===se)return f(e,ka(e,t),n);co(e,t)}return null}function p(e,t,n,r){var i=t===null?null:t.key;if(typeof n==`string`&&n!==``||typeof n==`number`||typeof n==`bigint`)return i===null?c(e,t,``+n,r):null;if(typeof n==`object`&&n){switch(n.$$typeof){case D:return n.key===i?l(e,t,n,r):null;case ne:return n.key===i?u(e,t,n,r):null;case fe:return n=to(n),p(e,t,n,r)}if(Se(n)||ye(n))return i===null?d(e,t,n,r,null):null;if(typeof n.then==`function`)return p(e,t,oo(n),r);if(n.$$typeof===se)return p(e,t,ka(e,n),r);co(e,n)}return null}function m(e,t,n,r,i){if(typeof r==`string`&&r!==``||typeof r==`number`||typeof r==`bigint`)return e=e.get(n)||null,c(t,e,``+r,i);if(typeof r==`object`&&r){switch(r.$$typeof){case D:return e=e.get(r.key===null?n:r.key)||null,l(t,e,r,i);case ne:return e=e.get(r.key===null?n:r.key)||null,u(t,e,r,i);case fe:return r=to(r),m(e,t,n,r,i)}if(Se(r)||ye(r))return e=e.get(n)||null,d(t,e,r,i,null);if(typeof r.then==`function`)return m(e,t,n,oo(r),i);if(r.$$typeof===se)return m(e,t,n,ka(t,r),i);co(t,r)}return null}function h(i,a,s,c){for(var l=null,u=null,d=a,h=a=0,g=null;d!==null&&h<s.length;h++){d.index>h?(g=d,d=null):g=d.sibling;var _=p(i,d,s[h],c);if(_===null){d===null&&(d=g);break}e&&d&&_.alternate===null&&t(i,d),a=o(_,a,h),u===null?l=_:u.sibling=_,u=_,d=g}if(h===s.length)return n(i,d),L&&na(i,h),l;if(d===null){for(;h<s.length;h++)d=f(i,s[h],c),d!==null&&(a=o(d,a,h),u===null?l=d:u.sibling=d,u=d);return L&&na(i,h),l}for(d=r(d);h<s.length;h++)g=m(d,i,h,s[h],c),g!==null&&(e&&(_=g.alternate,_!==null&&d.delete(_.key===null?h:_.key)),a=o(g,a,h),u===null?l=g:u.sibling=g,u=g);return e&&d.forEach(function(e){return t(i,e)}),L&&na(i,h),l}function g(a,s,c,l){if(c==null)throw Error(i(151));for(var u=null,d=null,h=s,g=s=0,_=null,v=c.next();h!==null&&!v.done;g++,v=c.next()){h.index>g?(_=h,h=null):_=h.sibling;var y=p(a,h,v.value,l);if(y===null){h===null&&(h=_);break}e&&h&&y.alternate===null&&t(a,h),s=o(y,s,g),d===null?u=y:d.sibling=y,d=y,h=_}if(v.done)return n(a,h),L&&na(a,g),u;if(h===null){for(;!v.done;g++,v=c.next())v=f(a,v.value,l),v!==null&&(s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return L&&na(a,g),u}for(h=r(h);!v.done;g++,v=c.next())v=m(h,a,g,v.value,l),v!==null&&(e&&(_=v.alternate,_!==null&&h.delete(_.key===null?g:_.key)),s=o(v,s,g),d===null?u=v:d.sibling=v,d=v);return e&&h.forEach(function(e){return t(a,e)}),L&&na(a,g),u}function _(e,r,o,c){if(typeof o==`object`&&o&&o.type===re&&o.key===null&&o.props.ref===void 0&&(o=o.props.children),typeof o==`object`&&o){switch(o.$$typeof){case D:a:{for(var l=o.key;r!==null;){if(r.key===l){if(l=o.type,l===re){if(r.tag===7){n(e,r.sibling),c=a(r,o.props.children),so(c,o),c.return=e,e=c;break a}}else if(r.elementType===l||typeof l==`object`&&l&&l.$$typeof===fe&&to(l)===r.type){n(e,r.sibling),c=a(r,o.props),so(c,o),c.return=e,e=c;break a}n(e,r);break}t(e,r),r=r.sibling}o.type===re?(c=Vi(o.props.children,e.mode,c,o.key),so(c,o),c.return=e,e=c):(c=Bi(o.type,o.key,o.props,null,e.mode,c),so(c,o),c.return=e,e=c)}return s(e);case ne:a:{for(l=o.key;r!==null;){if(r.key===l){if(r.tag===4&&r.stateNode.containerInfo===o.containerInfo&&r.stateNode.implementation===o.implementation){n(e,r.sibling),c=a(r,o.children||[]),c.return=e,e=c;break a}n(e,r);break}t(e,r),r=r.sibling}c=Wi(o,e.mode,c),c.return=e,e=c}return s(e);case fe:return o=to(o),_(e,r,o,c)}if(Se(o))return h(e,r,o,c);if(ye(o)){if(l=ye(o),typeof l!=`function`)throw Error(i(150));return o=l.call(o),g(e,r,o,c)}if(typeof o.then==`function`)return _(e,r,oo(o),c);if(o.$$typeof===se)return _(e,r,ka(e,o),c);co(e,o)}return typeof o==`string`&&o!==``||typeof o==`number`||typeof o==`bigint`?(o=``+o,r!==null&&r.tag===6?(n(e,r.sibling),c=a(r,o),c.return=e,e=c):(n(e,r),c=Hi(o,e.mode,c),c.return=e,e=c),s(e)):n(e,r)}return function(e,t,n,r){try{ao=0;var i=_(e,t,n,r);return io=null,i}catch(t){if(t===R||t===B)throw t;var a=Ii(29,t,null,e.mode);return a.lanes=r,a.return=e,a}}}var uo=lo(!0),fo=lo(!1),po=!1;function mo(e){e.updateQueue={baseState:e.memoizedState,firstBaseUpdate:null,lastBaseUpdate:null,shared:{pending:null,lanes:0,hiddenCallbacks:null},callbacks:null}}function ho(e,t){e=e.updateQueue,t.updateQueue===e&&(t.updateQueue={baseState:e.baseState,firstBaseUpdate:e.firstBaseUpdate,lastBaseUpdate:e.lastBaseUpdate,shared:e.shared,callbacks:null})}function go(e){return{lane:e,tag:0,payload:null,callback:null,next:null}}function _o(e,t,n){var r=e.updateQueue;if(r===null)return null;if(r=r.shared,K&2){var i=r.pending;return i===null?t.next=t:(t.next=i.next,i.next=t),r.pending=t,t=Ni(e),Mi(e,null,n),t}return ki(e,r,t,n),Ni(e)}function vo(e,t,n){if(t=t.updateQueue,t!==null&&(t=t.shared,n&4194048)){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,Ct(e,n)}}function yo(e,t){var n=e.updateQueue,r=e.alternate;if(r!==null&&(r=r.updateQueue,n===r)){var i=null,a=null;if(n=n.firstBaseUpdate,n!==null){do{var o={lane:n.lane,tag:n.tag,payload:n.payload,callback:null,next:null};a===null?i=a=o:a=a.next=o,n=n.next}while(n!==null);a===null?i=a=t:a=a.next=t}else i=a=t;n={baseState:r.baseState,firstBaseUpdate:i,lastBaseUpdate:a,shared:r.shared,callbacks:r.callbacks},e.updateQueue=n;return}e=n.lastBaseUpdate,e===null?n.firstBaseUpdate=t:e.next=t,n.lastBaseUpdate=t}var bo=!1;function xo(){if(bo){var e=Ua;if(e!==null)throw e}}function So(e,t,n,r){bo=!1;var i=e.updateQueue;po=!1;var a=i.firstBaseUpdate,o=i.lastBaseUpdate,s=i.shared.pending;if(s!==null){i.shared.pending=null;var c=s,l=c.next;c.next=null,o===null?a=l:o.next=l,o=c;var u=e.alternate;u!==null&&(u=u.updateQueue,s=u.lastBaseUpdate,s!==o&&(s===null?u.firstBaseUpdate=l:s.next=l,u.lastBaseUpdate=c))}if(a!==null){var d=i.baseState;o=0,u=l=c=null,s=a;do{var f=s.lane&-536870913,p=f!==s.lane;if(p?(Y&f)===f:(r&f)===f){f!==0&&f===Ha&&(bo=!0),u!==null&&(u=u.next={lane:0,tag:s.tag,payload:s.payload,callback:null,next:null});a:{var m=e,h=s;f=t;var g=n;switch(h.tag){case 1:if(m=h.payload,typeof m==`function`){d=m.call(g,d,f);break a}d=m;break a;case 3:m.flags=m.flags&-65537|128;case 0:if(m=h.payload,f=typeof m==`function`?m.call(g,d,f):m,f==null)break a;d=T({},d,f);break a;case 2:po=!0}}f=s.callback,f!==null&&(e.flags|=64,p&&(e.flags|=8192),p=i.callbacks,p===null?i.callbacks=[f]:p.push(f))}else p={lane:f,tag:s.tag,payload:s.payload,callback:s.callback,next:null},u===null?(l=u=p,c=d):u=u.next=p,o|=f;if(s=s.next,s===null){if(s=i.shared.pending,s===null)break;p=s,s=p.next,p.next=null,i.lastBaseUpdate=p,i.shared.pending=null}}while(1);u===null&&(c=d),i.baseState=c,i.firstBaseUpdate=l,i.lastBaseUpdate=u,a===null&&(i.shared.lanes=0),od|=o,e.lanes=o,e.memoizedState=d}}function Co(e,t){if(typeof e!=`function`)throw Error(i(191,e));e.call(t)}function wo(e,t){var n=e.callbacks;if(n!==null)for(e.callbacks=null,e=0;e<n.length;e++)Co(n[e],t)}var To=Ee(null),Eo=Ee(0);function Do(e,t){e=id,A(Eo,e),A(To,t),id=e|t.baseLanes}function Oo(){A(Eo,id),A(To,To.current)}function ko(){id=Eo.current,De(To),De(Eo)}var Ao=Ee(null),jo=null;function Mo(e){var t=e.alternate;A(Lo,Lo.current&1),A(Ao,e),jo===null&&(t===null||To.current!==null||t.memoizedState!==null)&&(jo=e)}function No(e){A(Lo,Lo.current),A(Ao,e),jo===null&&(jo=e)}function Po(e){e.tag===22?(A(Lo,Lo.current),A(Ao,e),jo===null&&(jo=e)):Fo()}function Fo(){A(Lo,Lo.current),A(Ao,Ao.current)}function Io(e){De(Ao),jo===e&&(jo=null),De(Lo)}var Lo=Ee(0);function Ro(e,t){A(Ao,Ao.current),A(Lo,t)}function zo(e){De(Lo),De(Ao),jo===e&&(jo=null)}function Bo(e){for(var t=e;t!==null;){if(t.tag===13){var n=t.memoizedState;if(n!==null&&(n=n.dehydrated,n===null||om(n)||sm(n)))return t}else if(t.tag===19&&t.memoizedProps.revealOrder!==`independent`){if(t.flags&128)return t}else if(t.child!==null){t.child.return=t,t=t.child;continue}if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return null;t=t.return}t.sibling.return=t.return,t=t.sibling}return null}var Vo=0,H=null,U=null,Ho=null,Uo=!1,Wo=!1,Go=!1,Ko=0,qo=0,Jo=null,Yo=0;function Xo(){throw Error(i(321))}function Zo(e,t){if(t===null)return!1;for(var n=0;n<t.length&&n<e.length;n++)if(!Jr(e[n],t[n]))return!1;return!0}function Qo(e,t,n,r,i,a){return Vo=a,H=t,t.memoizedState=null,t.updateQueue=null,t.lanes=0,O.H=e===null||e.memoizedState===null?hc:gc,Go=!1,a=n(r,i),Go=!1,Wo&&(a=es(t,n,r,i)),$o(e),a}function $o(e){O.H=mc;var t=U!==null&&U.next!==null;if(Vo=0,Ho=U=H=null,Uo=!1,qo=0,Jo=null,t)throw Error(i(300));e===null||Nc||(e=e.dependencies,e!==null&&Ea(e)&&(Nc=!0))}function es(e,t,n,r){H=e;var a=0;do{if(Wo&&(Jo=null),qo=0,Wo=!1,25<=a)throw Error(i(301));if(a+=1,Ho=U=null,e.updateQueue!=null){var o=e.updateQueue;o.lastEffect=null,o.events=null,o.stores=null,o.memoCache!=null&&(o.memoCache.index=0)}O.H=_c,o=t(n,r)}while(Wo);return o}function ts(){var e=O.H,t=e.useState()[0];return t=typeof t.then==`function`?cs(t):t,e=e.useState()[0],(U===null?null:U.memoizedState)!==e&&(H.flags|=1024),t}function ns(){var e=Ko!==0;return Ko=0,e}function rs(e,t,n){t.updateQueue=e.updateQueue,t.flags&=-2053,e.lanes&=~n}function is(e){if(Uo){for(e=e.memoizedState;e!==null;){var t=e.queue;t!==null&&(t.pending=null),e=e.next}Uo=!1}Vo=0,Ho=U=H=null,Wo=!1,qo=Ko=0,Jo=null}function as(){var e={memoizedState:null,baseState:null,baseQueue:null,queue:null,next:null};return Ho===null?H.memoizedState=Ho=e:Ho=Ho.next=e,Ho}function os(){if(U===null){var e=H.alternate;e=e===null?null:e.memoizedState}else e=U.next;var t=Ho===null?H.memoizedState:Ho.next;if(t!==null)Ho=t,U=e;else{if(e===null)throw H.alternate===null?Error(i(467)):Error(i(310));U=e,e={memoizedState:U.memoizedState,baseState:U.baseState,baseQueue:U.baseQueue,queue:U.queue,next:null},Ho===null?H.memoizedState=Ho=e:Ho=Ho.next=e}return Ho}function ss(){return{lastEffect:null,events:null,stores:null,memoCache:null}}function cs(e){var t=qo;return qo+=1,Jo===null&&(Jo=[]),e=eo(Jo,e,t),t=H,(Ho===null?t.memoizedState:Ho.next)===null&&(t=t.alternate,O.H=t===null||t.memoizedState===null?hc:gc),e}function ls(e){if(typeof e==`object`&&e){if(typeof e.then==`function`)return cs(e);if(e.$$typeof===_e)return;if(e.$$typeof===se)return Oa(e)}throw Error(i(438,String(e)))}function us(e){var t=null,n=H.updateQueue;if(n!==null&&(t=n.memoCache),t==null){var r=H.alternate;r!==null&&(r=r.updateQueue,r!==null&&(r=r.memoCache,r!=null&&(t={data:r.data.map(function(e){return e.slice()}),index:0})))}if(t??={data:[],index:0},n===null&&(n=ss(),H.updateQueue=n),n.memoCache=t,n=t.data[t.index],n===void 0)for(n=t.data[t.index]=Array(e),r=0;r<e;r++)n[r]=he;return t.index++,n}function ds(e,t){return typeof t==`function`?t(e):t}function fs(e){return ps(os(),U,e)}function ps(e,t,n){var r=e.queue;if(r===null)throw Error(i(311));r.lastRenderedReducer=n;var a=e.baseQueue,o=r.pending;if(o!==null){if(a!==null){var s=a.next;a.next=o.next,o.next=s}t.baseQueue=a=o,r.pending=null}if(o=e.baseState,a===null)e.memoizedState=o;else{t=a.next;var c=s=null,l=null,u=t,d=!1;do{var f=u.lane&-536870913;if(f===u.lane?(Vo&f)===f:(Y&f)===f){var p=u.revertLane;if(p===0)l!==null&&(l=l.next={lane:0,revertLane:0,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null}),f===Ha&&(d=!0);else if((Vo&p)===p){u=u.next,p===Ha&&(d=!0);continue}else f={lane:0,revertLane:u.revertLane,gesture:null,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=f,s=o):l=l.next=f,H.lanes|=p,od|=p;f=u.action,Go&&n(o,f),o=u.hasEagerState?u.eagerState:n(o,f)}else p={lane:f,revertLane:u.revertLane,gesture:u.gesture,action:u.action,hasEagerState:u.hasEagerState,eagerState:u.eagerState,next:null},l===null?(c=l=p,s=o):l=l.next=p,H.lanes|=f,od|=f;u=u.next}while(u!==null&&u!==t);if(l===null?s=o:l.next=c,!Jr(o,e.memoizedState)&&(Nc=!0,d&&(n=Ua,n!==null)))throw n;e.memoizedState=o,e.baseState=s,e.baseQueue=l,r.lastRenderedState=o}return a===null&&(r.lanes=0),[e.memoizedState,r.dispatch]}function ms(e){var t=os(),n=t.queue;if(n===null)throw Error(i(311));n.lastRenderedReducer=e;var r=n.dispatch,a=n.pending,o=t.memoizedState;if(a!==null){n.pending=null;var s=a=a.next;do o=e(o,s.action),s=s.next;while(s!==a);Jr(o,t.memoizedState)||(Nc=!0),t.memoizedState=o,t.baseQueue===null&&(t.baseState=o),n.lastRenderedState=o}return[o,r]}function hs(e,t,n){var r=H,a=os(),o=L;if(o){if(n===void 0)throw Error(i(407));n=n()}else n=t();var s=!Jr((U||a).memoizedState,n);if(s&&(a.memoizedState=n,Nc=!0),a=a.queue,Bs(vs.bind(null,r,a,e),[e]),e=a.getSnapshot!==t||s||Ho!==null&&!!(Ho.memoizedState.tag&1),Fs(e?9:8,{destroy:void 0},_s.bind(null,r,a,n,t),null),e){if(r.flags|=2048,q===null)throw Error(i(349));o||Vo&127||gs(r,t,n)}return n}function gs(e,t,n){e.flags|=16384,e={getSnapshot:t,value:n},t=H.updateQueue,t===null?(t=ss(),H.updateQueue=t,t.stores=[e]):(n=t.stores,n===null?t.stores=[e]:n.push(e))}function _s(e,t,n,r){t.value=n,t.getSnapshot=r,ys(t)&&bs(e)}function vs(e,t,n){return n(function(){ys(t)&&bs(e)})}function ys(e){var t=e.getSnapshot;e=e.value;try{var n=t();return!Jr(e,n)}catch{return!0}}function bs(e){var t=ji(e,2);t!==null&&Pd(t,e,2)}function xs(e){var t=as();if(typeof e==`function`){var n=e;if(e=n(),Go){at(!0);try{n()}finally{at(!1)}}}return t.memoizedState=t.baseState=e,t.queue={pending:null,lanes:0,dispatch:null,lastRenderedReducer:ds,lastRenderedState:e},t}function Ss(e,t,n,r){return e.baseState=n,ps(e,U,typeof r==`function`?r:ds)}function Cs(e,t,n,r,a){if(dc(e))throw Error(i(485));if(e=t.action,e!==null){var o={payload:a,action:e,next:null,isTransition:!0,status:`pending`,value:null,reason:null,listeners:[],then:function(e){o.listeners.push(e)}};O.T===null?o.isTransition=!1:n(!0),r(o),n=t.pending,n===null?(o.next=t.pending=o,ws(t,o)):(o.next=n.next,t.pending=n.next=o)}}function ws(e,t){var n=t.action,r=t.payload,i=e.state;if(t.isTransition){var a=O.T,o={};o.types=a===null?null:a.types,O.T=o;try{var s=n(i,r),c=O.S;c!==null&&c(o,s),Ts(e,t,s)}catch(n){Ds(e,t,n)}finally{a!==null&&o.types!==null&&(a.types=o.types),O.T=a}}else try{a=n(i,r),Ts(e,t,a)}catch(n){Ds(e,t,n)}}function Ts(e,t,n){typeof n==`object`&&n&&typeof n.then==`function`?n.then(function(n){Es(e,t,n)},function(n){return Ds(e,t,n)}):Es(e,t,n)}function Es(e,t,n){t.status=`fulfilled`,t.value=n,Os(t),e.state=n,t=e.pending,t!==null&&(n=t.next,n===t?e.pending=null:(n=n.next,t.next=n,ws(e,n)))}function Ds(e,t,n){var r=e.pending;if(e.pending=null,r!==null){r=r.next;do t.status=`rejected`,t.reason=n,Os(t),t=t.next;while(t!==r)}e.action=null}function Os(e){e=e.listeners;for(var t=0;t<e.length;t++)(0,e[t])()}function ks(e,t){return t}function As(e,t){if(L){var n=q.formState;if(n!==null){a:{var r=H;if(L){if(I){b:{for(var i=I,a=la;i.nodeType!==8;){if(!a){i=null;break b}if(i=lm(i.nextSibling),i===null){i=null;break b}}a=i.data,i=a===`F!`||a===`F`?i:null}if(i){I=lm(i.nextSibling),r=i.data===`F!`;break a}}da(r)}r=!1}r&&(t=n[0])}}return n=as(),n.memoizedState=n.baseState=t,r={pending:null,lanes:0,dispatch:null,lastRenderedReducer:ks,lastRenderedState:t},n.queue=r,n=cc.bind(null,H,r),r.dispatch=n,r=xs(!1),a=uc.bind(null,H,!1,r.queue),r=as(),i={state:t,dispatch:null,action:e,pending:null},r.queue=i,n=Cs.bind(null,H,i,a,n),i.dispatch=n,r.memoizedState=e,[t,n,!1]}function js(e){return Ms(os(),U,e)}function Ms(e,t,n){if(t=ps(e,t,ks)[0],e=fs(ds)[0],typeof t==`object`&&t&&typeof t.then==`function`)try{var r=cs(t)}catch(e){throw e===R?B:e}else r=t;t=os();var i=t.queue,a=i.dispatch;return n!==t.memoizedState&&(H.flags|=2048,Fs(9,{destroy:void 0},Ns.bind(null,i,n),null)),[r,a,e]}function Ns(e,t){e.action=t}function Ps(e){var t=os(),n=U;if(n!==null)return Ms(t,n,e);os(),t=t.memoizedState,n=os();var r=n.queue.dispatch;return n.memoizedState=e,[t,r,!1]}function Fs(e,t,n,r){return e={tag:e,create:n,deps:r,inst:t,next:null},t=H.updateQueue,t===null&&(t=ss(),H.updateQueue=t),n=t.lastEffect,n===null?t.lastEffect=e.next=e:(r=n.next,n.next=e,e.next=r,t.lastEffect=e),e}function Is(){return os().memoizedState}function Ls(e,t,n,r){var i=as();H.flags|=e,i.memoizedState=Fs(1|t,{destroy:void 0},n,r===void 0?null:r)}function Rs(e,t,n,r){var i=os();r=r===void 0?null:r;var a=i.memoizedState.inst;U!==null&&r!==null&&Zo(r,U.memoizedState.deps)?i.memoizedState=Fs(t,a,n,r):(H.flags|=e,i.memoizedState=Fs(1|t,a,n,r))}function zs(e,t){Ls(8390656,8,e,t)}function Bs(e,t){Rs(2048,8,e,t)}function Vs(e){H.flags|=4;var t=H.updateQueue;if(t===null)t=ss(),H.updateQueue=t,t.events=[e];else{var n=t.events;n===null?t.events=[e]:n.push(e)}}function Hs(e){var t=os().memoizedState;return Vs({ref:t,nextImpl:e}),function(){if(K&2)throw Error(i(440));return t.impl.apply(void 0,arguments)}}function Us(e,t){return Rs(4,2,e,t)}function Ws(e,t){return Rs(4,4,e,t)}function Gs(e,t){if(typeof t==`function`){e=e();var n=t(e);return function(){typeof n==`function`?n():t(null)}}if(t!=null)return e=e(),t.current=e,function(){t.current=null}}function Ks(e,t,n){n=n==null?null:n.concat([e]),Rs(4,4,Gs.bind(null,t,e),n)}function qs(){}function Js(e,t){var n=os();t=t===void 0?null:t;var r=n.memoizedState;return t!==null&&Zo(t,r[1])?r[0]:(n.memoizedState=[e,t],e)}function Ys(e,t){var n=os();t=t===void 0?null:t;var r=n.memoizedState;if(t!==null&&Zo(t,r[1]))return r[0];if(r=e(),Go){at(!0);try{e()}finally{at(!1)}}return n.memoizedState=[r,t],r}function Xs(e,t,n){return n===void 0||Vo&1073741824&&!(Y&261930)?e.memoizedState=t:(e.memoizedState=n,e=Md(),H.lanes|=e,od|=e,n)}function Zs(e,t,n,r){return Jr(n,t)?n:To.current===null?!(Vo&106)||Vo&1073741824&&!(Y&261930)?(Nc=!0,e.memoizedState=n):(e=Md(),H.lanes|=e,od|=e,t):(e=Xs(e,n,r),Jr(e,t)||(Nc=!0),e)}function Qs(e,t,n,r,i){var a=k.p;k.p=a!==0&&8>a?a:8;var o=O.T,s={};s.types=o===null?null:o.types,O.T=s,uc(e,!1,t,n);try{var c=i(),l=O.S;l!==null&&l(s,c),typeof c==`object`&&c&&typeof c.then==`function`?lc(e,t,Ka(c,r),jd(e)):lc(e,t,r,jd(e))}catch(n){lc(e,t,{then:function(){},status:`rejected`,reason:n},jd())}finally{k.p=a,o!==null&&s.types!==null&&(o.types=s.types),O.T=o}}function $s(){}function ec(e,t,n,r){if(e.tag!==5)throw Error(i(476));var a=tc(e).queue;Qs(e,a,t,Ce,n===null?$s:function(){return nc(e),n(r)})}function tc(e){var t=e.memoizedState;if(t!==null)return t;t={memoizedState:Ce,baseState:Ce,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:ds,lastRenderedState:Ce},next:null};var n={};return t.next={memoizedState:n,baseState:n,baseQueue:null,queue:{pending:null,lanes:0,dispatch:null,lastRenderedReducer:ds,lastRenderedState:n},next:null},e.memoizedState=t,e=e.alternate,e!==null&&(e.memoizedState=t),t}function nc(e){var t=tc(e);t.next===null&&(t=e.alternate.memoizedState),lc(e,t.next.queue,{},jd())}function rc(){return Oa(sh)}function ic(){return os().memoizedState}function ac(){return os().memoizedState}function oc(e){for(var t=e.return;t!==null;){switch(t.tag){case 24:case 3:var n=jd();e=go(n);var r=_o(t,e,n);r!==null&&(Pd(r,t,n),vo(r,t,n)),t={cache:Fa()},e.payload=t;return}t=t.return}}function sc(e,t,n){var r=jd();n={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null},dc(e)?fc(t,n):(n=Ai(e,t,n,r),n!==null&&(Pd(n,e,r),pc(n,t,r)))}function cc(e,t,n){lc(e,t,n,jd())}function lc(e,t,n,r){var i={lane:r,revertLane:0,gesture:null,action:n,hasEagerState:!1,eagerState:null,next:null};if(dc(e))fc(t,i);else{var a=e.alternate;if(e.lanes===0&&(a===null||a.lanes===0)&&(a=t.lastRenderedReducer,a!==null))try{var o=t.lastRenderedState,s=a(o,n);if(i.hasEagerState=!0,i.eagerState=s,Jr(s,o))return ki(e,t,i,0),q===null&&Oi(),!1}catch{}if(n=Ai(e,t,i,r),n!==null)return Pd(n,e,r),pc(n,t,r),!0}return!1}function uc(e,t,n,r){if(r={lane:2,revertLane:Pf(),gesture:null,action:r,hasEagerState:!1,eagerState:null,next:null},dc(e)){if(t)throw Error(i(479))}else t=Ai(e,n,r,2),t!==null&&Pd(t,e,2)}function dc(e){var t=e.alternate;return e===H||t!==null&&t===H}function fc(e,t){Wo=Uo=!0;var n=e.pending;n===null?t.next=t:(t.next=n.next,n.next=t),e.pending=t}function pc(e,t,n){if(n&4194048){var r=t.lanes;r&=e.pendingLanes,n|=r,t.lanes=n,Ct(e,n)}}var mc={readContext:Oa,use:ls,useCallback:Xo,useContext:Xo,useEffect:Xo,useImperativeHandle:Xo,useLayoutEffect:Xo,useInsertionEffect:Xo,useMemo:Xo,useReducer:Xo,useRef:Xo,useState:Xo,useDebugValue:Xo,useDeferredValue:Xo,useTransition:Xo,useSyncExternalStore:Xo,useId:Xo,useHostTransitionStatus:Xo,useFormState:Xo,useActionState:Xo,useOptimistic:Xo,useMemoCache:Xo,useCacheRefresh:Xo,useEffectEvent:Xo},hc={readContext:Oa,use:ls,useCallback:function(e,t){return as().memoizedState=[e,t===void 0?null:t],e},useContext:Oa,useEffect:zs,useImperativeHandle:function(e,t,n){n=n==null?null:n.concat([e]),Ls(4194308,4,Gs.bind(null,t,e),n)},useLayoutEffect:function(e,t){return Ls(4194308,4,e,t)},useInsertionEffect:function(e,t){Ls(4,2,e,t)},useMemo:function(e,t){var n=as();t=t===void 0?null:t;var r=e();if(Go){at(!0);try{e()}finally{at(!1)}}return n.memoizedState=[r,t],r},useReducer:function(e,t,n){var r=as();if(n!==void 0){var i=n(t);if(Go){at(!0);try{n(t)}finally{at(!1)}}}else i=t;return r.memoizedState=r.baseState=i,e={pending:null,lanes:0,dispatch:null,lastRenderedReducer:e,lastRenderedState:i},r.queue=e,e=e.dispatch=sc.bind(null,H,e),[r.memoizedState,e]},useRef:function(e){var t=as();return e={current:e},t.memoizedState=e},useState:function(e){e=xs(e);var t=e.queue,n=cc.bind(null,H,t);return t.dispatch=n,[e.memoizedState,n]},useDebugValue:qs,useDeferredValue:function(e,t){return Xs(as(),e,t)},useTransition:function(){var e=xs(!1);return e=Qs.bind(null,H,e.queue,!0,!1),as().memoizedState=e,[!1,e]},useSyncExternalStore:function(e,t,n){var r=H,a=as();if(L){if(n===void 0)throw Error(i(407));n=n()}else{if(n=t(),q===null)throw Error(i(349));Y&127||gs(r,t,n)}a.memoizedState=n;var o={value:n,getSnapshot:t};return a.queue=o,zs(vs.bind(null,r,o,e),[e]),r.flags|=2048,Fs(9,{destroy:void 0},_s.bind(null,r,o,n,t),null),n},useId:function(){var e=as(),t=q.identifierPrefix;if(L){var n=ta,r=ea;n=(r&~(1<<32-ot(r)-1)).toString(32)+n,t=`_`+t+`R_`+n,n=Ko++,0<n&&(t+=`H`+n.toString(32)),t+=`_`}else n=Yo++,t=`_`+t+`r_`+n.toString(32)+`_`;return e.memoizedState=t},useHostTransitionStatus:rc,useFormState:As,useActionState:As,useOptimistic:function(e){var t=as();t.memoizedState=t.baseState=e;var n={pending:null,lanes:0,dispatch:null,lastRenderedReducer:null,lastRenderedState:null};return t.queue=n,t=uc.bind(null,H,!0,n),n.dispatch=t,[e,t]},useMemoCache:us,useCacheRefresh:function(){return as().memoizedState=oc.bind(null,H)},useEffectEvent:function(e){var t=as(),n={impl:e};return t.memoizedState=n,function(){if(K&2)throw Error(i(440));return n.impl.apply(void 0,arguments)}}},gc={readContext:Oa,use:ls,useCallback:Js,useContext:Oa,useEffect:Bs,useImperativeHandle:Ks,useInsertionEffect:Us,useLayoutEffect:Ws,useMemo:Ys,useReducer:fs,useRef:Is,useState:function(){return fs(ds)},useDebugValue:qs,useDeferredValue:function(e,t){return Zs(os(),U.memoizedState,e,t)},useTransition:function(){var e=fs(ds)[0],t=os().memoizedState;return[typeof e==`boolean`?e:cs(e),t]},useSyncExternalStore:hs,useId:ic,useHostTransitionStatus:rc,useFormState:js,useActionState:js,useOptimistic:function(e,t){return Ss(os(),U,e,t)},useMemoCache:us,useCacheRefresh:ac,useEffectEvent:Hs},_c={readContext:Oa,use:ls,useCallback:Js,useContext:Oa,useEffect:Bs,useImperativeHandle:Ks,useInsertionEffect:Us,useLayoutEffect:Ws,useMemo:Ys,useReducer:ms,useRef:Is,useState:function(){return ms(ds)},useDebugValue:qs,useDeferredValue:function(e,t){var n=os();return U===null?Xs(n,e,t):Zs(n,U.memoizedState,e,t)},useTransition:function(){var e=ms(ds)[0],t=os().memoizedState;return[typeof e==`boolean`?e:cs(e),t]},useSyncExternalStore:hs,useId:ic,useHostTransitionStatus:rc,useFormState:Ps,useActionState:Ps,useOptimistic:function(e,t){var n=os();return U===null?(n.baseState=e,[e,n.queue.dispatch]):Ss(n,U,e,t)},useMemoCache:us,useCacheRefresh:ac,useEffectEvent:Hs};function vc(e,t,n,r){t=e.memoizedState,n=n(r,t),n=n==null?t:T({},t,n),e.memoizedState=n,e.lanes===0&&(e.updateQueue.baseState=n)}var yc={enqueueSetState:function(e,t,n){e=e._reactInternals;var r=jd(),i=go(r);i.payload=t,n!=null&&(i.callback=n),t=_o(e,i,r),t!==null&&(Pd(t,e,r),vo(t,e,r))},enqueueReplaceState:function(e,t,n){e=e._reactInternals;var r=jd(),i=go(r);i.tag=1,i.payload=t,n!=null&&(i.callback=n),t=_o(e,i,r),t!==null&&(Pd(t,e,r),vo(t,e,r))},enqueueForceUpdate:function(e,t){e=e._reactInternals;var n=jd(),r=go(n);r.tag=2,t!=null&&(r.callback=t),t=_o(e,r,n),t!==null&&(Pd(t,e,n),vo(t,e,n))}};function bc(e,t,n,r,i,a,o){return e=e.stateNode,typeof e.shouldComponentUpdate==`function`?e.shouldComponentUpdate(r,a,o):t.prototype&&t.prototype.isPureReactComponent?!Yr(n,r)||!Yr(i,a):!0}function xc(e,t,n,r){e=t.state,typeof t.componentWillReceiveProps==`function`&&t.componentWillReceiveProps(n,r),typeof t.UNSAFE_componentWillReceiveProps==`function`&&t.UNSAFE_componentWillReceiveProps(n,r),t.state!==e&&yc.enqueueReplaceState(t,t.state,null)}function Sc(e,t){var n=t;if(`ref`in t)for(var r in n={},t)r!==`ref`&&(n[r]=t[r]);if(e=e.defaultProps)for(var i in n===t&&(n=T({},n)),e)n[i]===void 0&&(n[i]=e[i]);return n}function Cc(e){wi(e)}function wc(e){console.error(e)}function Tc(e){wi(e)}function Ec(e,t){try{var n=e.onUncaughtError;n(t.value,{componentStack:t.stack})}catch(e){setTimeout(function(){throw e})}}function Dc(e,t,n){try{var r=e.onCaughtError;r(n.value,{componentStack:n.stack,errorBoundary:t.tag===1?t.stateNode:null})}catch(e){setTimeout(function(){throw e})}}function Oc(e,t,n){return n=go(n),n.tag=3,n.payload={element:null},n.callback=function(){Ec(e,t)},n}function kc(e){return e=go(e),e.tag=3,e}function Ac(e,t,n,r){var i=n.type.getDerivedStateFromError;if(typeof i==`function`){var a=r.value;e.payload=function(){return i(a)},e.callback=function(){Dc(t,n,r)}}var o=n.stateNode;o!==null&&typeof o.componentDidCatch==`function`&&(e.callback=function(){Dc(t,n,r),typeof i!=`function`&&(vd===null?vd=new Set([this]):vd.add(this));var e=r.stack;this.componentDidCatch(r.value,{componentStack:e===null?``:e})})}function jc(e,t,n,r,a){if(n.flags|=32768,typeof r==`object`&&r&&typeof r.then==`function`){if(t=n.alternate,t!==null&&Ta(t,n,a,!0),n=Ao.current,n!==null){switch(n.tag){case 31:case 13:case 19:return jo===null?Kd():n.alternate===null&&ad===0&&(ad=3),n.flags&=-257,n.flags|=65536,n.lanes=a,r===Qa?n.flags|=16384:(t=n.updateQueue,t===null?n.updateQueue=new Set([r]):t.add(r),mf(e,r,a)),!1;case 22:return n.flags|=65536,r===Qa?n.flags|=16384:(t=n.updateQueue,t===null?(t={transitions:null,markerInstances:null,retryQueue:new Set([r])},n.updateQueue=t):(n=t.retryQueue,n===null?t.retryQueue=new Set([r]):n.add(r)),mf(e,r,a)),!1}throw Error(i(435,n.tag))}return mf(e,r,a),Kd(),!1}if(L)return t=Ao.current,t===null?(r!==ua&&(t=Error(i(423),{cause:r}),_a(Ki(t,n))),e=e.current.alternate,e.flags|=65536,a&=-a,e.lanes|=a,r=Ki(r,n),a=Oc(e.stateNode,r,a),yo(e,a),ad!==4&&(ad=2)):(!(t.flags&65536)&&(t.flags|=256),t.flags|=65536,t.lanes=a,r!==ua&&(e=Error(i(422),{cause:r}),_a(Ki(e,n)))),!1;var o=Error(i(520),{cause:r});if(o=Ki(o,n),dd===null?dd=[o]:dd.push(o),ad!==4&&(ad=2),t===null)return!0;r=Ki(r,n),n=t;do{switch(n.tag){case 3:return n.flags|=65536,e=a&-a,n.lanes|=e,e=Oc(n.stateNode,r,e),yo(n,e),!1;case 1:if(t=n.type,o=n.stateNode,!(n.flags&128)&&(typeof t.getDerivedStateFromError==`function`||o!==null&&typeof o.componentDidCatch==`function`&&(vd===null||!vd.has(o))))return n.flags|=65536,a&=-a,n.lanes|=a,a=kc(a),Ac(a,e,n,r),yo(n,a),!1;break;case 22:if(n.memoizedState!==null)return n.flags|=65536,!1}n=n.return}while(n!==null);return!1}var Mc=Error(i(461)),Nc=!1;function Pc(e,t,n,r){t.child=e===null?fo(t,null,n,r):uo(t,e.child,n,r)}function Fc(e,t,n,r,i){n=n.render;var a=t.ref;if(`ref`in r){var o={};for(var s in r)s!==`ref`&&(o[s]=r[s])}else o=r;return Da(t),r=Qo(e,t,n,o,a,i),s=ns(),e!==null&&!Nc?(rs(e,t,i),ll(e,t,i)):(L&&s&&ia(t),t.flags|=1,Pc(e,t,r,i),t.child)}function Ic(e,t,n,r,i){if(e===null){var a=n.type;return typeof a==`function`&&!Li(a)&&a.defaultProps===void 0&&n.compare===null?(t.tag=15,t.type=a,Lc(e,t,a,r,i)):(e=Bi(n.type,null,r,t,t.mode,i),e.ref=t.ref,e.return=t,t.child=e)}if(a=e.child,!ul(e,i)){var o=a.memoizedProps;if(n=n.compare,n=n===null?Yr:n,n(o,r)&&e.ref===t.ref)return ll(e,t,i)}return t.flags|=1,e=Ri(a,r),e.ref=t.ref,e.return=t,t.child=e}function Lc(e,t,n,r,i){if(e!==null){var a=e.memoizedProps;if(Yr(a,r)&&e.ref===t.ref){if(Nc=!1,t.pendingProps=r=a,ul(e,i))e.flags&131072&&(Nc=!0);else return t.lanes=e.lanes,ll(e,t,i)}}return Gc(e,t,n,r,i)}function Rc(e,t,n,r){var i=r.children,a=e===null?null:e.memoizedState;if(e===null&&t.stateNode===null&&(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),r.mode===`hidden`){if(t.flags&128){if(a=a===null?n:a.baseLanes|n,e!==null){for(r=t.child=e.child,i=0;r!==null;)i=i|r.lanes|r.childLanes,r=r.sibling;r=i&~a}else r=0,t.child=null;return Bc(e,t,a,n,r)}if(n&536870912)t.memoizedState={baseLanes:0,cachePool:null},e!==null&&Xa(t,a===null?null:a.cachePool),a===null?Oo():Do(t,a),Po(t);else return r=t.lanes=536870912,Bc(e,t,a===null?n:a.baseLanes|n,n,r)}else a===null?(e!==null&&Xa(t,null),Oo(),Fo()):(Xa(t,a.cachePool),Do(t,a),Fo(),t.memoizedState=null);return Pc(e,t,i,n),t.child}function zc(e,t){return e!==null&&e.tag===22||t.stateNode!==null||(t.stateNode={_visibility:1,_pendingMarkers:null,_retryCache:null,_transitions:null}),t.sibling}function Bc(e,t,n,r,i){var a=Ya();return a=a===null?null:{parent:Pa._currentValue,pool:a},t.memoizedState={baseLanes:n,cachePool:a},e!==null&&Xa(t,null),Oo(),Po(t),e!==null&&Ta(e,t,r,!0),t.childLanes=i,null}function Vc(e,t){return t=el({mode:t.mode,children:t.children},e.mode),t.ref=e.ref,e.child=t,t.return=e,t}function Hc(e,t,n){return uo(t,e.child,null,n),e=Vc(t,t.pendingProps),e.flags|=2,Io(t),t.memoizedState=null,e}function Uc(e,t,n){var r=t.pendingProps,a=!!(t.flags&128);if(t.flags&=-129,e===null){if(L){if(r.mode===`hidden`)return e=Vc(t,r),t.lanes=536870912,e.memoizedState={baseLanes:0,cachePool:null},zc(null,e);if(No(t),(e=I)?(e=am(e,la),e=e!==null&&e.data===`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:$i===null?null:{id:ea,overflow:ta},retryLane:536870912,hydrationErrors:null},n=Ui(e),n.return=t,t.child=n,sa=t,I=null)):e=null,e===null)throw da(t);return t.lanes=536870912,null}return Vc(t,r)}var o=e.memoizedState;if(o!==null){var s=o.dehydrated;if(No(t),a){if(t.flags&256)t.flags&=-257,t=Hc(e,t,n);else if(t.memoizedState!==null)t.child=e.child,t.flags|=128,t=null;else throw Error(i(558))}else if(Nc||Ta(e,t,n,!1),a=(n&e.childLanes)!==0,Nc||a){if(To.current===null){if(r=q,r!==null&&(s=wt(r,n),s!==0&&s!==o.retryLane))throw o.retryLane=s,ji(e,s),Pd(r,e,s),Mc;Kd()}t=Hc(e,t,n)}else e=o.treeContext,I=lm(s.nextSibling),sa=t,L=!0,ca=null,la=!1,e!==null&&oa(t,e),t=Vc(t,r),t.flags|=134221824;return t}return e=Ri(e.child,{mode:r.mode,children:r.children}),e.ref=t.ref,t.child=e,e.return=t,e}function Wc(e,t){var n=t.ref;if(n===null)e!==null&&e.ref!==null&&(t.flags|=4194816);else{if(typeof n!=`function`&&typeof n!=`object`)throw Error(i(284));(e===null||e.ref!==n)&&(t.flags|=4194816)}}function Gc(e,t,n,r,i){return Da(t),n=Qo(e,t,n,r,void 0,i),r=ns(),e!==null&&!Nc?(rs(e,t,i),ll(e,t,i)):(L&&r&&ia(t),t.flags|=1,Pc(e,t,n,i),t.child)}function Kc(e,t,n,r,i,a){return Da(t),t.updateQueue=null,n=es(t,r,n,i),$o(e),r=ns(),e!==null&&!Nc?(rs(e,t,a),ll(e,t,a)):(L&&r&&ia(t),t.flags|=1,Pc(e,t,n,a),t.child)}function qc(e,t,n,r,i){if(Da(t),t.stateNode===null){var a=Pi,o=n.contextType;typeof o==`object`&&o&&(a=Oa(o)),a=new n(r,a),t.memoizedState=a.state!==null&&a.state!==void 0?a.state:null,a.updater=yc,t.stateNode=a,a._reactInternals=t,a=t.stateNode,a.props=r,a.state=t.memoizedState,a.refs={},mo(t),o=n.contextType,a.context=typeof o==`object`&&o?Oa(o):Pi,a.state=t.memoizedState,o=n.getDerivedStateFromProps,typeof o==`function`&&(vc(t,n,o,r),a.state=t.memoizedState),typeof n.getDerivedStateFromProps==`function`||typeof a.getSnapshotBeforeUpdate==`function`||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(o=a.state,typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount(),o!==a.state&&yc.enqueueReplaceState(a,a.state,null),So(t,r,a,i),xo(),a.state=t.memoizedState),typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!0}else if(e===null){a=t.stateNode;var s=t.memoizedProps,c=Sc(n,s);a.props=c;var l=a.context,u=n.contextType;o=Pi,typeof u==`object`&&u&&(o=Oa(u));var d=n.getDerivedStateFromProps;u=typeof d==`function`||typeof a.getSnapshotBeforeUpdate==`function`,s=t.pendingProps!==s,u||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(s||l!==o)&&xc(t,a,r,o),po=!1;var f=t.memoizedState;a.state=f,So(t,r,a,i),xo(),l=t.memoizedState,s||f!==l||po?(typeof d==`function`&&(vc(t,n,d,r),l=t.memoizedState),(c=po||bc(t,n,c,r,f,l,o))?(u||typeof a.UNSAFE_componentWillMount!=`function`&&typeof a.componentWillMount!=`function`||(typeof a.componentWillMount==`function`&&a.componentWillMount(),typeof a.UNSAFE_componentWillMount==`function`&&a.UNSAFE_componentWillMount()),typeof a.componentDidMount==`function`&&(t.flags|=4194308)):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),t.memoizedProps=r,t.memoizedState=l),a.props=r,a.state=l,a.context=o,r=c):(typeof a.componentDidMount==`function`&&(t.flags|=4194308),r=!1)}else{a=t.stateNode,ho(e,t),o=t.memoizedProps,u=Sc(n,o),a.props=u,d=t.pendingProps,f=a.context,l=n.contextType,c=Pi,typeof l==`object`&&l&&(c=Oa(l)),s=n.getDerivedStateFromProps,(l=typeof s==`function`||typeof a.getSnapshotBeforeUpdate==`function`)||typeof a.UNSAFE_componentWillReceiveProps!=`function`&&typeof a.componentWillReceiveProps!=`function`||(o!==d||f!==c)&&xc(t,a,r,c),po=!1,f=t.memoizedState,a.state=f,So(t,r,a,i),xo();var p=t.memoizedState;o!==d||f!==p||po||e!==null&&e.dependencies!==null&&Ea(e.dependencies)?(typeof s==`function`&&(vc(t,n,s,r),p=t.memoizedState),(u=po||bc(t,n,u,r,f,p,c)||e!==null&&e.dependencies!==null&&Ea(e.dependencies))?(l||typeof a.UNSAFE_componentWillUpdate!=`function`&&typeof a.componentWillUpdate!=`function`||(typeof a.componentWillUpdate==`function`&&a.componentWillUpdate(r,p,c),typeof a.UNSAFE_componentWillUpdate==`function`&&a.UNSAFE_componentWillUpdate(r,p,c)),typeof a.componentDidUpdate==`function`&&(t.flags|=4),typeof a.getSnapshotBeforeUpdate==`function`&&(t.flags|=1024)):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),t.memoizedProps=r,t.memoizedState=p),a.props=r,a.state=p,a.context=c,r=u):(typeof a.componentDidUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=4),typeof a.getSnapshotBeforeUpdate!=`function`||o===e.memoizedProps&&f===e.memoizedState||(t.flags|=1024),r=!1)}return a=r,Wc(e,t),r=!!(t.flags&128),a||r?(a=t.stateNode,n=r&&typeof n.getDerivedStateFromError!=`function`?null:a.render(),t.flags|=1,e!==null&&r?(t.child=uo(t,e.child,null,i),t.child=uo(t,null,n,i)):Pc(e,t,n,i),t.memoizedState=a.state,e=t.child):e=ll(e,t,i),e}function Jc(e,t,n,r){return ha(),t.flags|=256,Pc(e,t,n,r),t.child}var Yc={dehydrated:null,treeContext:null,retryLane:0,hydrationErrors:null};function Xc(e){return{baseLanes:e,cachePool:Za()}}function Zc(e,t,n){return e=e===null?0:e.childLanes&~n,t&&(e|=ld),e}function Qc(e,t,n){var r=t.pendingProps,i=!1,a=!!(t.flags&128),o;if((o=a)||(o=e!==null&&e.memoizedState===null?!1:!!(Lo.current&2)),o&&(i=!0,t.flags&=-129),o=!!(t.flags&32),t.flags&=-33,e===null){if(L){if(i?Mo(t):Fo(),(e=I)?(e=am(e,la),e=e!==null&&e.data!==`&`?e:null,e!==null&&(t.memoizedState={dehydrated:e,treeContext:$i===null?null:{id:ea,overflow:ta},retryLane:536870912,hydrationErrors:null},n=Ui(e),n.return=t,t.child=n,sa=t,I=null)):e=null,e===null)throw da(t);return t.lanes=sm(e)?32:536870912,null}return a=r.children,r=r.fallback,i?(Fo(),i=t.mode,a=el({mode:`hidden`,children:a},i),r=Vi(r,i,n,null),a.return=t,r.return=t,a.sibling=r,t.child=a,r=t.child,r.memoizedState=Xc(n),r.childLanes=Zc(e,o,n),t.memoizedState=Yc,zc(null,r)):(Mo(t),$c(t,a))}var s=e.memoizedState;if(s!==null){var c=s.dehydrated;if(c!==null)return nl(e,t,a,o,r,c,s,n)}return i?(Fo(),i=r.fallback,a=t.mode,s=e.child,c=s.sibling,r=Ri(s,{mode:`hidden`,children:r.children}),r.subtreeFlags=s.subtreeFlags&1206910976,c===null?(i=Vi(i,a,n,null),i.flags|=2):i=Ri(c,i),i.return=t,r.return=t,r.sibling=i,t.child=r,zc(null,r),r=t.child,i=e.child.memoizedState,i===null?i=Xc(n):(a=i.cachePool,a===null?a=Za():(s=Pa._currentValue,a=a.parent===s?a:{parent:s,pool:s}),i={baseLanes:i.baseLanes|n,cachePool:a}),r.memoizedState=i,r.childLanes=Zc(e,o,n),t.memoizedState=Yc,zc(e.child,r)):(Mo(t),n=e.child,e=n.sibling,n=Ri(n,{mode:`visible`,children:r.children}),n.return=t,n.sibling=null,e!==null&&(o=t.deletions,o===null?(t.deletions=[e],t.flags|=16):o.push(e)),t.child=n,t.memoizedState=null,n)}function $c(e,t){return t=el({mode:`visible`,children:t},e.mode),t.return=e,e.child=t}function el(e,t){return e=Ii(22,e,null,t),e.lanes=0,e}function tl(e,t,n){return uo(t,e.child,null,n),e=$c(t,t.pendingProps.children),e.flags|=2,t.memoizedState=null,e}function nl(e,t,n,r,a,o,s,c){if(n)return t.flags&256?(Mo(t),t.flags&=-257,tl(e,t,c)):t.memoizedState===null?(Fo(),o=a.fallback,s=t.mode,a=el({mode:`visible`,children:a.children},s),o=Vi(o,s,c,null),o.flags|=2,a.return=t,o.return=t,a.sibling=o,t.child=a,uo(t,e.child,null,c),a=t.child,a.memoizedState=Xc(c),a.childLanes=Zc(e,r,c),t.memoizedState=Yc,zc(null,a)):(Fo(),t.child=e.child,t.flags|=128,null);if(Mo(t),sm(o)){if(r=o.nextSibling&&o.nextSibling.dataset,r)var l=r.dgst;return r=l,r!==``&&(a=Error(i(419)),a.stack=``,a.digest=r,_a({value:a,source:null,stack:null})),tl(e,t,c)}if(Nc||Ta(e,t,c,!1),r=(c&e.childLanes)!==0,Nc||r){if(To.current!==null)return tl(e,t,c);if(r=q,r!==null&&(a=wt(r,c),a!==0&&a!==s.retryLane))throw s.retryLane=a,ji(e,a),Pd(r,e,a),Mc;return om(o)||Kd(),tl(e,t,c)}return om(o)?(t.flags|=192,t.child=e.child,null):(e=s.treeContext,I=lm(o.nextSibling),sa=t,L=!0,ca=null,la=!1,e!==null&&oa(t,e),t=$c(t,a.children),t.flags|=134221824,t)}function rl(e,t,n){e.lanes|=t;var r=e.alternate;r!==null&&(r.lanes|=t),Ca(e.return,t,n)}function il(e){for(var t=null;e!==null;){var n=e.alternate;n!==null&&Bo(n)===null&&(t=e),e=e.sibling}return t}function al(e,t,n,r,i,a){var o=e.memoizedState;o===null?e.memoizedState={isBackwards:t,rendering:null,renderingStartTime:0,last:r,tail:n,tailMode:i,treeForkCount:a}:(o.isBackwards=t,o.rendering=null,o.renderingStartTime=0,o.last=r,o.tail=n,o.tailMode=i,o.treeForkCount=a)}function ol(e){var t=e.child;for(e.child=null;t!==null;){var n=t.sibling;t.sibling=e.child,e.child=t,t=n}}function sl(e,t,n){var r=t.pendingProps,i=r.revealOrder,a=r.tail;r=r.children;var o=Lo.current;if(t.flags&128)return Ro(t,o),null;var s=!!(o&2);if(s?(o=o&1|2,t.flags|=128):o&=1,Ro(t,o),i===`backwards`&&e!==null?(ol(e),Pc(e,t,r,n),ol(e)):Pc(e,t,r,n),r=L?Xi:0,!s&&e!==null&&e.flags&128)a:for(e=t.child;e!==null;){if(e.tag===13)e.memoizedState!==null&&rl(e,n,t);else if(e.tag===19)rl(e,n,t);else if(e.child!==null){e.child.return=e,e=e.child;continue}if(e===t)break a;for(;e.sibling===null;){if(e.return===null||e.return===t)break a;e=e.return}e.sibling.return=e.return,e=e.sibling}switch(i){case`backwards`:n=il(t.child),n===null?(i=t.child,t.child=null):(i=n.sibling,n.sibling=null,ol(t)),al(t,!0,i,null,a,r);break;case`unstable_legacy-backwards`:for(n=null,i=t.child,t.child=null;i!==null;){if(e=i.alternate,e!==null&&Bo(e)===null){t.child=i;break}e=i.sibling,i.sibling=n,n=i,i=e}al(t,!0,n,null,a,r);break;case`together`:al(t,!1,null,null,void 0,r);break;case`independent`:t.memoizedState=null;break;default:n=il(t.child),n===null?(i=t.child,t.child=null):(i=n.sibling,n.sibling=null),al(t,!1,i,n,a,r)}return t.child}function cl(e,t,n){var r=t.pendingProps;return xa(t,t.type,r.value),Pc(e,t,r.children,n),t.child}function ll(e,t,n){if(e!==null&&(t.dependencies=e.dependencies),od|=t.lanes,(n&t.childLanes)===0){if(e!==null){if(Ta(e,t,n,!1),(n&t.childLanes)===0)return null}else return null}if(e!==null&&t.child!==e.child)throw Error(i(153));if(t.child!==null){for(e=t.child,n=Ri(e,e.pendingProps),t.child=n,n.return=t;e.sibling!==null;)e=e.sibling,n=n.sibling=Ri(e,e.pendingProps),n.return=t;n.sibling=null}return t.child}function ul(e,t){return(e.lanes&t)!==0||(e=e.dependencies,!!(e!==null&&Ea(e)))}function dl(e,t,n){switch(t.tag){case 3:Me(t,t.stateNode.containerInfo),xa(t,Pa,e.memoizedState.cache),ha();break;case 27:case 5:Pe(t);break;case 4:Me(t,t.stateNode.containerInfo);break;case 10:xa(t,t.type,t.memoizedProps.value);break;case 31:if(t.memoizedState!==null)return t.flags|=128,No(t),null;break;case 13:var r=t.memoizedState;if(r!==null){if(r.dehydrated!==null)return Mo(t),t.flags|=128,null;r=Ta(e,t,n,!1);var i=t.child.childLanes;return r||(n&i)!==0?Qc(e,t,n):(Mo(t),e=ll(e,t,n),e===null?null:e.sibling)}Mo(t);break;case 19:if(t.flags&128)return sl(e,t,n);if(i=!!(e.flags&128),r=(n&t.childLanes)!==0,r||=(Ta(e,t,n,!1),(n&t.childLanes)!==0),i){if(r)return sl(e,t,n);t.flags|=128}if(i=t.memoizedState,i!==null&&(i.rendering=null,i.tail=null,i.lastEffect=null),Ro(t,Lo.current),r)break;return null;case 22:return t.lanes=0,Rc(e,t,n,t.pendingProps);case 24:xa(t,Pa,e.memoizedState.cache)}return ll(e,t,n)}function fl(e,t,n){if(e!==null){if(e.memoizedProps!==t.pendingProps)Nc=!0;else{if(!ul(e,n)&&!(t.flags&128))return Nc=!1,dl(e,t,n);Nc=!!(e.flags&131072)}}else Nc=!1,L&&t.flags&1048576&&ra(t,Xi,t.index);switch(t.lanes=0,t.tag){case 16:a:{var r=t.pendingProps;if(e=to(t.elementType),t.type=e,typeof e==`function`)Li(e)?(r=Sc(e,r),t.tag=1,t=qc(null,t,e,r,n)):(t.tag=0,t=Gc(null,t,e,r,n));else{if(e!=null){var a=e.$$typeof;if(a===ce){t.tag=11,t=Fc(null,t,e,r,n);break a}if(a===de){t.tag=14,t=Ic(null,t,e,r,n);break a}if(a===se){t.tag=10,t.type=e,t=cl(null,t,n);break a}}throw t=xe(e)||e,Error(i(306,t,``))}}return t;case 0:return Gc(e,t,t.type,t.pendingProps,n);case 1:return r=t.type,a=Sc(r,t.pendingProps),qc(e,t,r,a,n);case 3:a:{if(Me(t,t.stateNode.containerInfo),e===null)throw Error(i(387));r=t.pendingProps;var o=t.memoizedState;a=o.element,ho(e,t),So(t,r,null,n);var s=t.memoizedState;if(r=s.cache,xa(t,Pa,r),r!==o.cache&&wa(t,[Pa],n,!0),xo(),r=s.element,o.isDehydrated){if(o={element:r,isDehydrated:!1,cache:s.cache},t.updateQueue.baseState=o,t.memoizedState=o,t.flags&256){t=Jc(e,t,r,n);break a}if(r!==a){a=Ki(Error(i(424)),t),_a(a),t=Jc(e,t,r,n);break a}switch(e=t.stateNode.containerInfo,e.nodeType){case 9:e=e.body;break;default:e=e.nodeName===`HTML`?e.ownerDocument.body:e}for(I=lm(e.firstChild),sa=t,L=!0,ca=null,la=!0,n=fo(t,null,r,n),t.child=n;n;)n.flags=n.flags&-3|134221824,n=n.sibling}else{if(ha(),r===a){t=ll(e,t,n);break a}Pc(e,t,r,n)}t=t.child}return t;case 26:return Wc(e,t),e===null?(n=Nm(t.type,null,t.pendingProps,null))?t.memoizedState=n:L||(t.stateNode=fp(t.type,t.pendingProps,Ae.current,t)):t.memoizedState=Nm(t.type,e.memoizedProps,t.pendingProps,e.memoizedState),null;case 27:return Pe(t),e===null&&L&&(r=t.stateNode=hm(t.type,t.pendingProps,Ae.current),sa=t,la=!0,a=I,Sp(t.type)?(um=a,I=lm(r.firstChild)):I=a),Pc(e,t,t.pendingProps.children,n),Wc(e,t),e===null&&(t.flags|=4194304),t.child;case 5:return e===null&&L&&((a=r=I)&&(r=rm(r,t.type,t.pendingProps,la),r===null?a=!1:(t.stateNode=r,sa=t,I=lm(r.firstChild),la=!1,a=!0)),a||da(t)),Pe(t),a=t.type,o=t.pendingProps,s=e===null?null:e.memoizedProps,r=o.children,pp(a,o)?r=null:s!==null&&pp(a,s)&&(t.flags|=32),t.memoizedState!==null&&(a=Qo(e,t,ts,null,null,n),sh._currentValue=a),Wc(e,t),Pc(e,t,r,n),t.child;case 6:return e===null&&L&&((e=n=I)&&(n=im(n,t.pendingProps,la),n===null?e=!1:(t.stateNode=n,sa=t,I=null,e=!0)),e||da(t)),null;case 13:return Qc(e,t,n);case 4:return Me(t,t.stateNode.containerInfo),r=t.pendingProps,e===null?t.child=uo(t,null,r,n):Pc(e,t,r,n),t.child;case 11:return Fc(e,t,t.type,t.pendingProps,n);case 7:return r=t.pendingProps,Wc(e,t),Pc(e,t,r,n),t.child;case 8:return Pc(e,t,t.pendingProps.children,n),t.child;case 12:return Pc(e,t,t.pendingProps.children,n),t.child;case 10:return cl(e,t,n);case 9:return a=t.type._context,r=t.pendingProps.children,Da(t),a=Oa(a),r=r(a),t.flags|=1,Pc(e,t,r,n),t.child;case 14:return Ic(e,t,t.type,t.pendingProps,n);case 15:return Lc(e,t,t.type,t.pendingProps,n);case 19:return sl(e,t,n);case 31:return Uc(e,t,n);case 22:return Rc(e,t,n,t.pendingProps);case 24:return Da(t),r=Oa(Pa),e===null?(a=Ya(),a===null&&(a=q,o=Fa(),a.pooledCache=o,o.refCount++,o!==null&&(a.pooledCacheLanes|=n),a=o),t.memoizedState={parent:r,cache:a},mo(t),xa(t,Pa,a)):((e.lanes&n)!==0&&(ho(e,t),So(t,null,null,n),xo()),a=e.memoizedState,o=t.memoizedState,a.parent===r?(r=o.cache,xa(t,Pa,r),r!==a.cache&&wa(t,[Pa],n,!0)):(a={parent:r,cache:r},t.memoizedState=a,t.lanes===0&&(t.memoizedState=t.updateQueue.baseState=a),xa(t,Pa,r))),Pc(e,t,t.pendingProps.children,n),t.child;case 30:return t.stateNode===null&&(t.stateNode={autoName:null,paired:null,clones:null,ref:null}),r=t.pendingProps,r.name!=null&&r.name!==`auto`?t.flags|=e===null?18882560:18874368:L&&ia(t),e!==null&&e.memoizedProps.name!==r.name?t.flags|=4194816:Wc(e,t),Pc(e,t,r.children,n),t.child;case 29:throw t.pendingProps}throw Error(i(156,t.tag))}function pl(e){e.flags|=4}function ml(e,t,n,r,i){var a;if((a=!!(e.mode&32))&&(a=n===null?Jm(t,r):Jm(t,r)&&(r.src!==n.src||r.srcSet!==n.srcSet)),a){if(e.flags|=16777216,(i&335544128)===i){if(e.stateNode.complete)e.flags|=8192;else if(Ud())e.flags|=8192;else throw V=Qa,z}}else e.flags&=-16777217}function hl(e,t){if(t.type!==`stylesheet`||t.state.loading&4)e.flags&=-16777217;else if(e.flags|=16777216,!Ym(t)){if(Ud())e.flags|=8192;else throw V=Qa,z}}function gl(e,t){t!==null&&(e.flags|=4),e.flags&16384&&(t=e.tag===22?536870912:vt(),e.lanes|=t,ud|=t)}function _l(e,t){if(!L)switch(e.tailMode){case`visible`:break;case`collapsed`:for(var n=e.tail,r=null;n!==null;)n.alternate!==null&&(r=n),n=n.sibling;r===null?t||e.tail===null?e.tail=null:e.tail.sibling=null:r.sibling=null;break;default:for(t=e.tail,n=null;t!==null;)t.alternate!==null&&(n=t),t=t.sibling;n===null?e.tail=null:n.sibling=null}}function W(e){var t=e.alternate!==null&&e.alternate.child===e.child,n=0,r=0;if(t)for(var i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags&1206910976,r|=i.flags&1206910976,i.return=e,i=i.sibling;else for(i=e.child;i!==null;)n|=i.lanes|i.childLanes,r|=i.subtreeFlags,r|=i.flags,i.return=e,i=i.sibling;return e.subtreeFlags|=r,e.childLanes=n,t}function vl(e,t,n){var r=t.pendingProps;switch(aa(t),t.tag){case 16:case 15:case 0:case 11:case 7:case 8:case 12:case 9:case 14:return W(t),null;case 1:return W(t),null;case 3:return n=t.stateNode,r=null,e!==null&&(r=e.memoizedState.cache),t.memoizedState.cache!==r&&(t.flags|=2048),Sa(Pa),Ne(),n.pendingContext&&(n.context=n.pendingContext,n.pendingContext=null),(e===null||e.child===null)&&(ma(t)?pl(t):e===null||e.memoizedState.isDehydrated&&!(t.flags&256)||(t.flags|=1024,ga())),W(t),null;case 26:var a=t.type,o=t.memoizedState;return e===null?(pl(t),o===null?(W(t),ml(t,a,null,r,n)):(W(t),hl(t,o))):o?o===e.memoizedState?(W(t),t.flags&=-16777217):(pl(t),W(t),hl(t,o)):(e=e.memoizedProps,e!==r&&pl(t),W(t),ml(t,a,e,r,n)),null;case 27:if(Fe(t),n=Ae.current,a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&pl(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return W(t),t.subtreeFlags&=-33554433,null}e=Oe.current,ma(t)?fa(t,e):(e=hm(a,r,n),t.stateNode=e,pl(t))}return W(t),t.subtreeFlags&=-33554433,null;case 5:if(Fe(t),a=t.type,e!==null&&t.stateNode!=null)e.memoizedProps!==r&&pl(t);else{if(!r){if(t.stateNode===null)throw Error(i(166));return W(t),t.subtreeFlags&=-33554433,null}if(o=Oe.current,ma(t))fa(t,o);else{var s=lp(Ae.current);switch(o){case 1:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case 2:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;default:switch(a){case`svg`:o=s.createElementNS(`http://www.w3.org/2000/svg`,a);break;case`math`:o=s.createElementNS(`http://www.w3.org/1998/Math/MathML`,a);break;case`script`:o=s.createElement(`div`),o.innerHTML=`<script><\/script>`,o=o.removeChild(o.firstChild);break;case`select`:o=typeof r.is==`string`?s.createElement(`select`,{is:r.is}):s.createElement(`select`),r.multiple?o.multiple=!0:r.size&&(o.size=r.size);break;default:o=typeof r.is==`string`?s.createElement(a,{is:r.is}):s.createElement(a)}}o[At]=t,o[jt]=r;a:for(s=t.child;s!==null;){if(s.tag===5||s.tag===6)o.appendChild(s.stateNode);else if(s.tag!==4&&s.tag!==27&&s.child!==null){s.child.return=s,s=s.child;continue}if(s===t)break a;for(;s.sibling===null;){if(s.return===null||s.return===t)break a;s=s.return}s.sibling.return=s.return,s=s.sibling}t.stateNode=o;a:switch(np(o,a,r),a){case`button`:case`input`:case`select`:case`textarea`:r=!!r.autoFocus;break a;case`img`:r=!0;break a;default:r=!1}r&&pl(t)}}return W(t),t.subtreeFlags&=-33554433,ml(t,t.type,e===null?null:e.memoizedProps,t.pendingProps,n),null;case 6:if(e&&t.stateNode!=null)e.memoizedProps!==r&&pl(t);else{if(typeof r!=`string`&&t.stateNode===null)throw Error(i(166));if(e=Ae.current,ma(t)){if(e=t.stateNode,n=t.memoizedProps,r=null,a=sa,a!==null)switch(a.tag){case 27:case 5:r=a.memoizedProps}e[At]=t,e=!!(e.nodeValue===n||r!==null&&!0===r.suppressHydrationWarning||ep(e.nodeValue,n)),e||da(t,!0)}else e=lp(e).createTextNode(r),e[At]=t,t.stateNode=e}return W(t),null;case 31:if(n=t.memoizedState,e===null||e.memoizedState!==null){if(r=ma(t),n!==null){if(e===null){if(!r)throw Error(i(318));if(e=t.memoizedState,e=e===null?null:e.dehydrated,!e)throw Error(i(557));e[At]=t}else ha(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;W(t),e=!1}else n=ga(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=n),e=!0;if(!e)return t.flags&256?(Io(t),t):(Io(t),null);if(t.flags&128)throw Error(i(558))}return W(t),null;case 13:if(r=t.memoizedState,e===null||e.memoizedState!==null&&e.memoizedState.dehydrated!==null){if(a=ma(t),r!==null&&r.dehydrated!==null){if(e===null){if(!a)throw Error(i(318));if(a=t.memoizedState,a=a===null?null:a.dehydrated,!a)throw Error(i(317));a[At]=t}else ha(),!(t.flags&128)&&(t.memoizedState=null),t.flags|=4;W(t),a=!1}else a=ga(),e!==null&&e.memoizedState!==null&&(e.memoizedState.hydrationErrors=a),a=!0;if(!a)return t.flags&256?(Io(t),t):(Io(t),null)}return Io(t),t.flags&128?(t.lanes=n,t):(n=r!==null,e=e!==null&&e.memoizedState!==null,n&&(r=t.child,a=null,r.alternate!==null&&r.alternate.memoizedState!==null&&r.alternate.memoizedState.cachePool!==null&&(a=r.alternate.memoizedState.cachePool.pool),o=null,r.memoizedState!==null&&r.memoizedState.cachePool!==null&&(o=r.memoizedState.cachePool.pool),o!==a&&(r.flags|=2048)),n!==e&&n&&(t.child.flags|=8192),gl(t,t.updateQueue),W(t),null);case 4:return Ne(),e===null&&Wf(t.stateNode.containerInfo),t.flags|=67108864,W(t),null;case 10:return Sa(t.type),W(t),null;case 19:if(zo(t),r=t.memoizedState,r===null)return W(t),null;if(a=!!(t.flags&128),o=r.rendering,o===null){if(a)_l(r,!1);else{if(ad!==0||e!==null&&e.flags&128)for(e=t.child;e!==null;){if(o=Bo(e),o!==null){for(t.flags|=128,_l(r,!1),e=o.updateQueue,t.updateQueue=e,gl(t,e),t.subtreeFlags=0,e=n,n=t.child;n!==null;)zi(n,e),n=n.sibling;return Ro(t,Lo.current&1|2),L&&na(t,r.treeForkCount),t.child}e=e.sibling}r.tail!==null&&Je()>gd&&(t.flags|=128,a=!0,_l(r,!1),t.lanes=4194304)}}else{if(!a){if(e=Bo(o),e!==null){if(t.flags|=128,a=!0,e=e.updateQueue,t.updateQueue=e,gl(t,e),_l(r,!0),r.tail===null&&r.tailMode!==`collapsed`&&r.tailMode!==`visible`&&!o.alternate&&!L)return W(t),null}else 2*Je()-r.renderingStartTime>gd&&n!==536870912&&(t.flags|=128,a=!0,_l(r,!1),t.lanes=4194304)}r.isBackwards?(o.sibling=t.child,t.child=o):(e=r.last,e===null?t.child=o:e.sibling=o,r.last=o)}if(r.tail!==null){e=r.tail;a:{for(n=e;n!==null;){if(n.alternate!==null){n=!1;break a}n=n.sibling}n=!0}return r.rendering=e,r.tail=e.sibling,r.renderingStartTime=Je(),e.sibling=null,o=Lo.current,o=a?o&1|2:o&1,r.tailMode===`visible`||r.tailMode===`collapsed`||!n||L?Ro(t,o):(n=o,A(Ao,t),A(Lo,n),jo===null&&(jo=t)),L&&na(t,r.treeForkCount),e}return W(t),null;case 22:case 23:return Io(t),ko(),r=t.memoizedState!==null,e===null?r&&(t.flags|=8192):e.memoizedState!==null!==r&&(t.flags|=8192),r?n&536870912&&!(t.flags&128)&&(W(t),t.subtreeFlags&6&&(t.flags|=8192)):W(t),n=t.updateQueue,n!==null&&gl(t,n.retryQueue),n=null,e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),r=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(r=t.memoizedState.cachePool.pool),r!==n&&(t.flags|=2048),e!==null&&De(Ja),null;case 24:return n=null,e!==null&&(n=e.memoizedState.cache),t.memoizedState.cache!==n&&(t.flags|=2048),Sa(Pa),W(t),null;case 25:return null;case 30:return t.flags|=33554432,W(t),null}throw Error(i(156,t.tag))}function yl(e,t){switch(aa(t),t.tag){case 1:return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 3:return Sa(Pa),Ne(),e=t.flags,e&65536&&!(e&128)?(t.flags=e&-65537|128,t):null;case 26:case 27:case 5:return Fe(t),null;case 31:if(t.memoizedState!==null){if(Io(t),t.alternate===null)throw Error(i(340));ha()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 13:if(Io(t),e=t.memoizedState,e!==null&&e.dehydrated!==null){if(t.alternate===null)throw Error(i(340));ha()}return e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 19:return zo(t),e=t.flags,e&65536?(t.flags=e&-65537|128,e=t.memoizedState,e!==null&&(e.rendering=null,e.tail=null),t.flags|=4,t):null;case 4:return Ne(),null;case 10:return Sa(t.type),null;case 22:case 23:return Io(t),ko(),e!==null&&De(Ja),e=t.flags,e&65536?(t.flags=e&-65537|128,t):null;case 24:return Sa(Pa),null;case 25:return null;default:return null}}function bl(e,t){switch(aa(t),t.tag){case 3:Sa(Pa),Ne();break;case 26:case 27:case 5:Fe(t);break;case 4:Ne();break;case 31:t.memoizedState!==null&&Io(t);break;case 13:Io(t);break;case 19:zo(t);break;case 10:Sa(t.type);break;case 22:case 23:Io(t),ko(),e!==null&&De(Ja);break;case 24:Sa(Pa)}}function xl(e,t){try{var n=t.updateQueue,r=n===null?null:n.lastEffect;if(r!==null){var i=r.next;n=i;do{if((n.tag&e)===e){r=void 0;var a=n.create,o=n.inst;r=a(),o.destroy=r}n=n.next}while(n!==i)}}catch(e){Z(t,t.return,e)}}function Sl(e,t,n){try{var r=t.updateQueue,i=r===null?null:r.lastEffect;if(i!==null){var a=i.next;r=a;do{if((r.tag&e)===e){var o=r.inst,s=o.destroy;if(s!==void 0){o.destroy=void 0,i=t;var c=n,l=s;try{l()}catch(e){Z(i,c,e)}}}r=r.next}while(r!==a)}}catch(e){Z(t,t.return,e)}}function Cl(e){var t=e.updateQueue;if(t!==null){var n=e.stateNode;try{wo(t,n)}catch(t){Z(e,e.return,t)}}}function wl(e,t,n){n.props=Sc(e.type,e.memoizedProps),n.state=e.memoizedState;try{n.componentWillUnmount()}catch(n){Z(e,t,n)}}function Tl(e,t){try{var n=e.ref;if(n!==null){switch(e.tag){case 26:case 27:case 5:var r=e.stateNode;break;case 30:var i=e.stateNode,a=xi(e.memoizedProps,i);(i.ref===null||i.ref.name!==a)&&(i.ref=Pp(a)),r=i.ref;break;case 7:if(e.stateNode===null){var o=new Fp(e);m(e.child,!1,Qp,o,void 0,void 0),e.stateNode=o}r=e.stateNode;break;default:r=e.stateNode}typeof n==`function`?e.refCleanup=n(r):n.current=r}}catch(n){Z(e,t,n)}}function El(e,t){var n=e.ref,r=e.refCleanup;if(n!==null){if(typeof r==`function`)try{r()}catch(n){Z(e,t,n)}finally{e.refCleanup=null,e=e.alternate,e!=null&&(e.refCleanup=null)}else if(typeof n==`function`)try{n(null)}catch(n){Z(e,t,n)}else n.current=null}}function Dl(e,t){if((e.tag===5||e.tag===27||e.tag===6)&&e.alternate===null&&t!==null)for(var n=0;n<t.length;n++)em(e.stateNode,t[n])}function Ol(e){for(var t=e.return;t!==null&&(jl(t)&&em(e.stateNode,t.stateNode),!Al(t));)t=t.return}function kl(e){for(var t=e.return;t!==null&&(jl(t)&&tm(e.stateNode,t.stateNode),!Al(t));)t=t.return}function Al(e){return e.tag===5||e.tag===3||e.tag===27}function jl(e){return e&&e.tag===7&&e.stateNode!==null}function Ml(e){var t=e.type,n=e.memoizedProps,r=e.stateNode;try{a:switch(t){case`button`:case`input`:case`select`:case`textarea`:n.autoFocus&&r.focus();break a;case`img`:n.src?r.src=n.src:n.srcSet&&(r.srcset=n.srcSet)}}catch(t){Z(e,e.return,t)}}function Nl(e,t,n){try{var r=e.stateNode;ip(r,e.type,n,t),r[jt]=t}catch(t){Z(e,e.return,t)}}function Pl(e){return e.tag===5||e.tag===3||e.tag===26||e.tag===27&&Sp(e.type)||e.tag===4}function Fl(e){a:for(;;){for(;e.sibling===null;){if(e.return===null||Pl(e.return))return null;e=e.return}for(e.sibling.return=e.return,e=e.sibling;e.tag!==5&&e.tag!==6&&e.tag!==18;){if(e.tag===27&&Sp(e.type)||e.flags&2||e.child===null||e.tag===4)continue a;e.child.return=e,e=e.child}if(!(e.flags&2))return e.stateNode}}function Il(e,t,n,r){var i=e.tag;if(i===5||i===6)i=e.stateNode,t?(n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n).insertBefore(i,t):(t=n.nodeType===9?n.body:n.nodeName===`HTML`?n.ownerDocument.body:n,t.appendChild(i),n=n._reactRootContainer,n!=null||t.onclick!==null||(t.onclick=En)),Dl(e,r),j=!0;else if(i!==4&&(i===27&&(Dl(e,r),r=null,Sp(e.type)&&(n=e.stateNode,t=null)),e=e.child,e!==null))for(Il(e,t,n,r),e=e.sibling;e!==null;)Il(e,t,n,r),e=e.sibling}function Ll(e,t,n,r){var i=e.tag;if(i===5||i===6)i=e.stateNode,t?n.insertBefore(i,t):n.appendChild(i),Dl(e,r),j=!0;else if(i!==4&&(i===27&&(Dl(e,r),r=null,Sp(e.type)&&(n=e.stateNode)),e=e.child,e!==null))for(Ll(e,t,n,r),e=e.sibling;e!==null;)Ll(e,t,n,r),e=e.sibling}function Rl(e){var t=e.stateNode,n=e.memoizedProps;try{for(var r=e.type,i=t.attributes;i.length;)t.removeAttributeNode(i[0]);np(t,r,n),t[At]=e,t[jt]=n}catch(t){Z(e,e.return,t)}}var zl=!1,Bl=null;function Vl(e){(e.tag===30||e.subtreeFlags&33554432)&&(zl=!0)}var Hl=null;function Ul(){var e=Hl;return Hl=null,e}var Wl=0;function Gl(e,t,n,r,i){return Wl=0,Kl(e.child,t,n,r,i)}function Kl(e,t,n,r,i){for(var a=!1;e!==null;){if(e.tag===5){var o=e.stateNode;if(r!==null){var s=Op(o);r.push(s),s.view&&(a=!0)}else a||Op(o).view&&(a=!0);zl=!0,Tp(o,Wl===0?t:t+`_`+Wl,n),Wl++}else(e.tag!==22||e.memoizedState===null)&&(e.tag===30&&i||Kl(e.child,t,n,r,i)&&(a=!0));e=e.sibling}return a}function ql(e,t){for(;e!==null;)e.tag===5?Ep(e.stateNode,e.memoizedProps):(e.tag!==22||e.memoizedState===null)&&(e.tag===30&&t||ql(e.child,t)),e=e.sibling}function Jl(e){if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if((e.tag!==22||e.memoizedState===null)&&(Jl(e),e.tag===30&&e.flags&18874368&&e.stateNode.paired)){var t=e.memoizedProps;if(t.name==null||t.name===`auto`)throw Error(i(544));var n=t.name;t=Ci(t.default,t.share),t!==`none`&&(Gl(e,n,t,null,!1)||ql(e.child,!1))}e=e.sibling}}function Yl(e,t){if(e.tag===30){var n=e.stateNode,r=e.memoizedProps,i=xi(r,n),a=Ci(r.default,n.paired?r.share:r.enter);a===`none`?Jl(e):Gl(e,i,a,null,!1)?(Jl(e),n.paired||t||Nd(e,r.onEnter)):ql(e.child,!1)}else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)Yl(e,t),e=e.sibling;else Jl(e)}function Xl(e){if(Bl!==null&&Bl.size!==0){var t=Bl;if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if(e.tag!==22||e.memoizedState===null){if(e.tag===30&&e.flags&18874368){var n=e.memoizedProps,r=n.name;if(r!=null&&r!==`auto`){var i=t.get(r);if(i!==void 0){var a=Ci(n.default,n.share);if(a!==`none`&&(Gl(e,r,a,null,!1)?(a=e.stateNode,i.paired=a,a.paired=i,Nd(e,n.onShare)):ql(e.child,!1)),t.delete(r),t.size===0)break}}}Xl(e)}e=e.sibling}}}function Zl(e){if(e.tag===30){var t=e.memoizedProps,n=xi(t,e.stateNode),r=Bl===null?void 0:Bl.get(n),i=Ci(t.default,r===void 0?t.exit:t.share);i!==`none`&&(Gl(e,n,i,null,!1)?r===void 0?Nd(e,t.onExit):(i=e.stateNode,r.paired=i,i.paired=r,Bl.delete(n),Nd(e,t.onShare)):ql(e.child,!1)),Bl!==null&&Xl(e)}else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)Zl(e),e=e.sibling;else Bl!==null&&Xl(e)}function Ql(e){for(e=e.child;e!==null;){if(e.tag===30){var t=e.memoizedProps,n=xi(t,e.stateNode);t=Ci(t.default,t.update),e.flags&=-5,t!==`none`&&Gl(e,n,t,e.memoizedState=[],!1)}else e.subtreeFlags&33554432&&Ql(e);e=e.sibling}}function $l(e){if(e.subtreeFlags&18874368)for(e=e.child;e!==null;){if(e.tag!==22||e.memoizedState===null){if(e.tag===30&&e.flags&18874368){var t=e.stateNode;t.paired!==null&&(t.paired=null,ql(e.child,!1))}$l(e)}e=e.sibling}}function eu(e){if(e.tag===30)e.stateNode.paired=null,ql(e.child,!1),$l(e);else if(e.subtreeFlags&33554432)for(e=e.child;e!==null;)eu(e),e=e.sibling;else $l(e)}function tu(e){for(e=e.child;e!==null;)e.tag===30?ql(e.child,!1):e.subtreeFlags&33554432&&tu(e),e=e.sibling}function nu(e,t,n,r,i,a,o){for(var s=!1;t!==null;){if(t.tag===5){var c=t.stateNode;if(a!==null&&Wl<a.length){var l=a[Wl],u=Op(c);(l.view||u.view)&&(s=!0);var d;if(d=!(e.flags&4)){if(u.clip)d=!0;else{d=l.rect;var f=u.rect;d=d.y!==f.y||d.x!==f.x||d.height!==f.height||d.width!==f.width}}d&&(e.flags|=4),u.abs?u=!l.abs:(l=l.rect,u=u.rect,u=l.height!==u.height||l.width!==u.width),u&&(e.flags|=32)}else e.flags|=32;e.flags&4&&Tp(c,Wl===0?n:n+`_`+Wl,i),s&&e.flags&4||(Hl===null&&(Hl=[]),Hl.push(c,Wl===0?r:r+`_`+Wl,t.memoizedProps)),Wl++}else(t.tag!==22||t.memoizedState===null)&&(t.tag===30&&o?e.flags|=t.flags&32:nu(e,t.child,n,r,i,a,o)&&(s=!0));t=t.sibling}return s}function ru(e,t){for(e=e.child;e!==null;){if(e.tag===30){var n=e.memoizedProps,r=e.stateNode,i=xi(n,r),a=Ci(n.default,n.update);if(t){r=r.clones;var o=r===null?null:r.map(kp)}else o=e.memoizedState,e.memoizedState=null;r=e;var s=e.child;Wl=0,i=nu(r,s,i,i,a,o,!1),e.flags&4&&i&&(t||Nd(e,n.onUpdate))}else e.subtreeFlags&33554432&&ru(e,t);e=e.sibling}}var iu=!1,G=!1,au=!1,ou=!1,su=typeof WeakSet==`function`?WeakSet:Set,cu=null,lu=!1,uu=!1,du=!1,fu=!1;function pu(e,t,n){if(e=e.containerInfo,sp=gh,e=ei(e),ti(e)){if(`selectionStart`in e)var r={start:e.selectionStart,end:e.selectionEnd};else a:{r=(r=e.ownerDocument)&&r.defaultView||window;var i=r.getSelection&&r.getSelection();if(i&&i.rangeCount!==0){r=i.anchorNode;var a=i.anchorOffset,o=i.focusNode;i=i.focusOffset;try{r.nodeType,o.nodeType}catch{r=null;break a}var s=0,c=-1,l=-1,u=0,d=0,f=e,p=null;b:for(;;){for(var m;f!==r||a!==0&&f.nodeType!==3||(c=s+a),f!==o||i!==0&&f.nodeType!==3||(l=s+i),f.nodeType===3&&(s+=f.nodeValue.length),(m=f.firstChild)!==null;)p=f,f=m;for(;;){if(f===e)break b;if(p===r&&++u===a&&(c=s),p===o&&++d===i&&(l=s),(m=f.nextSibling)!==null)break;f=p,p=f.parentNode}f=m}r=c===-1||l===-1?null:{start:c,end:l}}else r=null}r||={start:0,end:0}}else r=null;for(cp={focusedElem:e,selectionRange:r},gh=!1,n=(n&335544064)===n,cu=t,t=n?9270:1024;cu!==null;){if(e=cu,n&&(r=e.deletions,r!==null))for(a=0;a<r.length;a++)n&&Zl(r[a]);if(e.alternate===null&&e.flags&2)n&&Vl(e),mu(n);else{if(e.tag===22){if(r=e.alternate,e.memoizedState!==null){r!==null&&r.memoizedState===null&&n&&Zl(r),mu(n);continue}if(r!==null&&r.memoizedState!==null){n&&Vl(e),mu(n);continue}}r=e.child,(e.subtreeFlags&t)!==0&&r!==null?(r.return=e,cu=r):(n&&Ql(e),mu(n))}}Bl=null}function mu(e){for(;cu!==null;){var t=cu,n=e,r=t.alternate,a=t.flags;switch(t.tag){case 0:case 11:case 15:break;case 1:if(a&1024&&r!==null){n=void 0,a=r.memoizedProps,r=r.memoizedState;var o=t.stateNode;try{var s=Sc(t.type,a);n=o.getSnapshotBeforeUpdate(s,r),o.__reactInternalSnapshotBeforeUpdate=n}catch(e){Z(t,t.return,e)}}break;case 3:if(a&1024){if(r=t.stateNode.containerInfo,n=r.nodeType,n===9)nm(r);else if(n===1)switch(r.nodeName){case`HEAD`:case`HTML`:case`BODY`:nm(r);break;default:r.textContent=``}}break;case 5:case 26:case 27:case 6:case 4:case 17:break;case 30:n&&r!==null&&(n=xi(r.memoizedProps,r.stateNode),a=t.memoizedProps,a=Ci(a.default,a.update),a!==`none`&&Gl(r,n,a,r.memoizedState=[],!0));break;default:if(a&1024)throw Error(i(163))}if(r=t.sibling,r!==null){r.return=t.return,cu=r;break}cu=t.return}}function hu(e,t,n){var r=n.flags;switch(n.tag){case 0:case 11:case 15:Fu(e,n),r&4&&xl(5,n);break;case 1:if(Fu(e,n),r&4){if(e=n.stateNode,t===null)try{e.componentDidMount()}catch(e){Z(n,n.return,e)}else{var i=Sc(n.type,t.memoizedProps);t=t.memoizedState;try{e.componentDidUpdate(i,t,e.__reactInternalSnapshotBeforeUpdate)}catch(e){Z(n,n.return,e)}}}r&64&&Cl(n),r&512&&Tl(n,n.return);break;case 3:if(Fu(e,n),r&64&&(e=n.updateQueue,e!==null)){if(t=null,n.child!==null)switch(n.child.tag){case 27:case 5:t=n.child.stateNode;break;case 1:t=n.child.stateNode}try{wo(e,t)}catch(e){Z(n,n.return,e)}}break;case 27:t===null&&r&4&&Rl(n);case 26:case 5:Fu(e,n),t===null&&r&4&&Ml(n),r&512&&Tl(n,n.return);break;case 12:Fu(e,n);break;case 31:Fu(e,n),r&4&&wu(e,n);break;case 13:Fu(e,n),r&4&&Tu(e,n),r&64&&(e=n.memoizedState,e!==null&&(e=e.dehydrated,e!==null&&(n=_f.bind(null,n),cm(e,n))));break;case 22:if(r=n.memoizedState!==null||iu,!r){var a=t!==null&&t.memoizedState!==null||G;t=iu,i=G,iu=r,(G=a)&&!i?(r=2,n.subtreeFlags&8772&&(r|=1),Lu(e,n,r)):Fu(e,n),iu=t,G=i}break;case 30:Fu(e,n),r&512&&Tl(n,n.return);break;case 7:r&512&&Tl(n,n.return);default:Fu(e,n)}}function gu(e,t){for(e=e.child;e!==null;)_u(e,t),e=e.sibling}function _u(e,t){switch(e.tag){case 5:case 26:try{var n=e.stateNode;if(t){var r=n.style;typeof r.setProperty==`function`?r.setProperty(`display`,`none`,`important`):r.display=`none`}else{var i=e.stateNode,a=e.memoizedProps.style,o=a!=null&&a.hasOwnProperty(`display`)?a.display:null;i.style.display=o==null||typeof o==`boolean`?``:(``+o).trim()}}catch(t){Z(e,e.return,t)}vu(e,t);break;case 6:try{e.stateNode.nodeValue=t?``:e.memoizedProps,j=!0}catch(t){Z(e,e.return,t)}break;case 18:try{var s=e.stateNode;t?wp(s,!0):wp(e.stateNode,!1)}catch(t){Z(e,e.return,t)}break;case 22:case 23:e.memoizedState===null&&gu(e,t);break;default:gu(e,t)}}function vu(e,t){if(e.subtreeFlags&67108864)for(e=e.child;e!==null;){a:{var n=e,r=t;switch(n.tag){case 4:_u(n,r);break a;case 22:n.memoizedState===null&&vu(n,r);break a;default:vu(n,r)}}e=e.sibling}}function yu(e){var t=e.alternate;t!==null&&(e.alternate=null,yu(t)),e.child=null,e.deletions=null,e.sibling=null,e.tag===5&&(t=e.stateNode,t!==null&&zt(t)),e.stateNode=null,e.return=null,e.dependencies=null,e.memoizedProps=null,e.memoizedState=null,e.pendingProps=null,e.stateNode=null,e.updateQueue=null}var bu=null,xu=!1;function Su(e,t,n){for(n=n.child;n!==null;)Cu(e,t,n),n=n.sibling}function Cu(e,t,n){if(it&&typeof it.onCommitFiberUnmount==`function`)try{it.onCommitFiberUnmount(rt,n)}catch{}switch(n.tag){case 26:G||El(n,t),Su(e,t,n),n.memoizedState?n.memoizedState.count--:n.stateNode&&!G&&(n=n.stateNode,n.parentNode.removeChild(n));break;case 27:G||El(n,t),kl(n);var r=bu,i=xu;Sp(n.type)&&(bu=n.stateNode,xu=!1),Su(e,t,n),gm(n.stateNode,n.type,n.memoizedProps),bu=r,xu=i;break;case 5:G||El(n,t),kl(n);case 6:if(n.tag===6&&kl(n),r=bu,i=xu,bu=null,Su(e,t,n),bu=r,xu=i,bu!==null){if(xu)try{(bu.nodeType===9?bu.body:bu.nodeName===`HTML`?bu.ownerDocument.body:bu).removeChild(n.stateNode),j=!0}catch(e){Z(n,t,e)}else try{bu.removeChild(n.stateNode),j=!0}catch(e){Z(n,t,e)}}break;case 18:bu!==null&&(xu?(e=bu,Cp(e.nodeType===9?e.body:e.nodeName===`HTML`?e.ownerDocument.body:e,n.stateNode),Hh(e)):Cp(bu,n.stateNode));break;case 4:r=bu,i=xu,bu=n.stateNode.containerInfo,xu=!0,Su(e,t,n),bu=r,xu=i;break;case 0:case 11:case 14:case 15:Sl(2,n,t),G||Sl(4,n,t),Su(e,t,n);break;case 1:G||(El(n,t),r=n.stateNode,typeof r.componentWillUnmount==`function`&&wl(n,t,r)),Su(e,t,n);break;case 21:Su(e,t,n);break;case 22:G=(r=G)||n.memoizedState!==null,Su(e,t,n),G=r;break;case 30:El(n,t),Su(e,t,n);break;case 7:G||El(n,t),Su(e,t,n);break;default:Su(e,t,n)}}function wu(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null))){e=e.dehydrated;try{Hh(e)}catch(e){Z(t,t.return,e)}}}function Tu(e,t){if(t.memoizedState===null&&(e=t.alternate,e!==null&&(e=e.memoizedState,e!==null&&(e=e.dehydrated,e!==null))))try{Hh(e)}catch(e){Z(t,t.return,e)}}function Eu(e){switch(e.tag){case 31:case 13:case 19:var t=e.stateNode;return t===null&&(t=e.stateNode=new su),t;case 22:return e=e.stateNode,t=e._retryCache,t===null&&(t=e._retryCache=new su),t;default:throw Error(i(435,e.tag))}}function Du(e,t){var n=Eu(e);t.forEach(function(t){if(!n.has(t)){n.add(t);var r=vf.bind(null,e,t);t.then(r,r)}})}function Ou(e,t,n){var r=t.deletions;if(r!==null)for(var a=0;a<r.length;a++){var o=r[a],s=e,c=t,l=c;a:for(;l!==null;){switch(l.tag){case 27:if(Sp(l.type)){bu=l.stateNode,xu=!1;break a}break;case 5:bu=l.stateNode,xu=!1;break a;case 3:case 4:bu=l.stateNode.containerInfo,xu=!0;break a}l=l.return}if(bu===null)throw Error(i(160));Cu(s,c,o),bu=null,xu=!1,s=o.alternate,s!==null&&(s.return=null),o.return=null}if(t.subtreeFlags&13886)for(t=t.child;t!==null;)Au(t,e,n),t=t.sibling}var ku=null;function Au(e,t,n){var r=e.alternate,a=e.flags;switch(e.tag){case 0:case 11:case 14:case 15:if(a&4&&(r=e.updateQueue,r=r===null?null:r.events,r!==null))for(var o=0;o<r.length;o++){var s=r[o];s.ref.impl=s.nextImpl}Ou(t,e,n),ju(e),a&4&&(Sl(3,e,e.return),xl(3,e),Sl(5,e,e.return));break;case 1:Ou(t,e,n),ju(e),a&512&&(G||r===null||El(r,r.return)),a&64&&iu&&(e=e.updateQueue,e!==null&&(t=e.callbacks,t!==null&&(n=e.shared.hiddenCallbacks,e.shared.hiddenCallbacks=n===null?t:n.concat(t))));break;case 26:if(o=ku,Ou(t,e,n),ju(e),a&512&&(G||r===null||El(r,r.return)),a&4){if(a=r===null?null:r.memoizedState,n=e.memoizedState,r===null){if(n===null){if(e.stateNode===null){if(iu)e.stateNode=fp(e.type,e.memoizedProps,t.containerInfo,e);else{a:{t=e.type,n=e.memoizedProps,a=o.ownerDocument||o;b:switch(t){case`title`:r=a.getElementsByTagName(`title`)[0],(!r||r[Lt]||r[At]||r.namespaceURI===`http://www.w3.org/2000/svg`||r.hasAttribute(`itemprop`))&&(r=a.createElement(t),a.head.insertBefore(r,a.querySelector(`head > title`))),np(r,t,n),r[At]=e,Wt(r),t=r;break a;case`link`:if(o=Gm(`link`,`href`,a).get(t+(n.href||``))){for(s=0;s<o.length;s++)if(r=o[s],r.getAttribute(`href`)===(n.href==null||n.href===``?null:n.href)&&r.getAttribute(`rel`)===(n.rel==null?null:n.rel)&&r.getAttribute(`title`)===(n.title==null?null:n.title)&&r.getAttribute(`crossorigin`)===(n.crossOrigin==null?null:n.crossOrigin)){o.splice(s,1);break b}}r=a.createElement(t),np(r,t,n),a.head.appendChild(r);break;case`meta`:if(o=Gm(`meta`,`content`,a).get(t+(n.content||``))){for(s=0;s<o.length;s++)if(r=o[s],r.getAttribute(`content`)===(n.content==null?null:``+n.content)&&r.getAttribute(`name`)===(n.name==null?null:n.name)&&r.getAttribute(`property`)===(n.property==null?null:n.property)&&r.getAttribute(`http-equiv`)===(n.httpEquiv==null?null:n.httpEquiv)&&r.getAttribute(`charset`)===(n.charSet==null?null:n.charSet)){o.splice(s,1);break b}}r=a.createElement(t),np(r,t,n),a.head.appendChild(r);break;default:throw Error(i(468,t))}r[At]=e,Wt(r),t=r}e.stateNode=t}}else iu||Km(o,e.type,e.stateNode)}else e.stateNode=Bm(o,n,e.memoizedProps)}else a===n?n===null&&e.stateNode!==null&&Nl(e,e.memoizedProps,r.memoizedProps):(a===null?(t=r.stateNode,t===null||G||t.parentNode.removeChild(t)):a.count--,n===null?iu||Km(o,e.type,e.stateNode):Bm(o,n,e.memoizedProps))}break;case 27:Ou(t,e,n),ju(e),a&512&&(G||r===null||El(r,r.return)),r!==null&&a&4&&Nl(e,e.memoizedProps,r.memoizedProps);break;case 5:if(o=au,au=!1,Ou(t,e,n),au=o,ju(e),a&512&&(G||r===null||El(r,r.return)),e.flags&32){t=e.stateNode;try{vn(t,``),j=!0}catch(t){Z(e,e.return,t)}}a&4&&e.stateNode!=null&&(t=e.memoizedProps,Nl(e,t,r===null?t:r.memoizedProps)),a&1024&&(ou=!0);break;case 6:if(Ou(t,e,n),ju(e),a&4){if(e.stateNode===null)throw Error(i(162));t=e.memoizedProps,n=e.stateNode;try{n.nodeValue=t,j=!0}catch(t){Z(e,e.return,t)}}break;case 3:if(j=!1,Wm=null,o=ku,ku=bm(t.containerInfo),Ou(t,e,n),ku=o,ju(e),a&4&&r!==null&&r.memoizedState.isDehydrated)try{Hh(t.containerInfo)}catch(t){Z(e,e.return,t)}ou&&(ou=!1,Mu(e)),j=!1;break;case 4:a=au,au=iu,r=en(),o=ku,ku=bm(e.stateNode.containerInfo),Ou(t,e,n),ju(e),ku=o,j&&uu&&(du=!0),j=r,au=a;break;case 12:Ou(t,e,n),ju(e);break;case 31:Ou(t,e,n),ju(e),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,Du(e,t)));break;case 13:Ou(t,e,n),ju(e),e.child.flags&8192&&e.memoizedState!==null!=(r!==null&&r.memoizedState!==null)&&(md=Je()),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,Du(e,t)));break;case 22:o=e.memoizedState!==null,s=r!==null&&r.memoizedState!==null;var c=iu,l=G,u=au;iu=c||o,au=u||o,G=l||s,Ou(t,e,n),G=l,au=u,iu=c,ju(e),a&8192&&(t=e.stateNode,t._visibility=o?t._visibility&-2:t._visibility|1,!o||r===null||s||iu||G||(t=s||G,n=iu,r=G,iu=o||iu,G=t,Iu(e,2),iu=n,G=r),!o&&au||gu(e,o)),a&4&&(t=e.updateQueue,t!==null&&(n=t.retryQueue,n!==null&&(t.retryQueue=null,Du(e,n))));break;case 19:Ou(t,e,n),ju(e),a&4&&(t=e.updateQueue,t!==null&&(e.updateQueue=null,Du(e,t)));break;case 30:a&512&&(G||r===null||El(r,r.return)),a=en(),o=uu,s=(n&335544064)===n,c=e.memoizedProps,uu=s&&Ci(c.default,c.update)!==`none`,Ou(t,e,n),ju(e),s&&r!==null&&j&&(e.flags|=4),uu=o,j=a;break;case 21:break;case 7:a&512&&(G||r===null||El(r,r.return)),r&&r.stateNode!==null&&(r.stateNode._fragmentFiber=e);default:Ou(t,e,n),ju(e)}}function ju(e){var t=e.flags;if(t&2){try{for(var n,r=e.return;r!==null;){if(Pl(r)){n=r;break}r=r.return}r=null;for(var a=e.return;a!==null;){if(jl(a)){var o=a.stateNode;r===null?r=[o]:r.push(o)}if(Al(a))break;a=a.return}var s=r;if(n==null)throw Error(i(160));switch(n.tag){case 27:var c=n.stateNode;Ll(e,Fl(e),c,s);break;case 5:var l=n.stateNode;n.flags&32&&(vn(l,``),n.flags&=-33),Ll(e,Fl(e),l,s);break;case 3:case 4:var u=n.stateNode.containerInfo;Il(e,Fl(e),u,s);break;default:throw Error(i(161))}}catch(t){Z(e,e.return,t)}e.flags&=-3}t&4096&&(e.flags&=-4097)}function Mu(e){if(e.subtreeFlags&1024)for(e=e.child;e!==null;){var t=e;Mu(t),t.tag===5&&t.flags&1024&&(t=t.stateNode,gh=!0,t.reset(),gh=!1),e=e.sibling}}function Nu(e,t){if(t.subtreeFlags&9270)for(t=t.child;t!==null;)Pu(t,e),t=t.sibling;else ru(t,!1)}function Pu(e,t){var n=e.alternate;if(n===null)Yl(e,!1);else switch(e.tag){case 3:if(fu=lu=!1,Ul(),Nu(t,e),!lu&&!du){if(e=Hl,e!==null)for(var r=0;r<e.length;r+=3){n=e[r];var i=e[r+1];Ep(n,e[r+2]),n=n.ownerDocument.documentElement,n!==null&&n.animate({opacity:[0,0],pointerEvents:[`none`,`none`]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition-group(`+i+`)`})}e=t.containerInfo,e=e.nodeType===9?e.documentElement:e.ownerDocument.documentElement,e!==null&&e.style.viewTransitionName===``&&(e.style.viewTransitionName=`none`,e.animate({opacity:[0,0],pointerEvents:[`none`,`none`]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition-group(root)`}),e.animate({width:[0,0],height:[0,0]},{duration:0,fill:`forwards`,pseudoElement:`::view-transition`})),fu=!0}Hl=null;break;case 5:Nu(t,e);break;case 4:r=lu,lu=!1,Nu(t,e),lu&&(du=!0),lu=r;break;case 22:e.memoizedState===null&&(n.memoizedState===null?Nu(t,e):Yl(e,!1));break;case 30:r=lu,i=Ul(),lu=!1,Nu(t,e),lu&&(e.flags|=4);var a=e.memoizedProps,o=e.stateNode;t=xi(a,o),o=xi(n.memoizedProps,o);var s=Ci(a.default,a.update);s===`none`?t=!1:(a=n.memoizedState,n.memoizedState=null,n=e.child,Wl=0,t=nu(e,n,t,o,s,a,!0),Wl!==(a===null?0:a.length)&&(e.flags|=32)),e.flags&4&&t?(Nd(e,e.memoizedProps.onUpdate),Hl=i):i!==null&&(i.push.apply(i,Hl),Hl=i),lu=e.flags&32?!0:r;break;default:Nu(t,e)}}function Fu(e,t){if(t.subtreeFlags&8772)for(t=t.child;t!==null;)hu(e,t.alternate,t),t=t.sibling}function Iu(e,t){for(e=e.child;e!==null;){var n=e,r=t;switch(n.tag){case 0:case 11:case 14:case 15:Sl(4,n,n.return),Iu(n,r);break;case 1:El(n,n.return);var i=n.stateNode;typeof i.componentWillUnmount==`function`&&wl(n,n.return,i),Iu(n,r);break;case 27:r&2&&gm(n.stateNode,n.type,n.memoizedProps);case 5:El(n,n.return),n.tag!==5&&n.tag!==27||kl(n),Iu(n,r);break;case 6:kl(n);break;case 26:El(n,n.return),i=n.stateNode,n.memoizedState!==null||i===null||G||i.parentNode.removeChild(i),Iu(n,r);break;case 22:n.memoizedState===null&&Iu(n,r);break;case 30:El(n,n.return),Iu(n,r);break;case 7:El(n,n.return);default:Iu(n,r)}e=e.sibling}}function Lu(e,t,n){for(n=t.subtreeFlags&8772?n:n&-2,t=t.child;t!==null;){var r=t.alternate,i=e,a=t,o=a.flags,s=!!(n&1);switch(a.tag){case 0:case 11:case 15:Lu(i,a,n),xl(4,a);break;case 1:if(Lu(i,a,n),r=a,i=r.stateNode,typeof i.componentDidMount==`function`)try{i.componentDidMount()}catch(e){Z(r,r.return,e)}if(r=a,i=r.updateQueue,i!==null){var c=r.stateNode;try{var l=i.shared.hiddenCallbacks;if(l!==null)for(i.shared.hiddenCallbacks=null,i=0;i<l.length;i++)Co(l[i],c)}catch(e){Z(r,r.return,e)}}s&&o&64&&Cl(a),Tl(a,a.return);break;case 27:n&2&&Rl(a);case 5:a.tag!==5&&a.tag!==27||Ol(a),Lu(i,a,n),s&&r===null&&o&4&&Ml(a),Tl(a,a.return);break;case 6:Ol(a);break;case 26:c=a.stateNode,a.memoizedState!==null||c===null||iu||Km(bm(c.ownerDocument),a.type,c),Lu(i,a,n),s&&r===null&&o&4&&Ml(a),Tl(a,a.return);break;case 12:Lu(i,a,n);break;case 31:Lu(i,a,n),s&&o&4&&wu(i,a);break;case 13:Lu(i,a,n),s&&o&4&&Tu(i,a);break;case 22:a.memoizedState===null&&Lu(i,a,n),Tl(a,a.return);break;case 30:Lu(i,a,n),Tl(a,a.return);break;case 7:Tl(a,a.return);default:Lu(i,a,n)}t=t.sibling}}function Ru(e,t){var n=null;e!==null&&e.memoizedState!==null&&e.memoizedState.cachePool!==null&&(n=e.memoizedState.cachePool.pool),e=null,t.memoizedState!==null&&t.memoizedState.cachePool!==null&&(e=t.memoizedState.cachePool.pool),e!==n&&(e!=null&&e.refCount++,n!=null&&Ia(n))}function zu(e,t){e=null,t.alternate!==null&&(e=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==e&&(t.refCount++,e!=null&&Ia(e))}function Bu(e,t,n,r){var i=(n&335544064)===n;if(t.subtreeFlags&(i?10262:10256))for(t=t.child;t!==null;)Vu(e,t,n,r),t=t.sibling;else i&&tu(t)}function Vu(e,t,n,r){var i=(n&335544064)===n;i&&t.alternate===null&&t.return!==null&&t.return.alternate!==null&&eu(t);var a=t.flags;switch(t.tag){case 0:case 11:case 15:Bu(e,t,n,r),a&2048&&xl(9,t);break;case 1:Bu(e,t,n,r);break;case 3:Bu(e,t,n,r),i&&fu&&(e=e.containerInfo,e=e.nodeType===9?e.body:e.nodeName===`HTML`?e.ownerDocument.body:e,e.style.viewTransitionName===`root`&&(e.style.viewTransitionName=``),e=e.ownerDocument.documentElement,e!==null&&e.style.viewTransitionName===`none`&&(e.style.viewTransitionName=``)),a&2048&&(a=null,t.alternate!==null&&(a=t.alternate.memoizedState.cache),t=t.memoizedState.cache,t!==a&&(t.refCount++,a!=null&&Ia(a)));break;case 12:if(a&2048){Bu(e,t,n,r),a=t.stateNode;try{var o=t.memoizedProps,s=o.id,c=o.onPostCommit;typeof c==`function`&&c(s,t.alternate===null?`mount`:`update`,a.passiveEffectDuration,-0)}catch(e){Z(t,t.return,e)}}else Bu(e,t,n,r);break;case 31:Bu(e,t,n,r);break;case 13:Bu(e,t,n,r);break;case 23:break;case 22:o=t.stateNode,s=t.alternate,t.memoizedState===null?(i&&s!==null&&s.memoizedState!==null&&eu(t),o._visibility&2?Bu(e,t,n,r):(o._visibility|=2,Hu(e,t,n,r,!!(t.subtreeFlags&10256)||!1))):(i&&s!==null&&s.memoizedState===null&&eu(s),o._visibility&2?Bu(e,t,n,r):Uu(e,t)),a&2048&&Ru(s,t);break;case 24:Bu(e,t,n,r),a&2048&&zu(t.alternate,t);break;case 30:i&&(a=t.alternate,a!==null&&(ql(a.child,!0),ql(t.child,!0))),Bu(e,t,n,r);break;default:Bu(e,t,n,r)}}function Hu(e,t,n,r,i){for(i&&=!!(t.subtreeFlags&10256)||!1,t=t.child;t!==null;){var a=e,o=t,s=n,c=r,l=o.flags;switch(o.tag){case 0:case 11:case 15:Hu(a,o,s,c,i),xl(8,o);break;case 23:break;case 22:var u=o.stateNode;o.memoizedState===null?(u._visibility|=2,Hu(a,o,s,c,i)):u._visibility&2?Hu(a,o,s,c,i):Uu(a,o),i&&l&2048&&Ru(o.alternate,o);break;case 24:Hu(a,o,s,c,i),i&&l&2048&&zu(o.alternate,o);break;default:Hu(a,o,s,c,i)}t=t.sibling}}function Uu(e,t){if(t.subtreeFlags&10256)for(t=t.child;t!==null;){var n=e,r=t,i=r.flags;switch(r.tag){case 22:Uu(n,r),i&2048&&Ru(r.alternate,r);break;case 24:Uu(n,r),i&2048&&zu(r.alternate,r);break;default:Uu(n,r)}t=t.sibling}}var Wu=8192;function Gu(e,t,n){if(e.subtreeFlags&Wu)for(e=e.child;e!==null;)Ku(e,t,n),e=e.sibling}function Ku(e,t,n){switch(e.tag){case 26:Gu(e,t,n),e.flags&Wu&&(e.memoizedState===null?(e=e.stateNode,(t&335544128)===t&&Zm(n,e)):Qm(n,ku,e.memoizedState,e.memoizedProps));break;case 5:Gu(e,t,n),e.flags&Wu&&(e=e.stateNode,(t&335544128)===t&&Zm(n,e));break;case 3:case 4:var r=ku;ku=bm(e.stateNode.containerInfo),Gu(e,t,n),ku=r;break;case 22:e.memoizedState===null&&(r=e.alternate,r!==null&&r.memoizedState!==null?(r=Wu,Wu=16777216,Gu(e,t,n),Wu=r):Gu(e,t,n));break;case 30:if((e.flags&Wu)!==0&&(r=e.memoizedProps.name,r!=null&&r!==`auto`)){var i=e.stateNode;i.paired=null,Bl===null&&(Bl=new Map),Bl.set(r,i)}Gu(e,t,n);break;default:Gu(e,t,n)}}function qu(e){var t=e.alternate;if(t!==null&&(e=t.child,e!==null)){t.child=null;do t=e.sibling,e.sibling=null,e=t;while(e!==null)}}function Ju(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];cu=r,Zu(r,e)}qu(e)}if(e.subtreeFlags&10256)for(e=e.child;e!==null;)Yu(e),e=e.sibling}function Yu(e){switch(e.tag){case 0:case 11:case 15:Ju(e),e.flags&2048&&Sl(9,e,e.return);break;case 3:Ju(e);break;case 12:Ju(e);break;case 22:var t=e.stateNode;e.memoizedState!==null&&t._visibility&2&&(e.return===null||e.return.tag!==13)?(t._visibility&=-3,Xu(e)):Ju(e);break;default:Ju(e)}}function Xu(e){var t=e.deletions;if(e.flags&16){if(t!==null)for(var n=0;n<t.length;n++){var r=t[n];cu=r,Zu(r,e)}qu(e)}for(e=e.child;e!==null;){switch(t=e,t.tag){case 0:case 11:case 15:Sl(8,t,t.return),Xu(t);break;case 22:n=t.stateNode,n._visibility&2&&(n._visibility&=-3,Xu(t));break;default:Xu(t)}e=e.sibling}}function Zu(e,t){for(;cu!==null;){var n=cu;switch(n.tag){case 0:case 11:case 15:Sl(8,n,t);break;case 23:case 22:if(n.memoizedState!==null&&n.memoizedState.cachePool!==null){var r=n.memoizedState.cachePool.pool;r!=null&&r.refCount++}break;case 24:Ia(n.memoizedState.cache)}if(r=n.child,r!==null)r.return=n,cu=r;else a:for(n=e;cu!==null;){r=cu;var i=r.sibling,a=r.return;if(yu(r),r===n){cu=null;break a}if(i!==null){i.return=a,cu=i;break a}cu=a}}}var Qu={getCacheForType:function(e){var t=Oa(Pa),n=t.data.get(e);return n===void 0&&(n=e(),t.data.set(e,n)),n},cacheSignal:function(){return Oa(Pa).controller.signal}},$u=typeof WeakMap==`function`?WeakMap:Map,K=0,q=null,J=null,Y=0,X=0,ed=null,td=!1,nd=!1,rd=!1,id=0,ad=0,od=0,sd=0,cd=0,ld=0,ud=0,dd=null,fd=null,pd=!1,md=0,hd=0,gd=1/0,_d=null,vd=null,yd=0,bd=null,xd=null,Sd=0,Cd=0,wd=null,Td=null,Ed=null,Dd=null,Od=null,kd=0,Ad=null;function jd(){return K&2&&Y!==0?Y&-Y:O.T===null?Dt():Pf()}function Md(){if(ld===0){if(!(Y&536870912)||L){var e=dt;dt<<=1,!(dt&3932160)&&(dt=262144),ld=e}else ld=536870912}return e=Ao.current,e!==null&&(e.flags|=32),ld}function Nd(e,t){if(t!=null){var n=e.stateNode,r=n.ref;r===null&&(r=n.ref=Pp(xi(e.memoizedProps,n))),Dd===null&&(Dd=[]),Dd.push(t.bind(null,r))}}function Pd(e,t,n){(e===q&&(X===2||X===9)||e.cancelPendingCommit!==null)&&(Vd(e,0),Rd(e,Y,ld,!1)),bt(e,n),(!(K&2)||e!==q)&&(e===q&&(!(K&2)&&(sd|=n),ad===4&&Rd(e,Y,ld,!1)),Ef(e))}function Fd(e,t,n){if(K&6)throw Error(i(327));var r=!n&&!(t&127)&&(t&e.expiredLanes)===0||ht(e,t),a=r?Yd(e,t):qd(e,t,!0),o=r;do{if(a===0){nd&&!r&&Rd(e,t,0,!1);break}if(n=e.current.alternate,o&&!Ld(n)){a=qd(e,t,!1),o=!1;continue}if(a===2){if(o=t,e.errorRecoveryDisabledLanes&o)var s=0;else s=e.pendingLanes&-536870913,s=s===0?s&536870912?536870912:0:s;if(s!==0){t=s;a:{var c=e;a=dd;var l=c.current.memoizedState.isDehydrated;if(l&&(Vd(c,s).flags|=256),s=qd(c,s,!1),s!==2&&s!==6){if(rd&&!l){c.errorRecoveryDisabledLanes|=o,sd|=o,a=4;break a}o=fd,fd=a,o!==null&&(fd===null?fd=o:fd.push.apply(fd,o))}a=s}if(o=!1,a!==2)continue}}if(a===1){Vd(e,0),Rd(e,t,0,!0);break}a:{switch(r=e,o=a,o){case 0:case 1:throw Error(i(345));case 4:if((t&4194048)!==t&&(t&62914560)!==t)break;case 6:Rd(r,t,ld,!td);break a;case 2:fd=null;break;case 3:case 5:break;default:throw Error(i(329))}if((t&62914560)===t&&(a=md+300-Je(),10<a)){if(Rd(r,t,ld,!td),mt(r,0,!0)!==0)break a;Sd=t,r.timeoutHandle=gp(Id.bind(null,r,n,fd,_d,pd,t,ld,sd,ud,td,o,`Throttled`,-0,0),a);break a}Id(r,n,fd,_d,pd,t,ld,sd,ud,td,o,null,-0,0)}break}while(1);Ef(e)}function Id(e,t,n,r,i,a,o,s,c,l,u,d,f,p){e.timeoutHandle=-1;var m=t.subtreeFlags,h=(a&335544064)===a;if(d=null,(h||m&8192||(m&16785408)==16785408)&&(d={stylesheets:null,count:0,imgCount:0,imgBytes:0,suspenseyImages:[],waitingForImages:!0,waitingForViewTransition:!1,unsuspend:En},Bl=null,Ku(t,a,d),h&&(m=d,h=e.containerInfo,h=(h.nodeType===9?h:h.ownerDocument).__reactViewTransition,h!=null&&(m.count++,m.waitingForViewTransition=!0,m=nh.bind(m),h.finished.then(m,m))),m=(a&62914560)===a?md-Je():(a&4194048)===a?hd-Je():0,m=eh(d,m),m!==null)){Sd=a,e.cancelPendingCommit=m(nf.bind(null,e,t,a,n,r,i,o,s,c,l,u,d,null,f,p)),Rd(e,a,o,!l);return}nf(e,t,a,n,r,i,o,s,c,l,u,d)}function Ld(e){for(var t=e;;){var n=t.tag;if((n===0||n===11||n===15)&&t.flags&16384&&(n=t.updateQueue,n!==null&&(n=n.stores,n!==null)))for(var r=0;r<n.length;r++){var i=n[r],a=i.getSnapshot;i=i.value;try{if(!Jr(a(),i))return!1}catch{return!1}}if(n=t.child,t.subtreeFlags&16384&&n!==null)n.return=t,t=n;else{if(t===e)break;for(;t.sibling===null;){if(t.return===null||t.return===e)return!0;t=t.return}t.sibling.return=t.return,t=t.sibling}}return!0}function Rd(e,t,n,r){t=gt(e,t),t&=~cd,t&=~sd,e.suspendedLanes|=t,e.pingedLanes&=~t,r&&(e.warmLanes|=t),r=e.expirationTimes;for(var i=t;0<i;){var a=31-ot(i),o=1<<a;r[a]=-1,i&=~o}n!==0&&St(e,n,t)}function zd(){return K&6?!0:(Df(0,!1),!1)}function Bd(){if(J!==null){if(X===0)var e=J.return;else e=J,ba=ya=null,is(e),io=null,ao=0,e=J;for(;e!==null;)bl(e.alternate,e),e=e.return;J=null}}function Vd(e,t){var n=e.timeoutHandle;return n!==-1&&(e.timeoutHandle=-1,_p(n)),n=e.cancelPendingCommit,n!==null&&(e.cancelPendingCommit=null,n()),Sd=0,Bd(),q=e,J=n=Ri(e.current,null),Y=t,X=0,ed=null,td=!1,nd=ht(e,t),rd=!1,ud=ld=cd=sd=od=ad=0,fd=dd=null,pd=!1,id=gt(e,t),Oi(),n}function Hd(e,t){H=null,O.H=mc,t===R||t===B?(t=no(),X=3):t===z?(t=no(),X=4):X=t===Mc?8:typeof t==`object`&&t&&typeof t.then==`function`?6:1,ed=t,J===null&&(ad=1,Ec(e,Ki(t,e.current)))}function Ud(){var e=Ao.current;return e===null?!0:(Y&4194048)===Y?jo===null:(Y&62914560)===Y||Y&536870912?e===jo:!1}function Wd(){var e=O.H;return O.H=mc,e===null?mc:e}function Gd(){var e=O.A;return O.A=Qu,e}function Kd(){ad=4,td||(Y&4194048)!==Y&&Ao.current!==null||(nd=!0),!(od&134217727)&&!(sd&134217727)||q===null||Rd(q,Y,ld,!1)}function qd(e,t,n){var r=K;K|=2;var i=Wd(),a=Gd();(q!==e||Y!==t)&&(_d=null,Vd(e,t)),t=!1;var o=ad;a:do try{if(X!==0&&J!==null){var s=J,c=ed;switch(X){case 8:Bd(),o=6;break a;case 3:case 2:case 9:case 6:Ao.current===null&&(t=!0);var l=X;if(X=0,ed=null,$d(e,s,c,l),n&&nd){o=0;break a}break;default:l=X,X=0,ed=null,$d(e,s,c,l)}}Jd(),o=ad;break}catch(t){Hd(e,t)}while(1);return t&&e.shellSuspendCounter++,ba=ya=null,K=r,O.H=i,O.A=a,J===null&&(q=null,Y=0,Oi()),o}function Jd(){for(;J!==null;)Zd(J)}function Yd(e,t){var n=K;K|=2;var r=Wd(),a=Gd();q!==e||Y!==t?(_d=null,gd=Je()+500,Vd(e,t)):nd=ht(e,t);a:do try{if(X!==0&&J!==null){t=J;var o=ed;b:switch(X){case 1:X=0,ed=null,$d(e,t,o,1);break;case 2:case 9:if($a(o)){X=0,ed=null,Qd(t);break}t=function(){X!==2&&X!==9||q!==e||(X=7),Ef(e)},o.then(t,t);break a;case 3:X=7;break a;case 4:X=5;break a;case 7:$a(o)?(X=0,ed=null,Qd(t)):(X=0,ed=null,$d(e,t,o,7));break;case 5:var s=null;switch(J.tag){case 26:s=J.memoizedState;case 5:case 27:var c=J;if(s?Ym(s):c.stateNode.complete){X=0,ed=null;var l=c.sibling;if(l!==null)J=l;else{var u=c.return;u===null?J=null:(J=u,ef(u))}break b}}X=0,ed=null,$d(e,t,o,5);break;case 6:X=0,ed=null,$d(e,t,o,6);break;case 8:Bd(),ad=6;break a;default:throw Error(i(462))}}Xd();break}catch(t){Hd(e,t)}while(1);return ba=ya=null,O.H=r,O.A=a,K=n,J===null?(q=null,Y=0,Oi(),ad):0}function Xd(){for(;J!==null&&!Ke();)Zd(J)}function Zd(e){var t=fl(e.alternate,e,id);e.memoizedProps=e.pendingProps,t===null?ef(e):J=t}function Qd(e){var t=e,n=t.alternate;switch(t.tag){case 15:case 0:t=Kc(n,t,t.pendingProps,t.type,void 0,Y);break;case 11:t=Kc(n,t,t.pendingProps,t.type.render,t.ref,Y);break;case 5:is(t);var r=t;r===sa&&(L?(pa(r),r.tag===5&&r.stateNode!=null&&(I=r.stateNode)):(pa(r),L=!0));default:bl(n,t),t=J=zi(t,id),t=fl(n,t,id)}e.memoizedProps=e.pendingProps,t===null?ef(e):J=t}function $d(e,t,n,r){ba=ya=null,is(t),io=null,ao=0;var i=t.return;try{if(jc(e,i,t,n,Y)){ad=1,Ec(e,Ki(n,e.current)),J=null;return}}catch(t){if(i!==null)throw J=i,t;ad=1,Ec(e,Ki(n,e.current)),J=null;return}t.flags&32768?(L||r===1?e=!0:nd||Y&536870912?e=!1:(td=e=!0,(r===2||r===9||r===3||r===6)&&(r=Ao.current,r!==null&&r.tag===13&&(r.flags|=16384))),tf(t,e)):ef(t)}function ef(e){var t=e;do{if(t.flags&32768){tf(t,td);return}e=t.return;var n=vl(t.alternate,t,id);if(n!==null){J=n;return}if(t=t.sibling,t!==null){J=t;return}J=t=e}while(t!==null);ad===0&&(ad=5)}function tf(e,t){do{var n=yl(e.alternate,e);if(n!==null){n.flags&=32767,J=n;return}if(n=e.return,n!==null&&(n.flags|=32768,n.subtreeFlags=0,n.deletions=null),!t&&(e=e.sibling,e!==null)){J=e;return}J=e=n}while(e!==null);ad=6,J=null}function nf(e,t,n,r,a,o,s,c,l,u,d,f){e.cancelPendingCommit=null;do df();while(yd!==0);if(K&6)throw Error(i(327));if(t!==null){if(t===e.current)throw Error(i(177));e===q&&(J=q=null,Y=0),xd=t,bd=e,Sd=n,wd=a,Td=r,rf(e,t,n,s,c,l,f)}}function rf(e,t,n,r,i,a,o){var s=t.lanes|t.childLanes;if(Cd=s,s|=Di,xt(e,n,s,r,i,a),Dd=null,(n&335544064)===n?(Od=za(e),r=10262):(Od=null,r=10256),(t.subtreeFlags&r)!==0||(t.flags&r)!==0?(e.callbackNode=null,e.callbackPriority=0,yf(Qe,function(){return ff(),null})):(e.callbackNode=null,e.callbackPriority=0),zl=!1,r=!!(t.flags&13878),t.subtreeFlags&13878||r){r=O.T,O.T=null,i=k.p,k.p=2,a=K,K|=4;try{pu(e,t,n)}finally{K=a,k.p=i,O.T=r}}yd=1,zl?Ed=Mp(o,e.containerInfo,Od,sf,cf,of,lf,ff,af,null,null):(sf(),cf(),lf())}function af(e){if(yd!==0){var t=bd.onRecoverableError;t(e,{componentStack:null})}}function of(){yd===3&&(yd=0,Pu(xd,bd),yd=4)}function sf(){if(yd===1){yd=0;var e=bd,t=xd,n=Sd,r=!!(t.flags&13878);if(t.subtreeFlags&13878||r){r=O.T,O.T=null;var i=k.p;k.p=2;var a=K;K|=4;try{uu=du=!1,Au(t,e,n),n=cp;var o=ei(e.containerInfo),s=n.focusedElem,c=n.selectionRange;if(o!==s&&s&&s.ownerDocument&&$r(s.ownerDocument.documentElement,s)){if(c!==null&&ti(s)){var l=c.start,u=c.end;if(u===void 0&&(u=l),`selectionStart`in s)s.selectionStart=l,s.selectionEnd=Math.min(u,s.value.length);else{var d=s.ownerDocument||document,f=d&&d.defaultView||window;if(f.getSelection){var p=f.getSelection(),m=s.textContent.length,h=Math.min(c.start,m),g=c.end===void 0?h:Math.min(c.end,m);!p.extend&&h>g&&(o=g,g=h,h=o);var _=Qr(s,h),v=Qr(s,g);if(_&&v&&(p.rangeCount!==1||p.anchorNode!==_.node||p.anchorOffset!==_.offset||p.focusNode!==v.node||p.focusOffset!==v.offset)){var y=d.createRange();y.setStart(_.node,_.offset),p.removeAllRanges(),h>g?(p.addRange(y),p.extend(v.node,v.offset)):(y.setEnd(v.node,v.offset),p.addRange(y))}}}}for(d=[],p=s;p=p.parentNode;)p.nodeType===1&&d.push({element:p,left:p.scrollLeft,top:p.scrollTop});for(typeof s.focus==`function`&&s.focus(),s=0;s<d.length;s++){var b=d[s];b.element.scrollLeft=b.left,b.element.scrollTop=b.top}}gh=!!sp,cp=sp=null}finally{K=a,k.p=i,O.T=r}}e.current=t,yd=2}}function cf(){if(yd===2){yd=0;var e=bd,t=xd,n=!!(t.flags&8772);if(t.subtreeFlags&8772||n){n=O.T,O.T=null;var r=k.p;k.p=2;var i=K;K|=4;try{hu(e,t.alternate,t)}finally{K=i,k.p=r,O.T=n}}yd=3}}function lf(){if(yd===4||yd===3){yd=0;var e=Ed;Ed=null,qe();var t=bd,n=xd,r=Sd,i=Td,a=(r&335544064)===r?10262:10256;if((n.subtreeFlags&a)!==0||(n.flags&a)!==0?yd=5:(yd=0,xd=bd=null,uf(t,t.pendingLanes)),a=t.pendingLanes,a===0&&(vd=null),Et(r),n=n.stateNode,it&&typeof it.onCommitFiberRoot==`function`)try{it.onCommitFiberRoot(rt,n,void 0,(n.current.flags&128)==128)}catch{}if(i!==null){n=O.T,a=k.p,k.p=2,O.T=null;try{for(var o=t.onRecoverableError,s=0;s<i.length;s++){var c=i[s];o(c.value,{componentStack:c.stack})}}finally{O.T=n,k.p=a}}if(i=Dd,o=Od,Od=null,i!==null&&(Dd=null,o===null&&(o=[]),e!==null))for(c=0;c<i.length;c++)n=(0,i[c])(o),n!==void 0&&e.finished.finally(n);Sd&3&&df(),Ef(t),a=t.pendingLanes,r&261930&&a&42?t===Ad?kd++:(kd=0,Ad=t):(kd=0,Ad=null),Df(0,!1)}}function uf(e,t){(e.pooledCacheLanes&=t)===0&&(t=e.pooledCache,t!=null&&(e.pooledCache=null,Ia(t)))}function df(){return Ed!==null&&(Ed.skipTransition(),Ed=null),sf(),cf(),lf(),ff()}function ff(){if(yd!==5)return!1;var e=bd,t=Cd;Cd=0;var n=Et(Sd),r=O.T,a=k.p;try{k.p=32>n?32:n,O.T=null,n=wd,wd=null;var o=bd,s=Sd;if(yd=0,xd=bd=null,Sd=0,K&6)throw Error(i(331));var c=K;if(K|=4,Yu(o.current),Vu(o,o.current,s,n),K=c,Df(0,!1),it&&typeof it.onPostCommitFiberRoot==`function`)try{it.onPostCommitFiberRoot(rt,o)}catch{}return!0}finally{k.p=a,O.T=r,uf(e,t)}}function pf(e,t,n){t=Ki(n,t),t=Oc(e.stateNode,t,2),e=_o(e,t,2),e!==null&&(bt(e,2),Ef(e))}function Z(e,t,n){if(e.tag===3)pf(e,e,n);else for(;t!==null;){if(t.tag===3){pf(t,e,n);break}if(t.tag===1){var r=t.stateNode;if(typeof t.type.getDerivedStateFromError==`function`||typeof r.componentDidCatch==`function`&&(vd===null||!vd.has(r))){e=Ki(n,e),n=kc(2),r=_o(t,n,2),r!==null&&(Ac(n,r,t,e),bt(r,2),Ef(r));break}}t=t.return}}function mf(e,t,n){var r=e.pingCache;if(r===null){r=e.pingCache=new $u;var i=new Set;r.set(t,i)}else i=r.get(t),i===void 0&&(i=new Set,r.set(t,i));i.has(n)||(rd=!0,i.add(n),e=hf.bind(null,e,t,n),t.then(e,e))}function hf(e,t,n){var r=e.pingCache;r!==null&&r.delete(t),e.pingedLanes|=e.suspendedLanes&n,e.warmLanes&=~n,q===e&&(Y&n)===n&&(ad===4||ad===3&&(Y&62914560)===Y&&300>Je()-md?K&2?cd|=n:Vd(e,0):cd|=n,ud===Y&&(ud=0)),Ef(e)}function gf(e,t){t===0&&(t=vt()),e=ji(e,t),e!==null&&(bt(e,t),Ef(e))}function _f(e){var t=e.memoizedState,n=0;t!==null&&(n=t.retryLane),gf(e,n)}function vf(e,t){var n=0;switch(e.tag){case 31:case 13:var r=e.stateNode,a=e.memoizedState;a!==null&&(n=a.retryLane);break;case 19:r=e.stateNode;break;case 22:r=e.stateNode._retryCache;break;default:throw Error(i(314))}r!==null&&r.delete(t),gf(e,n)}function yf(e,t){return We(e,t)}var bf=null,xf=null,Sf=!1,Cf=!1,wf=!1,Tf=0;function Ef(e){e!==xf&&e.next===null&&(xf===null?bf=xf=e:xf=xf.next=e),Cf=!0,Sf||(Sf=!0,Nf())}function Df(e,t){if(!wf&&Cf){wf=!0;do for(var n=!1,r=bf;r!==null;){if(!t){if(e!==0){var i=r.pendingLanes;if(i===0)var a=0;else{var o=r.suspendedLanes,s=r.pingedLanes;a=(1<<31-ot(42|e)+1)-1,a&=i&~(o&~s),a=a&201326741?a&201326741|1:a?a|2:0}a!==0&&(n=!0,Mf(r,a))}else a=Y,a=mt(r,r===q?a:0,r.cancelPendingCommit!==null||r.timeoutHandle!==-1),!(a&3)||ht(r,a)||(n=!0,Mf(r,a))}r=r.next}while(n);wf=!1}}function Of(){kf()}function kf(){Cf=Sf=!1;var e=0;Tf!==0&&hp()&&(e=Tf);for(var t=Je(),n=null,r=bf;r!==null;){var i=r.next,a=Af(r,t);a===0?(r.next=null,n===null?bf=i:n.next=i,i===null&&(xf=n)):(n=r,(e!==0||a&3)&&(Cf=!0)),r=i}yd!==0&&yd!==5||Df(e,!1),Tf!==0&&(Tf=0)}function Af(e,t){for(var n=e.suspendedLanes,r=e.pingedLanes,i=e.expirationTimes,a=e.pendingLanes&-62914561;0<a;){var o=31-ot(a),s=1<<o,c=i[o];c===-1?((s&n)===0||(s&r)!==0)&&(i[o]=_t(s,t)):c<=t&&(e.expiredLanes|=s),a&=~s}if(t=q,n=Y,n=mt(e,e===t?n:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r=e.callbackNode,n===0||e===t&&(X===2||X===9)||e.cancelPendingCommit!==null)return r!==null&&r!==null&&Ge(r),e.callbackNode=null,e.callbackPriority=0;if(!(n&3)||ht(e,n)){if(t=n&-n,t===e.callbackPriority)return t;switch(r!==null&&Ge(r),Et(n)){case 2:case 8:n=Ze;break;case 32:n=Qe;break;case 268435456:n=et;break;default:n=Qe}return r=jf.bind(null,e),n=We(n,r),e.callbackPriority=t,e.callbackNode=n,t}return r!==null&&r!==null&&Ge(r),e.callbackPriority=2,e.callbackNode=null,2}function jf(e,t){if(yd!==0&&yd!==5)return e.callbackNode=null,e.callbackPriority=0,null;var n=e.callbackNode;if(df()&&e.callbackNode!==n)return null;var r=Y;return r=mt(e,e===q?r:0,e.cancelPendingCommit!==null||e.timeoutHandle!==-1),r===0?null:(Fd(e,r,t),Af(e,Je()),e.callbackNode!=null&&e.callbackNode===n?jf.bind(null,e):null)}function Mf(e,t){if(df())return null;Fd(e,t,!0)}function Nf(){bp(function(){K&6?We(Xe,Of):kf()})}function Pf(){if(Tf===0){var e=Ha;e===0&&(e=ut,ut<<=1,!(ut&261888)&&(ut=256)),Tf=e}return Tf}function Ff(e){return e==null||typeof e==`symbol`||typeof e==`boolean`?null:typeof e==`function`?e:Tn(e)}function If(e,t,n,r,i){if(t===`submit`&&n&&n.stateNode===i){var a=Ff((i[jt]||null).action),o=r.submitter;o&&(t=(t=o[jt]||null)?Ff(t.formAction):o.getAttribute(`formAction`),t!==null&&(a=t,o=null));var s=new Kn(`action`,`action`,null,r,i);e.push({event:s,listeners:[{instance:null,listener:function(){if(r.defaultPrevented){if(Tf!==0){var e=new FormData(i,o);ec(n,{pending:!0,data:e,method:i.method,action:a},null,e)}}else typeof a==`function`&&(s.preventDefault(),e=new FormData(i,o),ec(n,{pending:!0,data:e,method:i.method,action:a},a,e))},currentTarget:i}]})}}for(var Lf=0;Lf<vi.length;Lf++){var Rf=vi[Lf];yi(Rf.toLowerCase(),`on`+(Rf[0].toUpperCase()+Rf.slice(1)))}yi(pi,`onAnimationEnd`),yi(mi,`onAnimationIteration`),yi(hi,`onAnimationStart`),yi(`dblclick`,`onDoubleClick`),yi(`focusin`,`onFocus`),yi(`focusout`,`onBlur`),yi(N,`onTransitionRun`),yi(gi,`onTransitionStart`),yi(_i,`onTransitionCancel`),yi(P,`onTransitionEnd`),Yt(`onMouseEnter`,[`mouseout`,`mouseover`]),Yt(`onMouseLeave`,[`mouseout`,`mouseover`]),Yt(`onPointerEnter`,[`pointerout`,`pointerover`]),Yt(`onPointerLeave`,[`pointerout`,`pointerover`]),Jt(`onChange`,`change click focusin focusout input keydown keyup selectionchange`.split(` `)),Jt(`onSelect`,`focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange`.split(` `)),Jt(`onBeforeInput`,[`compositionend`,`keypress`,`textInput`,`paste`]),Jt(`onCompositionEnd`,`compositionend focusout keydown keypress keyup mousedown`.split(` `)),Jt(`onCompositionStart`,`compositionstart focusout keydown keypress keyup mousedown`.split(` `)),Jt(`onCompositionUpdate`,`compositionupdate focusout keydown keypress keyup mousedown`.split(` `));var zf=`abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting`.split(` `),Bf=new Set(`beforetoggle cancel close invalid load scroll scrollend toggle`.split(` `).concat(zf));function Vf(e,t){t=!!(t&4);for(var n=0;n<e.length;n++){var r=e[n],i=r.event;r=r.listeners;a:{var a=void 0;if(t)for(var o=r.length-1;0<=o;o--){var s=r[o],c=s.instance,l=s.currentTarget;if(s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){wi(e)}i.currentTarget=null,a=c}else for(o=0;o<r.length;o++){if(s=r[o],c=s.instance,l=s.currentTarget,s=s.listener,c!==a&&i.isPropagationStopped())break a;a=s,i.currentTarget=l;try{a(i)}catch(e){wi(e)}i.currentTarget=null,a=c}}}}function Q(e,t){var n=t[Nt];n===void 0&&(n=t[Nt]=new Set);var r=e+`__bubble`;n.has(r)||(Gf(t,e,2,!1),n.add(r))}function Hf(e,t,n){var r=0;t&&(r|=4),Gf(n,e,r,t)}var Uf=`_reactListening`+Math.random().toString(36).slice(2);function Wf(e){if(!e[Uf]){e[Uf]=!0,Kt.forEach(function(t){t!==`selectionchange`&&(Bf.has(t)||Hf(t,!1,e),Hf(t,!0,e))});var t=e.nodeType===9?e:e.ownerDocument;t===null||t[Uf]||(t[Uf]=!0,Hf(`selectionchange`,!1,t))}}function Gf(e,t,n,r){switch(Ch(t)){case 2:var i=_h;break;case 8:i=vh;break;default:i=yh}n=i.bind(null,t,n,e),i=void 0,!In||t!==`touchstart`&&t!==`touchmove`&&t!==`wheel`||(i=!0),r?i===void 0?e.addEventListener(t,n,!0):e.addEventListener(t,n,{capture:!0,passive:i}):i===void 0?e.addEventListener(t,n,!1):e.addEventListener(t,n,{passive:i})}function Kf(e,t,n,r,i){var a=r;if(!(t&1)&&!(t&2)&&r!==null)a:for(;;){if(r===null)return;var s=r.tag;if(s===3||s===4){var c=r.stateNode.containerInfo;if(c===i)break;if(s===4)for(s=r.return;s!==null;){var l=s.tag;if((l===3||l===4)&&s.stateNode.containerInfo===i)return;s=s.return}for(;c!==null;){if(s=Bt(c),s===null)return;if(l=s.tag,l===5||l===6||l===26||l===27){r=a=s;continue a}c=c.parentNode}}r=r.return}Nn(function(){var r=a,i=On(n),s=[];a:{var c=F.get(e);if(c!==void 0){var l=Kn,u=e;switch(e){case`keypress`:if(Hn(n)===0)break a;case`keydown`:case`keyup`:l=ur;break;case`focusin`:u=`focus`,l=tr;break;case`focusout`:u=`blur`,l=tr;break;case`beforeblur`:case`afterblur`:l=tr;break;case`click`:if(n.button===2)break a;case`auxclick`:case`dblclick`:case`mousedown`:case`mousemove`:case`mouseup`:case`mouseout`:case`mouseover`:case`contextmenu`:l=$n;break;case`drag`:case`dragend`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`dragstart`:case`drop`:l=er;break;case`touchcancel`:case`touchend`:case`touchmove`:case`touchstart`:l=pr;break;case pi:case mi:case hi:l=nr;break;case P:l=mr;break;case`scroll`:case`scrollend`:l=Jn;break;case`wheel`:l=hr;break;case`copy`:case`cut`:case`paste`:l=rr;break;case`gotpointercapture`:case`lostpointercapture`:case`pointercancel`:case`pointerdown`:case`pointermove`:case`pointerout`:case`pointerover`:case`pointerup`:l=dr;break;case`submit`:l=fr;break;case`toggle`:case`beforetoggle`:l=gr}var d=!!(t&4),f=!d&&(e===`scroll`||e===`scrollend`),p=d?c===null?null:c+`Capture`:c;d=[];for(var m=r,h;m!==null;){var g=m;if(h=g.stateNode,g=g.tag,g!==5&&g!==26&&g!==27||h===null||p===null||(g=Pn(m,p),g!=null&&d.push(qf(m,g,h))),f)break;m=m.return}0<d.length&&(c=new l(c,u,null,n,i),s.push({event:c,listeners:d}))}}if(!(t&7)){a:{if(l=e===`mouseover`||e===`pointerover`,c=e===`mouseout`||e===`pointerout`,l&&n!==Dn&&(u=n.relatedTarget||n.fromElement)&&(Bt(u)||u[Mt]))break a;(c||l)&&(u=i.window===i?i:(l=i.ownerDocument)?l.defaultView||l.parentWindow:window,c?(l=n.relatedTarget||n.toElement,c=r,l=l?Bt(l):null,l!==null&&(f=o(l),d=l.tag,l!==f||d!==5&&d!==27&&d!==6)&&(l=null)):(c=null,l=r),c!==l&&(d=$n,g=`onMouseLeave`,p=`onMouseEnter`,m=`mouse`,(e===`pointerout`||e===`pointerover`)&&(d=dr,g=`onPointerLeave`,p=`onPointerEnter`,m=`pointer`),f=c==null?u:Ht(c),h=l==null?u:Ht(l),u=new d(g,m+`leave`,c,n,i),u.target=f,u.relatedTarget=h,g=null,Bt(i)===r&&(d=new d(p,m+`enter`,l,n,i),d.target=h,d.relatedTarget=f,g=d),f=g,d=c&&l?w(c,l,Yf):null,c!==null&&Xf(s,u,c,d,!1),l!==null&&f!==null&&Xf(s,f,l,d,!0)))}a:{if(c=r?Ht(r):window,l=c.nodeName&&c.nodeName.toLowerCase(),l===`select`||l===`input`&&c.type===`file`)var _=Ir;else if(Ar(c)){if(Lr)_=Kr;else{_=Wr;var v=Ur}}else l=c.nodeName,!l||l.toLowerCase()!==`input`||c.type!==`checkbox`&&c.type!==`radio`?r&&Sn(r.elementType)&&(_=Ir):_=Gr;if(_&&=_(e,r)){jr(s,_,n,i);break a}v&&v(e,c,r)}switch(v=r?Ht(r):window,e){case`focusin`:(Ar(v)||v.contentEditable===`true`)&&(ri=v,ii=r,ai=null);break;case`focusout`:ai=ii=ri=null;break;case`mousedown`:oi=!0;break;case`contextmenu`:case`mouseup`:case`dragend`:oi=!1,si(s,n,i);break;case`selectionchange`:if(ni)break;case`keydown`:case`keyup`:si(s,n,i)}var y;if(vr)b:{switch(e){case`compositionstart`:var b=`onCompositionStart`;break b;case`compositionend`:b=`onCompositionEnd`;break b;case`compositionupdate`:b=`onCompositionUpdate`;break b}b=void 0}else Er?wr(e,n)&&(b=`onCompositionEnd`):e===`keydown`&&n.keyCode===229&&(b=`onCompositionStart`);b&&(xr&&n.locale!==`ko`&&(Er||b!==`onCompositionStart`?b===`onCompositionEnd`&&Er&&(y=Vn()):(Rn=i,zn=`value`in Rn?Rn.value:Rn.textContent,Er=!0)),v=Jf(r,b),0<v.length&&(b=new ir(b,e,null,n,i),s.push({event:b,listeners:v}),y?b.data=y:(y=Tr(n),y!==null&&(b.data=y)))),(y=br?Dr(e,n):Or(e,n))&&(b=Jf(r,`onBeforeInput`),0<b.length&&(v=new ir(`onBeforeInput`,`beforeinput`,null,n,i),s.push({event:v,listeners:b}),v.data=y)),If(s,e,r,n,i)}Vf(s,t)})}function qf(e,t,n){return{instance:e,listener:t,currentTarget:n}}function Jf(e,t){for(var n=t+`Capture`,r=[];e!==null;){var i=e,a=i.stateNode;if(i=i.tag,i!==5&&i!==26&&i!==27||a===null||(i=Pn(e,n),i!=null&&r.unshift(qf(e,i,a)),i=Pn(e,t),i!=null&&r.push(qf(e,i,a))),e.tag===3)return r;e=e.return}return[]}function Yf(e){if(e===null)return null;do e=e.return;while(e&&e.tag!==5&&e.tag!==27);return e||null}function Xf(e,t,n,r,i){for(var a=t._reactName,o=[];n!==null&&n!==r;){var s=n,c=s.alternate,l=s.stateNode;if(s=s.tag,c!==null&&c===r)break;s!==5&&s!==26&&s!==27||l===null||(c=l,i?(l=Pn(n,a),l!=null&&o.unshift(qf(n,l,c))):i||(l=Pn(n,a),l!=null&&o.push(qf(n,l,c)))),n=n.return}o.length!==0&&e.push({event:t,listeners:o})}var Zf=/\r\n?/g,Qf=/\u0000|\uFFFD/g;function $f(e){return(typeof e==`string`?e:``+e).replace(Zf,`
+`).replace(Qf,``)}function ep(e,t){return t=$f(t),$f(e)===t}function $(e,t,n,r,a,o){switch(n){case`children`:if(typeof r==`string`)t===`body`||t===`textarea`&&r===``||vn(e,r);else if(typeof r==`number`||typeof r==`bigint`)t!==`body`&&vn(e,``+r);else return;break;case`className`:nn(e,`class`,r);break;case`tabIndex`:nn(e,`tabindex`,r);break;case`dir`:case`role`:case`viewBox`:case`width`:case`height`:nn(e,n,r);break;case`style`:xn(e,r,o);return;case`data`:if(t!==`object`){nn(e,`data`,r);break}case`src`:case`href`:if(r===``&&(t!==`a`||n!==`href`)){e.removeAttribute(n);break}if(r==null||typeof r==`function`||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=Tn(r),e.setAttribute(n,r);break;case`action`:case`formAction`:if(typeof r==`function`){e.setAttribute(n,`javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`);break}if(typeof o==`function`&&(n===`formAction`?(t!==`input`&&$(e,t,`name`,a.name,a,null),$(e,t,`formEncType`,a.formEncType,a,null),$(e,t,`formMethod`,a.formMethod,a,null),$(e,t,`formTarget`,a.formTarget,a,null)):($(e,t,`encType`,a.encType,a,null),$(e,t,`method`,a.method,a,null),$(e,t,`target`,a.target,a,null))),r==null||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=Tn(r),e.setAttribute(n,r);break;case`onClick`:r!=null&&(e.onclick=En);return;case`onScroll`:r!=null&&Q(`scroll`,e);return;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);return;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));o?.__html!==n&&(e.innerHTML=n)}}break;case`multiple`:e.multiple=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`muted`:e.muted=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`defaultValue`:case`defaultChecked`:case`innerHTML`:case`ref`:break;case`autoFocus`:break;case`xlinkHref`:if(r==null||typeof r==`function`||typeof r==`boolean`||typeof r==`symbol`){e.removeAttribute(`xlink:href`);break}n=Tn(r),e.setAttributeNS(`http://www.w3.org/1999/xlink`,`xlink:href`,n);break;case`contentEditable`:case`spellCheck`:case`draggable`:case`value`:case`autoReverse`:case`externalResourcesRequired`:case`focusable`:case`preserveAlpha`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`inert`:case`allowFullScreen`:case`async`:case`autoPlay`:case`controls`:case`credentialless`:case`default`:case`defer`:case`disabled`:case`disablePictureInPicture`:case`disableRemotePlayback`:case`formNoValidate`:case`hidden`:case`loop`:case`noModule`:case`noValidate`:case`open`:case`playsInline`:case`readOnly`:case`required`:case`reversed`:case`scoped`:case`seamless`:case`itemScope`:r&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``):e.removeAttribute(n);break;case`capture`:case`download`:!0===r?e.setAttribute(n,``):!1!==r&&r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`cols`:case`rows`:case`size`:case`span`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`&&!isNaN(r)&&1<=r?e.setAttribute(n,r):e.removeAttribute(n);break;case`rowSpan`:case`start`:r==null||typeof r==`function`||typeof r==`symbol`||isNaN(r)?e.removeAttribute(n):e.setAttribute(n,r);break;case`popover`:Q(`beforetoggle`,e),Q(`toggle`,e),tn(e,`popover`,r);break;case`xlinkActuate`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:actuate`,r);break;case`xlinkArcrole`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:arcrole`,r);break;case`xlinkRole`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:role`,r);break;case`xlinkShow`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:show`,r);break;case`xlinkTitle`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:title`,r);break;case`xlinkType`:rn(e,`http://www.w3.org/1999/xlink`,`xlink:type`,r);break;case`xmlBase`:rn(e,`http://www.w3.org/XML/1998/namespace`,`xml:base`,r);break;case`xmlLang`:rn(e,`http://www.w3.org/XML/1998/namespace`,`xml:lang`,r);break;case`xmlSpace`:rn(e,`http://www.w3.org/XML/1998/namespace`,`xml:space`,r);break;case`is`:tn(e,`is`,r);break;case`innerText`:case`textContent`:return;default:if(!(2<n.length)||n[0]!==`o`&&n[0]!==`O`||n[1]!==`n`&&n[1]!==`N`)n=Cn.get(n)||n,tn(e,n,r);else return}j=!0}function tp(e,t,n,r,a,o){switch(n){case`style`:xn(e,r,o);return;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));o?.__html!==n&&(e.innerHTML=n)}}break;case`children`:if(typeof r==`string`)vn(e,r);else if(typeof r==`number`||typeof r==`bigint`)vn(e,``+r);else return;break;case`onScroll`:r!=null&&Q(`scroll`,e);return;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);return;case`onClick`:r!=null&&(e.onclick=En);return;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`innerHTML`:case`ref`:return;case`innerText`:case`textContent`:return;default:if(!qt.hasOwnProperty(n))a:{if(n[0]===`o`&&n[1]===`n`&&(a=n.endsWith(`Capture`),o=n.slice(2,a?n.length-7:void 0),t=e[jt]||null,t=t==null?null:t[n],typeof t==`function`&&e.removeEventListener(o,t,a),typeof r==`function`)){typeof t!=`function`&&t!==null&&(n in e?e[n]=null:e.hasAttribute(n)&&e.removeAttribute(n)),e.addEventListener(o,r,a);break a}j=!0,n in e?e[n]=r:!0===r?e.setAttribute(n,``):tn(e,n,r)}return}j=!0}function np(e,t,n){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`img`:Q(`error`,e),Q(`load`,e);var r=!1,a=!1,o;for(o in n)if(n.hasOwnProperty(o)){var s=n[o];if(s!=null)switch(o){case`src`:r=!0;break;case`srcSet`:a=!0;break;case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,o,s,n,null)}}a&&$(e,t,`srcSet`,n.srcSet,n,null),r&&$(e,t,`src`,n.src,n,null);return;case`input`:Q(`invalid`,e);var c=o=s=a=null,l=null,u=null;for(r in n)if(n.hasOwnProperty(r)){var d=n[r];if(d!=null)switch(r){case`name`:a=d;break;case`type`:s=d;break;case`checked`:l=d;break;case`defaultChecked`:u=d;break;case`value`:o=d;break;case`defaultValue`:c=d;break;case`children`:case`dangerouslySetInnerHTML`:if(d!=null)throw Error(i(137,t));break;default:$(e,t,r,d,n,null)}}pn(e,o,c,l,u,s,a,!1);return;case`select`:for(a in Q(`invalid`,e),r=s=o=null,n)if(n.hasOwnProperty(a)&&(c=n[a],c!=null))switch(a){case`value`:o=c;break;case`defaultValue`:s=c;break;case`multiple`:r=c;default:$(e,t,a,c,n,null)}t=o,n=s,e.multiple=!!r,t==null?n!=null&&hn(e,!!r,n,!0):hn(e,!!r,t,!1);return;case`textarea`:for(s in Q(`invalid`,e),o=a=r=null,n)if(n.hasOwnProperty(s)&&(c=n[s],c!=null))switch(s){case`value`:r=c;break;case`defaultValue`:a=c;break;case`children`:o=c;break;case`dangerouslySetInnerHTML`:if(c!=null)throw Error(i(91));break;default:$(e,t,s,c,n,null)}_n(e,r,a,o);return;case`option`:for(l in n)if(n.hasOwnProperty(l)&&(r=n[l],r!=null))switch(l){case`selected`:e.selected=r&&typeof r!=`function`&&typeof r!=`symbol`;break;default:$(e,t,l,r,n,null)}return;case`dialog`:Q(`beforetoggle`,e),Q(`toggle`,e),Q(`cancel`,e),Q(`close`,e);break;case`iframe`:case`object`:Q(`load`,e);break;case`video`:case`audio`:for(r=0;r<zf.length;r++)Q(zf[r],e);break;case`image`:Q(`error`,e),Q(`load`,e);break;case`details`:Q(`toggle`,e);break;case`embed`:case`source`:case`link`:Q(`error`,e),Q(`load`,e);case`area`:case`base`:case`br`:case`col`:case`hr`:case`keygen`:case`meta`:case`param`:case`track`:case`wbr`:case`menuitem`:for(u in n)if(n.hasOwnProperty(u)&&(r=n[u],r!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,u,r,n,null)}return;default:if(Sn(t)){for(d in n)n.hasOwnProperty(d)&&(r=n[d],r!==void 0&&tp(e,t,d,r,n,void 0));return}}for(c in n)n.hasOwnProperty(c)&&(r=n[c],r!=null&&$(e,t,c,r,n,null))}var rp={};function ip(e,t,n,r){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`input`:var a=null,o=null,s=null,c=null,l=null,u=null,d=null;for(m in n){var f=n[m];if(n.hasOwnProperty(m)&&f!=null)switch(m){case`checked`:break;case`value`:break;case`defaultValue`:l=f;default:r.hasOwnProperty(m)||$(e,t,m,null,r,f)}}for(var p in r){var m=r[p];if(f=n[p],r.hasOwnProperty(p)&&(m!=null||f!=null))switch(p){case`type`:m!==f&&(j=!0),o=m;break;case`name`:m!==f&&(j=!0),a=m;break;case`checked`:m!==f&&(j=!0),u=m;break;case`defaultChecked`:m!==f&&(j=!0),d=m;break;case`value`:m!==f&&(j=!0),s=m;break;case`defaultValue`:m!==f&&(j=!0),c=m;break;case`children`:case`dangerouslySetInnerHTML`:if(m!=null)throw Error(i(137,t));break;default:m!==f&&$(e,t,p,m,r,f)}}fn(e,s,c,l,u,d,o,a);return;case`select`:for(o in m=s=c=p=null,n)if(l=n[o],n.hasOwnProperty(o)&&l!=null)switch(o){case`value`:break;case`multiple`:m=l;default:r.hasOwnProperty(o)||$(e,t,o,null,r,l)}for(a in r)if(o=r[a],l=n[a],r.hasOwnProperty(a)&&(o!=null||l!=null))switch(a){case`value`:o!==l&&(j=!0),p=o;break;case`defaultValue`:o!==l&&(j=!0),c=o;break;case`multiple`:o!==l&&(j=!0),s=o;default:o!==l&&$(e,t,a,o,r,l)}t=c,n=s,r=m,p==null?!!r!=!!n&&(t==null?hn(e,!!n,n?[]:``,!1):hn(e,!!n,t,!0)):hn(e,!!n,p,!1);return;case`textarea`:for(c in m=p=null,n)if(a=n[c],n.hasOwnProperty(c)&&a!=null&&!r.hasOwnProperty(c))switch(c){case`value`:break;case`children`:break;default:$(e,t,c,null,r,a)}for(s in r)if(a=r[s],o=n[s],r.hasOwnProperty(s)&&(a!=null||o!=null))switch(s){case`value`:a!==o&&(j=!0),p=a;break;case`defaultValue`:a!==o&&(j=!0),m=a;break;case`children`:break;case`dangerouslySetInnerHTML`:if(a!=null)throw Error(i(91));break;default:a!==o&&$(e,t,s,a,r,o)}gn(e,p,m);return;case`option`:for(var h in n)if(p=n[h],n.hasOwnProperty(h)&&p!=null&&!r.hasOwnProperty(h))switch(h){case`selected`:e.selected=!1;break;default:$(e,t,h,null,r,p)}for(l in r)if(p=r[l],m=n[l],r.hasOwnProperty(l)&&p!==m&&(p!=null||m!=null))switch(l){case`selected`:p!==m&&(j=!0),e.selected=p&&typeof p!=`function`&&typeof p!=`symbol`;break;default:$(e,t,l,p,r,m)}return;case`img`:case`link`:case`area`:case`base`:case`br`:case`col`:case`embed`:case`hr`:case`keygen`:case`meta`:case`param`:case`source`:case`track`:case`wbr`:case`menuitem`:for(var g in n)p=n[g],n.hasOwnProperty(g)&&p!=null&&!r.hasOwnProperty(g)&&$(e,t,g,null,r,p);for(u in r)if(p=r[u],m=n[u],r.hasOwnProperty(u)&&p!==m&&(p!=null||m!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:if(p!=null)throw Error(i(137,t));break;default:$(e,t,u,p,r,m)}return;default:if(Sn(t)){for(var _ in n)p=n[_],n.hasOwnProperty(_)&&p!==void 0&&!r.hasOwnProperty(_)&&tp(e,t,_,void 0,r,p);for(d in r)p=r[d],m=n[d],!r.hasOwnProperty(d)||p===m||p===void 0&&m===void 0||tp(e,t,d,p,r,m);return}}for(var v in n)p=n[v],n.hasOwnProperty(v)&&p!=null&&!r.hasOwnProperty(v)&&$(e,t,v,null,r,p);for(f in r)p=r[f],m=n[f],!r.hasOwnProperty(f)||p===m||p==null&&m==null||$(e,t,f,p,r,m)}function ap(e){switch(e){case`css`:case`script`:case`font`:case`img`:case`image`:case`input`:case`link`:return!0;default:return!1}}function op(){if(typeof performance.getEntriesByType==`function`){for(var e=0,t=0,n=performance.getEntriesByType(`resource`),r=0;r<n.length;r++){var i=n[r],a=i.transferSize,o=i.initiatorType,s=i.duration;if(a&&s&&ap(o)){for(o=0,s=i.responseEnd,r+=1;r<n.length;r++){var c=n[r],l=c.startTime;if(l>s)break;var u=c.transferSize,d=c.initiatorType;u&&ap(d)&&(c=c.responseEnd,o+=u*(c<s?1:(s-l)/(c-l)))}if(--r,t+=8*(a+o)/(i.duration/1e3),e++,10<e)break}}if(0<e)return t/e/1e6}return navigator.connection&&(e=navigator.connection.downlink,typeof e==`number`)?e:5}var sp=null,cp=null;function lp(e){return e.nodeType===9?e:e.ownerDocument}function up(e){switch(e){case`http://www.w3.org/2000/svg`:return 1;case`http://www.w3.org/1998/Math/MathML`:return 2;default:return 0}}function dp(e,t){if(e===0)switch(t){case`svg`:return 1;case`math`:return 2;default:return 0}return e===1&&t===`foreignObject`?0:e}function fp(e,t,n,r){return n=lp(n).createElement(e),n[At]=r,n[jt]=t,np(n,e,t),Wt(n),n}function pp(e,t){return e===`textarea`||e===`noscript`||typeof t.children==`string`||typeof t.children==`number`||typeof t.children==`bigint`||typeof t.dangerouslySetInnerHTML==`object`&&t.dangerouslySetInnerHTML!==null&&t.dangerouslySetInnerHTML.__html!=null}var mp=null;function hp(){var e=window.event;return e&&e.type===`popstate`?e!==mp&&(mp=e,!0):(mp=null,!1)}var gp=typeof setTimeout==`function`?setTimeout:void 0,_p=typeof clearTimeout==`function`?clearTimeout:void 0,vp=typeof Promise==`function`?Promise:void 0,yp=typeof requestAnimationFrame==`function`?requestAnimationFrame:gp,bp=typeof queueMicrotask==`function`?queueMicrotask:vp===void 0?gp:function(e){return vp.resolve(null).then(e).catch(xp)};function xp(e){setTimeout(function(){throw e})}function Sp(e){return e===`head`}function Cp(e,t){var n=t,r=0;do{var i=n.nextSibling;if(e.removeChild(n),i&&i.nodeType===8){if(n=i.data,n===`/$`||n===`/&`){if(r===0){e.removeChild(i),Hh(t);return}r--}else if(n===`$`||n===`$?`||n===`$~`||n===`$!`||n===`&`)r++;else if(n===`html`)_m(e.ownerDocument.documentElement);else if(n===`head`){n=e.ownerDocument.head,_m(n);for(var a=n.firstChild;a;){var o=a.nextSibling,s=a.nodeName;a[Lt]||s===`SCRIPT`||s===`STYLE`||s===`LINK`&&a.rel.toLowerCase()===`stylesheet`||n.removeChild(a),a=o}}else n===`body`&&_m(e.ownerDocument.body)}n=i}while(n);Hh(t)}function wp(e,t){var n=e;e=0;do{var r=n.nextSibling;if(n.nodeType===1?t?(n._stashedDisplay=n.style.display,n.style.display=`none`):(n.style.display=n._stashedDisplay||``,n.getAttribute(`style`)===``&&n.removeAttribute(`style`)):n.nodeType===3&&(t?(n._stashedText=n.nodeValue,n.nodeValue=``):n.nodeValue=n._stashedText||``),r&&r.nodeType===8){if(n=r.data,n===`/$`){if(e===0)break;e--}else n!==`$`&&n!==`$?`&&n!==`$~`&&n!==`$!`||e++}n=r}while(n)}function Tp(e,t,n){if(t=CSS.escape(t)===t?t:`r-`+btoa(t).replace(/=/g,``),e.style.viewTransitionName=t,n!=null&&(e.style.viewTransitionClass=n),n=getComputedStyle(e),n.display===`inline`){if(t=e.getClientRects(),t.length===1)var r=1;else for(var i=r=0;i<t.length;i++){var a=t[i];0<a.width&&0<a.height&&r++}r===1&&(e=e.style,e.display=t.length===1?`inline-block`:`block`,e.marginTop=`-`+n.paddingTop,e.marginBottom=`-`+n.paddingBottom)}}function Ep(e,t){e=e.style,t=t.style;var n=t==null?null:t.hasOwnProperty(`viewTransitionName`)?t.viewTransitionName:t.hasOwnProperty(`view-transition-name`)?t[`view-transition-name`]:null;e.viewTransitionName=n==null||typeof n==`boolean`?``:(``+n).trim(),n=t==null?null:t.hasOwnProperty(`viewTransitionClass`)?t.viewTransitionClass:t.hasOwnProperty(`view-transition-class`)?t[`view-transition-class`]:null,e.viewTransitionClass=n==null||typeof n==`boolean`?``:(``+n).trim(),e.display===`inline-block`&&(t==null?e.display=e.margin=``:(n=t.display,e.display=n==null||typeof n==`boolean`?``:n,n=t.margin,n==null?(n=t.hasOwnProperty(`marginTop`)?t.marginTop:t[`margin-top`],e.marginTop=n==null||typeof n==`boolean`?``:n,t=t.hasOwnProperty(`marginBottom`)?t.marginBottom:t[`margin-bottom`],e.marginBottom=t==null||typeof t==`boolean`?``:t):e.margin=n))}function Dp(e,t,n){return n=n.ownerDocument.defaultView,{rect:e,abs:t.position===`absolute`||t.position===`fixed`,clip:t.clipPath!==`none`||t.overflow!==`visible`||t.filter!==`none`||t.mask!==`none`||t.mask!==`none`||t.borderRadius!==`0px`,view:0<=e.bottom&&0<=e.right&&e.top<=n.innerHeight&&e.left<=n.innerWidth}}function Op(e){return Dp(e.getBoundingClientRect(),getComputedStyle(e),e)}function kp(e){var t=e.getBoundingClientRect();t=new DOMRect(t.x+2e4,t.y+2e4,t.width,t.height);var n=getComputedStyle(e);return Dp(t,n,e)}function Ap(e){return e.documentElement.clientHeight}function jp(e){this.addEventListener(`load`,e),this.addEventListener(`error`,e)}function Mp(e,t,n,r,i,a,o,s,c){var l=t.nodeType===9?t:t.ownerDocument;try{var u=l.startViewTransition({update:function(){var t=l.defaultView,n=t.navigation&&t.navigation.transition,o=l.fonts.status;r();var s=[];if(o===`loaded`&&(Ap(l),l.fonts.status===`loading`&&s.push(l.fonts.ready)),o=s.length,e!==null)for(var c=e.suspenseyImages,u=0,d=0;d<c.length;d++){var f=c[d];if(!f.complete){var p=f.getBoundingClientRect();if(0<p.bottom&&0<p.right&&p.top<t.innerHeight&&p.left<t.innerWidth){if(u+=Xm(f),u>$m){s.length=o;break}f=new Promise(jp.bind(f)),s.push(f)}}}if(0<s.length)return t=Promise.race([Promise.all(s),new Promise(function(e){return setTimeout(e,500)})]).then(i,i),(n?Promise.allSettled([n.finished,t]):t).then(a,a);if(i(),n)return n.finished.then(a,a);a()},types:n});l.__reactViewTransition=u;var d=[];return u.ready.then(function(){for(var e=l.documentElement.getAnimations({subtree:!0}),t=0;t<e.length;t++){var n=e[t],r=n.effect,i=r.pseudoElement;if(i!=null&&i.startsWith(`::view-transition`)){d.push(n),n=r.getKeyframes();for(var a=i=void 0,s=!0,c=0;c<n.length;c++){var u=n[c],f=u.width;if(i===void 0)i=f;else if(i!==f){s=!1;break}if(f=u.height,a===void 0)a=f;else if(a!==f){s=!1;break}delete u.width,delete u.height,u.transform===`none`&&delete u.transform}s&&i!==void 0&&a!==void 0&&(r.setKeyframes(n),s=getComputedStyle(r.target,r.pseudoElement),s.width!==i||s.height!==a)&&(s=n[0],s.width=i,s.height=a,s=n[n.length-1],s.width=i,s.height=a,r.setKeyframes(n))}}o()},function(e){l.__reactViewTransition===u&&(l.__reactViewTransition=null);try{if(typeof e==`object`&&e)switch(e.name){case`InvalidStateError`:(e.message===`View transition was skipped because document visibility state is hidden.`||e.message===`Skipping view transition because document visibility state has become hidden.`||e.message===`Skipping view transition because viewport size changed.`||e.message===`Transition was aborted because of invalid state`)&&(e=null)}e!==null&&c(e)}finally{r(),i(),o()}}),u.finished.finally(function(){for(var e=0;e<d.length;e++)d[e].cancel();l.__reactViewTransition===u&&(l.__reactViewTransition=null),s()}),u}catch{return r(),i(),o(),null}}function Np(e,t){this._scope=document.documentElement,this._selector=`::view-transition-`+e+`(`+t+`)`}Np.prototype.animate=function(e,t){return t=typeof t==`number`?{duration:t}:T({},t),t.pseudoElement=this._selector,this._scope.animate(e,t)},Np.prototype.getAnimations=function(){for(var e=this._scope,t=this._selector,n=e.getAnimations({subtree:!0}),r=[],i=0;i<n.length;i++){var a=n[i].effect;a!==null&&a.target===e&&a.pseudoElement===t&&r.push(n[i])}return r},Np.prototype.getComputedStyle=function(){return getComputedStyle(this._scope,this._selector)};function Pp(e){return{name:e,group:new Np(`group`,e),imagePair:new Np(`image-pair`,e),old:new Np(`old`,e),new:new Np(`new`,e)}}function Fp(e){this._fragmentFiber=e,this._observers=this._eventListeners=null}Fp.prototype.addEventListener=function(e,t,n){var r=null,i=null;if(!(n!=null&&typeof n!=`boolean`&&(r=n.signal||null,r!==null&&r.aborted))){this._eventListeners===null&&(this._eventListeners=[]);var a=this._eventListeners;if(Bp(a,e,t,n)===-1){var o=this,s=t;n!=null&&typeof n!=`boolean`&&!0===n.once&&(s=function(r){o.removeEventListener(e,t,n),typeof t==`function`?t.call(this,r):t.handleEvent(r)}),r!==null&&(i=o.removeEventListener.bind(o,e,t,n),r.addEventListener(`abort`,i,{once:!0}),i=r.removeEventListener.bind(r,`abort`,i)),r=Rp(n),a.push({type:e,listener:t,optionsOrUseCapture:n,attachedListener:s,cleanup:i}),m(this._fragmentFiber.child,!1,Ip,e,s,r)}this._eventListeners=a}};function Ip(e,t,n,r){return b(e).addEventListener(t,n,r),!1}Fp.prototype.removeEventListener=function(e,t,n){var r=this._eventListeners;if(r!==null&&(t=Bp(r,e,t,n),t!==-1)){var i=r[t];n=i.attachedListener;var a=i.cleanup;i=Rp(i.optionsOrUseCapture),m(this._fragmentFiber.child,!1,Lp,e,n,i),r.splice(t,1),a!==null&&a()}};function Lp(e,t,n,r){return b(e).removeEventListener(t,n,r),!1}function Rp(e){return e!=null&&typeof e!=`boolean`&&(!0===e.once||e.signal instanceof AbortSignal)?{capture:e.capture,passive:e.passive}:e}function zp(e){return e==null?`c=0`:typeof e==`boolean`?`c=`+(e?`1`:`0`):`c=`+(e.capture?`1`:`0`)}function Bp(e,t,n,r){if(e.length===0)return-1;r=zp(r);for(var i=0;i<e.length;i++){var a=e[i];if(a.type===t&&a.listener===n&&zp(a.optionsOrUseCapture)===r)return i}return-1}Fp.prototype.dispatchEvent=function(e){var t=g(this._fragmentFiber);if(t===null)return!0;t=b(t);var n=this._eventListeners;if(n!==null&&0<n.length||!e.bubbles){var r=t.nodeType===9?t.createComment(``):document.createTextNode(``);if(n)for(var i=0;i<n.length;i++){var a=n[i];r.addEventListener(a.type,a.attachedListener,Rp(a.optionsOrUseCapture))}if(t.appendChild(r),e=r.dispatchEvent(e),n)for(i=0;i<n.length;i++)a=n[i],r.removeEventListener(a.type,a.attachedListener,Rp(a.optionsOrUseCapture));return t.removeChild(r),e}return t.dispatchEvent(e)},Fp.prototype.focus=function(e){m(this._fragmentFiber.child,!0,Vp,e,void 0,void 0)};function Vp(e,t){return e.tag!==6&&(e=b(e),pm(e,t))}Fp.prototype.focusLast=function(e){var t=[];m(this._fragmentFiber.child,!0,Hp,t,void 0,void 0);for(var n=t.length-1;0<=n&&!Vp(t[n],e);n--);};function Hp(e,t){return t.push(e),!1}Fp.prototype.blur=function(){var e=g(this._fragmentFiber);e!==null&&(e=b(e),e=lp(e).activeElement,e!==null&&m(this._fragmentFiber.child,!1,Up,e,void 0,void 0))};function Up(e,t){return e.tag!==6&&(e=b(e),e===t||e.contains(t)?(t.blur(),!0):!1)}Fp.prototype.observeUsing=function(e){this._observers===null&&(this._observers=new Set),this._observers.add(e),m(this._fragmentFiber.child,!1,Wp,e,void 0,void 0)};function Wp(e,t){return e.tag!==6&&(e=b(e),t.observe(e),!1)}Fp.prototype.unobserveUsing=function(e){var t=this._observers;if(t!==null&&t.has(e)){t.delete(e),m(this._fragmentFiber.child,!1,Gp,e,void 0,void 0);for(var n=t=0;n<Kp.length;n++){var r=Kp[n];r.fragmentInstance===this&&r.observer===e?e.unobserve(r.instance):Kp[t++]=r}Kp.length=t}};function Gp(e,t){return e.tag!==6&&(e=b(e),t.unobserve(e),!1)}var Kp=[],qp=!1;function Jp(e,t,n){Kp.push({fragmentInstance:e,observer:t,instance:n}),qp||(qp=!0,mm(function(){qp=!1;var e=Kp;Kp=[];for(var t=0;t<e.length;t++){var n=e[t];n.observer.unobserve(n.instance)}}))}Fp.prototype.getClientRects=function(){var e=[];return m(this._fragmentFiber.child,!1,Yp,e,void 0,void 0),e};function Yp(e,t){if(e.tag===6){e=e.stateNode;var n=e.ownerDocument.createRange();n.selectNodeContents(e),t.push.apply(t,n.getClientRects())}else e=b(e),t.push.apply(t,e.getClientRects());return!1}Fp.prototype.getRootNode=function(e){var t=g(this._fragmentFiber);return t===null?this:b(t).getRootNode(e)},Fp.prototype.compareDocumentPosition=function(e){var t=g(this._fragmentFiber);if(t===null)return Node.DOCUMENT_POSITION_DISCONNECTED;var n=[];m(this._fragmentFiber.child,!1,Hp,n,void 0,void 0);var r=b(t);if(n.length===0){if(n=r,_(this._fragmentFiber)){a:{for(t=this._fragmentFiber.return;t!==null;){if(t.tag===4){t=t.stateNode.containerInfo;break a}if(t.tag===3||t.tag===5||t.tag===27)break;t=t.return}t=null}t!=null&&(n=t)}t=this._fragmentFiber;var i=r=n.compareDocumentPosition(e);return n===e?i=Node.DOCUMENT_POSITION_CONTAINS:r&Node.DOCUMENT_POSITION_CONTAINED_BY&&(n=v(t)[1],n===null?i=Node.DOCUMENT_POSITION_PRECEDING:(e=b(n).compareDocumentPosition(e),i=e===0||e&Node.DOCUMENT_POSITION_FOLLOWING?Node.DOCUMENT_POSITION_FOLLOWING:Node.DOCUMENT_POSITION_PRECEDING)),i|=Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC}t=b(n[0]),i=b(n[n.length-1]);var a=_(this._fragmentFiber)?t.parentElement:r;if(a==null)return Node.DOCUMENT_POSITION_DISCONNECTED;r=a.compareDocumentPosition(t)&Node.DOCUMENT_POSITION_CONTAINED_BY,a=a.compareDocumentPosition(i)&Node.DOCUMENT_POSITION_CONTAINED_BY;var o=t.compareDocumentPosition(e),s=i.compareDocumentPosition(e),c=o&Node.DOCUMENT_POSITION_CONTAINED_BY||s&Node.DOCUMENT_POSITION_CONTAINED_BY;return s=r&&a&&o&Node.DOCUMENT_POSITION_FOLLOWING&&s&Node.DOCUMENT_POSITION_PRECEDING,t=r&&t===e||a&&i===e||c||s?Node.DOCUMENT_POSITION_CONTAINED_BY:!r&&t===e||!a&&i===e?Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC:o,t&Node.DOCUMENT_POSITION_DISCONNECTED||t&Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC||Xp(t,this._fragmentFiber,n[0],n[n.length-1],e)?t:Node.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC};function Xp(e,t,n,r,i){var a=Bt(i);if(e&Node.DOCUMENT_POSITION_CONTAINED_BY){if(n=!!a)a:{for(;a!==null;){if(a.tag===7&&(a===t||a.alternate===t)){n=!0;break a}a=a.return}n=!1}return n}if(e&Node.DOCUMENT_POSITION_CONTAINS){if(a===null)return a=i.ownerDocument,i===a||i===a.documentElement||i===a.body;a:{for(a=t,t=g(t);a!==null;){if(!(a.tag!==5&&a.tag!==3&&a.tag!==27||a!==t&&a.alternate!==t)){a=!0;break a}a=a.return}a=!1}return a}return e&Node.DOCUMENT_POSITION_PRECEDING?((t=!!a)&&!(t=a===n)&&(t=w(n,a,C),t===null?t=!1:(m(t,!0,ee,a,n),a=x,x=null,t=a!==null)),t):e&Node.DOCUMENT_POSITION_FOLLOWING?((t=!!a)&&!(t=a===r)&&(t=w(r,a,C),t===null?t=!1:(m(t,!0,te,a,r),a=x,S=x=null,t=a!==null)),t):!1}function Zp(e,t){var n=e.ownerDocument.createRange();n.selectNodeContents(e),e=n.getBoundingClientRect(),window.scrollTo(window.scrollX+e.left,t?window.scrollY+e.top:window.scrollY+e.bottom-window.innerHeight)}Fp.prototype.scrollIntoView=function(e){if(typeof e==`object`)throw Error(i(566));var t=[];m(this._fragmentFiber.child,!1,Hp,t,void 0,void 0);var n=!1!==e;if(t.length===0){var r=v(this._fragmentFiber);if(r=n?r[1]||r[0]||g(this._fragmentFiber):r[0]||r[1],r===null)return;if(r.tag===6){e=b(r),Zp(e,n);return}if(r=b(r),r.nodeType!==9){if(r.nodeType===11){n=`host`in r?r.host:null,n!==null&&n.scrollIntoView(e);return}r.scrollIntoView(e)}}for(r=n?t.length-1:0;r!==(n?-1:t.length);){var a=t[r];a.tag===6?(a=b(a),Zp(a,n)):b(a).scrollIntoView(e),r+=n?-1:1}};function Qp(e,t){return e=b(e),$p(e,t),!1}function $p(e,t){e.reactFragments??=new Set,e.reactFragments.add(t)}function em(e,t){var n=t._eventListeners;if(n!==null)for(var r=0;r<n.length;r++){var i=n[r];e.addEventListener(i.type,i.attachedListener,Rp(i.optionsOrUseCapture))}e.nodeType!==3&&(n=t._observers,n!==null&&n.forEach(function(n){for(var r=0,i=0;i<Kp.length;i++){var a=Kp[i];(a.fragmentInstance!==t||a.observer!==n||a.instance!==e)&&(Kp[r++]=a)}Kp.length=r,n.observe(e)}),$p(e,t))}function tm(e,t){var n=t._eventListeners;if(n!==null)for(var r=0;r<n.length;r++){var i=n[r];e.removeEventListener(i.type,i.attachedListener,Rp(i.optionsOrUseCapture))}e.nodeType!==3&&(n=t._observers,n!==null&&n.forEach(function(n){typeof n.rootMargin==`string`?Jp(t,n,e):n.unobserve(e)}),e.reactFragments!=null&&e.reactFragments.delete(t))}function nm(e){var t=e.firstChild;for(t&&t.nodeType===10&&(t=t.nextSibling);t;){var n=t;switch(t=t.nextSibling,n.nodeName){case`HTML`:case`HEAD`:case`BODY`:nm(n),zt(n);continue;case`SCRIPT`:case`STYLE`:continue;case`LINK`:if(n.rel.toLowerCase()===`stylesheet`)continue}e.removeChild(n)}}function rm(e,t,n,r){for(;e.nodeType===1;){var i=n;if(e.nodeName.toLowerCase()!==t.toLowerCase()){if(!r&&(e.nodeName!==`INPUT`||e.type!==`hidden`))break}else if(!r){if(t===`input`&&e.type===`hidden`){var a=i.name==null?null:``+i.name;if(i.type===`hidden`&&e.getAttribute(`name`)===a)return e}else return e}else if(!e[Lt])switch(t){case`meta`:if(!e.hasAttribute(`itemprop`))break;return e;case`link`:if(a=e.getAttribute(`rel`),a===`stylesheet`&&e.hasAttribute(`data-precedence`)||a!==i.rel||e.getAttribute(`href`)!==(i.href==null||i.href===``?null:i.href)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin)||e.getAttribute(`title`)!==(i.title==null?null:i.title))break;return e;case`style`:if(e.hasAttribute(`data-precedence`))break;return e;case`script`:if(a=e.getAttribute(`src`),(a!==(i.src==null?null:i.src)||e.getAttribute(`type`)!==(i.type==null?null:i.type)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin))&&a&&e.hasAttribute(`async`)&&!e.hasAttribute(`itemprop`))break;return e;default:return e}if(e=lm(e.nextSibling),e===null)break}return null}function im(e,t,n){if(t===``)return null;for(;e.nodeType!==3;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!n||(e=lm(e.nextSibling),e===null))return null;return e}function am(e,t){for(;e.nodeType!==8;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!t||(e=lm(e.nextSibling),e===null))return null;return e}function om(e){return e.data===`$?`||e.data===`$~`}function sm(e){return e.data===`$!`||e.data===`$?`&&e.ownerDocument.readyState!==`loading`}function cm(e,t){var n=e.ownerDocument;if(e.data===`$~`)e._reactRetry=t;else if(e.data!==`$?`||n.readyState!==`loading`)t();else{var r=function(){t(),n.removeEventListener(`DOMContentLoaded`,r)};n.addEventListener(`DOMContentLoaded`,r),e._reactRetry=r}}function lm(e){for(;e!=null;e=e.nextSibling){var t=e.nodeType;if(t===1||t===3)break;if(t===8){if(t=e.data,t===`$`||t===`$!`||t===`$?`||t===`$~`||t===`&`||t===`F!`||t===`F`)break;if(t===`/$`||t===`/&`)return null}}return e}var um=null;function dm(e){e=e.nextSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`/$`||n===`/&`){if(t===0)return lm(e.nextSibling);t--}else n!==`$`&&n!==`$!`&&n!==`$?`&&n!==`$~`&&n!==`&`||t++}e=e.nextSibling}return null}function fm(e){e=e.previousSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`$`||n===`$!`||n===`$?`||n===`$~`||n===`&`){if(t===0)return e;t--}else n!==`/$`&&n!==`/&`||t++}e=e.previousSibling}return null}function pm(e,t){function n(){r=!0}if(e.ownerDocument.activeElement===e)return!0;var r=!1;try{e.ownerDocument.addEventListener(`focus`,n,!0),(e.focus||HTMLElement.prototype.focus).call(e,t)}finally{e.ownerDocument.removeEventListener(`focus`,n,!0)}return r}function mm(e){yp(function(){yp(function(t){return e(t)})})}function hm(e,t,n){switch(t=lp(n),e){case`html`:if(e=t.documentElement,!e)throw Error(i(452));return e;case`head`:if(e=t.head,!e)throw Error(i(453));return e;case`body`:if(e=t.body,!e)throw Error(i(454));return e;default:throw Error(i(451))}}function gm(e,t,n){for(var r in n){var i=n[r];n.hasOwnProperty(r)&&i!=null&&$(e,t,r,null,rp,i)}n.dangerouslySetInnerHTML!=null&&(e.textContent=``),e.onclick===En&&(e.onclick=null),zt(e)}function _m(e){for(var t=e.attributes;t.length;)e.removeAttributeNode(t[0]);zt(e)}var vm=new Map,ym=new Set;function bm(e){if(typeof e.getRootNode==`function`){var t=e.getRootNode();if(t.nodeType===9||t.nodeType===11)return t}return e.nodeType===9?e:e.ownerDocument}var xm=k.d;k.d={f:Sm,r:Cm,D:Em,C:Dm,L:Om,m:km,X:jm,S:Am,M:Mm};function Sm(){var e=xm.f(),t=zd();return e||t}function Cm(e){var t=Vt(e);t!==null&&t.tag===5&&t.type===`form`?nc(t):xm.r(e)}var wm=typeof document>`u`?null:document;function Tm(e,t,n){var r=wm;if(r&&typeof t==`string`&&t){var i=dn(t);i=`link[rel="`+e+`"][href="`+i+`"]`,typeof n==`string`&&(i+=`[crossorigin="`+n+`"]`),ym.has(i)||(ym.add(i),e={rel:e,crossOrigin:n,href:t},r.querySelector(i)===null&&(t=r.createElement(`link`),np(t,`link`,e),Wt(t),r.head.appendChild(t)))}}function Em(e){xm.D(e),Tm(`dns-prefetch`,e,null)}function Dm(e,t){xm.C(e,t),Tm(`preconnect`,e,t)}function Om(e,t,n){xm.L(e,t,n);var r=wm;if(r&&e&&t){var i=`link[rel="preload"][as="`+dn(t)+`"]`;t===`image`&&n&&n.imageSrcSet?(i+=`[imagesrcset="`+dn(n.imageSrcSet)+`"]`,typeof n.imageSizes==`string`&&(i+=`[imagesizes="`+dn(n.imageSizes)+`"]`)):i+=`[href="`+dn(e)+`"]`;var a=i;switch(t){case`style`:a=Pm(e);break;case`script`:a=Rm(e)}if(!(vm.has(a)||(e=T({rel:`preload`,href:t===`image`&&n&&n.imageSrcSet?void 0:e,as:t},n),vm.set(a,e),r.querySelector(i)!==null||t===`style`&&r.querySelector(Fm(a))||t===`script`&&r.querySelector(zm(a))))){var o=r.createElement(`link`);np(o,`link`,e),t===`style`&&(o[Rt]=!0,o.onload=o.onerror=function(){Gt(o)}),Wt(o),r.head.appendChild(o)}}}function km(e,t){xm.m(e,t);var n=wm;if(n&&e){var r=t&&typeof t.as==`string`?t.as:`script`,i=`link[rel="modulepreload"][as="`+dn(r)+`"][href="`+dn(e)+`"]`,a=i;switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:a=Rm(e)}if(!vm.has(a)&&(e=T({rel:`modulepreload`,href:e},t),vm.set(a,e),n.querySelector(i)===null)){switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:if(n.querySelector(zm(a)))return}r=n.createElement(`link`),np(r,`link`,e),Wt(r),n.head.appendChild(r)}}}function Am(e,t,n){xm.S(e,t,n);var r=wm;if(r&&e){var i=Ut(r).hoistableStyles,a=Pm(e);t||=`default`;var o=i.get(a);if(!o){var s={loading:0,preload:null};if(o=r.querySelector(Fm(a)))s.loading=5;else{e=T({rel:`stylesheet`,href:e,"data-precedence":t},n),(n=vm.get(a))&&Hm(e,n);var c=o=r.createElement(`link`);Wt(c),np(c,`link`,e),c._p=new Promise(function(e,t){c.onload=e,c.onerror=t}),c.addEventListener(`load`,function(){s.loading|=1}),c.addEventListener(`error`,function(){s.loading|=2}),s.loading|=4,Vm(o,t,r)}o={type:`stylesheet`,instance:o,count:1,state:s},i.set(a,o)}}}function jm(e,t){xm.X(e,t);var n=wm;if(n&&e){var r=Ut(n).hoistableScripts,i=Rm(e),a=r.get(i);a||(a=n.querySelector(zm(i)),a||(e=T({src:e,async:!0},t),(t=vm.get(i))&&Um(e,t),a=n.createElement(`script`),Wt(a),np(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Mm(e,t){xm.M(e,t);var n=wm;if(n&&e){var r=Ut(n).hoistableScripts,i=Rm(e),a=r.get(i);a||(a=n.querySelector(zm(i)),a||(e=T({src:e,async:!0,type:`module`},t),(t=vm.get(i))&&Um(e,t),a=n.createElement(`script`),Wt(a),np(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Nm(e,t,n,r){var a=(a=Ae.current)?bm(a):null;if(!a)throw Error(i(446));switch(e){case`meta`:case`title`:return null;case`style`:return typeof n.precedence==`string`&&typeof n.href==`string`?(n=Pm(n.href),t=Ut(a).hoistableStyles,r=t.get(n),r||(r={type:`style`,instance:null,count:0,state:null},t.set(n,r)),r):{type:`void`,instance:null,count:0,state:null};case`link`:if(n.rel===`stylesheet`&&typeof n.href==`string`&&typeof n.precedence==`string`){e=Pm(n.href);var o=Ut(a).hoistableStyles,s=o.get(e);if(s||(a=a.ownerDocument||a,s={type:`stylesheet`,instance:null,count:0,state:{loading:0,preload:null}},o.set(e,s),(o=a.querySelector(Fm(e)))?o._p||(s.instance=o,s.state.loading=5):(o=vm.get(e),o||(o={rel:`preload`,as:`style`,href:n.href,crossOrigin:n.crossOrigin,integrity:n.integrity,media:n.media,hrefLang:n.hrefLang,referrerPolicy:n.referrerPolicy},vm.set(e,o)),Lm(a,e,o,s.state))),t&&r===null)throw Error(i(528,``));return s}if(t&&r!==null)throw Error(i(529,``));return null;case`script`:return t=n.async,n=n.src,typeof n==`string`&&t&&typeof t!=`function`&&typeof t!=`symbol`?(n=Rm(n),t=Ut(a).hoistableScripts,r=t.get(n),r||(r={type:`script`,instance:null,count:0,state:null},t.set(n,r)),r):{type:`void`,instance:null,count:0,state:null};default:throw Error(i(444,e))}}function Pm(e){return`href="`+dn(e)+`"`}function Fm(e){return`link[rel="stylesheet"][`+e+`]`}function Im(e){return T({},e,{"data-precedence":e.precedence,precedence:null})}function Lm(e,t,n,r){if(t=e.querySelector(`link[rel="preload"][as="style"][`+t+`]`)){if(!0!==t[Rt]){r.loading=1;return}}else t=e.createElement(`link`),t[Rt]=!0,t.onload=t.onerror=Gt.bind(null,t),np(t,`link`,n),Wt(t),e.head.appendChild(t);r.preload=t,t.addEventListener(`load`,function(){return r.loading|=1}),t.addEventListener(`error`,function(){return r.loading|=2})}function Rm(e){return`[src="`+dn(e)+`"]`}function zm(e){return`script[async]`+e}function Bm(e,t,n){if(t.count++,t.instance===null)switch(t.type){case`style`:var r=e.querySelector(`style[data-href~="`+dn(n.href)+`"]`);if(r)return t.instance=r,Wt(r),r;var a=T({},n,{"data-href":n.href,"data-precedence":n.precedence,href:null,precedence:null});return r=(e.ownerDocument||e).createElement(`style`),Wt(r),np(r,`style`,a),Vm(r,n.precedence,e),t.instance=r;case`stylesheet`:a=Pm(n.href);var o=e.querySelector(Fm(a));if(o)return t.state.loading|=4,t.instance=o,Wt(o),o;r=Im(n),(a=vm.get(a))&&Hm(r,a),o=(e.ownerDocument||e).createElement(`link`),Wt(o);var s=o;return s._p=new Promise(function(e,t){s.onload=e,s.onerror=t}),np(o,`link`,r),t.state.loading|=4,Vm(o,n.precedence,e),t.instance=o;case`script`:return o=Rm(n.src),(a=e.querySelector(zm(o)))?(t.instance=a,Wt(a),a):(r=n,(a=vm.get(o))&&(r=T({},n),Um(r,a)),e=e.ownerDocument||e,a=e.createElement(`script`),Wt(a),np(a,`link`,r),e.head.appendChild(a),t.instance=a);case`void`:return null;default:throw Error(i(443,t.type))}else t.type===`stylesheet`&&!(t.state.loading&4)&&(r=t.instance,t.state.loading|=4,Vm(r,n.precedence,e));return t.instance}function Vm(e,t,n){for(var r=n.querySelectorAll(`link[rel="stylesheet"][data-precedence],style[data-precedence]`),i=r.length?r[r.length-1]:null,a=i,o=0;o<r.length;o++){var s=r[o];if(s.dataset.precedence===t)a=s;else if(a!==i)break}a?a.parentNode.insertBefore(e,a.nextSibling):(t=n.nodeType===9?n.head:n,t.insertBefore(e,t.firstChild))}function Hm(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.title??=t.title}function Um(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.integrity??=t.integrity}var Wm=null;function Gm(e,t,n){if(Wm===null){var r=new Map,i=Wm=new Map;i.set(n,r)}else i=Wm,r=i.get(n),r||(r=new Map,i.set(n,r));if(r.has(e))return r;for(r.set(e,null),n=n.getElementsByTagName(e),i=0;i<n.length;i++){var a=n[i];if(!(a[Lt]||a[At]||e===`link`&&a.getAttribute(`rel`)===`stylesheet`)&&a.namespaceURI!==`http://www.w3.org/2000/svg`){var o=a.getAttribute(t)||``;o=e+o;var s=r.get(o);s?s.push(a):r.set(o,[a])}}return r}function Km(e,t,n){e=e.ownerDocument||e,e.head.insertBefore(n,t===`title`?e.querySelector(`head > title`):null)}function qm(e,t,n){if(n===1||t.itemProp!=null)return!1;switch(e){case`meta`:case`title`:return!0;case`style`:if(typeof t.precedence!=`string`||typeof t.href!=`string`||t.href===``)break;return!0;case`link`:if(typeof t.rel!=`string`||typeof t.href!=`string`||t.href===``||t.onLoad||t.onError)break;switch(t.rel){case`stylesheet`:return e=t.disabled,typeof t.precedence==`string`&&e==null;default:return!0}case`script`:if(t.async&&typeof t.async!=`function`&&typeof t.async!=`symbol`&&!t.onLoad&&!t.onError&&t.src&&typeof t.src==`string`)return!0}return!1}function Jm(e,t){return e===`img`&&t.src!=null&&t.src!==``&&t.onLoad==null&&t.loading!==`lazy`}function Ym(e){return!(e.type===`stylesheet`&&!(e.state.loading&3))}function Xm(e){return(e.width||100)*(e.height||100)*(typeof devicePixelRatio==`number`?devicePixelRatio:1)*.25}function Zm(e,t){typeof t.decode==`function`&&(e.imgCount++,t.complete||(e.imgBytes+=Xm(t),e.suspenseyImages.push(t)),e=rh.bind(e),t.decode().then(e,e))}function Qm(e,t,n,r){if(n.type===`stylesheet`&&(typeof r.media!=`string`||!1!==matchMedia(r.media).matches)&&!(n.state.loading&4)){if(n.instance===null){var i=Pm(r.href),a=t.querySelector(Fm(i));if(a){t=a._p,typeof t==`object`&&t&&typeof t.then==`function`&&(e.count++,e=nh.bind(e),t.then(e,e)),n.state.loading|=4,n.instance=a,Wt(a);return}a=t.ownerDocument||t,r=Im(r),(i=vm.get(i))&&Hm(r,i),a=a.createElement(`link`),Wt(a);var o=a;o._p=new Promise(function(e,t){o.onload=e,o.onerror=t}),np(a,`link`,r),n.instance=a}e.stylesheets===null&&(e.stylesheets=new Map),e.stylesheets.set(n,t),(t=n.state.preload)&&!(n.state.loading&3)&&(e.count++,n=nh.bind(e),t.addEventListener(`load`,n),t.addEventListener(`error`,n))}}var $m=0;function eh(e,t){return e.stylesheets&&e.count===0&&ah(e,e.stylesheets),0<e.count||0<e.imgCount?function(n){var r=setTimeout(function(){if(e.stylesheets&&ah(e,e.stylesheets),e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}},6e4+t);0<e.imgBytes&&$m===0&&($m=62500*op());var i=setTimeout(function(){if(e.waitingForImages=!1,e.count===0&&(e.stylesheets&&ah(e,e.stylesheets),e.unsuspend)){var t=e.unsuspend;e.unsuspend=null,t()}},(e.imgBytes>$m?50:800)+t);return e.unsuspend=n,function(){e.unsuspend=null,clearTimeout(r),clearTimeout(i)}}:null}function th(e){if(e.count===0&&(e.imgCount===0||!e.waitingForImages)){if(e.stylesheets)ah(e,e.stylesheets);else if(e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}}}function nh(){this.count--,th(this)}function rh(){this.imgCount--,th(this)}var ih=null;function ah(e,t){e.stylesheets=null,e.unsuspend!==null&&(e.count++,ih=new Map,t.forEach(oh,e),ih=null,nh.call(e))}function oh(e,t){if(!(t.state.loading&4)){var n=ih.get(e);if(n)var r=n.get(null);else{n=new Map,ih.set(e,n);for(var i=e.querySelectorAll(`link[data-precedence],style[data-precedence]`),a=0;a<i.length;a++){var o=i[a];(o.nodeName===`LINK`||o.getAttribute(`media`)!==`not all`)&&(n.set(o.dataset.precedence,o),r=o)}r&&n.set(null,r)}i=t.instance,o=i.getAttribute(`data-precedence`),a=n.get(o)||r,a===r&&n.set(null,i),n.set(o,i),this.count++,r=nh.bind(this),i.addEventListener(`load`,r),i.addEventListener(`error`,r),a?a.parentNode.insertBefore(i,a.nextSibling):(e=e.nodeType===9?e.head:e,e.insertBefore(i,e.firstChild)),t.state.loading|=4}}var sh={$$typeof:se,Provider:null,Consumer:null,_currentValue:Ce,_currentValue2:Ce,_threadCount:0};function ch(e,t,n,r,i,a,o,s,c){this.tag=1,this.containerInfo=e,this.pingCache=this.current=this.pendingChildren=null,this.timeoutHandle=-1,this.callbackNode=this.next=this.pendingContext=this.context=this.cancelPendingCommit=null,this.callbackPriority=0,this.expirationTimes=yt(-1),this.entangledLanes=this.shellSuspendCounter=this.errorRecoveryDisabledLanes=this.expiredLanes=this.warmLanes=this.pingedLanes=this.suspendedLanes=this.pendingLanes=0,this.entanglements=yt(0),this.hiddenUpdates=yt(null),this.identifierPrefix=r,this.onUncaughtError=i,this.onCaughtError=a,this.onRecoverableError=o,this.pooledCache=null,this.pooledCacheLanes=0,this.formState=c,this.transitionTypes=null,this.incompleteTransitions=new Map}function lh(e,t,n,r,i,a,o,s,c,l,u,d){return e=new ch(e,t,n,o,c,l,u,d,s),t=1,!0===a&&(t|=24),a=Ii(3,null,null,t),e.current=a,a.stateNode=e,t=Fa(),t.refCount++,e.pooledCache=t,t.refCount++,a.memoizedState={element:r,isDehydrated:n,cache:t},mo(a),e}function uh(e){return e?(e=Pi,e):Pi}function dh(e,t,n,r,i,a){i=uh(i),r.context===null?r.context=i:r.pendingContext=i,r=go(t),r.payload={element:n},a=a===void 0?null:a,a!==null&&(r.callback=a),n=_o(e,r,t),n!==null&&(Pd(n,e,t),vo(n,e,t))}function fh(e,t){if(e=e.memoizedState,e!==null&&e.dehydrated!==null){var n=e.retryLane;e.retryLane=n!==0&&n<t?n:t}}function ph(e,t){fh(e,t),(e=e.alternate)&&fh(e,t)}function mh(e){if(e.tag===13||e.tag===31){var t=ji(e,67108864);t!==null&&Pd(t,e,67108864),ph(e,67108864)}}function hh(e){if(e.tag===13||e.tag===31){var t=jd();t=Tt(t);var n=ji(e,t);n!==null&&Pd(n,e,t),ph(e,t)}}var gh=!0;function _h(e,t,n,r){var i=O.T;O.T=null;var a=k.p;try{k.p=2,yh(e,t,n,r)}finally{k.p=a,O.T=i}}function vh(e,t,n,r){var i=O.T;O.T=null;var a=k.p;try{k.p=8,yh(e,t,n,r)}finally{k.p=a,O.T=i}}function yh(e,t,n,r){if(gh){var i=bh(r);if(i===null)Kf(e,t,r,xh,n),Mh(e,r);else if(Ph(i,e,t,n,r))r.stopPropagation();else if(Mh(e,r),t&4&&-1<jh.indexOf(e)){for(;i!==null;){var a=Vt(i);if(a!==null)switch(a.tag){case 3:if(a=a.stateNode,a.current.memoizedState.isDehydrated){var o=pt(a.pendingLanes);if(o!==0){var s=a;for(s.pendingLanes|=2,s.entangledLanes|=2;o;){var c=1<<31-ot(o);s.entanglements[1]|=c,o&=~c}Ef(a),!(K&6)&&(gd=Je()+500,Df(0,!1))}}break;case 31:case 13:s=ji(a,2),s!==null&&Pd(s,a,2),zd(),ph(a,2)}if(a=bh(r),a===null&&Kf(e,t,r,xh,n),a===i)break;i=a}i!==null&&r.stopPropagation()}else Kf(e,t,r,null,n)}}function bh(e){return e=On(e),Sh(e)}var xh=null;function Sh(e){if(xh=null,e=Bt(e),e!==null){var t=o(e);if(t===null)e=null;else{var n=t.tag;if(n===13){if(e=s(t),e!==null)return e;e=null}else if(n===31){if(e=c(t),e!==null)return e;e=null}else if(n===3){if(t.stateNode.current.memoizedState.isDehydrated)return t.tag===3?t.stateNode.containerInfo:null;e=null}else t!==e&&(e=null)}}return xh=e,null}function Ch(e){switch(e){case`beforetoggle`:case`cancel`:case`click`:case`close`:case`contextmenu`:case`copy`:case`cut`:case`auxclick`:case`dblclick`:case`dragend`:case`dragstart`:case`drop`:case`focusin`:case`focusout`:case`input`:case`invalid`:case`keydown`:case`keypress`:case`keyup`:case`mousedown`:case`mouseup`:case`paste`:case`pause`:case`play`:case`pointercancel`:case`pointerdown`:case`pointerup`:case`ratechange`:case`reset`:case`seeked`:case`submit`:case`toggle`:case`touchcancel`:case`touchend`:case`touchstart`:case`volumechange`:case`change`:case`selectionchange`:case`textInput`:case`compositionstart`:case`compositionend`:case`compositionupdate`:case`beforeblur`:case`afterblur`:case`beforeinput`:case`blur`:case`fullscreenchange`:case`fullscreenerror`:case`focus`:case`hashchange`:case`popstate`:case`select`:case`selectstart`:return 2;case`drag`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`mousemove`:case`mouseout`:case`mouseover`:case`pointermove`:case`pointerout`:case`pointerover`:case`resize`:case`scroll`:case`touchmove`:case`wheel`:case`mouseenter`:case`mouseleave`:case`pointerenter`:case`pointerleave`:return 8;case`message`:switch(Ye()){case Xe:return 2;case Ze:return 8;case Qe:case $e:return 32;case et:return 268435456;default:return 32}default:return 32}}var wh=!1,Th=null,Eh=null,Dh=null,Oh=new Map,kh=new Map,Ah=[],jh=`mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset`.split(` `);function Mh(e,t){switch(e){case`focusin`:case`focusout`:Th=null;break;case`dragenter`:case`dragleave`:Eh=null;break;case`mouseover`:case`mouseout`:Dh=null;break;case`pointerover`:case`pointerout`:Oh.delete(t.pointerId);break;case`gotpointercapture`:case`lostpointercapture`:kh.delete(t.pointerId)}}function Nh(e,t,n,r,i,a){return e===null||e.nativeEvent!==a?(e={blockedOn:t,domEventName:n,eventSystemFlags:r,nativeEvent:a,targetContainers:[i]},t!==null&&(t=Vt(t),t!==null&&mh(t)),e):(e.eventSystemFlags|=r,t=e.targetContainers,i!==null&&t.indexOf(i)===-1&&t.push(i),e)}function Ph(e,t,n,r,i){switch(t){case`focusin`:return Th=Nh(Th,e,t,n,r,i),!0;case`dragenter`:return Eh=Nh(Eh,e,t,n,r,i),!0;case`mouseover`:return Dh=Nh(Dh,e,t,n,r,i),!0;case`pointerover`:var a=i.pointerId;return Oh.set(a,Nh(Oh.get(a)||null,e,t,n,r,i)),!0;case`gotpointercapture`:return a=i.pointerId,kh.set(a,Nh(kh.get(a)||null,e,t,n,r,i)),!0}return!1}function Fh(e){var t=Bt(e.target);if(t!==null){var n=o(t);if(n!==null){if(t=n.tag,t===13){if(t=s(n),t!==null){e.blockedOn=t,Ot(e.priority,function(){hh(n)});return}}else if(t===31){if(t=c(n),t!==null){e.blockedOn=t,Ot(e.priority,function(){hh(n)});return}}else if(t===3&&n.stateNode.current.memoizedState.isDehydrated){e.blockedOn=n.tag===3?n.stateNode.containerInfo:null;return}}}e.blockedOn=null}function Ih(e){if(e.blockedOn!==null)return!1;for(var t=e.targetContainers;0<t.length;){var n=bh(e.nativeEvent);if(n===null){n=e.nativeEvent;var r=new n.constructor(n.type,n);Dn=r,n.target.dispatchEvent(r),Dn=null}else return t=Vt(n),t!==null&&mh(t),e.blockedOn=n,!1;t.shift()}return!0}function Lh(e,t,n){Ih(e)&&n.delete(t)}function Rh(){wh=!1,Th!==null&&Ih(Th)&&(Th=null),Eh!==null&&Ih(Eh)&&(Eh=null),Dh!==null&&Ih(Dh)&&(Dh=null),Oh.forEach(Lh),kh.forEach(Lh)}function zh(e,n){e.blockedOn===n&&(e.blockedOn=null,wh||(wh=!0,t.unstable_scheduleCallback(t.unstable_NormalPriority,Rh)))}var Bh=null;function Vh(e){Bh!==e&&(Bh=e,t.unstable_scheduleCallback(t.unstable_NormalPriority,function(){Bh===e&&(Bh=null);for(var t=0;t<e.length;t+=3){var n=e[t],r=e[t+1],i=e[t+2];if(typeof r!=`function`){if(Sh(r||n)===null)continue;break}var a=Vt(n);a!==null&&(e.splice(t,3),t-=3,ec(a,{pending:!0,data:i,method:n.method,action:r},r,i))}}))}function Hh(e){function t(t){return zh(t,e)}Th!==null&&zh(Th,e),Eh!==null&&zh(Eh,e),Dh!==null&&zh(Dh,e),Oh.forEach(t),kh.forEach(t);for(var n=0;n<Ah.length;n++){var r=Ah[n];r.blockedOn===e&&(r.blockedOn=null)}for(;0<Ah.length&&(n=Ah[0],n.blockedOn===null);)Fh(n),n.blockedOn===null&&Ah.shift();if(n=(e.ownerDocument||e).$$reactFormReplay,n!=null)for(r=0;r<n.length;r+=3){var i=n[r],a=n[r+1],o=i[jt]||null;if(typeof a==`function`)o||Vh(n);else if(o){var s=null;if(a&&a.hasAttribute(`formAction`)){if(i=a,o=a[jt]||null)s=o.formAction;else if(Sh(i)!==null)continue}else s=o.action;typeof s==`function`?n[r+1]=s:(n.splice(r,3),r-=3),Vh(n)}}}function Uh(){function e(e){e.canIntercept&&e.info===`react-transition`&&e.intercept({handler:function(){return new Promise(function(e){return i=e})},focusReset:`manual`,scroll:`manual`})}function t(){i!==null&&(i(),i=null),r||setTimeout(n,20)}function n(){if(!r&&!navigation.transition){var e=navigation.currentEntry;e&&e.url!=null&&navigation.navigate(e.url,{state:e.getState(),info:`react-transition`,history:`replace`})}}if(typeof navigation==`object`){var r=!1,i=null;return navigation.addEventListener(`navigate`,e),navigation.addEventListener(`navigatesuccess`,t),navigation.addEventListener(`navigateerror`,t),setTimeout(n,100),function(){r=!0,navigation.removeEventListener(`navigate`,e),navigation.removeEventListener(`navigatesuccess`,t),navigation.removeEventListener(`navigateerror`,t),i!==null&&(i(),i=null)}}}function Wh(e){this._internalRoot=e}Gh.prototype.render=Wh.prototype.render=function(e){var t=this._internalRoot;if(t===null)throw Error(i(409));var n=t.current;dh(n,jd(),e,t,null,null)},Gh.prototype.unmount=Wh.prototype.unmount=function(){var e=this._internalRoot;if(e!==null){this._internalRoot=null;var t=e.containerInfo;dh(e.current,2,null,e,null,null),zd(),t[Mt]=null}};function Gh(e){this._internalRoot=e}Gh.prototype.unstable_scheduleHydration=function(e){if(e){var t=Dt();e={blockedOn:null,target:e,priority:t};for(var n=0;n<Ah.length&&t!==0&&t<Ah[n].priority;n++);Ah.splice(n,0,e),n===0&&Fh(e)}};var Kh=n.version;if(Kh!==`19.3.0`)throw Error(i(527,Kh,`19.3.0`));k.findDOMNode=function(e){var t=e._reactInternals;if(t===void 0)throw typeof e.render==`function`?Error(i(188)):(e=Object.keys(e).join(`,`),Error(i(268,e)));return e=u(t),e=e===null?null:f(e),e=e===null?null:e.stateNode,e};var qh={bundleType:0,version:`19.3.0`,rendererPackageName:`react-dom`,currentDispatcherRef:O,reconcilerVersion:`19.3.0`};if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`){var Jh=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!Jh.isDisabled&&Jh.supportsFiber)try{rt=Jh.inject(qh),it=Jh}catch{}}e.createRoot=function(e,t){if(!a(e))throw Error(i(299));var n=!1,r=``,o=Cc,s=wc,c=Tc;return t!=null&&(!0===t.unstable_strictMode&&(n=!0),t.identifierPrefix!==void 0&&(r=t.identifierPrefix),t.onUncaughtError!==void 0&&(o=t.onUncaughtError),t.onCaughtError!==void 0&&(s=t.onCaughtError),t.onRecoverableError!==void 0&&(c=t.onRecoverableError)),t=lh(e,1,!1,null,null,n,r,null,o,s,c,Uh),e[Mt]=t.current,Wf(e),new Wh(t)}})),_=o(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=g()})),v=`modulepreload`,y=function(e){return`/`+e},b={},x=function(e,t,n){let r=Promise.resolve();if(t&&t.length>0){let e=document.getElementsByTagName(`link`),i=document.querySelector(`meta[property=csp-nonce]`),a=i?.nonce||i?.getAttribute(`nonce`);function o(e){return Promise.all(e.map(e=>Promise.resolve(e).then(e=>({status:`fulfilled`,value:e}),e=>({status:`rejected`,reason:e}))))}function s(e){return import.meta.resolve?import.meta.resolve(e):new URL(e,import.meta.url).href}r=o(t.map(t=>{if(t=y(t,n),t=s(t),t in b)return;b[t]=!0;let r=t.endsWith(`.css`);for(let n=e.length-1;n>=0;n--){let i=e[n];if(i.href===t&&(!r||i.rel===`stylesheet`))return}let i=document.createElement(`link`);if(i.rel=r?`stylesheet`:v,r||(i.as=`script`),i.crossOrigin=``,i.href=t,a&&i.setAttribute(`nonce`,a),document.head.appendChild(i),r)return new Promise((e,n)=>{i.addEventListener(`load`,e),i.addEventListener(`error`,()=>n(Error(`Unable to preload CSS for ${t}`)))})}).filter(e=>e!==void 0))}function i(e){let t=new Event(`vite:preloadError`,{cancelable:!0});if(t.payload=e,window.dispatchEvent(t),!t.defaultPrevented)throw e}return r.then(t=>{for(let e of t||[])e.status===`rejected`&&i(e.reason);return e().catch(i)})},S=l(d(),1),ee=/^(?:[a-z][a-z0-9+.-]*:|[\\/]{2})/i,te=/^[\\/]{2}/;function C(e,t){return t+e.replace(/\\/g,`/`)}var w=`popstate`;function T(e){return typeof e==`object`&&!!e&&`pathname`in e&&`search`in e&&`hash`in e&&`state`in e&&`key`in e}function E(e={}){function t(e,t){let n=t.state?.masked,{pathname:r,search:i,hash:a}=n||e.location;return ae(``,{pathname:r,search:i,hash:a},t.state&&t.state.usr||null,t.state&&t.state.key||`default`,n?{pathname:e.location.pathname,search:e.location.search,hash:e.location.hash}:void 0)}function n(e,t){return typeof t==`string`?t:oe(t)}return ce(t,n,null,e)}function D(e,t){if(e===!1||e==null)throw Error(t)}function ne(e,t){if(!e){typeof console<`u`&&console.warn(t);try{throw Error(t)}catch{}}}function re(){return Math.random().toString(36).substring(2,10)}function ie(e,t){return{usr:e.state,key:e.key,idx:t,masked:e.mask?{pathname:e.pathname,search:e.search,hash:e.hash}:void 0}}function ae(e,t,n=null,r,i){return{pathname:typeof e==`string`?e:e.pathname,search:``,hash:``,...typeof t==`string`?se(t):t,state:n,key:t&&t.key||r||re(),mask:i}}function oe({pathname:e=`/`,search:t=``,hash:n=``}){return t&&t!==`?`&&(e+=t.charAt(0)===`?`?t:`?`+t),n&&n!==`#`&&(e+=n.charAt(0)===`#`?n:`#`+n),e}function se(e){let t={};if(e){let n=e.indexOf(`#`);n>=0&&(t.hash=e.substring(n),e=e.substring(0,n));let r=e.indexOf(`?`);r>=0&&(t.search=e.substring(r),e=e.substring(0,r)),e&&(t.pathname=e)}return t}function ce(e,t,n,r={}){let{window:i=document.defaultView,v5Compat:a=!1}=r,o=i.history,s=`POP`,c=null,l=u();l??(l=0,o.replaceState({...o.state,idx:l},``));function u(){return(o.state||{idx:null}).idx}function d(){s=`POP`;let e=u(),t=e==null?null:e-l;l=e,c&&c({action:s,location:h.location,delta:t})}function f(e,t){s=`PUSH`;let r=T(e)?e:ae(h.location,e,t);n&&n(r,e),l=u()+1;let d=ie(r,l),f=h.createHref(r.mask||r);try{o.pushState(d,``,f)}catch(e){if(e instanceof DOMException&&e.name===`DataCloneError`)throw e;i.location.assign(f)}a&&c&&c({action:s,location:h.location,delta:1})}function p(e,t){s=`REPLACE`;let r=T(e)?e:ae(h.location,e,t);n&&n(r,e),l=u();let i=ie(r,l),d=h.createHref(r.mask||r);o.replaceState(i,``,d),a&&c&&c({action:s,location:h.location,delta:0})}function m(e){return le(i,e)}let h={get action(){return s},get location(){return e(i,o)},listen(e){if(c)throw Error(`A history only accepts one active listener`);return i.addEventListener(w,d),c=e,()=>{i.removeEventListener(w,d),c=null}},createHref(e){return t(i,e)},createURL:m,encodeLocation(e){let t=m(e);return{pathname:t.pathname,search:t.search,hash:t.hash}},push:f,replace:p,go(e){return o.go(e)}};return h}function le(e,t,n=!1){let r=`http://localhost`;e&&(r=e.location.origin===`null`?e.location.href:e.location.origin),D(r,`No window.location.(origin|href) available to create URL`);let i=typeof t==`string`?t:oe(t);return i=i.replace(/ $/,`%20`),!n&&te.test(i)&&(i=r+i),new URL(i,r)}function ue(e,t,n=`/`){return de(e,t,n,!1)}function de(e,t,n,r,i){let a=A((typeof t==`string`?se(t):t).pathname||`/`,n);if(a==null)return null;let o=i??fe(e),s=null,c=De(a);for(let e=0;s==null&&e<o.length;++e)s=Ce(o[e],c,r);return s}function fe(e){let t=pe(e);return he(t),t}function pe(e,t=[],n=[],r=``,i=!1){let a=(e,a,o=i,s)=>{let c={relativePath:s===void 0?e.path||``:s,caseSensitive:e.caseSensitive===!0,childrenIndex:a,route:e};if(c.relativePath.startsWith(`/`)){if(!c.relativePath.startsWith(r)&&o)return;D(c.relativePath.startsWith(r),`Absolute route path "${c.relativePath}" nested under path "${r}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`),c.relativePath=c.relativePath.slice(r.length)}let l=Fe([r,c.relativePath]),u=n.concat(c);e.children&&e.children.length>0&&(D(e.index!==!0,`Index routes must not have child routes. Please remove all child routes from route path "${l}".`),pe(e.children,t,u,l,o)),(e.path!=null||e.index)&&t.push({path:l,score:O(l,e.index),routesMeta:u.map((e,t)=>{let[n,r]=Ee(e.relativePath,e.caseSensitive,t===u.length-1);return{...e,matcher:n,compiledParams:r}})})};return e.forEach((e,t)=>{if(e.path===``||!e.path?.includes(`?`))a(e,t);else for(let n of me(e.path))a(e,t,!0,n)}),t}function me(e){let t=e.split(`/`);if(t.length===0)return[];let[n,...r]=t,i=n.endsWith(`?`),a=n.replace(/\?$/,``);if(r.length===0)return i?[a,``]:[a];let o=me(r.join(`/`)),s=[];return s.push(...o.map(e=>e===``?a:[a,e].join(`/`))),i&&s.push(...o),s.map(t=>e.startsWith(`/`)&&t===``?`/`:t)}function he(e){e.sort((e,t)=>e.score===t.score?k(e.routesMeta.map(e=>e.childrenIndex),t.routesMeta.map(e=>e.childrenIndex)):t.score-e.score)}var ge=/^:[\w-]+$/,_e=3,ve=2,ye=1,be=10,xe=-2,Se=e=>e===`*`;function O(e,t){let n=e.split(`/`),r=n.length;return n.some(Se)&&(r+=xe),t&&(r+=ve),n.filter(e=>!Se(e)).reduce((e,t)=>e+(ge.test(t)?_e:t===``?ye:be),r)}function k(e,t){return e.length===t.length&&e.slice(0,-1).every((e,n)=>e===t[n])?e[e.length-1]-t[t.length-1]:0}function Ce(e,t,n=!1){let{routesMeta:r}=e,i={},a=`/`,o=[];for(let e=0;e<r.length;++e){let s=r[e],c=e===r.length-1,l=a===`/`?t:t.slice(a.length)||`/`,u={path:s.relativePath,caseSensitive:s.caseSensitive,end:c},d=s.matcher&&s.compiledParams?Te(u,l,s.matcher,s.compiledParams):we(u,l),f=s.route;if(!d&&c&&n&&!r[r.length-1].route.index&&(d=we({path:s.relativePath,caseSensitive:s.caseSensitive,end:!1},l)),!d)return null;Object.assign(i,d.params),o.push({params:i,pathname:Fe([a,d.pathname]),pathnameBase:Le(Fe([a,d.pathnameBase])),route:f}),d.pathnameBase!==`/`&&(a=Fe([a,d.pathnameBase]))}return o}function we(e,t){typeof e==`string`&&(e={path:e,caseSensitive:!1,end:!0});let[n,r]=Ee(e.path,e.caseSensitive,e.end);return Te(e,t,n,r)}function Te(e,t,n,r){let i=t.match(n);if(!i)return null;let a=i[0],o=Ie(a,1),s=i.slice(1);return{params:r.reduce((e,{paramName:t,isOptional:n},r)=>{if(t===`*`){let e=s[r]||``;o=Ie(a.slice(0,a.length-e.length),1)}let i=s[r];return e[t]=n&&!i?void 0:(i||``).replace(/%2F/g,`/`),e},{}),pathname:a,pathnameBase:o,pattern:e}}function Ee(e,t=!1,n=!0){ne(e===`*`||!e.endsWith(`*`)||e.endsWith(`/*`),`Route path "${e}" will be treated as if it were "${e.replace(/\*$/,`/*`)}" because the \`*\` character must always follow a \`/\` in the pattern. To get rid of this warning, please change the route path to "${e.replace(/\*$/,`/*`)}".`);let r=[],i=`^`+e.replace(/\/*\*?$/,``).replace(/^\/*/,`/`).replace(/[\\.*+^${}|()[\]]/g,`\\$&`).replace(/\/:([\w-]+)(\?)?/g,(e,t,n,i,a)=>{if(r.push({paramName:t,isOptional:n!=null}),n){let t=a.charAt(i+e.length);return t&&t!==`/`?`/([^\\/]*)`:`(?:/([^\\/]*))?`}return`/([^\\/]+)`}).replace(/\/([\w-]+)\?(\/|$)/g,`(/$1)?$2`);return e.endsWith(`*`)?(r.push({paramName:`*`}),i+=e===`*`||e===`/*`?`(.*)$`:`(?:\\/(.+)|\\/*)$`):n?i+=`\\/*$`:e!==``&&e!==`/`&&(i+=`(?:(?=\\/|$))`),[new RegExp(i,t?void 0:`i`),r]}function De(e){try{return e.split(`/`).map(e=>decodeURIComponent(e).replace(/\//g,`%2F`)).join(`/`)}catch(t){return ne(!1,`The URL path "${e}" could not be decoded because it is a malformed URL segment. This is probably due to a bad percent encoding (${t}).`),e}}function A(e,t){if(t===`/`)return e;if(!e.toLowerCase().startsWith(t.toLowerCase()))return null;let n=t.endsWith(`/`)?t.length-1:t.length,r=e.charAt(n);return r&&r!==`/`?null:e.slice(n)||`/`}function Oe(e,t=`/`){let{pathname:n,search:r=``,hash:i=``}=typeof e==`string`?se(e):e,a;return n?(n=Pe(n),a=n.startsWith(`/`)||n.startsWith(`\\`)?ke(n.substring(1),`/`):ke(n,t)):a=t,{pathname:a,search:Re(r),hash:ze(i)}}function ke(e,t){let n=Ie(t).split(`/`);return e.split(`/`).forEach(e=>{e===`..`?n.length>1&&n.pop():e!==`.`&&n.push(e)}),n.length>1?n.join(`/`):`/`}function Ae(e,t,n,r){return`Cannot include a '${e}' character in a manually specified \`to.${t}\` field [${JSON.stringify(r)}].  Please separate it out to the \`to.${n}\` field. Alternatively you may provide the full path as a string in <Link to="..."> and the router will parse it for you.`}function je(e){return e.filter((e,t)=>t===0||e.route.path&&e.route.path.length>0)}function Me(e){let t=je(e);return t.map((e,n)=>n===t.length-1?e.pathname:e.pathnameBase)}function Ne(e,t,n,r=!1){let i;typeof e==`string`?i=se(e):(i={...e},D(!i.pathname||!i.pathname.includes(`?`),Ae(`?`,`pathname`,`search`,i)),D(!i.pathname||!i.pathname.includes(`#`),Ae(`#`,`pathname`,`hash`,i)),D(!i.search||!i.search.includes(`#`),Ae(`#`,`search`,`hash`,i)));let a=e===``||i.pathname===``,o=a?`/`:i.pathname,s;if(o==null)s=n;else{let e=t.length-1;if(!r&&o.startsWith(`..`)){let t=o.split(`/`);for(;t[0]===`..`;)t.shift(),--e;i.pathname=t.join(`/`)}s=e>=0?t[e]:`/`}let c=Oe(i,s),l=o&&o!==`/`&&o.endsWith(`/`),u=(a||o===`.`)&&n.endsWith(`/`);return!c.pathname.endsWith(`/`)&&(l||u)&&(c.pathname+=`/`),c}var Pe=e=>e.replace(/[\\/]{2,}/g,`/`),Fe=e=>Pe(e.join(`/`));function Ie(e,t=0){let n=e.length;for(;n>t&&e.charCodeAt(n-1)===47;)n--;return n===e.length?e:e.slice(0,n)}var Le=e=>Ie(e).replace(/^\/*/,`/`),Re=e=>!e||e===`?`?``:e.startsWith(`?`)?e:`?`+e,ze=e=>!e||e===`#`?``:e.startsWith(`#`)?e:`#`+e,Be=class{constructor(e,t,n,r=!1){this.status=e,this.statusText=t||``,this.internal=r,n instanceof Error?(this.data=n.toString(),this.error=n):this.data=n}};function Ve(e){return e!=null&&typeof e.status==`number`&&typeof e.statusText==`string`&&typeof e.internal==`boolean`&&`data`in e}function He(e){return Fe(e.map(e=>e.route.path).filter(Boolean))||`/`}var Ue=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;function We(e,t){let n=e;if(typeof n!=`string`||!ee.test(n))return{absoluteURL:void 0,isExternal:!1,to:n};let r=n,i=!1;if(Ue)try{let e=new URL(window.location.href),r=te.test(n)?new URL(C(n,e.protocol)):new URL(n),a=A(r.pathname,t);r.origin===e.origin&&a!=null?n=a+r.search+r.hash:i=!0}catch{ne(!1,`<Link to="${n}"> contains an invalid URL which will probably break when clicked - please update to a valid URL path.`)}return{absoluteURL:r,isExternal:i,to:n}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);var Ge=new URL(`http://localhost`);function Ke(e){if(e.createURL)return e.createURL(`/`);try{return new URL(e.createHref(`/`),Ge)}catch{return Ge}}function qe(e,t){return e.origin===t.origin&&(e.origin!==`null`||e.protocol===t.protocol&&e.host===t.host)}function Je(e,t){if(e.startsWith(`//`))return!0;let n=t.protocol.toLowerCase();return e.toLowerCase().startsWith(n)?t.host===``||e.slice(n.length).startsWith(`//`):!1}function Ye(e,t,n,r){let i=null;try{i=e==null?null:new URL(e,n)}catch{}let a=new URL(t,n),o=i!=null&&!qe(i,n),s=!qe(a,n);if(r===`reject`){if(o||s)throw Error(`External navigation is not allowed`)}else if(s&&(i==null||!Je(e,i)||!qe(i,a)))throw Error(`External navigation is not allowed`)}var Xe=[`POST`,`PUT`,`PATCH`,`DELETE`];new Set(Xe);var Ze=[`GET`,...Xe];new Set(Ze);var Qe=[`about:`,`blob:`,`chrome:`,`chrome-untrusted:`,`content:`,`data:`,`devtools:`,`file:`,`filesystem:`,`javascript:`];function $e(e){try{return Qe.includes(new URL(e).protocol)}catch{return!1}}var et=S.createContext(null);et.displayName=`DataRouter`;var tt=S.createContext(null);tt.displayName=`DataRouterState`;var nt=S.createContext(!1);function rt(){return S.useContext(nt)}var it=S.createContext({isTransitioning:!1});it.displayName=`ViewTransition`;var at=S.createContext(new Map);at.displayName=`Fetchers`;var ot=S.createContext(null);ot.displayName=`Await`;var st=S.createContext(null);st.displayName=`Navigation`;var ct=S.createContext(null);ct.displayName=`Location`;var lt=S.createContext({outlet:null,matches:[],isDataRoute:!1});lt.displayName=`Route`;var ut=S.createContext(null);ut.displayName=`RouteError`;var dt=`REACT_ROUTER_ERROR`,ft=`REDIRECT`,pt=`ROUTE_ERROR_RESPONSE`;function mt(e){if(e.startsWith(`${dt}:${ft}:{`))try{let t=JSON.parse(e.slice(28));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`&&typeof t.location==`string`&&typeof t.reloadDocument==`boolean`&&typeof t.replace==`boolean`)return t}catch{}}function ht(e){if(e.startsWith(`${dt}:${pt}:{`))try{let t=JSON.parse(e.slice(40));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`)return new Be(t.status,t.statusText,t.data)}catch{}}function gt(e,{relative:t}={}){D(_t(),`useHref() may be used only in the context of a <Router> component.`);let{basename:n,navigator:r}=S.useContext(st),{hash:i,pathname:a,search:o}=wt(e,{relative:t}),s=a;return n!==`/`&&(s=a===`/`?n:Fe([n,a])),r.createHref({pathname:s,search:o,hash:i})}function _t(){return S.useContext(ct)!=null}function vt(){return D(_t(),`useLocation() may be used only in the context of a <Router> component.`),S.useContext(ct).location}var yt=`You should call navigate() in a React.useEffect(), not when your component is first rendered.`;function bt(e){S.useContext(st).static||S.useLayoutEffect(e)}function xt(){let{isDataRoute:e}=S.useContext(lt);return e?Vt():St()}function St(){D(_t(),`useNavigate() may be used only in the context of a <Router> component.`);let e=S.useContext(et),{basename:t,navigator:n}=S.useContext(st),{matches:r}=S.useContext(lt),{pathname:i}=vt(),a=JSON.stringify(Me(r)),o=S.useRef(!1);return bt(()=>{o.current=!0}),S.useCallback((r,s={})=>{if(ne(o.current,yt),!o.current)return;if(typeof r==`number`){n.go(r);return}let c=Ne(r,JSON.parse(a),i,s.relative===`path`);e==null&&t!==`/`&&(c.pathname=c.pathname===`/`?t:Fe([t,c.pathname])),Ye(typeof r==`string`?r:oe(r),n.createHref(c),Ke(n),`reject`),(s.replace?n.replace:n.push)(c,s.state,s)},[t,n,a,i,e])}S.createContext(null);function Ct(){let{matches:e}=S.useContext(lt);return e[e.length-1]?.params??{}}function wt(e,{relative:t}={}){let{matches:n}=S.useContext(lt),{pathname:r}=vt(),i=JSON.stringify(Me(n));return S.useMemo(()=>Ne(e,JSON.parse(i),r,t===`path`),[e,i,r,t])}function Tt(e,t){return Et(e,t)}function Et(e,t,n){D(_t(),`useRoutes() may be used only in the context of a <Router> component.`);let{navigator:r}=S.useContext(st),{matches:i}=S.useContext(lt),a=i[i.length-1],o=a?a.params:{},s=a?a.pathname:`/`,c=a?a.pathnameBase:`/`,l=a&&a.route;{let e=l&&l.path||``;Ut(s,!l||e.endsWith(`*`)||e.endsWith(`*?`),`You rendered descendant <Routes> (or called \`useRoutes()\`) at "${s}" (under <Route path="${e}">) but the parent route path has no trailing "*". This means if you navigate deeper, the parent won't match anymore and therefore the child routes will never render.
+
+Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}/*`}">.`)}let u=vt(),d;if(t){let e=typeof t==`string`?se(t):t;D(c===`/`||e.pathname?.startsWith(c),`When overriding the location using \`<Routes location>\` or \`useRoutes(routes, location)\`, the location pathname must begin with the portion of the URL pathname that was matched by all parent routes. The current pathname base is "${c}" but pathname "${e.pathname}" was given in the \`location\` prop.`),d=e}else d=u;let f=d.pathname||`/`,p=f;if(c!==`/`){let e=c.replace(/^\//,``).split(`/`);p=`/`+f.replace(/^\//,``).split(`/`).slice(e.length).join(`/`)}let m=n&&n.state.matches.length?n.state.matches.map(e=>Object.assign(e,{route:n.manifest[e.route.id]||e.route})):ue(e,{pathname:p});ne(l||m!=null,`No routes matched location "${d.pathname}${d.search}${d.hash}" `),ne(m==null||m[m.length-1].route.element!==void 0||m[m.length-1].route.Component!==void 0||m[m.length-1].route.lazy!==void 0,`Matched leaf route at location "${d.pathname}${d.search}${d.hash}" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.`);let h=Nt(m&&m.map(e=>Object.assign({},e,{params:Object.assign({},o,e.params),pathname:Fe([c,r.encodeLocation?r.encodeLocation(e.pathname.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathname]),pathnameBase:e.pathnameBase===`/`?c:Fe([c,r.encodeLocation?r.encodeLocation(e.pathnameBase.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathnameBase])})),i,n);return t&&h?S.createElement(ct.Provider,{value:{location:{pathname:`/`,search:``,hash:``,state:null,key:`default`,mask:void 0,...d},navigationType:`POP`}},h):h}function Dt(){let e=Bt(),t=Ve(e)?`${e.status} ${e.statusText}`:e instanceof Error?e.message:JSON.stringify(e),n=e instanceof Error?e.stack:null,r=`rgba(200,200,200, 0.5)`,i={padding:`0.5rem`,backgroundColor:r},a={padding:`2px 4px`,backgroundColor:r},o=null;return console.error(`Error handled by React Router default ErrorBoundary:`,e),o=S.createElement(S.Fragment,null,S.createElement(`p`,null,`💿 Hey developer 👋`),S.createElement(`p`,null,`You can provide a way better UX than this when your app throws errors by providing your own `,S.createElement(`code`,{style:a},`ErrorBoundary`),` or`,` `,S.createElement(`code`,{style:a},`errorElement`),` prop on your route.`)),S.createElement(S.Fragment,null,S.createElement(`h2`,null,`Unexpected Application Error!`),S.createElement(`h3`,{style:{fontStyle:`italic`}},t),n?S.createElement(`pre`,{style:i},n):null,o)}var Ot=S.createElement(Dt,null),kt=class extends S.Component{constructor(e){super(e),this.state={location:e.location,revalidation:e.revalidation,error:e.error}}static getDerivedStateFromError(e){return{error:e}}static getDerivedStateFromProps(e,t){return t.location!==e.location||t.revalidation!==`idle`&&e.revalidation===`idle`?{error:e.error,location:e.location,revalidation:e.revalidation}:{error:e.error===void 0?t.error:e.error,location:t.location,revalidation:e.revalidation||t.revalidation}}componentDidCatch(e,t){this.props.onError?this.props.onError(e,t):console.error(`React Router caught the following error during render`,e)}render(){let e=this.state.error;if(this.context&&typeof e==`object`&&e&&`digest`in e&&typeof e.digest==`string`){let t=ht(e.digest);t&&(e=t)}let t=e===void 0?this.props.children:S.createElement(lt.Provider,{value:this.props.routeContext},S.createElement(ut.Provider,{value:e,children:this.props.component}));return this.context?S.createElement(jt,{error:e},t):t}};kt.contextType=nt;var At=new WeakMap;function jt({children:e,error:t}){let{basename:n,navigator:r}=S.useContext(st);if(typeof t==`object`&&t&&`digest`in t&&typeof t.digest==`string`){let e=mt(t.digest);if(e){let i=At.get(t);if(i)throw i;let a=We(e.location,n),o=a.absoluteURL||a.to;if(Ye(e.location,o,Ke(r),`allow-explicit`),$e(o))throw Error(`Invalid redirect location`);if(Ue&&!At.get(t)){if(a.isExternal||e.reloadDocument)window.location.href=o;else{let n=Promise.resolve().then(()=>window.__reactRouterDataRouter.navigate(a.to,{replace:e.replace}));throw At.set(t,n),n}}return S.createElement(`meta`,{httpEquiv:`refresh`,content:`0;url=${o}`})}}return e}function Mt({routeContext:e,match:t,children:n}){let r=S.useContext(et);return r&&r.static&&r.staticContext&&(t.route.errorElement||t.route.ErrorBoundary)&&(r.staticContext._deepestRenderedBoundaryId=t.route.id),S.createElement(lt.Provider,{value:e},n)}function Nt(e,t=[],n){let r=n?.state;if(e==null){if(!r)return null;if(r.errors)e=r.matches;else if(t.length===0&&!r.initialized&&r.matches.length>0)e=r.matches;else return null}let i=e,a=r?.errors;if(a!=null){let e=i.findIndex(e=>e.route.id&&a?.[e.route.id]!==void 0);D(e>=0,`Could not find a matching route for errors on route IDs: ${Object.keys(a).join(`,`)}`),i=i.slice(0,Math.min(i.length,e+1))}let o=!1,s=-1;if(n&&r){o=r.renderFallback;for(let e=0;e<i.length;e++){let t=i[e];if((t.route.HydrateFallback||t.route.hydrateFallbackElement)&&(s=e),t.route.id){let{loaderData:e,errors:a}=r,c=t.route.loader&&!e.hasOwnProperty(t.route.id)&&(!a||a[t.route.id]===void 0);if(t.route.lazy||c){n.isStatic&&(o=!0),i=s>=0?i.slice(0,s+1):[i[0]];break}}}}let c=n?.onError,l=r&&c?(e,t)=>{c(e,{location:r.location,params:r.matches?.[0]?.params??{},pattern:He(r.matches),errorInfo:t})}:void 0;return i.reduceRight((e,n,c)=>{let u,d=!1,f=null,p=null;r&&(u=a&&n.route.id?a[n.route.id]:void 0,f=n.route.errorElement||Ot,o&&(s<0&&c===0?(Ut(`route-fallback`,!1,"No `HydrateFallback` element provided to render during initial hydration"),d=!0,p=null):s===c&&(d=!0,p=n.route.hydrateFallbackElement||null)));let m=t.concat(i.slice(0,c+1)),h=()=>{let t;return t=u?f:d?p:n.route.Component?S.createElement(n.route.Component,null):n.route.element?n.route.element:e,S.createElement(Mt,{match:n,routeContext:{outlet:e,matches:m,isDataRoute:r!=null},children:t})};return r&&(n.route.ErrorBoundary||n.route.errorElement||c===0)?S.createElement(kt,{location:r.location,revalidation:r.revalidation,component:f,error:u,children:h(),routeContext:{outlet:null,matches:m,isDataRoute:!0},onError:l}):h()},null)}function Pt(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function Ft(e){let t=S.useContext(et);return D(t,Pt(e)),t}function It(e){let t=S.useContext(tt);return D(t,Pt(e)),t}function Lt(e){let t=S.useContext(lt);return D(t,Pt(e)),t}function Rt(e){let t=Lt(e),n=t.matches[t.matches.length-1];return D(n.route.id,`${e} can only be used on routes that contain a unique "id"`),n.route.id}function zt(){return Rt(`useRouteId`)}function Bt(){let e=S.useContext(ut),t=It(`useRouteError`),n=Rt(`useRouteError`);return e===void 0?t.errors?.[n]:e}function Vt(){let{router:e}=Ft(`useNavigate`),t=Rt(`useNavigate`),n=S.useRef(!1);return bt(()=>{n.current=!0}),S.useCallback(async(r,i={})=>{ne(n.current,yt),n.current&&(typeof r==`number`?await e.navigate(r):await e.navigate(r,{fromRouteId:t,...i}))},[e,t])}var Ht={};function Ut(e,t,n){!t&&!Ht[e]&&(Ht[e]=!0,ne(!1,n))}S.memo(Wt);function Wt({routes:e,manifest:t,future:n,state:r,isStatic:i,onError:a}){return Et(e,void 0,{manifest:t,state:r,isStatic:i,onError:a,future:n})}function Gt(e){D(!1,`A <Route> is only ever to be used as the child of <Routes> element, never rendered directly. Please wrap your <Route> in a <Routes>.`)}function Kt({basename:e=`/`,children:t=null,location:n,navigationType:r=`POP`,navigator:i,static:a=!1,useTransitions:o}){D(!_t(),`You cannot render a <Router> inside another <Router>. You should never have more than one in your app.`);let s=e.replace(/^\/*/,`/`),c=S.useMemo(()=>({basename:s,navigator:i,static:a,useTransitions:o,future:{}}),[s,i,a,o]);typeof n==`string`&&(n=se(n));let{pathname:l=`/`,search:u=``,hash:d=``,state:f=null,key:p=`default`,mask:m}=n,h=S.useMemo(()=>{let e=A(l,s);return e==null?null:{location:{pathname:e,search:u,hash:d,state:f,key:p,mask:m},navigationType:r}},[s,l,u,d,f,p,r,m]);return ne(h!=null,`<Router basename="${s}"> is not able to match the URL "${l}${u}${d}" because it does not start with the basename, so the <Router> won't render anything.`),h==null?null:S.createElement(st.Provider,{value:c},S.createElement(ct.Provider,{children:t,value:h}))}function qt({children:e,location:t}){return Tt(Jt(e),t)}S.Component;function Jt(e,t=[]){let n=[];return S.Children.forEach(e,(e,r)=>{if(!S.isValidElement(e))return;let i=[...t,r];if(e.type===S.Fragment){n.push.apply(n,Jt(e.props.children,i));return}D(e.type===Gt,`[${typeof e.type==`string`?e.type:e.type.name}] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>`),D(!e.props.index||!e.props.children,`An index route cannot have child routes.`);let a={id:e.props.id||i.join(`-`),caseSensitive:e.props.caseSensitive,element:e.props.element,Component:e.props.Component,index:e.props.index,path:e.props.path,middleware:e.props.middleware,loader:e.props.loader,action:e.props.action,hydrateFallbackElement:e.props.hydrateFallbackElement,HydrateFallback:e.props.HydrateFallback,errorElement:e.props.errorElement,ErrorBoundary:e.props.ErrorBoundary,hasErrorBoundary:e.props.hasErrorBoundary===!0||e.props.ErrorBoundary!=null||e.props.errorElement!=null,shouldRevalidate:e.props.shouldRevalidate,handle:e.props.handle,lazy:e.props.lazy};e.props.children&&(a.children=Jt(e.props.children,i)),n.push(a)}),n}var Yt=`get`,Xt=`application/x-www-form-urlencoded`;function Zt(e){return typeof HTMLElement<`u`&&e instanceof HTMLElement}function Qt(e){return Zt(e)&&e.tagName.toLowerCase()===`button`}function $t(e){return Zt(e)&&e.tagName.toLowerCase()===`form`}function j(e){return Zt(e)&&e.tagName.toLowerCase()===`input`}function en(e){return!!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}function tn(e,t){return e.button===0&&(!t||t===`_self`)&&!en(e)}var nn=null;function rn(){if(nn===null)try{new FormData(document.createElement(`form`),0),nn=!1}catch{nn=!0}return nn}var an=new Set([`application/x-www-form-urlencoded`,`multipart/form-data`,`text/plain`]);function on(e){return e!=null&&!an.has(e)?(ne(!1,`"${e}" is not a valid \`encType\` for \`<Form>\`/\`<fetcher.Form>\` and will default to "${Xt}"`),null):e}function sn(e,t){let n,r,i,a,o;if($t(e)){let o=e.getAttribute(`action`);r=o?A(o,t):null,n=e.getAttribute(`method`)||Yt,i=on(e.getAttribute(`enctype`))||Xt,a=new FormData(e)}else if(Qt(e)||j(e)&&(e.type===`submit`||e.type===`image`)){let o=e.form;if(o==null)throw Error(`Cannot submit a <button> or <input type="submit"> without a <form>`);let s=e.getAttribute(`formaction`)||o.getAttribute(`action`);if(r=s?A(s,t):null,n=e.getAttribute(`formmethod`)||o.getAttribute(`method`)||Yt,i=on(e.getAttribute(`formenctype`))||on(o.getAttribute(`enctype`))||Xt,a=new FormData(o,e),!rn()){let{name:t,type:n,value:r}=e;if(n===`image`){let e=t?`${t}.`:``;a.append(`${e}x`,`0`),a.append(`${e}y`,`0`)}else t&&a.append(t,r)}}else if(Zt(e))throw Error(`Cannot submit element that is not <form>, <button>, or <input type="submit|image">`);else n=Yt,r=null,i=Xt,o=e;return a&&i===`text/plain`&&(o=a,a=void 0),{action:r,method:n.toLowerCase(),encType:i,formData:a,body:o}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);function cn(e,t){if(e===!1||e==null)throw Error(t)}function ln(e,t,n,r){let i=typeof e==`string`?new URL(e,typeof window>`u`?`server://singlefetch/`:window.location.origin):e;return i.pathname=n?i.pathname.endsWith(`/`)?`${i.pathname}_.${r}`:`${i.pathname}.${r}`:i.pathname===`/`?`_root.${r}`:t&&A(i.pathname,t)===`/`?`${Ie(t)}/_root.${r}`:`${Ie(i.pathname)}.${r}`,i}async function un(e,t){if(e.id in t)return t[e.id];try{let n=await x(()=>import(e.module),[]);return t[e.id]=n,n}catch(t){return console.error(`Error loading route module \`${e.module}\`, reloading page...`),console.error(t),window.__reactRouterContext&&window.__reactRouterContext.isSpaMode,window.location.reload(),new Promise(()=>{})}}function dn(e){return e!=null&&typeof e.page==`string`}function fn(e){return e==null?!1:e.href==null?e.rel===`preload`&&typeof e.imageSrcSet==`string`&&typeof e.imageSizes==`string`:typeof e.rel==`string`&&typeof e.href==`string`}async function pn(e,t,n){return vn((await Promise.all(e.map(async e=>{let r=t.routes[e.route.id];if(r){let e=await un(r,n);return e.links?e.links():[]}return[]}))).flat(1).filter(fn).filter(e=>e.rel===`stylesheet`||e.rel===`preload`).map(e=>e.rel===`stylesheet`?{...e,rel:`prefetch`,as:`style`}:{...e,rel:`prefetch`}))}function mn(e,t,n,r,i,a){let o=(e,t)=>!n[t]||e.route.id!==n[t].route.id,s=(e,t)=>n[t].pathname!==e.pathname||n[t].route.path?.endsWith(`*`)&&n[t].params[`*`]!==e.params[`*`];return a===`assets`?t.filter((e,t)=>o(e,t)||s(e,t)):a===`data`?t.filter((t,a)=>{let c=r.routes[t.route.id];if(!c||!c.hasLoader)return!1;if(o(t,a)||s(t,a))return!0;if(t.route.shouldRevalidate){let r=t.route.shouldRevalidate({currentUrl:new URL(i.pathname+i.search+i.hash,window.origin),currentParams:n[0]?.params||{},nextUrl:new URL(e,window.origin),nextParams:t.params,defaultShouldRevalidate:!0});if(typeof r==`boolean`)return r}return!0}):[]}function hn(e,t,{includeHydrateFallback:n}={}){return gn(e.map(e=>{let r=t.routes[e.route.id];if(!r)return[];let i=[r.module];return r.clientActionModule&&(i=i.concat(r.clientActionModule)),r.clientLoaderModule&&(i=i.concat(r.clientLoaderModule)),n&&r.hydrateFallbackModule&&(i=i.concat(r.hydrateFallbackModule)),r.imports&&(i=i.concat(r.imports)),i}).flat(1))}function gn(e){return[...new Set(e)]}function _n(e){let t={},n=Object.keys(e).sort();for(let r of n)t[r]=e[r];return t}function vn(e,t){let n=new Set,r=new Set(t);return e.reduce((e,i)=>{if(t&&!dn(i)&&i.as===`script`&&i.href&&r.has(i.href))return e;let a=JSON.stringify(_n(i));return n.has(a)||(n.add(a),e.push({key:a,link:i})),e},[])}function yn(){let e=S.useContext(et);return cn(e,`You must render this element inside a <DataRouterContext.Provider> element`),e}function bn(){let e=S.useContext(tt);return cn(e,`You must render this element inside a <DataRouterStateContext.Provider> element`),e}var xn=S.createContext(void 0);xn.displayName=`FrameworkContext`;function Sn(){let e=S.useContext(xn);return cn(e,`You must render this element inside a <HydratedRouter> element`),e}function Cn(e,t){let n=S.useContext(xn),[r,i]=S.useState(!1),[a,o]=S.useState(!1),{onFocus:s,onBlur:c,onMouseEnter:l,onMouseLeave:u,onTouchStart:d}=t,f=S.useRef(null);S.useEffect(()=>{if(e===`render`&&o(!0),e===`viewport`){let e=new IntersectionObserver(e=>{e.forEach(e=>{o(e.isIntersecting)})},{threshold:.5});return f.current&&e.observe(f.current),()=>{e.disconnect()}}},[e]),S.useEffect(()=>{if(r){let e=setTimeout(()=>{o(!0)},100);return()=>{clearTimeout(e)}}},[r]);let p=()=>{i(!0)},m=()=>{i(!1),o(!1)};return n?e===`intent`?[a,f,{onFocus:wn(s,p),onBlur:wn(c,m),onMouseEnter:wn(l,p),onMouseLeave:wn(u,m),onTouchStart:wn(d,p)}]:[a,f,{}]:[!1,f,{}]}function wn(e,t){return n=>{e&&e(n),n.defaultPrevented||t(n)}}function Tn({page:e,...t}){let n=rt(),{nonce:r}=Sn(),{router:i}=yn(),a=S.useMemo(()=>ue(i.routes,e,i.basename),[i.routes,e,i.basename]);return a?(t.nonce==null&&r&&(t={...t,nonce:r}),n?S.createElement(Dn,{page:e,matches:a,...t}):S.createElement(On,{page:e,matches:a,...t})):null}function En(e){let{manifest:t,routeModules:n}=Sn(),[r,i]=S.useState([]);return S.useEffect(()=>{let r=!1;return pn(e,t,n).then(e=>{r||i(e)}),()=>{r=!0}},[e,t,n]),r}function Dn({page:e,matches:t,...n}){let r=vt(),{future:i}=Sn(),{basename:a}=yn(),o=S.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=ln(e,a,i.v8_trailingSlashAwareDataRequests,`rsc`),o=!1,s=[];for(let e of t)typeof e.route.shouldRevalidate==`function`?o=!0:s.push(e.route.id);return o&&s.length>0&&n.searchParams.set(`_routes`,s.join(`,`)),[n.pathname+n.search]},[a,i.v8_trailingSlashAwareDataRequests,e,r,t]);return S.createElement(S.Fragment,null,o.map(e=>S.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})))}function On({page:e,matches:t,...n}){let r=vt(),{future:i,manifest:a,routeModules:o}=Sn(),{basename:s}=yn(),{loaderData:c,matches:l}=bn(),u=S.useMemo(()=>mn(e,t,l,a,r,`data`),[e,t,l,a,r]),d=S.useMemo(()=>mn(e,t,l,a,r,`assets`),[e,t,l,a,r]),f=S.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=new Set,l=!1;if(t.forEach(e=>{let t=a.routes[e.route.id];t&&t.hasLoader&&(!u.some(t=>t.route.id===e.route.id)&&e.route.id in c&&o[e.route.id]?.shouldRevalidate||t.hasClientLoader?l=!0:n.add(e.route.id))}),n.size===0)return[];let d=ln(e,s,i.v8_trailingSlashAwareDataRequests,`data`);return l&&n.size>0&&d.searchParams.set(`_routes`,t.filter(e=>n.has(e.route.id)).map(e=>e.route.id).join(`,`)),[d.pathname+d.search]},[s,i.v8_trailingSlashAwareDataRequests,c,r,a,u,t,e,o]),p=S.useMemo(()=>hn(d,a),[d,a]),m=En(d);return S.createElement(S.Fragment,null,f.map(e=>S.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})),p.map(e=>S.createElement(`link`,{key:e,rel:`modulepreload`,href:e,...n})),m.map(({key:e,link:t})=>S.createElement(`link`,{key:e,nonce:n.nonce,...t,crossOrigin:t.crossOrigin??n.crossOrigin})))}function kn(...e){return t=>{e.forEach(e=>{typeof e==`function`?e(t):e!=null&&(e.current=t)})}}S.Component;var An=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;try{An&&(window.__reactRouterVersion=`7.18.3`)}catch{}function jn({basename:e,children:t,useTransitions:n,window:r}){let i=S.useRef();i.current??=E({window:r,v5Compat:!0});let a=i.current,[o,s]=S.useState({action:a.action,location:a.location}),c=S.useCallback(e=>{n===!1?s(e):S.startTransition(()=>s(e))},[n]);return S.useLayoutEffect(()=>a.listen(c),[a,c]),S.createElement(Kt,{basename:e,children:t,location:o.location,navigationType:o.action,navigator:a,useTransitions:n})}var Mn=S.forwardRef(function({onClick:e,discover:t=`render`,prefetch:n=`none`,relative:r,reloadDocument:i,replace:a,mask:o,state:s,target:c,to:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f,...p},m){let{basename:h,navigator:g,useTransitions:_}=S.useContext(st),v=typeof l==`string`&&ee.test(l),y=We(l,h);l=y.to;let b=gt(l,{relative:r}),x=vt(),te=null;if(o){let e=Ne(o,[],x.mask?x.mask.pathname:`/`,!0);h!==`/`&&(e.pathname=e.pathname===`/`?h:Fe([h,e.pathname])),te=g.createHref(e)}let[C,w,T]=Cn(n,p),E=Ln(l,{replace:a,mask:o,state:s,target:c,preventScrollReset:u,relative:r,viewTransition:d,defaultShouldRevalidate:f,useTransitions:_});function D(t){e&&e(t),t.defaultPrevented||E(t)}let ne=!(y.isExternal||i),re=S.createElement(`a`,{...p,...T,href:(ne?te:void 0)||y.absoluteURL||b,onClick:ne?D:e,ref:kn(m,w),target:c,"data-discover":!v&&t===`render`?`true`:void 0});return C&&!v?S.createElement(S.Fragment,null,re,S.createElement(Tn,{page:b})):re});Mn.displayName=`Link`;var Nn=S.forwardRef(function({"aria-current":e=`page`,caseSensitive:t=!1,className:n=``,end:r=!1,style:i,to:a,viewTransition:o,children:s,...c},l){let u=wt(a,{relative:c.relative}),d=vt(),f=S.useContext(tt),{navigator:p,basename:m}=S.useContext(st),h=f!=null&&Hn(u)&&o===!0,g=p.encodeLocation?p.encodeLocation(u).pathname:u.pathname,_=d.pathname,v=f&&f.navigation&&f.navigation.location?f.navigation.location.pathname:null;t||(_=_.toLowerCase(),v=v?v.toLowerCase():null,g=g.toLowerCase()),v&&m&&(v=A(v,m)||v);let y=g!==`/`&&g.endsWith(`/`)?g.length-1:g.length,b=_===g||!r&&_.startsWith(g)&&_.charAt(y)===`/`,x=v!=null&&(v===g||!r&&v.startsWith(g)&&v.charAt(g.length)===`/`),ee={isActive:b,isPending:x,isTransitioning:h},te=b?e:void 0,C;C=typeof n==`function`?n(ee):[n,b?`active`:null,x?`pending`:null,h?`transitioning`:null].filter(Boolean).join(` `);let w=typeof i==`function`?i(ee):i;return S.createElement(Mn,{...c,"aria-current":te,className:C,ref:l,style:w,to:a,viewTransition:o},typeof s==`function`?s(ee):s)});Nn.displayName=`NavLink`;var Pn=S.forwardRef(({discover:e=`render`,fetcherKey:t,navigate:n,reloadDocument:r,replace:i,state:a,method:o=Yt,action:s,onSubmit:c,relative:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f,...p},m)=>{let{useTransitions:h}=S.useContext(st),g=Bn(),_=Vn(s,{relative:l}),v=o.toLowerCase()===`get`?`get`:`post`,y=typeof s==`string`&&ee.test(s);return S.createElement(`form`,{ref:m,method:v,action:_,onSubmit:r?c:e=>{if(c&&c(e),e.defaultPrevented)return;e.preventDefault();let r=e.nativeEvent.submitter,s=r?.getAttribute(`formmethod`)||o,p=()=>g(r||e.currentTarget,{fetcherKey:t,method:s,navigate:n,replace:i,state:a,relative:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f});h&&n!==!1?S.startTransition(()=>p()):p()},...p,"data-discover":!y&&e===`render`?`true`:void 0})});Pn.displayName=`Form`;function Fn(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function In(e){let t=S.useContext(et);return D(t,Fn(e)),t}function Ln(e,{target:t,replace:n,mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,defaultShouldRevalidate:c,useTransitions:l}={}){let u=xt(),d=vt(),f=wt(e,{relative:o});return S.useCallback(p=>{if(tn(p,t)){p.preventDefault();let t=n===void 0?oe(d)===oe(f):n,m=()=>u(e,{replace:t,mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,defaultShouldRevalidate:c});l?S.startTransition(()=>m()):m()}},[d,u,f,n,r,i,t,e,a,o,s,c,l])}var Rn=0,zn=()=>`__${String(++Rn)}__`;function Bn(){let{router:e}=In(`useSubmit`),{basename:t}=S.useContext(st),n=zt(),r=e.fetch,i=e.navigate;return S.useCallback(async(e,a={})=>{let{action:o,method:s,encType:c,formData:l,body:u}=sn(e,t);if(a.navigate===!1){let e=a.fetcherKey||zn();await r(e,n,a.action||o,{defaultShouldRevalidate:a.defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,flushSync:a.flushSync})}else await i(a.action||o,{defaultShouldRevalidate:a.defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,replace:a.replace,state:a.state,fromRouteId:n,flushSync:a.flushSync,viewTransition:a.viewTransition})},[r,i,t,n])}function Vn(e,{relative:t}={}){let{basename:n}=S.useContext(st),r=S.useContext(lt);D(r,`useFormAction must be used inside a RouteContext`);let[i]=r.matches.slice(-1),a={...wt(e||`.`,{relative:t})},o=vt();if(e==null){a.search=o.search;let e=new URLSearchParams(a.search),t=e.getAll(`index`);if(t.some(e=>e===``)){e.delete(`index`),t.filter(e=>e).forEach(t=>e.append(`index`,t));let n=e.toString();a.search=n?`?${n}`:``}}return(!e||e===`.`)&&i.route.index&&(a.search=a.search?a.search.replace(/^\?/,`?index&`):`?index`),n!==`/`&&(a.pathname=a.pathname===`/`?n:Fe([n,a.pathname])),oe(a)}function Hn(e,{relative:t}={}){let n=S.useContext(it);D(n!=null,"`useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?");let{basename:r}=In(`useViewTransitionState`),i=wt(e,{relative:t});if(!n.isTransitioning)return!1;let a=A(n.currentLocation.pathname,r)||n.currentLocation.pathname,o=A(n.nextLocation.pathname,r)||n.nextLocation.pathname;return we(i.pathname,o)!=null||we(i.pathname,a)!=null}var Un=_(),Wn=o((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),M=o(((e,t)=>{t.exports=Wn()}))();function Gn(){return(0,M.jsxs)(`footer`,{className:`build-info`,children:[`Build `,`20260915`]})}function Kn(e){return e===null?`planned`:/^- \[ \] T/m.test(e)?`in-progress`:`shipped`}var qn=/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/;function Jn(e){let t=qn.exec(e),n=t?.[1],r=t?.[2];return n===void 0||r===void 0?null:{date:n,id:r}}var Yn=`# Day 1: laying the foundation before writing a line of code
+
+The project's actual first day didn't produce anything a child could touch — no app, no
+exercises, not even a line of code. What it did produce was a plan clear enough that everything
+built over the days that followed had an obvious place to go, and a reason for existing, instead
+of getting figured out on the fly.
+
+The day started with the basics most projects skip past too quickly: a proper home for the work,
+in the form of two repositories set up before anything else.
+
+\`\`\`
+specs/  -> the written rules a feature has to satisfy, agreed on *before* any code gets written
+blog/   -> this running story of what actually gets built, one entry per day
+\`\`\`
+
+The reasoning behind splitting things that way was simple, if a little unusual for a small
+project: write down what a feature is supposed to do and why, in enough detail to check the
+finished thing against, before building it — rather than deciding as you go and hoping it holds
+together later. The third piece, an actual app a family can open, would only start once there was
+something concrete in \`specs/\` to build it against — that came the following day.
+
+Most of the rest of day one went into questions that are easy to skip and expensive to get wrong
+later: what is this product actually for, and for whom? The answer settled on was deliberately
+narrow — a practice app to help kids build core skills, starting with one thing done well (mental
+math) rather than a sprawling curriculum from day one. The thinking was that a single skill,
+built and proven end-to-end, is worth far more early on than five half-built ones: it's the
+difference between a real, working example to point to and a pile of promises.
+
+With that settled, the rest of the day went into organizing how the specs repository itself
+should be structured — one folder per feature, so each piece of the product has its own
+self-contained description of what it does and why, plus a small set of higher-level notes
+covering the product's overall vision and the bigger architectural decisions that individual
+features would otherwise have to keep re-explaining. On top of that structure, a first rough pass
+at requirements went down on paper (well — into a repository), covering the handful of pieces the
+app would eventually need: a way to represent what a "skill" even is, a consistent shape for
+exercises to follow, and a trustworthy way to tell whether a child had actually learned something
+rather than just gotten lucky on a given day.
+
+None of those pieces existed yet by the end of day one. What existed was a place for each of them
+to go, and a reason, written down, for why each one mattered — which turned out to matter more
+than it might sound, once actual building started the very next day.
+`,Xn=`# Day 2: a real dev setup, and a first version kids can actually use
+
+Day two started with a decision that had nothing to do with kids or math: getting a proper place
+to actually build the thing. By the end of the day, that unglamorous groundwork had turned into
+something real — a first version of the app a child could genuinely open and practice with.
+
+The morning went into the development setup itself: a dedicated machine to build on, an AI coding
+assistant to build with, and a proper code editor tying it together — deliberately kept separate
+from a personal computer, so the project has its own clean, reproducible environment from the
+start rather than being tangled up with anything else. Not exciting work, but the kind that pays
+for itself the moment something needs debugging six months from now.
+
+Once that was sorted, the rest of the day went into turning yesterday's plans into a real, working
+first version. Everything built fits around one simple loop, repeated every time a child answers
+a question:
+
+\`\`\`
+Question  ->  Answer  ->  Feedback  ->  Progress updates  ->  Next question
+\`\`\`
+
+Simple to say, but every step of it needed real thought behind it:
+
+**A place to open, and room for the whole family.** The app now has an actual shell — screens a
+parent or child can open, not just isolated pieces of logic. Profiles were built in from the very
+start: a parent can set up more than one child on the same device, completely free, and each
+child's practice and progress stay fully separate from any siblings sharing the device. Setting up
+a profile asks for almost nothing personal — a nickname is enough, nothing more is required —
+which was a deliberate choice, not an oversight: the less personal data the app asks for, the less
+there is to ever worry about.
+
+**The first real exercise.** A child can now work through a set of mental addition questions,
+matched to a level chosen for them, with feedback the moment they answer — right or wrong, no
+waiting. Get one wrong, and the correct answer is shown before moving on, rather than leaving a
+child stuck or guessing again. There's deliberately no visible timer or countdown anywhere on
+screen; the goal is focus, not the feeling of a clock ticking down on a seven-year-old.
+
+**Progress that means something.** Maybe the most important piece: a child's progress on a skill
+isn't just a raw count of correct answers. It's designed to reflect a real, sustained pattern
+rather than one lucky run — the app waits for enough attempts before making any claim at all, and
+only calls a level "learned" once a child has been consistently getting it right, not just once.
+A single good session doesn't inflate the number, and a single bad one doesn't wreck it either.
+
+**Built so the next exercise doesn't mean starting over.** Alongside addition itself, today's work
+also nailed down the *shape* every future exercise has to follow — how it asks a question,
+checks an answer, and reports what happened. That's what makes it possible to add a second
+exercise later (subtraction, say, or multiplication) as its own self-contained piece, without
+having to touch or risk breaking anything already working for addition.
+
+Small pieces on their own, but put together they added up to something a child could actually
+open and use: pick a profile, answer real questions at a level that fits them, get honest
+feedback right away, and see progress that reflects how they're actually doing — not just how
+lucky today happened to be.
+`,Zn=`# Day 3: a smarter daily practice, and a window into how it all works
+
+Three things came together today: the app got noticeably better at deciding what a child should
+practice each day, parents and teachers got a proper way to see how the whole system works
+without leaving the app, and parents got a place of their own inside it — one that also makes
+sure a child's progress can survive losing a phone or switching to a new one.
+
+**Building a session that actually adapts**
+
+Until now, opening the app meant working through addition problems with no real plan behind
+them — a flat set of exercises, the same shape no matter how a child was actually doing. That
+changed today. Every time a child opens the app, it now puts together a full session for that
+day — 50 questions, split into five ten-question rounds — built around one question: what does
+this child need most, right now?
+
+The logic behind that is closer to how a good tutor plans a lesson than to a random quiz
+generator. Most of the session — three of the five rounds — stays at the level the child is
+currently working on, so the bulk of the practice is neither too easy nor too far out of reach.
+What happens with the other two rounds depends entirely on how that level has been going lately:
+
+\`\`\`
+ Doing great there (90%+ correct)?   -> two rounds move UP,   a stretch to the next level
+ Struggling, or brand new to it?     -> two rounds move DOWN, extra review of the last level
+ Somewhere in between?               -> one round each way, a bit of both
+\`\`\`
+
+At the very first level, there's nowhere lower to go, so a child who's still finding their feet
+just gets more practice at that level instead of being pushed below it. At the top level, once
+it's fully mastered, the "move up" case has nowhere to go either, so those rounds become a review
+round instead — a small victory lap rather than a dead end.
+
+None of this gets decided once and locked in for good. The plan is recalculated from scratch every
+single day based on how the child has actually been performing, so one rough day or one lucky
+streak doesn't lock in a plan that no longer fits by tomorrow. And for a parent or teacher who
+already has a good read on where a child stands — say, at the very start, before the app has
+collected any data of its own — there's now a way to set the starting level directly, rather than
+waiting for the system to work it out from a blank slate.
+
+**Opening the hood**
+
+The second piece of today's work: the specifications and progress notes describing everything
+above — not just today's feature, but the whole project — are now readable from inside the app
+itself, in a section built specifically for parents and teachers rather than for the child using
+the practice screens. It's deliberately calm and plain where the practice screens are playful and
+game-like, because the two audiences reading them want very different things from what's in front
+of them.
+
+That distinction matters more than it might sound like at first. A parent handing a device to
+their child, or a teacher weighing whether to bring the app into a classroom, shouldn't have to
+take "it adapts to your child" on faith, or go spelunking through a GitHub repository to check for
+themselves. As of today, they don't have to do either — the same documentation this project is
+built from, and this very blog, are now one tap away from the practice app itself, with a clear
+way back to it whenever they're done reading.
+
+Small on its own, but it's the first time this project has had a proper front door for the people
+deciding whether to trust it with their kids' practice time — not just for the kids using it.
+
+**A place of their own, and a way to never lose it**
+
+That new front door didn't stay empty for long. Alongside it, parents now get their own area
+inside the app — separate from both the practice screens and the documentation — with a simple
+report showing how their child is actually doing, competency by competency, in real numbers
+rather than a vague sense of progress. It's deliberately plain for now: no charts or history yet,
+just an honest current reading, with a clear "nothing to show yet" message for a child who hasn't
+started practicing. The graphs and trend lines are a natural next step, but getting an accurate
+number in front of parents mattered more than making it pretty on day one.
+
+The more important piece living in that same area is quieter, but it's the one that actually
+protects something: a way to export a child's entire practice history — their profile and every
+recorded answer that feeds the mastery numbers — into a single file, and bring that same file back
+in on another device. Losing a phone, switching to a new one, or just wanting a backup before
+handing a tablet down to a younger sibling no longer means a child's progress vanishes with it.
+Import even works before a single profile exists yet on the new device — restoring a backup is
+exactly the situation where there's nothing there to begin with, so it had to work from a
+completely blank slate, not just as a convenience for an already-set-up one.
+
+The detail that took the most care wasn't the export itself — it was making sure a file exported
+today still works after this project has changed several times over. Every exported file carries
+a version marker, and the app is built to always understand its own older files rather than
+quietly failing to read them a year from now. If a file ever comes from a version newer than what
+a particular device is running — say, a backup made on a freshly updated phone, brought back to an
+older one — the import says so plainly and stops, instead of guessing and getting it wrong. A
+backup you can't trust isn't really a backup at all, so that guarantee mattered more than almost
+anything else about how this was built.
+
+**Drawing the whole map, not just the part we're building**
+
+The last piece of today's work isn't a feature at all. It's a document — but it's the one that
+quietly decides what this project is allowed to become.
+
+The app builds mathematics first, and will for a long while. But "primary-school maths" is a
+strange thing to build in isolation, because it's a slice of something much larger that nobody
+usually writes down in one place: the full set of things a child could reasonably be expected to
+be able to do by the time primary school ends. So we wrote it down. All of it — just under a
+thousand individual skills, across twenty areas, each one tagged with the school year by the end
+of which a child should own it, starting from what's already expected before the first day of
+Grade 1.
+
+Maths and reading are in there in the detail you'd expect. What's more interesting is everything
+around them. Swimming a hundred metres unaided. Riding a bicycle safely on a road. Cooking a hot
+meal for the family. Calling the emergency services and saying clearly where you are. Playing a
+prepared piece from written music in front of other people. Reading a map and a compass and
+actually arriving. Keeping to a budget, and explaining why borrowing money costs more than paying
+cash. Resolving an argument with a friend without an adult stepping in. Roughly half of that list
+isn't taught by any school system anywhere — it's learned at home, or it isn't learned at all, and
+a checklist that quietly leaves it out makes it invisible.
+
+It's deliberately demanding, and no child ticks every box — that isn't the point of it. A ceiling
+set at the average isn't really a ceiling. It's meant to be read as a map of what's out there and
+where the gaps are, never as a bar to measure a particular child against. Every single entry is
+written as something a child can be observed *doing*, rather than something they either have or
+haven't got, and each of the twenty areas ends with one concrete test you could actually watch
+happen.
+
+For the app itself, the document does one specific job: it keeps us honest about the foundations.
+It's easy to build something that claims to handle any subject and has in fact been quietly
+shaped around arithmetic the whole time. Having the full list in front of us makes an awkward
+question unavoidable — how would this system ever record "swims twenty-five metres"? A child can't
+demonstrate that to a phone. Some skills a device can test by itself, some need a parent to watch
+and confirm, and some a child can honestly report themselves. That's a distinction worth building
+into the foundations now, while the foundations are still small enough to change, rather than
+bolting it on the first time a second subject arrives and doesn't fit.
+`,Qn=`# Day 4: a chart that shows a child's whole learning at a glance 
+
+A parent checking their child's progress until now had to read a list of percentages, one
+competency at a time, and do the mental work of turning that list into a picture. Today that
+picture got drawn for them.
+
+**From a list of numbers to a shape you can read in a second**
+
+The parent area added yesterday showed real numbers — how a child is actually doing, competency
+by competency — but numbers in a list don't tell you where the weak spots are without some
+squinting and mental arithmetic. A parent glancing at their phone between other things shouldn't
+have to do that work themselves. So today the advancement report gained a chart that does it for
+them: one shape, one glance, and the gaps just show up.
+
+It works like a spider's web, or a compass rose — one spoke for each area of maths a child is
+learning (addition, fractions, geometry, and so on), radiating out from a center point. How far
+out along each spoke the child's own line reaches shows how solidly they've got that area down.
+A second, fainter shape marks the full target for their grade. Where the two shapes meet, that
+area is mastered. Where there's a gap between them, that's exactly where a bit more practice would
+help most — visible instantly, without reading a single number.
+
+\`\`\`
+        Number sense
+   Problem      Place value
+  solving  \\   /
+            \\ /
+Reasoning ---*--- Addition  <- child's line reaches further out here (stronger)
+            / \\
+           /   \\
+   Geometry     Fractions   <- gap between the two shapes here (needs more practice)
+\`\`\`
+
+None of this meant anything without first answering a smaller, more basic question: on track for
+*what*, exactly? A ten-year-old and a six-year-old shouldn't be measured against the same bar. So
+the app now asks a parent to say which year of primary school their child is currently in, and the
+"target" shape on the chart is built around that specific year — the things a child their age would
+reasonably be expected to have a handle on, not a fixed, one-size-fits-all ceiling. Set it once,
+and change it whenever the child moves up a year.
+
+**A preview of the bigger picture, honestly labeled**
+
+Right below that chart sits a second, quieter one — the same idea stretched across everything from
+yesterday's full map of childhood skills, not just maths: language, science, money, music, physical
+skills, and every other area a well-rounded education actually covers. Maths lights up with real
+numbers, exactly like the chart above it. Every other area sits there too, clearly marked as "not
+tracked yet" rather than showing a zero that could be mistaken for a child failing at something.
+
+That distinction mattered enough to think through carefully before building it. A zero and "not
+tracked yet" look similar at a glance but mean opposite things — one says a child is behind, the
+other says the app simply doesn't measure that yet. Showing a child's real strengths honestly, and
+being just as honest about what isn't being measured, felt more important than making the chart
+look more complete than the app actually is today. Think of it as a preview of where this project
+is headed — a map of the whole territory, with just one region properly surveyed so far, and
+markers on the rest to show what's still ahead rather than pretending it's already been covered.
+
+**What's actually behind those unlit spokes**
+
+That second chart raises an obvious question, though: fine, "not tracked yet" — but what *is* a
+child supposed to be able to do in each of those areas, by each age? Pointing at an unlit spoke
+labeled "science" or "money" without saying more isn't much use to a parent trying to plan. So the
+parent area gained a second, much plainer addition today: a full written answer to "what should my
+child be able to do, subject by subject, year by year?" — covering not just maths but the entire
+map from yesterday's chart, spelled out in plain language.
+
+Open it and every subject is listed by name — reading, science, money, cooking, first aid, music,
+a second language, and everything else a well-rounded primary education might reasonably cover —
+each one collapsed to just its name, so the list doesn't read as a wall of text before you've asked
+for anything. Tap on one and it opens out into what a child is typically expected to manage by the
+end of each year of primary school: concrete, specific things, not vague goals — "swims 25 metres
+unaided" rather than "is comfortable in water," "reads a bus or train timetable and plans a
+journey" rather than "understands schedules." Close it again and it tucks itself away, so looking
+up one thing about geography doesn't leave nine other subjects sprawled open on the screen at the
+same time.
+
+Maths keeps its own honest label here too, same as on the chart: it's marked as the one subject the
+app is actually measuring a child's real progress against, while every other subject is clearly
+flagged as general reference — useful as a map of what's ahead, not a record of what this
+particular child has or hasn't done yet. A parent can still read, in full, what a solid Grade 3 or
+a solid Grade 5 looks like across all of it — the app just isn't pretending to be the one keeping
+score outside of maths, not yet.
+`,$n=`# CLAUDE.md
+
+## This repo is the mandatory third step of every feature
+
+Per the project constitution (\`../specs/.specify/memory/constitution.md\`, "Development
+Workflow"), every feature follows \`specs\` → \`app\` → \`blog\` in order, and is **not considered
+complete** until a write-up exists here — this repo is a running, chronological record of
+everything shipped in the project, not optional polish.
+
+## Format: one post per day, full-length article
+
+As of 2026-09-14 (later revision) this blog is **one well-developed, longer-form article per
+day**, not a compact digest and not one technical post per feature. It's written for a general
+audience (parents/teachers reading it from inside the app) — still no implementation detail (no
+file names, function/variable names, spec IDs) — but it should read like something that audience
+actually wants to read, not a status update: give real, concrete detail on what changed and why it
+matters to them. A short diagram or simple schema (plain text/markdown — an ASCII sketch, a small
+table — nothing needing a rendering library beyond what the app already has) is welcome when it
+makes a mechanism easier to picture. Light subheadings (bold lead-ins, or \`##\` headings) are fine
+for a longer post; skip them for a short one.
+
+The post's first paragraph doubles as its index/summary blurb (see
+\`app/apps/web/src/content/extractSummary.ts\`, which takes the first paragraph after the title,
+collapsed to ~200 characters) — write it as a real, standalone hook, not a throat-clearing
+sentence.
+
+When implementation work wraps up (in this session or handed off from one): if a post for
+today's date (\`YYYY-MM-DD-<slug>.md\`) already exists, add a substantial paragraph or section to it
+rather than creating a second file for the same day. Only start a new file when the calendar date
+changes. Look at the current 2026-09-14 post for tone/length — the earlier 2026-09-12/13 posts
+predate this longer format and are left as shorter historical entries, not a template to match.
+`,er=`# blog
+blog
+`,tr=200;function nr(e){let t=e.replace(/^#\s+.+$/m,``).split(/\n\s*\n/).map(e=>e.trim()).find(e=>e.length>0);if(t===void 0)return``;let n=t.replace(/\s+/g,` `).trim();if(n.length<=tr)return n;let r=n.slice(0,tr),i=r.lastIndexOf(` `);return`${r.slice(0,i>0?i:tr)}…`}function rr(e,t){return/^#\s+(.+)$/m.exec(e)?.[1]?.trim()??t}var ir=Object.assign({"../../../../../blog/2026-09-12-kicking-off-the-project.md":Yn,"../../../../../blog/2026-09-13-dev-environment-and-v1.md":Xn,"../../../../../blog/2026-09-14-daily-practice-and-docs.md":Zn,"../../../../../blog/2026-09-15-a-chart-that-shows-the-whole-picture.md":Qn,"../../../../../blog/CLAUDE.md":$n,"../../../../../blog/README.md":er});function ar(){let e=[];for(let[t,n]of Object.entries(ir)){let r=Jn(t.split(`/`).pop()??t);r!==null&&e.push({id:r.id,date:r.date,title:rr(n,r.id),summary:nr(n),content:n})}return e.sort((e,t)=>t.date.localeCompare(e.date))}var or=`# Mathematics Curriculum (MVP)
+
+> Status: placeholder — the exact competency tree still needs to be defined in
+> detail. This file lists the top-level competency areas from the vision doc as
+> a starting point.
+>
+> **Source material:** \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` section B breaks every area
+> below into individual, grade-tagged, testable competencies. That section is the intended input
+> for the first TODO on this page; this file stays the product-facing curriculum of record.
+
+The initial mathematics curriculum should cover the major primary-school
+competencies, including:
+
+* Number sense
+* Place value
+* Comparing and ordering numbers
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Mental mathematics
+* Fractions
+* Decimals
+* Percentages
+* Measurement
+* Money
+* Time
+* Geometry
+* Data and graphs
+* Mathematical reasoning
+* Problem solving
+
+The curriculum should be designed so that the platform can later support
+different national curricula.
+
+## TODO
+
+* [ ] Break each competency area into a tree of individual, testable
+      competencies (e.g. "Addition" → "single-digit addition without carrying",
+      "two-digit addition with carrying", ...) — draft available in
+      \`PRIMARY-SKILLS-FRAMEWORK.md\` section B.
+* [ ] Assign each competency to a target Level (1–5) — the framework's G1–G5 tags map onto
+      Levels 1–5 directly, but the mapping needs to be confirmed rather than assumed.
+* [ ] Cross-reference each competency with which exercise plugin(s) train it
+      (see \`specs/004-exercise-plugin-engine/spec.md\`).
+* [ ] Decide whether curriculum is age-banded, level-banded, or both.
+`,sr=`# The Primary Skills Framework
+
+> **Everything a child could reasonably be expected to master by the end of primary school.**
+>
+> A cross-subject, country-neutral checklist of competencies, from the pre-school baseline
+> through the end of Grade 5 — academic, physical, practical, artistic, social and financial.
+
+---
+
+## Status and scope
+
+This document is a **long-horizon reference**, not a build order.
+
+The product's MVP is deliberately mathematics-only (\`docs/product/vision.md\`), and the
+constitution's multi-subject principle says the architecture must not be *structurally* limited to
+mathematics. This file is the answer to "limited to what, then?" — it is the full map of the
+territory the platform could eventually cover, written down once so that data-model and curriculum
+decisions made today are not quietly shaped around arithmetic alone.
+
+Nothing here is committed scope. Section B (Mathematics) is the only part that feeds the current
+roadmap, and it is the source material for turning \`docs/product/CURRICULUM.md\` from a list of
+area names into a real competency tree.
+
+---
+
+## Why this is deliberately demanding
+
+This is a **maximal** checklist, written as an answer to "what would a genuinely well-educated
+eleven-year-old be able to do?" — not "what does the average school actually deliver?"
+
+No child ticks every box. Very few tick most of them. That is intentional and it is not a defect:
+
+* A ceiling set at the average is not a ceiling, it is a floor with good marketing.
+* Roughly half of what follows — swimming, cycling, cooking, money, first aid, an instrument,
+  navigation, emotional regulation — is not taught by any school system anywhere. It is learned at
+  home, or it is not learned at all. A checklist that silently omits it makes it invisible.
+* Read it as **a menu of ambition and a map of gaps**, never as a pass/fail bar to measure a child
+  against. A child who has ticked 60% of this, including things no curriculum tests, is doing
+  extremely well.
+
+The framework is also **descriptive of capability, never of worth**. Items are phrased as things a
+child can *do*, so that each one is observable and, in principle, checkable — not as traits a child
+either has or lacks.
+
+---
+
+## How to read the levels
+
+Each item carries the grade **by the end of which it should be solidly mastered** — meaning
+performed reliably, unprompted, and without an adult walking through it step by step.
+
+| Tag | Meaning | Typical age |
+| --- | --- | --- |
+| **P** | **Pre-school baseline** — already in place when Grade 1 starts | before 6 |
+| **G1** | mastered by the end of Grade 1 | 6–7 |
+| **G2** | mastered by the end of Grade 2 | 7–8 |
+| **G3** | mastered by the end of Grade 3 | 8–9 |
+| **G4** | mastered by the end of Grade 4 | 9–10 |
+| **G5** | mastered by the end of Grade 5 — the end-of-primary target | 10–11 |
+
+Two conventions matter when reading a tag:
+
+* **A tag is a mastery date, not a start date.** A \`G4\` item is usually introduced in G2 or G3 and
+  practiced for years before it is reliably owned. The tag says when the wobbling should stop.
+* **Later tags assume the earlier ones.** Items are not repeated as they deepen; "reads fluently"
+  at \`G3\` is not restated at \`G5\` with bigger books. Where a skill genuinely changes in kind rather
+  than degree, it appears twice with different wording.
+
+Age bands are approximate and vary by country, by school-entry cut-off and by child. Treat a
+one-year deviation in either direction as noise, not as a signal.
+
+---
+
+## Design principles
+
+1. **Country-neutral.** No national curriculum, no national syllabus, no single country's history
+   or institutions. Where a skill is inherently local ("the political system of your country"), the
+   item is phrased generically and marked *local*.
+2. **Demonstrable.** Every item is something a child can be observed doing. "Understands
+   fractions" is not a competency; "can tell which of 2/3 and 3/5 is larger, and explain why" is.
+3. **Whole-child.** Academic knowledge is roughly a third of this document. Physical, practical,
+   artistic, emotional and financial competence occupy the rest, because they occupy the rest of a
+   life.
+4. **Transferable.** Skills that keep their value regardless of era, technology or career are
+   preferred over facts that date. Where facts are listed, they are the load-bearing ones that
+   everything else attaches to.
+5. **Mastery, not exposure.** Having met a topic once in a lesson is not mastery. The bar
+   throughout is independent, reliable performance — the same bar the product's mastery engine
+   applies to arithmetic.
+
+---
+
+## Contents
+
+| | Domain | | Domain |
+| --- | --- | --- | --- |
+| **A** | [Language & Literacy](#a--language--literacy) | **K** | [Music](#k--music) |
+| **B** | [Mathematics](#b--mathematics) | **L** | [Visual Arts & Making Things](#l--visual-arts--making-things) |
+| **C** | [Science & the Natural World](#c--science--the-natural-world) | **M** | [Dance, Drama & Performance](#m--dance-drama--performance) |
+| **D** | [Geography & the Planet](#d--geography--the-planet) | **N** | [Practical Life & Household Skills](#n--practical-life--household-skills) |
+| **E** | [History & a Sense of Time](#e--history--a-sense-of-time) | **O** | [Outdoors, Nature & Orientation](#o--outdoors-nature--orientation) |
+| **F** | [Civics, Society & Ethics](#f--civics-society--ethics) | **P** | [Social & Emotional Skills](#p--social--emotional-skills) |
+| **G** | [Money & Financial Literacy](#g--money--financial-literacy) | **Q** | [Learning How to Learn](#q--learning-how-to-learn) |
+| **H** | [Digital Literacy & Technology](#h--digital-literacy--technology) | **R** | [A Second Language](#r--a-second-language) |
+| **I** | [Physical Skills, Sport & the Body](#i--physical-skills-sport--the-body) | **S** | [Games, Logic & Strategy](#s--games-logic--strategy) |
+| **J** | [Health, Safety & First Aid](#j--health-safety--first-aid) | **T** | [General Knowledge & Cultural Literacy](#t--general-knowledge--cultural-literacy) |
+
+Then: [the pre-school baseline](#the-pre-school-baseline-a-readiness-snapshot) ·
+[grade-by-grade summary](#appendix-1--grade-by-grade-summary) ·
+[the twenty benchmarks](#appendix-2--the-twenty-end-of-primary-benchmarks) ·
+[deliberate omissions](#appendix-3--deliberate-omissions)
+
+---
+
+## The pre-school baseline: a readiness snapshot
+
+Everything tagged **P** below is expected to be in place *before* Grade 1 begins. Those items stay
+in their own domains — this section is a quick cross-domain readiness check, not a separate
+checklist to tick.
+
+A child ready for Grade 1 can typically:
+
+* Speak in full, comprehensible sentences and be understood by a stranger.
+* Listen to a story for ten minutes and answer questions about what happened.
+* Recognise their own written name, and most letters of the alphabet.
+* Count objects accurately to at least 20, and recognise quantities up to 5 without counting.
+* Hold a pencil with a functional grip, and draw a recognisable person with a head, body and limbs.
+* Use scissors to cut along a line.
+* Dress themselves, including shoes; manage the toilet and wash their hands unaided.
+* Eat with cutlery at a table.
+* Say their own full name, their parents' names, and their age.
+* Separate from a parent without distress, and stay with a group of children and one adult.
+* Take turns, share, and wait a short while for something they want.
+* Ask an adult for help in words when they are stuck, hurt or frightened.
+* Name the basic emotions in themselves and recognise them in others.
+* Run, jump with two feet, climb, throw and catch a large ball, and pedal (a bike with stabilisers,
+  or a balance bike).
+* Follow a two-step instruction and tidy up when asked.
+
+A gap in this list at age six is common and closes fast with practice. It is a starting point to
+work from, not a verdict.
+
+---
+
+## A — Language & Literacy
+
+*The mother tongue. Everything else in this document is learned through it, which is why it is
+first and why it is the longest section.*
+
+### A1. Listening and oral comprehension
+
+- [ ] **P** — Follows a two-step spoken instruction.
+- [ ] **P** — Listens to a story for 10 minutes and answers questions about what happened.
+- [ ] **G1** — Follows a three-step instruction without repetition.
+- [ ] **G1** — Retells a story just heard, in order, with the main characters named.
+- [ ] **G2** — Listens to a 15-minute explanation and reports back its main point.
+- [ ] **G3** — Takes a simple spoken message (who called, what about, what to do) and passes it on
+      accurately.
+- [ ] **G3** — Distinguishes a speaker's main point from a supporting detail.
+- [ ] **G4** — Listens to an opposing view without interrupting, then restates it fairly before
+      replying.
+- [ ] **G4** — Takes rough notes from a spoken explanation and reconstructs it later from them.
+- [ ] **G5** — Detects when a speaker is stating an opinion as though it were a fact.
+
+### A2. Speaking and oral expression
+
+- [ ] **P** — Speaks in full sentences a stranger can understand.
+- [ ] **P** — Says their full name, age, and their parents' names.
+- [ ] **G1** — Recounts something that happened to them, in the right order, so a listener follows
+      it.
+- [ ] **G1** — Asks a question when they do not understand, instead of staying silent.
+- [ ] **G2** — Describes an object or a process clearly enough for a listener to picture it.
+- [ ] **G2** — Answers the telephone politely, takes the caller's name, and calls an adult.
+- [ ] **G3** — Explains how to do something they know well, step by step, to someone who does not.
+- [ ] **G3** — Adjusts register between a friend, a teacher and an unfamiliar adult.
+- [ ] **G4** — States an opinion and gives at least two reasons for it.
+- [ ] **G4** — Disagrees with a peer's idea without attacking the peer.
+- [ ] **G5** — Holds a short structured discussion: makes a point, hears the reply, concedes or
+      answers it.
+- [ ] **G5** — Introduces two people to each other, and introduces themselves to an adult with a
+      handshake or local equivalent.
+
+### A3. Speaking to an audience
+
+- [ ] **G1** — Recites a short memorised poem or rhyme in front of the class.
+- [ ] **G2** — Shows an object to the class and talks about it for a minute without reading.
+- [ ] **G3** — Gives a 2–3 minute prepared talk from notes rather than a script.
+- [ ] **G3** — Speaks loudly enough to be heard at the back of a room, facing the audience.
+- [ ] **G4** — Uses a simple visual aid (poster, slide, object) without reading from it aloud.
+- [ ] **G4** — Takes questions at the end of a talk and answers them, including "I don't know".
+- [ ] **G5** — Delivers a 5-minute prepared presentation with a clear opening, middle and close.
+- [ ] **G5** — Recites from memory a substantial poem or passage (20+ lines) with expression.
+
+### A4. Reading — decoding and fluency
+
+- [ ] **P** — Recognises their own written name.
+- [ ] **P** — Names most letters of the alphabet and knows that print carries meaning, left to
+      right.
+- [ ] **P** — Hears and produces rhymes; claps the syllables in a word.
+- [ ] **G1** — Knows every letter–sound correspondence of the language, including the common
+      digraphs.
+- [ ] **G1** — Blends sounds to decode an unfamiliar regular word without help.
+- [ ] **G1** — Reads a simple sentence aloud and understands what it says.
+- [ ] **G2** — Reads an age-appropriate text aloud fluently, respecting full stops and question
+      marks.
+- [ ] **G2** — Recognises the common irregular/high-frequency words on sight.
+- [ ] **G3** — Reads silently and faster than they read aloud.
+- [ ] **G3** — Reads aloud with expression, changing voice for dialogue.
+- [ ] **G4** — Decodes an unfamiliar long word by breaking it into parts.
+- [ ] **G5** — Reads an unfamiliar text aloud at first sight without stumbling.
+
+### A5. Reading — comprehension
+
+- [ ] **G1** — Answers literal questions about a text just read (who, what, where).
+- [ ] **G2** — Predicts what will happen next and justifies the prediction from the text.
+- [ ] **G2** — Retells a read story in their own words, keeping the sequence.
+- [ ] **G3** — Identifies the main idea of a paragraph and of a whole text.
+- [ ] **G3** — Infers something the text implies but never states (how a character feels, and why).
+- [ ] **G3** — Works out an unknown word's meaning from its context, and checks it afterwards.
+- [ ] **G4** — Summarises a chapter in five sentences without copying phrases.
+- [ ] **G4** — Distinguishes fact from opinion inside a single text.
+- [ ] **G4** — Names the narrator and notices whether the story is told from inside or outside a
+      character.
+- [ ] **G5** — Compares how two texts treat the same subject and says where they disagree.
+- [ ] **G5** — Identifies an author's purpose: to inform, to persuade, to entertain, to sell.
+- [ ] **G5** — Reads and follows written instructions of ten or more steps (a recipe, a model kit, a
+      game's rules) without an adult.
+- [ ] **G5** — Reads a non-fiction page and turns it into their own notes.
+
+### A6. The reading habit
+
+- [ ] **P** — Chooses to look at books; asks to be read to.
+- [ ] **G1** — Handles books properly and returns them to their place.
+- [ ] **G2** — Chooses their own book from a library or shelf and finishes it.
+- [ ] **G2** — Uses a library: finds a section, borrows a book, returns it on time.
+- [ ] **G3** — Reads independently for 20 minutes without being asked to.
+- [ ] **G3** — Reads a chapter book of 100+ pages to the end.
+- [ ] **G4** — Has a favourite author or series, and can say why.
+- [ ] **G4** — Reads at least one non-fiction book on a subject that interests them.
+- [ ] **G5** — Reads for 30+ minutes by choice, regularly, including books nobody assigned.
+- [ ] **G5** — Has read across at least four kinds of text: novel, non-fiction, poetry, myth/legend,
+      comic, biography.
+
+### A7. Handwriting and typing
+
+- [ ] **P** — Holds a pencil with a functional grip; draws a recognisable person.
+- [ ] **P** — Writes their own first name.
+- [ ] **G1** — Forms every lower-case and capital letter correctly, in the right direction.
+- [ ] **G1** — Writes on the line, with spaces between words.
+- [ ] **G2** — Writes a full page legibly without their hand tiring out.
+- [ ] **G3** — Writes fluently in the joined/cursive form used locally, at a usable speed.
+- [ ] **G3** — Copies from a board or a book accurately.
+- [ ] **G4** — Keeps handwriting legible when writing fast or under time pressure.
+- [ ] **G4** — Types with two hands, without hunting for every key.
+- [ ] **G5** — Touch-types a short text at a usable speed (roughly 20+ words per minute).
+- [ ] **G5** — Writes a page of legible, well-laid-out prose: margins, paragraphs, a title.
+
+### A8. Spelling and word study
+
+- [ ] **G1** — Spells the most frequent words of the language correctly from memory.
+- [ ] **G1** — Attempts an unknown word phonetically rather than refusing to write it.
+- [ ] **G2** — Applies the language's basic spelling patterns and their common exceptions.
+- [ ] **G2** — Uses a picture dictionary or a simple dictionary to check a word.
+- [ ] **G3** — Uses an alphabetical dictionary fluently, including guide words.
+- [ ] **G3** — Knows the common prefixes and suffixes and what they do to a word's meaning.
+- [ ] **G4** — Spells homophones correctly according to the sense of the sentence.
+- [ ] **G4** — Builds word families from a root, and guesses an unknown word's meaning from its
+      root.
+- [ ] **G5** — Proofreads their own writing and finds most of their own spelling errors.
+- [ ] **G5** — Uses a thesaurus to find a better word rather than a longer one.
+
+### A9. Grammar and sentence craft
+
+- [ ] **G1** — Starts a sentence with a capital and ends it with a full stop.
+- [ ] **G1** — Uses question marks and exclamation marks correctly.
+- [ ] **G2** — Identifies nouns, verbs and adjectives in a sentence.
+- [ ] **G2** — Makes subject and verb agree; keeps a piece of writing in one tense.
+- [ ] **G3** — Uses commas in a list, and apostrophes for possession and contraction.
+- [ ] **G3** — Writes in past, present and future deliberately, and switches on purpose.
+- [ ] **G3** — Joins two short sentences into one with a conjunction.
+- [ ] **G4** — Punctuates direct speech correctly.
+- [ ] **G4** — Identifies the subject, the verb and the object of a sentence.
+- [ ] **G4** — Varies sentence length deliberately for effect.
+- [ ] **G5** — Uses paragraphs correctly: one idea each, and a new one when the idea changes.
+- [ ] **G5** — Recognises and repairs a run-on sentence and a fragment.
+- [ ] **G5** — Uses pronouns unambiguously, so the reader always knows who "he", "she" or "it" is.
+
+### A10. Writing — composition
+
+- [ ] **P** — Dictates a story to an adult to be written down.
+- [ ] **G1** — Writes a few connected sentences about a real event.
+- [ ] **G2** — Writes a short story with a beginning, a middle and an end.
+- [ ] **G2** — Writes a simple letter or message to a real person, and sends it.
+- [ ] **G3** — Writes a description that uses more than sight — sound, smell, texture.
+- [ ] **G3** — Writes a set of instructions someone else can actually follow.
+- [ ] **G3** — Plans a piece of writing before starting it, on paper.
+- [ ] **G4** — Writes a factual report on a topic, organised into sections, in their own words.
+- [ ] **G4** — Writes an opinion piece: claim, reasons, conclusion.
+- [ ] **G4** — Revises a draft after feedback — rewrites, rather than just fixing spelling.
+- [ ] **G5** — Writes a 1–2 page story with a real plot, a problem and a resolution.
+- [ ] **G5** — Writes a formal letter or email (complaint, request, thank-you) with the right
+      register.
+- [ ] **G5** — Writes a poem using a deliberate form or device: rhyme, rhythm, metaphor, repetition.
+- [ ] **G5** — Writes a summary of something they read, correctly attributed, without copying it.
+
+### A11. Literary appreciation
+
+- [ ] **G2** — Knows the difference between a true story and an invented one.
+- [ ] **G3** — Names the setting, characters and problem in a story.
+- [ ] **G3** — Knows what a metaphor and a simile are, and finds one in a text.
+- [ ] **G4** — Recognises common story shapes: quest, rescue, rags-to-riches, trickster.
+- [ ] **G4** — Says why a character acted as they did, using evidence from the text.
+- [ ] **G5** — Discusses a book with others: what they liked, what failed, and why.
+- [ ] **G5** — Recognises when a text is trying to make them feel something, and how it does it.
+
+> **End-of-primary benchmark.** Reads a 200-page novel by choice and discusses it; writes two
+> pages of clear, correctly punctuated, self-proofread prose on an unfamiliar topic; delivers a
+> five-minute talk to an audience without a script.
+
+---
+
+## B — Mathematics
+
+*The most detailed section, because it is the one the product actually builds first. This is the
+raw material for turning \`docs/product/CURRICULUM.md\` into a competency tree: each item below is
+intended to be small enough to be trainable by a single exercise plugin and checkable by the
+mastery engine.*
+
+### B1. Counting and number sense
+
+- [ ] **P** — Counts objects accurately to 20, one number per object.
+- [ ] **P** — Recognises quantities up to 5 at a glance, without counting.
+- [ ] **P** — Compares two groups and says which has more.
+- [ ] **P** — Recognises written digits 0–9.
+- [ ] **G1** — Counts forwards and backwards to 100 from any starting number.
+- [ ] **G1** — Reads and writes numbers to 100 in digits.
+- [ ] **G1** — Counts in 2s, 5s and 10s.
+- [ ] **G1** — Knows odd and even, and can test a number.
+- [ ] **G1** — Uses ordinal numbers (first, second, tenth).
+- [ ] **G2** — Counts to 1,000; reads and writes numbers to 1,000.
+- [ ] **G2** — Orders any set of numbers to 1,000 and places them on a number line.
+- [ ] **G3** — Reads, writes and orders numbers to 10,000.
+- [ ] **G4** — Reads, writes and orders numbers to 1,000,000.
+- [ ] **G4** — Understands negative numbers on a number line, and uses them for temperature and
+      debt.
+- [ ] **G5** — Knows what a prime number is and identifies the primes below 50.
+- [ ] **G5** — Finds all factors of a number below 100, and common multiples of two small numbers.
+- [ ] **G5** — Recognises square numbers and knows the squares to 12×12.
+- [ ] **G5** — Reads and writes Roman numerals to 1,000.
+
+### B2. Place value
+
+- [ ] **G1** — Understands a two-digit number as tens and units.
+- [ ] **G2** — Understands hundreds, tens and units; partitions and recombines any three-digit
+      number.
+- [ ] **G2** — Says what each digit is worth in a three-digit number.
+- [ ] **G3** — Extends place value to thousands; adds and subtracts 1, 10, 100, 1,000 to any number
+      instantly.
+- [ ] **G4** — Extends place value to millions.
+- [ ] **G4** — Rounds any number to the nearest 10, 100 or 1,000.
+- [ ] **G5** — Extends place value to the right of the decimal point: tenths, hundredths,
+      thousandths.
+- [ ] **G5** — Rounds decimals to a given number of decimal places.
+- [ ] **G5** — Multiplies and divides by 10, 100 and 1,000 and explains what happens to the digits.
+
+### B3. Addition and subtraction
+
+- [ ] **P** — Adds and subtracts small quantities with objects in front of them.
+- [ ] **G1** — Knows all number bonds within 10 by heart.
+- [ ] **G1** — Adds and subtracts within 20.
+- [ ] **G1** — Understands subtraction as both "take away" and "difference between".
+- [ ] **G2** — Knows all number bonds within 20 by heart.
+- [ ] **G2** — Adds and subtracts two-digit numbers with regrouping, written down.
+- [ ] **G2** — Knows that addition is commutative and subtraction is not.
+- [ ] **G3** — Adds and subtracts three-digit numbers in columns, fluently and accurately.
+- [ ] **G3** — Checks a subtraction with the inverse addition.
+- [ ] **G4** — Adds and subtracts four-digit numbers, including across zeros.
+- [ ] **G5** — Adds and subtracts any whole numbers and decimals, fluently, in columns.
+
+### B4. Multiplication and division
+
+- [ ] **G1** — Understands multiplication as repeated addition and as an array.
+- [ ] **G1** — Shares a quantity equally between 2 and between 4.
+- [ ] **G2** — Knows the 2, 5 and 10 times tables by heart, both ways.
+- [ ] **G2** — Understands division as both sharing and grouping, and meets remainders.
+- [ ] **G3** — Knows the 3, 4 and 8 times tables by heart.
+- [ ] **G3** — Multiplies a two-digit number by a one-digit number, written down.
+- [ ] **G3** — Knows that multiplication is commutative and division is not.
+- [ ] **G4** — **Knows all multiplication tables to 12×12 by heart, and the matching division
+      facts.**
+- [ ] **G4** — Multiplies a three-digit number by a one-digit number.
+- [ ] **G4** — Divides a three-digit number by a one-digit number with a remainder, and says what
+      the remainder means in context.
+- [ ] **G5** — Multiplies a four-digit number by a two-digit number (long multiplication).
+- [ ] **G5** — Divides by a two-digit number (long or short division), expressing the remainder as a
+      whole number, a fraction or a decimal as the situation demands.
+- [ ] **G5** — Knows the divisibility tests for 2, 3, 4, 5, 9 and 10.
+- [ ] **G5** — Applies the order of operations correctly, including brackets.
+
+### B5. Mental mathematics
+
+- [ ] **G1** — Adds and subtracts within 20 mentally, without fingers.
+- [ ] **G2** — Adds and subtracts a one-digit number to any two-digit number mentally.
+- [ ] **G2** — Doubles and halves any number to 50 mentally.
+- [ ] **G3** — Adds and subtracts two two-digit numbers mentally.
+- [ ] **G3** — Bridges through 10 and through 100 as a deliberate strategy.
+- [ ] **G4** — Uses rounding and compensation mentally (+99 as +100−1).
+- [ ] **G4** — Multiplies any table fact instantly, in under three seconds.
+- [ ] **G5** — Multiplies a two-digit number by a one-digit number mentally.
+- [ ] **G5** — Finds 10%, 25%, 50% and 75% of a quantity mentally.
+- [ ] **G5** — Estimates an answer before calculating, and notices when the calculated answer is
+      impossible.
+
+### B6. Fractions
+
+- [ ] **G1** — Recognises and finds a half and a quarter of a shape and of a small quantity.
+- [ ] **G2** — Recognises thirds, quarters and fifths; knows 2/4 = 1/2.
+- [ ] **G3** — Understands a fraction as a number on the number line, not only as part of a cake.
+- [ ] **G3** — Finds equivalent fractions and simplifies a simple fraction.
+- [ ] **G3** — Adds and subtracts fractions with the same denominator.
+- [ ] **G4** — Compares and orders fractions with different denominators.
+- [ ] **G4** — Converts between improper fractions and mixed numbers.
+- [ ] **G4** — Finds a fraction of a quantity (3/5 of 40).
+- [ ] **G5** — Adds and subtracts fractions with different denominators.
+- [ ] **G5** — Multiplies a fraction by a whole number, and by another fraction.
+- [ ] **G5** — Converts fluently between fractions, decimals and percentages for the common values.
+
+### B7. Decimals, percentages, ratio
+
+- [ ] **G3** — Reads a decimal in a price and in a measurement.
+- [ ] **G4** — Understands tenths and hundredths as decimals; places decimals on a number line.
+- [ ] **G4** — Adds and subtracts decimals to two places.
+- [ ] **G4** — Understands percentage as "out of 100".
+- [ ] **G5** — Multiplies and divides decimals by whole numbers.
+- [ ] **G5** — Finds any percentage of a quantity.
+- [ ] **G5** — Calculates a percentage increase and a percentage decrease (a discount, a price
+      rise).
+- [ ] **G5** — Understands ratio and shares a quantity in a given ratio (share 20 in 3:1).
+- [ ] **G5** — Solves simple scaling problems (if 3 items cost 12, what do 7 cost).
+
+### B8. Measurement
+
+- [ ] **P** — Compares objects directly: longer/shorter, heavier/lighter, holds more/less.
+- [ ] **G1** — Measures length in whole centimetres with a ruler, starting from zero.
+- [ ] **G1** — Uses the vocabulary of measure correctly across length, mass, capacity and time.
+- [ ] **G2** — Measures mass on a scale and capacity in a jug, reading the graduations.
+- [ ] **G2** — Knows the metric units and their relationships: mm, cm, m, km; g, kg; ml, l.
+- [ ] **G3** — Converts between adjacent metric units (cm↔m, g↔kg, ml↔l).
+- [ ] **G3** — Measures and calculates the perimeter of a rectangle and of a compound shape.
+- [ ] **G4** — Calculates the area of a rectangle, and of a shape made of rectangles.
+- [ ] **G4** — Estimates a length, a mass and a volume before measuring, and is roughly right.
+- [ ] **G4** — Reads a scale with unlabelled intermediate divisions.
+- [ ] **G5** — Calculates the volume of a cuboid, and knows that 1 litre = 1,000 cm³.
+- [ ] **G5** — Converts between metric units across two steps (mm→m, ml→l→cl).
+- [ ] **G5** — Knows roughly what an imperial/customary unit is worth in metric, when the local
+      context uses one.
+- [ ] **G5** — Has a reliable body-ruler: knows their own height, hand span, pace length, and uses
+      them to estimate.
+
+### B9. Time
+
+- [ ] **P** — Knows the order of the day: morning, afternoon, evening, night.
+- [ ] **P** — Names the days of the week.
+- [ ] **G1** — Tells the time to the hour and half-hour on an analogue clock.
+- [ ] **G1** — Names the months and the seasons, in order.
+- [ ] **G2** — Tells the time to five minutes, and to the quarter hour.
+- [ ] **G2** — Knows how many days in a week, weeks in a year, days in each month.
+- [ ] **G3** — Tells the time to the minute, analogue and digital, and converts between 12- and
+      24-hour clocks.
+- [ ] **G3** — Calculates a duration between two times within the hour.
+- [ ] **G4** — Calculates durations crossing hours and midnight; reads a timetable and plans a
+      journey with it.
+- [ ] **G4** — Uses a calendar to work out a date some weeks ahead.
+- [ ] **G5** — Converts between seconds, minutes, hours, days and years fluently.
+- [ ] **G5** — Handles time-zone differences well enough to schedule a call to another country.
+
+### B10. Geometry — shape
+
+- [ ] **P** — Names circle, square, triangle, rectangle.
+- [ ] **G1** — Names common 2D and 3D shapes: circle, triangle, square, rectangle, cube, sphere,
+      cylinder, cone.
+- [ ] **G1** — Recognises a shape whatever its orientation or size.
+- [ ] **G2** — Counts sides, vertices, edges and faces; sorts shapes by their properties.
+- [ ] **G2** — Recognises a line of symmetry and completes a symmetrical figure.
+- [ ] **G3** — Classifies triangles (equilateral, isosceles, scalene, right-angled).
+- [ ] **G3** — Classifies quadrilaterals and knows why a square is also a rectangle.
+- [ ] **G3** — Identifies right angles, and angles greater and smaller than a right angle.
+- [ ] **G4** — Measures and draws an angle with a protractor, to the nearest degree.
+- [ ] **G4** — Knows that angles on a straight line total 180° and around a point 360°, and uses it.
+- [ ] **G4** — Knows the angles of a triangle sum to 180°.
+- [ ] **G5** — Draws a shape accurately from a specification, with ruler, protractor and compasses.
+- [ ] **G5** — Names the parts of a circle: centre, radius, diameter, circumference; knows the
+      diameter is twice the radius.
+- [ ] **G5** — Identifies the net of a cube and of other simple solids.
+
+### B11. Geometry — position and movement
+
+- [ ] **P** — Uses positional language: on, under, behind, between, next to.
+- [ ] **G1** — Describes a route using left, right, forward and turns.
+- [ ] **G2** — Describes a position on a grid with letters and numbers (B4).
+- [ ] **G3** — Uses the four compass directions, and quarter/half turns as 90° and 180°.
+- [ ] **G4** — Plots and reads coordinates in the first quadrant.
+- [ ] **G4** — Translates and reflects a shape on a grid.
+- [ ] **G5** — Plots coordinates in all four quadrants, with negatives.
+- [ ] **G5** — Rotates a shape about a point, and describes the rotation.
+- [ ] **G5** — Uses and understands a scale on a plan or map (1 cm : 100 m).
+
+### B12. Data, chance and statistics
+
+- [ ] **G1** — Sorts objects by a chosen criterion and explains the rule used.
+- [ ] **G1** — Reads a simple pictogram.
+- [ ] **G2** — Collects data with a tally chart and draws a bar chart from it.
+- [ ] **G3** — Reads a bar chart and a pictogram with a scale (one symbol = 5).
+- [ ] **G3** — Answers comparison questions from a table of data.
+- [ ] **G4** — Draws and reads a line graph, and describes the trend it shows.
+- [ ] **G4** — Finds the mode and the range of a data set.
+- [ ] **G5** — Calculates the mean, and says when it is and is not a useful summary.
+- [ ] **G5** — Reads a pie chart and relates its sectors to fractions and percentages.
+- [ ] **G5** — Uses the language of chance (impossible, unlikely, even chance, likely, certain) and
+      places simple events on a 0–1 scale.
+- [ ] **G5** — **Spots a misleading graph** — a truncated axis, a missing scale, cherry-picked
+      years.
+
+### B13. Algebraic thinking
+
+- [ ] **G1** — Continues a repeating pattern and describes its rule.
+- [ ] **G2** — Finds the missing number in a simple equation (7 + ? = 12).
+- [ ] **G3** — Continues a number sequence and states its rule in words.
+- [ ] **G4** — Uses a symbol or a box for an unknown and solves for it.
+- [ ] **G4** — Describes the relationship between two columns of a table as a rule.
+- [ ] **G5** — Uses a letter for an unknown; substitutes a value into a simple formula.
+- [ ] **G5** — Solves a one-step equation and checks the solution by substituting it back.
+- [ ] **G5** — Expresses a general rule for a sequence in terms of its position.
+
+### B14. Problem solving and reasoning
+
+- [ ] **G1** — Chooses whether a one-step word problem needs addition or subtraction.
+- [ ] **G2** — Solves a one-step word problem in any of the four operations and writes the number
+      sentence.
+- [ ] **G3** — Solves a two-step word problem, doing the steps in the right order.
+- [ ] **G3** — Draws a picture, bar model or diagram to represent a problem.
+- [ ] **G4** — Solves multi-step problems mixing operations and units.
+- [ ] **G4** — Works systematically to find *all* the solutions to a problem, not just one.
+- [ ] **G4** — Explains their method aloud so another child can follow it.
+- [ ] **G5** — Judges whether an answer is reasonable, by estimating first and by checking against
+      the question.
+- [ ] **G5** — Finds their own mistake in a wrong answer, rather than starting over blindly.
+- [ ] **G5** — Solves a problem with missing or surplus information, and says which is which.
+- [ ] **G5** — Tackles an unfamiliar problem with no taught method, and gets somewhere by trying,
+      checking and adjusting.
+- [ ] **G5** — Uses a calculator correctly *and* knows when not to — checks its output against a
+      mental estimate.
+
+> **End-of-primary benchmark.** All tables to 12×12 instant and automatic; long multiplication and
+> division reliable; fractions, decimals and percentages interchangeable at will; and an unfamiliar
+> multi-step word problem solved independently, with the answer checked and justified.
+
+---
+
+## C — Science & the Natural World
+
+*Half of this is knowledge; the other half is the habit of asking how anyone knows.*
+
+### C1. Working scientifically
+
+- [ ] **P** — Asks "why?" and "what happens if?" about the physical world.
+- [ ] **G1** — Observes carefully and describes what they see, without inventing.
+- [ ] **G1** — Sorts and groups objects by an observable property.
+- [ ] **G2** — Makes a prediction before an experiment and checks it afterwards.
+- [ ] **G2** — Records observations in a drawing, a table or a chart.
+- [ ] **G3** — Understands a fair test: change one thing, keep everything else the same.
+- [ ] **G3** — Uses simple equipment correctly: thermometer, magnifier, measuring cylinder, scales,
+      stopwatch.
+- [ ] **G4** — Plans a simple investigation to answer a question they posed themselves.
+- [ ] **G4** — Repeats a measurement instead of trusting a single reading.
+- [ ] **G4** — Draws a conclusion from their results, including "the result didn't show what I
+      expected".
+- [ ] **G5** — Distinguishes an observation from an inference from an opinion.
+- [ ] **G5** — Identifies what could have gone wrong in an experiment and how to improve it.
+- [ ] **G5** — Knows that scientific ideas change when evidence changes, and gives one example.
+
+### C2. Living things
+
+- [ ] **P** — Knows living from non-living; names common animals and plants.
+- [ ] **G1** — Names the parts of a plant and of the human body.
+- [ ] **G1** — Knows what plants and animals need to stay alive.
+- [ ] **G2** — Sorts animals into major groups: mammals, birds, fish, reptiles, amphibians, insects.
+- [ ] **G2** — Describes a life cycle (butterfly, frog, plant from seed).
+- [ ] **G3** — Knows how plants make their own food from light, water and air, and why that matters
+      to everything else.
+- [ ] **G3** — Knows what a habitat is and how an animal is suited to its own.
+- [ ] **G3** — Builds a food chain from producer to top predator, and says what happens if one link
+      is removed.
+- [ ] **G4** — Classifies a living thing using a branching key.
+- [ ] **G4** — Knows the major organ systems and what each does: digestion, circulation, breathing,
+      skeleton and muscles, nerves.
+- [ ] **G4** — Knows the function of the heart, lungs, stomach, intestines, brain, kidneys and skin.
+- [ ] **G5** — Explains reproduction and the life cycle in humans and other mammals, in
+      age-appropriate terms.
+- [ ] **G5** — Knows that offspring resemble their parents but are not identical, and why.
+- [ ] **G5** — Explains, in outline, how species change over long periods and how fossils show it.
+- [ ] **G5** — Knows what a microbe is, that most are harmless, and how the harmful ones spread.
+
+### C3. Materials, matter and chemistry
+
+- [ ] **P** — Describes materials: hard, soft, rough, smooth, heavy, light.
+- [ ] **G1** — Names common materials and one sensible use for each.
+- [ ] **G2** — Sorts materials by property and explains why an object is made of what it is made of.
+- [ ] **G2** — Knows solid, liquid and gas, and gives examples of each.
+- [ ] **G3** — Explains melting, freezing, boiling and evaporation, with the temperatures water does
+      them at.
+- [ ] **G3** — Knows the water cycle and can draw it.
+- [ ] **G4** — Distinguishes a reversible change (melting, dissolving) from an irreversible one
+      (burning, cooking, rusting).
+- [ ] **G4** — Separates a mixture by an appropriate method: sieving, filtering, evaporating,
+      magnetism.
+- [ ] **G4** — Knows what dissolving is and what affects how fast it happens.
+- [ ] **G5** — Knows everything is made of particles too small to see, and explains solids, liquids
+      and gases that way.
+- [ ] **G5** — Recognises that some substances are dangerous and reads a hazard symbol.
+
+### C4. Forces, energy and physics
+
+- [ ] **G1** — Knows pushes and pulls make things start, stop, speed up and change direction.
+- [ ] **G2** — Knows that things fall because of gravity.
+- [ ] **G2** — Knows a magnet attracts some metals and not other materials; knows poles attract and
+      repel.
+- [ ] **G3** — Knows friction slows things down, and gives everyday examples of wanting more of it
+      and less.
+- [ ] **G3** — Knows light travels in straight lines, that we see by reflected light, and how
+      shadows are made.
+- [ ] **G3** — Knows sound is a vibration, travels through air, and gets quieter with distance.
+- [ ] **G4** — Builds a simple electrical circuit with a cell, wires, a bulb and a switch, and fixes
+      it when it fails.
+- [ ] **G4** — Knows which materials conduct electricity and which insulate.
+- [ ] **G4** — Names the main forms of energy and gives an example of each converting into another.
+- [ ] **G5** — Knows air resistance and water resistance, and how shape changes them.
+- [ ] **G5** — Explains how a lever, a pulley or a gear lets a small force do a big job.
+- [ ] **G5** — Knows the difference between renewable and non-renewable energy sources, with
+      examples of each.
+- [ ] **G5** — Knows electricity is dangerous, why, and the basic rules that follow from it.
+
+### C5. Earth, space and the environment
+
+- [ ] **P** — Knows day and night, sun and moon, and the weather of each season.
+- [ ] **G1** — Records the weather and notices the pattern across a season.
+- [ ] **G2** — Knows the Earth is a sphere in space, and that the Sun is a star.
+- [ ] **G2** — Names the Sun, the Earth and the Moon and how they relate.
+- [ ] **G3** — Explains day and night by the Earth's rotation — not by the Sun moving.
+- [ ] **G3** — Knows the Earth orbits the Sun once a year, and that this makes the seasons.
+- [ ] **G3** — Names the eight planets in order from the Sun.
+- [ ] **G4** — Explains the Moon's phases, and knows the Moon orbits the Earth.
+- [ ] **G4** — Knows rocks and soil form and change, and what a fossil is.
+- [ ] **G4** — Knows what causes an eclipse, and never to look at the Sun directly.
+- [ ] **G5** — Explains gravity holding planets and moons in orbit.
+- [ ] **G5** — Knows the Earth's structure in outline: crust, mantle, core; knows what causes
+      earthquakes and volcanoes.
+- [ ] **G5** — Explains, in outline, why the climate is changing and what human activity has to do
+      with it.
+- [ ] **G5** — Knows why biodiversity matters and what makes a species go extinct.
+- [ ] **G5** — Sorts waste correctly, and explains what recycling, reusing and composting each
+      achieve.
+
+> **End-of-primary benchmark.** Designs and runs a fair test to answer their own question, records
+> the results, draws a conclusion and says how the test could have been better — and can explain
+> day/night, the seasons, the water cycle and a food chain from first principles, without reciting.
+
+---
+
+## D — Geography & the Planet
+
+*Where things are, why they are there, and how to find your way without a phone.*
+
+### D1. Maps and spatial skills
+
+- [ ] **P** — Recognises their own home and street; knows their home town's name.
+- [ ] **G1** — Draws a rough plan of a room or a route from above.
+- [ ] **G1** — Points out their own country on a world map or globe.
+- [ ] **G2** — Uses a map key/legend and a simple grid reference.
+- [ ] **G2** — Knows the four cardinal directions and uses a compass to face them.
+- [ ] **G3** — Uses a scale bar to estimate a real distance on a map.
+- [ ] **G3** — Uses the eight compass points, including the intercardinals.
+- [ ] **G4** — Reads contour lines well enough to tell a hill from a valley and steep from gentle.
+- [ ] **G4** — Finds a place by latitude and longitude, and explains what the Equator and the poles
+      are.
+- [ ] **G5** — Plans a route on a real map and follows it on the ground.
+- [ ] **G5** — Uses a compass with a map to take and walk a bearing.
+- [ ] **G5** — Reads a public-transport map and plans a journey with a change.
+- [ ] **G5** — Knows what a satellite navigation app is actually doing, and its failure modes.
+
+### D2. The world: physical
+
+- [ ] **G1** — Names land and sea on a map; knows what an island, a river and a mountain are.
+- [ ] **G2** — **Names and locates the seven continents.**
+- [ ] **G2** — **Names and locates the five oceans.**
+- [ ] **G3** — Names the major landform types: mountain, valley, plain, plateau, desert, forest,
+      coast, delta.
+- [ ] **G3** — Locates the Equator, the two Tropics, the Arctic and Antarctic Circles, and the Prime
+      Meridian.
+- [ ] **G4** — Names the world's major climate zones and roughly where they are.
+- [ ] **G4** — Names several of the longest rivers, highest mountains and largest deserts, and
+      locates them.
+- [ ] **G4** — Explains how a river works from source to mouth, and what it does to the land on the
+      way.
+- [ ] **G5** — Explains why climate differs with latitude, altitude and distance from the sea.
+- [ ] **G5** — Knows the main biomes and what lives in each: rainforest, savanna, desert, temperate
+      forest, taiga, tundra, grassland.
+- [ ] **G5** — Explains what causes a volcano, an earthquake and a tsunami, and where they cluster.
+- [ ] **G5** — Understands time zones, and why it is a different time on the other side of the
+      world.
+
+### D3. The world: human
+
+- [ ] **G2** — Knows their own full address, town, region and country.
+- [ ] **G3** — Knows what a country, a capital and a border are.
+- [ ] **G3** — Locates their own country's neighbours and names their capitals.
+- [ ] **G4** — Names and locates roughly 30 countries across all the continents, with their
+      capitals.
+- [ ] **G4** — Knows the difference between a city, a town and a village, and between urban and
+      rural life.
+- [ ] **G4** — Knows several major world languages and roughly where each is spoken.
+- [ ] **G5** — Names and locates 50+ countries and their capitals, including several in every
+      continent.
+- [ ] **G5** — Recognises the flags of 20+ countries.
+- [ ] **G5** — Explains why people migrate, with economic, environmental and conflict reasons.
+- [ ] **G5** — Traces a familiar product from raw material to shop shelf, across countries.
+- [ ] **G5** — Knows what a currency is, that exchange rates exist, and names a few major
+      currencies.
+- [ ] **G5** — Knows the rough population of their own country and of the world, to the right order
+      of magnitude.
+
+### D4. Environment and sustainability
+
+- [ ] **G2** — Knows litter and waste harm animals and places.
+- [ ] **G3** — Knows where their household's water comes from and where its waste goes.
+- [ ] **G3** — Knows where their electricity comes from.
+- [ ] **G4** — Explains deforestation, pollution and their consequences in their own words.
+- [ ] **G4** — Names practical things a household can do to use less energy and water.
+- [ ] **G5** — Explains the greenhouse effect simply and correctly.
+- [ ] **G5** — Discusses a local environmental issue with evidence rather than slogans.
+- [ ] **G5** — Understands a trade-off: that an environmental choice can cost money, time or jobs.
+
+> **End-of-primary benchmark.** Given a world map with no labels, places the continents, the
+> oceans, the Equator and 50 countries — and given a paper map and a compass, walks an unfamiliar
+> route and arrives.
+
+---
+
+## E — History & a Sense of Time
+
+*Chronology first: a child who cannot order the centuries cannot make sense of anything in them.*
+
+### E1. Chronology
+
+- [ ] **P** — Distinguishes yesterday, today and tomorrow.
+- [ ] **G1** — Orders events in their own life; knows "when I was a baby" was before now.
+- [ ] **G1** — Knows some things happened long before anyone alive was born.
+- [ ] **G2** — Orders a handful of events on a simple timeline.
+- [ ] **G3** — Knows what a decade, a century and a millennium are.
+- [ ] **G3** — Places a date in the right century.
+- [ ] **G4** — Uses BC/BCE and AD/CE correctly, and counts backwards across the zero.
+- [ ] **G4** — Places the major eras in order: prehistory, ancient civilisations, classical
+      antiquity, the Middle Ages, the early modern period, the industrial age, the modern era.
+- [ ] **G5** — Builds a timeline spanning several eras with dates in roughly the right places.
+- [ ] **G5** — Knows roughly when the big turning points happened: farming, writing, printing,
+      industrialisation, electricity, computing.
+
+### E2. Historical knowledge
+
+- [ ] **G2** — Knows how daily life differed for children a century ago: school, work, home, travel.
+- [ ] **G3** — Knows how people lived in the Stone, Bronze and Iron Ages, and what changed between
+      them.
+- [ ] **G3** — Knows what farming did to how humans lived — the shift from following food to growing
+      it.
+- [ ] **G4** — Knows something substantial about at least three ancient civilisations (e.g. Egypt,
+      Mesopotamia, Greece, Rome, China, the Indus Valley, Mesoamerica).
+- [ ] **G4** — Knows why writing was invented and what it made possible.
+- [ ] **G4** — Knows the outline of their own country's history — *local* — and its main turning
+      points.
+- [ ] **G5** — Knows the outline of the last 300 years: industrialisation, empire and its end, the
+      two world wars, the human-rights era, the digital era.
+- [ ] **G5** — Knows several individuals who changed history, in more than one field and more than
+      one part of the world, and what each actually did.
+- [ ] **G5** — Knows that slavery, empire and genocide happened, in age-appropriate terms, and that
+      history includes what was done badly as well as well.
+- [ ] **G5** — Knows how one everyday thing was invented and spread: the wheel, writing, printing,
+      the engine, vaccination, the internet.
+
+### E3. Thinking historically
+
+- [ ] **G3** — Knows what a historical source is: an object, a picture, a letter, a building.
+- [ ] **G3** — Says what an old object or photograph tells us about the people who used it.
+- [ ] **G4** — Distinguishes a primary from a secondary source.
+- [ ] **G4** — Explains why two accounts of the same event can differ, without either being a lie.
+- [ ] **G5** — Asks who made a source, when, and why, before trusting it.
+- [ ] **G5** — Explains a historical event in terms of causes and consequences, not just what
+      happened.
+- [ ] **G5** — Judges a past decision by what was known at the time, not only by what we know now.
+- [ ] **G5** — Knows that history is written by people and gets revised — and that whose story gets
+      told is itself a question.
+
+> **End-of-primary benchmark.** Places any date in its century and era, tells the story of one
+> civilisation in detail, and explains why two sources describing the same event disagree.
+
+---
+
+## F — Civics, Society & Ethics
+
+*How people live together, and what a child owes to and can expect from others.*
+
+### F1. Rules, rights and institutions
+
+- [ ] **P** — Follows the rules of a game and of a room; knows rules apply to everyone.
+- [ ] **G1** — Knows why rules exist and helps make class rules.
+- [ ] **G2** — Knows what a law is and that it differs from a rule.
+- [ ] **G2** — Knows the jobs that keep a community running: doctor, nurse, teacher, firefighter,
+      police, refuse collector, farmer, driver.
+- [ ] **G3** — Knows what taxes are, in simple terms, and what they pay for.
+- [ ] **G3** — Knows children have rights: to be safe, schooled, heard, cared for, and free from
+      harm.
+- [ ] **G4** — Knows what democracy and voting are, and has voted in a real class decision.
+- [ ] **G4** — Knows how their own country is governed — *local* — and who leads it.
+- [ ] **G5** — Knows the difference between a democracy and a dictatorship, and why the difference
+      matters.
+- [ ] **G5** — Knows courts and police exist to apply the law, and that the law applies to those in
+      power too.
+- [ ] **G5** — Knows what the United Nations is and, roughly, what it is for.
+- [ ] **G5** — Knows what a charity, a volunteer and a non-governmental organisation are.
+
+### F2. Living with others
+
+- [ ] **P** — Takes turns; shares; says please and thank you.
+- [ ] **G1** — Includes a child who is left out.
+- [ ] **G2** — Knows people differ in language, religion, ability, family shape and skin colour, and
+      that this is ordinary.
+- [ ] **G2** — Knows what bullying is, and tells an adult when they see it.
+- [ ] **G3** — Knows what a stereotype is and can spot a simple one.
+- [ ] **G3** — Knows that a disabled person may need a different kind of access, not a different
+      kind of respect.
+- [ ] **G4** — Disagrees with someone's belief while treating the person decently.
+- [ ] **G4** — Knows what prejudice and discrimination are, with examples.
+- [ ] **G5** — Recognises when they are in a group that is excluding someone, and says so.
+- [ ] **G5** — Explains why a rule they personally dislike might still be fair.
+
+### F3. Ethics and judgement
+
+- [ ] **G1** — Tells the truth when owning up costs them something.
+- [ ] **G2** — Keeps a promise, or explains why they cannot.
+- [ ] **G2** — Returns something found or borrowed.
+- [ ] **G3** — Distinguishes an accident from something done on purpose.
+- [ ] **G3** — Apologises for the harm caused, not merely to end the conversation.
+- [ ] **G4** — Identifies a fair share and an unfair one, and argues the case.
+- [ ] **G4** — Notices a conflict between what is easy and what is right, and names it.
+- [ ] **G5** — Argues both sides of a moral question before giving their own view.
+- [ ] **G5** — Refuses to join something they believe is wrong, even when friends are doing it.
+- [ ] **G5** — Knows that consent matters — over their own body, their belongings and their image.
+
+> **End-of-primary benchmark.** Argues both sides of a contested question honestly, then states and
+> defends their own position — and has actually voted, campaigned or organised something real.
+
+---
+
+## G — Money & Financial Literacy
+
+*Almost entirely absent from primary curricula worldwide, and among the most consequential things
+on this list. Currency amounts below are deliberately generic — substitute the local one.*
+
+### G1. Handling money
+
+- [ ] **P** — Knows money is exchanged for things, and that things cost different amounts.
+- [ ] **G1** — Recognises the coins and notes of their own currency and knows what each is worth.
+- [ ] **G1** — Makes a small amount with coins in more than one way.
+- [ ] **G2** — Pays for something in a shop and checks the change.
+- [ ] **G2** — Adds up a short bill mentally and knows whether they have enough.
+- [ ] **G3** — Works out the change from a round amount before the till shows it.
+- [ ] **G3** — Reads a price label, including price-per-unit, and says which package is better
+      value.
+- [ ] **G4** — Reads a receipt line by line and spots an overcharge.
+- [ ] **G4** — Calculates a discount and knows what "30% off" really saves.
+- [ ] **G5** — Handles a small amount of real money over a month without losing track of it.
+- [ ] **G5** — Uses a card or a payment app under supervision, and knows it is spending real money.
+
+### G2. Earning, saving, spending
+
+- [ ] **G1** — Knows adults work to earn money.
+- [ ] **G2** — Distinguishes a need from a want, and sorts examples correctly.
+- [ ] **G2** — Saves up for something instead of spending immediately — and actually gets there.
+- [ ] **G3** — Keeps a simple record of money in and money out.
+- [ ] **G3** — Sets a savings goal with an amount and a date, and tracks progress.
+- [ ] **G4** — Makes a budget for an event or a trip and stays inside it.
+- [ ] **G4** — Compares two ways to spend the same money and justifies the choice.
+- [ ] **G4** — Has earned money by doing something of value for somebody else.
+- [ ] **G5** — Splits income deliberately into spending, saving and giving.
+- [ ] **G5** — Waits for a better price or a better option instead of buying immediately.
+- [ ] **G5** — Explains opportunity cost: that money spent here cannot be spent there.
+
+### G3. How money works
+
+- [ ] **G3** — Knows what a bank does with money left in it.
+- [ ] **G4** — Knows what interest is — that savings grow and debts grow.
+- [ ] **G4** — Knows that borrowing money means paying back more than was borrowed.
+- [ ] **G4** — Knows what a salary, a bill and a subscription are.
+- [ ] **G5** — Knows why prices rise over time, in simple terms.
+- [ ] **G5** — Knows the difference between a debit card, a credit card and cash — and who is owed
+      what in each case.
+- [ ] **G5** — Knows what insurance is for.
+- [ ] **G5** — Knows that a business must take in more than it spends, and can sketch that for a
+      lemonade stand.
+- [ ] **G5** — Knows why a family cannot buy everything it wants, without shame attached to the
+      fact.
+
+### G4. Consumer defence
+
+- [ ] **G3** — Knows an advertisement is trying to sell something, and recognises one.
+- [ ] **G4** — Identifies the technique an advert is using: a celebrity, a crowd, a fear, a free
+      gift.
+- [ ] **G4** — Knows an in-game purchase costs real money that someone actually loses.
+- [ ] **G5** — Recognises a too-good-to-be-true offer and a pressure tactic ("only 3 left!").
+- [ ] **G5** — Knows never to give money, card details or personal information to a stranger online.
+- [ ] **G5** — Knows what a scam is, names three common ones, and knows that being targeted is not a
+      shameful thing to report.
+
+> **End-of-primary benchmark.** Plans and sticks to a real budget for a real event, and explains —
+> correctly — why borrowing money costs more than paying cash.
+
+---
+
+## H — Digital Literacy & Technology
+
+*Fluent with the tools, sceptical about the content, and unhurt by either.*
+
+### H1. Operating a device
+
+- [ ] **G1** — Turns a device on and off, opens and closes an application.
+- [ ] **G1** — Uses a mouse, a trackpad or a touchscreen accurately.
+- [ ] **G2** — Uses a keyboard: letters, capitals, space, enter, delete, punctuation.
+- [ ] **G2** — Adjusts volume and screen brightness; knows what a battery level means.
+- [ ] **G3** — Saves a file, names it sensibly, and finds it again tomorrow.
+- [ ] **G3** — Organises files into folders and moves files between them.
+- [ ] **G4** — Copies, pastes, undoes and uses the common keyboard shortcuts.
+- [ ] **G4** — Connects to a network, and knows the difference between online and offline.
+- [ ] **G4** — Takes and edits a photo; records a video or an audio clip.
+- [ ] **G5** — Uses a word processor to produce a properly formatted document.
+- [ ] **G5** — Builds a simple spreadsheet with a formula that adds a column.
+- [ ] **G5** — Makes a short presentation or video that communicates something to an audience.
+- [ ] **G5** — Solves a routine problem alone before asking: restart, reconnect, check the obvious.
+
+### H2. Finding and judging information
+
+- [ ] **G2** — Knows that a device can answer questions, and that its answers can be wrong.
+- [ ] **G3** — Searches with useful keywords rather than a whole sentence.
+- [ ] **G3** — Knows a search result at the top is not automatically the truest.
+- [ ] **G4** — Checks a surprising claim against a second, independent source.
+- [ ] **G4** — Says who wrote a page and whether they have a reason to mislead.
+- [ ] **G4** — Puts an answer in their own words rather than pasting it.
+- [ ] **G5** — Recognises a sponsored result and an advert dressed up as an article.
+- [ ] **G5** — Knows images, video and voices can be faked, including convincingly.
+- [ ] **G5** — Knows an AI assistant can state a falsehood fluently and confidently, and checks
+      anything that matters.
+- [ ] **G5** — Credits a source when using someone else's words, pictures or ideas.
+
+### H3. Safety, privacy and conduct
+
+- [ ] **G1** — Tells an adult about anything online that frightens or upsets them.
+- [ ] **G2** — Knows not to share their name, address, school or photo with strangers online.
+- [ ] **G3** — Knows a password should be strong, private, and not shared with friends.
+- [ ] **G3** — Knows people online can pretend to be someone they are not.
+- [ ] **G4** — Knows what a digital footprint is: that posts, photos and messages persist.
+- [ ] **G4** — Knows what cyberbullying is; knows to save the evidence and tell an adult.
+- [ ] **G4** — Never opens a link or an attachment from an unknown sender.
+- [ ] **G5** — Writes a message they would be comfortable having read aloud by anyone.
+- [ ] **G5** — Asks before posting a photo of somebody else.
+- [ ] **G5** — Recognises a manipulative design: an infinite feed, a streak, a loot box, a
+      countdown.
+- [ ] **G5** — Notices when they have been on a screen too long, and stops themselves.
+
+### H4. Computational thinking and making
+
+- [ ] **G1** — Gives a precise sequence of instructions to a person or a floor robot.
+- [ ] **G2** — Debugs a sequence that went wrong by finding the step that failed.
+- [ ] **G3** — Builds a working program in a block-based language, using a loop.
+- [ ] **G3** — Understands an algorithm as a recipe: the same steps, the same result, every time.
+- [ ] **G4** — Uses conditionals (if/then/else) and variables in a program.
+- [ ] **G4** — Breaks a big problem into smaller parts before starting.
+- [ ] **G4** — Predicts what a short program will do before running it.
+- [ ] **G5** — Builds something genuinely their own: a game, an animation, a quiz, a device.
+- [ ] **G5** — Writes a few lines in a text-based language, and reads an error message instead of
+      panicking.
+- [ ] **G5** — Explains, in outline, what happens when a web page is requested.
+- [ ] **G5** — Knows a computer only does what it was told, and that bugs are the programmer's
+      doing, not the machine's.
+
+> **End-of-primary benchmark.** Researches an unfamiliar question from more than one source, judges
+> which to trust, and produces a document or a presentation of their own — plus one working program
+> they designed themselves.
+
+---
+
+## I — Physical Skills, Sport & the Body
+
+*Everything here is a physical capability that has to be built in a body, over years. Several items
+are also safety-critical: swimming and cycling save lives.*
+
+### I1. Fundamental movement
+
+- [ ] **P** — Runs, stops and changes direction without falling.
+- [ ] **P** — Jumps with two feet; hops on one; climbs; walks up and down stairs with alternating
+      feet.
+- [ ] **P** — Throws and catches a large ball.
+- [ ] **G1** — Runs with coordinated arms; skips; gallops; moves backwards safely.
+- [ ] **G1** — Balances on one foot for 10 seconds, either foot.
+- [ ] **G2** — Throws overarm with some accuracy; catches a bouncing ball with two hands.
+- [ ] **G2** — Skips with a rope, continuously.
+- [ ] **G3** — Catches a ball one-handed; kicks a moving ball with either foot.
+- [ ] **G3** — Dodges, changes pace and changes direction at speed in a game.
+- [ ] **G4** — Strikes a ball with a bat, racket or stick with control.
+- [ ] **G4** — Combines movements fluently: run-and-jump, run-and-throw, jump-and-turn.
+- [ ] **G5** — Learns an unfamiliar physical skill by watching it and trying it, without
+      step-by-step coaching.
+
+### I2. Swimming and water safety
+
+- [ ] **P** — Is comfortable in water; puts their face in willingly.
+- [ ] **G1** — Floats on their front and on their back, unaided.
+- [ ] **G1** — Submerges fully and opens their eyes underwater.
+- [ ] **G2** — Swims 10 m unaided in any recognisable stroke.
+- [ ] **G2** — Enters and exits a pool safely; knows the deep end from the shallow.
+- [ ] **G3** — **Swims 25 m unaided, continuously.**
+- [ ] **G3** — Treads water for one minute.
+- [ ] **G3** — Knows the water safety rules: never alone, never dive into unknown water, respect
+      currents.
+- [ ] **G4** — Swims 50 m; swims competently in two different strokes.
+- [ ] **G4** — Retrieves an object from the bottom in water above their head.
+- [ ] **G4** — Floats and self-rescues fully clothed.
+- [ ] **G5** — **Swims 100 m continuously without stopping or touching the bottom.**
+- [ ] **G5** — Knows what to do if someone else is in trouble in water: call for help, reach or
+      throw — never swim out.
+- [ ] **G5** — Knows the dangers of open water: cold shock, currents, tides, weeds, changing depth.
+
+### I3. Cycling and wheels
+
+- [ ] **P** — Pedals a tricycle or propels a balance bike confidently.
+- [ ] **G1** — **Rides a two-wheeled bicycle without stabilisers**, starting and stopping unaided.
+- [ ] **G1** — Wears a helmet, fastened, every time, without being told.
+- [ ] **G2** — Steers around obstacles; brakes smoothly and in a controlled distance.
+- [ ] **G2** — Rides one-handed long enough to signal.
+- [ ] **G3** — Looks behind while riding straight; signals a turn.
+- [ ] **G3** — Checks their own bike before riding: brakes, tyres, chain.
+- [ ] **G4** — Rides on a quiet road with an adult, obeying the traffic rules.
+- [ ] **G4** — Mends a puncture or fixes a dropped chain.
+- [ ] **G5** — Rides a route of several kilometres, reading traffic and making safe decisions.
+- [ ] **G5** — Knows what a helmet does and why the rule is not negotiable.
+
+### I4. Games and sport
+
+- [ ] **G1** — Plays a simple team game and follows the rules.
+- [ ] **G2** — Plays a playground game start to finish without an adult refereeing it.
+- [ ] **G2** — Loses without a scene and wins without gloating.
+- [ ] **G3** — Plays at least one team sport with an understanding of positions and tactics.
+- [ ] **G3** — Passes to a teammate in a better position rather than always shooting.
+- [ ] **G4** — Plays at least one individual sport or discipline.
+- [ ] **G4** — Referees or scores a game for younger children.
+- [ ] **G5** — Trains at something regularly across a season and sees the improvement.
+- [ ] **G5** — Accepts a referee's decision they believe is wrong, without retaliating.
+- [ ] **G5** — Encourages a weaker teammate instead of freezing them out.
+
+### I5. Fitness, gymnastics and body control
+
+- [ ] **G1** — Moves to a beat; copies a sequence of movements.
+- [ ] **G2** — Forward roll; balances in several shapes; holds a still position.
+- [ ] **G2** — Climbs a frame or a rope to a safe height and descends in control.
+- [ ] **G3** — Runs continuously for 10 minutes.
+- [ ] **G3** — Performs a short gymnastic or movement sequence from memory.
+- [ ] **G4** — Runs continuously for 20 minutes, or covers 2 km.
+- [ ] **G4** — Knows how to warm up and cool down, and does it unprompted.
+- [ ] **G4** — Lifts and carries something heavy with their legs, not their back.
+- [ ] **G5** — Runs 3 km, or exercises hard for 30 minutes, without stopping.
+- [ ] **G5** — Knows what exercise does to the heart, lungs and muscles.
+- [ ] **G5** — Has a physical activity they choose to do for its own sake, not because they were
+      made to.
+
+### I6. Fine motor control
+
+- [ ] **P** — Uses scissors to cut along a line; threads beads; does large buttons.
+- [ ] **G1** — **Ties their own shoelaces.**
+- [ ] **G1** — Does up buttons, zips and fastenings unaided.
+- [ ] **G2** — Uses a ruler to draw an accurate straight line; folds paper precisely.
+- [ ] **G3** — Cuts out a complex shape; uses a stapler, a hole punch, sticky tape well.
+- [ ] **G3** — Uses a knife and fork properly, including cutting their own food.
+- [ ] **G4** — Threads a needle and sews a running stitch.
+- [ ] **G4** — Uses a compass, a protractor and a set square accurately.
+- [ ] **G5** — Uses a craft knife, a saw or a hot glue gun safely with supervision.
+- [ ] **G5** — Ties several knots and knows what each is for.
+
+> **End-of-primary benchmark.** Swims 100 m unaided, rides a bicycle safely on a road, runs 3 km,
+> and plays at least one sport well enough to enjoy it.
+
+---
+
+## J — Health, Safety & First Aid
+
+*The section where a missing item has the highest cost.*
+
+### J1. Hygiene and self-care
+
+- [ ] **P** — Washes hands after the toilet and before eating, unprompted.
+- [ ] **P** — Uses the toilet independently.
+- [ ] **P** — Brushes teeth with help.
+- [ ] **G1** — Brushes teeth properly twice a day, unsupervised.
+- [ ] **G1** — Covers coughs and sneezes; uses and disposes of a tissue.
+- [ ] **G2** — Washes and dries themselves thoroughly in a bath or shower.
+- [ ] **G2** — Dresses appropriately for the weather without being told.
+- [ ] **G3** — Manages their own hair, nails and general grooming.
+- [ ] **G4** — Uses deodorant and manages body odour as puberty approaches.
+- [ ] **G5** — Manages the changes of early puberty with accurate information and without shame —
+      including periods, for every child, not only girls.
+- [ ] **G5** — Knows why washing hands actually works.
+
+### J2. Nutrition, sleep and wellbeing
+
+- [ ] **G1** — Names foods that are everyday foods and foods that are treats.
+- [ ] **G2** — Knows the main food groups and what each does for the body.
+- [ ] **G2** — Drinks water when thirsty rather than only sugary drinks.
+- [ ] **G3** — Builds a balanced plate from what is available.
+- [ ] **G3** — Knows sugar harms teeth, and why.
+- [ ] **G4** — Reads a food label: sugar, salt, fat, portion size.
+- [ ] **G4** — Knows how much sleep they need and what happens to them without it.
+- [ ] **G5** — Knows smoking, alcohol and drugs harm a body, and specifically how.
+- [ ] **G5** — Recognises that food marketing targets children, and sees it happening.
+- [ ] **G5** — Knows that mental health is health: that sadness, worry and stress are real and
+      treatable, and who to tell.
+
+### J3. Everyday safety
+
+- [ ] **P** — Holds an adult's hand near a road; stops at the kerb.
+- [ ] **P** — Knows not to touch a hot stove, a plug socket or a sharp knife.
+- [ ] **G1** — Crosses a quiet road with an adult, looking both ways and listening.
+- [ ] **G1** — Knows their own full name, address and a parent's phone number **by heart**.
+- [ ] **G2** — Knows the emergency number for their country and when it is right to call it.
+- [ ] **G2** — Knows what to do if lost: stay put, find a uniformed adult or a family with children.
+- [ ] **G3** — Crosses a road alone, safely, choosing a good place to cross.
+- [ ] **G3** — Knows fire safety: get out, stay low, never go back in, meet at the agreed point.
+- [ ] **G3** — Recognises hazard symbols on household chemicals and leaves them alone.
+- [ ] **G4** — Uses knives, the stove, the oven and the kettle safely.
+- [ ] **G4** — Knows never to take medicine unsupervised, including another person's.
+- [ ] **G4** — Stays home alone briefly: locks the door, answers nobody, calls if needed.
+- [ ] **G5** — Assesses a new situation for risk before joining in — thin ice, a high wall, a fast
+      river, a dare.
+- [ ] **G5** — Says no to a friend's dangerous idea, and leaves.
+- [ ] **G5** — Knows how to get home from an unfamiliar place, with a plan that does not depend on a
+      charged phone.
+
+### J4. Personal safety and boundaries
+
+- [ ] **P** — Knows which parts of their body are private.
+- [ ] **P** — Knows they may refuse a hug or a kiss from anyone.
+- [ ] **G1** — Knows the difference between a safe secret and an unsafe one, and that adults do not
+      ask children to keep unsafe secrets.
+- [ ] **G1** — Names three trusted adults they could tell anything to.
+- [ ] **G2** — Knows nobody may touch them in a way that makes them uncomfortable, including someone
+      they know or love.
+- [ ] **G2** — Knows not to go anywhere with someone without a parent's agreement.
+- [ ] **G3** — Says no loudly, moves away and tells someone — and keeps telling until someone
+      listens.
+- [ ] **G4** — Knows an adult asking for secrecy, photos or private contact is a warning sign,
+      online or off.
+- [ ] **G5** — Knows they are never at fault for what an adult did to them.
+- [ ] **G5** — Knows how to leave a situation that feels wrong without needing to justify it first.
+
+### J5. First aid
+
+- [ ] **G1** — Tells an adult immediately when someone is hurt.
+- [ ] **G2** — Cleans and covers a small cut or graze themselves.
+- [ ] **G2** — Knows to run a burn under cool water and then to fetch an adult.
+- [ ] **G3** — **Calls the emergency number, says where they are, what happened, and stays on the
+      line.**
+- [ ] **G3** — Applies pressure to a bleeding wound.
+- [ ] **G3** — Deals with a nosebleed: sit, lean forward, pinch the soft part.
+- [ ] **G4** — Checks whether someone is responsive and whether they are breathing.
+- [ ] **G4** — Puts an unconscious but breathing person into the recovery position.
+- [ ] **G4** — Recognises choking and knows what to do about it.
+- [ ] **G5** — Knows the basic principle of CPR, and that an attempt is better than nothing.
+- [ ] **G5** — Assesses a scene for danger before approaching a casualty.
+- [ ] **G5** — Knows what someone's serious allergy, asthma inhaler or epilepsy needs, if a friend
+      or a sibling has one.
+- [ ] **G5** — Keeps calm enough to be useful, and knows their first job is to get a competent adult
+      there.
+
+> **End-of-primary benchmark.** Calls the emergency services correctly and clearly, puts a
+> breathing casualty into the recovery position, and can name three adults they would tell anything
+> to.
+
+---
+
+## K — Music
+
+*Ambitious on purpose: reading a simple score and playing an instrument are ordinary primary-school
+attainments in many countries and absent in others.*
+
+### K1. Singing and voice
+
+- [ ] **P** — Sings familiar songs from memory, roughly in time.
+- [ ] **G1** — Sings in a group, starting and stopping together.
+- [ ] **G1** — Matches a pitch given by a voice or an instrument.
+- [ ] **G2** — Sings a simple song in tune, alone, all the way through.
+- [ ] **G3** — Sings loudly and softly on purpose; shapes a phrase.
+- [ ] **G3** — Holds their own part in a round or a canon.
+- [ ] **G4** — **Sings a song in tune, from memory, in front of an audience.**
+- [ ] **G4** — Sings a simple harmony against a melody without being pulled off it.
+- [ ] **G5** — Has a repertoire of songs they can sing well, from more than one tradition.
+- [ ] **G5** — Warms up their voice and knows not to strain it.
+
+### K2. Rhythm and pulse
+
+- [ ] **P** — Claps along to a beat; copies a short clapped pattern.
+- [ ] **G1** — Keeps a steady pulse while others keep a different one.
+- [ ] **G2** — Claps back a rhythm of four beats accurately.
+- [ ] **G2** — Plays an untuned percussion instrument in time with a group.
+- [ ] **G3** — Recognises 2-, 3- and 4-beat metres and counts them.
+- [ ] **G3** — Reads and performs simple rhythmic notation.
+- [ ] **G4** — Keeps a rhythmic ostinato going under a melody.
+- [ ] **G5** — Performs a syncopated rhythm accurately.
+- [ ] **G5** — Follows a conductor or a count-in, and comes in on the right beat.
+
+### K3. Reading music
+
+- [ ] **G2** — Knows that music can be written down, and that the dots mean something specific.
+- [ ] **G3** — Reads the note values: whole, half, quarter, eighth, and their rests.
+- [ ] **G3** — Knows higher on the stave means higher in pitch.
+- [ ] **G4** — Names the notes on the treble clef stave and finds them on an instrument.
+- [ ] **G4** — Reads a time signature and a bar line; knows what a sharp and a flat do.
+- [ ] **G5** — **Sight-reads a simple melody on their instrument and plays it correctly.**
+- [ ] **G5** — Follows a score while listening to it being played.
+- [ ] **G5** — Writes down a short melody or rhythm they invented, so someone else could play it.
+
+### K4. Playing an instrument
+
+- [ ] **G1** — Plays a simple percussion or tuned instrument with control.
+- [ ] **G2** — Plays a short recognisable tune on a recorder, keyboard, xylophone or similar.
+- [ ] **G3** — Plays with correct posture and technique for the instrument.
+- [ ] **G3** — Practises regularly, and understands practice is what makes the difference.
+- [ ] **G4** — Plays a piece of real music from notation, hands or fingers in the right places.
+- [ ] **G4** — Plays as part of an ensemble, listening to the others rather than only to themselves.
+- [ ] **G5** — **Performs a prepared piece in front of an audience, from a score.**
+- [ ] **G5** — Learns a new short piece largely on their own.
+- [ ] **G5** — Tunes or sets up their own instrument, and looks after it.
+
+### K5. Listening and creating
+
+- [ ] **G1** — Says whether music is fast or slow, loud or soft, happy or sad.
+- [ ] **G2** — Recognises common instruments by their sound.
+- [ ] **G3** — Identifies the families of the orchestra: strings, woodwind, brass, percussion.
+- [ ] **G3** — Makes up a short tune or rhythm of their own.
+- [ ] **G4** — Describes a piece using real vocabulary: tempo, dynamics, pitch, mood,
+      instrumentation.
+- [ ] **G4** — Composes a short piece with a beginning, a middle and an end.
+- [ ] **G5** — Recognises several major styles: classical, folk, jazz, rock, pop, and music from at
+      least one other tradition.
+- [ ] **G5** — Names several composers or musicians and something they are known for.
+- [ ] **G5** — Says why they like a piece, in terms of what is actually happening in it.
+
+> **End-of-primary benchmark.** Plays a prepared piece from a written score on an instrument, in
+> front of other people — and sings a song in tune, alone, from memory.
+
+---
+
+## L — Visual Arts & Making Things
+
+### L1. Drawing and painting
+
+- [ ] **P** — Draws a recognisable person with a head, a body and limbs.
+- [ ] **P** — Names the primary colours; paints without fear of the paper.
+- [ ] **G1** — Draws from life rather than only from imagination.
+- [ ] **G1** — Mixes primary colours to make secondary ones.
+- [ ] **G2** — Fills a page deliberately instead of drawing small in a corner.
+- [ ] **G2** — Uses several media: pencil, crayon, chalk, paint, ink.
+- [ ] **G3** — Draws an object in front of them with roughly correct proportions.
+- [ ] **G3** — Shades to suggest light and shadow.
+- [ ] **G3** — Mixes tints and shades by adding white and black.
+- [ ] **G4** — Uses overlap and relative size to show depth.
+- [ ] **G4** — Draws a simple portrait with the features in the right places.
+- [ ] **G5** — Uses basic one-point perspective.
+- [ ] **G5** — Plans a piece in a sketchbook before making the final version.
+- [ ] **G5** — Finishes a demanding piece over several sessions instead of abandoning it.
+
+### L2. Making and craft
+
+- [ ] **P** — Cuts, sticks, folds and builds with blocks and junk materials.
+- [ ] **G1** — Models a recognisable object in clay or dough.
+- [ ] **G2** — Builds a 3D structure from paper, card and tape that stands up.
+- [ ] **G2** — Makes a repeating printed or stamped pattern.
+- [ ] **G3** — Follows written or diagrammed instructions to build something.
+- [ ] **G3** — Sews two pieces of fabric together by hand.
+- [ ] **G4** — Designs something to solve a real problem, then builds and tests it.
+- [ ] **G4** — Uses a saw, a drill or a glue gun safely with supervision.
+- [ ] **G4** — Measures twice and cuts once, because they learned why.
+- [ ] **G5** — Builds a working mechanism: a lever, a pulley, a gear train, a simple circuit in an
+      object.
+- [ ] **G5** — Improves a design after it failed, rather than giving up on it.
+- [ ] **G5** — Makes a gift or a useful object good enough that someone wants to keep it.
+
+### L3. Looking at art
+
+- [ ] **G2** — Says what they notice in a picture, beyond liking it.
+- [ ] **G3** — Knows painting, drawing, sculpture, photography and printmaking apart.
+- [ ] **G4** — Knows several famous artworks and who made them.
+- [ ] **G4** — Describes an artwork's colour, shape, line, texture and composition.
+- [ ] **G5** — Recognises a few distinct styles or periods and can tell them apart.
+- [ ] **G5** — Knows art comes from every culture and era, not one continent.
+- [ ] **G5** — Gives another person's work useful feedback: what works, what they would try next.
+- [ ] **G5** — Accepts criticism of their own work without dropping the work.
+
+> **End-of-primary benchmark.** Designs, plans and completes a substantial piece of work over
+> several sessions — drawn, built or sewn — and talks about someone else's work in real terms.
+
+---
+
+## M — Dance, Drama & Performance
+
+### M1. Dance and movement
+
+- [ ] **P** — Moves freely to music without self-consciousness.
+- [ ] **G1** — Keeps time with the beat while moving.
+- [ ] **G1** — Copies a short sequence of movements.
+- [ ] **G2** — Learns and performs a simple set dance from a tradition.
+- [ ] **G2** — Moves in different qualities on request: sharp, smooth, heavy, light.
+- [ ] **G3** — Remembers and performs a longer choreography from memory.
+- [ ] **G3** — Dances with a partner, matching or mirroring them.
+- [ ] **G4** — Makes up their own short sequence with a clear beginning and end.
+- [ ] **G4** — Uses the space deliberately: levels, directions, pathways, formations.
+- [ ] **G5** — **Performs a rehearsed dance in front of an audience, in time and in formation.**
+- [ ] **G5** — Knows dances from more than one culture, including at least one social/partner dance.
+- [ ] **G5** — Picks up new choreography quickly by watching.
+
+### M2. Drama and performance
+
+- [ ] **P** — Plays pretend, sustaining a role with others.
+- [ ] **G1** — Acts out a known story, taking a part.
+- [ ] **G2** — Uses voice and face to show an emotion clearly to an audience.
+- [ ] **G2** — Waits offstage for a cue and comes in on it.
+- [ ] **G3** — Learns lines and delivers them audibly, without rushing.
+- [ ] **G3** — Stays in character when something goes wrong.
+- [ ] **G4** — Improvises a short scene from a prompt with others.
+- [ ] **G4** — Plays a character unlike themselves, convincingly.
+- [ ] **G5** — Takes a real part in a full production, in front of a real audience.
+- [ ] **G5** — Contributes behind the scenes too: set, costume, lighting, sound, prompting.
+- [ ] **G5** — Handles stage nerves well enough to go on anyway.
+
+> **End-of-primary benchmark.** Performs in front of a real audience — a dance, a play or a piece
+> of music — having rehearsed for it, and does it again the following year.
+
+---
+
+## N — Practical Life & Household Skills
+
+*The most reliably overlooked domain in this document, and the one a child will use daily for the
+rest of their life.*
+
+### N1. Self-management
+
+- [ ] **P** — Dresses and undresses themselves completely, including shoes.
+- [ ] **P** — Eats with cutlery at a table; clears their own plate.
+- [ ] **G1** — Ties shoelaces; manages coat, bag and belongings without losing them.
+- [ ] **G1** — Packs their own school bag from a list.
+- [ ] **G2** — Gets themselves up and ready in the morning with a reminder, not a rescue.
+- [ ] **G3** — Keeps their own room and workspace in a usable state.
+- [ ] **G4** — Packs their own bag for an overnight stay, with everything they need.
+- [ ] **G4** — Manages their own belongings on a trip without losing them.
+- [ ] **G5** — Runs their own morning and evening routine unprompted.
+- [ ] **G5** — Notices something that needs doing and does it without being asked.
+
+### N2. Food and cooking
+
+- [ ] **P** — Helps in the kitchen: stirs, pours, washes vegetables.
+- [ ] **G1** — Lays a table properly and clears it afterwards.
+- [ ] **G1** — Spreads, pours a drink, and peels a banana or an orange.
+- [ ] **G2** — Makes their own breakfast: cereal, toast, a drink.
+- [ ] **G2** — Washes up or loads a dishwasher properly.
+- [ ] **G3** — Uses a knife to chop soft food safely, with a proper grip and board.
+- [ ] **G3** — Follows a simple recipe from start to finish.
+- [ ] **G3** — Grates, whisks, measures ingredients on scales and in jugs.
+- [ ] **G4** — Uses a hob and an oven safely, with supervision.
+- [ ] **G4** — **Cooks a simple hot meal for themselves** — pasta, eggs, rice, soup, a stir-fry.
+- [ ] **G4** — Knows basic food hygiene: raw meat, hand washing, use-by dates, the fridge.
+- [ ] **G5** — Cooks a full meal for the family, from a recipe, and gets it on the table hot.
+- [ ] **G5** — Adapts a recipe: doubles it, halves it, substitutes a missing ingredient.
+- [ ] **G5** — Plans a meal, lists what is needed, and shops for it.
+- [ ] **G5** — Stores leftovers correctly and knows what has gone off.
+
+### N3. Home, clothes and repair
+
+- [ ] **P** — Puts toys away where they belong.
+- [ ] **G1** — Puts dirty clothes in the basket; hangs up a coat.
+- [ ] **G2** — Makes their own bed; tidies a room to a standard, not just out of sight.
+- [ ] **G2** — Sweeps, wipes a surface, takes out the rubbish.
+- [ ] **G3** — Sorts laundry; hangs it out; folds and puts clothes away.
+- [ ] **G3** — Sorts waste correctly: recycling, food waste, general.
+- [ ] **G4** — Operates a washing machine.
+- [ ] **G4** — Sews on a button; mends a small tear.
+- [ ] **G4** — Changes a bulb or a battery; uses a screwdriver, a hammer, a tape measure.
+- [ ] **G5** — Cleans a room properly, top to bottom, to a standard someone else would accept.
+- [ ] **G5** — Knows where the water stopcock, the fuse box and the fire extinguisher are — and what
+      each is for.
+- [ ] **G5** — Fixes something broken instead of replacing it, at least once, successfully.
+- [ ] **G5** — Waters plants, cares for a pet, or grows something edible from seed to plate.
+
+### N4. Getting around and dealing with the world
+
+- [ ] **G2** — Buys something from a shop alone, with the money counted beforehand.
+- [ ] **G3** — Walks a known local route alone or with a friend, safely.
+- [ ] **G3** — Asks a stranger for help or directions, politely and clearly.
+- [ ] **G4** — Uses public transport on a familiar route: ticket, stop, timing.
+- [ ] **G4** — Reads a timetable and works out when to leave.
+- [ ] **G5** — Makes a phone call to an organisation and asks for what they need.
+- [ ] **G5** — Navigates an unfamiliar journey with a change, with a plan for what to do if it goes
+      wrong.
+- [ ] **G5** — Fills in a simple form correctly: name, address, date of birth, date.
+
+> **End-of-primary benchmark.** Cooks a hot meal for other people, does a load of laundry start to
+> finish, and gets themselves somewhere unfamiliar and back.
+
+---
+
+## O — Outdoors, Nature & Orientation
+
+### O1. Being outside
+
+- [ ] **P** — Plays outdoors in all weathers, comfortably.
+- [ ] **G1** — Dresses correctly for cold, wet and hot weather without being told.
+- [ ] **G2** — Walks several kilometres without complaint.
+- [ ] **G3** — Climbs a tree or a rock safely, and gets down again.
+- [ ] **G3** — Knows to leave no trace: take rubbish home, close gates, keep to paths.
+- [ ] **G4** — Walks a full day in hill or forest country with a pack.
+- [ ] **G4** — Puts up a tent and sleeps outside.
+- [ ] **G5** — Packs correctly for a day outdoors: water, food, layers, map, torch.
+- [ ] **G5** — Lights and extinguishes a fire safely where it is permitted.
+- [ ] **G5** — Knows when weather or terrain means turning back, and turns back.
+
+### O2. Knowing the natural world
+
+- [ ] **P** — Names common animals and knows a tree from a bush.
+- [ ] **G1** — Names the seasons and what changes in each.
+- [ ] **G2** — Identifies 5+ common local trees, 5+ birds and 5+ flowers by name.
+- [ ] **G2** — Knows which plants and animals to leave alone: stings, thorns, bites.
+- [ ] **G3** — Identifies 10+ local species; uses a field guide or a key.
+- [ ] **G3** — Grows a plant from seed to harvest.
+- [ ] **G4** — **Knows which local plants and berries are dangerous, and the rule: never eat
+      anything unidentified.**
+- [ ] **G4** — Recognises animal tracks, nests and droppings.
+- [ ] **G4** — Reads the sky well enough to see rain coming.
+- [ ] **G5** — Identifies 20+ local species across plants, birds, insects and mammals.
+- [ ] **G5** — Knows the moon phases and finds the Pole Star or the local equivalent.
+- [ ] **G5** — Knows which local wildlife is protected, and why it matters.
+
+### O3. Orientation and practical outdoor skills
+
+- [ ] **G2** — Retraces a route they have walked once.
+- [ ] **G3** — Finds north without a compass — sun position, time of day.
+- [ ] **G3** — Ties a reef knot and a slip knot.
+- [ ] **G4** — Ties four useful knots and uses each for its purpose: joining, securing, shortening,
+      a loop.
+- [ ] **G4** — Navigates a short orienteering course with a map.
+- [ ] **G5** — **Navigates an unfamiliar route with a paper map and a compass, and arrives.**
+- [ ] **G5** — Knows what to do if lost outdoors: stop, stay put, stay visible, stay warm.
+- [ ] **G5** — Judges a natural risk: deep water, loose rock, thin ice, an incoming tide, a coming
+      storm.
+
+> **End-of-primary benchmark.** Spends a night camping, navigates an unfamiliar route by map and
+> compass, and names twenty living things in their own region on sight.
+
+---
+
+## P — Social & Emotional Skills
+
+*The best predictor on this list of whether the rest of it gets used well.*
+
+### P1. Knowing and managing themselves
+
+- [ ] **P** — Names the basic emotions in themselves: happy, sad, angry, scared.
+- [ ] **P** — Separates from a parent without distress.
+- [ ] **G1** — Recovers from a small disappointment without a meltdown.
+- [ ] **G1** — Waits their turn, including when it is hard.
+- [ ] **G2** — Names a wider range of feelings: frustrated, nervous, jealous, proud, embarrassed,
+      lonely.
+- [ ] **G2** — Uses a calming strategy on purpose: breathing, walking away, asking for a moment.
+- [ ] **G3** — Notices their own anger building and does something before it lands on someone.
+- [ ] **G3** — Says what is wrong in words instead of acting it out.
+- [ ] **G4** — Distinguishes a feeling from a fact — "I feel stupid" is not "I am stupid".
+- [ ] **G4** — Tolerates being bored without needing a screen handed to them.
+- [ ] **G5** — Names what they are good at and what they find hard, accurately and without drama.
+- [ ] **G5** — Recovers from a real failure — a lost match, a bad mark, a rejection — and goes back
+      to it.
+- [ ] **G5** — Asks for help when it is needed, which is a skill and not a weakness.
+
+### P2. Getting on with others
+
+- [ ] **P** — Shares and takes turns; plays alongside and with other children.
+- [ ] **G1** — Makes a friend; joins a group already playing.
+- [ ] **G1** — Says sorry and means it.
+- [ ] **G2** — Notices when someone is upset and responds to it.
+- [ ] **G2** — Listens without interrupting, and waits to speak.
+- [ ] **G3** — Resolves a small dispute with a peer without an adult refereeing.
+- [ ] **G3** — Gives a genuine compliment.
+- [ ] **G3** — Works in a pair or a group and does their share.
+- [ ] **G4** — Takes another person's perspective, including one they disagree with.
+- [ ] **G4** — Says no to a friend without losing the friendship.
+- [ ] **G4** — Leads a group task, and follows someone else leading one.
+- [ ] **G5** — Repairs a friendship after a real falling-out.
+- [ ] **G5** — Stands up for someone being treated badly, or gets an adult who will.
+- [ ] **G5** — Resists group pressure to do something they know is wrong.
+- [ ] **G5** — Keeps a confidence — and knows the one exception: when someone is being hurt.
+
+### P3. Character and self-direction
+
+- [ ] **G1** — Tries something new without a guarantee of succeeding at it.
+- [ ] **G2** — Finishes something they started, even once it stops being fun.
+- [ ] **G2** — Takes care of something that belongs to somebody else.
+- [ ] **G3** — Keeps working on something hard after the first failure.
+- [ ] **G3** — Owns a mistake rather than blaming someone else for it.
+- [ ] **G4** — Practises something deliberately over weeks to get better at it.
+- [ ] **G4** — Helps someone with no prospect of anything in return.
+- [ ] **G5** — Sets themselves a goal nobody asked for, and reaches it.
+- [ ] **G5** — Holds a position under mild social pressure, and changes it when genuinely persuaded.
+- [ ] **G5** — Shows up for a commitment — a team, a rehearsal, a promise — on a day they do not
+      feel like it.
+
+> **End-of-primary benchmark.** Resolves a real conflict with a peer without an adult, recovers
+> from a real failure and returns to the thing, and stands up for somebody at some cost to
+> themselves.
+
+---
+
+## Q — Learning How to Learn
+
+*Explicitly taught almost nowhere, and the difference between coping with secondary school and
+drowning in it.*
+
+### Q1. Attention and work habits
+
+- [ ] **P** — Sits and attends to one activity for ten minutes.
+- [ ] **G1** — Works at a task for 15 minutes without wandering off.
+- [ ] **G2** — Starts a task without being told to three times.
+- [ ] **G2** — Works quietly beside others without disturbing them.
+- [ ] **G3** — Works independently for 30 minutes, asking only when genuinely stuck.
+- [ ] **G3** — Removes their own distractions before starting.
+- [ ] **G4** — Works for 45 minutes on something difficult and unappealing.
+- [ ] **G4** — Checks their own work before handing it in.
+- [ ] **G5** — Does the hard task first rather than the easy one.
+- [ ] **G5** — Notices when they have stopped concentrating, and takes a break on purpose instead of
+      drifting.
+
+### Q2. Organisation and planning
+
+- [ ] **G1** — Keeps their equipment together and brings it back.
+- [ ] **G2** — Writes down what they have to do, and reads it later.
+- [ ] **G2** — Has a homework routine: a place, a time, a finish.
+- [ ] **G3** — Uses a diary, planner or calendar and meets a deadline with it.
+- [ ] **G3** — Keeps their books and papers findable.
+- [ ] **G4** — Breaks a multi-day task into steps and schedules them.
+- [ ] **G4** — Estimates how long something will take, and learns from being wrong.
+- [ ] **G5** — Plans a week with several commitments in it, and keeps to it.
+- [ ] **G5** — Starts a long task early enough to survive something going wrong.
+- [ ] **G5** — Prioritises when there is more to do than time to do it.
+
+### Q3. Study technique
+
+- [ ] **G2** — Memorises a short text, a rhyme or a list deliberately.
+- [ ] **G3** — Tests themselves instead of only re-reading.
+- [ ] **G3** — Uses a memory aid: a mnemonic, a rhyme, a story, a picture.
+- [ ] **G4** — Takes notes in their own words rather than copying.
+- [ ] **G4** — Spreads practice over several days instead of cramming.
+- [ ] **G4** — Explains what they learned to someone else, and discovers the gaps that way.
+- [ ] **G5** — Makes their own summary, mind map or flashcards for a topic.
+- [ ] **G5** — Revisits old material deliberately so it is not lost.
+- [ ] **G5** — Identifies what they do *not* yet know, rather than assuming they know it.
+
+### Q4. Curiosity and intellectual honesty
+
+- [ ] **P** — Asks questions about everything, constantly.
+- [ ] **G1** — Asks a question when confused instead of hiding it.
+- [ ] **G2** — Looks something up because they wanted to know, not because they were told to.
+- [ ] **G3** — Says "I don't know" comfortably, and then goes and finds out.
+- [ ] **G4** — Changes their mind when shown good evidence, and says so.
+- [ ] **G4** — Pursues an interest of their own beyond what school asks for.
+- [ ] **G5** — Asks how somebody knows what they are claiming.
+- [ ] **G5** — Knows the difference between not understanding *yet* and not being able to.
+- [ ] **G5** — Prefers being right to having been right.
+
+> **End-of-primary benchmark.** Plans and delivers a multi-week project of their own with no adult
+> managing the schedule — and prepares for an assessment using a method they chose deliberately.
+
+---
+
+## R — A Second Language
+
+*Roughly CEFR A1 by the end of primary, reaching towards A2 — and the confidence to use it badly
+in public, which matters more than the grammar.*
+
+- [ ] **G1** — Knows some languages sound different from their own, and enjoys the difference.
+- [ ] **G1** — Greets, says goodbye, and says their name in the second language.
+- [ ] **G2** — Counts to 20; names colours, animals, family members and classroom objects.
+- [ ] **G2** — Sings a song or recites a rhyme in the language.
+- [ ] **G3** — Says their name, age, where they live and what they like, in full sentences.
+- [ ] **G3** — Asks and answers simple questions on familiar topics.
+- [ ] **G3** — Understands classroom instructions given in the language.
+- [ ] **G4** — Holds a short conversation about themselves, their family and their day.
+- [ ] **G4** — Reads a short simple text and understands the gist.
+- [ ] **G4** — Writes a few sentences about a familiar topic, correctly spelled.
+- [ ] **G4** — Knows the present tense of the most common verbs.
+- [ ] **G5** — Understands a slow, clear speaker on a familiar topic and replies appropriately.
+- [ ] **G5** — Writes a short letter, postcard or message (5+ sentences).
+- [ ] **G5** — Talks about the past and the future, at least roughly.
+- [ ] **G5** — Uses a bilingual dictionary and copes with an unknown word without stopping.
+- [ ] **G5** — **Speaks the language to a real person and is understood** — the actual point of the
+      exercise.
+- [ ] **G5** — Knows something real about where the language is spoken and how people there live.
+
+> **End-of-primary benchmark.** Holds a five-minute conversation with a patient native speaker
+> about themselves, their family and their interests, and is understood.
+
+---
+
+## S — Games, Logic & Strategy
+
+*Cheap, portable, sociable, and among the best thinking training available.*
+
+- [ ] **P** — Plays a simple board game, follows the rules and takes turns.
+- [ ] **G1** — Plays a card game with rules; deals and shuffles.
+- [ ] **G1** — Solves a jigsaw appropriate to their age, by strategy rather than trial and error.
+- [ ] **G2** — Plays a strategy game and thinks one move ahead.
+- [ ] **G2** — Teaches a game they know to someone who does not.
+- [ ] **G3** — Knows the rules and moves of chess, draughts or an equivalent, and plays a full game.
+- [ ] **G3** — Solves a logic puzzle: a grid puzzle, a riddle, a sudoku.
+- [ ] **G3** — Loses a game without quitting the next one.
+- [ ] **G4** — Thinks several moves ahead and anticipates an opponent's reply.
+- [ ] **G4** — Works out the rules of an unfamiliar game by playing it.
+- [ ] **G4** — Spots a pattern in a sequence of shapes, numbers or moves and uses it.
+- [ ] **G5** — Plays a strategy game competently: opening ideas, a plan, an endgame.
+- [ ] **G5** — Solves a multi-step logic problem by elimination, systematically.
+- [ ] **G5** — Recognises a fallacy in an argument, even informally ("everyone says so" is not a
+      reason).
+- [ ] **G5** — Invents a game with coherent rules and teaches it to others.
+- [ ] **G5** — Estimates a chance sensibly, and knows a lucky win is not a good decision.
+
+> **End-of-primary benchmark.** Plays a full strategy game with a plan, and solves an unfamiliar
+> logic puzzle by systematic elimination rather than guessing.
+
+---
+
+## T — General Knowledge & Cultural Literacy
+
+*The shared references that make conversation, reading and humour land — drawn from the whole
+world, not one corner of it.*
+
+- [ ] **P** — Knows their own family: names, relationships, where they live.
+- [ ] **G1** — Knows classic fairy tales and folk stories from their own culture.
+- [ ] **G2** — Knows the major festivals celebrated around them and roughly what each marks.
+- [ ] **G2** — Knows their own country's flag, name, capital and a famous landmark.
+- [ ] **G3** — Knows myths and legends from more than one culture: Greek, Norse, African, Asian,
+      Indigenous.
+- [ ] **G3** — Knows that the world holds many religions and beliefs, including none, and names
+      several.
+- [ ] **G4** — Knows what happens in several famous stories everyone alludes to.
+- [ ] **G4** — Knows a handful of world-famous buildings and monuments, and where they are.
+- [ ] **G4** — Names people who changed the world in science, art, politics, sport and rights — from
+      more than one continent, and not all men.
+- [ ] **G5** — Knows the main world religions' core ideas and major festivals, factually and
+      respectfully.
+- [ ] **G5** — Knows several famous quotations, proverbs and idioms, and uses them correctly.
+- [ ] **G5** — Follows a news story over time and can explain what it is about.
+- [ ] **G5** — Knows enough about the wider world to ask a good question about a country they have
+      never visited.
+- [ ] **G5** — Knows their own family's story: where the previous generations came from and what
+      they did.
+
+> **End-of-primary benchmark.** Holds a real conversation with an adult about something in the
+> news, a book, or another country — and asks a question that shows they were actually thinking.
+
+---
+
+## Appendix 1 — Grade-by-grade summary
+
+What each year is fundamentally *for*, across all twenty domains. Use it as a sanity check on
+pacing, not as a checklist in itself.
+
+| Grade | The year's centre of gravity |
+| --- | --- |
+| **Pre-school** | **Independence and communication.** Dresses, feeds, toilets and washes themselves. Speaks in sentences and is understood by strangers. Counts to 20. Knows letters. Separates from a parent. Runs, jumps, climbs, catches. Plays with other children and takes turns. |
+| **Grade 1** | **Decoding.** Reading becomes possible: every letter–sound, blending, first real books. Number bonds to 10, addition and subtraction within 20. Ties shoelaces, rides a bike, tells the time to the half hour, knows their address and a phone number by heart. |
+| **Grade 2** | **Fluency.** Reading stops being effortful and becomes usable. Bonds to 20, the 2/5/10 tables, place value to 1,000. Writes a story with a shape. Swims 10 m. Saves up for something. Makes their own breakfast. |
+| **Grade 3** | **Independence in the basics.** Reads silently and by choice; writes planned pieces. Columns, the 3/4/8 tables, fractions as numbers. Swims 25 m. Calls the emergency number. Cooks from a recipe. Follows a map. Reads simple musical notation. Resolves a dispute without an adult. |
+| **Grade 4** | **Consolidation and reach.** All tables by heart; long-form arithmetic; area; angles. Summarises, argues, revises a draft. Cooks a hot meal. Swims 50 m. Builds a circuit and a program with a loop. Keeps a budget. Recovery position. Plans across several days. |
+| **Grade 5** | **Ownership.** Learns without being taught, plans without being managed, checks their own work, and performs in public. Long multiplication and division; fractions, decimals and percentages interchangeable. Swims 100 m, navigates by map and compass, performs a piece from a score, holds a conversation in a second language, and argues both sides of a hard question before choosing one. |
+
+---
+
+## Appendix 2 — The twenty end-of-primary benchmarks
+
+One concrete, observable test per domain. If a single page of this document is worth keeping, this
+is it.
+
+| | Domain | Benchmark |
+| --- | --- | --- |
+| A | Language | Reads a 200-page novel by choice; writes two clean, self-proofread pages; speaks for five minutes to an audience without a script. |
+| B | Mathematics | Tables to 12×12 automatic; long division reliable; solves and checks an unfamiliar multi-step problem alone. |
+| C | Science | Designs and runs their own fair test, concludes from the results, and says how it could have been better. |
+| D | Geography | Places continents, oceans and 50 countries on a blank map; walks an unfamiliar route with a paper map. |
+| E | History | Places any date in its era; tells one civilisation's story in detail; explains why two sources disagree. |
+| F | Civics | Argues both sides of a contested question, then defends their own — and has organised or voted on something real. |
+| G | Money | Plans and keeps to a real budget; explains correctly why borrowing costs more than paying cash. |
+| H | Digital | Researches from multiple sources, judges which to trust, produces a document — and one program of their own design. |
+| I | Physical | Swims 100 m unaided; cycles safely on a road; runs 3 km; plays a sport well enough to enjoy it. |
+| J | Safety | Calls emergency services clearly; puts a breathing casualty in the recovery position; names three trusted adults. |
+| K | Music | Performs a prepared piece from a written score in front of people; sings in tune, alone, from memory. |
+| L | Art | Plans and completes a substantial piece over several sessions; critiques someone else's work usefully. |
+| M | Performance | Performs a rehearsed dance, play or piece to a real audience — and goes back the next year. |
+| N | Practical life | Cooks a hot meal for others; does laundry start to finish; travels somewhere unfamiliar and back. |
+| O | Outdoors | Camps overnight; navigates by map and compass; names twenty local living things on sight. |
+| P | Social & emotional | Resolves a real conflict alone; recovers from real failure; stands up for someone at a cost. |
+| Q | Learning | Runs a multi-week project with no adult managing the schedule; revises by a method they chose. |
+| R | Second language | Holds a five-minute conversation with a patient native speaker and is understood. |
+| S | Logic | Plays a full strategy game with a plan; solves an unfamiliar logic puzzle by elimination. |
+| T | General knowledge | Discusses a news story, a book or another country with an adult — and asks a good question. |
+
+---
+
+## Appendix 3 — Deliberate omissions
+
+What is **not** here, and why:
+
+* **National curriculum content** — a country's own history, institutions, literary canon,
+  set texts and constitutional arrangements. Essential, but by definition local; items that touch
+  it are marked *local* and left generic.
+* **Religious instruction.** Religions appear in Section T as things to know *about*, factually and
+  respectfully. Instruction in a particular faith is a family's decision, not a competency.
+* **Sex education beyond the biological and the protective.** Reproduction (C2), puberty (J1) and
+  bodily autonomy and consent (J4, F3) are in, because omitting them has real costs. Anything
+  beyond that is for families and local norms.
+* **Anything requiring a specific technology, product or platform.** "Uses a spreadsheet" is here;
+  a named application is not.
+* **Talents rather than competencies.** Perfect pitch, athletic ability, artistic gift — a child
+  can master everything in this document without any of them.
+* **Speed and comparison.** No item is "faster than other children". Every benchmark is absolute:
+  the child against the task, never against the class.
+
+---
+
+## Appendix 4 — How this relates to the product
+
+The platform builds mathematics first, and Section B is its curriculum source. The rest of this
+document is here for three reasons:
+
+1. **It keeps the data model honest.** A competency model that cannot express "swims 25 m
+   unaided", "ties four useful knots" or "performs a piece from a score" is a *mathematics* model
+   wearing a general-purpose name. Everything the constitution's multi-subject principle promises
+   lives or dies on whether the competency tree can hold Sections C through T as naturally as it
+   holds Section B.
+2. **Not everything here is exercise-shaped, and that is a design input, not a problem.**
+   \`2 + 7\` can be generated, answered and auto-marked on a device. "Cooks a hot meal for the
+   family" cannot: it needs a parent to observe it and tick it. A framework this broad forces the
+   question of whether a competency's evidence can be *machine-assessed*, *parent-attested* or
+   *self-reported* — and that distinction should exist in the model before a second subject
+   arrives, not be retrofitted around it.
+3. **It is a genuinely useful artefact on its own**, whether or not the platform ever covers a
+   second subject — as a parent's checklist, as a school's audit, and as an answer to "are we
+   missing anything important?"
+
+### Related documents
+
+* Product vision: \`docs/product/vision.md\`
+* Mathematics curriculum (Section B is its source material): \`docs/product/CURRICULUM.md\`
+* Constitution — multi-subject principle VII: \`.specify/memory/constitution.md\`
+* Mastery algorithm: \`specs/003-mastery-engine/spec.md\`
+`,cr=`# Primary Learning Platform
+
+> **Master every skill, one step at a time.**
+
+## Vision
+
+Build a free, accessible and multilingual learning platform that helps children
+progressively master the knowledge and skills expected throughout primary school.
+
+The long-term goal is broader than primary school or mathematics: the platform
+should eventually provide structured mastery-based learning across multiple
+subjects and potentially multiple age levels.
+
+The first public product will focus exclusively on **primary-school mathematics**.
+
+---
+
+## MVP
+
+The MVP is an exercise-first mathematics mastery platform.
+
+A child should be able to:
+
+1. Start at Level 1.
+2. Practice mathematics through short exercises/games.
+3. Receive immediate feedback.
+4. Build mastery of individual competencies.
+5. Progress through Levels 1–5.
+6. See their progress visually.
+7. Practice approximately 30 minutes per day.
+8. Eventually reach **100% mastery of the defined primary-school mathematics curriculum**.
+
+The product should work on:
+
+* Phone
+* Tablet
+* Desktop/browser
+
+The initial product should be a web application/PWA rather than native mobile
+applications.
+
+---
+
+## Core philosophy
+
+### 1. Exercise first
+
+The first version should not be built around lessons.
+
+The primary interaction is:
+
+**Practice → feedback → adapt → practice again → mastery**
+
+Explanations can be introduced later where useful.
+
+### 2. Mastery rather than completion
+
+Completing exercises is not the goal.
+
+The system should estimate whether a child has actually mastered a competency.
+
+A child reaching 100% should mean:
+
+> The child has demonstrated mastery of all competencies defined for the target
+> primary-school mathematics curriculum.
+
+100% should not simply mean answering a fixed number of questions correctly once.
+
+### 3. Progressive difficulty
+
+Every competency should have multiple levels of difficulty.
+
+The platform should be able to move a child from basic understanding toward
+fluent and reliable performance.
+
+### 4. Short daily practice
+
+The intended usage pattern is approximately:
+
+**30 minutes per day**
+
+The system should automatically prioritize the child's weaknesses and review
+previously learned skills.
+
+### 5. Local-first privacy
+
+Free users should be able to use the platform without requiring all progress to
+be stored on our servers.
+
+Initial free architecture:
+
+**progress stored locally on the user's device**
+
+Users should be able to:
+
+* export their progress
+* backup their progress
+* restore/import their progress
+
+Cloud synchronization can become a premium feature later.
+
+### 6. Multiple children
+
+A parent should be able to manage multiple children without paying per child.
+
+The same underlying model should eventually support teachers managing groups of
+students.
+
+---
+
+## Look & feel
+
+The product speaks to two very different audiences inside the same app, and must not use one
+visual language for both.
+
+### Child-facing UI (the practice loop — grades 1–5, roughly ages 6–11)
+
+Playful, colorful, game-like — never a bare form or a spreadsheet-style quiz.
+
+* Bright, friendly, rounded visual style with a mascot/illustration-driven feel rather than plain
+  utilitarian icons.
+* Game-like feedback: encouraging animations, optional sound, stars/badges/streaks tied to the
+  Level 1–5 progression — celebrate effort and progress, not only correctness.
+* Large, forgiving touch targets and short, simple wording, since a 6-year-old and a 10-year-old
+  share the same screen.
+* Never boring or homework-like: avoid dense text, long instructions, or a plain
+  input-box-and-submit-button look. A child should want to keep playing.
+* Playful MUST NOT mean stressful or exclusionary: no visible timer/countdown pressure (see
+  \`specs/002-mental-addition-exercise/spec.md\` FR-007), and basic accessibility (contrast,
+  readable type, never a color-only signal for correct/incorrect) still applies.
+
+### Parent/teacher-facing UI (dashboards, profile & account management, reports)
+
+Calm, clean, professional — closer to a typical SaaS dashboard than to the child's play area.
+
+* Neutral palette, clear typography, information presented plainly (mastery %, per-competency
+  breakdown, session history) — parents and teachers need to trust and quickly scan this, not be
+  entertained by it.
+* Same brand identity as the child-facing UI (shared logo/name/core color) so both surfaces are
+  recognizably one product, but restrained rather than playful in execution.
+
+### Scope note
+
+This section fixes the visual *intent*, not a finished design spec. Concrete design tokens
+(palette, type scale, illustration/mascot style, component library) are a UI implementation
+detail, to be defined once Phase 1 UI work starts (see \`docs/architecture/decisions/\`), and each
+feature spec's own "UI/visual design" is out of scope by convention (e.g.
+\`specs/002-mental-addition-exercise/spec.md\`) — this is the philosophy that later design work must
+be consistent with.
+
+---
+
+## Levels
+
+The user-facing progression consists of:
+
+**Level 1 → Level 2 → Level 3 → Level 4 → Level 5**
+
+Level 5 represents the highest target level for the defined primary-school
+mathematics curriculum.
+
+Levels are a user-facing abstraction over the underlying competency/difficulty
+system.
+
+The system should not assume that every child progresses linearly through every
+exercise.
+
+---
+
+## Multilingual architecture
+
+The application should be designed for multilingual use from the beginning.
+
+The initial content is mathematics.
+
+The UI should be internationalized so that languages can be added without
+rewriting the application.
+
+Future subjects may include:
+
+* French
+* Science
+* History
+* Geography
+* Reading
+* Other core subjects
+
+The product must not be architecturally limited to mathematics.
+
+---
+
+## Business model
+
+The core educational experience should remain free.
+
+Possible premium features include:
+
+* cloud synchronization
+* advanced analytics
+* extended history
+* offline capabilities
+* printable worksheets
+* advanced parent controls
+* advanced teacher functionality
+* future AI/OCR features
+
+Advertising may provide an additional revenue source for free users, but the
+product should not depend entirely on advertising.
+
+Multiple children should remain free.
+
+---
+
+## Development strategy
+
+### Phase 1 — Foundation
+
+Build:
+
+* project structure
+* frontend
+* exercise engine
+* competency model
+* first mental-maths exercise
+* scoring
+
+### Phase 2 — Mastery
+
+Build:
+
+* mastery calculation
+* progression
+* levels
+* daily practice
+* progress visualization
+
+### Phase 3 — User experience
+
+Build:
+
+* profiles
+* multiple children
+* local persistence
+* export/import
+* responsive/PWA experience
+
+### Phase 4 — Content
+
+Expand the mathematics exercise library until the defined mathematics curriculum
+is covered.
+
+### Phase 5 — Paper
+
+Add worksheet generation and manual result entry.
+
+### Phase 6 — Teacher sessions
+
+Add simple one-shot classroom sessions.
+
+### Phase 7 — Launch
+
+Release the complete mathematics product.
+
+Only after the mathematics product is working well should additional subjects be
+developed.
+
+---
+
+## What is NOT part of the first MVP
+
+Do not build these unless explicitly added to the roadmap:
+
+* French
+* Science
+* History
+* AI tutor/chatbot
+* free-form AI teaching
+* handwriting OCR
+* automatic worksheet scanning
+* native iOS app
+* native Android app
+* complex school administration
+* social network
+* sophisticated leaderboard
+* user-generated exercise marketplace
+
+---
+
+## Definition of MVP success
+
+The MVP is successful when:
+
+1. A child can start at Level 1.
+2. The child can practice independently.
+3. The system records performance.
+4. The system estimates competency mastery.
+5. The system recommends useful next practice.
+6. The child can progress through Levels 1–5.
+7. The parent can see meaningful progress.
+8. Multiple children can use the same family account.
+9. Progress can be backed up/restored.
+10. The mathematics curriculum defined by the project is substantially covered.
+11. The application works well on phone, tablet and desktop.
+12. Real children use it regularly and demonstrate measurable progress.
+
+---
+
+## Guiding principle
+
+Do not build a giant educational platform before proving the core loop.
+
+The core loop is:
+
+**Exercise → Answer → Feedback → Mastery → Next Exercise**
+
+Make that loop excellent first.
+
+Everything else should support it.
+
+---
+
+## Related documents
+
+* Curriculum detail: \`docs/product/CURRICULUM.md\`
+* Full cross-subject skills framework (long-horizon reference, not MVP scope):
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\`
+* Technical architecture: \`docs/architecture/ARCHITECTURE.md\`
+* Mastery algorithm: \`specs/003-mastery-engine/spec.md\`
+* Exercise plugin contract: \`specs/004-exercise-plugin-engine/spec.md\`
+`,lr=`# Technical Architecture
+
+> Status: stack and architecture for V1 are finalized — see
+> \`docs/architecture/decisions/0007-frontend-framework-react.md\`, \`0004-testing-and-quality-gates.md\`,
+> and \`0006-client-only-architecture.md\`. This document captures the resulting principles; the
+> ADRs are the source of truth for the concrete decisions and their rationale. ADR-0001's
+> Angular choice is superseded by ADR-0007 (React); ADR-0002, 0003, and 0005 explored a
+> C#-backend architecture and are superseded by ADR-0006 — all kept for historical record only.
+
+## Web first
+
+Initial target:
+
+**Responsive PWA**
+
+The same application should work on:
+
+* phone
+* tablet
+* desktop
+
+## Client-only architecture (ADR-0006)
+
+There is no backend in V1. Everything runs in the browser:
+
+* **React app** (\`apps/web\`) — UI, routing, i18n (\`docs/architecture/decisions/0007-frontend-framework-react.md\`).
+* **Independent TypeScript packages** (\`packages/core/*\`, \`packages/exercises/*\`) — competency
+  model, plugin engine, mastery engine, and each exercise plugin, per
+  \`docs/architecture/decisions/0006-client-only-architecture.md\`. These are plain TypeScript with
+  no React (or Angular) dependency, each independently unit-tested (95%+ coverage,
+  \`0004-testing-and-quality-gates.md\`).
+
+\`\`\`text
+GitHub
+   ↓
+React static build (imports packages/core/*, packages/exercises/* directly)
+   ↓
+GitHub Pages
+   ↓
+child's browser (offline-capable — no network dependency for the core loop)
+\`\`\`
+
+An earlier iteration explored a stateless C# backend (see ADR-0002/0003/0005, superseded) — kept
+for reference in case a genuine future need (e.g. server-side aggregation for teacher mode across
+many students/devices) makes revisiting a backend worthwhile. Nothing here rules that out later.
+
+## Local-first
+
+Both progress **storage** and the core practice loop's **computation** happen entirely on-device
+(see \`.specify/memory/constitution.md\` Principle IV). There is no server to reach, so no network
+connectivity is required for the core loop, and there is no permanent server-side storage of any
+kind.
+
+Users should be able to:
+
+* export their progress
+* backup their progress
+* restore/import their progress
+
+Cloud synchronization (server-side storage, as an explicit opt-in premium feature) remains a
+possible later addition, not part of V1.
+
+## Plugin architecture
+
+Exercises must be modular.
+
+Adding an exercise should not require rewriting the core mastery engine.
+
+See \`specs/004-exercise-plugin-engine/spec.md\` for the plugin contract.
+
+## Testability
+
+Question generation, answer validation and mastery calculations must be
+deterministic and heavily tested.
+
+## Privacy & GDPR
+
+The product should minimize personal data.
+
+The system should support:
+
+* child profiles
+* parent accounts
+* multiple children
+* optional username/alias
+* country
+* age/age band where appropriate
+
+Public profiles must never expose unnecessary identifying information.
+
+Any future public comparison/leaderboard system must use aliases or generated
+identifiers rather than children's real names.
+
+The architecture must be designed with GDPR/privacy requirements in mind.
+
+## Open questions / TODO
+
+* [x] Resolved 2026-09-13 (history): the architecture went through two
+      iterations the same day — first a stateless C# backend (ADR-0002/0003/0005),
+      then reverted to fully client-side (ADR-0006) once the added hosting/repo
+      complexity was weighed against the benefit. ADR-0006 is current.
+* [x] Resolved 2026-09-13: stack finalized — TypeScript throughout, everything
+      (competency model, plugin engine, mastery engine, exercises) as
+      independent packages within one workspace, hosted on GitHub Pages only.
+      See \`docs/architecture/decisions/0001-frontend-stack.md\`,
+      \`0004-testing-and-quality-gates.md\`, \`0006-client-only-architecture.md\`.
+* [x] Resolved 2026-09-13: UI framework changed from Angular to React — see
+      \`docs/architecture/decisions/0007-frontend-framework-react.md\`. No code
+      existed against Angular yet, so this was a zero-cost pivot.
+* [ ] Define local storage format/schema for progress data (export/import) —
+      implementation-level choice (e.g. IndexedDB vs. localStorage, JSON
+      export shape), not yet a spec-blocking product decision.
+`,ur=`# ADR-0001: Frontend Stack
+
+## Status
+**Framework choice superseded by ADR-0007 (2026-09-13)** — React replaces Angular as the UI
+framework. Kept below as the historical record of the original reasoning and of the
+non-framework-specific choices (npm, Vitest, Playwright) that ADR-0007 carries forward unchanged.
+
+Originally accepted — 2026-09-13
+
+## Context
+The app needs a responsive PWA (phone/tablet/desktop), internationalized from the start
+(\`docs/product/vision.md\`), built to an enterprise-grade quality bar (typed, heavily tested).
+
+**Updated 2026-09-13 (see ADR-0006)**: there is no backend in V1. This Angular application now
+owns all business logic itself, as independent, pluggable TypeScript packages (competency model,
+plugin engine, mastery engine, exercise plugins) — not just UI rendering. Framework choice below
+was made before that reversal but remains valid: Angular's DI and module system are a good fit for
+composing independent packages cleanly, not just for UI structure.
+
+## Decision
+* **Language/Framework**: Angular + TypeScript. Angular is fully TypeScript-native, ships
+  dependency injection, routing, forms, and an HTTP client as first-party, opinionated tooling —
+  a good fit for an "enterprise-grade" bar with a small team, since less is left to
+  library-shopping/bikeshedding.
+* **Unit testing**: Vitest — the Angular CLI's default unit test runner as of Angular 21 (2026);
+  Karma is deprecated/EOL and Jest support is frozen/experimental
+  ([source](https://qaskills.sh/blog/karma-to-jest-migration-guide),
+  [source](https://javascript.plainenglish.io/angular-unit-testing-in-v20-x-choosing-the-right-test-runner-cafe3f80115e)).
+* **Component testing**: Angular Testing Library (\`@testing-library/angular\`) — behavior-focused
+  component tests over implementation-detail-focused ones.
+* **End-to-end testing**: Playwright — smoke-tests the actual core loop (start a session, answer
+  questions, see a mastery result) against a running build.
+* **Internationalization**: Transloco (runtime locale switching) rather than Angular's built-in
+  \`@angular/localize\` (which requires a separate build per locale). A single static deploy that
+  can switch language at runtime is simpler to host on GitHub Pages than N locale-specific builds.
+* **Package manager**: npm — the default and most friction-free choice for Angular CLI tooling.
+
+## Consequences
+* Per ADR-0006, the frontend workspace now contains both the UI app and the independent
+  business-logic packages (competency model, plugin engine, mastery engine, exercise plugins).
+  Those packages get the 95%+ coverage bar from ADR-0004 (deterministic, pure-function-heavy);
+  the Angular app-shell/UI layer itself keeps the lower, non-blocking target.
+* Runtime locale switching (Transloco) trades a small amount of bundle size/runtime cost for
+  deployment simplicity.
+* Angular's opinionated structure reduces flexibility compared to a minimal framework (e.g.
+  Svelte/SolidJS), in exchange for consistency and a shallower learning curve for future
+  contributors familiar with mainstream enterprise Angular codebases.
+
+## Related
+* ADR-0004 (Testing & Quality Gates)
+* ADR-0006 (Client-Only Architecture for V1)
+`,dr=`# ADR-0002: Backend Stack
+
+## Status
+**Superseded by ADR-0006 (2026-09-13)** — V1 dropped the backend entirely in favor of a fully
+client-side architecture. Kept below as the historical record of why C#/ASP.NET Core was chosen
+at the time; none of it applies to V1 as currently planned.
+
+~~Accepted — 2026-09-13~~
+
+## Context
+Per ADR-0003, the backend owns the competency model, the exercise plugin engine, and the mastery
+calculation as a **stateless** API — it computes given input, it does not store child data. It
+must be enterprise-grade: strongly typed, deterministic where required by the constitution
+(Principle VI), and heavily unit-tested.
+
+## Decision
+* **Language/Framework**: C# on ASP.NET Core (Web API). Chosen directly per product owner
+  preference for an enterprise C# backend.
+* **Statelessness**: no database. Every endpoint is a pure function of its request payload (e.g.
+  a tier + seed, or a child's locally-held answer history) — see ADR-0003 for why.
+* **Unit testing**: xUnit, with FluentAssertions for readable assertions — the standard modern
+  choice for .NET test suites.
+* **Coverage tooling**: coverlet for coverage collection, reportgenerator for CI-readable
+  coverage reports, enforced per the thresholds in ADR-0004.
+* **Determinism**: question generation and mastery calculation MUST be pure functions of their
+  inputs (including any random seed) per Constitution Principle VI — this is directly testable
+  with xUnit given the stateless design.
+* **Packaging**: the API ships as a Docker image (see ADR-0003 for where it runs).
+
+## Consequences
+* All of specs 001 (Competency Model), 003 (Mastery Engine), and 004 (Exercise Plugin Engine) are
+  implemented as C# code inside this API. Their spec.md files describe the contract
+  (language-agnostic); this ADR fixes the concrete implementation language.
+* The exercise plugin engine's "static manifest/registry" (spec 004, FR-007) becomes a C#
+  module/DI registration list — adding a plugin means adding one C# class and one registry entry,
+  no other code changes, preserving spec 004's SC-001.
+* No ORM/database driver dependencies are needed, keeping the backend's dependency surface small
+  — consistent with the "no unnecessary abstraction" quality bar.
+* Because there is no database, there is nothing to migrate/back up on the server side; all
+  durable child data remains local per Constitution Principle IV (as amended — see the
+  constitution's Sync Impact Report for this amendment).
+
+## Related
+* ADR-0001 (Frontend Stack)
+* ADR-0003 (Client/Server Split & Hosting)
+* ADR-0004 (Testing & Quality Gates)
+`,fr=`# ADR-0003: Client/Server Split, Repo Topology & Hosting
+
+## Status
+**Superseded by ADR-0006 (2026-09-13)** — on reflection, a fully modular client-side
+architecture was judged simpler and sufficient for V1; the backend/hosting split below was never
+implemented. Kept as the historical record of the reasoning at the time (notably: the Cloudflare
+Containers pricing finding is still accurate and worth keeping for reference).
+
+~~Accepted — 2026-09-13~~
+
+## Context
+Two things needed resolving together: (1) how much business logic the Angular frontend should
+own versus a new C# backend (product owner preference: keep Angular thin), and (2) how to host
+both for free. These interact because the hosting options for "compute" (an API) and "static
+files" (a PWA) are different products with different constraints.
+
+A literal reading of "host directly on Cloudflare" turned out not to be free: Cloudflare
+Containers require the paid Workers plan (from $5/month) — there is no free tier for running
+Docker containers directly on Cloudflare
+([source](https://lalatenduswain.medium.com/understanding-cloudflare-containers-a-comprehensive-pricing-guide-for-developers-9f7242a2ac20),
+[source](https://northflank.com/blog/top-cloudflare-containers-alternatives)).
+
+## Decision
+
+### Client/server split
+* The Angular frontend is a **thin client**: it renders UI and calls the backend API. It does not
+  implement the competency model, plugin engine, or mastery formula itself.
+* The C# backend (ADR-0002) is **stateless**: it computes (question generation, answer
+  validation, mastery calculation) given whatever input the client sends; it stores nothing about
+  any child.
+* A child's profile and answer/mastery history (specs 003, 006) remain stored **only on the
+  child's device** (browser storage). The client sends the relevant data to the API when it needs
+  a computation (e.g. "generate a question for this tier" or "here's my recent answer history,
+  compute my mastery") and persists whatever comes back, locally.
+* **Consequence accepted explicitly**: the core practice loop now requires network connectivity —
+  question generation and mastery calculation cannot happen fully offline. This is a real change
+  from an implicit "everything runs in the browser" assumption, which is why Constitution
+  Principle IV (Local-First Privacy) has been amended to state it governs data **storage**
+  ownership, not computation locality — see the constitution's Sync Impact Report for this
+  amendment.
+
+### Hosting
+* **Frontend**: static Angular build, hosted on **GitHub Pages** (free, matches the product
+  owner's preference, zero extra accounts).
+* **Backend**: the C# API's Docker image is deployed to **Google Cloud Run**. Cloud Run's
+  always-free monthly quota (2M requests, 360,000 GB-seconds, 180,000 vCPU-seconds) comfortably
+  covers a small family/early-user load, it scales to zero (an idle API costs nothing beyond the
+  free quota), and it natively runs arbitrary Docker containers including .NET — unlike Cloudflare
+  Containers, this is free with no paid plan required.
+  * Cold starts after scale-to-zero are an accepted tradeoff (explicitly confirmed acceptable).
+  * **Render.com** (750 free instance-hours/month) is the fallback if Cloud Run's account setup
+    (Google Cloud billing account, even though usage stays within free quota) is undesirable.
+* **Cloudflare's free plan** (not Containers) MAY optionally front both GitHub Pages and Cloud
+  Run for a unified custom domain, basic WAF, and caching — this is a DNS/proxy layer, not a
+  compute host, and is not required for either service to work.
+
+### Repo topology
+* Two repositories, split by toolchain: \`learncoreskills/app\` (Angular/npm) and a new
+  \`learncoreskills/api\` (C#/dotnet/Docker). Kept separate because the two toolchains have
+  genuinely different CI/build/deploy pipelines (a Node-based GitHub Pages deploy workflow vs. a
+  dotnet-build + Docker-push-to-Cloud-Run workflow); combining them in one repo mostly adds CI
+  complexity without a clear benefit at this scale.
+
+## Consequences
+* An offline mode for the practice loop is no longer possible without future work (e.g. caching
+  a batch of pre-generated questions client-side) — not part of V1, but no longer ruled out
+  structurally either, since the client already persists whatever the API returns.
+* Free-tier cold starts mean the first request after idle may take longer — acceptable per
+  explicit confirmation, but worth surfacing in the UI later (a loading state) rather than as a
+  silent delay.
+* Two repos means two CI pipelines and two deploy targets to maintain, but each stays simpler
+  than a combined one would be.
+
+## Related
+* ADR-0001 (Frontend Stack)
+* ADR-0002 (Backend Stack)
+* ADR-0004 (Testing & Quality Gates)
+* \`.specify/memory/constitution.md\` (Principle IV amendment)
+`,pr=`# ADR-0004: Testing & Quality Gates
+
+## Status
+Accepted — 2026-09-13. **Updated 2026-09-13 following ADR-0006**: the split below now applies to
+packages within the single TypeScript workspace, not to a separate backend repo. The coverage
+philosophy and thresholds are unchanged; only "which repo/language" changed. **Updated 2026-09-13
+following ADR-0007**: the app-shell/UI layer is React, not Angular; the coverage split and
+thresholds are unaffected.
+
+## Context
+The product owner asked for "enterprise-level quality" software. Per ADR-0006, all
+determinism-critical logic (Constitution Principle VI) — competency model, plugin engine, mastery
+formula, exercise plugins — lives in independent TypeScript packages inside the workspace, separate
+from the React app-shell/UI code (ADR-0007) that consumes them.
+
+## Decision
+
+### Coverage gates (enforced in CI, blocks merge on failure)
+* **Core logic packages** (competency model, exercise plugin engine, mastery engine, individual
+  exercise plugins — e.g. \`packages/core/*\`, \`packages/exercises/*\`) — **95%+ line and branch
+  coverage**, hard gate. These are pure, deterministic functions (Principle VI) and are cheap to
+  test exhaustively; there is no excuse for gaps here.
+* **React app-shell/UI code** (\`apps/web\`) — **70%+ coverage**, tracked but not hard-blocking
+  initially. Most of this layer is rendering/wiring rather than business logic; a hard 95% gate
+  here would incentivize low-value tests (e.g. testing that a template renders a string) rather
+  than useful ones.
+
+### CI
+* GitHub Actions, free for this scale of usage, in the single \`learncoreskills/app\` repo.
+* Every PR runs: lint, type-check/build, unit tests with coverage, and the coverage gate above.
+  A failing gate blocks merge (branch protection).
+
+### Linting & formatting
+* ESLint + Prettier across the whole workspace, TypeScript strict mode (\`strict: true\`, no
+  implicit \`any\`) — applies equally to core packages and the React app.
+
+### Determinism testing
+* Every question-generation and mastery-calculation function gets at minimum a same-input →
+  same-output repeat-call test (per specs 003/004's acceptance criteria). Property-based testing
+  (e.g. fast-check) is encouraged for these functions but not mandated for V1.
+
+## Consequences
+* The 95% core-package bar means new exercise plugins (beyond the first) inherit a real, checked
+  quality bar from day one rather than "we'll add tests later."
+* The lower, non-blocking UI bar keeps app iteration fast; it should be revisited upward once the
+  UI stabilizes past V1, not left permanently soft by default.
+* No coverage target is set for end-to-end (Playwright) tests — e2e tests are judged by scenario
+  coverage of the core loop, not a percentage metric.
+* Because core packages and the app now share one repo/toolchain, there is only one CI pipeline to
+  maintain (simpler than the two-repo setup ADR-0003 would have required).
+
+## Related
+* ADR-0001 (Frontend Stack) / ADR-0007 (Frontend Framework — React over Angular)
+* ADR-0006 (Client-Only Architecture for V1)
+* \`.specify/memory/constitution.md\` Principle VI (Determinism & Testability)
+`,mr=`# ADR-0005: Client/Server Responsibility Boundary & API Contract
+
+## Status
+**Superseded by ADR-0006 (2026-09-13)** — there is no server in V1, so this API contract is not
+built. Kept as the historical record of the stateless-regeneration mechanism, which remains a
+useful reference if a server is ever reintroduced later.
+
+~~Accepted — 2026-09-13~~
+
+## Context
+ADR-0003 established that the Angular frontend is a thin client and the C# backend is a
+stateless business-logic API, but didn't pin down *exactly* which piece of data or logic lives on
+which side, or how a genuinely stateless server can validate an answer without remembering what
+question it handed out. This ADR makes that boundary concrete enough to implement against.
+
+## Decision
+
+### The key mechanism: deterministic regeneration instead of server-side session state
+Because \`generateQuestion(tier, seed)\` MUST be deterministic (spec 004, FR-003), the server never
+needs to remember which question it gave out. To validate an answer, the client resends the same
+\`(competencyId, tier, seed)\` it used to generate the question, plus the answer. The server
+regenerates the identical question from that seed and checks the answer against it. No session,
+no server-side cache, no database — genuinely stateless, by construction rather than by
+discipline.
+
+The client generates the \`seed\` (e.g. \`crypto.getRandomValues\`-based), and that same seed doubles
+as the question's \`questionId\` throughout — one value, not two, threaded through generation,
+validation, and the resulting \`MasterySignal\`. This isn't a security boundary against a
+determined adversary (there's no exam integrity to protect), just enough obscurity that a child
+can't trivially read the answer off the network tab.
+
+### Responsibility table
+
+| Concern | Lives on | Notes |
+|---|---|---|
+| Competency definitions (id, tiers, level, name **key**, prerequisites) | **Server** | Authored/owned in C# (spec 001). Client never holds its own copy. |
+| Question generation (operand ranges, carry rules, etc.) | **Server** | Plugin implementation (specs 002/004). Client only knows "tier N of competency X." |
+| Answer validation | **Server** | Via deterministic regeneration, above — no server state. |
+| Mastery formula (per-tier accuracy, per-competency average, threshold) | **Server** | Spec 003's v1 formula; computed on demand from whatever log slice the client sends. |
+| Mastery **signal log** (raw answer history) | **Client** | Persisted in browser storage (IndexedDB), one log per local profile. The server receives a slice of it only as a request payload for a compute call — it is never stored server-side. |
+| Cached/last-known mastery percentages | **Client** | Cached locally after each \`/mastery/compute\` response, so the UI can render without a network round-trip every time; recomputed when new answers are recorded. |
+| Child/profile identity (names, which profile is active) | **Client, entirely** | The server never receives a child id, name, or any identifying data — it is completely profile-agnostic. Multi-profile support (spec 006, V1 slice) is a pure client-side concern: one local-storage namespace per profile. This is a direct consequence of statelessness, not a separate design choice. |
+| In-session UI state (which question # out of 10, in-progress answer) | **Client**, ephemeral | Each answered question is already durably recorded via the signal log as it happens, so losing this UI state on refresh (spec 002's "abandoned session" edge case) loses no mastery-relevant data. |
+| Question generation seed | **Client generates it** | Sent to \`/questions/generate\`, resent to \`/questions/validate\`. See mechanism above. |
+| i18n resolution | **Client** | The server deals only in stable translation **keys** (e.g. \`competency.math.addition.mental.name\`), never resolved UI strings. Transloco (ADR-0001) resolves keys to the active locale entirely client-side, so all translation logic stays in one place. |
+| Printable worksheet generation (spec 007, later) | **Server** | Reuses the same deterministic plugin generation with a batch of seeds — no new generation logic needed when this phase arrives. |
+| PWA app-shell caching | **Client** | The Angular shell itself can still load instantly offline (standard PWA app-shell caching) even though the practice loop's *data* calls require network (ADR-0003's accepted tradeoff). These are two different kinds of "offline" — worth not conflating in UI copy later ("the app opens instantly" vs. "exercises need a connection"). |
+
+### API surface (V1)
+
+\`\`\`text
+GET  /competencies
+     → [{ id, subject, targetLevel, tierCount, nameKey }]   // translatable keys, not resolved text
+
+POST /questions/generate
+     { competencyId, tier, seed }
+     → { questionId, displayPayload }   // e.g. { operandA, operandB } for addition
+     // displayPayload NEVER includes the correct answer.
+
+POST /questions/validate
+     { competencyId, tier, seed, questionId, answer }
+     → { correct: boolean }
+     // questionId === seed; included for clarity/logging, server re-derives everything from seed.
+
+POST /mastery/compute
+     { competencyId, signalLog: MasterySignal[] }
+     → { tierMastery: [{ tier, percentage | "not-started" }], competencyMastery: number }
+\`\`\`
+
+## Consequences
+* The server is provably stateless: every endpoint's output is a pure function of its input. This
+  makes the 95% coverage bar (ADR-0004) straightforward to hit — every business-logic function is
+  trivially unit-testable with fixed inputs.
+* Multi-profile support (spec 006) required zero backend work — it falls out of the client owning
+  all profile/storage concerns. This wasn't obvious until the boundary was made explicit here.
+* Because the seed is client-generated and not cryptographically protected, a technically curious
+  user could inspect network calls to see a question before answering it. Explicitly accepted:
+  this product has no exam-integrity requirement to defend against.
+* \`displayPayload\`'s shape is plugin-specific and opaque to the engine (per spec 004's Key
+  Entities) — the frontend needs a small per-plugin rendering adapter, not a generic renderer.
+  For V1 (one plugin), this is a single component; a registry of renderers is a problem for when
+  a second plugin exists, not now.
+
+## Related
+* ADR-0002 (Backend Stack)
+* ADR-0003 (Client/Server Split & Hosting)
+* \`specs/001-competency-model/spec.md\`, \`specs/002-mental-addition-exercise/spec.md\`,
+  \`specs/003-mastery-engine/spec.md\`, \`specs/004-exercise-plugin-engine/spec.md\`
+`,hr=`# ADR-0006: Client-Only Architecture for V1
+
+## Status
+Accepted — 2026-09-13. Supersedes ADR-0002 (Backend Stack), ADR-0003 (Client/Server Split &
+Hosting), and ADR-0005 (Client/Server Responsibility Boundary & API Contract).
+
+## Context
+ADR-0002/0003/0005 designed a stateless C# backend, on the reasoning that the Angular frontend
+should stay thin and business logic should live server-side. On reflection, the product owner
+judged that a fully modular client-side architecture — independent, pluggable TypeScript packages
+— would be simpler and sufficient for V1, as long as each module stays independent (satisfying
+Constitution Principle V, Plugin Architecture, regardless of which side of a network boundary the
+modules run on).
+
+This is a deliberate reversal, not a drift: the C#-backend ADRs are kept (marked Superseded) as
+the historical record of that reasoning, in case a genuine future need (e.g. a teacher-mode
+feature that must aggregate data across many students/devices server-side) makes revisiting a
+backend worthwhile. Nothing here rules that out later — it just isn't part of V1.
+
+## Decision
+
+### Everything runs client-side
+Competency model (spec 001), exercise plugin engine (spec 004), mastery engine (spec 003), and
+the mental-addition exercise (spec 002) are all implemented as independent TypeScript packages
+that run in the browser, inside the React app (ADR-0007, formerly Angular per ADR-0001). There is
+no network boundary between
+"UI" and "business logic" — Constitution Principle VI's determinism/testability requirement is
+enforced by unit tests (Vitest, ADR-0004's 95% gate), not by a client/server split.
+
+### Package layout (single \`learncoreskills/app\` repo, npm workspace)
+\`\`\`text
+apps/
+  web/                        React application (UI, routing, i18n, calls into core packages directly)
+packages/
+  core/competency-model/      Spec 001 — competency definitions, tiers, prerequisites
+  core/plugin-engine/         Spec 004 — plugin interface + static registry
+  core/mastery-engine/        Spec 003 — v1 mastery formula
+  exercises/mental-addition/  Spec 002 — the first plugin, implementing core/plugin-engine's interface
+\`\`\`
+Each \`packages/*\` module is independently unit-testable and has no dependency on React (or
+Angular) itself — they are plain TypeScript, importable by the React app (or, later, by a
+Node-based worksheet
+generator for spec 007, or a future backend, without rewriting them). This is what "modular" means
+concretely here: independence is enforced by these being separate packages with their own
+\`package.json\`/test suite, not just separate folders.
+
+### What moves from "server" to "client" relative to ADR-0005's table
+* **Competency definitions, question generation, answer validation, mastery formula**: now
+  in-browser (TypeScript) instead of a C# API. Determinism (spec 004 FR-003) is still required and
+  still tested the same way — just via Vitest instead of xUnit.
+  Answer validation no longer needs the seed-regeneration trick from ADR-0005 — that trick existed
+  specifically to let a *stateless server* validate without remembering the question; an in-process
+  client function can just hold the question and its correct answer in memory directly, no
+  smuggling and no seed round-trip needed. Determinism is still required (same seed/tier →
+  same question) for testability, not for this concern.
+* **Mastery signal log, cached mastery, profile/child identity**: unchanged from ADR-0005 — these
+  were already client-side and stay that way.
+* **i18n**: unchanged in approach — react-i18next (ADR-0007; was Transloco under ADR-0001) resolves
+  translation keys client-side; competency name keys are
+  just imported from \`core/competency-model\` directly rather than fetched over HTTP.
+
+### Hosting
+Only GitHub Pages is needed — a static React build, nothing else. No Cloud Run, no Docker, no
+second repo, no Cloudflare consideration required (though it remains an option later for a custom
+domain/CDN in front of GitHub Pages, per the original ARCHITECTURE.md diagram).
+
+## Consequences
+* **Offline works again.** The practice loop no longer requires network connectivity — the
+  tradeoff explicitly accepted in ADR-0003 is gone. This restores the constitution's Local-First
+  Privacy principle (IV) to its more natural reading (see the constitution amendment accompanying
+  this ADR).
+* **One language, one repo, one CI pipeline.** No \`learncoreskills/api\` repo is needed;
+  \`docs/architecture/decisions/0003-client-server-split-and-hosting.md\`'s repo-topology decision
+  does not apply.
+* **No cold starts, no hosting cost/complexity, no Google Cloud account needed.**
+* If a genuine future need for server-side logic arises (cross-device teacher-mode aggregation,
+  premium cloud sync storage), it can be introduced then as a new ADR — the core packages'
+  plain-TypeScript, framework-agnostic design (no Angular or React dependency) means they could in
+  principle be reused in a future Node-based backend without a rewrite, even though none is
+  planned now.
+* The enterprise "Angular + C#" pairing originally requested is dropped for V1 (and Angular itself
+  was later replaced by React per ADR-0007). "Enterprise-grade
+  quality" is still delivered via the same rigor (strict typing, 95% coverage on core packages,
+  deterministic testing, CI-enforced gates) — just in one language rather than two.
+
+## Related
+* ADR-0001 (Frontend Stack) / ADR-0007 (Frontend Framework — React over Angular) — updated to
+  reflect this
+* ADR-0004 (Testing & Quality Gates) — updated to reflect this
+* ADR-0002, ADR-0003, ADR-0005 — superseded, kept as historical record
+* \`.specify/memory/constitution.md\` Principle IV (Local-First Privacy) — amendment accompanying
+  this ADR
+`,gr=`# ADR-0007: Frontend Framework — React over Angular
+
+## Status
+Accepted — 2026-09-13. Supersedes the framework choice in ADR-0001 (Frontend Stack).
+
+## Context
+ADR-0001 chose Angular for its batteries-included, opinionated tooling (DI, router, forms, HTTP
+client, CLI, test runner as first-party defaults) — a good fit, it reasoned, for a small team
+targeting an "enterprise-grade" bar with minimal library-shopping. Part of that reasoning was that
+Angular's DI/module system would help compose the plugin architecture (competency model, plugin
+engine, mastery engine, exercise plugins) cleanly.
+
+ADR-0006 (Client-Only Architecture) subsequently made those packages plain, framework-agnostic
+TypeScript with no Angular dependency — their independence is enforced by being separate npm
+packages with their own tests, not by Angular's DI or module system. That removes ADR-0001's
+strongest Angular-specific argument; the framework now only governs the UI shell (\`apps/web\`), not
+the modular business logic.
+
+Weighed against that, the product is a child-facing, exercise/game-first UI — per-exercise custom
+widgets, drag-and-drop, animated feedback — where React's larger component/animation ecosystem
+(e.g. Framer Motion, react-dnd) and broader hiring pool are a more direct fit than Angular's more
+structured, enterprise-CRUD-oriented conventions. The product owner judged this outweighs the
+"fewer decisions for a small team" argument that originally favored Angular.
+
+## Decision
+* **Language/Framework**: React + TypeScript, scaffolded with Vite (not Create React App, which is
+  deprecated).
+* **Routing**: React Router.
+* **Internationalization**: react-i18next (runtime locale switching) — replaces Transloco, same
+  rationale as ADR-0001: a single static deploy that switches language at runtime, rather than a
+  separate build per locale, stays simplest to host on GitHub Pages.
+* **Unit testing**: Vitest — unchanged from ADR-0001; framework-independent and works the same way
+  via Vite with React.
+* **Component testing**: React Testing Library (\`@testing-library/react\`) — replaces Angular
+  Testing Library, same behavior-over-implementation-detail philosophy.
+* **End-to-end testing**: Playwright — unchanged from ADR-0001.
+* **Package manager**: npm — unchanged from ADR-0001.
+* **State management**: no global state library adopted upfront. Component-local state plus the
+  framework-agnostic core packages (which already hold the real business state/logic per ADR-0006)
+  are expected to cover V1; revisit only if prop-drilling or cross-cutting UI state becomes an
+  actual problem.
+
+## Consequences
+* \`apps/web\` (per ADR-0006's package layout) is now a React app instead of an Angular app. The
+  core packages (\`packages/core/*\`, \`packages/exercises/*\`) are unaffected — they were already
+  framework-agnostic.
+* Angular Testing Library and Transloco are dropped in favor of React Testing Library and
+  react-i18next; Vitest and Playwright carry over unchanged, so ADR-0004's coverage gates and CI
+  shape are unaffected.
+* React's less-opinionated nature means routing/forms/state-management choices that Angular would
+  have bundled must now be made explicitly. Accepted as a reasonable tradeoff for the UI
+  flexibility this product's exercise-heavy, kid-facing interface needs (see Context).
+* No code had been written against Angular at the time of this decision — \`apps/web\` did not yet
+  exist — so this is a zero-cost pivot: a documentation/spec change only, not a rewrite.
+
+## Related
+* Supersedes the framework portion of ADR-0001 (Frontend Stack); ADR-0001's non-framework-specific
+  choices (npm, Vitest, Playwright) are restated here unchanged.
+* ADR-0004 (Testing & Quality Gates) — package/tooling references updated (Angular → React);
+  thresholds unchanged.
+* ADR-0006 (Client-Only Architecture for V1) — package layout unaffected; \`apps/web\`'s framework
+  updated.
+`,_r=Object.assign({"../../../../../specs/docs/product/CURRICULUM.md":or,"../../../../../specs/docs/product/PRIMARY-SKILLS-FRAMEWORK.md":sr,"../../../../../specs/docs/product/vision.md":cr}),vr=Object.assign({"../../../../../specs/docs/architecture/ARCHITECTURE.md":lr}),yr=Object.assign({"../../../../../specs/docs/architecture/decisions/0001-frontend-stack.md":ur,"../../../../../specs/docs/architecture/decisions/0002-backend-stack.md":dr,"../../../../../specs/docs/architecture/decisions/0003-client-server-split-and-hosting.md":fr,"../../../../../specs/docs/architecture/decisions/0004-testing-and-quality-gates.md":pr,"../../../../../specs/docs/architecture/decisions/0005-client-server-responsibility-boundary.md":mr,"../../../../../specs/docs/architecture/decisions/0006-client-only-architecture.md":hr,"../../../../../specs/docs/architecture/decisions/0007-frontend-framework-react.md":gr});function br(e,t){return`${t}-${(e.split(`/`).pop()??e).replace(/\.md$/,``).toLowerCase()}`}function xr(e,t){return Object.entries(e).map(([e,n])=>{let r=br(e,t);return{id:r,title:rr(n,r),category:t,content:n}})}function Sr(){return[...xr(_r,`product`),...xr(vr,`architecture`),...xr(yr,`architecture`)]}var Cr=`# Feature Specification: Competency Model
+
+**Feature Branch**: \`001-competency-model\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft
+
+**Input**: User description: "Define the core data model representing a 'competency' — the atomic unit of knowledge/skill that the mastery system tracks per child. This underlies every other system (exercises, mastery, levels, curriculum)."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Stable target for mastery tracking (Priority: P1)
+
+As the mastery engine, I need a stable competency identifier and a shared difficulty-tier scale
+to record and query a child's progress against, so mastery percentages are comparable and
+consistent over time and across the exercise plugins that train the same competency.
+
+**Why this priority**: Nothing else in the system (exercise plugins, mastery engine, daily
+practice, curriculum content) can be built until competencies exist as an addressable, stable
+concept. This is the foundation the whole build order depends on.
+
+**Independent Test**: Can be fully tested by defining a handful of competencies with mock tiers,
+recording mock mastery signals against them, and confirming the records reference a competency +
+tier pair unambiguously with no collisions.
+
+**Acceptance Scenarios**:
+
+1. **Given** a competency \`math.addition.mental\` with 5 tiers, **When** a mastery signal is
+   recorded against tier 3, **Then** it is stored against that exact competency+tier pair.
+2. **Given** a competency with prerequisite competencies listed, **When** the recommendation
+   logic reads it, **Then** it can use those prerequisites as a hint without being blocked from
+   letting a child attempt the competency directly.
+
+---
+
+### User Story 2 - Subject- and language-agnostic authoring (Priority: P2)
+
+As a curriculum author, I need to express a competency in a subject-agnostic, multilingual way,
+so new subjects and languages can be added later without redesigning the model.
+
+**Why this priority**: The product's long-term goal spans multiple subjects and languages; this
+must be true from the first competency defined, or the model will need a breaking redesign later.
+
+**Independent Test**: Can be tested by adding a competency for a hypothetical second subject
+(e.g. "science") and a second language, and confirming no change to the model/schema is needed.
+
+**Acceptance Scenarios**:
+
+1. **Given** the competency model, **When** a new subject is introduced, **Then** no changes to
+   the competency schema are required.
+2. **Given** a competency's display name, **When** the UI locale changes, **Then** the name is
+   resolved via translated content rather than being hardcoded to the identifier.
+
+---
+
+### Edge Cases
+
+- What happens when two competencies list each other as mutual/circular prerequisites? The model
+  must allow this to be detected and rejected at content-authoring time, not silently accepted.
+- How does the system handle a competency with only 1 tier versus the typical 5? The model must
+  not assume every competency has the same tier count.
+- What happens if a competency has zero prerequisites? This is the normal case for foundational
+  competencies (e.g. single-digit number sense) and must not require a placeholder value.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST assign every competency a unique, permanent, human-readable identifier
+  (slug, e.g. \`math.addition.mental\`) that is never reused for a different meaning once assigned.
+- **FR-002**: System MUST store a competency's human-readable name/description as translatable
+  content, never as a hardcoded string baked into the identifier or data model.
+- **FR-003**: System MUST associate every competency with exactly one subject (e.g.
+  "mathematics").
+- **FR-004**: System MUST associate every competency with a target Level (1–5).
+- **FR-005**: System MUST allow a competency to declare zero or more prerequisite competencies.
+  Prerequisites are a soft recommendation signal only (consumed by
+  \`specs/005-daily-practice/spec.md\`) and MUST NEVER hard-block a child from attempting a
+  competency directly.
+- **FR-006**: System MUST represent a competency's difficulty as a small, fixed integer tier
+  scale (1..N, typically N=5), owned by the competency itself. Exercise plugins map their own
+  question-generation logic onto this shared scale rather than inventing their own (see
+  \`specs/004-exercise-plugin-engine/spec.md\`).
+- **FR-007**: System MUST support competencies forming a tree/graph without assuming linear
+  progression — a child MAY work on multiple competencies in parallel.
+- **FR-008**: System MUST NOT be structurally limited to the mathematics subject.
+
+### Key Entities
+
+- **Competency**: unique id (permanent slug), translatable name/description, subject reference,
+  target Level (1–5), tier count (1..N), zero or more prerequisite competency ids.
+- **Subject**: id, translatable name — the grouping a competency belongs to (mathematics is the
+  first and only subject built).
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A new competency can be added to the curriculum content without any code change to
+  the mastery engine or exercise plugin engine.
+- **SC-002**: Every competency in the mathematics curriculum defined so far can be expressed using
+  this model with no schema change.
+- **SC-003**: Prerequisite data can be read by recommendation logic with zero observed cases of it
+  blocking direct access to a competency.
+
+## Assumptions
+
+- Competency ID stability across curriculum versions or national curricula is not a real
+  constraint yet — only one subject and one curriculum currently exist. Revisit ID
+  versioning only if/when a second curriculum or national variant is introduced.
+- Prerequisites are informational/recommendation input only; see Constitution Principle III
+  (Progressive, Non-Linear Difficulty) in \`.specify/memory/constitution.md\`.
+
+## Execution Architecture
+
+This spec defines the model contract, independent of implementation language. Per
+\`docs/architecture/decisions/0006-client-only-architecture.md\`, it is implemented as an
+independent TypeScript package (\`packages/core/competency-model\`) imported directly by the
+React app — no network call, no separate backend. Competency names/descriptions are exposed as
+translation keys, resolved client-side by react-i18next (ADR-0007).
+
+## Out of Scope
+
+- The actual mathematics competency tree content (tracked in \`docs/product/CURRICULUM.md\`).
+- Mastery calculation logic (see \`specs/003-mastery-engine/spec.md\`).
+
+## Related
+
+- \`docs/product/CURRICULUM.md\`
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/004-exercise-plugin-engine/spec.md\`
+`,wr=`# Feature Specification: Mental Addition Exercise (First Exercise Plugin)
+
+**Feature Branch**: \`002-mental-addition-exercise\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft
+
+**Input**: User description: "The first concrete exercise/game, used to validate the exercise plugin architecture end-to-end (question generation → answer → validation → scoring → mastery signal)."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Practice mental addition and see immediate feedback (Priority: P1)
+
+As a child, I want to answer a short set of addition questions at a difficulty that matches what
+I'm working on, and know right away whether I got each one right, so I can practice and improve.
+
+**Why this priority**: This is the first end-to-end proof of the core loop
+(Exercise → Answer → Feedback → Mastery → Next Exercise). Nothing else in Phase 1 can be
+validated until this works.
+
+**Independent Test**: Can be fully tested by running a 10-question session at a fixed tier and
+observing correct/incorrect feedback after each answer, with no dependency on other exercises.
+
+**Acceptance Scenarios**:
+
+1. **Given** a session at Tier 1 (single-digit, no carrying), **When** the child answers a
+   question correctly, **Then** the system shows immediate positive feedback and advances to the
+   next question.
+2. **Given** a session at any tier, **When** the child answers incorrectly, **Then** the system
+   reveals the correct answer and advances — the child does not get a second attempt at the same
+   question.
+3. **Given** a completed 10-question session, **When** the last question is answered, **Then** the
+   session ends and its results are available to the mastery engine.
+
+---
+
+### User Story 2 - Progress through addition difficulty tiers (Priority: P2)
+
+As a child, I want to be given questions at a tier that matches my current level, so the exercise
+is neither too easy nor too hard.
+
+**Why this priority**: Progressive difficulty (Constitution Principle III) is core to the product,
+but is secondary to first proving the single-tier loop works (User Story 1).
+
+**Independent Test**: Can be tested by requesting question generation at each of the 5 tiers and
+confirming generated questions match that tier's definition (digit count / carrying rule).
+
+**Acceptance Scenarios**:
+
+1. **Given** Tier 2 is requested, **When** a question is generated, **Then** it is a single-digit
+   + single-digit addition that requires carrying (e.g. 7+8).
+2. **Given** Tier 5 is requested, **When** a question is generated, **Then** it is a three-digit +
+   two/three-digit addition that requires carrying.
+
+---
+
+### Edge Cases
+
+- What happens if a session is abandoned partway through (fewer than 10 answers)? The signals
+  already recorded for answered questions must still be usable by the mastery engine; there is no
+  requirement to force session completion.
+- What happens when a generated question would have a duplicate within the same session? Not
+  explicitly restricted — repetition within a 10-question session is acceptable for MVP.
+- What happens at the tier boundary (e.g. a sum of exactly 10 at Tier 1, which by definition
+  requires carrying)? Tier 1 generation must only ever produce sums ≤ 9, so this case cannot occur
+  by construction, not by runtime filtering.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST train the \`math.addition.mental\` competency using 5 difficulty tiers:
+
+  | Tier | Definition | Example |
+  |---|---|---|
+  | 1 | single-digit + single-digit, no carrying | 2+3 |
+  | 2 | single-digit + single-digit, with carrying | 7+8 |
+  | 3 | two-digit + one-digit, no carrying | 42+5 |
+  | 4 | two-digit + two-digit, with carrying | 48+37 |
+  | 5 | three-digit + two/three-digit, with carrying | 486+257 |
+
+- **FR-002**: System MUST generate addition questions appropriate to a given tier, per the
+  definitions in FR-001.
+- **FR-003**: A session MUST consist of a fixed set of 10 questions, all generated at one tier
+  (the tier currently recommended for that child).
+- **FR-004**: System MUST accept a numeric answer per question.
+- **FR-005**: System MUST validate each answer deterministically.
+- **FR-006**: System MUST allow exactly one attempt per question: show correct/incorrect feedback
+  immediately, reveal the correct answer if wrong, then auto-advance to the next question.
+- **FR-007**: System MUST record time-to-answer per question silently (no visible countdown or
+  timer shown to the child), to avoid adding pressure for young children while still collecting
+  speed data for future use.
+- **FR-008**: System MUST emit one mastery signal per answered question, per the shared contract
+  in \`specs/004-exercise-plugin-engine/spec.md\`:
+  \`{ competencyId: "math.addition.mental", tier, correct, timeMs, timestamp, questionId }\`.
+- **FR-009**: Speed data captured in FR-007 MUST NOT affect the v1 mastery formula (see
+  \`specs/003-mastery-engine/spec.md\`) but MUST be captured so a future formula can use it without
+  a data migration.
+- **FR-010**: This plugin MUST conform to the general exercise plugin contract in
+  \`specs/004-exercise-plugin-engine/spec.md\` without redefining it.
+
+### Key Entities
+
+- **AdditionQuestion**: tier (1–5), operandA, operandB, correctSum, questionId.
+- **AdditionSession**: 10 \`AdditionQuestion\` instances at one tier, plus the per-question
+  mastery signals emitted as each is answered.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A child can complete a 10-question session of mental addition at a given tier and
+  see immediate per-question feedback for all 10 questions.
+- **SC-002**: 100% of answered questions in a session produce a mastery signal consumed
+  successfully by the mastery engine (per \`specs/003-mastery-engine/spec.md\`'s v1 formula).
+- **SC-003**: Generated questions for a given tier match that tier's digit-count/carrying
+  definition in FR-001 with zero exceptions observed in testing.
+
+## Assumptions
+
+- 10 questions per session and single-attempt-then-reveal feedback are the agreed MVP defaults;
+  session length may be revisited once real usage data exists.
+- Untimed (silently recorded) sessions are the agreed MVP default; a visible timer/countdown is
+  deferred, not ruled out for later tiers focused on fluency.
+
+## Execution Architecture
+
+Per \`docs/architecture/decisions/0006-client-only-architecture.md\`, question generation and
+answer validation (FR-002, FR-005) run in-browser as \`packages/exercises/mental-addition\`,
+implementing the plugin interface from \`specs/004-exercise-plugin-engine/spec.md\`. There is no
+network call for any of this — the React app calls the package's functions directly and
+assembles/stores the resulting mastery signal (FR-008) locally.
+
+## Out of Scope
+
+- UI/visual design of the exercise screen — see \`docs/product/vision.md\` ("Look & feel") for the
+  target design intent (playful, game-like, grade 1–5 appropriate) once this is scoped.
+- Other operations (subtraction, multiplication, etc.) — separate specs once this one is proven.
+
+## Related
+
+- \`specs/001-competency-model/spec.md\`
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/004-exercise-plugin-engine/spec.md\`
+`,Tr=`# Feature Specification: Mastery Engine
+
+**Feature Branch**: \`003-mastery-engine\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft
+
+**Input**: User description: "Defines how the system estimates whether a child has mastered a competency, producing the per-competency mastery percentages shown to parents/children."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - See a trustworthy mastery percentage (Priority: P1)
+
+As a parent or child, I want to see a mastery percentage per competency that reflects sustained
+performance rather than a lucky streak, so I can trust it as a real measure of progress.
+
+**Why this priority**: Per Constitution Principle II (Mastery Over Completion), this is the
+signal the entire product's value proposition depends on. Without it, "100% mastery" is
+meaningless.
+
+**Independent Test**: Can be fully tested by feeding a synthetic sequence of mastery signals for
+one competency into the formula and asserting the resulting percentage matches the expected
+calculation.
+
+**Acceptance Scenarios**:
+
+1. **Given** fewer than 5 recorded attempts at a tier, **When** mastery is computed, **Then** that
+   tier reports "not started" rather than a numeric percentage.
+2. **Given** 10 attempts at a tier with 9 correct, **When** mastery is computed, **Then** that
+   tier reports 90% and is flagged as "mastered" (per the ≥90% threshold).
+3. **Given** a competency with 5 tiers where only 2 have been attempted, **When** overall
+   competency mastery is computed, **Then** the 3 unattempted tiers count as 0%, not as excluded
+   from the average.
+
+---
+
+### User Story 2 - Prioritize weaknesses for practice (Priority: P2)
+
+As the daily-practice feature, I need to identify which competencies have the lowest mastery, so
+I can recommend what a child should practice next.
+
+**Why this priority**: Feeds \`specs/005-daily-practice/spec.md\`; secondary to first having a
+mastery number to prioritize by (User Story 1).
+
+**Independent Test**: Can be tested by computing mastery for several mock competencies and
+confirming the lowest-mastery ones are correctly identifiable by sorting.
+
+**Acceptance Scenarios**:
+
+1. **Given** mastery percentages for multiple competencies, **When** the weakest are requested,
+   **Then** they are returned ordered from lowest to highest mastery.
+
+---
+
+### Edge Cases
+
+- What happens when a child has zero recorded attempts for a competency at all? Every tier reports
+  "not started" and overall competency mastery is 0%, not undefined/null.
+- What happens when more than 10 attempts exist at a tier? Only the most recent 10 are used in the
+  v1 formula — older attempts do not keep influencing the number forever.
+- What happens if the mastery calculation is run twice on the same signal log? It MUST return the
+  same result both times (determinism, per Constitution Principle VI).
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST maintain a mastery value (0–100%) per competency per child.
+- **FR-002**: Mastery MUST reflect sustained, reliable performance — not a single correct streak
+  or one-time pass.
+- **FR-003**: System MUST be able to rank a child's competencies by mastery to surface weaknesses,
+  consumed by \`specs/005-daily-practice/spec.md\`.
+- **FR-004**: Mastery calculation inputs MUST come from the append-only mastery-signal log defined
+  in \`specs/004-exercise-plugin-engine/spec.md\`
+  (\`{ competencyId, tier, correct, timeMs, timestamp, questionId }\`), never from a mutable
+  aggregate that can't be recomputed from history.
+- **FR-005**: Mastery calculation MUST be deterministic and covered by tests, per the
+  Determinism & Testability principle.
+- **FR-006**: System MUST expose mastery data in a shape suitable for a radar/spider-chart
+  visualization (one value per competency); the chart itself is a UI concern, not part of this
+  spec.
+- **FR-007** *(v1 formula — explicit placeholder, see Assumptions)*: Per tier, mastery MUST be
+  computed as accuracy over the last \`min(10, attempts)\` answers at that tier, with fewer than 5
+  attempts reporting "not started" rather than a percentage.
+- **FR-008** *(v1 formula)*: Per competency, mastery MUST be the average of its per-tier
+  percentages from FR-007, treating an unattempted tier as 0% — so reaching 100% requires
+  mastering every tier, not just the easiest one.
+- **FR-009** *(v1 formula)*: A tier MUST be considered "mastered" at ≥90% accuracy over its last
+  10 attempts.
+- **FR-010** *(v1 formula)*: The v1 formula MUST NOT apply any decay/forgetting to a stored
+  percentage over time — it only changes in response to new attempts.
+
+### Key Entities
+
+- **MasterySignal**: as defined in \`specs/004-exercise-plugin-engine/spec.md\` — the only input to
+  this engine.
+- **TierMastery**: competencyId, tier, percentage or "not started", attempt count considered.
+- **CompetencyMastery**: competencyId, overall percentage (average of its TierMastery values).
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: Given the same signal log, the mastery calculation returns identical results on
+  every run (100% reproducibility in tests).
+- **SC-002**: A child's weakest competencies can be correctly ranked and retrieved for the daily
+  practice feature.
+- **SC-003**: Mastery for a competency reaches 100% only when every one of its tiers independently
+  meets the ≥90%-over-last-10 threshold.
+
+## Assumptions
+
+- **v1 formula is an explicit placeholder.** The real algorithm — including any decay/forgetting
+  model, the rigor of required sample size, and speed/consistency weighting — is deferred until
+  real Phase 1 exercise data exists to validate against. FR-007 through FR-010 exist so the
+  product's core loop and mastery visualization are demonstrably working in Phase 1, and are
+  expected to be replaced without any change to the underlying signal log (FR-004) or its
+  consumers.
+- Speed and consistency are captured in the signal log now specifically so the real algorithm can
+  use them later without a data migration.
+
+## Execution Architecture
+
+Per \`docs/architecture/decisions/0006-client-only-architecture.md\`, this calculation runs
+in-browser as \`packages/core/mastery-engine\`, called directly by the React app — no network
+round-trip. FR-004's "append-only log" lives entirely on the child's device (browser storage);
+there is no server to send it to. This is also why multi-profile support (spec 006) requires no
+special handling here beyond storing each profile's log under its own local namespace — there was
+never a "server" concept of a child to worry about.
+
+## Related
+
+- \`specs/001-competency-model/spec.md\`
+- \`specs/004-exercise-plugin-engine/spec.md\`
+- \`specs/005-daily-practice/spec.md\`
+`,Er=`# Feature Specification: Exercise Plugin Engine
+
+**Feature Branch**: \`004-exercise-plugin-engine\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft
+
+**Input**: User description: "Define the contract that every exercise/game must implement, so new exercises can be added without modifying the core application or mastery engine."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Add a new exercise without touching core code (Priority: P1)
+
+As a developer, I need to add a new exercise plugin by writing one self-contained module and
+registering it, so I never have to modify the core engine, the mastery engine, or any other
+plugin to ship a new exercise.
+
+**Why this priority**: This is the entire point of the plugin architecture (Constitution
+Principle V). Without it, every new exercise (subtraction, multiplication, fractions, ...) would
+require touching shared code, which does not scale to a full curriculum.
+
+**Independent Test**: Can be fully tested by implementing a trivial second plugin (e.g. a
+no-op/echo exercise) and confirming it registers and runs end-to-end with zero changes to
+engine/mastery/UI source files.
+
+**Acceptance Scenarios**:
+
+1. **Given** a new plugin module implementing the plugin interface, **When** it is added to the
+   plugin registry, **Then** it becomes available to the app with no other code changes.
+2. **Given** two plugins training the same competency at different tiers, **When** either emits a
+   mastery signal, **Then** the signal has an identical shape regardless of which plugin produced
+   it.
+
+---
+
+### User Story 2 - Deterministic, testable question generation (Priority: P2)
+
+As a developer, I need question generation and answer validation to be deterministic given a
+seed/state, so plugin behavior can be unit-tested reliably.
+
+**Why this priority**: Per Constitution Principle VI (Determinism & Testability), scoring logic
+is trust-critical and must be reproducible — this cannot be retrofitted cheaply once plugins ship.
+
+**Independent Test**: Can be tested by calling a plugin's question generator twice with the same
+seed/tier and asserting identical output.
+
+**Acceptance Scenarios**:
+
+1. **Given** a fixed seed and tier, **When** \`generateQuestion\` is called twice, **Then** it
+   returns the same question both times.
+2. **Given** a question and a candidate answer, **When** \`validateAnswer\` is called, **Then** it
+   returns the same correctness result every time for the same inputs.
+
+---
+
+### Edge Cases
+
+- What happens when a plugin is registered twice (duplicate id) in the manifest? Registration
+  must fail loudly (e.g. a startup error), not silently keep one and drop the other.
+- What happens when a plugin is asked to generate a question for a tier its competency doesn't
+  define? Must be rejected rather than silently clamped to a nearby tier.
+- What happens when a plugin declares a competency id that doesn't exist in the competency model?
+  Must fail validation rather than emit orphaned mastery signals.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST let a plugin declare the competency/competencies it trains, referencing
+  \`specs/001-competency-model/spec.md\`.
+- **FR-002**: System MUST require a plugin's difficulty levels to be expressed in terms of the
+  trained competency's own integer tier scale (1..N) — a plugin MUST NOT invent its own tier
+  scale.
+- **FR-003**: System MUST require every plugin to implement deterministic question generation
+  (same seed/tier → same question) and deterministic answer validation.
+- **FR-004**: System MUST require every plugin to implement scoring and, where appropriate,
+  timing capture.
+- **FR-005**: System MUST require every plugin to emit mastery signals in a single shared shape,
+  consumed identically by \`specs/003-mastery-engine/spec.md\` regardless of which plugin produced
+  them:
+  \`{ competencyId, tier (1..N), correct: boolean, timeMs: number, timestamp, questionId }\`.
+- **FR-006**: System MUST allow a plugin to optionally expose a printable question format (feeds
+  \`specs/007-printable-worksheets/spec.md\`) without requiring it.
+- **FR-007**: System MUST support registering a new plugin via a single static manifest/registry
+  (one TypeScript module + one registry entry, per
+  \`docs/architecture/decisions/0006-client-only-architecture.md\`) with no changes to engine,
+  mastery, or UI code.
+- **FR-008**: System MUST provide one stable plugin interface that every plugin implements
+  identically:
+
+  \`\`\`text
+  Plugin {
+    id: string
+    competencyIds: string[]
+    generateQuestion(tier: 1..N, seed) -> Question   // deterministic given seed
+    validateAnswer(question, answer) -> { correct: boolean }
+    toPrintable(question) -> PrintableQuestion        // optional
+  }
+  \`\`\`
+
+  Per \`docs/architecture/decisions/0006-client-only-architecture.md\`, this is implemented as a
+  plain TypeScript interface inside \`packages/core/plugin-engine\`, called directly (in-process) by
+  the React app — there is no network boundary between the engine and its caller, so
+  \`validateAnswer\` can simply compare against the \`Question\`'s own correct-answer field rather
+  than needing any answer-hiding or session mechanism. Determinism (same seed/tier → same
+  question) is still required, purely for testability (Constitution Principle VI), not to protect
+  a network response.
+
+### Key Entities
+
+- **Plugin**: id, competencyIds[], question generator, answer validator, optional printable
+  formatter.
+- **Question**: plugin-defined shape, opaque to the engine/mastery layer beyond its id.
+- **MasterySignal**: \`{ competencyId, tier, correct, timeMs, timestamp, questionId }\` — the one
+  shape every plugin emits, defined in FR-005.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: Adding a second exercise plugin requires zero changes to files outside the new
+  plugin's own module and the registry entry for it.
+- **SC-002**: 100% of mastery signals observed across all plugins conform to the single shared
+  shape in FR-005.
+- **SC-003**: Every plugin's question generation and answer validation pass deterministic
+  repeat-call tests (same input → same output) in the test suite.
+
+## Assumptions
+
+- A static manifest/registry file is sufficient for the number of plugins expected in MVP;
+  directory-convention auto-discovery or runtime \`registerPlugin()\` calls are not needed unless
+  the number of plugins later makes the manifest unwieldy.
+- The mastery *algorithm* that consumes the signal log (as opposed to the signal shape itself) is
+  intentionally out of scope here and evolves independently in \`specs/003-mastery-engine/spec.md\`.
+
+## Out of Scope
+
+- Individual exercise implementations (see e.g.
+  \`specs/002-mental-addition-exercise/spec.md\`).
+
+## Related
+
+- \`specs/001-competency-model/spec.md\`
+- \`specs/002-mental-addition-exercise/spec.md\`
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/007-printable-worksheets/spec.md\`
+`,Dr=`# Feature Specification: Daily Practice
+
+**Feature Branch**: \`005-daily-practice\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft (Phase 2 — not required before the Phase 1 build order: 001 → 004 → 002 → 003)
+
+**Input**: User description: "Defines the 'Today's Practice' experience — a ~30-minute daily session that prioritizes a child's weaknesses and reviews previously learned skills."
+
+## Clarifications
+
+### Session 2026-09-14
+
+- Q: Should this feature actually allocate practice time across the 5 difficulty tiers of the one existing competency (math.addition.mental), targeting the weakest tiers, or should it stay a stub/no-op until a second exercise plugin exists? → A: Real tier-level allocation now — keep 50% of the day's questions at the child's current tier; the remaining 50% is redistributed to the next tier, the previous tier, or split between them depending on the child's current-tier score.
+- Q: For the other 50% of the session, what score thresholds decide whether it goes to the next tier, the previous tier, or is split? → A: Reuse the mastery-engine's own ≥90% "mastered" line from \`specs/003-mastery-engine/spec.md\`: ≥90% on the current tier → remaining 50% goes to the next tier; below the "not started" floor (<5 attempts) or otherwise not mastered → remaining 50% goes to the previous tier; in between → split evenly between next and previous.
+- Q: Since each addition session is a fixed 10-question, single-tier block (per \`specs/002-mental-addition-exercise/spec.md\` FR-003), how should the ~30-minute daily target be expressed for generation purposes? → A: One daily session of 50 questions total, built as five 10-question blocks (reusing the existing single-tier session unit unchanged) — not raw minutes and not a continuous mixed-tier run. ~30 minutes is a derived estimate (~36 sec/question), not the generation target itself.
+- Q: Should a child's daily session plan be generated fresh every time the app is opened that day, or generated once and persisted/reused for the rest of that calendar day? → A: Regenerate on every app load, deterministically computed from current mastery state and keyed by the local calendar date. No new persisted state is introduced by this feature.
+- Q: With the 50/50 current-tier/swing-tier structure, what happens at the tier floor (Tier 1, no previous tier) and ceiling (Tier 5, no next tier)? → A: At the floor, the swing 50% stays at the current tier (Tier 1) instead of dropping below it. At the ceiling, the swing 50% falls back to the previous tier (review) instead of progressing, since there is no Tier 6.
+
+### Session 2026-09-14 (follow-up, post-plan)
+
+- Q: Should a parent/user be able to override the tier the daily session starts from, instead of it always being derived purely from mastery data? → A: Yes — the default starting tier is Tier 1 (for a child with no mastery data), and the tier still moves up/down day-to-day based on mastery (too easy → next tier, too hard → previous tier, per FR-002), but a parent/user MUST be able to force the tier a given day's session is built around instead of relying on the derived one.
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Get a daily session that targets weaknesses (Priority: P1)
+
+As a child, I want to open the app and be given a practice plan for today that focuses on what I'm
+weakest at, so my ~30 minutes of practice is well spent.
+
+**Why this priority**: This is the feature's entire reason to exist — without weakness
+prioritization it is just a random exercise picker.
+
+**Independent Test**: Can be tested by seeding mock per-tier mastery data at various accuracy
+levels and confirming the generated session's 5 blocks land on the expected tiers.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child's current recommended tier has mastery ≥90% (per
+   \`specs/003-mastery-engine/spec.md\`), **When** a daily session is generated, **Then** exactly 3
+   of its 5 blocks are at the current tier and the other 2 are at the next tier.
+2. **Given** a child's current recommended tier has fewer than 5 recorded attempts, **When** a
+   daily session is generated, **Then** exactly 3 of its 5 blocks are at the current tier and the
+   other 2 are at the previous tier.
+3. **Given** a daily session, **When** it is fully generated, **Then** it always consists of
+   exactly 5 blocks of 10 questions (50 questions total).
+
+---
+
+### User Story 2 - Review previously learned skills (Priority: P2)
+
+As a child, I want part of my daily session to review things I already learned, so I don't forget
+them over time.
+
+**Why this priority**: Prevents skill decay between mastery events; secondary to the primary
+weakness-targeting behavior.
+
+**Independent Test**: Can be tested by confirming a generated session, whenever a previous tier
+exists (current tier > 1), always includes at least 1 previous-tier block if the current tier
+isn't mastered, rising to at least 2 when the current tier is not-started or is the mastered
+Tier 5 ceiling.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child whose current tier is greater than 1 and is either not yet attempted at all
+   (fewer than 5 attempts) or is Tier 5 and already mastered (no next tier available), **When** a
+   daily session is generated, **Then** it includes at least 2 blocks (20 questions) at the
+   previous tier, covering content the child has already progressed past.
+2. **Given** a child whose current tier is greater than 1 and has been attempted but isn't yet
+   mastered (some accuracy below 90%), **When** a daily session is generated, **Then** it includes
+   at least 1 block (10 questions) at the previous tier, alongside 1 block at the next tier —
+   mixing review with a stretch toward the next tier rather than pure review.
+
+---
+
+### User Story 3 - Parent overrides the starting tier (Priority: P3)
+
+As a parent, I want to set my child's starting tier myself when I already know their level, so
+the first day's session doesn't have to start from the system's default (Tier 1) or wait for
+mastery data to build up.
+
+**Why this priority**: A convenience/calibration override on top of the automatic tier
+adaptation in User Story 1 — useful, but the automatic behavior already produces a working
+session without it.
+
+**Independent Test**: Can be tested by generating a daily session with a supplied tier override
+and confirming that tier (not the mastery-derived one) is used as the current tier.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent supplies a starting tier for a child, **When** a daily session is
+   generated, **Then** the supplied tier is used as the current tier — the 3-current/2-swing
+   allocation in FR-002 runs around it exactly as it would around a derived tier, including the
+   same floor/ceiling handling.
+2. **Given** no override is supplied, **When** a daily session is generated, **Then** the current
+   tier is derived from mastery data as usual (starting at Tier 1 by default for a child with no
+   mastery data).
+
+---
+
+### Edge Cases
+
+- What happens when a child has no mastery data yet (first-ever session)? Treated as below the
+  "not started" floor: the session is still 5 blocks of 10 questions, all at Tier 1 (the
+  foundational default tier), not an empty plan.
+- What happens when only one exercise plugin exists (as in Phase 1, addition only)? The daily
+  session degrades to that one competency's tiers, per FR-002, rather than failing to generate.
+- What happens at the Tier 1 floor (no previous tier)? The swing 50% stays at the current tier
+  (Tier 1) instead of dropping below it.
+- What happens at the Tier 5 ceiling when already mastered (no next tier)? The swing 50% falls
+  back to the previous tier (review) instead of progressing, since there is no Tier 6.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST generate a daily session of exactly 50 questions, structured as five
+  10-question blocks, each block reusing the existing single-tier session unit defined in
+  \`specs/002-mental-addition-exercise/spec.md\` (FR-003) unchanged. ~30 minutes is a derived
+  estimate of this fixed structure (at an assumed ~36 sec/question), not a separate generation
+  target.
+- **FR-002**: System MUST allocate the 5 blocks across tiers as follows, using the child's
+  per-tier mastery from \`specs/003-mastery-engine/spec.md\`:
+  - Exactly 3 of the 5 blocks (60%, satisfying the "~50%" target as a floor) MUST be at the
+    child's current recommended tier.
+  - The remaining 2 blocks MUST be allocated by that tier's mastery score: ≥90% ("mastered", per
+    003's threshold) → both remaining blocks at the next tier; below the "not started" floor (<5
+    attempts) → both remaining blocks at the previous tier; attempted but not yet mastered (some
+    accuracy below 90%) → split the remaining blocks evenly, 1 at the next tier and 1 at the
+    previous tier.
+  - At the Tier 1 floor, remaining blocks stay at the current tier instead of going below Tier 1.
+    At the Tier 5 ceiling when mastered, remaining blocks fall back to the previous tier instead
+    of progressing.
+- **FR-003**: The previous-tier blocks produced by FR-002 (triggered whenever the current tier
+  isn't ≥90% mastered, or capped at Tier 5) MUST serve as the review component: they cover tier
+  content the child has already progressed past.
+- **FR-004**: Selection logic MUST use the simple, explicit rule in FR-002 for MVP, with a clear
+  path to becoming adaptive later — this spec does not block MVP on full adaptivity.
+- **FR-005**: The daily session plan MUST be regenerated deterministically from current mastery
+  state on every app load, keyed by the local calendar date — it MUST NOT be persisted as separate
+  state.
+- **FR-006**: System MUST accept an optional parent/user-supplied tier override for a given day's
+  session. When supplied, it MUST be used as the current tier in place of the mastery-derived one
+  in FR-002 — the same 3-current/2-swing allocation and floor/ceiling handling then run around it
+  unchanged. When absent, the current tier continues to be derived from mastery data as in FR-002
+  (defaulting to Tier 1 for a child with no mastery data yet, per the existing Edge Cases).
+
+### Key Entities
+
+- **DailySession**: exactly 5 blocks of (competencyId, tier, 10 questions) — 50 questions total —
+  generated fresh per child on each app load for the current local calendar date; not persisted.
+  Optionally built around a caller-supplied tier override (FR-006) instead of a derived one.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A generated daily session always consists of exactly 5 ten-question blocks (50
+  questions total, ≈30 minutes at an assumed ~36 sec/question) — a fixed count, not a range.
+- **SC-002**: Whenever a previous tier exists (current tier > 1), a child's daily session includes
+  at least 1 block (10 questions) at the previous tier if the current tier has been attempted but
+  isn't yet mastered (some accuracy below 90%) — rising to at least 2 blocks (20 questions) if the
+  current tier is not-started (<5 attempts) or is the already-mastered Tier 5 ceiling. At the
+  Tier 1 floor, no previous tier exists; the session consists entirely of Tier 1 blocks instead
+  (see Edge Cases), and this criterion doesn't apply.
+
+## Assumptions
+
+- With only one exercise plugin/competency (\`math.addition.mental\`) in V1, weakness-prioritization
+  operates at the tier level within that competency (per FR-002) rather than across competencies;
+  extending to across-competency allocation is deferred until a 2nd plugin exists.
+- "Approximately 30 minutes" is estimated at ~36 seconds/question (50 questions ≈ 30 min); no
+  visible timer is shown to the child, consistent with \`specs/002-mental-addition-exercise/spec.md\`.
+- "Current recommended tier" is the concept referenced (but not computed) by
+  \`specs/002-mental-addition-exercise/spec.md\` (FR-003) — no other spec or existing code actually
+  computes it yet, so this spec defines the derivation (lowest non-mastered tier, capped at the
+  highest) for this feature's own internal use. This doesn't amend 002's spec text; a future
+  feature reusing "current recommended tier" elsewhere may reuse this definition or supersede it.
+- Remembering a parent's tier override across days/app loads (vs. supplying it fresh each call)
+  is a caller/storage concern, not this feature's — FR-006 only defines that an override, if
+  supplied, takes effect for that call; where/whether it's persisted is out of scope here (see
+  also FR-005: this feature introduces no persisted state of its own).
+
+## Out of Scope
+
+- The final adaptive algorithm (V2+).
+- UI for displaying the daily plan.
+
+## Related
+
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/004-exercise-plugin-engine/spec.md\`
+`,Or=`# Feature Specification: Accounts, Multiple Children & Privacy
+
+**Feature Branch**: \`006-accounts-privacy\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft — **User Story 1 and FR-001/FR-002 are required for V1** (see V1 Scope below);
+the rest of this spec (minimal-data fields beyond a name, export/import, deletion) remains Phase 3
+and is not V1-blocking.
+
+**Input**: User description: "Defines parent/child account structure, support for multiple children per family, and the minimal-data/GDPR-aligned privacy approach."
+
+## V1 Scope
+
+Mixing two children's progress into one mastery log is a correctness bug, not a polish gap — a
+family with more than one child (a real, immediate case, not a hypothetical) would get meaningless
+mastery percentages on day one. So, unlike the rest of this spec, **multiple named local
+profiles with fully separate per-child data is pulled forward into V1**:
+
+* Required for V1: creating more than one local child profile on a device, switching between them,
+  and each child's mastery-signal log (\`specs/003-mastery-engine/spec.md\`) and exercise sessions
+  being scoped to the active profile only — User Story 1, FR-001, FR-002 below.
+* A profile needs *some* label to distinguish it in the switcher — practically, an alias/name
+  (which can be a nickname, not necessarily a real name) is required at creation for V1, even
+  though FR-003 correctly keeps it an optional *personal-data* field (i.e. it need not be the
+  child's real name, and no other field is required alongside it).
+* Deferred past V1 (Phase 3, as originally scoped): country, age/age band, export/import,
+  deletion flows, and any distinct "parent account" concept beyond an implicit on-device profile
+  list — see FR-003, FR-006, FR-007 and User Story 2 below.
+* **Architecture note**: per \`docs/architecture/decisions/0006-client-only-architecture.md\`,
+  there is no backend at all — profile switching and per-profile data isolation are entirely a
+  client-side concern (separate local-storage namespaces in the React app). This spec's
+  requirements below are all about client-side/local behavior; there is no backend work implied by
+  this spec.
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Manage multiple children on one device for free (Priority: P1)
+
+As a parent, I want to create and switch between profiles for each of my children on this device,
+without paying extra per child, so my whole family can use the app.
+
+**Why this priority**: Per Constitution Principle VIII (Free Core, Paid Convenience), multiple
+children must be free; this is a direct product requirement, not a nice-to-have.
+
+**Independent Test**: Can be fully tested by creating several child profiles under one local
+parent profile and confirming each has independent progress with no payment gate.
+
+**Acceptance Scenarios**:
+
+1. **Given** a device with one parent profile, **When** the parent adds a second child, **Then**
+   no payment or upgrade is required.
+2. **Given** two child profiles on the same device, **When** switching between them, **Then**
+   each child's progress remains fully separate.
+
+---
+
+### User Story 2 - Minimal personal data collected (Priority: P2)
+
+As a parent, I want the app to ask for as little personal information about my child as possible,
+so I'm comfortable letting them use it.
+
+**Why this priority**: Direct GDPR-alignment and trust requirement (Constitution Principle IV);
+secondary to first having profiles to apply the constraint to.
+
+**Independent Test**: Can be tested by attempting to create a child profile with only the allowed
+fields and confirming no other field is required.
+
+**Acceptance Scenarios**:
+
+1. **Given** the child profile creation flow, **When** a parent fills it in, **Then** only an
+   optional username/alias, country, and age/age band (where appropriate) can be entered — no
+   other personal data field exists to fill in.
+2. **Given** a child profile, **When** it is exported, **Then** the export contains only that
+   minimal data plus progress data, never anything else.
+
+---
+
+### Edge Cases
+
+- What happens if a parent wants to delete a child profile? Deletion must remove that child's
+  local data entirely, consistent with GDPR data-minimization/deletion principles.
+- What happens to a child's data if the app/device is uninstalled without exporting first? Local
+  data is lost — this is the expected tradeoff of local-first storage and must be communicated to
+  the parent (export/backup UX), not a bug to fix in this spec.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST support a parent profile as a local, on-device profile — no
+  signup/login flow in MVP (see Decisions below).
+- **FR-002**: System MUST support multiple child profiles per parent profile, free of charge.
+- **FR-003**: Child profile fields MUST be limited to: optional username/alias, country, and
+  age/age band where appropriate — no other personal data field.
+- **FR-004**: Any public-facing profile (if one exists) MUST NOT expose identifying information
+  beyond what FR-003 allows.
+- **FR-005**: Any future leaderboard/comparison feature MUST use aliases or generated identifiers,
+  never a child's real name.
+- **FR-006**: The data model MUST align with GDPR principles: data minimization, and the ability
+  to export and delete a child's data.
+- **FR-007**: Progress data MUST be exportable and importable per child, consistent with the
+  local-first storage principle in \`docs/architecture/ARCHITECTURE.md\`.
+
+### Key Entities
+
+- **ParentProfile**: local, on-device profile; owns one or more ChildProfiles.
+- **ChildProfile**: optional alias, country, age/age band, and a reference to that child's
+  progress/mastery data (defined in \`specs/003-mastery-engine/spec.md\`).
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent can create an additional child profile in under a defined number of steps
+  [NEEDS CLARIFICATION: exact UX step budget not yet defined — this is a UI concern deferred past
+  this spec] with zero payment prompts.
+- **SC-002**: 100% of child profile fields collected match the FR-003 allowlist — no additional
+  personal data field exists anywhere in the profile flow.
+- **SC-003**: A child's exported data can be re-imported on another device and reproduce identical
+  mastery percentages.
+
+## Assumptions
+
+- **No server/auth in MVP.** A "parent account" is purely a local, on-device profile
+  (create/switch/manage children on this device) — no login, no backend. This matches
+  Constitution Principle IV (Local-First Privacy). A real server-side account only arrives with
+  premium cloud sync, later, and is out of scope for the MVP requirements above.
+
+## Out of Scope
+
+- Teacher/classroom accounts (see \`specs/008-teacher-mode/spec.md\`).
+- Cloud sync implementation (premium feature, later).
+- UI/visual design of profile management and any parent-facing dashboard — see
+  \`docs/product/vision.md\` ("Look & feel") for the target design intent (calm, professional,
+  distinct from the child-facing practice loop) once this is scoped.
+
+## Related
+
+- \`docs/architecture/ARCHITECTURE.md\`
+- \`docs/product/vision.md\`
+- \`specs/008-teacher-mode/spec.md\`
+`,kr=`# Feature Specification: Printable Worksheets
+
+**Feature Branch**: \`007-printable-worksheets\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft (Phase 5 — not MVP-blocking)
+
+**Input**: User description: "Allows generating a paper worksheet from an exercise, with manual result entry feeding back into mastery."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Generate and score a paper worksheet (Priority: P1)
+
+As a parent or teacher, I want to print a worksheet generated from an exercise plugin, have the
+child complete it on paper, and enter the results afterward, so paper-based practice still
+contributes to the child's mastery.
+
+**Why this priority**: This is the entire feature — without it there is no printable-worksheet
+capability at all.
+
+**Independent Test**: Can be fully tested by generating a worksheet from the mental-addition
+plugin, manually entering a set of right/wrong answers, and confirming the resulting mastery
+signals match what a digital session with the same answers would have produced.
+
+**Acceptance Scenarios**:
+
+1. **Given** an exercise plugin's question generation logic, **When** a worksheet is requested,
+   **Then** a printable set of questions is produced without requiring OCR or scanning.
+2. **Given** a printed worksheet and a set of child-written answers, **When** a
+   parent/teacher enters the results, **Then** each answer is validated and produces a mastery
+   signal identical in shape to a digital exercise result.
+
+---
+
+### Edge Cases
+
+- What happens when a worksheet's answers are only partially entered? Signals must be recorded
+  for the questions that were entered; the missing ones must not be recorded as incorrect by
+  default.
+- What happens when a plugin does not implement a printable format? Worksheet generation must be
+  refused for that plugin rather than producing a malformed sheet, since the printable format is
+  optional per \`specs/004-exercise-plugin-engine/spec.md\`.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST generate a printable worksheet from an exercise plugin's question
+  generation logic, per the optional printable format in
+  \`specs/004-exercise-plugin-engine/spec.md\`.
+- **FR-002**: System MUST support manual entry of results by a parent/teacher after the worksheet
+  is completed on paper.
+- **FR-003**: System MUST feed manually entered results into the mastery engine using the same
+  mastery-signal shape as digital exercise results (see \`specs/004-exercise-plugin-engine/spec.md\`
+  and \`specs/003-mastery-engine/spec.md\`).
+- **FR-004**: System MUST NOT require OCR, handwriting recognition, or automatic photo-based
+  scanning in this (first) implementation.
+
+### Key Entities
+
+- **Worksheet**: a printable rendering of N questions generated by one plugin at one tier.
+- **WorksheetResult**: manually entered per-question correctness, converted into the standard
+  MasterySignal shape on entry.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A worksheet generated from any plugin that implements the optional printable format
+  can be printed and manually scored with zero missing questions.
+- **SC-002**: Mastery signals produced from manually entered worksheet results are
+  indistinguishable in shape/effect from signals produced by a digital session.
+
+## Assumptions
+
+- A future version may support Photo → OCR → answers → automatic correction → mastery, but that
+  is explicitly not required for this first implementation.
+
+## Out of Scope (first implementation)
+
+- OCR / handwriting recognition.
+- Automatic photo-based scanning and correction.
+
+## Related
+
+- \`specs/004-exercise-plugin-engine/spec.md\`
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/008-teacher-mode/spec.md\`
+`,Ar=`# Feature Specification: Teacher Mode (One-Shot Classroom Sessions)
+
+**Feature Branch**: \`008-teacher-mode\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft (Phase 6 — not MVP-blocking)
+
+**Input**: User description: "Supports a teacher generating and printing the same exercise for a whole class, then entering or scanning results for a class report."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Run a one-shot classroom exercise session (Priority: P1)
+
+As a teacher, I want to generate the same exercise for my whole class, print worksheets for every
+child, and get a simple class report once results are in, without setting up a persistent
+classroom/roster system.
+
+**Why this priority**: This is the entire feature scope — a lightweight, one-shot session, not
+ongoing classroom management.
+
+**Independent Test**: Can be fully tested by creating a session for N mock students, generating N
+worksheets from one plugin, entering results for each, and confirming a class report is produced.
+
+**Acceptance Scenarios**:
+
+1. **Given** a teacher creates a session for N children, **When** worksheets are generated,
+   **Then** N printable worksheets are produced from the same exercise plugin/tier (via
+   \`specs/007-printable-worksheets/spec.md\`).
+2. **Given** results entered for each child in the session, **When** the session is finalized,
+   **Then** a class report summarizing per-child and aggregate results is produced.
+
+---
+
+### Edge Cases
+
+- What happens if results are entered for only some of the N children? The class report must
+  reflect only the children with entered results, clearly distinguishing them from children with
+  no results yet, rather than treating missing results as zero/incorrect.
+- What happens after the session ends — is any roster retained? No persistent
+  classroom/roster system is in scope; the session and its children exist only for that one-shot
+  use (see Out of Scope).
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST let a teacher create a one-shot session — not a persistent
+  classroom/roster system.
+- **FR-002**: System MUST generate the same exercise (via
+  \`specs/004-exercise-plugin-engine/spec.md\`) for N children in a session.
+- **FR-003**: System MUST produce printable worksheets for the session, via
+  \`specs/007-printable-worksheets/spec.md\`.
+- **FR-004**: System MUST support entering results per child in the session.
+- **FR-005**: System MUST produce a simple class report summarizing per-child and aggregate
+  results once results are entered.
+
+### Key Entities
+
+- **ClassSession**: one-shot, non-persistent grouping of N children, one exercise/tier, and their
+  entered results.
+- **ClassReport**: per-child and aggregate summary derived from a ClassSession's entered results.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A teacher can go from creating a session to a printed worksheet set for N children
+  without configuring a roster or classroom entity.
+- **SC-002**: A class report accurately reflects entered results for every child who has them, and
+  clearly flags any child in the session without results yet.
+
+## Assumptions
+
+- N (class size) has no enforced upper bound in this spec; any practical limit is a UI/printing
+  concern, not a requirement here.
+
+## Out of Scope
+
+- Full school/classroom management (rosters, ongoing class tracking).
+- Automatic photo-based scanning (future, shared with \`specs/007-printable-worksheets/spec.md\`).
+
+## Related
+
+- \`specs/004-exercise-plugin-engine/spec.md\`
+- \`specs/007-printable-worksheets/spec.md\`
+- \`specs/006-accounts-privacy/spec.md\`
+`,jr=`# Feature Specification: V1 App Shell (Practice Loop Integration)
+
+**Feature Branch**: \`009-v1-app-shell\`
+
+**Created**: 2026-09-13
+
+**Status**: Draft
+
+**Input**: User description: "Wire the five already-implemented V1 packages (competency-model,
+plugin-engine, mental-addition, mastery-engine, profiles) into a real, usable React app screen in
+apps/web: a parent can create/switch child profiles, the active child can run a 10-question
+mental-addition practice session at a chosen tier with immediate per-question feedback, mastery
+signals are recorded to that child's own storage namespace, and the child's current mastery
+percentage for math.addition.mental is displayed as a plain percentage (no radar chart, per V1
+scope). This is the missing UI layer that makes the already-built V1 core loop (Exercise -> Answer
+-> Feedback -> Mastery -> Next Exercise) actually usable end-to-end, per specs/README.md's V1
+scope description. No new business logic - this feature only wires apps/web to the five existing
+packages' already-published contracts."
+
+## V1 Scope
+
+This feature adds no new business logic — \`001-competency-model\`, \`004-exercise-plugin-engine\`,
+\`002-mental-addition-exercise\`, \`003-mastery-engine\`, and the V1 slice of \`006-accounts-privacy\`
+are all already implemented and verified as independent packages. What's missing, and what this
+spec covers, is the app-shell wiring in \`apps/web\` that turns those five packages into something a
+parent or child can actually open in a browser and use — per \`specs/README.md\`'s V1 description:
+"the core loop is Exercise → Answer → Feedback → Mastery → Next Exercise, for a real family with
+more than one child." Per that same README, mastery is shown as a plain percentage (the radar
+chart and Level 1–5 badge are explicitly deferred past V1), and there is exactly one exercise
+(mental addition) and one competency (\`math.addition.mental\`) to wire up.
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Complete a practice session and see the result (Priority: P1)
+
+As a child with a profile already set up, I want to answer a set of addition questions at a
+difficulty I choose, see right away whether each answer is correct, and see my mastery percentage
+update afterward, so I can practice and track my progress.
+
+**Why this priority**: This is the core loop itself — without it, none of the five already-built
+packages are reachable by an actual user. Nothing else in this feature matters if this doesn't
+work.
+
+**Independent Test**: With one child profile already active, start a session at a chosen tier,
+answer all 10 questions (a mix of correct and incorrect), and confirm feedback appears after each
+answer and a mastery percentage is visible once the session ends.
+
+**Acceptance Scenarios**:
+
+1. **Given** an active child profile and a chosen tier, **When** the child starts a session,
+   **Then** the first of 10 questions appears with no visible timer/countdown.
+2. **Given** a question on screen, **When** the child submits an answer, **Then** the app
+   immediately shows whether it was correct, reveals the correct answer if it was not, and then
+   advances to the next question automatically.
+3. **Given** the 10th question has been answered, **When** the session ends, **Then** the child's
+   current mastery percentage for \`math.addition.mental\` is visible on screen, reflecting the
+   session just played.
+4. **Given** a child has an existing mastery percentage from a previous session, **When** they
+   reload the app in a new browser session (e.g. closing and reopening the tab), **Then** that
+   percentage is still shown correctly, proving it was actually persisted and not held only in
+   memory.
+
+---
+
+### User Story 2 - Manage more than one child on the same device (Priority: P2)
+
+As a parent, I want to create a profile for each of my children on this device and switch between
+them, so every child gets their own practice sessions and mastery tracking without paying extra.
+
+**Why this priority**: Required for V1 per \`006-accounts-privacy\`'s V1 Scope (mixing two
+children's data is a correctness bug), but the single-child loop (User Story 1) has to work first
+— a family's second child needs the same working session flow the first child gets, not a
+different one.
+
+**Independent Test**: With zero profiles on a fresh browser profile, create two child profiles,
+run a session as the first child, switch to the second child, and confirm the second child's
+mastery percentage is unaffected by the first child's session.
+
+**Acceptance Scenarios**:
+
+1. **Given** a device with no child profiles yet, **When** the app is opened, **Then** the parent
+   is prompted to create at least one child profile before any practice session can start.
+2. **Given** one child profile already exists, **When** the parent adds a second, **Then** no
+   payment or upgrade prompt appears at any point.
+3. **Given** two child profiles exist, **When** the parent switches the active profile, **Then**
+   every subsequently displayed mastery percentage and session belongs only to the newly active
+   child — the previous child's data is never shown or affected.
+
+---
+
+### Edge Cases
+
+- What happens if a session is closed/navigated away from before all 10 questions are answered?
+  Mastery signals already recorded for the questions answered so far remain saved and continue to
+  count toward that child's mastery percentage — there is no requirement to force session
+  completion (matches \`002-mental-addition-exercise\`'s abandoned-session edge case).
+- What happens if the active child has never played a session at all? Their mastery percentage
+  displays as 0% (or an equivalent "not started" presentation), never as blank/undefined/an error.
+- What happens if a parent switches the active child while a session is in progress? The
+  in-progress session's already-answered questions keep the signals they already recorded (for the
+  child who was active when each was answered); the switch does not retroactively reassign them to
+  the newly active child, and the practice screen returns to a fresh, not-yet-started state for
+  whichever child is now active.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST require at least one child profile to exist before a practice session
+  can be started, prompting profile creation otherwise.
+- **FR-002**: System MUST let a parent create additional child profiles at any time with no
+  payment or upgrade prompt of any kind.
+- **FR-003**: System MUST let a parent switch the active child profile, and every practice session
+  and displayed mastery value MUST reflect only the currently active profile.
+- **FR-004**: System MUST let the active child start a 10-question mental-addition session at a
+  tier they choose (1 through 5).
+- **FR-005**: System MUST show correct/incorrect feedback immediately after each submitted answer,
+  reveal the correct answer when the submission was wrong, and then automatically advance to the
+  next question — exactly one attempt per question.
+- **FR-006**: System MUST NOT display any visible timer or countdown to the child during a
+  session.
+- **FR-007**: System MUST record one mastery signal per answered question, persisted under the
+  active child's own storage namespace, surviving a page reload/new browser session.
+- **FR-008**: System MUST display the active child's current mastery percentage for
+  \`math.addition.mental\` as a plain numeric percentage — no radar/spider chart and no Level 1–5
+  badge (both explicitly deferred past V1 per \`specs/README.md\`).
+- **FR-009**: System MUST function with no network calls at any point in this flow (profile
+  management, question generation, answer validation, mastery calculation, and persistence are all
+  local to the device).
+
+### Key Entities
+
+- **Active practice session (UI-only, ephemeral)**: the in-progress question index and answers
+  given so far for the current run-through; not itself a persisted business entity — it exists
+  only in the running app and is rebuilt fresh each time a session starts. The durable record of
+  what happened is the mastery-signal log (\`003-mastery-engine\`, \`004-exercise-plugin-engine\`),
+  which this feature persists per child but does not redefine.
+- **Persisted per-child mastery-signal log**: the append-only list of \`MasterySignal\` records for
+  one child, stored under that child's namespaced storage key (\`006-accounts-privacy\`'s
+  \`childStorageKey\`), read back to compute the mastery percentage shown per FR-008.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent with zero existing profiles can reach their first practice question in 3 or
+  fewer screens/steps (create profile → choose tier → first question), with zero payment prompts
+  anywhere in that path.
+- **SC-002**: Across repeated testing, two child profiles on the same device never show each
+  other's mastery percentage or session progress — 100% separation, matching
+  \`006-accounts-privacy\`'s per-child isolation guarantee.
+- **SC-003**: A child's mastery percentage, once earned, survives a full page reload/new browser
+  session with no loss or reset — proving persistence rather than in-memory-only state.
+- **SC-004**: A completed 10-question session always results in exactly 10 new mastery signals
+  recorded for the active child — zero lost, zero duplicated, regardless of how many answers were
+  correct.
+
+## Assumptions
+
+- Exactly one exercise (\`002-mental-addition-exercise\`) and one competency
+  (\`math.addition.mental\`) exist for V1 — the UI does not need an exercise picker, only a tier
+  picker, matching \`specs/README.md\`'s V1 scope.
+- Tier selection for V1 is a manual choice made by the child/parent before each session, not an
+  automatic recommendation — the adaptive "what tier should this child practice next" logic
+  (\`005-daily-practice\`) is explicitly Phase 2, out of scope here.
+- Visual/UX polish (the playful, game-like look described in \`docs/product/vision.md\` for the
+  child-facing practice loop) is not required for this feature to be considered done — a
+  functionally correct, usable screen is the bar; visual design is expected to be iterated on
+  afterward, not blocked on here.
+- A single browser's local storage is the only persistence target for V1 (per
+  \`006-accounts-privacy\`'s V1 scope) — nothing here introduces cross-device sync.
+
+## Execution Architecture
+
+Per \`docs/architecture/decisions/0006-client-only-architecture.md\`, this feature lives entirely in
+\`apps/web\` (React) and calls the five already-implemented packages directly, in-process — no new
+package, no network boundary:
+
+- \`@learncoreskills/profiles\` — profile creation/listing/switching, using \`window.localStorage\` as
+  the \`KeyValueStore\`.
+- \`@learncoreskills/competency-model\` — the one V1 \`Competency\` record (\`math.addition.mental\`,
+  \`tierCount: 5\`), authored as plain data in \`apps/web\` (this is the first place curriculum content
+  becomes real, loadable data rather than the \`docs/product/CURRICULUM.md\` placeholder).
+- \`@learncoreskills/plugin-engine\` + \`@learncoreskills/mental-addition\` — \`createRegistry\` with the
+  one \`mentalAdditionPlugin\`, then \`createSession\`/\`validateAnswer\`/\`createMasterySignal\` to run a
+  session.
+- \`@learncoreskills/mastery-engine\` — \`computeCompetencyMastery\` over the active child's persisted
+  signal log, to render FR-008's percentage.
+
+The one genuinely new piece of glue code this feature introduces is a small, thin
+read/append/persist helper for a child's \`MasterySignal[]\` log under
+\`childStorageKey(childId, "mastery-signals")\` in \`window.localStorage\` — this is app-level wiring
+(FR-007), not new business logic; none of the five packages persist a signal log themselves (each
+already documents storage as "the caller's job").
+
+## Out of Scope
+
+- Adaptive/weakness-prioritized daily sessions (\`005-daily-practice\`).
+- Printable worksheets (\`007-printable-worksheets\`) and teacher mode (\`008-teacher-mode\`).
+- Radar/spider chart mastery visualization and the Level 1–5 badge UI (both explicitly deferred
+  past V1 per \`specs/README.md\`).
+- Country/age-band profile fields, profile export/import, and profile deletion
+  (\`006-accounts-privacy\`'s Phase 3 scope).
+- Any exercise other than mental addition, and any competency other than \`math.addition.mental\`.
+- Final visual/UX design polish (see Assumptions above).
+
+## Related
+
+- \`specs/001-competency-model/spec.md\`
+- \`specs/002-mental-addition-exercise/spec.md\`
+- \`specs/003-mastery-engine/spec.md\`
+- \`specs/004-exercise-plugin-engine/spec.md\`
+- \`specs/006-accounts-privacy/spec.md\`
+- \`specs/README.md\` (V1 scope)
+`,Mr=`# Feature Specification: Documentation & Blog
+
+**Feature Branch**: \`010-docs-and-blog\`
+
+**Created**: 2026-09-14
+
+**Status**: Draft
+
+**Input**: User description: "Add a documentation section to the app, aimed at parents and
+teachers rather than children. It has two parts: (1) a specs/docs area that displays the
+project's specifications and documentation, and (2) a blog page that displays the project's blog
+posts. It needs a professional, calm visual style distinct from the playful child-facing practice
+loop, per the constitution's existing two-audience look-and-feel split."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Understand what the product does and how mastery is tracked (Priority: P1)
+
+As a parent or teacher, I want to read the project's specifications and documentation from within
+the app, so I can understand how the practice loop and mastery tracking actually work before
+trusting it with my child's practice time.
+
+**Why this priority**: This is the feature's core reason to exist — without a way to read the
+underlying documentation, a parent/teacher has no way to evaluate the product's substance beyond
+the marketing surface. It's the trust-building layer the constitution's two-audience split exists
+for.
+
+**Independent Test**: Can be tested by opening the documentation area and confirming the
+project's specs/docs content renders legibly, is navigable (e.g. a list/index leading to
+individual documents), and visually reads as calm/professional rather than playful.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent/teacher opens the documentation area, **When** the page loads, **Then**
+   they see an index of the available specifications/documentation, distinguishable by topic.
+2. **Given** a parent/teacher selects one document from the index, **When** it opens, **Then**
+   its full content renders readably (headings, lists, code/requirement blocks preserved) in the
+   professional visual style, not the child-facing playful one.
+3. **Given** a specification describes a feature that is still planned/not yet built (a "Draft"
+   status document), **When** it's displayed, **Then** it is clearly marked as such rather than
+   presented as if it already exists in the product.
+
+---
+
+### User Story 2 - Follow development progress via the blog (Priority: P2)
+
+As a parent or teacher, I want to read the project's blog posts from within the app, so I can see
+how the product is progressing and what's recently changed.
+
+**Why this priority**: Secondary to the core documentation trust-building goal — valuable for
+engaged parents/teachers who want an ongoing view of progress, but not required for a first
+evaluation of the product.
+
+**Independent Test**: Can be tested by opening the blog page and confirming posts are listed
+(most recent first) and each is individually readable.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent/teacher opens the blog page, **When** it loads, **Then** they see a list of
+   posts ordered newest first, each showing at least a title and date.
+2. **Given** a parent/teacher selects one post, **When** it opens, **Then** its full content
+   renders readably in the professional visual style.
+
+---
+
+### User Story 3 - Move between documentation and the child's practice app without confusion (Priority: P3)
+
+As a parent or teacher, I want a clear, obvious way to get from the documentation/blog area back
+to (or into) the child-facing practice app, so the two audiences and their two visual styles never
+blur together into one confusing screen.
+
+**Why this priority**: A polish/wayfinding concern layered on top of User Stories 1 and 2 — the
+documentation content is useful even with imperfect navigation, but poor wayfinding would
+undermine the calm/professional impression the whole feature exists to create.
+
+**Independent Test**: Can be tested by navigating from the documentation/blog area into the
+practice app and back, confirming the visual style switches cleanly at the boundary with no
+mixed-style intermediate state.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent/teacher is anywhere in the documentation or blog area, **When** they look
+   for a way back to the practice app, **Then** a clearly-labeled way to do so is always visible.
+2. **Given** a parent/teacher is in the child-facing practice app, **When** they look for the
+   documentation/blog area, **Then** a way to reach it is discoverable without disrupting the
+   child-facing screen's playful style.
+
+---
+
+### Edge Cases
+
+- What happens when a specification or blog post is very long? Content must remain readable
+  (e.g. scrollable, not truncated or clipped) rather than breaking the page layout.
+- What happens when a document contains formatting the renderer doesn't recognize (unusual
+  Markdown, broken links)? The renderer MUST NOT crash the page; unsupported content degrades to
+  plain readable text rather than blocking the rest of the document.
+- What happens when a specification has no plan/tasks yet (spec-only, per this project's own
+  Draft-status specs)? It MUST still display with whatever sections it has, clearly marked as not
+  yet planned/built (see User Story 1, AS-3).
+- What happens if a specific piece of documentation/blog content fails to render (e.g. malformed
+  source content bundled at build time)? That individual document MUST show a clear "couldn't be
+  displayed" message rather than a blank page or a silent failure, and MUST NOT block the rest of
+  the index or access to the child-facing practice app.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST provide a documentation area, separate from the child-facing practice
+  screens, that displays the project's specifications and documentation content.
+- **FR-002**: System MUST provide an index/listing of available documentation content that lets a
+  parent/teacher browse to an individual document.
+- **FR-003**: System MUST render an individual document's full content in a readable form
+  (headings, lists, emphasis, and requirement/code-style blocks preserved).
+- **FR-004**: System MUST visually distinguish documentation describing a not-yet-built/planned
+  feature from documentation describing a shipped one.
+- **FR-005**: System MUST provide a separate blog page listing the project's blog posts ordered
+  newest first, each showing at minimum a title and publish date.
+- **FR-006**: System MUST let a parent/teacher open an individual blog post and read its full
+  content in the same readable, professional style as the documentation area.
+- **FR-007**: The documentation and blog area MUST use a visually calm, professional style,
+  distinct from the child-facing practice loop's playful, game-like style (per the constitution's
+  Product Constraints on the two-audience look-and-feel split).
+- **FR-008**: System MUST provide a clearly-labeled way to navigate between the
+  documentation/blog area and the child-facing practice app in both directions.
+- **FR-009**: System MUST source its documentation and blog content by bundling it into the app
+  at build time from the \`specs\` and \`blog\` repos' existing content — not by fetching it at
+  runtime from a live source, and not by hand-duplicating it into the app repo. This keeps the
+  documentation area working fully offline, consistent with this project's client-only
+  architecture (ADR-0006), at the cost of content only updating on the next app deploy.
+- **FR-010**: The documentation area MUST display every specification under \`specs/\`, regardless
+  of status — including Draft/future-phase specs (e.g. \`007-printable-worksheets\`,
+  \`008-teacher-mode\`) — each clearly marked shipped vs planned (per FR-004), plus every narrative
+  document under \`docs/product/\` (vision and curriculum) and \`docs/architecture/\` (architecture
+  overview and individual decision records) as supporting context.
+- **FR-011**: The documentation/blog area MUST be reachable independent of, and before, the
+  existing child-profile gate that the practice app requires (per \`009-v1-app-shell\`) — a
+  prospective parent/teacher can read it without first creating a child profile.
+
+### Key Entities
+
+- **DocumentationEntry**: one piece of specs/docs content displayed in the documentation area —
+  a title, a status (e.g. shipped vs planned/draft), and its renderable content.
+- **BlogPost**: one blog entry — a title, a publish date, and its renderable content.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent/teacher can locate and open any given specification or blog post from the
+  documentation/blog entry point in 3 clicks or fewer.
+- **SC-002**: 100% of Draft/not-yet-built specifications shown in the documentation area are
+  visibly marked as such, verifiable without reading the full document.
+- **SC-003**: In a side-by-side comparison, the documentation/blog area and the child-facing
+  practice screens are visually distinguishable as belonging to two different audiences (calm/
+  professional vs playful/game-like) without needing to read any text.
+- **SC-004**: A parent/teacher can navigate from the documentation/blog area into the practice app
+  and back at least once without landing on a broken or blank page.
+
+## Assumptions
+
+- The documentation/blog area targets parents/teachers only; it is not translated into a
+  child-friendly reading level and is not part of the child-facing practice loop's own navigation
+  flow (Constitution Principle I: the core loop stays exercise-first, not documentation-gated).
+- Markdown (or an equivalent lightweight markup already used by the \`specs\`/\`blog\` repos) is the
+  source format for documentation/blog content, since that's what both repos already use.
+- This feature displays existing \`specs\`/\`blog\` repo content as-is; it does not add new
+  authoring/editing tools for that content inside the app itself.
+- No search functionality is required for v1 of this feature — a browsable index is sufficient at
+  the current, modest content volume.
+- Because content is bundled at build time (FR-009), the \`app\` repo's CI build needs read access
+  to the \`specs\` and \`blog\` repos' content at build time; this is a new build-time dependency this
+  feature introduces, not something any prior V1 feature required.
+- Reaching the documentation/blog area before the child-profile gate (FR-011) means the app's
+  entry screen gains a landing/navigation layer above \`009-v1-app-shell\`'s existing
+  profile-gated shell, rather than the profile gate remaining the very first thing every visitor
+  sees.
+`,Nr=`# Feature Specification: Parent Area — Advancement Report & Data Export/Import
+
+**Feature Branch**: \`011-parent-area-export-import\`
+
+**Created**: 2026-09-14
+
+**Status**: Draft
+
+**Input**: User description: "next feature i would like is maybe a parent area where we can see
+the advancement report (a place holder maybe now) and also something so we can export / import
+all the info regarding a child (and reimport in another device). note the format should not
+change to often so that when we export, if there is a new version its kinda compatible and can
+import."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - See the active child's advancement at a glance (Priority: P1)
+
+As a parent, I want a parent-facing area that shows the active child's current mastery
+per competency, so I can check how they're progressing without digging through the
+child-facing practice screens.
+
+**Why this priority**: This is the feature's core reason to exist — a dedicated,
+calm/professional home for parent-facing information (per the constitution's two-audience
+look-and-feel split), distinct from the playful practice loop. Without it, mastery data
+computed by the existing mastery engine (\`specs/003-mastery-engine\`) has nowhere parent-facing
+to surface.
+
+**Independent Test**: Can be tested by opening the parent area for a child with existing mastery
+signals and confirming real per-competency mastery percentages are shown, sourced from the same
+mastery engine used elsewhere in the app.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent opens the parent area for the active child, **When** the advancement report
+   loads, **Then** it shows that child's current mastery percentage for each competency they have
+   recorded signals for, computed by the existing mastery engine.
+2. **Given** the active child has no recorded mastery signals yet, **When** the advancement report
+   loads, **Then** it shows a clear "no progress yet" state rather than an error or blank screen.
+3. **Given** a parent is in the child-facing practice app, **When** they look for the parent area,
+   **Then** a clearly-labeled way to reach it is discoverable without disrupting the child-facing
+   screen's playful style.
+
+---
+
+### User Story 2 - Move a child's progress to another device (Priority: P1)
+
+As a parent, I want to export a child's profile and progress to a file and import it on another
+device, so switching devices (or reinstalling) doesn't lose that child's mastery history.
+
+**Why this priority**: Directly fulfills FR-006/FR-007 and SC-003 of
+\`specs/006-accounts-privacy/spec.md\`, which explicitly deferred export/import to a later spec.
+Per Constitution Principle IV (Local-First Privacy), export/backup/restore of a child's progress
+is a required capability, not optional polish — losing all progress on device loss is otherwise
+the only outcome for a local-first product.
+
+**Independent Test**: Can be fully tested by exporting a child with recorded mastery signals from
+one browser profile, importing the resulting file into a fresh browser profile, and confirming
+the imported child's mastery percentages exactly match the source child's.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child profile with recorded mastery signals, **When** a parent exports that child,
+   **Then** they receive a single file containing that child's profile information and its full
+   mastery-signal history.
+2. **Given** an exported child file and a device with zero or more existing child profiles,
+   **When** a parent imports that file, **Then** a child profile is created (or updated, per FR-008)
+   on the importing device whose mastery percentages exactly match the exported child's.
+3. **Given** a file that is not a valid export (wrong format, corrupted, or unrelated content),
+   **When** a parent attempts to import it, **Then** the import is rejected with a clear
+   explanation and no partial/corrupted child profile is created.
+
+---
+
+### User Story 3 - Trust that an exported file still imports after the app has updated (Priority: P2)
+
+As a parent, I want a file I exported today to still import correctly after the app has been
+updated in the future (and vice versa, within reason), so I don't lose the ability to restore a
+backup just because time has passed between export and import.
+
+**Why this priority**: The user's explicit requirement — the export format "should not change too
+often" and new versions should stay "kinda compatible." This is what separates a trustworthy
+backup feature from a fragile one; without it, User Story 2 degrades over time as the app evolves.
+
+**Independent Test**: Can be tested by taking a file matching an older, previously-defined export
+shape, importing it against the current app version, and confirming it still imports correctly
+(or, for a shape newer than the current app understands, confirming a clear rejection message
+rather than silent data corruption).
+
+**Acceptance Scenarios**:
+
+1. **Given** an export file written by an older version of the app, **When** a parent imports it
+   into a current version of the app, **Then** the import succeeds and produces correct mastery
+   data, unless that old version has been explicitly dropped from support (per FR-005).
+2. **Given** an export file written by a newer version of the app than the one currently
+   installed, **When** a parent attempts to import it, **Then** the import is refused with a
+   message explaining the file requires a newer app version, rather than silently importing
+   partial or misinterpreted data.
+3. **Given** an export file with no recognizable version marker at all, **When** a parent attempts
+   to import it, **Then** it is treated as invalid (per User Story 2, AS-3), not guessed at.
+
+---
+
+### Edge Cases
+
+- What happens when a parent imports a file for a child whose alias matches an existing profile on
+  the importing device? Both profiles are treated as independent local profiles (per
+  \`specs/006-accounts-privacy/spec.md\`, profiles are identified by an internal id, not by alias) —
+  the import MUST NOT silently merge or overwrite an existing profile unless the parent explicitly
+  confirms that intent (see FR-008).
+- What happens when the advancement report is opened for a child with mastery signals recorded
+  under a competency that no longer exists in the current competency model (e.g. after a content
+  change)? That competency's data is omitted from the report rather than causing an error.
+- What happens if an export is interrupted or the resulting file is only partially written? An
+  import of a truncated/malformed file MUST be rejected per User Story 2, AS-3, not partially
+  applied.
+- What happens when a parent tries to export a child with no recorded mastery signals yet? Export
+  still succeeds, producing a valid file with an empty progress history, so the profile itself
+  (alias, etc.) isn't stranded on one device.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: System MUST provide a parent area, separate from the child-facing practice screens,
+  reachable with a clearly-labeled navigation path in both directions (per the constitution's
+  two-audience look-and-feel split — calm/professional, not playful).
+- **FR-002**: The parent area MUST include an advancement report for the active child, showing
+  that child's current per-competency mastery percentages as computed by the existing mastery
+  engine (\`specs/003-mastery-engine\`) — real data, not placeholder/fake content. The report's
+  visual layout MAY be minimal for V1 (no charts, trends, or historical views required); those are
+  future enhancements out of scope here.
+- **FR-003**: The parent area MUST show a clear "no progress yet" state for a child with no
+  recorded mastery signals, instead of an empty or error state.
+- **FR-004**: System MUST let a parent export a single child's data (profile fields defined in
+  \`specs/006-accounts-privacy/spec.md\` plus that child's full mastery-signal history) to a single
+  file the parent can save and transfer to another device.
+- **FR-005**: The export file format MUST carry an explicit, machine-readable schema version
+  marker. System MUST document, for every released schema version, whether it is still supported
+  for import. A given app version's importer MUST accept files at its own schema version and MUST
+  accept every older supported schema version, migrating older shapes forward to the current
+  in-app representation. Dropping support for a given old schema version is a deliberate,
+  documented decision (an explicit compatibility break), never an accidental side effect of adding
+  a new field.
+- **FR-006**: System MUST let a parent import a previously-exported file, recreating an equivalent
+  child profile with matching mastery-signal history on the importing device.
+- **FR-007**: System MUST reject import of a file that is unreadable, malformed, or carries a
+  schema version newer than the current app version supports, with a clear explanation to the
+  parent — never partially importing or silently corrupting data (per User Story 3, AS-2).
+- **FR-008**: When an import targets a device that already has a local profile that appears to
+  correspond to the same child (see Assumptions for how "same child" is determined for V1), the
+  system MUST require the parent to explicitly choose how to proceed (e.g. import as a new,
+  separate profile, or replace the existing one), rather than silently merging or overwriting.
+- **FR-009**: The exported file MUST contain only the data already permitted under
+  \`specs/006-accounts-privacy/spec.md\` (FR-003's minimal-data allowlist plus mastery-signal
+  history) — no additional personal data beyond what that spec permits collecting in the first
+  place.
+- **FR-010**: Export and import MUST both work entirely on-device, without requiring a network
+  connection or any server-side component (per Constitution Principle IV).
+
+### Key Entities
+
+- **AdvancementReport**: a read-only, per-child view derived from existing mastery data (per
+  \`specs/003-mastery-engine\`) — not a new data store of its own; it reflects one child's current
+  per-competency mastery percentages at the time it's viewed.
+- **ChildExportFile**: the versioned, portable representation of one child's data — a schema
+  version marker, that child's profile fields (\`specs/006-accounts-privacy\`), and its full
+  mastery-signal history (\`specs/003-mastery-engine\`). This is the unit of export/import; its
+  shape is the compatibility contract described in FR-005.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent can reach the active child's advancement report from anywhere in the app in
+  3 clicks or fewer.
+- **SC-002**: An exported child's mastery percentages match exactly (100% of competencies, exact
+  percentage values) after being imported on a different device/browser profile.
+- **SC-003**: 100% of import attempts on malformed, corrupted, or unsupported-newer-version files
+  are rejected with an explanatory message, with zero instances of partial or silently incorrect
+  data being created.
+- **SC-004**: An export file produced by the first released version of this feature still imports
+  correctly against every subsequent app release that has not explicitly announced dropping
+  support for that version (per FR-005).
+
+## Assumptions
+
+- **"Same child" detection for FR-008 is best-effort, not identity-verified.** For V1, the system
+  treats an imported file as "possibly the same child" as an existing local profile only when
+  their internal profile ids match (e.g. re-importing a backup of a profile that still exists on
+  this device); two profiles that merely share an alias are treated as different children, since
+  alias is optional/non-unique by design (\`specs/006-accounts-privacy\`). A more sophisticated
+  duplicate-detection UX is a future enhancement, not required here.
+- **The advancement report is single-child, not multi-child, for V1.** It shows the currently
+  active child (per \`specs/009-v1-app-shell\`'s active-profile concept); comparing multiple
+  children side by side is out of scope for this spec.
+- **Export produces a file, not a cloud-synced/live-linked copy.** The parent is responsible for
+  moving the file between devices themselves (e.g. via their own file transfer method); this spec
+  does not introduce any transport mechanism, account system, or cloud storage — that remains a
+  distinct, later premium feature (cloud sync) per \`specs/006-accounts-privacy/spec.md\`.
+- **Schema versioning uses a simple incrementing marker** (e.g. an integer or \`major.minor\`
+  string) rather than a full content-negotiation protocol; the "kinda compatible" requirement from
+  the feature request is interpreted as: old files always import (until support is explicitly
+  dropped and documented), newer-than-supported files are refused outright rather than
+  best-effort-parsed.
+- This feature does not change how mastery is computed, how profiles are created, or how sessions
+  are generated — it only adds a parent-facing read view and a portable serialization of data that
+  already exists per \`specs/003-mastery-engine\` and \`specs/006-accounts-privacy\`.
+
+## Out of Scope
+
+- Charts, trend lines, or historical views in the advancement report (future enhancement).
+- Multi-child comparison views in the parent area.
+- Cloud sync or any account/server-backed transport for moving data between devices.
+- Teacher/classroom-facing reporting (see \`specs/008-teacher-mode/spec.md\`).
+- Deleting a child profile (remains covered by \`specs/006-accounts-privacy/spec.md\`'s deletion
+  requirement, not re-specified here).
+
+## Related
+
+- \`specs/003-mastery-engine/spec.md\` — source of the mastery percentages shown in the advancement
+  report.
+- \`specs/006-accounts-privacy/spec.md\` — defines the child profile fields carried in export, and
+  the FR-006/FR-007/SC-003 requirements this spec fulfills.
+- \`specs/009-v1-app-shell/spec.md\` — defines the active-child-profile concept this spec's
+  advancement report is scoped to.
+- \`docs/product/vision.md\` — "Look & feel" section, for the parent-facing calm/professional visual
+  intent.
+`,Pr=`# Feature Specification: Progression Radar Chart
+
+**Feature Branch**: \`012-progression-radar-chart\`
+
+**Created**: 2026-09-15
+
+**Status**: Draft
+
+**Input**: User description: "given this skill we expect to have, i would like to show and the
+progression report some kind of spider net graph with make skill category, where the kids stands
+and where he should be in G1,G2,G3,G4 and G5. it will help visually see where the kid is." Refined
+through follow-up: two radar variants (a mathematics-focused one using \`docs/product/CURRICULUM.md\`
+top-level areas, and an illustrative whole-child one spanning every domain in
+\`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\`); current position is the average mastery percentage,
+per category, of that category's competencies targeted at the child's current grade; the target is
+full (100%) mastery of the current grade's expected competencies, shown as a reference shape so
+gaps are visually obvious. Per the constitution's 1.5.0 amendment, the whole-child radar's
+non-mathematics axes are illustrative placeholders only ("not tracked yet") — no new subject data
+or computation.
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - See the mathematics radar at a glance (Priority: P1)
+
+As a parent, I want a radar/spider chart in the advancement report with one axis per top-level
+mathematics area (Number sense, Addition, Fractions, Geometry, ...), showing my child's current
+mastery against full mastery of their current grade, so I can immediately see which areas are
+strong and which need attention — without reading a long list of percentages.
+
+**Why this priority**: This is the feature's core value and the only variant backed by real,
+existing mastery data (\`specs/003-mastery-engine\`, whose FR-006 already anticipates exposing
+mastery "in a shape suitable for a radar/spider-chart visualization"). It extends the advancement
+report from \`specs/011-parent-area-export-import\`, which explicitly deferred charts as a future
+enhancement — this is that enhancement, scoped to mathematics.
+
+**Independent Test**: Can be tested by opening the advancement report for a child with recorded
+mastery signals across several mathematics areas and a set current grade, and confirming the chart
+renders one axis per area with a plotted current-mastery value and a full-mastery target shape,
+matching the underlying per-competency mastery percentages.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child with a set current grade and recorded mastery signals in multiple mathematics
+   areas, **When** the parent opens the advancement report, **Then** the mathematics radar renders
+   one axis per top-level mathematics area, each plotted at the average mastery percentage of that
+   area's competencies targeted at the child's current grade, alongside a target shape at 100%.
+2. **Given** a mathematics area with zero competencies targeted at the child's current grade (e.g.
+   an area that only introduces content at a later grade), **When** the chart renders, **Then**
+   that axis is shown in a distinct "not yet applicable at this grade" state rather than as 0%
+   mastery (which would misleadingly suggest a weakness).
+3. **Given** a child with no recorded mastery signals at all, **When** the parent opens the
+   advancement report, **Then** the mathematics radar renders with every axis at 0% current
+   mastery and the target shape still visible, consistent with the existing "no progress yet"
+   state from \`specs/011-parent-area-export-import\`.
+
+---
+
+### User Story 2 - Set and change a child's current grade (Priority: P1)
+
+As a parent, I want to tell the system which grade (G1–G5) my child is currently in, so the radar
+chart's target — "full mastery of the current grade" — reflects my child's actual grade rather
+than a guess, and so I can update it as my child advances.
+
+**Why this priority**: Every other part of this feature depends on knowing the child's current
+grade; no existing spec captures it (\`specs/006-accounts-privacy\` explicitly deferred age/age band
+to a later phase, and no grade field exists anywhere in the child profile today). Without this
+story, the radar chart has no way to know which competencies count toward "the current grade's
+target."
+
+**Independent Test**: Can be tested by setting a current grade for a child in the parent area,
+confirming it persists across sessions, and confirming the radar charts recompute against the
+newly set grade.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child profile with no current grade set, **When** the parent opens the advancement
+   report, **Then** they see a prompt to set the child's current grade before either radar chart
+   renders its target shape.
+2. **Given** a child profile, **When** the parent sets or changes its current grade to any of
+   G1–G5, **Then** the value is saved to that child's profile and both radar charts (where
+   applicable) immediately reflect the new grade.
+
+---
+
+### User Story 3 - See the illustrative whole-child skill map (Priority: P2)
+
+As a parent, I want a second, whole-child radar chart spanning every domain from the primary-skills
+framework (language, science, money, physical skills, and so on — not only mathematics), so I can
+see the full map of what a well-rounded primary education covers, even though today's app only
+tracks mathematics in detail.
+
+**Why this priority**: Lower priority than User Story 1 because it is explicitly illustrative
+rather than data-backed for 19 of its 20 axes — it delivers orientation/context value ("here is the
+whole map, and here is the one slice we track today"), not a new tracked capability. This story
+exists only because of the constitution's 1.5.0 exception permitting a purely illustrative
+whole-child visualization without implying new subject scope.
+
+**Independent Test**: Can be tested by opening the advancement report and confirming a second chart
+renders with one axis per \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` domain, where the mathematics
+axis shows the same real value as User Story 1's chart (aggregated to one point) and every other
+axis is visibly and unambiguously marked as not tracked, with no fabricated percentage.
+
+**Acceptance Scenarios**:
+
+1. **Given** a child with a set current grade, **When** the parent opens the advancement report,
+   **Then** a whole-child radar renders with one axis per framework domain (A through T); the
+   mathematics axis shows that child's overall current-grade mathematics mastery (the average
+   across all mathematics areas), and every other axis is rendered as an explicit "not tracked
+   yet" placeholder, visually distinguished from a real 0% value.
+2. **Given** the whole-child radar is displayed, **When** a parent inspects a "not tracked yet"
+   axis (e.g. by hovering or tapping it, per platform convention), **Then** they see a short
+   explanation that the app does not track that subject yet, without implying the child is
+   failing that area.
+
+---
+
+### Edge Cases
+
+- What happens when a mathematics area has some competencies at the child's current grade and some
+  at other grades? Only the competencies targeted at the child's current grade count toward that
+  area's axis value (per User Story 1, AS-1); competencies targeted at other grades are excluded
+  from this chart entirely (they may still appear elsewhere, e.g. a full competency list).
+- What happens when a child's current grade is changed after mastery signals already exist? The
+  radar recomputes from the existing mastery data against the newly set grade's competency set —
+  no mastery data is lost or recalculated differently; only which competencies count toward each
+  axis changes.
+- What happens when a competency that contributes to an axis's average has zero recorded attempts
+  ("not started", per \`specs/003-mastery-engine\` FR-007)? It contributes 0% to that axis's average,
+  consistent with how the mastery engine already treats unattempted tiers/competencies elsewhere
+  (\`specs/003-mastery-engine\` FR-008).
+- What happens when a competency referenced by the current grade's target set no longer exists in
+  the current competency model (e.g. after a content change)? It is excluded from the average,
+  mirroring the existing edge case in \`specs/011-parent-area-export-import\`.
+- What happens on the whole-child radar if mathematics itself has zero applicable competencies at
+  the child's current grade (e.g. grade set but content not yet authored for it)? The mathematics
+  axis shows a "not yet applicable at this grade" state (same as User Story 1, AS-2), distinct from
+  the other axes' "not tracked yet" state — one means "we track this subject but not at this
+  grade," the other means "we don't track this subject at all."
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: The parent area MUST let a parent set and change the active child's current grade,
+  as one of G1, G2, G3, G4, or G5.
+- **FR-002**: The advancement report MUST prompt the parent to set a current grade for any child
+  who does not yet have one, before rendering either radar chart's target shape (per User Story 2,
+  AS-1).
+- **FR-003**: The advancement report MUST render a mathematics radar chart with one axis per
+  top-level mathematics competency area (as listed in \`docs/product/CURRICULUM.md\`).
+- **FR-004**: For each mathematics axis, the system MUST compute the current-position value as the
+  average mastery percentage (per \`specs/003-mastery-engine\`) across that area's competencies
+  targeted at the child's current grade, and MUST render a target shape representing 100% (full
+  mastery of the current grade's expected competencies) on the same axes.
+- **FR-005**: An axis with zero competencies targeted at the child's current grade MUST be
+  rendered in a distinct "not yet applicable at this grade" state, never as a 0% value.
+- **FR-006**: The advancement report MUST also render a second, whole-child radar chart with one
+  axis per domain defined in \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\`, per the constitution's
+  illustrative-exception carve-out (v1.5.0).
+- **FR-007**: On the whole-child radar, the mathematics axis MUST show the child's overall current
+  mathematics mastery (the average across all mathematics areas' current-grade values from
+  FR-004); every other axis MUST be rendered as an explicit "not tracked yet" placeholder backed
+  by no computed value, clearly and unambiguously distinguished from a real 0% or low-mastery
+  value.
+- **FR-008**: The whole-child radar's "not tracked yet" axes MUST NOT imply, through labeling or
+  visual weight, that the child is failing or behind in those domains — they communicate absence
+  of tracking, not absence of skill.
+- **FR-009**: Both radar charts MUST use the calm/professional parent-facing visual language (per
+  the constitution's two-audience look-and-feel split), consistent with the rest of the advancement
+  report.
+- **FR-010**: Both radar charts MUST recompute immediately (without requiring a page reload) when
+  the active child's current grade changes or when new mastery signals are recorded.
+- **FR-011**: Neither radar chart's rendering MUST require a network connection or any
+  server-side component (per Constitution Principle IV) — both are computed entirely from
+  on-device data.
+
+### Key Entities
+
+- **Current grade**: a new attribute on a child's profile (extending
+  \`specs/006-accounts-privacy/spec.md\`'s \`ChildProfile\`), one of G1–G5, set and changed by the
+  parent. Not derived from age/age band, which remains out of scope per that spec. Drives which
+  competencies count as "the current grade's target" for both radar charts.
+- **MathematicsAreaProgress**: a derived, read-only value per top-level mathematics area — the
+  area's label, its current-position percentage (or "not yet applicable at this grade"), and the
+  fixed 100% target. Computed from existing \`CompetencyMastery\` data
+  (\`specs/003-mastery-engine\`); not a new stored data type.
+- **WholeChildSkillMap**: a derived, read-only, illustrative view with one entry per
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` domain — a label, and either a real percentage
+  (mathematics only, reused from MathematicsAreaProgress) or a "not tracked yet" marker (every
+  other domain). Not a new stored data type, and never a basis for exercises, mastery computation,
+  or any other subject's product functionality (per the constitution's illustrative-only
+  exception).
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent can identify their child's single weakest mathematics area from the radar
+  chart, without reading any numeric list, in one glance (validated as: correctly identified in a
+  usability check without prompting).
+- **SC-002**: 100% of mathematics radar axis values exactly match the corresponding average of
+  \`specs/003-mastery-engine\` mastery percentages for that area's current-grade competencies, for
+  every rendering.
+- **SC-003**: 100% of non-mathematics axes on the whole-child radar are visually and textually
+  distinguishable from a real data value in a blind review (no reviewer mistakes a "not tracked
+  yet" axis for a real low-mastery score).
+- **SC-004**: A parent can set or change their child's current grade in 2 actions or fewer from the
+  advancement report.
+- **SC-005**: Both radar charts reflect a changed current grade or newly recorded mastery signal
+  without any manual refresh action.
+
+## Assumptions
+
+- **Mathematics-area grouping is a content-authoring concern, not a new runtime data model.** Each
+  \`Competency\` (\`specs/001-competency-model\`) is assumed to be attributable to exactly one
+  top-level mathematics area from \`docs/product/CURRICULUM.md\` (e.g. via its existing id namespace
+  or a lightweight grouping key added at content-authoring time) — this spec does not mandate a
+  specific mechanism, only that the grouping exists and is unambiguous per competency.
+- **Current grade is per-child, parent-set, and independent of the deferred age/age band field.**
+  \`specs/006-accounts-privacy\` deferred age/age band entirely; this spec introduces "current
+  grade" as its own minimal field rather than waiting on or conflating with that deferred work,
+  since the radar chart cannot function without knowing which grade's competencies are "current."
+- **"Average mastery percentage" is a simple, unweighted mean** across the applicable
+  competencies' \`CompetencyMastery\` percentages (treating any competency with zero recorded
+  attempts as 0%, consistent with how \`specs/003-mastery-engine\` FR-008 already treats unattempted
+  tiers) — no competency within an area is weighted more heavily than another for v1.
+- **The whole-child radar's domain list is a fixed, static list of labels** derived from
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\`'s section headings (A–T), not read from any runtime
+  \`Subject\` data store — since only mathematics exists as a real \`Subject\` today, the other 19
+  labels exist purely for display.
+- **Both charts share the same current-grade target concept**: "the target" always means 100% of
+  the competencies tagged for the child's current grade — never a fixed end-of-primary (G5)
+  ceiling regardless of the child's actual current grade. A younger child's target circle is
+  therefore based on a smaller, easier competency set than an older child's, not a harder,
+  fixed one.
+
+## Out of Scope
+
+- Any real mastery tracking, exercise content, or competency model for subjects other than
+  mathematics (the whole-child radar's other 19 axes remain permanently illustrative until a
+  future spec deliberately brings another subject into scope, per the constitution).
+- Historical/trend views (e.g. how the radar looked last month) — this spec shows only the current
+  snapshot, consistent with \`specs/011-parent-area-export-import\`'s deferral of trend lines.
+- Deriving current grade automatically from age, age band, or mastery data — it is explicitly
+  parent-set (User Story 2).
+- Multi-child comparison on the same chart — the chart is scoped to the single active child, per
+  \`specs/011-parent-area-export-import\`'s existing single-child assumption.
+- Printable/exportable versions of the chart image itself (distinct from the existing data
+  export/import in \`specs/011-parent-area-export-import\`, which remains text/data, not a chart
+  image).
+
+## Related
+
+- \`specs/011-parent-area-export-import/spec.md\` — the advancement report this feature extends;
+  explicitly deferred charts as a future enhancement.
+- \`specs/003-mastery-engine/spec.md\` — source of per-competency mastery percentages; FR-006
+  already anticipated a radar/spider-chart consumer of this data.
+- \`specs/001-competency-model/spec.md\` — defines \`Competency.level\` (1–5), the basis for "targeted
+  at the child's current grade."
+- \`specs/006-accounts-privacy/spec.md\` — defines \`ChildProfile\`, extended here with a current-grade
+  field.
+- \`docs/product/CURRICULUM.md\` — source of the mathematics radar's top-level area labels.
+- \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` — source of the whole-child radar's domain labels.
+- \`.specify/memory/constitution.md\` (v1.5.0) — the illustrative-only exception permitting the
+  whole-child radar's non-mathematics axes.
+`,Fr=`# Feature Specification: Parent Competency Reference
+
+**Feature Branch**: \`013-competency-reference\`
+
+**Created**: 2026-09-15
+
+**Status**: Draft
+
+**Input**: User description: "Add a read-only 'What your child will learn' competency reference to the parent area (/parent), sourced from docs/product/PRIMARY-SKILLS-FRAMEWORK.md: all competencies a child is expected to master, grouped by subject/domain (all domains A-T in the framework, not just mathematics), and within each subject broken down by grade (P, G1-G5). Purely informational/reference content for parents to browse. Per constitution v1.6.0's broadened exception, this may show the actual grade-tagged skill text for every domain, sourced verbatim from PRIMARY-SKILLS-FRAMEWORK.md as static reference content — but it must not be presented as this child's tracked progress, must not introduce new trackable competency/subject data model entries, mastery computation, or exercises for any non-mathematics domain. Only mathematics corresponds to competencies the app actually tracks elsewhere in the product. Must fit the parent screen without becoming overwhelming — collapsed/expandable per subject (and likely per grade within a subject) rather than a giant wall of text, so a parent can scan subjects at a glance and drill into grade-level detail only for what they care about. Matches the existing calm/professional parent-facing visual language (docs.css theme), not the playful child-facing one."
+
+## User Scenarios & Testing *(mandatory)*
+
+### User Story 1 - Browse what's expected, subject by subject (Priority: P1)
+
+A parent in the parent area wants a plain answer to "what is my child supposed to be able to do
+by their grade?" across every subject, not only mathematics. They open a new reference section,
+see every subject listed by name, and can tell at a glance that this is a big list without being
+confronted with all of it at once.
+
+**Why this priority**: This is the entire feature — without it there is nothing to test or
+deliver. Everything else is refinement of this core browsing experience.
+
+**Independent Test**: Open the parent area, locate the competency reference, and confirm every
+domain from \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` (Language & Literacy through General
+Knowledge & Cultural Literacy) appears as a collapsed subject heading with no grade-level detail
+visible yet.
+
+**Acceptance Scenarios**:
+
+1. **Given** a parent has opened the parent area, **When** they open the competency reference,
+   **Then** they see a list of subject headings covering every domain in the framework, collapsed
+   by default.
+2. **Given** the reference is showing collapsed subject headings, **When** the parent counts what
+   is on screen, **Then** no grade-level skill text is visible until a subject is expanded.
+
+---
+
+### User Story 2 - Drill into one subject's grade-by-grade skills (Priority: P1)
+
+A parent wants to know specifically what a Grade 3 child is expected to be able to do in, say,
+Geography. They find the Geography subject, expand it, and see the skills grouped under each
+grade tier (Pre-school, Grade 1 … Grade 5), so they can read just the tier they care about instead
+of an undifferentiated list.
+
+**Why this priority**: Grouping by grade within a subject is what makes the reference usable
+rather than just a long alphabetical dump — it is the second half of the core value proposition,
+equally essential to a minimum viable version of this feature.
+
+**Independent Test**: Expand any one subject and confirm its skills are presented under separate,
+labeled grade tiers matching the framework's own tags (P, G1, G2, G3, G4, G5), with tiers that
+have no items for that subject omitted rather than shown empty.
+
+**Acceptance Scenarios**:
+
+1. **Given** a collapsed subject heading, **When** the parent expands it, **Then** the subject's
+   skills appear grouped under labeled grade tiers, in grade order.
+2. **Given** an expanded subject, **When** the parent looks for a grade tier that the framework
+   has no items for in that subject, **Then** no empty tier heading is shown for it.
+3. **Given** one subject is expanded, **When** the parent expands a second subject, **Then** the
+   first subject's detail does not need to be forced fully closed — both may be open — but the
+   screen must remain scannable rather than turning into a continuous wall of text (see Success
+   Criteria).
+
+---
+
+### User Story 3 - Tell reference content apart from real tracked progress (Priority: P2)
+
+A parent who has already seen the mathematics advancement report and mastery percentages needs to
+understand that the new reference's mathematics section reflects the same subject the app
+actually tracks, while every other subject in the reference is general context only — not
+something the app is measuring for their child yet.
+
+**Why this priority**: Without this distinction, a parent could reasonably conclude the app is
+tracking reading, science, money, etc., which is false and could mislead a parent about their
+child's actual measured progress. It matters, but the reference is still useful without it being
+pixel-perfect on day one, so it ranks below the two core browsing stories.
+
+**Independent Test**: With the reference open, confirm the mathematics subject carries a visible
+indication that it corresponds to what the app tracks elsewhere, while every other subject carries
+a visible "reference only / not tracked" indication, and that this distinction is understandable
+without needing to read a help article.
+
+**Acceptance Scenarios**:
+
+1. **Given** the reference is open, **When** the parent looks at the mathematics subject, **Then**
+   it is visibly marked as connected to the app's real tracked progress.
+2. **Given** the reference is open, **When** the parent looks at any non-mathematics subject,
+   **Then** it is visibly marked as reference/context only, not tracked by the app.
+
+---
+
+### Edge Cases
+
+- What happens when a parent has no active child profile? The reference is general knowledge, not
+  child-specific, so it MUST remain reachable and useful even in the zero-profile state described
+  in the existing parent area (see \`ParentArea.tsx\`'s "no active child profile" branch).
+- What happens when a subject has very long skill text at some grade tiers (e.g. Mathematics or
+  Language & Literacy, the two largest domains)? The layout MUST stay readable — wrapping text
+  rather than truncating or horizontally scrolling — without the expanded section overwhelming the
+  rest of the screen.
+- What happens when the framework's pre-school ("P") tier has no items for a given subject? That
+  tier is simply omitted for that subject, same as any other grade tier with nothing to show.
+- What happens if a parent expands every subject at once? The screen becomes long (scrolling is
+  expected and acceptable) but must not become disorganized — each subject and grade tier must stay
+  clearly delimited so the parent can still tell where one ends and the next begins.
+- What happens on a narrow (phone-width) viewport? Subject and grade groupings must still collapse
+  and expand correctly and remain readable without horizontal scrolling.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: The parent area MUST provide a "what your child will learn" competency reference,
+  reachable from \`/parent\` without navigating away from the parent-facing area.
+- **FR-002**: The reference MUST cover every subject/domain defined in
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` (all of domains A through T), not only mathematics.
+- **FR-003**: The reference MUST group content first by subject, then within each subject by grade
+  tier, using the framework's own tier tags (Pre-school baseline, Grade 1 through Grade 5).
+- **FR-004**: Within a subject and grade tier, the reference MUST list the specific skill
+  descriptions the framework assigns to that subject at that tier.
+- **FR-005**: Subjects MUST be collapsed by default, showing only the subject name, so the initial
+  view lists every subject without exposing grade-level detail until a parent chooses to see it.
+- **FR-006**: A parent MUST be able to expand and collapse each subject independently to reveal or
+  hide its grade-tier breakdown.
+- **FR-007**: A grade tier with no skills defined for a given subject MUST NOT be displayed as an
+  empty section for that subject.
+- **FR-008**: The reference MUST visibly distinguish the mathematics subject (which corresponds to
+  competencies the app actually tracks) from every other subject (which is reference/context only
+  and not tracked by the app for any child).
+- **FR-009**: The reference MUST be presented as general, child-independent reference material — it
+  MUST NOT be framed as, mixed with, or imply a specific child's actual progress, mastery, or
+  completion against any non-mathematics subject.
+- **FR-010**: The reference MUST remain reachable and fully usable when no child profile is active,
+  consistent with the parent area's existing no-profile state.
+- **FR-011**: The reference content is read-only: it MUST NOT expose any control that records,
+  checks off, saves, or otherwise persists a parent's or child's interaction with individual skill
+  items.
+- **FR-012**: The reference MUST use the parent area's existing calm/professional visual language,
+  not the playful child-facing style.
+- **FR-013**: The reference MUST remain legible and usable across phone, tablet, and desktop
+  viewport widths, consistent with the product's responsive web/PWA target.
+
+### Key Entities
+
+- **Subject/Domain**: One top-level area of the competency reference (e.g. Mathematics, Language &
+  Literacy, Money & Financial Literacy). Has a name and an ordered list of grade tiers.
+- **Grade Tier**: A mastery-by-when grouping within a subject (Pre-school baseline, Grade 1 …
+  Grade 5). Has a label and an ordered list of skill descriptions belonging to that subject at that
+  tier. A subject may have no skills at a given tier.
+- **Skill Description**: A single, concrete, observable statement of something a child can do,
+  belonging to exactly one subject and one grade tier. Static reference text — not a trackable
+  progress record.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: A parent can reach the competency reference from the parent area in one navigation
+  action (a single click/tap from \`/parent\`).
+- **SC-002**: With the reference freshly opened and nothing expanded, a parent can see the full
+  list of subject names without expanding anything — the collapsed view is not itself a wall of
+  unlabeled text.
+- **SC-003**: A parent looking for a specific subject and grade (e.g. "Geography, Grade 3") can
+  find and read that subject's Grade 3 skills, and only that tier's skills, without also having to
+  read unrelated subjects' or unrelated grades' full skill text.
+- **SC-004**: Every domain and every grade-tagged skill item present in
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` is represented somewhere in the reference — no domain
+  or tagged item is silently dropped.
+- **SC-005**: In a short, unprompted look at the reference, a parent can correctly state which
+  subject is the one the app actually tracks progress for, versus which are reference-only.
+
+## Assumptions
+
+- The reference content is a static snapshot derived from the current text of
+  \`docs/product/PRIMARY-SKILLS-FRAMEWORK.md\` at implementation time. Keeping it automatically in
+  sync with future edits to that document is out of scope for this feature.
+- "Collapsed by default, expand per subject" (and grade tiers visible once a subject is expanded)
+  satisfies the "not too messy" requirement; a search/filter control is not required for this
+  feature and can be considered a later enhancement if browsing alone proves insufficient.
+- The reference is not child-specific: it does not read or depend on a specific child's currently
+  selected grade (\`useChildGrade\`) or mastery data. A future enhancement could highlight a child's
+  current grade tier, but this feature does not require it.
+- The reference lives only in the parent area; it is not exposed anywhere in the child-facing
+  practice loop.
+- No printing or export capability is required for this feature, distinct from the existing
+  advancement-report data export/import feature (011-parent-area-export-import).
+`,Ir="---\n\ndescription: \"Task list template for feature implementation\"\n---\n\n# Tasks: Competency Model\n\n**Input**: Design documents from `/specs/001-competency-model/` (spec.md, plan.md, research.md,\ndata-model.md, contracts/competency-model.api.md, quickstart.md)\n\n**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every\n`packages/core/*` package, and Constitution Principle VI (Determinism & Testability,\nNON-NEGOTIABLE) requires validation logic to be heavily unit-tested — this is a project-wide\nstandard, not an ad hoc choice for this feature.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2)\nso each can be implemented and tested independently. All paths are relative to the\n`learncoreskills/app` repo (not this `specs` repo).\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2)\n\n## Path Conventions\n\nSingle npm workspace package, per plan.md's Project Structure:\n`packages/core/competency-model/{src,tests}` inside the `learncoreskills/app` repo.\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the new workspace package.\n\n- [x] T001 Create `packages/core/competency-model/package.json` (name\n  `@learncoreskills/competency-model`, `private: true`, zero runtime dependencies, `vitest` +\n  `@vitest/coverage-v8` as devDependencies, `test`/`coverage` npm scripts) and\n  `packages/core/competency-model/tsconfig.json` extending the workspace root's strict TS config\n  (`strict: true`, no implicit `any`, per ADR-0001/0004)\n- [x] T002 Add `packages/core/competency-model` to the `workspaces` array in the repo root\n  `package.json` (create the root `package.json`/npm workspace if it does not exist yet)\n- [x] T003 [P] Add a `vitest.config.ts` in `packages/core/competency-model/` with a coverage\n  threshold of 95% lines/branches (`coverage.thresholds.lines = 95`, `branches = 95`), per\n  ADR-0004's hard gate for core packages\n\n**Checkpoint**: `npm test --workspace packages/core/competency-model` runs (with zero tests) and\n`npm run coverage --workspace packages/core/competency-model` is wired up.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared type definitions both user stories build on.\n\n**⚠️ CRITICAL**: Both user stories add fields/behavior around this same `Competency` type — it\nmust exist first.\n\n- [x] T004 Define `Subject` (`id: string`, `nameKey: string`) and `Competency` (`id: string`,\n  `nameKey: string`, `descriptionKey: string`, `subjectId: string`, `level: 1|2|3|4|5`,\n  `tierCount: number`, `prerequisiteIds: string[]`) interfaces in\n  `packages/core/competency-model/src/types.ts`, exactly per `data-model.md`'s field tables —\n  `nameKey`/`descriptionKey` are translation-key strings, never literal display text (FR-002)\n- [x] T005 Create empty `packages/core/competency-model/src/validate.ts` (module scaffold, no\n  logic yet) and `packages/core/competency-model/src/index.ts` barrel file re-exporting\n  `./types` (US1/US2 add exports to it incrementally)\n\n**Checkpoint**: Types compile under strict mode; both user stories can now build on them\nindependently.\n\n---\n\n## Phase 3: User Story 1 - Stable target for mastery tracking (Priority: P1) 🎯 MVP\n\n**Goal**: A competency+tier pair is addressable unambiguously, prerequisites are readable but\nnever block, and malformed data (duplicate ids, dangling references, cycles) is rejected at\nvalidation time rather than silently accepted.\n\n**Independent Test**: Define a handful of competencies (single subject) with mock tiers, run\n`validateCompetencyModel`, and confirm valid data passes, prerequisite cycles are rejected, and\nprerequisites never gate anything — matches `quickstart.md` Scenarios 1–2 and both edge cases\nabout zero prerequisites / circular prerequisites.\n\n### Tests for User Story 1\n\n- [x] T006 [P] [US1] Write unit tests in\n  `packages/core/competency-model/tests/validate.test.ts` for: unique `id` enforcement\n  (`duplicate-competency-id` error), `tierCount` must be an integer `>= 1` (`invalid-tier-count`\n  error — including a 1-tier competency being *valid*, per spec edge case), `level` must be an\n  integer in `1..5` (`invalid-level` error)\n- [x] T007 [P] [US1] Write unit tests in\n  `packages/core/competency-model/tests/validate.test.ts` for: a competency with zero\n  `prerequisiteIds` validates successfully with no placeholder required (spec edge case), an\n  unknown id inside `prerequisiteIds` produces an `unknown-prerequisite-reference` error, and a\n  direct or transitive cycle in `prerequisiteIds` (e.g. `a → b → a`) produces a\n  `prerequisite-cycle` error naming every competency id in the cycle\n\n### Implementation for User Story 1\n\n- [x] T008 [US1] Implement `detectPrerequisiteCycles(competencies: Competency[]): string[]` in\n  `packages/core/competency-model/src/validate.ts` — pure function, returns the ids participating\n  in any cycle over the `prerequisiteIds` graph, or `[]` if acyclic (depends on T004; makes T007\n  pass)\n- [x] T009 [US1] Implement `validateCompetencyModel(subjects, competencies): ValidationResult`\n  in `packages/core/competency-model/src/validate.ts` with the `ValidationResult`/`ValidationError`\n  union from `contracts/competency-model.api.md`, wiring in: duplicate-id detection,\n  `tierCount >= 1` and `level` in `1..5` bounds checks, dangling `prerequisiteIds` detection, and\n  `detectPrerequisiteCycles` from T008 (depends on T008; makes T006/T007 pass) — subject-related\n  checks (`duplicate-subject-id`, `unknown-subject-reference`) are added in US2 (T013)\n- [x] T010 [US1] Implement `findCompetency(competencies: Competency[], id: string): Competency |\n  undefined` in `packages/core/competency-model/src/validate.ts` — never throws on a missing id\n- [x] T011 [US1] Export `Competency`, `validateCompetencyModel`, `detectPrerequisiteCycles`,\n  `findCompetency`, `ValidationResult`, `ValidationError` from\n  `packages/core/competency-model/src/index.ts`\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — a single-subject\ncompetency set with prerequisites can be validated, with prerequisites never blocking access\n(confirmed by test intent in T007, not by any filtering code — there is none to write).\n\n---\n\n## Phase 4: User Story 2 - Subject- and language-agnostic authoring (Priority: P2)\n\n**Goal**: A second subject (and a second competency in it) can be added as pure data, with zero\nchange to `types.ts`/`validate.ts`, and malformed subject references are rejected the same way\nprerequisite references are in US1.\n\n**Independent Test**: Add a competency for a hypothetical second subject (e.g. \"science\") to an\nalready-valid US1 dataset and confirm `validateCompetencyModel` still reports valid with no code\nchange required — matches `quickstart.md` Scenario 3.\n\n### Tests for User Story 2\n\n- [x] T012 [P] [US2] Write unit tests in\n  `packages/core/competency-model/tests/index.test.ts` for: unique `Subject.id` enforcement\n  (`duplicate-subject-id` error), a `Competency.subjectId` referencing a non-existent subject\n  producing an `unknown-subject-reference` error, and — matching `quickstart.md` Scenario 3 —\n  adding a second `Subject` plus a `Competency` referencing it to an existing valid\n  mathematics-only dataset still validates successfully using the same imported types/functions\n  with no edits to `src/types.ts` or `src/validate.ts`\n\n### Implementation for User Story 2\n\n- [x] T013 [US2] Extend `validateCompetencyModel` in\n  `packages/core/competency-model/src/validate.ts` (from T009) with `duplicate-subject-id` and\n  `unknown-subject-reference` checks against the `subjects: Subject[]` parameter\n- [x] T014 [US2] Export `Subject` from `packages/core/competency-model/src/index.ts` (extends\n  T011)\n\n**Checkpoint**: Both user stories are independently functional — US1's dataset still validates\nunchanged, and a second subject can be layered in as data only.\n\n---\n\n## Phase 5: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the package meets the project's quality bar end-to-end.\n\n- [x] T015 Run `npm run coverage --workspace packages/core/competency-model` and confirm\n  `src/validate.ts` and `src/index.ts` are at or above the 95% line/branch threshold from T003;\n  add any missing edge-case test to close a gap (ADR-0004)\n- [x] T016 [P] Run `npx eslint packages/core/competency-model` and\n  `npx tsc --noEmit -p packages/core/competency-model/tsconfig.json`; fix any lint or strict-mode\n  type error (ADR-0004: ESLint + Prettier + `strict: true` workspace-wide)\n- [x] T017 Walk through every scenario in `quickstart.md` against the finished package (Scenarios\n  1–3 plus both edge cases) and confirm each expected outcome holds\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS both user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. No dependency on US2.\n- **User Story 2 (Phase 4)**: Depends on Foundational; T013 textually extends the\n  `validateCompetencyModel` body T009 wrote, so within a solo implementation order T009 before\n  T013 — but US2's own tests (T012) and independent test criteria stand on their own and do not\n  require US1's tests to exist.\n- **Polish (Phase 5)**: Depends on both user stories being complete.\n\n### Parallel Opportunities\n\n- T003 can run alongside T001/T002 (Setup).\n- T006 and T007 (both US1 tests, same file but non-overlapping test blocks) can be drafted in\n  parallel then merged.\n- T012 (US2 tests) can be drafted in parallel with any US1 task once Foundational (Phase 2) is\n  done, since it lives in a separate test file.\n- T016 can run in parallel with T015/T017 (Polish).\n\n---\n\n## Parallel Example: User Story 1\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: \"Write unit tests for competency identity & tier validation in tests/validate.test.ts\"\nTask: \"Write unit tests for prerequisite handling (zero prereqs, dangling refs, cycles) in tests/validate.test.ts\"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — a single-subject competency model with prerequisite/cycle\n   validation is already independently useful and unblocks `004-exercise-plugin-engine` for its\n   one V1 competency (`math.addition.mental`).\n3. **STOP and VALIDATE**: run `quickstart.md` Scenarios 1–2 and both edge cases.\n4. Proceed to Phase 4 (User Story 2) to prove multi-subject extensibility before moving to the\n   next spec in the V1 build order (`004-exercise-plugin-engine`).\n\n### Incremental Delivery\n\n1. Setup + Foundational → package scaffolded, types compile.\n2. User Story 1 → single-subject validation works, mergeable on its own.\n3. User Story 2 → multi-subject extensibility proven, no earlier code touched except the one\n   planned extension point (T013).\n4. Polish → coverage/lint gates green, quickstart fully walked.\n",Lr="---\n\ndescription: \"Task list template for feature implementation\"\n---\n\n# Tasks: Mental Addition Exercise (First Exercise Plugin)\n\n**Input**: Design documents from `/specs/002-mental-addition-exercise/` (spec.md, plan.md,\nresearch.md, data-model.md, contracts/mental-addition.api.md, quickstart.md)\n\n**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every\n`packages/exercises/*` package, and Constitution Principle VI (Determinism & Testability,\nNON-NEGOTIABLE) requires question generation and answer validation to be heavily unit-tested —\nthis is a project-wide standard, not an ad hoc choice for this feature.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2)\nso each can be implemented and tested independently. All paths are relative to the\n`learncoreskills/app` repo (not this `specs` repo).\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2)\n\n## Path Conventions\n\nSingle npm workspace package, per plan.md's Project Structure:\n`packages/exercises/mental-addition/{src,tests}` inside the `learncoreskills/app` repo, depending\non the already-implemented `packages/core/plugin-engine` (spec 004).\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the new workspace package.\n\n- [x] T001 Create `packages/exercises/mental-addition/package.json` (name\n  `@learncoreskills/mental-addition`, `private: true`, one runtime dependency —\n  `@learncoreskills/plugin-engine` via npm workspaces' `\"*\"` version range — plus `vitest` +\n  `@vitest/coverage-v8` as devDependencies, `test`/`coverage` npm scripts) and\n  `packages/exercises/mental-addition/tsconfig.json` extending the workspace root's strict TS\n  config (`strict: true`, no implicit `any`, per ADR-0001/0004). No change to the root\n  `package.json` `workspaces` array is needed — `packages/exercises/*` already matches this path.\n- [x] T002 [P] Add a `vitest.config.ts` in `packages/exercises/mental-addition/` with a coverage\n  threshold of 95% lines/branches (`coverage.thresholds.lines = 95`, `branches = 95`), per\n  ADR-0004's hard gate\n\n**Checkpoint**: `npm test --workspace packages/exercises/mental-addition` runs (with zero tests)\nand `npm run coverage --workspace packages/exercises/mental-addition` is wired up.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared PRNG and type definitions both user stories build on.\n\n**⚠️ CRITICAL**: Both user stories generate questions through the same deterministic RNG and\n`AdditionQuestion`/`AdditionSession` shapes — these must exist first.\n\n- [x] T003 Implement a local seeded PRNG in `packages/exercises/mental-addition/src/rng.ts`:\n  `createRng(seed: number): () => number` (mulberry32, returns a function yielding deterministic\n  floats in `[0, 1)` on each call) and `randInt(rng: () => number, min: number, max: number):\n  number` (inclusive integer in `[min, max]`), per research.md #2 — local to this package, not\n  imported from `plugin-engine`\n- [x] T004 [P] Define `AdditionQuestion` (extends `Question` from `@learncoreskills/plugin-engine`\n  — `id: string`, `tier: 1 | 2 | 3 | 4 | 5`, `operandA: number`, `operandB: number`, `correctSum:\n  number`) and `AdditionSession` (`tier: 1 | 2 | 3 | 4 | 5`, `questions: AdditionQuestion[]`)\n  interfaces in `packages/exercises/mental-addition/src/types.ts`, exactly per `data-model.md`\n- [x] T005 Create empty `packages/exercises/mental-addition/src/generate.ts` and\n  `packages/exercises/mental-addition/src/plugin.ts` (module scaffolds, no logic yet) and\n  `packages/exercises/mental-addition/src/index.ts` barrel file re-exporting `./types` (US1/US2\n  add exports to it incrementally)\n\n**Checkpoint**: RNG and types compile under strict mode; both user stories can now build on them\nindependently.\n\n---\n\n## Phase 3: User Story 1 - Practice mental addition and see immediate feedback (Priority: P1) 🎯 MVP\n\n**Goal**: A 10-question session at one fixed tier can be generated, each question can be answered\n(correct or incorrect) with a deterministic result, and a `MasterySignal` is produced per answered\nquestion — independent of tier-boundary correctness (that's US2).\n\n**Independent Test**: Call `createSession(1, seed)`, answer all 10 questions (some correctly, some\nnot) via `mentalAdditionPlugin.validateAnswer`, and confirm each answer's correctness matches\n`question.correctSum` and a `createMasterySignal` call for each succeeds — matches `quickstart.md`\nScenario 1 and the abandoned-session edge case.\n\n### Tests for User Story 1\n\n- [x] T006 [P] [US1] Write unit tests in `packages/exercises/mental-addition/tests/plugin.test.ts`\n  for: `mentalAdditionPlugin.validateAnswer(question, question.correctSum).correct === true` (AS-1)\n  and `validateAnswer(question, question.correctSum - 1).correct === false` while\n  `question.correctSum` remains readable off the question object for revealing (AS-2)\n- [x] T007 [P] [US1] Write unit tests in `packages/exercises/mental-addition/tests/plugin.test.ts`\n  for `createSession(tier, seed)`: returns `questions.length === 10`, every question's `tier`\n  equals the session's `tier`, and answering only the first 3 of 10 questions still lets\n  `createMasterySignal` succeed for each of those 3 with no dependency on the remaining 7\n  (abandoned-session edge case)\n- [x] T008 [P] [US1] Write unit tests in `packages/exercises/mental-addition/tests/plugin.test.ts`\n  for `createMasterySignal(question, correct, timeMs, timestamp)`: returns exactly\n  `{ competencyId: \"math.addition.mental\", tier: question.tier, correct, timeMs, timestamp,\n  questionId: question.id }` (FR-008) — matches `quickstart.md` Scenario 1's per-question signal\n  assertion (AS-3: signals available as each question is answered, not only at session end)\n\n### Implementation for User Story 1\n\n- [x] T009 [US1] Implement `createMasterySignal(question: AdditionQuestion, correct: boolean,\n  timeMs: number, timestamp: number): MasterySignal` in\n  `packages/exercises/mental-addition/src/plugin.ts` (import `MasterySignal` from\n  `@learncoreskills/plugin-engine`) per the exact shape in `data-model.md` (depends on T004; makes\n  T008 pass)\n- [x] T010 [US1] Implement `mentalAdditionPlugin: Plugin<AdditionQuestion, number>` in\n  `packages/exercises/mental-addition/src/plugin.ts` — `id: \"mental-addition\"`, `competencyIds:\n  [\"math.addition.mental\"]`, `validateAnswer(question, answer)` returning `{ correct: answer ===\n  question.correctSum }` (depends on T004; makes T006 pass — `generateQuestion` is wired in T013\n  once US2's generator exists, so this task's `generateQuestion` may delegate to a not-yet-final\n  `generateAdditionQuestion` import from T013)\n- [x] T011 [US1] Implement `createSession(tier: 1 | 2 | 3 | 4 | 5, seed: number): AdditionSession`\n  in `packages/exercises/mental-addition/src/plugin.ts` — draws 10 sub-seeds from `createRng(seed)`\n  (T003) and calls `generateAdditionQuestion(tier, subSeed)` (T013) once per sub-seed, per\n  research.md #3 (depends on T003, T013; makes T007 pass)\n- [x] T012 [US1] Export `AdditionQuestion`, `AdditionSession`, `mentalAdditionPlugin`,\n  `createSession`, `createMasterySignal` from `packages/exercises/mental-addition/src/index.ts`\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — a full session can\nbe created, answered, and produce mastery signals per question, with no dependency on US2's\ntier-correctness guarantees (US1's tests only check `correctSum` matching, not digit-count/carrying\nrules).\n\n---\n\n## Phase 4: User Story 2 - Progress through addition difficulty tiers (Priority: P2)\n\n**Goal**: Each of the 5 tiers generates operands matching its FR-001 digit-count/carrying\ndefinition, constructed so the constraint holds by construction (never filtered after the fact),\nand generation is deterministic given `(tier, seed)`.\n\n**Independent Test**: Call `generateAdditionQuestion(tier, seed)` for each tier `1..5` across many\nseeds and confirm the digit-count/carrying invariant from `data-model.md`'s Tier Rules table holds\nevery time, and that calling with the same `(tier, seed)` twice returns a deep-equal result —\nmatches `quickstart.md` Scenario 2 and both determinism/tier-boundary edge cases.\n\n### Tests for User Story 2\n\n- [x] T013 [P] [US2] Write unit tests in `packages/exercises/mental-addition/tests/rng.test.ts`\n  for `createRng(seed)`: same seed produces the same sequence of values across two independent\n  calls to `createRng`; different seeds produce different first values (sanity check, not a\n  statistical test); `randInt(rng, min, max)` never returns a value outside `[min, max]` across\n  many draws\n- [x] T014 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for Tier 1: across at least 1000\n  seeds, `operandA <= 9`, `operandB <= 9`, and `operandA + operandB <= 9` always (never exactly 10\n  — the tier-boundary edge case) — matches `quickstart.md`'s \"Tier 1 never produces a sum of\n  exactly 10\" edge case\n- [x] T015 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for Tier 2: across many seeds, both\n  operands are single-digit (`<= 9`) and `operandA + operandB >= 10` always (carrying required)\n- [x] T016 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for Tier 3: across many seeds,\n  `operandA` is two-digit (`10..99`), `operandB` is one-digit (`0..9`), and the ones digit of\n  `operandA` plus `operandB` is `<= 9` always (no carrying)\n- [x] T017 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for Tier 4: across many seeds, both\n  operands are two-digit (`10..99`), and their ones digits sum to `>= 10` always (carrying\n  required)\n- [x] T018 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for Tier 5: across many seeds,\n  `operandA` is three-digit (`100..999`), `operandB` is two- or three-digit (`10..999`), and their\n  ones digits sum to `>= 10` always (carrying required) — matches the `486+257` example in FR-001\n- [x] T019 [P] [US2] Write unit tests in\n  `packages/exercises/mental-addition/tests/generate.test.ts` for determinism: calling\n  `generateAdditionQuestion(tier, seed)` twice with the same `(tier, seed)` for each of the 5\n  tiers returns a deep-equal `AdditionQuestion` (FR-005, SC-003); and for invalid input: `tier: 0`,\n  `tier: 6`, and `tier: 2.5` all throw\n\n### Implementation for User Story 2\n\n- [x] T020 [US2] Implement Tier 1 and Tier 2 generation in\n  `packages/exercises/mental-addition/src/generate.ts`: `generateAdditionQuestion(tier, seed)`\n  dispatches per tier; Tier 1 picks `operandA` in `0..9` then `operandB` in `0..(9 - operandA)`;\n  Tier 2 picks `operandA` in `1..9` then `operandB` in `max(1, 10 - operandA)..9` — both using\n  `randInt`/`createRng` from T003 (depends on T003, T004; makes T014/T015 pass)\n- [x] T021 [US2] Implement Tier 3 and Tier 4 generation in\n  `packages/exercises/mental-addition/src/generate.ts`: Tier 3 picks a one-digit `operandB` in\n  `0..9`, then constructs `operandA` as a two-digit number whose ones digit is drawn from\n  `0..(9 - operandB)` and whose tens digit is drawn from `1..9`; Tier 4 picks ones digits for both\n  operands forcing their sum `>= 10` (`operandB`'s ones digit in `1..9`, `operandA`'s ones digit in\n  `max(0, 10 - operandBOnes)..9`), then draws each tens digit from `1..9` (depends on T020; makes\n  T016/T017 pass)\n- [x] T022 [US2] Implement Tier 5 generation in\n  `packages/exercises/mental-addition/src/generate.ts`: construct forced-carry ones digits as in\n  Tier 4, draw `operandA`'s hundreds digit from `1..9` and tens digit from `0..9` (three-digit,\n  `100..999`), and — using one more `rng()` draw to choose two-digit vs. three-digit — either draw\n  `operandB`'s tens digit from `1..9` with hundreds digit `0` (two-digit, `10..99`) or its hundreds\n  digit from `1..9` and tens digit from `0..9` (three-digit, `100..999`) (depends on T021; makes\n  T018 pass); throw for `tier` outside `1..5` or non-integer `tier` (makes T019's invalid-input\n  cases pass)\n- [x] T023 [US2] Wire `mentalAdditionPlugin.generateQuestion` (from T010) to call\n  `generateAdditionQuestion` (T022) in `packages/exercises/mental-addition/src/plugin.ts`, and\n  export `generateAdditionQuestion` from `packages/exercises/mental-addition/src/index.ts` (makes\n  T019's determinism assertions exercised through the public API too)\n\n**Checkpoint**: Both user stories are independently functional — US1's session/signal flow still\nworks unchanged, and every tier's generation is now proven correct-by-construction and\ndeterministic.\n\n---\n\n## Phase 5: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the package meets the project's quality bar end-to-end.\n\n- [x] T024 Run `npm run coverage --workspace packages/exercises/mental-addition` and confirm\n  `src/rng.ts`, `src/generate.ts`, and `src/plugin.ts` are at or above the 95% line/branch\n  threshold from T002; add any missing edge-case test to close a gap (ADR-0004)\n- [x] T025 [P] Run `npx eslint packages/exercises/mental-addition` and\n  `npx tsc --noEmit -p packages/exercises/mental-addition/tsconfig.json`; fix any lint or\n  strict-mode type error (ADR-0004: ESLint + Prettier + `strict: true` workspace-wide)\n- [x] T026 Walk through every scenario in `quickstart.md` against the finished package (Scenarios\n  1–2 plus all edge cases) and confirm each expected outcome holds\n- [x] T027 Confirm `mentalAdditionPlugin` type-checks as a `Plugin` when passed to\n  `validatePluginRegistry`/`createRegistry` from `@learncoreskills/plugin-engine` (FR-010 — proves\n  this plugin conforms to 004's contract without redefining it), by adding a small integration\n  test in `packages/exercises/mental-addition/tests/plugin.test.ts`\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS both user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational. T010/T011 reference\n  `generateAdditionQuestion`, which US2 (T020-T022) implements — so within a solo implementation\n  order, draft T009/T010/T011's structure first, then complete US2's generator (Phase 4), then\n  finish wiring (T023), rather than treating the two phases as fully sequential.\n- **User Story 2 (Phase 4)**: Depends on Foundational only for T013 (RNG tests) and T020's operand\n  logic; T023 (wiring into the plugin) depends on US1's T010 existing.\n- **Polish (Phase 5)**: Depends on both user stories being complete.\n\n### Parallel Opportunities\n\n- T002 can run alongside T001 (Setup).\n- T004 can run alongside T003 (Foundational, different files).\n- T006, T007, T008 (all US1 tests, same file but non-overlapping test blocks) can be drafted in\n  parallel then merged.\n- T014 through T019 (all US2 generation tests, same file but non-overlapping test blocks per tier)\n  can be drafted in parallel then merged.\n- T025 can run in parallel with T024/T026/T027 (Polish).\n\n---\n\n## Parallel Example: User Story 2\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: \"Write Tier 1 generation tests in tests/generate.test.ts\"\nTask: \"Write Tier 2 generation tests in tests/generate.test.ts\"\nTask: \"Write Tier 3 generation tests in tests/generate.test.ts\"\nTask: \"Write Tier 4 generation tests in tests/generate.test.ts\"\nTask: \"Write Tier 5 generation tests in tests/generate.test.ts\"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) together with enough of Phase 4 (T020-T023) to have a working\n   `generateAdditionQuestion` — US1's session/signal flow is not meaningfully testable end-to-end\n   without at least one real tier generator, unlike `004`'s echo-plugin pattern, since this\n   feature's whole point is real addition questions.\n3. **STOP and VALIDATE**: run `quickstart.md` Scenario 1 and the abandoned-session edge case.\n4. Complete the remaining tiers in Phase 4 to prove every tier's digit-count/carrying rule before\n   moving to the next spec in the V1 build order (`003-mastery-engine`).\n\n### Incremental Delivery\n\n1. Setup + Foundational → package scaffolded, RNG and types compile.\n2. User Story 1 (+ Tiers 1-2 from US2, needed to exercise it end-to-end) → session/answer/signal\n   flow works, mergeable together.\n3. User Story 2 (remaining tiers) → all 5 tiers proven correct-by-construction and deterministic.\n4. Polish → coverage/lint gates green, quickstart fully walked, FR-010 conformance proven against\n   the real `plugin-engine` registry.\n",Rr='---\n\ndescription: "Task list template for feature implementation"\n---\n\n# Tasks: Mastery Engine\n\n**Input**: Design documents from `/specs/003-mastery-engine/` (spec.md, plan.md, research.md,\ndata-model.md, contracts/mastery-engine.api.md, quickstart.md)\n\n**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every\n`packages/core/*` package, and Constitution Principle VI (Determinism & Testability,\nNON-NEGOTIABLE) requires mastery calculations to be heavily unit-tested — this is a project-wide\nstandard, not an ad hoc choice for this feature.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2)\nso each can be implemented and tested independently. All paths are relative to the\n`learncoreskills/app` repo (not this `specs` repo).\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2)\n\n## Path Conventions\n\nSingle npm workspace package, per plan.md\'s Project Structure:\n`packages/core/mastery-engine/{src,tests}` inside the `learncoreskills/app` repo, depending on the\nalready-implemented `packages/core/plugin-engine` (spec 004) and `packages/core/competency-model`\n(spec 001).\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the new workspace package.\n\n- [x] T001 Create `packages/core/mastery-engine/package.json` (name\n  `@learncoreskills/mastery-engine`, `private: true`, two runtime dependencies —\n  `@learncoreskills/plugin-engine` and `@learncoreskills/competency-model`, both via npm\n  workspaces\' `"*"` version range — plus `vitest` + `@vitest/coverage-v8` as devDependencies,\n  `test`/`coverage` npm scripts) and `packages/core/mastery-engine/tsconfig.json` extending the\n  workspace root\'s strict TS config (`strict: true`, no implicit `any`, per ADR-0001/0004). No\n  change to the root `package.json` `workspaces` array is needed — `packages/core/*` already\n  matches this path.\n- [x] T002 [P] Add a `vitest.config.ts` in `packages/core/mastery-engine/` with a coverage\n  threshold of 95% lines/branches (`coverage.thresholds.lines = 95`, `branches = 95`), per\n  ADR-0004\'s hard gate\n\n**Checkpoint**: `npm test --workspace packages/core/mastery-engine` runs (with zero tests) and\n`npm run coverage --workspace packages/core/mastery-engine` is wired up.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared type definitions both user stories build on.\n\n**⚠️ CRITICAL**: Both user stories produce/consume these same result shapes — they must exist\nfirst.\n\n- [x] T003 Define `TierMastery` (`competencyId: string`, `tier: number`, `percentage: number |\n  "not-started"`, `attemptsConsidered: number`, `mastered: boolean`) and `CompetencyMastery`\n  (`competencyId: string`, `percentage: number`, `tiers: TierMastery[]`) interfaces in\n  `packages/core/mastery-engine/src/types.ts`, exactly per `data-model.md`\'s field tables\n- [x] T004 Create empty `packages/core/mastery-engine/src/tier-mastery.ts`,\n  `packages/core/mastery-engine/src/competency-mastery.ts`, and\n  `packages/core/mastery-engine/src/rank.ts` (module scaffolds, no logic yet) and\n  `packages/core/mastery-engine/src/index.ts` barrel file re-exporting `./types` (US1/US2 add\n  exports to it incrementally)\n\n**Checkpoint**: Types compile under strict mode; both user stories can now build on them\nindependently.\n\n---\n\n## Phase 3: User Story 1 - See a trustworthy mastery percentage (Priority: P1) 🎯 MVP\n\n**Goal**: Per-tier mastery reports "not started" below 5 attempts, an accurate percentage (and\nmastered flag at ≥90%) at 5+ attempts using at most the last 10, and per-competency mastery\naverages across every tier the competency defines — unattempted tiers count as 0%, never excluded.\n\n**Independent Test**: Feed synthetic `MasterySignal[]` sequences into `computeTierMastery` and\n`computeCompetencyMastery` and assert the resulting percentages match the expected calculation —\nmatches `quickstart.md` Scenarios 1–3 and the zero-attempts / more-than-10-attempts / determinism\nedge cases.\n\n### Tests for User Story 1\n\n- [x] T005 [P] [US1] Write unit tests in\n  `packages/core/mastery-engine/tests/tier-mastery.test.ts` for: fewer than 5 signals at a\n  `{ competencyId, tier }` → `percentage: "not-started"`, `mastered: false`,\n  `attemptsConsidered` equal to the actual count (AS-1); 10 signals with 9 correct → `percentage:\n  90`, `mastered: true`, `attemptsConsidered: 10` (AS-2); exactly 5 signals (boundary) reports a\n  numeric percentage, not "not-started"\n- [x] T006 [P] [US1] Write unit tests in\n  `packages/core/mastery-engine/tests/tier-mastery.test.ts` for: more than 10 signals at a\n  `{ competencyId, tier }` — only the most recent 10 (by `timestamp`, regardless of input array\n  order) are considered, confirmed by constructing older all-wrong + newer all-correct signals and\n  asserting the result reflects only the newer 10 (edge case); signals for a different\n  `competencyId` or `tier` are excluded from the count\n- [x] T007 [P] [US1] Write unit tests in\n  `packages/core/mastery-engine/tests/competency-mastery.test.ts` for: a competency with 5 tiers\n  where only 2 have ≥5 attempts (each 100%) — `computeCompetencyMastery(...).percentage === 40`\n  (`(100 + 100 + 0 + 0 + 0) / 5`), proving unattempted tiers are averaged in as 0%, not excluded\n  (AS-3); zero signals at all for the competency — `percentage === 0`, every entry in `tiers` has\n  `percentage: "not-started"` (zero-attempts edge case)\n- [x] T008 [P] [US1] Write a unit test in\n  `packages/core/mastery-engine/tests/competency-mastery.test.ts` for determinism: calling\n  `computeCompetencyMastery` twice with the same `signals` array (any number of times) returns a\n  deep-equal `CompetencyMastery` both times (FR-005, SC-001)\n\n### Implementation for User Story 1\n\n- [x] T009 [US1] Implement `computeTierMastery(signals: MasterySignal[], competencyId: string,\n  tier: number): TierMastery` in `packages/core/mastery-engine/src/tier-mastery.ts` (import\n  `MasterySignal` from `@learncoreskills/plugin-engine`) — filters by `competencyId`/`tier`, sorts\n  by `timestamp` ascending, takes the last `min(10, count)`, returns `"not-started"` below 5\n  considered, else `(correctCount / attemptsConsidered) * 100` with `mastered` at `>= 90` (depends\n  on T003; makes T005/T006 pass)\n- [x] T010 [US1] Implement `computeCompetencyMastery(signals: MasterySignal[], competency:\n  Competency): CompetencyMastery` in `packages/core/mastery-engine/src/competency-mastery.ts`\n  (import `Competency` from `@learncoreskills/competency-model`) — calls `computeTierMastery`\n  (T009) once per tier `1..competency.tierCount`, averages each tier\'s `percentage` treating\n  `"not-started"` as `0` (depends on T009; makes T007/T008 pass)\n- [x] T011 [US1] Export `TierMastery`, `CompetencyMastery`, `computeTierMastery`,\n  `computeCompetencyMastery` from `packages/core/mastery-engine/src/index.ts`\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — trustworthy,\ndeterministic per-tier and per-competency mastery percentages, with unattempted tiers never\ninflating the average.\n\n---\n\n## Phase 4: User Story 2 - Prioritize weaknesses for practice (Priority: P2)\n\n**Goal**: A set of `CompetencyMastery` results can be ranked from weakest to strongest.\n\n**Independent Test**: Compute mastery for several mock competencies and confirm\n`rankWeakestCompetencies` returns them ordered from lowest to highest `percentage` — matches\n`quickstart.md` Scenario 4.\n\n### Tests for User Story 2\n\n- [x] T012 [P] [US2] Write unit tests in `packages/core/mastery-engine/tests/rank.test.ts` for:\n  `rankWeakestCompetencies` given competencies with percentages `[80, 20, 50]` returns them ordered\n  `[20, 50, 80]` (AS-1); the input array is not mutated (the function returns a new array); an\n  empty input returns an empty array\n\n### Implementation for User Story 2\n\n- [x] T013 [US2] Implement `rankWeakestCompetencies(masteries: CompetencyMastery[]):\n  CompetencyMastery[]` in `packages/core/mastery-engine/src/rank.ts` — returns a new array sorted\n  ascending by `percentage` (depends on T003; makes T012 pass)\n- [x] T014 [US2] Export `rankWeakestCompetencies` from `packages/core/mastery-engine/src/index.ts`\n\n**Checkpoint**: Both user stories are independently functional — US1\'s per-tier/per-competency\ncalculations are untouched, and weakness ranking now works over their output.\n\n---\n\n## Phase 5: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the package meets the project\'s quality bar end-to-end.\n\n- [x] T015 Run `npm run coverage --workspace packages/core/mastery-engine` and confirm\n  `src/tier-mastery.ts`, `src/competency-mastery.ts`, `src/rank.ts`, and `src/index.ts` are at or\n  above the 95% line/branch threshold from T002; add any missing edge-case test to close a gap\n  (ADR-0004)\n- [x] T016 [P] Run `npx eslint packages/core/mastery-engine` and\n  `npx tsc --noEmit -p packages/core/mastery-engine/tsconfig.json`; fix any lint or strict-mode\n  type error (ADR-0004: ESLint + Prettier + `strict: true` workspace-wide)\n- [x] T017 Walk through every scenario in `quickstart.md` against the finished package (Scenarios\n  1–4 plus all three edge cases) and confirm each expected outcome holds\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS both user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. No dependency on US2.\n- **User Story 2 (Phase 4)**: Depends on Foundational only for its own types (`CompetencyMastery`)\n  — does not require US1\'s functions to exist to be tested in isolation (T012 constructs\n  `CompetencyMastery` fixtures directly), though it is naturally exercised together with US1\'s\n  output in practice.\n- **Polish (Phase 5)**: Depends on both user stories being complete.\n\n### Parallel Opportunities\n\n- T002 can run alongside T001 (Setup).\n- T005, T006 (US1 tier-mastery tests, same file but non-overlapping blocks) can be drafted in\n  parallel then merged; T007, T008 similarly for competency-mastery tests.\n- T012 (US2) can be drafted in parallel with any US1 task once Foundational (Phase 2) is done,\n  since it lives in a separate test file and only needs `CompetencyMastery` fixtures.\n- T016 can run in parallel with T015/T017 (Polish).\n\n---\n\n## Parallel Example: User Story 1\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: "Write tier-mastery threshold/percentage tests in tests/tier-mastery.test.ts"\nTask: "Write tier-mastery recency-window tests in tests/tier-mastery.test.ts"\nTask: "Write competency-mastery averaging tests in tests/competency-mastery.test.ts"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — trustworthy per-tier/per-competency mastery is already\n   independently useful and is the number every other consumer (UI display, weakness ranking)\n   needs first.\n3. **STOP and VALIDATE**: run `quickstart.md` Scenarios 1–3 and the zero-attempts /\n   more-than-10-attempts / determinism edge cases.\n4. Proceed to Phase 4 (User Story 2) to prove weakness ranking before moving on — V1\'s build order\n   (`specs/README.md`) has no further core packages after this one; remaining V1 work is\n   `006-accounts-privacy` (partial).\n\n### Incremental Delivery\n\n1. Setup + Foundational → package scaffolded, types compile.\n2. User Story 1 → per-tier and per-competency mastery work, mergeable on its own.\n3. User Story 2 → weakness ranking proven, no earlier code touched.\n4. Polish → coverage/lint gates green, quickstart fully walked.\n',zr="---\n\ndescription: \"Task list template for feature implementation\"\n---\n\n# Tasks: Exercise Plugin Engine\n\n**Input**: Design documents from `/specs/004-exercise-plugin-engine/` (spec.md, plan.md,\nresearch.md, data-model.md, contracts/plugin-engine.api.md, quickstart.md)\n\n**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every\n`packages/core/*` package, and Constitution Principle VI (Determinism & Testability,\nNON-NEGOTIABLE) requires question generation and answer validation to be heavily unit-tested —\nthis is a project-wide standard, not an ad hoc choice for this feature.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2)\nso each can be implemented and tested independently. All paths are relative to the\n`learncoreskills/app` repo (not this `specs` repo).\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2)\n\n## Path Conventions\n\nSingle npm workspace package, per plan.md's Project Structure:\n`packages/core/plugin-engine/{src,tests}` inside the `learncoreskills/app` repo, depending on the\nalready-implemented `packages/core/competency-model` (spec 001).\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the new workspace package.\n\n- [x] T001 Create `packages/core/plugin-engine/package.json` (name\n  `@learncoreskills/plugin-engine`, `private: true`, one runtime dependency —\n  `@learncoreskills/competency-model` as a workspace dependency (npm workspaces resolve this via\n  a plain `\"*\"` version range, not the pnpm/yarn `workspace:*` protocol) — plus `vitest` +\n  `@vitest/coverage-v8` as devDependencies, `test`/`coverage` npm scripts) and\n  `packages/core/plugin-engine/tsconfig.json` extending the workspace root's strict TS config\n  (`strict: true`, no implicit `any`, per ADR-0001/0004). No change to the root `package.json`\n  `workspaces` array is needed — `packages/core/*` already matches this path.\n- [x] T002 [P] Add a `vitest.config.ts` in `packages/core/plugin-engine/` with a coverage\n  threshold of 95% lines/branches (`coverage.thresholds.lines = 95`, `branches = 95`), per\n  ADR-0004's hard gate for core packages\n\n**Checkpoint**: `npm test --workspace packages/core/plugin-engine` runs (with zero tests) and\n`npm run coverage --workspace packages/core/plugin-engine` is wired up.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared type definitions both user stories build on.\n\n**⚠️ CRITICAL**: Both user stories add behavior around these same types — they must exist first.\n\n- [x] T003 Define `Question` (`id: string`), `PrintableQuestion` (`questionId: string`),\n  `MasterySignal` (`competencyId: string`, `tier: number`, `correct: boolean`, `timeMs: number`,\n  `timestamp: number`, `questionId: string`), and `Plugin<TQuestion extends Question = Question,\n  TAnswer = unknown>` (`id: string`, `competencyIds: string[]`, `generateQuestion(tier: number,\n  seed: number): TQuestion`, `validateAnswer(question: TQuestion, answer: TAnswer): { correct:\n  boolean }`, optional `toPrintable?(question: TQuestion): PrintableQuestion`) interfaces in\n  `packages/core/plugin-engine/src/types.ts`, exactly per `data-model.md`'s field tables and\n  `contracts/plugin-engine.api.md`\n- [x] T004 Create empty `packages/core/plugin-engine/src/tier.ts` and\n  `packages/core/plugin-engine/src/registry.ts` (module scaffolds, no logic yet) and\n  `packages/core/plugin-engine/src/index.ts` barrel file re-exporting `./types` (US1/US2 add\n  exports to it incrementally)\n\n**Checkpoint**: Types compile under strict mode; both user stories can now build on them\nindependently.\n\n---\n\n## Phase 3: User Story 1 - Add a new exercise without touching core code (Priority: P1) 🎯 MVP\n\n**Goal**: A trivial second plugin registers and runs end-to-end with zero changes to\nengine/mastery/UI source files; every plugin's mastery signal has the identical `MasterySignal`\nshape regardless of which plugin produced it; a duplicate plugin id or a reference to an unknown\ncompetency id fails registration loudly.\n\n**Independent Test**: Implement a trivial no-op/echo plugin, register it via `createRegistry`\nalongside the one V1 competency, and confirm it is retrievable via `getPlugin`/\n`getPluginsForCompetency` with zero changes to any file outside its own module and the registry\narray — matches `quickstart.md` Scenarios 1–2 and the duplicate-id / unknown-competency-reference\nedge cases.\n\n### Tests for User Story 1\n\n- [x] T005 [P] [US1] Write unit tests in `packages/core/plugin-engine/tests/registry.test.ts` for:\n  `validatePluginRegistry` returning `valid: true, errors: []` for a set of plugins with unique\n  ids and known `competencyIds` references, and `createRegistry` returning a `PluginRegistry`\n  whose `getPlugin(id)`, `getPluginsForCompetency(competencyId)`, and `all()` behave per\n  `data-model.md`'s `PluginRegistry` member table (never throwing on a missing id, returning `[]`\n  for a competency no plugin trains)\n- [x] T006 [P] [US1] Write unit tests in `packages/core/plugin-engine/tests/registry.test.ts` for:\n  two plugins sharing the same `id` producing a `duplicate-plugin-id` error from\n  `validatePluginRegistry`, and `createRegistry` throwing on the same input (spec edge case 1 —\n  \"must fail loudly, not silently keep one and drop the other\")\n- [x] T007 [P] [US1] Write unit tests in `packages/core/plugin-engine/tests/registry.test.ts` for:\n  a plugin's `competencyIds` entry with no matching `Competency.id` producing an\n  `unknown-competency-reference` error (naming both `pluginId` and `competencyId`) from\n  `validatePluginRegistry`, and `createRegistry` throwing on the same input (spec edge case 3)\n- [x] T008 [P] [US1] Write a unit test in `packages/core/plugin-engine/tests/index.test.ts`\n  implementing a trivial no-op/echo `Plugin` (per `quickstart.md` Scenario 1), registering it via\n  `createRegistry` with the one V1 competency (`math.addition.mental`, `tierCount: 5`), and\n  asserting: it is retrievable via `getPlugin`/`getPluginsForCompetency`/`all()`, and a\n  `MasterySignal` object built from its `generateQuestion`/`validateAnswer` output conforms to the\n  exact same shape (`competencyId`, `tier`, `correct`, `timeMs`, `timestamp`, `questionId`) a\n  second, differently-shaped mock plugin's output would also conform to (`quickstart.md` Scenario\n  2, SC-002)\n\n### Implementation for User Story 1\n\n- [x] T009 [US1] Implement `validatePluginRegistry(plugins: Plugin[], competencies: Competency[]):\n  ValidationResult` in `packages/core/plugin-engine/src/registry.ts` (import `Competency` from\n  `@learncoreskills/competency-model`) with the `ValidationResult`/`PluginRegistryError` union from\n  `contracts/plugin-engine.api.md`, wiring in duplicate-plugin-id detection and\n  unknown-competency-reference detection (depends on T003; makes T005/T006/T007 pass)\n- [x] T010 [US1] Implement `createRegistry(plugins: Plugin[], competencies: Competency[]):\n  PluginRegistry` in `packages/core/plugin-engine/src/registry.ts` — calls\n  `validatePluginRegistry` (T009) and throws a single `Error` whose message lists every problem\n  found if invalid, otherwise returns a `PluginRegistry` object implementing `getPlugin`,\n  `getPluginsForCompetency`, and `all()` per `data-model.md` (depends on T009; makes T005/T006/T007\n  pass)\n- [x] T011 [US1] Export `Plugin`, `Question`, `PrintableQuestion`, `MasterySignal`,\n  `ValidationResult`, `PluginRegistryError`, `validatePluginRegistry`, `createRegistry`, and\n  `PluginRegistry` from `packages/core/plugin-engine/src/index.ts`\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — a second plugin can\nbe added and registered as a self-contained module plus one registry-array entry, with duplicate\nids and unknown competency references rejected loudly (confirmed by T006/T007), and every plugin's\nmastery signal shape provably identical (confirmed by T008, not by any per-plugin shape-conversion\ncode — there is none to write).\n\n---\n\n## Phase 4: User Story 2 - Deterministic, testable question generation (Priority: P2)\n\n**Goal**: Question generation and answer validation are provably deterministic given a\nseed/state, and a plugin can reject a tier its trained competency doesn't define using one shared,\ntested guard rather than inventing its own bounds check.\n\n**Independent Test**: Call the echo plugin's `generateQuestion`/`validateAnswer` twice each with\nidentical inputs and assert identical output; call `isValidTier` against the one V1 competency's\n`tierCount` with in-range, out-of-range, and non-integer tiers — matches `quickstart.md` Scenario 3\nand the invalid-tier edge case.\n\n### Tests for User Story 2\n\n- [x] T012 [P] [US2] Write unit tests in `packages/core/plugin-engine/tests/tier.test.ts` for\n  `isValidTier(competency, tier)` against a competency with `tierCount: 5`: `tier: 3` → `true`;\n  `tier: 6` → `false` (above range); `tier: 0` → `false` (below range); `tier: 1.5` → `false`\n  (non-integer) — matches `quickstart.md`'s invalid-tier edge case\n- [x] T013 [P] [US2] Extend the echo plugin test in\n  `packages/core/plugin-engine/tests/index.test.ts` (from T008) with: calling\n  `generateQuestion(tier, seed)` twice with the same `(tier, seed)` pair and asserting deep-equal\n  results (FR-003, `quickstart.md` Scenario 3), and calling `validateAnswer(question, answer)`\n  twice with the same inputs and asserting deep-equal `{ correct }` results\n\n### Implementation for User Story 2\n\n- [x] T014 [US2] Implement `isValidTier(competency: Competency, tier: number): boolean` in\n  `packages/core/plugin-engine/src/tier.ts` (import `Competency` from\n  `@learncoreskills/competency-model`) — pure function returning `Number.isInteger(tier) && tier >=\n  1 && tier <= competency.tierCount` (depends on T003; makes T012 pass); update the echo plugin\n  used in T008/T013 to call `isValidTier` as the first line of its `generateQuestion` and throw on\n  a `false` result, demonstrating the pattern plugin authors (starting with\n  `002-mental-addition-exercise`) are expected to follow\n- [x] T015 [US2] Export `isValidTier` from `packages/core/plugin-engine/src/index.ts`\n\n**Checkpoint**: Both user stories are independently functional — US1's registry and echo plugin\nstill work unchanged, and determinism plus tier-bounds rejection are now independently proven.\n\n---\n\n## Phase 5: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the package meets the project's quality bar end-to-end.\n\n- [x] T016 Run `npm run coverage --workspace packages/core/plugin-engine` and confirm\n  `src/tier.ts`, `src/registry.ts`, and `src/index.ts` are at or above the 95% line/branch\n  threshold from T002; add any missing edge-case test to close a gap (ADR-0004)\n- [x] T017 [P] Run `npx eslint packages/core/plugin-engine` and\n  `npx tsc --noEmit -p packages/core/plugin-engine/tsconfig.json`; fix any lint or strict-mode\n  type error (ADR-0004: ESLint + Prettier + `strict: true` workspace-wide)\n- [x] T018 Walk through every scenario in `quickstart.md` against the finished package (Scenarios\n  1–3 plus all three edge cases) and confirm each expected outcome holds\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS both user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. No dependency on US2.\n- **User Story 2 (Phase 4)**: Depends on Foundational; extends the echo plugin T008 wrote, so\n  within a solo implementation order T008 before T013 — but US2's own bounds-check tests (T012)\n  stand on their own and do not require US1's tests to exist.\n- **Polish (Phase 5)**: Depends on both user stories being complete.\n\n### Parallel Opportunities\n\n- T002 can run alongside T001 (Setup).\n- T005, T006, and T007 (all US1 tests, same file but non-overlapping test blocks) can be drafted\n  in parallel then merged.\n- T012 (US2 tier tests) can be drafted in parallel with any US1 task once Foundational (Phase 2)\n  is done, since it lives in a separate test file.\n- T017 can run in parallel with T016/T018 (Polish).\n\n---\n\n## Parallel Example: User Story 1\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: \"Write unit tests for registry success path in tests/registry.test.ts\"\nTask: \"Write unit tests for duplicate-plugin-id rejection in tests/registry.test.ts\"\nTask: \"Write unit tests for unknown-competency-reference rejection in tests/registry.test.ts\"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — plugin registration with duplicate-id/unknown-reference\n   rejection is already independently useful and unblocks `002-mental-addition-exercise` (the one\n   V1 plugin) from having a real registry to register against.\n3. **STOP and VALIDATE**: run `quickstart.md` Scenarios 1–2 and the duplicate-id /\n   unknown-competency-reference edge cases.\n4. Proceed to Phase 4 (User Story 2) to prove determinism and tier-bounds rejection before moving\n   to the next spec in the V1 build order (`002-mental-addition-exercise`).\n\n### Incremental Delivery\n\n1. Setup + Foundational → package scaffolded, types compile.\n2. User Story 1 → registration/lookup works, mergeable on its own.\n3. User Story 2 → determinism and tier bounds proven, no earlier code touched except the one\n   planned extension point (the echo plugin's `generateQuestion` calling `isValidTier`).\n4. Polish → coverage/lint gates green, quickstart fully walked.\n",Br=`---
+
+description: "Task list template for feature implementation"
+---
+
+# Tasks: Daily Practice
+
+**Input**: Design documents from \`/specs/005-daily-practice/\` (spec.md, plan.md, research.md,
+data-model.md, contracts/daily-practice.api.md, quickstart.md)
+
+**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every
+\`packages/core/*\` package, and Constitution Principle VI (Determinism & Testability,
+NON-NEGOTIABLE) requires this kind of deterministic, trust-critical logic to be heavily
+unit-tested — this is a project-wide standard, not an ad hoc choice for this feature.
+
+**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2,
+User Story 3 = P3) so each can be implemented and tested independently. All paths are relative to
+the \`learncoreskills/app\` repo (not this \`specs\` repo).
+
+## Format: \`[ID] [P?] [Story] Description\`
+
+- **[P]**: Can run in parallel (different files, no dependencies)
+- **[Story]**: Which user story this task belongs to (US1, US2, US3)
+
+## Path Conventions
+
+Single npm workspace package, per plan.md's Project Structure:
+\`packages/core/daily-practice/{src,tests}\` inside the \`learncoreskills/app\` repo, depending only
+on the already-implemented \`packages/core/mastery-engine\` (spec 003) —
+\`@learncoreskills/competency-model\` is not a dependency (\`competencyId\` is a plain \`string\`,
+\`tierCount\` is read as \`mastery.tiers.length\`). No \`apps/web\` changes — UI is Out of Scope.
+
+**Note on FR-005**: only the "not persisted" half of FR-005 is verified by this feature's tasks
+(satisfied by this package never touching storage). The "regenerated on every app load, keyed by
+the local calendar date" half has no task here by design — this package has no notion of "today"
+or "app load" (see plan.md Scale/Scope); a future UI-wiring feature owns calling
+\`generateDailySession\` at the right time and is where that half gets verified.
+
+---
+
+## Phase 1: Setup (Shared Infrastructure)
+
+**Purpose**: Scaffold the new workspace package.
+
+- [x] T001 Create \`packages/core/daily-practice/package.json\` (name
+  \`@learncoreskills/daily-practice\`, \`private: true\`, \`type: module\`, \`main\`/\`types\` both
+  \`./src/index.ts\`, one runtime dependency — \`@learncoreskills/mastery-engine\` via npm
+  workspaces' \`"*"\` version range — plus \`vitest\` + \`@vitest/coverage-v8\` + \`typescript\` as
+  devDependencies, \`test\`/\`coverage\`/\`typecheck\`/\`lint\` npm scripts matching
+  \`packages/core/mastery-engine/package.json\`) and
+  \`packages/core/daily-practice/tsconfig.json\` extending the workspace root's strict TS config.
+  No change to the root \`package.json\` \`workspaces\` array is needed — \`packages/core/*\` already
+  matches this path.
+- [x] T002 [P] Add a \`vitest.config.ts\` in \`packages/core/daily-practice/\` with a coverage
+  threshold of 95% lines/branches/functions/statements (\`coverage.provider: "v8"\`,
+  \`include: ["src/**/*.ts"]\`), matching \`packages/core/mastery-engine/vitest.config.ts\` exactly,
+  per ADR-0004's hard gate
+
+**Checkpoint**: \`npm test --workspace packages/core/daily-practice\` runs (with zero tests) and
+\`npm run coverage --workspace packages/core/daily-practice\` is wired up.
+
+---
+
+## Phase 2: Foundational (Blocking Prerequisites)
+
+**Purpose**: The shared type definitions and scaffolding every user story builds on.
+
+**⚠️ CRITICAL**: All three user stories produce/consume the same \`DailySession\` result shape —
+it must exist first.
+
+- [x] T003 Define \`DailySessionBlock\` (\`competencyId: string\`, \`tier: number\`, \`questionCount:
+  10\`) and \`DailySession\` (\`blocks: DailySessionBlock[]\`) interfaces in
+  \`packages/core/daily-practice/src/types.ts\`, exactly per \`data-model.md\`'s field tables — do
+  not add \`id\`/\`date\`/\`childId\` fields (data-model.md: "No \`id\`, \`date\`, or \`childId\` field on
+  \`DailySession\` itself... this package has no notion of 'today' or 'which child'")
+- [x] T004 Create empty \`packages/core/daily-practice/src/daily-session.ts\` (module scaffold, no
+  logic yet) and \`packages/core/daily-practice/src/index.ts\` barrel file re-exporting \`./types\`
+  (US1/US2/US3 add exports to it incrementally)
+
+**Checkpoint**: Types compile under strict mode; all three user stories can now build on them
+independently.
+
+---
+
+## Phase 3: User Story 1 - Get a daily session that targets weaknesses (Priority: P1) 🎯 MVP
+
+**Goal**: Generate exactly 5 fixed 10-question blocks (50 questions total) for one competency, 3
+always at the child's derived current tier and 2 "swing" blocks placed at the next/previous tier
+based on that tier's own mastery data, clamped at the Tier 1 floor and Tier 5 ceiling.
+
+**Independent Test**: Construct synthetic \`CompetencyMastery\` fixtures (mastered / not-started /
+attempted-not-mastered at various tiers) and assert \`generateDailySession\` places blocks exactly
+per research.md Decisions 1-4 — matches \`quickstart.md\` Scenarios 1-3 and the floor edge case.
+
+### Tests for User Story 1
+
+- [x] T005 [P] [US1] Write unit tests in \`packages/core/daily-practice/tests/allocation.test.ts\`
+  for deriving the current tier (research.md Decision 2): given a \`CompetencyMastery\` where tier 2
+  is \`mastered: true\` and every other tier defaults to \`"not-started"\`, the derived current tier
+  is 1 — NOT 2 — because tier 1 is also not mastered and is the lowest such tier (derivation picks
+  the lowest-numbered tier with \`mastered === false\`, ignoring that tier 2 happens to be mastered);
+  given every tier \`mastered: true\`, the derived current tier is \`tiers.length\` (the last tier),
+  not tier 1
+- [x] T006 [P] [US1] Write unit tests in \`packages/core/daily-practice/tests/allocation.test.ts\`
+  for the swing-tier rule (research.md Decision 3) at a current tier with no floor/ceiling
+  involved (e.g. tier 3 of 5): \`percentage: "not-started"\` (<5 attempts, tiers 1-2 mastered so
+  derivation naturally lands on tier 3) → both swing blocks at tier 2 (previous); \`percentage\` a
+  number with \`mastered: false\` (attempted, <90%, same natural derivation) → exactly 1 swing block
+  at tier 4 and 1 at tier 2 (split evenly); \`mastered: true\` (≥90%) → both swing blocks at tier 4
+  (next) — note natural derivation can never land currentTier on an already-mastered, non-ceiling
+  tier (Decision 2 always skips past a mastered tier), so this sub-case must use \`forcedTier: 3\`
+  with tier 3 itself mastered to exercise the branch in isolation
+- [x] T007 [P] [US1] Write unit tests in \`packages/core/daily-practice/tests/allocation.test.ts\`
+  for floor/ceiling redirection (research.md Decision 4, spec Edge Cases): current tier = 1 with
+  \`percentage: "not-started"\` → all 5 blocks at tier 1 (both swing blocks, which would target
+  tier 0, redirect to tier 1 instead — quickstart.md Scenario 2); current tier = \`tiers.length\`
+  (5) with \`mastered: true\` → 3 blocks at tier 5, 2 blocks at tier 4 (both swing blocks, which
+  would target tier 6, redirect to tier 4 instead — quickstart.md edge case "Tier 5 ceiling")
+- [x] T008 [P] [US1] Write unit tests in \`packages/core/daily-practice/tests/allocation.test.ts\`
+  for the fixed output shape (data-model.md Validation rules, SC-001): for any valid mastery
+  fixture, \`session.blocks.length === 5\` exactly; \`session.blocks.reduce((n, b) => n +
+  b.questionCount, 0) === 50\` exactly; every block's \`competencyId\` equals the \`competencyId\`
+  argument passed in and every block's \`tier\` satisfies \`1 <= tier <= mastery.tiers.length\`; and
+  determinism — calling \`generateDailySession\` twice with the same arguments returns a deep-equal
+  \`DailySession\` both times (Constitution VI)
+
+### Implementation for User Story 1
+
+- [x] T009 [US1] Implement an internal (non-exported) \`deriveCurrentTier(mastery:
+  CompetencyMastery): number\` helper in \`packages/core/daily-practice/src/daily-session.ts\` —
+  returns the lowest tier index (1-based) in \`mastery.tiers\` where \`mastered === false\`, or
+  \`mastery.tiers.length\` if every tier is mastered (depends on T003; makes T005 pass)
+- [x] T010 [US1] Implement an internal \`selectSwingTiers(mastery: CompetencyMastery, currentTier:
+  number): [number, number]\` helper in \`packages/core/daily-practice/src/daily-session.ts\` per
+  research.md Decision 3 (not-started → \`[previous, previous]\`; attempted-not-mastered →
+  \`[next, previous]\`; mastered → \`[next, next]\`) and Decision 4 (any tier \`< 1\` redirects to
+  \`currentTier\`; any tier \`> mastery.tiers.length\` redirects to the previous tier) (depends on
+  T009; makes T006/T007 pass)
+- [x] T011 [US1] Implement \`generateDailySession(competencyId: string, mastery:
+  CompetencyMastery): DailySession\` in \`packages/core/daily-practice/src/daily-session.ts\` —
+  throws if \`mastery.tiers.length === 0\` (data-model.md Validation rules); computes \`currentTier\`
+  via T009; builds exactly 5 blocks of \`questionCount: 10\`: 3 at \`currentTier\` plus one block per
+  entry of the pair from T010; every block carries the given \`competencyId\` (depends on T009,
+  T010; makes T008 pass)
+- [x] T012 [US1] Export \`DailySessionBlock\`, \`DailySession\`, \`generateDailySession\` from
+  \`packages/core/daily-practice/src/index.ts\`
+
+**Checkpoint**: User Story 1 is fully functional and testable independently — a daily session
+that always targets the child's current tier and swings toward the next/previous tier based on
+mastery, correctly clamped at both ends of the tier range.
+
+---
+
+## Phase 4: User Story 2 - Review previously learned skills (Priority: P2)
+
+**Goal**: Confirm the swing-block mechanism built in User Story 1 satisfies the review
+requirement (FR-003/SC-002) on its own — no new production code, only verification that the
+already-implemented allocation rule provides at least 1 previous-tier block whenever a previous
+tier exists and the current tier isn't mastered, rising to at least 2 for the not-started and
+Tier-5-ceiling-mastered cases. The Tier 1 floor (no previous tier at all) is explicitly excluded
+from this guarantee — that case is already covered by User Story 1's T007.
+
+**Independent Test**: Construct \`CompetencyMastery\` fixtures for all three current-tier states at
+a tier greater than 1 — not-started, attempted-but-not-mastered, and the Tier 5 ceiling already
+mastered — and confirm the previous-tier block count matches SC-002's two guarantee levels in
+every case — matches \`quickstart.md\` Scenario 4 and the "Tier 5 ceiling" edge case.
+
+### Tests for User Story 2
+
+- [x] T013 [P] [US2] Write a unit test in \`packages/core/daily-practice/tests/review.test.ts\` for
+  SC-002's not-started case at a tier greater than 1 (spec.md User Story 2 AS-1) — e.g. via
+  \`forcedTier: 3\` with tier 3 \`"not-started"\`: 2 of the 5 returned blocks are at the previous tier
+  (tier 2), satisfying "at least 2 of the 5 blocks ... at the previous tier." (The Tier 1 floor
+  case — where there is no previous tier and all 5 blocks land on tier 1 instead — is US1's T007,
+  not a review claim.)
+- [x] T014 [P] [US2] Write a unit test in \`packages/core/daily-practice/tests/review.test.ts\` for
+  the Tier 5 ceiling edge case (spec.md User Story 2 AS-1): current tier = \`tiers.length\` (5),
+  \`mastered: true\` — assert exactly 2 of the 5 blocks are at tier 4 (previous), satisfying "at
+  least 2 blocks (20 questions) at the previous tier" even though the current tier is already at
+  the mastery ceiling with nowhere to progress to
+- [x] T015 [P] [US2] Write a unit test in \`packages/core/daily-practice/tests/review.test.ts\` for
+  SC-002's general (weaker) guarantee, the attempted-but-not-mastered case (spec.md User Story 2
+  AS-2, \`quickstart.md\` Scenario 4): current tier attempted with \`mastered: false\` (e.g. 60%), not
+  at the floor or ceiling — assert exactly 1 of the 5 blocks is at the previous tier and 1 at the
+  next tier (research.md Decision 3's 1/1 split), satisfying "at least 1 block (10 questions) at
+  the previous tier whenever the current tier isn't mastered" — this is the case \`/speckit-analyze\`
+  flagged as previously untested and inconsistent with an earlier, stronger SC-002 wording
+
+### Implementation for User Story 2
+
+No new implementation — User Story 1's \`generateDailySession\` (T009-T011) already produces this
+behavior by construction (research.md Decisions 3-4). This phase is test-only, closing the loop
+on FR-003/SC-002 as an explicitly verified property rather than an incidental side effect.
+
+**Checkpoint**: Both User Story 1 and User Story 2 are independently verified — the same
+implementation satisfies both the weakness-targeting and review requirements, with no
+story-specific code branch needed.
+
+---
+
+## Phase 5: User Story 3 - Parent overrides the starting tier (Priority: P3)
+
+**Goal**: A parent/user-supplied tier, when provided, is used as the current tier instead of the
+mastery-derived one (FR-006) — the same 3-current/2-swing allocation and floor/ceiling handling
+from User Story 1 then runs around it unchanged.
+
+**Independent Test**: Call \`generateDailySession\` with a \`forcedTier\` that differs from what
+mastery data would derive, and confirm the forced tier — not the derived one — is used as the
+current tier, with swing blocks computed around it exactly as in User Story 1 — matches
+\`quickstart.md\` Scenario 5.
+
+### Tests for User Story 3
+
+- [x] T016 [P] [US3] Write unit tests in \`packages/core/daily-practice/tests/override.test.ts\`
+  for FR-006: given a mastery fixture that would derive current tier = 1, calling
+  \`generateDailySession(competencyId, mastery, { forcedTier: 3 })\` produces 3 blocks at tier 3
+  (not tier 1), with the 2 swing blocks placed per the same Decision 3 rule evaluated against
+  \`mastery.tiers[2]\` (tier 3's own \`TierMastery\`) — matches \`quickstart.md\` Scenario 5 exactly
+  (\`{ 2: 2, 3: 3 }\` for a "not-started" tier 3); given no \`options\` argument (or \`options\` without
+  \`forcedTier\`), behavior is unchanged from User Story 1 (current tier is still derived)
+- [x] T017 [P] [US3] Write a unit test in \`packages/core/daily-practice/tests/override.test.ts\`
+  for the out-of-range case (contracts/daily-practice.api.md, data-model.md Validation rules):
+  calling \`generateDailySession(competencyId, mastery, { forcedTier: 0 })\` and \`{ forcedTier:
+  mastery.tiers.length + 1 }\` both throw — "MUST throw if \`options.forcedTier\` is supplied and
+  outside \`1..mastery.tiers.length\`"
+
+### Implementation for User Story 3
+
+- [x] T018 [US3] Define \`GenerateDailySessionOptions\` (\`forcedTier?: number\`) in
+  \`packages/core/daily-practice/src/types.ts\` and extend \`generateDailySession\`'s signature in
+  \`packages/core/daily-practice/src/daily-session.ts\` to \`generateDailySession(competencyId:
+  string, mastery: CompetencyMastery, options?: GenerateDailySessionOptions): DailySession\` —
+  when \`options?.forcedTier\` is present, validate it is an integer in \`1..mastery.tiers.length\`
+  (throw otherwise) and use it directly as \`currentTier\`, skipping the T009 \`deriveCurrentTier\`
+  call entirely; all downstream logic (T010's swing selection, block assembly) is unchanged
+  (depends on T009-T011; makes T016/T017 pass)
+- [x] T019 [US3] Export \`GenerateDailySessionOptions\` from
+  \`packages/core/daily-practice/src/index.ts\`
+
+**Checkpoint**: All three user stories are independently functional — derived allocation (US1),
+the review property it guarantees (US2), and a parent's ability to override the starting tier
+without changing any of the surrounding adaptive behavior (US3).
+
+---
+
+## Phase 6: Polish & Cross-Cutting Concerns
+
+**Purpose**: Confirm the package meets the project's quality bar end-to-end.
+
+- [x] T020 Run \`npm run coverage --workspace packages/core/daily-practice\` and confirm
+  \`src/daily-session.ts\` and \`src/index.ts\` are at or above the 95% line/branch threshold from
+  T002; add any missing edge-case test to close a gap (ADR-0004)
+- [x] T021 [P] Run \`npx eslint packages/core/daily-practice\` and \`npx tsc --noEmit -p
+  packages/core/daily-practice/tsconfig.json\`; fix any lint or strict-mode type error (ADR-0004:
+  ESLint + Prettier + \`strict: true\` workspace-wide)
+- [x] T022 Walk through every scenario in \`quickstart.md\` against the finished package (Scenarios
+  1-5 plus all three edge cases) and confirm each expected outcome holds exactly, including the
+  exact \`byTier\` counts shown in each scenario
+
+---
+
+## Dependencies & Execution Order
+
+### Phase Dependencies
+
+- **Setup (Phase 1)**: No dependencies — start immediately.
+- **Foundational (Phase 2)**: Depends on Setup — BLOCKS all three user stories.
+- **User Story 1 (Phase 3)**: Depends on Foundational only. No dependency on US2/US3.
+- **User Story 2 (Phase 4)**: Depends on User Story 1's implementation (T009-T011) existing —
+  unlike \`003-mastery-engine\`'s US2, this story adds no new production code, only tests that
+  verify a property of US1's own implementation, so it cannot start before T011 lands.
+- **User Story 3 (Phase 5)**: Depends on User Story 1's implementation (T009-T011) — it extends
+  \`generateDailySession\`'s signature, so T018 must follow T011. Independent of US2.
+- **Polish (Phase 6)**: Depends on all three user stories being complete.
+
+### Parallel Opportunities
+
+- T002 can run alongside T001 (Setup).
+- T005, T006, T007, T008 (US1 tests, same file \`allocation.test.ts\` but non-overlapping
+  describe blocks) can be drafted in parallel then merged.
+- T013, T014, T015 (US2 tests) can be drafted in parallel with each other once T011 lands, in
+  their own file (\`review.test.ts\`) — no conflict with \`allocation.test.ts\`.
+- T016, T017 (US3 tests) can be drafted in parallel with each other and with US2's tests once T011
+  lands, in their own file (\`override.test.ts\`).
+- T021 can run in parallel with T020/T022 (Polish).
+
+---
+
+## Parallel Example: User Story 1
+
+\`\`\`bash
+# After Phase 2 (Foundational) completes:
+Task: "Write current-tier derivation tests in tests/allocation.test.ts"
+Task: "Write swing-tier rule tests in tests/allocation.test.ts"
+Task: "Write floor/ceiling redirection tests in tests/allocation.test.ts"
+Task: "Write fixed-shape/determinism tests in tests/allocation.test.ts"
+\`\`\`
+
+---
+
+## Implementation Strategy
+
+### MVP First (User Story 1 Only)
+
+1. Complete Phase 1 (Setup) + Phase 2 (Foundational).
+2. Complete Phase 3 (User Story 1) — the core weakness-targeted allocation is already
+   independently useful and is what every other story (US2's review property, US3's override)
+   builds on.
+3. **STOP and VALIDATE**: run \`quickstart.md\` Scenarios 1-3 and the floor edge case.
+4. Proceed to Phase 4 (User Story 2) to formally verify the review property, then Phase 5 (User
+   Story 3) to add the parent override, before Phase 6 Polish.
+
+### Incremental Delivery
+
+1. Setup + Foundational → package scaffolded, types compile.
+2. User Story 1 → weakness-targeted allocation works, mergeable on its own as the MVP.
+3. User Story 2 → review property formally verified, no US1 code touched.
+4. User Story 3 → parent-forced starting tier added, extending (not replacing) US1's function.
+5. Polish → coverage/lint gates green, quickstart fully walked.
+`,Vr='---\n\ndescription: "Task list template for feature implementation"\n---\n\n# Tasks: Accounts, Multiple Children & Privacy (V1 slice)\n\n**Input**: Design documents from `/specs/006-accounts-privacy/` (spec.md, plan.md, research.md,\ndata-model.md, contracts/profiles.api.md, quickstart.md)\n\n**Scope**: Per spec.md\'s **V1 Scope** section, only **User Story 1 and FR-001/FR-002** are\nin-scope for V1 — User Story 2 and FR-003/FR-006/FR-007 (country/age-band fields, export/import,\ndeletion) are Phase 3 and deliberately **not** broken into tasks here; they remain future work\ntracked directly against the spec\'s own Status line, not this task list.\n\n**Tests**: Included. ADR-0004 sets a hard 95%+ line/branch coverage gate for every\n`packages/core/*` package.\n\n**Organization**: A single user story phase (User Story 1 = P1 — the only story in scope for V1).\nAll paths are relative to the `learncoreskills/app` repo (not this `specs` repo).\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1)\n\n## Path Conventions\n\nSingle npm workspace package, per plan.md\'s Project Structure:\n`packages/core/profiles/{src,tests}` inside the `learncoreskills/app` repo. Zero dependency on any\nother `packages/core/*` package.\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the new workspace package.\n\n- [x] T001 Create `packages/core/profiles/package.json` (name `@learncoreskills/profiles`,\n  `private: true`, zero runtime dependencies, `vitest` + `@vitest/coverage-v8` as devDependencies,\n  `test`/`coverage` npm scripts) and `packages/core/profiles/tsconfig.json` extending the\n  workspace root\'s strict TS config (`strict: true`, no implicit `any`, per ADR-0001/0004). No\n  change to the root `package.json` `workspaces` array is needed — `packages/core/*` already\n  matches this path.\n- [x] T002 [P] Add a `vitest.config.ts` in `packages/core/profiles/` with a coverage threshold of\n  95% lines/branches (`coverage.thresholds.lines = 95`, `branches = 95`), per ADR-0004\'s hard gate\n\n**Checkpoint**: `npm test --workspace packages/core/profiles` runs (with zero tests) and\n`npm run coverage --workspace packages/core/profiles` is wired up.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared type definitions User Story 1 builds on.\n\n- [x] T003 Define `ChildProfile` (`id: string`, `alias: string`, `createdAt: number`),\n  `ProfilesState` (`children: ChildProfile[]`, `activeChildId: string | null`), and\n  `KeyValueStore` (`getItem(key: string): string | null`, `setItem(key: string, value: string):\n  void`) interfaces in `packages/core/profiles/src/types.ts`, exactly per `data-model.md`\'s field\n  tables\n- [x] T004 Create empty `packages/core/profiles/src/profiles.ts` and\n  `packages/core/profiles/src/namespace.ts` (module scaffolds, no logic yet) and\n  `packages/core/profiles/src/index.ts` barrel file re-exporting `./types` (US1 adds exports to it\n  incrementally)\n\n**Checkpoint**: Types compile under strict mode.\n\n---\n\n## Phase 3: User Story 1 - Manage multiple children on one device for free (Priority: P1) 🎯 MVP\n\n**Goal**: A parent can create multiple child profiles on one device with no payment gate, switch\nthe active profile, and derive a storage-isolation key per child so no two children\'s data can\never collide.\n\n**Independent Test**: Create several child profiles under one device, switch between them, and\nconfirm each has an independent `id`/namespaced storage key with no payment check anywhere —\nmatches `quickstart.md` Scenarios 1–2 and both edge cases.\n\n### Tests for User Story 1\n\n- [x] T005 [P] [US1] Write unit tests in `packages/core/profiles/tests/profiles.test.ts` for:\n  `createChildProfile(store, alias)` returns a `ChildProfile` with a generated `id`, the given\n  `alias`, and a `createdAt` timestamp, and appends it to `listChildProfiles(store)`; creating a\n  second child succeeds identically to the first (no payment/upgrade check exists to fail) — AS-1\n- [x] T006 [P] [US1] Write unit tests in `packages/core/profiles/tests/profiles.test.ts` for: the\n  first child ever created automatically becomes `getActiveChildId(store)`; `switchActiveChild(\n  store, childId)` updates `getActiveChildId(store)` to the given id while leaving\n  `listChildProfiles(store)` unchanged (both children still present) — AS-2\n- [x] T007 [P] [US1] Write unit tests in `packages/core/profiles/tests/profiles.test.ts` for:\n  `createChildProfile(store, "")` and `createChildProfile(store, "   ")` both throw (empty-alias\n  edge case); `switchActiveChild(store, "does-not-exist")` throws and does not change\n  `getActiveChildId(store)` (invalid-switch edge case)\n- [x] T008 [P] [US1] Write unit tests in `packages/core/profiles/tests/namespace.test.ts` for:\n  `childStorageKey(childId, key)` returns a distinct string for distinct `childId`s given the same\n  `key` (e.g. `childStorageKey("alex", "mastery-signals") !== childStorageKey("sam",\n  "mastery-signals")`), and a distinct string for distinct `key`s given the same `childId`\n\n### Implementation for User Story 1\n\n- [x] T009 [US1] Implement private `readState(store)`/`writeState(store, state)` helpers in\n  `packages/core/profiles/src/profiles.ts` — JSON-serialize/deserialize `ProfilesState` under one\n  fixed storage key (e.g. `"learncoreskills.profiles"`), defaulting to `{ children: [],\n  activeChildId: null }` when nothing is stored yet (depends on T003)\n- [x] T010 [US1] Implement `createChildProfile(store: KeyValueStore, alias: string): ChildProfile`\n  in `packages/core/profiles/src/profiles.ts` — throws if `alias.trim()` is empty; otherwise\n  generates `id` via `crypto.randomUUID()` and `createdAt` via `Date.now()`, appends to the\n  persisted `children` list, and sets `activeChildId` to the new child\'s id if no active profile\n  existed yet (depends on T009; makes T005/T007\'s empty-alias case pass)\n- [x] T011 [US1] Implement `listChildProfiles(store: KeyValueStore): ChildProfile[]` and\n  `getActiveChildId(store: KeyValueStore): string | null` in\n  `packages/core/profiles/src/profiles.ts` (depends on T009; makes T005/T006 pass)\n- [x] T012 [US1] Implement `switchActiveChild(store: KeyValueStore, childId: string): void` in\n  `packages/core/profiles/src/profiles.ts` — throws if `childId` is not present in the persisted\n  `children` list, otherwise updates `activeChildId` (depends on T009; makes T006/T007\'s\n  invalid-switch case pass)\n- [x] T013 [US1] Implement `childStorageKey(childId: string, key: string): string` in\n  `packages/core/profiles/src/namespace.ts` — pure string function, e.g. returning\n  `` `learncoreskills.child.${childId}.${key}` `` (makes T008 pass)\n- [x] T014 [US1] Export `ChildProfile`, `ProfilesState`, `KeyValueStore`, `createChildProfile`,\n  `listChildProfiles`, `getActiveChildId`, `switchActiveChild`, `childStorageKey` from\n  `packages/core/profiles/src/index.ts`\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — multiple free child\nprofiles, switching, and per-child storage-key isolation all work.\n\n---\n\n## Phase 4: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the package meets the project\'s quality bar end-to-end.\n\n- [x] T015 Run `npm run coverage --workspace packages/core/profiles` and confirm\n  `src/profiles.ts`, `src/namespace.ts`, and `src/index.ts` are at or above the 95% line/branch\n  threshold from T002; add any missing edge-case test to close a gap (ADR-0004)\n- [x] T016 [P] Run `npx eslint packages/core/profiles` and\n  `npx tsc --noEmit -p packages/core/profiles/tsconfig.json`; fix any lint or strict-mode type\n  error (ADR-0004: ESLint + Prettier + `strict: true` workspace-wide)\n- [x] T017 Walk through every scenario in `quickstart.md` against the finished package (Scenarios\n  1–2 plus both edge cases) and confirm each expected outcome holds\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS User Story 1.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. This is the only user story in scope\n  for V1 (see spec.md\'s V1 Scope section) — there is no Phase 4 "User Story 2" here the way `001`/\n  `002`/`003`/`004`\'s task lists have a second story phase.\n- **Polish (Phase 4)**: Depends on User Story 1 being complete.\n\n### Parallel Opportunities\n\n- T002 can run alongside T001 (Setup).\n- T005, T006, T007 (all US1 profile tests, same file but non-overlapping blocks) can be drafted in\n  parallel then merged; T008 (namespace tests, separate file) can be drafted in parallel with all\n  of them.\n- T016 can run in parallel with T015/T017 (Polish).\n\n---\n\n## Parallel Example: User Story 1\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: "Write profile creation tests in tests/profiles.test.ts"\nTask: "Write active-profile switching tests in tests/profiles.test.ts"\nTask: "Write invalid-input edge case tests in tests/profiles.test.ts"\nTask: "Write namespacing tests in tests/namespace.test.ts"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (and Only, for V1)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — this is the entire V1 slice of this spec; everything else in\n   spec.md is explicitly Phase 3 (product-phase, not task-phase) work, tracked later against a\n   fresh planning pass on this same spec once it becomes relevant.\n3. **STOP and VALIDATE**: run `quickstart.md` Scenarios 1–2 and both edge cases.\n4. Complete Phase 4 (Polish). This closes out `006-accounts-privacy`\'s V1 scope entirely — with\n   all five V1 specs (`001`, `002`, `003`, `004`, and this V1 slice of `006`) implemented, the\n   V1 core loop (Exercise → Answer → Feedback → Mastery → Next Exercise, multi-child-safe) is\n   complete at the package level, per `specs/README.md`.\n\n### Incremental Delivery\n\n1. Setup + Foundational → package scaffolded, types compile.\n2. User Story 1 → profile CRUD, switching, and namespacing all work, mergeable as one unit (it\'s\n   the only story in scope).\n3. Polish → coverage/lint gates green, quickstart fully walked.\n',Hr="---\n\ndescription: \"Task list template for feature implementation\"\n---\n\n# Tasks: V1 App Shell (Practice Loop Integration)\n\n**Input**: Design documents from `/specs/009-v1-app-shell/` (spec.md, plan.md, research.md,\ndata-model.md, contracts/screen-flow.md, quickstart.md)\n\n**Tests**: Included, at `apps/web`'s ADR-0004 bar (70%+ coverage, tracked not hard-blocking) —\nlighter than the five dependency packages' 95% hard gate, since this layer is UI wiring rather\nthan pure business logic.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2)\nso each can be implemented and tested independently. All paths are relative to\n`apps/web/` inside the `learncoreskills/app` repo.\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2)\n\n## Path Conventions\n\nExisting `apps/web` workspace package. All five dependency packages\n(`competency-model`, `plugin-engine`, `mental-addition`, `mastery-engine`, `profiles`) are already\nimplemented and published as workspace packages — this feature only adds them as dependencies of\n`apps/web` and writes new `apps/web/src/**` code.\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Wire the five dependency packages and a test runner into `apps/web`.\n\n- [x] T001 Add `@learncoreskills/plugin-engine`, `@learncoreskills/mental-addition`,\n  `@learncoreskills/mastery-engine`, and `@learncoreskills/profiles` (all `\"*\"`, npm workspace\n  resolution) to `apps/web/package.json` dependencies (alongside the already-present\n  `@learncoreskills/competency-model`); add all four to `apps/web/vite.config.ts`'s\n  `optimizeDeps.exclude` array, matching the existing entry for `competency-model`\n- [x] T002 Add `vitest`, `@vitest/coverage-v8`, `jsdom`, `@testing-library/react`, and\n  `@testing-library/jest-dom` as devDependencies in `apps/web/package.json`; add `test`/`coverage`\n  npm scripts (`vitest run` / `vitest run --coverage`); create `apps/web/vitest.config.ts` with\n  `test.environment: \"jsdom\"` and a coverage threshold of 70% lines/branches (ADR-0004's tracked,\n  non-blocking `apps/web` bar) and `test.setupFiles` pointing at a new\n  `apps/web/src/test-setup.ts` that imports `@testing-library/jest-dom`\n\n**Checkpoint**: `npm test --workspace apps/web` runs (with zero tests); `npm run typecheck\n--workspace apps/web` still passes with the new dependencies present but unused.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The curriculum data, plugin registry, and persistence helper every screen depends on.\n\n**⚠️ CRITICAL**: Both user stories read from these same modules — they must exist first.\n\n- [x] T003 [P] Create `apps/web/src/curriculum.ts` exporting `mathematicsSubject: Subject` and\n  `mentalAdditionCompetency: Competency` with exactly the field values in `data-model.md`'s\n  \"New content\" table (moved from `App.tsx`'s current placeholder arrays)\n- [x] T004 [P] Create `apps/web/src/registry.ts` exporting `pluginRegistry: PluginRegistry =\n  createRegistry([mentalAdditionPlugin], [mentalAdditionCompetency])` (imports\n  `mentalAdditionPlugin` from `@learncoreskills/mental-addition`, `createRegistry` from\n  `@learncoreskills/plugin-engine`, and `mentalAdditionCompetency` from `./curriculum.js`)\n- [x] T005 [P] Create `apps/web/src/storage/masterySignals.ts` implementing\n  `readMasterySignals(childId: string): MasterySignal[]` and `appendMasterySignal(childId: string,\n  signal: MasterySignal): void` against `window.localStorage`, keyed via `childStorageKey(childId,\n  \"mastery-signals\")` from `@learncoreskills/profiles`, per `contracts/screen-flow.md`'s module\n  signature\n- [x] T006 [P] Write unit tests in `apps/web/src/storage/masterySignals.test.ts` for: `[]` returned\n  when nothing is stored yet; `appendMasterySignal` followed by `readMasterySignals` returns the\n  appended signal; two different `childId`s never see each other's appended signals (uses\n  `localStorage` directly — available under the `jsdom` test environment from T002)\n\n**Checkpoint**: Curriculum data, registry, and persistence helper all compile and the storage\nhelper's own tests pass; both user stories can now build on them.\n\n---\n\n## Phase 3: User Story 1 - Complete a practice session and see the result (Priority: P1) 🎯 MVP\n\n**Goal**: With one child profile active, a child can run a full 10-question session at a chosen\ntier, see immediate feedback per question, and see their mastery percentage update at the end —\nand that percentage survives a page reload.\n\n**Independent Test**: Manually run Scenario 2 and Scenario 3 from `quickstart.md` — start a\nsession, answer all 10 questions, see the summary percentage, reload, confirm it's still shown.\n\n### Tests for User Story 1\n\n- [x] T007 [P] [US1] Write a hook test in `apps/web/src/hooks/useMastery.test.ts` for: with no\n  signals recorded, the returned percentage is `0`; after `appendMasterySignal` calls are made for\n  a child, re-invoking the hook (or its underlying computation) reflects the new percentage\n  (exercises `computeCompetencyMastery` wired to `readMasterySignals` + `curriculum.ts`)\n- [x] T008 [P] [US1] Write a component test in `apps/web/src/components/PracticeSession.test.tsx`\n  for: rendering starts on question 1 of the session with no visible timer element; submitting the\n  correct answer shows a \"correct\" feedback state before advancing; submitting a wrong answer shows\n  the revealed correct answer before advancing; after answering all 10 questions, an `onComplete`\n  callback fires exactly once\n- [x] T009 [P] [US1] Write a component test in `apps/web/src/components/TierPicker.test.tsx` for:\n  all 5 tiers are selectable, and choosing one and starting a session invokes an `onStart(tier)`\n  callback with the chosen tier\n\n### Implementation for User Story 1\n\n- [x] T010 [US1] Implement `useMastery(childId: string | null): CompetencyMastery | null` in\n  `apps/web/src/hooks/useMastery.ts` — returns `null` when `childId` is `null`, otherwise\n  `computeCompetencyMastery(readMasterySignals(childId), mentalAdditionCompetency)`, recomputed\n  whenever `childId` changes or a `refreshToken`/version argument passed by the caller changes\n  (depends on T003, T005; makes T007 pass)\n- [x] T011 [US1] Implement `TierPicker` in `apps/web/src/components/TierPicker.tsx` — renders\n  tiers `1..mentalAdditionCompetency.tierCount`, calls `onStart(tier)` when one is chosen and\n  confirmed (depends on T003; makes T009 pass)\n- [x] T012 [US1] Implement `PracticeSession` in `apps/web/src/components/PracticeSession.tsx` —\n  props `{ childId, tier, onComplete }`; on mount, calls `createSession(tier, Date.now())` once\n  (research.md #2); renders the current question with an answer input; on submit, calls\n  `pluginRegistry.getPlugin(\"mental-addition\")!.validateAnswer`, shows feedback (correct, or the\n  revealed `correctSum` if wrong), calls `appendMasterySignal(childId, createMasterySignal(...))`\n  immediately, then after a short delay advances `currentIndex` and clears feedback; calls\n  `onComplete()` once all 10 are answered (depends on T004, T005; makes T008 pass)\n- [x] T013 [US1] Implement `MasteryDisplay` in `apps/web/src/components/MasteryDisplay.tsx` —\n  props `{ mastery: CompetencyMastery | null }`; renders the plain percentage (rounded to a whole\n  number), or a \"not started\" presentation when `mastery` is `null` or its value is `0` with no\n  attempts recorded (depends on T010)\n- [x] T014 [US1] Wire `TierPicker` → `PracticeSession` → session-summary (re-showing\n  `MasteryDisplay`) into `apps/web/src/App.tsx` for the single-active-child case, replacing the\n  current placeholder body (depends on T010-T013)\n\n**Checkpoint**: User Story 1 is fully functional and manually testable — Scenarios 2 and 3 from\n`quickstart.md` both hold, independent of User Story 2's multi-profile UI (a single always-active\nprofile is enough to exercise this story).\n\n---\n\n## Phase 4: User Story 2 - Manage more than one child on the same device (Priority: P2)\n\n**Goal**: A parent can create one or more child profiles, is prompted to create a first one if\nnone exist, and can switch the active child with each child's session/mastery fully independent.\n\n**Independent Test**: Manually run Scenario 1 and Scenario 4 from `quickstart.md` — start from\nzero profiles, create one, confirm no payment prompt; create a second, run a short session as one,\nswitch, confirm the other's mastery is untouched.\n\n### Tests for User Story 2\n\n- [x] T015 [P] [US2] Write a hook test in `apps/web/src/hooks/useProfiles.test.ts` for: with no\n  profiles stored, `children` is `[]` and `activeChildId` is `null`; after calling the hook's\n  `createProfile(alias)`, `children` includes the new profile and `activeChildId` equals its id\n  (first-child auto-activation, per `006`); calling `createProfile` again with the same active\n  child already set does not change `activeChildId`; calling `switchProfile(id)` updates\n  `activeChildId`\n- [x] T016 [P] [US2] Write a component test in `apps/web/src/components/ProfileManager.test.tsx`\n  for: with zero profiles, only a creation form is rendered (no tier picker/session trigger\n  reachable through it); after creating a profile, a list including it is shown with no\n  payment/upgrade element anywhere in the rendered output; selecting a different existing profile\n  invokes an `onSwitch(id)` callback\n\n### Implementation for User Story 2\n\n- [x] T017 [US2] Implement `useProfiles()` in `apps/web/src/hooks/useProfiles.ts` — React state\n  `{ children, activeChildId }` initialized from `listChildProfiles`/`getActiveChildId` against\n  `window.localStorage`, with `createProfile(alias)` and `switchProfile(id)` methods that call the\n  corresponding `@learncoreskills/profiles` function and then re-read/update state (research.md\n  #3) (makes T015 pass)\n- [x] T018 [US2] Implement `ProfileManager` in `apps/web/src/components/ProfileManager.tsx` —\n  props `{ children, activeChildId, onCreate, onSwitch }`; renders a creation form (alias text\n  input + submit) and, when `children` is non-empty, a list of existing profiles with the active\n  one indicated and each other one selectable via `onSwitch` (depends on T017; makes T016 pass)\n- [x] T019 [US2] Wire `useProfiles` + `ProfileManager` into `apps/web/src/App.tsx`, gating the\n  Phase 3 screen flow behind `children.length > 0` (FR-001 — the `NoProfiles` state from\n  `contracts/screen-flow.md`), passing `activeChildId` through to `useMastery`/`PracticeSession`,\n  and resetting any in-progress session state when `activeChildId` changes (per the\n  switch-mid-session edge case) (depends on T014, T018)\n\n**Checkpoint**: Both user stories are independently functional together — the full screen-flow\ncontract in `contracts/screen-flow.md` is now reachable end-to-end.\n\n---\n\n## Phase 5: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the feature meets the project's quality bar and matches the spec exactly.\n\n- [x] T020 Run `npm run coverage --workspace apps/web` and confirm the new `src/hooks`,\n  `src/components`, and `src/storage` code is at or above the 70% line/branch threshold from T002\n  (ADR-0004's tracked `apps/web` bar); add any missing test to close an obvious gap\n- [x] T021 [P] Run `npx eslint apps/web` and `npx tsc --noEmit -p apps/web/tsconfig.json`; fix any\n  lint or strict-mode type error\n- [~] T022 Run `npm run dev --workspace apps/web` and manually walk every scenario and edge case in\n  `quickstart.md` (all four scenarios plus both edge cases) in a real browser, confirming each\n  expected outcome holds. **Partially done**: confirmed the dev server boots and serves the app\n  shell correctly (`vite` ready, HTML fetched successfully), and every scenario/edge case is\n  covered by an equivalent automated test (`App.test.tsx`, jsdom + React Testing Library) that\n  exercises the same user-facing flow. No headless-browser tooling (no `chromium-cli`, no\n  Playwright/browser binary) was available in the environment this was built in to take an actual\n  screenshot or drive a real browser — a human should do one real-browser pass before this is\n  considered fully done, or a future session should set up browser automation tooling\n  (`/run-skill-generator`) first.\n- [x] T023 Confirm `npm run build --workspace apps/web` (the same command CI runs) still succeeds\n  with the new dependencies and code\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS both user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. Manually testable with a single\n  always-active profile, independent of User Story 2's profile-management UI.\n- **User Story 2 (Phase 4)**: Depends on Foundational for its own hook/component (T015-T018); T019\n  (wiring into `App.tsx`) depends on User Story 1's T014 already existing, since it wraps that flow\n  behind profile gating rather than replacing it.\n- **Polish (Phase 5)**: Depends on both user stories being complete.\n\n### Parallel Opportunities\n\n- T003, T004, T005 (Foundational, three separate new files) can be drafted in parallel; T006\n  depends on T005 completing first.\n- T007, T008, T009 (US1 tests, three separate files) can be drafted in parallel once Foundational\n  is done.\n- T015, T016 (US2 tests, two separate files) can be drafted in parallel with any US1 task once\n  Foundational is done.\n- T021 can run in parallel with T020/T022/T023 (Polish).\n\n---\n\n## Parallel Example: Foundational\n\n```bash\n# After Phase 1 (Setup) completes:\nTask: \"Create curriculum.ts with the one V1 Subject/Competency\"\nTask: \"Create registry.ts building the plugin registry\"\nTask: \"Create storage/masterySignals.ts persistence helper\"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — a single always-active child running a full session end to\n   end is the entire point of this feature (per spec.md's Why-this-priority); User Story 2 makes\n   it usable by a real multi-child family but doesn't change what the loop itself does.\n3. **STOP and VALIDATE**: run `quickstart.md` Scenarios 2–3 manually.\n4. Proceed to Phase 4 (User Story 2) to add real multi-profile management before Polish — this\n   closes out all five V1 specs' worth of work with an actually-usable app.\n\n### Incremental Delivery\n\n1. Setup + Foundational → dependencies wired, curriculum/registry/storage helper all compile and\n   are tested.\n2. User Story 1 → the core loop is playable (with an implicit single profile), mergeable on its\n   own as a milestone.\n3. User Story 2 → real profile creation/switching gates and drives the same loop, no change to\n   User Story 1's session-running code itself.\n4. Polish → coverage tracked, lint/typecheck/build all green, every quickstart scenario walked by\n   hand in a real browser.\n",Ur='---\n\ndescription: "Task list template for feature implementation"\n---\n\n# Tasks: Documentation & Blog\n\n**Input**: Design documents from `/specs/010-docs-and-blog/` (spec.md, plan.md, research.md,\ndata-model.md, contracts/screen-flow.md, quickstart.md)\n\n**Tests**: Included. `apps/web` already carries a 70% coverage bar (ADR-0004) and an established\nVitest + React Testing Library convention (`009-v1-app-shell`) that this feature follows.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1, User Story 2 = P2,\nUser Story 3 = P3). All paths are relative to the `learncoreskills/app` repo (not this `specs`\nrepo) unless noted.\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2, US3)\n\n## Path Conventions\n\nEverything lives inside the existing `apps/web` workspace package (no new `packages/*` package —\nplan.md Structure Decision). New content-loading code under `apps/web/src/content/`, new UI under\n`apps/web/src/components/docs/`, tests colocated as `*.test.ts(x)` next to their source file —\nthe actual `009` convention, not a separate `tests/` directory. `apps/web` reads sibling repos at\n`../../../specs` and `../../../blog` (relative to\n`apps/web/`) — both must be checked out alongside `app` for build/dev/test to work\n(quickstart.md Prerequisites).\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Add the two new dependencies this feature needs and permit local dev to read the\nsibling repos.\n\n- [x] T001 Add `react-router-dom` (^7), `react-markdown` (^9), and `remark-gfm` (^4) to\n  `apps/web/package.json` dependencies; run `npm install` at the workspace root\n- [x] T002 [P] Add `server.fs.allow` including `"../../../specs"` and `"../../../blog"` to\n  **both** `apps/web/vite.config.ts` and `apps/web/vitest.config.ts` (research.md Decision 5 —\n  `apps/web` has a separate `vitest.config.ts` that does not inherit `vite.config.ts`\'s settings,\n  confirmed during implementation) — needed for `npm run dev` and `npm test`/`npm run coverage`,\n  not for `npm run build` (Rollup\'s static glob resolution at build time isn\'t subject to this)\n\n**Checkpoint**: `npm install` succeeds; `npm run dev --workspace apps/web` can read sibling-repo\nfiles without a 403.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The router, shared type definitions, and shared rendering/layout chrome both user\nstories build on.\n\n**⚠️ CRITICAL**: US1 and US2 both render through the same layout and markdown component, and\nboth produce entries typed here — this must exist first.\n\n- [x] T003 [P] Define `DocumentationEntry` (`id: string`, `title: string`, `category: "spec" |\n  "product" | "architecture"`, `status?: DocStatus`, `content: string`), `DocStatus` (`"shipped" |\n  "in-progress" | "planned"`), and `BlogPost` (`id: string`, `date: string`, `title: string`,\n  `content: string`) interfaces in `apps/web/src/content/types.ts`, exactly per data-model.md\'s\n  field tables\n- [x] T004 [P] Implement `MarkdownContent` in `apps/web/src/components/docs/MarkdownContent.tsx`\n  — renders a `content: string` prop via `react-markdown` + `remark-gfm` (GFM tables and `- [ ]`\n  task-list checkboxes must render, since this project\'s own specs/tasks rely on both), wrapped in\n  a class-based `MarkdownErrorBoundary` that catches a rendering error and shows a\n  "This document couldn\'t be displayed." message instead of crashing (spec Edge Cases,\n  contracts/screen-flow.md consumer guarantee)\n- [x] T005 [P] Create `apps/web/src/docs.css` — a calm/professional theme (neutral background,\n  dark slate text, a muted accent color, restrained typography, no mascot/playful imagery) that is\n  visually distinct from `App.css` at a glance (FR-007, SC-003). Two directions of leakage must\n  both be prevented: (1) `.docs-theme` rules must not apply outside that wrapper, and (2)\n  `App.css`\'s global `body`/`*` selectors — confirmed to set a playful radial-gradient\n  `background`, `--font-body` (Nunito), and `color: var(--color-ink)` (purple), all inherited/\n  cascading properties — must NOT bleed into `.docs-theme` content. `.docs-theme` (or a\n  full-viewport wrapper immediately inside it) MUST explicitly reset `background`,\n  `background-attachment`, `font-family`, and `color` rather than merely adding new rules\n  alongside `body`\'s. Verify by inspecting computed styles inside `.docs-theme` in a test or by\n  hand, not by visual impression alone (`/speckit-analyze` finding C1)\n- [x] T006 Implement `DocsLayout` in `apps/web/src/components/docs/DocsLayout.tsx` — wraps its\n  children in the `.docs-theme` class (T005), renders a small top nav with "Documentation" and\n  "Blog" links (`/docs`, `/blog`) and an always-visible "Back to practice app" link to `/` (FR-008,\n  User Story 3 AS-1) (depends on T005)\n- [x] T007 Modify `apps/web/src/App.tsx`: wrap the existing app content in `<BrowserRouter>` +\n  `<Routes>`, with a `/` route rendering the existing (unchanged) practice-app JSX exactly as\n  before, and add a "Documentation" link to `/docs` in the practice-app header (FR-008, User\n  Story 3 AS-2) — do not change any existing `Screen`-state behavior under `/` (depends on T006\n  only for a consistent link target; the `/docs` and `/blog` route entries themselves are added by\n  US1/US2). The link MUST render even before any child profile exists (FR-011) — keep it in the\n  header markup that already sits outside the `activeChildId !== null` conditional block; do not\n  move it inside that gated section (`/speckit-analyze` finding E2)\n\n**Checkpoint**: App boots with routing in place; `/` behaves exactly as `009` left it; shared\nlayout/rendering primitives exist for both stories to build on independently.\n\n---\n\n## Phase 3: User Story 1 - Understand what the product does and how mastery is tracked (Priority: P1) 🎯 MVP\n\n**Goal**: A parent/teacher can browse an index of every spec (shipped + planned, clearly marked)\nplus the narrative product/architecture docs, and read any one of them in full.\n\n**Independent Test**: Open `/docs`, confirm every `specs/specs/*` folder plus the narrative docs\nappear with correct status badges; open one, confirm full readable content — matches\nquickstart.md Scenarios 1-3.\n\n### Tests for User Story 1\n\n- [x] T008 [P] [US1] Write unit tests in `apps/web/src/content/deriveSpecStatus.test.ts` for\n  data-model.md\'s `DocStatus` table: `null` input → `"planned"`; text with zero `- [ ]` lines →\n  `"shipped"`; text with at least one `- [ ]` line → `"in-progress"`\n- [x] T009 [P] [US1] Write unit tests in `apps/web/src/content/loadSpecs.test.ts` asserting\n  `documentationEntries` (from `../index.js`) contains at least one entry with\n  `status: "shipped"` and at least one with `status: "planned"` — proves the real sibling-repo\n  glob resolves correctly end-to-end, not just via mocks. Prefer this weaker invariant over\n  pinning specific spec ids/statuses (e.g. "005 is shipped," "007 is planned"): those will\n  correctly-but-confusingly break the day that spec\'s real implementation state changes, which\n  has nothing to do with a regression in this test (`/speckit-analyze` finding F1). If a specific\n  id is still useful for the test\'s clarity, add a comment noting it needs updating if that spec\'s\n  status changes.\n- [x] T010 [P] [US1] Write a component test in `apps/web/src/components/docs/DocsIndex.test.tsx`\n  for: every category renders with a visible status badge on `"spec"` entries only (never on\n  `"product"`/`"architecture"` entries, which have no `status` — data-model.md); each entry links\n  to `/docs/:id`\n- [x] T011 [P] [US1] Write a component test in `apps/web/src/components/docs/DocPage.test.tsx`\n  for: a known id (e.g. `"003-mastery-engine"`) renders its content via `MarkdownContent`; an\n  unknown id renders a "not found" message with a link back to `/docs` (contracts/screen-flow.md)\n\n### Implementation for User Story 1\n\n- [x] T012 [US1] Implement `deriveSpecStatus(tasksMdContent: string | null): DocStatus` in\n  `apps/web/src/content/deriveSpecStatus.ts` per data-model.md\'s table (depends on T003; makes\n  T008 pass)\n- [x] T013 [US1] Implement `apps/web/src/content/loadSpecs.ts` — `import.meta.glob("../../../../../specs/specs/*/spec.md",\n  { query: "?raw", import: "default", eager: true })` and the matching `tasks.md` glob; for each\n  spec folder, build a `DocumentationEntry` with `category: "spec"`, `id` = the folder name,\n  `title` = the `spec.md` content\'s first `# ` heading line (fallback to `id` if absent, per\n  data-model.md Validation rules), `status` via `deriveSpecStatus` (T012) applied to that spec\'s\n  `tasks.md` content or `null` if no match exists (depends on T012)\n- [x] T014 [US1] Implement `apps/web/src/content/loadNarrativeDocs.ts` — `import.meta.glob` over\n  `../../../../../specs/docs/product/*.md` (→ `category: "product"`) and\n  `../../../../../specs/docs/architecture/**/*.md` (→ `category: "architecture"`, excludes the\n  `.gitkeep` file, which the `*.md` glob pattern already naturally excludes); `id` =\n  `<category>-<filename-without-extension, lowercased>` (e.g. `"product-vision"`,\n  `"architecture-architecture"` for the top-level `ARCHITECTURE.md`,\n  `"architecture-0006-client-only-architecture"` for a `decisions/` file — data-model.md), `title`\n  from the first `# ` heading line (depends on T003)\n- [x] T015 [US1] Implement `apps/web/src/content/index.ts` barrel — exports `documentationEntries:\n  DocumentationEntry[]` combining T013 and T014\'s results (depends on T013, T014)\n- [x] T016 [US1] Implement `DocsIndex` in `apps/web/src/components/docs/DocsIndex.tsx` — lists\n  `documentationEntries` grouped by `category`, with a "Shipped"/"In Progress"/"Planned" badge on\n  each `"spec"` entry (FR-004), each linking to `/docs/:id` (depends on T015; makes T010 pass)\n- [x] T017 [US1] Implement `DocPage` in `apps/web/src/components/docs/DocPage.tsx` — reads `:id`\n  via `useParams`, looks it up in `documentationEntries`, renders via `MarkdownContent` (T004), or\n  a "not found" state linking back to `/docs` if no match (depends on T015, T004; makes T011 pass)\n- [x] T018 [US1] Wire `/docs` → `<DocsLayout><DocsIndex /></DocsLayout>` and `/docs/:id` →\n  `<DocsLayout><DocPage /></DocsLayout>` into `apps/web/src/App.tsx`\'s `<Routes>` (depends on\n  T007, T016, T017)\n\n**Checkpoint**: User Story 1 is fully functional and testable independently — every spec is\nbrowsable and readable, correctly marked shipped/planned.\n\n---\n\n## Phase 4: User Story 2 - Follow development progress via the blog (Priority: P2)\n\n**Goal**: A parent/teacher can see every blog post listed newest-first and read any one in full.\n\n**Independent Test**: Open `/blog`, confirm posts are ordered newest-first with title+date; open\none, confirm full readable content — matches quickstart.md Scenarios 4-5.\n\n### Tests for User Story 2\n\n- [x] T019 [P] [US2] Write unit tests in `apps/web/src/content/parseBlogFilename.test.ts` for\n  data-model.md\'s Validation rules: `"2026-09-14-daily-practice-plan-and-implementation.md"` →\n  `{ date: "2026-09-14", id: "daily-practice-plan-and-implementation" }`; `"README.md"` → `null`;\n  `"CLAUDE.md"` → `null`\n- [x] T020 [P] [US2] Write a component test in `apps/web/src/components/docs/BlogIndex.test.tsx`\n  for: posts render ordered newest-first by `date`; neither `README.md` nor `CLAUDE.md` appears as\n  a post (FR-005, data-model.md)\n- [x] T021 [P] [US2] Write a component test in\n  `apps/web/src/components/docs/BlogPostPage.test.tsx` for: a known post id renders its title,\n  date, and content via `MarkdownContent`; an unknown id renders a "not found" message with a link\n  back to `/blog`\n\n### Implementation for User Story 2\n\n- [x] T022 [US2] Implement `parseBlogFilename(filename: string): { date: string; id: string } |\n  null` in `apps/web/src/content/parseBlogFilename.ts` — matches `^\\d{4}-\\d{2}-\\d{2}-.+\\.md$`,\n  returns `null` (never throws) otherwise (depends on T003; makes T019 pass)\n- [x] T023 [US2] Implement `apps/web/src/content/loadBlog.ts` — `import.meta.glob("../../../../../blog/*.md",\n  { query: "?raw", import: "default", eager: true })`, filters/parses each filename via T022\n  (dropping `null` results), builds a `BlogPost` per match (`title` from the first `# ` heading\n  line), sorted descending by `date` (depends on T022)\n- [x] T024 [US2] Extend `apps/web/src/content/index.ts` to also export `blogPosts: BlogPost[]`\n  from T023 (depends on T023, T015)\n- [x] T025 [US2] Implement `BlogIndex` in `apps/web/src/components/docs/BlogIndex.tsx` — lists\n  `blogPosts` with title + date, each linking to `/blog/:id` (depends on T024; makes T020 pass)\n- [x] T026 [US2] Implement `BlogPostPage` in `apps/web/src/components/docs/BlogPostPage.tsx` —\n  reads `:id` via `useParams`, looks it up in `blogPosts`, renders via `MarkdownContent` (T004), or\n  a "not found" state linking back to `/blog` (depends on T024, T004; makes T021 pass)\n- [x] T027 [US2] Wire `/blog` → `<DocsLayout><BlogIndex /></DocsLayout>` and `/blog/:id` →\n  `<DocsLayout><BlogPostPage /></DocsLayout>` into `apps/web/src/App.tsx`\'s `<Routes>` (depends on\n  T007, T025, T026)\n\n**Checkpoint**: Both User Story 1 and User Story 2 are independently functional.\n\n---\n\n## Phase 5: User Story 3 - Move between documentation and the child\'s practice app without confusion (Priority: P3)\n\n**Goal**: Confirm the navigation links already built in Foundational (T006, T007) actually work\nand that the two visual themes never mix.\n\n**Independent Test**: From `/docs` or `/blog`, the "Back to practice app" link is visible and\nworks; from `/`, the "Documentation" link is visible and works — matches quickstart.md Scenario 6.\n\n### Tests for User Story 3\n\n- [x] T028 [P] [US3] Write a component test in\n  `apps/web/src/components/docs/DocsLayout.test.tsx` for: a "Back to practice app" link to `/`\n  is always rendered, and "Documentation"/"Blog" links to `/docs`/`/blog` are always rendered\n  (contracts/screen-flow.md)\n- [x] T029 [P] [US3] Extend `apps/web/src/App.test.tsx` (or add a new test file) for: the\n  practice-app view at `/` renders a "Documentation" link to `/docs`, and following it navigates\n  away from the profile-gated practice UI without error\n\n### Implementation for User Story 3\n\nNo new implementation — the navigation links already exist from Foundational (T006\'s `DocsLayout`\ntop nav + "Back to practice app" link, T007\'s "Documentation" link in the practice-app header).\nThis phase is test-only, closing the loop on FR-008/SC-004 as an explicitly verified property.\n\n**Checkpoint**: All three user stories are independently functional — documentation browsing\n(US1), blog browsing (US2), and verified two-way navigation between the two visual worlds (US3).\n\n---\n\n## Phase 6: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm the feature meets the project\'s quality bar end-to-end and that CI can\nactually build it.\n\n- [x] T030 Run `npm test --workspace apps/web` and confirm all new and existing tests pass\n- [x] T031 [P] Run `npm run coverage --workspace apps/web` and confirm the 70% line/branch bar\n  (ADR-0004) still holds across `src/content/` and `src/components/docs/`; add any missing\n  edge-case test to close a gap\n- [x] T032 [P] Run `npx eslint apps/web` and `npx tsc --noEmit -p apps/web/tsconfig.json`; fix any\n  lint or strict-mode type error\n- [x] T033 Run `npm run build --workspace apps/web` and confirm it succeeds with the sibling\n  `specs`/`blog` repos present, and that the built `dist/` output contains the bundled\n  documentation/blog content (no runtime fetch)\n- [x] T034 Modify `.github/workflows/ci-cd.yml` (research.md Decision 6). Confirmed:\n  `learncoreskills/specs` is a **private** repo (needs an auth token to check out, like the\n  existing `DISTRIB_DEPLOY_TOKEN` pattern — reuse that secret or add a new one scoped to read\n  `specs`), `learncoreskills/blog` is **public** (no token needed). In both the `quality` and\n  `deploy` jobs:\n  1. Give the existing `app` checkout step an explicit `path: app`.\n  2. Add an `actions/checkout` step for `learncoreskills/specs` with `path: specs` and a `token:`\n     input (a repo-scoped PAT with read access, via secrets — same pattern as\n     `DISTRIB_DEPLOY_TOKEN`).\n  3. Add an `actions/checkout` step for `learncoreskills/blog` with `path: blog` (no token needed\n     — public repo).\n  4. All three checkout steps MUST come before any `npm install`/`lint`/`typecheck`/`coverage`/\n     `build` step, since those now read sibling-repo content.\n  5. Add `defaults: run: working-directory: app` at each job level (`quality` and `deploy`) so\n     every existing `npm ...` step keeps running from the right directory without editing each\n     one individually.\n  6. In the `deploy` job\'s `peaceiris/actions-gh-pages` step, update `publish_dir` from\n     `apps/web/dist` to `app/apps/web/dist` — missing this silently breaks the live deploy, since\n     the action would look for the build output in the wrong place (`/speckit-analyze` finding C2;\n     this is the same class of path-assumption bug already hit once this session with the\n     custom-domain `base` path issue)\n- [x] T035 Walk through every scenario in `quickstart.md` (Scenarios 1-6 plus the 3 edge cases)\n  against the finished feature and confirm each expected outcome holds\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — start immediately.\n- **Foundational (Phase 2)**: Depends on Setup — BLOCKS all three user stories.\n- **User Story 1 (Phase 3)**: Depends on Foundational only. No dependency on US2/US3.\n- **User Story 2 (Phase 4)**: Depends on Foundational only. No dependency on US1\'s specific\n  content-loading code — its own `content/index.ts` export (T024) is additive to T015, not\n  blocked by T013/T014.\n- **User Story 3 (Phase 5)**: Depends on Foundational (T006, T007) only — its tests can run as\n  soon as those land, even before US1/US2 are complete, since the links themselves don\'t depend\n  on either story\'s content.\n- **Polish (Phase 6)**: Depends on all three user stories being complete (T034 in particular needs\n  the full feature working to be meaningfully verified).\n\n### Parallel Opportunities\n\n- T001, T002 (Setup) can run in parallel.\n- T003, T004, T005 (Foundational) can run in parallel (different files); T006 depends on T005,\n  T007 depends on T006.\n- T008-T011 (US1 tests, different files) can be drafted in parallel once Foundational completes.\n- T019-T021 (US2 tests, different files) can be drafted in parallel once Foundational completes —\n  and in parallel with all of US1\'s work, per the Phase Dependencies note above.\n- T028, T029 (US3 tests) can be drafted in parallel with each other, and with US1/US2, once\n  Foundational completes.\n- T031, T032 (Polish) can run in parallel with each other.\n\n---\n\n## Parallel Example: User Story 1\n\n```bash\n# After Phase 2 (Foundational) completes:\nTask: "Write deriveSpecStatus unit tests in tests/content/deriveSpecStatus.test.ts"\nTask: "Write loadSpecs integration tests in tests/content/loadSpecs.test.ts"\nTask: "Write DocsIndex component tests in tests/components/docs/DocsIndex.test.tsx"\nTask: "Write DocPage component tests in tests/components/docs/DocPage.test.tsx"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1 (Setup) + Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 1) — a browsable, correctly-status-marked specs/docs area is\n   already independently useful and delivers the feature\'s primary trust-building value.\n3. **STOP and VALIDATE**: run quickstart.md Scenarios 1-3.\n4. Proceed to Phase 4 (User Story 2) for the blog, Phase 5 (User Story 3) to verify navigation,\n   then Phase 6 Polish — including the CI workflow change, which only matters once the whole\n   feature works locally.\n\n### Incremental Delivery\n\n1. Setup + Foundational → router mounted, shared shell/rendering ready, `/` unchanged.\n2. User Story 1 → documentation browsing works, mergeable on its own as the MVP.\n3. User Story 2 → blog browsing works, no US1 code touched.\n4. User Story 3 → navigation formally verified, no new code.\n5. Polish → coverage/lint/build gates green, CI updated to check out sibling repos, quickstart\n   fully walked.\n',Wr='---\n\ndescription: "Task list template for feature implementation"\n---\n\n# Tasks: Parent Area — Advancement Report & Data Export/Import\n\n**Input**: Design documents from `/specs/011-parent-area-export-import/` (spec.md, plan.md,\nresearch.md, data-model.md, contracts/child-export-file.md, contracts/screen-flow.md,\nquickstart.md)\n\n**Tests**: Included. `apps/web` already carries a 70% coverage bar (ADR-0004) and the established\nVitest + React Testing Library convention (`009`/`010`); `packages/core/*` carries a 95% bar\n(matching `packages/core/profiles`\'s `vitest.config.ts`) and Constitution VI requires the new\n`child-export` package\'s serialize/parse/migrate functions be directly, deterministically tested.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1 advancement report,\nUser Story 2 = P1 export/import round trip, User Story 3 = P2 forward-compatible import). All\npaths are relative to the `learncoreskills/app` repo (not this `specs` repo) unless noted.\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2, US3)\n\n## Path Conventions\n\nTwo new locations, following plan.md\'s Structure Decision: `packages/core/child-export/` (new\npure package — the versioned file-format logic, mirroring `packages/core/profiles`\'s scaffold)\nand `apps/web/src/components/parent/` (new UI, reusing `apps/web/src/docs.css`\'s theme from\n`010-docs-and-blog` rather than adding a new one). Tests are colocated as `*.test.ts(x)` next to\ntheir source file, the established `009`/`010` convention — no separate `tests/` directory except\n`packages/core/child-export/tests/fixtures/`, which holds versioned example files, not test code.\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: Scaffold the one new package this feature adds. No new npm dependency is needed\n(plan.md Technical Context) — export/import uses native browser APIs only.\n\n- [X] T001 Create the `packages/core/child-export` package scaffold: `package.json` (name\n  `@learncoreskills/child-export`, same shape as `packages/core/profiles/package.json`:\n  `test`/`coverage`/`typecheck`/`lint` scripts, `vitest`+`@vitest/coverage-v8`+`typescript`\n  devDependencies), `tsconfig.json` (extends `../../../tsconfig.base.json`, same as\n  `packages/core/profiles/tsconfig.json`), and `vitest.config.ts` (v8 coverage provider, 95%\n  lines/branches/functions/statements thresholds on `src/**/*.ts`, matching\n  `packages/core/profiles/vitest.config.ts`); create empty `src/` and `tests/fixtures/`\n  directories. No root `package.json` change needed — `packages/core/*` is already a glob\n  workspace.\n\n**Checkpoint**: `npm install` at the workspace root picks up the new package; `npm run\ntypecheck --workspace packages/core/child-export` succeeds against an empty `src/`.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The `/parent` route and its shell layout — both User Story 1\'s advancement report\nand User Story 2\'s export/import controls render inside this shell (contracts/screen-flow.md).\n\n**⚠️ CRITICAL**: No user story work can begin until this phase is complete.\n\n- [X] T002 [P] Add a `/parent` route to `apps/web/src/App.tsx`, and a "Parent Area" nav link in\n  `PracticeApp`\'s header next to the existing "Documentation" link (`apps/web/src/App.tsx`\n  currently renders that link via `<Link to="/docs" className="app-docs-link">`) — update\n  `apps/web/src/App.test.tsx` to assert the link is present and navigates to `/parent`\n  (contracts/screen-flow.md Routes; FR-001)\n- [X] T003 [P] Implement `ParentArea` in `apps/web/src/components/parent/ParentArea.tsx`: wraps\n  its content in the `.docs-theme` class from `apps/web/src/docs.css` (reused as-is from `010`,\n  no new theme file per plan.md), renders a "Back to practice app" link to `/`, and — when there\n  is no active child (`useProfiles().activeChildId === null`) — renders a short "create a child\n  profile first" state with a link to `/` instead of any report/export content\n  (contracts/screen-flow.md "`/parent` requires an active child profile"); add\n  `apps/web/src/components/parent/ParentArea.test.tsx` covering both the no-active-child state and\n  the "Back to practice app" link (depends on T002)\n\n**Checkpoint**: `/parent` is reachable and renders the shell correctly for both "no active child"\nand "active child" cases (with an empty body for now) — ready for US1 and US2 to fill in.\n\n---\n\n## Phase 3: User Story 1 - See the active child\'s advancement at a glance (Priority: P1) 🎯 MVP\n\n**Goal**: A parent can open `/parent` and see the active child\'s real per-competency mastery,\ncomputed by the existing mastery engine, with a clear empty state when there\'s no progress yet.\n\n**Independent Test**: Open `/parent` for a child with recorded mastery signals — see accurate,\nreal mastery percentages. Switch to a child with none — see a "no progress yet" state, not an\nerror or blank screen.\n\n### Implementation for User Story 1\n\n- [X] T004 [US1] Implement `AdvancementReport` in\n  `apps/web/src/components/parent/AdvancementReport.tsx`: takes the active child\'s mastery the\n  same way `apps/web/src/hooks/useMastery.ts` already computes it for `MasteryDisplay`\n  (`computeCompetencyMastery` over `readMasterySignals(childId)` and\n  `mentalAdditionCompetency`), rendering the per-competency mastery percentage in the\n  `docs.css`-themed, minimal layout described in plan.md/FR-002 (no charts/trends — a percentage\n  and label is sufficient for V1); when `mastery` is `null` or has zero recorded signals, render a\n  "no progress yet" message instead (FR-003); add\n  `apps/web/src/components/parent/AdvancementReport.test.tsx` covering both the populated and\n  empty states\n- [X] T005 [US1] Mount `<AdvancementReport childId={activeChildId} />` inside `ParentArea.tsx`\n  (`apps/web/src/components/parent/ParentArea.tsx`), in the branch where an active child exists;\n  extend `ParentArea.test.tsx` to assert the report renders when a child is active (depends on\n  T003, T004)\n\n**Checkpoint**: User Story 1 is fully functional and independently testable — quickstart.md\nScenarios 1 and 2 pass.\n\n---\n\n## Phase 4: User Story 2 - Move a child\'s progress to another device (Priority: P1)\n\n**Goal**: A parent can export a child\'s profile + full mastery-signal history to a file, and\nimport that file on another device (or a fresh profile on the same device), reproducing identical\nmastery percentages.\n\n**Independent Test**: Export a child with recorded signals; import the file into a fresh\n`localStorage`; confirm the imported child\'s mastery percentages exactly match the source child\'s,\nand that an invalid file is rejected with no partial profile created.\n\n### Implementation for User Story 2\n\n- [X] T006 [P] [US2] Define `ChildExportFileV1` (`schemaVersion: 1`, `exportedAt: number`,\n  `profile: { id: string; alias: string; createdAt: number }`, `masterySignals: MasterySignal[]`)\n  and `export const CURRENT_SCHEMA_VERSION = 1` in `packages/core/child-export/src/types.ts`,\n  exactly per data-model.md\'s `ChildExportFileV1` field table (depends on T001)\n- [X] T007 [P] [US2] Implement `serializeChildExport(profile: ChildProfile, masterySignals:\n  MasterySignal[]): ChildExportFileV1` in `packages/core/child-export/src/serialize.ts` — pure,\n  always writes `schemaVersion: CURRENT_SCHEMA_VERSION` and the current wall-clock time as\n  `exportedAt` (contracts/child-export-file.md "Producer side"); add `serialize.test.ts` (depends\n  on T006)\n- [X] T008 [US2] Implement `parseChildExport(raw: unknown): ParseResult` in\n  `packages/core/child-export/src/parse.ts`, where `ParseResult` is the discriminated union from\n  contracts/child-export-file.md (`{ ok: true; data: { profile; masterySignals } } | { ok: false;\n  reason: "unreadable" | "unsupported-newer-version" | "unsupported-older-version" |\n  "invalid-shape" }`); for this task, cover only the `ok: true` current-version path (validating\n  `schemaVersion === CURRENT_SCHEMA_VERSION`, `profile.id`/`profile.alias` present,\n  `masterySignals` is an array) plus `"invalid-shape"` for a structurally wrong object; also create\n  `packages/core/child-export/src/migrations.ts` with `export const migrations: Migration[] = []`\n  and `export const OLDEST_SUPPORTED_SCHEMA_VERSION = 1` (empty chain for now — no version 2\n  exists yet); never throw — every failure path returns `ok: false` (contracts/child-export-file.md\n  "Consumer side"); add `parse.test.ts` for the cases covered here (depends on T006)\n- [X] T009 [P] [US2] Create the barrel `packages/core/child-export/src/index.ts` re-exporting\n  `ChildExportFileV1`, `CURRENT_SCHEMA_VERSION`, `serializeChildExport`, `parseChildExport`, and\n  `ParseResult` (depends on T006, T007, T008)\n- [X] T010 [P] [US2] Add `upsertChildProfile(store: KeyValueStore, profile: ChildProfile): void`\n  to `packages/core/profiles/src/profiles.ts` — writes `profile` into `ProfilesState.children`,\n  replacing the existing entry if one with the same `id` exists, otherwise appending (does not\n  change `activeChildId`); add cases to `packages/core/profiles/profiles.test.ts` (or wherever\n  that package\'s existing tests live) for both the insert-new and replace-existing paths\n- [X] T011 [P] [US2] Add `writeMasterySignals(childId: string, signals: MasterySignal[]): void` to\n  `apps/web/src/storage/masterySignals.ts` — bulk-overwrites the child\'s entire signal log at\n  `childStorageKey(childId, "mastery-signals")` (unlike `appendMasterySignal`, which only appends\n  one); extend `apps/web/src/storage/masterySignals.test.ts` (or equivalent) with a case proving a\n  prior log is fully replaced, not merged\n- [X] T012 [US2] Implement `exportChild(childId: string): void` in `apps/web/src/io/exportChild.ts`\n  — reads the child\'s `ChildProfile` (from `listChildProfiles`/`@learncoreskills/profiles`) and\n  `readMasterySignals(childId)`, calls `serializeChildExport`, `JSON.stringify`s the result into a\n  `Blob`, and triggers a download via `URL.createObjectURL` + a programmatically-clicked `<a\n  download="...">` (research.md Decision 4); add `exportChild.test.ts` mocking\n  `URL.createObjectURL`/anchor click and asserting the downloaded content matches\n  `serializeChildExport`\'s output (depends on T007, T010, T011)\n- [X] T013 [US2] Implement `importChild(file: File): Promise<ImportResult>` in\n  `apps/web/src/io/importChild.ts`, where `ImportResult` is `{ status: "imported"; childId: string\n  } | { status: "conflict"; parsed: ParsedChildExport } | { status: "error"; reason: ParseResult["reason"]\n  | "unreadable" }`: reads `file.text()` (catching a read/JSON-parse failure as `"unreadable"`),\n  calls `parseChildExport`, and on `ok: true` checks whether `listChildProfiles(window.localStorage)`\n  already contains a profile with the same `id` (research.md Decision 5) — if so, returns\n  `"conflict"` without writing anything; if not, calls `upsertChildProfile` + `writeMasterySignals`\n  directly and returns `"imported"`; add `importChild.test.ts` covering the clean-import and\n  malformed-file paths (depends on T008, T010, T011)\n- [X] T014 [P] [US2] Implement `ExportChildButton` in\n  `apps/web/src/components/parent/ExportChildButton.tsx` — calls `exportChild(activeChildId)` on\n  click, disabled when there is no active child; add `ExportChildButton.test.tsx` (depends on\n  T012)\n- [X] T015 [US2] Implement `ImportChildButton` in\n  `apps/web/src/components/parent/ImportChildButton.tsx` (a hidden `<input type="file"\n  accept="application/json">` triggered by a visible button, calling `importChild` on selection)\n  and `ImportConflictDialog` in\n  `apps/web/src/components/parent/ImportConflictDialog.tsx` — rendered only when `importChild`\n  returns `"conflict"`, offering "import as a new profile" (re-calls the write path with a freshly\n  generated `id`, e.g. via `crypto.randomUUID()`, keeping the rest of the parsed data) vs "replace\n  this profile\'s data" (writes with the original `id` via `upsertChildProfile` +\n  `writeMasterySignals`) — never silently picking one (FR-008); add\n  `ImportChildButton.test.tsx` and `ImportConflictDialog.test.tsx` covering the no-conflict and\n  conflict-with-both-choices paths (depends on T013)\n- [X] T016 [US2] Mount `<ExportChildButton />` and `<ImportChildButton />` inside `ParentArea.tsx`\n  (active-child branch, alongside `AdvancementReport`), and refresh `useProfiles`\'s child\n  list/active child after a successful import the same way `createProfile` already does today;\n  extend `ParentArea.test.tsx` accordingly (depends on T003, T014, T015)\n\n**Checkpoint**: User Stories 1 AND 2 both work independently — quickstart.md Scenarios 1, 2, 3,\nand 5 pass.\n\n---\n\n## Phase 5: User Story 3 - Trust that an exported file still imports after the app has updated (Priority: P2)\n\n**Goal**: The compatibility contract in contracts/child-export-file.md is actually enforced and\ntested — an old (still-supported) file always imports, a too-new file is clearly refused, and a\nfile with no recognizable version is treated as invalid, never guessed at.\n\n**Independent Test**: Import a fixture file at the current schema version — succeeds. Hand-edit a\ncopy with an out-of-range `schemaVersion` (too high, or below `OLDEST_SUPPORTED_SCHEMA_VERSION`)\n— refused with a specific, accurate message. Import a file with `schemaVersion` missing entirely —\ntreated as invalid, not guessed at.\n\n### Implementation for User Story 3\n\n- [X] T017 [P] [US3] Add `packages/core/child-export/tests/fixtures/v1.json` — a real,\n  hand-written example `ChildExportFileV1` (a sample profile plus a handful of mastery signals),\n  and a `parse.test.ts` case asserting it parses successfully with `ok: true` against\n  `CURRENT_SCHEMA_VERSION` (contracts/child-export-file.md "Fixture tests" — this is the test that\n  actually enforces the "old files keep importing" contract, not just a manual check) (depends on\n  T008)\n- [X] T018 [US3] Extend `packages/core/child-export/src/parse.ts` and `parse.test.ts` with the\n  remaining `ok: false` cases from contracts/child-export-file.md: `schemaVersion` missing,\n  non-numeric, or otherwise not a positive integer → `"invalid-shape"`; `schemaVersion >\n  CURRENT_SCHEMA_VERSION` → `"unsupported-newer-version"`; `schemaVersion <\n  OLDEST_SUPPORTED_SCHEMA_VERSION` → `"unsupported-older-version"` (depends on T008)\n- [X] T019 [US3] In `ImportChildButton.tsx`\n  (`apps/web/src/components/parent/ImportChildButton.tsx`), map each `ImportResult`/`ParseResult`\n  `reason` (including the `"unreadable"` case from `importChild.ts`) to a distinct, specific\n  message shown to the parent — never a generic/blank error (FR-007; contracts/child-export-file.md\n  four `reason` values; quickstart.md Scenario 4); extend `ImportChildButton.test.tsx` with one\n  case per reason (depends on T015, T018)\n\n**Checkpoint**: All three user stories are independently functional — quickstart.md Scenarios 1–6\nall pass.\n\n---\n\n## Phase 6: Polish & Cross-Cutting Concerns\n\n**Purpose**: Confirm coverage bars and the full validation guide, now that all stories are done.\n\n- [X] T020 [P] Run `npm run coverage --workspace apps/web` and `npm run coverage --workspace\n  packages/core/child-export`; confirm `apps/web`\'s existing 70% bar (ADR-0004) and\n  `child-export`\'s 95% bar (T001\'s `vitest.config.ts` thresholds) are both met\n- [X] T021 Walk through quickstart.md Scenarios 1–6 end to end in a real browser (`npm run dev\n  --workspace apps/web`), including the two-browser-profile export/import round trip (Scenario 3)\n  and the three invalid-file cases (Scenario 4)\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — can start immediately.\n- **Foundational (Phase 2)**: Depends on Setup completion — BLOCKS all user stories.\n- **User Stories (Phase 3-5)**: All depend on Foundational phase completion.\n  - US1 (Phase 3) has no dependency on US2/US3 — reuses only the existing mastery engine.\n  - US2 (Phase 4) has no dependency on US1 — reuses only `ParentArea`\'s shell from Phase 2.\n  - US3 (Phase 5) extends `parse.ts`/`ImportChildButton.tsx`, both introduced in US2 — it can only\n    start once US2\'s T008 and T015 exist, unlike the US1/US2 pair which are mutually independent.\n- **Polish (Phase 6)**: Depends on all three user stories being complete.\n\n### Within Each User Story\n\n- US1: T004 (AdvancementReport) before T005 (mount it in ParentArea).\n- US2: types (T006) before serialize/parse (T007, T008); serialize/parse/profiles/masterySignals\n  (T006-T011) before the `io/` wrappers (T012, T013); `io/` wrappers before their buttons (T014,\n  T015); buttons before mounting them in `ParentArea` (T016).\n- US3: fixture test (T017) and parse rejection cases (T018) can run in parallel with each other;\n  T019 (message wiring) depends on T018.\n\n### Parallel Opportunities\n\n- T002 and T003 (Phase 2) touch different files and can run in parallel.\n- T006, T010, T011 (Phase 4) touch three different, currently-independent files and can start\n  together; T007 and T009 follow T006.\n- T014 (ExportChildButton) can be built in parallel with T013/T015 (import path) — different\n  files, no shared dependency beyond T010/T011 which both already need.\n- T017 (fixture + its test) can run in parallel with T018 (rejection-case tests) — same file\n  (`parse.test.ts`) but additive, non-conflicting cases; sequence them if working solo, parallelize\n  across two people if pairing.\n\n---\n\n## Parallel Example: Phase 4 (User Story 2) kickoff\n\n```bash\n# After Phase 2 (Foundational) is done, these can start together:\nTask: "Define ChildExportFileV1 + CURRENT_SCHEMA_VERSION in packages/core/child-export/src/types.ts"\nTask: "Add upsertChildProfile to packages/core/profiles/src/profiles.ts"\nTask: "Add writeMasterySignals to apps/web/src/storage/masterySignals.ts"\n```\n\n---\n\n## Implementation Strategy\n\n### MVP First (User Story 1 Only)\n\n1. Complete Phase 1: Setup.\n2. Complete Phase 2: Foundational (CRITICAL — blocks all stories).\n3. Complete Phase 3: User Story 1 (advancement report).\n4. **STOP and VALIDATE**: quickstart.md Scenarios 1–2.\n5. Deploy/demo if ready — a parent can already see real mastery in a dedicated area, even before\n   export/import exists.\n\n### Incremental Delivery\n\n1. Setup + Foundational → `/parent` shell ready.\n2. Add User Story 1 → validate → demo (MVP).\n3. Add User Story 2 → validate (round trip + rejection) → demo — the feature\'s core "don\'t lose\n   progress on device loss" promise is now real.\n4. Add User Story 3 → validate (fixture + version-rejection tests) → demo — the compatibility\n   contract is now enforced and regression-tested, not just documented.\n5. Phase 6 polish (coverage, full quickstart walkthrough) before calling the feature done.\n\n### Parallel Team Strategy\n\nWith two developers, once Phase 2 is done: one takes US1 (Phase 3, small — 2 tasks) then joins the\nother on US2 (Phase 4, the bulk of the work); US3 (Phase 5) starts once US2\'s T008/T015 land.\n',Gr='---\n\ndescription: "Task list template for feature implementation"\n---\n\n# Tasks: Progression Radar Chart\n\n**Input**: Design documents from `/specs/012-progression-radar-chart/` (spec.md, plan.md,\nresearch.md, data-model.md, contracts/screen-flow.md, contracts/radar-chart-component.md,\nquickstart.md)\n\n**Tests**: Included. `apps/web` carries a 70% coverage bar (ADR-0004) and the established Vitest +\nReact Testing Library convention (`009`/`010`/`011`); `packages/core/*` carries a 95% bar\n(`packages/core/profiles/vitest.config.ts`), and Constitution Principle VI requires the new pure\naggregation functions (`radar/mathematicsRadar.ts`, `radar/wholeChildRadar.ts`) and the extended\n`profiles`/`child-export` logic be directly, deterministically tested.\n\n**Organization**: Tasks are grouped by user story (spec.md User Story 1 = P1 mathematics radar,\nUser Story 2 = P1 set/change current grade, User Story 3 = P2 illustrative whole-child radar). All\npaths are relative to the `learncoreskills/app` repo (not this `specs` repo) unless noted.\n\n## Format: `[ID] [P?] [Story] Description`\n\n- **[P]**: Can run in parallel (different files, no dependencies)\n- **[Story]**: Which user story this task belongs to (US1, US2, US3)\n\n## Path Conventions\n\nNo new package or route. Two existing core packages gain a small field/version bump\n(`packages/core/profiles`, `packages/core/child-export`); `apps/web/src` gains two new pure-logic\nfiles (`radar/`), one new static data file (`skillsFramework.ts`), three new components\n(`RadarChart.tsx`, `GradeSelector.tsx`, plus thin wrappers `MathematicsRadar.tsx` /\n`WholeChildRadar.tsx`), and one new hook (`useChildGrade.ts`), all under\n`apps/web/src/components/parent/` and `apps/web/src/hooks/` alongside the existing `011` files.\nTests are colocated as `*.test.ts(x)` next to their source file, the established convention — no\nseparate `tests/` directory. No i18n resolution layer exists in `apps/web` yet (confirmed: no\n`i18next` wiring, no locale files) — new labels are hardcoded English strings for now, exactly\nlike the existing `AdvancementReport`\'s "Mental addition mastery" text, while still carrying a\n`nameKey`-style key in data (`curriculum.ts`, `skillsFramework.ts`) per Constitution Principle\nVII, ready for a future translation layer without a further data-shape change.\n\n**Note on story ordering vs. spec.md**: spec.md lists User Story 1 (mathematics radar) before\nUser Story 2 (set/change grade); both are P1. This file sequences US2 before US1\'s UI-integration\ntask because FR-002 requires the grade prompt to gate both radar charts — US1\'s *computation*\nlogic (T016-T019) has no dependency on US2 and can be built in parallel, but US1\'s task that wires\nthe mathematics radar into `AdvancementReport` (T021) needs US2\'s `GradeSelector` to exist first.\nThis matches how `plan.md`\'s Project Structure and `contracts/screen-flow.md` already describe the\ncomposition.\n\n---\n\n## Phase 1: Setup (Shared Infrastructure)\n\n**Purpose**: No new package or dependency is needed (plan.md Technical Context — no charting\nlibrary added). Confirm the baseline is green before extending existing packages.\n\n- [X] T001 Run `npm test --workspaces --if-present` and `npm run typecheck --workspaces\n  --if-present` from the `app` repo root to confirm a clean baseline before starting (no code\n  change; failing baseline must be resolved first, separately from this feature).\n\n**Checkpoint**: Baseline green. Safe to start Foundational changes.\n\n---\n\n## Phase 2: Foundational (Blocking Prerequisites)\n\n**Purpose**: The shared data layer every user story depends on — the new `currentGrade` field,\nits export/import support, and the generalization from one hardcoded competency to "all known\ncompetencies" that both radar charts need to read.\n\n**⚠️ CRITICAL**: No user story work can begin until this phase is complete.\n\n- [X] T002 [P] Add `currentGrade: 1 | 2 | 3 | 4 | 5 | null` to the `ChildProfile` interface in\n  `packages/core/profiles/src/types.ts` (data-model.md: "MUST be an integer in `1..5`, or\n  `null`"). Add a short doc comment noting a profile read from storage with no `currentGrade` key\n  (created before this feature) is treated as `null`, not an error.\n- [X] T003 [P] Add `setChildGrade(store: KeyValueStore, childId: string, grade: 1|2|3|4|5):\n  void` to `packages/core/profiles/src/profiles.ts` (same read-modify-write shape as\n  `switchActiveChild`: throws if `childId` doesn\'t match an existing profile), and update\n  `readState`\'s default so a profile object missing `currentGrade` normalizes to\n  `currentGrade: null` when read. Export `setChildGrade` from `packages/core/profiles/src/index.ts`.\n- [X] T004 [US-shared] Add tests in `packages/core/profiles/src/profiles.test.ts`: a freshly\n  created profile has `currentGrade: null`; `setChildGrade` persists a value in `1..5` and it\n  survives a fresh read; `setChildGrade` throws for an unknown `childId`; a profile object\n  manually written to storage without a `currentGrade` key reads back as `null`. (depends on\n  T002, T003)\n- [X] T005 [P] Bump `packages/core/child-export/src/types.ts`: add `ChildExportFileV2`\n  (`schemaVersion: 2`) with `profile.currentGrade: 1|2|3|4|5|null` alongside the unchanged v1\n  fields (data-model.md); update `ChildExportProfile` to include `currentGrade`; set\n  `CURRENT_SCHEMA_VERSION = 2`.\n- [X] T006 Add the `{ fromVersion: 1, migrate }` step to `packages/core/child-export/src/migrations.ts`\n  that sets `profile.currentGrade = null` on a v1 payload (research.md Decision "child-export\n  bumps to schema v2"); do not modify `OLDEST_SUPPORTED_SCHEMA_VERSION` (v1 files must keep\n  importing, per `specs/011` FR-005). (depends on T005)\n- [X] T007 Update `packages/core/child-export/src/serialize.ts` to always write\n  `schemaVersion: 2` and carry `currentGrade` through, and `packages/core/child-export/src/parse.ts`\'s\n  `isValidShape` to require `profile.currentGrade` be `null` or an integer in `1..5` — reject as\n  `invalid-shape` otherwise (data-model.md validation rule; contracts/radar-chart-component.md\'s\n  child-export contract). (depends on T005)\n- [X] T008 [P] Extend `packages/core/child-export`\'s tests: serialize/parse round-trip for a v2\n  file with a non-null `currentGrade`; migrating a `schemaVersion: 1` fixture (add\n  `tests/fixtures/v1.json` if one doesn\'t already exist, matching `specs/011`\'s convention)\n  produces `currentGrade: null`; a hand-edited file with `currentGrade: 6` (out of range) is\n  rejected as `invalid-shape`. (depends on T006, T007)\n- [X] T009 Generalize `apps/web/src/curriculum.ts`: export the full list of known competencies as\n  `allCompetencies: Competency[]` (today just `[mentalAdditionCompetency]`), add a\n  `mathematicsAreas` registry keyed by the 17 top-level areas from `docs/product/CURRICULUM.md`\n  (each with a stable `areaKey` and a `nameKey`-style label), and a\n  `getMathematicsAreaForCompetency(competency: Competency): string` lookup derived from each\n  competency id\'s namespace segment (research.md: `math.addition.mental` → `"addition"`).\n- [X] T010 Generalize `apps/web/src/hooks/useMastery.ts` to compute a `CompetencyMastery[]` (one\n  entry per `curriculum.ts`\'s `allCompetencies`) instead of being hardcoded to\n  `mentalAdditionCompetency`; keep the same `refreshToken`-forces-recompute contract. Update\n  `apps/web/src/hooks/useMastery.test.ts` accordingly (existing single-competency assertions must\n  still pass unchanged — this is a mechanical generalization, not a behavior change for today\'s\n  one real competency). (depends on T009)\n- [X] T011 Refactor `apps/web/src/components/parent/AdvancementReport.tsx`\'s existing\n  single-competency display to read the mental-addition entry out of the now-array-shaped\n  `useMastery` result, preserving its exact current rendered text/behavior (regression safety —\n  `AdvancementReport.test.tsx`\'s existing assertions must keep passing unmodified). (depends on\n  T010)\n\n**Checkpoint**: `currentGrade` exists end-to-end (profile → export/import), and mastery data is\navailable for every known competency, not just one. User story work can now begin.\n\n---\n\n## Phase 3: User Story 2 - Set and change a child\'s current grade (Priority: P1)\n\n**Goal**: A parent can set the active child\'s current grade (G1–G5) and change it later, with the\nvalue persisted and immediately available to both radar charts.\n\n**Independent Test**: Set a grade via `GradeSelector`, reload the page, and confirm the same grade\nis still shown; change it to a different value and confirm the new value persists.\n\n### Implementation for User Story 2\n\n- [X] T012 [P] [US2] Add `useChildGrade(childId: string | null)` hook in\n  `apps/web/src/hooks/useChildGrade.ts`: reads the active child\'s `currentGrade` from\n  `@learncoreskills/profiles` and exposes a `setGrade(grade: 1|2|3|4|5)` function that calls\n  `setChildGrade` and updates local state. Add `apps/web/src/hooks/useChildGrade.test.ts` (mirrors\n  `useProfiles.test.ts`\'s structure).\n- [X] T013 [US2] Implement `GradeSelector` in `apps/web/src/components/parent/GradeSelector.tsx`:\n  renders five options labeled "G1".."G5" (research.md: numeric `1..5` storage, `` `G${n}` ``\n  display), calls `useChildGrade`\'s `setGrade` on selection, and shows the currently-selected\n  grade when one is already set (so it doubles as the "change grade later" control, User Story 2\n  AS-2). Add `apps/web/src/components/parent/GradeSelector.test.tsx`: renders all five options;\n  selecting one calls through to persist it; re-rendering with an already-set grade shows it\n  selected. (depends on T012)\n- [X] T014 [US2] Wire `GradeSelector` into `AdvancementReport.tsx`: when the active child\'s\n  `currentGrade` is `null` **and** at least one mastery signal exists (the existing "no progress\n  yet" state from `specs/011` FR-003 takes precedence over the grade prompt, per\n  contracts/screen-flow.md), render `GradeSelector` in place of both radar charts (FR-002); once a\n  grade is set, keep `GradeSelector` visible as a small "change grade" control above the charts\n  (satisfies SC-004: 2 actions or fewer). (depends on T013, T011)\n- [X] T015 [US2] Extend `apps/web/src/components/parent/AdvancementReport.test.tsx`: a child with\n  signals but no `currentGrade` shows the grade prompt and no radar chart; setting a grade removes\n  the prompt; the set grade is still shown/selected after a simulated reload (re-render from\n  fresh storage read). (depends on T014)\n\n**Checkpoint**: A parent can set and change the active child\'s grade from the advancement report;\nthe value survives a reload. User Story 2 is independently functional and testable.\n\n---\n\n## Phase 4: User Story 1 - See the mathematics radar at a glance (Priority: P1) 🎯 MVP\n\n**Goal**: The advancement report renders a radar chart with one axis per top-level mathematics\narea, plotting current mastery (average, at the child\'s current grade) against a 100% target.\n\n**Independent Test**: With a child\'s `currentGrade` set (via T003\'s `setChildGrade`, directly in a\ntest — no dependency on US2\'s UI to validate this story\'s own logic) and mastery signals recorded\nfor `math.addition.mental`, confirm the "Addition" axis shows the correct average percentage and\nevery other area axis shows the "not yet applicable at this grade" state, not 0%.\n\n### Implementation for User Story 1\n\n- [X] T016 [P] [US1] Implement `computeMathematicsAreaProgress(competencies, masterySignals,\n  currentGrade)` in `apps/web/src/radar/mathematicsRadar.ts` (contracts/radar-chart-component.md\n  signature; data-model.md `MathematicsAreaProgress`): for each `mathematicsAreas` entry, filter\n  `competencies` to that area (via `getMathematicsAreaForCompetency`) with `level === currentGrade`;\n  if none, return `status: "not-applicable-at-grade"`; otherwise compute the unweighted mean of\n  each matching competency\'s `computeCompetencyMastery(...).percentage` (treating a competency\n  with zero recorded attempts as contributing 0%, per FR-008/mastery-engine\'s own convention) as\n  `currentPercentage`, with `targetPercentage: 100`.\n- [X] T017 [P] [US1] Add `apps/web/src/radar/mathematicsRadar.test.ts`: an area with a matching,\n  partially-mastered competency at the current grade returns the right average; an area with zero\n  matching competencies at the current grade returns `"not-applicable-at-grade"` with no\n  percentage; an unattempted competency at the current grade contributes 0%, not `null`/`NaN`;\n  changing `currentGrade` changes which competencies are included (mirrors spec.md\'s Edge Cases\n  and quickstart.md Scenario 4). (depends on T016)\n- [X] T018 [P] [US1] Implement the generic `RadarChart` component in\n  `apps/web/src/components/parent/RadarChart.tsx` per contracts/radar-chart-component.md: takes\n  an `axes: { key, label, current, target, state }[]` prop (≥3 entries expected; falls back to a\n  plain labeled list rather than crashing below that), renders one spoke per axis as inline SVG,\n  plots `current`/`target` as two overlaid polygons for `state === "tracked"` axes only, and\n  renders a visually muted spoke with no plotted point for any other `state`, with every axis\'s\n  label and value/placeholder-state also exposed as text (not only inside the SVG shapes) per the\n  component\'s accessibility contract.\n- [X] T019 [P] [US1] Add `apps/web/src/components/parent/RadarChart.test.tsx`: renders one spoke\n  per axis in the `axes` array; a `"tracked"` axis\'s current/target values are reflected in the\n  rendered polygons (or their underlying point data) and in accessible text; a\n  `"not-applicable-at-grade"`/`"not-tracked-yet"` axis renders no numeric 0/100 anywhere\n  (SC-003) and its accessible text names the placeholder state; fewer than 3 axes falls back to a\n  labeled list without throwing.\n- [X] T020 [US1] Implement `MathematicsRadar` in `apps/web/src/components/parent/MathematicsRadar.tsx`:\n  reads `curriculum.ts`\'s `mathematicsAreas`/`allCompetencies`, the generalized `useMastery`\n  result, and the active child\'s `currentGrade` (via `useChildGrade`), calls\n  `computeMathematicsAreaProgress`, maps the result to `RadarChart`\'s `axes` prop, and renders\n  `RadarChart`. (depends on T016, T018, T009, T010)\n- [X] T021 [US1] Wire `MathematicsRadar` into `AdvancementReport.tsx`: render it once\n  `currentGrade` is non-null (after the grade-prompt gate from T014), alongside the existing\n  per-competency text `AdvancementReport` already shows (T011) — this is additive, not a\n  replacement. (depends on T020, T014)\n- [X] T022 [US1] Extend `AdvancementReport.test.tsx` / add scenario coverage matching\n  quickstart.md Scenarios 3–4: with a grade set and `math.addition.mental` signals recorded, the\n  "Addition" axis shows the correct percentage and other areas show the placeholder state;\n  changing the grade (via `GradeSelector`, now available from US2) changes which axis is\n  "tracked". (depends on T021, T015)\n\n**Checkpoint**: The mathematics radar is fully functional against real mastery data. Combined\nwith User Story 2, this is the feature\'s MVP — stop here and validate/demo if time-constrained.\n\n---\n\n## Phase 5: User Story 3 - See the illustrative whole-child skill map (Priority: P2)\n\n**Goal**: A second radar chart spans every `PRIMARY-SKILLS-FRAMEWORK.md` domain; the mathematics\naxis reuses real data from User Story 1, every other axis is an explicit, unambiguous "not\ntracked yet" placeholder.\n\n**Independent Test**: Open the advancement report with a grade set and confirm a second chart\nrenders 20 axes total, with exactly one ("Mathematics") showing a real value equal to the\nmathematics radar\'s own aggregate, and the other 19 showing accessible "not tracked yet" text —\nnever a fabricated percentage.\n\n### Implementation for User Story 3\n\n- [X] T023 [P] [US3] Add `apps/web/src/skillsFramework.ts`: a static, ordered list of the 20\n  `docs/product/PRIMARY-SKILLS-FRAMEWORK.md` domains (sections A–T), each with a `domainKey` and a\n  `nameKey`-style label — display-only data, no computation.\n- [X] T024 [P] [US3] Implement `computeWholeChildSkillMap(mathematicsAreaProgress:\n  MathematicsAreaProgress[])` in `apps/web/src/radar/wholeChildRadar.ts`\n  (contracts/radar-chart-component.md: this function MUST NOT take `competencies`,\n  `masterySignals`, or `currentGrade` as parameters, enforcing at the type level that\n  non-mathematics domains can never gain a computed value): the `"mathematics"` domain entry gets\n  `status: "tracked"`, `currentPercentage` = the mean of every `"tracked"`\n  `MathematicsAreaProgress.currentPercentage`, `targetPercentage: 100`; every other\n  `skillsFramework.ts` domain gets `status: "not-tracked-yet"`, `currentPercentage: null`,\n  `targetPercentage: null`. Add `apps/web/src/radar/wholeChildRadar.test.ts` covering both cases,\n  including "zero tracked mathematics areas" (mathematics itself shows\n  `"not-applicable-at-grade"` upstream) producing a sensible mathematics-domain result rather than\n  `NaN`. (depends on T023, T016)\n- [X] T025 [US3] Implement `WholeChildRadar` in `apps/web/src/components/parent/WholeChildRadar.tsx`:\n  takes the same `MathematicsAreaProgress[]` `MathematicsRadar` already computes, calls\n  `computeWholeChildSkillMap`, maps to `RadarChart`\'s `axes` prop (mapping `"not-tracked-yet"` to\n  the same non-plotted, muted-with-accessible-text spoke style `RadarChart` already supports), and\n  renders `RadarChart`. (depends on T024, T018)\n- [X] T026 [US3] Wire `WholeChildRadar` into `AdvancementReport.tsx`, rendered alongside\n  `MathematicsRadar` once `currentGrade` is set (contracts/screen-flow.md composition). (depends\n  on T025, T021)\n- [X] T027 [US3] Extend `AdvancementReport.test.tsx`: the whole-child radar\'s mathematics axis\n  value matches the mathematics radar\'s own aggregate exactly; each of the other 19 axes exposes\n  accessible text identifying it as not tracked (FR-008 — never phrased or styled as a failure);\n  a blind-review-style assertion that no non-mathematics axis renders a numeric percentage\n  anywhere in the DOM (SC-003). (depends on T026)\n\n**Checkpoint**: All three user stories are independently functional. Full feature complete.\n\n---\n\n## Phase 6: Polish & Cross-Cutting Concerns\n\n**Purpose**: Consistency and verification across all three stories.\n\n- [X] T028 [P] Add/extend styling in `apps/web/src/docs.css` for `RadarChart` and `GradeSelector`\n  so both stay within the existing calm/professional parent-area theme (FR-009) — no new\n  stylesheet, no child-facing (`App.css`) styles reused here.\n- [X] T029 [P] Run `npm run coverage --workspace apps/web`, `--workspace packages/core/profiles`,\n  and `--workspace packages/core/child-export`; confirm the 70%/95% bars (ADR-0004 /\n  `profiles`\'s `vitest.config.ts`) still hold with the new code included.\n- [X] T030 Walk through `quickstart.md` Scenarios 1–6 end-to-end in a running `npm run dev\n  --workspace apps/web` session, including the v1-export-still-imports regression check\n  (Scenario 6).\n\n---\n\n## Dependencies & Execution Order\n\n### Phase Dependencies\n\n- **Setup (Phase 1)**: No dependencies — run first.\n- **Foundational (Phase 2)**: Depends on Setup. BLOCKS all user stories (T002–T011 are the shared\n  `currentGrade` + "all competencies" data layer every story reads).\n- **User Story 2 (Phase 3)**: Depends on Foundational only.\n- **User Story 1 (Phase 4)**: Its computation/UI-primitive tasks (T016–T020) depend only on\n  Foundational and can proceed in parallel with Phase 3; its `AdvancementReport`-integration task\n  (T021) additionally depends on Phase 3\'s T014 (the grade-prompt gate must exist first).\n- **User Story 3 (Phase 5)**: Depends on Foundational and on User Story 1\'s `mathematicsRadar.ts`\n  (T016) and `RadarChart` (T018); its integration task (T026) additionally depends on Phase 4\'s\n  T021.\n- **Polish (Phase 6)**: Depends on all three user stories being complete.\n\n### Parallel Opportunities\n\n- T002/T003 (profiles) and T005 (child-export types) can start in parallel; T009 (curriculum.ts)\n  is independent of both and can also start immediately after Setup.\n- Within Phase 4, T016/T017 (pure function + its tests) and T018/T019 (RadarChart + its tests) are\n  fully independent of each other (different files, no shared state) and can be built in parallel;\n  both must land before T020.\n- Phase 3 (User Story 2) and Phase 4\'s T016–T020 (User Story 1\'s non-integration work) can proceed\n  in parallel once Foundational is done — only the final integration tasks (T021, T014) have a\n  cross-story ordering constraint.\n\n## Implementation Strategy\n\n### MVP First (User Stories 2 + 1)\n\n1. Complete Phase 1 (Setup) and Phase 2 (Foundational).\n2. Complete Phase 3 (User Story 2 — grade selection) — needed for FR-002\'s gate.\n3. Complete Phase 4 (User Story 1 — mathematics radar).\n4. **STOP and VALIDATE**: quickstart.md Scenarios 1–4. This is the feature\'s real value —\n   demoable/shippable on its own even before the illustrative whole-child chart exists.\n\n### Incremental Delivery\n\n1. Foundational → grade + generalized mastery data ready.\n2. User Story 2 → parent can set a grade → demo.\n3. User Story 1 → mathematics radar renders real data → demo (MVP complete).\n4. User Story 3 → whole-child illustrative chart added → demo.\n5. Polish → styling consistency + coverage confirmation.\n',Kr='---\n\ndescription: "Task list for the Parent Competency Reference feature"\n---\n\n# Tasks: Parent Competency Reference\n\n**Input**: Design documents from `/specs/013-competency-reference/`\n\n**Prerequisites**: plan.md, spec.md, research.md, data-model.md, quickstart.md\n\n**Tests**: Included — every existing component under `app/apps/web/src/components/parent/` ships\na sibling `.test.tsx`; this feature follows the same convention.\n\n**Organization**: Tasks are grouped by user story (spec.md) so each can be implemented and\nverified independently. All file paths are relative to the `app` repo (a sibling of this `specs`\nrepo), inside `apps/web/src/`.\n\n## Phase 1: Setup\n\n- [x] T001 Confirm `app` repo dev environment works: `cd app && npm install && npm run dev --workspace apps/web` starts and `/parent` loads (no new dependency is expected — this is a smoke check, per plan.md\'s "no new primary dependencies").\n\n## Phase 2: Foundational (blocking prerequisites)\n\n- [x] T002 Create `apps/web/src/skillsFrameworkSkills.ts` exporting `SkillsFrameworkTier` (union of `"P" | "G1" | "G2" | "G3" | "G4" | "G5"`), `skillsFrameworkTierLabels` (`Record<SkillsFrameworkTier, string>` with the six labels from data-model.md), and `skillsFrameworkSkillsByDomain` (`Record<string, Partial<Record<SkillsFrameworkTier, string[]>>>`) populated with every domain\'s grade-tagged skill text transcribed verbatim from `specs/docs/product/PRIMARY-SKILLS-FRAMEWORK.md` sections A–T, keyed by the same `domainKey` values as `skillsFrameworkDomains` in `apps/web/src/skillsFramework.ts`. Per data-model.md: omit a tier key entirely (do not include an empty array) when the framework defines no items for that domain at that tier.\n- [x] T003 [P] Add a data-consistency unit test (e.g. `apps/web/src/skillsFrameworkSkills.test.ts`) asserting `Object.keys(skillsFrameworkSkillsByDomain)` equals the set of `skillsFrameworkDomains.map(d => d.domainKey)` (data-model.md\'s validation rule) and that no tier\'s array is present-but-empty.\n\n**Checkpoint**: Data module exists, is internally consistent with `skillsFrameworkDomains`, and typechecks. Every user story phase below depends on this.\n\n---\n\n## Phase 3: User Story 1 - Browse what\'s expected, subject by subject (Priority: P1) 🎯 MVP\n\n**Goal**: A parent opens the parent area and sees every subject listed by name, collapsed, with no grade-level detail shown until they choose to expand one.\n\n**Independent Test**: Open `/parent`, locate the competency reference, confirm all 20 domains from `PRIMARY-SKILLS-FRAMEWORK.md` appear as collapsed subject headings with no skill text visible.\n\n- [x] T004 [US1] Create `apps/web/src/components/parent/CompetencyReference.tsx`: builds the `SubjectViewModel[]` described in data-model.md by joining `skillsFrameworkDomains` with `skillsFrameworkSkillsByDomain`, and renders one collapsed entry per subject (subject name only, using a native `<details>`/`<summary>` per research.md\'s disclosure decision — grade-tier content is added in Phase 4, not yet wired in this task).\n- [x] T005 [US1] Reuse `apps/web/src/docs.css` (or extend it) for the reference\'s layout/spacing so it matches the parent area\'s existing calm/professional theme (FR-012), and confirm no horizontal scrolling at ~375px width (FR-013).\n- [x] T006 [US1] Wire `CompetencyReference` into `apps/web/src/components/parent/ParentArea.tsx`: reachable within one navigation action from `/parent` (SC-001), and reachable even in the existing "no active child profile" branch (FR-010) — not only inside the active-child `<section>`.\n- [x] T007 [US1] Create `apps/web/src/components/parent/CompetencyReference.test.tsx` asserting: all 20 subject names render; no grade-tier or skill text is present before any subject is expanded (SC-002); the reference renders when `ParentArea` is in its no-active-child-profile state.\n\n**Checkpoint**: User Story 1 is independently testable and deliverable — a parent can see the full subject list, collapsed, from `/parent`.\n\n---\n\n## Phase 4: User Story 2 - Drill into one subject\'s grade-by-grade skills (Priority: P1)\n\n**Goal**: Expanding a subject reveals its skills grouped under labeled grade tiers, in grade order, with tiers that have no items for that subject omitted.\n\n**Independent Test**: Expand any subject and confirm its skills appear grouped under grade-tier headings matching `P, G1, G2, G3, G4, G5` (using `skillsFrameworkTierLabels`), in that order, with empty tiers absent.\n\n- [x] T008 [US2] Create `apps/web/src/components/parent/CompetencySubjectSection.tsx`: given one `SubjectViewModel` entry, renders its grade tiers in order (`P, G1, G2, G3, G4, G5`) each as a labeled group (per data-model.md, `tiers` already excludes empty ones — render exactly what\'s provided) listing that tier\'s skill strings.\n- [x] T009 [US2] Wire `CompetencySubjectSection` into `CompetencyReference.tsx` (`apps/web/src/components/parent/CompetencyReference.tsx`) as the content of each subject\'s `<details>`, replacing the placeholder body from T004.\n- [x] T010 [US2] Verify long skill text (e.g. Mathematics G5, Language & Literacy G3 — see research.md/data-model.md for the largest tiers) wraps correctly and does not overflow or force horizontal scroll, at both desktop and ~375px widths.\n- [x] T011 [US2] Create `apps/web/src/components/parent/CompetencySubjectSection.test.tsx` asserting: grade tiers render in `P, G1, G2, G3, G4, G5` order; a tier absent from a subject\'s data produces no heading for that tier (FR-007) — e.g. assert "Pre-school baseline" does not render for the `digital-literacy` or `second-language` subjects; multiple subjects can be expanded independently (assert one subject\'s open state doesn\'t affect another\'s) when exercised through `CompetencyReference`.\n\n**Checkpoint**: User Stories 1 and 2 together deliver the full core browsing experience — collapsed subject list, expandable grade-tier detail, no empty tiers.\n\n---\n\n## Phase 5: User Story 3 - Tell reference content apart from real tracked progress (Priority: P2)\n\n**Goal**: Mathematics is visibly marked as connected to the app\'s real tracked progress; every other subject is visibly marked as reference-only / not tracked.\n\n**Independent Test**: With the reference open, confirm the Mathematics subject carries a "tracked" indication and every other subject carries a "reference only / not tracked" indication, both understandable without external explanation.\n\n- [x] T012 [US3] In `CompetencyReference.tsx` (`apps/web/src/components/parent/CompetencyReference.tsx`), set `isTracked: domainKey === "mathematics"` on each `SubjectViewModel` (per data-model.md) and render a short visible badge/label per subject reflecting it — e.g. "Tracked in this app" for Mathematics, "Reference only — not tracked" for every other subject (exact wording is a UI-copy choice; must satisfy FR-008/FR-009, i.e. never implies a specific child\'s progress for non-mathematics subjects).\n- [x] T013 [US3] Extend `apps/web/src/components/parent/CompetencyReference.test.tsx` asserting the Mathematics subject shows the tracked indication and at least one other subject (e.g. Geography) shows the not-tracked indication.\n\n**Checkpoint**: All three user stories complete — the reference is fully usable and self-explanatory about what is and isn\'t real tracked data.\n\n---\n\n## Phase 6: Polish & Cross-Cutting Concerns\n\n- [x] T014 [P] Run `npm run typecheck --workspace apps/web` and `npm run lint` (from `app` repo root) and fix any issues.\n- [x] T015 [P] Run `npm run test --workspace apps/web` (full suite) to confirm no regression in existing `ParentArea.test.tsx`, `AdvancementReport.test.tsx`, or other parent-area tests now that `ParentArea.tsx` has a new child.\n- [x] T016 Walk through every step of `specs/013-competency-reference/quickstart.md` manually in a running dev server and confirm each "Expect" holds.\n- [x] T017 Per this project\'s constitution (Development Workflow, three-repo sequence) and `specs/CLAUDE.md`: once the above is complete and verified, add a paragraph to today\'s `../blog/YYYY-MM-DD-<slug>.md` post (or create it if none exists yet for today) describing this feature in the established story-style tone — this is required for the feature to be considered complete, not optional polish.\n\n## Dependencies & Execution Order\n\n- **Phase 1 (Setup)** → **Phase 2 (Foundational)**: no dependencies, do first.\n- **Phase 2** blocks all of Phases 3–5 (every story renders from `skillsFrameworkSkillsByDomain`).\n- **Phase 3 (US1)** and **Phase 4 (US2)** are both P1 and tightly coupled in practice — T004 renders subjects with an empty/placeholder body, and T008–T009 fill that body — but each has its own independent test and could be demoed separately if needed (T004–T007 alone already satisfies User Story 1\'s acceptance scenarios).\n- **Phase 5 (US3)** depends on `CompetencyReference.tsx` existing (Phase 3) but not on Phase 4\'s internals — it only needs the per-subject badge, which can be added once T004/T006 exist.\n- **Phase 6 (Polish)** runs last, after all user stories are implemented.\n\n## Parallel Execution Examples\n\n- T002 and T003 are sequential (T003 tests what T002 creates), not parallel, despite the `[P]` marker on T003 relative to *other* tasks — do not start T003 before T002\'s data exists.\n- Within Phase 6, T014 and T015 are independent (`[P]`) and can run concurrently; T016 and T017 depend on everything before them being done.\n\n## Implementation Strategy\n\n**MVP = Phase 1 + Phase 2 + Phase 3 (User Story 1)**: a parent can already see every subject listed\non `/parent`, even before grade-tier drill-down (Phase 4) or tracked/not-tracked badges (Phase 5)\nexist. Recommended order is still 1→2→3→4→5→6 in one pass, since Phases 3 and 4 are small and\ntightly coupled (per the note above), but Phase 3 alone is a valid, demoable checkpoint if work\nneeds to pause there.\n',qr=Object.assign({"../../../../../specs/specs/001-competency-model/spec.md":Cr,"../../../../../specs/specs/002-mental-addition-exercise/spec.md":wr,"../../../../../specs/specs/003-mastery-engine/spec.md":Tr,"../../../../../specs/specs/004-exercise-plugin-engine/spec.md":Er,"../../../../../specs/specs/005-daily-practice/spec.md":Dr,"../../../../../specs/specs/006-accounts-privacy/spec.md":Or,"../../../../../specs/specs/007-printable-worksheets/spec.md":kr,"../../../../../specs/specs/008-teacher-mode/spec.md":Ar,"../../../../../specs/specs/009-v1-app-shell/spec.md":jr,"../../../../../specs/specs/010-docs-and-blog/spec.md":Mr,"../../../../../specs/specs/011-parent-area-export-import/spec.md":Nr,"../../../../../specs/specs/012-progression-radar-chart/spec.md":Pr,"../../../../../specs/specs/013-competency-reference/spec.md":Fr}),Jr=Object.assign({"../../../../../specs/specs/001-competency-model/tasks.md":Ir,"../../../../../specs/specs/002-mental-addition-exercise/tasks.md":Lr,"../../../../../specs/specs/003-mastery-engine/tasks.md":Rr,"../../../../../specs/specs/004-exercise-plugin-engine/tasks.md":zr,"../../../../../specs/specs/005-daily-practice/tasks.md":Br,"../../../../../specs/specs/006-accounts-privacy/tasks.md":Vr,"../../../../../specs/specs/009-v1-app-shell/tasks.md":Hr,"../../../../../specs/specs/010-docs-and-blog/tasks.md":Ur,"../../../../../specs/specs/011-parent-area-export-import/tasks.md":Wr,"../../../../../specs/specs/012-progression-radar-chart/tasks.md":Gr,"../../../../../specs/specs/013-competency-reference/tasks.md":Kr});function Yr(e){let t=e.split(`/`);return t[t.length-2]??e}function Xr(e){return Object.entries(Jr).find(([t])=>Yr(t.replace(/tasks\.md$/,`spec.md`))===e)?.[1]??null}function Zr(){return Object.entries(qr).map(([e,t])=>{let n=Yr(e);return{id:n,title:rr(t,n),category:`spec`,status:Kn(Xr(n)),content:t}})}var Qr=[...Zr(),...Sr()],$r=ar(),ei=5;function ti(){let[e,t]=(0,S.useState)(0),n=Math.max(1,Math.ceil($r.length/ei)),r=$r.slice(e*ei,(e+1)*ei);return(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`h1`,{children:`Blog`}),(0,M.jsx)(`p`,{children:`The story of this project, one post per day, newest first.`}),(0,M.jsx)(`ul`,{className:`docs-entry-list`,children:r.map(e=>(0,M.jsxs)(`li`,{children:[(0,M.jsx)(Mn,{to:`/blog/${e.id}`,children:e.title}),(0,M.jsx)(`div`,{className:`docs-entry-meta`,children:e.date}),e.summary.length>0&&(0,M.jsx)(`p`,{className:`docs-entry-summary`,children:e.summary})]},e.id))}),n>1&&(0,M.jsxs)(`nav`,{className:`docs-pagination`,"aria-label":`Blog pages`,children:[(0,M.jsx)(`button`,{type:`button`,onClick:()=>t(e=>e-1),disabled:e===0,children:`Previous`}),(0,M.jsxs)(`span`,{className:`docs-entry-meta`,children:[`Page `,e+1,` of `,n]}),(0,M.jsx)(`button`,{type:`button`,onClick:()=>t(e=>e+1),disabled:e>=n-1,children:`Next`})]})]})}function ni(e,t){let n=t||{};return(e[e.length-1]===``?[...e,``]:e).join((n.padRight?` `:``)+`,`+(n.padLeft===!1?``:` `)).trim()}var ri=/^[$_\p{ID_Start}][$_\u{200C}\u{200D}\p{ID_Continue}]*$/u,ii=/^[$_\p{ID_Start}][-$_\u{200C}\u{200D}\p{ID_Continue}]*$/u,ai={};function oi(e,t){return((t||ai).jsx?ii:ri).test(e)}var si=/[ \t\n\f\r]/g;function ci(e){return typeof e==`object`?e.type===`text`&&li(e.value):li(e)}function li(e){return e.replace(si,``)===``}var ui=class{constructor(e,t,n){this.normal=t,this.property=e,n&&(this.space=n)}};ui.prototype.normal={},ui.prototype.property={},ui.prototype.space=void 0;function di(e,t){let n={},r={};for(let t of e)Object.assign(n,t.property),Object.assign(r,t.normal);return new ui(n,r,t)}function fi(e){return e.toLowerCase()}var pi=class{constructor(e,t){this.attribute=t,this.property=e}};pi.prototype.attribute=``,pi.prototype.booleanish=!1,pi.prototype.boolean=!1,pi.prototype.commaOrSpaceSeparated=!1,pi.prototype.commaSeparated=!1,pi.prototype.defined=!1,pi.prototype.mustUseProperty=!1,pi.prototype.number=!1,pi.prototype.overloadedBoolean=!1,pi.prototype.property=``,pi.prototype.spaceSeparated=!1,pi.prototype.space=void 0;var mi=s({boolean:()=>N,booleanish:()=>gi,commaOrSpaceSeparated:()=>yi,commaSeparated:()=>vi,number:()=>P,overloadedBoolean:()=>_i,spaceSeparated:()=>F}),hi=0,N=bi(),gi=bi(),_i=bi(),P=bi(),F=bi(),vi=bi(),yi=bi();function bi(){return 2**++hi}var xi=Object.keys(mi),Si=class extends pi{constructor(e,t,n,r){let i=-1;if(super(e,t),Ci(this,`space`,r),typeof n==`number`)for(;++i<xi.length;){let e=xi[i];Ci(this,xi[i],(n&mi[e])===mi[e])}}};Si.prototype.defined=!0;function Ci(e,t,n){n&&(e[t]=n)}function wi(e){let t={},n={};for(let[r,i]of Object.entries(e.properties)){let a=new Si(r,e.transform(e.attributes||{},r),i,e.space);e.mustUseProperty&&e.mustUseProperty.includes(r)&&(a.mustUseProperty=!0),t[r]=a,n[fi(r)]=r,n[fi(a.attribute)]=r}return new ui(t,n,e.space)}var Ti=wi({properties:{ariaActiveDescendant:null,ariaAtomic:gi,ariaAutoComplete:null,ariaBusy:gi,ariaChecked:gi,ariaColCount:P,ariaColIndex:P,ariaColSpan:P,ariaControls:F,ariaCurrent:null,ariaDescribedBy:F,ariaDetails:null,ariaDisabled:gi,ariaDropEffect:F,ariaErrorMessage:null,ariaExpanded:gi,ariaFlowTo:F,ariaGrabbed:gi,ariaHasPopup:null,ariaHidden:gi,ariaInvalid:null,ariaKeyShortcuts:null,ariaLabel:null,ariaLabelledBy:F,ariaLevel:P,ariaLive:null,ariaModal:gi,ariaMultiLine:gi,ariaMultiSelectable:gi,ariaOrientation:null,ariaOwns:F,ariaPlaceholder:null,ariaPosInSet:P,ariaPressed:gi,ariaReadOnly:gi,ariaRelevant:null,ariaRequired:gi,ariaRoleDescription:F,ariaRowCount:P,ariaRowIndex:P,ariaRowSpan:P,ariaSelected:gi,ariaSetSize:P,ariaSort:null,ariaValueMax:P,ariaValueMin:P,ariaValueNow:P,ariaValueText:null,role:null},transform(e,t){return t===`role`?t:`aria-`+t.slice(4).toLowerCase()}});function Ei(e,t){return t in e?e[t]:t}function Di(e,t){return Ei(e,t.toLowerCase())}var Oi=wi({attributes:{acceptcharset:`accept-charset`,classname:`class`,htmlfor:`for`,httpequiv:`http-equiv`},mustUseProperty:[`checked`,`multiple`,`muted`,`selected`],properties:{abbr:null,accept:vi,acceptCharset:F,accessKey:F,action:null,allow:null,allowFullScreen:N,allowPaymentRequest:N,allowUserMedia:N,alpha:N,alt:null,as:null,async:N,autoCapitalize:null,autoComplete:F,autoFocus:N,autoPlay:N,blocking:F,capture:null,charSet:null,checked:N,cite:null,className:F,closedBy:null,colorSpace:null,cols:P,colSpan:P,command:null,commandFor:null,content:null,contentEditable:gi,controls:N,controlsList:F,coords:P|vi,crossOrigin:null,data:null,dateTime:null,decoding:null,default:N,defer:N,dir:null,dirName:null,disabled:N,download:_i,draggable:gi,encType:null,enterKeyHint:null,fetchPriority:null,form:null,formAction:null,formEncType:null,formMethod:null,formNoValidate:N,formTarget:null,headers:F,height:P,hidden:_i,high:P,href:null,hrefLang:null,htmlFor:F,httpEquiv:F,id:null,imageSizes:null,imageSrcSet:null,inert:N,inputMode:null,integrity:null,is:null,isMap:N,itemId:null,itemProp:F,itemRef:F,itemScope:N,itemType:F,kind:null,label:null,lang:null,language:null,list:null,loading:null,loop:N,low:P,manifest:null,max:null,maxLength:P,media:null,method:null,min:null,minLength:P,multiple:N,muted:N,name:null,nonce:null,noModule:N,noValidate:N,onAbort:null,onAfterPrint:null,onAuxClick:null,onBeforeMatch:null,onBeforePrint:null,onBeforeToggle:null,onBeforeUnload:null,onBlur:null,onCancel:null,onCanPlay:null,onCanPlayThrough:null,onChange:null,onClick:null,onClose:null,onContextLost:null,onContextMenu:null,onContextRestored:null,onCopy:null,onCueChange:null,onCut:null,onDblClick:null,onDrag:null,onDragEnd:null,onDragEnter:null,onDragExit:null,onDragLeave:null,onDragOver:null,onDragStart:null,onDrop:null,onDurationChange:null,onEmptied:null,onEnded:null,onError:null,onFocus:null,onFormData:null,onHashChange:null,onInput:null,onInvalid:null,onKeyDown:null,onKeyPress:null,onKeyUp:null,onLanguageChange:null,onLoad:null,onLoadedData:null,onLoadedMetadata:null,onLoadEnd:null,onLoadStart:null,onMessage:null,onMessageError:null,onMouseDown:null,onMouseEnter:null,onMouseLeave:null,onMouseMove:null,onMouseOut:null,onMouseOver:null,onMouseUp:null,onOffline:null,onOnline:null,onPageHide:null,onPageShow:null,onPaste:null,onPause:null,onPlay:null,onPlaying:null,onPopState:null,onProgress:null,onRateChange:null,onRejectionHandled:null,onReset:null,onResize:null,onScroll:null,onScrollEnd:null,onSecurityPolicyViolation:null,onSeeked:null,onSeeking:null,onSelect:null,onSlotChange:null,onStalled:null,onStorage:null,onSubmit:null,onSuspend:null,onTimeUpdate:null,onToggle:null,onUnhandledRejection:null,onUnload:null,onVolumeChange:null,onWaiting:null,onWheel:null,open:N,optimum:P,pattern:null,ping:F,placeholder:null,playsInline:N,popover:null,popoverTarget:null,popoverTargetAction:null,poster:null,preload:null,readOnly:N,referrerPolicy:null,rel:F,required:N,reversed:N,rows:P,rowSpan:P,sandbox:F,scope:null,scoped:N,seamless:N,selected:N,shadowRootClonable:N,shadowRootCustomElementRegistry:N,shadowRootDelegatesFocus:N,shadowRootMode:null,shadowRootSerializable:N,shape:null,size:P,sizes:null,slot:null,span:P,spellCheck:gi,src:null,srcDoc:null,srcLang:null,srcSet:null,start:P,step:null,style:null,tabIndex:P,target:null,title:null,translate:null,type:null,typeMustMatch:N,useMap:null,value:gi,width:P,wrap:null,writingSuggestions:null,align:null,aLink:null,archive:F,axis:null,background:null,bgColor:null,border:P,borderColor:null,bottomMargin:P,cellPadding:null,cellSpacing:null,char:null,charOff:null,classId:null,clear:null,code:null,codeBase:null,codeType:null,color:null,compact:N,declare:N,event:null,face:null,frame:null,frameBorder:null,hSpace:P,leftMargin:P,link:null,longDesc:null,lowSrc:null,marginHeight:P,marginWidth:P,noResize:N,noHref:N,noShade:N,noWrap:N,object:null,profile:null,prompt:null,rev:null,rightMargin:P,rules:null,scheme:null,scrolling:gi,standby:null,summary:null,text:null,topMargin:P,valueType:null,version:null,vAlign:null,vLink:null,vSpace:P,allowTransparency:null,autoCorrect:null,autoSave:null,credentialless:N,disablePictureInPicture:N,disableRemotePlayback:N,exportParts:vi,part:F,prefix:null,property:null,results:P,security:null,unselectable:null},space:`html`,transform:Di}),ki=wi({attributes:{accentHeight:`accent-height`,alignmentBaseline:`alignment-baseline`,arabicForm:`arabic-form`,baselineShift:`baseline-shift`,capHeight:`cap-height`,className:`class`,clipPath:`clip-path`,clipRule:`clip-rule`,colorInterpolation:`color-interpolation`,colorInterpolationFilters:`color-interpolation-filters`,colorProfile:`color-profile`,colorRendering:`color-rendering`,crossOrigin:`crossorigin`,dataType:`datatype`,dominantBaseline:`dominant-baseline`,enableBackground:`enable-background`,fillOpacity:`fill-opacity`,fillRule:`fill-rule`,floodColor:`flood-color`,floodOpacity:`flood-opacity`,fontFamily:`font-family`,fontSize:`font-size`,fontSizeAdjust:`font-size-adjust`,fontStretch:`font-stretch`,fontStyle:`font-style`,fontVariant:`font-variant`,fontWeight:`font-weight`,glyphName:`glyph-name`,glyphOrientationHorizontal:`glyph-orientation-horizontal`,glyphOrientationVertical:`glyph-orientation-vertical`,hrefLang:`hreflang`,horizAdvX:`horiz-adv-x`,horizOriginX:`horiz-origin-x`,horizOriginY:`horiz-origin-y`,imageRendering:`image-rendering`,letterSpacing:`letter-spacing`,lightingColor:`lighting-color`,markerEnd:`marker-end`,markerMid:`marker-mid`,markerStart:`marker-start`,maskType:`mask-type`,navDown:`nav-down`,navDownLeft:`nav-down-left`,navDownRight:`nav-down-right`,navLeft:`nav-left`,navNext:`nav-next`,navPrev:`nav-prev`,navRight:`nav-right`,navUp:`nav-up`,navUpLeft:`nav-up-left`,navUpRight:`nav-up-right`,onAbort:`onabort`,onActivate:`onactivate`,onAfterPrint:`onafterprint`,onBeforePrint:`onbeforeprint`,onBegin:`onbegin`,onCancel:`oncancel`,onCanPlay:`oncanplay`,onCanPlayThrough:`oncanplaythrough`,onChange:`onchange`,onClick:`onclick`,onClose:`onclose`,onCopy:`oncopy`,onCueChange:`oncuechange`,onCut:`oncut`,onDblClick:`ondblclick`,onDrag:`ondrag`,onDragEnd:`ondragend`,onDragEnter:`ondragenter`,onDragExit:`ondragexit`,onDragLeave:`ondragleave`,onDragOver:`ondragover`,onDragStart:`ondragstart`,onDrop:`ondrop`,onDurationChange:`ondurationchange`,onEmptied:`onemptied`,onEnd:`onend`,onEnded:`onended`,onError:`onerror`,onFocus:`onfocus`,onFocusIn:`onfocusin`,onFocusOut:`onfocusout`,onHashChange:`onhashchange`,onInput:`oninput`,onInvalid:`oninvalid`,onKeyDown:`onkeydown`,onKeyPress:`onkeypress`,onKeyUp:`onkeyup`,onLoad:`onload`,onLoadedData:`onloadeddata`,onLoadedMetadata:`onloadedmetadata`,onLoadStart:`onloadstart`,onMessage:`onmessage`,onMouseDown:`onmousedown`,onMouseEnter:`onmouseenter`,onMouseLeave:`onmouseleave`,onMouseMove:`onmousemove`,onMouseOut:`onmouseout`,onMouseOver:`onmouseover`,onMouseUp:`onmouseup`,onMouseWheel:`onmousewheel`,onOffline:`onoffline`,onOnline:`ononline`,onPageHide:`onpagehide`,onPageShow:`onpageshow`,onPaste:`onpaste`,onPause:`onpause`,onPlay:`onplay`,onPlaying:`onplaying`,onPopState:`onpopstate`,onProgress:`onprogress`,onRateChange:`onratechange`,onRepeat:`onrepeat`,onReset:`onreset`,onResize:`onresize`,onScroll:`onscroll`,onSeeked:`onseeked`,onSeeking:`onseeking`,onSelect:`onselect`,onShow:`onshow`,onStalled:`onstalled`,onStorage:`onstorage`,onSubmit:`onsubmit`,onSuspend:`onsuspend`,onTimeUpdate:`ontimeupdate`,onToggle:`ontoggle`,onUnload:`onunload`,onVolumeChange:`onvolumechange`,onWaiting:`onwaiting`,onZoom:`onzoom`,overlinePosition:`overline-position`,overlineThickness:`overline-thickness`,paintOrder:`paint-order`,panose1:`panose-1`,pointerEvents:`pointer-events`,referrerPolicy:`referrerpolicy`,renderingIntent:`rendering-intent`,shapeRendering:`shape-rendering`,stopColor:`stop-color`,stopOpacity:`stop-opacity`,strikethroughPosition:`strikethrough-position`,strikethroughThickness:`strikethrough-thickness`,strokeDashArray:`stroke-dasharray`,strokeDashOffset:`stroke-dashoffset`,strokeLineCap:`stroke-linecap`,strokeLineJoin:`stroke-linejoin`,strokeMiterLimit:`stroke-miterlimit`,strokeOpacity:`stroke-opacity`,strokeWidth:`stroke-width`,tabIndex:`tabindex`,textAnchor:`text-anchor`,textDecoration:`text-decoration`,textRendering:`text-rendering`,transformOrigin:`transform-origin`,typeOf:`typeof`,underlinePosition:`underline-position`,underlineThickness:`underline-thickness`,unicodeBidi:`unicode-bidi`,unicodeRange:`unicode-range`,unitsPerEm:`units-per-em`,vAlphabetic:`v-alphabetic`,vHanging:`v-hanging`,vIdeographic:`v-ideographic`,vMathematical:`v-mathematical`,vectorEffect:`vector-effect`,vertAdvY:`vert-adv-y`,vertOriginX:`vert-origin-x`,vertOriginY:`vert-origin-y`,wordSpacing:`word-spacing`,writingMode:`writing-mode`,xHeight:`x-height`,playbackOrder:`playbackorder`,timelineBegin:`timelinebegin`},properties:{about:yi,accentHeight:P,accumulate:null,additive:null,alignmentBaseline:null,alphabetic:P,amplitude:P,arabicForm:null,ascent:P,attributeName:null,attributeType:null,azimuth:P,bandwidth:null,baselineShift:null,baseFrequency:null,baseProfile:null,bbox:null,begin:null,bias:P,by:null,calcMode:null,capHeight:P,className:F,clip:null,clipPath:null,clipPathUnits:null,clipRule:null,color:null,colorInterpolation:null,colorInterpolationFilters:null,colorProfile:null,colorRendering:null,content:null,contentScriptType:null,contentStyleType:null,crossOrigin:null,cursor:null,cx:null,cy:null,d:null,dataType:null,defaultAction:null,descent:P,diffuseConstant:P,direction:null,display:null,dur:null,divisor:P,dominantBaseline:null,download:N,dx:null,dy:null,edgeMode:null,editable:null,elevation:P,enableBackground:null,end:null,event:null,exponent:P,externalResourcesRequired:null,fill:null,fillOpacity:P,fillRule:null,filter:null,filterRes:null,filterUnits:null,floodColor:null,floodOpacity:null,focusable:null,focusHighlight:null,fontFamily:null,fontSize:null,fontSizeAdjust:null,fontStretch:null,fontStyle:null,fontVariant:null,fontWeight:null,format:null,fr:null,from:null,fx:null,fy:null,g1:vi,g2:vi,glyphName:vi,glyphOrientationHorizontal:null,glyphOrientationVertical:null,glyphRef:null,gradientTransform:null,gradientUnits:null,handler:null,hanging:P,hatchContentUnits:null,hatchUnits:null,height:null,href:null,hrefLang:null,horizAdvX:P,horizOriginX:P,horizOriginY:P,id:null,ideographic:P,imageRendering:null,initialVisibility:null,in:null,in2:null,intercept:P,k:P,k1:P,k2:P,k3:P,k4:P,kernelMatrix:yi,kernelUnitLength:null,keyPoints:null,keySplines:null,keyTimes:null,kerning:null,lang:null,lengthAdjust:null,letterSpacing:null,lightingColor:null,limitingConeAngle:P,local:null,markerEnd:null,markerMid:null,markerStart:null,markerHeight:null,markerUnits:null,markerWidth:null,mask:null,maskContentUnits:null,maskType:null,maskUnits:null,mathematical:null,max:null,media:null,mediaCharacterEncoding:null,mediaContentEncodings:null,mediaSize:P,mediaTime:null,method:null,min:null,mode:null,name:null,navDown:null,navDownLeft:null,navDownRight:null,navLeft:null,navNext:null,navPrev:null,navRight:null,navUp:null,navUpLeft:null,navUpRight:null,numOctaves:null,observer:null,offset:null,onAbort:null,onActivate:null,onAfterPrint:null,onBeforePrint:null,onBegin:null,onCancel:null,onCanPlay:null,onCanPlayThrough:null,onChange:null,onClick:null,onClose:null,onCopy:null,onCueChange:null,onCut:null,onDblClick:null,onDrag:null,onDragEnd:null,onDragEnter:null,onDragExit:null,onDragLeave:null,onDragOver:null,onDragStart:null,onDrop:null,onDurationChange:null,onEmptied:null,onEnd:null,onEnded:null,onError:null,onFocus:null,onFocusIn:null,onFocusOut:null,onHashChange:null,onInput:null,onInvalid:null,onKeyDown:null,onKeyPress:null,onKeyUp:null,onLoad:null,onLoadedData:null,onLoadedMetadata:null,onLoadStart:null,onMessage:null,onMouseDown:null,onMouseEnter:null,onMouseLeave:null,onMouseMove:null,onMouseOut:null,onMouseOver:null,onMouseUp:null,onMouseWheel:null,onOffline:null,onOnline:null,onPageHide:null,onPageShow:null,onPaste:null,onPause:null,onPlay:null,onPlaying:null,onPopState:null,onProgress:null,onRateChange:null,onRepeat:null,onReset:null,onResize:null,onScroll:null,onSeeked:null,onSeeking:null,onSelect:null,onShow:null,onStalled:null,onStorage:null,onSubmit:null,onSuspend:null,onTimeUpdate:null,onToggle:null,onUnload:null,onVolumeChange:null,onWaiting:null,onZoom:null,opacity:null,operator:null,order:null,orient:null,orientation:null,origin:null,overflow:null,overlay:null,overlinePosition:P,overlineThickness:P,paintOrder:null,panose1:null,path:null,pathLength:P,patternContentUnits:null,patternTransform:null,patternUnits:null,phase:null,ping:F,pitch:null,playbackOrder:null,pointerEvents:null,points:null,pointsAtX:P,pointsAtY:P,pointsAtZ:P,preserveAlpha:null,preserveAspectRatio:null,primitiveUnits:null,propagate:null,property:yi,r:null,radius:null,referrerPolicy:null,refX:null,refY:null,rel:yi,rev:yi,renderingIntent:null,repeatCount:null,repeatDur:null,requiredExtensions:yi,requiredFeatures:yi,requiredFonts:yi,requiredFormats:yi,resource:null,restart:null,result:null,rotate:null,rx:null,ry:null,scale:null,seed:null,shapeRendering:null,side:null,slope:null,snapshotTime:null,specularConstant:P,specularExponent:P,spreadMethod:null,spacing:null,startOffset:null,stdDeviation:null,stemh:null,stemv:null,stitchTiles:null,stopColor:null,stopOpacity:null,strikethroughPosition:P,strikethroughThickness:P,string:null,stroke:null,strokeDashArray:yi,strokeDashOffset:null,strokeLineCap:null,strokeLineJoin:null,strokeMiterLimit:P,strokeOpacity:P,strokeWidth:null,style:null,surfaceScale:P,syncBehavior:null,syncBehaviorDefault:null,syncMaster:null,syncTolerance:null,syncToleranceDefault:null,systemLanguage:yi,tabIndex:P,tableValues:null,target:null,targetX:P,targetY:P,textAnchor:null,textDecoration:null,textRendering:null,textLength:null,timelineBegin:null,title:null,transformBehavior:null,type:null,typeOf:yi,to:null,transform:null,transformOrigin:null,u1:null,u2:null,underlinePosition:P,underlineThickness:P,unicode:null,unicodeBidi:null,unicodeRange:null,unitsPerEm:P,values:null,vAlphabetic:P,vMathematical:P,vectorEffect:null,vHanging:P,vIdeographic:P,version:null,vertAdvY:P,vertOriginX:P,vertOriginY:P,viewBox:null,viewTarget:null,visibility:null,width:null,widths:null,wordSpacing:null,writingMode:null,x:null,x1:null,x2:null,xChannelSelector:null,xHeight:P,y:null,y1:null,y2:null,yChannelSelector:null,z:null,zoomAndPan:null},space:`svg`,transform:Ei}),Ai=wi({properties:{xLinkActuate:null,xLinkArcRole:null,xLinkHref:null,xLinkRole:null,xLinkShow:null,xLinkTitle:null,xLinkType:null},space:`xlink`,transform(e,t){return`xlink:`+t.slice(5).toLowerCase()}}),ji=wi({attributes:{xmlnsxlink:`xmlns:xlink`},properties:{xmlnsXLink:null,xmlns:null},space:`xmlns`,transform:Di}),Mi=wi({properties:{xmlBase:null,xmlLang:null,xmlSpace:null},space:`xml`,transform(e,t){return`xml:`+t.slice(3).toLowerCase()}}),Ni={classId:`classID`,dataType:`datatype`,itemId:`itemID`,strokeDashArray:`strokeDasharray`,strokeDashOffset:`strokeDashoffset`,strokeLineCap:`strokeLinecap`,strokeLineJoin:`strokeLinejoin`,strokeMiterLimit:`strokeMiterlimit`,typeOf:`typeof`,xLinkActuate:`xlinkActuate`,xLinkArcRole:`xlinkArcrole`,xLinkHref:`xlinkHref`,xLinkRole:`xlinkRole`,xLinkShow:`xlinkShow`,xLinkTitle:`xlinkTitle`,xLinkType:`xlinkType`,xmlnsXLink:`xmlnsXlink`},Pi=/[A-Z]/g,Fi=/-[a-z]/g,Ii=/^data[-\w.:]+$/i;function Li(e,t){let n=fi(t),r=t,i=pi;if(n in e.normal)return e.property[e.normal[n]];if(n.length>4&&n.slice(0,4)===`data`&&Ii.test(t)){if(t.charAt(4)===`-`){let e=t.slice(5).replace(Fi,zi);r=`data`+e.charAt(0).toUpperCase()+e.slice(1)}else{let e=t.slice(4);if(!Fi.test(e)){let n=e.replace(Pi,Ri);n.charAt(0)!==`-`&&(n=`-`+n),t=`data`+n}}i=Si}return new i(r,t)}function Ri(e){return`-`+e.toLowerCase()}function zi(e){return e.charAt(1).toUpperCase()}var Bi=di([Ti,Oi,Ai,ji,Mi],`html`),Vi=di([Ti,ki,Ai,ji,Mi],`svg`);function Hi(e){return e.join(` `).trim()}var Ui=o(((e,t)=>{var n=/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g,r=/\n/g,i=/^\s*/,a=/^(\*?[-#/*\\\w]+(\[[0-9a-z_-]+\])?)\s*/,o=/^:\s*/,s=/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/,c=/^[;\s]*/,l=/^\s+|\s+$/g;function u(e,t){if(typeof e!=`string`)throw TypeError(`First argument must be a string`);if(!e)return[];t||={};var l=1,u=1;function f(e){var t=e.match(r);t&&(l+=t.length);var n=e.lastIndexOf(`
+`);u=~n?e.length-n:u+e.length}function p(){var e={line:l,column:u};return function(t){return t.position=new m(e),_(),t}}function m(e){this.start=e,this.end={line:l,column:u},this.source=t.source}m.prototype.content=e;function h(n){var r=Error(t.source+`:`+l+`:`+u+`: `+n);if(r.reason=n,r.filename=t.source,r.line=l,r.column=u,r.source=e,!t.silent)throw r}function g(t){var n=t.exec(e);if(n){var r=n[0];return f(r),e=e.slice(r.length),n}}function _(){g(i)}function v(e){var t;for(e||=[];t=y();)t!==!1&&e.push(t);return e}function y(){var t=p();if(e.charAt(0)==`/`&&e.charAt(1)==`*`){for(var n=2;e.charAt(n)!=``&&(e.charAt(n)!=`*`||e.charAt(n+1)!=`/`);)++n;if(n+=2,e.charAt(n-1)===``)return h(`End of comment missing`);var r=e.slice(2,n-2);return u+=2,f(r),e=e.slice(n),u+=2,t({type:`comment`,comment:r})}}function b(){var e=p(),t=g(a);if(t){if(y(),!g(o))return h(`property missing ':'`);var r=g(s),i=e({type:`declaration`,property:d(t[0].replace(n,``)),value:r?d(r[0].replace(n,``)):``});return g(c),i}}function x(){var e=[];v(e);for(var t;t=b();)t!==!1&&(e.push(t),v(e));return e}return _(),x()}function d(e){return e?e.replace(l,``):``}t.exports=u})),Wi=o((e=>{var t=e&&e.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(e,"__esModule",{value:!0}),e.default=r;var n=t(Ui());function r(e,t){let r=null;if(!e||typeof e!=`string`)return r;let i=(0,n.default)(e),a=typeof t==`function`;return i.forEach(e=>{if(e.type!==`declaration`)return;let{property:n,value:i}=e;a?t(n,i,e):i&&(r||={},r[n]=i)}),r}})),Gi=o((e=>{Object.defineProperty(e,"__esModule",{value:!0}),e.camelCase=void 0;var t=/^--[a-zA-Z0-9_-]+$/,n=/-([a-z])/g,r=/^[^-]+$/,i=/^-(webkit|moz|ms|o|khtml)-/,a=/^-(ms)-/,o=function(e){return!e||r.test(e)||t.test(e)},s=function(e,t){return t.toUpperCase()},c=function(e,t){return`${t}-`};e.camelCase=function(e,t){return t===void 0&&(t={}),o(e)?e:(e=e.toLowerCase(),e=t.reactCompat?e.replace(a,c):e.replace(i,c),e.replace(n,s))}})),Ki=o(((e,t)=>{var n=(e&&e.__importDefault||function(e){return e&&e.__esModule?e:{default:e}})(Wi()),r=Gi();function i(e,t){var i={};return!e||typeof e!=`string`||(0,n.default)(e,function(e,n){e&&n&&(i[(0,r.camelCase)(e,t)]=n)}),i}i.default=i,t.exports=i})),qi=Yi(`end`),Ji=Yi(`start`);function Yi(e){return t;function t(t){let n=t&&t.position&&t.position[e]||{};if(typeof n.line==`number`&&n.line>0&&typeof n.column==`number`&&n.column>0)return{line:n.line,column:n.column,offset:typeof n.offset==`number`&&n.offset>-1?n.offset:void 0}}}function Xi(e){let t=Ji(e),n=qi(e);if(t&&n)return{start:t,end:n}}function Zi(e){return!e||typeof e!=`object`?``:`position`in e||`type`in e?$i(e.position):`start`in e||`end`in e?$i(e):`line`in e||`column`in e?Qi(e):``}function Qi(e){return ea(e&&e.line)+`:`+ea(e&&e.column)}function $i(e){return Qi(e&&e.start)+`-`+Qi(e&&e.end)}function ea(e){return e&&typeof e==`number`?e:1}var ta=class extends Error{constructor(e,t,n){super(),typeof t==`string`&&(n=t,t=void 0);let r=``,i={},a=!1;if(t&&(i=`line`in t&&`column`in t||`start`in t&&`end`in t?{place:t}:`type`in t?{ancestors:[t],place:t.position}:{...t}),typeof e==`string`?r=e:!i.cause&&e&&(a=!0,r=e.message,i.cause=e),!i.ruleId&&!i.source&&typeof n==`string`){let e=n.indexOf(`:`);e===-1?i.ruleId=n:(i.source=n.slice(0,e),i.ruleId=n.slice(e+1))}if(!i.place&&i.ancestors&&i.ancestors){let e=i.ancestors[i.ancestors.length-1];e&&(i.place=e.position)}let o=i.place&&`start`in i.place?i.place.start:i.place;this.ancestors=i.ancestors||void 0,this.cause=i.cause||void 0,this.column=o?o.column:void 0,this.fatal=void 0,this.file=``,this.message=r,this.line=o?o.line:void 0,this.name=Zi(i.place)||`1:1`,this.place=i.place||void 0,this.reason=this.message,this.ruleId=i.ruleId||void 0,this.source=i.source||void 0,this.stack=a&&i.cause&&typeof i.cause.stack==`string`?i.cause.stack:``,this.actual=void 0,this.expected=void 0,this.note=void 0,this.url=void 0}};ta.prototype.file=``,ta.prototype.name=``,ta.prototype.reason=``,ta.prototype.message=``,ta.prototype.stack=``,ta.prototype.column=void 0,ta.prototype.line=void 0,ta.prototype.ancestors=void 0,ta.prototype.cause=void 0,ta.prototype.fatal=void 0,ta.prototype.place=void 0,ta.prototype.ruleId=void 0,ta.prototype.source=void 0;var na=l(Ki(),1),ra={}.hasOwnProperty,ia=new Map,aa=/[A-Z]/g,oa=new Set([`table`,`tbody`,`thead`,`tfoot`,`tr`]),sa=new Set([`td`,`th`]),I=`https://github.com/syntax-tree/hast-util-to-jsx-runtime`;function L(e,t){if(!t||t.Fragment===void 0)throw TypeError("Expected `Fragment` in options");let n=t.filePath||void 0,r;if(t.development){if(typeof t.jsxDEV!=`function`)throw TypeError("Expected `jsxDEV` in options when `development: true`");r=va(n,t.jsxDEV)}else{if(typeof t.jsx!=`function`)throw TypeError("Expected `jsx` in production options");if(typeof t.jsxs!=`function`)throw TypeError("Expected `jsxs` in production options");r=_a(n,t.jsx,t.jsxs)}let i={Fragment:t.Fragment,ancestors:[],components:t.components||{},create:r,elementAttributeNameCase:t.elementAttributeNameCase||`react`,evaluater:t.createEvaluater?t.createEvaluater():void 0,filePath:n,ignoreInvalidStyle:t.ignoreInvalidStyle||!1,passKeys:t.passKeys!==!1,passNode:t.passNode||!1,schema:t.space===`svg`?Vi:Bi,stylePropertyNameCase:t.stylePropertyNameCase||`dom`,tableCellAlignToStyle:t.tableCellAlignToStyle!==!1},a=ca(i,e,void 0);return a&&typeof a!=`string`?a:i.create(e,i.Fragment,{children:a||void 0},void 0)}function ca(e,t,n){if(t.type===`element`)return la(e,t,n);if(t.type===`mdxFlowExpression`||t.type===`mdxTextExpression`)return ua(e,t);if(t.type===`mdxJsxFlowElement`||t.type===`mdxJsxTextElement`)return fa(e,t,n);if(t.type===`mdxjsEsm`)return da(e,t);if(t.type===`root`)return pa(e,t,n);if(t.type===`text`)return ma(e,t)}function la(e,t,n){let r=e.schema,i=r;t.tagName.toLowerCase()===`svg`&&r.space===`html`&&(i=Vi,e.schema=i),e.ancestors.push(t);let a=wa(e,t.tagName,!1),o=ya(e,t),s=xa(e,t);return oa.has(t.tagName)&&(s=s.filter(function(e){return typeof e!=`string`||!ci(e)})),ha(e,o,a,t),ga(o,s),e.ancestors.pop(),e.schema=r,e.create(t,a,o,n)}function ua(e,t){if(t.data&&t.data.estree&&e.evaluater){let n=t.data.estree.body[0];return n.type,e.evaluater.evaluateExpression(n.expression)}Ta(e,t.position)}function da(e,t){if(t.data&&t.data.estree&&e.evaluater)return e.evaluater.evaluateProgram(t.data.estree);Ta(e,t.position)}function fa(e,t,n){let r=e.schema,i=r;t.name===`svg`&&r.space===`html`&&(i=Vi,e.schema=i),e.ancestors.push(t);let a=t.name===null?e.Fragment:wa(e,t.name,!0),o=ba(e,t),s=xa(e,t);return ha(e,o,a,t),ga(o,s),e.ancestors.pop(),e.schema=r,e.create(t,a,o,n)}function pa(e,t,n){let r={};return ga(r,xa(e,t)),e.create(t,e.Fragment,r,n)}function ma(e,t){return t.value}function ha(e,t,n,r){typeof n!=`string`&&n!==e.Fragment&&e.passNode&&(t.node=r)}function ga(e,t){if(t.length>0){let n=t.length>1?t:t[0];n&&(e.children=n)}}function _a(e,t,n){return r;function r(e,r,i,a){let o=Array.isArray(i.children)?n:t;return a?o(r,i,a):o(r,i)}}function va(e,t){return n;function n(n,r,i,a){let o=Array.isArray(i.children),s=Ji(n);return t(r,i,a,o,{columnNumber:s?s.column-1:void 0,fileName:e,lineNumber:s?s.line:void 0},void 0)}}function ya(e,t){let n={},r,i;for(i in t.properties)if(i!==`children`&&ra.call(t.properties,i)){let a=Sa(e,i,t.properties[i]);if(a){let[i,o]=a;e.tableCellAlignToStyle&&i===`align`&&typeof o==`string`&&sa.has(t.tagName)?r=o:n[i]=o}}if(r){let t=n.style||={};t[e.stylePropertyNameCase===`css`?`text-align`:`textAlign`]=r}return n}function ba(e,t){let n={};for(let r of t.attributes)if(r.type===`mdxJsxExpressionAttribute`){if(r.data&&r.data.estree&&e.evaluater){let t=r.data.estree.body[0];t.type;let i=t.expression;i.type;let a=i.properties[0];a.type,Object.assign(n,e.evaluater.evaluateExpression(a.argument))}else Ta(e,t.position)}else{let i=r.name,a;if(r.value&&typeof r.value==`object`){if(r.value.data&&r.value.data.estree&&e.evaluater){let t=r.value.data.estree.body[0];t.type,a=e.evaluater.evaluateExpression(t.expression)}else Ta(e,t.position)}else a=r.value===null||r.value;n[i]=a}return n}function xa(e,t){let n=[],r=-1,i=e.passKeys?new Map:ia;for(;++r<t.children.length;){let a=t.children[r],o;if(e.passKeys){let e=a.type===`element`?a.tagName:a.type===`mdxJsxFlowElement`||a.type===`mdxJsxTextElement`?a.name:void 0;if(e){let t=i.get(e)||0;o=e+`-`+t,i.set(e,t+1)}}let s=ca(e,a,o);s!==void 0&&n.push(s)}return n}function Sa(e,t,n){let r=Li(e.schema,t);if(!(n==null||typeof n==`number`&&Number.isNaN(n))){if(Array.isArray(n)&&(n=r.commaSeparated?ni(n):Hi(n)),r.property===`style`){let t=typeof n==`object`?n:Ca(e,String(n));return e.stylePropertyNameCase===`css`&&(t=Ea(t)),[`style`,t]}return[e.elementAttributeNameCase===`react`&&r.space?Ni[r.property]||r.property:r.attribute,n]}}function Ca(e,t){try{return(0,na.default)(t,{reactCompat:!0})}catch(t){if(e.ignoreInvalidStyle)return{};let n=t,r=new ta("Cannot parse `style` attribute",{ancestors:e.ancestors,cause:n,ruleId:`style`,source:`hast-util-to-jsx-runtime`});throw r.file=e.filePath||void 0,r.url=I+`#cannot-parse-style-attribute`,r}}function wa(e,t,n){let r;if(!n)r={type:`Literal`,value:t};else if(t.includes(`.`)){let e=t.split(`.`),n=-1,i;for(;++n<e.length;){let t=oi(e[n])?{type:`Identifier`,name:e[n]}:{type:`Literal`,value:e[n]};i=i?{type:`MemberExpression`,object:i,property:t,computed:!!(n&&t.type===`Literal`),optional:!1}:t}r=i}else r=oi(t)&&!/^[a-z]/.test(t)?{type:`Identifier`,name:t}:{type:`Literal`,value:t};if(r.type===`Literal`){let t=r.value;return ra.call(e.components,t)?e.components[t]:t}if(e.evaluater)return e.evaluater.evaluateExpression(r);Ta(e)}function Ta(e,t){let n=new ta("Cannot handle MDX estrees without `createEvaluater`",{ancestors:e.ancestors,place:t,ruleId:`mdx-estree`,source:`hast-util-to-jsx-runtime`});throw n.file=e.filePath||void 0,n.url=I+`#cannot-handle-mdx-estrees-without-createevaluater`,n}function Ea(e){let t={},n;for(n in e)ra.call(e,n)&&(t[Da(n)]=e[n]);return t}function Da(e){let t=e.replace(aa,Oa);return t.slice(0,3)===`ms-`&&(t=`-`+t),t}function Oa(e){return`-`+e.toLowerCase()}var ka={action:[`form`],cite:[`blockquote`,`del`,`ins`,`q`],data:[`object`],formAction:[`button`,`input`],href:[`a`,`area`,`base`,`link`],icon:[`menuitem`],itemId:null,manifest:[`html`],ping:[`a`,`area`],poster:[`video`],src:[`audio`,`embed`,`iframe`,`img`,`input`,`script`,`source`,`track`,`video`]},Aa={};function ja(e,t){let n=t||Aa;return Ma(e,typeof n.includeImageAlt!=`boolean`||n.includeImageAlt,typeof n.includeHtml!=`boolean`||n.includeHtml)}function Ma(e,t,n){if(Pa(e)){if(`value`in e)return e.type===`html`&&!n?``:e.value;if(t&&`alt`in e&&e.alt)return e.alt;if(`children`in e)return Na(e.children,t,n)}return Array.isArray(e)?Na(e,t,n):``}function Na(e,t,n){let r=[],i=-1;for(;++i<e.length;)r[i]=Ma(e[i],t,n);return r.join(``)}function Pa(e){return!!(e&&typeof e==`object`)}var Fa=document.createElement(`i`);function Ia(e){let t=`&`+e+`;`;Fa.innerHTML=t;let n=Fa.textContent;return n.charCodeAt(n.length-1)===59&&e!==`semi`?!1:n!==t&&n}function La(e,t,n,r){let i=e.length,a=0,o;if(t=t<0?-t>i?0:i+t:t>i?i:t,n=n>0?n:0,r.length<1e4)o=Array.from(r),o.unshift(t,n),e.splice(...o);else for(n&&e.splice(t,n);a<r.length;)o=r.slice(a,a+1e4),o.unshift(t,0),e.splice(...o),a+=1e4,t+=1e4}function Ra(e,t){return e.length>0?(La(e,e.length,0,t),e):t}var za={}.hasOwnProperty;function Ba(e){let t={},n=-1;for(;++n<e.length;)Va(t,e[n]);return t}function Va(e,t){let n;for(n in t){let r=(za.call(e,n)?e[n]:void 0)||(e[n]={}),i=t[n],a;if(i)for(a in i){za.call(r,a)||(r[a]=[]);let e=i[a];Ha(r[a],Array.isArray(e)?e:e?[e]:[])}}}function Ha(e,t){let n=-1,r=[];for(;++n<t.length;)(t[n].add===`after`?e:r).push(t[n]);La(e,0,0,r)}function Ua(e,t){let n=Number.parseInt(e,t);return n<9||n===11||n>13&&n<32||n>126&&n<160||n>55295&&n<57344||n>64975&&n<65008||(n&65535)==65535||(n&65535)==65534||n>1114111?`�`:String.fromCodePoint(n)}function Wa(e){return e.replace(/[\t\n\r ]+/g,` `).replace(/^ | $/g,``).toLowerCase().toUpperCase()}var Ga=eo(/[A-Za-z]/),Ka=eo(/[\dA-Za-z]/),qa=eo(/[#-'*+\--9=?A-Z^-~]/);function Ja(e){return e!==null&&(e<32||e===127)}var Ya=eo(/\d/),Xa=eo(/[\dA-Fa-f]/),Za=eo(/[!-/:-@[-`{-~]/);function R(e){return e!==null&&e<-2}function z(e){return e!==null&&(e<0||e===32)}function B(e){return e===-2||e===-1||e===32}var Qa=eo(/\p{P}|\p{S}/u),$a=eo(/\s/);function eo(e){return t;function t(t){return t!==null&&t>-1&&e.test(String.fromCharCode(t))}}function to(e){let t=[],n=-1,r=0,i=0;for(;++n<e.length;){let a=e.charCodeAt(n),o=``;if(a===37&&Ka(e.charCodeAt(n+1))&&Ka(e.charCodeAt(n+2)))i=2;else if(a<128)/[!#$&-;=?-Z_a-z~]/.test(String.fromCharCode(a))||(o=String.fromCharCode(a));else if(a>55295&&a<57344){let t=e.charCodeAt(n+1);a<56320&&t>56319&&t<57344?(o=String.fromCharCode(a,t),i=1):o=`�`}else o=String.fromCharCode(a);o&&=(t.push(e.slice(r,n),encodeURIComponent(o)),r=n+i+1,``),i&&=(n+=i,0)}return t.join(``)+e.slice(r)}function V(e,t,n,r){let i=r?r-1:1/0,a=0;return o;function o(r){return B(r)?(e.enter(n),s(r)):t(r)}function s(r){return B(r)&&a++<i?(e.consume(r),s):(e.exit(n),t(r))}}var no={tokenize:ro};function ro(e){let t=e.attempt(this.parser.constructs.contentInitial,r,i),n;return t;function r(n){if(n===null){e.consume(n);return}return e.enter(`lineEnding`),e.consume(n),e.exit(`lineEnding`),V(e,t,`linePrefix`)}function i(t){return e.enter(`paragraph`),a(t)}function a(t){let r=e.enter(`chunkText`,{contentType:`text`,previous:n});return n&&(n.next=r),n=r,o(t)}function o(t){if(t===null){e.exit(`chunkText`),e.exit(`paragraph`),e.consume(t);return}return R(t)?(e.consume(t),e.exit(`chunkText`),a):(e.consume(t),o)}}var io={tokenize:oo},ao={tokenize:so};function oo(e){let t=this,n=[],r=0,i,a,o;return s;function s(i){if(r<n.length){let a=n[r];return t.containerState=a[1],e.attempt(a[0].continuation,c,l)(i)}return l(i)}function c(e){if(r++,t.containerState._closeFlow){t.containerState._closeFlow=void 0,i&&v();let n=t.events.length,a=n,o;for(;a--;)if(t.events[a][0]===`exit`&&t.events[a][1].type===`chunkFlow`){o=t.events[a][1].end;break}_(r);let s=n;for(;s<t.events.length;)t.events[s][1].end={...o},s++;return La(t.events,a+1,0,t.events.slice(n)),t.events.length=s,l(e)}return s(e)}function l(a){if(r===n.length){if(!i)return f(a);if(i.currentConstruct&&i.currentConstruct.concrete)return m(a);t.interrupt=!(!i.currentConstruct||i._gfmTableDynamicInterruptHack)}return t.containerState={},e.check(ao,u,d)(a)}function u(e){return i&&v(),_(r),f(e)}function d(e){return t.parser.lazy[t.now().line]=r!==n.length,o=t.now().offset,m(e)}function f(n){return t.containerState={},e.attempt(ao,p,m)(n)}function p(e){return r++,n.push([t.currentConstruct,t.containerState]),f(e)}function m(n){if(n===null){i&&v(),_(0),e.consume(n);return}return i||=t.parser.flow(t.now()),e.enter(`chunkFlow`,{_tokenizer:i,contentType:`flow`,previous:a}),h(n)}function h(n){if(n===null){g(e.exit(`chunkFlow`),!0),_(0),e.consume(n);return}return R(n)?(e.consume(n),g(e.exit(`chunkFlow`)),r=0,t.interrupt=void 0,s):(e.consume(n),h)}function g(e,n){let s=t.sliceStream(e);if(n&&s.push(null),e.previous=a,a&&(a.next=e),a=e,i.defineSkip(e.start),i.write(s),t.parser.lazy[e.start.line]){let e=i.events.length;for(;e--;)if(i.events[e][1].start.offset<o&&(!i.events[e][1].end||i.events[e][1].end.offset>o))return;let n=t.events.length,a=n,s,c;for(;a--;)if(t.events[a][0]===`exit`&&t.events[a][1].type===`chunkFlow`){if(s){c=t.events[a][1].end;break}s=!0}for(_(r),e=n;e<t.events.length;)t.events[e][1].end={...c},e++;La(t.events,a+1,0,t.events.slice(n)),t.events.length=e}}function _(r){let i=n.length;for(;i-->r;){let r=n[i];t.containerState=r[1],r[0].exit.call(t,e)}n.length=r}function v(){i.write([null]),a=void 0,i=void 0,t.containerState._closeFlow=void 0}}function so(e,t,n){return V(e,e.attempt(this.parser.constructs.document,t,n),`linePrefix`,this.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)}function co(e){if(e===null||z(e)||$a(e))return 1;if(Qa(e))return 2}function lo(e,t,n){let r=[],i=-1;for(;++i<e.length;){let a=e[i].resolveAll;a&&!r.includes(a)&&(t=a(t,n),r.push(a))}return t}var uo={name:`attention`,resolveAll:fo,tokenize:po};function fo(e,t){let n=-1,r,i,a,o,s,c,l,u;for(;++n<e.length;)if(e[n][0]===`enter`&&e[n][1].type===`attentionSequence`&&e[n][1]._close){for(r=n;r--;)if(e[r][0]===`exit`&&e[r][1].type===`attentionSequence`&&e[r][1]._open&&t.sliceSerialize(e[r][1]).charCodeAt(0)===t.sliceSerialize(e[n][1]).charCodeAt(0)){if((e[r][1]._close||e[n][1]._open)&&(e[n][1].end.offset-e[n][1].start.offset)%3&&!((e[r][1].end.offset-e[r][1].start.offset+e[n][1].end.offset-e[n][1].start.offset)%3))continue;c=e[r][1].end.offset-e[r][1].start.offset>1&&e[n][1].end.offset-e[n][1].start.offset>1?2:1;let d={...e[r][1].end},f={...e[n][1].start};mo(d,-c),mo(f,c),o={type:c>1?`strongSequence`:`emphasisSequence`,start:d,end:{...e[r][1].end}},s={type:c>1?`strongSequence`:`emphasisSequence`,start:{...e[n][1].start},end:f},a={type:c>1?`strongText`:`emphasisText`,start:{...e[r][1].end},end:{...e[n][1].start}},i={type:c>1?`strong`:`emphasis`,start:{...o.start},end:{...s.end}},e[r][1].end={...o.start},e[n][1].start={...s.end},l=[],e[r][1].end.offset-e[r][1].start.offset&&(l=Ra(l,[[`enter`,e[r][1],t],[`exit`,e[r][1],t]])),l=Ra(l,[[`enter`,i,t],[`enter`,o,t],[`exit`,o,t],[`enter`,a,t]]),l=Ra(l,lo(t.parser.constructs.insideSpan.null,e.slice(r+1,n),t)),l=Ra(l,[[`exit`,a,t],[`enter`,s,t],[`exit`,s,t],[`exit`,i,t]]),e[n][1].end.offset-e[n][1].start.offset?(u=2,l=Ra(l,[[`enter`,e[n][1],t],[`exit`,e[n][1],t]])):u=0,La(e,r-1,n-r+3,l),n=r+l.length-u-2;break}}for(n=-1;++n<e.length;)e[n][1].type===`attentionSequence`&&(e[n][1].type=`data`);return e}function po(e,t){let n=this.parser.constructs.attentionMarkers.null,r=this.previous,i=co(r),a;return o;function o(t){return a=t,e.enter(`attentionSequence`),s(t)}function s(o){if(o===a)return e.consume(o),s;let c=e.exit(`attentionSequence`),l=co(o),u=!l||l===2&&i||n.includes(o),d=!i||i===2&&l||n.includes(r);return c._open=!!(a===42?u:u&&(i||!d)),c._close=!!(a===42?d:d&&(l||!u)),t(o)}}function mo(e,t){e.column+=t,e.offset+=t,e._bufferIndex+=t}var ho={name:`autolink`,tokenize:go};function go(e,t,n){let r=0;return i;function i(t){return e.enter(`autolink`),e.enter(`autolinkMarker`),e.consume(t),e.exit(`autolinkMarker`),e.enter(`autolinkProtocol`),a}function a(t){return Ga(t)?(e.consume(t),o):t===64?n(t):l(t)}function o(e){return e===43||e===45||e===46||Ka(e)?(r=1,s(e)):l(e)}function s(t){return t===58?(e.consume(t),r=0,c):(t===43||t===45||t===46||Ka(t))&&r++<32?(e.consume(t),s):(r=0,l(t))}function c(r){return r===62?(e.exit(`autolinkProtocol`),e.enter(`autolinkMarker`),e.consume(r),e.exit(`autolinkMarker`),e.exit(`autolink`),t):r===null||r===32||r===60||Ja(r)?n(r):(e.consume(r),c)}function l(t){return t===64?(e.consume(t),u):qa(t)?(e.consume(t),l):n(t)}function u(e){return Ka(e)?d(e):n(e)}function d(n){return n===46?(e.consume(n),r=0,u):n===62?(e.exit(`autolinkProtocol`).type=`autolinkEmail`,e.enter(`autolinkMarker`),e.consume(n),e.exit(`autolinkMarker`),e.exit(`autolink`),t):f(n)}function f(t){if((t===45||Ka(t))&&r++<63){let n=t===45?f:d;return e.consume(t),n}return n(t)}}var _o={partial:!0,tokenize:vo};function vo(e,t,n){return r;function r(t){return B(t)?V(e,i,`linePrefix`)(t):i(t)}function i(e){return e===null||R(e)?t(e):n(e)}}var yo={continuation:{tokenize:xo},exit:So,name:`blockQuote`,tokenize:bo};function bo(e,t,n){let r=this;return i;function i(t){if(t===62){let n=r.containerState;return n.open||=(e.enter(`blockQuote`,{_container:!0}),!0),e.enter(`blockQuotePrefix`),e.enter(`blockQuoteMarker`),e.consume(t),e.exit(`blockQuoteMarker`),a}return n(t)}function a(n){return B(n)?(e.enter(`blockQuotePrefixWhitespace`),e.consume(n),e.exit(`blockQuotePrefixWhitespace`),e.exit(`blockQuotePrefix`),t):(e.exit(`blockQuotePrefix`),t(n))}}function xo(e,t,n){let r=this;return i;function i(t){return B(t)?V(e,a,`linePrefix`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)(t):a(t)}function a(r){return e.attempt(yo,t,n)(r)}}function So(e){e.exit(`blockQuote`)}var Co={name:`characterEscape`,tokenize:wo};function wo(e,t,n){return r;function r(t){return e.enter(`characterEscape`),e.enter(`escapeMarker`),e.consume(t),e.exit(`escapeMarker`),i}function i(r){return Za(r)?(e.enter(`characterEscapeValue`),e.consume(r),e.exit(`characterEscapeValue`),e.exit(`characterEscape`),t):n(r)}}var To={name:`characterReference`,tokenize:Eo};function Eo(e,t,n){let r=this,i=0,a,o;return s;function s(t){return e.enter(`characterReference`),e.enter(`characterReferenceMarker`),e.consume(t),e.exit(`characterReferenceMarker`),c}function c(t){return t===35?(e.enter(`characterReferenceMarkerNumeric`),e.consume(t),e.exit(`characterReferenceMarkerNumeric`),l):(e.enter(`characterReferenceValue`),a=31,o=Ka,u(t))}function l(t){return t===88||t===120?(e.enter(`characterReferenceMarkerHexadecimal`),e.consume(t),e.exit(`characterReferenceMarkerHexadecimal`),e.enter(`characterReferenceValue`),a=6,o=Xa,u):(e.enter(`characterReferenceValue`),a=7,o=Ya,u(t))}function u(s){if(s===59&&i){let i=e.exit(`characterReferenceValue`);return o===Ka&&!Ia(r.sliceSerialize(i))?n(s):(e.enter(`characterReferenceMarker`),e.consume(s),e.exit(`characterReferenceMarker`),e.exit(`characterReference`),t)}return o(s)&&i++<a?(e.consume(s),u):n(s)}}var Do={partial:!0,tokenize:Ao},Oo={concrete:!0,name:`codeFenced`,tokenize:ko};function ko(e,t,n){let r=this,i={partial:!0,tokenize:x},a=0,o=0,s;return c;function c(e){return l(e)}function l(t){let n=r.events[r.events.length-1];return a=n&&n[1].type===`linePrefix`?n[2].sliceSerialize(n[1],!0).length:0,s=t,e.enter(`codeFenced`),e.enter(`codeFencedFence`),e.enter(`codeFencedFenceSequence`),u(t)}function u(t){return t===s?(o++,e.consume(t),u):o<3?n(t):(e.exit(`codeFencedFenceSequence`),B(t)?V(e,d,`whitespace`)(t):d(t))}function d(n){return n===null||R(n)?(e.exit(`codeFencedFence`),r.interrupt?t(n):e.check(Do,h,b)(n)):(e.enter(`codeFencedFenceInfo`),e.enter(`chunkString`,{contentType:`string`}),f(n))}function f(t){return t===null||R(t)?(e.exit(`chunkString`),e.exit(`codeFencedFenceInfo`),d(t)):B(t)?(e.exit(`chunkString`),e.exit(`codeFencedFenceInfo`),V(e,p,`whitespace`)(t)):t===96&&t===s?n(t):(e.consume(t),f)}function p(t){return t===null||R(t)?d(t):(e.enter(`codeFencedFenceMeta`),e.enter(`chunkString`,{contentType:`string`}),m(t))}function m(t){return t===null||R(t)?(e.exit(`chunkString`),e.exit(`codeFencedFenceMeta`),d(t)):t===96&&t===s?n(t):(e.consume(t),m)}function h(t){return e.attempt(i,b,g)(t)}function g(t){return e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),_}function _(t){return a>0&&B(t)?V(e,v,`linePrefix`,a+1)(t):v(t)}function v(t){return t===null||R(t)?e.check(Do,h,b)(t):(e.enter(`codeFlowValue`),y(t))}function y(t){return t===null||R(t)?(e.exit(`codeFlowValue`),v(t)):(e.consume(t),y)}function b(n){return e.exit(`codeFenced`),t(n)}function x(e,t,n){let i=0;return a;function a(t){return e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),c}function c(t){return e.enter(`codeFencedFence`),B(t)?V(e,l,`linePrefix`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)(t):l(t)}function l(t){return t===s?(e.enter(`codeFencedFenceSequence`),u(t)):n(t)}function u(t){return t===s?(i++,e.consume(t),u):i>=o?(e.exit(`codeFencedFenceSequence`),B(t)?V(e,d,`whitespace`)(t):d(t)):n(t)}function d(r){return r===null||R(r)?(e.exit(`codeFencedFence`),t(r)):n(r)}}}function Ao(e,t,n){let r=this;return i;function i(t){return t===null?n(t):(e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),a)}function a(e){return r.parser.lazy[r.now().line]?n(e):t(e)}}var jo={name:`codeIndented`,tokenize:No},Mo={partial:!0,tokenize:Po};function No(e,t,n){let r=this;return i;function i(t){return e.enter(`codeIndented`),V(e,a,`linePrefix`,5)(t)}function a(e){let t=r.events[r.events.length-1];return t&&t[1].type===`linePrefix`&&t[2].sliceSerialize(t[1],!0).length>=4?o(e):n(e)}function o(t){return t===null?c(t):R(t)?e.attempt(Mo,o,c)(t):(e.enter(`codeFlowValue`),s(t))}function s(t){return t===null||R(t)?(e.exit(`codeFlowValue`),o(t)):(e.consume(t),s)}function c(n){return e.exit(`codeIndented`),t(n)}}function Po(e,t,n){let r=this;return i;function i(t){return r.parser.lazy[r.now().line]?n(t):R(t)?(e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),i):V(e,a,`linePrefix`,5)(t)}function a(e){let a=r.events[r.events.length-1];return a&&a[1].type===`linePrefix`&&a[2].sliceSerialize(a[1],!0).length>=4?t(e):R(e)?i(e):n(e)}}var Fo={name:`codeText`,previous:Lo,resolve:Io,tokenize:Ro};function Io(e){let t=e.length-4,n=3,r,i;if((e[n][1].type===`lineEnding`||e[n][1].type===`space`)&&(e[t][1].type===`lineEnding`||e[t][1].type===`space`)){for(r=n;++r<t;)if(e[r][1].type===`codeTextData`){e[n][1].type=`codeTextPadding`,e[t][1].type=`codeTextPadding`,n+=2,t-=2;break}}for(r=n-1,t++;++r<=t;)i===void 0?r!==t&&e[r][1].type!==`lineEnding`&&(i=r):(r===t||e[r][1].type===`lineEnding`)&&(e[i][1].type=`codeTextData`,r!==i+2&&(e[i][1].end=e[r-1][1].end,e.splice(i+2,r-i-2),t-=r-i-2,r=i+2),i=void 0);return e}function Lo(e){return e!==96||this.events[this.events.length-1][1].type===`characterEscape`}function Ro(e,t,n){let r=0,i,a;return o;function o(t){return e.enter(`codeText`),e.enter(`codeTextSequence`),s(t)}function s(t){return t===96?(e.consume(t),r++,s):(e.exit(`codeTextSequence`),c(t))}function c(t){return t===null?n(t):t===32?(e.enter(`space`),e.consume(t),e.exit(`space`),c):t===96?(a=e.enter(`codeTextSequence`),i=0,u(t)):R(t)?(e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),c):(e.enter(`codeTextData`),l(t))}function l(t){return t===null||t===32||t===96||R(t)?(e.exit(`codeTextData`),c(t)):(e.consume(t),l)}function u(n){return n===96?(e.consume(n),i++,u):i===r?(e.exit(`codeTextSequence`),e.exit(`codeText`),t(n)):(a.type=`codeTextData`,l(n))}}var zo=class{constructor(e){this.left=e?[...e]:[],this.right=[]}get(e){if(e<0||e>=this.left.length+this.right.length)throw RangeError("Cannot access index `"+e+"` in a splice buffer of size `"+(this.left.length+this.right.length)+"`");return e<this.left.length?this.left[e]:this.right[this.right.length-e+this.left.length-1]}get length(){return this.left.length+this.right.length}shift(){return this.setCursor(0),this.right.pop()}slice(e,t){let n=t??1/0;return n<this.left.length?this.left.slice(e,n):e>this.left.length?this.right.slice(this.right.length-n+this.left.length,this.right.length-e+this.left.length).reverse():this.left.slice(e).concat(this.right.slice(this.right.length-n+this.left.length).reverse())}splice(e,t,n){let r=t||0;this.setCursor(Math.trunc(e));let i=this.right.splice(this.right.length-r,1/0);return n&&Bo(this.left,n),i.reverse()}pop(){return this.setCursor(1/0),this.left.pop()}push(e){this.setCursor(1/0),this.left.push(e)}pushMany(e){this.setCursor(1/0),Bo(this.left,e)}unshift(e){this.setCursor(0),this.right.push(e)}unshiftMany(e){this.setCursor(0),Bo(this.right,e.reverse())}setCursor(e){if(!(e===this.left.length||e>this.left.length&&this.right.length===0||e<0&&this.left.length===0)){if(e<this.left.length){let t=this.left.splice(e,1/0);Bo(this.right,t.reverse())}else{let t=this.right.splice(this.left.length+this.right.length-e,1/0);Bo(this.left,t.reverse())}}}};function Bo(e,t){let n=0;if(t.length<1e4)e.push(...t);else for(;n<t.length;)e.push(...t.slice(n,n+1e4)),n+=1e4}function Vo(e){let t={},n=-1,r,i,a,o,s,c,l,u=new zo(e);for(;++n<u.length;){for(;n in t;)n=t[n];if(r=u.get(n),n&&r[1].type===`chunkFlow`&&u.get(n-1)[1].type===`listItemPrefix`&&(c=r[1]._tokenizer.events,a=0,a<c.length&&c[a][1].type===`lineEndingBlank`&&(a+=2),a<c.length&&c[a][1].type===`content`))for(;++a<c.length&&c[a][1].type!==`content`;)c[a][1].type===`chunkText`&&(c[a][1]._isInFirstContentOfListItem=!0,a++);if(r[0]===`enter`)r[1].contentType&&(Object.assign(t,H(u,n)),n=t[n],l=!0);else if(r[1]._container){for(a=n,i=void 0;a--;)if(o=u.get(a),o[1].type===`lineEnding`||o[1].type===`lineEndingBlank`)o[0]===`enter`&&(i&&(u.get(i)[1].type=`lineEndingBlank`),o[1].type=`lineEnding`,i=a);else if(o[1].type!==`linePrefix`&&o[1].type!==`listItemIndent`)break;i&&(r[1].end={...u.get(i)[1].start},s=u.slice(i,n),s.unshift(r),u.splice(i,n-i+1,s))}}return La(e,0,1/0,u.slice(0)),!l}function H(e,t){let n=e.get(t)[1],r=e.get(t)[2],i=t-1,a=[],o=n._tokenizer;o||(o=r.parser[n.contentType](n.start),n._contentTypeTextTrailing&&(o._contentTypeTextTrailing=!0));let s=o.events,c=[],l={},u,d,f=-1,p=n,m=0,h=0,g=[h];for(;p;){for(;e.get(++i)[1]!==p;);a.push(i),p._tokenizer||(u=r.sliceStream(p),p.next||u.push(null),d&&o.defineSkip(p.start),p._isInFirstContentOfListItem&&(o._gfmTasklistFirstContentOfListItem=!0),o.write(u),p._isInFirstContentOfListItem&&(o._gfmTasklistFirstContentOfListItem=void 0)),d=p,p=p.next}for(p=n;++f<s.length;)s[f][0]===`exit`&&s[f-1][0]===`enter`&&s[f][1].type===s[f-1][1].type&&s[f][1].start.line!==s[f][1].end.line&&(h=f+1,g.push(h),p._tokenizer=void 0,p.previous=void 0,p=p.next);for(o.events=[],p?(p._tokenizer=void 0,p.previous=void 0):g.pop(),f=g.length;f--;){let t=s.slice(g[f],g[f+1]),n=a.pop();c.push([n,n+t.length-1]),e.splice(n,2,t)}for(c.reverse(),f=-1;++f<c.length;)l[m+c[f][0]]=m+c[f][1],m+=c[f][1]-c[f][0]-1;return l}var U={resolve:Uo,tokenize:Wo},Ho={partial:!0,tokenize:Go};function Uo(e){return Vo(e),e}function Wo(e,t){let n;return r;function r(t){return e.enter(`content`),n=e.enter(`chunkContent`,{contentType:`content`}),i(t)}function i(t){return t===null?a(t):R(t)?e.check(Ho,o,a)(t):(e.consume(t),i)}function a(n){return e.exit(`chunkContent`),e.exit(`content`),t(n)}function o(t){return e.consume(t),e.exit(`chunkContent`),n.next=e.enter(`chunkContent`,{contentType:`content`,previous:n}),n=n.next,i}}function Go(e,t,n){let r=this;return i;function i(t){return e.exit(`chunkContent`),e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),V(e,a,`linePrefix`)}function a(i){if(i===null||R(i))return n(i);let a=r.events[r.events.length-1];return!r.parser.constructs.disable.null.includes(`codeIndented`)&&a&&a[1].type===`linePrefix`&&a[2].sliceSerialize(a[1],!0).length>=4?t(i):e.interrupt(r.parser.constructs.flow,n,t)(i)}}function Ko(e,t,n,r,i,a,o,s,c){let l=c||1/0,u=0;return d;function d(t){return t===60?(e.enter(r),e.enter(i),e.enter(a),e.consume(t),e.exit(a),f):t===null||t===32||t===41||Ja(t)?n(t):(e.enter(r),e.enter(o),e.enter(s),e.enter(`chunkString`,{contentType:`string`}),h(t))}function f(n){return n===62?(e.enter(a),e.consume(n),e.exit(a),e.exit(i),e.exit(r),t):(e.enter(s),e.enter(`chunkString`,{contentType:`string`}),p(n))}function p(t){return t===62?(e.exit(`chunkString`),e.exit(s),f(t)):t===null||t===60||R(t)?n(t):(e.consume(t),t===92?m:p)}function m(t){return t===60||t===62||t===92?(e.consume(t),p):p(t)}function h(i){return!u&&(i===null||i===41||z(i))?(e.exit(`chunkString`),e.exit(s),e.exit(o),e.exit(r),t(i)):u<l&&i===40?(e.consume(i),u++,h):i===41?(e.consume(i),u--,h):i===null||i===32||i===40||Ja(i)?n(i):(e.consume(i),i===92?g:h)}function g(t){return t===40||t===41||t===92?(e.consume(t),h):h(t)}}function qo(e,t,n,r,i,a){let o=this,s=0,c;return l;function l(t){return e.enter(r),e.enter(i),e.consume(t),e.exit(i),e.enter(a),u}function u(l){return s>999||l===null||l===91||l===93&&!c||l===94&&!s&&`_hiddenFootnoteSupport`in o.parser.constructs?n(l):l===93?(e.exit(a),e.enter(i),e.consume(l),e.exit(i),e.exit(r),t):R(l)?(e.enter(`lineEnding`),e.consume(l),e.exit(`lineEnding`),u):(e.enter(`chunkString`,{contentType:`string`}),d(l))}function d(t){return t===null||t===91||t===93||R(t)||s++>999?(e.exit(`chunkString`),u(t)):(e.consume(t),c||=!B(t),t===92?f:d)}function f(t){return t===91||t===92||t===93?(e.consume(t),s++,d):d(t)}}function Jo(e,t,n,r,i,a){let o;return s;function s(t){return t===34||t===39||t===40?(e.enter(r),e.enter(i),e.consume(t),e.exit(i),o=t===40?41:t,c):n(t)}function c(n){return n===o?(e.enter(i),e.consume(n),e.exit(i),e.exit(r),t):(e.enter(a),l(n))}function l(t){return t===o?(e.exit(a),c(o)):t===null?n(t):R(t)?(e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),V(e,l,`linePrefix`)):(e.enter(`chunkString`,{contentType:`string`}),u(t))}function u(t){return t===o||t===null||R(t)?(e.exit(`chunkString`),l(t)):(e.consume(t),t===92?d:u)}function d(t){return t===o||t===92?(e.consume(t),u):u(t)}}function Yo(e,t){let n;return r;function r(i){return R(i)?(e.enter(`lineEnding`),e.consume(i),e.exit(`lineEnding`),n=!0,r):B(i)?V(e,r,n?`linePrefix`:`lineSuffix`)(i):t(i)}}var Xo={name:`definition`,tokenize:Qo},Zo={partial:!0,tokenize:$o};function Qo(e,t,n){let r=this,i;return a;function a(t){return e.enter(`definition`),o(t)}function o(t){return qo.call(r,e,s,n,`definitionLabel`,`definitionLabelMarker`,`definitionLabelString`)(t)}function s(t){return i=Wa(r.sliceSerialize(r.events[r.events.length-1][1]).slice(1,-1)),t===58?(e.enter(`definitionMarker`),e.consume(t),e.exit(`definitionMarker`),c):n(t)}function c(t){return z(t)?Yo(e,l)(t):l(t)}function l(t){return Ko(e,u,n,`definitionDestination`,`definitionDestinationLiteral`,`definitionDestinationLiteralMarker`,`definitionDestinationRaw`,`definitionDestinationString`)(t)}function u(t){return e.attempt(Zo,d,d)(t)}function d(t){return B(t)?V(e,f,`whitespace`)(t):f(t)}function f(a){return a===null||R(a)?(e.exit(`definition`),r.parser.defined.push(i),t(a)):n(a)}}function $o(e,t,n){return r;function r(t){return z(t)?Yo(e,i)(t):n(t)}function i(t){return Jo(e,a,n,`definitionTitle`,`definitionTitleMarker`,`definitionTitleString`)(t)}function a(t){return B(t)?V(e,o,`whitespace`)(t):o(t)}function o(e){return e===null||R(e)?t(e):n(e)}}var es={name:`hardBreakEscape`,tokenize:ts};function ts(e,t,n){return r;function r(t){return e.enter(`hardBreakEscape`),e.consume(t),i}function i(r){return R(r)?(e.exit(`hardBreakEscape`),t(r)):n(r)}}var ns={name:`headingAtx`,resolve:rs,tokenize:is};function rs(e,t){let n=e.length-2,r=3,i,a;return e[r][1].type===`whitespace`&&(r+=2),n-2>r&&e[n][1].type===`whitespace`&&(n-=2),e[n][1].type===`atxHeadingSequence`&&(r===n-1||n-4>r&&e[n-2][1].type===`whitespace`)&&(n-=r+1===n?2:4),n>r&&(i={type:`atxHeadingText`,start:e[r][1].start,end:e[n][1].end},a={type:`chunkText`,start:e[r][1].start,end:e[n][1].end,contentType:`text`},La(e,r,n-r+1,[[`enter`,i,t],[`enter`,a,t],[`exit`,a,t],[`exit`,i,t]])),e}function is(e,t,n){let r=0;return i;function i(t){return e.enter(`atxHeading`),a(t)}function a(t){return e.enter(`atxHeadingSequence`),o(t)}function o(t){return t===35&&r++<6?(e.consume(t),o):t===null||z(t)?(e.exit(`atxHeadingSequence`),s(t)):n(t)}function s(n){return n===35?(e.enter(`atxHeadingSequence`),c(n)):n===null||R(n)?(e.exit(`atxHeading`),t(n)):B(n)?V(e,s,`whitespace`)(n):(e.enter(`atxHeadingText`),l(n))}function c(t){return t===35?(e.consume(t),c):(e.exit(`atxHeadingSequence`),s(t))}function l(t){return t===null||t===35||z(t)?(e.exit(`atxHeadingText`),s(t)):(e.consume(t),l)}}var as=`address.article.aside.base.basefont.blockquote.body.caption.center.col.colgroup.dd.details.dialog.dir.div.dl.dt.fieldset.figcaption.figure.footer.form.frame.frameset.h1.h2.h3.h4.h5.h6.head.header.hr.html.iframe.legend.li.link.main.menu.menuitem.nav.noframes.ol.optgroup.option.p.param.search.section.summary.table.tbody.td.tfoot.th.thead.title.tr.track.ul`.split(`.`),os=[`pre`,`script`,`style`,`textarea`],ss={concrete:!0,name:`htmlFlow`,resolveTo:us,tokenize:ds},cs={partial:!0,tokenize:ps},ls={partial:!0,tokenize:fs};function us(e){let t=e.length;for(;t--&&(e[t][0]!==`enter`||e[t][1].type!==`htmlFlow`););return t>1&&e[t-2][1].type===`linePrefix`&&(e[t][1].start=e[t-2][1].start,e[t+1][1].start=e[t-2][1].start,e.splice(t-2,2)),e}function ds(e,t,n){let r=this,i,a,o,s,c;return l;function l(e){return u(e)}function u(t){return e.enter(`htmlFlow`),e.enter(`htmlFlowData`),e.consume(t),d}function d(s){return s===33?(e.consume(s),f):s===47?(e.consume(s),a=!0,h):s===63?(e.consume(s),i=3,r.interrupt?t:ce):Ga(s)?(e.consume(s),o=String.fromCharCode(s),g):n(s)}function f(a){return a===45?(e.consume(a),i=2,p):a===91?(e.consume(a),i=5,s=0,m):Ga(a)?(e.consume(a),i=4,r.interrupt?t:ce):n(a)}function p(i){return i===45?(e.consume(i),r.interrupt?t:ce):n(i)}function m(i){return i===`CDATA[`.charCodeAt(s++)?(e.consume(i),s===6?r.interrupt?t:E:m):n(i)}function h(t){return Ga(t)?(e.consume(t),o=String.fromCharCode(t),g):n(t)}function g(s){if(s===null||s===47||s===62||z(s)){let c=s===47,l=o.toLowerCase();return!c&&!a&&os.includes(l)?(i=1,r.interrupt?t(s):E(s)):as.includes(o.toLowerCase())?(i=6,c?(e.consume(s),_):r.interrupt?t(s):E(s)):(i=7,r.interrupt&&!r.parser.lazy[r.now().line]?n(s):a?v(s):y(s))}return s===45||Ka(s)?(e.consume(s),o+=String.fromCharCode(s),g):n(s)}function _(i){return i===62?(e.consume(i),r.interrupt?t:E):n(i)}function v(t){return B(t)?(e.consume(t),v):w(t)}function y(t){return t===47?(e.consume(t),w):t===58||t===95||Ga(t)?(e.consume(t),b):B(t)?(e.consume(t),y):w(t)}function b(t){return t===45||t===46||t===58||t===95||Ka(t)?(e.consume(t),b):x(t)}function x(t){return t===61?(e.consume(t),S):B(t)?(e.consume(t),x):y(t)}function S(t){return t===null||t===60||t===61||t===62||t===96?n(t):t===34||t===39?(e.consume(t),c=t,ee):B(t)?(e.consume(t),S):te(t)}function ee(t){return t===c?(e.consume(t),c=null,C):t===null||R(t)?n(t):(e.consume(t),ee)}function te(t){return t===null||t===34||t===39||t===47||t===60||t===61||t===62||t===96||z(t)?x(t):(e.consume(t),te)}function C(e){return e===47||e===62||B(e)?y(e):n(e)}function w(t){return t===62?(e.consume(t),T):n(t)}function T(t){return t===null||R(t)?E(t):B(t)?(e.consume(t),T):n(t)}function E(t){return t===45&&i===2?(e.consume(t),ie):t===60&&i===1?(e.consume(t),ae):t===62&&i===4?(e.consume(t),le):t===63&&i===3?(e.consume(t),ce):t===93&&i===5?(e.consume(t),se):R(t)&&(i===6||i===7)?(e.exit(`htmlFlowData`),e.check(cs,ue,D)(t)):t===null||R(t)?(e.exit(`htmlFlowData`),D(t)):(e.consume(t),E)}function D(t){return e.check(ls,ne,ue)(t)}function ne(t){return e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),re}function re(t){return t===null||R(t)?D(t):(e.enter(`htmlFlowData`),E(t))}function ie(t){return t===45?(e.consume(t),ce):E(t)}function ae(t){return t===47?(e.consume(t),o=``,oe):E(t)}function oe(t){if(t===62){let n=o.toLowerCase();return os.includes(n)?(e.consume(t),le):E(t)}return Ga(t)&&o.length<8?(e.consume(t),o+=String.fromCharCode(t),oe):E(t)}function se(t){return t===93?(e.consume(t),ce):E(t)}function ce(t){return t===62?(e.consume(t),le):t===45&&i===2?(e.consume(t),ce):E(t)}function le(t){return t===null||R(t)?(e.exit(`htmlFlowData`),ue(t)):(e.consume(t),le)}function ue(n){return e.exit(`htmlFlow`),t(n)}}function fs(e,t,n){let r=this;return i;function i(t){return R(t)?(e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),a):n(t)}function a(e){return r.parser.lazy[r.now().line]?n(e):t(e)}}function ps(e,t,n){return r;function r(r){return e.enter(`lineEnding`),e.consume(r),e.exit(`lineEnding`),e.attempt(_o,t,n)}}var ms={name:`htmlText`,tokenize:hs};function hs(e,t,n){let r=this,i,a,o;return s;function s(t){return e.enter(`htmlText`),e.enter(`htmlTextData`),e.consume(t),c}function c(t){return t===33?(e.consume(t),l):t===47?(e.consume(t),x):t===63?(e.consume(t),y):Ga(t)?(e.consume(t),te):n(t)}function l(t){return t===45?(e.consume(t),u):t===91?(e.consume(t),a=0,m):Ga(t)?(e.consume(t),v):n(t)}function u(t){return t===45?(e.consume(t),p):n(t)}function d(t){return t===null?n(t):t===45?(e.consume(t),f):R(t)?(o=d,ae(t)):(e.consume(t),d)}function f(t){return t===45?(e.consume(t),p):d(t)}function p(e){return e===62?ie(e):e===45?f(e):d(e)}function m(t){return t===`CDATA[`.charCodeAt(a++)?(e.consume(t),a===6?h:m):n(t)}function h(t){return t===null?n(t):t===93?(e.consume(t),g):R(t)?(o=h,ae(t)):(e.consume(t),h)}function g(t){return t===93?(e.consume(t),_):h(t)}function _(t){return t===62?ie(t):t===93?(e.consume(t),_):h(t)}function v(t){return t===null||t===62?ie(t):R(t)?(o=v,ae(t)):(e.consume(t),v)}function y(t){return t===null?n(t):t===63?(e.consume(t),b):R(t)?(o=y,ae(t)):(e.consume(t),y)}function b(e){return e===62?ie(e):y(e)}function x(t){return Ga(t)?(e.consume(t),S):n(t)}function S(t){return t===45||Ka(t)?(e.consume(t),S):ee(t)}function ee(t){return R(t)?(o=ee,ae(t)):B(t)?(e.consume(t),ee):ie(t)}function te(t){return t===45||Ka(t)?(e.consume(t),te):t===47||t===62||z(t)?C(t):n(t)}function C(t){return t===47?(e.consume(t),ie):t===58||t===95||Ga(t)?(e.consume(t),w):R(t)?(o=C,ae(t)):B(t)?(e.consume(t),C):ie(t)}function w(t){return t===45||t===46||t===58||t===95||Ka(t)?(e.consume(t),w):T(t)}function T(t){return t===61?(e.consume(t),E):R(t)?(o=T,ae(t)):B(t)?(e.consume(t),T):C(t)}function E(t){return t===null||t===60||t===61||t===62||t===96?n(t):t===34||t===39?(e.consume(t),i=t,D):R(t)?(o=E,ae(t)):B(t)?(e.consume(t),E):(e.consume(t),ne)}function D(t){return t===i?(e.consume(t),i=void 0,re):t===null?n(t):R(t)?(o=D,ae(t)):(e.consume(t),D)}function ne(t){return t===null||t===34||t===39||t===60||t===61||t===96?n(t):t===47||t===62||z(t)?C(t):(e.consume(t),ne)}function re(e){return e===47||e===62||z(e)?C(e):n(e)}function ie(r){return r===62?(e.consume(r),e.exit(`htmlTextData`),e.exit(`htmlText`),t):n(r)}function ae(t){return e.exit(`htmlTextData`),e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),oe}function oe(t){return B(t)?V(e,se,`linePrefix`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)(t):se(t)}function se(t){return e.enter(`htmlTextData`),o(t)}}var gs={name:`labelEnd`,resolveAll:bs,resolveTo:xs,tokenize:Ss},_s={tokenize:Cs},vs={tokenize:ws},ys={tokenize:Ts};function bs(e){let t=-1,n=[];for(;++t<e.length;){let r=e[t][1];if(n.push(e[t]),r.type===`labelImage`||r.type===`labelLink`||r.type===`labelEnd`){let e=r.type===`labelImage`?4:2;r.type=`data`,t+=e}}return e.length!==n.length&&La(e,0,e.length,n),e}function xs(e,t){let n=e.length,r=0,i,a,o,s;for(;n--;)if(i=e[n][1],a){if(i.type===`link`||i.type===`labelLink`&&i._inactive)break;e[n][0]===`enter`&&i.type===`labelLink`&&(i._inactive=!0)}else if(o){if(e[n][0]===`enter`&&(i.type===`labelImage`||i.type===`labelLink`)&&!i._balanced&&(a=n,i.type!==`labelLink`)){r=2;break}}else i.type===`labelEnd`&&(o=n);let c={type:e[a][1].type===`labelLink`?`link`:`image`,start:{...e[a][1].start},end:{...e[e.length-1][1].end}},l={type:`label`,start:{...e[a][1].start},end:{...e[o][1].end}},u={type:`labelText`,start:{...e[a+r+2][1].end},end:{...e[o-2][1].start}};return s=[[`enter`,c,t],[`enter`,l,t]],s=Ra(s,e.slice(a+1,a+r+3)),s=Ra(s,[[`enter`,u,t]]),s=Ra(s,lo(t.parser.constructs.insideSpan.null,e.slice(a+r+4,o-3),t)),s=Ra(s,[[`exit`,u,t],e[o-2],e[o-1],[`exit`,l,t]]),s=Ra(s,e.slice(o+1)),s=Ra(s,[[`exit`,c,t]]),La(e,a,e.length,s),e}function Ss(e,t,n){let r=this,i=r.events.length,a,o;for(;i--;)if((r.events[i][1].type===`labelImage`||r.events[i][1].type===`labelLink`)&&!r.events[i][1]._balanced){a=r.events[i][1];break}return s;function s(t){return a?a._inactive?d(t):(o=r.parser.defined.includes(Wa(r.sliceSerialize({start:a.end,end:r.now()}))),e.enter(`labelEnd`),e.enter(`labelMarker`),e.consume(t),e.exit(`labelMarker`),e.exit(`labelEnd`),c):n(t)}function c(t){return t===40?e.attempt(_s,u,o?u:d)(t):t===91?e.attempt(vs,u,o?l:d)(t):o?u(t):d(t)}function l(t){return e.attempt(ys,u,d)(t)}function u(e){return t(e)}function d(e){return a._balanced=!0,n(e)}}function Cs(e,t,n){return r;function r(t){return e.enter(`resource`),e.enter(`resourceMarker`),e.consume(t),e.exit(`resourceMarker`),i}function i(t){return z(t)?Yo(e,a)(t):a(t)}function a(t){return t===41?u(t):Ko(e,o,s,`resourceDestination`,`resourceDestinationLiteral`,`resourceDestinationLiteralMarker`,`resourceDestinationRaw`,`resourceDestinationString`,32)(t)}function o(t){return z(t)?Yo(e,c)(t):u(t)}function s(e){return n(e)}function c(t){return t===34||t===39||t===40?Jo(e,l,n,`resourceTitle`,`resourceTitleMarker`,`resourceTitleString`)(t):u(t)}function l(t){return z(t)?Yo(e,u)(t):u(t)}function u(r){return r===41?(e.enter(`resourceMarker`),e.consume(r),e.exit(`resourceMarker`),e.exit(`resource`),t):n(r)}}function ws(e,t,n){let r=this;return i;function i(t){return qo.call(r,e,a,o,`reference`,`referenceMarker`,`referenceString`)(t)}function a(e){return r.parser.defined.includes(Wa(r.sliceSerialize(r.events[r.events.length-1][1]).slice(1,-1)))?t(e):n(e)}function o(e){return n(e)}}function Ts(e,t,n){return r;function r(t){return e.enter(`reference`),e.enter(`referenceMarker`),e.consume(t),e.exit(`referenceMarker`),i}function i(r){return r===93?(e.enter(`referenceMarker`),e.consume(r),e.exit(`referenceMarker`),e.exit(`reference`),t):n(r)}}var Es={name:`labelStartImage`,resolveAll:gs.resolveAll,tokenize:Ds};function Ds(e,t,n){let r=this;return i;function i(t){return e.enter(`labelImage`),e.enter(`labelImageMarker`),e.consume(t),e.exit(`labelImageMarker`),a}function a(t){return t===91?(e.enter(`labelMarker`),e.consume(t),e.exit(`labelMarker`),e.exit(`labelImage`),o):n(t)}function o(e){return e===94&&`_hiddenFootnoteSupport`in r.parser.constructs?n(e):t(e)}}var Os={name:`labelStartLink`,resolveAll:gs.resolveAll,tokenize:ks};function ks(e,t,n){let r=this;return i;function i(t){return e.enter(`labelLink`),e.enter(`labelMarker`),e.consume(t),e.exit(`labelMarker`),e.exit(`labelLink`),a}function a(e){return e===94&&`_hiddenFootnoteSupport`in r.parser.constructs?n(e):t(e)}}var As={name:`lineEnding`,tokenize:js};function js(e,t){return n;function n(n){return e.enter(`lineEnding`),e.consume(n),e.exit(`lineEnding`),V(e,t,`linePrefix`)}}var Ms={name:`thematicBreak`,tokenize:Ns};function Ns(e,t,n){let r=0,i;return a;function a(t){return e.enter(`thematicBreak`),o(t)}function o(e){return i=e,s(e)}function s(a){return a===i?(e.enter(`thematicBreakSequence`),c(a)):r>=3&&(a===null||R(a))?(e.exit(`thematicBreak`),t(a)):n(a)}function c(t){return t===i?(e.consume(t),r++,c):(e.exit(`thematicBreakSequence`),B(t)?V(e,s,`whitespace`)(t):s(t))}}var Ps={continuation:{tokenize:Rs},exit:Bs,name:`list`,tokenize:Ls},Fs={partial:!0,tokenize:Vs},Is={partial:!0,tokenize:zs};function Ls(e,t,n){let r=this,i=r.events[r.events.length-1],a=i&&i[1].type===`linePrefix`?i[2].sliceSerialize(i[1],!0).length:0,o=0;return s;function s(t){let i=r.containerState.type||(t===42||t===43||t===45?`listUnordered`:`listOrdered`);if(i===`listUnordered`?!r.containerState.marker||t===r.containerState.marker:Ya(t)){if(r.containerState.type||(r.containerState.type=i,e.enter(i,{_container:!0})),i===`listUnordered`)return e.enter(`listItemPrefix`),t===42||t===45?e.check(Ms,n,l)(t):l(t);if(!r.interrupt||t===49)return e.enter(`listItemPrefix`),e.enter(`listItemValue`),c(t)}return n(t)}function c(t){return Ya(t)&&++o<10?(e.consume(t),c):(!r.interrupt||o<2)&&(r.containerState.marker?t===r.containerState.marker:t===41||t===46)?(e.exit(`listItemValue`),l(t)):n(t)}function l(t){return e.enter(`listItemMarker`),e.consume(t),e.exit(`listItemMarker`),r.containerState.marker=r.containerState.marker||t,e.check(_o,r.interrupt?n:u,e.attempt(Fs,f,d))}function u(e){return r.containerState.initialBlankLine=!0,a++,f(e)}function d(t){return B(t)?(e.enter(`listItemPrefixWhitespace`),e.consume(t),e.exit(`listItemPrefixWhitespace`),f):n(t)}function f(n){return r.containerState.size=a+r.sliceSerialize(e.exit(`listItemPrefix`),!0).length,t(n)}}function Rs(e,t,n){let r=this;return r.containerState._closeFlow=void 0,e.check(_o,i,a);function i(n){return r.containerState.furtherBlankLines=r.containerState.furtherBlankLines||r.containerState.initialBlankLine,V(e,t,`listItemIndent`,r.containerState.size+1)(n)}function a(n){return r.containerState.furtherBlankLines||!B(n)?(r.containerState.furtherBlankLines=void 0,r.containerState.initialBlankLine=void 0,o(n)):(r.containerState.furtherBlankLines=void 0,r.containerState.initialBlankLine=void 0,e.attempt(Is,t,o)(n))}function o(i){return r.containerState._closeFlow=!0,r.interrupt=void 0,V(e,e.attempt(Ps,t,n),`linePrefix`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)(i)}}function zs(e,t,n){let r=this;return V(e,i,`listItemIndent`,r.containerState.size+1);function i(e){let i=r.events[r.events.length-1];return i&&i[1].type===`listItemIndent`&&i[2].sliceSerialize(i[1],!0).length===r.containerState.size?t(e):n(e)}}function Bs(e){e.exit(this.containerState.type)}function Vs(e,t,n){let r=this;return V(e,i,`listItemPrefixWhitespace`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:5);function i(e){let i=r.events[r.events.length-1];return!B(e)&&i&&i[1].type===`listItemPrefixWhitespace`?t(e):n(e)}}var Hs={name:`setextUnderline`,resolveTo:Us,tokenize:Ws};function Us(e,t){let n=e.length,r,i,a;for(;n--;)if(e[n][0]===`enter`){if(e[n][1].type===`content`){r=n;break}e[n][1].type===`paragraph`&&(i=n)}else e[n][1].type===`content`&&e.splice(n,1),!a&&e[n][1].type===`definition`&&(a=n);let o={type:`setextHeading`,start:{...e[r][1].start},end:{...e[e.length-1][1].end}};return e[i][1].type=`setextHeadingText`,a?(e.splice(i,0,[`enter`,o,t]),e.splice(a+1,0,[`exit`,e[r][1],t]),e[r][1].end={...e[a][1].end}):e[r][1]=o,e.push([`exit`,o,t]),e}function Ws(e,t,n){let r=this,i;return a;function a(t){let a=r.events.length,s;for(;a--;)if(r.events[a][1].type!==`lineEnding`&&r.events[a][1].type!==`linePrefix`&&r.events[a][1].type!==`content`){s=r.events[a][1].type===`paragraph`;break}return!r.parser.lazy[r.now().line]&&(r.interrupt||s)?(e.enter(`setextHeadingLine`),i=t,o(t)):n(t)}function o(t){return e.enter(`setextHeadingLineSequence`),s(t)}function s(t){return t===i?(e.consume(t),s):(e.exit(`setextHeadingLineSequence`),B(t)?V(e,c,`lineSuffix`)(t):c(t))}function c(r){return r===null||R(r)?(e.exit(`setextHeadingLine`),t(r)):n(r)}}var Gs={tokenize:Ks};function Ks(e){let t=this,n=e.attempt(_o,r,e.attempt(this.parser.constructs.flowInitial,i,V(e,e.attempt(this.parser.constructs.flow,i,e.attempt(U,i)),`linePrefix`)));return n;function r(r){if(r===null){e.consume(r);return}return e.enter(`lineEndingBlank`),e.consume(r),e.exit(`lineEndingBlank`),t.currentConstruct=void 0,n}function i(r){if(r===null){e.consume(r);return}return e.enter(`lineEnding`),e.consume(r),e.exit(`lineEnding`),t.currentConstruct=void 0,n}}var qs={resolveAll:Zs()},Js=Xs(`string`),Ys=Xs(`text`);function Xs(e){return{resolveAll:Zs(e===`text`?Qs:void 0),tokenize:t};function t(t){let n=this,r=this.parser.constructs[e],i=t.attempt(r,a,o);return a;function a(e){return c(e)?i(e):o(e)}function o(e){if(e===null){t.consume(e);return}return t.enter(`data`),t.consume(e),s}function s(e){return c(e)?(t.exit(`data`),i(e)):(t.consume(e),s)}function c(e){if(e===null)return!0;let t=r[e],i=-1;if(t)for(;++i<t.length;){let e=t[i];if(!e.previous||e.previous.call(n,n.previous))return!0}return!1}}}function Zs(e){return t;function t(t,n){let r=-1,i;for(;++r<=t.length;)i===void 0?t[r]&&t[r][1].type===`data`&&(i=r,r++):(!t[r]||t[r][1].type!==`data`)&&(r!==i+2&&(t[i][1].end=t[r-1][1].end,t.splice(i+2,r-i-2),r=i+2),i=void 0);return e?e(t,n):t}}function Qs(e,t){let n=0;for(;++n<=e.length;)if((n===e.length||e[n][1].type===`lineEnding`)&&e[n-1][1].type===`data`){let r=e[n-1][1],i=t.sliceStream(r),a=i.length,o=-1,s=0,c;for(;a--;){let e=i[a];if(typeof e==`string`){for(o=e.length;e.charCodeAt(o-1)===32;)s++,o--;if(o)break;o=-1}else if(e===-2)c=!0,s++;else if(e!==-1){a++;break}}if(t._contentTypeTextTrailing&&n===e.length&&(s=0),s){let i={type:n===e.length||c||s<2?`lineSuffix`:`hardBreakTrailing`,start:{_bufferIndex:a?o:r.start._bufferIndex+o,_index:r.start._index+a,line:r.end.line,column:r.end.column-s,offset:r.end.offset-s},end:{...r.end}};r.end={...i.start},r.start.offset===r.end.offset?Object.assign(r,i):(e.splice(n,0,[`enter`,i,t],[`exit`,i,t]),n+=2)}n++}return e}var $s=s({attentionMarkers:()=>sc,contentInitial:()=>tc,disable:()=>cc,document:()=>ec,flow:()=>rc,flowInitial:()=>nc,insideSpan:()=>oc,string:()=>ic,text:()=>ac}),ec={42:Ps,43:Ps,45:Ps,48:Ps,49:Ps,50:Ps,51:Ps,52:Ps,53:Ps,54:Ps,55:Ps,56:Ps,57:Ps,62:yo},tc={91:Xo},nc={[-2]:jo,[-1]:jo,32:jo},rc={35:ns,42:Ms,45:[Hs,Ms],60:ss,61:Hs,95:Ms,96:Oo,126:Oo},ic={38:To,92:Co},ac={[-5]:As,[-4]:As,[-3]:As,33:Es,38:To,42:uo,60:[ho,ms],91:Os,92:[es,Co],93:gs,95:uo,96:Fo},oc={null:[uo,qs]},sc={null:[42,95]},cc={null:[]};function lc(e,t,n){let r={_bufferIndex:-1,_index:0,line:n&&n.line||1,column:n&&n.column||1,offset:n&&n.offset||0},i={},a=[],o=[],s=[],c={attempt:ee(x),check:ee(S),consume:v,enter:y,exit:b,interrupt:ee(S,{interrupt:!0})},l={code:null,containerState:{},defineSkip:h,events:[],now:m,parser:e,previous:null,sliceSerialize:f,sliceStream:p,write:d},u=t.tokenize.call(l,c);return t.resolveAll&&a.push(t),l;function d(e){return o=Ra(o,e),g(),o[o.length-1]===null?(te(t,0),l.events=lo(a,l.events,l),l.events):[]}function f(e,t){return dc(p(e),t)}function p(e){return uc(o,e)}function m(){let{_bufferIndex:e,_index:t,line:n,column:i,offset:a}=r;return{_bufferIndex:e,_index:t,line:n,column:i,offset:a}}function h(e){i[e.line]=e.column,w()}function g(){let e;for(;r._index<o.length;){let t=o[r._index];if(typeof t==`string`)for(e=r._index,r._bufferIndex<0&&(r._bufferIndex=0);r._index===e&&r._bufferIndex<t.length;)_(t.charCodeAt(r._bufferIndex));else _(t)}}function _(e){u=u(e)}function v(e){R(e)?(r.line++,r.column=1,r.offset+=e===-3?2:1,w()):e!==-1&&(r.column++,r.offset++),r._bufferIndex<0?r._index++:(r._bufferIndex++,r._bufferIndex===o[r._index].length&&(r._bufferIndex=-1,r._index++)),l.previous=e}function y(e,t){let n=t||{};return n.type=e,n.start=m(),l.events.push([`enter`,n,l]),s.push(n),n}function b(e){let t=s.pop();return t.end=m(),l.events.push([`exit`,t,l]),t}function x(e,t){te(e,t.from)}function S(e,t){t.restore()}function ee(e,t){return n;function n(n,r,i){let a,o,s,u;return Array.isArray(n)?f(n):`tokenize`in n?f([n]):d(n);function d(e){return t;function t(t){let n=t!==null&&e[t],r=t!==null&&e.null;return f([...Array.isArray(n)?n:n?[n]:[],...Array.isArray(r)?r:r?[r]:[]])(t)}}function f(e){return a=e,o=0,e.length===0?i:p(e[o])}function p(e){return n;function n(n){return u=C(),s=e,e.partial||(l.currentConstruct=e),e.name&&l.parser.constructs.disable.null.includes(e.name)?h(n):e.tokenize.call(t?Object.assign(Object.create(l),t):l,c,m,h)(n)}}function m(t){return e(s,u),r}function h(e){return u.restore(),++o<a.length?p(a[o]):i}}}function te(e,t){e.resolveAll&&!a.includes(e)&&a.push(e),e.resolve&&La(l.events,t,l.events.length-t,e.resolve(l.events.slice(t),l)),e.resolveTo&&(l.events=e.resolveTo(l.events,l))}function C(){let e=m(),t=l.previous,n=l.currentConstruct,i=l.events.length,a=Array.from(s);return{from:i,restore:o};function o(){r=e,l.previous=t,l.currentConstruct=n,l.events.length=i,s=a,w()}}function w(){r.line in i&&r.column<2&&(r.column=i[r.line],r.offset+=i[r.line]-1)}}function uc(e,t){let n=t.start._index,r=t.start._bufferIndex,i=t.end._index,a=t.end._bufferIndex,o;if(n===i)o=[e[n].slice(r,a)];else{if(o=e.slice(n,i),r>-1){let e=o[0];typeof e==`string`?o[0]=e.slice(r):o.shift()}a>0&&o.push(e[i].slice(0,a))}return o}function dc(e,t){let n=-1,r=[],i;for(;++n<e.length;){let a=e[n],o;if(typeof a==`string`)o=a;else switch(a){case-5:o=`\r`;break;case-4:o=`
+`;break;case-3:o=`\r
+`;break;case-2:o=t?` `:`	`;break;case-1:if(!t&&i)continue;o=` `;break;default:o=String.fromCharCode(a)}i=a===-2,r.push(o)}return r.join(``)}function fc(e){let t={constructs:Ba([$s,...(e||{}).extensions||[]]),content:n(no),defined:[],document:n(io),flow:n(Gs),lazy:{},string:n(Js),text:n(Ys)};return t;function n(e){return n;function n(n){return lc(t,e,n)}}}function pc(e){for(;!Vo(e););return e}var mc=/[\0\t\n\r]/g;function hc(){let e=1,t=``,n=!0,r;return i;function i(i,a,o){let s=[],c,l,u,d,f;for(i=t+(typeof i==`string`?i.toString():new TextDecoder(a||void 0).decode(i)),u=0,t=``,n&&=(i.charCodeAt(0)===65279&&u++,void 0);u<i.length;){if(mc.lastIndex=u,c=mc.exec(i),d=c&&c.index!==void 0?c.index:i.length,f=i.charCodeAt(d),!c){t=i.slice(u);break}if(f===10&&u===d&&r)s.push(-3),r=void 0;else switch(r&&=(s.push(-5),void 0),u<d&&(s.push(i.slice(u,d)),e+=d-u),f){case 0:s.push(65533),e++;break;case 9:for(l=Math.ceil(e/4)*4,s.push(-2);e++<l;)s.push(-1);break;case 10:s.push(-4),e=1;break;default:r=!0,e=1}u=d+1}return o&&(r&&s.push(-5),t&&s.push(t),s.push(null)),s}}var gc=/\\([!-/:-@[-`{-~])|&(#(?:\d{1,7}|x[\da-f]{1,6})|[\da-z]{1,31});/gi;function _c(e){return e.replace(gc,vc)}function vc(e,t,n){if(t)return t;if(n.charCodeAt(0)===35){let e=n.charCodeAt(1),t=e===120||e===88;return Ua(n.slice(t?2:1),t?16:10)}return Ia(n)||e}var yc={}.hasOwnProperty;function bc(e,t,n){return t&&typeof t==`object`&&(n=t,t=void 0),xc(n)(pc(fc(n).document().write(hc()(e,t,!0))))}function xc(e){let t={transforms:[],canContainEols:[`emphasis`,`fragment`,`heading`,`paragraph`,`strong`],enter:{autolink:a(Te),autolinkProtocol:C,autolinkEmail:C,atxHeading:a(O),blockQuote:a(ve),characterEscape:C,characterReference:C,codeFenced:a(ye),codeFencedFenceInfo:o,codeFencedFenceMeta:o,codeIndented:a(ye,o),codeText:a(be,o),codeTextData:C,data:C,codeFlowValue:C,definition:a(xe),definitionDestinationString:o,definitionLabelString:o,definitionTitleString:o,emphasis:a(Se),hardBreakEscape:a(k),hardBreakTrailing:a(k),htmlFlow:a(Ce,o),htmlFlowData:C,htmlText:a(Ce,o),htmlTextData:C,image:a(we),label:o,link:a(Te),listItem:a(De),listItemValue:f,listOrdered:a(Ee,d),listUnordered:a(Ee),paragraph:a(A),reference:de,referenceString:o,resourceDestinationString:o,resourceTitleString:o,setextHeading:a(O),strong:a(Oe),thematicBreak:a(Ae)},exit:{atxHeading:c(),atxHeadingSequence:x,autolink:c(),autolinkEmail:_e,autolinkProtocol:ge,blockQuote:c(),characterEscapeValue:w,characterReferenceMarkerHexadecimal:pe,characterReferenceMarkerNumeric:pe,characterReferenceValue:me,characterReference:he,codeFenced:c(g),codeFencedFence:h,codeFencedFenceInfo:p,codeFencedFenceMeta:m,codeFlowValue:w,codeIndented:c(_),codeText:c(re),codeTextData:w,data:w,definition:c(),definitionDestinationString:b,definitionLabelString:v,definitionTitleString:y,emphasis:c(),hardBreakEscape:c(E),hardBreakTrailing:c(E),htmlFlow:c(D),htmlFlowData:w,htmlText:c(ne),htmlTextData:w,image:c(ae),label:se,labelText:oe,lineEnding:T,link:c(ie),listItem:c(),listOrdered:c(),listUnordered:c(),paragraph:c(),referenceString:fe,resourceDestinationString:ce,resourceTitleString:le,resource:ue,setextHeading:c(te),setextHeadingLineSequence:ee,setextHeadingText:S,strong:c(),thematicBreak:c()}};Cc(t,(e||{}).mdastExtensions||[]);let n={};return r;function r(e){let r={type:`root`,children:[]},a={stack:[r],tokenStack:[],config:t,enter:s,exit:l,buffer:o,resume:u,data:n},c=[],d=-1;for(;++d<e.length;)(e[d][1].type===`listOrdered`||e[d][1].type===`listUnordered`)&&(e[d][0]===`enter`?c.push(d):d=i(e,c.pop(),d));for(d=-1;++d<e.length;){let n=t[e[d][0]];yc.call(n,e[d][1].type)&&n[e[d][1].type].call(Object.assign({sliceSerialize:e[d][2].sliceSerialize},a),e[d][1])}if(a.tokenStack.length>0){let e=a.tokenStack[a.tokenStack.length-1];(e[1]||Tc).call(a,void 0,e[0])}for(r.position={start:Sc(e.length>0?e[0][1].start:{line:1,column:1,offset:0}),end:Sc(e.length>0?e[e.length-2][1].end:{line:1,column:1,offset:0})},d=-1;++d<t.transforms.length;)r=t.transforms[d](r)||r;return r}function i(e,t,n){let r=t-1,i=-1,a=!1,o,s,c,l;for(;++r<=n;){let t=e[r];switch(t[1].type){case`listUnordered`:case`listOrdered`:case`blockQuote`:t[0]===`enter`?i++:i--,l=void 0;break;case`lineEndingBlank`:t[0]===`enter`&&(o&&!l&&!i&&!c&&(c=r),l=void 0);break;case`linePrefix`:case`listItemValue`:case`listItemMarker`:case`listItemPrefix`:case`listItemPrefixWhitespace`:break;default:l=void 0}if(!i&&t[0]===`enter`&&t[1].type===`listItemPrefix`||i===-1&&t[0]===`exit`&&(t[1].type===`listUnordered`||t[1].type===`listOrdered`)){if(o){let i=r;for(s=void 0;i--;){let t=e[i];if(t[1].type===`lineEnding`||t[1].type===`lineEndingBlank`){if(t[0]===`exit`)continue;s&&(e[s][1].type=`lineEndingBlank`,a=!0),t[1].type=`lineEnding`,s=i}else if(t[1].type!==`linePrefix`&&t[1].type!==`blockQuotePrefix`&&t[1].type!==`blockQuotePrefixWhitespace`&&t[1].type!==`blockQuoteMarker`&&t[1].type!==`listItemIndent`)break}c&&(!s||c<s)&&(o._spread=!0),o.end=Object.assign({},s?e[s][1].start:t[1].end),e.splice(s||r,0,[`exit`,o,t[2]]),r++,n++}if(t[1].type===`listItemPrefix`){let i={type:`listItem`,_spread:!1,start:Object.assign({},t[1].start),end:void 0};o=i,e.splice(r,0,[`enter`,i,t[2]]),r++,n++,c=void 0,l=!0}}}return e[t][1]._spread=a,n}function a(e,t){return n;function n(n){s.call(this,e(n),n),t&&t.call(this,n)}}function o(){this.stack.push({type:`fragment`,children:[]})}function s(e,t,n){this.stack[this.stack.length-1].children.push(e),this.stack.push(e),this.tokenStack.push([t,n||void 0]),e.position={start:Sc(t.start),end:void 0}}function c(e){return t;function t(t){e&&e.call(this,t),l.call(this,t)}}function l(e,t){let n=this.stack.pop(),r=this.tokenStack.pop();if(r)r[0].type!==e.type&&(t?t.call(this,e,r[0]):(r[1]||Tc).call(this,e,r[0]));else throw Error("Cannot close `"+e.type+"` ("+Zi({start:e.start,end:e.end})+`): it’s not open`);n.position.end=Sc(e.end)}function u(){return ja(this.stack.pop())}function d(){this.data.expectingFirstListItemValue=!0}function f(e){if(this.data.expectingFirstListItemValue){let t=this.stack[this.stack.length-2];t.start=Number.parseInt(this.sliceSerialize(e),10),this.data.expectingFirstListItemValue=void 0}}function p(){let e=this.resume(),t=this.stack[this.stack.length-1];t.lang=e}function m(){let e=this.resume(),t=this.stack[this.stack.length-1];t.meta=e}function h(){this.data.flowCodeInside||(this.buffer(),this.data.flowCodeInside=!0)}function g(){let e=this.resume(),t=this.stack[this.stack.length-1];t.value=e.replace(/^(\r?\n|\r)|(\r?\n|\r)$/g,``),this.data.flowCodeInside=void 0}function _(){let e=this.resume(),t=this.stack[this.stack.length-1];t.value=e.replace(/(\r?\n|\r)$/g,``)}function v(e){let t=this.resume(),n=this.stack[this.stack.length-1];n.label=t,n.identifier=Wa(this.sliceSerialize(e)).toLowerCase()}function y(){let e=this.resume(),t=this.stack[this.stack.length-1];t.title=e}function b(){let e=this.resume(),t=this.stack[this.stack.length-1];t.url=e}function x(e){let t=this.stack[this.stack.length-1];t.depth||=this.sliceSerialize(e).length}function S(){this.data.setextHeadingSlurpLineEnding=!0}function ee(e){let t=this.stack[this.stack.length-1];t.depth=this.sliceSerialize(e).codePointAt(0)===61?1:2}function te(){this.data.setextHeadingSlurpLineEnding=void 0}function C(e){let t=this.stack[this.stack.length-1].children,n=t[t.length-1];(!n||n.type!==`text`)&&(n=ke(),n.position={start:Sc(e.start),end:void 0},t.push(n)),this.stack.push(n)}function w(e){let t=this.stack.pop();t.value+=this.sliceSerialize(e),t.position.end=Sc(e.end)}function T(e){let n=this.stack[this.stack.length-1];if(this.data.atHardBreak){let t=n.children[n.children.length-1];t.position.end=Sc(e.end),this.data.atHardBreak=void 0;return}!this.data.setextHeadingSlurpLineEnding&&t.canContainEols.includes(n.type)&&(C.call(this,e),w.call(this,e))}function E(){this.data.atHardBreak=!0}function D(){let e=this.resume(),t=this.stack[this.stack.length-1];t.value=e}function ne(){let e=this.resume(),t=this.stack[this.stack.length-1];t.value=e}function re(){let e=this.resume(),t=this.stack[this.stack.length-1];t.value=e}function ie(){let e=this.stack[this.stack.length-1];if(this.data.inReference){let t=this.data.referenceType||`shortcut`;e.type+=`Reference`,e.referenceType=t,delete e.url,delete e.title}else delete e.identifier,delete e.label;this.data.referenceType=void 0}function ae(){let e=this.stack[this.stack.length-1];if(this.data.inReference){let t=this.data.referenceType||`shortcut`;e.type+=`Reference`,e.referenceType=t,delete e.url,delete e.title}else delete e.identifier,delete e.label;this.data.referenceType=void 0}function oe(e){let t=this.sliceSerialize(e),n=this.stack[this.stack.length-2];n.label=_c(t),n.identifier=Wa(t).toLowerCase()}function se(){let e=this.stack[this.stack.length-1],t=this.resume(),n=this.stack[this.stack.length-1];this.data.inReference=!0,n.type===`link`?n.children=e.children:n.alt=t}function ce(){let e=this.resume(),t=this.stack[this.stack.length-1];t.url=e}function le(){let e=this.resume(),t=this.stack[this.stack.length-1];t.title=e}function ue(){this.data.inReference=void 0}function de(){this.data.referenceType=`collapsed`}function fe(e){let t=this.resume(),n=this.stack[this.stack.length-1];n.label=t,n.identifier=Wa(this.sliceSerialize(e)).toLowerCase(),this.data.referenceType=`full`}function pe(e){this.data.characterReferenceType=e.type}function me(e){let t=this.sliceSerialize(e),n=this.data.characterReferenceType,r;n?(r=Ua(t,n===`characterReferenceMarkerNumeric`?10:16),this.data.characterReferenceType=void 0):r=Ia(t);let i=this.stack[this.stack.length-1];i.value+=r}function he(e){let t=this.stack.pop();t.position.end=Sc(e.end)}function ge(e){w.call(this,e);let t=this.stack[this.stack.length-1];t.url=this.sliceSerialize(e)}function _e(e){w.call(this,e);let t=this.stack[this.stack.length-1];t.url=`mailto:`+this.sliceSerialize(e)}function ve(){return{type:`blockquote`,children:[]}}function ye(){return{type:`code`,lang:null,meta:null,value:``}}function be(){return{type:`inlineCode`,value:``}}function xe(){return{type:`definition`,identifier:``,label:null,title:null,url:``}}function Se(){return{type:`emphasis`,children:[]}}function O(){return{type:`heading`,depth:0,children:[]}}function k(){return{type:`break`}}function Ce(){return{type:`html`,value:``}}function we(){return{type:`image`,title:null,url:``,alt:null}}function Te(){return{type:`link`,title:null,url:``,children:[]}}function Ee(e){return{type:`list`,ordered:e.type===`listOrdered`,start:null,spread:e._spread,children:[]}}function De(e){return{type:`listItem`,spread:e._spread,checked:null,children:[]}}function A(){return{type:`paragraph`,children:[]}}function Oe(){return{type:`strong`,children:[]}}function ke(){return{type:`text`,value:``}}function Ae(){return{type:`thematicBreak`}}}function Sc(e){return{line:e.line,column:e.column,offset:e.offset}}function Cc(e,t){let n=-1;for(;++n<t.length;){let r=t[n];Array.isArray(r)?Cc(e,r):wc(e,r)}}function wc(e,t){let n;for(n in t)if(yc.call(t,n))switch(n){case`canContainEols`:{let r=t[n];r&&e[n].push(...r);break}case`transforms`:{let r=t[n];r&&e[n].push(...r);break}case`enter`:case`exit`:{let r=t[n];r&&Object.assign(e[n],r);break}}}function Tc(e,t){throw Error(e?"Cannot close `"+e.type+"` ("+Zi({start:e.start,end:e.end})+"): a different token (`"+t.type+"`, "+Zi({start:t.start,end:t.end})+`) is open`:"Cannot close document, a token (`"+t.type+"`, "+Zi({start:t.start,end:t.end})+`) is still open`)}function Ec(e){let t=this;t.parser=n;function n(n){return bc(n,{...t.data(`settings`),...e,extensions:t.data(`micromarkExtensions`)||[],mdastExtensions:t.data(`fromMarkdownExtensions`)||[]})}}function Dc(e,t){let n={type:`element`,tagName:`blockquote`,properties:{},children:e.wrap(e.all(t),!0)};return e.patch(t,n),e.applyData(t,n)}function Oc(e,t){let n={type:`element`,tagName:`br`,properties:{},children:[]};return e.patch(t,n),[e.applyData(t,n),{type:`text`,value:`
+`}]}function kc(e,t){let n=t.value?t.value+`
+`:``,r={},i=t.lang?t.lang.split(/\s+/):[];i.length>0&&(r.className=[`language-`+i[0]]);let a={type:`element`,tagName:`code`,properties:r,children:[{type:`text`,value:n}]};return t.meta&&(a.data={meta:t.meta}),e.patch(t,a),a=e.applyData(t,a),a={type:`element`,tagName:`pre`,properties:{},children:[a]},e.patch(t,a),a}function Ac(e,t){let n={type:`element`,tagName:`del`,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}function jc(e,t){let n={type:`element`,tagName:`em`,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}function Mc(e,t){let n=typeof e.options.clobberPrefix==`string`?e.options.clobberPrefix:`user-content-`,r=String(t.identifier).toUpperCase(),i=to(r.toLowerCase()),a=e.footnoteOrder.indexOf(r),o,s=e.footnoteCounts.get(r);s===void 0?(s=0,e.footnoteOrder.push(r),o=e.footnoteOrder.length):o=a+1,s+=1,e.footnoteCounts.set(r,s);let c={type:`element`,tagName:`a`,properties:{href:`#`+n+`fn-`+i,id:n+`fnref-`+i+(s>1?`-`+s:``),dataFootnoteRef:!0,ariaDescribedBy:[`footnote-label`]},children:[{type:`text`,value:String(o)}]};e.patch(t,c);let l={type:`element`,tagName:`sup`,properties:{},children:[c]};return e.patch(t,l),e.applyData(t,l)}function Nc(e,t){let n={type:`element`,tagName:`h`+t.depth,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}function Pc(e,t){if(e.options.allowDangerousHtml){let n={type:`raw`,value:t.value};return e.patch(t,n),e.applyData(t,n)}}function Fc(e,t){let n=t.referenceType,r=`]`;if(n===`collapsed`?r+=`[]`:n===`full`&&(r+=`[`+(t.label||t.identifier)+`]`),t.type===`imageReference`)return[{type:`text`,value:`![`+t.alt+r}];let i=e.all(t),a=i[0];a&&a.type===`text`?a.value=`[`+a.value:i.unshift({type:`text`,value:`[`});let o=i[i.length-1];return o&&o.type===`text`?o.value+=r:i.push({type:`text`,value:r}),i}function Ic(e,t){let n=String(t.identifier).toUpperCase(),r=e.definitionById.get(n);if(!r)return Fc(e,t);let i={src:to(r.url||``),alt:t.alt};r.title!==null&&r.title!==void 0&&(i.title=r.title);let a={type:`element`,tagName:`img`,properties:i,children:[]};return e.patch(t,a),e.applyData(t,a)}function Lc(e,t){let n={src:to(t.url)};t.alt!==null&&t.alt!==void 0&&(n.alt=t.alt),t.title!==null&&t.title!==void 0&&(n.title=t.title);let r={type:`element`,tagName:`img`,properties:n,children:[]};return e.patch(t,r),e.applyData(t,r)}function Rc(e,t){let n={type:`text`,value:t.value.replace(/\r?\n|\r/g,` `)};e.patch(t,n);let r={type:`element`,tagName:`code`,properties:{},children:[n]};return e.patch(t,r),e.applyData(t,r)}function zc(e,t){let n=String(t.identifier).toUpperCase(),r=e.definitionById.get(n);if(!r)return Fc(e,t);let i={href:to(r.url||``)};r.title!==null&&r.title!==void 0&&(i.title=r.title);let a={type:`element`,tagName:`a`,properties:i,children:e.all(t)};return e.patch(t,a),e.applyData(t,a)}function Bc(e,t){let n={href:to(t.url)};t.title!==null&&t.title!==void 0&&(n.title=t.title);let r={type:`element`,tagName:`a`,properties:n,children:e.all(t)};return e.patch(t,r),e.applyData(t,r)}function Vc(e,t,n){let r=e.all(t),i=n?Hc(n):Uc(t),a={},o=[];if(typeof t.checked==`boolean`){let e=r[0],n;e&&e.type===`element`&&e.tagName===`p`?n=e:(n={type:`element`,tagName:`p`,properties:{},children:[]},r.unshift(n)),n.children.length>0&&n.children.unshift({type:`text`,value:` `}),n.children.unshift({type:`element`,tagName:`input`,properties:{type:`checkbox`,checked:t.checked,disabled:!0},children:[]}),a.className=[`task-list-item`]}let s=-1;for(;++s<r.length;){let e=r[s];(i||s!==0||e.type!==`element`||e.tagName!==`p`)&&o.push({type:`text`,value:`
+`}),e.type===`element`&&e.tagName===`p`&&!i?o.push(...e.children):o.push(e)}let c=r[r.length-1];c&&(i||c.type!==`element`||c.tagName!==`p`)&&o.push({type:`text`,value:`
+`});let l={type:`element`,tagName:`li`,properties:a,children:o};return e.patch(t,l),e.applyData(t,l)}function Hc(e){let t=!1;if(e.type===`list`){t=e.spread||!1;let n=e.children,r=-1;for(;!t&&++r<n.length;)t=Uc(n[r])}return t}function Uc(e){return e.spread??e.children.length>1}function Wc(e,t){let n={},r=e.all(t),i=-1;for(typeof t.start==`number`&&t.start!==1&&(n.start=t.start);++i<r.length;){let e=r[i];if(e.type===`element`&&e.tagName===`li`&&e.properties&&Array.isArray(e.properties.className)&&e.properties.className.includes(`task-list-item`)){n.className=[`contains-task-list`];break}}let a={type:`element`,tagName:t.ordered?`ol`:`ul`,properties:n,children:e.wrap(r,!0)};return e.patch(t,a),e.applyData(t,a)}function Gc(e,t){let n={type:`element`,tagName:`p`,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}function Kc(e,t){let n={type:`root`,children:e.wrap(e.all(t))};return e.patch(t,n),e.applyData(t,n)}function qc(e,t){let n={type:`element`,tagName:`strong`,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}function Jc(e,t){let n=e.all(t),r=n.shift(),i=[];if(r){let n={type:`element`,tagName:`thead`,properties:{},children:e.wrap([r],!0)};e.patch(t.children[0],n),i.push(n)}if(n.length>0){let r={type:`element`,tagName:`tbody`,properties:{},children:e.wrap(n,!0)},a=Ji(t.children[1]),o=qi(t.children[t.children.length-1]);a&&o&&(r.position={start:a,end:o}),i.push(r)}let a={type:`element`,tagName:`table`,properties:{},children:e.wrap(i,!0)};return e.patch(t,a),e.applyData(t,a)}function Yc(e,t,n){let r=n?n.children:void 0,i=(r?r.indexOf(t):1)===0?`th`:`td`,a=n&&n.type===`table`?n.align:void 0,o=a?a.length:t.children.length,s=-1,c=[];for(;++s<o;){let n=t.children[s],r={},o=a?a[s]:void 0;o&&(r.align=o);let l={type:`element`,tagName:i,properties:r,children:[]};n&&(l.children=e.all(n),e.patch(n,l),l=e.applyData(n,l)),c.push(l)}let l={type:`element`,tagName:`tr`,properties:{},children:e.wrap(c,!0)};return e.patch(t,l),e.applyData(t,l)}function Xc(e,t){let n={type:`element`,tagName:`td`,properties:{},children:e.all(t)};return e.patch(t,n),e.applyData(t,n)}var Zc=9,Qc=32;function $c(e){let t=String(e),n=/\r?\n|\r/g,r=n.exec(t),i=0,a=[];for(;r;)a.push(el(t.slice(i,r.index),i>0,!0),r[0]),i=r.index+r[0].length,r=n.exec(t);return a.push(el(t.slice(i),i>0,!1)),a.join(``)}function el(e,t,n){let r=0,i=e.length;if(t){let t=e.codePointAt(r);for(;t===Zc||t===Qc;)r++,t=e.codePointAt(r)}if(n){let t=e.codePointAt(i-1);for(;t===Zc||t===Qc;)i--,t=e.codePointAt(i-1)}return i>r?e.slice(r,i):``}function tl(e,t){let n={type:`text`,value:$c(String(t.value))};return e.patch(t,n),e.applyData(t,n)}function nl(e,t){let n={type:`element`,tagName:`hr`,properties:{},children:[]};return e.patch(t,n),e.applyData(t,n)}var rl={blockquote:Dc,break:Oc,code:kc,delete:Ac,emphasis:jc,footnoteReference:Mc,heading:Nc,html:Pc,imageReference:Ic,image:Lc,inlineCode:Rc,linkReference:zc,link:Bc,listItem:Vc,list:Wc,paragraph:Gc,root:Kc,strong:qc,table:Jc,tableCell:Xc,tableRow:Yc,text:tl,thematicBreak:nl,toml:il,yaml:il,definition:il,footnoteDefinition:il};function il(){}var{defineProperty:al}=Object,ol=typeof self==`object`?self:globalThis,sl=(e,t)=>{switch(e){case`Function`:case`SharedWorker`:case`Worker`:case`eval`:case`setInterval`:case`setTimeout`:throw TypeError(`unable to deserialize `+e)}return new ol[e](t)},cl=(e,t)=>{let n=(t,n)=>(e.set(n,t),t),r=i=>{if(e.has(i))return e.get(i);let[a,o]=t[i];switch(a){case 0:case-1:return n(o,i);case 1:{let e=n([],i);for(let t of o)e.push(r(t));return e}case 2:{let e=n({},i);for(let[t,n]of o){let i=r(t),a=r(n);i===`__proto__`?al(e,i,{value:a,configurable:!0,enumerable:!0,writable:!0}):e[i]=a}return e}case 3:return n(new Date(o),i);case 4:{let{source:e,flags:t}=o;return n(new RegExp(e,t),i)}case 5:{let e=n(new Map,i);for(let[t,n]of o)e.set(r(t),r(n));return e}case 6:{let e=n(new Set,i);for(let t of o)e.add(r(t));return e}case 7:{let{name:e,message:t}=o;return n(typeof ol[e]==`function`?sl(e,t):Error(t),i)}case 8:return n(BigInt(o),i);case`BigInt`:return n(Object(BigInt(o)),i);case`ArrayBuffer`:return n(new Uint8Array(o).buffer,o);case`DataView`:{let{buffer:e}=new Uint8Array(o);return n(new DataView(e),o)}case`-0`:return-0}return n(sl(a,o),i)};return r},ll=e=>cl(new Map,e)(0),ul=``,{toString:dl}={},{keys:fl,is:pl}=Object,ml=e=>{let t=typeof e;if(t!==`object`||!e)return[0,t];let n=dl.call(e).slice(8,-1);switch(n){case`Array`:return[1,ul];case`Object`:return[2,ul];case`Date`:return[3,ul];case`RegExp`:return[4,ul];case`Map`:return[5,ul];case`Set`:return[6,ul];case`DataView`:return[1,n]}return n.includes(`Array`)?[1,n]:e instanceof Error?[7,e.name||`Error`]:[2,n]},hl=([e,t])=>e===0&&(t===`function`||t===`symbol`),gl=(e,t,n,r)=>{let i=(e,t)=>{let i=r.push(e)-1;return n.set(t,i),i},a=o=>{if(n.has(o))return n.get(o);let[s,c]=ml(o);switch(s){case 0:{let t=o;switch(c){case`bigint`:s=8,t=o.toString();break;case`number`:if(!o&&pl(o,-0))return r.push([`-0`])-1;break;case`function`:case`symbol`:if(e)throw TypeError(`unable to serialize `+c);t=null;break;case`undefined`:return i([-1],o)}return i([s,t],o)}case 1:{if(c){let e=o;return c===`DataView`?e=new Uint8Array(o.buffer):c===`ArrayBuffer`&&(e=new Uint8Array(o)),i([c,[...e]],o)}let e=[],t=i([s,e],o);for(let t of o)e.push(a(t));return t}case 2:{if(c)switch(c){case`BigInt`:return i([c,o.toString()],o);case`Boolean`:case`Number`:case`String`:return i([c,o.valueOf()],o)}if(t&&`toJSON`in o)return a(o.toJSON());let n=[],r=i([s,n],o);for(let t of fl(o))(e||!hl(ml(o[t])))&&n.push([a(t),a(o[t])]);return r}case 3:return i([s,isNaN(o.getTime())?ul:o.toISOString()],o);case 4:{let{source:e,flags:t}=o;return i([s,{source:e,flags:t}],o)}case 5:{let t=[],n=i([s,t],o);for(let[n,r]of o)(e||!(hl(ml(n))||hl(ml(r))))&&t.push([a(n),a(r)]);return n}case 6:{let t=[],n=i([s,t],o);for(let n of o)(e||!hl(ml(n)))&&t.push(a(n));return n}}let{message:l}=o;return i([s,{name:c,message:l}],o)};return a},_l=(e,{json:t,lossy:n}={})=>{let r=[];return gl(!(t||n),!!t,new Map,r)(e),r},W=typeof structuredClone==`function`?(e,t)=>t&&(`json`in t||`lossy`in t)?ll(_l(e,t)):structuredClone(e):(e,t)=>ll(_l(e,t));function vl(e,t){let n=[{type:`text`,value:`↩`}];return t>1&&n.push({type:`element`,tagName:`sup`,properties:{},children:[{type:`text`,value:String(t)}]}),n}function yl(e,t){return`Back to reference `+(e+1)+(t>1?`-`+t:``)}function bl(e){let t=typeof e.options.clobberPrefix==`string`?e.options.clobberPrefix:`user-content-`,n=e.options.footnoteBackContent||vl,r=e.options.footnoteBackLabel||yl,i=e.options.footnoteLabel||`Footnotes`,a=e.options.footnoteLabelTagName||`h2`,o=e.options.footnoteLabelProperties||{className:[`sr-only`]},s=[],c=-1;for(;++c<e.footnoteOrder.length;){let i=e.footnoteById.get(e.footnoteOrder[c]);if(!i)continue;let a=e.all(i),o=String(i.identifier).toUpperCase(),l=to(o.toLowerCase()),u=0,d=[],f=e.footnoteCounts.get(o);for(;f!==void 0&&++u<=f;){d.length>0&&d.push({type:`text`,value:` `});let e=typeof n==`string`?n:n(c,u);typeof e==`string`&&(e={type:`text`,value:e}),d.push({type:`element`,tagName:`a`,properties:{href:`#`+t+`fnref-`+l+(u>1?`-`+u:``),dataFootnoteBackref:``,ariaLabel:typeof r==`string`?r:r(c,u),className:[`data-footnote-backref`]},children:Array.isArray(e)?e:[e]})}let p=a[a.length-1];if(p&&p.type===`element`&&p.tagName===`p`){let e=p.children[p.children.length-1];e&&e.type===`text`?e.value+=` `:p.children.push({type:`text`,value:` `}),p.children.push(...d)}else a.push(...d);let m={type:`element`,tagName:`li`,properties:{id:t+`fn-`+l},children:e.wrap(a,!0)};e.patch(i,m),s.push(m)}if(s.length!==0)return{type:`element`,tagName:`section`,properties:{dataFootnotes:!0,className:[`footnotes`]},children:[{type:`element`,tagName:a,properties:{...W(o),id:`footnote-label`},children:[{type:`text`,value:i}]},{type:`text`,value:`
+`},{type:`element`,tagName:`ol`,properties:{},children:e.wrap(s,!0)},{type:`text`,value:`
+`}]}}var xl=(function(e){if(e==null)return El;if(typeof e==`function`)return Tl(e);if(typeof e==`object`)return Array.isArray(e)?Sl(e):Cl(e);if(typeof e==`string`)return wl(e);throw Error(`Expected function, string, or object as test`)});function Sl(e){let t=[],n=-1;for(;++n<e.length;)t[n]=xl(e[n]);return Tl(r);function r(...e){let n=-1;for(;++n<t.length;)if(t[n].apply(this,e))return!0;return!1}}function Cl(e){let t=e;return Tl(n);function n(n){let r=n,i;for(i in e)if(r[i]!==t[i])return!1;return!0}}function wl(e){return Tl(t);function t(t){return t&&t.type===e}}function Tl(e){return t;function t(t,n,r){return!!(Dl(t)&&e.call(this,t,typeof n==`number`?n:void 0,r||void 0))}}function El(){return!0}function Dl(e){return typeof e==`object`&&!!e&&`type`in e}function Ol(e){return e}var kl=[];function Al(e,t,n,r){let i;typeof t==`function`&&typeof n!=`function`?(r=n,n=t):i=t;let a=xl(i),o=r?-1:1;s(e,void 0,[])();function s(e,i,c){let l=e&&typeof e==`object`?e:{};if(typeof l.type==`string`){let t=typeof l.tagName==`string`?l.tagName:typeof l.name==`string`?l.name:void 0;Object.defineProperty(u,"name",{value:`node (`+Ol(e.type+(t?`<`+t+`>`:``))+`)`})}return u;function u(){let l=kl,u,d,f;if((!t||a(e,i,c[c.length-1]||void 0))&&(l=jl(n(e,c)),l[0]===!1))return l;if(`children`in e&&e.children){let t=e;if(t.children&&l[0]!==`skip`)for(d=(r?t.children.length:-1)+o,f=c.concat(t);d>-1&&d<t.children.length;){let e=t.children[d];if(u=s(e,d,f)(),u[0]===!1)return u;d=typeof u[1]==`number`?u[1]:d+o}}return l}}}function jl(e){return Array.isArray(e)?e:typeof e==`number`?[!0,e]:e==null?kl:[e]}function Ml(e,t,n,r){let i,a,o;typeof t==`function`&&typeof n!=`function`?(a=void 0,o=t,i=n):(a=t,o=n,i=r),Al(e,a,s,i);function s(e,t){let n=t[t.length-1],r=n?n.children.indexOf(e):void 0;return o(e,r,n)}}var Nl={}.hasOwnProperty,Pl={};function Fl(e,t){let n=t||Pl,r=new Map,i=new Map,a={all:s,applyData:Ll,definitionById:r,footnoteById:i,footnoteCounts:new Map,footnoteOrder:[],handlers:{...rl,...n.handlers},one:o,options:n,patch:Il,wrap:zl};return Ml(e,function(e){if(e.type===`definition`||e.type===`footnoteDefinition`){let t=e.type===`definition`?r:i,n=String(e.identifier).toUpperCase();t.has(n)||t.set(n,e)}}),a;function o(e,t){let n=e.type,r=a.handlers[n];if(Nl.call(a.handlers,n)&&r)return r(a,e,t);if(a.options.passThrough&&a.options.passThrough.includes(n)){if(`children`in e){let{children:t,...n}=e,r=W(n);return r.children=a.all(e),r}return W(e)}return(a.options.unknownHandler||Rl)(a,e,t)}function s(e){let t=[];if(`children`in e){let n=e.children,r=-1;for(;++r<n.length;){let i=a.one(n[r],e);if(i){if(r&&n[r-1].type===`break`&&(!Array.isArray(i)&&i.type===`text`&&(i.value=Bl(i.value)),!Array.isArray(i)&&i.type===`element`)){let e=i.children[0];e&&e.type===`text`&&(e.value=Bl(e.value))}Array.isArray(i)?t.push(...i):t.push(i)}}}return t}}function Il(e,t){e.position&&(t.position=Xi(e))}function Ll(e,t){let n=t;if(e&&e.data){let t=e.data.hName,r=e.data.hChildren,i=e.data.hProperties;typeof t==`string`&&(n.type===`element`?n.tagName=t:n={type:`element`,tagName:t,properties:{},children:`children`in n?n.children:[n]}),n.type===`element`&&i&&Object.assign(n.properties,W(i)),`children`in n&&n.children&&r!=null&&(n.children=r)}return n}function Rl(e,t){let n=t.data||{},r=`value`in t&&!(Nl.call(n,`hProperties`)||Nl.call(n,`hChildren`))?{type:`text`,value:t.value}:{type:`element`,tagName:`div`,properties:{},children:e.all(t)};return e.patch(t,r),e.applyData(t,r)}function zl(e,t){let n=[],r=-1;for(t&&n.push({type:`text`,value:`
+`});++r<e.length;)r&&n.push({type:`text`,value:`
+`}),n.push(e[r]);return t&&e.length>0&&n.push({type:`text`,value:`
+`}),n}function Bl(e){let t=0,n=e.charCodeAt(t);for(;n===9||n===32;)t++,n=e.charCodeAt(t);return e.slice(t)}function Vl(e,t){let n=Fl(e,t),r=n.one(e,void 0),i=bl(n),a=Array.isArray(r)?{type:`root`,children:r}:r||{type:`root`,children:[]};return i&&(`children`in a,a.children.push({type:`text`,value:`
+`},i)),a}function Hl(e,t){return e&&`run`in e?async function(n,r){let i=Vl(n,{file:r,...t});await e.run(i,r)}:function(n,r){return Vl(n,{file:r,...e||t})}}function Ul(e){if(e)throw e}var Wl=o(((e,t)=>{var n=Object.prototype.hasOwnProperty,r=Object.prototype.toString,i=Object.defineProperty,a=Object.getOwnPropertyDescriptor,o=function(e){return typeof Array.isArray==`function`?Array.isArray(e):r.call(e)===`[object Array]`},s=function(e){if(!e||r.call(e)!==`[object Object]`)return!1;var t=n.call(e,`constructor`),i=e.constructor&&e.constructor.prototype&&n.call(e.constructor.prototype,`isPrototypeOf`);if(e.constructor&&!t&&!i)return!1;for(var a in e);return a===void 0||n.call(e,a)},c=function(e,t){i&&t.name===`__proto__`?i(e,t.name,{enumerable:!0,configurable:!0,value:t.newValue,writable:!0}):e[t.name]=t.newValue},l=function(e,t){if(t===`__proto__`){if(!n.call(e,t))return;if(a)return a(e,t).value}return e[t]};t.exports=function e(){var t,n,r,i,a,u,d=arguments[0],f=1,p=arguments.length,m=!1;for(typeof d==`boolean`&&(m=d,d=arguments[1]||{},f=2),(d==null||typeof d!=`object`&&typeof d!=`function`)&&(d={});f<p;++f)if(t=arguments[f],t!=null)for(n in t)r=l(d,n),i=l(t,n),d!==i&&(m&&i&&(s(i)||(a=o(i)))?(a?(a=!1,u=r&&o(r)?r:[]):u=r&&s(r)?r:{},c(d,{name:n,newValue:e(m,u,i)})):i!==void 0&&c(d,{name:n,newValue:i}));return d}}));function Gl(e){if(typeof e!=`object`||!e)return!1;let t=Object.getPrototypeOf(e);return(t===null||t===Object.prototype||Object.getPrototypeOf(t)===null)&&!(Symbol.toStringTag in e)&&!(Symbol.iterator in e)}function Kl(){let e=[],t={run:n,use:r};return t;function n(...t){let n=-1,r=t.pop();if(typeof r!=`function`)throw TypeError(`Expected function as last argument, not `+r);i(null,...t);function i(a,...o){let s=e[++n],c=-1;if(a){r(a);return}for(;++c<t.length;)(o[c]===null||o[c]===void 0)&&(o[c]=t[c]);t=o,s?ql(s,i)(...o):r(null,...o)}}function r(n){if(typeof n!=`function`)throw TypeError("Expected `middelware` to be a function, not "+n);return e.push(n),t}}function ql(e,t){let n;return r;function r(...t){let r=e.length>t.length,o;r&&t.push(i);try{o=e.apply(this,t)}catch(e){let t=e;if(r&&n)throw t;return i(t)}r||(o&&o.then&&typeof o.then==`function`?o.then(a,i):o instanceof Error?i(o):a(o))}function i(e,...r){n||(n=!0,t(e,...r))}function a(e){i(null,e)}}var Jl={basename:Yl,dirname:Xl,extname:Zl,join:Ql,sep:`/`};function Yl(e,t){if(t!==void 0&&typeof t!=`string`)throw TypeError(`"ext" argument must be a string`);tu(e);let n=0,r=-1,i=e.length,a;if(t===void 0||t.length===0||t.length>e.length){for(;i--;)if(e.codePointAt(i)===47){if(a){n=i+1;break}}else r<0&&(a=!0,r=i+1);return r<0?``:e.slice(n,r)}if(t===e)return``;let o=-1,s=t.length-1;for(;i--;)if(e.codePointAt(i)===47){if(a){n=i+1;break}}else o<0&&(a=!0,o=i+1),s>-1&&(e.codePointAt(i)===t.codePointAt(s--)?s<0&&(r=i):(s=-1,r=o));return n===r?r=o:r<0&&(r=e.length),e.slice(n,r)}function Xl(e){if(tu(e),e.length===0)return`.`;let t=-1,n=e.length,r;for(;--n;)if(e.codePointAt(n)===47){if(r){t=n;break}}else r||=!0;return t<0?e.codePointAt(0)===47?`/`:`.`:t===1&&e.codePointAt(0)===47?`//`:e.slice(0,t)}function Zl(e){tu(e);let t=e.length,n=-1,r=0,i=-1,a=0,o;for(;t--;){let s=e.codePointAt(t);if(s===47){if(o){r=t+1;break}continue}n<0&&(o=!0,n=t+1),s===46?i<0?i=t:a!==1&&(a=1):i>-1&&(a=-1)}return i<0||n<0||a===0||a===1&&i===n-1&&i===r+1?``:e.slice(i,n)}function Ql(...e){let t=-1,n;for(;++t<e.length;)tu(e[t]),e[t]&&(n=n===void 0?e[t]:n+`/`+e[t]);return n===void 0?`.`:$l(n)}function $l(e){tu(e);let t=e.codePointAt(0)===47,n=eu(e,!t);return n.length===0&&!t&&(n=`.`),n.length>0&&e.codePointAt(e.length-1)===47&&(n+=`/`),t?`/`+n:n}function eu(e,t){let n=``,r=0,i=-1,a=0,o=-1,s,c;for(;++o<=e.length;){if(o<e.length)s=e.codePointAt(o);else if(s===47)break;else s=47;if(s===47){if(i!==o-1&&a!==1){if(i!==o-1&&a===2){if(n.length<2||r!==2||n.codePointAt(n.length-1)!==46||n.codePointAt(n.length-2)!==46){if(n.length>2){if(c=n.lastIndexOf(`/`),c!==n.length-1){c<0?(n=``,r=0):(n=n.slice(0,c),r=n.length-1-n.lastIndexOf(`/`)),i=o,a=0;continue}}else if(n.length>0){n=``,r=0,i=o,a=0;continue}}t&&(n=n.length>0?n+`/..`:`..`,r=2)}else n.length>0?n+=`/`+e.slice(i+1,o):n=e.slice(i+1,o),r=o-i-1}i=o,a=0}else s===46&&a>-1?a++:a=-1}return n}function tu(e){if(typeof e!=`string`)throw TypeError(`Path must be a string. Received `+JSON.stringify(e))}var nu={cwd:ru};function ru(){return`/`}function iu(e){return!!(typeof e==`object`&&e&&`href`in e&&e.href&&`protocol`in e&&e.protocol&&e.auth===void 0)}function G(e){if(typeof e==`string`)e=new URL(e);else if(!iu(e)){let t=TypeError('The "path" argument must be of type string or an instance of URL. Received `'+e+"`");throw t.code=`ERR_INVALID_ARG_TYPE`,t}if(e.protocol!==`file:`){let e=TypeError(`The URL must be of scheme file`);throw e.code=`ERR_INVALID_URL_SCHEME`,e}return au(e)}function au(e){if(e.hostname!==``){let e=TypeError(`File URL host must be "localhost" or empty on darwin`);throw e.code=`ERR_INVALID_FILE_URL_HOST`,e}let t=e.pathname,n=-1;for(;++n<t.length;)if(t.codePointAt(n)===37&&t.codePointAt(n+1)===50){let e=t.codePointAt(n+2);if(e===70||e===102){let e=TypeError(`File URL path must not include encoded / characters`);throw e.code=`ERR_INVALID_FILE_URL_PATH`,e}}return decodeURIComponent(t)}var ou=[`history`,`path`,`basename`,`stem`,`extname`,`dirname`],su=class{constructor(e){let t;t=e?iu(e)?{path:e}:typeof e==`string`||du(e)?{value:e}:e:{},this.cwd=`cwd`in t?``:nu.cwd(),this.data={},this.history=[],this.messages=[],this.value,this.map,this.result,this.stored;let n=-1;for(;++n<ou.length;){let e=ou[n];e in t&&t[e]!==void 0&&t[e]!==null&&(this[e]=e===`history`?[...t[e]]:t[e])}let r;for(r in t)ou.includes(r)||(this[r]=t[r])}get basename(){return typeof this.path==`string`?Jl.basename(this.path):void 0}set basename(e){lu(e,`basename`),cu(e,`basename`),this.path=Jl.join(this.dirname||``,e)}get dirname(){return typeof this.path==`string`?Jl.dirname(this.path):void 0}set dirname(e){uu(this.basename,`dirname`),this.path=Jl.join(e||``,this.basename)}get extname(){return typeof this.path==`string`?Jl.extname(this.path):void 0}set extname(e){if(cu(e,`extname`),uu(this.dirname,`extname`),e){if(e.codePointAt(0)!==46)throw Error("`extname` must start with `.`");if(e.includes(`.`,1))throw Error("`extname` cannot contain multiple dots")}this.path=Jl.join(this.dirname,this.stem+(e||``))}get path(){return this.history[this.history.length-1]}set path(e){iu(e)&&(e=G(e)),lu(e,`path`),this.path!==e&&this.history.push(e)}get stem(){return typeof this.path==`string`?Jl.basename(this.path,this.extname):void 0}set stem(e){lu(e,`stem`),cu(e,`stem`),this.path=Jl.join(this.dirname||``,e+(this.extname||``))}fail(e,t,n){let r=this.message(e,t,n);throw r.fatal=!0,r}info(e,t,n){let r=this.message(e,t,n);return r.fatal=void 0,r}message(e,t,n){let r=new ta(e,t,n);return this.path&&(r.name=this.path+`:`+r.name,r.file=this.path),r.fatal=!1,this.messages.push(r),r}toString(e){return this.value===void 0?``:typeof this.value==`string`?this.value:new TextDecoder(e||void 0).decode(this.value)}};function cu(e,t){if(e&&e.includes(Jl.sep))throw Error("`"+t+"` cannot be a path: did not expect `"+Jl.sep+"`")}function lu(e,t){if(!e)throw Error("`"+t+"` cannot be empty")}function uu(e,t){if(!e)throw Error("Setting `"+t+"` requires `path` to be set too")}function du(e){return!!(e&&typeof e==`object`&&`byteLength`in e&&`byteOffset`in e)}var fu=(function(e){let t=this.constructor.prototype,n=t[e],r=function(){return n.apply(r,arguments)};return Object.setPrototypeOf(r,t),r}),pu=l(Wl(),1),mu={}.hasOwnProperty,hu=new class e extends fu{constructor(){super(`copy`),this.Compiler=void 0,this.Parser=void 0,this.attachers=[],this.compiler=void 0,this.freezeIndex=-1,this.frozen=void 0,this.namespace={},this.parser=void 0,this.transformers=Kl()}copy(){let t=new e,n=-1;for(;++n<this.attachers.length;){let e=this.attachers[n];t.use(...e)}return t.data((0,pu.default)(!0,{},this.namespace)),t}data(e,t){return typeof e==`string`?arguments.length===2?(vu(`data`,this.frozen),this.namespace[e]=t,this):mu.call(this.namespace,e)&&this.namespace[e]||void 0:e?(vu(`data`,this.frozen),this.namespace=e,this):this.namespace}freeze(){if(this.frozen)return this;let e=this;for(;++this.freezeIndex<this.attachers.length;){let[t,...n]=this.attachers[this.freezeIndex];if(n[0]===!1)continue;n[0]===!0&&(n[0]=void 0);let r=t.call(e,...n);typeof r==`function`&&this.transformers.use(r)}return this.frozen=!0,this.freezeIndex=1/0,this}parse(e){this.freeze();let t=xu(e),n=this.parser||this.Parser;return gu(`parse`,n),n(String(t),t)}process(e,t){let n=this;return this.freeze(),gu(`process`,this.parser||this.Parser),_u(`process`,this.compiler||this.Compiler),t?r(void 0,t):new Promise(r);function r(r,i){let a=xu(e),o=n.parse(a);n.run(o,a,function(e,t,r){if(e||!t||!r)return s(e);let i=t,a=n.stringify(i,r);Cu(a)?r.value=a:r.result=a,s(e,r)});function s(e,n){e||!n?i(e):r?r(n):t(void 0,n)}}}processSync(e){let t=!1,n;return this.freeze(),gu(`processSync`,this.parser||this.Parser),_u(`processSync`,this.compiler||this.Compiler),this.process(e,r),bu(`processSync`,`process`,t),n;function r(e,r){t=!0,Ul(e),n=r}}run(e,t,n){yu(e),this.freeze();let r=this.transformers;return!n&&typeof t==`function`&&(n=t,t=void 0),n?i(void 0,n):new Promise(i);function i(i,a){let o=xu(t);r.run(e,o,s);function s(t,r,o){let s=r||e;t?a(t):i?i(s):n(void 0,s,o)}}}runSync(e,t){let n=!1,r;return this.run(e,t,i),bu(`runSync`,`run`,n),r;function i(e,t){Ul(e),r=t,n=!0}}stringify(e,t){this.freeze();let n=xu(t),r=this.compiler||this.Compiler;return _u(`stringify`,r),yu(e),r(e,n)}use(e,...t){let n=this.attachers,r=this.namespace;if(vu(`use`,this.frozen),e!=null){if(typeof e==`function`)s(e,t);else if(typeof e==`object`)Array.isArray(e)?o(e):a(e);else throw TypeError("Expected usable value, not `"+e+"`")}return this;function i(e){if(typeof e==`function`)s(e,[]);else if(typeof e==`object`){if(Array.isArray(e)){let[t,...n]=e;s(t,n)}else a(e)}else throw TypeError("Expected usable value, not `"+e+"`")}function a(e){if(!(`plugins`in e)&&!(`settings`in e))throw Error("Expected usable value but received an empty preset, which is probably a mistake: presets typically come with `plugins` and sometimes with `settings`, but this has neither");o(e.plugins),e.settings&&(r.settings=(0,pu.default)(!0,r.settings,e.settings))}function o(e){let t=-1;if(e!=null){if(Array.isArray(e))for(;++t<e.length;){let n=e[t];i(n)}else throw TypeError("Expected a list of plugins, not `"+e+"`")}}function s(e,t){let r=-1,i=-1;for(;++r<n.length;)if(n[r][0]===e){i=r;break}if(i===-1)n.push([e,...t]);else if(t.length>0){let[r,...a]=t,o=n[i][1];Gl(o)&&Gl(r)&&(r=(0,pu.default)(!0,o,r)),n[i]=[e,r,...a]}}}}().freeze();function gu(e,t){if(typeof t!=`function`)throw TypeError("Cannot `"+e+"` without `parser`")}function _u(e,t){if(typeof t!=`function`)throw TypeError("Cannot `"+e+"` without `compiler`")}function vu(e,t){if(t)throw Error("Cannot call `"+e+"` on a frozen processor.\nCreate a new processor first, by calling it: use `processor()` instead of `processor`.")}function yu(e){if(!Gl(e)||typeof e.type!=`string`)throw TypeError("Expected node, got `"+e+"`")}function bu(e,t,n){if(!n)throw Error("`"+e+"` finished async. Use `"+t+"` instead")}function xu(e){return Su(e)?e:new su(e)}function Su(e){return!!(e&&typeof e==`object`&&`message`in e&&`messages`in e)}function Cu(e){return typeof e==`string`||wu(e)}function wu(e){return!!(e&&typeof e==`object`&&`byteLength`in e&&`byteOffset`in e)}var Tu=[],Eu={allowDangerousHtml:!0},Du=/^(https?|ircs?|mailto|xmpp)$/i,Ou=[{from:`astPlugins`,id:`remove-buggy-html-in-markdown-parser`},{from:`allowDangerousHtml`,id:`remove-buggy-html-in-markdown-parser`},{from:`allowNode`,id:`replace-allownode-allowedtypes-and-disallowedtypes`,to:`allowElement`},{from:`allowedTypes`,id:`replace-allownode-allowedtypes-and-disallowedtypes`,to:`allowedElements`},{from:`disallowedTypes`,id:`replace-allownode-allowedtypes-and-disallowedtypes`,to:`disallowedElements`},{from:`escapeHtml`,id:`remove-buggy-html-in-markdown-parser`},{from:`includeElementIndex`,id:`#remove-includeelementindex`},{from:`includeNodeIndex`,id:`change-includenodeindex-to-includeelementindex`},{from:`linkTarget`,id:`remove-linktarget`},{from:`plugins`,id:`change-plugins-to-remarkplugins`,to:`remarkPlugins`},{from:`rawSourcePos`,id:`#remove-rawsourcepos`},{from:`renderers`,id:`change-renderers-to-components`,to:`components`},{from:`source`,id:`change-source-to-children`,to:`children`},{from:`sourcePos`,id:`#remove-sourcepos`},{from:`transformImageUri`,id:`#add-urltransform`,to:`urlTransform`},{from:`transformLinkUri`,id:`#add-urltransform`,to:`urlTransform`}];function ku(e){let t=Au(e),n=ju(e);return Mu(t.runSync(t.parse(n),n),e)}function Au(e){let t=e.rehypePlugins||Tu,n=e.remarkPlugins||Tu,r=e.remarkRehypeOptions?{...e.remarkRehypeOptions,...Eu}:Eu;return hu().use(Ec).use(n).use(Hl,r).use(t)}function ju(e){let t=e.children||``,n=new su;return typeof t==`string`?n.value=t:``+t,n}function Mu(e,t){let n=t.allowedElements,r=t.allowElement,i=t.components,a=t.disallowedElements,o=t.skipHtml,s=t.unwrapDisallowed,c=t.urlTransform||Nu;for(let e of Ou)Object.hasOwn(t,e.from)&&``+e.from+(e.to?"use `"+e.to+"` instead":`remove it`)+e.id;return t.className&&(e={type:`element`,tagName:`div`,properties:{className:t.className},children:e.type===`root`?e.children:[e]}),Ml(e,l),L(e,{Fragment:M.Fragment,components:i,ignoreInvalidStyle:!0,jsx:M.jsx,jsxs:M.jsxs,passKeys:!0,passNode:!0});function l(e,t,i){if(e.type===`raw`&&i&&typeof t==`number`)return o?i.children.splice(t,1):i.children[t]={type:`text`,value:e.value},t;if(e.type===`element`){let t;for(t in ka)if(Object.hasOwn(ka,t)&&Object.hasOwn(e.properties,t)){let n=e.properties[t],r=ka[t];(r===null||r.includes(e.tagName))&&(e.properties[t]=c(String(n||``),t,e))}}if(e.type===`element`){let o=n?!n.includes(e.tagName):a?a.includes(e.tagName):!1;if(!o&&r&&typeof t==`number`&&(o=!r(e,t,i)),o&&i&&typeof t==`number`)return s&&e.children?i.children.splice(t,1,...e.children):i.children.splice(t,1),t}}}function Nu(e){let t=e.indexOf(`:`),n=e.indexOf(`?`),r=e.indexOf(`#`),i=e.indexOf(`/`);return t===-1||i!==-1&&t>i||n!==-1&&t>n||r!==-1&&t>r||Du.test(e.slice(0,t))?e:``}function Pu(e,t){let n=String(e);if(typeof t!=`string`)throw TypeError(`Expected character`);let r=0,i=n.indexOf(t);for(;i!==-1;)r++,i=n.indexOf(t,i+t.length);return r}function Fu(e){if(typeof e!=`string`)throw TypeError(`Expected a string`);return e.replace(/[|\\{}()[\]^$+*?.]/g,`\\$&`).replace(/-/g,`\\x2d`)}function Iu(e,t,n){let r=xl((n||{}).ignore||[]),i=Lu(t),a=-1;for(;++a<i.length;)Al(e,`text`,o);function o(e,t){let n=-1,i;for(;++n<t.length;){let e=t[n],a=i?i.children:void 0;if(r(e,a?a.indexOf(e):void 0,i))return;i=e}if(i)return s(e,t)}function s(e,t){let n=t[t.length-1],r=i[a][0],o=i[a][1],s=0,c=n.children.indexOf(e),l=!1,u=[];r.lastIndex=0;let d=r.exec(e.value);for(;d;){let n=d.index,i={index:d.index,input:d.input,stack:[...t,e]},a=o(...d,i);if(typeof a==`string`&&(a=a.length>0?{type:`text`,value:a}:void 0),a===!1?r.lastIndex=n+1:(s!==n&&u.push({type:`text`,value:e.value.slice(s,n)}),Array.isArray(a)?u.push(...a):a&&u.push(a),s=n+d[0].length,l=!0),!r.global)break;d=r.exec(e.value)}return l?(s<e.value.length&&u.push({type:`text`,value:e.value.slice(s)}),n.children.splice(c,1,...u)):u=[e],c+u.length}}function Lu(e){let t=[];if(!Array.isArray(e))throw TypeError(`Expected find and replace tuple or list of tuples`);let n=!e[0]||Array.isArray(e[0])?e:[e],r=-1;for(;++r<n.length;){let e=n[r];t.push([Ru(e[0]),zu(e[1])])}return t}function Ru(e){return typeof e==`string`?new RegExp(Fu(e),`g`):e}function zu(e){return typeof e==`function`?e:function(){return e}}var Bu=`phrasing`,Vu=[`autolink`,`link`,`image`,`label`];function Hu(){return{transforms:[Xu],enter:{literalAutolink:Wu,literalAutolinkEmail:Gu,literalAutolinkHttp:Gu,literalAutolinkWww:Gu},exit:{literalAutolink:Yu,literalAutolinkEmail:Ju,literalAutolinkHttp:Ku,literalAutolinkWww:qu}}}function Uu(){return{unsafe:[{character:`@`,before:`[+\\-.\\w]`,after:`[\\-.\\w]`,inConstruct:Bu,notInConstruct:Vu},{character:`.`,before:`[Ww]`,after:`[\\-.\\w]`,inConstruct:Bu,notInConstruct:Vu},{character:`:`,before:`[ps]`,after:`\\/`,inConstruct:Bu,notInConstruct:Vu}]}}function Wu(e){this.enter({type:`link`,title:null,url:``,children:[]},e)}function Gu(e){this.config.enter.autolinkProtocol.call(this,e)}function Ku(e){this.config.exit.autolinkProtocol.call(this,e)}function qu(e){this.config.exit.data.call(this,e);let t=this.stack[this.stack.length-1];t.type,t.url=`http://`+this.sliceSerialize(e)}function Ju(e){this.config.exit.autolinkEmail.call(this,e)}function Yu(e){this.exit(e)}function Xu(e){Iu(e,[[/(https?:\/\/|www(?=\.))([-.\w]+)([^ \t\r\n]*)/gi,Zu],[/(?<=^|\s|\p{P}|\p{S})([-.\w+]+)@([-\w]+(?:\.[-\w]+)+)/gu,Qu]],{ignore:[`link`,`linkReference`]})}function Zu(e,t,n,r,i){let a=``;if(!q(i)||(/^w/i.test(t)&&(n=t+n,t=``,a=`http://`),!$u(n)))return!1;let o=K(n+r);if(!o[0])return!1;let s={type:`link`,title:null,url:a+t+o[0],children:[{type:`text`,value:t+o[0]}]};return o[1]?[s,{type:`text`,value:o[1]}]:s}function Qu(e,t,n,r){return!q(r,!0)||/[-\d_]$/.test(n)?!1:{type:`link`,title:null,url:`mailto:`+t+`@`+n,children:[{type:`text`,value:t+`@`+n}]}}function $u(e){let t=e.split(`.`);return!(t.length<2||t[t.length-1]&&(/_/.test(t[t.length-1])||!/[a-zA-Z\d]/.test(t[t.length-1]))||t[t.length-2]&&(/_/.test(t[t.length-2])||!/[a-zA-Z\d]/.test(t[t.length-2])))}function K(e){let t=/[!"&'),.:;<>?\]}]+$/.exec(e);if(!t)return[e,void 0];e=e.slice(0,t.index);let n=t[0],r=n.indexOf(`)`),i=Pu(e,`(`),a=Pu(e,`)`);for(;r!==-1&&i>a;)e+=n.slice(0,r+1),n=n.slice(r+1),r=n.indexOf(`)`),a++;return[e,n]}function q(e,t){let n=e.input.charCodeAt(e.index-1);return(e.index===0||$a(n)||Qa(n))&&(!t||n!==47)}od.peek=ad;function J(){this.buffer()}function Y(e){this.enter({type:`footnoteReference`,identifier:``,label:``},e)}function X(){this.buffer()}function ed(e){this.enter({type:`footnoteDefinition`,identifier:``,label:``,children:[]},e)}function td(e){let t=this.resume(),n=this.stack[this.stack.length-1];n.type,n.identifier=Wa(this.sliceSerialize(e)).toLowerCase(),n.label=t}function nd(e){this.exit(e)}function rd(e){let t=this.resume(),n=this.stack[this.stack.length-1];n.type,n.identifier=Wa(this.sliceSerialize(e)).toLowerCase(),n.label=t}function id(e){this.exit(e)}function ad(){return`[`}function od(e,t,n,r){let i=n.createTracker(r),a=i.move(`[^`),o=n.enter(`footnoteReference`),s=n.enter(`reference`);return a+=i.move(n.safe(n.associationId(e),{after:`]`,before:a})),s(),o(),a+=i.move(`]`),a}function sd(){return{enter:{gfmFootnoteCallString:J,gfmFootnoteCall:Y,gfmFootnoteDefinitionLabelString:X,gfmFootnoteDefinition:ed},exit:{gfmFootnoteCallString:td,gfmFootnoteCall:nd,gfmFootnoteDefinitionLabelString:rd,gfmFootnoteDefinition:id}}}function cd(e){let t=!1;return e&&e.firstLineBlank&&(t=!0),{handlers:{footnoteDefinition:n,footnoteReference:od},unsafe:[{character:`[`,inConstruct:[`label`,`phrasing`,`reference`]}]};function n(e,n,r,i){let a=r.createTracker(i),o=a.move(`[^`),s=r.enter(`footnoteDefinition`),c=r.enter(`label`);return o+=a.move(r.safe(r.associationId(e),{before:o,after:`]`})),c(),o+=a.move(`]:`),e.children&&e.children.length>0&&(a.shift(4),o+=a.move((t?`
+`:` `)+r.indentLines(r.containerFlow(e,a.current()),t?ud:ld))),s(),o}}function ld(e,t,n){return t===0?e:ud(e,t,n)}function ud(e,t,n){return(n?``:`    `)+e}var dd=[`autolink`,`destinationLiteral`,`destinationRaw`,`reference`,`titleQuote`,`titleApostrophe`];gd.peek=_d;function fd(){return{canContainEols:[`delete`],enter:{strikethrough:md},exit:{strikethrough:hd}}}function pd(){return{unsafe:[{character:`~`,inConstruct:`phrasing`,notInConstruct:dd}],handlers:{delete:gd}}}function md(e){this.enter({type:`delete`,children:[]},e)}function hd(e){this.exit(e)}function gd(e,t,n,r){let i=n.createTracker(r),a=n.enter(`strikethrough`),o=i.move(`~~`);return o+=n.containerPhrasing(e,{...i.current(),before:o,after:`~`}),o+=i.move(`~~`),a(),o}function _d(){return`~`}function vd(e){return e.length}function yd(e,t){let n=t||{},r=(n.align||[]).concat(),i=n.stringLength||vd,a=[],o=[],s=[],c=[],l=0,u=-1;for(;++u<e.length;){let t=[],r=[],a=-1;for(e[u].length>l&&(l=e[u].length);++a<e[u].length;){let o=bd(e[u][a]);if(n.alignDelimiters!==!1){let e=i(o);r[a]=e,(c[a]===void 0||e>c[a])&&(c[a]=e)}t.push(o)}o[u]=t,s[u]=r}let d=-1;if(typeof r==`object`&&`length`in r)for(;++d<l;)a[d]=xd(r[d]);else{let e=xd(r);for(;++d<l;)a[d]=e}d=-1;let f=[],p=[];for(;++d<l;){let e=a[d],t=``,r=``;e===99?(t=`:`,r=`:`):e===108?t=`:`:e===114&&(r=`:`);let i=n.alignDelimiters===!1?1:Math.max(1,c[d]-t.length-r.length),o=t+`-`.repeat(i)+r;n.alignDelimiters!==!1&&(i=t.length+i+r.length,i>c[d]&&(c[d]=i),p[d]=i),f[d]=o}o.splice(1,0,f),s.splice(1,0,p),u=-1;let m=[];for(;++u<o.length;){let e=o[u],t=s[u];d=-1;let r=[];for(;++d<l;){let i=e[d]||``,o=``,s=``;if(n.alignDelimiters!==!1){let e=c[d]-(t[d]||0),n=a[d];n===114?o=` `.repeat(e):n===99?e%2?(o=` `.repeat(e/2+.5),s=` `.repeat(e/2-.5)):(o=` `.repeat(e/2),s=o):s=` `.repeat(e)}n.delimiterStart!==!1&&!d&&r.push(`|`),n.padding!==!1&&(n.alignDelimiters!==!1||i!==``)&&(n.delimiterStart!==!1||d)&&r.push(` `),n.alignDelimiters!==!1&&r.push(o),r.push(i),n.alignDelimiters!==!1&&r.push(s),n.padding!==!1&&r.push(` `),(n.delimiterEnd!==!1||d!==l-1)&&r.push(`|`)}m.push(n.delimiterEnd===!1?r.join(``).replace(/ +$/,``):r.join(``))}return m.join(`
+`)}function bd(e){return e==null?``:String(e)}function xd(e){let t=typeof e==`string`?e.codePointAt(0):0;return t===67||t===99?99:t===76||t===108?108:t===82||t===114?114:0}function Sd(e,t,n,r){let i=n.enter(`blockquote`),a=n.createTracker(r);a.move(`> `),a.shift(2);let o=n.indentLines(n.containerFlow(e,a.current()),Cd);return i(),o}function Cd(e,t,n){return`>`+(n?``:` `)+e}function wd(e,t){return Td(e,t.inConstruct,!0)&&!Td(e,t.notInConstruct,!1)}function Td(e,t,n){if(typeof t==`string`&&(t=[t]),!t||t.length===0)return n;let r=-1;for(;++r<t.length;)if(e.includes(t[r]))return!0;return!1}function Ed(e,t,n,r){let i=-1;for(;++i<n.unsafe.length;)if(n.unsafe[i].character===`
+`&&wd(n.stack,n.unsafe[i]))return/[ \t]/.test(r.before)?``:` `;return`\\
+`}function Dd(e,t){let n=String(e),r=n.indexOf(t),i=r,a=0,o=0;if(typeof t!=`string`)throw TypeError(`Expected substring`);for(;r!==-1;)r===i?++a>o&&(o=a):a=1,i=r+t.length,r=n.indexOf(t,i);return o}function Od(e,t){return!(t.options.fences!==!1||!e.value||e.lang||!/[^ \r\n]/.test(e.value)||/^[\t ]*(?:[\r\n]|$)|(?:^|[\r\n])[\t ]*$/.test(e.value))}function kd(e){let t=e.options.fence||"`";if(t!=="`"&&t!==`~`)throw Error("Cannot serialize code with `"+t+"` for `options.fence`, expected `` ` `` or `~`");return t}function Ad(e,t,n,r){let i=kd(n),a=e.value||``,o=i==="`"?`GraveAccent`:`Tilde`;if(Od(e,n)){let e=n.enter(`codeIndented`),t=n.indentLines(a,jd);return e(),t}let s=n.createTracker(r),c=i.repeat(Math.max(Dd(a,i)+1,3)),l=n.enter(`codeFenced`),u=s.move(c);if(e.lang){let t=n.enter(`codeFencedLang${o}`);u+=s.move(n.safe(e.lang,{before:u,after:` `,encode:["`"],...s.current()})),t()}if(e.lang&&e.meta){let t=n.enter(`codeFencedMeta${o}`);u+=s.move(` `),u+=s.move(n.safe(e.meta,{before:u,after:`
+`,encode:["`"],...s.current()})),t()}return u+=s.move(`
+`),a&&(u+=s.move(a+`
+`)),u+=s.move(c),l(),u}function jd(e,t,n){return(n?``:`    `)+e}function Md(e){let t=e.options.quote||`"`;if(t!==`"`&&t!==`'`)throw Error("Cannot serialize title with `"+t+"` for `options.quote`, expected `\"`, or `'`");return t}function Nd(e,t,n,r){let i=Md(n),a=i===`"`?`Quote`:`Apostrophe`,o=n.enter(`definition`),s=n.enter(`label`),c=n.createTracker(r),l=c.move(`[`);return l+=c.move(n.safe(n.associationId(e),{before:l,after:`]`,...c.current()})),l+=c.move(`]: `),s(),!e.url||/[\0- \u007F]/.test(e.url)?(s=n.enter(`destinationLiteral`),l+=c.move(`<`),l+=c.move(n.safe(e.url,{before:l,after:`>`,...c.current()})),l+=c.move(`>`)):(s=n.enter(`destinationRaw`),l+=c.move(n.safe(e.url,{before:l,after:e.title?` `:`
+`,...c.current()}))),s(),e.title&&(s=n.enter(`title${a}`),l+=c.move(` `+i),l+=c.move(n.safe(e.title,{before:l,after:i,...c.current()})),l+=c.move(i),s()),o(),l}function Pd(e){let t=e.options.emphasis||`*`;if(t!==`*`&&t!==`_`)throw Error("Cannot serialize emphasis with `"+t+"` for `options.emphasis`, expected `*`, or `_`");return t}function Fd(e){return`&#x`+e.toString(16).toUpperCase()+`;`}function Id(e,t,n){let r=co(e),i=co(t);return r===void 0?i===void 0?n===`_`?{inside:!0,outside:!0}:{inside:!1,outside:!1}:i===1?{inside:!0,outside:!0}:{inside:!1,outside:!0}:r===1?i===void 0?{inside:!1,outside:!1}:i===1?{inside:!0,outside:!0}:{inside:!1,outside:!1}:i===void 0?{inside:!1,outside:!1}:i===1?{inside:!0,outside:!1}:{inside:!1,outside:!1}}Ld.peek=Rd;function Ld(e,t,n,r){let i=Pd(n),a=n.enter(`emphasis`),o=n.createTracker(r),s=o.move(i),c=o.move(n.containerPhrasing(e,{after:i,before:s,...o.current()})),l=c.charCodeAt(0),u=Id(r.before.charCodeAt(r.before.length-1),l,i);u.inside&&(c=Fd(l)+c.slice(1));let d=c.charCodeAt(c.length-1),f=Id(r.after.charCodeAt(0),d,i);f.inside&&(c=c.slice(0,-1)+Fd(d));let p=o.move(i);return a(),n.attentionEncodeSurroundingInfo={after:f.outside,before:u.outside},s+c+p}function Rd(e,t,n){return n.options.emphasis||`*`}function zd(e,t){let n=!1;return Ml(e,function(e){if(`value`in e&&/\r?\n|\r/.test(e.value)||e.type===`break`)return n=!0,!1}),!!((!e.depth||e.depth<3)&&ja(e)&&(t.options.setext||n))}function Bd(e,t,n,r){let i=Math.max(Math.min(6,e.depth||1),1),a=n.createTracker(r);if(zd(e,n)){let t=n.enter(`headingSetext`),r=n.enter(`phrasing`),o=n.containerPhrasing(e,{...a.current(),before:`
+`,after:`
+`});return r(),t(),o+`
+`+(i===1?`=`:`-`).repeat(o.length-(Math.max(o.lastIndexOf(`\r`),o.lastIndexOf(`
+`))+1))}let o=`#`.repeat(i),s=n.enter(`headingAtx`),c=n.enter(`phrasing`);a.move(o+` `);let l=n.containerPhrasing(e,{before:`# `,after:`
+`,...a.current()});return/^[\t ]/.test(l)&&(l=Fd(l.charCodeAt(0))+l.slice(1)),l=l?o+` `+l:o,n.options.closeAtx&&(l+=` `+o),c(),s(),l}Vd.peek=Hd;function Vd(e){return e.value||``}function Hd(){return`<`}Ud.peek=Wd;function Ud(e,t,n,r){let i=Md(n),a=i===`"`?`Quote`:`Apostrophe`,o=n.enter(`image`),s=n.enter(`label`),c=n.createTracker(r),l=c.move(`![`);return l+=c.move(n.safe(e.alt,{before:l,after:`]`,...c.current()})),l+=c.move(`](`),s(),!e.url&&e.title||/[\0- \u007F]/.test(e.url)?(s=n.enter(`destinationLiteral`),l+=c.move(`<`),l+=c.move(n.safe(e.url,{before:l,after:`>`,...c.current()})),l+=c.move(`>`)):(s=n.enter(`destinationRaw`),l+=c.move(n.safe(e.url,{before:l,after:e.title?` `:`)`,...c.current()}))),s(),e.title&&(s=n.enter(`title${a}`),l+=c.move(` `+i),l+=c.move(n.safe(e.title,{before:l,after:i,...c.current()})),l+=c.move(i),s()),l+=c.move(`)`),o(),l}function Wd(){return`!`}Gd.peek=Kd;function Gd(e,t,n,r){let i=e.referenceType,a=n.enter(`imageReference`),o=n.enter(`label`),s=n.createTracker(r),c=s.move(`![`),l=n.safe(e.alt,{before:c,after:`]`,...s.current()});c+=s.move(l+`][`),o();let u=n.stack;n.stack=[],o=n.enter(`reference`);let d=n.safe(n.associationId(e),{before:c,after:`]`,...s.current()});return o(),n.stack=u,a(),i===`full`||!l||l!==d?c+=s.move(d+`]`):i===`shortcut`?c=c.slice(0,-1):c+=s.move(`]`),c}function Kd(){return`!`}qd.peek=Jd;function qd(e,t,n){let r=e.value||``,i="`",a=-1;for(;RegExp("(^|[^`])"+i+"([^`]|$)").test(r);)i+="`";for(/[^ \r\n]/.test(r)&&(/^[ \r\n]/.test(r)&&/[ \r\n]$/.test(r)||/^`|`$/.test(r))&&(r=` `+r+` `);++a<n.unsafe.length;){let e=n.unsafe[a],t=n.compilePattern(e),i;if(e.atBreak)for(;i=t.exec(r);){let e=i.index;r.charCodeAt(e)===10&&r.charCodeAt(e-1)===13&&e--,r=r.slice(0,e)+` `+r.slice(i.index+1)}}return i+r+i}function Jd(){return"`"}function Yd(e,t){let n=ja(e);return!(t.options.resourceLink||!e.url||e.title||!e.children||e.children.length!==1||e.children[0].type!==`text`||n!==e.url&&`mailto:`+n!==e.url||!/^[a-z][a-z+.-]+:/i.test(e.url)||/[\0- <>\u007F]/.test(e.url))}Xd.peek=Zd;function Xd(e,t,n,r){let i=Md(n),a=i===`"`?`Quote`:`Apostrophe`,o=n.createTracker(r),s,c;if(Yd(e,n)){let t=n.stack;n.stack=[],s=n.enter(`autolink`);let r=o.move(`<`);return r+=o.move(n.containerPhrasing(e,{before:r,after:`>`,...o.current()})),r+=o.move(`>`),s(),n.stack=t,r}s=n.enter(`link`),c=n.enter(`label`);let l=o.move(`[`);return l+=o.move(n.containerPhrasing(e,{before:l,after:`](`,...o.current()})),l+=o.move(`](`),c(),!e.url&&e.title||/[\0- \u007F]/.test(e.url)?(c=n.enter(`destinationLiteral`),l+=o.move(`<`),l+=o.move(n.safe(e.url,{before:l,after:`>`,...o.current()})),l+=o.move(`>`)):(c=n.enter(`destinationRaw`),l+=o.move(n.safe(e.url,{before:l,after:e.title?` `:`)`,...o.current()}))),c(),e.title&&(c=n.enter(`title${a}`),l+=o.move(` `+i),l+=o.move(n.safe(e.title,{before:l,after:i,...o.current()})),l+=o.move(i),c()),l+=o.move(`)`),s(),l}function Zd(e,t,n){return Yd(e,n)?`<`:`[`}Qd.peek=$d;function Qd(e,t,n,r){let i=e.referenceType,a=n.enter(`linkReference`),o=n.enter(`label`),s=n.createTracker(r),c=s.move(`[`),l=n.containerPhrasing(e,{before:c,after:`]`,...s.current()});c+=s.move(l+`][`),o();let u=n.stack;n.stack=[],o=n.enter(`reference`);let d=n.safe(n.associationId(e),{before:c,after:`]`,...s.current()});return o(),n.stack=u,a(),i===`full`||!l||l!==d?c+=s.move(d+`]`):i===`shortcut`?c=c.slice(0,-1):c+=s.move(`]`),c}function $d(){return`[`}function ef(e){let t=e.options.bullet||`*`;if(t!==`*`&&t!==`+`&&t!==`-`)throw Error("Cannot serialize items with `"+t+"` for `options.bullet`, expected `*`, `+`, or `-`");return t}function tf(e){let t=ef(e),n=e.options.bulletOther;if(!n)return t===`*`?`-`:`*`;if(n!==`*`&&n!==`+`&&n!==`-`)throw Error("Cannot serialize items with `"+n+"` for `options.bulletOther`, expected `*`, `+`, or `-`");if(n===t)throw Error("Expected `bullet` (`"+t+"`) and `bulletOther` (`"+n+"`) to be different");return n}function nf(e){let t=e.options.bulletOrdered||`.`;if(t!==`.`&&t!==`)`)throw Error("Cannot serialize items with `"+t+"` for `options.bulletOrdered`, expected `.` or `)`");return t}function rf(e){let t=e.options.rule||`*`;if(t!==`*`&&t!==`-`&&t!==`_`)throw Error("Cannot serialize rules with `"+t+"` for `options.rule`, expected `*`, `-`, or `_`");return t}function af(e,t,n,r){let i=n.enter(`list`),a=n.bulletCurrent,o=e.ordered?nf(n):ef(n),s=e.ordered?o===`.`?`)`:`.`:tf(n),c=t&&n.bulletLastUsed?o===n.bulletLastUsed:!1;if(!e.ordered){let t=e.children?e.children[0]:void 0;if((o===`*`||o===`-`)&&t&&(!t.children||!t.children[0])&&n.stack[n.stack.length-1]===`list`&&n.stack[n.stack.length-2]===`listItem`&&n.stack[n.stack.length-3]===`list`&&n.stack[n.stack.length-4]===`listItem`&&n.indexStack[n.indexStack.length-1]===0&&n.indexStack[n.indexStack.length-2]===0&&n.indexStack[n.indexStack.length-3]===0&&(c=!0),rf(n)===o&&t){let t=-1;for(;++t<e.children.length;){let n=e.children[t];if(n&&n.type===`listItem`&&n.children&&n.children[0]&&n.children[0].type===`thematicBreak`){c=!0;break}}}}c&&(o=s),n.bulletCurrent=o;let l=n.containerFlow(e,r);return n.bulletLastUsed=o,n.bulletCurrent=a,i(),l}function of(e){let t=e.options.listItemIndent||`one`;if(t!==`tab`&&t!==`one`&&t!==`mixed`)throw Error("Cannot serialize items with `"+t+"` for `options.listItemIndent`, expected `tab`, `one`, or `mixed`");return t}function sf(e,t,n,r){let i=of(n),a=n.bulletCurrent||ef(n);t&&t.type===`list`&&t.ordered&&(a=(typeof t.start==`number`&&t.start>-1?t.start:1)+(n.options.incrementListMarker===!1?0:t.children.indexOf(e))+a);let o=a.length+1;(i===`tab`||i===`mixed`&&(t&&t.type===`list`&&t.spread||e.spread))&&(o=Math.ceil(o/4)*4);let s=n.createTracker(r);s.move(a+` `.repeat(o-a.length)),s.shift(o);let c=n.enter(`listItem`),l=n.indentLines(n.containerFlow(e,s.current()),u);return c(),l;function u(e,t,n){return t?(n?``:` `.repeat(o))+e:(n?a:a+` `.repeat(o-a.length))+e}}function cf(e,t,n,r){let i=n.enter(`paragraph`),a=n.enter(`phrasing`),o=n.containerPhrasing(e,r);return a(),i(),o}var lf=xl([`break`,`delete`,`emphasis`,`footnote`,`footnoteReference`,`image`,`imageReference`,`inlineCode`,`inlineMath`,`link`,`linkReference`,`mdxJsxTextElement`,`mdxTextExpression`,`strong`,`text`,`textDirective`]);function uf(e,t,n,r){return(e.children.some(function(e){return lf(e)})?n.containerPhrasing:n.containerFlow).call(n,e,r)}function df(e){let t=e.options.strong||`*`;if(t!==`*`&&t!==`_`)throw Error("Cannot serialize strong with `"+t+"` for `options.strong`, expected `*`, or `_`");return t}ff.peek=pf;function ff(e,t,n,r){let i=df(n),a=n.enter(`strong`),o=n.createTracker(r),s=o.move(i+i),c=o.move(n.containerPhrasing(e,{after:i,before:s,...o.current()})),l=c.charCodeAt(0),u=Id(r.before.charCodeAt(r.before.length-1),l,i);u.inside&&(c=Fd(l)+c.slice(1));let d=c.charCodeAt(c.length-1),f=Id(r.after.charCodeAt(0),d,i);f.inside&&(c=c.slice(0,-1)+Fd(d));let p=o.move(i+i);return a(),n.attentionEncodeSurroundingInfo={after:f.outside,before:u.outside},s+c+p}function pf(e,t,n){return n.options.strong||`*`}function Z(e,t,n,r){return n.safe(e.value,r)}function mf(e){let t=e.options.ruleRepetition||3;if(t<3)throw Error("Cannot serialize rules with repetition `"+t+"` for `options.ruleRepetition`, expected `3` or more");return t}function hf(e,t,n){let r=(rf(n)+(n.options.ruleSpaces?` `:``)).repeat(mf(n));return n.options.ruleSpaces?r.slice(0,-1):r}var gf={blockquote:Sd,break:Ed,code:Ad,definition:Nd,emphasis:Ld,hardBreak:Ed,heading:Bd,html:Vd,image:Ud,imageReference:Gd,inlineCode:qd,link:Xd,linkReference:Qd,list:af,listItem:sf,paragraph:cf,root:uf,strong:ff,text:Z,thematicBreak:hf};function _f(){return{enter:{table:vf,tableData:Sf,tableHeader:Sf,tableRow:bf},exit:{codeText:Cf,table:yf,tableData:xf,tableHeader:xf,tableRow:xf}}}function vf(e){let t=e._align;this.enter({type:`table`,align:t.map(function(e){return e===`none`?null:e}),children:[]},e),this.data.inTable=!0}function yf(e){this.exit(e),this.data.inTable=void 0}function bf(e){this.enter({type:`tableRow`,children:[]},e)}function xf(e){this.exit(e)}function Sf(e){this.enter({type:`tableCell`,children:[]},e)}function Cf(e){let t=this.resume();this.data.inTable&&(t=t.replace(/\\([\\|])/g,wf));let n=this.stack[this.stack.length-1];n.type,n.value=t,this.exit(e)}function wf(e,t){return t===`|`?t:e}function Tf(e){let t=e||{},n=t.tableCellPadding,r=t.tablePipeAlign,i=t.stringLength,a=n?` `:`|`;return{unsafe:[{character:`\r`,inConstruct:`tableCell`},{character:`
+`,inConstruct:`tableCell`},{atBreak:!0,character:`|`,after:`[	 :-]`},{character:`|`,inConstruct:`tableCell`},{atBreak:!0,character:`:`,after:`-`},{atBreak:!0,character:`-`,after:`[:|-]`}],handlers:{inlineCode:f,table:o,tableCell:c,tableRow:s}};function o(e,t,n,r){return l(u(e,n,r),e.align)}function s(e,t,n,r){let i=l([d(e,n,r)]);return i.slice(0,i.indexOf(`
+`))}function c(e,t,n,r){let i=n.enter(`tableCell`),o=n.enter(`phrasing`),s=n.containerPhrasing(e,{...r,before:a,after:a});return o(),i(),s}function l(e,t){return yd(e,{align:t,alignDelimiters:r,padding:n,stringLength:i})}function u(e,t,n){let r=e.children,i=-1,a=[],o=t.enter(`table`);for(;++i<r.length;)a[i]=d(r[i],t,n);return o(),a}function d(e,t,n){let r=e.children,i=-1,a=[],o=t.enter(`tableRow`);for(;++i<r.length;)a[i]=c(r[i],e,t,n);return o(),a}function f(e,t,n){let r=gf.inlineCode(e,t,n);return n.stack.includes(`tableCell`)&&(r=r.replace(/\|/g,`\\$&`)),r}}function Ef(){return{exit:{taskListCheckValueChecked:Of,taskListCheckValueUnchecked:Of,paragraph:kf}}}function Df(){return{unsafe:[{atBreak:!0,character:`-`,after:`[:|-]`}],handlers:{listItem:Af}}}function Of(e){let t=this.stack[this.stack.length-2];t.type,t.checked=e.type===`taskListCheckValueChecked`}function kf(e){let t=this.stack[this.stack.length-2];if(t&&t.type===`listItem`&&typeof t.checked==`boolean`){let e=this.stack[this.stack.length-1];e.type;let n=e.children[0];if(n&&n.type===`text`){let r=t.children,i=-1,a;for(;++i<r.length;){let e=r[i];if(e.type===`paragraph`){a=e;break}}a===e&&(n.value=n.value.slice(1),n.value.length===0?e.children.shift():e.position&&n.position&&typeof n.position.start.offset==`number`&&(n.position.start.column++,n.position.start.offset++,e.position.start=Object.assign({},n.position.start)))}}this.exit(e)}function Af(e,t,n,r){let i=e.children[0],a=typeof e.checked==`boolean`&&i&&i.type===`paragraph`,o=`[`+(e.checked?`x`:` `)+`] `,s=n.createTracker(r);a&&s.move(o);let c=gf.listItem(e,t,n,{...r,...s.current()});return a&&(c=c.replace(/^(?:[*+-]|\d+\.)([\r\n]| {1,3})/,l)),c;function l(e){return e+o}}function jf(){return[Hu(),sd(),fd(),_f(),Ef()]}function Mf(e){return{extensions:[Uu(),cd(e),pd(),Tf(e),Df()]}}var Nf={tokenize:Kf,partial:!0},Pf={tokenize:qf,partial:!0},Ff={tokenize:Jf,partial:!0},If={tokenize:Yf,partial:!0},Lf={tokenize:Xf,partial:!0},Rf={name:`wwwAutolink`,tokenize:Wf,previous:Zf},zf={name:`protocolAutolink`,tokenize:Gf,previous:Qf},Bf={name:`emailAutolink`,tokenize:Uf,previous:$f},Vf={};function Q(){return{text:Vf}}for(var Hf=48;Hf<123;)Vf[Hf]=Bf,Hf++,Hf===58?Hf=65:Hf===91&&(Hf=97);Vf[43]=Bf,Vf[45]=Bf,Vf[46]=Bf,Vf[95]=Bf,Vf[72]=[Bf,zf],Vf[104]=[Bf,zf],Vf[87]=[Bf,Rf],Vf[119]=[Bf,Rf];function Uf(e,t,n){let r=this,i,a;return o;function o(t){return!ep(t)||!$f.call(r,r.previous)||$(r.events)?n(t):(e.enter(`literalAutolink`),e.enter(`literalAutolinkEmail`),s(t))}function s(t){return ep(t)?(e.consume(t),s):t===64?(e.consume(t),c):n(t)}function c(t){return t===46?e.check(Lf,u,l)(t):t===45||t===95||Ka(t)?(a=!0,e.consume(t),c):u(t)}function l(t){return e.consume(t),i=!0,c}function u(o){return a&&i&&Ga(r.previous)?(e.exit(`literalAutolinkEmail`),e.exit(`literalAutolink`),t(o)):n(o)}}function Wf(e,t,n){let r=this;return i;function i(t){return t!==87&&t!==119||!Zf.call(r,r.previous)||$(r.events)?n(t):(e.enter(`literalAutolink`),e.enter(`literalAutolinkWww`),e.check(Nf,e.attempt(Pf,e.attempt(Ff,a),n),n)(t))}function a(n){return e.exit(`literalAutolinkWww`),e.exit(`literalAutolink`),t(n)}}function Gf(e,t,n){let r=this,i=``,a=!1;return o;function o(t){return(t===72||t===104)&&Qf.call(r,r.previous)&&!$(r.events)?(e.enter(`literalAutolink`),e.enter(`literalAutolinkHttp`),i+=String.fromCodePoint(t),e.consume(t),s):n(t)}function s(t){if(Ga(t)&&i.length<5)return i+=String.fromCodePoint(t),e.consume(t),s;if(t===58){let n=i.toLowerCase();if(n===`http`||n===`https`)return e.consume(t),c}return n(t)}function c(t){return t===47?(e.consume(t),a?l:(a=!0,c)):n(t)}function l(t){return t===null||Ja(t)||z(t)||$a(t)||Qa(t)?n(t):e.attempt(Pf,e.attempt(Ff,u),n)(t)}function u(n){return e.exit(`literalAutolinkHttp`),e.exit(`literalAutolink`),t(n)}}function Kf(e,t,n){let r=0;return i;function i(t){return(t===87||t===119)&&r<3?(r++,e.consume(t),i):t===46&&r===3?(e.consume(t),a):n(t)}function a(e){return e===null?n(e):t(e)}}function qf(e,t,n){let r,i,a;return o;function o(t){return t===46||t===95?e.check(If,c,s)(t):t===null||z(t)||$a(t)||t!==45&&Qa(t)?c(t):(a=!0,e.consume(t),o)}function s(t){return t===95?r=!0:(i=r,r=void 0),e.consume(t),o}function c(e){return i||r||!a?n(e):t(e)}}function Jf(e,t){let n=0,r=0;return i;function i(o){return o===40?(n++,e.consume(o),i):o===41&&r<n?a(o):o===33||o===34||o===38||o===39||o===41||o===42||o===44||o===46||o===58||o===59||o===60||o===63||o===93||o===95||o===126?e.check(If,t,a)(o):o===null||z(o)||$a(o)?t(o):(e.consume(o),i)}function a(t){return t===41&&r++,e.consume(t),i}}function Yf(e,t,n){return r;function r(o){return o===33||o===34||o===39||o===41||o===42||o===44||o===46||o===58||o===59||o===63||o===95||o===126?(e.consume(o),r):o===38?(e.consume(o),a):o===93?(e.consume(o),i):o===60||o===null||z(o)||$a(o)?t(o):n(o)}function i(e){return e===null||e===40||e===91||z(e)||$a(e)?t(e):r(e)}function a(e){return Ga(e)?o(e):n(e)}function o(t){return t===59?(e.consume(t),r):Ga(t)?(e.consume(t),o):n(t)}}function Xf(e,t,n){return r;function r(t){return e.consume(t),i}function i(e){return Ka(e)?n(e):t(e)}}function Zf(e){return e===null||e===40||e===42||e===95||e===91||e===93||e===126||z(e)}function Qf(e){return!Ga(e)}function $f(e){return!(e===47||ep(e))}function ep(e){return e===43||e===45||e===46||e===95||Ka(e)}function $(e){let t=e.length,n=!1;for(;t--;){let r=e[t][1];if((r.type===`labelLink`||r.type===`labelImage`)&&!r._balanced){n=!0;break}if(r._gfmAutolinkLiteralWalkedInto){n=!1;break}}return e.length>0&&!n&&(e[e.length-1][1]._gfmAutolinkLiteralWalkedInto=!0),n}var tp={tokenize:lp,partial:!0};function np(){return{document:{91:{name:`gfmFootnoteDefinition`,tokenize:op,continuation:{tokenize:sp},exit:cp}},text:{91:{name:`gfmFootnoteCall`,tokenize:ap},93:{name:`gfmPotentialFootnoteCall`,add:`after`,tokenize:rp,resolveTo:ip}}}}function rp(e,t,n){let r=this,i=r.events.length,a=r.parser.gfmFootnotes||(r.parser.gfmFootnotes=[]),o;for(;i--;){let e=r.events[i][1];if(e.type===`labelImage`){o=e;break}if(e.type===`gfmFootnoteCall`||e.type===`labelLink`||e.type===`label`||e.type===`image`||e.type===`link`)break}return s;function s(i){if(!o||!o._balanced)return n(i);let s=Wa(r.sliceSerialize({start:o.end,end:r.now()}));return s.codePointAt(0)!==94||!a.includes(s.slice(1))?n(i):(e.enter(`gfmFootnoteCallLabelMarker`),e.consume(i),e.exit(`gfmFootnoteCallLabelMarker`),t(i))}}function ip(e,t){let n=e.length;for(;n--;)if(e[n][1].type===`labelImage`&&e[n][0]===`enter`){e[n][1];break}e[n+1][1].type=`data`,e[n+3][1].type=`gfmFootnoteCallLabelMarker`;let r={type:`gfmFootnoteCall`,start:Object.assign({},e[n+3][1].start),end:Object.assign({},e[e.length-1][1].end)},i={type:`gfmFootnoteCallMarker`,start:Object.assign({},e[n+3][1].end),end:Object.assign({},e[n+3][1].end)};i.end.column++,i.end.offset++,i.end._bufferIndex++;let a={type:`gfmFootnoteCallString`,start:Object.assign({},i.end),end:Object.assign({},e[e.length-1][1].start)},o={type:`chunkString`,contentType:`string`,start:Object.assign({},a.start),end:Object.assign({},a.end)},s=[e[n+1],e[n+2],[`enter`,r,t],e[n+3],e[n+4],[`enter`,i,t],[`exit`,i,t],[`enter`,a,t],[`enter`,o,t],[`exit`,o,t],[`exit`,a,t],e[e.length-2],e[e.length-1],[`exit`,r,t]];return e.splice(n,e.length-n+1,...s),e}function ap(e,t,n){let r=this,i=r.parser.gfmFootnotes||(r.parser.gfmFootnotes=[]),a=0,o;return s;function s(t){return e.enter(`gfmFootnoteCall`),e.enter(`gfmFootnoteCallLabelMarker`),e.consume(t),e.exit(`gfmFootnoteCallLabelMarker`),c}function c(t){return t===94?(e.enter(`gfmFootnoteCallMarker`),e.consume(t),e.exit(`gfmFootnoteCallMarker`),e.enter(`gfmFootnoteCallString`),e.enter(`chunkString`).contentType=`string`,l):n(t)}function l(s){if(a>999||s===93&&!o||s===null||s===91||z(s))return n(s);if(s===93){e.exit(`chunkString`);let a=e.exit(`gfmFootnoteCallString`);return i.includes(Wa(r.sliceSerialize(a)))?(e.enter(`gfmFootnoteCallLabelMarker`),e.consume(s),e.exit(`gfmFootnoteCallLabelMarker`),e.exit(`gfmFootnoteCall`),t):n(s)}return z(s)||(o=!0),a++,e.consume(s),s===92?u:l}function u(t){return t===91||t===92||t===93?(e.consume(t),a++,l):l(t)}}function op(e,t,n){let r=this,i=r.parser.gfmFootnotes||(r.parser.gfmFootnotes=[]),a,o=0,s;return c;function c(t){return e.enter(`gfmFootnoteDefinition`)._container=!0,e.enter(`gfmFootnoteDefinitionLabel`),e.enter(`gfmFootnoteDefinitionLabelMarker`),e.consume(t),e.exit(`gfmFootnoteDefinitionLabelMarker`),l}function l(t){return t===94?(e.enter(`gfmFootnoteDefinitionMarker`),e.consume(t),e.exit(`gfmFootnoteDefinitionMarker`),e.enter(`gfmFootnoteDefinitionLabelString`),e.enter(`chunkString`).contentType=`string`,u):n(t)}function u(t){if(o>999||t===93&&!s||t===null||t===91||z(t))return n(t);if(t===93){e.exit(`chunkString`);let n=e.exit(`gfmFootnoteDefinitionLabelString`);return a=Wa(r.sliceSerialize(n)),e.enter(`gfmFootnoteDefinitionLabelMarker`),e.consume(t),e.exit(`gfmFootnoteDefinitionLabelMarker`),e.exit(`gfmFootnoteDefinitionLabel`),f}return z(t)||(s=!0),o++,e.consume(t),t===92?d:u}function d(t){return t===91||t===92||t===93?(e.consume(t),o++,u):u(t)}function f(t){return t===58?(e.enter(`definitionMarker`),e.consume(t),e.exit(`definitionMarker`),i.includes(a)||i.push(a),V(e,p,`gfmFootnoteDefinitionWhitespace`)):n(t)}function p(e){return t(e)}}function sp(e,t,n){return e.check(_o,t,e.attempt(tp,t,n))}function cp(e){e.exit(`gfmFootnoteDefinition`)}function lp(e,t,n){let r=this;return V(e,i,`gfmFootnoteDefinitionIndent`,5);function i(e){let i=r.events[r.events.length-1];return i&&i[1].type===`gfmFootnoteDefinitionIndent`&&i[2].sliceSerialize(i[1],!0).length===4?t(e):n(e)}}function up(e){let t=(e||{}).singleTilde,n={name:`strikethrough`,tokenize:i,resolveAll:r};return t??=!0,{text:{126:n},insideSpan:{null:[n]},attentionMarkers:{null:[126]}};function r(e,t){let n=-1;for(;++n<e.length;)if(e[n][0]===`enter`&&e[n][1].type===`strikethroughSequenceTemporary`&&e[n][1]._close){let r=n;for(;r--;)if(e[r][0]===`exit`&&e[r][1].type===`strikethroughSequenceTemporary`&&e[r][1]._open&&e[n][1].end.offset-e[n][1].start.offset===e[r][1].end.offset-e[r][1].start.offset){e[n][1].type=`strikethroughSequence`,e[r][1].type=`strikethroughSequence`;let i={type:`strikethrough`,start:Object.assign({},e[r][1].start),end:Object.assign({},e[n][1].end)},a={type:`strikethroughText`,start:Object.assign({},e[r][1].end),end:Object.assign({},e[n][1].start)},o=[[`enter`,i,t],[`enter`,e[r][1],t],[`exit`,e[r][1],t],[`enter`,a,t]],s=t.parser.constructs.insideSpan.null;s&&La(o,o.length,0,lo(s,e.slice(r+1,n),t)),La(o,o.length,0,[[`exit`,a,t],[`enter`,e[n][1],t],[`exit`,e[n][1],t],[`exit`,i,t]]),La(e,r-1,n-r+3,o),n=r+o.length-2;break}}for(n=-1;++n<e.length;)e[n][1].type===`strikethroughSequenceTemporary`&&(e[n][1].type=`data`);return e}function i(e,n,r){let i=this.previous,a=this.events,o=0;return s;function s(t){return i===126&&a[a.length-1][1].type!==`characterEscape`?r(t):(e.enter(`strikethroughSequenceTemporary`),c(t))}function c(a){let s=co(i);if(a===126)return o>1?r(a):(e.consume(a),o++,c);if(o<2&&!t)return r(a);let l=e.exit(`strikethroughSequenceTemporary`),u=co(a);return l._open=!u||u===2&&!!s,l._close=!s||s===2&&!!u,n(a)}}}var dp=class{constructor(){this.map=[],this.index=new Map}add(e,t,n){fp(this,e,t,n)}consume(e){if(this.map.sort(function(e,t){return e[0]-t[0]}),this.map.length===0)return;let t=this.map.length,n=[];for(;t>0;)--t,n.push(e.slice(this.map[t][0]+this.map[t][1]),this.map[t][2]),e.length=this.map[t][0];n.push(e.slice()),e.length=0;let r=n.pop();for(;r;){for(let t of r)e.push(t);r=n.pop()}this.map.length=0,this.index.clear()}};function fp(e,t,n,r){if(n===0&&r.length===0)return;let i=e.index.get(t);if(i){i[1]+=n,i[2].push(...r);return}let a=[t,n,r];e.map.push(a),e.index.set(t,a)}function pp(e,t){let n=!1,r=[];for(;t<e.length;){let i=e[t];if(n){if(i[0]===`enter`)i[1].type===`tableContent`&&r.push(e[t+1][1].type===`tableDelimiterMarker`?`left`:`none`);else if(i[1].type===`tableContent`){if(e[t-1][1].type===`tableDelimiterMarker`){let e=r.length-1;r[e]=r[e]===`left`?`center`:`right`}}else if(i[1].type===`tableDelimiterRow`)break}else i[0]===`enter`&&i[1].type===`tableDelimiterRow`&&(n=!0);t+=1}return r}function mp(){return{flow:{null:{name:`table`,tokenize:hp,resolveAll:gp}}}}function hp(e,t,n){let r=this,i=0,a=0,o;return s;function s(e){let t=r.events.length-1;for(;t>-1;){let{type:e}=r.events[t][1];if(e===`lineEnding`||e===`linePrefix`)t--;else break}let i=t>-1?r.events[t][1].type:null,a=i===`tableHead`||i===`tableRow`?S:c;return a===S&&r.parser.lazy[r.now().line]?n(e):a(e)}function c(t){return e.enter(`tableHead`),e.enter(`tableRow`),l(t)}function l(e){return e===124?u(e):(o=!0,a+=1,u(e))}function u(t){return t===null?n(t):R(t)?a>1?(a=0,r.interrupt=!0,e.exit(`tableRow`),e.enter(`lineEnding`),e.consume(t),e.exit(`lineEnding`),p):n(t):B(t)?V(e,u,`whitespace`)(t):(a+=1,o&&(o=!1,i+=1),t===124?(e.enter(`tableCellDivider`),e.consume(t),e.exit(`tableCellDivider`),o=!0,u):(e.enter(`data`),d(t)))}function d(t){return t===null||t===124||z(t)?(e.exit(`data`),u(t)):(e.consume(t),t===92?f:d)}function f(t){return t===92||t===124?(e.consume(t),d):d(t)}function p(t){return r.interrupt=!1,r.parser.lazy[r.now().line]?n(t):(e.enter(`tableDelimiterRow`),o=!1,B(t)?V(e,m,`linePrefix`,r.parser.constructs.disable.null.includes(`codeIndented`)?void 0:4)(t):m(t))}function m(t){return t===45||t===58?g(t):t===124?(o=!0,e.enter(`tableCellDivider`),e.consume(t),e.exit(`tableCellDivider`),h):x(t)}function h(t){return B(t)?V(e,g,`whitespace`)(t):g(t)}function g(t){return t===58?(a+=1,o=!0,e.enter(`tableDelimiterMarker`),e.consume(t),e.exit(`tableDelimiterMarker`),_):t===45?(a+=1,_(t)):t===null||R(t)?b(t):x(t)}function _(t){return t===45?(e.enter(`tableDelimiterFiller`),v(t)):x(t)}function v(t){return t===45?(e.consume(t),v):t===58?(o=!0,e.exit(`tableDelimiterFiller`),e.enter(`tableDelimiterMarker`),e.consume(t),e.exit(`tableDelimiterMarker`),y):(e.exit(`tableDelimiterFiller`),y(t))}function y(t){return B(t)?V(e,b,`whitespace`)(t):b(t)}function b(n){return n===124?m(n):n===null||R(n)?!o||i!==a?x(n):(e.exit(`tableDelimiterRow`),e.exit(`tableHead`),t(n)):x(n)}function x(e){return n(e)}function S(t){return e.enter(`tableRow`),ee(t)}function ee(n){return n===124?(e.enter(`tableCellDivider`),e.consume(n),e.exit(`tableCellDivider`),ee):n===null||R(n)?(e.exit(`tableRow`),t(n)):B(n)?V(e,ee,`whitespace`)(n):(e.enter(`data`),te(n))}function te(t){return t===null||t===124||z(t)?(e.exit(`data`),ee(t)):(e.consume(t),t===92?C:te)}function C(t){return t===92||t===124?(e.consume(t),te):te(t)}}function gp(e,t){let n=-1,r=!0,i=0,a=[0,0,0,0],o=[0,0,0,0],s=!1,c=0,l,u,d,f=new dp;for(;++n<e.length;){let p=e[n],m=p[1];p[0]===`enter`?m.type===`tableHead`?(s=!1,c!==0&&(vp(f,t,c,l,u),u=void 0,c=0),l={type:`table`,start:Object.assign({},m.start),end:Object.assign({},m.end)},f.add(n,0,[[`enter`,l,t]])):m.type===`tableRow`||m.type===`tableDelimiterRow`?(r=!0,d=void 0,a=[0,0,0,0],o=[0,n+1,0,0],s&&(s=!1,u={type:`tableBody`,start:Object.assign({},m.start),end:Object.assign({},m.end)},f.add(n,0,[[`enter`,u,t]])),i=m.type===`tableDelimiterRow`?2:u?3:1):i&&(m.type===`data`||m.type===`tableDelimiterMarker`||m.type===`tableDelimiterFiller`)?(r=!1,o[2]===0&&(a[1]!==0&&(o[0]=o[1],d=_p(f,t,a,i,void 0,d),a=[0,0,0,0]),o[2]=n)):m.type===`tableCellDivider`&&(r?r=!1:(a[1]!==0&&(o[0]=o[1],d=_p(f,t,a,i,void 0,d)),a=o,o=[a[1],n,0,0])):m.type===`tableHead`?(s=!0,c=n):m.type===`tableRow`||m.type===`tableDelimiterRow`?(c=n,a[1]===0?o[1]!==0&&(d=_p(f,t,o,i,n,d)):(o[0]=o[1],d=_p(f,t,a,i,n,d)),i=0):i&&(m.type===`data`||m.type===`tableDelimiterMarker`||m.type===`tableDelimiterFiller`)&&(o[3]=n)}for(c!==0&&vp(f,t,c,l,u),f.consume(t.events),n=-1;++n<t.events.length;){let e=t.events[n];e[0]===`enter`&&e[1].type===`table`&&(e[1]._align=pp(t.events,n))}return e}function _p(e,t,n,r,i,a){let o=r===1?`tableHeader`:r===2?`tableDelimiter`:`tableData`;n[0]!==0&&(a.end=Object.assign({},yp(t.events,n[0])),e.add(n[0],0,[[`exit`,a,t]]));let s=yp(t.events,n[1]);if(a={type:o,start:Object.assign({},s),end:Object.assign({},s)},e.add(n[1],0,[[`enter`,a,t]]),n[2]!==0){let i=yp(t.events,n[2]),a=yp(t.events,n[3]),o={type:`tableContent`,start:Object.assign({},i),end:Object.assign({},a)};if(e.add(n[2],0,[[`enter`,o,t]]),r!==2){let r=t.events[n[2]],i=t.events[n[3]];if(r[1].end=Object.assign({},i[1].end),r[1].type=`chunkText`,r[1].contentType=`text`,n[3]>n[2]+1){let t=n[2]+1,r=n[3]-n[2]-1;e.add(t,r,[])}}e.add(n[3]+1,0,[[`exit`,o,t]])}return i!==void 0&&(a.end=Object.assign({},yp(t.events,i)),e.add(i,0,[[`exit`,a,t]]),a=void 0),a}function vp(e,t,n,r,i){let a=[],o=yp(t.events,n);i&&(i.end=Object.assign({},o),a.push([`exit`,i,t])),r.end=Object.assign({},o),a.push([`exit`,r,t]),e.add(n+1,0,a)}function yp(e,t){let n=e[t],r=n[0]===`enter`?`start`:`end`;return n[1][r]}var bp={name:`tasklistCheck`,tokenize:Sp};function xp(){return{text:{91:bp}}}function Sp(e,t,n){let r=this;return i;function i(t){return r.previous!==null||!r._gfmTasklistFirstContentOfListItem?n(t):(e.enter(`taskListCheck`),e.enter(`taskListCheckMarker`),e.consume(t),e.exit(`taskListCheckMarker`),a)}function a(t){return z(t)?(e.enter(`taskListCheckValueUnchecked`),e.consume(t),e.exit(`taskListCheckValueUnchecked`),o):t===88||t===120?(e.enter(`taskListCheckValueChecked`),e.consume(t),e.exit(`taskListCheckValueChecked`),o):n(t)}function o(t){return t===93?(e.enter(`taskListCheckMarker`),e.consume(t),e.exit(`taskListCheckMarker`),e.exit(`taskListCheck`),s):n(t)}function s(r){return R(r)?t(r):B(r)?e.check({tokenize:Cp},t,n)(r):n(r)}}function Cp(e,t,n){return V(e,r,`whitespace`);function r(e){return e===null?n(e):t(e)}}function wp(e){return Ba([Q(),np(),up(e),mp(),xp()])}var Tp={};function Ep(e){let t=this,n=e||Tp,r=t.data(),i=r.micromarkExtensions||=[],a=r.fromMarkdownExtensions||=[],o=r.toMarkdownExtensions||=[];i.push(wp(n)),a.push(jf()),o.push(Mf(n))}var Dp=class extends S.Component{state={hasError:!1};static getDerivedStateFromError(){return{hasError:!0}}render(){return this.state.hasError?(0,M.jsx)(`p`,{role:`alert`,children:`This document couldn't be displayed.`}):this.props.children}};function Op({content:e}){return(0,M.jsx)(Dp,{children:(0,M.jsx)(`div`,{className:`docs-markdown`,children:(0,M.jsx)(ku,{remarkPlugins:[Ep],children:e})})})}function kp(){let{id:e}=Ct(),t=$r.find(t=>t.id===e);return t===void 0?(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{children:`This post couldn't be found.`}),(0,M.jsx)(Mn,{to:`/blog`,children:`Back to blog`})]}):(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{className:`docs-entry-meta`,children:t.date}),(0,M.jsx)(Op,{content:t.content})]})}function Ap(){let{id:e}=Ct(),t=Qr.find(t=>t.id===e);return t===void 0?(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`p`,{children:`This document couldn't be found.`}),(0,M.jsx)(Mn,{to:`/docs`,children:`Back to documentation`})]}):(0,M.jsx)(Op,{content:t.content})}var jp={spec:`Specifications`,product:`Product`,architecture:`Architecture`},Mp={shipped:`Shipped`,"in-progress":`In Progress`,planned:`Planned`};function Np({status:e}){return(0,M.jsx)(`span`,{className:`docs-badge docs-badge-${e}`,children:Mp[e]})}function Pp(){return(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`h1`,{children:`Documentation`}),(0,M.jsx)(`p`,{children:`Every specification and reference document behind this product, shipped and planned.`}),[`spec`,`product`,`architecture`].map(e=>{let t=Qr.filter(t=>t.category===e);return t.length===0?null:(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`h2`,{className:`docs-category-heading`,children:jp[e]}),(0,M.jsx)(`ul`,{className:`docs-entry-list`,children:t.map(e=>(0,M.jsxs)(`li`,{children:[(0,M.jsx)(Mn,{to:`/docs/${e.id}`,children:e.title}),e.status!==void 0&&(0,M.jsx)(`div`,{className:`docs-entry-meta`,children:(0,M.jsx)(Np,{status:e.status})})]},e.id))})]},e)})]})}function Fp({children:e}){return(0,M.jsxs)(`div`,{className:`docs-theme`,children:[(0,M.jsxs)(`nav`,{className:`docs-nav`,"aria-label":`Documentation navigation`,children:[(0,M.jsx)(Mn,{to:`/docs`,children:`Documentation`}),(0,M.jsx)(Mn,{to:`/blog`,children:`Blog`}),(0,M.jsx)(Mn,{to:`/`,className:`docs-nav-back`,children:`Back to practice app`})]}),(0,M.jsx)(`main`,{className:`docs-main`,children:e}),(0,M.jsx)(Gn,{})]})}function Ip({mastery:e}){let t=e?.percentage??0,n=Math.round(t);return(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsxs)(`p`,{className:`mastery-text`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`⭐`}),` Mental addition mastery: `,(0,M.jsxs)(`strong`,{children:[n,`%`]})]}),(0,M.jsx)(`span`,{className:`progress-track`,"aria-hidden":`true`,children:(0,M.jsx)(`span`,{className:`progress-fill`,style:{width:`${n}%`}})})]})}var Lp=`learncoreskills.profiles`;function Rp(e){let t=e.getItem(Lp);return t?JSON.parse(t):{children:[],activeChildId:null}}function zp(e,t){e.setItem(Lp,JSON.stringify(t))}function Bp(e,t){if(t.trim().length===0)throw Error(`alias is required`);let n=Rp(e),r={id:crypto.randomUUID(),alias:t,createdAt:Date.now(),currentGrade:null};return zp(e,{children:[...n.children,r],activeChildId:n.activeChildId??r.id}),r}function Vp(e,t){let n=Rp(e),r=n.children.findIndex(e=>e.id===t.id);zp(e,{children:r===-1?[...n.children,t]:n.children.map((e,n)=>n===r?t:e),activeChildId:n.activeChildId??t.id})}function Hp(e){return Rp(e).children}function Up(e){return Rp(e).activeChildId}function Wp(e,t){let n=Rp(e);if(!n.children.some(e=>e.id===t))throw Error(`no such child profile: ${t}`);zp(e,{...n,activeChildId:t})}function Gp(e,t,n){let r=Rp(e),i=r.children.findIndex(e=>e.id===t);if(i===-1)throw Error(`no such child profile: ${t}`);let a=r.children.map((e,t)=>t===i?{...e,currentGrade:n}:e);zp(e,{...r,children:a})}function Kp(e,t){return`learncoreskills.child.${e}.${t}`}function qp(){let[e,t]=(0,S.useState)(()=>Hp(window.localStorage)),[n,r]=(0,S.useState)(()=>Up(window.localStorage));function i(){t(Hp(window.localStorage)),r(Up(window.localStorage))}function a(e){Bp(window.localStorage,e),i()}function o(e){Wp(window.localStorage,e),r(Up(window.localStorage))}return{children:e,activeChildId:n,createProfile:a,switchProfile:o,refresh:i}}var Jp={id:`math.addition.mental`,nameKey:`competency.math.addition.mental.name`,descriptionKey:`competency.math.addition.mental.description`,subjectId:`mathematics`,level:1,tierCount:5,prerequisiteIds:[]},Yp=[Jp],Xp=[{areaKey:`number-sense`,nameKey:`curriculum.area.number-sense`,label:`Number sense`},{areaKey:`place-value`,nameKey:`curriculum.area.place-value`,label:`Place value`},{areaKey:`comparing-ordering`,nameKey:`curriculum.area.comparing-ordering`,label:`Comparing & ordering`},{areaKey:`addition`,nameKey:`curriculum.area.addition`,label:`Addition`},{areaKey:`subtraction`,nameKey:`curriculum.area.subtraction`,label:`Subtraction`},{areaKey:`multiplication`,nameKey:`curriculum.area.multiplication`,label:`Multiplication`},{areaKey:`division`,nameKey:`curriculum.area.division`,label:`Division`},{areaKey:`mental-mathematics`,nameKey:`curriculum.area.mental-mathematics`,label:`Mental mathematics`},{areaKey:`fractions`,nameKey:`curriculum.area.fractions`,label:`Fractions`},{areaKey:`decimals`,nameKey:`curriculum.area.decimals`,label:`Decimals`},{areaKey:`percentages`,nameKey:`curriculum.area.percentages`,label:`Percentages`},{areaKey:`measurement`,nameKey:`curriculum.area.measurement`,label:`Measurement`},{areaKey:`money`,nameKey:`curriculum.area.money`,label:`Money`},{areaKey:`time`,nameKey:`curriculum.area.time`,label:`Time`},{areaKey:`geometry`,nameKey:`curriculum.area.geometry`,label:`Geometry`},{areaKey:`data-graphs`,nameKey:`curriculum.area.data-graphs`,label:`Data and graphs`},{areaKey:`mathematical-reasoning`,nameKey:`curriculum.area.mathematical-reasoning`,label:`Mathematical reasoning`},{areaKey:`problem-solving`,nameKey:`curriculum.area.problem-solving`,label:`Problem solving`}];function Zp(e){let[t,n]=e.id.split(`.`);if(t===`math`)return Xp.some(e=>e.areaKey===n)?n:void 0}function Qp(e){return e===null?null:Hp(window.localStorage).find(t=>t.id===e)?.currentGrade??null}function $p(e){let[t,n]=(0,S.useState)(()=>Qp(e));(0,S.useEffect)(()=>{n(Qp(e))},[e]);function r(t){e!==null&&(Gp(window.localStorage,e,t),n(t))}return{currentGrade:t,setGrade:r}}var em=5,tm=90;function nm(e,t,n){let r=e.filter(e=>e.competencyId===t&&e.tier===n).sort((e,t)=>e.timestamp-t.timestamp).slice(-10),i=r.length;if(i<em)return{competencyId:t,tier:n,percentage:`not-started`,attemptsConsidered:i,mastered:!1};let a=r.filter(e=>e.correct).length/i*100;return{competencyId:t,tier:n,percentage:a,attemptsConsidered:i,mastered:a>=tm}}function rm(e,t){let n=Array.from({length:t.tierCount},(n,r)=>nm(e,t.id,r+1)),r=n.reduce((e,t)=>e+(t.percentage===`not-started`?0:t.percentage),0);return{competencyId:t.id,percentage:r/n.length,tiers:n}}var im=`mastery-signals`;function am(e){let t=window.localStorage.getItem(Kp(e,im));return t?JSON.parse(t):[]}function om(e,t){let n=[...am(e),t];window.localStorage.setItem(Kp(e,im),JSON.stringify(n))}function sm(e,t){window.localStorage.setItem(Kp(e,im),JSON.stringify(t))}function cm(e,t=0){return(0,S.useMemo)(()=>{if(e===null)return null;let t=am(e);return Yp.map(e=>rm(t,e))},[e,t])}function lm(e,t,n){return Xp.map(r=>{let i=e.filter(e=>Zp(e)===r.areaKey&&e.level===n);if(i.length===0)return{areaKey:r.areaKey,nameKey:r.nameKey,label:r.label,status:`not-applicable-at-grade`,currentPercentage:null,targetPercentage:100};let a=i.map(e=>rm(t,e).percentage),o=a.reduce((e,t)=>e+t,0)/a.length;return{areaKey:r.areaKey,nameKey:r.nameKey,label:r.label,status:`tracked`,currentPercentage:o,targetPercentage:100}})}var um=[1,2,3,4,5];function dm({currentGrade:e,onSelect:t}){return(0,M.jsxs)(`div`,{className:`card grade-selector`,"aria-label":`Current grade`,children:[(0,M.jsx)(`p`,{children:e===null?`Set your child's current grade to see their progression chart:`:`Current grade:`}),(0,M.jsx)(`div`,{className:`grade-selector-options`,role:`radiogroup`,"aria-label":`Grade`,children:um.map(n=>(0,M.jsx)(`button`,{type:`button`,role:`radio`,className:`grade-selector-option`,"aria-checked":e===n,"aria-pressed":e===n,onClick:()=>t(n),children:`G${n}`},n))})]})}var fm=460,pm=fm/2,mm=130,hm=162;function gm(e,t){return{x:pm+t*Math.cos(e),y:pm+t*Math.sin(e)}}function _m(e,t){return-Math.PI/2+e/t*2*Math.PI}function vm(e){let t=Math.cos(e);return t>.15?`start`:t<-.15?`end`:`middle`}function ym(e){return e.state===`not-applicable-at-grade`?`${e.label}: not yet applicable at this grade`:e.state===`not-tracked-yet`?`${e.label}: not tracked yet`:`${e.label}: ${Math.round(e.current??0)}% (target ${e.target??100}%)`}function bm({axes:e}){if(e.length<3)return(0,M.jsx)(`ul`,{className:`radar-chart-fallback-list`,"aria-label":`Progress by category`,children:e.map(e=>(0,M.jsx)(`li`,{children:ym(e)},e.key))});let t=e.map((e,t)=>({axis:e,index:t})).filter(({axis:e})=>e.state===`tracked`),n=t.map(({axis:t,index:n})=>gm(_m(n,e.length),Math.max(0,Math.min(100,t.current??0))/100*mm)),r=t.map(({axis:t,index:n})=>gm(_m(n,e.length),Math.max(0,Math.min(100,t.target??100))/100*mm)),i=e=>e.map(e=>`${e.x},${e.y}`).join(` `);return(0,M.jsxs)(`div`,{className:`radar-chart`,children:[(0,M.jsxs)(`svg`,{className:`radar-chart-svg`,viewBox:`-110 0 680 ${fm}`,width:fm,height:fm,role:`img`,"aria-label":`Progress by category`,children:[e.map((t,n)=>{let r=_m(n,e.length),i=gm(r,mm),a=gm(r,hm),o=t.state!==`tracked`;return(0,M.jsxs)(`g`,{children:[(0,M.jsx)(`line`,{x1:pm,y1:pm,x2:i.x,y2:i.y,className:o?`radar-chart-spoke-muted`:`radar-chart-spoke`,strokeWidth:1}),(0,M.jsx)(`text`,{x:a.x,y:a.y,fontSize:11,textAnchor:vm(r),className:o?`radar-chart-label-muted`:`radar-chart-label`,children:t.label})]},t.key)}),r.length>=3&&(0,M.jsx)(`polygon`,{points:i(r),className:`radar-chart-target-shape`,fill:`none`,strokeWidth:1.5}),n.length>=3&&(0,M.jsx)(`polygon`,{points:i(n),className:`radar-chart-current-shape`,strokeWidth:2}),n.map((e,n)=>(0,M.jsx)(`circle`,{cx:e.x,cy:e.y,r:3,className:`radar-chart-current-point`},`current-${t[n].axis.key}`))]}),(0,M.jsx)(`ul`,{className:`radar-chart-accessible-list`,children:e.map(e=>(0,M.jsx)(`li`,{children:ym(e)},e.key))})]})}function xm({progress:e}){let t=e.map(e=>({key:e.areaKey,label:e.label,current:e.currentPercentage,target:e.status===`tracked`?e.targetPercentage:null,state:e.status}));return(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`h3`,{children:`Mathematics`}),(0,M.jsx)(bm,{axes:t})]})}var Sm=[{domainKey:`language-literacy`,nameKey:`skillsFramework.domain.language-literacy`,label:`Language`},{domainKey:`mathematics`,nameKey:`skillsFramework.domain.mathematics`,label:`Mathematics`},{domainKey:`science`,nameKey:`skillsFramework.domain.science`,label:`Science`},{domainKey:`geography`,nameKey:`skillsFramework.domain.geography`,label:`Geography`},{domainKey:`history`,nameKey:`skillsFramework.domain.history`,label:`History`},{domainKey:`civics-ethics`,nameKey:`skillsFramework.domain.civics-ethics`,label:`Civics & Ethics`},{domainKey:`money-financial-literacy`,nameKey:`skillsFramework.domain.money-financial-literacy`,label:`Money`},{domainKey:`digital-literacy`,nameKey:`skillsFramework.domain.digital-literacy`,label:`Digital Literacy`},{domainKey:`physical-skills-sport`,nameKey:`skillsFramework.domain.physical-skills-sport`,label:`Physical Skills`},{domainKey:`health-safety-first-aid`,nameKey:`skillsFramework.domain.health-safety-first-aid`,label:`Health & Safety`},{domainKey:`music`,nameKey:`skillsFramework.domain.music`,label:`Music`},{domainKey:`visual-arts`,nameKey:`skillsFramework.domain.visual-arts`,label:`Visual Arts`},{domainKey:`dance-drama-performance`,nameKey:`skillsFramework.domain.dance-drama-performance`,label:`Dance & Drama`},{domainKey:`practical-life`,nameKey:`skillsFramework.domain.practical-life`,label:`Practical Life`},{domainKey:`outdoors-nature`,nameKey:`skillsFramework.domain.outdoors-nature`,label:`Outdoors & Nature`},{domainKey:`social-emotional`,nameKey:`skillsFramework.domain.social-emotional`,label:`Social & Emotional`},{domainKey:`learning-how-to-learn`,nameKey:`skillsFramework.domain.learning-how-to-learn`,label:`Learning Skills`},{domainKey:`second-language`,nameKey:`skillsFramework.domain.second-language`,label:`2nd Language`},{domainKey:`games-logic-strategy`,nameKey:`skillsFramework.domain.games-logic-strategy`,label:`Games & Logic`},{domainKey:`general-knowledge`,nameKey:`skillsFramework.domain.general-knowledge`,label:`General Knowledge`}];function Cm(e){let t=e.filter(e=>e.status===`tracked`&&e.currentPercentage!==null),n=t.length===0?0:t.reduce((e,t)=>e+(t.currentPercentage??0),0)/t.length;return Sm.map(e=>e.domainKey===`mathematics`?{domainKey:e.domainKey,nameKey:e.nameKey,label:e.label,status:`tracked`,currentPercentage:n,targetPercentage:100}:{domainKey:e.domainKey,nameKey:e.nameKey,label:e.label,status:`not-tracked-yet`,currentPercentage:null,targetPercentage:null})}function wm({mathematicsAreaProgress:e}){let t=(0,S.useMemo)(()=>Cm(e),[e]).map(e=>({key:e.domainKey,label:e.label,current:e.currentPercentage,target:e.targetPercentage,state:e.status}));return(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`h3`,{children:`Whole-child skill map`}),(0,M.jsx)(`p`,{children:`An illustrative map of the full primary-skills framework. Only mathematics is tracked today — every other area will show real progress once the app supports it.`}),(0,M.jsx)(bm,{axes:t})]})}function Tm({childId:e}){let t=cm(e)?.find(e=>e.competencyId===Jp.id)??null,{currentGrade:n,setGrade:r}=$p(e),i=(0,S.useMemo)(()=>n===null?null:lm(Yp,am(e),n),[e,n]);return t===null||t.tiers.every(e=>e.percentage===`not-started`)?(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsx)(`h2`,{children:`Advancement Report`}),(0,M.jsx)(`p`,{children:`No progress yet — mastery will show up here once practice sessions are completed.`})]}):(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsx)(`h2`,{children:`Advancement Report`}),(0,M.jsxs)(`p`,{children:[`Mental addition mastery: `,(0,M.jsxs)(`strong`,{children:[Math.round(t.percentage),`%`]})]}),(0,M.jsx)(dm,{currentGrade:n,onSelect:r}),i!==null&&(0,M.jsxs)(M.Fragment,{children:[(0,M.jsx)(xm,{progress:i}),(0,M.jsx)(wm,{mathematicsAreaProgress:i})]})]})}var Em={P:`Pre-school baseline`,G1:`Grade 1`,G2:`Grade 2`,G3:`Grade 3`,G4:`Grade 4`,G5:`Grade 5`},Dm={"language-literacy":{P:[`Follows a two-step spoken instruction.`,`Listens to a story for 10 minutes and answers questions about what happened.`,`Speaks in full sentences a stranger can understand.`,`Says their full name, age, and their parents' names.`,`Recognises their own written name.`,`Names most letters of the alphabet and knows that print carries meaning, left to right.`,`Hears and produces rhymes; claps the syllables in a word.`,`Chooses to look at books; asks to be read to.`,`Holds a pencil with a functional grip; draws a recognisable person.`,`Writes their own first name.`,`Dictates a story to an adult to be written down.`],G1:[`Follows a three-step instruction without repetition.`,`Retells a story just heard, in order, with the main characters named.`,`Recounts something that happened to them, in the right order, so a listener follows it.`,`Asks a question when they do not understand, instead of staying silent.`,`Recites a short memorised poem or rhyme in front of the class.`,`Knows every letter–sound correspondence of the language, including the common digraphs.`,`Blends sounds to decode an unfamiliar regular word without help.`,`Reads a simple sentence aloud and understands what it says.`,`Answers literal questions about a text just read (who, what, where).`,`Handles books properly and returns them to their place.`,`Forms every lower-case and capital letter correctly, in the right direction.`,`Writes on the line, with spaces between words.`,`Spells the most frequent words of the language correctly from memory.`,`Attempts an unknown word phonetically rather than refusing to write it.`,`Starts a sentence with a capital and ends it with a full stop.`,`Uses question marks and exclamation marks correctly.`,`Writes a few connected sentences about a real event.`],G2:[`Listens to a 15-minute explanation and reports back its main point.`,`Describes an object or a process clearly enough for a listener to picture it.`,`Answers the telephone politely, takes the caller's name, and calls an adult.`,`Shows an object to the class and talks about it for a minute without reading.`,`Reads an age-appropriate text aloud fluently, respecting full stops and question marks.`,`Recognises the common irregular/high-frequency words on sight.`,`Predicts what will happen next and justifies the prediction from the text.`,`Retells a read story in their own words, keeping the sequence.`,`Chooses their own book from a library or shelf and finishes it.`,`Uses a library: finds a section, borrows a book, returns it on time.`,`Writes a full page legibly without their hand tiring out.`,`Applies the language's basic spelling patterns and their common exceptions.`,`Uses a picture dictionary or a simple dictionary to check a word.`,`Identifies nouns, verbs and adjectives in a sentence.`,`Makes subject and verb agree; keeps a piece of writing in one tense.`,`Writes a short story with a beginning, a middle and an end.`,`Writes a simple letter or message to a real person, and sends it.`,`Knows the difference between a true story and an invented one.`],G3:[`Takes a simple spoken message (who called, what about, what to do) and passes it on accurately.`,`Distinguishes a speaker's main point from a supporting detail.`,`Explains how to do something they know well, step by step, to someone who does not.`,`Adjusts register between a friend, a teacher and an unfamiliar adult.`,`Gives a 2–3 minute prepared talk from notes rather than a script.`,`Speaks loudly enough to be heard at the back of a room, facing the audience.`,`Reads silently and faster than they read aloud.`,`Reads aloud with expression, changing voice for dialogue.`,`Identifies the main idea of a paragraph and of a whole text.`,`Infers something the text implies but never states (how a character feels, and why).`,`Works out an unknown word's meaning from its context, and checks it afterwards.`,`Reads independently for 20 minutes without being asked to.`,`Reads a chapter book of 100+ pages to the end.`,`Writes fluently in the joined/cursive form used locally, at a usable speed.`,`Copies from a board or a book accurately.`,`Uses an alphabetical dictionary fluently, including guide words.`,`Knows the common prefixes and suffixes and what they do to a word's meaning.`,`Uses commas in a list, and apostrophes for possession and contraction.`,`Writes in past, present and future deliberately, and switches on purpose.`,`Joins two short sentences into one with a conjunction.`,`Writes a description that uses more than sight — sound, smell, texture.`,`Writes a set of instructions someone else can actually follow.`,`Plans a piece of writing before starting it, on paper.`,`Names the setting, characters and problem in a story.`,`Knows what a metaphor and a simile are, and finds one in a text.`],G4:[`Listens to an opposing view without interrupting, then restates it fairly before replying.`,`Takes rough notes from a spoken explanation and reconstructs it later from them.`,`States an opinion and gives at least two reasons for it.`,`Disagrees with a peer's idea without attacking the peer.`,`Uses a simple visual aid (poster, slide, object) without reading from it aloud.`,`Takes questions at the end of a talk and answers them, including "I don't know".`,`Decodes an unfamiliar long word by breaking it into parts.`,`Summarises a chapter in five sentences without copying phrases.`,`Distinguishes fact from opinion inside a single text.`,`Names the narrator and notices whether the story is told from inside or outside a character.`,`Has a favourite author or series, and can say why.`,`Reads at least one non-fiction book on a subject that interests them.`,`Keeps handwriting legible when writing fast or under time pressure.`,`Types with two hands, without hunting for every key.`,`Spells homophones correctly according to the sense of the sentence.`,`Builds word families from a root, and guesses an unknown word's meaning from its root.`,`Punctuates direct speech correctly.`,`Identifies the subject, the verb and the object of a sentence.`,`Varies sentence length deliberately for effect.`,`Writes a factual report on a topic, organised into sections, in their own words.`,`Writes an opinion piece: claim, reasons, conclusion.`,`Revises a draft after feedback — rewrites, rather than just fixing spelling.`,`Recognises common story shapes: quest, rescue, rags-to-riches, trickster.`,`Says why a character acted as they did, using evidence from the text.`],G5:[`Detects when a speaker is stating an opinion as though it were a fact.`,`Holds a short structured discussion: makes a point, hears the reply, concedes or answers it.`,`Introduces two people to each other, and introduces themselves to an adult with a handshake or local equivalent.`,`Delivers a 5-minute prepared presentation with a clear opening, middle and close.`,`Recites from memory a substantial poem or passage (20+ lines) with expression.`,`Reads an unfamiliar text aloud at first sight without stumbling.`,`Compares how two texts treat the same subject and says where they disagree.`,`Identifies an author's purpose: to inform, to persuade, to entertain, to sell.`,`Reads and follows written instructions of ten or more steps (a recipe, a model kit, a game's rules) without an adult.`,`Reads a non-fiction page and turns it into their own notes.`,`Reads for 30+ minutes by choice, regularly, including books nobody assigned.`,`Has read across at least four kinds of text: novel, non-fiction, poetry, myth/legend, comic, biography.`,`Touch-types a short text at a usable speed (roughly 20+ words per minute).`,`Writes a page of legible, well-laid-out prose: margins, paragraphs, a title.`,`Proofreads their own writing and finds most of their own spelling errors.`,`Uses a thesaurus to find a better word rather than a longer one.`,`Uses paragraphs correctly: one idea each, and a new one when the idea changes.`,`Recognises and repairs a run-on sentence and a fragment.`,`Uses pronouns unambiguously, so the reader always knows who "he", "she" or "it" is.`,`Writes a 1–2 page story with a real plot, a problem and a resolution.`,`Writes a formal letter or email (complaint, request, thank-you) with the right register.`,`Writes a poem using a deliberate form or device: rhyme, rhythm, metaphor, repetition.`,`Writes a summary of something they read, correctly attributed, without copying it.`,`Discusses a book with others: what they liked, what failed, and why.`,`Recognises when a text is trying to make them feel something, and how it does it.`]},mathematics:{P:[`Counts objects accurately to 20, one number per object.`,`Recognises quantities up to 5 at a glance, without counting.`,`Compares two groups and says which has more.`,`Recognises written digits 0–9.`,`Adds and subtracts small quantities with objects in front of them.`,`Compares objects directly: longer/shorter, heavier/lighter, holds more/less.`,`Knows the order of the day: morning, afternoon, evening, night.`,`Names the days of the week.`,`Names circle, square, triangle, rectangle.`,`Uses positional language: on, under, behind, between, next to.`],G1:[`Counts forwards and backwards to 100 from any starting number.`,`Reads and writes numbers to 100 in digits.`,`Counts in 2s, 5s and 10s.`,`Knows odd and even, and can test a number.`,`Uses ordinal numbers (first, second, tenth).`,`Understands a two-digit number as tens and units.`,`Knows all number bonds within 10 by heart.`,`Adds and subtracts within 20.`,`Understands subtraction as both "take away" and "difference between".`,`Understands multiplication as repeated addition and as an array.`,`Shares a quantity equally between 2 and between 4.`,`Adds and subtracts within 20 mentally, without fingers.`,`Recognises and finds a half and a quarter of a shape and of a small quantity.`,`Measures length in whole centimetres with a ruler, starting from zero.`,`Uses the vocabulary of measure correctly across length, mass, capacity and time.`,`Tells the time to the hour and half-hour on an analogue clock.`,`Names the months and the seasons, in order.`,`Names common 2D and 3D shapes: circle, triangle, square, rectangle, cube, sphere, cylinder, cone.`,`Recognises a shape whatever its orientation or size.`,`Describes a route using left, right, forward and turns.`,`Sorts objects by a chosen criterion and explains the rule used.`,`Reads a simple pictogram.`,`Continues a repeating pattern and describes its rule.`,`Chooses whether a one-step word problem needs addition or subtraction.`],G2:[`Counts to 1,000; reads and writes numbers to 1,000.`,`Orders any set of numbers to 1,000 and places them on a number line.`,`Understands hundreds, tens and units; partitions and recombines any three-digit number.`,`Says what each digit is worth in a three-digit number.`,`Knows all number bonds within 20 by heart.`,`Adds and subtracts two-digit numbers with regrouping, written down.`,`Knows that addition is commutative and subtraction is not.`,`Knows the 2, 5 and 10 times tables by heart, both ways.`,`Understands division as both sharing and grouping, and meets remainders.`,`Adds and subtracts a one-digit number to any two-digit number mentally.`,`Doubles and halves any number to 50 mentally.`,`Recognises thirds, quarters and fifths; knows 2/4 = 1/2.`,`Measures mass on a scale and capacity in a jug, reading the graduations.`,`Knows the metric units and their relationships: mm, cm, m, km; g, kg; ml, l.`,`Tells the time to five minutes, and to the quarter hour.`,`Knows how many days in a week, weeks in a year, days in each month.`,`Counts sides, vertices, edges and faces; sorts shapes by their properties.`,`Recognises a line of symmetry and completes a symmetrical figure.`,`Describes a position on a grid with letters and numbers (B4).`,`Collects data with a tally chart and draws a bar chart from it.`,`Finds the missing number in a simple equation (7 + ? = 12).`,`Solves a one-step word problem in any of the four operations and writes the number sentence.`],G3:[`Reads, writes and orders numbers to 10,000.`,`Extends place value to thousands; adds and subtracts 1, 10, 100, 1,000 to any number instantly.`,`Adds and subtracts three-digit numbers in columns, fluently and accurately.`,`Checks a subtraction with the inverse addition.`,`Knows the 3, 4 and 8 times tables by heart.`,`Multiplies a two-digit number by a one-digit number, written down.`,`Knows that multiplication is commutative and division is not.`,`Adds and subtracts two two-digit numbers mentally.`,`Bridges through 10 and through 100 as a deliberate strategy.`,`Understands a fraction as a number on the number line, not only as part of a cake.`,`Finds equivalent fractions and simplifies a simple fraction.`,`Adds and subtracts fractions with the same denominator.`,`Reads a decimal in a price and in a measurement.`,`Converts between adjacent metric units (cm↔m, g↔kg, ml↔l).`,`Measures and calculates the perimeter of a rectangle and of a compound shape.`,`Tells the time to the minute, analogue and digital, and converts between 12- and 24-hour clocks.`,`Calculates a duration between two times within the hour.`,`Classifies triangles (equilateral, isosceles, scalene, right-angled).`,`Classifies quadrilaterals and knows why a square is also a rectangle.`,`Identifies right angles, and angles greater and smaller than a right angle.`,`Uses the four compass directions, and quarter/half turns as 90° and 180°.`,`Reads a bar chart and a pictogram with a scale (one symbol = 5).`,`Answers comparison questions from a table of data.`,`Continues a number sequence and states its rule in words.`,`Solves a two-step word problem, doing the steps in the right order.`,`Draws a picture, bar model or diagram to represent a problem.`],G4:[`Reads, writes and orders numbers to 1,000,000.`,`Understands negative numbers on a number line, and uses them for temperature and debt.`,`Extends place value to millions.`,`Rounds any number to the nearest 10, 100 or 1,000.`,`Adds and subtracts four-digit numbers, including across zeros.`,`Knows all multiplication tables to 12×12 by heart, and the matching division facts.`,`Multiplies a three-digit number by a one-digit number.`,`Divides a three-digit number by a one-digit number with a remainder, and says what the remainder means in context.`,`Uses rounding and compensation mentally (+99 as +100−1).`,`Multiplies any table fact instantly, in under three seconds.`,`Compares and orders fractions with different denominators.`,`Converts between improper fractions and mixed numbers.`,`Finds a fraction of a quantity (3/5 of 40).`,`Understands tenths and hundredths as decimals; places decimals on a number line.`,`Adds and subtracts decimals to two places.`,`Understands percentage as "out of 100".`,`Calculates the area of a rectangle, and of a shape made of rectangles.`,`Estimates a length, a mass and a volume before measuring, and is roughly right.`,`Reads a scale with unlabelled intermediate divisions.`,`Calculates durations crossing hours and midnight; reads a timetable and plans a journey with it.`,`Uses a calendar to work out a date some weeks ahead.`,`Measures and draws an angle with a protractor, to the nearest degree.`,`Knows that angles on a straight line total 180° and around a point 360°, and uses it.`,`Knows the angles of a triangle sum to 180°.`,`Plots and reads coordinates in the first quadrant.`,`Translates and reflects a shape on a grid.`,`Draws and reads a line graph, and describes the trend it shows.`,`Finds the mode and the range of a data set.`,`Uses a symbol or a box for an unknown and solves for it.`,`Describes the relationship between two columns of a table as a rule.`,`Solves multi-step problems mixing operations and units.`,`Works systematically to find *all* the solutions to a problem, not just one.`,`Explains their method aloud so another child can follow it.`],G5:[`Knows what a prime number is and identifies the primes below 50.`,`Finds all factors of a number below 100, and common multiples of two small numbers.`,`Recognises square numbers and knows the squares to 12×12.`,`Reads and writes Roman numerals to 1,000.`,`Extends place value to the right of the decimal point: tenths, hundredths, thousandths.`,`Rounds decimals to a given number of decimal places.`,`Multiplies and divides by 10, 100 and 1,000 and explains what happens to the digits.`,`Adds and subtracts any whole numbers and decimals, fluently, in columns.`,`Multiplies a four-digit number by a two-digit number (long multiplication).`,`Divides by a two-digit number (long or short division), expressing the remainder as a whole number, a fraction or a decimal as the situation demands.`,`Knows the divisibility tests for 2, 3, 4, 5, 9 and 10.`,`Applies the order of operations correctly, including brackets.`,`Multiplies a two-digit number by a one-digit number mentally.`,`Finds 10%, 25%, 50% and 75% of a quantity mentally.`,`Estimates an answer before calculating, and notices when the calculated answer is impossible.`,`Adds and subtracts fractions with different denominators.`,`Multiplies a fraction by a whole number, and by another fraction.`,`Converts fluently between fractions, decimals and percentages for the common values.`,`Multiplies and divides decimals by whole numbers.`,`Finds any percentage of a quantity.`,`Calculates a percentage increase and a percentage decrease (a discount, a price rise).`,`Understands ratio and shares a quantity in a given ratio (share 20 in 3:1).`,`Solves simple scaling problems (if 3 items cost 12, what do 7 cost).`,`Calculates the volume of a cuboid, and knows that 1 litre = 1,000 cm³.`,`Converts between metric units across two steps (mm→m, ml→l→cl).`,`Knows roughly what an imperial/customary unit is worth in metric, when the local context uses one.`,`Has a reliable body-ruler: knows their own height, hand span, pace length, and uses them to estimate.`,`Converts between seconds, minutes, hours, days and years fluently.`,`Handles time-zone differences well enough to schedule a call to another country.`,`Draws a shape accurately from a specification, with ruler, protractor and compasses.`,`Names the parts of a circle: centre, radius, diameter, circumference; knows the diameter is twice the radius.`,`Identifies the net of a cube and of other simple solids.`,`Plots coordinates in all four quadrants, with negatives.`,`Rotates a shape about a point, and describes the rotation.`,`Uses and understands a scale on a plan or map (1 cm : 100 m).`,`Calculates the mean, and says when it is and is not a useful summary.`,`Reads a pie chart and relates its sectors to fractions and percentages.`,`Uses the language of chance (impossible, unlikely, even chance, likely, certain) and places simple events on a 0–1 scale.`,`Spots a misleading graph — a truncated axis, a missing scale, cherry-picked years.`,`Uses a letter for an unknown; substitutes a value into a simple formula.`,`Solves a one-step equation and checks the solution by substituting it back.`,`Expresses a general rule for a sequence in terms of its position.`,`Judges whether an answer is reasonable, by estimating first and by checking against the question.`,`Finds their own mistake in a wrong answer, rather than starting over blindly.`,`Solves a problem with missing or surplus information, and says which is which.`,`Tackles an unfamiliar problem with no taught method, and gets somewhere by trying, checking and adjusting.`,`Uses a calculator correctly *and* knows when not to — checks its output against a mental estimate.`]},science:{P:[`Asks "why?" and "what happens if?" about the physical world.`,`Knows living from non-living; names common animals and plants.`,`Describes materials: hard, soft, rough, smooth, heavy, light.`,`Knows day and night, sun and moon, and the weather of each season.`],G1:[`Observes carefully and describes what they see, without inventing.`,`Sorts and groups objects by an observable property.`,`Names the parts of a plant and of the human body.`,`Knows what plants and animals need to stay alive.`,`Names common materials and one sensible use for each.`,`Knows pushes and pulls make things start, stop, speed up and change direction.`,`Records the weather and notices the pattern across a season.`],G2:[`Makes a prediction before an experiment and checks it afterwards.`,`Records observations in a drawing, a table or a chart.`,`Sorts animals into major groups: mammals, birds, fish, reptiles, amphibians, insects.`,`Describes a life cycle (butterfly, frog, plant from seed).`,`Sorts materials by property and explains why an object is made of what it is made of.`,`Knows solid, liquid and gas, and gives examples of each.`,`Knows that things fall because of gravity.`,`Knows a magnet attracts some metals and not other materials; knows poles attract and repel.`,`Knows the Earth is a sphere in space, and that the Sun is a star.`,`Names the Sun, the Earth and the Moon and how they relate.`],G3:[`Understands a fair test: change one thing, keep everything else the same.`,`Uses simple equipment correctly: thermometer, magnifier, measuring cylinder, scales, stopwatch.`,`Knows how plants make their own food from light, water and air, and why that matters to everything else.`,`Knows what a habitat is and how an animal is suited to its own.`,`Builds a food chain from producer to top predator, and says what happens if one link is removed.`,`Explains melting, freezing, boiling and evaporation, with the temperatures water does them at.`,`Knows the water cycle and can draw it.`,`Knows friction slows things down, and gives everyday examples of wanting more of it and less.`,`Knows light travels in straight lines, that we see by reflected light, and how shadows are made.`,`Knows sound is a vibration, travels through air, and gets quieter with distance.`,`Explains day and night by the Earth's rotation — not by the Sun moving.`,`Knows the Earth orbits the Sun once a year, and that this makes the seasons.`,`Names the eight planets in order from the Sun.`],G4:[`Plans a simple investigation to answer a question they posed themselves.`,`Repeats a measurement instead of trusting a single reading.`,`Draws a conclusion from their results, including "the result didn't show what I expected".`,`Classifies a living thing using a branching key.`,`Knows the major organ systems and what each does: digestion, circulation, breathing, skeleton and muscles, nerves.`,`Knows the function of the heart, lungs, stomach, intestines, brain, kidneys and skin.`,`Distinguishes a reversible change (melting, dissolving) from an irreversible one (burning, cooking, rusting).`,`Separates a mixture by an appropriate method: sieving, filtering, evaporating, magnetism.`,`Knows what dissolving is and what affects how fast it happens.`,`Builds a simple electrical circuit with a cell, wires, a bulb and a switch, and fixes it when it fails.`,`Knows which materials conduct electricity and which insulate.`,`Names the main forms of energy and gives an example of each converting into another.`,`Explains the Moon's phases, and knows the Moon orbits the Earth.`,`Knows rocks and soil form and change, and what a fossil is.`,`Knows what causes an eclipse, and never to look at the Sun directly.`],G5:[`Distinguishes an observation from an inference from an opinion.`,`Identifies what could have gone wrong in an experiment and how to improve it.`,`Knows that scientific ideas change when evidence changes, and gives one example.`,`Explains reproduction and the life cycle in humans and other mammals, in age-appropriate terms.`,`Knows that offspring resemble their parents but are not identical, and why.`,`Explains, in outline, how species change over long periods and how fossils show it.`,`Knows what a microbe is, that most are harmless, and how the harmful ones spread.`,`Knows everything is made of particles too small to see, and explains solids, liquids and gases that way.`,`Recognises that some substances are dangerous and reads a hazard symbol.`,`Knows air resistance and water resistance, and how shape changes them.`,`Explains how a lever, a pulley or a gear lets a small force do a big job.`,`Knows the difference between renewable and non-renewable energy sources, with examples of each.`,`Knows electricity is dangerous, why, and the basic rules that follow from it.`,`Explains gravity holding planets and moons in orbit.`,`Knows the Earth's structure in outline: crust, mantle, core; knows what causes earthquakes and volcanoes.`,`Explains, in outline, why the climate is changing and what human activity has to do with it.`,`Knows why biodiversity matters and what makes a species go extinct.`,`Sorts waste correctly, and explains what recycling, reusing and composting each achieve.`]},geography:{P:[`Recognises their own home and street; knows their home town's name.`],G1:[`Draws a rough plan of a room or a route from above.`,`Points out their own country on a world map or globe.`,`Names land and sea on a map; knows what an island, a river and a mountain are.`],G2:[`Uses a map key/legend and a simple grid reference.`,`Knows the four cardinal directions and uses a compass to face them.`,`Names and locates the seven continents.`,`Names and locates the five oceans.`,`Knows their own full address, town, region and country.`,`Knows litter and waste harm animals and places.`],G3:[`Uses a scale bar to estimate a real distance on a map.`,`Uses the eight compass points, including the intercardinals.`,`Names the major landform types: mountain, valley, plain, plateau, desert, forest, coast, delta.`,`Locates the Equator, the two Tropics, the Arctic and Antarctic Circles, and the Prime Meridian.`,`Knows what a country, a capital and a border are.`,`Locates their own country's neighbours and names their capitals.`,`Knows where their household's water comes from and where its waste goes.`,`Knows where their electricity comes from.`],G4:[`Reads contour lines well enough to tell a hill from a valley and steep from gentle.`,`Finds a place by latitude and longitude, and explains what the Equator and the poles are.`,`Names the world's major climate zones and roughly where they are.`,`Names several of the longest rivers, highest mountains and largest deserts, and locates them.`,`Explains how a river works from source to mouth, and what it does to the land on the way.`,`Names and locates roughly 30 countries across all the continents, with their capitals.`,`Knows the difference between a city, a town and a village, and between urban and rural life.`,`Knows several major world languages and roughly where each is spoken.`,`Explains deforestation, pollution and their consequences in their own words.`,`Names practical things a household can do to use less energy and water.`],G5:[`Plans a route on a real map and follows it on the ground.`,`Uses a compass with a map to take and walk a bearing.`,`Reads a public-transport map and plans a journey with a change.`,`Knows what a satellite navigation app is actually doing, and its failure modes.`,`Explains why climate differs with latitude, altitude and distance from the sea.`,`Knows the main biomes and what lives in each: rainforest, savanna, desert, temperate forest, taiga, tundra, grassland.`,`Explains what causes a volcano, an earthquake and a tsunami, and where they cluster.`,`Understands time zones, and why it is a different time on the other side of the world.`,`Names and locates 50+ countries and their capitals, including several in every continent.`,`Recognises the flags of 20+ countries.`,`Explains why people migrate, with economic, environmental and conflict reasons.`,`Traces a familiar product from raw material to shop shelf, across countries.`,`Knows what a currency is, that exchange rates exist, and names a few major currencies.`,`Knows the rough population of their own country and of the world, to the right order of magnitude.`,`Explains the greenhouse effect simply and correctly.`,`Discusses a local environmental issue with evidence rather than slogans.`,`Understands a trade-off: that an environmental choice can cost money, time or jobs.`]},history:{P:[`Distinguishes yesterday, today and tomorrow.`],G1:[`Orders events in their own life; knows "when I was a baby" was before now.`,`Knows some things happened long before anyone alive was born.`],G2:[`Orders a handful of events on a simple timeline.`,`Knows how daily life differed for children a century ago: school, work, home, travel.`],G3:[`Knows what a decade, a century and a millennium are.`,`Places a date in the right century.`,`Knows how people lived in the Stone, Bronze and Iron Ages, and what changed between them.`,`Knows what farming did to how humans lived — the shift from following food to growing it.`,`Knows what a historical source is: an object, a picture, a letter, a building.`,`Says what an old object or photograph tells us about the people who used it.`],G4:[`Uses BC/BCE and AD/CE correctly, and counts backwards across the zero.`,`Places the major eras in order: prehistory, ancient civilisations, classical antiquity, the Middle Ages, the early modern period, the industrial age, the modern era.`,`Knows something substantial about at least three ancient civilisations (e.g. Egypt, Mesopotamia, Greece, Rome, China, the Indus Valley, Mesoamerica).`,`Knows why writing was invented and what it made possible.`,`Knows the outline of their own country's history — *local* — and its main turning points.`,`Distinguishes a primary from a secondary source.`,`Explains why two accounts of the same event can differ, without either being a lie.`],G5:[`Builds a timeline spanning several eras with dates in roughly the right places.`,`Knows roughly when the big turning points happened: farming, writing, printing, industrialisation, electricity, computing.`,`Knows the outline of the last 300 years: industrialisation, empire and its end, the two world wars, the human-rights era, the digital era.`,`Knows several individuals who changed history, in more than one field and more than one part of the world, and what each actually did.`,`Knows that slavery, empire and genocide happened, in age-appropriate terms, and that history includes what was done badly as well as well.`,`Knows how one everyday thing was invented and spread: the wheel, writing, printing, the engine, vaccination, the internet.`,`Asks who made a source, when, and why, before trusting it.`,`Explains a historical event in terms of causes and consequences, not just what happened.`,`Judges a past decision by what was known at the time, not only by what we know now.`,`Knows that history is written by people and gets revised — and that whose story gets told is itself a question.`]},"civics-ethics":{P:[`Follows the rules of a game and of a room; knows rules apply to everyone.`,`Takes turns; shares; says please and thank you.`],G1:[`Knows why rules exist and helps make class rules.`,`Includes a child who is left out.`,`Tells the truth when owning up costs them something.`],G2:[`Knows what a law is and that it differs from a rule.`,`Knows the jobs that keep a community running: doctor, nurse, teacher, firefighter, police, refuse collector, farmer, driver.`,`Knows people differ in language, religion, ability, family shape and skin colour, and that this is ordinary.`,`Knows what bullying is, and tells an adult when they see it.`,`Keeps a promise, or explains why they cannot.`,`Returns something found or borrowed.`],G3:[`Knows what taxes are, in simple terms, and what they pay for.`,`Knows children have rights: to be safe, schooled, heard, cared for, and free from harm.`,`Knows what a stereotype is and can spot a simple one.`,`Knows that a disabled person may need a different kind of access, not a different kind of respect.`,`Distinguishes an accident from something done on purpose.`,`Apologises for the harm caused, not merely to end the conversation.`],G4:[`Knows what democracy and voting are, and has voted in a real class decision.`,`Knows how their own country is governed — *local* — and who leads it.`,`Disagrees with someone's belief while treating the person decently.`,`Knows what prejudice and discrimination are, with examples.`,`Identifies a fair share and an unfair one, and argues the case.`,`Notices a conflict between what is easy and what is right, and names it.`],G5:[`Knows the difference between a democracy and a dictatorship, and why the difference matters.`,`Knows courts and police exist to apply the law, and that the law applies to those in power too.`,`Knows what the United Nations is and, roughly, what it is for.`,`Knows what a charity, a volunteer and a non-governmental organisation are.`,`Recognises when they are in a group that is excluding someone, and says so.`,`Explains why a rule they personally dislike might still be fair.`,`Argues both sides of a moral question before giving their own view.`,`Refuses to join something they believe is wrong, even when friends are doing it.`,`Knows that consent matters — over their own body, their belongings and their image.`]},"money-financial-literacy":{P:[`Knows money is exchanged for things, and that things cost different amounts.`],G1:[`Recognises the coins and notes of their own currency and knows what each is worth.`,`Makes a small amount with coins in more than one way.`,`Knows adults work to earn money.`],G2:[`Pays for something in a shop and checks the change.`,`Adds up a short bill mentally and knows whether they have enough.`,`Distinguishes a need from a want, and sorts examples correctly.`,`Saves up for something instead of spending immediately — and actually gets there.`],G3:[`Works out the change from a round amount before the till shows it.`,`Reads a price label, including price-per-unit, and says which package is better value.`,`Keeps a simple record of money in and money out.`,`Sets a savings goal with an amount and a date, and tracks progress.`,`Knows what a bank does with money left in it.`,`Knows an advertisement is trying to sell something, and recognises one.`],G4:[`Reads a receipt line by line and spots an overcharge.`,`Calculates a discount and knows what "30% off" really saves.`,`Makes a budget for an event or a trip and stays inside it.`,`Compares two ways to spend the same money and justifies the choice.`,`Has earned money by doing something of value for somebody else.`,`Knows what interest is — that savings grow and debts grow.`,`Knows that borrowing money means paying back more than was borrowed.`,`Knows what a salary, a bill and a subscription are.`,`Identifies the technique an advert is using: a celebrity, a crowd, a fear, a free gift.`,`Knows an in-game purchase costs real money that someone actually loses.`],G5:[`Handles a small amount of real money over a month without losing track of it.`,`Uses a card or a payment app under supervision, and knows it is spending real money.`,`Splits income deliberately into spending, saving and giving.`,`Waits for a better price or a better option instead of buying immediately.`,`Explains opportunity cost: that money spent here cannot be spent there.`,`Knows why prices rise over time, in simple terms.`,`Knows the difference between a debit card, a credit card and cash — and who is owed what in each case.`,`Knows what insurance is for.`,`Knows that a business must take in more than it spends, and can sketch that for a lemonade stand.`,`Knows why a family cannot buy everything it wants, without shame attached to the fact.`,`Recognises a too-good-to-be-true offer and a pressure tactic ("only 3 left!").`,`Knows never to give money, card details or personal information to a stranger online.`,`Knows what a scam is, names three common ones, and knows that being targeted is not a shameful thing to report.`]},"digital-literacy":{G1:[`Turns a device on and off, opens and closes an application.`,`Uses a mouse, a trackpad or a touchscreen accurately.`,`Tells an adult about anything online that frightens or upsets them.`,`Gives a precise sequence of instructions to a person or a floor robot.`],G2:[`Uses a keyboard: letters, capitals, space, enter, delete, punctuation.`,`Adjusts volume and screen brightness; knows what a battery level means.`,`Knows that a device can answer questions, and that its answers can be wrong.`,`Knows not to share their name, address, school or photo with strangers online.`,`Debugs a sequence that went wrong by finding the step that failed.`],G3:[`Saves a file, names it sensibly, and finds it again tomorrow.`,`Organises files into folders and moves files between them.`,`Searches with useful keywords rather than a whole sentence.`,`Knows a search result at the top is not automatically the truest.`,`Knows a password should be strong, private, and not shared with friends.`,`Knows people online can pretend to be someone they are not.`,`Builds a working program in a block-based language, using a loop.`,`Understands an algorithm as a recipe: the same steps, the same result, every time.`],G4:[`Copies, pastes, undoes and uses the common keyboard shortcuts.`,`Connects to a network, and knows the difference between online and offline.`,`Takes and edits a photo; records a video or an audio clip.`,`Checks a surprising claim against a second, independent source.`,`Says who wrote a page and whether they have a reason to mislead.`,`Puts an answer in their own words rather than pasting it.`,`Knows what a digital footprint is: that posts, photos and messages persist.`,`Knows what cyberbullying is; knows to save the evidence and tell an adult.`,`Never opens a link or an attachment from an unknown sender.`,`Uses conditionals (if/then/else) and variables in a program.`,`Breaks a big problem into smaller parts before starting.`,`Predicts what a short program will do before running it.`],G5:[`Uses a word processor to produce a properly formatted document.`,`Builds a simple spreadsheet with a formula that adds a column.`,`Makes a short presentation or video that communicates something to an audience.`,`Solves a routine problem alone before asking: restart, reconnect, check the obvious.`,`Recognises a sponsored result and an advert dressed up as an article.`,`Knows images, video and voices can be faked, including convincingly.`,`Knows an AI assistant can state a falsehood fluently and confidently, and checks anything that matters.`,`Credits a source when using someone else's words, pictures or ideas.`,`Writes a message they would be comfortable having read aloud by anyone.`,`Asks before posting a photo of somebody else.`,`Recognises a manipulative design: an infinite feed, a streak, a loot box, a countdown.`,`Notices when they have been on a screen too long, and stops themselves.`,`Builds something genuinely their own: a game, an animation, a quiz, a device.`,`Writes a few lines in a text-based language, and reads an error message instead of panicking.`,`Explains, in outline, what happens when a web page is requested.`,`Knows a computer only does what it was told, and that bugs are the programmer's doing, not the machine's.`]},"physical-skills-sport":{P:[`Runs, stops and changes direction without falling.`,`Jumps with two feet; hops on one; climbs; walks up and down stairs with alternating feet.`,`Throws and catches a large ball.`,`Is comfortable in water; puts their face in willingly.`,`Pedals a tricycle or propels a balance bike confidently.`,`Uses scissors to cut along a line; threads beads; does large buttons.`],G1:[`Runs with coordinated arms; skips; gallops; moves backwards safely.`,`Balances on one foot for 10 seconds, either foot.`,`Floats on their front and on their back, unaided.`,`Submerges fully and opens their eyes underwater.`,`Rides a two-wheeled bicycle without stabilisers, starting and stopping unaided.`,`Wears a helmet, fastened, every time, without being told.`,`Plays a simple team game and follows the rules.`,`Moves to a beat; copies a sequence of movements.`,`Ties their own shoelaces.`,`Does up buttons, zips and fastenings unaided.`],G2:[`Throws overarm with some accuracy; catches a bouncing ball with two hands.`,`Skips with a rope, continuously.`,`Swims 10 m unaided in any recognisable stroke.`,`Enters and exits a pool safely; knows the deep end from the shallow.`,`Steers around obstacles; brakes smoothly and in a controlled distance.`,`Rides one-handed long enough to signal.`,`Plays a playground game start to finish without an adult refereeing it.`,`Loses without a scene and wins without gloating.`,`Forward roll; balances in several shapes; holds a still position.`,`Climbs a frame or a rope to a safe height and descends in control.`,`Uses a ruler to draw an accurate straight line; folds paper precisely.`],G3:[`Catches a ball one-handed; kicks a moving ball with either foot.`,`Dodges, changes pace and changes direction at speed in a game.`,`Swims 25 m unaided, continuously.`,`Treads water for one minute.`,`Knows the water safety rules: never alone, never dive into unknown water, respect currents.`,`Looks behind while riding straight; signals a turn.`,`Checks their own bike before riding: brakes, tyres, chain.`,`Plays at least one team sport with an understanding of positions and tactics.`,`Passes to a teammate in a better position rather than always shooting.`,`Runs continuously for 10 minutes.`,`Performs a short gymnastic or movement sequence from memory.`,`Cuts out a complex shape; uses a stapler, a hole punch, sticky tape well.`,`Uses a knife and fork properly, including cutting their own food.`],G4:[`Strikes a ball with a bat, racket or stick with control.`,`Combines movements fluently: run-and-jump, run-and-throw, jump-and-turn.`,`Swims 50 m; swims competently in two different strokes.`,`Retrieves an object from the bottom in water above their head.`,`Floats and self-rescues fully clothed.`,`Rides on a quiet road with an adult, obeying the traffic rules.`,`Mends a puncture or fixes a dropped chain.`,`Plays at least one individual sport or discipline.`,`Referees or scores a game for younger children.`,`Runs continuously for 20 minutes, or covers 2 km.`,`Knows how to warm up and cool down, and does it unprompted.`,`Lifts and carries something heavy with their legs, not their back.`,`Threads a needle and sews a running stitch.`,`Uses a compass, a protractor and a set square accurately.`],G5:[`Learns an unfamiliar physical skill by watching it and trying it, without step-by-step coaching.`,`Swims 100 m continuously without stopping or touching the bottom.`,`Knows what to do if someone else is in trouble in water: call for help, reach or throw — never swim out.`,`Knows the dangers of open water: cold shock, currents, tides, weeds, changing depth.`,`Rides a route of several kilometres, reading traffic and making safe decisions.`,`Knows what a helmet does and why the rule is not negotiable.`,`Trains at something regularly across a season and sees the improvement.`,`Accepts a referee's decision they believe is wrong, without retaliating.`,`Encourages a weaker teammate instead of freezing them out.`,`Runs 3 km, or exercises hard for 30 minutes, without stopping.`,`Knows what exercise does to the heart, lungs and muscles.`,`Has a physical activity they choose to do for its own sake, not because they were made to.`,`Uses a craft knife, a saw or a hot glue gun safely with supervision.`,`Ties several knots and knows what each is for.`]},"health-safety-first-aid":{P:[`Washes hands after the toilet and before eating, unprompted.`,`Uses the toilet independently.`,`Brushes teeth with help.`,`Holds an adult's hand near a road; stops at the kerb.`,`Knows not to touch a hot stove, a plug socket or a sharp knife.`,`Knows which parts of their body are private.`,`Knows they may refuse a hug or a kiss from anyone.`],G1:[`Brushes teeth properly twice a day, unsupervised.`,`Covers coughs and sneezes; uses and disposes of a tissue.`,`Names foods that are everyday foods and foods that are treats.`,`Crosses a quiet road with an adult, looking both ways and listening.`,`Knows their own full name, address and a parent's phone number by heart.`,`Knows the difference between a safe secret and an unsafe one, and that adults do not ask children to keep unsafe secrets.`,`Names three trusted adults they could tell anything to.`,`Tells an adult immediately when someone is hurt.`],G2:[`Washes and dries themselves thoroughly in a bath or shower.`,`Dresses appropriately for the weather without being told.`,`Knows the main food groups and what each does for the body.`,`Drinks water when thirsty rather than only sugary drinks.`,`Knows the emergency number for their country and when it is right to call it.`,`Knows what to do if lost: stay put, find a uniformed adult or a family with children.`,`Knows nobody may touch them in a way that makes them uncomfortable, including someone they know or love.`,`Knows not to go anywhere with someone without a parent's agreement.`,`Cleans and covers a small cut or graze themselves.`,`Knows to run a burn under cool water and then to fetch an adult.`],G3:[`Manages their own hair, nails and general grooming.`,`Builds a balanced plate from what is available.`,`Knows sugar harms teeth, and why.`,`Crosses a road alone, safely, choosing a good place to cross.`,`Knows fire safety: get out, stay low, never go back in, meet at the agreed point.`,`Recognises hazard symbols on household chemicals and leaves them alone.`,`Says no loudly, moves away and tells someone — and keeps telling until someone listens.`,`Calls the emergency number, says where they are, what happened, and stays on the line.`,`Applies pressure to a bleeding wound.`,`Deals with a nosebleed: sit, lean forward, pinch the soft part.`],G4:[`Uses deodorant and manages body odour as puberty approaches.`,`Reads a food label: sugar, salt, fat, portion size.`,`Knows how much sleep they need and what happens to them without it.`,`Uses knives, the stove, the oven and the kettle safely.`,`Knows never to take medicine unsupervised, including another person's.`,`Stays home alone briefly: locks the door, answers nobody, calls if needed.`,`Knows an adult asking for secrecy, photos or private contact is a warning sign, online or off.`,`Checks whether someone is responsive and whether they are breathing.`,`Puts an unconscious but breathing person into the recovery position.`,`Recognises choking and knows what to do about it.`],G5:[`Manages the changes of early puberty with accurate information and without shame — including periods, for every child, not only girls.`,`Knows why washing hands actually works.`,`Knows smoking, alcohol and drugs harm a body, and specifically how.`,`Recognises that food marketing targets children, and sees it happening.`,`Knows that mental health is health: that sadness, worry and stress are real and treatable, and who to tell.`,`Assesses a new situation for risk before joining in — thin ice, a high wall, a fast river, a dare.`,`Says no to a friend's dangerous idea, and leaves.`,`Knows how to get home from an unfamiliar place, with a plan that does not depend on a charged phone.`,`Knows they are never at fault for what an adult did to them.`,`Knows how to leave a situation that feels wrong without needing to justify it first.`,`Knows the basic principle of CPR, and that an attempt is better than nothing.`,`Assesses a scene for danger before approaching a casualty.`,`Knows what someone's serious allergy, asthma inhaler or epilepsy needs, if a friend or a sibling has one.`,`Keeps calm enough to be useful, and knows their first job is to get a competent adult there.`]},music:{P:[`Sings familiar songs from memory, roughly in time.`,`Claps along to a beat; copies a short clapped pattern.`],G1:[`Sings in a group, starting and stopping together.`,`Matches a pitch given by a voice or an instrument.`,`Keeps a steady pulse while others keep a different one.`,`Plays a simple percussion or tuned instrument with control.`,`Says whether music is fast or slow, loud or soft, happy or sad.`],G2:[`Sings a simple song in tune, alone, all the way through.`,`Claps back a rhythm of four beats accurately.`,`Plays an untuned percussion instrument in time with a group.`,`Knows that music can be written down, and that the dots mean something specific.`,`Plays a short recognisable tune on a recorder, keyboard, xylophone or similar.`,`Recognises common instruments by their sound.`],G3:[`Sings loudly and softly on purpose; shapes a phrase.`,`Holds their own part in a round or a canon.`,`Recognises 2-, 3- and 4-beat metres and counts them.`,`Reads and performs simple rhythmic notation.`,`Reads the note values: whole, half, quarter, eighth, and their rests.`,`Knows higher on the stave means higher in pitch.`,`Plays with correct posture and technique for the instrument.`,`Practises regularly, and understands practice is what makes the difference.`,`Identifies the families of the orchestra: strings, woodwind, brass, percussion.`,`Makes up a short tune or rhythm of their own.`],G4:[`Sings a song in tune, from memory, in front of an audience.`,`Sings a simple harmony against a melody without being pulled off it.`,`Keeps a rhythmic ostinato going under a melody.`,`Names the notes on the treble clef stave and finds them on an instrument.`,`Reads a time signature and a bar line; knows what a sharp and a flat do.`,`Plays a piece of real music from notation, hands or fingers in the right places.`,`Plays as part of an ensemble, listening to the others rather than only to themselves.`,`Describes a piece using real vocabulary: tempo, dynamics, pitch, mood, instrumentation.`,`Composes a short piece with a beginning, a middle and an end.`],G5:[`Has a repertoire of songs they can sing well, from more than one tradition.`,`Warms up their voice and knows not to strain it.`,`Performs a syncopated rhythm accurately.`,`Follows a conductor or a count-in, and comes in on the right beat.`,`Sight-reads a simple melody on their instrument and plays it correctly.`,`Follows a score while listening to it being played.`,`Writes down a short melody or rhythm they invented, so someone else could play it.`,`Performs a prepared piece in front of an audience, from a score.`,`Learns a new short piece largely on their own.`,`Tunes or sets up their own instrument, and looks after it.`,`Recognises several major styles: classical, folk, jazz, rock, pop, and music from at least one other tradition.`,`Names several composers or musicians and something they are known for.`,`Says why they like a piece, in terms of what is actually happening in it.`]},"visual-arts":{P:[`Draws a recognisable person with a head, a body and limbs.`,`Names the primary colours; paints without fear of the paper.`,`Cuts, sticks, folds and builds with blocks and junk materials.`],G1:[`Draws from life rather than only from imagination.`,`Mixes primary colours to make secondary ones.`,`Models a recognisable object in clay or dough.`],G2:[`Fills a page deliberately instead of drawing small in a corner.`,`Uses several media: pencil, crayon, chalk, paint, ink.`,`Builds a 3D structure from paper, card and tape that stands up.`,`Makes a repeating printed or stamped pattern.`,`Says what they notice in a picture, beyond liking it.`],G3:[`Draws an object in front of them with roughly correct proportions.`,`Shades to suggest light and shadow.`,`Mixes tints and shades by adding white and black.`,`Follows written or diagrammed instructions to build something.`,`Sews two pieces of fabric together by hand.`,`Knows painting, drawing, sculpture, photography and printmaking apart.`],G4:[`Uses overlap and relative size to show depth.`,`Draws a simple portrait with the features in the right places.`,`Designs something to solve a real problem, then builds and tests it.`,`Uses a saw, a drill or a glue gun safely with supervision.`,`Measures twice and cuts once, because they learned why.`,`Knows several famous artworks and who made them.`,`Describes an artwork's colour, shape, line, texture and composition.`],G5:[`Uses basic one-point perspective.`,`Plans a piece in a sketchbook before making the final version.`,`Finishes a demanding piece over several sessions instead of abandoning it.`,`Builds a working mechanism: a lever, a pulley, a gear train, a simple circuit in an object.`,`Improves a design after it failed, rather than giving up on it.`,`Makes a gift or a useful object good enough that someone wants to keep it.`,`Recognises a few distinct styles or periods and can tell them apart.`,`Knows art comes from every culture and era, not one continent.`,`Gives another person's work useful feedback: what works, what they would try next.`,`Accepts criticism of their own work without dropping the work.`]},"dance-drama-performance":{P:[`Moves freely to music without self-consciousness.`,`Plays pretend, sustaining a role with others.`],G1:[`Keeps time with the beat while moving.`,`Copies a short sequence of movements.`,`Acts out a known story, taking a part.`],G2:[`Learns and performs a simple set dance from a tradition.`,`Moves in different qualities on request: sharp, smooth, heavy, light.`,`Uses voice and face to show an emotion clearly to an audience.`,`Waits offstage for a cue and comes in on it.`],G3:[`Remembers and performs a longer choreography from memory.`,`Dances with a partner, matching or mirroring them.`,`Learns lines and delivers them audibly, without rushing.`,`Stays in character when something goes wrong.`],G4:[`Makes up their own short sequence with a clear beginning and end.`,`Uses the space deliberately: levels, directions, pathways, formations.`,`Improvises a short scene from a prompt with others.`,`Plays a character unlike themselves, convincingly.`],G5:[`Performs a rehearsed dance in front of an audience, in time and in formation.`,`Knows dances from more than one culture, including at least one social/partner dance.`,`Picks up new choreography quickly by watching.`,`Takes a real part in a full production, in front of a real audience.`,`Contributes behind the scenes too: set, costume, lighting, sound, prompting.`,`Handles stage nerves well enough to go on anyway.`]},"practical-life":{P:[`Dresses and undresses themselves completely, including shoes.`,`Eats with cutlery at a table; clears their own plate.`,`Helps in the kitchen: stirs, pours, washes vegetables.`,`Puts toys away where they belong.`],G1:[`Ties shoelaces; manages coat, bag and belongings without losing them.`,`Packs their own school bag from a list.`,`Lays a table properly and clears it afterwards.`,`Spreads, pours a drink, and peels a banana or an orange.`,`Puts dirty clothes in the basket; hangs up a coat.`],G2:[`Gets themselves up and ready in the morning with a reminder, not a rescue.`,`Makes their own breakfast: cereal, toast, a drink.`,`Washes up or loads a dishwasher properly.`,`Makes their own bed; tidies a room to a standard, not just out of sight.`,`Sweeps, wipes a surface, takes out the rubbish.`,`Buys something from a shop alone, with the money counted beforehand.`],G3:[`Keeps their own room and workspace in a usable state.`,`Uses a knife to chop soft food safely, with a proper grip and board.`,`Follows a simple recipe from start to finish.`,`Grates, whisks, measures ingredients on scales and in jugs.`,`Sorts laundry; hangs it out; folds and puts clothes away.`,`Sorts waste correctly: recycling, food waste, general.`,`Walks a known local route alone or with a friend, safely.`,`Asks a stranger for help or directions, politely and clearly.`],G4:[`Packs their own bag for an overnight stay, with everything they need.`,`Manages their own belongings on a trip without losing them.`,`Uses a hob and an oven safely, with supervision.`,`Cooks a simple hot meal for themselves — pasta, eggs, rice, soup, a stir-fry.`,`Knows basic food hygiene: raw meat, hand washing, use-by dates, the fridge.`,`Operates a washing machine.`,`Sews on a button; mends a small tear.`,`Changes a bulb or a battery; uses a screwdriver, a hammer, a tape measure.`,`Uses public transport on a familiar route: ticket, stop, timing.`,`Reads a timetable and works out when to leave.`],G5:[`Runs their own morning and evening routine unprompted.`,`Notices something that needs doing and does it without being asked.`,`Cooks a full meal for the family, from a recipe, and gets it on the table hot.`,`Adapts a recipe: doubles it, halves it, substitutes a missing ingredient.`,`Plans a meal, lists what is needed, and shops for it.`,`Stores leftovers correctly and knows what has gone off.`,`Cleans a room properly, top to bottom, to a standard someone else would accept.`,`Knows where the water stopcock, the fuse box and the fire extinguisher are — and what each is for.`,`Fixes something broken instead of replacing it, at least once, successfully.`,`Waters plants, cares for a pet, or grows something edible from seed to plate.`,`Makes a phone call to an organisation and asks for what they need.`,`Navigates an unfamiliar journey with a change, with a plan for what to do if it goes wrong.`,`Fills in a simple form correctly: name, address, date of birth, date.`]},"outdoors-nature":{P:[`Plays outdoors in all weathers, comfortably.`,`Names common animals and knows a tree from a bush.`],G1:[`Dresses correctly for cold, wet and hot weather without being told.`,`Names the seasons and what changes in each.`],G2:[`Walks several kilometres without complaint.`,`Identifies 5+ common local trees, 5+ birds and 5+ flowers by name.`,`Knows which plants and animals to leave alone: stings, thorns, bites.`,`Retraces a route they have walked once.`],G3:[`Climbs a tree or a rock safely, and gets down again.`,`Knows to leave no trace: take rubbish home, close gates, keep to paths.`,`Identifies 10+ local species; uses a field guide or a key.`,`Grows a plant from seed to harvest.`,`Finds north without a compass — sun position, time of day.`,`Ties a reef knot and a slip knot.`],G4:[`Walks a full day in hill or forest country with a pack.`,`Puts up a tent and sleeps outside.`,`Knows which local plants and berries are dangerous, and the rule: never eat anything unidentified.`,`Recognises animal tracks, nests and droppings.`,`Reads the sky well enough to see rain coming.`,`Ties four useful knots and uses each for its purpose: joining, securing, shortening, a loop.`,`Navigates a short orienteering course with a map.`],G5:[`Packs correctly for a day outdoors: water, food, layers, map, torch.`,`Lights and extinguishes a fire safely where it is permitted.`,`Knows when weather or terrain means turning back, and turns back.`,`Identifies 20+ local species across plants, birds, insects and mammals.`,`Knows the moon phases and finds the Pole Star or the local equivalent.`,`Knows which local wildlife is protected, and why it matters.`,`Navigates an unfamiliar route with a paper map and a compass, and arrives.`,`Knows what to do if lost outdoors: stop, stay put, stay visible, stay warm.`,`Judges a natural risk: deep water, loose rock, thin ice, an incoming tide, a coming storm.`]},"social-emotional":{P:[`Names the basic emotions in themselves: happy, sad, angry, scared.`,`Separates from a parent without distress.`,`Shares and takes turns; plays alongside and with other children.`],G1:[`Recovers from a small disappointment without a meltdown.`,`Waits their turn, including when it is hard.`,`Makes a friend; joins a group already playing.`,`Says sorry and means it.`,`Tries something new without a guarantee of succeeding at it.`],G2:[`Names a wider range of feelings: frustrated, nervous, jealous, proud, embarrassed, lonely.`,`Uses a calming strategy on purpose: breathing, walking away, asking for a moment.`,`Notices when someone is upset and responds to it.`,`Listens without interrupting, and waits to speak.`,`Finishes something they started, even once it stops being fun.`,`Takes care of something that belongs to somebody else.`],G3:[`Notices their own anger building and does something before it lands on someone.`,`Says what is wrong in words instead of acting it out.`,`Resolves a small dispute with a peer without an adult refereeing.`,`Gives a genuine compliment.`,`Works in a pair or a group and does their share.`,`Keeps working on something hard after the first failure.`,`Owns a mistake rather than blaming someone else for it.`],G4:[`Distinguishes a feeling from a fact — "I feel stupid" is not "I am stupid".`,`Tolerates being bored without needing a screen handed to them.`,`Takes another person's perspective, including one they disagree with.`,`Says no to a friend without losing the friendship.`,`Leads a group task, and follows someone else leading one.`,`Practises something deliberately over weeks to get better at it.`,`Helps someone with no prospect of anything in return.`],G5:[`Names what they are good at and what they find hard, accurately and without drama.`,`Recovers from a real failure — a lost match, a bad mark, a rejection — and goes back to it.`,`Asks for help when it is needed, which is a skill and not a weakness.`,`Repairs a friendship after a real falling-out.`,`Stands up for someone being treated badly, or gets an adult who will.`,`Resists group pressure to do something they know is wrong.`,`Keeps a confidence — and knows the one exception: when someone is being hurt.`,`Sets themselves a goal nobody asked for, and reaches it.`,`Holds a position under mild social pressure, and changes it when genuinely persuaded.`,`Shows up for a commitment — a team, a rehearsal, a promise — on a day they do not feel like it.`]},"learning-how-to-learn":{P:[`Sits and attends to one activity for ten minutes.`,`Asks questions about everything, constantly.`],G1:[`Works at a task for 15 minutes without wandering off.`,`Keeps their equipment together and brings it back.`,`Asks a question when confused instead of hiding it.`],G2:[`Starts a task without being told to three times.`,`Works quietly beside others without disturbing them.`,`Writes down what they have to do, and reads it later.`,`Has a homework routine: a place, a time, a finish.`,`Memorises a short text, a rhyme or a list deliberately.`,`Looks something up because they wanted to know, not because they were told to.`],G3:[`Works independently for 30 minutes, asking only when genuinely stuck.`,`Removes their own distractions before starting.`,`Uses a diary, planner or calendar and meets a deadline with it.`,`Keeps their books and papers findable.`,`Tests themselves instead of only re-reading.`,`Uses a memory aid: a mnemonic, a rhyme, a story, a picture.`,`Says "I don't know" comfortably, and then goes and finds out.`],G4:[`Works for 45 minutes on something difficult and unappealing.`,`Checks their own work before handing it in.`,`Breaks a multi-day task into steps and schedules them.`,`Estimates how long something will take, and learns from being wrong.`,`Takes notes in their own words rather than copying.`,`Spreads practice over several days instead of cramming.`,`Explains what they learned to someone else, and discovers the gaps that way.`,`Changes their mind when shown good evidence, and says so.`,`Pursues an interest of their own beyond what school asks for.`],G5:[`Does the hard task first rather than the easy one.`,`Notices when they have stopped concentrating, and takes a break on purpose instead of drifting.`,`Plans a week with several commitments in it, and keeps to it.`,`Starts a long task early enough to survive something going wrong.`,`Prioritises when there is more to do than time to do it.`,`Makes their own summary, mind map or flashcards for a topic.`,`Revisits old material deliberately so it is not lost.`,`Identifies what they do *not* yet know, rather than assuming they know it.`,`Asks how somebody knows what they are claiming.`,`Knows the difference between not understanding *yet* and not being able to.`,`Prefers being right to having been right.`]},"second-language":{G1:[`Knows some languages sound different from their own, and enjoys the difference.`,`Greets, says goodbye, and says their name in the second language.`],G2:[`Counts to 20; names colours, animals, family members and classroom objects.`,`Sings a song or recites a rhyme in the language.`],G3:[`Says their name, age, where they live and what they like, in full sentences.`,`Asks and answers simple questions on familiar topics.`,`Understands classroom instructions given in the language.`],G4:[`Holds a short conversation about themselves, their family and their day.`,`Reads a short simple text and understands the gist.`,`Writes a few sentences about a familiar topic, correctly spelled.`,`Knows the present tense of the most common verbs.`],G5:[`Understands a slow, clear speaker on a familiar topic and replies appropriately.`,`Writes a short letter, postcard or message (5+ sentences).`,`Talks about the past and the future, at least roughly.`,`Uses a bilingual dictionary and copes with an unknown word without stopping.`,`Speaks the language to a real person and is understood — the actual point of the exercise.`,`Knows something real about where the language is spoken and how people there live.`]},"games-logic-strategy":{P:[`Plays a simple board game, follows the rules and takes turns.`],G1:[`Plays a card game with rules; deals and shuffles.`,`Solves a jigsaw appropriate to their age, by strategy rather than trial and error.`],G2:[`Plays a strategy game and thinks one move ahead.`,`Teaches a game they know to someone who does not.`],G3:[`Knows the rules and moves of chess, draughts or an equivalent, and plays a full game.`,`Solves a logic puzzle: a grid puzzle, a riddle, a sudoku.`,`Loses a game without quitting the next one.`],G4:[`Thinks several moves ahead and anticipates an opponent's reply.`,`Works out the rules of an unfamiliar game by playing it.`,`Spots a pattern in a sequence of shapes, numbers or moves and uses it.`],G5:[`Plays a strategy game competently: opening ideas, a plan, an endgame.`,`Solves a multi-step logic problem by elimination, systematically.`,`Recognises a fallacy in an argument, even informally ("everyone says so" is not a reason).`,`Invents a game with coherent rules and teaches it to others.`,`Estimates a chance sensibly, and knows a lucky win is not a good decision.`]},"general-knowledge":{P:[`Knows their own family: names, relationships, where they live.`],G1:[`Knows classic fairy tales and folk stories from their own culture.`],G2:[`Knows the major festivals celebrated around them and roughly what each marks.`,`Knows their own country's flag, name, capital and a famous landmark.`],G3:[`Knows myths and legends from more than one culture: Greek, Norse, African, Asian, Indigenous.`,`Knows that the world holds many religions and beliefs, including none, and names several.`],G4:[`Knows what happens in several famous stories everyone alludes to.`,`Knows a handful of world-famous buildings and monuments, and where they are.`,`Names people who changed the world in science, art, politics, sport and rights — from more than one continent, and not all men.`],G5:[`Knows the main world religions' core ideas and major festivals, factually and respectfully.`,`Knows several famous quotations, proverbs and idioms, and uses them correctly.`,`Follows a news story over time and can explain what it is about.`,`Knows enough about the wider world to ask a good question about a country they have never visited.`,`Knows their own family's story: where the previous generations came from and what they did.`]}};function Om({domainKey:e,label:t,isTracked:n,tiers:r}){return(0,M.jsxs)(`details`,{className:`competency-subject`,"data-domain":e,children:[(0,M.jsxs)(`summary`,{className:`competency-subject-summary`,children:[(0,M.jsx)(`span`,{className:`competency-subject-label`,children:t}),(0,M.jsx)(`span`,{className:n?`competency-badge competency-badge-tracked`:`competency-badge competency-badge-reference`,children:n?`Tracked in this app`:`Reference only — not tracked`})]}),(0,M.jsx)(`div`,{className:`competency-subject-body`,children:r.map(({tier:e,tierLabel:t,skills:n})=>(0,M.jsxs)(`div`,{className:`competency-tier`,children:[(0,M.jsx)(`h4`,{className:`competency-tier-label`,children:t}),(0,M.jsx)(`ul`,{className:`competency-skill-list`,children:n.map(e=>(0,M.jsx)(`li`,{children:e},e))})]},e))})]})}var km=[`P`,`G1`,`G2`,`G3`,`G4`,`G5`];function Am(){return Sm.map(e=>{let t=Dm[e.domainKey]??{};return{domainKey:e.domainKey,label:e.label,isTracked:e.domainKey===`mathematics`,tiers:km.filter(e=>t[e]!==void 0).map(e=>({tier:e,tierLabel:Em[e],skills:t[e]}))}})}function jm(){let e=(0,S.useMemo)(Am,[]);return(0,M.jsxs)(`section`,{className:`competency-reference`,"aria-label":`What your child will learn`,children:[(0,M.jsx)(`h2`,{children:`What your child will learn`}),(0,M.jsx)(`p`,{className:`competency-reference-intro`,children:`A subject-by-subject, grade-by-grade reference of the skills a child is typically expected to master by the end of primary school. Expand a subject to see its grade breakdown. Mathematics is the only subject this app currently tracks real progress for — every other subject below is general reference material, not this child’s measured progress.`}),(0,M.jsx)(`div`,{className:`competency-subject-list`,children:e.map(e=>(0,M.jsx)(Om,{domainKey:e.domainKey,label:e.label,isTracked:e.isTracked,tiers:e.tiers},e.domainKey))})]})}var Mm=[{fromVersion:1,migrate(e){let t=e;return{...t,profile:{...t.profile,currentGrade:null}}}}];function Nm(e,t){return{schemaVersion:2,exportedAt:Date.now(),profile:{id:e.id,alias:e.alias,createdAt:e.createdAt,currentGrade:e.currentGrade??null},masterySignals:t}}function Pm(e){return typeof e==`number`&&Number.isInteger(e)&&e>0}function Fm(e){return e===null||typeof e==`number`&&Number.isInteger(e)&&e>=1&&e<=5}function Im(e){if(typeof e!=`object`||!e)return!1;let t=e,n=t.profile;if(typeof n!=`object`||!n)return!1;let r=n;return typeof r.id!=`string`||r.id.length===0||typeof r.alias!=`string`||typeof r.createdAt!=`number`||!Fm(r.currentGrade)?!1:Array.isArray(t.masterySignals)}function Lm(e){if(typeof e!=`object`||!e)return{ok:!1,reason:`invalid-shape`};let t=e.schemaVersion;if(!Pm(t))return{ok:!1,reason:`invalid-shape`};if(t>2)return{ok:!1,reason:`unsupported-newer-version`};if(t<1)return{ok:!1,reason:`unsupported-older-version`};let n=e,r=t;for(;r<2;){let e=Mm.find(e=>e.fromVersion===r);if(!e)return{ok:!1,reason:`unsupported-older-version`};n=e.migrate(n),r+=1}return Im(n)?{ok:!0,data:{profile:{id:n.profile.id,alias:n.profile.alias,createdAt:n.profile.createdAt,currentGrade:n.profile.currentGrade},masterySignals:n.masterySignals}}:{ok:!1,reason:`invalid-shape`}}function Rm(e){let t=Hp(window.localStorage).find(t=>t.id===e);if(!t)throw Error(`no such child profile: ${e}`);let n=Nm(t,am(e)),r=new Blob([JSON.stringify(n,null,2)],{type:`application/json`}),i=URL.createObjectURL(r),a=document.createElement(`a`);a.href=i,a.download=`${t.alias.trim()||`child`}-export.json`,document.body.appendChild(a),a.click(),document.body.removeChild(a),URL.revokeObjectURL(i)}function zm({childId:e}){return(0,M.jsx)(`button`,{type:`button`,disabled:e===null,onClick:()=>e!==null&&Rm(e),children:`Export this child's data`})}function Bm(e){return new Promise((t,n)=>{let r=new FileReader;r.onload=()=>t(r.result),r.onerror=()=>n(r.error),r.readAsText(e)})}async function Vm(e){let t;try{t=await Bm(e)}catch{return{status:`error`,reason:`unreadable`}}let n;try{n=JSON.parse(t)}catch{return{status:`error`,reason:`unreadable`}}let r=Lm(n);return r.ok?Hp(window.localStorage).some(e=>e.id===r.data.profile.id)?{status:`conflict`,parsed:r.data}:(Vp(window.localStorage,r.data.profile),sm(r.data.profile.id,r.data.masterySignals),{status:`imported`,childId:r.data.profile.id}):{status:`error`,reason:r.reason}}function Hm(e){let t=crypto.randomUUID();return Vp(window.localStorage,{...e.profile,id:t}),sm(t,e.masterySignals),t}function Um(e){return Vp(window.localStorage,e.profile),sm(e.profile.id,e.masterySignals),e.profile.id}function Wm({parsed:e,onResolved:t,onCancel:n}){return(0,M.jsxs)(`div`,{role:`dialog`,"aria-label":`Resolve import conflict`,children:[(0,M.jsxs)(`p`,{children:[`A profile matching "`,e.profile.alias,`" already exists on this device. How should this import be applied?`]}),(0,M.jsx)(`button`,{type:`button`,onClick:()=>t(Hm(e)),children:`Import as a new profile`}),(0,M.jsx)(`button`,{type:`button`,onClick:()=>t(Um(e)),children:`Replace this profile's data`}),(0,M.jsx)(`button`,{type:`button`,onClick:n,children:`Cancel`})]})}function Gm(e){switch(e){case`unreadable`:return`That file couldn't be read. Make sure you selected a valid export file.`;case`invalid-shape`:return`That file isn't a valid child export.`;case`unsupported-newer-version`:return`That file was exported by a newer version of the app. Update the app to import it.`;case`unsupported-older-version`:return`That file is from a version of the app that's no longer supported for import.`}}function Km({onImported:e}){let t=(0,S.useRef)(null),[n,r]=(0,S.useState)(null),[i,a]=(0,S.useState)(null);async function o(t){let n=t.target.files?.[0];if(t.target.value=``,!n)return;a(null);let i=await Vm(n);i.status===`imported`?e():i.status===`conflict`?r(i.parsed):a(Gm(i.reason))}return(0,M.jsxs)(`div`,{children:[(0,M.jsx)(`button`,{type:`button`,onClick:()=>t.current?.click(),children:`Import a child's data`}),(0,M.jsx)(`input`,{ref:t,type:`file`,accept:`application/json`,hidden:!0,"aria-label":`Import a child export file`,onChange:e=>{o(e)}}),i!==null&&(0,M.jsx)(`p`,{role:`alert`,children:i}),n!==null&&(0,M.jsx)(Wm,{parsed:n,onResolved:()=>{r(null),e()},onCancel:()=>r(null)})]})}function qm(){let{activeChildId:e,refresh:t}=qp();return(0,M.jsxs)(`div`,{className:`docs-theme`,children:[(0,M.jsxs)(`nav`,{className:`docs-nav`,"aria-label":`Parent area navigation`,children:[(0,M.jsx)(`span`,{children:`Parent Area`}),(0,M.jsx)(Mn,{to:`/`,className:`docs-nav-back`,children:`Back to practice app`})]}),(0,M.jsxs)(`main`,{className:`docs-main`,children:[e===null?(0,M.jsxs)(`div`,{children:[(0,M.jsxs)(`p`,{children:[`No active child profile yet. `,(0,M.jsx)(Mn,{to:`/`,children:`Create a child profile first`}),`, or import a previously exported child below.`]}),(0,M.jsx)(Km,{onImported:t})]}):(0,M.jsxs)(`section`,{"aria-label":`Active child`,children:[(0,M.jsx)(Tm,{childId:e}),(0,M.jsx)(zm,{childId:e}),(0,M.jsx)(Km,{onImported:t})]}),(0,M.jsx)(jm,{})]}),(0,M.jsx)(Gn,{})]})}function Jm(e){let t=e>>>0;return function(){t=t+1831565813>>>0;let e=t;return e=Math.imul(e^e>>>15,e|1),e^=e+Math.imul(e^e>>>7,e|61),((e^e>>>14)>>>0)/4294967296}}function Ym(e,t,n){return t+Math.floor(e()*(n-t+1))}function Xm(e){return Number.isInteger(e)&&e>=1&&e<=5}function Zm(e){let t=Ym(e,0,9);return{operandA:t,operandB:Ym(e,0,9-t)}}function Qm(e){let t=Ym(e,1,9);return{operandA:t,operandB:Ym(e,Math.max(1,10-t),9)}}function $m(e){let t=Ym(e,0,9),n=Ym(e,0,9-t);return{operandA:Ym(e,1,9)*10+n,operandB:t}}function eh(e){let t=Ym(e,1,9);return{onesA:Ym(e,Math.max(0,10-t),9),onesB:t}}function th(e){let{onesA:t,onesB:n}=eh(e),r=Ym(e,1,9),i=Ym(e,1,9);return{operandA:r*10+t,operandB:i*10+n}}function nh(e){let{onesA:t,onesB:n}=eh(e),r=Ym(e,0,9),i=Ym(e,1,9)*100+r*10+t,a=e()<.5,o=Ym(e,+!a,9);return{operandA:i,operandB:(a?Ym(e,1,9):0)*100+o*10+n}}function rh(e,t){if(!Xm(e))throw Error(`invalid tier: ${e} (must be an integer in 1..5)`);let n=Jm(t),{operandA:r,operandB:i}=e===1?Zm(n):e===2?Qm(n):e===3?$m(n):e===4?th(n):nh(n);return{id:`mental-addition-${e}-${t}`,tier:e,operandA:r,operandB:i,correctSum:r+i}}var ih=`math.addition.mental`;function ah(e,t,n,r){return{competencyId:ih,tier:e.tier,correct:t,timeMs:n,timestamp:r,questionId:e.id}}function oh(e,t){let n=Jm(t),r=[];for(let t=0;t<10;t++){let t=Math.floor(n()*4294967295);r.push(rh(e,t))}return{tier:e,questions:r}}var sh={id:`mental-addition`,competencyIds:[ih],generateQuestion(e,t){return rh(e,t)},validateAnswer(e,t){return{correct:t===e.correctSum}}};function ch(e,t){let n=[],r=new Set(t.map(e=>e.id)),i=new Set;for(let t of e)i.has(t.id)&&n.push({kind:`duplicate-plugin-id`,id:t.id}),i.add(t.id);for(let t of e)for(let e of t.competencyIds)r.has(e)||n.push({kind:`unknown-competency-reference`,pluginId:t.id,competencyId:e});return{valid:n.length===0,errors:n}}function lh(e){switch(e.kind){case`duplicate-plugin-id`:return`duplicate plugin id: "${e.id}"`;case`unknown-competency-reference`:return`plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`}}function uh(e,t){let n=ch(e,t);if(!n.valid){let e=n.errors.map(lh).join(`; `);throw Error(`Invalid plugin registry: ${e}`)}let r=new Map(e.map(e=>[e.id,e]));return{getPlugin(e){return r.get(e)},getPluginsForCompetency(t){return e.filter(e=>e.competencyIds.includes(t))},all(){return[...e]}}}var dh=uh([sh],[Jp]),fh=10,ph=1200;function mh({childId:e,tier:t,onComplete:n,feedbackDelayMs:r=ph}){let[i]=(0,S.useState)(()=>oh(t,Date.now())),[a,o]=(0,S.useState)(0),[s,c]=(0,S.useState)(``),[l,u]=(0,S.useState)(null),[d,f]=(0,S.useState)(()=>Date.now()),p=i.questions[a],m=dh.getPlugin(`mental-addition`);if(!p||!m)return null;function h(t){if(t.preventDefault(),l!==null||!p||!m)return;let i=Number(s),{correct:h}=m.validateAnswer(p,i),g=Date.now()-d;om(e,ah(p,h,g,Date.now())),u({correct:h,correctSum:p.correctSum}),setTimeout(()=>{u(null),c(``),a+1>=fh?n():(o(e=>e+1),f(Date.now()))},r)}let g=a/fh*100;return(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsx)(`div`,{className:`session-progress`,children:(0,M.jsxs)(`p`,{children:[`Question `,a+1,` of `,fh]})}),(0,M.jsx)(`div`,{className:`progress-track`,"aria-hidden":`true`,children:(0,M.jsx)(`span`,{className:`progress-fill`,style:{width:`${g}%`}})}),(0,M.jsx)(`div`,{className:`equation-card`,children:(0,M.jsxs)(`p`,{children:[p.operandA,` + `,p.operandB,` = ?`]})}),(0,M.jsxs)(`form`,{onSubmit:h,className:`answer-form`,children:[(0,M.jsx)(`input`,{type:`number`,"aria-label":`answer`,className:`text-input answer-input`,value:s,onChange:e=>c(e.target.value),disabled:l!==null}),(0,M.jsxs)(`button`,{type:`submit`,className:`btn`,disabled:l!==null,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`✅ `}),`Submit`]})]}),l!==null&&(l.correct?(0,M.jsxs)(`p`,{role:`status`,className:`feedback-banner feedback-correct`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`🎉 `}),`Correct!`]}):(0,M.jsxs)(`p`,{role:`status`,className:`feedback-banner feedback-incorrect`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`💛 `}),`Not quite — the answer was `,l.correctSum,`.`]}))]})}var hh=[`🐵`,`🐸`,`🦊`,`🐼`,`🐯`,`🐨`,`🐰`,`🦁`,`🐷`,`🐙`],gh=[`#ff8a3d`,`#3fa9f5`,`#3ecf6e`,`#ff6f9c`,`#7c4dff`,`#00c2a8`,`#ffc93c`];function _h(e,t){let n=0;for(let t of e)n=(n*31+t.charCodeAt(0))%997;return t[n%t.length]}function vh({profiles:e,activeChildId:t,onCreate:n,onSwitch:r}){let[i,a]=(0,S.useState)(``);function o(e){e.preventDefault(),i.trim().length!==0&&(n(i),a(``))}return(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsxs)(`h2`,{className:`card-title`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:e.length===0?`👋`:`🧒`}),e.length===0?`Add your first child`:`Children`]}),(0,M.jsxs)(`form`,{onSubmit:o,className:`form-row`,children:[(0,M.jsxs)(`div`,{className:`field`,children:[(0,M.jsx)(`label`,{htmlFor:`alias-input`,className:`field-label`,children:`Child's name`}),(0,M.jsx)(`input`,{id:`alias-input`,type:`text`,className:`text-input`,value:i,onChange:e=>a(e.target.value)})]}),(0,M.jsxs)(`button`,{type:`submit`,className:`btn`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`➕ `}),`Add child`]})]}),e.length>0&&(0,M.jsx)(`ul`,{className:`profile-list`,children:e.map(e=>{let n=e.id===t;return(0,M.jsxs)(`li`,{className:`profile-chip${n?` is-active`:``}`,children:[(0,M.jsx)(`span`,{className:`avatar-circle`,style:{background:_h(e.id,gh)},"aria-hidden":`true`,children:_h(e.id,hh)}),(0,M.jsx)(`span`,{className:`profile-name`,children:e.alias}),n?(0,M.jsxs)(`span`,{className:`active-badge`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`⭐`}),` (active)`]}):(0,M.jsxs)(`button`,{type:`button`,className:`btn btn-ghost`,onClick:()=>r(e.id),children:[`Switch to `,e.alias]})]},e.id)})})]})}function yh({onStart:e}){let[t,n]=(0,S.useState)(1),r=Array.from({length:Jp.tierCount},(e,t)=>t+1);return(0,M.jsxs)(`div`,{className:`card`,children:[(0,M.jsxs)(`h2`,{className:`card-title`,children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`➕`}),`Mental addition`]}),(0,M.jsxs)(`div`,{className:`field`,children:[(0,M.jsx)(`label`,{htmlFor:`tier-select`,className:`field-label`,children:`Tier`}),(0,M.jsx)(`select`,{id:`tier-select`,className:`select-input`,value:t,onChange:e=>n(Number(e.target.value)),children:r.map(e=>(0,M.jsxs)(`option`,{value:e,children:[`Tier `,e]},e))})]}),(0,M.jsxs)(`button`,{type:`button`,className:`btn btn-teal btn-lg`,onClick:()=>e(t),children:[(0,M.jsx)(`span`,{"aria-hidden":`true`,children:`🚀 `}),`Start session`]})]})}function bh(){let{children:e,activeChildId:t,createProfile:n,switchProfile:r}=qp(),[i,a]=(0,S.useState)({name:`home`}),[o,s]=(0,S.useState)(0),c=cm(t,o)?.find(e=>e.competencyId===Jp.id)??null;function l(e){r(e),a({name:`home`})}return(0,M.jsxs)(`main`,{className:`app-shell`,children:[(0,M.jsxs)(`header`,{className:`app-header`,children:[(0,M.jsx)(`span`,{className:`app-mascot`,"aria-hidden":`true`,children:`🦉`}),(0,M.jsx)(`h1`,{className:`app-title`,children:`Learn Core Skills`}),(0,M.jsxs)(`nav`,{className:`app-header-links`,"aria-label":`Parent and teacher links`,children:[(0,M.jsx)(Mn,{to:`/docs`,className:`app-docs-link`,children:`Documentation`}),(0,M.jsx)(Mn,{to:`/parent`,className:`app-docs-link`,children:`Parent Area`})]})]}),(0,M.jsx)(vh,{profiles:e,activeChildId:t,onCreate:n,onSwitch:l}),t!==null&&(0,M.jsxs)(`section`,{children:[(0,M.jsx)(Ip,{mastery:c}),i.name===`home`&&(0,M.jsx)(yh,{onStart:e=>a({name:`session`,tier:e})}),i.name===`session`&&(0,M.jsx)(mh,{childId:t,tier:i.tier,onComplete:()=>{s(e=>e+1),a({name:`home`})}},`${t}-${i.tier}`)]}),(0,M.jsx)(Gn,{})]})}function xh(){return(0,M.jsx)(jn,{children:(0,M.jsxs)(qt,{children:[(0,M.jsx)(Gt,{path:`/`,element:(0,M.jsx)(bh,{})}),(0,M.jsx)(Gt,{path:`/docs`,element:(0,M.jsx)(Fp,{children:(0,M.jsx)(Pp,{})})}),(0,M.jsx)(Gt,{path:`/docs/:id`,element:(0,M.jsx)(Fp,{children:(0,M.jsx)(Ap,{})})}),(0,M.jsx)(Gt,{path:`/blog`,element:(0,M.jsx)(Fp,{children:(0,M.jsx)(ti,{})})}),(0,M.jsx)(Gt,{path:`/blog/:id`,element:(0,M.jsx)(Fp,{children:(0,M.jsx)(kp,{})})}),(0,M.jsx)(Gt,{path:`/parent`,element:(0,M.jsx)(qm,{})})]})})}var Sh=document.getElementById(`root`);if(!Sh)throw Error(`#root element not found`);(0,Un.createRoot)(Sh).render((0,M.jsx)(S.StrictMode,{children:(0,M.jsx)(xh,{})}));
