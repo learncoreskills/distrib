@@ -1,0 +1,37 @@
+{
+  "subjects": [
+    {
+      "subjectId": "math",
+      "displayName": "Mathematics",
+      "competencyIds": [
+        "math.addition.mental",
+        "math.subtraction.mental",
+        "math.multiplication.mental",
+        "math.division.mental",
+        "math.number-sense.baseline-counting",
+        "math.number-sense.baseline-subitizing",
+        "math.number-sense.baseline-digits",
+        "math.comparing-ordering.baseline-groups",
+        "math.addition.baseline-concrete",
+        "math.measurement.baseline-comparison",
+        "math.time.baseline-day-order",
+        "math.time.baseline-days-of-week",
+        "math.geometry.baseline-shapes",
+        "math.geometry.baseline-position",
+        "math.number-sense.counting-range",
+        "math.number-sense.skip-counting",
+        "math.number-sense.odd-even",
+        "math.number-sense.ordinals",
+        "math.number-sense.negative-numbers",
+        "math.number-sense.primes-factors",
+        "math.number-sense.squares",
+        "math.number-sense.roman-numerals",
+        "math.place-value.understanding",
+        "math.place-value.powers-of-ten",
+        "math.place-value.rounding",
+        "math.place-value.multiply-divide-ten"
+      ]
+    }
+  ],
+  "generatedAt": "2026-09-22T01:11:36.050460Z"
+}
