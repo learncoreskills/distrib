@@ -44,7 +44,29 @@
     "math.mathematical-reasoning.sorts-objects-by-criterion",
     "math.data-graphs.reads-simple-pictogram",
     "math.mathematical-reasoning.continues-repeating-pattern",
-    "math.problem-solving.choose-addition-or-subtraction"
+    "math.problem-solving.choose-addition-or-subtraction",
+    "math.number-sense.counts-reads-writes-to-1000",
+    "math.number-sense.orders-numbers-to-1000",
+    "math.place-value.partitions-three-digit-numbers",
+    "math.place-value.digit-value-in-three-digit-number",
+    "math.addition.number-bonds-within-20",
+    "math.addition.add-subtract-two-digit-with-regrouping",
+    "math.mathematical-reasoning.addition-commutative-subtraction-not",
+    "math.multiplication.times-tables-2-5-10",
+    "math.division.sharing-grouping-remainders",
+    "math.mental-mathematics.add-subtract-one-digit-to-two-digit",
+    "math.mental-mathematics.doubles-halves-to-50",
+    "math.fractions.thirds-quarters-fifths",
+    "math.measurement.mass-and-capacity",
+    "math.measurement.metric-units-relationships",
+    "math.time.five-minutes-quarter-hour",
+    "math.time.days-weeks-months-counts",
+    "math.geometry.counts-shape-properties",
+    "math.geometry.recognises-line-of-symmetry",
+    "math.geometry.describes-grid-position",
+    "math.data-graphs.tally-chart-bar-chart",
+    "math.mathematical-reasoning.finds-missing-number-in-equation",
+    "math.problem-solving.solves-one-step-word-problem"
   ],
-  "builtAt": "2026-09-23T22:21:28.908Z"
+  "builtAt": "2026-09-23T22:32:47.170Z"
 }
