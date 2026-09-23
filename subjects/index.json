@@ -29,9 +29,24 @@
         "math.place-value.understanding",
         "math.place-value.powers-of-ten",
         "math.place-value.rounding",
-        "math.place-value.multiply-divide-ten"
+        "math.place-value.multiply-divide-ten",
+        "math.number-sense.reads-writes-to-100",
+        "math.addition.number-bonds-within-10",
+        "math.mental-mathematics.add-subtract-within-20",
+        "math.fractions.half-and-quarter",
+        "math.measurement.length-in-cm",
+        "math.measurement.vocabulary",
+        "math.time.hour-half-hour",
+        "math.time.months-and-seasons",
+        "math.geometry.names-2d-3d-shapes",
+        "math.geometry.shape-orientation-invariance",
+        "math.geometry.describes-route",
+        "math.mathematical-reasoning.sorts-objects-by-criterion",
+        "math.data-graphs.reads-simple-pictogram",
+        "math.mathematical-reasoning.continues-repeating-pattern",
+        "math.problem-solving.choose-addition-or-subtraction"
       ]
     }
   ],
-  "generatedAt": "2026-09-23T22:05:44.727Z"
+  "generatedAt": "2026-09-23T22:21:35.307Z"
 }
