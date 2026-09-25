@@ -66,9 +66,34 @@
         "math.geometry.describes-grid-position",
         "math.data-graphs.tally-chart-bar-chart",
         "math.mathematical-reasoning.finds-missing-number-in-equation",
-        "math.problem-solving.solves-one-step-word-problem"
+        "math.problem-solving.solves-one-step-word-problem",
+        "math.number-sense.reads-writes-orders-to-10000",
+        "math.addition.add-subtract-three-digit-columns",
+        "math.mathematical-reasoning.checks-subtraction-with-inverse-addition",
+        "math.multiplication.times-tables-3-4-8",
+        "math.multiplication.multiplies-two-digit-by-one-digit-written",
+        "math.mathematical-reasoning.multiplication-commutative-division-not",
+        "math.mental-mathematics.add-subtract-two-two-digit-mentally",
+        "math.mental-mathematics.bridges-through-10-and-100",
+        "math.fractions.fraction-as-number-on-number-line",
+        "math.fractions.finds-equivalent-fractions-simplifies",
+        "math.fractions.add-subtract-fractions-same-denominator",
+        "math.number-sense.reads-decimal-in-price-and-measurement",
+        "math.measurement.converts-between-adjacent-metric-units",
+        "math.measurement.measures-perimeter-rectangle-compound",
+        "math.time.tells-time-to-minute-converts-12-24",
+        "math.time.calculates-duration-within-hour",
+        "math.geometry.classifies-triangles",
+        "math.geometry.classifies-quadrilaterals",
+        "math.geometry.identifies-right-angles",
+        "math.geometry.uses-compass-directions-quarter-half-turns",
+        "math.data-graphs.reads-bar-chart-pictogram-scale",
+        "math.data-graphs.answers-comparison-questions-from-table",
+        "math.mathematical-reasoning.continues-number-sequence-states-rule",
+        "math.problem-solving.solves-two-step-word-problem",
+        "math.problem-solving.draws-bar-model-to-represent-problem"
       ]
     }
   ],
-  "generatedAt": "2026-09-23T22:32:52.122Z"
+  "generatedAt": "2026-09-25T05:49:25.252Z"
 }
