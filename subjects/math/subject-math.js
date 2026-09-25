@@ -3575,7 +3575,3647 @@ var Rn = [
 		createSession: In.createSession,
 		createMasterySignal: In.createMasterySignal
 	})
-], x = {
+], zn = {
+	id: "math.number-sense.reads-writes-orders-to-million",
+	nameKey: "competency.math.number-sense.reads-writes-orders-to-million.name",
+	descriptionKey: "competency.math.number-sense.reads-writes-orders-to-million.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.0",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.number-sense.reads-writes-orders-to-million"
+	}]
+}, Bn = {
+	id: "math.place-value.extends-place-value-to-millions",
+	nameKey: "competency.math.place-value.extends-place-value-to-millions.name",
+	descriptionKey: "competency.math.place-value.extends-place-value-to-millions.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.2",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.place-value.extends-place-value-to-millions"
+	}]
+}, Vn = {
+	id: "math.subtraction.add-subtract-four-digit-across-zeros",
+	nameKey: "competency.math.subtraction.add-subtract-four-digit-across-zeros.name",
+	descriptionKey: "competency.math.subtraction.add-subtract-four-digit-across-zeros.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.4",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.subtraction.add-subtract-four-digit-across-zeros"
+	}]
+}, Hn = {
+	id: "math.multiplication.knows-tables-to-12x12",
+	nameKey: "competency.math.multiplication.knows-tables-to-12x12.name",
+	descriptionKey: "competency.math.multiplication.knows-tables-to-12x12.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.5",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.multiplication.knows-tables-to-12x12"
+	}]
+}, Un = {
+	id: "math.multiplication.multiplies-three-digit-by-one-digit",
+	nameKey: "competency.math.multiplication.multiplies-three-digit-by-one-digit.name",
+	descriptionKey: "competency.math.multiplication.multiplies-three-digit-by-one-digit.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.6",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.multiplication.multiplies-three-digit-by-one-digit"
+	}]
+}, Wn = {
+	id: "math.division.divides-three-digit-by-one-digit-with-remainder",
+	nameKey: "competency.math.division.divides-three-digit-by-one-digit-with-remainder.name",
+	descriptionKey: "competency.math.division.divides-three-digit-by-one-digit-with-remainder.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.7",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.division.divides-three-digit-by-one-digit-with-remainder"
+	}]
+}, Gn = {
+	id: "math.mental-mathematics.rounding-compensation-mentally",
+	nameKey: "competency.math.mental-mathematics.rounding-compensation-mentally.name",
+	descriptionKey: "competency.math.mental-mathematics.rounding-compensation-mentally.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.8",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mental-mathematics.rounding-compensation-mentally"
+	}]
+}, Kn = {
+	id: "math.mental-mathematics.instant-table-fact-recall",
+	nameKey: "competency.math.mental-mathematics.instant-table-fact-recall.name",
+	descriptionKey: "competency.math.mental-mathematics.instant-table-fact-recall.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.9",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mental-mathematics.instant-table-fact-recall"
+	}]
+}, qn = {
+	id: "math.fractions.compares-orders-fractions-different-denominators",
+	nameKey: "competency.math.fractions.compares-orders-fractions-different-denominators.name",
+	descriptionKey: "competency.math.fractions.compares-orders-fractions-different-denominators.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.10",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.fractions.compares-orders-fractions-different-denominators"
+	}]
+}, Jn = {
+	id: "math.fractions.converts-improper-fractions-mixed-numbers",
+	nameKey: "competency.math.fractions.converts-improper-fractions-mixed-numbers.name",
+	descriptionKey: "competency.math.fractions.converts-improper-fractions-mixed-numbers.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.11",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.fractions.converts-improper-fractions-mixed-numbers"
+	}]
+}, Yn = {
+	id: "math.fractions.finds-fraction-of-quantity",
+	nameKey: "competency.math.fractions.finds-fraction-of-quantity.name",
+	descriptionKey: "competency.math.fractions.finds-fraction-of-quantity.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.12",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.fractions.finds-fraction-of-quantity"
+	}]
+}, Xn = {
+	id: "math.decimals.tenths-hundredths-as-decimals-number-line",
+	nameKey: "competency.math.decimals.tenths-hundredths-as-decimals-number-line.name",
+	descriptionKey: "competency.math.decimals.tenths-hundredths-as-decimals-number-line.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.13",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.decimals.tenths-hundredths-as-decimals-number-line"
+	}]
+}, Zn = {
+	id: "math.decimals.add-subtract-decimals-two-places",
+	nameKey: "competency.math.decimals.add-subtract-decimals-two-places.name",
+	descriptionKey: "competency.math.decimals.add-subtract-decimals-two-places.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.14",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.decimals.add-subtract-decimals-two-places"
+	}]
+}, Qn = {
+	id: "math.percentages.understands-percentage-as-out-of-100",
+	nameKey: "competency.math.percentages.understands-percentage-as-out-of-100.name",
+	descriptionKey: "competency.math.percentages.understands-percentage-as-out-of-100.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.15",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.percentages.understands-percentage-as-out-of-100"
+	}]
+}, $n = {
+	id: "math.measurement.calculates-area-rectangle-compound",
+	nameKey: "competency.math.measurement.calculates-area-rectangle-compound.name",
+	descriptionKey: "competency.math.measurement.calculates-area-rectangle-compound.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.16",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.calculates-area-rectangle-compound"
+	}]
+}, er = {
+	id: "math.measurement.estimates-length-mass-volume",
+	nameKey: "competency.math.measurement.estimates-length-mass-volume.name",
+	descriptionKey: "competency.math.measurement.estimates-length-mass-volume.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.17",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.estimates-length-mass-volume"
+	}]
+}, tr = {
+	id: "math.measurement.reads-scale-with-unlabelled-divisions",
+	nameKey: "competency.math.measurement.reads-scale-with-unlabelled-divisions.name",
+	descriptionKey: "competency.math.measurement.reads-scale-with-unlabelled-divisions.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.18",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.reads-scale-with-unlabelled-divisions"
+	}]
+}, nr = {
+	id: "math.time.calculates-durations-crossing-hours-midnight",
+	nameKey: "competency.math.time.calculates-durations-crossing-hours-midnight.name",
+	descriptionKey: "competency.math.time.calculates-durations-crossing-hours-midnight.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.19",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.time.calculates-durations-crossing-hours-midnight"
+	}]
+}, rr = {
+	id: "math.time.uses-calendar-date-weeks-ahead",
+	nameKey: "competency.math.time.uses-calendar-date-weeks-ahead.name",
+	descriptionKey: "competency.math.time.uses-calendar-date-weeks-ahead.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.20",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.time.uses-calendar-date-weeks-ahead"
+	}]
+}, ir = {
+	id: "math.geometry.measures-draws-angle-with-protractor",
+	nameKey: "competency.math.geometry.measures-draws-angle-with-protractor.name",
+	descriptionKey: "competency.math.geometry.measures-draws-angle-with-protractor.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.21",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.measures-draws-angle-with-protractor"
+	}]
+}, ar = {
+	id: "math.geometry.angles-on-line-and-around-point",
+	nameKey: "competency.math.geometry.angles-on-line-and-around-point.name",
+	descriptionKey: "competency.math.geometry.angles-on-line-and-around-point.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.22",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.angles-on-line-and-around-point"
+	}]
+}, or = {
+	id: "math.geometry.triangle-angles-sum-180",
+	nameKey: "competency.math.geometry.triangle-angles-sum-180.name",
+	descriptionKey: "competency.math.geometry.triangle-angles-sum-180.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.23",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.triangle-angles-sum-180"
+	}]
+}, sr = {
+	id: "math.geometry.plots-reads-coordinates-first-quadrant",
+	nameKey: "competency.math.geometry.plots-reads-coordinates-first-quadrant.name",
+	descriptionKey: "competency.math.geometry.plots-reads-coordinates-first-quadrant.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.24",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.plots-reads-coordinates-first-quadrant"
+	}]
+}, cr = {
+	id: "math.geometry.translates-reflects-shape-on-grid",
+	nameKey: "competency.math.geometry.translates-reflects-shape-on-grid.name",
+	descriptionKey: "competency.math.geometry.translates-reflects-shape-on-grid.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.25",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.translates-reflects-shape-on-grid"
+	}]
+}, lr = {
+	id: "math.data-graphs.draws-reads-line-graph-trend",
+	nameKey: "competency.math.data-graphs.draws-reads-line-graph-trend.name",
+	descriptionKey: "competency.math.data-graphs.draws-reads-line-graph-trend.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.26",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.draws-reads-line-graph-trend"
+	}]
+}, ur = {
+	id: "math.data-graphs.finds-mode-range-data-set",
+	nameKey: "competency.math.data-graphs.finds-mode-range-data-set.name",
+	descriptionKey: "competency.math.data-graphs.finds-mode-range-data-set.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.27",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.finds-mode-range-data-set"
+	}]
+}, dr = {
+	id: "math.mathematical-reasoning.uses-symbol-box-for-unknown",
+	nameKey: "competency.math.mathematical-reasoning.uses-symbol-box-for-unknown.name",
+	descriptionKey: "competency.math.mathematical-reasoning.uses-symbol-box-for-unknown.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.28",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.uses-symbol-box-for-unknown"
+	}]
+}, fr = {
+	id: "math.mathematical-reasoning.describes-relationship-between-columns",
+	nameKey: "competency.math.mathematical-reasoning.describes-relationship-between-columns.name",
+	descriptionKey: "competency.math.mathematical-reasoning.describes-relationship-between-columns.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.29",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.describes-relationship-between-columns"
+	}]
+}, pr = {
+	id: "math.problem-solving.solves-multi-step-mixed-operations-units",
+	nameKey: "competency.math.problem-solving.solves-multi-step-mixed-operations-units.name",
+	descriptionKey: "competency.math.problem-solving.solves-multi-step-mixed-operations-units.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.30",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.problem-solving.solves-multi-step-mixed-operations-units"
+	}]
+}, mr = {
+	id: "math.problem-solving.works-systematically-all-solutions",
+	nameKey: "competency.math.problem-solving.works-systematically-all-solutions.name",
+	descriptionKey: "competency.math.problem-solving.works-systematically-all-solutions.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.31",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.problem-solving.works-systematically-all-solutions"
+	}]
+}, hr = {
+	id: "math.problem-solving.explains-method-aloud",
+	nameKey: "competency.math.problem-solving.explains-method-aloud.name",
+	descriptionKey: "competency.math.problem-solving.explains-method-aloud.description",
+	subjectId: "mathematics",
+	targetGrade: 4,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G4.32",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.problem-solving.explains-method-aloud"
+	}]
+}, gr = [
+	zn,
+	Bn,
+	Vn,
+	Hn,
+	Un,
+	Wn,
+	Gn,
+	Kn,
+	qn,
+	Jn,
+	Yn,
+	Xn,
+	Zn,
+	Qn,
+	$n,
+	er,
+	tr,
+	nr,
+	rr,
+	ir,
+	ar,
+	or,
+	sr,
+	cr,
+	lr,
+	ur,
+	dr,
+	fr,
+	pr,
+	mr,
+	hr
+], _r = g({
+	pluginId: "syllabus-g4-reads-writes-orders-to-million",
+	competencyId: zn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Write the number: four hundred twelve thousand, six hundred" },
+		fr: { prompt: "Écris le nombre : quatre cent douze mille six cents" },
+		correctValue: 412600
+	}, {
+		grade: 2,
+		en: { prompt: "Write the number: two million, thirty thousand and five" },
+		fr: { prompt: "Écris le nombre : deux millions trente mille cinq" },
+		correctValue: 2030005
+	}]
+}), vr = g({
+	pluginId: "syllabus-g4-extends-place-value-to-millions",
+	competencyId: Bn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "In the number 3,482,109, what is the value of the digit 8?" },
+		fr: { prompt: "Dans le nombre 3 482 109, quelle est la valeur du chiffre 8 ?" },
+		correctValue: 8e4
+	}, {
+		grade: 2,
+		en: { prompt: "In the number 6,057,341, what is the value of the digit 6?" },
+		fr: { prompt: "Dans le nombre 6 057 341, quelle est la valeur du chiffre 6 ?" },
+		correctValue: 6e6
+	}]
+}), yr = g({
+	pluginId: "syllabus-g4-add-subtract-four-digit-across-zeros",
+	competencyId: Vn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "4,002 - 1,586 = ?" },
+		fr: { prompt: "4 002 - 1 586 = ?" },
+		correctValue: 2416
+	}, {
+		grade: 2,
+		en: { prompt: "5,000 - 2,347 = ?" },
+		fr: { prompt: "5 000 - 2 347 = ?" },
+		correctValue: 2653
+	}]
+}), br = g({
+	pluginId: "syllabus-g4-knows-tables-to-12x12",
+	competencyId: Hn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "9 x 11 = ?" },
+		fr: { prompt: "9 x 11 = ?" },
+		correctValue: 99
+	}, {
+		grade: 2,
+		en: { prompt: "144 ÷ 12 = ?" },
+		fr: { prompt: "144 ÷ 12 = ?" },
+		correctValue: 12
+	}]
+}), xr = g({
+	pluginId: "syllabus-g4-multiplies-three-digit-by-one-digit",
+	competencyId: Un.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "213 x 4 = ?" },
+		fr: { prompt: "213 x 4 = ?" },
+		correctValue: 852
+	}, {
+		grade: 2,
+		en: { prompt: "348 x 6 = ?" },
+		fr: { prompt: "348 x 6 = ?" },
+		correctValue: 2088
+	}]
+}), Sr = m({
+	pluginId: "syllabus-g4-divides-three-digit-by-one-digit-with-remainder",
+	competencyId: Wn.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "317 shared equally among 5 people: each gets 63, with ___ left over.",
+			answer: "2"
+		},
+		fr: {
+			promptWithBlank: "317 partagé également entre 5 personnes : chacun reçoit 63, avec ___ en trop.",
+			answer: "2"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "A minibus seats 8. To carry 250 people, you need ___ full minibuses plus one more partly full.",
+			answer: "31"
+		},
+		fr: {
+			promptWithBlank: "Un minibus a 8 places. Pour transporter 250 personnes, il faut ___ minibus pleins, plus un autre partiellement plein.",
+			answer: "31"
+		}
+	}]
+}), Cr = g({
+	pluginId: "syllabus-g4-rounding-compensation-mentally",
+	competencyId: Gn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "356 + 99 = ? (think: +100 then -1)" },
+		fr: { prompt: "356 + 99 = ? (pense : +100 puis -1)" },
+		correctValue: 455
+	}, {
+		grade: 2,
+		en: { prompt: "482 - 199 = ? (think: -200 then +1)" },
+		fr: { prompt: "482 - 199 = ? (pense : -200 puis +1)" },
+		correctValue: 283
+	}]
+}), wr = g({
+	pluginId: "syllabus-g4-instant-table-fact-recall",
+	competencyId: Kn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "7 x 8 = ?" },
+		fr: { prompt: "7 x 8 = ?" },
+		correctValue: 56
+	}, {
+		grade: 2,
+		en: { prompt: "108 ÷ 9 = ?" },
+		fr: { prompt: "108 ÷ 9 = ?" },
+		correctValue: 12
+	}]
+}), Tr = h({
+	pluginId: "syllabus-g4-compares-orders-fractions-different-denominators",
+	competencyId: qn.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Which fraction is larger: 2/3 or 3/5?",
+			options: [
+				"2/3",
+				"3/5",
+				"They are equal"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quelle fraction est la plus grande : 2/3 ou 3/5 ?",
+			options: [
+				"2/3",
+				"3/5",
+				"Elles sont égales"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "Put in order from smallest to largest: 1/2, 1/4, 3/4 — which is smallest?",
+			options: [
+				"1/4",
+				"1/2",
+				"3/4"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Range du plus petit au plus grand : 1/2, 1/4, 3/4 — lequel est le plus petit ?",
+			options: [
+				"1/4",
+				"1/2",
+				"3/4"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Er = m({
+	pluginId: "syllabus-g4-converts-improper-fractions-mixed-numbers",
+	competencyId: Jn.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "7/2 as a mixed number is ___.",
+			answer: "3 1/2"
+		},
+		fr: {
+			promptWithBlank: "7/2 en nombre fractionnaire est ___.",
+			answer: "3 1/2"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "2 3/4 as an improper fraction is ___.",
+			answer: "11/4"
+		},
+		fr: {
+			promptWithBlank: "2 3/4 en fraction impropre est ___.",
+			answer: "11/4"
+		}
+	}]
+}), Dr = g({
+	pluginId: "syllabus-g4-finds-fraction-of-quantity",
+	competencyId: Yn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "What is 3/5 of 40?" },
+		fr: { prompt: "Combien font 3/5 de 40 ?" },
+		correctValue: 24
+	}, {
+		grade: 2,
+		en: { prompt: "What is 5/6 of 72?" },
+		fr: { prompt: "Combien font 5/6 de 72 ?" },
+		correctValue: 60
+	}]
+}), Or = h({
+	pluginId: "syllabus-g4-tenths-hundredths-as-decimals-number-line",
+	competencyId: Xn.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Which decimal is the same as 7/10?",
+			options: [
+				"0.7",
+				"0.07",
+				"7.0"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quel décimal correspond à 7/10 ?",
+			options: [
+				"0,7",
+				"0,07",
+				"7,0"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "On a number line from 0 to 1, where does 0.35 sit?",
+			options: [
+				"Between 0.3 and 0.4, closer to 0.4",
+				"Between 0.5 and 0.6",
+				"Between 0 and 0.1"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Sur une droite numérique de 0 à 1, où se trouve 0,35 ?",
+			options: [
+				"Entre 0,3 et 0,4, plus proche de 0,4",
+				"Entre 0,5 et 0,6",
+				"Entre 0 et 0,1"
+			],
+			correctIndex: 0
+		}
+	}]
+}), kr = g({
+	pluginId: "syllabus-g4-add-subtract-decimals-two-places",
+	competencyId: Zn.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "12.45 + 3.60 = ?" },
+		fr: { prompt: "12,45 + 3,60 = ?" },
+		correctValue: 16.05
+	}, {
+		grade: 2,
+		en: { prompt: "20.30 - 8.75 = ?" },
+		fr: { prompt: "20,30 - 8,75 = ?" },
+		correctValue: 11.55
+	}]
+}), Ar = h({
+	pluginId: "syllabus-g4-understands-percentage-as-out-of-100",
+	competencyId: Qn.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "What does 45% mean?",
+			options: [
+				"45 out of every 100",
+				"45 out of every 10",
+				"45 out of every 1000"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Que signifie 45 % ?",
+			options: [
+				"45 sur 100",
+				"45 sur 10",
+				"45 sur 1000"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A grid of 100 squares has 60 shaded. What percentage is shaded?",
+			options: [
+				"60%",
+				"6%",
+				"16%"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Une grille de 100 cases a 60 cases colorées. Quel pourcentage est colorié ?",
+			options: [
+				"60 %",
+				"6 %",
+				"16 %"
+			],
+			correctIndex: 0
+		}
+	}]
+}), jr = g({
+	pluginId: "syllabus-g4-calculates-area-rectangle-compound",
+	competencyId: $n.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A rectangle is 9 cm long and 4 cm wide. What is its area, in cm²?" },
+		fr: { prompt: "Un rectangle mesure 9 cm de long et 4 cm de large. Quelle est son aire, en cm² ?" },
+		correctValue: 36
+	}, {
+		grade: 2,
+		en: { prompt: "An L-shape is made of a 6 cm x 5 cm rectangle with a 2 cm x 3 cm rectangle removed from one corner. What is its area, in cm²?" },
+		fr: { prompt: "Une forme en L est formée d'un rectangle 6 cm x 5 cm auquel on retire un rectangle 2 cm x 3 cm dans un coin. Quelle est son aire, en cm² ?" },
+		correctValue: 24
+	}]
+}), Mr = h({
+	pluginId: "syllabus-g4-estimates-length-mass-volume",
+	competencyId: er.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Which is the best estimate for the length of a classroom door?",
+			options: [
+				"2 metres",
+				"20 centimetres",
+				"20 metres"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quelle est la meilleure estimation pour la longueur d'une porte de classe ?",
+			options: [
+				"2 mètres",
+				"20 centimètres",
+				"20 mètres"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "Which is the best estimate for the mass of a bag of apples?",
+			options: [
+				"1 kilogram",
+				"1 gram",
+				"100 kilograms"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quelle est la meilleure estimation pour la masse d'un sac de pommes ?",
+			options: [
+				"1 kilogramme",
+				"1 gramme",
+				"100 kilogrammes"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Nr = g({
+	pluginId: "syllabus-g4-reads-scale-with-unlabelled-divisions",
+	competencyId: tr.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A scale has marks at 0, 10 and 20 with two unlabelled marks evenly spaced between them. What number does the first unlabelled mark show?" },
+		fr: { prompt: "Une échelle a des marques à 0, 10 et 20 avec deux marques non étiquetées également espacées entre elles. Quel nombre montre la première marque non étiquetée ?" },
+		correctValue: 10
+	}, {
+		grade: 2,
+		en: { prompt: "A measuring jug has marks at 0 ml, 100 ml and 200 ml with four unlabelled marks evenly spaced between 100 and 200. What does the second unlabelled mark after 100 show?" },
+		fr: { prompt: "Un verre doseur a des marques à 0 ml, 100 ml et 200 ml avec quatre marques non étiquetées également espacées entre 100 et 200. Que montre la deuxième marque non étiquetée après 100 ?" },
+		correctValue: 140
+	}]
+}), Pr = g({
+	pluginId: "syllabus-g4-calculates-durations-crossing-hours-midnight",
+	competencyId: nr.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A train leaves at 23:40 and arrives at 00:15. How many minutes is the journey?" },
+		fr: { prompt: "Un train part à 23h40 et arrive à 00h15. Combien de minutes dure le trajet ?" },
+		correctValue: 35
+	}, {
+		grade: 2,
+		en: { prompt: "A bus leaves at 21:50 and the timetable says the journey takes 55 minutes. What time does it arrive?" },
+		fr: { prompt: "Un bus part à 21h50 et l'horaire indique que le trajet dure 55 minutes. À quelle heure arrive-t-il ? (Réponds en minutes après minuit, par exemple 22h45 = 1365)" },
+		correctValue: 1365
+	}]
+}), Fr = m({
+	pluginId: "syllabus-g4-uses-calendar-date-weeks-ahead",
+	competencyId: rr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "Today is March 3rd. Three weeks from today is March ___.",
+			answer: "24"
+		},
+		fr: {
+			promptWithBlank: "Aujourd'hui, c'est le 3 mars. Dans trois semaines, ce sera le ___ mars.",
+			answer: "24"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "Today is April 18th. Five weeks from today is May ___.",
+			answer: "23"
+		},
+		fr: {
+			promptWithBlank: "Aujourd'hui, c'est le 18 avril. Dans cinq semaines, ce sera le ___ mai.",
+			answer: "23"
+		}
+	}]
+}), Ir = g({
+	pluginId: "syllabus-g4-measures-draws-angle-with-protractor",
+	competencyId: ir.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A protractor reading shows an angle starting at 0° and ending at 47°. What is the angle, in degrees?" },
+		fr: { prompt: "Un rapporteur montre un angle commençant à 0° et se terminant à 47°. Quel est l'angle, en degrés ?" },
+		correctValue: 47
+	}, {
+		grade: 2,
+		en: { prompt: "You need to draw an angle of 132° with a protractor. What number do you mark on the scale?" },
+		fr: { prompt: "Tu dois tracer un angle de 132° avec un rapporteur. Quel nombre marques-tu sur l'échelle ?" },
+		correctValue: 132
+	}]
+}), Lr = _({
+	pluginId: "syllabus-g4-angles-on-line-and-around-point",
+	competencyId: ar.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "Angles on a straight line always add up to 180°.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Les angles sur une droite totalisent toujours 180°.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "If three angles around a point measure 100°, 150° and 100°, they add up to 360°.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Si trois angles autour d'un point mesurent 100°, 150° et 100°, ils totalisent 360°.",
+			isTrue: !1
+		}
+	}]
+}), Rr = g({
+	pluginId: "syllabus-g4-triangle-angles-sum-180",
+	competencyId: or.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A triangle has angles of 60° and 70°. What is the third angle, in degrees?" },
+		fr: { prompt: "Un triangle a des angles de 60° et 70°. Quel est le troisième angle, en degrés ?" },
+		correctValue: 50
+	}, {
+		grade: 2,
+		en: { prompt: "A triangle has angles of 35° and 95°. What is the third angle, in degrees?" },
+		fr: { prompt: "Un triangle a des angles de 35° et 95°. Quel est le troisième angle, en degrés ?" },
+		correctValue: 50
+	}]
+}), zr = h({
+	pluginId: "syllabus-g4-plots-reads-coordinates-first-quadrant",
+	competencyId: sr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A point is 3 across and 5 up from the origin. What are its coordinates?",
+			options: [
+				"(3, 5)",
+				"(5, 3)",
+				"(3, 3)"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un point est à 3 à droite et 5 en haut de l'origine. Quelles sont ses coordonnées ?",
+			options: [
+				"(3, 5)",
+				"(5, 3)",
+				"(3, 3)"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "The point (6, 2) is plotted. How far up from the x-axis is it?",
+			options: [
+				"2 units",
+				"6 units",
+				"8 units"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Le point (6, 2) est tracé. À quelle distance de l'axe des x se trouve-t-il ?",
+			options: [
+				"2 unités",
+				"6 unités",
+				"8 unités"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Br = h({
+	pluginId: "syllabus-g4-translates-reflects-shape-on-grid",
+	competencyId: cr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A shape at (2, 2) is translated 3 right and 1 up. What are its new coordinates?",
+			options: [
+				"(5, 3)",
+				"(1, 5)",
+				"(2, 5)"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Une forme en (2, 2) est translatée de 3 à droite et 1 en haut. Quelles sont ses nouvelles coordonnées ?",
+			options: [
+				"(5, 3)",
+				"(1, 5)",
+				"(2, 5)"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A shape is reflected in a vertical mirror line. What stays the same?",
+			options: [
+				"Its distance from the mirror line",
+				"Its left-right orientation",
+				"Its position"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Une forme est réfléchie par rapport à une ligne miroir verticale. Qu'est-ce qui reste identique ?",
+			options: [
+				"Sa distance par rapport à la ligne miroir",
+				"Son orientation gauche-droite",
+				"Sa position"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Vr = h({
+	pluginId: "syllabus-g4-draws-reads-line-graph-trend",
+	competencyId: lr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A line graph of temperature rises steadily from 9am to 3pm. What trend does this show?",
+			options: [
+				"Temperature is increasing",
+				"Temperature is decreasing",
+				"Temperature is constant"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un graphique linéaire de température monte régulièrement de 9h à 15h. Quelle tendance cela montre-t-il ?",
+			options: [
+				"La température augmente",
+				"La température diminue",
+				"La température est constante"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A line graph shows plant height rising fast then levelling off. What does the flat part mean?",
+			options: [
+				"Growth has slowed almost to a stop",
+				"The plant shrank",
+				"Growth sped up"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un graphique linéaire montre la hauteur d'une plante augmentant vite puis se stabilisant. Que signifie la partie plate ?",
+			options: [
+				"La croissance a presque cessé",
+				"La plante a rétréci",
+				"La croissance a accéléré"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Hr = g({
+	pluginId: "syllabus-g4-finds-mode-range-data-set",
+	competencyId: ur.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Data set: 4, 7, 4, 9, 4, 2. What is the mode?" },
+		fr: { prompt: "Ensemble de données : 4, 7, 4, 9, 4, 2. Quel est le mode ?" },
+		correctValue: 4
+	}, {
+		grade: 2,
+		en: { prompt: "Data set: 12, 5, 19, 8, 15. What is the range?" },
+		fr: { prompt: "Ensemble de données : 12, 5, 19, 8, 15. Quelle est l'étendue ?" },
+		correctValue: 14
+	}]
+}), Ur = g({
+	pluginId: "syllabus-g4-uses-symbol-box-for-unknown",
+	competencyId: dr.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "☐ + 17 = 42. What number goes in the box?" },
+		fr: { prompt: "☐ + 17 = 42. Quel nombre va dans la case ?" },
+		correctValue: 25
+	}, {
+		grade: 2,
+		en: { prompt: "6 x ☐ = 54. What number goes in the box?" },
+		fr: { prompt: "6 x ☐ = 54. Quel nombre va dans la case ?" },
+		correctValue: 9
+	}]
+}), Wr = h({
+	pluginId: "syllabus-g4-describes-relationship-between-columns",
+	competencyId: fr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A table shows: Input 1, 2, 3, 4 -> Output 3, 6, 9, 12. What is the rule?",
+			options: [
+				"Multiply by 3",
+				"Add 3",
+				"Multiply by 2"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un tableau montre : Entrée 1, 2, 3, 4 -> Sortie 3, 6, 9, 12. Quelle est la règle ?",
+			options: [
+				"Multiplier par 3",
+				"Ajouter 3",
+				"Multiplier par 2"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A table shows: Input 2, 4, 6, 8 -> Output 5, 7, 9, 11. What is the rule?",
+			options: [
+				"Add 3",
+				"Multiply by 2",
+				"Add 5"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un tableau montre : Entrée 2, 4, 6, 8 -> Sortie 5, 7, 9, 11. Quelle est la règle ?",
+			options: [
+				"Ajouter 3",
+				"Multiplier par 2",
+				"Ajouter 5"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Gr = g({
+	pluginId: "syllabus-g4-solves-multi-step-mixed-operations-units",
+	competencyId: pr.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A rope is 5 metres long. It is cut into pieces of 40 cm each. How many whole pieces can be cut?" },
+		fr: { prompt: "Une corde mesure 5 mètres de long. Elle est coupée en morceaux de 40 cm chacun. Combien de morceaux entiers peut-on couper ?" },
+		correctValue: 12
+	}, {
+		grade: 2,
+		en: { prompt: "A recipe needs 250 g of flour per batch. How many whole batches can be made from a 2 kg bag?" },
+		fr: { prompt: "Une recette nécessite 250 g de farine par lot. Combien de lots entiers peut-on faire avec un sac de 2 kg ?" },
+		correctValue: 8
+	}]
+}), Kr = _({
+	pluginId: "syllabus-g4-works-systematically-all-solutions",
+	competencyId: mr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "Listing pairs of numbers that add to 10 in order (0+10, 1+9, 2+8, ...) helps you find every possible pair without missing one.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Lister les paires de nombres qui font 10 dans l'ordre (0+10, 1+9, 2+8, ...) aide à trouver toutes les paires possibles sans en manquer une.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "If a problem asks for all the ways to make 15p with 5p and 10p coins, finding just one way is enough — there is never more than one solution.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Si un problème demande toutes les façons de faire 15p avec des pièces de 5p et 10p, trouver une seule façon suffit — il n'y a jamais plus d'une solution.",
+			isTrue: !1
+		}
+	}]
+}), qr = _({
+	pluginId: "syllabus-g4-explains-method-aloud",
+	competencyId: hr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "A good explanation of your method says the steps in order, so someone else could follow along.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Une bonne explication de sa méthode donne les étapes dans l'ordre, afin qu'une autre personne puisse suivre.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "Saying just the final answer, with no steps, is enough to explain your method to someone else.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Dire seulement la réponse finale, sans étapes, suffit pour expliquer sa méthode à quelqu'un d'autre.",
+			isTrue: !1
+		}
+	}]
+}), Jr = [
+	_r.plugin,
+	vr.plugin,
+	yr.plugin,
+	br.plugin,
+	xr.plugin,
+	Sr.plugin,
+	Cr.plugin,
+	wr.plugin,
+	Tr.plugin,
+	Er.plugin,
+	Dr.plugin,
+	Or.plugin,
+	kr.plugin,
+	Ar.plugin,
+	jr.plugin,
+	Mr.plugin,
+	Nr.plugin,
+	Pr.plugin,
+	Fr.plugin,
+	Ir.plugin,
+	Lr.plugin,
+	Rr.plugin,
+	zr.plugin,
+	Br.plugin,
+	Vr.plugin,
+	Hr.plugin,
+	Ur.plugin,
+	Wr.plugin,
+	Gr.plugin,
+	Kr.plugin,
+	qr.plugin
+];
+function x(e) {
+	return e;
+}
+var Yr = [
+	x({
+		key: "syllabus-g4-reads-writes-orders-to-million",
+		label: "Numbers to a Million",
+		icon: "🔢",
+		pluginId: _r.plugin.id,
+		competency: zn,
+		competencies: [zn],
+		createSession: _r.createSession,
+		createMasterySignal: _r.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-extends-place-value-to-millions",
+		label: "Place Value to Millions",
+		icon: "🧮",
+		pluginId: vr.plugin.id,
+		competency: Bn,
+		competencies: [Bn],
+		createSession: vr.createSession,
+		createMasterySignal: vr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-add-subtract-four-digit-across-zeros",
+		label: "Adding & Subtracting Across Zeros",
+		icon: "➖",
+		pluginId: yr.plugin.id,
+		competency: Vn,
+		competencies: [Vn],
+		createSession: yr.createSession,
+		createMasterySignal: yr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-knows-tables-to-12x12",
+		label: "Times Tables to 12x12",
+		icon: "✖️",
+		pluginId: br.plugin.id,
+		competency: Hn,
+		competencies: [Hn],
+		createSession: br.createSession,
+		createMasterySignal: br.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-multiplies-three-digit-by-one-digit",
+		label: "3-Digit by 1-Digit Multiplication",
+		icon: "📝",
+		pluginId: xr.plugin.id,
+		competency: Un,
+		competencies: [Un],
+		createSession: xr.createSession,
+		createMasterySignal: xr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-divides-three-digit-by-one-digit-with-remainder",
+		label: "Division with Remainders",
+		icon: "➗",
+		pluginId: Sr.plugin.id,
+		competency: Wn,
+		competencies: [Wn],
+		createSession: Sr.createSession,
+		createMasterySignal: Sr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-rounding-compensation-mentally",
+		label: "Mental Rounding & Compensation",
+		icon: "🧠",
+		pluginId: Cr.plugin.id,
+		competency: Gn,
+		competencies: [Gn],
+		createSession: Cr.createSession,
+		createMasterySignal: Cr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-instant-table-fact-recall",
+		label: "Instant Table Facts",
+		icon: "⚡",
+		pluginId: wr.plugin.id,
+		competency: Kn,
+		competencies: [Kn],
+		createSession: wr.createSession,
+		createMasterySignal: wr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-compares-orders-fractions-different-denominators",
+		label: "Comparing Fractions",
+		icon: "🍰",
+		pluginId: Tr.plugin.id,
+		competency: qn,
+		competencies: [qn],
+		createSession: Tr.createSession,
+		createMasterySignal: Tr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-converts-improper-fractions-mixed-numbers",
+		label: "Improper Fractions & Mixed Numbers",
+		icon: "🔀",
+		pluginId: Er.plugin.id,
+		competency: Jn,
+		competencies: [Jn],
+		createSession: Er.createSession,
+		createMasterySignal: Er.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-finds-fraction-of-quantity",
+		label: "Fraction of a Quantity",
+		icon: "🍕",
+		pluginId: Dr.plugin.id,
+		competency: Yn,
+		competencies: [Yn],
+		createSession: Dr.createSession,
+		createMasterySignal: Dr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-tenths-hundredths-as-decimals-number-line",
+		label: "Tenths & Hundredths as Decimals",
+		icon: "🔟",
+		pluginId: Or.plugin.id,
+		competency: Xn,
+		competencies: [Xn],
+		createSession: Or.createSession,
+		createMasterySignal: Or.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-add-subtract-decimals-two-places",
+		label: "Adding & Subtracting Decimals",
+		icon: "💲",
+		pluginId: kr.plugin.id,
+		competency: Zn,
+		competencies: [Zn],
+		createSession: kr.createSession,
+		createMasterySignal: kr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-understands-percentage-as-out-of-100",
+		label: "Percentage as Out of 100",
+		icon: "💯",
+		pluginId: Ar.plugin.id,
+		competency: Qn,
+		competencies: [Qn],
+		createSession: Ar.createSession,
+		createMasterySignal: Ar.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-calculates-area-rectangle-compound",
+		label: "Area of Rectangles & Compound Shapes",
+		icon: "🔲",
+		pluginId: jr.plugin.id,
+		competency: $n,
+		competencies: [$n],
+		createSession: jr.createSession,
+		createMasterySignal: jr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-estimates-length-mass-volume",
+		label: "Estimating Length, Mass & Volume",
+		icon: "📏",
+		pluginId: Mr.plugin.id,
+		competency: er,
+		competencies: [er],
+		createSession: Mr.createSession,
+		createMasterySignal: Mr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-reads-scale-with-unlabelled-divisions",
+		label: "Reading Unlabelled Scales",
+		icon: "📐",
+		pluginId: Nr.plugin.id,
+		competency: tr,
+		competencies: [tr],
+		createSession: Nr.createSession,
+		createMasterySignal: Nr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-calculates-durations-crossing-hours-midnight",
+		label: "Durations Crossing Hours & Midnight",
+		icon: "⏱️",
+		pluginId: Pr.plugin.id,
+		competency: nr,
+		competencies: [nr],
+		createSession: Pr.createSession,
+		createMasterySignal: Pr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-uses-calendar-date-weeks-ahead",
+		label: "Calendar: Weeks Ahead",
+		icon: "📅",
+		pluginId: Fr.plugin.id,
+		competency: rr,
+		competencies: [rr],
+		createSession: Fr.createSession,
+		createMasterySignal: Fr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-measures-draws-angle-with-protractor",
+		label: "Measuring Angles with a Protractor",
+		icon: "📐",
+		pluginId: Ir.plugin.id,
+		competency: ir,
+		competencies: [ir],
+		createSession: Ir.createSession,
+		createMasterySignal: Ir.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-angles-on-line-and-around-point",
+		label: "Angles on a Line & Around a Point",
+		icon: "📏",
+		pluginId: Lr.plugin.id,
+		competency: ar,
+		competencies: [ar],
+		createSession: Lr.createSession,
+		createMasterySignal: Lr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-triangle-angles-sum-180",
+		label: "Triangle Angle Sum",
+		icon: "🔺",
+		pluginId: Rr.plugin.id,
+		competency: or,
+		competencies: [or],
+		createSession: Rr.createSession,
+		createMasterySignal: Rr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-plots-reads-coordinates-first-quadrant",
+		label: "Coordinates in the First Quadrant",
+		icon: "🧭",
+		pluginId: zr.plugin.id,
+		competency: sr,
+		competencies: [sr],
+		createSession: zr.createSession,
+		createMasterySignal: zr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-translates-reflects-shape-on-grid",
+		label: "Translating & Reflecting Shapes",
+		icon: "🔄",
+		pluginId: Br.plugin.id,
+		competency: cr,
+		competencies: [cr],
+		createSession: Br.createSession,
+		createMasterySignal: Br.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-draws-reads-line-graph-trend",
+		label: "Line Graphs & Trends",
+		icon: "📈",
+		pluginId: Vr.plugin.id,
+		competency: lr,
+		competencies: [lr],
+		createSession: Vr.createSession,
+		createMasterySignal: Vr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-finds-mode-range-data-set",
+		label: "Mode & Range",
+		icon: "📊",
+		pluginId: Hr.plugin.id,
+		competency: ur,
+		competencies: [ur],
+		createSession: Hr.createSession,
+		createMasterySignal: Hr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-uses-symbol-box-for-unknown",
+		label: "Solving for an Unknown Box",
+		icon: "❓",
+		pluginId: Ur.plugin.id,
+		competency: dr,
+		competencies: [dr],
+		createSession: Ur.createSession,
+		createMasterySignal: Ur.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-describes-relationship-between-columns",
+		label: "Table Rules",
+		icon: "📋",
+		pluginId: Wr.plugin.id,
+		competency: fr,
+		competencies: [fr],
+		createSession: Wr.createSession,
+		createMasterySignal: Wr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-solves-multi-step-mixed-operations-units",
+		label: "Multi-Step Problems with Units",
+		icon: "🧩",
+		pluginId: Gr.plugin.id,
+		competency: pr,
+		competencies: [pr],
+		createSession: Gr.createSession,
+		createMasterySignal: Gr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-works-systematically-all-solutions",
+		label: "Finding All Solutions Systematically",
+		icon: "🔍",
+		pluginId: Kr.plugin.id,
+		competency: mr,
+		competencies: [mr],
+		createSession: Kr.createSession,
+		createMasterySignal: Kr.createMasterySignal
+	}),
+	x({
+		key: "syllabus-g4-explains-method-aloud",
+		label: "Explaining Your Method",
+		icon: "🗣️",
+		pluginId: qr.plugin.id,
+		competency: hr,
+		competencies: [hr],
+		createSession: qr.createSession,
+		createMasterySignal: qr.createMasterySignal
+	})
+], Xr = {
+	id: "math.number-sense.finds-factors-common-multiples",
+	nameKey: "competency.math.number-sense.finds-factors-common-multiples.name",
+	descriptionKey: "competency.math.number-sense.finds-factors-common-multiples.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.1",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.number-sense.finds-factors-common-multiples"
+	}]
+}, Zr = {
+	id: "math.place-value.extends-place-value-right-of-decimal",
+	nameKey: "competency.math.place-value.extends-place-value-right-of-decimal.name",
+	descriptionKey: "competency.math.place-value.extends-place-value-right-of-decimal.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.4",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.place-value.extends-place-value-right-of-decimal"
+	}]
+}, Qr = {
+	id: "math.decimals.rounds-decimals-to-given-places",
+	nameKey: "competency.math.decimals.rounds-decimals-to-given-places.name",
+	descriptionKey: "competency.math.decimals.rounds-decimals-to-given-places.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.5",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.decimals.rounds-decimals-to-given-places"
+	}]
+}, $r = {
+	id: "math.addition.adds-subtracts-whole-decimals-columns",
+	nameKey: "competency.math.addition.adds-subtracts-whole-decimals-columns.name",
+	descriptionKey: "competency.math.addition.adds-subtracts-whole-decimals-columns.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.7",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.addition.adds-subtracts-whole-decimals-columns"
+	}]
+}, ei = {
+	id: "math.multiplication.multiplies-four-digit-by-two-digit",
+	nameKey: "competency.math.multiplication.multiplies-four-digit-by-two-digit.name",
+	descriptionKey: "competency.math.multiplication.multiplies-four-digit-by-two-digit.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.8",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.multiplication.multiplies-four-digit-by-two-digit"
+	}]
+}, ti = {
+	id: "math.division.divides-by-two-digit-expresses-remainder",
+	nameKey: "competency.math.division.divides-by-two-digit-expresses-remainder.name",
+	descriptionKey: "competency.math.division.divides-by-two-digit-expresses-remainder.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.9",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.division.divides-by-two-digit-expresses-remainder"
+	}]
+}, ni = {
+	id: "math.number-sense.knows-divisibility-tests",
+	nameKey: "competency.math.number-sense.knows-divisibility-tests.name",
+	descriptionKey: "competency.math.number-sense.knows-divisibility-tests.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.10",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.number-sense.knows-divisibility-tests"
+	}]
+}, ri = {
+	id: "math.mathematical-reasoning.applies-order-of-operations",
+	nameKey: "competency.math.mathematical-reasoning.applies-order-of-operations.name",
+	descriptionKey: "competency.math.mathematical-reasoning.applies-order-of-operations.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.11",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.applies-order-of-operations"
+	}]
+}, ii = {
+	id: "math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally",
+	nameKey: "competency.math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally.name",
+	descriptionKey: "competency.math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.12",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally"
+	}]
+}, ai = {
+	id: "math.percentages.finds-common-percentages-mentally",
+	nameKey: "competency.math.percentages.finds-common-percentages-mentally.name",
+	descriptionKey: "competency.math.percentages.finds-common-percentages-mentally.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.13",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.percentages.finds-common-percentages-mentally"
+	}]
+}, oi = {
+	id: "math.mathematical-reasoning.estimates-before-calculating",
+	nameKey: "competency.math.mathematical-reasoning.estimates-before-calculating.name",
+	descriptionKey: "competency.math.mathematical-reasoning.estimates-before-calculating.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.14",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.estimates-before-calculating"
+	}]
+}, si = {
+	id: "math.fractions.adds-subtracts-fractions-different-denominators",
+	nameKey: "competency.math.fractions.adds-subtracts-fractions-different-denominators.name",
+	descriptionKey: "competency.math.fractions.adds-subtracts-fractions-different-denominators.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.15",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.fractions.adds-subtracts-fractions-different-denominators"
+	}]
+}, ci = {
+	id: "math.fractions.multiplies-fraction-by-whole-or-fraction",
+	nameKey: "competency.math.fractions.multiplies-fraction-by-whole-or-fraction.name",
+	descriptionKey: "competency.math.fractions.multiplies-fraction-by-whole-or-fraction.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.16",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.fractions.multiplies-fraction-by-whole-or-fraction"
+	}]
+}, li = {
+	id: "math.percentages.converts-fluently-fractions-decimals-percentages",
+	nameKey: "competency.math.percentages.converts-fluently-fractions-decimals-percentages.name",
+	descriptionKey: "competency.math.percentages.converts-fluently-fractions-decimals-percentages.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.17",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.percentages.converts-fluently-fractions-decimals-percentages"
+	}]
+}, ui = {
+	id: "math.decimals.multiplies-divides-decimals-by-whole-numbers",
+	nameKey: "competency.math.decimals.multiplies-divides-decimals-by-whole-numbers.name",
+	descriptionKey: "competency.math.decimals.multiplies-divides-decimals-by-whole-numbers.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.18",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.decimals.multiplies-divides-decimals-by-whole-numbers"
+	}]
+}, di = {
+	id: "math.percentages.finds-any-percentage-of-quantity",
+	nameKey: "competency.math.percentages.finds-any-percentage-of-quantity.name",
+	descriptionKey: "competency.math.percentages.finds-any-percentage-of-quantity.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.19",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.percentages.finds-any-percentage-of-quantity"
+	}]
+}, fi = {
+	id: "math.percentages.calculates-percentage-increase-decrease",
+	nameKey: "competency.math.percentages.calculates-percentage-increase-decrease.name",
+	descriptionKey: "competency.math.percentages.calculates-percentage-increase-decrease.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.20",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.percentages.calculates-percentage-increase-decrease"
+	}]
+}, pi = {
+	id: "math.number-sense.understands-ratio-shares-quantity",
+	nameKey: "competency.math.number-sense.understands-ratio-shares-quantity.name",
+	descriptionKey: "competency.math.number-sense.understands-ratio-shares-quantity.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.21",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.number-sense.understands-ratio-shares-quantity"
+	}]
+}, mi = {
+	id: "math.mathematical-reasoning.solves-simple-scaling-problems",
+	nameKey: "competency.math.mathematical-reasoning.solves-simple-scaling-problems.name",
+	descriptionKey: "competency.math.mathematical-reasoning.solves-simple-scaling-problems.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.22",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.solves-simple-scaling-problems"
+	}]
+}, hi = {
+	id: "math.measurement.calculates-volume-cuboid",
+	nameKey: "competency.math.measurement.calculates-volume-cuboid.name",
+	descriptionKey: "competency.math.measurement.calculates-volume-cuboid.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.23",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.calculates-volume-cuboid"
+	}]
+}, gi = {
+	id: "math.measurement.converts-metric-units-two-steps",
+	nameKey: "competency.math.measurement.converts-metric-units-two-steps.name",
+	descriptionKey: "competency.math.measurement.converts-metric-units-two-steps.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.24",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.converts-metric-units-two-steps"
+	}]
+}, _i = {
+	id: "math.measurement.knows-imperial-metric-rough-equivalence",
+	nameKey: "competency.math.measurement.knows-imperial-metric-rough-equivalence.name",
+	descriptionKey: "competency.math.measurement.knows-imperial-metric-rough-equivalence.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.25",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.knows-imperial-metric-rough-equivalence"
+	}]
+}, vi = {
+	id: "math.measurement.has-reliable-body-ruler",
+	nameKey: "competency.math.measurement.has-reliable-body-ruler.name",
+	descriptionKey: "competency.math.measurement.has-reliable-body-ruler.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.26",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.has-reliable-body-ruler"
+	}]
+}, yi = {
+	id: "math.time.converts-seconds-minutes-hours-days-years",
+	nameKey: "competency.math.time.converts-seconds-minutes-hours-days-years.name",
+	descriptionKey: "competency.math.time.converts-seconds-minutes-hours-days-years.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.27",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.time.converts-seconds-minutes-hours-days-years"
+	}]
+}, bi = {
+	id: "math.time.handles-time-zone-differences",
+	nameKey: "competency.math.time.handles-time-zone-differences.name",
+	descriptionKey: "competency.math.time.handles-time-zone-differences.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.28",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.time.handles-time-zone-differences"
+	}]
+}, xi = {
+	id: "math.geometry.draws-shape-accurately-from-specification",
+	nameKey: "competency.math.geometry.draws-shape-accurately-from-specification.name",
+	descriptionKey: "competency.math.geometry.draws-shape-accurately-from-specification.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.29",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.draws-shape-accurately-from-specification"
+	}]
+}, Si = {
+	id: "math.geometry.names-parts-of-circle",
+	nameKey: "competency.math.geometry.names-parts-of-circle.name",
+	descriptionKey: "competency.math.geometry.names-parts-of-circle.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.30",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.names-parts-of-circle"
+	}]
+}, Ci = {
+	id: "math.geometry.identifies-net-of-cube-solids",
+	nameKey: "competency.math.geometry.identifies-net-of-cube-solids.name",
+	descriptionKey: "competency.math.geometry.identifies-net-of-cube-solids.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.31",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.identifies-net-of-cube-solids"
+	}]
+}, wi = {
+	id: "math.geometry.plots-coordinates-all-four-quadrants",
+	nameKey: "competency.math.geometry.plots-coordinates-all-four-quadrants.name",
+	descriptionKey: "competency.math.geometry.plots-coordinates-all-four-quadrants.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.32",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.plots-coordinates-all-four-quadrants"
+	}]
+}, Ti = {
+	id: "math.geometry.rotates-shape-about-point",
+	nameKey: "competency.math.geometry.rotates-shape-about-point.name",
+	descriptionKey: "competency.math.geometry.rotates-shape-about-point.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.33",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.geometry.rotates-shape-about-point"
+	}]
+}, Ei = {
+	id: "math.measurement.uses-scale-on-plan-or-map",
+	nameKey: "competency.math.measurement.uses-scale-on-plan-or-map.name",
+	descriptionKey: "competency.math.measurement.uses-scale-on-plan-or-map.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.34",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.measurement.uses-scale-on-plan-or-map"
+	}]
+}, Di = {
+	id: "math.data-graphs.calculates-mean",
+	nameKey: "competency.math.data-graphs.calculates-mean.name",
+	descriptionKey: "competency.math.data-graphs.calculates-mean.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.35",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.calculates-mean"
+	}]
+}, Oi = {
+	id: "math.data-graphs.reads-pie-chart-fractions-percentages",
+	nameKey: "competency.math.data-graphs.reads-pie-chart-fractions-percentages.name",
+	descriptionKey: "competency.math.data-graphs.reads-pie-chart-fractions-percentages.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.36",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.reads-pie-chart-fractions-percentages"
+	}]
+}, ki = {
+	id: "math.data-graphs.uses-language-of-chance",
+	nameKey: "competency.math.data-graphs.uses-language-of-chance.name",
+	descriptionKey: "competency.math.data-graphs.uses-language-of-chance.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.37",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.uses-language-of-chance"
+	}]
+}, Ai = {
+	id: "math.data-graphs.spots-misleading-graph",
+	nameKey: "competency.math.data-graphs.spots-misleading-graph.name",
+	descriptionKey: "competency.math.data-graphs.spots-misleading-graph.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.38",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.data-graphs.spots-misleading-graph"
+	}]
+}, ji = {
+	id: "math.mathematical-reasoning.uses-letter-for-unknown-substitutes",
+	nameKey: "competency.math.mathematical-reasoning.uses-letter-for-unknown-substitutes.name",
+	descriptionKey: "competency.math.mathematical-reasoning.uses-letter-for-unknown-substitutes.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.39",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.uses-letter-for-unknown-substitutes"
+	}]
+}, Mi = {
+	id: "math.mathematical-reasoning.solves-one-step-equation-checks",
+	nameKey: "competency.math.mathematical-reasoning.solves-one-step-equation-checks.name",
+	descriptionKey: "competency.math.mathematical-reasoning.solves-one-step-equation-checks.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.40",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.solves-one-step-equation-checks"
+	}]
+}, Ni = {
+	id: "math.mathematical-reasoning.expresses-general-rule-for-sequence",
+	nameKey: "competency.math.mathematical-reasoning.expresses-general-rule-for-sequence.name",
+	descriptionKey: "competency.math.mathematical-reasoning.expresses-general-rule-for-sequence.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.41",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.expresses-general-rule-for-sequence"
+	}]
+}, Pi = {
+	id: "math.mathematical-reasoning.judges-whether-answer-reasonable",
+	nameKey: "competency.math.mathematical-reasoning.judges-whether-answer-reasonable.name",
+	descriptionKey: "competency.math.mathematical-reasoning.judges-whether-answer-reasonable.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.42",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.judges-whether-answer-reasonable"
+	}]
+}, Fi = {
+	id: "math.mathematical-reasoning.finds-own-mistake-in-wrong-answer",
+	nameKey: "competency.math.mathematical-reasoning.finds-own-mistake-in-wrong-answer.name",
+	descriptionKey: "competency.math.mathematical-reasoning.finds-own-mistake-in-wrong-answer.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.43",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.finds-own-mistake-in-wrong-answer"
+	}]
+}, Ii = {
+	id: "math.problem-solving.solves-problem-missing-surplus-info",
+	nameKey: "competency.math.problem-solving.solves-problem-missing-surplus-info.name",
+	descriptionKey: "competency.math.problem-solving.solves-problem-missing-surplus-info.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.44",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.problem-solving.solves-problem-missing-surplus-info"
+	}]
+}, Li = {
+	id: "math.problem-solving.tackles-unfamiliar-problem",
+	nameKey: "competency.math.problem-solving.tackles-unfamiliar-problem.name",
+	descriptionKey: "competency.math.problem-solving.tackles-unfamiliar-problem.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.45",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.problem-solving.tackles-unfamiliar-problem"
+	}]
+}, Ri = {
+	id: "math.mathematical-reasoning.uses-calculator-correctly-checks-estimate",
+	nameKey: "competency.math.mathematical-reasoning.uses-calculator-correctly-checks-estimate.name",
+	descriptionKey: "competency.math.mathematical-reasoning.uses-calculator-correctly-checks-estimate.description",
+	subjectId: "mathematics",
+	targetGrade: 5,
+	gradeCount: 2,
+	frameworkSkillId: "mathematics.G5.46",
+	prerequisiteIds: [],
+	scoreInputs: [{
+		kind: "activity",
+		id: "math.mathematical-reasoning.uses-calculator-correctly-checks-estimate"
+	}]
+}, zi = [
+	Xr,
+	Zr,
+	Qr,
+	$r,
+	ei,
+	ti,
+	ni,
+	ri,
+	ii,
+	ai,
+	oi,
+	si,
+	ci,
+	li,
+	ui,
+	di,
+	fi,
+	pi,
+	mi,
+	hi,
+	gi,
+	_i,
+	vi,
+	yi,
+	bi,
+	xi,
+	Si,
+	Ci,
+	wi,
+	Ti,
+	Ei,
+	Di,
+	Oi,
+	ki,
+	Ai,
+	ji,
+	Mi,
+	Ni,
+	Pi,
+	Fi,
+	Ii,
+	Li,
+	Ri
+], Bi = m({
+	pluginId: "syllabus-g5-finds-factors-common-multiples",
+	competencyId: Xr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "List all the factors of 18: 1, 2, 3, 6, 9, ___.",
+			answer: "18"
+		},
+		fr: {
+			promptWithBlank: "Liste tous les diviseurs de 18 : 1, 2, 3, 6, 9, ___.",
+			answer: "18"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "The smallest common multiple of 4 and 6 (other than 0) is ___.",
+			answer: "12"
+		},
+		fr: {
+			promptWithBlank: "Le plus petit multiple commun de 4 et 6 (autre que 0) est ___.",
+			answer: "12"
+		}
+	}]
+}), Vi = h({
+	pluginId: "syllabus-g5-extends-place-value-right-of-decimal",
+	competencyId: Zr.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "In the number 4.627, what digit is in the hundredths place?",
+			options: [
+				"2",
+				"6",
+				"7"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Dans le nombre 4,627, quel chiffre est à la position des centièmes ?",
+			options: [
+				"2",
+				"6",
+				"7"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "In the number 0.359, what digit is in the thousandths place?",
+			options: [
+				"9",
+				"3",
+				"5"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Dans le nombre 0,359, quel chiffre est à la position des millièmes ?",
+			options: [
+				"9",
+				"3",
+				"5"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Hi = g({
+	pluginId: "syllabus-g5-rounds-decimals-to-given-places",
+	competencyId: Qr.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Round 3.482 to 2 decimal places." },
+		fr: { prompt: "Arrondis 3,482 à 2 décimales." },
+		correctValue: 3.48
+	}, {
+		grade: 2,
+		en: { prompt: "Round 7.096 to 1 decimal place." },
+		fr: { prompt: "Arrondis 7,096 à 1 décimale." },
+		correctValue: 7.1
+	}]
+}), Ui = g({
+	pluginId: "syllabus-g5-adds-subtracts-whole-decimals-columns",
+	competencyId: $r.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "348.6 + 27.35 = ?" },
+		fr: { prompt: "348,6 + 27,35 = ?" },
+		correctValue: 375.95
+	}, {
+		grade: 2,
+		en: { prompt: "902.4 - 356.78 = ?" },
+		fr: { prompt: "902,4 - 356,78 = ?" },
+		correctValue: 545.62
+	}]
+}), Wi = g({
+	pluginId: "syllabus-g5-multiplies-four-digit-by-two-digit",
+	competencyId: ei.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "2,314 x 12 = ?" },
+		fr: { prompt: "2 314 x 12 = ?" },
+		correctValue: 27768
+	}, {
+		grade: 2,
+		en: { prompt: "3,608 x 24 = ?" },
+		fr: { prompt: "3 608 x 24 = ?" },
+		correctValue: 86592
+	}]
+}), Gi = m({
+	pluginId: "syllabus-g5-divides-by-two-digit-expresses-remainder",
+	competencyId: ti.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "487 ÷ 15 = 32 remainder ___.",
+			answer: "7"
+		},
+		fr: {
+			promptWithBlank: "487 ÷ 15 = 32 reste ___.",
+			answer: "7"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "156 shared equally among 12: each gets ___ exactly (no remainder).",
+			answer: "13"
+		},
+		fr: {
+			promptWithBlank: "156 partagé également entre 12 : chacun reçoit ___ exactement (sans reste).",
+			answer: "13"
+		}
+	}]
+}), Ki = _({
+	pluginId: "syllabus-g5-knows-divisibility-tests",
+	competencyId: ni.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "531 is divisible by 3, because 5 + 3 + 1 = 9, and 9 is divisible by 3.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "531 est divisible par 3, car 5 + 3 + 1 = 9, et 9 est divisible par 3.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "The number 4,530 is divisible by both 9 and 10.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Le nombre 4 530 est divisible à la fois par 9 et par 10.",
+			isTrue: !1
+		}
+	}]
+}), qi = g({
+	pluginId: "syllabus-g5-applies-order-of-operations",
+	competencyId: ri.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "(4 + 3) x 5 = ?" },
+		fr: { prompt: "(4 + 3) x 5 = ?" },
+		correctValue: 35
+	}, {
+		grade: 2,
+		en: { prompt: "20 - (2 x 6) + 3 = ?" },
+		fr: { prompt: "20 - (2 x 6) + 3 = ?" },
+		correctValue: 11
+	}]
+}), Ji = g({
+	pluginId: "syllabus-g5-multiplies-two-digit-by-one-digit-mentally",
+	competencyId: ii.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "34 x 6 = ? (do it mentally)" },
+		fr: { prompt: "34 x 6 = ? (calcule-le mentalement)" },
+		correctValue: 204
+	}, {
+		grade: 2,
+		en: { prompt: "58 x 7 = ? (do it mentally)" },
+		fr: { prompt: "58 x 7 = ? (calcule-le mentalement)" },
+		correctValue: 406
+	}]
+}), Yi = g({
+	pluginId: "syllabus-g5-finds-common-percentages-mentally",
+	competencyId: ai.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "What is 25% of 84? (do it mentally)" },
+		fr: { prompt: "Combien font 25 % de 84 ? (calcule-le mentalement)" },
+		correctValue: 21
+	}, {
+		grade: 2,
+		en: { prompt: "What is 75% of 120? (do it mentally)" },
+		fr: { prompt: "Combien font 75 % de 120 ? (calcule-le mentalement)" },
+		correctValue: 90
+	}]
+}), Xi = _({
+	pluginId: "syllabus-g5-estimates-before-calculating",
+	competencyId: oi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "Before calculating 198 x 5 exactly, rounding to 200 x 5 = 1000 gives a sensible estimate.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Avant de calculer exactement 198 x 5, arrondir à 200 x 5 = 1000 donne une estimation raisonnable.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "If your estimate is 40 and your calculator shows 4000 for the same problem, your calculated answer is probably right and the estimate is wrong.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Si ton estimation est 40 et que la calculatrice affiche 4000 pour le même problème, ta réponse calculée est probablement correcte et l'estimation est fausse.",
+			isTrue: !1
+		}
+	}]
+}), Zi = m({
+	pluginId: "syllabus-g5-adds-subtracts-fractions-different-denominators",
+	competencyId: si.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "1/2 + 1/3 = ___.",
+			answer: "5/6"
+		},
+		fr: {
+			promptWithBlank: "1/2 + 1/3 = ___.",
+			answer: "5/6"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "3/4 - 1/6 = ___.",
+			answer: "7/12"
+		},
+		fr: {
+			promptWithBlank: "3/4 - 1/6 = ___.",
+			answer: "7/12"
+		}
+	}]
+}), Qi = g({
+	pluginId: "syllabus-g5-multiplies-fraction-by-whole-or-fraction",
+	competencyId: ci.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "2/5 x 15 = ?" },
+		fr: { prompt: "2/5 x 15 = ?" },
+		correctValue: 6
+	}, {
+		grade: 2,
+		en: { prompt: "1/2 x 1/4 = ? (answer as a decimal)" },
+		fr: { prompt: "1/2 x 1/4 = ? (réponds en décimal)" },
+		correctValue: .125
+	}]
+}), $i = h({
+	pluginId: "syllabus-g5-converts-fluently-fractions-decimals-percentages",
+	competencyId: li.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Which percentage is the same as 1/4?",
+			options: [
+				"25%",
+				"40%",
+				"14%"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quel pourcentage correspond à 1/4 ?",
+			options: [
+				"25 %",
+				"40 %",
+				"14 %"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "Which decimal is the same as 3/5?",
+			options: [
+				"0.6",
+				"0.35",
+				"0.53"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Quel décimal correspond à 3/5 ?",
+			options: [
+				"0,6",
+				"0,35",
+				"0,53"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ea = g({
+	pluginId: "syllabus-g5-multiplies-divides-decimals-by-whole-numbers",
+	competencyId: ui.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "3.6 x 4 = ?" },
+		fr: { prompt: "3,6 x 4 = ?" },
+		correctValue: 14.4
+	}, {
+		grade: 2,
+		en: { prompt: "9.6 ÷ 4 = ?" },
+		fr: { prompt: "9,6 ÷ 4 = ?" },
+		correctValue: 2.4
+	}]
+}), ta = g({
+	pluginId: "syllabus-g5-finds-any-percentage-of-quantity",
+	competencyId: di.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "What is 15% of 60?" },
+		fr: { prompt: "Combien font 15 % de 60 ?" },
+		correctValue: 9
+	}, {
+		grade: 2,
+		en: { prompt: "What is 32% of 250?" },
+		fr: { prompt: "Combien font 32 % de 250 ?" },
+		correctValue: 80
+	}]
+}), na = g({
+	pluginId: "syllabus-g5-calculates-percentage-increase-decrease",
+	competencyId: fi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A $40 jacket is reduced by 20%. What is the new price, in dollars?" },
+		fr: { prompt: "Une veste à 40 $ est réduite de 20 %. Quel est le nouveau prix, en dollars ?" },
+		correctValue: 32
+	}, {
+		grade: 2,
+		en: { prompt: "A $150 bike price increases by 10%. What is the new price, in dollars?" },
+		fr: { prompt: "Le prix d'un vélo à 150 $ augmente de 10 %. Quel est le nouveau prix, en dollars ?" },
+		correctValue: 165
+	}]
+}), ra = m({
+	pluginId: "syllabus-g5-understands-ratio-shares-quantity",
+	competencyId: pi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "Share 20 in the ratio 3:1. The larger share is ___.",
+			answer: "15"
+		},
+		fr: {
+			promptWithBlank: "Partage 20 selon le rapport 3:1. La plus grande part est ___.",
+			answer: "15"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "Share 35 in the ratio 2:5. The smaller share is ___.",
+			answer: "10"
+		},
+		fr: {
+			promptWithBlank: "Partage 35 selon le rapport 2:5. La plus petite part est ___.",
+			answer: "10"
+		}
+	}]
+}), ia = g({
+	pluginId: "syllabus-g5-solves-simple-scaling-problems",
+	competencyId: mi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "If 3 items cost $12, how much do 7 items cost, in dollars?" },
+		fr: { prompt: "Si 3 articles coûtent 12 $, combien coûtent 7 articles, en dollars ?" },
+		correctValue: 28
+	}, {
+		grade: 2,
+		en: { prompt: "If 5 pens cost $9, how much do 15 pens cost, in dollars?" },
+		fr: { prompt: "Si 5 stylos coûtent 9 $, combien coûtent 15 stylos, en dollars ?" },
+		correctValue: 27
+	}]
+}), aa = g({
+	pluginId: "syllabus-g5-calculates-volume-cuboid",
+	competencyId: hi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A cuboid is 4 cm x 3 cm x 5 cm. What is its volume, in cm³?" },
+		fr: { prompt: "Un parallélépipède mesure 4 cm x 3 cm x 5 cm. Quel est son volume, en cm³ ?" },
+		correctValue: 60
+	}, {
+		grade: 2,
+		en: { prompt: "A box holds 2,000 cm³ of water. How many litres is that?" },
+		fr: { prompt: "Une boîte contient 2 000 cm³ d'eau. Combien de litres cela fait-il ?" },
+		correctValue: 2
+	}]
+}), oa = g({
+	pluginId: "syllabus-g5-converts-metric-units-two-steps",
+	competencyId: gi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Convert 3,450 mm to metres. How many metres is that?" },
+		fr: { prompt: "Convertis 3 450 mm en mètres. Combien de mètres cela fait-il ?" },
+		correctValue: 3.45
+	}, {
+		grade: 2,
+		en: { prompt: "Convert 2.6 litres to centilitres. How many centilitres is that?" },
+		fr: { prompt: "Convertis 2,6 litres en centilitres. Combien de centilitres cela fait-il ?" },
+		correctValue: 260
+	}]
+}), sa = h({
+	pluginId: "syllabus-g5-knows-imperial-metric-rough-equivalence",
+	competencyId: _i.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Roughly, one mile is closest to which metric distance?",
+			options: [
+				"1.6 kilometres",
+				"160 metres",
+				"16 kilometres"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Environ, un mile correspond le mieux à quelle distance métrique ?",
+			options: [
+				"1,6 kilomètre",
+				"160 mètres",
+				"16 kilomètres"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "Roughly, one pound (lb) is closest to which mass in metric units?",
+			options: [
+				"450 grams",
+				"45 grams",
+				"4.5 kilograms"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Environ, une livre (lb) correspond le mieux à quelle masse en unités métriques ?",
+			options: [
+				"450 grammes",
+				"45 grammes",
+				"4,5 kilogrammes"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ca = _({
+	pluginId: "syllabus-g5-has-reliable-body-ruler",
+	competencyId: vi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "Knowing your own hand span lets you estimate the length of a table without a ruler.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Connaître l'envergure de sa propre main permet d'estimer la longueur d'une table sans règle.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "A single average pace length is a reliable way to estimate a long distance, like the length of a playground.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "La longueur moyenne d'un pas est un moyen fiable d'estimer une longue distance, comme la longueur d'une cour de récréation.",
+			isTrue: !0
+		}
+	}]
+}), la = g({
+	pluginId: "syllabus-g5-converts-seconds-minutes-hours-days-years",
+	competencyId: yi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "How many seconds are in 4 minutes?" },
+		fr: { prompt: "Combien de secondes y a-t-il dans 4 minutes ?" },
+		correctValue: 240
+	}, {
+		grade: 2,
+		en: { prompt: "How many days are in 3 years (not counting leap years)?" },
+		fr: { prompt: "Combien de jours y a-t-il dans 3 ans (sans compter les années bissextiles) ?" },
+		correctValue: 1095
+	}]
+}), ua = g({
+	pluginId: "syllabus-g5-handles-time-zone-differences",
+	competencyId: bi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "It is 14:00 where you are. A friend's city is 5 hours behind. What time is it there? (answer in 24-hour format as a number, e.g. 09:00 = 900)" },
+		fr: { prompt: "Il est 14h00 chez toi. La ville d'un ami est 5 heures en retard. Quelle heure est-il là-bas ? (réponds au format 24h comme un nombre, par exemple 09h00 = 900)" },
+		correctValue: 900
+	}, {
+		grade: 2,
+		en: { prompt: "It is 09:00 where you are. A friend's city is 8 hours ahead. What time is it there? (answer in 24-hour format as a number, e.g. 17:00 = 1700)" },
+		fr: { prompt: "Il est 09h00 chez toi. La ville d'un ami est 8 heures en avance. Quelle heure est-il là-bas ? (réponds au format 24h comme un nombre, par exemple 17h00 = 1700)" },
+		correctValue: 1700
+	}]
+}), da = _({
+	pluginId: "syllabus-g5-draws-shape-accurately-from-specification",
+	competencyId: xi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "To draw a triangle with a 5 cm side and a 40° angle accurately, you need both a ruler and a protractor.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Pour tracer avec précision un triangle avec un côté de 5 cm et un angle de 40°, tu as besoin d'une règle et d'un rapporteur.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "Compasses are used to draw a straight line of an exact length.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Le compas sert à tracer une ligne droite d'une longueur exacte.",
+			isTrue: !1
+		}
+	}]
+}), fa = h({
+	pluginId: "syllabus-g5-names-parts-of-circle",
+	competencyId: Si.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "The distance from the centre of a circle to its edge is called the:",
+			options: [
+				"Radius",
+				"Diameter",
+				"Circumference"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "La distance entre le centre d'un cercle et son bord s'appelle :",
+			options: [
+				"Le rayon",
+				"Le diamètre",
+				"La circonférence"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "If the radius of a circle is 6 cm, what is its diameter?",
+			options: [
+				"12 cm",
+				"3 cm",
+				"6 cm"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Si le rayon d'un cercle est 6 cm, quel est son diamètre ?",
+			options: [
+				"12 cm",
+				"3 cm",
+				"6 cm"
+			],
+			correctIndex: 0
+		}
+	}]
+}), pa = h({
+	pluginId: "syllabus-g5-identifies-net-of-cube-solids",
+	competencyId: Ci.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "How many square faces does the net of a cube have?",
+			options: [
+				"6",
+				"4",
+				"8"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Combien de faces carrées a le patron d'un cube ?",
+			options: [
+				"6",
+				"4",
+				"8"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "The net of a triangular prism includes which shapes?",
+			options: [
+				"2 triangles and 3 rectangles",
+				"6 squares",
+				"1 triangle and 1 rectangle"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Le patron d'un prisme triangulaire comprend quelles formes ?",
+			options: [
+				"2 triangles et 3 rectangles",
+				"6 carrés",
+				"1 triangle et 1 rectangle"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ma = h({
+	pluginId: "syllabus-g5-plots-coordinates-all-four-quadrants",
+	competencyId: wi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "The point (-3, 4) is in which quadrant?",
+			options: [
+				"Top-left",
+				"Top-right",
+				"Bottom-left"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Le point (-3, 4) se trouve dans quel quadrant ?",
+			options: [
+				"En haut à gauche",
+				"En haut à droite",
+				"En bas à gauche"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "The point (2, -5) is in which quadrant?",
+			options: [
+				"Bottom-right",
+				"Top-right",
+				"Bottom-left"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Le point (2, -5) se trouve dans quel quadrant ?",
+			options: [
+				"En bas à droite",
+				"En haut à droite",
+				"En bas à gauche"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ha = h({
+	pluginId: "syllabus-g5-rotates-shape-about-point",
+	competencyId: Ti.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A shape is rotated 90° clockwise about a point. What stays the same?",
+			options: [
+				"Its distance from the point",
+				"Its orientation",
+				"Its position"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Une forme est tournée de 90° dans le sens horaire autour d'un point. Qu'est-ce qui reste identique ?",
+			options: [
+				"Sa distance par rapport au point",
+				"Son orientation",
+				"Sa position"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A shape rotated 180° about a point ends up:",
+			options: [
+				"Upside down and reversed, same distance from the point",
+				"In the same place",
+				"Reflected, not rotated"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Une forme tournée de 180° autour d'un point se retrouve :",
+			options: [
+				"À l'envers et inversée, à la même distance du point",
+				"Au même endroit",
+				"Réfléchie, pas tournée"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ga = g({
+	pluginId: "syllabus-g5-uses-scale-on-plan-or-map",
+	competencyId: Ei.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "A map has a scale of 1 cm : 100 m. Two towns are 4 cm apart on the map. How many metres apart are they in real life?" },
+		fr: { prompt: "Une carte a une échelle de 1 cm : 100 m. Deux villes sont à 4 cm sur la carte. Combien de mètres les séparent en réalité ?" },
+		correctValue: 400
+	}, {
+		grade: 2,
+		en: { prompt: "A map has a scale of 1 cm : 100 m. A road is 2,500 m long in real life. How many cm is that on the map?" },
+		fr: { prompt: "Une carte a une échelle de 1 cm : 100 m. Une route mesure 2 500 m en réalité. Combien de cm cela fait-il sur la carte ?" },
+		correctValue: 25
+	}]
+}), _a = g({
+	pluginId: "syllabus-g5-calculates-mean",
+	competencyId: Di.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Find the mean of: 4, 8, 6, 2." },
+		fr: { prompt: "Trouve la moyenne de : 4, 8, 6, 2." },
+		correctValue: 5
+	}, {
+		grade: 2,
+		en: { prompt: "Find the mean of: 10, 15, 20, 25, 30." },
+		fr: { prompt: "Trouve la moyenne de : 10, 15, 20, 25, 30." },
+		correctValue: 20
+	}]
+}), va = h({
+	pluginId: "syllabus-g5-reads-pie-chart-fractions-percentages",
+	competencyId: Oi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A pie chart is split into 4 equal sectors. What fraction does each sector represent?",
+			options: [
+				"1/4",
+				"1/2",
+				"1/3"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un diagramme circulaire est divisé en 4 secteurs égaux. Quelle fraction représente chaque secteur ?",
+			options: [
+				"1/4",
+				"1/2",
+				"1/3"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A pie chart sector takes up half the circle. What percentage is that?",
+			options: [
+				"50%",
+				"25%",
+				"75%"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un secteur de diagramme circulaire occupe la moitié du cercle. Quel pourcentage cela représente-t-il ?",
+			options: [
+				"50 %",
+				"25 %",
+				"75 %"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ya = h({
+	pluginId: "syllabus-g5-uses-language-of-chance",
+	competencyId: ki.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "Flipping a fair coin and getting heads is best described as:",
+			options: [
+				"Even chance",
+				"Impossible",
+				"Certain"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Lancer une pièce équilibrée et obtenir face se décrit le mieux comme :",
+			options: [
+				"Une chance sur deux",
+				"Impossible",
+				"Certain"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "Rolling a standard die and getting a number less than 7 is:",
+			options: [
+				"Certain",
+				"Impossible",
+				"Unlikely"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Lancer un dé standard et obtenir un nombre inférieur à 7 est :",
+			options: [
+				"Certain",
+				"Impossible",
+				"Improbable"
+			],
+			correctIndex: 0
+		}
+	}]
+}), ba = _({
+	pluginId: "syllabus-g5-spots-misleading-graph",
+	competencyId: Ai.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "A bar chart whose y-axis starts at 90 instead of 0 can make small differences look much bigger than they really are.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Un diagramme en barres dont l'axe des y commence à 90 au lieu de 0 peut faire paraître de petites différences bien plus grandes qu'elles ne le sont réellement.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "Choosing only the three best years out of ten to display on a graph gives a fair, unbiased picture of the overall trend.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Choisir seulement les trois meilleures années sur dix à afficher sur un graphique donne une image juste et impartiale de la tendance générale.",
+			isTrue: !1
+		}
+	}]
+}), xa = g({
+	pluginId: "syllabus-g5-uses-letter-for-unknown-substitutes",
+	competencyId: ji.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "If n = 8, what is 3n + 2?" },
+		fr: { prompt: "Si n = 8, combien font 3n + 2 ?" },
+		correctValue: 26
+	}, {
+		grade: 2,
+		en: { prompt: "If x = 5, what is 2x² - 3?" },
+		fr: { prompt: "Si x = 5, combien font 2x² - 3 ?" },
+		correctValue: 47
+	}]
+}), Sa = g({
+	pluginId: "syllabus-g5-solves-one-step-equation-checks",
+	competencyId: Mi.id,
+	bank: [{
+		grade: 1,
+		en: { prompt: "Solve for x: x + 14 = 23." },
+		fr: { prompt: "Résous pour x : x + 14 = 23." },
+		correctValue: 9
+	}, {
+		grade: 2,
+		en: { prompt: "Solve for y: 6y = 42." },
+		fr: { prompt: "Résous pour y : 6y = 42." },
+		correctValue: 7
+	}]
+}), Ca = m({
+	pluginId: "syllabus-g5-expresses-general-rule-for-sequence",
+	competencyId: Ni.id,
+	bank: [{
+		grade: 1,
+		en: {
+			promptWithBlank: "The sequence 3, 6, 9, 12, ... has the rule: the nth term is ___ x n.",
+			answer: "3"
+		},
+		fr: {
+			promptWithBlank: "La suite 3, 6, 9, 12, ... a la règle : le nième terme est ___ x n.",
+			answer: "3"
+		}
+	}, {
+		grade: 2,
+		en: {
+			promptWithBlank: "The sequence 5, 8, 11, 14, ... has the rule: the nth term is 3n + ___.",
+			answer: "2"
+		},
+		fr: {
+			promptWithBlank: "La suite 5, 8, 11, 14, ... a la règle : le nième terme est 3n + ___.",
+			answer: "2"
+		}
+	}]
+}), wa = _({
+	pluginId: "syllabus-g5-judges-whether-answer-reasonable",
+	competencyId: Pi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "If a question asks for the number of children in a class and your answer is 340, you should check your working, because that answer is not reasonable.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Si une question demande le nombre d'enfants dans une classe et que ta réponse est 340, tu dois vérifier ton travail, car cette réponse n'est pas raisonnable.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "Once you get an answer from a calculation, there is no need to check it against the original question.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Une fois qu'on obtient une réponse à un calcul, il n'est pas nécessaire de la vérifier par rapport à la question d'origine.",
+			isTrue: !1
+		}
+	}]
+}), Ta = _({
+	pluginId: "syllabus-g5-finds-own-mistake-in-wrong-answer",
+	competencyId: Fi.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "If your answer doesn't match the expected result, checking each step of your working can help you find exactly where the mistake happened.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Si ta réponse ne correspond pas au résultat attendu, vérifier chaque étape de ton travail peut t'aider à trouver exactement où l'erreur s'est produite.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "The best way to deal with a wrong answer is always to start the whole problem over from scratch, without checking any of your working first.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "La meilleure façon de traiter une réponse fausse est toujours de recommencer tout le problème depuis le début, sans vérifier son travail d'abord.",
+			isTrue: !1
+		}
+	}]
+}), Ea = h({
+	pluginId: "syllabus-g5-solves-problem-missing-surplus-info",
+	competencyId: Ii.id,
+	bank: [{
+		grade: 1,
+		en: {
+			prompt: "A problem says: 'Sam has 12 apples and 5 oranges. He gives away some apples. How many apples does he have now?' What is missing?",
+			options: [
+				"How many apples he gave away",
+				"How many oranges he has",
+				"How many apples he started with"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un problème dit : « Sam a 12 pommes et 5 oranges. Il donne quelques pommes. Combien de pommes a-t-il maintenant ? » Qu'est-ce qui manque ?",
+			options: [
+				"Combien de pommes il a données",
+				"Combien d'oranges il a",
+				"Combien de pommes il avait au départ"
+			],
+			correctIndex: 0
+		}
+	}, {
+		grade: 2,
+		en: {
+			prompt: "A problem says: 'A box has 24 pencils. There are 5 red, 8 blue, 6 green pencils, and the rest are yellow. Today is Tuesday. How many pencils are yellow?' Which piece of information is surplus (not needed)?",
+			options: [
+				"Today is Tuesday",
+				"The box has 24 pencils",
+				"There are 5 red pencils"
+			],
+			correctIndex: 0
+		},
+		fr: {
+			prompt: "Un problème dit : « Une boîte contient 24 crayons. Il y a 5 rouges, 8 bleus, 6 verts, et le reste sont jaunes. Aujourd'hui, c'est mardi. Combien de crayons sont jaunes ? » Quelle information est superflue (pas nécessaire) ?",
+			options: [
+				"Aujourd'hui, c'est mardi",
+				"La boîte contient 24 crayons",
+				"Il y a 5 crayons rouges"
+			],
+			correctIndex: 0
+		}
+	}]
+}), Da = _({
+	pluginId: "syllabus-g5-tackles-unfamiliar-problem",
+	competencyId: Li.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "When you don't know a taught method for a problem, trying an approach, checking if it works, and adjusting is a sensible strategy.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Quand tu ne connais pas de méthode enseignée pour un problème, essayer une approche, vérifier si elle fonctionne, et ajuster est une stratégie sensée.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "If a problem looks unfamiliar and you don't immediately know the method, the only sensible option is to leave it blank.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Si un problème semble inconnu et que tu ne connais pas immédiatement la méthode, la seule option sensée est de le laisser vide.",
+			isTrue: !1
+		}
+	}]
+}), Oa = _({
+	pluginId: "syllabus-g5-uses-calculator-correctly-checks-estimate",
+	competencyId: Ri.id,
+	bank: [{
+		grade: 1,
+		en: {
+			statement: "After using a calculator to find an answer, comparing it to a quick mental estimate helps catch a mistyped calculation.",
+			isTrue: !0
+		},
+		fr: {
+			statement: "Après avoir utilisé une calculatrice pour trouver une réponse, la comparer à une estimation mentale rapide aide à repérer une erreur de frappe.",
+			isTrue: !0
+		}
+	}, {
+		grade: 2,
+		en: {
+			statement: "A calculator result should always be trusted completely, even if it looks wildly different from what you expected.",
+			isTrue: !1
+		},
+		fr: {
+			statement: "Un résultat de calculatrice doit toujours être totalement fiable, même s'il semble très différent de ce à quoi tu t'attendais.",
+			isTrue: !1
+		}
+	}]
+}), ka = [
+	Bi.plugin,
+	Vi.plugin,
+	Hi.plugin,
+	Ui.plugin,
+	Wi.plugin,
+	Gi.plugin,
+	Ki.plugin,
+	qi.plugin,
+	Ji.plugin,
+	Yi.plugin,
+	Xi.plugin,
+	Zi.plugin,
+	Qi.plugin,
+	$i.plugin,
+	ea.plugin,
+	ta.plugin,
+	na.plugin,
+	ra.plugin,
+	ia.plugin,
+	aa.plugin,
+	oa.plugin,
+	sa.plugin,
+	ca.plugin,
+	la.plugin,
+	ua.plugin,
+	da.plugin,
+	fa.plugin,
+	pa.plugin,
+	ma.plugin,
+	ha.plugin,
+	ga.plugin,
+	_a.plugin,
+	va.plugin,
+	ya.plugin,
+	ba.plugin,
+	xa.plugin,
+	Sa.plugin,
+	Ca.plugin,
+	wa.plugin,
+	Ta.plugin,
+	Ea.plugin,
+	Da.plugin,
+	Oa.plugin
+];
+function S(e) {
+	return e;
+}
+var Aa = [
+	S({
+		key: "syllabus-g5-finds-factors-common-multiples",
+		label: "Factors & Common Multiples",
+		icon: "🔢",
+		pluginId: Bi.plugin.id,
+		competency: Xr,
+		competencies: [Xr],
+		createSession: Bi.createSession,
+		createMasterySignal: Bi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-extends-place-value-right-of-decimal",
+		label: "Decimal Place Value",
+		icon: "🧮",
+		pluginId: Vi.plugin.id,
+		competency: Zr,
+		competencies: [Zr],
+		createSession: Vi.createSession,
+		createMasterySignal: Vi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-rounds-decimals-to-given-places",
+		label: "Rounding Decimals",
+		icon: "📐",
+		pluginId: Hi.plugin.id,
+		competency: Qr,
+		competencies: [Qr],
+		createSession: Hi.createSession,
+		createMasterySignal: Hi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-adds-subtracts-whole-decimals-columns",
+		label: "Column Addition & Subtraction with Decimals",
+		icon: "➕",
+		pluginId: Ui.plugin.id,
+		competency: $r,
+		competencies: [$r],
+		createSession: Ui.createSession,
+		createMasterySignal: Ui.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-multiplies-four-digit-by-two-digit",
+		label: "Long Multiplication",
+		icon: "✖️",
+		pluginId: Wi.plugin.id,
+		competency: ei,
+		competencies: [ei],
+		createSession: Wi.createSession,
+		createMasterySignal: Wi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-divides-by-two-digit-expresses-remainder",
+		label: "Long Division & Remainders",
+		icon: "➗",
+		pluginId: Gi.plugin.id,
+		competency: ti,
+		competencies: [ti],
+		createSession: Gi.createSession,
+		createMasterySignal: Gi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-knows-divisibility-tests",
+		label: "Divisibility Tests",
+		icon: "✅",
+		pluginId: Ki.plugin.id,
+		competency: ni,
+		competencies: [ni],
+		createSession: Ki.createSession,
+		createMasterySignal: Ki.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-applies-order-of-operations",
+		label: "Order of Operations",
+		icon: "🧩",
+		pluginId: qi.plugin.id,
+		competency: ri,
+		competencies: [ri],
+		createSession: qi.createSession,
+		createMasterySignal: qi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-multiplies-two-digit-by-one-digit-mentally",
+		label: "Mental Multiplication",
+		icon: "🧠",
+		pluginId: Ji.plugin.id,
+		competency: ii,
+		competencies: [ii],
+		createSession: Ji.createSession,
+		createMasterySignal: Ji.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-finds-common-percentages-mentally",
+		label: "Mental Percentages",
+		icon: "💯",
+		pluginId: Yi.plugin.id,
+		competency: ai,
+		competencies: [ai],
+		createSession: Yi.createSession,
+		createMasterySignal: Yi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-estimates-before-calculating",
+		label: "Estimating Before Calculating",
+		icon: "🔍",
+		pluginId: Xi.plugin.id,
+		competency: oi,
+		competencies: [oi],
+		createSession: Xi.createSession,
+		createMasterySignal: Xi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-adds-subtracts-fractions-different-denominators",
+		label: "Adding & Subtracting Unlike Fractions",
+		icon: "🍰",
+		pluginId: Zi.plugin.id,
+		competency: si,
+		competencies: [si],
+		createSession: Zi.createSession,
+		createMasterySignal: Zi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-multiplies-fraction-by-whole-or-fraction",
+		label: "Multiplying Fractions",
+		icon: "🍕",
+		pluginId: Qi.plugin.id,
+		competency: ci,
+		competencies: [ci],
+		createSession: Qi.createSession,
+		createMasterySignal: Qi.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-converts-fluently-fractions-decimals-percentages",
+		label: "Fractions, Decimals & Percentages",
+		icon: "🔀",
+		pluginId: $i.plugin.id,
+		competency: li,
+		competencies: [li],
+		createSession: $i.createSession,
+		createMasterySignal: $i.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-multiplies-divides-decimals-by-whole-numbers",
+		label: "Multiplying & Dividing Decimals",
+		icon: "💲",
+		pluginId: ea.plugin.id,
+		competency: ui,
+		competencies: [ui],
+		createSession: ea.createSession,
+		createMasterySignal: ea.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-finds-any-percentage-of-quantity",
+		label: "Any Percentage of a Quantity",
+		icon: "💯",
+		pluginId: ta.plugin.id,
+		competency: di,
+		competencies: [di],
+		createSession: ta.createSession,
+		createMasterySignal: ta.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-calculates-percentage-increase-decrease",
+		label: "Percentage Increase & Decrease",
+		icon: "📈",
+		pluginId: na.plugin.id,
+		competency: fi,
+		competencies: [fi],
+		createSession: na.createSession,
+		createMasterySignal: na.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-understands-ratio-shares-quantity",
+		label: "Ratio & Sharing",
+		icon: "⚖️",
+		pluginId: ra.plugin.id,
+		competency: pi,
+		competencies: [pi],
+		createSession: ra.createSession,
+		createMasterySignal: ra.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-solves-simple-scaling-problems",
+		label: "Scaling Problems",
+		icon: "🧩",
+		pluginId: ia.plugin.id,
+		competency: mi,
+		competencies: [mi],
+		createSession: ia.createSession,
+		createMasterySignal: ia.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-calculates-volume-cuboid",
+		label: "Volume of a Cuboid",
+		icon: "🧊",
+		pluginId: aa.plugin.id,
+		competency: hi,
+		competencies: [hi],
+		createSession: aa.createSession,
+		createMasterySignal: aa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-converts-metric-units-two-steps",
+		label: "Converting Metric Units (Two Steps)",
+		icon: "📏",
+		pluginId: oa.plugin.id,
+		competency: gi,
+		competencies: [gi],
+		createSession: oa.createSession,
+		createMasterySignal: oa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-knows-imperial-metric-rough-equivalence",
+		label: "Imperial & Metric Units",
+		icon: "🔄",
+		pluginId: sa.plugin.id,
+		competency: _i,
+		competencies: [_i],
+		createSession: sa.createSession,
+		createMasterySignal: sa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-has-reliable-body-ruler",
+		label: "Body-Ruler Estimation",
+		icon: "📏",
+		pluginId: ca.plugin.id,
+		competency: vi,
+		competencies: [vi],
+		createSession: ca.createSession,
+		createMasterySignal: ca.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-converts-seconds-minutes-hours-days-years",
+		label: "Converting Time Units",
+		icon: "⏱️",
+		pluginId: la.plugin.id,
+		competency: yi,
+		competencies: [yi],
+		createSession: la.createSession,
+		createMasterySignal: la.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-handles-time-zone-differences",
+		label: "Time Zones",
+		icon: "🌐",
+		pluginId: ua.plugin.id,
+		competency: bi,
+		competencies: [bi],
+		createSession: ua.createSession,
+		createMasterySignal: ua.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-draws-shape-accurately-from-specification",
+		label: "Accurate Shape Drawing",
+		icon: "📐",
+		pluginId: da.plugin.id,
+		competency: xi,
+		competencies: [xi],
+		createSession: da.createSession,
+		createMasterySignal: da.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-names-parts-of-circle",
+		label: "Parts of a Circle",
+		icon: "⭕",
+		pluginId: fa.plugin.id,
+		competency: Si,
+		competencies: [Si],
+		createSession: fa.createSession,
+		createMasterySignal: fa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-identifies-net-of-cube-solids",
+		label: "Nets of Solids",
+		icon: "🧊",
+		pluginId: pa.plugin.id,
+		competency: Ci,
+		competencies: [Ci],
+		createSession: pa.createSession,
+		createMasterySignal: pa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-plots-coordinates-all-four-quadrants",
+		label: "Coordinates in Four Quadrants",
+		icon: "🧭",
+		pluginId: ma.plugin.id,
+		competency: wi,
+		competencies: [wi],
+		createSession: ma.createSession,
+		createMasterySignal: ma.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-rotates-shape-about-point",
+		label: "Rotating Shapes",
+		icon: "🔄",
+		pluginId: ha.plugin.id,
+		competency: Ti,
+		competencies: [Ti],
+		createSession: ha.createSession,
+		createMasterySignal: ha.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-uses-scale-on-plan-or-map",
+		label: "Scale on Plans & Maps",
+		icon: "🗺️",
+		pluginId: ga.plugin.id,
+		competency: Ei,
+		competencies: [Ei],
+		createSession: ga.createSession,
+		createMasterySignal: ga.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-calculates-mean",
+		label: "Calculating the Mean",
+		icon: "📊",
+		pluginId: _a.plugin.id,
+		competency: Di,
+		competencies: [Di],
+		createSession: _a.createSession,
+		createMasterySignal: _a.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-reads-pie-chart-fractions-percentages",
+		label: "Reading Pie Charts",
+		icon: "🥧",
+		pluginId: va.plugin.id,
+		competency: Oi,
+		competencies: [Oi],
+		createSession: va.createSession,
+		createMasterySignal: va.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-uses-language-of-chance",
+		label: "Language of Chance",
+		icon: "🎲",
+		pluginId: ya.plugin.id,
+		competency: ki,
+		competencies: [ki],
+		createSession: ya.createSession,
+		createMasterySignal: ya.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-spots-misleading-graph",
+		label: "Spotting Misleading Graphs",
+		icon: "📉",
+		pluginId: ba.plugin.id,
+		competency: Ai,
+		competencies: [Ai],
+		createSession: ba.createSession,
+		createMasterySignal: ba.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-uses-letter-for-unknown-substitutes",
+		label: "Algebraic Substitution",
+		icon: "🔤",
+		pluginId: xa.plugin.id,
+		competency: ji,
+		competencies: [ji],
+		createSession: xa.createSession,
+		createMasterySignal: xa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-solves-one-step-equation-checks",
+		label: "One-Step Equations",
+		icon: "❓",
+		pluginId: Sa.plugin.id,
+		competency: Mi,
+		competencies: [Mi],
+		createSession: Sa.createSession,
+		createMasterySignal: Sa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-expresses-general-rule-for-sequence",
+		label: "General Rule for a Sequence",
+		icon: "🔁",
+		pluginId: Ca.plugin.id,
+		competency: Ni,
+		competencies: [Ni],
+		createSession: Ca.createSession,
+		createMasterySignal: Ca.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-judges-whether-answer-reasonable",
+		label: "Judging a Reasonable Answer",
+		icon: "🤔",
+		pluginId: wa.plugin.id,
+		competency: Pi,
+		competencies: [Pi],
+		createSession: wa.createSession,
+		createMasterySignal: wa.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-finds-own-mistake-in-wrong-answer",
+		label: "Finding Your Own Mistake",
+		icon: "🔍",
+		pluginId: Ta.plugin.id,
+		competency: Fi,
+		competencies: [Fi],
+		createSession: Ta.createSession,
+		createMasterySignal: Ta.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-solves-problem-missing-surplus-info",
+		label: "Missing or Surplus Information",
+		icon: "🧩",
+		pluginId: Ea.plugin.id,
+		competency: Ii,
+		competencies: [Ii],
+		createSession: Ea.createSession,
+		createMasterySignal: Ea.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-tackles-unfamiliar-problem",
+		label: "Tackling Unfamiliar Problems",
+		icon: "🧗",
+		pluginId: Da.plugin.id,
+		competency: Li,
+		competencies: [Li],
+		createSession: Da.createSession,
+		createMasterySignal: Da.createMasterySignal
+	}),
+	S({
+		key: "syllabus-g5-uses-calculator-correctly-checks-estimate",
+		label: "Using a Calculator Wisely",
+		icon: "🖩",
+		pluginId: Oa.plugin.id,
+		competency: Ri,
+		competencies: [Ri],
+		createSession: Oa.createSession,
+		createMasterySignal: Oa.createMasterySignal
+	})
+], C = {
 	id: "math.addition.mental",
 	nameKey: "competency.math.addition.mental.name",
 	descriptionKey: "competency.math.addition.mental.description",
@@ -3591,7 +7231,7 @@ var Rn = [
 		kind: "competency",
 		id: "math.addition.baseline-concrete"
 	}]
-}, zn = {
+}, w = {
 	id: "math.subtraction.mental",
 	nameKey: "competency.math.subtraction.mental.name",
 	descriptionKey: "competency.math.subtraction.mental.description",
@@ -3614,7 +7254,7 @@ var Rn = [
 			id: "math.addition.baseline-concrete"
 		}
 	]
-}, Bn = {
+}, ja = {
 	id: "math.multiplication.mental",
 	nameKey: "competency.math.multiplication.mental.name",
 	descriptionKey: "competency.math.multiplication.mental.description",
@@ -3627,7 +7267,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.multiplication.mental"
 	}]
-}, Vn = {
+}, Ma = {
 	id: "math.division.mental",
 	nameKey: "competency.math.division.mental.name",
 	descriptionKey: "competency.math.division.mental.description",
@@ -3643,7 +7283,7 @@ var Rn = [
 		kind: "competency",
 		id: "math.multiplication.mental"
 	}]
-}, S = {
+}, T = {
 	id: "math.number-sense.baseline-counting",
 	nameKey: "competency.math.number-sense.baseline-counting.name",
 	descriptionKey: "competency.math.number-sense.baseline-counting.description",
@@ -3656,7 +7296,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.baseline-counting"
 	}]
-}, Hn = {
+}, Na = {
 	id: "math.number-sense.baseline-subitizing",
 	nameKey: "competency.math.number-sense.baseline-subitizing.name",
 	descriptionKey: "competency.math.number-sense.baseline-subitizing.description",
@@ -3669,7 +7309,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.baseline-subitizing"
 	}]
-}, C = {
+}, Pa = {
 	id: "math.number-sense.baseline-digits",
 	nameKey: "competency.math.number-sense.baseline-digits.name",
 	descriptionKey: "competency.math.number-sense.baseline-digits.description",
@@ -3682,7 +7322,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.baseline-digits"
 	}]
-}, w = {
+}, Fa = {
 	id: "math.comparing-ordering.baseline-groups",
 	nameKey: "competency.math.comparing-ordering.baseline-groups.name",
 	descriptionKey: "competency.math.comparing-ordering.baseline-groups.description",
@@ -3695,7 +7335,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.comparing-ordering.baseline-groups"
 	}]
-}, T = {
+}, Ia = {
 	id: "math.addition.baseline-concrete",
 	nameKey: "competency.math.addition.baseline-concrete.name",
 	descriptionKey: "competency.math.addition.baseline-concrete.description",
@@ -3760,7 +7400,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.geometry.baseline-shapes"
 	}]
-}, Un = {
+}, La = {
 	id: "math.geometry.baseline-position",
 	nameKey: "competency.math.geometry.baseline-position.name",
 	descriptionKey: "competency.math.geometry.baseline-position.description",
@@ -3773,7 +7413,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.geometry.baseline-position"
 	}]
-}, Wn = {
+}, Ra = {
 	id: "math.number-sense.counting-range",
 	nameKey: "competency.math.number-sense.counting-range.name",
 	descriptionKey: "competency.math.number-sense.counting-range.description",
@@ -3786,7 +7426,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.counting-range"
 	}]
-}, Gn = {
+}, za = {
 	id: "math.number-sense.skip-counting",
 	nameKey: "competency.math.number-sense.skip-counting.name",
 	descriptionKey: "competency.math.number-sense.skip-counting.description",
@@ -3799,7 +7439,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.skip-counting"
 	}]
-}, Kn = {
+}, Ba = {
 	id: "math.number-sense.odd-even",
 	nameKey: "competency.math.number-sense.odd-even.name",
 	descriptionKey: "competency.math.number-sense.odd-even.description",
@@ -3812,7 +7452,7 @@ var Rn = [
 		kind: "activity",
 		id: "math.number-sense.odd-even"
 	}]
-}, qn = {
+}, Va = {
 	id: "math.number-sense.ordinals",
 	nameKey: "competency.math.number-sense.ordinals.name",
 	descriptionKey: "competency.math.number-sense.ordinals.description",
@@ -3929,25 +7569,25 @@ var Rn = [
 		kind: "activity",
 		id: "math.place-value.multiply-divide-ten"
 	}]
-}, Jn = [
-	x,
-	zn,
-	Bn,
-	Vn,
-	S,
-	Hn,
+}, Ha = [
 	C,
 	w,
+	ja,
+	Ma,
 	T,
+	Na,
+	Pa,
+	Fa,
+	Ia,
 	E,
 	D,
 	O,
 	k,
-	Un,
-	Wn,
-	Gn,
-	Kn,
-	qn,
+	La,
+	Ra,
+	za,
+	Ba,
+	Va,
 	A,
 	j,
 	M,
@@ -3958,13 +7598,15 @@ var Rn = [
 	L,
 	...ie,
 	...mt,
-	...dn
-], Yn = n([{
+	...dn,
+	...gr,
+	...zi
+], Ua = n([{
 	id: "mathematics",
 	nameKey: "subject.mathematics.name"
-}], Jn, Jn.map((e) => e.id));
-if (!Yn.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(Yn.errors)}`);
-var Xn = [
+}], Ha, Ha.map((e) => e.id));
+if (!Ua.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(Ua.errors)}`);
+var Wa = [
 	{
 		areaKey: "number-sense",
 		nameKey: "curriculum.area.number-sense",
@@ -4056,16 +7698,16 @@ var Xn = [
 		label: "Problem solving"
 	}
 ];
-function Zn(e) {
+function Ga(e) {
 	let [t, n] = e.id.split(".");
-	if (t === "math") return Xn.some((e) => e.areaKey === n) ? n : void 0;
+	if (t === "math") return Wa.some((e) => e.areaKey === n) ? n : void 0;
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/types.ts
-var Qn = "math.time.baseline-day-order", $n = "math.time.baseline-days-of-week";
+var Ka = "math.time.baseline-day-order", qa = "math.time.baseline-days-of-week";
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/rng.ts
-function er(e) {
+function Ja(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4073,17 +7715,17 @@ function er(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function tr(e, t, n) {
+function Ya(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/generate.ts
-var nr = [
+var Xa = [
 	"morning",
 	"afternoon",
 	"evening",
 	"night"
-], rr = [
+], Za = [
 	"Monday",
 	"Tuesday",
 	"Wednesday",
@@ -4092,58 +7734,58 @@ var nr = [
 	"Saturday",
 	"Sunday"
 ];
-function ir(e) {
+function Qa(e) {
 	return e === "P" || e === 1;
 }
-function ar(e, t) {
-	let n = tr(e, 0, t - 1), r = tr(e, 0, t - 1);
-	for (; r === n;) r = tr(e, 0, t - 1);
+function $a(e, t) {
+	let n = Ya(e, 0, t - 1), r = Ya(e, 0, t - 1);
+	for (; r === n;) r = Ya(e, 0, t - 1);
 	return [n, r];
 }
-function or(e, t, n) {
-	let [r, i] = ar(n, nr.length), a = Math.min(r, i), o = {
+function eo(e, t, n) {
+	let [r, i] = $a(n, Xa.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: nr[r]
+		label: Xa[r]
 	}, s = {
 		id: "b",
-		label: nr[i]
+		label: Xa[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-day-order-${e}-${t}`,
 		kind: "day-order",
 		grade: e,
-		competencyId: Qn,
+		competencyId: Ka,
 		prompt: "Which comes first in the day?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function sr(e, t, n) {
-	let [r, i] = ar(n, rr.length), a = Math.min(r, i), o = {
+function to(e, t, n) {
+	let [r, i] = $a(n, Za.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: rr[r]
+		label: Za[r]
 	}, s = {
 		id: "b",
-		label: rr[i]
+		label: Za[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-days-of-week-${e}-${t}`,
 		kind: "days-of-week",
 		grade: e,
-		competencyId: $n,
+		competencyId: qa,
 		prompt: "Which comes first in the week?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function cr(e, t) {
-	if (!ir(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = er(t);
-	return n() < .5 ? or(e, t, n) : sr(e, t, n);
+function no(e, t) {
+	if (!Qa(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Ja(t);
+	return n() < .5 ? eo(e, t, n) : to(e, t, n);
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/plugin.ts
-function lr(e, t, n, r, i) {
+function ro(e, t, n, r, i) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -4154,22 +7796,22 @@ function lr(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ur(e, t) {
-	let n = er(t), r = [];
+function io(e, t) {
+	let n = Ja(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(cr(e, t));
+		r.push(no(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var dr = {
+var ao = {
 	id: "baseline-calendar-time-basics",
-	competencyIds: [Qn, $n],
+	competencyIds: [Ka, qa],
 	generateQuestion(e, t) {
-		return cr(e, t);
+		return no(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -4184,10 +7826,10 @@ var dr = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, fr = "math.addition.baseline-concrete";
+}, oo = "math.addition.baseline-concrete";
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/rng.ts
-function pr(e) {
+function so(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4200,17 +7842,17 @@ function R(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/generate.ts
-var mr = [
+var co = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function hr(e) {
+function lo(e) {
 	return e === "P" || e === 1;
 }
-function gr(e, t, n) {
+function uo(e, t, n) {
 	let r = R(n, 1, 5), i = R(n, 1, 5);
 	return {
 		id: `baseline-concrete-addition-subtraction-add-${e}-${t}`,
@@ -4218,11 +7860,11 @@ function gr(e, t, n) {
 		operator: "+",
 		leftCount: r,
 		rightCount: i,
-		emoji: mr[R(n, 0, mr.length - 1)],
+		emoji: co[R(n, 0, co.length - 1)],
 		correctAnswer: r + i
 	};
 }
-function _r(e, t, n) {
+function fo(e, t, n) {
 	let r = R(n, 2, 10), i = R(n, 1, r - 1);
 	return {
 		id: `baseline-concrete-addition-subtraction-sub-${e}-${t}`,
@@ -4230,20 +7872,20 @@ function _r(e, t, n) {
 		operator: "-",
 		leftCount: r,
 		rightCount: i,
-		emoji: mr[R(n, 0, mr.length - 1)],
+		emoji: co[R(n, 0, co.length - 1)],
 		correctAnswer: r - i
 	};
 }
-function vr(e, t) {
-	if (!hr(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = pr(t);
-	return n() < .5 ? gr(e, t, n) : _r(e, t, n);
+function po(e, t) {
+	if (!lo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = so(t);
+	return n() < .5 ? uo(e, t, n) : fo(e, t, n);
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/plugin.ts
-function yr(e, t, n, r, i) {
+function mo(e, t, n, r, i) {
 	return {
-		competencyId: fr,
+		competencyId: oo,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4252,22 +7894,22 @@ function yr(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function br(e, t) {
-	let n = pr(t), r = [];
+function ho(e, t) {
+	let n = so(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(vr(e, t));
+		r.push(po(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var xr = {
+var go = {
 	id: "baseline-concrete-addition-subtraction",
-	competencyIds: [fr],
+	competencyIds: [oo],
 	generateQuestion(e, t) {
-		return vr(e, t);
+		return po(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
@@ -4281,10 +7923,10 @@ var xr = {
 			correctAnswer: e.correctAnswer
 		};
 	}
-}, Sr = "math.number-sense.baseline-counting", Cr = "math.number-sense.baseline-subitizing", wr = "math.number-sense.baseline-digits", Tr = "math.comparing-ordering.baseline-groups";
+}, _o = "math.number-sense.baseline-counting", vo = "math.number-sense.baseline-subitizing", yo = "math.number-sense.baseline-digits", bo = "math.comparing-ordering.baseline-groups";
 //#endregion
 //#region packages/baseline-counting-quantities/src/rng.ts
-function Er(e) {
+function xo(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4297,20 +7939,20 @@ function z(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/generate.ts
-var Dr = [
+var So = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function Or(e) {
+function Co(e) {
 	return e === "P" || e === 1;
 }
 function B(e) {
-	return Dr[z(e, 0, Dr.length - 1)];
+	return So[z(e, 0, So.length - 1)];
 }
-function kr(e, t) {
+function wo(e, t) {
 	let n = /* @__PURE__ */ new Set();
 	for (; n.size < 3;) {
 		let r = z(e, 0, 9);
@@ -4329,44 +7971,44 @@ function kr(e, t) {
 		correctOptionId: `digit-${t}`
 	};
 }
-function Ar(e, t, n) {
+function To(e, t, n) {
 	let r = z(n, 1, 20);
 	return {
 		id: `baseline-counting-quantities-counting-${e}-${t}`,
 		kind: "counting",
 		grade: e,
-		competencyId: Sr,
+		competencyId: _o,
 		count: r,
 		emoji: B(n),
 		correctAnswer: r
 	};
 }
-function jr(e, t, n) {
+function Eo(e, t, n) {
 	let r = z(n, 1, 5);
 	return {
 		id: `baseline-counting-quantities-subitizing-${e}-${t}`,
 		kind: "subitizing",
 		grade: e,
-		competencyId: Cr,
+		competencyId: vo,
 		count: r,
 		emoji: B(n),
 		correctAnswer: r
 	};
 }
-function Mr(e, t, n) {
-	let r = z(n, 0, 9), i = B(n), { options: a, correctOptionId: o } = kr(n, r);
+function Do(e, t, n) {
+	let r = z(n, 0, 9), i = B(n), { options: a, correctOptionId: o } = wo(n, r);
 	return {
 		id: `baseline-counting-quantities-digit-${e}-${t}`,
 		kind: "digit",
 		grade: e,
-		competencyId: wr,
+		competencyId: yo,
 		count: r,
 		emoji: i,
 		options: a,
 		correctOptionId: o
 	};
 }
-function Nr(e, t, n) {
+function Oo(e, t, n) {
 	let r = z(n, 1, 10), i = z(n, 1, 10);
 	for (; i === r;) i = z(n, 1, 10);
 	let a = B(n), o = B(n), s = r > i ? "left" : "right";
@@ -4374,7 +8016,7 @@ function Nr(e, t, n) {
 		id: `baseline-counting-quantities-compare-groups-${e}-${t}`,
 		kind: "compare-groups",
 		grade: e,
-		competencyId: Tr,
+		competencyId: bo,
 		leftCount: r,
 		rightCount: i,
 		leftEmoji: a,
@@ -4389,19 +8031,19 @@ function Nr(e, t, n) {
 		correctOptionId: s
 	};
 }
-function Pr(e, t) {
-	if (!Or(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Er(t);
+function ko(e, t) {
+	if (!Co(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = xo(t);
 	switch (z(n, 0, 3)) {
-		case 0: return Ar(e, t, n);
-		case 1: return jr(e, t, n);
-		case 2: return Mr(e, t, n);
-		default: return Nr(e, t, n);
+		case 0: return To(e, t, n);
+		case 1: return Eo(e, t, n);
+		case 2: return Do(e, t, n);
+		default: return Oo(e, t, n);
 	}
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/plugin.ts
-function Fr(e, t, n, r, i) {
+function Ao(e, t, n, r, i) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -4412,27 +8054,27 @@ function Fr(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Ir(e, t) {
-	let n = Er(t), r = [];
+function jo(e, t) {
+	let n = xo(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Pr(e, t));
+		r.push(ko(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Lr = {
+var Mo = {
 	id: "baseline-counting-quantities",
 	competencyIds: [
-		Sr,
-		Cr,
-		wr,
-		Tr
+		_o,
+		vo,
+		yo,
+		bo
 	],
 	generateQuestion(e, t) {
-		return Pr(e, t);
+		return ko(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -4465,10 +8107,10 @@ var Lr = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, Rr = "math.measurement.baseline-comparison";
+}, No = "math.measurement.baseline-comparison";
 //#endregion
 //#region packages/baseline-direct-comparison/src/rng.ts
-function zr(e) {
+function Po(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4476,12 +8118,12 @@ function zr(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Br(e, t, n) {
+function Fo(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/generate.ts
-var Vr = {
+var Io = {
 	length: [
 		"🐛 the worm",
 		"🐍 the snake",
@@ -4500,26 +8142,26 @@ var Vr = {
 		"🧴 the bottle",
 		"🛁 the bathtub"
 	]
-}, Hr = [
+}, Lo = [
 	"length",
 	"weight",
 	"capacity"
-], Ur = {
+], Ro = {
 	length: "Which one is longer?",
 	weight: "Which one is heavier?",
 	capacity: "Which one holds more?"
 };
-function Wr(e) {
+function zo(e) {
 	return e === "P" || e === 1;
 }
-function Gr(e, t) {
-	let n = Br(e, 0, t.length - 1), r = Br(e, 0, t.length - 1);
-	for (; r === n;) r = Br(e, 0, t.length - 1);
+function Bo(e, t) {
+	let n = Fo(e, 0, t.length - 1), r = Fo(e, 0, t.length - 1);
+	for (; r === n;) r = Fo(e, 0, t.length - 1);
 	return [t[n], t[r]];
 }
-function Kr(e, t) {
-	if (!Wr(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = zr(t), r = Hr[Br(n, 0, Hr.length - 1)], [i, a] = Gr(n, Vr[r]), o = n() < .5, s = {
+function Vo(e, t) {
+	if (!zo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Po(t), r = Lo[Fo(n, 0, Lo.length - 1)], [i, a] = Bo(n, Io[r]), o = n() < .5, s = {
 		id: "a",
 		label: i
 	}, c = {
@@ -4530,16 +8172,16 @@ function Kr(e, t) {
 		id: `baseline-direct-comparison-${r}-${e}-${t}`,
 		grade: e,
 		attribute: r,
-		prompt: Ur[r],
+		prompt: Ro[r],
 		options: [s, c],
 		correctOptionId: o ? "a" : "b"
 	};
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/plugin.ts
-function qr(e, t, n, r, i) {
+function Ho(e, t, n, r, i) {
 	return {
-		competencyId: Rr,
+		competencyId: No,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4548,22 +8190,22 @@ function qr(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Jr(e, t) {
-	let n = zr(t), r = [];
+function Uo(e, t) {
+	let n = Po(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Kr(e, t));
+		r.push(Vo(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Yr = {
+var Wo = {
 	id: "baseline-direct-comparison",
-	competencyIds: [Rr],
+	competencyIds: [No],
 	generateQuestion(e, t) {
-		return Kr(e, t);
+		return Vo(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -4578,10 +8220,10 @@ var Yr = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, Xr = "math.geometry.baseline-position";
+}, Go = "math.geometry.baseline-position";
 //#endregion
 //#region packages/baseline-positional-language/src/rng.ts
-function Zr(e) {
+function Ko(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4594,7 +8236,7 @@ function V(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-positional-language/src/generate.ts
-var Qr = [
+var qo = [
 	"🐱 the cat",
 	"🐶 the dog",
 	"⭐ the star",
@@ -4604,23 +8246,23 @@ var Qr = [
 	"🪑 the chair",
 	"🛏️ the bed",
 	"🌳 the tree"
-], $r = [
+], Jo = [
 	"on",
 	"under",
 	"behind",
 	"between",
 	"next-to"
-], ei = {
+], Yo = {
 	on: "on",
 	under: "under",
 	behind: "behind",
 	between: "between",
 	"next-to": "next to"
 };
-function ti(e) {
+function Xo(e) {
 	return e === "P" || e === 1;
 }
-function ni(e, t, n, r) {
+function Zo(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
@@ -4629,37 +8271,37 @@ function ni(e, t, n, r) {
 		case "between": return `${n}  ${t}  ${r}`;
 	}
 }
-function ri(e) {
-	let t = [...$r];
+function Qo(e) {
+	let t = [...Jo];
 	for (let n = t.length - 1; n > 0; n--) {
 		let r = V(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function ii(e, t) {
-	if (!ti(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Zr(t), r = $r[V(n, 0, $r.length - 1)], i = Qr[V(n, 0, Qr.length - 1)], a = V(n, 0, H.length - 1), o = V(n, 0, H.length - 1);
+function $o(e, t) {
+	if (!Xo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Ko(t), r = Jo[V(n, 0, Jo.length - 1)], i = qo[V(n, 0, qo.length - 1)], a = V(n, 0, H.length - 1), o = V(n, 0, H.length - 1);
 	for (; o === a;) o = V(n, 0, H.length - 1);
-	let s = H[a], c = H[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = ri(n).map((e) => ({
+	let s = H[a], c = H[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = Qo(n).map((e) => ({
 		id: `position-${e}`,
-		label: ei[e]
+		label: Yo[e]
 	}));
 	return {
 		id: `baseline-positional-language-${e}-${t}`,
 		grade: e,
 		position: r,
 		subjectLabel: i,
-		scene: ni(r, l, u, d),
+		scene: Zo(r, l, u, d),
 		options: f,
 		correctOptionId: `position-${r}`
 	};
 }
 //#endregion
 //#region packages/baseline-positional-language/src/plugin.ts
-function ai(e, t, n, r, i) {
+function es(e, t, n, r, i) {
 	return {
-		competencyId: Xr,
+		competencyId: Go,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4668,22 +8310,22 @@ function ai(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function oi(e, t) {
-	let n = Zr(t), r = [];
+function ts(e, t) {
+	let n = Ko(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ii(e, t));
+		r.push($o(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var si = {
+var ns = {
 	id: "baseline-positional-language",
-	competencyIds: [Xr],
+	competencyIds: [Go],
 	generateQuestion(e, t) {
-		return ii(e, t);
+		return $o(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -4698,10 +8340,10 @@ var si = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, ci = "math.geometry.baseline-shapes";
+}, rs = "math.geometry.baseline-shapes";
 //#endregion
 //#region packages/baseline-shape-recognition/src/rng.ts
-function li(e) {
+function is(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4709,12 +8351,12 @@ function li(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function ui(e, t, n) {
+function as(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/generate.ts
-var di = [
+var os = [
 	{
 		name: "circle",
 		emoji: "🔵"
@@ -4732,20 +8374,20 @@ var di = [
 		emoji: "▭"
 	}
 ];
-function fi(e) {
+function ss(e) {
 	return e === "P" || e === 1;
 }
-function pi(e) {
-	let t = di.map((e) => e.name);
+function cs(e) {
+	let t = os.map((e) => e.name);
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = ui(e, 0, n), i = t[n];
+		let r = as(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function mi(e, t) {
-	if (!fi(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = li(t), r = di[ui(n, 0, di.length - 1)], i = pi(n).map((e) => ({
+function ls(e, t) {
+	if (!ss(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = is(t), r = os[as(n, 0, os.length - 1)], i = cs(n).map((e) => ({
 		id: `shape-${e}`,
 		label: e
 	}));
@@ -4760,9 +8402,9 @@ function mi(e, t) {
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/plugin.ts
-function hi(e, t, n, r, i) {
+function us(e, t, n, r, i) {
 	return {
-		competencyId: ci,
+		competencyId: rs,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4771,22 +8413,22 @@ function hi(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function gi(e, t) {
-	let n = li(t), r = [];
+function ds(e, t) {
+	let n = is(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(mi(e, t));
+		r.push(ls(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var _i = {
+var fs = {
 	id: "baseline-shape-recognition",
-	competencyIds: [ci],
+	competencyIds: [rs],
 	generateQuestion(e, t) {
-		return mi(e, t);
+		return ls(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -4804,7 +8446,7 @@ var _i = {
 };
 //#endregion
 //#region packages/mental-addition/src/rng.ts
-function vi(e) {
+function ps(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4817,54 +8459,54 @@ function U(e, t, n) {
 }
 //#endregion
 //#region packages/mental-addition/src/generate.ts
-function yi(e) {
+function ms(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function bi(e) {
+function hs(e) {
 	let t = U(e, 0, 9);
 	return {
 		operandA: t,
 		operandB: U(e, 0, 9 - t)
 	};
 }
-function xi(e) {
+function gs(e) {
 	let t = U(e, 1, 9);
 	return {
 		operandA: t,
 		operandB: U(e, Math.max(1, 10 - t), 9)
 	};
 }
-function Si(e) {
+function _s(e) {
 	let t = U(e, 0, 9), n = U(e, 0, 9 - t);
 	return {
 		operandA: U(e, 1, 9) * 10 + n,
 		operandB: t
 	};
 }
-function Ci(e) {
+function vs(e) {
 	let t = U(e, 1, 9);
 	return {
 		onesA: U(e, Math.max(0, 10 - t), 9),
 		onesB: t
 	};
 }
-function wi(e) {
-	let { onesA: t, onesB: n } = Ci(e), r = U(e, 1, 9), i = U(e, 1, 9);
+function ys(e) {
+	let { onesA: t, onesB: n } = vs(e), r = U(e, 1, 9), i = U(e, 1, 9);
 	return {
 		operandA: r * 10 + t,
 		operandB: i * 10 + n
 	};
 }
-function Ti(e) {
-	let { onesA: t, onesB: n } = Ci(e), r = U(e, 0, 9), i = U(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = U(e, +!a, 9);
+function bs(e) {
+	let { onesA: t, onesB: n } = vs(e), r = U(e, 0, 9), i = U(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = U(e, +!a, 9);
 	return {
 		operandA: i,
 		operandB: (a ? U(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function Ei(e, t) {
-	if (!yi(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = vi(t), { operandA: r, operandB: i } = e === 1 ? bi(n) : e === 2 ? xi(n) : e === 3 ? Si(n) : e === 4 ? wi(n) : Ti(n);
+function xs(e, t) {
+	if (!ms(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = ps(t), { operandA: r, operandB: i } = e === 1 ? hs(n) : e === 2 ? gs(n) : e === 3 ? _s(n) : e === 4 ? ys(n) : bs(n);
 	return {
 		id: `mental-addition-${e}-${t}`,
 		grade: e,
@@ -4875,10 +8517,10 @@ function Ei(e, t) {
 }
 //#endregion
 //#region packages/mental-addition/src/plugin.ts
-var Di = "math.addition.mental";
-function Oi(e, t, n, r, i) {
+var Ss = "math.addition.mental";
+function Cs(e, t, n, r, i) {
 	return {
-		competencyId: Di,
+		competencyId: Ss,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4887,22 +8529,22 @@ function Oi(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ki(e, t) {
-	let n = vi(t), r = [];
+function ws(e, t) {
+	let n = ps(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Ei(e, t));
+		r.push(xs(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ai = {
+var Ts = {
 	id: "mental-addition",
-	competencyIds: [Di],
+	competencyIds: [Ss],
 	generateQuestion(e, t) {
-		return Ei(e, t);
+		return xs(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctSum };
@@ -4919,7 +8561,7 @@ var Ai = {
 };
 //#endregion
 //#region packages/mental-division/src/rng.ts
-function ji(e) {
+function Es(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -4927,29 +8569,29 @@ function ji(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Mi(e, t, n) {
+function Ds(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-division/src/generate.ts
-function Ni(e) {
+function Os(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Pi(e, t) {
+function ks(e, t) {
 	return {
-		divisor: Mi(e, 1, t),
-		correctQuotient: Mi(e, 0, t)
+		divisor: Ds(e, 1, t),
+		correctQuotient: Ds(e, 0, t)
 	};
 }
-function Fi(e) {
+function As(e) {
 	return {
-		divisor: Mi(e, 1, 9),
-		correctQuotient: Mi(e, 11, 20)
+		divisor: Ds(e, 1, 9),
+		correctQuotient: Ds(e, 11, 20)
 	};
 }
-function Ii(e, t) {
-	if (!Ni(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = ji(t), { divisor: r, correctQuotient: i } = e === 1 ? Pi(n, 2) : e === 2 ? Pi(n, 5) : e === 3 ? Pi(n, 10) : e === 4 ? Pi(n, 12) : Fi(n);
+function js(e, t) {
+	if (!Os(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Es(t), { divisor: r, correctQuotient: i } = e === 1 ? ks(n, 2) : e === 2 ? ks(n, 5) : e === 3 ? ks(n, 10) : e === 4 ? ks(n, 12) : As(n);
 	return {
 		id: `mental-division-${e}-${t}`,
 		grade: e,
@@ -4960,10 +8602,10 @@ function Ii(e, t) {
 }
 //#endregion
 //#region packages/mental-division/src/plugin.ts
-var Li = "math.division.mental";
-function Ri(e, t, n, r, i) {
+var Ms = "math.division.mental";
+function Ns(e, t, n, r, i) {
 	return {
-		competencyId: Li,
+		competencyId: Ms,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -4972,22 +8614,22 @@ function Ri(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function zi(e, t) {
-	let n = ji(t), r = [];
+function Ps(e, t) {
+	let n = Es(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Ii(e, t));
+		r.push(js(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Bi = {
+var Fs = {
 	id: "mental-division",
-	competencyIds: [Li],
+	competencyIds: [Ms],
 	generateQuestion(e, t) {
-		return Ii(e, t);
+		return js(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctQuotient };
@@ -5004,7 +8646,7 @@ var Bi = {
 };
 //#endregion
 //#region packages/mental-multiplication/src/rng.ts
-function Vi(e) {
+function Is(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5012,29 +8654,29 @@ function Vi(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Hi(e, t, n) {
+function Ls(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-multiplication/src/generate.ts
-function Ui(e) {
+function Rs(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Wi(e, t) {
+function zs(e, t) {
 	return {
-		factorA: Hi(e, 0, t),
-		factorB: Hi(e, 0, t)
+		factorA: Ls(e, 0, t),
+		factorB: Ls(e, 0, t)
 	};
 }
-function Gi(e) {
+function Bs(e) {
 	return {
-		factorA: Hi(e, 11, 20),
-		factorB: Hi(e, 0, 9)
+		factorA: Ls(e, 11, 20),
+		factorB: Ls(e, 0, 9)
 	};
 }
-function Ki(e, t) {
-	if (!Ui(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Vi(t), { factorA: r, factorB: i } = e === 1 ? Wi(n, 2) : e === 2 ? Wi(n, 5) : e === 3 ? Wi(n, 10) : e === 4 ? Wi(n, 12) : Gi(n);
+function Vs(e, t) {
+	if (!Rs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Is(t), { factorA: r, factorB: i } = e === 1 ? zs(n, 2) : e === 2 ? zs(n, 5) : e === 3 ? zs(n, 10) : e === 4 ? zs(n, 12) : Bs(n);
 	return {
 		id: `mental-multiplication-${e}-${t}`,
 		grade: e,
@@ -5045,10 +8687,10 @@ function Ki(e, t) {
 }
 //#endregion
 //#region packages/mental-multiplication/src/plugin.ts
-var qi = "math.multiplication.mental";
-function Ji(e, t, n, r, i) {
+var Hs = "math.multiplication.mental";
+function Us(e, t, n, r, i) {
 	return {
-		competencyId: qi,
+		competencyId: Hs,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5057,22 +8699,22 @@ function Ji(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Yi(e, t) {
-	let n = Vi(t), r = [];
+function Ws(e, t) {
+	let n = Is(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Ki(e, t));
+		r.push(Vs(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Xi = {
+var Gs = {
 	id: "mental-multiplication",
-	competencyIds: [qi],
+	competencyIds: [Hs],
 	generateQuestion(e, t) {
-		return Ki(e, t);
+		return Vs(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctProduct };
@@ -5089,7 +8731,7 @@ var Xi = {
 };
 //#endregion
 //#region packages/mental-subtraction/src/rng.ts
-function Zi(e) {
+function Ks(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5102,54 +8744,54 @@ function W(e, t, n) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/generate.ts
-function Qi(e) {
+function qs(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function $i(e) {
+function Js(e) {
 	let t = W(e, 0, 9);
 	return {
 		correctDifference: t,
 		subtrahend: W(e, 0, 9 - t)
 	};
 }
-function ea(e) {
+function Ys(e) {
 	let t = W(e, 1, 9);
 	return {
 		correctDifference: t,
 		subtrahend: W(e, Math.max(1, 10 - t), 9)
 	};
 }
-function ta(e) {
+function Xs(e) {
 	let t = W(e, 0, 9), n = W(e, 0, 9 - t);
 	return {
 		correctDifference: W(e, 1, 9) * 10 + n,
 		subtrahend: t
 	};
 }
-function na(e) {
+function Zs(e) {
 	let t = W(e, 1, 9);
 	return {
 		onesDiff: W(e, Math.max(0, 10 - t), 9),
 		onesSubtrahend: t
 	};
 }
-function ra(e) {
-	let { onesDiff: t, onesSubtrahend: n } = na(e), r = W(e, 1, 9), i = W(e, 1, 9);
+function Qs(e) {
+	let { onesDiff: t, onesSubtrahend: n } = Zs(e), r = W(e, 1, 9), i = W(e, 1, 9);
 	return {
 		correctDifference: r * 10 + t,
 		subtrahend: i * 10 + n
 	};
 }
-function ia(e) {
-	let { onesDiff: t, onesSubtrahend: n } = na(e), r = W(e, 0, 9), i = W(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = W(e, +!a, 9);
+function $s(e) {
+	let { onesDiff: t, onesSubtrahend: n } = Zs(e), r = W(e, 0, 9), i = W(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = W(e, +!a, 9);
 	return {
 		correctDifference: i,
 		subtrahend: (a ? W(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function aa(e, t) {
-	if (!Qi(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Zi(t), { correctDifference: r, subtrahend: i } = e === 1 ? $i(n) : e === 2 ? ea(n) : e === 3 ? ta(n) : e === 4 ? ra(n) : ia(n);
+function ec(e, t) {
+	if (!qs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Ks(t), { correctDifference: r, subtrahend: i } = e === 1 ? Js(n) : e === 2 ? Ys(n) : e === 3 ? Xs(n) : e === 4 ? Qs(n) : $s(n);
 	return {
 		id: `mental-subtraction-${e}-${t}`,
 		grade: e,
@@ -5160,10 +8802,10 @@ function aa(e, t) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/plugin.ts
-var oa = "math.subtraction.mental";
-function sa(e, t, n, r, i) {
+var tc = "math.subtraction.mental";
+function nc(e, t, n, r, i) {
 	return {
-		competencyId: oa,
+		competencyId: tc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5172,22 +8814,22 @@ function sa(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ca(e, t) {
-	let n = Zi(t), r = [];
+function rc(e, t) {
+	let n = Ks(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(aa(e, t));
+		r.push(ec(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var la = {
+var ic = {
 	id: "mental-subtraction",
-	competencyIds: [oa],
+	competencyIds: [tc],
 	generateQuestion(e, t) {
-		return aa(e, t);
+		return ec(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctDifference };
@@ -5201,10 +8843,10 @@ var la = {
 			correctAnswer: e.correctDifference
 		};
 	}
-}, ua = "math.number-sense.counting-range";
+}, ac = "math.number-sense.counting-range";
 //#endregion
 //#region packages/number-sense-counting-range/src/rng.ts
-function da(e) {
+function oc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5217,16 +8859,16 @@ function G(e, t, n) {
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/generate.ts
-function fa(e) {
+function sc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 4;
 }
-var pa = {
+var cc = {
 	1: 100,
 	2: 1e3,
 	3: 1e4,
 	4: 1e6
 };
-function ma(e, t, n, r) {
+function lc(e, t, n, r) {
 	let i = G(r, 0, n - 1);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -5236,7 +8878,7 @@ function ma(e, t, n, r) {
 		numericAnswer: i + 1
 	};
 }
-function ha(e, t, n, r) {
+function uc(e, t, n, r) {
 	let i = G(r, 1, n);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -5246,7 +8888,7 @@ function ha(e, t, n, r) {
 		numericAnswer: i - 1
 	};
 }
-function ga(e, t, n, r) {
+function dc(e, t, n, r) {
 	let i = G(r, 0, n), a = G(r, 0, n);
 	for (; a === i;) a = G(r, 0, n);
 	let o = i > a ? "a" : "b";
@@ -5265,20 +8907,20 @@ function ga(e, t, n, r) {
 		correctOptionId: o
 	};
 }
-function _a(e, t) {
-	if (!fa(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
-	let n = pa[e], r = da(t);
+function fc(e, t) {
+	if (!sc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
+	let n = cc[e], r = oc(t);
 	switch (G(r, 0, 2)) {
-		case 0: return ma(e, t, n, r);
-		case 1: return ha(e, t, n, r);
-		default: return ga(e, t, n, r);
+		case 0: return lc(e, t, n, r);
+		case 1: return uc(e, t, n, r);
+		default: return dc(e, t, n, r);
 	}
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/plugin.ts
-function va(e, t, n, r, i) {
+function pc(e, t, n, r, i) {
 	return {
-		competencyId: ua,
+		competencyId: ac,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5287,22 +8929,22 @@ function va(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ya(e, t) {
-	let n = da(t), r = [];
+function mc(e, t) {
+	let n = oc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(_a(e, t));
+		r.push(fc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ba = {
+var hc = {
 	id: "number-sense-counting-range",
-	competencyIds: [ua],
+	competencyIds: [ac],
 	generateQuestion(e, t) {
-		return _a(e, t);
+		return fc(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
@@ -5325,10 +8967,10 @@ var ba = {
 			correctAnswer: e.numericAnswer
 		};
 	}
-}, xa = "math.number-sense.negative-numbers";
+}, gc = "math.number-sense.negative-numbers";
 //#endregion
 //#region packages/number-sense-negative-numbers/src/rng.ts
-function Sa(e) {
+function _c(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5336,16 +8978,16 @@ function Sa(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Ca(e, t, n) {
+function vc(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/generate.ts
-function wa(e) {
+function yc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Ta(e, t, n, r) {
-	let i = Ca(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
+function bc(e, t, n, r) {
+	let i = vc(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
 		grade: e,
@@ -5354,9 +8996,9 @@ function Ta(e, t, n, r) {
 		numericAnswer: o
 	};
 }
-function Ea(e, t, n, r, i) {
-	let a = Ca(n, i[0], i[1]), o = Ca(n, i[0], i[1]);
-	for (; o === a;) o = Ca(n, i[0], i[1]);
+function xc(e, t, n, r, i) {
+	let a = vc(n, i[0], i[1]), o = vc(n, i[0], i[1]);
+	for (; o === a;) o = vc(n, i[0], i[1]);
 	let s = r === "temperature" ? `Which is colder, ${a}° or ${o}°?` : `Who owes more money: someone who owes $${Math.abs(a)} or someone who owes $${Math.abs(o)}?`, c = (e) => r === "temperature" ? `${e}°` : `owes $${Math.abs(e)}`, l = a < o ? "a" : "b";
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
@@ -5373,22 +9015,22 @@ function Ea(e, t, n, r, i) {
 		correctOptionId: l
 	};
 }
-function Da(e, t) {
-	if (!wa(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Sa(t);
-	if (e === 1) return Ta(e, t, n, [-10, 10]);
-	if (e === 2) return Ta(e, t, n, [-20, 20]);
-	if (e === 3) return Ea(e, t, n, "temperature", [-20, 20]);
-	if (e === 4) return Ea(e, t, n, "debt", [-50, -1]);
-	if (n() < .5) return Ta(e, t, n, [-100, 100]);
+function Sc(e, t) {
+	if (!yc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = _c(t);
+	if (e === 1) return bc(e, t, n, [-10, 10]);
+	if (e === 2) return bc(e, t, n, [-20, 20]);
+	if (e === 3) return xc(e, t, n, "temperature", [-20, 20]);
+	if (e === 4) return xc(e, t, n, "debt", [-50, -1]);
+	if (n() < .5) return bc(e, t, n, [-100, 100]);
 	let r = n() < .5 ? "temperature" : "debt";
-	return Ea(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
+	return xc(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/plugin.ts
-function Oa(e, t, n, r, i) {
+function Cc(e, t, n, r, i) {
 	return {
-		competencyId: xa,
+		competencyId: gc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5397,22 +9039,22 @@ function Oa(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ka(e, t) {
-	let n = Sa(t), r = [];
+function wc(e, t) {
+	let n = _c(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Da(e, t));
+		r.push(Sc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Aa = {
+var Tc = {
 	id: "number-sense-negative-numbers",
-	competencyIds: [xa],
+	competencyIds: [gc],
 	generateQuestion(e, t) {
-		return Da(e, t);
+		return Sc(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
@@ -5433,10 +9075,10 @@ var Aa = {
 			correctAnswer: e.numericAnswer
 		};
 	}
-}, ja = "math.number-sense.odd-even";
+}, Ec = "math.number-sense.odd-even";
 //#endregion
 //#region packages/number-sense-odd-even/src/rng.ts
-function Ma(e) {
+function Dc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5444,30 +9086,30 @@ function Ma(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Na(e, t, n) {
+function Oc(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/generate.ts
-function Pa(e) {
+function kc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Fa = {
+var Ac = {
 	1: 20,
 	2: 100,
 	3: 1e3,
 	4: 1e4,
 	5: 1e4
 };
-function Ia(e) {
+function jc(e) {
 	return e % 2 == 0 ? "even" : "odd";
 }
-function La(e, t, n) {
+function Mc(e, t, n) {
 	let r = t === "even" ? 0 : 1;
-	return r + 2 * Na(e, 0, Math.floor((n - r) / 2) + 1 - 1);
+	return r + 2 * Oc(e, 0, Math.floor((n - r) / 2) + 1 - 1);
 }
-function Ra(e, t, n) {
-	let r = Fa[e], i = Na(n, 0, r);
+function Nc(e, t, n) {
+	let r = Ac[e], i = Oc(n, 0, r);
 	return {
 		id: `number-sense-odd-even-${e}-${t}`,
 		grade: e,
@@ -5480,16 +9122,16 @@ function Ra(e, t, n) {
 			id: "even",
 			label: "Even"
 		}],
-		correctOptionId: Ia(i)
+		correctOptionId: jc(i)
 	};
 }
-function za(e, t, n) {
+function Pc(e, t, n) {
 	let r = n() < .5 ? "odd" : "even", i = r === "odd" ? "even" : "odd", a = [];
 	for (; a.length < 3;) {
-		let e = La(n, r, 1e4);
+		let e = Mc(n, r, 1e4);
 		a.includes(e) || a.push(e);
 	}
-	let o = La(n, i, 1e4), s = [
+	let o = Mc(n, i, 1e4), s = [
 		{
 			value: a[0],
 			isOddOneOut: !1
@@ -5508,7 +9150,7 @@ function za(e, t, n) {
 		}
 	];
 	for (let e = s.length - 1; e > 0; e--) {
-		let t = Na(n, 0, e), r = s[e];
+		let t = Oc(n, 0, e), r = s[e];
 		s[e] = s[t], s[t] = r;
 	}
 	let c = [
@@ -5532,16 +9174,16 @@ function za(e, t, n) {
 		correctOptionId: l
 	};
 }
-function Ba(e, t) {
-	if (!Pa(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ma(t);
-	return e === 5 && n() < .5 ? za(e, t, n) : Ra(e, t, n);
+function Fc(e, t) {
+	if (!kc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Dc(t);
+	return e === 5 && n() < .5 ? Pc(e, t, n) : Nc(e, t, n);
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/plugin.ts
-function Va(e, t, n, r, i) {
+function Ic(e, t, n, r, i) {
 	return {
-		competencyId: ja,
+		competencyId: Ec,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5550,22 +9192,22 @@ function Va(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Ha(e, t) {
-	let n = Ma(t), r = [];
+function Lc(e, t) {
+	let n = Dc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Ba(e, t));
+		r.push(Fc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ua = {
+var Rc = {
 	id: "number-sense-odd-even",
-	competencyIds: [ja],
+	competencyIds: [Ec],
 	generateQuestion(e, t) {
-		return Ba(e, t);
+		return Fc(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -5580,10 +9222,10 @@ var Ua = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, Wa = "math.number-sense.ordinals";
+}, zc = "math.number-sense.ordinals";
 //#endregion
 //#region packages/number-sense-ordinals/src/ordinal.ts
-function Ga(e) {
+function Bc(e) {
 	let t = e % 100;
 	if (t >= 11 && t <= 13) return `${e}th`;
 	switch (e % 10) {
@@ -5595,7 +9237,7 @@ function Ga(e) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/rng.ts
-function Ka(e) {
+function Vc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5603,31 +9245,31 @@ function Ka(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function qa(e, t, n) {
+function Hc(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/generate.ts
-var Ja = {
+var Uc = {
 	1: 5,
 	2: 10,
 	3: 20,
 	4: 50,
 	5: 100
 };
-function Ya(e) {
+function Wc(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Xa(e, t) {
+function Gc(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = qa(t, 0, e), i = n[e];
+		let r = Hc(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function Za(e, t) {
-	let n = Xa(e, t), r = n.map((e, t) => ({
+function Kc(e, t) {
+	let n = Gc(e, t), r = n.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e.label
 	}));
@@ -5636,7 +9278,7 @@ function Za(e, t) {
 		correctOptionId: r[n.findIndex((e) => e.correct)].id
 	};
 }
-function Qa(e, t) {
+function qc(e, t) {
 	let n = [
 		e - 1,
 		e + 1,
@@ -5648,7 +9290,7 @@ function Qa(e, t) {
 	for (let a of n) a >= 1 && a <= t && a !== e && !r.has(a) && (r.add(a), i.push(a));
 	return i;
 }
-function $a(e, t, n, r) {
+function Jc(e, t, n, r) {
 	let i = new Set(t), a = [];
 	for (let t of e) {
 		if (a.length >= r) break;
@@ -5657,9 +9299,9 @@ function $a(e, t, n, r) {
 	for (let e = 1; e <= n && a.length < r; e++) i.has(e) || (a.push(e), i.add(e));
 	return a;
 }
-function eo(e, t, n, r) {
-	let i = $a(Qa(e, t), /* @__PURE__ */ new Set([e]), t, 3);
-	return Za([{
+function Yc(e, t, n, r) {
+	let i = Jc(qc(e, t), /* @__PURE__ */ new Set([e]), t, 3);
+	return Kc([{
 		label: r(e),
 		correct: !0
 	}, ...i.map((e) => ({
@@ -5667,9 +9309,9 @@ function eo(e, t, n, r) {
 		correct: !1
 	}))], n);
 }
-function to(e, t) {
-	if (!Ya(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ja[e], r = Ka(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = qa(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? eo(a, n, r, Ga) : eo(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${Ga(a)}?`;
+function Xc(e, t) {
+	if (!Wc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Uc[e], r = Vc(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = Hc(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? Yc(a, n, r, Bc) : Yc(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${Bc(a)}?`;
 	return {
 		id: `number-sense-ordinals-${e}-${t}`,
 		grade: e,
@@ -5681,9 +9323,9 @@ function to(e, t) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/plugin.ts
-function no(e, t, n, r, i) {
+function Zc(e, t, n, r, i) {
 	return {
-		competencyId: Wa,
+		competencyId: zc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5692,22 +9334,22 @@ function no(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function ro(e, t) {
-	let n = Ka(t), r = [];
+function Qc(e, t) {
+	let n = Vc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(to(e, t));
+		r.push(Xc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var io = {
+var $c = {
 	id: "number-sense-ordinals",
-	competencyIds: [Wa],
+	competencyIds: [zc],
 	generateQuestion(e, t) {
-		return to(e, t);
+		return Xc(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -5722,10 +9364,10 @@ var io = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, ao = "math.number-sense.primes-factors";
+}, el = "math.number-sense.primes-factors";
 //#endregion
 //#region packages/number-sense-primes-factors/src/rng.ts
-function oo(e) {
+function tl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5738,41 +9380,41 @@ function K(e, t, n) {
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/generate.ts
-function so(e) {
+function nl(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function co(e) {
+function rl(e) {
 	if (e < 2) return !1;
 	for (let t = 2; t * t <= e; t++) if (e % t === 0) return !1;
 	return !0;
 }
-function lo(e, t) {
-	return t === 0 ? e : lo(t, e % t);
+function il(e, t) {
+	return t === 0 ? e : il(t, e % t);
 }
-function uo(e, t) {
-	return e * t / lo(e, t);
+function al(e, t) {
+	return e * t / il(e, t);
 }
-var fo = {
+var ol = {
 	1: 20,
 	2: 50,
 	5: 50
-}, po = {
+}, sl = {
 	3: 50,
 	4: 100,
 	5: 100
 };
-function mo(e, t) {
+function cl(e, t) {
 	let n = [];
 	for (let e = 2; e < t; e++) t % e === 0 && n.push(e);
 	return n.length === 0 ? K(e, 2, t - 1) : n[K(e, 0, n.length - 1)];
 }
-function ho(e, t) {
+function ll(e, t) {
 	let n = K(e, 2, t - 1), r = 0;
 	for (; t % n === 0 && r < 20;) n = K(e, 2, t - 1), r++;
 	return n;
 }
-function go(e, t, n) {
-	let r = K(n, 2, fo[e] ?? 50);
+function ul(e, t, n) {
+	let r = K(n, 2, ol[e] ?? 50);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -5785,12 +9427,12 @@ function go(e, t, n) {
 			id: "no",
 			label: "No"
 		}],
-		correctOptionId: co(r) ? "yes" : "no",
+		correctOptionId: rl(r) ? "yes" : "no",
 		n: r
 	};
 }
-function _o(e, t, n) {
-	let r = K(n, 4, (po[e] ?? 100) - 1), i = n() < .5 ? mo(n, r) : ho(n, r);
+function dl(e, t, n) {
+	let r = K(n, 4, (sl[e] ?? 100) - 1), i = n() < .5 ? cl(n, r) : ll(n, r);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -5806,7 +9448,7 @@ function _o(e, t, n) {
 		correctOptionId: r % i === 0 ? "yes" : "no"
 	};
 }
-function vo(e, t, n) {
+function fl(e, t, n) {
 	let r = K(n, 2, 12), i = K(n, 2, 12);
 	for (; i === r;) i = K(n, 2, 12);
 	return {
@@ -5814,25 +9456,25 @@ function vo(e, t, n) {
 		grade: e,
 		kind: "common-multiple",
 		prompt: `What is the smallest common multiple of ${r} and ${i}?`,
-		numericAnswer: uo(r, i)
+		numericAnswer: al(r, i)
 	};
 }
-function yo(e, t) {
-	if (!so(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = oo(t);
-	if (e === 1 || e === 2) return go(e, t, n);
-	if (e === 3 || e === 4) return _o(e, t, n);
+function pl(e, t) {
+	if (!nl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = tl(t);
+	if (e === 1 || e === 2) return ul(e, t, n);
+	if (e === 3 || e === 4) return dl(e, t, n);
 	switch (K(n, 0, 2)) {
-		case 0: return go(e, t, n);
-		case 1: return _o(e, t, n);
-		default: return vo(e, t, n);
+		case 0: return ul(e, t, n);
+		case 1: return dl(e, t, n);
+		default: return fl(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/plugin.ts
-function bo(e, t, n, r, i) {
+function ml(e, t, n, r, i) {
 	return {
-		competencyId: ao,
+		competencyId: el,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -5841,22 +9483,22 @@ function bo(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function xo(e, t) {
-	let n = oo(t), r = [];
+function hl(e, t) {
+	let n = tl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(yo(e, t));
+		r.push(pl(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var So = {
+var gl = {
 	id: "number-sense-primes-factors",
-	competencyIds: [ao],
+	competencyIds: [el],
 	generateQuestion(e, t) {
-		return yo(e, t);
+		return pl(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "common-multiple" ? { correct: t === e.numericAnswer } : { correct: t === e.correctOptionId };
@@ -5881,10 +9523,10 @@ var So = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, Co = "math.number-sense.roman-numerals";
+}, _l = "math.number-sense.roman-numerals";
 //#endregion
 //#region packages/number-sense-roman-numerals/src/rng.ts
-function wo(e) {
+function vl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -5892,12 +9534,12 @@ function wo(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function To(e, t, n) {
+function yl(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/generate.ts
-var Eo = [
+var bl = [
 	[1e3, "M"],
 	[900, "CM"],
 	[500, "D"],
@@ -5912,33 +9554,33 @@ var Eo = [
 	[4, "IV"],
 	[1, "I"]
 ];
-function Do(e) {
+function xl(e) {
 	let t = e, n = "";
-	for (let [e, r] of Eo) for (; t >= e;) n += r, t -= e;
+	for (let [e, r] of bl) for (; t >= e;) n += r, t -= e;
 	return n;
 }
-function Oo(e) {
+function Sl(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var ko = {
+var Cl = {
 	1: [1, 10],
 	2: [1, 50],
 	3: [1, 100],
 	4: [1, 500],
 	5: [1, 1e3]
 };
-function Ao(e, t) {
+function wl(e, t) {
 	return e <= 3 || t() < .5 ? "read" : "write";
 }
-function jo(e, t) {
+function Tl(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = To(t, 0, e), i = n[e];
+		let r = yl(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function Mo(e, t, n, r) {
+function El(e, t, n, r) {
 	let i = /* @__PURE__ */ new Set();
 	for (let a of [
 		1,
@@ -5962,31 +9604,31 @@ function Mo(e, t, n, r) {
 	for (; i.size < r && a <= n;) a !== e && i.add(a), a++;
 	return Array.from(i).slice(0, r);
 }
-function No(e, t, n) {
-	let [r, i] = t, a = jo([e, ...Mo(e, r, i, 3)], n), o = a.map((e, t) => ({
+function Dl(e, t, n) {
+	let [r, i] = t, a = Tl([e, ...El(e, r, i, 3)], n), o = a.map((e, t) => ({
 		id: `opt-${t}`,
 		label: String(e)
 	})), s = a.indexOf(e);
 	return {
-		prompt: `Which number does the Roman numeral ${Do(e)} represent?`,
+		prompt: `Which number does the Roman numeral ${xl(e)} represent?`,
 		options: o,
 		correctOptionId: `opt-${s}`
 	};
 }
-function Po(e, t, n) {
-	let [r, i] = t, a = Mo(e, r, i, 3), o = jo([Do(e), ...a.map(Do)], n), s = o.map((e, t) => ({
+function Ol(e, t, n) {
+	let [r, i] = t, a = El(e, r, i, 3), o = Tl([xl(e), ...a.map(xl)], n), s = o.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
-	})), c = o.indexOf(Do(e));
+	})), c = o.indexOf(xl(e));
 	return {
 		prompt: `Which Roman numeral represents ${e}?`,
 		options: s,
 		correctOptionId: `opt-${c}`
 	};
 }
-function Fo(e, t) {
-	if (!Oo(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = wo(t), r = ko[e], i = Ao(e, n), a = To(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? No(a, r, n) : Po(a, r, n);
+function kl(e, t) {
+	if (!Sl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = vl(t), r = Cl[e], i = wl(e, n), a = yl(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? Dl(a, r, n) : Ol(a, r, n);
 	return {
 		id: `number-sense-roman-numerals-${e}-${t}`,
 		grade: e,
@@ -5998,9 +9640,9 @@ function Fo(e, t) {
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/plugin.ts
-function Io(e, t, n, r, i) {
+function Al(e, t, n, r, i) {
 	return {
-		competencyId: Co,
+		competencyId: _l,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6009,22 +9651,22 @@ function Io(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Lo(e, t) {
-	let n = wo(t), r = [];
+function jl(e, t) {
+	let n = vl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Fo(e, t));
+		r.push(kl(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ro = {
+var Ml = {
 	id: "number-sense-roman-numerals",
-	competencyIds: [Co],
+	competencyIds: [_l],
 	generateQuestion(e, t) {
-		return Fo(e, t);
+		return kl(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -6042,7 +9684,7 @@ var Ro = {
 };
 //#endregion
 //#region packages/number-sense-skip-counting/src/rng.ts
-function zo(e) {
+function Nl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6050,39 +9692,39 @@ function zo(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Bo(e, t, n) {
+function Pl(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/generate.ts
-function Vo(e) {
+function Fl(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Ho() {
+function Il() {
 	return {
 		step: 2,
 		maxRange: 20
 	};
 }
-function Uo() {
+function Ll() {
 	return {
 		step: 2,
 		maxRange: 50
 	};
 }
-function Wo() {
+function Rl() {
 	return {
 		step: 5,
 		maxRange: 100
 	};
 }
-function Go() {
+function zl() {
 	return {
 		step: 10,
 		maxRange: 200
 	};
 }
-function Ko(e) {
+function Bl(e) {
 	let t = [
 		2,
 		5,
@@ -6091,13 +9733,13 @@ function Ko(e) {
 		50
 	];
 	return {
-		step: t[Bo(e, 0, t.length - 1)],
+		step: t[Pl(e, 0, t.length - 1)],
 		maxRange: 500
 	};
 }
-function qo(e, t) {
-	if (!Vo(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = zo(t), { step: r, maxRange: i } = e === 1 ? Ho() : e === 2 ? Uo() : e === 3 ? Wo() : e === 4 ? Go() : Ko(n), a = Bo(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
+function Vl(e, t) {
+	if (!Fl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Nl(t), { step: r, maxRange: i } = e === 1 ? Il() : e === 2 ? Ll() : e === 3 ? Rl() : e === 4 ? zl() : Bl(n), a = Pl(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
 	return {
 		id: `number-sense-skip-counting-${e}-${t}`,
 		grade: e,
@@ -6113,10 +9755,10 @@ function qo(e, t) {
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/plugin.ts
-var Jo = "math.number-sense.skip-counting";
-function Yo(e, t, n, r, i) {
+var Hl = "math.number-sense.skip-counting";
+function Ul(e, t, n, r, i) {
 	return {
-		competencyId: Jo,
+		competencyId: Hl,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6125,22 +9767,22 @@ function Yo(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Xo(e, t) {
-	let n = zo(t), r = [];
+function Wl(e, t) {
+	let n = Nl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(qo(e, t));
+		r.push(Vl(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Zo = {
+var Gl = {
 	id: "number-sense-skip-counting",
-	competencyIds: [Jo],
+	competencyIds: [Hl],
 	generateQuestion(e, t) {
-		return qo(e, t);
+		return Vl(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
@@ -6157,7 +9799,7 @@ var Zo = {
 };
 //#endregion
 //#region packages/number-sense-squares/src/rng.ts
-function Qo(e) {
+function Kl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6165,21 +9807,21 @@ function Qo(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function $o(e, t, n) {
+function ql(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-squares/src/generate.ts
-function es(e) {
+function Jl(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var ts = [{
+var Yl = [{
 	id: "yes",
 	label: "Yes"
 }, {
 	id: "no",
 	label: "No"
-}], ns = {
+}], Xl = {
 	1: {
 		baseMin: 1,
 		baseMax: 5,
@@ -6198,7 +9840,7 @@ var ts = [{
 		numberMin: 1,
 		numberMax: 144
 	}
-}, rs = {
+}, Zl = {
 	4: {
 		baseMin: 1,
 		baseMax: 8
@@ -6208,25 +9850,25 @@ var ts = [{
 		baseMax: 12
 	}
 };
-function is(e) {
+function Ql(e) {
 	return Number.isInteger(Math.sqrt(e));
 }
-function as(e, t, n) {
-	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = ns[e], s = n() < .5 ? (() => {
-		let e = $o(n, r, i);
+function $l(e, t, n) {
+	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = Xl[e], s = n() < .5 ? (() => {
+		let e = ql(n, r, i);
 		return e * e;
-	})() : $o(n, a, o), c = is(s) ? "yes" : "no";
+	})() : ql(n, a, o), c = Ql(s) ? "yes" : "no";
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
 		kind: "recognize",
 		prompt: `Is ${s} a square number?`,
-		options: ts,
+		options: Yl,
 		correctOptionId: c
 	};
 }
-function os(e, t, n) {
-	let { baseMin: r, baseMax: i } = rs[e], a = $o(n, r, i);
+function eu(e, t, n) {
+	let { baseMin: r, baseMax: i } = Zl[e], a = ql(n, r, i);
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
@@ -6235,23 +9877,23 @@ function os(e, t, n) {
 		numericAnswer: a * a
 	};
 }
-function ss(e, t) {
-	if (!es(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Qo(t);
+function tu(e, t) {
+	if (!Jl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Kl(t);
 	switch (e) {
 		case 1:
 		case 2:
-		case 3: return as(e, t, n);
+		case 3: return $l(e, t, n);
 		case 4:
-		case 5: return os(e, t, n);
+		case 5: return eu(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-squares/src/plugin.ts
-var cs = "math.number-sense.squares";
-function ls(e, t, n, r, i) {
+var nu = "math.number-sense.squares";
+function ru(e, t, n, r, i) {
 	return {
-		competencyId: cs,
+		competencyId: nu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6260,22 +9902,22 @@ function ls(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function us(e, t) {
-	let n = Qo(t), r = [];
+function iu(e, t) {
+	let n = Kl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ss(e, t));
+		r.push(tu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ds = {
+var au = {
 	id: "number-sense-squares",
-	competencyIds: [cs],
+	competencyIds: [nu],
 	generateQuestion(e, t) {
-		return ss(e, t);
+		return tu(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -6306,7 +9948,7 @@ var ds = {
 };
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/rng.ts
-function fs(e) {
+function ou(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6319,13 +9961,13 @@ function q(e, t, n) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/generate.ts
-function ps(e) {
+function su(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function ms(e) {
+function cu(e) {
 	return `${Math.floor(e / 10)}.${e % 10}`;
 }
-function hs(e) {
+function lu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -6333,7 +9975,7 @@ function hs(e) {
 		correctAnswer: t * 10
 	};
 }
-function gs(e) {
+function uu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -6341,7 +9983,7 @@ function gs(e) {
 		correctAnswer: t * 100
 	};
 }
-function _s(e) {
+function du(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -6349,7 +9991,7 @@ function _s(e) {
 		correctAnswer: t * 1e3
 	};
 }
-function vs(e) {
+function fu(e) {
 	let t = e() < .5 ? 10 : 100, n = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -6357,7 +9999,7 @@ function vs(e) {
 		correctAnswer: n
 	};
 }
-function ys(e) {
+function pu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -6365,23 +10007,23 @@ function ys(e) {
 		correctAnswer: t
 	};
 }
-function bs(e) {
+function mu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${ms(t)} × 10`,
+		equation: `${cu(t)} × 10`,
 		correctAnswer: t
 	};
 }
-function xs(e) {
+function hu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${ms(t)} × 100`,
+		equation: `${cu(t)} × 100`,
 		correctAnswer: t * 10
 	};
 }
-function Ss(e) {
+function gu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -6389,19 +10031,19 @@ function Ss(e) {
 		correctAnswer: t
 	};
 }
-var Cs = [
-	ys,
-	bs,
-	xs,
-	Ss
+var _u = [
+	pu,
+	mu,
+	hu,
+	gu
 ];
-function ws(e) {
-	let t = Cs[q(e, 0, Cs.length - 1)];
+function vu(e) {
+	let t = _u[q(e, 0, _u.length - 1)];
 	return t(e);
 }
-function Ts(e, t) {
-	if (!ps(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = fs(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? hs(n) : e === 2 ? gs(n) : e === 3 ? _s(n) : e === 4 ? vs(n) : ws(n);
+function yu(e, t) {
+	if (!su(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = ou(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? lu(n) : e === 2 ? uu(n) : e === 3 ? du(n) : e === 4 ? fu(n) : vu(n);
 	return {
 		id: `place-value-multiply-divide-ten-${e}-${t}`,
 		grade: e,
@@ -6412,10 +10054,10 @@ function Ts(e, t) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/plugin.ts
-var Es = "math.place-value.multiply-divide-ten";
-function Ds(e, t, n, r, i) {
+var bu = "math.place-value.multiply-divide-ten";
+function xu(e, t, n, r, i) {
 	return {
-		competencyId: Es,
+		competencyId: bu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6424,22 +10066,22 @@ function Ds(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Os(e, t) {
-	let n = fs(t), r = [];
+function Su(e, t) {
+	let n = ou(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Ts(e, t));
+		r.push(yu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ks = {
+var Cu = {
 	id: "place-value-multiply-divide-ten",
-	competencyIds: [Es],
+	competencyIds: [bu],
 	generateQuestion(e, t) {
-		return Ts(e, t);
+		return yu(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
@@ -6456,7 +10098,7 @@ var ks = {
 };
 //#endregion
 //#region packages/place-value-powers-of-ten/src/rng.ts
-function As(e) {
+function wu(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6469,49 +10111,49 @@ function J(e, t, n) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/generate.ts
-function js(e) {
+function Tu(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Ms = [
+var Eu = [
 	1,
 	10,
 	100,
 	1e3
 ];
-function Ns(e) {
+function Du(e) {
 	return {
 		operand: J(e, 1, 99),
 		magnitude: 1
 	};
 }
-function Ps(e) {
+function Ou(e) {
 	return {
 		operand: J(e, 10, 999),
 		magnitude: 10
 	};
 }
-function Fs(e) {
+function ku(e) {
 	return {
 		operand: J(e, 100, 9999),
 		magnitude: 100
 	};
 }
-function Is(e) {
+function Au(e) {
 	return {
 		operand: J(e, 1e3, 99999),
 		magnitude: 1e3
 	};
 }
-function Ls(e) {
-	let t = Ms[J(e, 0, Ms.length - 1)];
+function ju(e) {
+	let t = Eu[J(e, 0, Eu.length - 1)];
 	return {
 		operand: J(e, t, 999999),
 		magnitude: t
 	};
 }
-function Rs(e, t) {
-	if (!js(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = As(t), { operand: r, magnitude: i } = e === 1 ? Ns(n) : e === 2 ? Ps(n) : e === 3 ? Fs(n) : e === 4 ? Is(n) : Ls(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
+function Mu(e, t) {
+	if (!Tu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = wu(t), { operand: r, magnitude: i } = e === 1 ? Du(n) : e === 2 ? Ou(n) : e === 3 ? ku(n) : e === 4 ? Au(n) : ju(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
 	return {
 		id: `place-value-powers-of-ten-${e}-${t}`,
 		grade: e,
@@ -6524,10 +10166,10 @@ function Rs(e, t) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/plugin.ts
-var zs = "math.place-value.powers-of-ten";
-function Bs(e, t, n, r, i) {
+var Nu = "math.place-value.powers-of-ten";
+function Pu(e, t, n, r, i) {
 	return {
-		competencyId: zs,
+		competencyId: Nu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6536,22 +10178,22 @@ function Bs(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Vs(e, t) {
-	let n = As(t), r = [];
+function Fu(e, t) {
+	let n = wu(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Rs(e, t));
+		r.push(Mu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Hs = {
+var Iu = {
 	id: "place-value-powers-of-ten",
-	competencyIds: [zs],
+	competencyIds: [Nu],
 	generateQuestion(e, t) {
-		return Rs(e, t);
+		return Mu(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
@@ -6565,10 +10207,10 @@ var Hs = {
 			correctAnswer: e.correctAnswer
 		};
 	}
-}, Us = "math.place-value.rounding";
+}, Lu = "math.place-value.rounding";
 //#endregion
 //#region packages/place-value-rounding/src/rng.ts
-function Ws(e) {
+function Ru(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6576,22 +10218,22 @@ function Ws(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Gs(e, t, n) {
+function zu(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-rounding/src/generate.ts
-function Ks(e) {
+function Bu(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function qs(e, t) {
+function Vu(e, t) {
 	let n = e % t, r = e - n;
 	return n * 2 >= t ? r + t : r;
 }
-function Js(e, t) {
+function Hu(e, t) {
 	return e - e % t;
 }
-function Ys(e, t) {
+function Uu(e, t) {
 	let n = e % t;
 	return n === 0 ? e : e - n + t;
 }
@@ -6599,7 +10241,7 @@ function Y(e, t) {
 	let n = String(e).padStart(t + 1, "0");
 	return `${n.slice(0, -t)}.${n.slice(-t)}`;
 }
-function Xs(e, t, n) {
+function Wu(e, t, n) {
 	let r = /* @__PURE__ */ new Set([e]), i = [];
 	for (let e of t) if (!r.has(e) && (r.add(e), i.push(e), i.length === 3)) return i;
 	let a = 1;
@@ -6609,7 +10251,7 @@ function Xs(e, t, n) {
 	}
 	return i;
 }
-function Zs(e, t, n, r, i, a) {
+function Gu(e, t, n, r, i, a) {
 	let o = [{
 		label: i,
 		isCorrect: !0
@@ -6618,7 +10260,7 @@ function Zs(e, t, n, r, i, a) {
 		isCorrect: !1
 	}))];
 	for (let e = o.length - 1; e > 0; e--) {
-		let t = Gs(n, 0, e), r = o[e];
+		let t = zu(n, 0, e), r = o[e];
 		o[e] = o[t], o[t] = r;
 	}
 	let s = "", c = o.map((e, t) => {
@@ -6636,32 +10278,32 @@ function Zs(e, t, n, r, i, a) {
 		correctOptionId: s
 	};
 }
-var Qs = {
+var Ku = {
 	1: 999,
 	2: 9999,
 	3: 99999
-}, $s = {
+}, qu = {
 	1: 10,
 	2: 100,
 	3: 1e3
-}, ec = {
+}, Ju = {
 	1: "10",
 	2: "100",
 	3: "1,000"
 };
-function tc(e, t, n) {
-	let r = $s[e], i = Gs(n, 0, Qs[e]), a = qs(i, r), o = String(a), s = Xs(o, [
-		Js(i, r),
-		Ys(i, r),
+function Yu(e, t, n) {
+	let r = qu[e], i = zu(n, 0, Ku[e]), a = Vu(i, r), o = String(a), s = Wu(o, [
+		Hu(i, r),
+		Uu(i, r),
 		i,
 		a - r,
 		a + r,
 		a - 2 * r,
 		a + 2 * r
 	].filter((e) => e >= 0).map(String), (e) => String(a + (e + 2) * r));
-	return Zs(e, t, n, `Round ${i} to the nearest ${ec[e]}.`, o, s);
+	return Gu(e, t, n, `Round ${i} to the nearest ${Ju[e]}.`, o, s);
 }
-var nc = {
+var Xu = {
 	4: {
 		maxScaled: 999,
 		sourceDecimalPlaces: 2,
@@ -6675,8 +10317,8 @@ var nc = {
 		precisionLabel: "2"
 	}
 }, X = 10;
-function rc(e, t, n) {
-	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = nc[e], s = Gs(n, 0, r), c = Y(s, i), l = qs(s, X) / X, u = Y(l, a), d = Js(s, X) / X, f = Ys(s, X) / X, p = Xs(u, [
+function Zu(e, t, n) {
+	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = Xu[e], s = zu(n, 0, r), c = Y(s, i), l = Vu(s, X) / X, u = Y(l, a), d = Hu(s, X) / X, f = Uu(s, X) / X, p = Wu(u, [
 		Y(d, a),
 		Y(f, a),
 		c,
@@ -6687,18 +10329,18 @@ function rc(e, t, n) {
 			l + 2
 		].filter((e) => e >= 0).map((e) => Y(e, a))
 	], (e) => Y(l + e + 2, a));
-	return Zs(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
+	return Gu(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
 }
-function ic(e, t) {
-	if (!Ks(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ws(t);
-	return e === 1 || e === 2 || e === 3 ? tc(e, t, n) : rc(e, t, n);
+function Qu(e, t) {
+	if (!Bu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Ru(t);
+	return e === 1 || e === 2 || e === 3 ? Yu(e, t, n) : Zu(e, t, n);
 }
 //#endregion
 //#region packages/place-value-rounding/src/plugin.ts
-function ac(e, t, n, r, i) {
+function $u(e, t, n, r, i) {
 	return {
-		competencyId: Us,
+		competencyId: Lu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -6707,22 +10349,22 @@ function ac(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function oc(e, t) {
-	let n = Ws(t), r = [];
+function ed(e, t) {
+	let n = Ru(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ic(e, t));
+		r.push(Qu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var sc = {
+var td = {
 	id: "place-value-rounding",
-	competencyIds: [Us],
+	competencyIds: [Lu],
 	generateQuestion(e, t) {
-		return ic(e, t);
+		return Qu(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -6737,10 +10379,10 @@ var sc = {
 			correctAnswer: e.correctOptionId
 		};
 	}
-}, cc = "math.place-value.understanding";
+}, nd = "math.place-value.understanding";
 //#endregion
 //#region packages/place-value-understanding/src/rng.ts
-function lc(e) {
+function rd(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -6748,90 +10390,90 @@ function lc(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function uc(e, t, n) {
+function id(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-understanding/src/generate.ts
-function dc(e) {
+function ad(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var fc = {
+var od = {
 	name: "units",
 	value: 1,
 	decimals: 0
-}, pc = {
+}, sd = {
 	name: "tens",
 	value: 10,
 	decimals: 0
-}, mc = {
+}, cd = {
 	name: "hundreds",
 	value: 100,
 	decimals: 0
-}, hc = {
+}, ld = {
 	name: "thousands",
 	value: 1e3,
 	decimals: 0
-}, gc = {
+}, ud = {
 	name: "ten-thousands",
 	value: 1e4,
 	decimals: 0
-}, _c = {
+}, dd = {
 	name: "hundred-thousands",
 	value: 1e5,
 	decimals: 0
-}, vc = {
+}, fd = {
 	name: "millions",
 	value: 1e6,
 	decimals: 0
-}, yc = {
+}, pd = {
 	name: "ones",
 	value: 1,
 	decimals: 0
-}, bc = {
+}, md = {
 	name: "tenths",
 	value: .1,
 	decimals: 1
-}, xc = {
+}, hd = {
 	name: "hundredths",
 	value: .01,
 	decimals: 2
-}, Sc = {
+}, gd = {
 	name: "thousandths",
 	value: .001,
 	decimals: 3
 }, Z = {
-	1: [fc, pc],
+	1: [od, sd],
 	2: [
-		fc,
-		pc,
-		mc
+		od,
+		sd,
+		cd
 	],
 	3: [
-		fc,
-		pc,
-		mc,
-		hc
+		od,
+		sd,
+		cd,
+		ld
 	],
 	4: [
-		fc,
-		pc,
-		mc,
-		hc,
-		gc,
-		_c,
-		vc
+		od,
+		sd,
+		cd,
+		ld,
+		ud,
+		dd,
+		fd
 	]
-}, Cc = [
-	Sc,
-	xc,
-	bc,
-	yc
-], wc = [
-	Sc,
-	xc,
-	bc
-], Tc = {
+}, _d = [
+	gd,
+	hd,
+	md,
+	pd
+], vd = [
+	gd,
+	hd,
+	md
+], yd = {
 	1: {
 		composePlaces: Z[1],
 		scopePlaces: Z[1],
@@ -6853,12 +10495,12 @@ var fc = {
 		isDecimal: !1
 	},
 	5: {
-		composePlaces: Cc,
-		scopePlaces: wc,
+		composePlaces: _d,
+		scopePlaces: vd,
 		isDecimal: !0
 	}
 };
-function Ec(e, t) {
+function bd(e, t) {
 	let n = [
 		1,
 		2,
@@ -6871,7 +10513,7 @@ function Ec(e, t) {
 		9
 	];
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = uc(e, 0, t), i = n[t];
+		let r = id(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n.slice(0, t);
@@ -6879,7 +10521,7 @@ function Ec(e, t) {
 function Q(e, t) {
 	return t.decimals === 0 ? String(e * t.value) : `0.${"0".repeat(t.decimals - 1)}${e}`;
 }
-function Dc(e, t) {
+function xd(e, t) {
 	if (!e.isDecimal) {
 		let n = t.reduce((t, n, r) => t + n * e.composePlaces[r].value, 0);
 		return String(n);
@@ -6887,16 +10529,16 @@ function Dc(e, t) {
 	let [n, r, i, a] = t;
 	return `${a}.${i}${r}${n}`;
 }
-function Oc(e) {
+function Sd(e) {
 	return e.length === 1 ? e[0] : `${e.slice(0, -1).join(", ")} and ${e[e.length - 1]}`;
 }
-function kc(e, t, n) {
+function Cd(e, t, n) {
 	let r = t.map((e, t) => ({
 		label: e,
 		isCorrect: t === n
 	}));
 	for (let t = r.length - 1; t > 0; t--) {
-		let n = uc(e, 0, t), i = r[t];
+		let n = id(e, 0, t), i = r[t];
 		r[t] = r[n], r[n] = i;
 	}
 	let i = "";
@@ -6911,7 +10553,7 @@ function kc(e, t, n) {
 		correctOptionId: i
 	};
 }
-function Ac(e, t, n, r) {
+function wd(e, t, n, r) {
 	let i = e[t], a = n.get(i.name), o = [], s = /* @__PURE__ */ new Set([r]);
 	function c(e) {
 		o.length >= 3 || s.has(e) || (s.add(e), o.push(e));
@@ -6930,11 +10572,11 @@ function Ac(e, t, n, r) {
 	for (let e = 1; e <= 9 && o.length < 3; e++) c(Q(e, i));
 	return o;
 }
-function jc(e, t, n) {
+function Td(e, t, n) {
 	let r = [], i = /* @__PURE__ */ new Set([n]), a = t.length;
 	function o(t) {
 		if (r.length >= 3) return;
-		let n = Dc(e, t);
+		let n = xd(e, t);
 		i.has(n) || (i.add(n), r.push(n));
 	}
 	for (let e = 0; e < a - 1; e++) {
@@ -6966,8 +10608,8 @@ function jc(e, t, n) {
 	}
 	return r;
 }
-function Mc(e, t, n, r) {
-	let i = Ec(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = Dc(r, i), s = uc(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = Q(a.get(c.name), c), { options: u, correctOptionId: d } = kc(n, [l, ...Ac(r.scopePlaces, s, a, l)], 0);
+function Ed(e, t, n, r) {
+	let i = bd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = xd(r, i), s = id(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = Q(a.get(c.name), c), { options: u, correctOptionId: d } = Cd(n, [l, ...wd(r.scopePlaces, s, a, l)], 0);
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -6983,8 +10625,8 @@ function Mc(e, t, n, r) {
 		selectedPlace: c
 	};
 }
-function Nc(e, t, n, r) {
-	let i = Ec(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = Dc(r, i), { options: s, correctOptionId: c } = kc(n, [o, ...jc(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${Oc(d)}?`;
+function Dd(e, t, n, r) {
+	let i = bd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = xd(r, i), { options: s, correctOptionId: c } = Cd(n, [o, ...Td(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${Sd(d)}?`;
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -6999,19 +10641,19 @@ function Nc(e, t, n, r) {
 		digitsByPlaceName: a
 	};
 }
-function Pc(e, t) {
-	if (!dc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = lc(t), r = n() < .5 ? "digit-value" : "compose", i = Tc[e];
-	return r === "digit-value" ? Mc(e, t, n, i) : Nc(e, t, n, i);
+function Od(e, t) {
+	if (!ad(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = rd(t), r = n() < .5 ? "digit-value" : "compose", i = yd[e];
+	return r === "digit-value" ? Ed(e, t, n, i) : Dd(e, t, n, i);
 }
-function Fc(e, t) {
-	return Pc(e, t).question;
+function kd(e, t) {
+	return Od(e, t).question;
 }
 //#endregion
 //#region packages/place-value-understanding/src/plugin.ts
-function Ic(e, t, n, r, i) {
+function Ad(e, t, n, r, i) {
 	return {
-		competencyId: cc,
+		competencyId: nd,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
@@ -7020,22 +10662,22 @@ function Ic(e, t, n, r, i) {
 		...i && { endReason: i }
 	};
 }
-function Lc(e, t) {
-	let n = lc(t), r = [];
+function jd(e, t) {
+	let n = rd(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Fc(e, t));
+		r.push(kd(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Rc = {
+var Md = {
 	id: "place-value-understanding",
-	competencyIds: [cc],
+	competencyIds: [nd],
 	generateQuestion(e, t) {
-		return Fc(e, t);
+		return kd(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
@@ -7053,7 +10695,7 @@ var Rc = {
 };
 //#endregion
 //#region node_modules/@learncoreskills/plugin-engine/dist/src/registry.js
-function zc(e, t) {
+function Nd(e, t) {
 	let n = [], r = new Set(t.map((e) => e.id)), i = /* @__PURE__ */ new Set();
 	for (let t of e) i.has(t.id) && n.push({
 		kind: "duplicate-plugin-id",
@@ -7069,16 +10711,16 @@ function zc(e, t) {
 		errors: n
 	};
 }
-function Bc(e) {
+function Pd(e) {
 	switch (e.kind) {
 		case "duplicate-plugin-id": return `duplicate plugin id: "${e.id}"`;
 		case "unknown-competency-reference": return `plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`;
 	}
 }
-function Vc(e, t) {
-	let n = zc(e, t);
+function Fd(e, t) {
+	let n = Nd(e, t);
 	if (!n.valid) {
-		let e = n.errors.map(Bc).join("; ");
+		let e = n.errors.map(Pd).join("; ");
 		throw Error(`Invalid plugin registry: ${e}`);
 	}
 	let r = new Map(e.map((e) => [e.id, e]));
@@ -7096,51 +10738,53 @@ function Vc(e, t) {
 }
 //#endregion
 //#region src/pluginRegistry.ts
-var Hc = Vc([
-	Ai,
-	la,
-	Xi,
-	Bi,
-	Lr,
-	xr,
-	Yr,
-	dr,
-	_i,
-	si,
-	ba,
-	Zo,
-	Ua,
-	io,
-	Aa,
-	So,
-	ds,
-	Ro,
+var Id = Fd([
+	Ts,
+	ic,
+	Gs,
+	Fs,
+	Mo,
+	go,
+	Wo,
+	ao,
+	fs,
+	ns,
+	hc,
+	Gl,
 	Rc,
-	Hs,
-	sc,
-	ks,
+	$c,
+	Tc,
+	gl,
+	au,
+	Ml,
+	Md,
+	Iu,
+	td,
+	Cu,
 	...We,
 	...Lt,
-	...Ln
+	...Ln,
+	...Jr,
+	...ka
 ], [
-	x,
-	zn,
-	Bn,
-	Vn,
-	S,
-	Hn,
 	C,
 	w,
+	ja,
+	Ma,
 	T,
+	Na,
+	Pa,
+	Fa,
+	Ia,
 	E,
 	D,
 	O,
 	k,
-	Un,
-	Wn,
-	Gn,
-	Kn,
-	qn,
+	La,
+	Ra,
+	za,
+	Ba,
+	Va,
 	A,
 	j,
 	M,
@@ -7151,12 +10795,14 @@ var Hc = Vc([
 	L,
 	...ie,
 	...mt,
-	...dn
+	...dn,
+	...gr,
+	...zi
 ]);
 //#endregion
 //#region src/exerciseDefinitions.ts
 function $(e, t) {
-	let n = Hc.getPlugin(e);
+	let n = Id.getPlugin(e);
 	return {
 		grade: t.grade,
 		questions: t.questions.map((e) => {
@@ -7171,84 +10817,84 @@ function $(e, t) {
 		})
 	};
 }
-var Uc = {
+var Ld = {
 	key: "addition",
 	label: "Addition",
 	icon: "➕",
 	pluginId: "mental-addition",
-	competency: x,
-	competencies: [x],
+	competency: C,
+	competencies: [C],
 	createSession(e, t) {
-		return $("mental-addition", ki(e, t));
+		return $("mental-addition", ws(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Oi(e, t, n, r, i)
-}, Wc = {
+	createMasterySignal: (e, t, n, r, i) => Cs(e, t, n, r, i)
+}, Rd = {
 	key: "subtraction",
 	label: "Subtraction",
 	icon: "➖",
 	pluginId: "mental-subtraction",
-	competency: zn,
-	competencies: [zn],
+	competency: w,
+	competencies: [w],
 	createSession(e, t) {
-		return $("mental-subtraction", ca(e, t));
+		return $("mental-subtraction", rc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => sa(e, t, n, r, i)
-}, Gc = {
+	createMasterySignal: (e, t, n, r, i) => nc(e, t, n, r, i)
+}, zd = {
 	key: "multiplication",
 	label: "Multiplication",
 	icon: "✖️",
 	pluginId: "mental-multiplication",
-	competency: Bn,
-	competencies: [Bn],
+	competency: ja,
+	competencies: [ja],
 	createSession(e, t) {
-		return $("mental-multiplication", Yi(e, t));
+		return $("mental-multiplication", Ws(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ji(e, t, n, r, i)
-}, Kc = {
+	createMasterySignal: (e, t, n, r, i) => Us(e, t, n, r, i)
+}, Bd = {
 	key: "division",
 	label: "Division",
 	icon: "➗",
 	pluginId: "mental-division",
-	competency: Vn,
-	competencies: [Vn],
+	competency: Ma,
+	competencies: [Ma],
 	createSession(e, t) {
-		return $("mental-division", zi(e, t));
+		return $("mental-division", Ps(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ri(e, t, n, r, i)
-}, qc = {
+	createMasterySignal: (e, t, n, r, i) => Ns(e, t, n, r, i)
+}, Vd = {
 	key: "baseline-counting-quantities",
 	label: "Counting & Quantities",
 	icon: "🔢",
 	pluginId: "baseline-counting-quantities",
-	competency: S,
+	competency: T,
 	competencies: [
-		S,
-		Hn,
-		C,
-		w
+		T,
+		Na,
+		Pa,
+		Fa
 	],
 	competencyLabels: {
-		[S.id]: "Counting to 20",
-		[Hn.id]: "Subitizing to 5",
-		[C.id]: "Recognising digits",
-		[w.id]: "Comparing groups"
+		[T.id]: "Counting to 20",
+		[Na.id]: "Subitizing to 5",
+		[Pa.id]: "Recognising digits",
+		[Fa.id]: "Comparing groups"
 	},
 	createSession(e, t) {
-		return $("baseline-counting-quantities", Ir(e, t));
+		return $("baseline-counting-quantities", jo(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => Fr(e, t, n, r)
-}, Jc = {
+	createMasterySignal: (e, t, n, r) => Ao(e, t, n, r)
+}, Hd = {
 	key: "baseline-concrete-addition-subtraction",
 	label: "Concrete Addition & Subtraction",
 	icon: "🍎",
 	pluginId: "baseline-concrete-addition-subtraction",
-	competency: T,
-	competencies: [T],
+	competency: Ia,
+	competencies: [Ia],
 	createSession(e, t) {
-		return $("baseline-concrete-addition-subtraction", br(e, t));
+		return $("baseline-concrete-addition-subtraction", ho(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => yr(e, t, n, r)
-}, Yc = {
+	createMasterySignal: (e, t, n, r) => mo(e, t, n, r)
+}, Ud = {
 	key: "baseline-direct-comparison",
 	label: "Direct Comparison",
 	icon: "⚖️",
@@ -7256,10 +10902,10 @@ var Uc = {
 	competency: E,
 	competencies: [E],
 	createSession(e, t) {
-		return $("baseline-direct-comparison", Jr(e, t));
+		return $("baseline-direct-comparison", Uo(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => qr(e, t, n, r)
-}, Xc = {
+	createMasterySignal: (e, t, n, r) => Ho(e, t, n, r)
+}, Wd = {
 	key: "baseline-calendar-time-basics",
 	label: "Calendar & Time Basics",
 	icon: "📅",
@@ -7271,10 +10917,10 @@ var Uc = {
 		[O.id]: "Days of the week"
 	},
 	createSession(e, t) {
-		return $("baseline-calendar-time-basics", ur(e, t));
+		return $("baseline-calendar-time-basics", io(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => lr(e, t, n, r)
-}, Zc = {
+	createMasterySignal: (e, t, n, r) => ro(e, t, n, r)
+}, Gd = {
 	key: "baseline-shape-recognition",
 	label: "Shape Recognition",
 	icon: "🔺",
@@ -7282,65 +10928,65 @@ var Uc = {
 	competency: k,
 	competencies: [k],
 	createSession(e, t) {
-		return $("baseline-shape-recognition", gi(e, t));
+		return $("baseline-shape-recognition", ds(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => hi(e, t, n, r)
-}, Qc = {
+	createMasterySignal: (e, t, n, r) => us(e, t, n, r)
+}, Kd = {
 	key: "baseline-positional-language",
 	label: "Positional Language",
 	icon: "📍",
 	pluginId: "baseline-positional-language",
-	competency: Un,
-	competencies: [Un],
+	competency: La,
+	competencies: [La],
 	createSession(e, t) {
-		return $("baseline-positional-language", oi(e, t));
+		return $("baseline-positional-language", ts(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => ai(e, t, n, r)
-}, $c = {
+	createMasterySignal: (e, t, n, r) => es(e, t, n, r)
+}, qd = {
 	key: "number-sense-counting-range",
 	label: "Counting & Number Range",
 	icon: "🔢",
 	pluginId: "number-sense-counting-range",
-	competency: Wn,
-	competencies: [Wn],
+	competency: Ra,
+	competencies: [Ra],
 	createSession(e, t) {
-		return $("number-sense-counting-range", ya(e, t));
+		return $("number-sense-counting-range", mc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => va(e, t, n, r, i)
-}, el = {
+	createMasterySignal: (e, t, n, r, i) => pc(e, t, n, r, i)
+}, Jd = {
 	key: "number-sense-skip-counting",
 	label: "Skip Counting",
 	icon: "➡️",
 	pluginId: "number-sense-skip-counting",
-	competency: Gn,
-	competencies: [Gn],
+	competency: za,
+	competencies: [za],
 	createSession(e, t) {
-		return $("number-sense-skip-counting", Xo(e, t));
+		return $("number-sense-skip-counting", Wl(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Yo(e, t, n, r, i)
-}, tl = {
+	createMasterySignal: (e, t, n, r, i) => Ul(e, t, n, r, i)
+}, Yd = {
 	key: "number-sense-odd-even",
 	label: "Odd & Even",
 	icon: "🔀",
 	pluginId: "number-sense-odd-even",
-	competency: Kn,
-	competencies: [Kn],
+	competency: Ba,
+	competencies: [Ba],
 	createSession(e, t) {
-		return $("number-sense-odd-even", Ha(e, t));
+		return $("number-sense-odd-even", Lc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Va(e, t, n, r, i)
-}, nl = {
+	createMasterySignal: (e, t, n, r, i) => Ic(e, t, n, r, i)
+}, Xd = {
 	key: "number-sense-ordinals",
 	label: "Ordinal Numbers",
 	icon: "🥇",
 	pluginId: "number-sense-ordinals",
-	competency: qn,
-	competencies: [qn],
+	competency: Va,
+	competencies: [Va],
 	createSession(e, t) {
-		return $("number-sense-ordinals", ro(e, t));
+		return $("number-sense-ordinals", Qc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => no(e, t, n, r, i)
-}, rl = {
+	createMasterySignal: (e, t, n, r, i) => Zc(e, t, n, r, i)
+}, Zd = {
 	key: "number-sense-negative-numbers",
 	label: "Negative Numbers",
 	icon: "🌡️",
@@ -7348,10 +10994,10 @@ var Uc = {
 	competency: A,
 	competencies: [A],
 	createSession(e, t) {
-		return $("number-sense-negative-numbers", ka(e, t));
+		return $("number-sense-negative-numbers", wc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Oa(e, t, n, r, i)
-}, il = {
+	createMasterySignal: (e, t, n, r, i) => Cc(e, t, n, r, i)
+}, Qd = {
 	key: "number-sense-primes-factors",
 	label: "Primes & Factors",
 	icon: "🧮",
@@ -7359,10 +11005,10 @@ var Uc = {
 	competency: j,
 	competencies: [j],
 	createSession(e, t) {
-		return $("number-sense-primes-factors", xo(e, t));
+		return $("number-sense-primes-factors", hl(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => bo(e, t, n, r, i)
-}, al = {
+	createMasterySignal: (e, t, n, r, i) => ml(e, t, n, r, i)
+}, $d = {
 	key: "number-sense-squares",
 	label: "Square Numbers",
 	icon: "⬜",
@@ -7370,10 +11016,10 @@ var Uc = {
 	competency: M,
 	competencies: [M],
 	createSession(e, t) {
-		return $("number-sense-squares", us(e, t));
+		return $("number-sense-squares", iu(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => ls(e, t, n, r, i)
-}, ol = {
+	createMasterySignal: (e, t, n, r, i) => ru(e, t, n, r, i)
+}, ef = {
 	key: "number-sense-roman-numerals",
 	label: "Roman Numerals",
 	icon: "🏛️",
@@ -7381,10 +11027,10 @@ var Uc = {
 	competency: N,
 	competencies: [N],
 	createSession(e, t) {
-		return $("number-sense-roman-numerals", Lo(e, t));
+		return $("number-sense-roman-numerals", jl(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Io(e, t, n, r, i)
-}, sl = {
+	createMasterySignal: (e, t, n, r, i) => Al(e, t, n, r, i)
+}, tf = {
 	key: "place-value-understanding",
 	label: "Place Value Understanding",
 	icon: "🔟",
@@ -7392,10 +11038,10 @@ var Uc = {
 	competency: P,
 	competencies: [P],
 	createSession(e, t) {
-		return $("place-value-understanding", Lc(e, t));
+		return $("place-value-understanding", jd(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ic(e, t, n, r, i)
-}, cl = {
+	createMasterySignal: (e, t, n, r, i) => Ad(e, t, n, r, i)
+}, nf = {
 	key: "place-value-powers-of-ten",
 	label: "Add/Subtract Powers of Ten",
 	icon: "➕",
@@ -7403,10 +11049,10 @@ var Uc = {
 	competency: F,
 	competencies: [F],
 	createSession(e, t) {
-		return $("place-value-powers-of-ten", Vs(e, t));
+		return $("place-value-powers-of-ten", Fu(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Bs(e, t, n, r, i)
-}, ll = {
+	createMasterySignal: (e, t, n, r, i) => Pu(e, t, n, r, i)
+}, rf = {
 	key: "place-value-rounding",
 	label: "Rounding",
 	icon: "🔵",
@@ -7414,10 +11060,10 @@ var Uc = {
 	competency: I,
 	competencies: [I],
 	createSession(e, t) {
-		return $("place-value-rounding", oc(e, t));
+		return $("place-value-rounding", ed(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => ac(e, t, n, r, i)
-}, ul = {
+	createMasterySignal: (e, t, n, r, i) => $u(e, t, n, r, i)
+}, af = {
 	key: "place-value-multiply-divide-ten",
 	label: "Multiply/Divide by Powers of Ten",
 	icon: "✖️",
@@ -7425,10 +11071,10 @@ var Uc = {
 	competency: L,
 	competencies: [L],
 	createSession(e, t) {
-		return $("place-value-multiply-divide-ten", Os(e, t));
+		return $("place-value-multiply-divide-ten", Su(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ds(e, t, n, r, i)
-}, dl = Ge.map((e) => ({
+	createMasterySignal: (e, t, n, r, i) => xu(e, t, n, r, i)
+}, of = Ge.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -7437,7 +11083,7 @@ var Uc = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), fl = Rt.map((e) => ({
+})), sf = Rt.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -7446,7 +11092,7 @@ var Uc = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), pl = Rn.map((e) => ({
+})), cf = Rn.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -7455,33 +11101,53 @@ var Uc = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), ml = [
-	Uc,
-	Wc,
-	Gc,
-	Kc,
-	qc,
-	Jc,
-	Yc,
-	Xc,
-	Zc,
-	Qc,
-	$c,
-	el,
-	tl,
-	nl,
-	rl,
-	il,
-	al,
-	ol,
-	sl,
-	cl,
-	ll,
-	ul,
-	...dl,
-	...fl,
-	...pl
-], hl = {
+})), lf = Yr.map((e) => ({
+	key: e.key,
+	label: e.label,
+	icon: e.icon,
+	pluginId: e.pluginId,
+	competency: e.competency,
+	competencies: e.competencies,
+	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
+	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
+})), uf = Aa.map((e) => ({
+	key: e.key,
+	label: e.label,
+	icon: e.icon,
+	pluginId: e.pluginId,
+	competency: e.competency,
+	competencies: e.competencies,
+	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
+	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
+})), df = [
+	Ld,
+	Rd,
+	zd,
+	Bd,
+	Vd,
+	Hd,
+	Ud,
+	Wd,
+	Gd,
+	Kd,
+	qd,
+	Jd,
+	Yd,
+	Xd,
+	Zd,
+	Qd,
+	$d,
+	ef,
+	tf,
+	nf,
+	rf,
+	af,
+	...of,
+	...sf,
+	...cf,
+	...lf,
+	...uf
+], ff = {
 	en: {
 		P: [
 			"Counts objects accurately to 20, one number per object.",
@@ -7834,19 +11500,19 @@ var Uc = {
 			"Utilise une calculatrice correctement *et* sait quand ne pas s'en servir — vérifie son résultat par rapport à une estimation mentale."
 		]
 	}
-}, gl = !1;
-function _l() {
-	gl ||= !0;
+}, pf = !1;
+function mf() {
+	pf ||= !0;
 }
-var vl = () => ({
+var hf = () => ({
 	subjectId: "math",
-	competencies: Jn,
-	plugins: Hc.all(),
-	exercises: ml,
-	mathematicsAreas: Xn,
-	getMathematicsAreaForCompetency: Zn,
-	skillsReference: hl,
-	register: _l
+	competencies: Ha,
+	plugins: Id.all(),
+	exercises: df,
+	mathematicsAreas: Wa,
+	getMathematicsAreaForCompetency: Ga,
+	skillsReference: ff,
+	register: mf
 });
 //#endregion
-export { Jn as allCompetencies, w as baselineCompareGroupsCompetency, T as baselineConcreteArithmeticCompetency, S as baselineCountingCompetency, D as baselineDayOrderCompetency, O as baselineDaysOfWeekCompetency, C as baselineDigitsCompetency, E as baselineDirectComparisonCompetency, Un as baselinePositionCompetency, k as baselineShapesCompetency, Hn as baselineSubitizingCompetency, vl as default, Zn as getMathematicsAreaForCompetency, ml as mathExercises, Hc as mathPluginRegistry, Xn as mathematicsAreas, x as mentalAdditionCompetency, Vn as mentalDivisionCompetency, Bn as mentalMultiplicationCompetency, zn as mentalSubtractionCompetency, Wn as numberSenseCountingRangeCompetency, A as numberSenseNegativeNumbersCompetency, Kn as numberSenseOddEvenCompetency, qn as numberSenseOrdinalsCompetency, j as numberSensePrimesFactorsCompetency, N as numberSenseRomanNumeralsCompetency, Gn as numberSenseSkipCountingCompetency, M as numberSenseSquaresCompetency, L as placeValueMultiplyDivideTenCompetency, F as placeValuePowersOfTenCompetency, I as placeValueRoundingCompetency, P as placeValueUnderstandingCompetency, hl as skillsReference };
+export { Ha as allCompetencies, Fa as baselineCompareGroupsCompetency, Ia as baselineConcreteArithmeticCompetency, T as baselineCountingCompetency, D as baselineDayOrderCompetency, O as baselineDaysOfWeekCompetency, Pa as baselineDigitsCompetency, E as baselineDirectComparisonCompetency, La as baselinePositionCompetency, k as baselineShapesCompetency, Na as baselineSubitizingCompetency, hf as default, Ga as getMathematicsAreaForCompetency, df as mathExercises, Id as mathPluginRegistry, Wa as mathematicsAreas, C as mentalAdditionCompetency, Ma as mentalDivisionCompetency, ja as mentalMultiplicationCompetency, w as mentalSubtractionCompetency, Ra as numberSenseCountingRangeCompetency, A as numberSenseNegativeNumbersCompetency, Ba as numberSenseOddEvenCompetency, Va as numberSenseOrdinalsCompetency, j as numberSensePrimesFactorsCompetency, N as numberSenseRomanNumeralsCompetency, za as numberSenseSkipCountingCompetency, M as numberSenseSquaresCompetency, L as placeValueMultiplyDivideTenCompetency, F as placeValuePowersOfTenCompetency, I as placeValueRoundingCompetency, P as placeValueUnderstandingCompetency, ff as skillsReference };
