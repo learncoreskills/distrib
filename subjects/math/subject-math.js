@@ -361,15 +361,17 @@ function m(e) {
 			questions: i
 		};
 	}
-	function r(t, n, r, i, a) {
+	function r(n, r, i, a, o, s) {
 		return {
 			competencyId: e.competencyId,
-			grade: t.grade,
-			correct: n,
-			timeMs: r,
-			timestamp: i,
-			questionId: t.id,
-			...a && { endReason: a }
+			grade: n.grade,
+			correct: r,
+			timeMs: i,
+			timestamp: a,
+			questionId: n.id,
+			correctAnswer: t.toPresentation(n).correctAnswer,
+			submittedAnswer: o,
+			...s && { endReason: s }
 		};
 	}
 	return {
@@ -467,15 +469,17 @@ function h(e) {
 			questions: i
 		};
 	}
-	function r(t, n, r, i, a) {
+	function r(n, r, i, a, o, s) {
 		return {
 			competencyId: e.competencyId,
-			grade: t.grade,
-			correct: n,
-			timeMs: r,
-			timestamp: i,
-			questionId: t.id,
-			...a && { endReason: a }
+			grade: n.grade,
+			correct: r,
+			timeMs: i,
+			timestamp: a,
+			questionId: n.id,
+			correctAnswer: t.toPresentation(n).correctAnswer,
+			submittedAnswer: o,
+			...s && { endReason: s }
 		};
 	}
 	return {
@@ -549,15 +553,17 @@ function g(e) {
 			questions: i
 		};
 	}
-	function r(t, n, r, i, a) {
+	function r(n, r, i, a, o, s) {
 		return {
 			competencyId: e.competencyId,
-			grade: t.grade,
-			correct: n,
-			timeMs: r,
-			timestamp: i,
-			questionId: t.id,
-			...a && { endReason: a }
+			grade: n.grade,
+			correct: r,
+			timeMs: i,
+			timestamp: a,
+			questionId: n.id,
+			correctAnswer: t.toPresentation(n).correctAnswer,
+			submittedAnswer: o,
+			...s && { endReason: s }
 		};
 	}
 	return {
@@ -638,15 +644,17 @@ function _(e) {
 			questions: i
 		};
 	}
-	function r(t, n, r, i, a) {
+	function r(n, r, i, a, o, s) {
 		return {
 			competencyId: e.competencyId,
-			grade: t.grade,
-			correct: n,
-			timeMs: r,
-			timestamp: i,
-			questionId: t.id,
-			...a && { endReason: a }
+			grade: n.grade,
+			correct: r,
+			timeMs: i,
+			timestamp: a,
+			questionId: n.id,
+			correctAnswer: t.toPresentation(n).correctAnswer,
+			submittedAnswer: o,
+			...s && { endReason: s }
 		};
 	}
 	return {
@@ -7785,7 +7793,17 @@ function no(e, t) {
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/plugin.ts
-function ro(e, t, n, r, i) {
+function ro(e) {
+	return {
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function io(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -7793,10 +7811,12 @@ function ro(e, t, n, r, i) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: ro(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function io(e, t) {
+function ao(e, t) {
 	let n = Ja(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
@@ -7807,7 +7827,7 @@ function io(e, t) {
 		questions: r
 	};
 }
-var ao = {
+var oo = {
 	id: "baseline-calendar-time-basics",
 	competencyIds: [Ka, qa],
 	generateQuestion(e, t) {
@@ -7816,20 +7836,11 @@ var ao = {
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, oo = "math.addition.baseline-concrete";
+	toPresentation: ro
+}, so = "math.addition.baseline-concrete";
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/rng.ts
-function so(e) {
+function co(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -7842,17 +7853,17 @@ function R(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/generate.ts
-var co = [
+var lo = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function lo(e) {
+function uo(e) {
 	return e === "P" || e === 1;
 }
-function uo(e, t, n) {
+function fo(e, t, n) {
 	let r = R(n, 1, 5), i = R(n, 1, 5);
 	return {
 		id: `baseline-concrete-addition-subtraction-add-${e}-${t}`,
@@ -7860,11 +7871,11 @@ function uo(e, t, n) {
 		operator: "+",
 		leftCount: r,
 		rightCount: i,
-		emoji: co[R(n, 0, co.length - 1)],
+		emoji: lo[R(n, 0, lo.length - 1)],
 		correctAnswer: r + i
 	};
 }
-function fo(e, t, n) {
+function po(e, t, n) {
 	let r = R(n, 2, 10), i = R(n, 1, r - 1);
 	return {
 		id: `baseline-concrete-addition-subtraction-sub-${e}-${t}`,
@@ -7872,61 +7883,64 @@ function fo(e, t, n) {
 		operator: "-",
 		leftCount: r,
 		rightCount: i,
-		emoji: co[R(n, 0, co.length - 1)],
+		emoji: lo[R(n, 0, lo.length - 1)],
 		correctAnswer: r - i
 	};
 }
-function po(e, t) {
-	if (!lo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = so(t);
-	return n() < .5 ? uo(e, t, n) : fo(e, t, n);
+function mo(e, t) {
+	if (!uo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = co(t);
+	return n() < .5 ? fo(e, t, n) : po(e, t, n);
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/plugin.ts
-function mo(e, t, n, r, i) {
+function ho(e) {
 	return {
-		competencyId: oo,
+		presentation: {
+			kind: "equation",
+			equation: `${e.emoji.repeat(e.leftCount)} ${e.operator} ${e.emoji.repeat(e.rightCount)}`
+		},
+		correctAnswer: e.correctAnswer
+	};
+}
+function go(e, t, n, r, i, a) {
+	return {
+		competencyId: so,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: ho(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function ho(e, t) {
-	let n = so(t), r = [];
+function _o(e, t) {
+	let n = co(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(po(e, t));
+		r.push(mo(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var go = {
+var vo = {
 	id: "baseline-concrete-addition-subtraction",
-	competencyIds: [oo],
+	competencyIds: [so],
 	generateQuestion(e, t) {
-		return po(e, t);
+		return mo(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.emoji.repeat(e.leftCount)} ${e.operator} ${e.emoji.repeat(e.rightCount)}`
-			},
-			correctAnswer: e.correctAnswer
-		};
-	}
-}, _o = "math.number-sense.baseline-counting", vo = "math.number-sense.baseline-subitizing", yo = "math.number-sense.baseline-digits", bo = "math.comparing-ordering.baseline-groups";
+	toPresentation: ho
+}, yo = "math.number-sense.baseline-counting", bo = "math.number-sense.baseline-subitizing", xo = "math.number-sense.baseline-digits", So = "math.comparing-ordering.baseline-groups";
 //#endregion
 //#region packages/baseline-counting-quantities/src/rng.ts
-function xo(e) {
+function Co(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -7939,20 +7953,20 @@ function z(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/generate.ts
-var So = [
+var wo = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function Co(e) {
+function To(e) {
 	return e === "P" || e === 1;
 }
 function B(e) {
-	return So[z(e, 0, So.length - 1)];
+	return wo[z(e, 0, wo.length - 1)];
 }
-function wo(e, t) {
+function Eo(e, t) {
 	let n = /* @__PURE__ */ new Set();
 	for (; n.size < 3;) {
 		let r = z(e, 0, 9);
@@ -7971,44 +7985,44 @@ function wo(e, t) {
 		correctOptionId: `digit-${t}`
 	};
 }
-function To(e, t, n) {
+function Do(e, t, n) {
 	let r = z(n, 1, 20);
 	return {
 		id: `baseline-counting-quantities-counting-${e}-${t}`,
 		kind: "counting",
 		grade: e,
-		competencyId: _o,
+		competencyId: yo,
 		count: r,
 		emoji: B(n),
 		correctAnswer: r
 	};
 }
-function Eo(e, t, n) {
+function Oo(e, t, n) {
 	let r = z(n, 1, 5);
 	return {
 		id: `baseline-counting-quantities-subitizing-${e}-${t}`,
 		kind: "subitizing",
 		grade: e,
-		competencyId: vo,
+		competencyId: bo,
 		count: r,
 		emoji: B(n),
 		correctAnswer: r
 	};
 }
-function Do(e, t, n) {
-	let r = z(n, 0, 9), i = B(n), { options: a, correctOptionId: o } = wo(n, r);
+function ko(e, t, n) {
+	let r = z(n, 0, 9), i = B(n), { options: a, correctOptionId: o } = Eo(n, r);
 	return {
 		id: `baseline-counting-quantities-digit-${e}-${t}`,
 		kind: "digit",
 		grade: e,
-		competencyId: yo,
+		competencyId: xo,
 		count: r,
 		emoji: i,
 		options: a,
 		correctOptionId: o
 	};
 }
-function Oo(e, t, n) {
+function Ao(e, t, n) {
 	let r = z(n, 1, 10), i = z(n, 1, 10);
 	for (; i === r;) i = z(n, 1, 10);
 	let a = B(n), o = B(n), s = r > i ? "left" : "right";
@@ -8016,7 +8030,7 @@ function Oo(e, t, n) {
 		id: `baseline-counting-quantities-compare-groups-${e}-${t}`,
 		kind: "compare-groups",
 		grade: e,
-		competencyId: bo,
+		competencyId: So,
 		leftCount: r,
 		rightCount: i,
 		leftEmoji: a,
@@ -8031,19 +8045,42 @@ function Oo(e, t, n) {
 		correctOptionId: s
 	};
 }
-function ko(e, t) {
-	if (!Co(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = xo(t);
+function jo(e, t) {
+	if (!To(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Co(t);
 	switch (z(n, 0, 3)) {
-		case 0: return To(e, t, n);
-		case 1: return Eo(e, t, n);
-		case 2: return Do(e, t, n);
-		default: return Oo(e, t, n);
+		case 0: return Do(e, t, n);
+		case 1: return Oo(e, t, n);
+		case 2: return ko(e, t, n);
+		default: return Ao(e, t, n);
 	}
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/plugin.ts
-function Ao(e, t, n, r, i) {
+function Mo(e) {
+	return e.kind === "counting" || e.kind === "subitizing" ? {
+		presentation: {
+			kind: "equation",
+			equation: e.emoji.repeat(e.count)
+		},
+		correctAnswer: e.correctAnswer
+	} : e.kind === "digit" ? {
+		presentation: {
+			kind: "choice",
+			prompt: `${e.emoji.repeat(e.count)} — which number is this?`,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	} : {
+		presentation: {
+			kind: "choice",
+			prompt: `${e.leftEmoji.repeat(e.leftCount)}   vs   ${e.rightEmoji.repeat(e.rightCount)} — which side has more?`,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function No(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -8051,30 +8088,32 @@ function Ao(e, t, n, r, i) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Mo(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function jo(e, t) {
-	let n = xo(t), r = [];
+function Po(e, t) {
+	let n = Co(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ko(e, t));
+		r.push(jo(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Mo = {
+var Fo = {
 	id: "baseline-counting-quantities",
 	competencyIds: [
-		_o,
-		vo,
 		yo,
-		bo
+		bo,
+		xo,
+		So
 	],
 	generateQuestion(e, t) {
-		return ko(e, t);
+		return jo(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -8084,33 +8123,11 @@ var Mo = {
 			case "compare-groups": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation(e) {
-		return e.kind === "counting" || e.kind === "subitizing" ? {
-			presentation: {
-				kind: "equation",
-				equation: e.emoji.repeat(e.count)
-			},
-			correctAnswer: e.correctAnswer
-		} : e.kind === "digit" ? {
-			presentation: {
-				kind: "choice",
-				prompt: `${e.emoji.repeat(e.count)} — which number is this?`,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		} : {
-			presentation: {
-				kind: "choice",
-				prompt: `${e.leftEmoji.repeat(e.leftCount)}   vs   ${e.rightEmoji.repeat(e.rightCount)} — which side has more?`,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, No = "math.measurement.baseline-comparison";
+	toPresentation: Mo
+}, Io = "math.measurement.baseline-comparison";
 //#endregion
 //#region packages/baseline-direct-comparison/src/rng.ts
-function Po(e) {
+function Lo(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8118,12 +8135,12 @@ function Po(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Fo(e, t, n) {
+function Ro(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/generate.ts
-var Io = {
+var zo = {
 	length: [
 		"🐛 the worm",
 		"🐍 the snake",
@@ -8142,26 +8159,26 @@ var Io = {
 		"🧴 the bottle",
 		"🛁 the bathtub"
 	]
-}, Lo = [
+}, Bo = [
 	"length",
 	"weight",
 	"capacity"
-], Ro = {
+], Vo = {
 	length: "Which one is longer?",
 	weight: "Which one is heavier?",
 	capacity: "Which one holds more?"
 };
-function zo(e) {
+function Ho(e) {
 	return e === "P" || e === 1;
 }
-function Bo(e, t) {
-	let n = Fo(e, 0, t.length - 1), r = Fo(e, 0, t.length - 1);
-	for (; r === n;) r = Fo(e, 0, t.length - 1);
+function Uo(e, t) {
+	let n = Ro(e, 0, t.length - 1), r = Ro(e, 0, t.length - 1);
+	for (; r === n;) r = Ro(e, 0, t.length - 1);
 	return [t[n], t[r]];
 }
-function Vo(e, t) {
-	if (!zo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Po(t), r = Lo[Fo(n, 0, Lo.length - 1)], [i, a] = Bo(n, Io[r]), o = n() < .5, s = {
+function Wo(e, t) {
+	if (!Ho(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Lo(t), r = Bo[Ro(n, 0, Bo.length - 1)], [i, a] = Uo(n, zo[r]), o = n() < .5, s = {
 		id: "a",
 		label: i
 	}, c = {
@@ -8172,58 +8189,61 @@ function Vo(e, t) {
 		id: `baseline-direct-comparison-${r}-${e}-${t}`,
 		grade: e,
 		attribute: r,
-		prompt: Ro[r],
+		prompt: Vo[r],
 		options: [s, c],
 		correctOptionId: o ? "a" : "b"
 	};
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/plugin.ts
-function Ho(e, t, n, r, i) {
+function Go(e) {
 	return {
-		competencyId: No,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function Ko(e, t, n, r, i, a) {
+	return {
+		competencyId: Io,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Go(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Uo(e, t) {
-	let n = Po(t), r = [];
+function qo(e, t) {
+	let n = Lo(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Vo(e, t));
+		r.push(Wo(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Wo = {
+var Jo = {
 	id: "baseline-direct-comparison",
-	competencyIds: [No],
+	competencyIds: [Io],
 	generateQuestion(e, t) {
-		return Vo(e, t);
+		return Wo(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, Go = "math.geometry.baseline-position";
+	toPresentation: Go
+}, Yo = "math.geometry.baseline-position";
 //#endregion
 //#region packages/baseline-positional-language/src/rng.ts
-function Ko(e) {
+function Xo(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8236,7 +8256,7 @@ function V(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-positional-language/src/generate.ts
-var qo = [
+var Zo = [
 	"🐱 the cat",
 	"🐶 the dog",
 	"⭐ the star",
@@ -8246,23 +8266,23 @@ var qo = [
 	"🪑 the chair",
 	"🛏️ the bed",
 	"🌳 the tree"
-], Jo = [
+], Qo = [
 	"on",
 	"under",
 	"behind",
 	"between",
 	"next-to"
-], Yo = {
+], $o = {
 	on: "on",
 	under: "under",
 	behind: "behind",
 	between: "between",
 	"next-to": "next to"
 };
-function Xo(e) {
+function es(e) {
 	return e === "P" || e === 1;
 }
-function Zo(e, t, n, r) {
+function ts(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
@@ -8271,79 +8291,82 @@ function Zo(e, t, n, r) {
 		case "between": return `${n}  ${t}  ${r}`;
 	}
 }
-function Qo(e) {
-	let t = [...Jo];
+function ns(e) {
+	let t = [...Qo];
 	for (let n = t.length - 1; n > 0; n--) {
 		let r = V(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function $o(e, t) {
-	if (!Xo(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Ko(t), r = Jo[V(n, 0, Jo.length - 1)], i = qo[V(n, 0, qo.length - 1)], a = V(n, 0, H.length - 1), o = V(n, 0, H.length - 1);
+function rs(e, t) {
+	if (!es(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Xo(t), r = Qo[V(n, 0, Qo.length - 1)], i = Zo[V(n, 0, Zo.length - 1)], a = V(n, 0, H.length - 1), o = V(n, 0, H.length - 1);
 	for (; o === a;) o = V(n, 0, H.length - 1);
-	let s = H[a], c = H[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = Qo(n).map((e) => ({
+	let s = H[a], c = H[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = ns(n).map((e) => ({
 		id: `position-${e}`,
-		label: Yo[e]
+		label: $o[e]
 	}));
 	return {
 		id: `baseline-positional-language-${e}-${t}`,
 		grade: e,
 		position: r,
 		subjectLabel: i,
-		scene: Zo(r, l, u, d),
+		scene: ts(r, l, u, d),
 		options: f,
 		correctOptionId: `position-${r}`
 	};
 }
 //#endregion
 //#region packages/baseline-positional-language/src/plugin.ts
-function es(e, t, n, r, i) {
+function is(e) {
 	return {
-		competencyId: Go,
+		presentation: {
+			kind: "choice",
+			prompt: `${e.scene}\nWhere is ${e.subjectLabel}?`,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function as(e, t, n, r, i, a) {
+	return {
+		competencyId: Yo,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: is(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function ts(e, t) {
-	let n = Ko(t), r = [];
+function os(e, t) {
+	let n = Xo(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push($o(e, t));
+		r.push(rs(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ns = {
+var ss = {
 	id: "baseline-positional-language",
-	competencyIds: [Go],
+	competencyIds: [Yo],
 	generateQuestion(e, t) {
-		return $o(e, t);
+		return rs(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: `${e.scene}\nWhere is ${e.subjectLabel}?`,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, rs = "math.geometry.baseline-shapes";
+	toPresentation: is
+}, cs = "math.geometry.baseline-shapes";
 //#endregion
 //#region packages/baseline-shape-recognition/src/rng.ts
-function is(e) {
+function ls(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8351,12 +8374,12 @@ function is(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function as(e, t, n) {
+function us(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/generate.ts
-var os = [
+var ds = [
 	{
 		name: "circle",
 		emoji: "🔵"
@@ -8374,20 +8397,20 @@ var os = [
 		emoji: "▭"
 	}
 ];
-function ss(e) {
+function fs(e) {
 	return e === "P" || e === 1;
 }
-function cs(e) {
-	let t = os.map((e) => e.name);
+function ps(e) {
+	let t = ds.map((e) => e.name);
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = as(e, 0, n), i = t[n];
+		let r = us(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function ls(e, t) {
-	if (!ss(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = is(t), r = os[as(n, 0, os.length - 1)], i = cs(n).map((e) => ({
+function ms(e, t) {
+	if (!fs(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = ls(t), r = ds[us(n, 0, ds.length - 1)], i = ps(n).map((e) => ({
 		id: `shape-${e}`,
 		label: e
 	}));
@@ -8402,51 +8425,54 @@ function ls(e, t) {
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/plugin.ts
-function us(e, t, n, r, i) {
+function hs(e) {
 	return {
-		competencyId: rs,
+		presentation: {
+			kind: "choice",
+			prompt: `${e.emoji} — what shape is this?`,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function gs(e, t, n, r, i, a) {
+	return {
+		competencyId: cs,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: hs(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function ds(e, t) {
-	let n = is(t), r = [];
+function _s(e, t) {
+	let n = ls(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ls(e, t));
+		r.push(ms(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var fs = {
+var vs = {
 	id: "baseline-shape-recognition",
-	competencyIds: [rs],
+	competencyIds: [cs],
 	generateQuestion(e, t) {
-		return ls(e, t);
+		return ms(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: `${e.emoji} — what shape is this?`,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
+	toPresentation: hs
 };
 //#endregion
 //#region packages/mental-addition/src/rng.ts
-function ps(e) {
+function ys(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8459,54 +8485,54 @@ function U(e, t, n) {
 }
 //#endregion
 //#region packages/mental-addition/src/generate.ts
-function ms(e) {
+function bs(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function hs(e) {
+function xs(e) {
 	let t = U(e, 0, 9);
 	return {
 		operandA: t,
 		operandB: U(e, 0, 9 - t)
 	};
 }
-function gs(e) {
+function Ss(e) {
 	let t = U(e, 1, 9);
 	return {
 		operandA: t,
 		operandB: U(e, Math.max(1, 10 - t), 9)
 	};
 }
-function _s(e) {
+function Cs(e) {
 	let t = U(e, 0, 9), n = U(e, 0, 9 - t);
 	return {
 		operandA: U(e, 1, 9) * 10 + n,
 		operandB: t
 	};
 }
-function vs(e) {
+function ws(e) {
 	let t = U(e, 1, 9);
 	return {
 		onesA: U(e, Math.max(0, 10 - t), 9),
 		onesB: t
 	};
 }
-function ys(e) {
-	let { onesA: t, onesB: n } = vs(e), r = U(e, 1, 9), i = U(e, 1, 9);
+function Ts(e) {
+	let { onesA: t, onesB: n } = ws(e), r = U(e, 1, 9), i = U(e, 1, 9);
 	return {
 		operandA: r * 10 + t,
 		operandB: i * 10 + n
 	};
 }
-function bs(e) {
-	let { onesA: t, onesB: n } = vs(e), r = U(e, 0, 9), i = U(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = U(e, +!a, 9);
+function Es(e) {
+	let { onesA: t, onesB: n } = ws(e), r = U(e, 0, 9), i = U(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = U(e, +!a, 9);
 	return {
 		operandA: i,
 		operandB: (a ? U(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function xs(e, t) {
-	if (!ms(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = ps(t), { operandA: r, operandB: i } = e === 1 ? hs(n) : e === 2 ? gs(n) : e === 3 ? _s(n) : e === 4 ? ys(n) : bs(n);
+function Ds(e, t) {
+	if (!bs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = ys(t), { operandA: r, operandB: i } = e === 1 ? xs(n) : e === 2 ? Ss(n) : e === 3 ? Cs(n) : e === 4 ? Ts(n) : Es(n);
 	return {
 		id: `mental-addition-${e}-${t}`,
 		grade: e,
@@ -8517,51 +8543,54 @@ function xs(e, t) {
 }
 //#endregion
 //#region packages/mental-addition/src/plugin.ts
-var Ss = "math.addition.mental";
-function Cs(e, t, n, r, i) {
+var Os = "math.addition.mental";
+function ks(e) {
 	return {
-		competencyId: Ss,
+		presentation: {
+			kind: "equation",
+			equation: `${e.operandA} + ${e.operandB}`
+		},
+		correctAnswer: e.correctSum
+	};
+}
+function As(e, t, n, r, i, a) {
+	return {
+		competencyId: Os,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: ks(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function ws(e, t) {
-	let n = ps(t), r = [];
+function js(e, t) {
+	let n = ys(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(xs(e, t));
+		r.push(Ds(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ts = {
+var Ms = {
 	id: "mental-addition",
-	competencyIds: [Ss],
+	competencyIds: [Os],
 	generateQuestion(e, t) {
-		return xs(e, t);
+		return Ds(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctSum };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.operandA} + ${e.operandB}`
-			},
-			correctAnswer: e.correctSum
-		};
-	}
+	toPresentation: ks
 };
 //#endregion
 //#region packages/mental-division/src/rng.ts
-function Es(e) {
+function Ns(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8569,29 +8598,29 @@ function Es(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Ds(e, t, n) {
+function Ps(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-division/src/generate.ts
-function Os(e) {
+function Fs(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function ks(e, t) {
+function Is(e, t) {
 	return {
-		divisor: Ds(e, 1, t),
-		correctQuotient: Ds(e, 0, t)
+		divisor: Ps(e, 1, t),
+		correctQuotient: Ps(e, 0, t)
 	};
 }
-function As(e) {
+function Ls(e) {
 	return {
-		divisor: Ds(e, 1, 9),
-		correctQuotient: Ds(e, 11, 20)
+		divisor: Ps(e, 1, 9),
+		correctQuotient: Ps(e, 11, 20)
 	};
 }
-function js(e, t) {
-	if (!Os(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Es(t), { divisor: r, correctQuotient: i } = e === 1 ? ks(n, 2) : e === 2 ? ks(n, 5) : e === 3 ? ks(n, 10) : e === 4 ? ks(n, 12) : As(n);
+function Rs(e, t) {
+	if (!Fs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Ns(t), { divisor: r, correctQuotient: i } = e === 1 ? Is(n, 2) : e === 2 ? Is(n, 5) : e === 3 ? Is(n, 10) : e === 4 ? Is(n, 12) : Ls(n);
 	return {
 		id: `mental-division-${e}-${t}`,
 		grade: e,
@@ -8602,51 +8631,54 @@ function js(e, t) {
 }
 //#endregion
 //#region packages/mental-division/src/plugin.ts
-var Ms = "math.division.mental";
-function Ns(e, t, n, r, i) {
+var zs = "math.division.mental";
+function Bs(e) {
 	return {
-		competencyId: Ms,
+		presentation: {
+			kind: "equation",
+			equation: `${e.dividend} ÷ ${e.divisor}`
+		},
+		correctAnswer: e.correctQuotient
+	};
+}
+function Vs(e, t, n, r, i, a) {
+	return {
+		competencyId: zs,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Bs(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Ps(e, t) {
-	let n = Es(t), r = [];
+function Hs(e, t) {
+	let n = Ns(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(js(e, t));
+		r.push(Rs(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Fs = {
+var Us = {
 	id: "mental-division",
-	competencyIds: [Ms],
+	competencyIds: [zs],
 	generateQuestion(e, t) {
-		return js(e, t);
+		return Rs(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctQuotient };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.dividend} ÷ ${e.divisor}`
-			},
-			correctAnswer: e.correctQuotient
-		};
-	}
+	toPresentation: Bs
 };
 //#endregion
 //#region packages/mental-multiplication/src/rng.ts
-function Is(e) {
+function Ws(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8654,29 +8686,29 @@ function Is(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Ls(e, t, n) {
+function Gs(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-multiplication/src/generate.ts
-function Rs(e) {
+function Ks(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function zs(e, t) {
+function qs(e, t) {
 	return {
-		factorA: Ls(e, 0, t),
-		factorB: Ls(e, 0, t)
+		factorA: Gs(e, 0, t),
+		factorB: Gs(e, 0, t)
 	};
 }
-function Bs(e) {
+function Js(e) {
 	return {
-		factorA: Ls(e, 11, 20),
-		factorB: Ls(e, 0, 9)
+		factorA: Gs(e, 11, 20),
+		factorB: Gs(e, 0, 9)
 	};
 }
-function Vs(e, t) {
-	if (!Rs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Is(t), { factorA: r, factorB: i } = e === 1 ? zs(n, 2) : e === 2 ? zs(n, 5) : e === 3 ? zs(n, 10) : e === 4 ? zs(n, 12) : Bs(n);
+function Ys(e, t) {
+	if (!Ks(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Ws(t), { factorA: r, factorB: i } = e === 1 ? qs(n, 2) : e === 2 ? qs(n, 5) : e === 3 ? qs(n, 10) : e === 4 ? qs(n, 12) : Js(n);
 	return {
 		id: `mental-multiplication-${e}-${t}`,
 		grade: e,
@@ -8687,51 +8719,54 @@ function Vs(e, t) {
 }
 //#endregion
 //#region packages/mental-multiplication/src/plugin.ts
-var Hs = "math.multiplication.mental";
-function Us(e, t, n, r, i) {
+var Xs = "math.multiplication.mental";
+function Zs(e) {
 	return {
-		competencyId: Hs,
+		presentation: {
+			kind: "equation",
+			equation: `${e.factorA} × ${e.factorB}`
+		},
+		correctAnswer: e.correctProduct
+	};
+}
+function Qs(e, t, n, r, i, a) {
+	return {
+		competencyId: Xs,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Zs(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Ws(e, t) {
-	let n = Is(t), r = [];
+function $s(e, t) {
+	let n = Ws(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Vs(e, t));
+		r.push(Ys(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Gs = {
+var ec = {
 	id: "mental-multiplication",
-	competencyIds: [Hs],
+	competencyIds: [Xs],
 	generateQuestion(e, t) {
-		return Vs(e, t);
+		return Ys(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctProduct };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.factorA} × ${e.factorB}`
-			},
-			correctAnswer: e.correctProduct
-		};
-	}
+	toPresentation: Zs
 };
 //#endregion
 //#region packages/mental-subtraction/src/rng.ts
-function Ks(e) {
+function tc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8744,54 +8779,54 @@ function W(e, t, n) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/generate.ts
-function qs(e) {
+function nc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Js(e) {
+function rc(e) {
 	let t = W(e, 0, 9);
 	return {
 		correctDifference: t,
 		subtrahend: W(e, 0, 9 - t)
 	};
 }
-function Ys(e) {
+function ic(e) {
 	let t = W(e, 1, 9);
 	return {
 		correctDifference: t,
 		subtrahend: W(e, Math.max(1, 10 - t), 9)
 	};
 }
-function Xs(e) {
+function ac(e) {
 	let t = W(e, 0, 9), n = W(e, 0, 9 - t);
 	return {
 		correctDifference: W(e, 1, 9) * 10 + n,
 		subtrahend: t
 	};
 }
-function Zs(e) {
+function oc(e) {
 	let t = W(e, 1, 9);
 	return {
 		onesDiff: W(e, Math.max(0, 10 - t), 9),
 		onesSubtrahend: t
 	};
 }
-function Qs(e) {
-	let { onesDiff: t, onesSubtrahend: n } = Zs(e), r = W(e, 1, 9), i = W(e, 1, 9);
+function sc(e) {
+	let { onesDiff: t, onesSubtrahend: n } = oc(e), r = W(e, 1, 9), i = W(e, 1, 9);
 	return {
 		correctDifference: r * 10 + t,
 		subtrahend: i * 10 + n
 	};
 }
-function $s(e) {
-	let { onesDiff: t, onesSubtrahend: n } = Zs(e), r = W(e, 0, 9), i = W(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = W(e, +!a, 9);
+function cc(e) {
+	let { onesDiff: t, onesSubtrahend: n } = oc(e), r = W(e, 0, 9), i = W(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = W(e, +!a, 9);
 	return {
 		correctDifference: i,
 		subtrahend: (a ? W(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function ec(e, t) {
-	if (!qs(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ks(t), { correctDifference: r, subtrahend: i } = e === 1 ? Js(n) : e === 2 ? Ys(n) : e === 3 ? Xs(n) : e === 4 ? Qs(n) : $s(n);
+function lc(e, t) {
+	if (!nc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = tc(t), { correctDifference: r, subtrahend: i } = e === 1 ? rc(n) : e === 2 ? ic(n) : e === 3 ? ac(n) : e === 4 ? sc(n) : cc(n);
 	return {
 		id: `mental-subtraction-${e}-${t}`,
 		grade: e,
@@ -8802,51 +8837,54 @@ function ec(e, t) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/plugin.ts
-var tc = "math.subtraction.mental";
-function nc(e, t, n, r, i) {
+var uc = "math.subtraction.mental";
+function dc(e) {
 	return {
-		competencyId: tc,
+		presentation: {
+			kind: "equation",
+			equation: `${e.minuend} - ${e.subtrahend}`
+		},
+		correctAnswer: e.correctDifference
+	};
+}
+function fc(e, t, n, r, i, a) {
+	return {
+		competencyId: uc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: dc(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function rc(e, t) {
-	let n = Ks(t), r = [];
+function pc(e, t) {
+	let n = tc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(ec(e, t));
+		r.push(lc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ic = {
+var mc = {
 	id: "mental-subtraction",
-	competencyIds: [tc],
+	competencyIds: [uc],
 	generateQuestion(e, t) {
-		return ec(e, t);
+		return lc(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctDifference };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.minuend} - ${e.subtrahend}`
-			},
-			correctAnswer: e.correctDifference
-		};
-	}
-}, ac = "math.number-sense.counting-range";
+	toPresentation: dc
+}, hc = "math.number-sense.counting-range";
 //#endregion
 //#region packages/number-sense-counting-range/src/rng.ts
-function oc(e) {
+function gc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8859,16 +8897,16 @@ function G(e, t, n) {
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/generate.ts
-function sc(e) {
+function _c(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 4;
 }
-var cc = {
+var vc = {
 	1: 100,
 	2: 1e3,
 	3: 1e4,
 	4: 1e6
 };
-function lc(e, t, n, r) {
+function yc(e, t, n, r) {
 	let i = G(r, 0, n - 1);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -8878,7 +8916,7 @@ function lc(e, t, n, r) {
 		numericAnswer: i + 1
 	};
 }
-function uc(e, t, n, r) {
+function bc(e, t, n, r) {
 	let i = G(r, 1, n);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -8888,7 +8926,7 @@ function uc(e, t, n, r) {
 		numericAnswer: i - 1
 	};
 }
-function dc(e, t, n, r) {
+function xc(e, t, n, r) {
 	let i = G(r, 0, n), a = G(r, 0, n);
 	for (; a === i;) a = G(r, 0, n);
 	let o = i > a ? "a" : "b";
@@ -8907,70 +8945,73 @@ function dc(e, t, n, r) {
 		correctOptionId: o
 	};
 }
-function fc(e, t) {
-	if (!sc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
-	let n = cc[e], r = oc(t);
+function Sc(e, t) {
+	if (!_c(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
+	let n = vc[e], r = gc(t);
 	switch (G(r, 0, 2)) {
-		case 0: return lc(e, t, n, r);
-		case 1: return uc(e, t, n, r);
-		default: return dc(e, t, n, r);
+		case 0: return yc(e, t, n, r);
+		case 1: return bc(e, t, n, r);
+		default: return xc(e, t, n, r);
 	}
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/plugin.ts
-function pc(e, t, n, r, i) {
+function Cc(e) {
+	if (e.kind === "compare") return {
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+	let t = e.kind === "next" ? e.numericAnswer - 1 : e.numericAnswer + 1;
 	return {
-		competencyId: ac,
+		presentation: {
+			kind: "equation",
+			equation: e.kind === "next" ? `${t} + 1` : `${t} - 1`
+		},
+		correctAnswer: e.numericAnswer
+	};
+}
+function wc(e, t, n, r, i, a) {
+	return {
+		competencyId: hc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Cc(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function mc(e, t) {
-	let n = oc(t), r = [];
+function Tc(e, t) {
+	let n = gc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(fc(e, t));
+		r.push(Sc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var hc = {
+var Ec = {
 	id: "number-sense-counting-range",
-	competencyIds: [ac],
+	competencyIds: [hc],
 	generateQuestion(e, t) {
-		return fc(e, t);
+		return Sc(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation(e) {
-		if (e.kind === "compare") return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-		let t = e.kind === "next" ? e.numericAnswer - 1 : e.numericAnswer + 1;
-		return {
-			presentation: {
-				kind: "equation",
-				equation: e.kind === "next" ? `${t} + 1` : `${t} - 1`
-			},
-			correctAnswer: e.numericAnswer
-		};
-	}
-}, gc = "math.number-sense.negative-numbers";
+	toPresentation: Cc
+}, Dc = "math.number-sense.negative-numbers";
 //#endregion
 //#region packages/number-sense-negative-numbers/src/rng.ts
-function _c(e) {
+function Oc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -8978,16 +9019,16 @@ function _c(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function vc(e, t, n) {
+function kc(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/generate.ts
-function yc(e) {
+function Ac(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function bc(e, t, n, r) {
-	let i = vc(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
+function jc(e, t, n, r) {
+	let i = kc(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
 		grade: e,
@@ -8996,9 +9037,9 @@ function bc(e, t, n, r) {
 		numericAnswer: o
 	};
 }
-function xc(e, t, n, r, i) {
-	let a = vc(n, i[0], i[1]), o = vc(n, i[0], i[1]);
-	for (; o === a;) o = vc(n, i[0], i[1]);
+function Mc(e, t, n, r, i) {
+	let a = kc(n, i[0], i[1]), o = kc(n, i[0], i[1]);
+	for (; o === a;) o = kc(n, i[0], i[1]);
 	let s = r === "temperature" ? `Which is colder, ${a}° or ${o}°?` : `Who owes more money: someone who owes $${Math.abs(a)} or someone who owes $${Math.abs(o)}?`, c = (e) => r === "temperature" ? `${e}°` : `owes $${Math.abs(e)}`, l = a < o ? "a" : "b";
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
@@ -9015,70 +9056,73 @@ function xc(e, t, n, r, i) {
 		correctOptionId: l
 	};
 }
-function Sc(e, t) {
-	if (!yc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = _c(t);
-	if (e === 1) return bc(e, t, n, [-10, 10]);
-	if (e === 2) return bc(e, t, n, [-20, 20]);
-	if (e === 3) return xc(e, t, n, "temperature", [-20, 20]);
-	if (e === 4) return xc(e, t, n, "debt", [-50, -1]);
-	if (n() < .5) return bc(e, t, n, [-100, 100]);
+function Nc(e, t) {
+	if (!Ac(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Oc(t);
+	if (e === 1) return jc(e, t, n, [-10, 10]);
+	if (e === 2) return jc(e, t, n, [-20, 20]);
+	if (e === 3) return Mc(e, t, n, "temperature", [-20, 20]);
+	if (e === 4) return Mc(e, t, n, "debt", [-50, -1]);
+	if (n() < .5) return jc(e, t, n, [-100, 100]);
 	let r = n() < .5 ? "temperature" : "debt";
-	return xc(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
+	return Mc(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/plugin.ts
-function Cc(e, t, n, r, i) {
+function Pc(e) {
+	return e.kind === "compare" ? {
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	} : {
+		presentation: {
+			kind: "equation",
+			equation: `${e.numericAnswer - 1} + 1`
+		},
+		correctAnswer: e.numericAnswer
+	};
+}
+function Fc(e, t, n, r, i, a) {
 	return {
-		competencyId: gc,
+		competencyId: Dc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Pc(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function wc(e, t) {
-	let n = _c(t), r = [];
+function Ic(e, t) {
+	let n = Oc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Sc(e, t));
+		r.push(Nc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Tc = {
+var Lc = {
 	id: "number-sense-negative-numbers",
-	competencyIds: [gc],
+	competencyIds: [Dc],
 	generateQuestion(e, t) {
-		return Sc(e, t);
+		return Nc(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation(e) {
-		return e.kind === "compare" ? {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		} : {
-			presentation: {
-				kind: "equation",
-				equation: `${e.numericAnswer - 1} + 1`
-			},
-			correctAnswer: e.numericAnswer
-		};
-	}
-}, Ec = "math.number-sense.odd-even";
+	toPresentation: Pc
+}, Rc = "math.number-sense.odd-even";
 //#endregion
 //#region packages/number-sense-odd-even/src/rng.ts
-function Dc(e) {
+function zc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9086,30 +9130,30 @@ function Dc(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Oc(e, t, n) {
+function Bc(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/generate.ts
-function kc(e) {
+function Vc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Ac = {
+var Hc = {
 	1: 20,
 	2: 100,
 	3: 1e3,
 	4: 1e4,
 	5: 1e4
 };
-function jc(e) {
+function Uc(e) {
 	return e % 2 == 0 ? "even" : "odd";
 }
-function Mc(e, t, n) {
+function Wc(e, t, n) {
 	let r = t === "even" ? 0 : 1;
-	return r + 2 * Oc(e, 0, Math.floor((n - r) / 2) + 1 - 1);
+	return r + 2 * Bc(e, 0, Math.floor((n - r) / 2) + 1 - 1);
 }
-function Nc(e, t, n) {
-	let r = Ac[e], i = Oc(n, 0, r);
+function Gc(e, t, n) {
+	let r = Hc[e], i = Bc(n, 0, r);
 	return {
 		id: `number-sense-odd-even-${e}-${t}`,
 		grade: e,
@@ -9122,16 +9166,16 @@ function Nc(e, t, n) {
 			id: "even",
 			label: "Even"
 		}],
-		correctOptionId: jc(i)
+		correctOptionId: Uc(i)
 	};
 }
-function Pc(e, t, n) {
+function Kc(e, t, n) {
 	let r = n() < .5 ? "odd" : "even", i = r === "odd" ? "even" : "odd", a = [];
 	for (; a.length < 3;) {
-		let e = Mc(n, r, 1e4);
+		let e = Wc(n, r, 1e4);
 		a.includes(e) || a.push(e);
 	}
-	let o = Mc(n, i, 1e4), s = [
+	let o = Wc(n, i, 1e4), s = [
 		{
 			value: a[0],
 			isOddOneOut: !1
@@ -9150,7 +9194,7 @@ function Pc(e, t, n) {
 		}
 	];
 	for (let e = s.length - 1; e > 0; e--) {
-		let t = Oc(n, 0, e), r = s[e];
+		let t = Bc(n, 0, e), r = s[e];
 		s[e] = s[t], s[t] = r;
 	}
 	let c = [
@@ -9174,58 +9218,61 @@ function Pc(e, t, n) {
 		correctOptionId: l
 	};
 }
-function Fc(e, t) {
-	if (!kc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Dc(t);
-	return e === 5 && n() < .5 ? Pc(e, t, n) : Nc(e, t, n);
+function qc(e, t) {
+	if (!Vc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = zc(t);
+	return e === 5 && n() < .5 ? Kc(e, t, n) : Gc(e, t, n);
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/plugin.ts
-function Ic(e, t, n, r, i) {
+function Jc(e) {
 	return {
-		competencyId: Ec,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function Yc(e, t, n, r, i, a) {
+	return {
+		competencyId: Rc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Jc(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Lc(e, t) {
-	let n = Dc(t), r = [];
+function Xc(e, t) {
+	let n = zc(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Fc(e, t));
+		r.push(qc(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Rc = {
+var Zc = {
 	id: "number-sense-odd-even",
-	competencyIds: [Ec],
+	competencyIds: [Rc],
 	generateQuestion(e, t) {
-		return Fc(e, t);
+		return qc(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, zc = "math.number-sense.ordinals";
+	toPresentation: Jc
+}, Qc = "math.number-sense.ordinals";
 //#endregion
 //#region packages/number-sense-ordinals/src/ordinal.ts
-function Bc(e) {
+function $c(e) {
 	let t = e % 100;
 	if (t >= 11 && t <= 13) return `${e}th`;
 	switch (e % 10) {
@@ -9237,7 +9284,7 @@ function Bc(e) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/rng.ts
-function Vc(e) {
+function el(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9245,31 +9292,31 @@ function Vc(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Hc(e, t, n) {
+function tl(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/generate.ts
-var Uc = {
+var nl = {
 	1: 5,
 	2: 10,
 	3: 20,
 	4: 50,
 	5: 100
 };
-function Wc(e) {
+function rl(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Gc(e, t) {
+function il(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = Hc(t, 0, e), i = n[e];
+		let r = tl(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function Kc(e, t) {
-	let n = Gc(e, t), r = n.map((e, t) => ({
+function al(e, t) {
+	let n = il(e, t), r = n.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e.label
 	}));
@@ -9278,7 +9325,7 @@ function Kc(e, t) {
 		correctOptionId: r[n.findIndex((e) => e.correct)].id
 	};
 }
-function qc(e, t) {
+function ol(e, t) {
 	let n = [
 		e - 1,
 		e + 1,
@@ -9290,7 +9337,7 @@ function qc(e, t) {
 	for (let a of n) a >= 1 && a <= t && a !== e && !r.has(a) && (r.add(a), i.push(a));
 	return i;
 }
-function Jc(e, t, n, r) {
+function sl(e, t, n, r) {
 	let i = new Set(t), a = [];
 	for (let t of e) {
 		if (a.length >= r) break;
@@ -9299,9 +9346,9 @@ function Jc(e, t, n, r) {
 	for (let e = 1; e <= n && a.length < r; e++) i.has(e) || (a.push(e), i.add(e));
 	return a;
 }
-function Yc(e, t, n, r) {
-	let i = Jc(qc(e, t), /* @__PURE__ */ new Set([e]), t, 3);
-	return Kc([{
+function cl(e, t, n, r) {
+	let i = sl(ol(e, t), /* @__PURE__ */ new Set([e]), t, 3);
+	return al([{
 		label: r(e),
 		correct: !0
 	}, ...i.map((e) => ({
@@ -9309,9 +9356,9 @@ function Yc(e, t, n, r) {
 		correct: !1
 	}))], n);
 }
-function Xc(e, t) {
-	if (!Wc(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Uc[e], r = Vc(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = Hc(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? Yc(a, n, r, Bc) : Yc(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${Bc(a)}?`;
+function ll(e, t) {
+	if (!rl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = nl[e], r = el(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = tl(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? cl(a, n, r, $c) : cl(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${$c(a)}?`;
 	return {
 		id: `number-sense-ordinals-${e}-${t}`,
 		grade: e,
@@ -9323,51 +9370,54 @@ function Xc(e, t) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/plugin.ts
-function Zc(e, t, n, r, i) {
+function ul(e) {
 	return {
-		competencyId: zc,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function dl(e, t, n, r, i, a) {
+	return {
+		competencyId: Qc,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: ul(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Qc(e, t) {
-	let n = Vc(t), r = [];
+function fl(e, t) {
+	let n = el(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Xc(e, t));
+		r.push(ll(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var $c = {
+var pl = {
 	id: "number-sense-ordinals",
-	competencyIds: [zc],
+	competencyIds: [Qc],
 	generateQuestion(e, t) {
-		return Xc(e, t);
+		return ll(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, el = "math.number-sense.primes-factors";
+	toPresentation: ul
+}, ml = "math.number-sense.primes-factors";
 //#endregion
 //#region packages/number-sense-primes-factors/src/rng.ts
-function tl(e) {
+function hl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9380,41 +9430,41 @@ function K(e, t, n) {
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/generate.ts
-function nl(e) {
+function gl(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function rl(e) {
+function _l(e) {
 	if (e < 2) return !1;
 	for (let t = 2; t * t <= e; t++) if (e % t === 0) return !1;
 	return !0;
 }
-function il(e, t) {
-	return t === 0 ? e : il(t, e % t);
+function vl(e, t) {
+	return t === 0 ? e : vl(t, e % t);
 }
-function al(e, t) {
-	return e * t / il(e, t);
+function yl(e, t) {
+	return e * t / vl(e, t);
 }
-var ol = {
+var bl = {
 	1: 20,
 	2: 50,
 	5: 50
-}, sl = {
+}, xl = {
 	3: 50,
 	4: 100,
 	5: 100
 };
-function cl(e, t) {
+function Sl(e, t) {
 	let n = [];
 	for (let e = 2; e < t; e++) t % e === 0 && n.push(e);
 	return n.length === 0 ? K(e, 2, t - 1) : n[K(e, 0, n.length - 1)];
 }
-function ll(e, t) {
+function Cl(e, t) {
 	let n = K(e, 2, t - 1), r = 0;
 	for (; t % n === 0 && r < 20;) n = K(e, 2, t - 1), r++;
 	return n;
 }
-function ul(e, t, n) {
-	let r = K(n, 2, ol[e] ?? 50);
+function wl(e, t, n) {
+	let r = K(n, 2, bl[e] ?? 50);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -9427,12 +9477,12 @@ function ul(e, t, n) {
 			id: "no",
 			label: "No"
 		}],
-		correctOptionId: rl(r) ? "yes" : "no",
+		correctOptionId: _l(r) ? "yes" : "no",
 		n: r
 	};
 }
-function dl(e, t, n) {
-	let r = K(n, 4, (sl[e] ?? 100) - 1), i = n() < .5 ? cl(n, r) : ll(n, r);
+function Tl(e, t, n) {
+	let r = K(n, 4, (xl[e] ?? 100) - 1), i = n() < .5 ? Sl(n, r) : Cl(n, r);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -9448,7 +9498,7 @@ function dl(e, t, n) {
 		correctOptionId: r % i === 0 ? "yes" : "no"
 	};
 }
-function fl(e, t, n) {
+function El(e, t, n) {
 	let r = K(n, 2, 12), i = K(n, 2, 12);
 	for (; i === r;) i = K(n, 2, 12);
 	return {
@@ -9456,77 +9506,80 @@ function fl(e, t, n) {
 		grade: e,
 		kind: "common-multiple",
 		prompt: `What is the smallest common multiple of ${r} and ${i}?`,
-		numericAnswer: al(r, i)
+		numericAnswer: yl(r, i)
 	};
 }
-function pl(e, t) {
-	if (!nl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = tl(t);
-	if (e === 1 || e === 2) return ul(e, t, n);
-	if (e === 3 || e === 4) return dl(e, t, n);
+function Dl(e, t) {
+	if (!gl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = hl(t);
+	if (e === 1 || e === 2) return wl(e, t, n);
+	if (e === 3 || e === 4) return Tl(e, t, n);
 	switch (K(n, 0, 2)) {
-		case 0: return ul(e, t, n);
-		case 1: return dl(e, t, n);
-		default: return fl(e, t, n);
+		case 0: return wl(e, t, n);
+		case 1: return Tl(e, t, n);
+		default: return El(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/plugin.ts
-function ml(e, t, n, r, i) {
+function Ol(e) {
+	if (e.kind === "common-multiple") {
+		let t = e.prompt.match(/of (\d+) and (\d+)/);
+		return {
+			presentation: {
+				kind: "equation",
+				equation: t ? `LCM(${t[1]}, ${t[2]})` : e.prompt
+			},
+			correctAnswer: e.numericAnswer
+		};
+	}
 	return {
-		competencyId: el,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function kl(e, t, n, r, i, a) {
+	return {
+		competencyId: ml,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Ol(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function hl(e, t) {
-	let n = tl(t), r = [];
+function Al(e, t) {
+	let n = hl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(pl(e, t));
+		r.push(Dl(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var gl = {
+var jl = {
 	id: "number-sense-primes-factors",
-	competencyIds: [el],
+	competencyIds: [ml],
 	generateQuestion(e, t) {
-		return pl(e, t);
+		return Dl(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "common-multiple" ? { correct: t === e.numericAnswer } : { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		if (e.kind === "common-multiple") {
-			let t = e.prompt.match(/of (\d+) and (\d+)/);
-			return {
-				presentation: {
-					kind: "equation",
-					equation: t ? `LCM(${t[1]}, ${t[2]})` : e.prompt
-				},
-				correctAnswer: e.numericAnswer
-			};
-		}
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, _l = "math.number-sense.roman-numerals";
+	toPresentation: Ol
+}, Ml = "math.number-sense.roman-numerals";
 //#endregion
 //#region packages/number-sense-roman-numerals/src/rng.ts
-function vl(e) {
+function Nl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9534,12 +9587,12 @@ function vl(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function yl(e, t, n) {
+function Pl(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/generate.ts
-var bl = [
+var Fl = [
 	[1e3, "M"],
 	[900, "CM"],
 	[500, "D"],
@@ -9554,33 +9607,33 @@ var bl = [
 	[4, "IV"],
 	[1, "I"]
 ];
-function xl(e) {
+function Il(e) {
 	let t = e, n = "";
-	for (let [e, r] of bl) for (; t >= e;) n += r, t -= e;
+	for (let [e, r] of Fl) for (; t >= e;) n += r, t -= e;
 	return n;
 }
-function Sl(e) {
+function Ll(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Cl = {
+var Rl = {
 	1: [1, 10],
 	2: [1, 50],
 	3: [1, 100],
 	4: [1, 500],
 	5: [1, 1e3]
 };
-function wl(e, t) {
+function zl(e, t) {
 	return e <= 3 || t() < .5 ? "read" : "write";
 }
-function Tl(e, t) {
+function Bl(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = yl(t, 0, e), i = n[e];
+		let r = Pl(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function El(e, t, n, r) {
+function Vl(e, t, n, r) {
 	let i = /* @__PURE__ */ new Set();
 	for (let a of [
 		1,
@@ -9604,31 +9657,31 @@ function El(e, t, n, r) {
 	for (; i.size < r && a <= n;) a !== e && i.add(a), a++;
 	return Array.from(i).slice(0, r);
 }
-function Dl(e, t, n) {
-	let [r, i] = t, a = Tl([e, ...El(e, r, i, 3)], n), o = a.map((e, t) => ({
+function Hl(e, t, n) {
+	let [r, i] = t, a = Bl([e, ...Vl(e, r, i, 3)], n), o = a.map((e, t) => ({
 		id: `opt-${t}`,
 		label: String(e)
 	})), s = a.indexOf(e);
 	return {
-		prompt: `Which number does the Roman numeral ${xl(e)} represent?`,
+		prompt: `Which number does the Roman numeral ${Il(e)} represent?`,
 		options: o,
 		correctOptionId: `opt-${s}`
 	};
 }
-function Ol(e, t, n) {
-	let [r, i] = t, a = El(e, r, i, 3), o = Tl([xl(e), ...a.map(xl)], n), s = o.map((e, t) => ({
+function Ul(e, t, n) {
+	let [r, i] = t, a = Vl(e, r, i, 3), o = Bl([Il(e), ...a.map(Il)], n), s = o.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
-	})), c = o.indexOf(xl(e));
+	})), c = o.indexOf(Il(e));
 	return {
 		prompt: `Which Roman numeral represents ${e}?`,
 		options: s,
 		correctOptionId: `opt-${c}`
 	};
 }
-function kl(e, t) {
-	if (!Sl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = vl(t), r = Cl[e], i = wl(e, n), a = yl(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? Dl(a, r, n) : Ol(a, r, n);
+function Wl(e, t) {
+	if (!Ll(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Nl(t), r = Rl[e], i = zl(e, n), a = Pl(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? Hl(a, r, n) : Ul(a, r, n);
 	return {
 		id: `number-sense-roman-numerals-${e}-${t}`,
 		grade: e,
@@ -9640,51 +9693,54 @@ function kl(e, t) {
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/plugin.ts
-function Al(e, t, n, r, i) {
+function Gl(e) {
 	return {
-		competencyId: _l,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function Kl(e, t, n, r, i, a) {
+	return {
+		competencyId: Ml,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Gl(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function jl(e, t) {
-	let n = vl(t), r = [];
+function ql(e, t) {
+	let n = Nl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(kl(e, t));
+		r.push(Wl(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ml = {
+var Jl = {
 	id: "number-sense-roman-numerals",
-	competencyIds: [_l],
+	competencyIds: [Ml],
 	generateQuestion(e, t) {
-		return kl(e, t);
+		return Wl(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
+	toPresentation: Gl
 };
 //#endregion
 //#region packages/number-sense-skip-counting/src/rng.ts
-function Nl(e) {
+function Yl(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9692,39 +9748,39 @@ function Nl(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Pl(e, t, n) {
+function Xl(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/generate.ts
-function Fl(e) {
+function Zl(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Il() {
+function Ql() {
 	return {
 		step: 2,
 		maxRange: 20
 	};
 }
-function Ll() {
+function $l() {
 	return {
 		step: 2,
 		maxRange: 50
 	};
 }
-function Rl() {
+function eu() {
 	return {
 		step: 5,
 		maxRange: 100
 	};
 }
-function zl() {
+function tu() {
 	return {
 		step: 10,
 		maxRange: 200
 	};
 }
-function Bl(e) {
+function nu(e) {
 	let t = [
 		2,
 		5,
@@ -9733,13 +9789,13 @@ function Bl(e) {
 		50
 	];
 	return {
-		step: t[Pl(e, 0, t.length - 1)],
+		step: t[Xl(e, 0, t.length - 1)],
 		maxRange: 500
 	};
 }
-function Vl(e, t) {
-	if (!Fl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Nl(t), { step: r, maxRange: i } = e === 1 ? Il() : e === 2 ? Ll() : e === 3 ? Rl() : e === 4 ? zl() : Bl(n), a = Pl(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
+function ru(e, t) {
+	if (!Zl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Yl(t), { step: r, maxRange: i } = e === 1 ? Ql() : e === 2 ? $l() : e === 3 ? eu() : e === 4 ? tu() : nu(n), a = Xl(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
 	return {
 		id: `number-sense-skip-counting-${e}-${t}`,
 		grade: e,
@@ -9755,51 +9811,54 @@ function Vl(e, t) {
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/plugin.ts
-var Hl = "math.number-sense.skip-counting";
-function Ul(e, t, n, r, i) {
+var iu = "math.number-sense.skip-counting";
+function au(e) {
 	return {
-		competencyId: Hl,
+		presentation: {
+			kind: "equation",
+			equation: `${e.sequence[0]}, ${e.sequence[1]}, ${e.sequence[2]}`
+		},
+		correctAnswer: e.correctAnswer
+	};
+}
+function ou(e, t, n, r, i, a) {
+	return {
+		competencyId: iu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: au(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Wl(e, t) {
-	let n = Nl(t), r = [];
+function su(e, t) {
+	let n = Yl(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Vl(e, t));
+		r.push(ru(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Gl = {
+var cu = {
 	id: "number-sense-skip-counting",
-	competencyIds: [Hl],
+	competencyIds: [iu],
 	generateQuestion(e, t) {
-		return Vl(e, t);
+		return ru(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: `${e.sequence[0]}, ${e.sequence[1]}, ${e.sequence[2]}`
-			},
-			correctAnswer: e.correctAnswer
-		};
-	}
+	toPresentation: au
 };
 //#endregion
 //#region packages/number-sense-squares/src/rng.ts
-function Kl(e) {
+function lu(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9807,21 +9866,21 @@ function Kl(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function ql(e, t, n) {
+function uu(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-squares/src/generate.ts
-function Jl(e) {
+function du(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Yl = [{
+var fu = [{
 	id: "yes",
 	label: "Yes"
 }, {
 	id: "no",
 	label: "No"
-}], Xl = {
+}], pu = {
 	1: {
 		baseMin: 1,
 		baseMax: 5,
@@ -9840,7 +9899,7 @@ var Yl = [{
 		numberMin: 1,
 		numberMax: 144
 	}
-}, Zl = {
+}, mu = {
 	4: {
 		baseMin: 1,
 		baseMax: 8
@@ -9850,25 +9909,25 @@ var Yl = [{
 		baseMax: 12
 	}
 };
-function Ql(e) {
+function hu(e) {
 	return Number.isInteger(Math.sqrt(e));
 }
-function $l(e, t, n) {
-	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = Xl[e], s = n() < .5 ? (() => {
-		let e = ql(n, r, i);
+function gu(e, t, n) {
+	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = pu[e], s = n() < .5 ? (() => {
+		let e = uu(n, r, i);
 		return e * e;
-	})() : ql(n, a, o), c = Ql(s) ? "yes" : "no";
+	})() : uu(n, a, o), c = hu(s) ? "yes" : "no";
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
 		kind: "recognize",
 		prompt: `Is ${s} a square number?`,
-		options: Yl,
+		options: fu,
 		correctOptionId: c
 	};
 }
-function eu(e, t, n) {
-	let { baseMin: r, baseMax: i } = Zl[e], a = ql(n, r, i);
+function _u(e, t, n) {
+	let { baseMin: r, baseMax: i } = mu[e], a = uu(n, r, i);
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
@@ -9877,47 +9936,69 @@ function eu(e, t, n) {
 		numericAnswer: a * a
 	};
 }
-function tu(e, t) {
-	if (!Jl(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Kl(t);
+function vu(e, t) {
+	if (!du(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = lu(t);
 	switch (e) {
 		case 1:
 		case 2:
-		case 3: return $l(e, t, n);
+		case 3: return gu(e, t, n);
 		case 4:
-		case 5: return eu(e, t, n);
+		case 5: return _u(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-squares/src/plugin.ts
-var nu = "math.number-sense.squares";
-function ru(e, t, n, r, i) {
+var yu = "math.number-sense.squares";
+function bu(e) {
+	if (e.kind === "recall") {
+		let t = Math.sqrt(e.numericAnswer);
+		return {
+			presentation: {
+				kind: "equation",
+				equation: `${t} × ${t}`
+			},
+			correctAnswer: e.numericAnswer
+		};
+	}
 	return {
-		competencyId: nu,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function xu(e, t, n, r, i, a) {
+	return {
+		competencyId: yu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: bu(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function iu(e, t) {
-	let n = Kl(t), r = [];
+function Su(e, t) {
+	let n = lu(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(tu(e, t));
+		r.push(vu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var au = {
+var Cu = {
 	id: "number-sense-squares",
-	competencyIds: [nu],
+	competencyIds: [yu],
 	generateQuestion(e, t) {
-		return tu(e, t);
+		return vu(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -9925,30 +10006,11 @@ var au = {
 			case "recognize": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation(e) {
-		if (e.kind === "recall") {
-			let t = Math.sqrt(e.numericAnswer);
-			return {
-				presentation: {
-					kind: "equation",
-					equation: `${t} × ${t}`
-				},
-				correctAnswer: e.numericAnswer
-			};
-		}
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
+	toPresentation: bu
 };
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/rng.ts
-function ou(e) {
+function wu(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9961,13 +10023,13 @@ function q(e, t, n) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/generate.ts
-function su(e) {
+function Tu(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function cu(e) {
+function Eu(e) {
 	return `${Math.floor(e / 10)}.${e % 10}`;
 }
-function lu(e) {
+function Du(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -9975,7 +10037,7 @@ function lu(e) {
 		correctAnswer: t * 10
 	};
 }
-function uu(e) {
+function Ou(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -9983,7 +10045,7 @@ function uu(e) {
 		correctAnswer: t * 100
 	};
 }
-function du(e) {
+function ku(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
@@ -9991,7 +10053,7 @@ function du(e) {
 		correctAnswer: t * 1e3
 	};
 }
-function fu(e) {
+function Au(e) {
 	let t = e() < .5 ? 10 : 100, n = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -9999,7 +10061,7 @@ function fu(e) {
 		correctAnswer: n
 	};
 }
-function pu(e) {
+function ju(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -10007,23 +10069,23 @@ function pu(e) {
 		correctAnswer: t
 	};
 }
-function mu(e) {
+function Mu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${cu(t)} × 10`,
+		equation: `${Eu(t)} × 10`,
 		correctAnswer: t
 	};
 }
-function hu(e) {
+function Nu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${cu(t)} × 100`,
+		equation: `${Eu(t)} × 100`,
 		correctAnswer: t * 10
 	};
 }
-function gu(e) {
+function Pu(e) {
 	let t = q(e, 1, 999);
 	return {
 		operator: "÷",
@@ -10031,19 +10093,19 @@ function gu(e) {
 		correctAnswer: t
 	};
 }
-var _u = [
-	pu,
-	mu,
-	hu,
-	gu
+var Fu = [
+	ju,
+	Mu,
+	Nu,
+	Pu
 ];
-function vu(e) {
-	let t = _u[q(e, 0, _u.length - 1)];
+function Iu(e) {
+	let t = Fu[q(e, 0, Fu.length - 1)];
 	return t(e);
 }
-function yu(e, t) {
-	if (!su(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = ou(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? lu(n) : e === 2 ? uu(n) : e === 3 ? du(n) : e === 4 ? fu(n) : vu(n);
+function Lu(e, t) {
+	if (!Tu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = wu(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? Du(n) : e === 2 ? Ou(n) : e === 3 ? ku(n) : e === 4 ? Au(n) : Iu(n);
 	return {
 		id: `place-value-multiply-divide-ten-${e}-${t}`,
 		grade: e,
@@ -10054,51 +10116,54 @@ function yu(e, t) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/plugin.ts
-var bu = "math.place-value.multiply-divide-ten";
-function xu(e, t, n, r, i) {
+var Ru = "math.place-value.multiply-divide-ten";
+function zu(e) {
 	return {
-		competencyId: bu,
+		presentation: {
+			kind: "equation",
+			equation: e.equation
+		},
+		correctAnswer: e.correctAnswer
+	};
+}
+function Bu(e, t, n, r, i, a) {
+	return {
+		competencyId: Ru,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: zu(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Su(e, t) {
-	let n = ou(t), r = [];
+function Vu(e, t) {
+	let n = wu(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(yu(e, t));
+		r.push(Lu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Cu = {
+var Hu = {
 	id: "place-value-multiply-divide-ten",
-	competencyIds: [bu],
+	competencyIds: [Ru],
 	generateQuestion(e, t) {
-		return yu(e, t);
+		return Lu(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: e.equation
-			},
-			correctAnswer: e.correctAnswer
-		};
-	}
+	toPresentation: zu
 };
 //#endregion
 //#region packages/place-value-powers-of-ten/src/rng.ts
-function wu(e) {
+function Uu(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -10111,49 +10176,49 @@ function J(e, t, n) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/generate.ts
-function Tu(e) {
+function Wu(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Eu = [
+var Gu = [
 	1,
 	10,
 	100,
 	1e3
 ];
-function Du(e) {
+function Ku(e) {
 	return {
 		operand: J(e, 1, 99),
 		magnitude: 1
 	};
 }
-function Ou(e) {
+function qu(e) {
 	return {
 		operand: J(e, 10, 999),
 		magnitude: 10
 	};
 }
-function ku(e) {
+function Ju(e) {
 	return {
 		operand: J(e, 100, 9999),
 		magnitude: 100
 	};
 }
-function Au(e) {
+function Yu(e) {
 	return {
 		operand: J(e, 1e3, 99999),
 		magnitude: 1e3
 	};
 }
-function ju(e) {
-	let t = Eu[J(e, 0, Eu.length - 1)];
+function Xu(e) {
+	let t = Gu[J(e, 0, Gu.length - 1)];
 	return {
 		operand: J(e, t, 999999),
 		magnitude: t
 	};
 }
-function Mu(e, t) {
-	if (!Tu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = wu(t), { operand: r, magnitude: i } = e === 1 ? Du(n) : e === 2 ? Ou(n) : e === 3 ? ku(n) : e === 4 ? Au(n) : ju(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
+function Zu(e, t) {
+	if (!Wu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Uu(t), { operand: r, magnitude: i } = e === 1 ? Ku(n) : e === 2 ? qu(n) : e === 3 ? Ju(n) : e === 4 ? Yu(n) : Xu(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
 	return {
 		id: `place-value-powers-of-ten-${e}-${t}`,
 		grade: e,
@@ -10166,51 +10231,54 @@ function Mu(e, t) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/plugin.ts
-var Nu = "math.place-value.powers-of-ten";
-function Pu(e, t, n, r, i) {
+var Qu = "math.place-value.powers-of-ten";
+function $u(e) {
 	return {
-		competencyId: Nu,
+		presentation: {
+			kind: "equation",
+			equation: e.equation
+		},
+		correctAnswer: e.correctAnswer
+	};
+}
+function ed(e, t, n, r, i, a) {
+	return {
+		competencyId: Qu,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: $u(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function Fu(e, t) {
-	let n = wu(t), r = [];
+function td(e, t) {
+	let n = Uu(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Mu(e, t));
+		r.push(Zu(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Iu = {
+var nd = {
 	id: "place-value-powers-of-ten",
-	competencyIds: [Nu],
+	competencyIds: [Qu],
 	generateQuestion(e, t) {
-		return Mu(e, t);
+		return Zu(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "equation",
-				equation: e.equation
-			},
-			correctAnswer: e.correctAnswer
-		};
-	}
-}, Lu = "math.place-value.rounding";
+	toPresentation: $u
+}, rd = "math.place-value.rounding";
 //#endregion
 //#region packages/place-value-rounding/src/rng.ts
-function Ru(e) {
+function id(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -10218,22 +10286,22 @@ function Ru(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function zu(e, t, n) {
+function ad(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-rounding/src/generate.ts
-function Bu(e) {
+function od(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Vu(e, t) {
+function sd(e, t) {
 	let n = e % t, r = e - n;
 	return n * 2 >= t ? r + t : r;
 }
-function Hu(e, t) {
+function cd(e, t) {
 	return e - e % t;
 }
-function Uu(e, t) {
+function ld(e, t) {
 	let n = e % t;
 	return n === 0 ? e : e - n + t;
 }
@@ -10241,7 +10309,7 @@ function Y(e, t) {
 	let n = String(e).padStart(t + 1, "0");
 	return `${n.slice(0, -t)}.${n.slice(-t)}`;
 }
-function Wu(e, t, n) {
+function ud(e, t, n) {
 	let r = /* @__PURE__ */ new Set([e]), i = [];
 	for (let e of t) if (!r.has(e) && (r.add(e), i.push(e), i.length === 3)) return i;
 	let a = 1;
@@ -10251,7 +10319,7 @@ function Wu(e, t, n) {
 	}
 	return i;
 }
-function Gu(e, t, n, r, i, a) {
+function dd(e, t, n, r, i, a) {
 	let o = [{
 		label: i,
 		isCorrect: !0
@@ -10260,7 +10328,7 @@ function Gu(e, t, n, r, i, a) {
 		isCorrect: !1
 	}))];
 	for (let e = o.length - 1; e > 0; e--) {
-		let t = zu(n, 0, e), r = o[e];
+		let t = ad(n, 0, e), r = o[e];
 		o[e] = o[t], o[t] = r;
 	}
 	let s = "", c = o.map((e, t) => {
@@ -10278,32 +10346,32 @@ function Gu(e, t, n, r, i, a) {
 		correctOptionId: s
 	};
 }
-var Ku = {
+var fd = {
 	1: 999,
 	2: 9999,
 	3: 99999
-}, qu = {
+}, pd = {
 	1: 10,
 	2: 100,
 	3: 1e3
-}, Ju = {
+}, md = {
 	1: "10",
 	2: "100",
 	3: "1,000"
 };
-function Yu(e, t, n) {
-	let r = qu[e], i = zu(n, 0, Ku[e]), a = Vu(i, r), o = String(a), s = Wu(o, [
-		Hu(i, r),
-		Uu(i, r),
+function hd(e, t, n) {
+	let r = pd[e], i = ad(n, 0, fd[e]), a = sd(i, r), o = String(a), s = ud(o, [
+		cd(i, r),
+		ld(i, r),
 		i,
 		a - r,
 		a + r,
 		a - 2 * r,
 		a + 2 * r
 	].filter((e) => e >= 0).map(String), (e) => String(a + (e + 2) * r));
-	return Gu(e, t, n, `Round ${i} to the nearest ${Ju[e]}.`, o, s);
+	return dd(e, t, n, `Round ${i} to the nearest ${md[e]}.`, o, s);
 }
-var Xu = {
+var gd = {
 	4: {
 		maxScaled: 999,
 		sourceDecimalPlaces: 2,
@@ -10317,8 +10385,8 @@ var Xu = {
 		precisionLabel: "2"
 	}
 }, X = 10;
-function Zu(e, t, n) {
-	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = Xu[e], s = zu(n, 0, r), c = Y(s, i), l = Vu(s, X) / X, u = Y(l, a), d = Hu(s, X) / X, f = Uu(s, X) / X, p = Wu(u, [
+function _d(e, t, n) {
+	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = gd[e], s = ad(n, 0, r), c = Y(s, i), l = sd(s, X) / X, u = Y(l, a), d = cd(s, X) / X, f = ld(s, X) / X, p = ud(u, [
 		Y(d, a),
 		Y(f, a),
 		c,
@@ -10329,60 +10397,63 @@ function Zu(e, t, n) {
 			l + 2
 		].filter((e) => e >= 0).map((e) => Y(e, a))
 	], (e) => Y(l + e + 2, a));
-	return Gu(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
+	return dd(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
 }
-function Qu(e, t) {
-	if (!Bu(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ru(t);
-	return e === 1 || e === 2 || e === 3 ? Yu(e, t, n) : Zu(e, t, n);
+function vd(e, t) {
+	if (!od(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = id(t);
+	return e === 1 || e === 2 || e === 3 ? hd(e, t, n) : _d(e, t, n);
 }
 //#endregion
 //#region packages/place-value-rounding/src/plugin.ts
-function $u(e, t, n, r, i) {
+function yd(e) {
 	return {
-		competencyId: Lu,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function bd(e, t, n, r, i, a) {
+	return {
+		competencyId: rd,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: yd(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function ed(e, t) {
-	let n = Ru(t), r = [];
+function xd(e, t) {
+	let n = id(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Qu(e, t));
+		r.push(vd(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var td = {
+var Sd = {
 	id: "place-value-rounding",
-	competencyIds: [Lu],
+	competencyIds: [rd],
 	generateQuestion(e, t) {
-		return Qu(e, t);
+		return vd(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
-}, nd = "math.place-value.understanding";
+	toPresentation: yd
+}, Cd = "math.place-value.understanding";
 //#endregion
 //#region packages/place-value-understanding/src/rng.ts
-function rd(e) {
+function wd(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -10390,90 +10461,90 @@ function rd(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function id(e, t, n) {
+function Td(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-understanding/src/generate.ts
-function ad(e) {
+function Ed(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var od = {
+var Dd = {
 	name: "units",
 	value: 1,
 	decimals: 0
-}, sd = {
+}, Od = {
 	name: "tens",
 	value: 10,
 	decimals: 0
-}, cd = {
+}, kd = {
 	name: "hundreds",
 	value: 100,
 	decimals: 0
-}, ld = {
+}, Ad = {
 	name: "thousands",
 	value: 1e3,
 	decimals: 0
-}, ud = {
+}, jd = {
 	name: "ten-thousands",
 	value: 1e4,
 	decimals: 0
-}, dd = {
+}, Md = {
 	name: "hundred-thousands",
 	value: 1e5,
 	decimals: 0
-}, fd = {
+}, Nd = {
 	name: "millions",
 	value: 1e6,
 	decimals: 0
-}, pd = {
+}, Pd = {
 	name: "ones",
 	value: 1,
 	decimals: 0
-}, md = {
+}, Fd = {
 	name: "tenths",
 	value: .1,
 	decimals: 1
-}, hd = {
+}, Id = {
 	name: "hundredths",
 	value: .01,
 	decimals: 2
-}, gd = {
+}, Ld = {
 	name: "thousandths",
 	value: .001,
 	decimals: 3
 }, Z = {
-	1: [od, sd],
+	1: [Dd, Od],
 	2: [
-		od,
-		sd,
-		cd
+		Dd,
+		Od,
+		kd
 	],
 	3: [
-		od,
-		sd,
-		cd,
-		ld
+		Dd,
+		Od,
+		kd,
+		Ad
 	],
 	4: [
-		od,
-		sd,
-		cd,
-		ld,
-		ud,
-		dd,
-		fd
+		Dd,
+		Od,
+		kd,
+		Ad,
+		jd,
+		Md,
+		Nd
 	]
-}, _d = [
-	gd,
-	hd,
-	md,
-	pd
-], vd = [
-	gd,
-	hd,
-	md
-], yd = {
+}, Rd = [
+	Ld,
+	Id,
+	Fd,
+	Pd
+], zd = [
+	Ld,
+	Id,
+	Fd
+], Bd = {
 	1: {
 		composePlaces: Z[1],
 		scopePlaces: Z[1],
@@ -10495,12 +10566,12 @@ var od = {
 		isDecimal: !1
 	},
 	5: {
-		composePlaces: _d,
-		scopePlaces: vd,
+		composePlaces: Rd,
+		scopePlaces: zd,
 		isDecimal: !0
 	}
 };
-function bd(e, t) {
+function Vd(e, t) {
 	let n = [
 		1,
 		2,
@@ -10513,7 +10584,7 @@ function bd(e, t) {
 		9
 	];
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = id(e, 0, t), i = n[t];
+		let r = Td(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n.slice(0, t);
@@ -10521,7 +10592,7 @@ function bd(e, t) {
 function Q(e, t) {
 	return t.decimals === 0 ? String(e * t.value) : `0.${"0".repeat(t.decimals - 1)}${e}`;
 }
-function xd(e, t) {
+function Hd(e, t) {
 	if (!e.isDecimal) {
 		let n = t.reduce((t, n, r) => t + n * e.composePlaces[r].value, 0);
 		return String(n);
@@ -10529,16 +10600,16 @@ function xd(e, t) {
 	let [n, r, i, a] = t;
 	return `${a}.${i}${r}${n}`;
 }
-function Sd(e) {
+function Ud(e) {
 	return e.length === 1 ? e[0] : `${e.slice(0, -1).join(", ")} and ${e[e.length - 1]}`;
 }
-function Cd(e, t, n) {
+function Wd(e, t, n) {
 	let r = t.map((e, t) => ({
 		label: e,
 		isCorrect: t === n
 	}));
 	for (let t = r.length - 1; t > 0; t--) {
-		let n = id(e, 0, t), i = r[t];
+		let n = Td(e, 0, t), i = r[t];
 		r[t] = r[n], r[n] = i;
 	}
 	let i = "";
@@ -10553,7 +10624,7 @@ function Cd(e, t, n) {
 		correctOptionId: i
 	};
 }
-function wd(e, t, n, r) {
+function Gd(e, t, n, r) {
 	let i = e[t], a = n.get(i.name), o = [], s = /* @__PURE__ */ new Set([r]);
 	function c(e) {
 		o.length >= 3 || s.has(e) || (s.add(e), o.push(e));
@@ -10572,11 +10643,11 @@ function wd(e, t, n, r) {
 	for (let e = 1; e <= 9 && o.length < 3; e++) c(Q(e, i));
 	return o;
 }
-function Td(e, t, n) {
+function Kd(e, t, n) {
 	let r = [], i = /* @__PURE__ */ new Set([n]), a = t.length;
 	function o(t) {
 		if (r.length >= 3) return;
-		let n = xd(e, t);
+		let n = Hd(e, t);
 		i.has(n) || (i.add(n), r.push(n));
 	}
 	for (let e = 0; e < a - 1; e++) {
@@ -10608,8 +10679,8 @@ function Td(e, t, n) {
 	}
 	return r;
 }
-function Ed(e, t, n, r) {
-	let i = bd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = xd(r, i), s = id(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = Q(a.get(c.name), c), { options: u, correctOptionId: d } = Cd(n, [l, ...wd(r.scopePlaces, s, a, l)], 0);
+function qd(e, t, n, r) {
+	let i = Vd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = Hd(r, i), s = Td(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = Q(a.get(c.name), c), { options: u, correctOptionId: d } = Wd(n, [l, ...Gd(r.scopePlaces, s, a, l)], 0);
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -10625,8 +10696,8 @@ function Ed(e, t, n, r) {
 		selectedPlace: c
 	};
 }
-function Dd(e, t, n, r) {
-	let i = bd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = xd(r, i), { options: s, correctOptionId: c } = Cd(n, [o, ...Td(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${Sd(d)}?`;
+function Jd(e, t, n, r) {
+	let i = Vd(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = Hd(r, i), { options: s, correctOptionId: c } = Wd(n, [o, ...Kd(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${Ud(d)}?`;
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -10641,61 +10712,64 @@ function Dd(e, t, n, r) {
 		digitsByPlaceName: a
 	};
 }
-function Od(e, t) {
-	if (!ad(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = rd(t), r = n() < .5 ? "digit-value" : "compose", i = yd[e];
-	return r === "digit-value" ? Ed(e, t, n, i) : Dd(e, t, n, i);
+function Yd(e, t) {
+	if (!Ed(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = wd(t), r = n() < .5 ? "digit-value" : "compose", i = Bd[e];
+	return r === "digit-value" ? qd(e, t, n, i) : Jd(e, t, n, i);
 }
-function kd(e, t) {
-	return Od(e, t).question;
+function Xd(e, t) {
+	return Yd(e, t).question;
 }
 //#endregion
 //#region packages/place-value-understanding/src/plugin.ts
-function Ad(e, t, n, r, i) {
+function Zd(e) {
 	return {
-		competencyId: nd,
+		presentation: {
+			kind: "choice",
+			prompt: e.prompt,
+			options: e.options
+		},
+		correctAnswer: e.correctOptionId
+	};
+}
+function Qd(e, t, n, r, i, a) {
+	return {
+		competencyId: Cd,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		...i && { endReason: i }
+		correctAnswer: Zd(e).correctAnswer,
+		submittedAnswer: i,
+		...a && { endReason: a }
 	};
 }
-function jd(e, t) {
-	let n = rd(t), r = [];
+function $d(e, t) {
+	let n = wd(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(kd(e, t));
+		r.push(Xd(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Md = {
+var ef = {
 	id: "place-value-understanding",
-	competencyIds: [nd],
+	competencyIds: [Cd],
 	generateQuestion(e, t) {
-		return kd(e, t);
+		return Xd(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation(e) {
-		return {
-			presentation: {
-				kind: "choice",
-				prompt: e.prompt,
-				options: e.options
-			},
-			correctAnswer: e.correctOptionId
-		};
-	}
+	toPresentation: Zd
 };
 //#endregion
 //#region node_modules/@learncoreskills/plugin-engine/dist/src/registry.js
-function Nd(e, t) {
+function tf(e, t) {
 	let n = [], r = new Set(t.map((e) => e.id)), i = /* @__PURE__ */ new Set();
 	for (let t of e) i.has(t.id) && n.push({
 		kind: "duplicate-plugin-id",
@@ -10711,16 +10785,16 @@ function Nd(e, t) {
 		errors: n
 	};
 }
-function Pd(e) {
+function nf(e) {
 	switch (e.kind) {
 		case "duplicate-plugin-id": return `duplicate plugin id: "${e.id}"`;
 		case "unknown-competency-reference": return `plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`;
 	}
 }
-function Fd(e, t) {
-	let n = Nd(e, t);
+function rf(e, t) {
+	let n = tf(e, t);
 	if (!n.valid) {
-		let e = n.errors.map(Pd).join("; ");
+		let e = n.errors.map(nf).join("; ");
 		throw Error(`Invalid plugin registry: ${e}`);
 	}
 	let r = new Map(e.map((e) => [e.id, e]));
@@ -10738,29 +10812,29 @@ function Fd(e, t) {
 }
 //#endregion
 //#region src/pluginRegistry.ts
-var Id = Fd([
-	Ts,
-	ic,
-	Gs,
-	Fs,
-	Mo,
-	go,
-	Wo,
-	ao,
-	fs,
-	ns,
-	hc,
-	Gl,
-	Rc,
-	$c,
-	Tc,
-	gl,
-	au,
-	Ml,
-	Md,
-	Iu,
-	td,
+var af = rf([
+	Ms,
+	mc,
+	ec,
+	Us,
+	Fo,
+	vo,
+	Jo,
+	oo,
+	vs,
+	ss,
+	Ec,
+	cu,
+	Zc,
+	pl,
+	Lc,
+	jl,
 	Cu,
+	Jl,
+	ef,
+	nd,
+	Sd,
+	Hu,
 	...We,
 	...Lt,
 	...Ln,
@@ -10802,7 +10876,7 @@ var Id = Fd([
 //#endregion
 //#region src/exerciseDefinitions.ts
 function $(e, t) {
-	let n = Id.getPlugin(e);
+	let n = af.getPlugin(e);
 	return {
 		grade: t.grade,
 		questions: t.questions.map((e) => {
@@ -10817,7 +10891,7 @@ function $(e, t) {
 		})
 	};
 }
-var Ld = {
+var of = {
 	key: "addition",
 	label: "Addition",
 	icon: "➕",
@@ -10825,10 +10899,10 @@ var Ld = {
 	competency: C,
 	competencies: [C],
 	createSession(e, t) {
-		return $("mental-addition", ws(e, t));
+		return $("mental-addition", js(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Cs(e, t, n, r, i)
-}, Rd = {
+	createMasterySignal: (e, t, n, r, i, a) => As(e, t, n, r, i, a)
+}, sf = {
 	key: "subtraction",
 	label: "Subtraction",
 	icon: "➖",
@@ -10836,10 +10910,10 @@ var Ld = {
 	competency: w,
 	competencies: [w],
 	createSession(e, t) {
-		return $("mental-subtraction", rc(e, t));
+		return $("mental-subtraction", pc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => nc(e, t, n, r, i)
-}, zd = {
+	createMasterySignal: (e, t, n, r, i, a) => fc(e, t, n, r, i, a)
+}, cf = {
 	key: "multiplication",
 	label: "Multiplication",
 	icon: "✖️",
@@ -10847,10 +10921,10 @@ var Ld = {
 	competency: ja,
 	competencies: [ja],
 	createSession(e, t) {
-		return $("mental-multiplication", Ws(e, t));
+		return $("mental-multiplication", $s(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Us(e, t, n, r, i)
-}, Bd = {
+	createMasterySignal: (e, t, n, r, i, a) => Qs(e, t, n, r, i, a)
+}, lf = {
 	key: "division",
 	label: "Division",
 	icon: "➗",
@@ -10858,10 +10932,10 @@ var Ld = {
 	competency: Ma,
 	competencies: [Ma],
 	createSession(e, t) {
-		return $("mental-division", Ps(e, t));
+		return $("mental-division", Hs(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ns(e, t, n, r, i)
-}, Vd = {
+	createMasterySignal: (e, t, n, r, i, a) => Vs(e, t, n, r, i, a)
+}, uf = {
 	key: "baseline-counting-quantities",
 	label: "Counting & Quantities",
 	icon: "🔢",
@@ -10880,10 +10954,10 @@ var Ld = {
 		[Fa.id]: "Comparing groups"
 	},
 	createSession(e, t) {
-		return $("baseline-counting-quantities", jo(e, t));
+		return $("baseline-counting-quantities", Po(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => Ao(e, t, n, r)
-}, Hd = {
+	createMasterySignal: (e, t, n, r, i, a) => No(e, t, n, r, i, a)
+}, df = {
 	key: "baseline-concrete-addition-subtraction",
 	label: "Concrete Addition & Subtraction",
 	icon: "🍎",
@@ -10891,10 +10965,10 @@ var Ld = {
 	competency: Ia,
 	competencies: [Ia],
 	createSession(e, t) {
-		return $("baseline-concrete-addition-subtraction", ho(e, t));
+		return $("baseline-concrete-addition-subtraction", _o(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => mo(e, t, n, r)
-}, Ud = {
+	createMasterySignal: (e, t, n, r, i, a) => go(e, t, n, r, i, a)
+}, ff = {
 	key: "baseline-direct-comparison",
 	label: "Direct Comparison",
 	icon: "⚖️",
@@ -10902,10 +10976,10 @@ var Ld = {
 	competency: E,
 	competencies: [E],
 	createSession(e, t) {
-		return $("baseline-direct-comparison", Uo(e, t));
+		return $("baseline-direct-comparison", qo(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => Ho(e, t, n, r)
-}, Wd = {
+	createMasterySignal: (e, t, n, r, i, a) => Ko(e, t, n, r, i, a)
+}, pf = {
 	key: "baseline-calendar-time-basics",
 	label: "Calendar & Time Basics",
 	icon: "📅",
@@ -10917,10 +10991,10 @@ var Ld = {
 		[O.id]: "Days of the week"
 	},
 	createSession(e, t) {
-		return $("baseline-calendar-time-basics", io(e, t));
+		return $("baseline-calendar-time-basics", ao(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => ro(e, t, n, r)
-}, Gd = {
+	createMasterySignal: (e, t, n, r, i, a) => io(e, t, n, r, i, a)
+}, mf = {
 	key: "baseline-shape-recognition",
 	label: "Shape Recognition",
 	icon: "🔺",
@@ -10928,10 +11002,10 @@ var Ld = {
 	competency: k,
 	competencies: [k],
 	createSession(e, t) {
-		return $("baseline-shape-recognition", ds(e, t));
+		return $("baseline-shape-recognition", _s(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => us(e, t, n, r)
-}, Kd = {
+	createMasterySignal: (e, t, n, r, i, a) => gs(e, t, n, r, i, a)
+}, hf = {
 	key: "baseline-positional-language",
 	label: "Positional Language",
 	icon: "📍",
@@ -10939,10 +11013,10 @@ var Ld = {
 	competency: La,
 	competencies: [La],
 	createSession(e, t) {
-		return $("baseline-positional-language", ts(e, t));
+		return $("baseline-positional-language", os(e, t));
 	},
-	createMasterySignal: (e, t, n, r) => es(e, t, n, r)
-}, qd = {
+	createMasterySignal: (e, t, n, r, i, a) => as(e, t, n, r, i, a)
+}, gf = {
 	key: "number-sense-counting-range",
 	label: "Counting & Number Range",
 	icon: "🔢",
@@ -10950,10 +11024,10 @@ var Ld = {
 	competency: Ra,
 	competencies: [Ra],
 	createSession(e, t) {
-		return $("number-sense-counting-range", mc(e, t));
+		return $("number-sense-counting-range", Tc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => pc(e, t, n, r, i)
-}, Jd = {
+	createMasterySignal: (e, t, n, r, i, a) => wc(e, t, n, r, i, a)
+}, _f = {
 	key: "number-sense-skip-counting",
 	label: "Skip Counting",
 	icon: "➡️",
@@ -10961,10 +11035,10 @@ var Ld = {
 	competency: za,
 	competencies: [za],
 	createSession(e, t) {
-		return $("number-sense-skip-counting", Wl(e, t));
+		return $("number-sense-skip-counting", su(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ul(e, t, n, r, i)
-}, Yd = {
+	createMasterySignal: (e, t, n, r, i, a) => ou(e, t, n, r, i, a)
+}, vf = {
 	key: "number-sense-odd-even",
 	label: "Odd & Even",
 	icon: "🔀",
@@ -10972,10 +11046,10 @@ var Ld = {
 	competency: Ba,
 	competencies: [Ba],
 	createSession(e, t) {
-		return $("number-sense-odd-even", Lc(e, t));
+		return $("number-sense-odd-even", Xc(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ic(e, t, n, r, i)
-}, Xd = {
+	createMasterySignal: (e, t, n, r, i, a) => Yc(e, t, n, r, i, a)
+}, yf = {
 	key: "number-sense-ordinals",
 	label: "Ordinal Numbers",
 	icon: "🥇",
@@ -10983,10 +11057,10 @@ var Ld = {
 	competency: Va,
 	competencies: [Va],
 	createSession(e, t) {
-		return $("number-sense-ordinals", Qc(e, t));
+		return $("number-sense-ordinals", fl(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Zc(e, t, n, r, i)
-}, Zd = {
+	createMasterySignal: (e, t, n, r, i, a) => dl(e, t, n, r, i, a)
+}, bf = {
 	key: "number-sense-negative-numbers",
 	label: "Negative Numbers",
 	icon: "🌡️",
@@ -10994,10 +11068,10 @@ var Ld = {
 	competency: A,
 	competencies: [A],
 	createSession(e, t) {
-		return $("number-sense-negative-numbers", wc(e, t));
+		return $("number-sense-negative-numbers", Ic(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Cc(e, t, n, r, i)
-}, Qd = {
+	createMasterySignal: (e, t, n, r, i, a) => Fc(e, t, n, r, i, a)
+}, xf = {
 	key: "number-sense-primes-factors",
 	label: "Primes & Factors",
 	icon: "🧮",
@@ -11005,10 +11079,10 @@ var Ld = {
 	competency: j,
 	competencies: [j],
 	createSession(e, t) {
-		return $("number-sense-primes-factors", hl(e, t));
+		return $("number-sense-primes-factors", Al(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => ml(e, t, n, r, i)
-}, $d = {
+	createMasterySignal: (e, t, n, r, i, a) => kl(e, t, n, r, i, a)
+}, Sf = {
 	key: "number-sense-squares",
 	label: "Square Numbers",
 	icon: "⬜",
@@ -11016,10 +11090,10 @@ var Ld = {
 	competency: M,
 	competencies: [M],
 	createSession(e, t) {
-		return $("number-sense-squares", iu(e, t));
+		return $("number-sense-squares", Su(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => ru(e, t, n, r, i)
-}, ef = {
+	createMasterySignal: (e, t, n, r, i, a) => xu(e, t, n, r, i, a)
+}, Cf = {
 	key: "number-sense-roman-numerals",
 	label: "Roman Numerals",
 	icon: "🏛️",
@@ -11027,10 +11101,10 @@ var Ld = {
 	competency: N,
 	competencies: [N],
 	createSession(e, t) {
-		return $("number-sense-roman-numerals", jl(e, t));
+		return $("number-sense-roman-numerals", ql(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Al(e, t, n, r, i)
-}, tf = {
+	createMasterySignal: (e, t, n, r, i, a) => Kl(e, t, n, r, i, a)
+}, wf = {
 	key: "place-value-understanding",
 	label: "Place Value Understanding",
 	icon: "🔟",
@@ -11038,10 +11112,10 @@ var Ld = {
 	competency: P,
 	competencies: [P],
 	createSession(e, t) {
-		return $("place-value-understanding", jd(e, t));
+		return $("place-value-understanding", $d(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Ad(e, t, n, r, i)
-}, nf = {
+	createMasterySignal: (e, t, n, r, i, a) => Qd(e, t, n, r, i, a)
+}, Tf = {
 	key: "place-value-powers-of-ten",
 	label: "Add/Subtract Powers of Ten",
 	icon: "➕",
@@ -11049,10 +11123,10 @@ var Ld = {
 	competency: F,
 	competencies: [F],
 	createSession(e, t) {
-		return $("place-value-powers-of-ten", Fu(e, t));
+		return $("place-value-powers-of-ten", td(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => Pu(e, t, n, r, i)
-}, rf = {
+	createMasterySignal: (e, t, n, r, i, a) => ed(e, t, n, r, i, a)
+}, Ef = {
 	key: "place-value-rounding",
 	label: "Rounding",
 	icon: "🔵",
@@ -11060,10 +11134,10 @@ var Ld = {
 	competency: I,
 	competencies: [I],
 	createSession(e, t) {
-		return $("place-value-rounding", ed(e, t));
+		return $("place-value-rounding", xd(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => $u(e, t, n, r, i)
-}, af = {
+	createMasterySignal: (e, t, n, r, i, a) => bd(e, t, n, r, i, a)
+}, Df = {
 	key: "place-value-multiply-divide-ten",
 	label: "Multiply/Divide by Powers of Ten",
 	icon: "✖️",
@@ -11071,10 +11145,10 @@ var Ld = {
 	competency: L,
 	competencies: [L],
 	createSession(e, t) {
-		return $("place-value-multiply-divide-ten", Su(e, t));
+		return $("place-value-multiply-divide-ten", Vu(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i) => xu(e, t, n, r, i)
-}, of = Ge.map((e) => ({
+	createMasterySignal: (e, t, n, r, i, a) => Bu(e, t, n, r, i, a)
+}, Of = Ge.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -11082,8 +11156,8 @@ var Ld = {
 	competency: e.competency,
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
-	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), sf = Rt.map((e) => ({
+	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
+})), kf = Rt.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -11091,8 +11165,8 @@ var Ld = {
 	competency: e.competency,
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
-	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), cf = Rn.map((e) => ({
+	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
+})), Af = Rn.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -11100,8 +11174,8 @@ var Ld = {
 	competency: e.competency,
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
-	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), lf = Yr.map((e) => ({
+	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
+})), jf = Yr.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -11109,8 +11183,8 @@ var Ld = {
 	competency: e.competency,
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
-	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), uf = Aa.map((e) => ({
+	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
+})), Mf = Aa.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -11118,36 +11192,36 @@ var Ld = {
 	competency: e.competency,
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
-	createMasterySignal: (t, n, r, i, a) => e.createMasterySignal(t, n, r, i, a)
-})), df = [
-	Ld,
-	Rd,
-	zd,
-	Bd,
-	Vd,
-	Hd,
-	Ud,
-	Wd,
-	Gd,
-	Kd,
-	qd,
-	Jd,
-	Yd,
-	Xd,
-	Zd,
-	Qd,
-	$d,
-	ef,
-	tf,
-	nf,
-	rf,
-	af,
-	...of,
-	...sf,
-	...cf,
-	...lf,
-	...uf
-], ff = {
+	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
+})), Nf = [
+	of,
+	sf,
+	cf,
+	lf,
+	uf,
+	df,
+	ff,
+	pf,
+	mf,
+	hf,
+	gf,
+	_f,
+	vf,
+	yf,
+	bf,
+	xf,
+	Sf,
+	Cf,
+	wf,
+	Tf,
+	Ef,
+	Df,
+	...Of,
+	...kf,
+	...Af,
+	...jf,
+	...Mf
+], Pf = {
 	en: {
 		P: [
 			"Counts objects accurately to 20, one number per object.",
@@ -11500,19 +11574,19 @@ var Ld = {
 			"Utilise une calculatrice correctement *et* sait quand ne pas s'en servir — vérifie son résultat par rapport à une estimation mentale."
 		]
 	}
-}, pf = !1;
-function mf() {
-	pf ||= !0;
+}, Ff = !1;
+function If() {
+	Ff ||= !0;
 }
-var hf = () => ({
+var Lf = () => ({
 	subjectId: "math",
 	competencies: Ha,
-	plugins: Id.all(),
-	exercises: df,
+	plugins: af.all(),
+	exercises: Nf,
 	mathematicsAreas: Wa,
 	getMathematicsAreaForCompetency: Ga,
-	skillsReference: ff,
-	register: mf
+	skillsReference: Pf,
+	register: If
 });
 //#endregion
-export { Ha as allCompetencies, Fa as baselineCompareGroupsCompetency, Ia as baselineConcreteArithmeticCompetency, T as baselineCountingCompetency, D as baselineDayOrderCompetency, O as baselineDaysOfWeekCompetency, Pa as baselineDigitsCompetency, E as baselineDirectComparisonCompetency, La as baselinePositionCompetency, k as baselineShapesCompetency, Na as baselineSubitizingCompetency, hf as default, Ga as getMathematicsAreaForCompetency, df as mathExercises, Id as mathPluginRegistry, Wa as mathematicsAreas, C as mentalAdditionCompetency, Ma as mentalDivisionCompetency, ja as mentalMultiplicationCompetency, w as mentalSubtractionCompetency, Ra as numberSenseCountingRangeCompetency, A as numberSenseNegativeNumbersCompetency, Ba as numberSenseOddEvenCompetency, Va as numberSenseOrdinalsCompetency, j as numberSensePrimesFactorsCompetency, N as numberSenseRomanNumeralsCompetency, za as numberSenseSkipCountingCompetency, M as numberSenseSquaresCompetency, L as placeValueMultiplyDivideTenCompetency, F as placeValuePowersOfTenCompetency, I as placeValueRoundingCompetency, P as placeValueUnderstandingCompetency, ff as skillsReference };
+export { Ha as allCompetencies, Fa as baselineCompareGroupsCompetency, Ia as baselineConcreteArithmeticCompetency, T as baselineCountingCompetency, D as baselineDayOrderCompetency, O as baselineDaysOfWeekCompetency, Pa as baselineDigitsCompetency, E as baselineDirectComparisonCompetency, La as baselinePositionCompetency, k as baselineShapesCompetency, Na as baselineSubitizingCompetency, Lf as default, Ga as getMathematicsAreaForCompetency, Nf as mathExercises, af as mathPluginRegistry, Wa as mathematicsAreas, C as mentalAdditionCompetency, Ma as mentalDivisionCompetency, ja as mentalMultiplicationCompetency, w as mentalSubtractionCompetency, Ra as numberSenseCountingRangeCompetency, A as numberSenseNegativeNumbersCompetency, Ba as numberSenseOddEvenCompetency, Va as numberSenseOrdinalsCompetency, j as numberSensePrimesFactorsCompetency, N as numberSenseRomanNumeralsCompetency, za as numberSenseSkipCountingCompetency, M as numberSenseSquaresCompetency, L as placeValueMultiplyDivideTenCompetency, F as placeValuePowersOfTenCompetency, I as placeValueRoundingCompetency, P as placeValueUnderstandingCompetency, Pf as skillsReference };
