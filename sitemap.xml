@@ -12289,6 +12289,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/041-syllabus-grade-url-structure"/>
   </url>
   <url>
+    <loc>https://learncoreskills.com/en/docs/042-module-version-footer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/042-module-version-footer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/042-module-version-footer"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/fr/docs/042-module-version-footer</loc>
+    <lastmod>2026-09-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/042-module-version-footer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/042-module-version-footer"/>
+  </url>
+  <url>
     <loc>https://learncoreskills.com/en/docs/product-curriculum</loc>
     <lastmod>2026-09-26</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/product-curriculum"/>
