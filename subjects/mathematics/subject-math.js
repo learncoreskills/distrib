@@ -13510,7 +13510,7 @@ var Ch = {
 	pluginId: e.pluginId,
 	competency: e.competency,
 	competencies: e.competencies,
-	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
+	createSession: (t, n) => $(e.pluginId, e.createSession(t === "P" ? 1 : t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
 })), Zh = [
 	Ch,
