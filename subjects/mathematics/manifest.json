@@ -177,7 +177,25 @@
     "math.geometry.preschool-position-words",
     "math.measurement.preschool-direct-comparison",
     "math.mathematical-reasoning.preschool-patterns",
-    "math.time.preschool-days-of-week"
+    "math.time.preschool-days-of-week",
+    "math.number-sense.preschool-cardinality",
+    "math.number-sense.preschool-count-on",
+    "math.number-sense.preschool-before-after",
+    "math.number-sense.preschool-numeral-formation",
+    "math.number-sense.preschool-zero",
+    "math.comparing-ordering.preschool-conservation",
+    "math.number-sense.preschool-ordinals",
+    "math.addition.preschool-decompose-five",
+    "math.problem-solving.preschool-story-problems",
+    "math.geometry.preschool-solids",
+    "math.geometry.preschool-sides-corners",
+    "math.geometry.preschool-movement",
+    "math.measurement.preschool-order-by-size",
+    "math.mathematical-reasoning.preschool-sorting",
+    "math.mathematical-reasoning.preschool-name-the-rule",
+    "math.mathematical-reasoning.preschool-missing-item",
+    "math.time.preschool-parts-of-day",
+    "math.time.preschool-yesterday-today-tomorrow"
   ],
-  "builtAt": "2026-09-27T09:18:42.269Z"
+  "builtAt": "2026-09-27T10:11:48.757Z"
 }
