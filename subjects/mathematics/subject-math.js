@@ -8020,7 +8020,7 @@ function D(e, t) {
 		}]
 	};
 }
-var lo = D("math.number-sense.preschool-subitizing", "mathematics.P.1"), uo = D("math.number-sense.preschool-numerals", "mathematics.P.3"), fo = D("math.number-sense.preschool-numeral-quantity", "mathematics.P.3"), po = D("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.2"), mo = D("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.2"), ho = D("math.addition.preschool-combine", "mathematics.P.4"), go = D("math.subtraction.preschool-take-away", "mathematics.P.4"), _o = D("math.geometry.preschool-shapes-2d", "mathematics.P.8"), vo = D("math.geometry.preschool-position-words", "mathematics.P.9"), O = D("math.measurement.preschool-direct-comparison", "mathematics.P.5"), yo = D("math.mathematical-reasoning.preschool-patterns", void 0), bo = D("math.time.preschool-days-of-week", "mathematics.P.7"), xo = D("math.number-sense.preschool-cardinality", "mathematics.P.0"), So = D("math.number-sense.preschool-count-on", "mathematics.P.0"), Co = D("math.number-sense.preschool-before-after", "mathematics.P.0"), wo = D("math.number-sense.preschool-numeral-formation", "mathematics.P.3"), To = D("math.number-sense.preschool-zero", "mathematics.P.0"), Eo = D("math.comparing-ordering.preschool-conservation", "mathematics.P.2"), k = D("math.number-sense.preschool-ordinals", void 0), Do = D("math.addition.preschool-decompose-five", "mathematics.P.4"), Oo = D("math.problem-solving.preschool-story-problems", "mathematics.P.4"), A = D("math.geometry.preschool-solids", "mathematics.P.8"), ko = D("math.geometry.preschool-sides-corners", "mathematics.P.8"), Ao = D("math.geometry.preschool-movement", "mathematics.P.9"), jo = D("math.measurement.preschool-order-by-size", "mathematics.P.5"), Mo = D("math.mathematical-reasoning.preschool-sorting", void 0), No = D("math.mathematical-reasoning.preschool-name-the-rule", void 0), Po = D("math.mathematical-reasoning.preschool-missing-item", void 0), Fo = D("math.time.preschool-parts-of-day", "mathematics.P.6"), Io = D("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.7"), Lo = [
+var lo = D("math.number-sense.preschool-subitizing", "mathematics.P.4"), uo = D("math.number-sense.preschool-numerals", "mathematics.P.7"), fo = D("math.number-sense.preschool-numeral-quantity", "mathematics.P.8"), po = D("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.11"), mo = D("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.13"), ho = D("math.addition.preschool-combine", "mathematics.P.15"), go = D("math.subtraction.preschool-take-away", "mathematics.P.16"), _o = D("math.geometry.preschool-shapes-2d", "mathematics.P.19"), vo = D("math.geometry.preschool-position-words", "mathematics.P.22"), O = D("math.measurement.preschool-direct-comparison", "mathematics.P.24"), yo = D("math.mathematical-reasoning.preschool-patterns", "mathematics.P.28"), bo = D("math.time.preschool-days-of-week", "mathematics.P.31"), xo = D("math.number-sense.preschool-cardinality", "mathematics.P.2"), So = D("math.number-sense.preschool-count-on", "mathematics.P.5"), Co = D("math.number-sense.preschool-before-after", "mathematics.P.6"), wo = D("math.number-sense.preschool-numeral-formation", "mathematics.P.9"), To = D("math.number-sense.preschool-zero", "mathematics.P.10"), Eo = D("math.comparing-ordering.preschool-conservation", "mathematics.P.12"), k = D("math.number-sense.preschool-ordinals", "mathematics.P.14"), Do = D("math.addition.preschool-decompose-five", "mathematics.P.17"), Oo = D("math.problem-solving.preschool-story-problems", "mathematics.P.18"), A = D("math.geometry.preschool-solids", "mathematics.P.20"), ko = D("math.geometry.preschool-sides-corners", "mathematics.P.21"), Ao = D("math.geometry.preschool-movement", "mathematics.P.23"), jo = D("math.measurement.preschool-order-by-size", "mathematics.P.25"), Mo = D("math.mathematical-reasoning.preschool-sorting", "mathematics.P.26"), No = D("math.mathematical-reasoning.preschool-name-the-rule", "mathematics.P.27"), Po = D("math.mathematical-reasoning.preschool-missing-item", "mathematics.P.29"), Fo = D("math.time.preschool-parts-of-day", "mathematics.P.30"), Io = D("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.32"), Lo = [
 	lo,
 	uo,
 	fo,
@@ -11564,7 +11564,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.0",
+	frameworkSkillId: "mathematics.P.2",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11577,7 +11577,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.1",
+	frameworkSkillId: "mathematics.P.4",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11590,7 +11590,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.3",
+	frameworkSkillId: "mathematics.P.7",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11603,7 +11603,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.2",
+	frameworkSkillId: "mathematics.P.11",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11616,7 +11616,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.4",
+	frameworkSkillId: "mathematics.P.15",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11629,7 +11629,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.5",
+	frameworkSkillId: "mathematics.P.24",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11642,7 +11642,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.6",
+	frameworkSkillId: "mathematics.P.30",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11655,7 +11655,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.7",
+	frameworkSkillId: "mathematics.P.31",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11668,7 +11668,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.8",
+	frameworkSkillId: "mathematics.P.19",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -11681,7 +11681,7 @@ var Au = [
 	subjectId: "mathematics",
 	targetGrade: "P",
 	gradeCount: 1,
-	frameworkSkillId: "mathematics.P.9",
+	frameworkSkillId: "mathematics.P.22",
 	prerequisiteIds: [],
 	scoreInputs: [{
 		kind: "activity",
@@ -15503,16 +15503,40 @@ var k_ = {
 ], iv = {
 	en: {
 		P: [
-			"Counts objects accurately to 20, one number per object.",
-			"Recognises quantities up to 5 at a glance, without counting.",
-			"Compares two groups and says which has more.",
-			"Recognises written digits 0–9.",
-			"Adds and subtracts small quantities with objects in front of them.",
+			"Recites numbers in order from 1 to 20, and can fill in a missing number in a short sequence.",
+			"Counts a set of objects one at a time, saying one number per object.",
+			"Knows that the last number counted tells how many there are in total (cardinality).",
+			"Gives or takes a requested number of objects from a larger pile, up to 10.",
+			"Recognises quantities up to 5 at a glance, without counting (subitising).",
+			"Counts on from a given number rather than starting over from 1.",
+			"Says the number that comes just before or just after a given number, up to 10.",
+			"Recognises the written numerals 0–9.",
+			"Matches a written numeral 0–10 to the correct quantity, and back again.",
+			"Writes the numerals 0–9 correctly, without reversals.",
+			"Understands that zero means an empty set, and recognises it as a number.",
+			"Compares two groups and says which has more, fewer, or whether they are the same.",
+			"Knows that a group's quantity stays the same when it is spread out or rearranged.",
+			"Compares two written numerals up to 10 and says which is bigger, smaller, or the same.",
+			"Uses ordinal numbers first to fifth to describe position in a row.",
+			"Combines two small groups of objects and finds the total, up to 10.",
+			"Takes objects away from a small group and finds how many are left, up to 10.",
+			"Finds the different ways to split 5 objects into two groups.",
+			"Solves a simple addition or subtraction story problem with objects, up to 10.",
+			"Names and recognises circle, square, triangle and rectangle in different sizes and orientations.",
+			"Sorts everyday objects into solid shapes and flat shapes, and names common solids.",
+			"Counts the sides and corners of a 2D shape.",
+			"Uses positional language: on, under, in front of, behind, next to, between, above, below.",
+			"Follows and gives simple movement instructions: forward, back, up, down.",
 			"Compares objects directly: longer/shorter, heavier/lighter, holds more/less.",
-			"Knows the order of the day: morning, afternoon, evening, night.",
-			"Names the days of the week.",
-			"Names circle, square, triangle, rectangle.",
-			"Uses positional language: on, under, behind, between, next to."
+			"Orders three objects by size, from smallest to biggest.",
+			"Sorts objects into groups by one attribute: colour, shape or size.",
+			"Names the rule that separates two sorted groups of objects.",
+			"Copies and extends a simple repeating pattern.",
+			"Finds the missing item in a repeating pattern.",
+			"Knows the order of the parts of the day: morning, afternoon, evening, night.",
+			"Names the days of the week, in order.",
+			"Understands and uses yesterday, today and tomorrow correctly.",
+			"Reads a simple picture graph and says which category has more or fewer."
 		],
 		G1: [
 			"Counts forwards and backwards to 100 from any starting number.",
@@ -15679,16 +15703,40 @@ var k_ = {
 	},
 	fr: {
 		P: [
-			"Compte des objets avec exactitude jusqu'à 20, un nombre par objet.",
-			"Reconnaît des quantités jusqu'à 5 d'un coup d'œil, sans compter.",
-			"Compare deux groupes et dit lequel en a le plus.",
+			"Récite les nombres dans l'ordre de 1 à 20, et peut compléter un nombre manquant dans une courte suite.",
+			"Compte un ensemble d'objets un par un, en disant un nombre par objet.",
+			"Sait que le dernier nombre compté indique le total (principe de cardinalité).",
+			"Donne ou retire un nombre demandé d'objets dans un tas plus grand, jusqu'à 10.",
+			"Reconnaît des quantités jusqu'à 5 d'un coup d'œil, sans compter (subitisation).",
+			"Compte en continuant à partir d'un nombre donné, sans repartir de 1.",
+			"Dit le nombre qui vient juste avant ou juste après un nombre donné, jusqu'à 10.",
 			"Reconnaît les chiffres écrits de 0 à 9.",
-			"Additionne et soustrait de petites quantités avec des objets devant lui.",
+			"Associe un chiffre écrit de 0 à 10 à la bonne quantité, et inversement.",
+			"Écrit les chiffres de 0 à 9 correctement, sans les inverser.",
+			"Comprend que zéro représente un ensemble vide, et le reconnaît comme un nombre.",
+			"Compare deux groupes et dit lequel en a plus, moins, ou s'ils en ont autant.",
+			"Sait qu'une quantité reste la même quand un groupe est étalé ou réorganisé.",
+			"Compare deux chiffres écrits jusqu'à 10 et dit lequel est plus grand, plus petit, ou égal.",
+			"Utilise les nombres ordinaux du premier au cinquième pour décrire une position dans une rangée.",
+			"Réunit deux petits groupes d'objets et trouve le total, jusqu'à 10.",
+			"Retire des objets d'un petit groupe et trouve combien il en reste, jusqu'à 10.",
+			"Trouve les différentes façons de partager 5 objets en deux groupes.",
+			"Résout un problème simple d'addition ou de soustraction avec des objets, jusqu'à 10.",
+			"Nomme et reconnaît le cercle, le carré, le triangle et le rectangle sous différentes tailles et orientations.",
+			"Trie des objets du quotidien en solides et en formes plates, et nomme des solides courants.",
+			"Compte les côtés et les coins d'une forme 2D.",
+			"Utilise le vocabulaire de position : sur, sous, devant, derrière, à côté de, entre, au-dessus, au-dessous.",
+			"Suit et donne des consignes de déplacement simples : avancer, reculer, monter, descendre.",
 			"Compare des objets directement : plus long/plus court, plus lourd/plus léger, contient plus/moins.",
-			"Connaît l'ordre du jour : matin, après-midi, soir, nuit.",
-			"Nomme les jours de la semaine.",
-			"Nomme le cercle, le carré, le triangle, le rectangle.",
-			"Utilise le vocabulaire de position : sur, sous, derrière, entre, à côté de."
+			"Ordonne trois objets par taille, du plus petit au plus grand.",
+			"Trie des objets en groupes selon un critère : couleur, forme ou taille.",
+			"Nomme la règle qui sépare deux groupes d'objets triés.",
+			"Reproduit et poursuit une suite répétitive simple.",
+			"Trouve l'élément manquant dans une suite répétitive.",
+			"Connaît l'ordre des moments de la journée : matin, après-midi, soir, nuit.",
+			"Nomme les jours de la semaine, dans l'ordre.",
+			"Comprend et utilise correctement hier, aujourd'hui et demain.",
+			"Lit un pictogramme simple et dit quelle catégorie en a le plus ou le moins."
 		],
 		G1: [
 			"Compte en avant et en arrière jusqu'à 100 à partir de n'importe quel nombre de départ.",
