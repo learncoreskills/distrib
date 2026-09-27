@@ -25,7 +25,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2503112416832365"
      crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/assets/index-ConmeA6v.js"></script>
+    <script type="module" crossorigin src="/assets/index-C48VGvcc.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BYtu6r3W.css">
   
     <title>Physical Skills</title>
@@ -48,15 +48,11 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
-    <!-- Page-level ad config (child-directed treatment applies to every ad request on this page,
-         including the in-page square unit rendered by AdSquareCard). The actual <ins> for that
-         unit now lives in AdSquareCard.tsx, in-flow between the Subjects and Coming Soon cards,
-         instead of statically placed here. -->
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-           google_ad_client: "ca-pub-2503112416832365",
-           tag_for_child_directed_treatment: 1
-         });
-    </script>
+    <!-- The only ad unit on this app is the <ins> rendered by AdSquareCard.tsx, which also carries
+         its own push({}) and child-directed tagging (data-tag-for-age-treatment). A second,
+         page-level push() here raced with that component push against the single <ins> in this
+         SPA and intermittently threw "All 'ins' elements ... already have ads in them" — see
+         https://github.com/nuxt-modules/google-adsense/issues/179. Google's current async-tag
+         guidance also puts child-directed treatment on the <ins> itself, not a separate push. -->
   </body>
 </html>
