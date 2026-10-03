@@ -44073,6 +44073,7 @@ var YO = () => ({
 	mathematicsAreas: Mx,
 	getMathematicsAreaForCompetency: Nx,
 	skillsReference: FO,
+	skillReferenceIds: PO,
 	skillsTitles: KO,
 	register: JO
 });
