@@ -1,0 +1,19 @@
+# Learn Core Skills
+
+> Free, mastery-based practice activities for children across mathematics and the whole-child skills framework, tracked per child, with no lesson videos to sit through. Works in English and French; progress data stays on the family's device.
+
+## Main pages
+
+- [Home (English)](https://learncoreskills.com/en): what the product is and how to start
+- [Accueil (français)](https://learncoreskills.com/fr): présentation du produit en français
+- [Mathematics](https://learncoreskills.com/en/mathematics): grade-by-grade mathematics syllabus and practice activities
+- [Parent area](https://learncoreskills.com/en/parent): follow your child's mastery progress, export or import their data
+
+## Documentation
+
+- [Documentation index](https://learncoreskills.com/en/docs): specifications and reference documents behind the product
+- [Blog](https://learncoreskills.com/en/blog): the story of the project, one post per shipped feature
+
+## Machine-readable
+
+- [Sitemap](https://learncoreskills.com/sitemap.xml)
