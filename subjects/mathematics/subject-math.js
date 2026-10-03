@@ -922,13 +922,18 @@ function Ze(e, t, n, r) {
 			...e.groups[i(t)]
 		})),
 		layoutSeed: r >>> 0
-	} : {
+	} : e.type === "count-path" ? {
 		type: "count-path",
-		paths: n.map((t) => ({
-			optionId: t,
-			numbers: [...e.paths[i(t)]]
-		}))
-	};
+		...e.emoji !== void 0 && { emoji: e.emoji },
+		paths: n.map((t) => {
+			let n = e.noObject?.[i(t)];
+			return {
+				optionId: t,
+				numbers: [...e.paths[i(t)]],
+				...n && { noObject: [...n] }
+			};
+		})
+	} : e;
 }
 function _(e) {
 	let t = {
@@ -8704,7 +8709,8 @@ function Kr(e, t, n) {
 		grade: t,
 		en: { statement: i.en.statement },
 		fr: { statement: i.fr.statement },
-		isTrue: i.en.isTrue
+		isTrue: i.en.isTrue,
+		...i.scene && { scene: i.scene }
 	};
 }
 function b(e) {
@@ -8728,7 +8734,8 @@ function b(e) {
 					}, {
 						id: "false",
 						label: "False"
-					}]
+					}],
+					...e.scene && { scene: e.scene }
 				},
 				correctAnswer: e.isTrue ? "true" : "false"
 			};
