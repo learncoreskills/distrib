@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Analytics (Google Tag Manager) is not in the static head on purpose: ads/analytics.ts loads
+         it, after the consent-mode defaults are set, only on adult-facing routes (058, FR-019). -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-2503112416832365">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="module" crossorigin src="/assets/index-6V7rqaRk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B3csIvEJ.css">
+  
+    <title>Day 3: a smarter daily practice, and a window into how it all works</title>
+    <meta name="description" content="Three things came together today: the app got noticeably better at deciding what a child should practice each day, parents and teachers got a proper way to see…" />
+    <link rel="canonical" href="https://learncoreskills.com/en/blog/2026-09-14-daily-practice-and-docs.en" />
+
+    <meta property="og:title" content="Day 3: a smarter daily practice, and a window into how it all works" />
+    <meta property="og:description" content="Three things came together today: the app got noticeably better at deciding what a child should practice each day, parents and teachers got a proper way to see…" />
+    <meta property="og:url" content="https://learncoreskills.com/en/blog/2026-09-14-daily-practice-and-docs.en" />
+    <meta property="og:image" content="https://learncoreskills.com/social-default.png" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Day 3: a smarter daily practice, and a window into how it all works" />
+    <meta name="twitter:description" content="Three things came together today: the app got noticeably better at deciding what a child should practice each day, parents and teachers got a proper way to see…" />
+    <meta name="twitter:image" content="https://learncoreskills.com/social-default.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Day 3: a smarter daily practice, and a window into how it all works","inLanguage":"en","datePublished":"2026-09-14"}</script>
+  </head>
+  <body>
+    <div id="root"><div class="docs-theme"><main class="docs-main"><div class="card"><p class="docs-entry-meta">2026-09-14</p><div class="docs-markdown"><h1>Day 3: a smarter daily practice, and a window into how it all works</h1>
+<p>Three things came together today: the app got noticeably better at deciding what a child should
+practice each day, parents and teachers got a proper way to see how the whole system works
+without leaving the app, and parents got a place of their own inside it — one that also makes
+sure a child&#x27;s progress can survive losing a phone or switching to a new one.</p>
+<p><strong>Building a session that actually adapts</strong></p>
+<p>Until now, opening the app meant working through addition problems with no real plan behind
+them — a flat set of exercises, the same shape no matter how a child was actually doing. That
+changed today. Every time a child opens the app, it now puts together a full session for that
+day — 50 questions, split into five ten-question rounds — built around one question: what does
+this child need most, right now?</p>
+<p>The logic behind that is closer to how a good tutor plans a lesson than to a random quiz
+generator. Most of the session — three of the five rounds — stays at the level the child is
+currently working on, so the bulk of the practice is neither too easy nor too far out of reach.
+What happens with the other two rounds depends entirely on how that level has been going lately:</p>
+<pre><code> Doing great there (90%+ correct)?   -&gt; two rounds move UP,   a stretch to the next level
+ Struggling, or brand new to it?     -&gt; two rounds move DOWN, extra review of the last level
+ Somewhere in between?               -&gt; one round each way, a bit of both
+</code></pre>
+<p>At the very first level, there&#x27;s nowhere lower to go, so a child who&#x27;s still finding their feet
+just gets more practice at that level instead of being pushed below it. At the top level, once
+it&#x27;s fully mastered, the &quot;move up&quot; case has nowhere to go either, so those rounds become a review
+round instead — a small victory lap rather than a dead end.</p>
+<p>None of this gets decided once and locked in for good. The plan is recalculated from scratch every
+single day based on how the child has actually been performing, so one rough day or one lucky
+streak doesn&#x27;t lock in a plan that no longer fits by tomorrow. And for a parent or teacher who
+already has a good read on where a child stands — say, at the very start, before the app has
+collected any data of its own — there&#x27;s now a way to set the starting level directly, rather than
+waiting for the system to work it out from a blank slate.</p>
+<p><strong>Opening the hood</strong></p>
+<p>The second piece of today&#x27;s work: the specifications and progress notes describing everything
+above — not just today&#x27;s feature, but the whole project — are now readable from inside the app
+itself, in a section built specifically for parents and teachers rather than for the child using
+the practice screens. It&#x27;s deliberately calm and plain where the practice screens are playful and
+game-like, because the two audiences reading them want very different things from what&#x27;s in front
+of them.</p>
+<p>That distinction matters more than it might sound like at first. A parent handing a device to
+their child, or a teacher weighing whether to bring the app into a classroom, shouldn&#x27;t have to
+take &quot;it adapts to your child&quot; on faith, or go spelunking through a GitHub repository to check for
+themselves. As of today, they don&#x27;t have to do either — the same documentation this project is
+built from, and this very blog, are now one tap away from the practice app itself, with a clear
+way back to it whenever they&#x27;re done reading.</p>
+<p>Small on its own, but it&#x27;s the first time this project has had a proper front door for the people
+deciding whether to trust it with their kids&#x27; practice time — not just for the kids using it.</p>
+<p><strong>A place of their own, and a way to never lose it</strong></p>
+<p>That new front door didn&#x27;t stay empty for long. Alongside it, parents now get their own area
+inside the app — separate from both the practice screens and the documentation — with a simple
+report showing how their child is actually doing, competency by competency, in real numbers
+rather than a vague sense of progress. It&#x27;s deliberately plain for now: no charts or history yet,
+just an honest current reading, with a clear &quot;nothing to show yet&quot; message for a child who hasn&#x27;t
+started practicing. The graphs and trend lines are a natural next step, but getting an accurate
+number in front of parents mattered more than making it pretty on day one.</p>
+<p>The more important piece living in that same area is quieter, but it&#x27;s the one that actually
+protects something: a way to export a child&#x27;s entire practice history — their profile and every
+recorded answer that feeds the mastery numbers — into a single file, and bring that same file back
+in on another device. Losing a phone, switching to a new one, or just wanting a backup before
+handing a tablet down to a younger sibling no longer means a child&#x27;s progress vanishes with it.
+Import even works before a single profile exists yet on the new device — restoring a backup is
+exactly the situation where there&#x27;s nothing there to begin with, so it had to work from a
+completely blank slate, not just as a convenience for an already-set-up one.</p>
+<p>The detail that took the most care wasn&#x27;t the export itself — it was making sure a file exported
+today still works after this project has changed several times over. Every exported file carries
+a version marker, and the app is built to always understand its own older files rather than
+quietly failing to read them a year from now. If a file ever comes from a version newer than what
+a particular device is running — say, a backup made on a freshly updated phone, brought back to an
+older one — the import says so plainly and stops, instead of guessing and getting it wrong. A
+backup you can&#x27;t trust isn&#x27;t really a backup at all, so that guarantee mattered more than almost
+anything else about how this was built.</p>
+<p><strong>Drawing the whole map, not just the part we&#x27;re building</strong></p>
+<p>The last piece of today&#x27;s work isn&#x27;t a feature at all. It&#x27;s a document — but it&#x27;s the one that
+quietly decides what this project is allowed to become.</p>
+<p>The app builds mathematics first, and will for a long while. But &quot;primary-school maths&quot; is a
+strange thing to build in isolation, because it&#x27;s a slice of something much larger that nobody
+usually writes down in one place: the full set of things a child could reasonably be expected to
+be able to do by the time primary school ends. So we wrote it down. All of it — just under a
+thousand individual skills, across twenty areas, each one tagged with the school year by the end
+of which a child should own it, starting from what&#x27;s already expected before the first day of
+Grade 1.</p>
+<p>Maths and reading are in there in the detail you&#x27;d expect. What&#x27;s more interesting is everything
+around them. Swimming a hundred metres unaided. Riding a bicycle safely on a road. Cooking a hot
+meal for the family. Calling the emergency services and saying clearly where you are. Playing a
+prepared piece from written music in front of other people. Reading a map and a compass and
+actually arriving. Keeping to a budget, and explaining why borrowing money costs more than paying
+cash. Resolving an argument with a friend without an adult stepping in. Roughly half of that list
+isn&#x27;t taught by any school system anywhere — it&#x27;s learned at home, or it isn&#x27;t learned at all, and
+a checklist that quietly leaves it out makes it invisible.</p>
+<p>It&#x27;s deliberately demanding, and no child ticks every box — that isn&#x27;t the point of it. A ceiling
+set at the average isn&#x27;t really a ceiling. It&#x27;s meant to be read as a map of what&#x27;s out there and
+where the gaps are, never as a bar to measure a particular child against. Every single entry is
+written as something a child can be observed <em>doing</em>, rather than something they either have or
+haven&#x27;t got, and each of the twenty areas ends with one concrete test you could actually watch
+happen.</p>
+<p>For the app itself, the document does one specific job: it keeps us honest about the foundations.
+It&#x27;s easy to build something that claims to handle any subject and has in fact been quietly
+shaped around arithmetic the whole time. Having the full list in front of us makes an awkward
+question unavoidable — how would this system ever record &quot;swims twenty-five metres&quot;? A child can&#x27;t
+demonstrate that to a phone. Some skills a device can test by itself, some need a parent to watch
+and confirm, and some a child can honestly report themselves. That&#x27;s a distinction worth building
+into the foundations now, while the foundations are still small enough to change, rather than
+bolting it on the first time a second subject arrives and doesn&#x27;t fit.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a></nav></footer></div>
+    <!-- Ads: no adsbygoogle.js here on purpose. ads/AdSlot.tsx injects the loader and the single
+         <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
+         MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
+         content), tagged data-tag-for-age-treatment="1". -->
+  </body>
+</html>

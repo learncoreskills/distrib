@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Analytics (Google Tag Manager) is not in the static head on purpose: ads/analytics.ts loads
+         it, after the consent-mode defaults are set, only on adult-facing routes (058, FR-019). -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-2503112416832365">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="module" crossorigin src="/assets/index-6V7rqaRk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B3csIvEJ.css">
+  
+    <title>Day 10: the rest of French</title>
+    <meta name="description" content="A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app's chrome—buttons, menus, status…" />
+    <link rel="canonical" href="https://learncoreskills.com/en/blog/2026-09-21-the-rest-of-french.en" />
+
+    <meta property="og:title" content="Day 10: the rest of French" />
+    <meta property="og:description" content="A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app's chrome—buttons, menus, status…" />
+    <meta property="og:url" content="https://learncoreskills.com/en/blog/2026-09-21-the-rest-of-french.en" />
+    <meta property="og:image" content="https://learncoreskills.com/social-default.png" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Day 10: the rest of French" />
+    <meta name="twitter:description" content="A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app's chrome—buttons, menus, status…" />
+    <meta name="twitter:image" content="https://learncoreskills.com/social-default.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Day 10: the rest of French","inLanguage":"en","datePublished":"2026-09-21"}</script>
+  </head>
+  <body>
+    <div id="root"><div class="docs-theme"><main class="docs-main"><div class="card"><p class="docs-entry-meta">2026-09-21</p><div class="docs-markdown"><h1>Day 10: the rest of French</h1>
+<p>A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app&#x27;s chrome—buttons, menus, status messages—but not for the thing families actually spend most of their time looking at: the subjects, skills, and activities themselves. Switch to French, open Mathematics, and every skill name, every activity button, every &quot;what your child will learn&quot; list was still sitting there in English underneath a French menu. Today that&#x27;s fixed, along with a smaller but sharper problem: the language flag and the actual page you landed on could quietly disagree with each other.</p>
+<p><strong>Content, not just chrome</strong></p>
+<p>The earlier French work translated everything the app says <em>about</em> itself—labels, buttons, instructions. What it missed was everything the app says <em>about learning</em>: the name of a mathematics skill like &quot;Skip Counting,&quot; an activity button like &quot;Concrete Addition &amp; Subtraction,&quot; the &quot;Passed&quot; or &quot;Not yet&quot; badge next to a syllabus row, even the plain-English list of what a Grade 3 child is expected to know across subjects like Science, Geography, or Money. All of that content was generated once, in English, and reused as-is regardless of which flag was selected—so a French-speaking parent browsing the syllabus, or a French-speaking child staring at a grid of activity buttons, was reading English the entire time.</p>
+<p>That&#x27;s fixed now, comprehensively. Every mathematics skill and activity has a proper French name. Every one of the twenty subject areas in the &quot;what your child will learn&quot; reference—Language, Science, History, Money, Music, all of them—has its full grade-by-grade skill list translated, nearly a thousand individual sentences in total, each one written as a real French sentence rather than a word-for-word swap. The little &quot;Passed&quot; / &quot;Not yet&quot; / &quot;Reference&quot; badges on the syllabus now say &quot;Réussi&quot; / &quot;Pas encore&quot; / &quot;Référence.&quot; Even the search-engine listing for a French page—the title and description that show up when a French page gets shared or searched for—now describes that page in French instead of quietly falling back to English.</p>
+<p><strong>When the flag lies</strong></p>
+<p>The second problem was smaller in size but more confusing in effect: the little flag showing &quot;French&quot; and the page actually being English could get out of sync. The clearest case was the very first visit to the site. Anyone opening a plain link with no language already in the address—which is most links, most of the time—always landed on the English version, no matter what they&#x27;d chosen on a previous visit. Pick French once, close the app, come back later through a bookmark or a fresh link, and you&#x27;d land back on English by default, with nothing about the page telling you why. It looked exactly like the flag &quot;not working,&quot; because from the outside, that&#x27;s exactly what it was doing.</p>
+<p>The fix makes that first landing page actually remember what was picked last time, the same way a language preference is supposed to work. Open a link with no language specified, and it now checks what was chosen before and sends you straight there—French if that&#x27;s what was last selected, English otherwise—rather than defaulting to English every single time regardless of history. Once you&#x27;re on a page with a language already in its address, nothing about that behavior changes; the flag you see always matches the page you&#x27;re on, and clicking the other flag switches both together, immediately, everywhere.</p>
+<p><strong>Why this one took longer to catch</strong></p>
+<p>Both of today&#x27;s fixes trace back to the same root cause: a piece of the app quietly remembering something written down once, rather than asking &quot;what language am I in?&quot; every time it needed to say something. A skill&#x27;s name, an activity&#x27;s label, a subject&#x27;s description—each of those had exactly one hardcoded version, and nothing along the way ever stopped to translate it before putting it on screen. The menu worked in French from day one because it was built to ask the translation question every time; the content underneath it was built earlier, before that habit was established everywhere else, and never got revisited—until a family actually using the app in French ran into it and said so.</p>
+<p>That&#x27;s also why it&#x27;s a good sign this got caught at all: it came from someone actually trying the French experience end-to-end, subject by subject, rather than spot-checking a menu and calling it done. The fix isn&#x27;t just today&#x27;s set of translations—it&#x27;s a small piece of plumbing that makes sure every future skill, activity, or subject added to the app has to go through the same translation step before it can render, so the next new thing added won&#x27;t quietly slip back into English-only by accident.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a></nav></footer></div>
+    <!-- Ads: no adsbygoogle.js here on purpose. ads/AdSlot.tsx injects the loader and the single
+         <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
+         MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
+         content), tagged data-tag-for-age-treatment="1". -->
+  </body>
+</html>

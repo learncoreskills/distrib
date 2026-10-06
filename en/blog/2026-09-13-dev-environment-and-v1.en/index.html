@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Analytics (Google Tag Manager) is not in the static head on purpose: ads/analytics.ts loads
+         it, after the consent-mode defaults are set, only on adult-facing routes (058, FR-019). -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-2503112416832365">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="module" crossorigin src="/assets/index-6V7rqaRk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B3csIvEJ.css">
+  
+    <title>Day 2: a real dev setup, and a first version kids can actually use</title>
+    <meta name="description" content="Day two started with a decision that had nothing to do with kids or math: getting a proper place to actually build the thing. By the end of the day, that…" />
+    <link rel="canonical" href="https://learncoreskills.com/en/blog/2026-09-13-dev-environment-and-v1.en" />
+
+    <meta property="og:title" content="Day 2: a real dev setup, and a first version kids can actually use" />
+    <meta property="og:description" content="Day two started with a decision that had nothing to do with kids or math: getting a proper place to actually build the thing. By the end of the day, that…" />
+    <meta property="og:url" content="https://learncoreskills.com/en/blog/2026-09-13-dev-environment-and-v1.en" />
+    <meta property="og:image" content="https://learncoreskills.com/social-default.png" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Day 2: a real dev setup, and a first version kids can actually use" />
+    <meta name="twitter:description" content="Day two started with a decision that had nothing to do with kids or math: getting a proper place to actually build the thing. By the end of the day, that…" />
+    <meta name="twitter:image" content="https://learncoreskills.com/social-default.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Day 2: a real dev setup, and a first version kids can actually use","inLanguage":"en","datePublished":"2026-09-13"}</script>
+  </head>
+  <body>
+    <div id="root"><div class="docs-theme"><main class="docs-main"><div class="card"><p class="docs-entry-meta">2026-09-13</p><div class="docs-markdown"><h1>Day 2: a real dev setup, and a first version kids can actually use</h1>
+<p>Day two started with a decision that had nothing to do with kids or math: getting a proper place
+to actually build the thing. By the end of the day, that unglamorous groundwork had turned into
+something real — a first version of the app a child could genuinely open and practice with.</p>
+<p>The morning went into the development setup itself: a dedicated machine to build on, an AI coding
+assistant to build with, and a proper code editor tying it together — deliberately kept separate
+from a personal computer, so the project has its own clean, reproducible environment from the
+start rather than being tangled up with anything else. Not exciting work, but the kind that pays
+for itself the moment something needs debugging six months from now.</p>
+<p>Once that was sorted, the rest of the day went into turning yesterday&#x27;s plans into a real, working
+first version. Everything built fits around one simple loop, repeated every time a child answers
+a question:</p>
+<pre><code>Question  -&gt;  Answer  -&gt;  Feedback  -&gt;  Progress updates  -&gt;  Next question
+</code></pre>
+<p>Simple to say, but every step of it needed real thought behind it:</p>
+<p><strong>A place to open, and room for the whole family.</strong> The app now has an actual shell — screens a
+parent or child can open, not just isolated pieces of logic. Profiles were built in from the very
+start: a parent can set up more than one child on the same device, completely free, and each
+child&#x27;s practice and progress stay fully separate from any siblings sharing the device. Setting up
+a profile asks for almost nothing personal — a nickname is enough, nothing more is required —
+which was a deliberate choice, not an oversight: the less personal data the app asks for, the less
+there is to ever worry about.</p>
+<p><strong>The first real exercise.</strong> A child can now work through a set of mental addition questions,
+matched to a level chosen for them, with feedback the moment they answer — right or wrong, no
+waiting. Get one wrong, and the correct answer is shown before moving on, rather than leaving a
+child stuck or guessing again. There&#x27;s deliberately no visible timer or countdown anywhere on
+screen; the goal is focus, not the feeling of a clock ticking down on a seven-year-old.</p>
+<p><strong>Progress that means something.</strong> Maybe the most important piece: a child&#x27;s progress on a skill
+isn&#x27;t just a raw count of correct answers. It&#x27;s designed to reflect a real, sustained pattern
+rather than one lucky run — the app waits for enough attempts before making any claim at all, and
+only calls a level &quot;learned&quot; once a child has been consistently getting it right, not just once.
+A single good session doesn&#x27;t inflate the number, and a single bad one doesn&#x27;t wreck it either.</p>
+<p><strong>Built so the next exercise doesn&#x27;t mean starting over.</strong> Alongside addition itself, today&#x27;s work
+also nailed down the <em>shape</em> every future exercise has to follow — how it asks a question,
+checks an answer, and reports what happened. That&#x27;s what makes it possible to add a second
+exercise later (subtraction, say, or multiplication) as its own self-contained piece, without
+having to touch or risk breaking anything already working for addition.</p>
+<p>Small pieces on their own, but put together they added up to something a child could actually
+open and use: pick a profile, answer real questions at a level that fits them, get honest
+feedback right away, and see progress that reflects how they&#x27;re actually doing — not just how
+lucky today happened to be.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a></nav></footer></div>
+    <!-- Ads: no adsbygoogle.js here on purpose. ads/AdSlot.tsx injects the loader and the single
+         <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
+         MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
+         content), tagged data-tag-for-age-treatment="1". -->
+  </body>
+</html>
