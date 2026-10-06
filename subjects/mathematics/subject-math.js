@@ -63394,5346 +63394,5554 @@ var sA = {
 	"syllabus-g5-uses-scale-on-plan-or-map": "syllabus-g5-uses-scale-on-plan-or-map",
 	"syllabus-g5-writes-expressions-with-a-letter": "syllabus-g5-writes-expressions-with-a-letter"
 }, zA = {
-	K: {
-		"K-NS-1": {
-			title: "Dire les nombres dans l'ordre jusqu'à 30",
-			description: "Dit les nombres dans l'ordre de 1 à 30 sans en sauter (« 1, 2, 3 … 20 … 30 »)."
-		},
-		"K-NS-2": {
-			title: "Compter à partir d'un nombre et à rebours depuis 20",
-			description: "Part de n'importe quel nombre pour compter en avant ou à rebours jusqu'à 0 (« je pars de 7 : 7, 8, 9… » ; « 5, 4, 3, 2, 1, 0 »).",
-			ideas: { "rocket-countdown": "Jeu de lancement : toucher les nombres à rebours pour faire décoller la fusée." }
-		},
-		"K-NS-3": {
-			title: "Compter de 10 en 10, de 2 en 2 et de 5 en 5",
-			description: "Récite « 10, 20, 30 … 100 » et se joint au comptage de 2 en 2 et de 5 en 5 sur une piste, sans exigence de justesse ; le comptage de 2 en 2 et de 5 en 5 est seulement présenté.",
-			ideas: {
-				"skip-count-hops": "Jeu de rythme : une grenouille saute de 2, 5 ou 10 en 10 le long d'une piste et l'enfant frappe des mains à chaque nombre d'atterrissage.",
-				"tens-staircase": "Monter un escalier où chaque marche dit la dizaine suivante."
-			}
-		},
-		"K-NS-4": {
-			title: "Un nombre par objet ; le dernier dit combien",
-			description: "Pointe chaque objet une seule fois en disant un nombre à la fois, et répond à « combien ? » avec le dernier nombre dit (« 1, 2, 3, donc 3 »)."
-		},
-		"K-NS-5": {
-			title: "Donner ou retirer exactement n objets",
-			description: "Compte exactement n objets dans un tas et les donne, ou en retire n (« donne 6 os au chien »).",
-			ideas: { "grab-a-handful": "Jeu de pelle : prendre exactement le nombre demandé et vérifier en comptant." }
-		},
-		"K-NS-6": {
-			title: "Le nombre reste le même quand les objets bougent",
-			description: "Compte un ensemble jusqu'à 20 en rangée, en tas ou en cercle et sait que le nombre reste le même (« étalés, toujours 8 »)."
-		},
-		"K-NS-7": {
-			title: "Lire et associer les chiffres de 0 à 20",
-			description: "Associe un chiffre à sa quantité et le retrouve parmi d'autres (« la carte 12 va avec 12 points »)."
-		},
-		"K-NS-8": {
-			title: "Écrire les chiffres de 0 à 20 correctement",
-			description: "Écrit chaque chiffre en partant du bon endroit et dans le bon sens du tracé, et repère le chiffre bien formé parmi des chiffres inversés.",
-			ideas: { "trace-the-numeral": "Jeu de traçage au doigt avec un tracé guidé et une vignette en récompense (suivi)." }
-		},
-		"K-NS-9": {
-			title: "Zéro veut dire aucun",
-			description: "Dit 0 pour un ensemble vide et sait que c'est un nombre (« le panier est vide, donc 0 »)."
-		},
-		"K-NS-10": {
-			title: "Comparer deux ensembles : plus, moins, autant",
-			description: "Dit lequel de deux ensembles en contient plus, moins ou autant, en appariant ou en comptant (« chaque chat a un bol, il reste un bol, donc plus de bols »)."
-		},
-		"K-NS-11": {
-			title: "Comparer deux nombres jusqu'à 10",
-			description: "Dit lequel de deux chiffres jusqu'à 10 est plus grand, plus petit ou égal, sans compter d'objets (« 8 est plus grand que 5 »).",
-			ideas: { "number-showdown": "Bataille de cartes : retourner deux cartes de chiffres ; la plus grande l'emporte." }
-		},
-		"K-NS-12": {
-			title: "Ordonner de 0 à 10 et trouver le nombre manquant",
-			description: "Place les cartes de chiffres de 0 à 10 en ordre et nomme la carte manquante sur une piste numérique (« 0, 1, 2, _, 4 »).",
-			ideas: { "line-up-the-cards": "Glisser les cartes de chiffres dans une piste, dans l'ordre." }
-		},
-		"K-NS-13": {
-			title: "Nombre suivant, un de plus et un de moins",
-			description: "Dit le nombre suivant et donne un de plus ou un de moins que n'importe quel nombre jusqu'à 20, sans recompter depuis 1 (« un de plus que 9, c'est 10 »).",
-			ideas: { "pop-up-one-more": "Un nombre apparaît et l'enfant touche la carte « un de plus » ou « un de moins »." }
-		},
-		"K-NS-14": {
-			title: "Les rangs de premier à cinquième",
-			description: "Utilise premier à cinquième et dernier pour les positions dans une file et distingue un rang d'une quantité (« le troisième chien » et « 3 chiens »)."
-		},
-		"K-FL-1": {
-			title: "Voir d'un coup d'œil jusqu'à 5, puis 6 à 10 en parties",
-			description: "Nomme 1 à 3, puis les constellations de points, de dés et de doigts jusqu'à 5 d'un coup d'œil sans compter (« c'est 4 ») ; voit 6 à 10 en parties sur un cadre à dix cases (« 7, c'est 5 et 2 »).",
-			ideas: {
-				"dot-pattern-snap": "Jeu de cartes : une constellation s'affiche une seconde et l'enfant touche le chiffre correspondant.",
-				"ten-frame-flash": "Afficher un cadre à dix cases une seconde et dire les parties de 6 à 10 (« 7, c'est 5 et 2 »)."
-			}
-		},
-		"K-FL-2": {
-			title: "Estimer « environ combien »",
-			description: "Devine « environ 10 » avant de compter un ensemble, puis vérifie en comptant.",
-			ideas: { "jar-guess": "Deviner combien de haricots sont dans le pot, puis les compter ensemble." }
-		},
-		"K-FL-3": {
-			title: "Les doubles jusqu'à 5 + 5",
-			description: "Se rappelle les doubles jusqu'à 5 + 5 (« le double de 4, c'est 8 »).",
-			ideas: { "mirror-doubles": "Jeu du papillon : les points d'une aile sont reflétés sur l'autre et l'enfant dit le double." }
-		},
-		"K-FL-4": {
-			title: "Moitiés des nombres pairs jusqu'à 20",
-			description: "Partage un nombre pair en deux ensembles égaux et dit la moitié (« la moitié de 8, c'est 4 »).",
-			ideas: {
-				"mirror-halves": "Jeu du papillon : l'enfant couvre une aile et nomme combien de points il y a de chaque côté.",
-				"two-plates-halves": "Glisser des biscuits sur deux assiettes jusqu'à ce qu'elles soient égales et nommer la moitié."
-			}
-		},
-		"K-FL-5": {
-			title: "Calculs rapides dans la limite de 10",
-			description: "Répond vite à de simples additions et soustractions dans la limite de 10, sans pénalité pour les réponses lentes (« 4 et 3 — 7 »).",
-			ideas: {
-				"quick-twenty": "Calculs doux contre la minuterie jusqu'à 20, sans pénalité pour les réponses lentes.",
-				"fact-flash-cards": "Jeu de cartes à retourner : un calcul s'affiche et l'enfant dit la réponse."
-			}
-		},
-		"K-PV-1": {
-			title: "Montrer les nombres jusqu'à 10 sur un cadre à dix cases",
-			description: "Place des jetons sur un cadre à dix cases et dit combien il en faut de plus pour faire 10 (« 6 sur le cadre, 4 de plus pour le remplir »).",
-			ideas: { "fill-the-frame": "Remplir le cadre jusqu'au chiffre affiché et dire combien de cases restent." }
-		},
-		"K-PV-2": {
-			title: "Construire et dire 11 à 19 en dizaine et unités",
-			description: "Construit 11 à 19 avec une dizaine et quelques unités et le dit (« 14 = 10 + 4 »).",
-			ideas: { "teen-towers": "Jeu de construction : empiler une barre de dix, ajouter des cubes seuls ; la tour annonce son nombre." }
-		},
-		"K-PV-3": {
-			title: "Dix unités font une dizaine (regroupement)",
-			description: "Regroupe dix cubes seuls en une dizaine et voit la dizaine comme une unité (« 10 cubes = 1 barre »).",
-			ideas: {
-				"bundle-the-sticks": "Ranger des cubes seuls dans une barre de dix et compter les barres.",
-				"ten-trade-shop": "Échanger dix cubes seuls contre une barre au comptoir."
-			}
-		},
-		"K-OP-1": {
-			title: "Histoires de réunion : jouer et mettre ensemble",
-			description: "Joue des histoires d'ajout et de réunion jusqu'à 10 avec des objets (« 3 canards, 2 de plus arrivent — 5 en tout »)."
-		},
-		"K-OP-2": {
-			title: "Histoires de retrait : enlever et dire combien il reste",
-			description: "Joue des histoires de retrait jusqu'à 10 et dit ce qui reste (« 5 biscuits, on en mange 2, il en reste 3 »).",
-			ideas: { "snack-nibbles": "Barrer les collations mangées dans une image et dire combien il en reste." }
-		},
-		"K-OP-3": {
-			title: "Choisir plus ou moins pour une histoire",
-			description: "Dit si une histoire ou une image demande de réunir ou d'enlever (« ils s'envolent, donc moins »)."
-		},
-		"K-OP-4": {
-			title: "Résoudre une histoire dans la limite de 10",
-			description: "Résout une histoire de réunion ou de retrait avec des objets, des doigts ou un dessin (« je dessine 4 fleurs, 3 de plus, je compte : 7 »).",
-			ideas: { "draw-the-story": "Dessiner des points ou des traits pour chaque partie de l'histoire et compter." }
-		},
-		"K-OP-5": {
-			title: "Écrire une phrase mathématique",
-			description: "Écrit ou choisit la phrase mathématique qui correspond à une histoire (« 3 + 2 = 5 »).",
-			ideas: { "sentence-builder": "Glisser des tuiles de nombres et de signes pour correspondre à une histoire en image." }
-		},
-		"K-OP-6": {
-			title: "Décomposer un nombre en deux parties",
-			description: "Décompose un nombre jusqu'à 10 de plusieurs façons (« 5 = 4 + 1 = 3 + 2 »).",
-			ideas: { "split-the-beads": "Faire glisser des perles sur un fil pour montrer toutes les décompositions d'un nombre." }
-		},
-		"K-OP-7": {
-			title: "Trouver le complément à 10",
-			description: "Nomme le nombre qui va avec un autre pour faire 10 (« 7 et 3 font 10 »).",
-			ideas: { "ten-pairs-match": "Jeu de mémoire : retourner des cartes pour trouver les paires qui font 10." }
-		},
-		"K-OP-8": {
-			title: "Calculs dans la limite de 5",
-			description: "Se rappelle les additions et soustractions dont le total va jusqu'à 5 (« 2 + 3 = 5 », « 4 − 1 = 3 »).",
-			ideas: { "five-fact-fishing": "Pêcher des poissons dont les sommes vont jusqu'à 5 et dire chaque calcul." }
-		},
-		"K-OP-9": {
-			title: "Premier regard sur le passage de la dizaine (11 à 20)",
-			description: "Remplit un cadre à dix cases puis ajoute le reste au-delà de 10 (« 8 + 5 : 8 et 2 font 10, 3 de plus, 13 »).",
-			ideas: {
-				"bridge-to-twenty": "Jeu de sauts : remplir un cadre à dix cases, puis sauter au-delà de 10 pour atterrir sur la somme.",
-				"teen-train": "Ajouter des wagons au-delà de dix et lire le nombre."
-			}
-		},
-		"K-OP-10": {
-			title: "Partager équitablement entre 2 ou 3",
-			description: "Partage un ensemble équitablement et remarque les parts inégales (« 6 biscuits pour 2 amis : 3 chacun »). Pas de symbole ÷.",
-			ideas: { "fair-or-not-plates": "Observer des assiettes partagées et dire qui en a plus ou si le partage est équitable." }
-		},
-		"K-OP-11": {
-			title: "Former des groupes égaux",
-			description: "Forme des groupes ayant le même nombre d'objets chacun (« 3 sacs de 2 »). Pas de symbole ×.",
-			ideas: {
-				"equal-groups-bags": "Histoire à construire : remplir des sacs de fête avec le même nombre d'objets et dire combien de sacs et combien dans chacun.",
-				"groups-of-snap": "Repérer la rangée de groupes où tous ont le même nombre."
-			}
-		},
-		"K-FR-1": {
-			title: "Parts égales et parts inégales",
-			description: "Distingue un partage équitable d'un partage inégal (« ces deux parts n'ont pas la même taille »).",
-			ideas: { "fair-cut-or-not": "Observer des formes coupées et choisir celle qui est partagée équitablement." }
-		},
-		"K-FR-2": {
-			title: "Moitiés de formes",
-			description: "Plie ou coupe une forme en 2 parts égales et nomme chacune « une moitié ».",
-			ideas: {
-				"fold-the-half": "Plier et couper des formes en papier en deux parts égales.",
-				"half-or-not": "Choisir les formes qui sont partagées en moitiés."
-			}
-		},
-		"K-FR-3": {
-			title: "Quarts de formes",
-			description: "Plie ou coupe une forme en 4 parts égales et nomme « un quart ».",
-			ideas: {
-				"fold-halves-quarters": "Plier et couper des formes ; choisir le partage équitable et rejeter le partage inégal.",
-				"pizza-quarters": "Couper une pizza pour quatre amis."
-			}
-		},
-		"K-FR-4": {
-			title: "Moitié d'un ensemble",
-			description: "Partage un petit ensemble en deux parties égales et dit « la moitié de 8, c'est 4 ».",
-			ideas: {
-				"half-the-set": "Histoire de collation : partager un ensemble de gâteries en deux et vérifier que les parties sont égales.",
-				"half-of-my-toys": "Trier des jouets sur deux tapis pour voir la moitié."
-			}
-		},
-		"K-NT-1": {
-			title: "Former des paires sans reste",
-			description: "Apparie des objets jusqu'à 10 et dit s'il en reste un (« 6 font 3 paires, 7 en laissent un de côté »).",
-			ideas: { "pair-up-partners": "Jeu de danse : former des paires avec tout le monde et repérer qui reste seul." }
-		},
-		"K-NT-2": {
-			title: "Pair et impair à l'intuition",
-			description: "Trie les nombres jusqu'à 10 en « font des paires » et « il en reste un » (« 8 fait des paires, 9 non »).",
-			ideas: {
-				"left-over-sock": "Trier des chaussettes en paires et voir quels nombres laissent une chaussette seule.",
-				"even-odd-sort": "Glisser des tuiles de nombres dans les maisons « fait des paires » et « il en reste un »."
-			}
-		},
-		"K-ALG-1": {
-			title: "Continuer une suite AB",
-			description: "Continue une suite AB (« rouge-bleu, rouge-bleu, … puis rouge »).",
-			ideas: { "ab-bead-string": "Enfiler des perles pour prolonger une suite." }
-		},
-		"K-ALG-2": {
-			title: "Nommer le motif et corriger une erreur",
-			description: "Nomme le motif qui se répète et trouve ou comble ce qui est faux ou manquant (« le motif est tape-frappe, celui-ci l'a brisé »).",
-			ideas: { "fix-the-pattern": "Trouver et échanger la tuile fautive dans une bande de suite." }
-		},
-		"K-ALG-3": {
-			title: "Suites ABB et ABC",
-			description: "Continue des suites ABB et ABC (« tape-frappe-frappe, tape-frappe-frappe »).",
-			ideas: {
-				"abc-parade": "Faire défiler des costumes dans un ordre ABC qui se répète.",
-				"abb-clap-stomp": "Reproduire un rythme de tape et de frappe."
-			}
-		},
-		"K-ALG-4": {
-			title: "Créer sa propre suite",
-			description: "Construit une suite avec un motif de son choix et l'explique (« ma suite fait étoile-cœur-cœur »).",
-			ideas: {
-				"pattern-maker": "Choisir des tuiles et prolonger sa propre bande.",
-				"pattern-gallery": "Créer une suite qu'un ami devra continuer."
-			}
-		},
-		"K-ALG-5": {
-			title: "Traduire une suite sous une autre forme",
-			description: "Transforme une suite en une autre forme (« tape-frappe = rouge-bleu »).",
-			ideas: { "sound-to-colour": "Écouter un rythme et colorier la suite correspondante." }
-		},
-		"K-MEA-1": {
-			title: "Mots de grandeur et choix de ce qu'on mesure",
-			description: "Utilise grand/petit, long/court, lourd/léger, plein/vide et choisit la bonne grandeur à mesurer (« je mesure la longueur d'une corde »).",
-			ideas: { "size-word-sort": "Trier des objets selon un mot de grandeur." }
-		},
-		"K-MEA-2": {
-			title: "Comparer deux longueurs",
-			description: "Aligne les bouts et dit lequel est plus long ou plus court (« ce crayon est plus long »).",
-			ideas: { "line-up-the-ends": "Glisser deux rubans vers un départ commun et les comparer." }
-		},
-		"K-MEA-3": {
-			title: "Comparer deux masses",
-			description: "Utilise une balance ou les mains pour dire lequel est plus lourd ou plus léger (« la pomme est plus lourde »).",
-			ideas: { "balance-play": "Poser des objets sur une balance et la regarder pencher." }
-		},
-		"K-MEA-4": {
-			title: "Comparer deux capacités",
-			description: "Verse et dit lequel contient plus ou moins, plein ou vide (« la cruche contient plus que la tasse »).",
-			ideas: { "pour-and-see": "Verser de l'eau d'un contenant à l'autre pour voir lequel remplit lequel." }
-		},
-		"K-MEA-5": {
-			title: "Choisir un outil",
-			description: "Choisit l'outil qui mesure la grandeur voulue (« une règle pour la longueur, une balance pour la masse »).",
-			ideas: { "tool-match": "Associer un outil à la question posée." }
-		},
-		"K-MEA-6": {
-			title: "Ranger 3 à 5 objets",
-			description: "Range 3 à 5 objets par longueur, masse ou capacité et trouve celui du milieu.",
-			ideas: { "size-train": "Aligner des wagons du plus petit au plus grand." }
-		},
-		"K-TIM-1": {
-			title: "Ordonner des événements : d'abord, ensuite, enfin",
-			description: "Ordonne 3 à 5 images d'une routine (« se brosser les dents, puis se laver, puis dodo »).",
-			ideas: { "story-strip-order": "Glisser des cartes images dans une bande." }
-		},
-		"K-TIM-2": {
-			title: "Avant, après, maintenant, plus tard",
-			description: "Utilise avant, après, maintenant et plus tard pour des événements (« le dîner est avant la sieste »).",
-			ideas: {
-				"before-now-later": "Jeu d'histoire à glisser : classer des scènes en avant / maintenant / plus tard (suivi).",
-				"before-after-pairs": "Choisir laquelle de deux scènes arrive en premier."
-			}
-		},
-		"K-TIM-3": {
-			title: "Jour, nuit, matin et soir",
-			description: "Dit ce qui se passe le jour ou la nuit, et le matin ou le soir (« les étoiles sortent la nuit », « on déjeune le matin »).",
-			ideas: { "sun-moon-sort": "Classer des images en jour et nuit, puis en matin et soir." }
-		},
-		"K-TIM-4": {
-			title: "Hier, aujourd'hui, demain",
-			description: "Nomme des événements comme hier, aujourd'hui ou demain (« nous sommes allés au parc hier »).",
-			ideas: { "calendar-corner": "Placer des images sur un tableau hier-aujourd'hui-demain." }
-		},
-		"K-TIM-5": {
-			title: "Ce qui dure le plus longtemps",
-			description: "Compare deux activités (« se brosser les dents est plus court qu'un bain »).",
-			ideas: { "race-the-timer": "Chronométrer deux actions avec un sablier et les comparer." }
-		},
-		"K-TIM-6": {
-			title: "Les jours de la semaine dans l'ordre",
-			description: "Dit les sept jours dans l'ordre (« lundi, mardi, mercredi… »).",
-			ideas: { "week-song": "Chanter et frapper les jours dans l'ordre." }
-		},
-		"K-TIM-7": {
-			title: "Le jour d'avant et le jour d'après",
-			description: "Nomme le jour d'après ou d'avant un jour donné (« après mardi, c'est mercredi »)."
-		},
-		"K-MON-1": {
-			title: "L'argent sert à acheter",
-			description: "Sait que les pièces et les billets servent à acheter (« je donne de l'argent et j'ai le jouet »). Selon la monnaie locale, sans exigence.",
-			ideas: { "what-can-i-buy": "Associer des articles au magasin où on les trouve." }
-		},
-		"K-MON-2": {
-			title: "Reconnaître les pièces locales et payer avec l'une d'elles",
-			description: "Associe chaque pièce à son image et remet la bonne pièce pour un jouet ; associe aussi les billets locaux à leur image. Selon la monnaie locale, sans exigence.",
-			ideas: {
-				"coin-match-shop": "Magasin pour jouer : associer chaque pièce ou billet à son image et remettre la bonne pièce pour un jouet.",
-				"coin-memory": "Cartes de mémoire avec les faces et les valeurs des pièces."
-			}
-		},
-		"K-GEO-1": {
-			title: "Nommer cercle, triangle, carré",
-			description: "Nomme les trois figures planes de base, de toute taille et dans toute orientation (« ceci est un triangle »).",
-			ideas: { "shape-bingo": "Couvrir la figure nommée par l'animateur." }
-		},
-		"K-GEO-2": {
-			title: "Rectangle et hexagone dans toute orientation",
-			description: "Reconnaît les rectangles et les hexagones, penchés ou longs et minces (« un rectangle penché reste un rectangle »).",
-			ideas: { "tilted-shapes": "Faire tourner une figure et dire si c'est toujours la même." }
-		},
-		"K-GEO-3": {
-			title: "Associer des figures identiques",
-			description: "Associe des figures semblables de tailles et de couleurs différentes (« ce sont deux triangles »).",
-			ideas: { "shape-memory": "Retourner des cartes pour trouver des figures identiques." }
-		},
-		"K-GEO-4": {
-			title: "Compter les côtés",
-			description: "Compte les côtés d'une figure plane (« un triangle a 3 côtés »).",
-			ideas: { "side-tapper": "Toucher chaque côté une fois en comptant." }
-		},
-		"K-GEO-5": {
-			title: "Coins et bords courbes",
-			description: "Distingue les coins des côtés et les bords droits des bords courbes (« un cercle n'a pas de coins »).",
-			ideas: {
-				"corners-and-curves": "Trier des figures selon les coins et les courbes dans deux bacs (suivi).",
-				"corner-pop": "Éclater un ballon à chaque coin."
-			}
-		},
-		"K-GEO-6": {
-			title: "Nommer les solides",
-			description: "Nomme le cube, la sphère, le cylindre et le cône (« un ballon est une sphère »).",
-			ideas: { "solid-bingo": "Couvrir le solide nommé par l'animateur." }
-		},
-		"K-GEO-7": {
-			title: "Figure plane ou solide",
-			description: "Dit si une forme est plane ou solide (« une pièce est plate, un ballon est un solide »).",
-			ideas: { "shadow-guess": "Voir une ombre et dire si la forme est plane ou solide." }
-		},
-		"K-GEO-8": {
-			title: "Rouler ou empiler",
-			description: "Trouve quels solides roulent et lesquels s'empilent (« un cylindre peut rouler et s'empiler »).",
-			ideas: { "ramp-race": "Envoyer des solides sur une pente et voir lesquels roulent." }
-		},
-		"K-GEO-9": {
-			title: "Construire de grandes figures avec de plus petites",
-			description: "Assemble des figures pour en former une nouvelle (« deux triangles font un carré ») ; place 3 à 5 pièces dans un casse-tête à encastrer.",
-			ideas: { "tangram-two": "Placer deux pièces, puis 3 à 5, pour couvrir un contour." }
-		},
-		"K-GEO-10": {
-			title: "Repérer les formes autour de nous",
-			description: "Trouve des formes dans le monde (« une roue est un cercle, une boîte est un prisme rectangulaire »)."
-		},
-		"K-POS-1": {
-			title: "Dans, sur, sous, à côté de",
-			description: "Place et trouve des objets décrits avec dans, sur, sous, à côté de (« la balle est sous la table »).",
-			ideas: { "put-it-there": "Suivre une consigne orale pour placer un jouet dans, sur, sous ou à côté de quelque chose." }
-		},
-		"K-POS-2": {
-			title: "Au-dessus, en dessous, près de, entre, derrière, devant",
-			description: "Trouve des objets à partir d'indices comme « entre la chaise et la boîte » ou « près de la lampe ».",
-			ideas: {
-				"hide-the-teddy": "Histoire de cache-cache : suivre des indices comme « entre la chaise et la boîte » pour trouver l'ourson.",
-				"behind-or-in-front": "Choisir l'image qui correspond à l'indice."
-			}
-		},
-		"K-POS-3": {
-			title: "Copier une disposition",
-			description: "Reconstruit une disposition de blocs ou de tuiles à partir d'un modèle (« copie ma tour »).",
-			ideas: { "copy-my-layout": "Copier une disposition de tuiles à partir d'une image." }
-		},
-		"K-POS-4": {
-			title: "Mots de déplacement",
-			description: "Se déplace selon la consigne : haut/bas, en avant/en arrière, vers/loin de (« marche en avant, puis éloigne-toi »).",
-			ideas: { "move-like-me": "Jeu du miroir avec des mots de déplacement." }
-		},
-		"K-POS-5": {
-			title: "Suivre un court trajet",
-			description: "Suit un trajet de quelques étapes (« avancer de 3, tourner »).",
-			ideas: { "robot-grid-moves": "Programmer un robot avec des cartes avancer/tourner pour atteindre l'étoile (suivi)." }
-		},
-		"K-POS-6": {
-			title: "Donner un court trajet",
-			description: "Dit à un ami les étapes pour atteindre un but (« avance de 2, tourne, avance de 1 »).",
-			ideas: {
-				"tell-the-robot": "Choisir des cartes pour guider un robot jusqu'à l'étoile.",
-				"treasure-map-route": "Dire un court trajet jusqu'au trésor."
-			}
-		},
-		"K-DAT-1": {
-			title: "Trier selon un critère",
-			description: "Trie des objets selon un critère (« tous les rouges »).",
-			ideas: { "preschool-sort-into-bins": "Jeu de tri à glisser avec une règle mystère à deviner (suivi)." }
-		},
-		"K-DAT-2": {
-			title: "Nommer la règle de tri",
-			description: "Dit la règle d'un groupe (« ils sont tous ronds »).",
-			ideas: { "guess-my-rule": "Un ami trie, l'enfant nomme la règle." }
-		},
-		"K-DAT-3": {
-			title: "Compter et ordonner les groupes",
-			description: "Compte chaque groupe trié et les range en ordre (« 5 rouges, 3 bleus »), et apparie des objets semblables ou qui vont ensemble (« tasse et soucoupe »).",
-			ideas: { "match-pairs": "Apparier deux objets semblables ou qui vont ensemble (tasse–soucoupe), puis compter les paires." }
-		},
-		"K-DAT-4": {
-			title: "Construire et lire un graphique en images",
-			description: "Construit un graphique avec de vrais objets ou des images et dit lequel est plus nombreux (« plus d'enfants aiment les pommes »).",
-			ideas: { "real-object-graph": "Empiler de vrais cubes en colonnes et les comparer." }
-		},
-		"K-PSR-1": {
-			title: "Les mots de maths pendant le jeu",
-			description: "Utilise des mots comme plus, moins, autant et égal pendant le jeu (« j'en ai plus »).",
-			ideas: { "word-of-the-day": "Un mot de maths illustré d'une image, à utiliser pendant le jeu." }
-		},
-		"K-PSR-2": {
-			title: "Dire comment on le sait",
-			description: "Explique une réponse (« j'ai compté »).",
-			ideas: { "show-me-how": "Enregistrer un court message vocal pour expliquer la réponse." }
-		},
-		"K-PSR-3": {
-			title: "Y en a-t-il assez pour tous ?",
-			description: "Apparie des objets à des enfants et dit s'il y en a assez (« 5 tasses, 6 enfants — il en manque une »).",
-			ideas: { "party-table": "Mettre la table et vérifier que chaque invité a sa place." }
-		},
-		"K-PSR-4": {
-			title: "Essayer autrement",
-			description: "Essaie une autre façon quand une construction ou un casse-tête échoue (« c'est tombé, essayons une base plus large »).",
-			ideas: {
-				"build-it-again": "Défi de tour à construire : le premier essai échoue et un indice aide l'enfant à ajuster.",
-				"puzzle-try-again": "Un casse-tête qui se résout de plusieurs façons."
-			}
+	"K-NS-1": {
+		title: "Dire les nombres dans l'ordre jusqu'à 30",
+		description: "Dit les nombres dans l'ordre de 1 à 30 sans en sauter (« 1, 2, 3 … 20 … 30 »)."
+	},
+	"K-NS-2": {
+		title: "Compter à partir d'un nombre et à rebours depuis 20",
+		description: "Part de n'importe quel nombre pour compter en avant ou à rebours jusqu'à 0 (« je pars de 7 : 7, 8, 9… » ; « 5, 4, 3, 2, 1, 0 »).",
+		ideas: { "rocket-countdown": "Jeu de lancement : toucher les nombres à rebours pour faire décoller la fusée." }
+	},
+	"K-NS-3": {
+		title: "Compter de 10 en 10, de 2 en 2 et de 5 en 5",
+		description: "Récite « 10, 20, 30 … 100 » et se joint au comptage de 2 en 2 et de 5 en 5 sur une piste, sans exigence de justesse ; le comptage de 2 en 2 et de 5 en 5 est seulement présenté.",
+		ideas: {
+			"skip-count-hops": "Jeu de rythme : une grenouille saute de 2, 5 ou 10 en 10 le long d'une piste et l'enfant frappe des mains à chaque nombre d'atterrissage.",
+			"tens-staircase": "Monter un escalier où chaque marche dit la dizaine suivante."
 		}
 	},
-	G1: {
-		"G1-NS-1": {
-			title: "Compter en avançant jusqu'à 120 depuis n'importe quel nombre",
-			description: "Compte en avançant jusqu'à 120 en partant de n'importe quel nombre, pas seulement de 0 ou de 1. Exemple : part de 67 et dit « 67, 68, 69, 70… ».",
-			ideas: {
-				"count-on-hop-chart": "jeu : faire sauter un personnage sur un tableau de 120 depuis un nombre de départ au choix",
-				"missing-number-chart-patch": "puzzle : remplir les cases cachées d'un tableau de 120"
-			}
-		},
-		"G1-NS-2": {
-			title: "Compter à rebours jusqu'à 120",
-			description: "Compte à rebours dans les nombres jusqu'à 120 depuis n'importe quel nombre, y compris en passant une dizaine. Exemple : depuis 83, dit « 82, 81, 80, 79… ».",
-			ideas: {
-				"count-back-rocket": "jeu : un compte à rebours avant le décollage, depuis n'importe quel nombre",
-				"backwards-stairs": "construction : numéroter les marches d'un escalier en descendant"
-			}
-		},
-		"G1-NS-3": {
-			title: "Compter de 2 en 2 et de 10 en 10",
-			description: "Compte de 2 en 2 et de 10 en 10 depuis 0 ou depuis un nombre quelconque, en avant et en arrière. Exemple : 30, 40, 50 et 14, 16, 18.",
-			ideas: {
-				"skip-count-frog-hops": "jeu : une grenouille saute de 2 en 2 ou de 10 en 10 et l'enfant dit où elle atterrit",
-				"ten-jump-hundred-square": "puzzle : colorier chaque saut sur un tableau de 100 et voir apparaître la colonne"
-			}
-		},
-		"G1-NS-4": {
-			title: "Compter de 5 en 5 (et de 3 en 3, en découverte)",
-			description: "Compte de 5 en 5 jusqu'à 100 et repère la régularité du chiffre des unités ; explore le comptage de 3 en 3. Exemple : « cinq, dix, quinze… » sur le tableau de 100.",
-			ideas: {
-				"five-hand-count": "manipulation : compter une rangée de mains de cinq en cinq",
-				"three-step-tracks": "jeu : (exploration) sauter de 3 en 3 sur une piste et repérer où l'on tombe"
-			}
-		},
-		"G1-NS-5": {
-			title: "Lire et écrire les nombres jusqu'à 100 en chiffres",
-			description: "Lit et écrit tout nombre jusqu'à 100 en chiffres, avec les chiffres dans le bon sens. Exemple : écrit « 36 » et non « 63 ».",
-			ideas: { "numeral-match-dash": "jeu : associer un nombre entendu à son écriture en chiffres" }
-		},
-		"G1-NS-6": {
-			title: "Les nombres en lettres de zéro à vingt",
-			description: "Lit et écrit les nombres en lettres de zéro à vingt. Exemple : associe « quatorze » à 14.",
-			ideas: { "word-number-snap": "jeu : associer une carte-mot à son nombre en chiffres" }
-		},
-		"G1-NS-7": {
-			title: "Les nombres ordinaux, premier à dixième",
-			description: "Utilise premier à dixième, puis jusqu'à vingtième, pour dire une position dans une file ou une rangée. Exemple : « le chat est quatrième dans la file », « le douzième coureur ».",
-			ideas: {
-				"count-and-ordinal-race": "jeu : nommer du premier au vingtième à mesure que les coureurs arrivent",
-				"ordinal-queue-puzzle": "puzzle : placer des personnages grâce à des indices comme « après le troisième »"
-			}
-		},
-		"G1-NS-8": {
-			title: "Un de plus, un de moins, dix de plus, dix de moins",
-			description: "Trouve un ou dix de plus ou de moins qu'un nombre jusqu'à 100. Exemple : dix de plus que 47, c'est 57.",
-			ideas: { "ten-more-chart-slide": "jeu : faire glisser un jeton vers le haut et vers le bas du tableau de 100" }
-		},
-		"G1-NS-9": {
-			title: "Comparer deux nombres avec <, > et =",
-			description: "Compare deux nombres à 2 chiffres et note le résultat avec un symbole. Exemple : 47 > 39.",
-			ideas: { "crocodile-mouth-compare": "jeu : le crocodile mange le plus grand nombre" }
-		},
-		"G1-NS-10": {
-			title: "Ranger et placer des nombres sur une droite ou un tableau",
-			description: "Range des nombres jusqu'à 100 et place un nombre entre ses voisins sur une droite numérique. Exemple : place 47 entre 40 et 50.",
-			ideas: { "number-line-lander": "jeu : poser une fusée au bon endroit d'une droite vide" }
-		},
-		"G1-NS-11": {
-			title: "Estimer une collection jusqu'à 50 et vérifier",
-			description: "Estime une collection jusqu'à 50 et vérifie en groupant par dizaines. Exemple : devine 30 haricots, en trouve 37.",
-			ideas: { "guess-jar-check": "estimation et vérification : deviner le contenu d'un bocal, puis faire des paquets de dix" }
-		},
-		"G1-PV-1": {
-			title: "Dix unités font une dizaine",
-			description: "Regroupe dix unités en une dizaine et sait que c'est la même quantité. Exemple : 10 bâtonnets seuls deviennent 1 fagot.",
-			ideas: {
-				"bundle-the-sticks": "construction en manipulant : glisser des bâtonnets pour faire des fagots de dix",
-				"ten-frame-trade-up": "jeu : remplir un cadre à dix cases et l'échanger contre une barre de dix"
-			}
-		},
-		"G1-PV-2": {
-			title: "Les dizaines entières, de 10 à 90",
-			description: "Sait que 10, 20 … 90 sont 1 à 9 dizaines avec 0 unité. Exemple : 60, c'est 6 dizaines.",
-			ideas: { "tens-hundred-square-jump": "puzzle : trouver toutes les dizaines entières sur un tableau de 100" }
-		},
-		"G1-PV-3": {
-			title: "Construire un nombre à 2 chiffres avec dizaines et unités",
-			description: "Construit n'importe quel nombre à 2 chiffres avec des blocs ou des fagots. Exemple : construit 43 avec 4 dizaines et 3 unités.",
-			ideas: { "build-it-with-blocks": "construction en manipulant : fabriquer le nombre annoncé avec des barres et des cubes" }
-		},
-		"G1-PV-4": {
-			title: "Nommer un nombre à partir de ses blocs",
-			description: "Lit les dizaines et les unités sur une image et dit le nombre. Exemple : 3 barres et 8 cubes, c'est 38.",
-			ideas: {
-				"read-the-blocks": "jeu : dire le nombre que montrent les blocs",
-				"place-value-mat-flip": "puzzle : retourner des cartes de dizaines et d'unités pour révéler le nombre"
-			}
-		},
-		"G1-PV-5": {
-			title: "Décomposer de plusieurs façons",
-			description: "Décompose un nombre à 2 chiffres en dizaines et unités de façon inhabituelle. Exemple : 43, c'est 3 dizaines et 13 unités.",
-			ideas: { "regroup-shuffle": "puzzle : changer une dizaine en unités sans changer le nombre" }
-		},
-		"G1-PV-6": {
-			title: "La valeur de chaque chiffre",
-			description: "Dit ce que vaut chaque chiffre et que l'ordre des chiffres compte. Exemple : dans 47, le 4 vaut 40 ; 47 et 74 sont différents.",
-			ideas: {
-				"digit-value-detective": "chasse à l'erreur : une marionnette dit ce que vaut un chiffre, l'enfant vérifie",
-				"swap-the-digits": "jeu : échanger les chiffres et dire quel nombre est le plus grand"
-			}
-		},
-		"G1-OP-1": {
-			title: "Les compléments à 10 par cœur",
-			description: "Connaît tout de suite chaque paire qui fait 10. Exemple : 3 et ? font 10.",
-			ideas: { "bond-pairs-memory": "jeu : un memory de paires qui font dix" }
-		},
-		"G1-OP-2": {
-			title: "Échanger les termes d'une addition",
-			description: "Sait que 3 + 8 = 8 + 3 et s'en sert pour partir du plus grand nombre. Exemple : 2 + 9 devient 9 + 2.",
-			ideas: { "swap-and-check-towers": "construction : montrer que deux tours échangées ont la même hauteur" }
-		},
-		"G1-OP-3": {
-			title: "Additionner trois nombres avec des paires amies",
-			description: "Additionne trois nombres à 1 chiffre en repérant une paire qui fait 10. Exemple : 4 + 8 + 6 = 18 en associant 4 et 6.",
-			ideas: {
-				"friendly-pairs-trio": "puzzle : entourer la paire qui fait dix dans un trio",
-				"three-dice-ten-hunt": "jeu : lancer trois dés et les additionner avec la paire amie"
-			}
-		},
-		"G1-OP-4": {
-			title: "Les trois sens de la soustraction",
-			description: "Distingue enlever, écart et partie manquante. Exemple : « combien de rouges en plus que de bleus » est un écart.",
-			ideas: {
-				"three-kinds-of-minus": "trier des cartes-histoires selon les trois sens, puis les mimer",
-				"difference-towers": "construction : aligner deux tours et lire l'écart",
-				"missing-part-bag": "manipulation : un sac cache des jetons, trouver combien"
-			}
-		},
-		"G1-OP-5": {
-			title: "Additions et soustractions liées",
-			description: "Écrit la famille de calculs d'un trio de nombres. Exemple : 3 + 4 = 7 donne 7 − 4 = 3.",
-			ideas: { "fact-family-houses": "puzzle : compléter les quatre calculs d'une maison des nombres" }
-		},
-		"G1-OP-6": {
-			title: "Ajouter des unités ou des dizaines à un nombre à 2 chiffres",
-			description: "Ajoute des unités ou des dizaines entières avec la valeur de position. Exemple : 34 + 5 = 39 et 34 + 20 = 54.",
-			ideas: { "tens-ones-blocks-add": "construction en manipulant : ajouter des barres ou des cubes à un nombre en blocs" }
-		},
-		"G1-OP-7": {
-			title: "Soustraire des dizaines entières",
-			description: "Soustrait une dizaine entière d'une dizaine entière. Exemple : 70 − 30 = 40."
-		},
-		"G1-OP-8": {
-			title: "Additionner et soustraire jusqu'à 100 : dizaines puis unités",
-			description: "Sépare le deuxième nombre en dizaines et unités et saute sur une droite. Exemple : 34 + 25 comme 34 + 20 + 5.",
-			ideas: { "tens-then-ones-jump-line": "jeu : sauter les dizaines puis les unités sur une droite numérique vide" }
-		},
-		"G1-OP-9": {
-			title: "Calculs à 2 chiffres avec échange",
-			description: "Découvre l'échange avec des blocs de dizaines et d'unités, sans opération posée. Exemple : 34 + 28 comme 5 dizaines et 12 unités.",
-			ideas: {
-				"trade-ten-for-ones": "construction en manipulant : échanger une dizaine contre dix unités pour soustraire",
-				"regroup-the-blocks": "jeu : additionner des nombres en blocs et échanger dix unités contre une dizaine"
-			}
-		},
-		"G1-OP-10": {
-			title: "Groupes égaux : addition répétée et ×",
-			description: "Écrit des groupes égaux comme une addition répétée et une multiplication. Exemple : 4 groupes de 5, c'est 5 + 5 + 5 + 5 = 4 × 5.",
-			ideas: { "sticker-sheet-groups": "construction : mettre le même nombre d'autocollants sur chaque feuille et écrire le calcul" }
-		},
-		"G1-OP-11": {
-			title: "Tableaux de points et 3 × 5 = 5 × 3",
-			description: "Montre avec un tableau de points que l'ordre d'un produit peut changer. Exemple : 3 rangées de 5, c'est aussi 5 colonnes de 3.",
-			ideas: { "array-turner": "construction : faire pivoter un tableau de points et lire les deux calculs" }
-		},
-		"G1-OP-12": {
-			title: "Partager ou regrouper, et ÷",
-			description: "Distingue partager et regrouper, l'écrit avec ÷ et relie ÷ à ×. Exemple : 12 partagés en 3, c'est 12 ÷ 3 ; 12 ÷ 3 = 4 car 3 × 4 = 12.",
-			ideas: {
-				"share-or-group-sort": "tri d'histoires : partager ou regrouper, puis écrire avec ÷",
-				"fair-share-picnic": "manipulation : distribuer la nourriture dans les assiettes à parts égales"
-			}
-		},
-		"G1-OP-13": {
-			title: "Table de 2, 5 et 10 en comptant de n en n",
-			description: "Trouve les résultats des tables en comptant de n en n sur des tableaux de points, sans jamais en faire un obstacle. Exemple : 4 × 5 en comptant 5, 10, 15, 20.",
-			ideas: {
-				"table-track-runner": "jeu : courir sur une piste par bonds réguliers et lire le calcul",
-				"array-rows-skip-count": "puzzle : compter les rangées d'un tableau de 2 en 2, de 5 en 5 ou de 10 en 10"
-			}
-		},
-		"G1-OP-14": {
-			title: "Additionner et soustraire dans 10 avec aisance",
-			description: "Connaît tout de suite les sommes et les différences dans 10. Exemple : 7 − 4 = 3 et 6 + 3 = 9 sans compter.",
-			ideas: {
-				"within-ten-flash-race": "jeu : répondre à des cartes d'additions et de soustractions contre la montre",
-				"ten-frame-facts-puzzle": "puzzle : lire un calcul sur une image de cadre à dix cases"
-			}
-		},
-		"G1-FL-1": {
-			title: "Compter en avançant jusqu'à 20 sans les doigts",
-			description: "Additionne et soustrait jusqu'à 20 en comptant en avant ou en arrière dans sa tête. Exemple : 9 + 3 en comptant 10, 11, 12.",
-			ideas: { "count-on-dice-jump": "jeu : lancer le dé et compter en avançant sans toucher le plateau" }
-		},
-		"G1-FL-2": {
-			title: "Faire dix pour additionner",
-			description: "Complète une dizaine, puis ajoute le reste. Exemple : 8 + 5 comme 8 + 2 + 3.",
-			ideas: {
-				"make-ten-frames": "manipulation : déplacer des jetons pour remplir un cadre à dix cases",
-				"make-ten-card-race": "jeu : course pour faire dix et ajouter le reste"
-			}
-		},
-		"G1-FL-3": {
-			title: "Doubles et moitiés",
-			description: "Connaît les doubles jusqu'à 10 + 10 et les moitiés des nombres pairs jusqu'à 20. Exemple : le double de 7 est 14, la moitié de 14 est 7.",
-			ideas: { "double-mirror-dominoes": "jeu : associer chaque domino à son double" }
-		},
-		"G1-FL-4": {
-			title: "Presque-doubles",
-			description: "Utilise un double plus ou moins un. Exemple : 6 + 7 comme le double de 6 plus 1.",
-			ideas: { "near-double-detective": "puzzle : repérer le double caché dans une addition de presque-double" }
-		},
-		"G1-FL-5": {
-			title: "Soustraire jusqu'à 20 en pensant à l'addition",
-			description: "Soustrait en cherchant ce qu'il faut ajouter. Exemple : 15 − 9, penser 9 + 6 = 15.",
-			ideas: {
-				"think-add-to-subtract": "puzzle : sauter du petit nombre jusqu'au grand",
-				"subtract-through-ten": "jeu : soustraire en deux sauts, retour à la dizaine puis la suite"
-			}
-		},
-		"G1-FL-6": {
-			title: "Ajouter ou enlever 10 de tête",
-			description: "Ajoute ou enlève 10 à n'importe quel nombre à 2 chiffres. Exemple : 10 de moins que 63, c'est 53.",
-			ideas: { "ten-lift-tower": "jeu : monter ou descendre de dix à la fois dans une tour" }
-		},
-		"G1-FL-7": {
-			title: "Passer la dizaine en additionnant (47 + 8)",
-			description: "Ajoute un nombre à 1 chiffre à un nombre à 2 chiffres en passant une dizaine. Exemple : 47 + 8 = 47 + 3 + 5 = 55.",
-			ideas: { "bridge-the-ten-hopscotch": "jeu : sauter jusqu'à la dizaine suivante, puis continuer" }
-		},
-		"G1-FL-8": {
-			title: "Passer la dizaine en soustrayant (52 − 7)",
-			description: "Soustrait un nombre à 1 chiffre en passant une dizaine. Exemple : 52 − 7 = 52 − 2 − 5 = 45.",
-			ideas: {
-				"back-over-ten-hop": "jeu : reculer jusqu'à la dizaine, puis faire le reste",
-				"bridge-down-number-line": "puzzle : placer les deux sauts sur une droite"
-			}
-		},
-		"G1-FL-9": {
-			title: "Déduire les calculs de dizaines d'un calcul simple",
-			description: "Utilise un calcul dans 10 pour connaître celui des dizaines. Exemple : 3 + 7 = 10 donc 30 + 70 = 100.",
-			ideas: { "tens-twin-facts": "jeu : associer chaque calcul à son jumeau en dizaines" }
-		},
-		"G1-FL-10": {
-			title: "Calculer de tête à 2 chiffres",
-			description: "Découvre la décomposition ou la compensation de tête, sans jamais en faire un obstacle. Exemple : 34 + 20 + 5, ou 38 + 20 − 1.",
-			ideas: { "partition-and-jump": "jeu : décomposer le deuxième nombre et sauter" }
-		},
-		"G1-NT-1": {
-			title: "Pair et impair en faisant des paires",
-			description: "Fait des paires d'objets et regarde s'il en reste un. Exemple : 14 forme des paires sans reste, il est pair.",
-			ideas: {
-				"odd-even-pairing-trains": "construction en manipulant : mettre les passagers par deux sur les sièges d'un train",
-				"pair-up-party": "jeu : mettre des enfants en paires dans une file et trier pair et impair"
-			}
-		},
-		"G1-NT-2": {
-			title: "Pair ou impair : tableau de 100 et dernier chiffre",
-			description: "Voit les bandes de pairs et d'impairs et décide d'après le dernier chiffre. Exemple : 38 finit par 8, il est pair.",
-			ideas: {
-				"hundred-square-patterns": "puzzle : colorier les pairs et les impairs et repérer les bandes",
-				"last-digit-sorter": "jeu : trier les nombres selon leur dernier chiffre"
-			}
-		},
-		"G1-NT-3": {
-			title: "Un nombre pair est un double",
-			description: "Écrit un nombre pair comme un double. Exemple : 14 = 7 + 7.",
-			ideas: { "double-it-split": "puzzle : couper un nombre pair en deux moitiés égales" }
-		},
-		"G1-FR-1": {
-			title: "Parts égales et parts inégales",
-			description: "Partage une forme en parts égales et refuse les partages inégaux. Exemple : plie un rectangle en deux parties identiques.",
-			ideas: { "shape-splitter": "construction : plier ou couper une forme et refuser les partages inégaux" }
-		},
-		"G1-FR-2": {
-			title: "Moitiés, tiers et quarts par leur nom",
-			description: "Nomme les parts quand on partage en 2, 3 ou 4, en sachant que des parts égales n'ont pas toujours le même aspect. Exemple : deux découpes différentes d'un carré peuvent toutes deux donner des quarts.",
-			ideas: { "same-share-different-shape": "puzzle : prouver que deux morceaux d'aspect différent sont égaux" }
-		},
-		"G1-FR-3": {
-			title: "Lire et écrire 1/2, 1/3, 1/4",
-			description: "Lit et écrit les fractions unitaires et les associe à des images. Exemple : écrit 1/4 pour une part sur quatre.",
-			ideas: { "fraction-card-match": "jeu : associer symbole, mot et image" }
-		},
-		"G1-FR-4": {
-			title: "Trois quarts",
-			description: "Colorie et nomme 3/4 comme trois parts égales sur quatre. Exemple : colorie 3/4 d'un rectangle coupé en quatre.",
-			ideas: {
-				"shade-three-quarters": "construction : colorier le nombre de quarts demandé",
-				"fraction-pizza-orders": "jeu : servir la commande de pizza, par exemple trois quarts"
-			}
-		},
-		"G1-FR-5": {
-			title: "Deux quarts font une moitié",
-			description: "Voit que 2/4 et 1/2 représentent la même quantité. Exemple : plie une moitié en deux quarts.",
-			ideas: {
-				"two-quarters-make-a-half": "manipulation : recouvrir une moitié avec deux quarts",
-				"fold-and-compare": "puzzle : plier des bandes et associer les morceaux égaux"
-			}
-		},
-		"G1-FR-6": {
-			title: "La moitié d'un ensemble",
-			description: "Partage un petit ensemble en deux groupes égaux. Exemple : la moitié de 8, c'est 4.",
-			ideas: { "fair-halves-sort": "jeu : distribuer des jetons en deux équipes égales" }
-		},
-		"G1-FR-7": {
-			title: "Un tiers ou un quart d'un ensemble",
-			description: "Trouve un tiers ou un quart d'un petit ensemble, puis une part de plusieurs unités. Exemple : 1/4 de 12, c'est 3, et 3/4 de 12, c'est 9.",
-			ideas: { "quarter-the-cubes": "manipulation : distribuer des cubes en quatre groupes, lire un quart, puis en prendre trois" }
-		},
-		"G1-FR-8": {
-			title: "Compter en demis et en quarts",
-			description: "Compte le long d'une piste en demis et en quarts. Exemple : 1/4, 1/2, 3/4, 1, 1 1/4.",
-			ideas: { "g2-count-halves-quarters": "compter en quarts le long d'une piste graduée comme une règle" }
-		},
-		"G1-ALG-1": {
-			title: "Le signe égal veut dire « pareil que »",
-			description: "Lit = comme un équilibre. Exemple : 3 + 4 = 5 + 2.",
-			ideas: { "balance-the-scale": "puzzle : équilibrer une balance à deux plateaux et lire le calcul" }
-		},
-		"G1-ALG-2": {
-			title: "Égalités vraies ou fausses",
-			description: "Juge si une égalité est vraie ou fausse. Exemple : 7 = 8 − 1 est vrai.",
-			ideas: {
-				"true-or-false-sentences": "jeu : lever le drapeau vrai ou faux pour chaque phrase",
-				"equation-sorter": "tri d'histoires : ranger les égalités dans les bacs vrai et faux"
-			}
-		},
-		"G1-ALG-3": {
-			title: "Terme manquant ou résultat manquant",
-			description: "Trouve le nombre manquant dans une addition ou à la fin. Exemple : 8 + ? = 11.",
-			ideas: { "mystery-box-sums": "puzzle : une boîte cache un nombre dans un calcul" }
-		},
-		"G1-ALG-4": {
-			title: "Départ manquant ou nombre soustrait manquant",
-			description: "Trouve le nombre manquant au début ou dans une soustraction. Exemple : ? − 3 = 5.",
-			ideas: { "hidden-start-puzzles": "puzzle : défaire les étapes à partir du résultat" }
-		},
-		"G1-ALG-5": {
-			title: "Prolonger une suite qui se répète",
-			description: "Continue et décrit une suite qui se répète. Exemple : rouge, bleu, bleu, rouge, bleu, bleu…",
-			ideas: { "pattern-train-builder": "construction : continuer un train de wagons colorés" }
-		},
-		"G1-ALG-6": {
-			title: "Suites de nombres et leur règle",
-			description: "Prolonge une suite de nombres et énonce la règle. Exemple : 2, 4, 6, 8 suit la règle « ajouter 2 ».",
-			ideas: {
-				"pattern-detective": "chasse à l'erreur : trouver le nombre qui casse la règle",
-				"rule-machine-peek": "puzzle : deviner la règle à partir des entrées et des sorties"
-			}
-		},
-		"G1-ALG-7": {
-			title: "Suites de formes qui grandissent",
-			description: "Prolonge une suite de formes qui grandit et dit comment elle grandit. Exemple : un escalier gagne une tuile à chaque marche.",
-			ideas: {
-				"growing-tile-staircase": "construction : ajouter des tuiles à la marche suivante",
-				"next-shape-builder": "puzzle : construire la forme suivante et dire la règle"
-			}
-		},
-		"G1-MEA-1": {
-			title: "Ranger des longueurs en les comparant directement",
-			description: "Range trois objets selon leur longueur. Exemple : crayon, feutre, gomme, du plus long au plus court.",
-			ideas: { "g1-compare-order-length": "construction : aligner des objets et les ranger" }
-		},
-		"G1-MEA-2": {
-			title: "Comparer des longueurs avec un troisième objet",
-			description: "Compare deux objets qu'on ne peut pas mettre côte à côte avec une ficelle ou un bâton. Exemple : la table passe-t-elle par la porte ?",
-			ideas: {
-				"string-stick-compare": "manipulation : transporter une ficelle pour comparer",
-				"fit-through-the-door": "puzzle : utiliser un bâton pour décider ce qui passe"
-			}
-		},
-		"G1-MEA-3": {
-			title: "Mesurer avec des unités bout à bout",
-			description: "Pose des unités identiques sans trou ni chevauchement. Exemple : le crayon mesure 6 cubes.",
-			ideas: {
-				"g1-nonstandard-units": "manipulation : poser des trombones ou des cubes le long d'objets",
-				"lay-it-end-to-end": "jeu : aligner des unités jusqu'à un repère sans trou"
-			}
-		},
-		"G1-MEA-4": {
-			title: "Estimer puis mesurer en unités (vers le cm)",
-			description: "Devine une longueur en unités et vérifie. Exemple : devine 5 trombones et en trouve 6.",
-			ideas: {
-				"guess-the-clips": "estimation et vérification : deviner, puis poser les trombones",
-				"gaps-and-overlaps-error-hunt": "chasse à l'erreur : repérer où une mesure laisse des trous"
-			}
-		},
-		"G1-MEA-5": {
-			title: "Comparer des masses avec une balance",
-			description: "Dit plus lourd, plus léger ou en équilibre. Exemple : la pomme est plus lourde que la poire.",
-			ideas: { "g1-mass-balance": "jeu : équilibrer des objets sur une balance à deux plateaux" }
-		},
-		"G1-MEA-6": {
-			title: "Mesurer une masse avec des unités identiques",
-			description: "Équilibre un objet avec des unités identiques. Exemple : trois cubes équilibrent la pomme.",
-			ideas: {
-				"cubes-to-balance": "manipulation : ajouter des cubes jusqu'à ce que la balance soit droite",
-				"how-many-cubes-weigh": "jeu : deviner puis équilibrer"
-			}
-		},
-		"G1-MEA-7": {
-			title: "Comparer des capacités en versant",
-			description: "Verse d'un récipient à l'autre pour voir lequel contient le plus. Exemple : la carafe contient plus que la tasse.",
-			ideas: { "g1-capacity-pouring": "manipulation : verser d'un récipient à l'autre pour comparer" }
-		},
-		"G1-MEA-8": {
-			title: "Plein, à moitié plein, vide et mots de mesure",
-			description: "Utilise plein, à moitié plein, vide et le vocabulaire de comparaison. Exemple : « la bouteille est à moitié pleine ».",
-			ideas: { "full-half-empty-fill": "jeu : remplir un verre jusqu'au niveau demandé" }
-		},
-		"G1-TIM-1": {
-			title: "Lire l'heure juste",
-			description: "Lit et règle les heures pile sur des horloges à aiguilles et numériques. Exemple : 7 heures.",
-			ideas: { "set-the-clock-hour": "jeu : placer les aiguilles sur l'heure demandée" }
-		},
-		"G1-TIM-2": {
-			title: "Lire la demi-heure",
-			description: "Lit et règle l'heure et demie. Exemple : 3 heures et demie.",
-			ideas: {
-				"half-past-clock-set": "jeu : placer les aiguilles sur l'heure et demie",
-				"hour-or-half-sort": "jeu de tri : ranger les horloges en heures pile et heures et demie"
-			}
-		},
-		"G1-TIM-3": {
-			title: "Associer heure à aiguilles et heure numérique",
-			description: "Associe un cadran à son affichage numérique et l'écrit. Exemple : 3:30, c'est 3 heures et demie.",
-			ideas: {
-				"clock-match-snap": "jeu : associer une horloge à aiguilles à son jumeau numérique",
-				"digital-twin-writer": "construction : écrire l'heure numérique d'un cadran"
-			}
-		},
-		"G1-TIM-4": {
-			title: "Comparer et ranger des durées",
-			description: "Dit ce qui dure le plus longtemps et range des événements selon leur durée. Exemple : déjeuner dure plus longtemps que se laver les mains.",
-			ideas: { "race-the-sand-timer": "manipulation : chronométrer deux tâches avec un sablier" }
-		},
-		"G1-TIM-5": {
-			title: "Unités de temps approximatives",
-			description: "Choisit secondes, minutes, heures, jours ou semaines pour un événement. Exemple : se brosser les dents prend des minutes, une journée d'école des heures, des vacances des semaines.",
-			ideas: {
-				"seconds-minutes-hours-sort": "tri d'histoires : placer les événements sous la bonne unité",
-				"how-long-does-it-take": "estimation et vérification : deviner puis chronométrer une tâche"
-			}
-		},
-		"G1-TIM-6": {
-			title: "Les jours de la semaine dans l'ordre",
-			description: "Nomme les jours dans l'ordre, avec avant et après. Exemple : le jour après mardi est mercredi.",
-			ideas: {
-				"days-of-week-order": "mise en ordre : glisser les jours dans l'ordre",
-				"yesterday-today-tomorrow": "puzzle : compléter le jour d'avant et le jour d'après"
-			}
-		},
-		"G1-TIM-7": {
-			title: "Les mois et les saisons dans l'ordre",
-			description: "Nomme les mois et les saisons dans l'ordre. Exemple : après le printemps vient l'été.",
-			ideas: { "year-wheel-builder": "construction : placer les mois et les saisons sur une roue" }
-		},
-		"G1-TIM-8": {
-			title: "Trouver une date et un jour sur un calendrier",
-			description: "Lit un calendrier mensuel. Exemple : trouve le troisième vendredi.",
-			ideas: { "calendar-treasure-dates": "puzzle : suivre des indices de dates sur un mois" }
-		},
-		"G1-MON-1": {
-			title: "Nommer les pièces et les billets",
-			description: "Nomme les pièces et les billets de la monnaie locale. Exemple : montre la pièce de 5.",
-			ideas: { "coin-snap": "jeu : associer une pièce à son nom" }
-		},
-		"G1-MON-2": {
-			title: "Connaître la valeur de chaque pièce",
-			description: "Sait ce que vaut chaque pièce et chaque billet et échange des valeurs égales. Exemple : cinq pièces de 1 valent une pièce de 5.",
-			ideas: {
-				"coin-value-sort": "jeu de tri : regrouper les pièces selon leur valeur",
-				"coin-swap-shop": "jeu : échanger pièces et billets contre une valeur égale"
-			}
-		},
-		"G1-MON-3": {
-			title: "Compter des pièces de même valeur",
-			description: "Compte une rangée de pièces identiques en comptant de n en n. Exemple : quatre pièces de 5 font 20.",
-			ideas: {
-				"count-the-fives-purse": "jeu : compter une rangée de pièces de n en n",
-				"coin-row-race": "jeu : compter une rangée de pièces contre la montre"
-			}
-		},
-		"G1-MON-4": {
-			title: "Compter des pièces différentes jusqu'à 20",
-			description: "Compte un ensemble de pièces différentes jusqu'à 20. Exemple : 5 + 5 + 5 + 2 = 17.",
-			ideas: { "purse-total-puzzle": "puzzle : associer un porte-monnaie à son total" }
-		},
-		"G1-MON-5": {
-			title: "Payer un objet à moins de 20",
-			description: "Choisit les pièces pour payer un objet. Exemple : trois pièces de 5 et une pièce de 2 paient un jouet à 17.",
-			ideas: { "corner-shop-pay": "manipulation : payer au comptoir d'une boutique" }
-		},
-		"G1-MON-6": {
-			title: "A-t-on assez d'argent ?",
-			description: "Dit si un porte-monnaie couvre un prix. Exemple : 12 ne suffit pas pour 15.",
-			ideas: {
-				"purse-or-price": "estimation et vérification : dire assez ou pas assez avant de compter",
-				"enough-or-short": "chasse à l'erreur : une marionnette dit que c'est assez, l'enfant vérifie"
-			}
-		},
-		"G1-GEO-1": {
-			title: "Nommer les figures planes",
-			description: "Nomme cercle, triangle, carré, rectangle, pentagone et hexagone. Exemple : « ça, c'est un hexagone ».",
-			ideas: { "shape-name-hunt": "jeu : toucher la forme nommée" }
-		},
-		"G1-GEO-2": {
-			title: "Des formes de toute taille et dans toutes les positions",
-			description: "Sait qu'une forme reste la même quand on la tourne ou qu'on change sa taille. Exemple : un triangle penché reste un triangle.",
-			ideas: { "tilted-shape-sort": "jeu de tri : regrouper par nom des formes penchées, grandes ou petites" }
-		},
-		"G1-GEO-3": {
-			title: "Ce qui fait un triangle",
-			description: "Dit qu'il est fermé avec 3 côtés droits, et que la couleur et la taille n'y changent rien. Exemple : refuse une forme avec un côté courbe.",
-			ideas: {
-				"what-makes-a-triangle": "chasse à l'erreur : une marionnette nomme des triangles, l'enfant décide",
-				"sides-and-corners-count": "jeu : compter côtés et sommets pour nommer la forme"
-			}
-		},
-		"G1-GEO-4": {
-			title: "Nommer les solides 3D",
-			description: "Nomme cube, pavé droit, sphère, cylindre, cône et pyramide. Exemple : choisit le cône dans un sac.",
-			ideas: { "mystery-solid-bag": "jeu : toucher un solide dans un sac et le nommer" }
-		},
-		"G1-GEO-5": {
-			title: "Relier les solides aux objets du quotidien",
-			description: "Associe des solides à des objets autour de nous. Exemple : une boîte de conserve est un cylindre.",
-			ideas: { "shape-scavenger-hunt": "manipulation : trouver un solide à la maison ou en classe" }
-		},
-		"G1-GEO-6": {
-			title: "Construire des formes composées",
-			description: "Construit une forme plus grande avec d'autres, en 2D et avec des blocs 3D. Exemple : une maison avec un carré et un triangle, ou une tour avec des cubes et des pavés.",
-			ideas: {
-				"tangram-house": "construction : remplir un contour avec des formes",
-				"block-tower-model": "construction : copier un modèle avec des blocs 3D"
-			}
-		},
-		"G1-GEO-7": {
-			title: "Copier une figure sur un quadrillage",
-			description: "Copie une figure sur du papier quadrillé ou pointé. Exemple : copie un petit bateau.",
-			ideas: { "dot-paper-twin": "dessin : copier une figure à côté de l'original" }
-		},
-		"G1-GEO-8": {
-			title: "Lignes droites et lignes courbes",
-			description: "Distingue une ligne droite d'une ligne courbe. Exemple : le virage d'une route est courbe.",
-			ideas: { "curved-or-straight-sort": "jeu de tri : ranger les lignes en courbes et en droites" }
-		},
-		"G1-GEO-9": {
-			title: "Tracer une ligne droite à la règle",
-			description: "Relie deux points par une ligne droite. Exemple : trace entre deux points.",
-			ideas: {
-				"ruler-line-draw": "dessin : relier des points avec une ligne à la règle",
-				"connect-the-dots-ruler": "dessin : repasser une image avec des lignes droites"
-			}
-		},
-		"G1-POS-1": {
-			title: "Gauche et droite",
-			description: "Utilise gauche et droite à partir de sa propre position. Exemple : « lève ta main gauche ».",
-			ideas: { "left-right-simon": "jeu : Jacques a dit avec gauche et droite" }
-		},
-		"G1-POS-2": {
-			title: "Pas en avant et pas en arrière",
-			description: "Décrit un trajet en pas. Exemple : « trois pas en avant ».",
-			ideas: { "follow-my-steps": "jeu : guider un partenaire avec des pas" }
-		},
-		"G1-POS-3": {
-			title: "Tour entier, demi-tour et quart de tour",
-			description: "Nomme le tour entier, le demi-tour et le quart de tour. Exemple : un quart de tour vers la droite.",
-			ideas: { "turn-the-puppet": "jeu : tourner la marionnette pour qu'elle regarde le but" }
-		},
-		"G1-POS-4": {
-			title: "Programmer le trajet d'un robot",
-			description: "Combine des pas et des tours pour faire un trajet. Exemple : « deux pas en avant, un quart de tour à droite ».",
-			ideas: {
-				"g1-route-robot-grid": "puzzle : programmer un robot jusqu'à une cible",
-				"floor-robot-obstacle-course": "puzzle : trouver un trajet qui contourne les obstacles"
-			}
-		},
-		"G1-POS-5": {
-			title: "Trouver des objets sur le plan d'une pièce",
-			description: "Repère des objets sur un plan simple. Exemple : « la poubelle est près de la porte » sur le plan.",
-			ideas: { "classroom-plan-hunt": "jeu : trouver l'objet caché grâce à des indices" }
-		},
-		"G1-DAT-1": {
-			title: "Trier selon un critère et expliquer la règle",
-			description: "Trie selon une propriété et nomme la règle. Exemple : rouge et pas rouge.",
-			ideas: { "mystery-rule-sort": "puzzle : deviner la règle de tri" }
-		},
-		"G1-DAT-2": {
-			title: "Trier selon deux critères : Venn ou tableau de Carroll",
-			description: "Trie selon deux propriétés. Exemple : rouge et rond dans deux cerceaux qui se chevauchent.",
-			ideas: {
-				"venn-hoops-sort": "manipulation : déposer des objets dans des cerceaux qui se chevauchent",
-				"carroll-table-fill": "puzzle : remplir un tableau 2×2 avec ses deux règles"
-			}
-		},
-		"G1-DAT-3": {
-			title: "Construire un pictogramme ou un graphique en blocs 1 pour 1",
-			description: "Construit un graphique avec jusqu'à 3 catégories. Exemple : empile 5 icônes rouges et 3 bleues.",
-			ideas: {
-				"pictogram-build": "construction : toucher pour empiler des icônes pour un sondage de classe",
-				"block-graph-stack": "construction : empiler des blocs pour chaque catégorie"
-			}
-		},
-		"G1-DAT-4": {
-			title: "Lire un graphique : combien de plus ou de moins",
-			description: "Répond à des questions à partir d'un graphique. Exemple : 5 rouges, 3 bleus, donc 2 rouges de plus.",
-			ideas: { "more-or-fewer-detective": "jeu : répondre à des questions « de plus » ou « de moins »" }
-		},
-		"G1-PRB-1": {
-			title: "Classer des événements : certain, possible, impossible",
-			description: "Classe des événements du quotidien en « va arriver », « peut arriver » et « ne peut pas arriver » (sans obstacle). Exemple : « le soleil va se lever » est certain.",
-			ideas: { "sure-maybe-never-sort": "tri d'histoires : placer des cartes d'événements sous sûr, peut-être ou jamais" }
-		},
-		"G1-PRB-2": {
-			title: "Prédire, puis vérifier (sans obstacle)",
-			description: "Prédit « sûr, peut-être ou jamais » et vérifie en essayant. Exemple : un sac avec seulement des jetons bleus ne peut jamais donner du rouge.",
-			ideas: {
-				"spinner-guess": "jeu : prédire avant de faire tourner la roue, puis vérifier",
-				"bag-of-colours-guess": "manipulation : deviner ce qu'un sac peut donner"
-			}
-		},
-		"G1-PSR-1": {
-			title: "Choisir + ou −",
-			description: "Décide s'il faut additionner ou soustraire pour une histoire. Exemple : « 3 se sont envolés » veut dire soustraire.",
-			ideas: { "plus-or-minus-story-sort": "tri d'histoires : marquer chaque histoire + ou −" }
-		},
-		"G1-PSR-2": {
-			title: "Les quatre types d'histoires",
-			description: "Reconnaît les histoires où l'on ajoute, où l'on enlève, où l'on réunit et où l'on compare. Exemple : « combien de plus » est une comparaison.",
-			ideas: {
-				"story-type-detective": "jeu : nommer le type de chaque histoire",
-				"act-it-out-stories": "manipulation : jouer une histoire avec des objets"
-			}
-		},
-		"G1-PSR-3": {
-			title: "Départ, changement ou résultat inconnu",
-			description: "Résout un problème quand une partie manque. Exemple : « Il y en avait __, 3 se sont envolés, il en reste 5. »",
-			ideas: { "hidden-number-stories": "puzzle : un nuage cache un nombre dans l'histoire" }
-		},
-		"G1-PSR-4": {
-			title: "Représenter une histoire avec des objets et un dessin",
-			description: "Montre une histoire avec des objets ou un dessin rapide. Exemple : dessine 5 oiseaux et en barre 3.",
-			ideas: {
-				"draw-the-story": "construction : dessiner l'histoire avec des icônes",
-				"cube-bar-story": "construction : montrer les parties et le tout avec des cubes"
-			}
-		},
-		"G1-PSR-5": {
-			title: "Écrire le calcul",
-			description: "Écrit un calcul pour une histoire. Exemple : 8 − 3 = 5.",
-			ideas: { "story-to-sentence-match": "jeu : associer chaque histoire à son calcul" }
-		},
-		"G1-PSR-6": {
-			title: "Expliquer comment on a trouvé la réponse",
-			description: "Dit comment il a trouvé la réponse. Exemple : « J'ai reculé de trois depuis huit ».",
-			ideas: {
-				"tell-how-you-know": "manipulation : enregistrer une explication à voix haute",
-				"explain-it-to-the-puppet": "jeu : apprendre sa méthode à une marionnette"
-			}
-		},
-		"G1-PSR-7": {
-			title: "Vérifier une réponse autrement",
-			description: "Vérifie avec une deuxième méthode. Exemple : additionne pour vérifier une soustraction.",
-			ideas: { "spot-the-wrong-answer": "chasse à l'erreur : une marionnette résout une histoire, l'enfant décide et corrige" }
+	"K-NS-4": {
+		title: "Un nombre par objet ; le dernier dit combien",
+		description: "Pointe chaque objet une seule fois en disant un nombre à la fois, et répond à « combien ? » avec le dernier nombre dit (« 1, 2, 3, donc 3 »)."
+	},
+	"K-NS-5": {
+		title: "Donner ou retirer exactement n objets",
+		description: "Compte exactement n objets dans un tas et les donne, ou en retire n (« donne 6 os au chien »).",
+		ideas: { "grab-a-handful": "Jeu de pelle : prendre exactement le nombre demandé et vérifier en comptant." }
+	},
+	"K-NS-6": {
+		title: "Le nombre reste le même quand les objets bougent",
+		description: "Compte un ensemble jusqu'à 20 en rangée, en tas ou en cercle et sait que le nombre reste le même (« étalés, toujours 8 »)."
+	},
+	"K-NS-7": {
+		title: "Lire et associer les chiffres de 0 à 20",
+		description: "Associe un chiffre à sa quantité et le retrouve parmi d'autres (« la carte 12 va avec 12 points »)."
+	},
+	"K-NS-8": {
+		title: "Écrire les chiffres de 0 à 20 correctement",
+		description: "Écrit chaque chiffre en partant du bon endroit et dans le bon sens du tracé, et repère le chiffre bien formé parmi des chiffres inversés.",
+		ideas: { "trace-the-numeral": "Jeu de traçage au doigt avec un tracé guidé et une vignette en récompense (suivi)." }
+	},
+	"K-NS-9": {
+		title: "Zéro veut dire aucun",
+		description: "Dit 0 pour un ensemble vide et sait que c'est un nombre (« le panier est vide, donc 0 »)."
+	},
+	"K-NS-10": {
+		title: "Comparer deux ensembles : plus, moins, autant",
+		description: "Dit lequel de deux ensembles en contient plus, moins ou autant, en appariant ou en comptant (« chaque chat a un bol, il reste un bol, donc plus de bols »)."
+	},
+	"K-NS-11": {
+		title: "Comparer deux nombres jusqu'à 10",
+		description: "Dit lequel de deux chiffres jusqu'à 10 est plus grand, plus petit ou égal, sans compter d'objets (« 8 est plus grand que 5 »).",
+		ideas: { "number-showdown": "Bataille de cartes : retourner deux cartes de chiffres ; la plus grande l'emporte." }
+	},
+	"K-NS-12": {
+		title: "Ordonner de 0 à 10 et trouver le nombre manquant",
+		description: "Place les cartes de chiffres de 0 à 10 en ordre et nomme la carte manquante sur une piste numérique (« 0, 1, 2, _, 4 »).",
+		ideas: { "line-up-the-cards": "Glisser les cartes de chiffres dans une piste, dans l'ordre." }
+	},
+	"K-NS-13": {
+		title: "Nombre suivant, un de plus et un de moins",
+		description: "Dit le nombre suivant et donne un de plus ou un de moins que n'importe quel nombre jusqu'à 20, sans recompter depuis 1 (« un de plus que 9, c'est 10 »).",
+		ideas: { "pop-up-one-more": "Un nombre apparaît et l'enfant touche la carte « un de plus » ou « un de moins »." }
+	},
+	"K-NS-14": {
+		title: "Les rangs de premier à cinquième",
+		description: "Utilise premier à cinquième et dernier pour les positions dans une file et distingue un rang d'une quantité (« le troisième chien » et « 3 chiens »)."
+	},
+	"K-FL-1": {
+		title: "Voir d'un coup d'œil jusqu'à 5, puis 6 à 10 en parties",
+		description: "Nomme 1 à 3, puis les constellations de points, de dés et de doigts jusqu'à 5 d'un coup d'œil sans compter (« c'est 4 ») ; voit 6 à 10 en parties sur un cadre à dix cases (« 7, c'est 5 et 2 »).",
+		ideas: {
+			"dot-pattern-snap": "Jeu de cartes : une constellation s'affiche une seconde et l'enfant touche le chiffre correspondant.",
+			"ten-frame-flash": "Afficher un cadre à dix cases une seconde et dire les parties de 6 à 10 (« 7, c'est 5 et 2 »)."
 		}
 	},
-	G2: {
-		"G2-NS-1": {
-			title: "Compter jusqu'à 1000 en passant les centaines",
-			description: "Compte en avant et en arrière en passant une centaine (398, 399, 400, 401), à partir de n'importe quel nombre à 3 chiffres.",
-			ideas: {
-				"hundreds-odometer-count": "compteur qui tourne : règle le cadran, puis compte jusqu'au nombre suivant",
-				"count-back-bridge-the-hundred": "jeu de l'ascenseur : descends les étages en disant chaque nombre à rebours"
-			}
-		},
-		"G2-NS-2": {
-			title: "Lire et écrire les nombres à 3 chiffres",
-			description: "Écrit 352 en lettres et sous la forme 300 + 50 + 2, et relit chaque écriture en chiffres.",
-			ideas: {
-				"number-name-match": "jeu de paires : carte en chiffres, carte en lettres, carte en somme",
-				"number-dictation-cheque": "dictée de chèque : écris en lettres le nombre entendu"
-			}
-		},
-		"G2-NS-3": {
-			title: "Comparer et ranger les nombres à 3 chiffres",
-			description: "Range 407, 470, 74 et écrit 407 < 470 avec <, > et = en regardant d'abord les centaines.",
-			ideas: {
-				"crocodile-mouth-compare": "nourris le crocodile affamé avec le plus grand nombre",
-				"digit-card-biggest-number": "forme le plus grand ou le plus petit nombre avec trois cartes chiffres tirées"
-			}
-		},
-		"G2-NS-10": {
-			title: "Nombres pairs et impairs",
-			description: "Décide que 17 est impair et 18 est pair en formant des paires ou avec le dernier chiffre, et écrit un nombre pair comme un double (18 = 9 + 9).",
-			ideas: {
-				"odd-even-pairing-party": "forme des paires de danseurs : y a-t-il quelqu'un sans partenaire ?",
-				"last-digit-odd-even-sort": "trie les nombres en pairs et impairs grâce au dernier chiffre"
-			}
-		},
-		"G2-NS-4": {
-			title: "Placer un nombre sur une droite 0–500–1000",
-			description: "Place 640 à peu près au bon endroit sur une droite graduée 0, 500 et 1000 et lit un nombre sur un point marqué.",
-			ideas: {
-				"number-line-darts": "lance une fléchette là où va le nombre, le plus proche gagne",
-				"mystery-point-on-line": "lis le nombre caché grâce aux repères"
-			}
-		},
-		"G2-NS-5": {
-			title: "Compter de 2 en 2, 5 en 5, 10 en 10 et 3 en 3",
-			description: "Compte en avant et en arrière à partir de 36 de 2 en 2, à partir de 7 de 5 en 5, et de 3 en 3 depuis n'importe quel nombre.",
-			ideas: {
-				"skip-count-rhythm-track": "jeu musical : tape le rythme de chaque suite et complète le trou dans la piste",
-				"skip-count-stepping-stones": "fais sauter une grenouille de pierre en pierre, même en arrière"
-			}
-		},
-		"G2-NS-6": {
-			title: "Compter de 4 en 4 et de 8 en 8",
-			description: "Compte de 4 en 4 à partir de 36 (36, 40, 44…) et de 8 en 8 (8, 16, 24…), en avant et en arrière (découverte).",
-			ideas: {
-				"four-and-eight-train": "les wagons du train portent 4 ou 8 passagers, dis le total à chaque arrêt",
-				"double-the-double-count": "compte de 2 en 2, 4 en 4, 8 en 8 côte à côte pour voir les doubles"
-			}
-		},
-		"G2-NS-7": {
-			title: "Compter de 50 en 50 et de 100 en 100",
-			description: "Compte 150, 200, 250… et 340, 440, 540… à partir de n'importe quel nombre à 3 chiffres.",
-			ideas: {
-				"hundred-hop-rocket": "la fusée monte de 100 en 100, complète les étapes manquantes",
-				"fifty-coin-count": "compte des piles de pièces de 50 jusqu'à un total"
-			}
-		},
-		"G2-NS-8": {
-			title: "Découvrir les nombres jusqu'à 10 000",
-			description: "Lit un nombre à 4 chiffres construit avec des blocs (2 milliers, 4 centaines → 2400) et sait que dix centaines font un millier.",
-			ideas: {
-				"meet-ten-thousand": "jeu d'exploration : empile dix blocs de 1000 et lis les nombres à 4 chiffres que tu construis",
-				"big-number-slide-reader": "glisse de 999 à 1000 et dis ce qui change"
-			}
-		},
-		"G2-NS-9": {
-			title: "Chiffres romains I–XII sur les cadrans (local)",
-			description: "Lit un cadran à chiffres romains et dit que IX vaut 9 et VII vaut 7.",
-			ideas: {
-				"roman-clock-faces": "associe les cadrans à chiffres romains à l'heure (local, sans validation)",
-				"roman-numeral-builder": "construis I–XII avec des tuiles I, V et X"
-			}
-		},
-		"G2-PV-1": {
-			title: "100 = 10 dizaines, et construire avec des blocs",
-			description: "Échange 10 dizaines contre 1 centaine et construit 245 avec des blocs.",
-			ideas: {
-				"block-builder-trade-mat": "construis le nombre demandé en échangeant dix contre un sur le tapis",
-				"bundle-the-hundred": "regroupe des bâtonnets en dizaines et en centaines"
-			}
-		},
-		"G2-PV-2": {
-			title: "Valeur de chaque chiffre",
-			description: "Dit que le 7 de 372 vaut 70 et que le 3 vaut 300.",
-			ideas: {
-				"place-value-mystery-number": "énigme : des cartes indices (« mon chiffre des dizaines est le double de celui des unités ») permettent de trouver un nombre caché",
-				"digit-spotlight": "touche le chiffre qui vaut la valeur demandée"
-			}
-		},
-		"G2-PV-3": {
-			title: "Le zéro comme place vide",
-			description: "Distingue 305 de 35 et de 350, et écrit « 3 centaines, 0 dizaine, 5 unités ».",
-			ideas: {
-				"zero-keeper-game": "garde la colonne vide ou perds le nombre",
-				"swap-the-zero": "que devient 305 quand on déplace le zéro ?"
-			}
-		},
-		"G2-PV-7": {
-			title: "Décomposer un nombre de plusieurs façons",
-			description: "Montre 352 comme 34 dizaines + 12 unités et comme 2 centaines + 15 dizaines + 2 unités, avec des blocs.",
-			ideas: {
-				"many-ways-to-build": "tapis de blocs : construis le même nombre avec différents tas de dizaines et d'unités",
-				"partition-swap-puzzle": "échange une centaine ou une dizaine pour obtenir la décomposition demandée"
-			}
-		},
-		"G2-PV-4": {
-			title: "Ajouter ou enlever 10 de tête",
-			description: "Sait que 472 + 10 = 482 et 305 − 10 = 295, et remarque que seul le chiffre des dizaines change (sauf en passant une centaine).",
-			ideas: {
-				"ten-more-ten-less-lift": "l'ascenseur s'arrête à l'étage des dizaines, monte ou descends",
-				"hundred-chart-ten-moves": "une case plus bas dans le tableau de 100 fait +10"
-			}
-		},
-		"G2-PV-5": {
-			title: "Ajouter ou enlever 100 de tête",
-			description: "Sait que 472 + 100 = 572 et 905 − 100 = 805, seul le chiffre des centaines change.",
-			ideas: {
-				"hundred-tower-builder": "ajoute ou retire une tour de cent et lis le total",
-				"odometer-100-more": "le compteur monte ou descend de cent"
-			}
-		},
-		"G2-PV-6": {
-			title: "Valeur des chiffres d'un nombre à 4 chiffres",
-			description: "Lit 2 345 comme 2 milliers, 3 centaines, 4 dizaines, 5 unités avec des blocs.",
-			ideas: {
-				"thousand-block-stack": "exploration : ajoute des blocs de mille à un nombre à 3 chiffres et lis le nouveau nombre",
-				"four-digit-place-peek": "jette un œil à chaque rang d'un nombre à 4 chiffres"
-			}
-		},
-		"G2-OP-1": {
-			title: "Additions de base jusqu'à 20",
-			description: "Retrouve tout de suite 8 + 7 = 15, 9 + 6 = 15 et toutes les décompositions jusqu'à 20.",
-			ideas: {
-				"bond-bubble-pop": "éclate la paire qui fait le total demandé",
-				"fact-flash-race": "bats ton propre record sur des calculs variés"
-			}
-		},
-		"G2-OP-2": {
-			title: "Soustractions de base jusqu'à 20 et familles de calculs",
-			description: "Retrouve 15 − 9 = 6 et écrit la famille 6 + 9 = 15, 9 + 6 = 15, 15 − 6 = 9, 15 − 9 = 6.",
-			ideas: {
-				"fact-family-houses": "place les nombres dans la maison de la famille pour la compléter",
-				"subtraction-lighthouse": "le faisceau du phare descend selon les calculs pour atteindre la réponse"
-			}
-		},
-		"G2-OP-3": {
-			title: "L'addition change d'ordre, pas la soustraction ; l'inverse",
-			description: "Sait que 5 + 3 = 3 + 5 mais que 5 − 3 ≠ 3 − 5, et vérifie 52 − 17 = 35 avec 35 + 17.",
-			ideas: { "g2-check-subtraction-with-addition": "chasse à l'erreur : une soustraction est « vérifiée » par la mauvaise addition, repère-la" }
-		},
-		"G2-OP-4": {
-			title: "Additionner des nombres à 2 chiffres avec retenue",
-			description: "Calcule 47 + 38 par écrit, avec une retenue d'une dizaine.",
-			ideas: {
-				"column-carry-machine": "dépose les unités dans la machine, elle fait un paquet de dix",
-				"sum-bridge-puzzle": "choisis deux nombres qui font le total, d'abord sans retenue, puis avec"
-			}
-		},
-		"G2-OP-5": {
-			title: "Soustraire à 2 chiffres avec échange, puis calcul aisé",
-			description: "Calcule 64 − 37 en ouvrant une dizaine, puis mélange + et − jusqu'à 100 sans hésiter.",
-			ideas: { "trade-a-ten-subtraction": "tapis de blocs : échange une dizaine, puis enlève" }
-		},
-		"G2-OP-6": {
-			title: "Additionner jusqu'à quatre nombres à 2 chiffres",
-			description: "Calcule 23 + 41 + 18 + 7 en regroupant les dizaines et les unités.",
-			ideas: {
-				"g2-add-four-2digit": "casse-tête en colonnes : choisis quatre nombres pour atteindre le total demandé",
-				"shopping-list-total": "additionne quatre prix sur un ticket de caisse"
-			}
-		},
-		"G2-OP-7": {
-			title: "Additionner et soustraire à 3 chiffres avec des blocs",
-			description: "Montre 356 + 278 avec des blocs, échange 10 dizaines contre une centaine, et le dessine.",
-			ideas: {
-				"g2-add-within-1000-models": "construis : échange 10 dizaines contre une centaine sur le tapis de blocs",
-				"draw-the-blocks-subtract": "dessine les blocs et barre-les pour soustraire"
-			}
-		},
-		"G2-OP-8": {
-			title: "Colonnes à 3 chiffres : addition, soustraction, zéro",
-			description: "Écrit 356 + 278 et 403 − 168 en colonnes, avec échange à travers le zéro.",
-			ideas: {
-				"zero-trouble-columns": "répare l'opération en colonnes 403 − 168 qui est cassée",
-				"column-and-blocks-link": "associe chaque étape de la colonne au geste avec les blocs"
-			}
-		},
-		"G2-OP-16": {
-			title: "Groupes égaux et tableaux : addition répétée et ×",
-			description: "Écrit 4 groupes de 3 comme 3 + 3 + 3 + 3 et comme 4 × 3, et lit un tableau de 4 par 3 comme 4 × 3.",
-			ideas: {
-				"equal-groups-to-times": "regroupe les jetons, écris l'addition répétée, puis la multiplication",
-				"array-to-sentence": "construis un tableau, lis-le comme une addition répétée et une multiplication"
-			}
-		},
-		"G2-OP-9": {
-			title: "Tables de 2, 5 et 10 et divisions associées",
-			description: "Retrouve 6 × 5 = 30 et 30 ÷ 5 = 6, 7 × 2 et 70 ÷ 10 tout de suite.",
-			ideas: {
-				"table-tennis-2-5-10": "échange de balles de ping-pong : renvoie le produit",
-				"division-from-the-table": "complète le calcul inverse de chaque produit"
-			}
-		},
-		"G2-OP-10": {
-			title: "Tables de 3 et 4",
-			description: "Retrouve 3 × 7 = 21, 4 × 6 = 24 et leurs divisions associées.",
-			ideas: {
-				"three-and-four-array-builder": "construis des tableaux rangée par rangée et lis le calcul",
-				"double-for-four": "trouve ×4 en doublant ×2"
-			}
-		},
-		"G2-OP-11": {
-			title: "Découvrir les tables de 6, 7, 8 et 9",
-			description: "Explore 6 × 7 avec des tableaux et la régularité des 9 (9 × 4 = 36 : les chiffres font 9). Sans validation."
-		},
-		"G2-OP-12": {
-			title: "×0, ×1 et changer l'ordre des facteurs",
-			description: "Sait que 7 × 0 = 0, 7 × 1 = 7 et que 3 × 5 = 5 × 3 mais 12 ÷ 3 ≠ 3 ÷ 12. Partie de G3.MD.4 : seulement ×0, ×1 et l'ordre des facteurs ; pas d'associativité ni de distributivité (découverte).",
-			ideas: {
-				"turn-the-array": "fais pivoter un tableau et vois le même produit",
-				"zero-and-one-magic-doors": "des portes qui renvoient le nombre ou le font disparaître"
-			}
-		},
-		"G2-OP-13": {
-			title: "Multiplier par des dizaines, 2 chiffres × 1 chiffre",
-			description: "Calcule 4 × 30 à partir de 4 × 3, puis 23 × 4 avec une grille (20 × 4 + 3 × 4).",
-			ideas: { "grid-method-tiles": "remplis la grille d'aire avec les produits partiels" }
-		},
-		"G2-OP-14": {
-			title: "Partager, grouper et penser multiplication",
-			description: "Distingue « 12 partagé entre 3 » de « 12 en groupes de 3 », écrit ÷, résout 32 ÷ 8 en cherchant 8 × ? = 32.",
-			ideas: { "share-or-group-sort": "trie les histoires en partage et en groupement" }
-		},
-		"G2-OP-15": {
-			title: "Restes et division à 2 chiffres par 1 chiffre",
-			description: "Dit ce qui reste dans 14 ÷ 4 = 3 reste 2 et partage 72 en 3 groupes égaux avec des blocs.",
-			ideas: { "share-the-leftovers": "distribue des blocs à des amis et nomme le reste" }
-		},
-		"G2-FL-1": {
-			title: "Passer la dizaine en ajoutant un nombre à 1 chiffre",
-			description: "Ajoute 8 à 47 par 47 + 3 = 50, puis + 5 = 55.",
-			ideas: {
-				"bridge-the-ten-hops": "saute jusqu'à la dizaine suivante, puis ajoute le reste",
-				"plus-nine-shortcut": "+9 comme +10 −1"
-			}
-		},
-		"G2-FL-2": {
-			title: "Soustraire un nombre à 1 chiffre en passant une dizaine",
-			description: "Calcule 52 − 6 par 52 − 2 = 50, puis − 4 = 46.",
-			ideas: {
-				"back-through-ten-frog": "la grenouille recule jusqu'à la dizaine, puis continue",
-				"minus-nine-minus-eight": "−9 comme −10 +1"
-			}
-		},
-		"G2-FL-3": {
-			title: "Ajouter et enlever des dizaines de tête",
-			description: "Calcule 46 + 30 = 76 et 90 − 40 = 50 de tête.",
-			ideas: {
-				"tens-jump-line": "saute de dizaine en dizaine sur une droite numérique",
-				"tens-bonds-to-100": "paires de dizaines qui font 100"
-			}
-		},
-		"G2-FL-11": {
-			title: "Faits dérivés : agrandir un calcul connu",
-			description: "Utilise 3 + 7 = 10 pour savoir 30 + 70 = 100, et 8 − 5 = 3 pour savoir 80 − 50 = 30.",
-			ideas: {
-				"fact-grows-tens": "un calcul connu, puis le même en dizaines : tape la réponse",
-				"derived-fact-match": "associe chaque calcul en dizaines au petit calcul dont il vient"
-			}
-		},
-		"G2-FL-4": {
-			title: "Calcul mental : centaines, dizaines et unités",
-			description: "Calcule 472 + 300 = 772, 472 + 20 = 492, 472 + 5 = 477 sans écrire.",
-			ideas: {
-				"mental-hundreds-hop": "jeu de sauts sur la droite : atteins la cible en un minimum de sauts de 100, 10 et 1",
-				"which-digit-changes": "choisis le chiffre qui change",
-				"mental-mix-challenge": "défi mixte : pas de 100, de 10 et de 1 contre la montre"
-			}
-		},
-		"G2-FL-5": {
-			title: "Doubles jusqu'à 50",
-			description: "Double 17 en 34 et 25 en 50 en doublant les dizaines et les unités.",
-			ideas: {
-				"double-trouble-mirror": "le miroir double les tuiles que tu poses",
-				"near-doubles-detective": "détective des quasi-doubles : 17 + 18 comme double de 17 + 1"
-			}
-		},
-		"G2-FL-6": {
-			title: "Moitiés des nombres pairs jusqu'à 100",
-			description: "Prend la moitié de 86 : 43, en coupant en deux les dizaines et les unités.",
-			ideas: {
-				"half-it-hunt": "chasse aux moitiés : trouve la moitié de chaque nombre et son partenaire",
-				"halving-machine": "la machine coupe en deux, l'enfant retrouve le nombre de départ"
-			}
-		},
-		"G2-FL-7": {
-			title: "Arrondir à la dizaine la plus proche sur une droite",
-			description: "Dit que 38 est plus proche de 40 que de 30, et que 35 s'arrondit vers le haut.",
-			ideas: {
-				"round-to-ten-hop": "quelle dizaine est la plus proche ? Fais sauter la grenouille sur le nénuphar le plus proche",
-				"round-or-not-sort": "trie les nombres selon leur dizaine la plus proche",
-				"midpoint-five-rule": "trouve où la droite bascule"
-			}
-		},
-		"G2-FL-8": {
-			title: "Estimer une somme ou une différence en arrondissant",
-			description: "Dit que 38 + 53 vaut environ 90 et 83 − 41 environ 40.",
-			ideas: {
-				"estimate-then-add": "choisis une estimation raisonnable avant la somme exacte",
-				"about-how-many-receipt": "estime le total d'un panier de courses"
-			}
-		},
-		"G2-FL-9": {
-			title: "Estimer un produit simple en arrondissant",
-			description: "Dit que 4 × 19 vaut environ 80 grâce à 4 × 20 (découverte).",
-			ideas: {
-				"round-then-times": "arrondis un facteur puis multiplie",
-				"product-magnitude-check": "vérifie l'ordre de grandeur : quelle réponse est absurde ?"
-			}
-		},
-		"G2-FL-10": {
-			title: "Vérifier par estimation et par l'opération inverse",
-			description: "Vérifie 63 + 29 = 92 par estimation (60 + 30) et par 92 − 29.",
-			ideas: {
-				"answer-detective": "détective des réponses : trouve la mauvaise réponse dans une liste",
-				"check-it-two-ways": "confirme chaque réponse de deux façons : estimation et opération inverse"
-			}
-		},
-		"G2-NT-1": {
-			title: "Les multiples comme comptage de n en n",
-			description: "Colorie les multiples de 3, 4, 5 et 8 sur un tableau de 100, sait que 24 est dans les tables de 3 et de 4, et compte les nombres communs à deux tables (découverte).",
-			ideas: {
-				"multiples-hundred-chart": "casse-tête de coloriage : colorie les multiples de deux nombres, compte et lis ce qui est partagé",
-				"multiple-or-not-bingo": "loto : 28 est-il un multiple de 4 ?",
-				"frog-lands-on-multiples": "la grenouille saute par pas réguliers : quels nombres touche-t-elle ?"
-			}
-		},
-		"G2-NT-2": {
-			title: "Régularités dans les tables",
-			description: "Remarque que les multiples de 5 finissent par 0 ou 5, que pair × n'importe quel nombre est pair, et que les multiples de 10 finissent par 0 (découverte).",
-			ideas: {
-				"table-pattern-hunt": "jeu de détective : trouve et teste une régularité dans un tableau de multiplication",
-				"even-or-odd-product-predict": "devine si un produit est pair avant de le calculer",
-				"last-digit-clues": "devine la table grâce aux derniers chiffres"
-			}
-		},
-		"G2-FR-1": {
-			title: "Fractions unitaires : 1/b d'un tout",
-			description: "Nomme 1/4 comme une part sur 4 parts égales et 1/6 comme une sur 6, avec les dénominateurs 2, 3, 4, 6, 8, 10 ; sait que des parts égales de touts identiques peuvent avoir des formes différentes.",
-			ideas: {
-				"equal-or-not-split": "cette forme est-elle partagée en parts égales ? (des parts égales peuvent être différentes)",
-				"pizza-slice-names": "nomme une part de chaque pizza"
-			}
-		},
-		"G2-FR-2": {
-			title: "Fractions a/b",
-			description: "Montre 3/4 comme 3 parts sur 4 parts égales (3 morceaux de 1/4).",
-			ideas: {
-				"colour-the-fraction": "colorie a/b d'une bande",
-				"fraction-bar-match": "associe l'image à la fraction"
-			}
-		},
-		"G2-FR-3": {
-			title: "Fractions sur la droite de 0 à 1",
-			description: "Place 3/4 et 3/8 sur une droite de 0 à 1 coupée en parts égales.",
-			ideas: {
-				"fraction-ruler-slider": "fais glisser le repère jusqu'à la fraction",
-				"which-fraction-is-this": "lis la fraction à un point marqué"
-			}
-		},
-		"G2-FR-4": {
-			title: "Fractions plus grandes que 1 et nombres entiers en fractions",
-			description: "Sait que 4/4 = 1, 3 = 3/1 et situe 5/4 juste après 1.",
-			ideas: {
-				"whole-as-fraction-sort": "associe 4/4, 8/8 et 1",
-				"fraction-train-past-one": "le train des fractions : compte les quarts au-delà d'un entier"
-			}
-		},
-		"G2-FR-11": {
-			title: "Compter par demis et par quarts",
-			description: "Compte ¼, ½, ¾, 1, 1¼… et ½, 1, 1½, 2… sur une droite numérique, en avant et en arrière.",
-			ideas: {
-				"quarter-step-line-hop": "fais sauter une grenouille de quart en quart sur une droite et dis chaque arrêt",
-				"half-step-staircase": "monte l'escalier de demi en demi, complète les marches manquantes"
-			}
-		},
-		"G2-FR-5": {
-			title: "Fractions égales avec des modèles",
-			description: "Montre par pliage que 2/4 = 1/2 et 3/6 = 1/2. Avec des modèles, sans règle.",
-			ideas: {
-				"fold-and-match-halves": "plie du papier pour trouver la même quantité",
-				"fraction-wall-twins": "trouve les bandes de même longueur sur un mur de fractions"
-			}
-		},
-		"G2-FR-6": {
-			title: "Comparer des fractions de même dénominateur",
-			description: "Dit que 3/8 < 5/8 et explique « plus de huitièmes ».",
-			ideas: {
-				"bigger-slice-battle": "choisis la plus grosse part",
-				"fraction-order-train": "range des fractions de même dénominateur"
-			}
-		},
-		"G2-FR-7": {
-			title: "Comparer des fractions de même numérateur",
-			description: "Dit que 1/3 > 1/5 et explique « des parts plus petites ».",
-			ideas: {
-				"which-pizza-more": "quelle pizza en a le plus ? Même nombre de parts, tailles différentes",
-				"justify-the-bigger": "choisis le gagnant et explique pourquoi"
-			}
-		},
-		"G2-FR-8": {
-			title: "Compter en dixièmes",
-			description: "Compte par pas de 0,1 comme 1/10, 2/10, 3/10… jusqu'à 10/10 et sait que les dixièmes viennent d'un partage en 10.",
-			ideas: {
-				"tenths-strip-count": "colorie une bande un dixième à la fois",
-				"tenth-hop-line": "saute le long d'une droite de 0 à 1 de dixième en dixième"
-			}
-		},
-		"G2-FR-9": {
-			title: "Additionner des fractions de même dénominateur (modèles)",
-			description: "Montre 2/7 + 3/7 = 5/7 avec des bandes et dit « les septièmes ne changent pas » ; enlève 2/7 à 5/7 pour trouver 3/7.",
-			ideas: {
-				"fraction-strip-join": "joins des bandes pour additionner",
-				"take-away-slices": "enlève des parts à un entier : « 5/7 moins 2/7 il reste 3/7 »"
-			}
-		},
-		"G2-FR-10": {
-			title: "Trouver 1/4 et 3/4 de 20, et des fractions de 6 et 12",
-			description: "Trouve 1/4 de 20 = 5 en partageant en 4 groupes et 3/4 = 15 ; trouve 1/3 de 6 = 2, 1/4 de 12 = 3 et 3/4 de 12 = 9 avec des objets.",
-			ideas: {
-				"share-in-four-groups": "distribue 20 jetons en 4 groupes, compte les groupes",
-				"fraction-of-a-set-shop": "boutique : trouve 1/4 ou 3/4 d'un panier, ou 1/3 d'un ensemble de 6 ou 12"
-			}
-		},
-		"G2-ALG-1": {
-			title: "Nombre manquant dans + et −",
-			description: "Trouve ? dans ? − 7 = 15 (22) et 8 + ? = 17 avec l'opération inverse.",
-			ideas: {
-				"hidden-weight-scale": "énigme : une balance à deux plateaux avec un poids caché à deviner",
-				"missing-number-fix-it": "répare l'égalité avec le nombre manquant"
-			}
-		},
-		"G2-ALG-2": {
-			title: "Nombre manquant dans ×",
-			description: "Trouve 4 × ? = 20 (5) et ? × 3 = 12.",
-			ideas: {
-				"hidden-array-rows": "un tableau avec une rangée cachée : combien ?",
-				"times-mystery-box": "la boîte cache un facteur"
-			}
-		},
-		"G2-ALG-3": {
-			title: "Continuer des suites de 2 en 2, 3 en 3, 5 en 5, 10 en 10",
-			description: "Continue 7, 12, 17… et dit la règle « ajoute 5 ».",
-			ideas: {
-				"sequence-train": "fais glisser les nombres des prochains wagons",
-				"step-rule-match": "associe chaque suite à sa règle"
-			}
-		},
-		"G2-ALG-4": {
-			title: "Suites de 100 en 100 et à rebours",
-			description: "Continue 850, 750, 650… et 500, 400…",
-			ideas: {
-				"hundred-stairs-sequence": "escalier de centaine en centaine, vers le haut et vers le bas",
-				"count-down-code": "la suite à rebours ouvre un cadenas"
-			}
-		},
-		"G2-ALG-5": {
-			title: "Trouver le terme manquant ou intrus",
-			description: "Repère que 3, 6, 9, 13, 15 est faux à 13 et énonce la règle.",
-			ideas: {
-				"sequence-rule-detective": "trouve le terme intrus et la règle",
-				"fill-the-gap-sequence": "remplis les termes cachés"
-			}
-		},
-		"G2-ALG-6": {
-			title: "Comparer des expressions sans calculer",
-			description: "Décide si 8 + 5 est plus grand que 7 + 6 (égaux à 13 : 8 + 5 = 7 + 6) en déplaçant une unité, sans additionner les deux.",
-			ideas: {
-				"balance-scale-reasoning": "vois la balance pencher avant de calculer",
-				"greater-lesser-equal-flip": "choisis <, > ou ="
-			}
-		},
-		"G2-ALG-7": {
-			title: "Rendre les deux côtés égaux",
-			description: "Complète 9 + 4 = 7 + ? et 12 − 5 = ? + 3.",
-			ideas: {
-				"equal-sides-scale": "ajoute le poids manquant pour équilibrer",
-				"make-it-balance-cards": "choisis des cartes pour rendre égal"
-			}
-		},
-		"G2-MEA-1": {
-			title: "Choisir l'outil et l'unité pour mesurer une longueur",
-			description: "Choisit une règle pour un crayon en cm et un mètre ruban pour une pièce en m.",
-			ideas: {
-				"which-tool-sort": "trie les objets : règle, mètre ou ruban",
-				"cm-or-m-pick": "choisis l'unité : cm ou m"
-			}
-		},
-		"G2-MEA-2": {
-			title: "Mesurer au centimètre près",
-			description: "Place un crayon à 0 et lit 14 cm ; avec un mètre ou un ruban mesure une pièce ou une porte en m.",
-			ideas: {
-				"ruler-snap-measure": "règle aimantée : lis la longueur",
-				"measure-the-trail": "mesure des objets le long d'un parcours, avec un niveau mètre (pièce ou porte en m)"
-			}
-		},
-		"G2-MEA-3": {
-			title: "Estimer des longueurs et vérifier",
-			description: "Devine 30 cm pour un livre, puis mesure.",
-			ideas: {
-				"guess-then-measure": "devine puis mesure : la meilleure estimation marque des points",
-				"benchmark-body-lengths": "utilise ta main ou ton pas comme repère"
-			}
-		},
-		"G2-MEA-4": {
-			title: "De combien est-ce plus long ?",
-			description: "Trouve qu'un ruban de 45 cm est plus long de 18 cm qu'un ruban de 27 cm.",
-			ideas: {
-				"longer-by-how-much": "compare deux barres et soustrais",
-				"ribbon-cut-puzzle": "coupe un ruban pour obtenir la différence demandée"
-			}
-		},
-		"G2-MEA-5": {
-			title: "Longueurs et différences sur une droite numérique",
-			description: "Montre 12 cm et 20 cm sur une droite et l'écart de 8 cm.",
-			ideas: {
-				"ruler-as-number-line": "saute sur la règle pour trouver l'écart",
-				"difference-jump-line": "saute d'une longueur à l'autre"
-			}
-		},
-		"G2-MEA-6": {
-			title: "Lire des balances en kg et en g",
-			description: "Lit une balance à la graduation la plus proche : 2 kg, 500 g.",
-			ideas: {
-				"kitchen-scale-reader": "lis le cadran, à la graduation la plus proche",
-				"balance-the-bag": "pèse avec des poids marqués"
-			}
-		},
-		"G2-MEA-7": {
-			title: "Lire des mesures en l et en ml",
-			description: "Lit un pichet à la graduation la plus proche : 300 ml, 2 l.",
-			ideas: {
-				"jug-fill-reader": "remplis le pichet jusqu'à un trait",
-				"pour-to-the-mark": "verse jusqu'au nombre de ml demandé"
-			}
-		},
-		"G2-MEA-8": {
-			title: "Choisir l'unité adaptée et les liens métriques",
-			description: "Choisit kg pour la farine, ml pour une cuillère de sirop, et sait que 1 kg = 1000 g, 1 l = 1000 ml.",
-			ideas: {
-				"unit-sort-kitchen": "trie les objets de cuisine : kg, g, l, ml",
-				"thousand-link-match": "associe 1 kg à 1000 g"
-			}
-		},
-		"G2-MEA-9": {
-			title: "Lire un thermomètre en degrés Celsius",
-			description: "Lit 23 °C et dit s'il fait chaud ou froid.",
-			ideas: {
-				"thermometer-weather-report": "règle le thermomètre pour chaque jour",
-				"hot-or-cold-sort": "associe chaque température à une activité"
-			}
-		},
-		"G2-TIM-1": {
-			title: "Lire l'heure au quart d'heure",
-			description: "Lit « pile », « et demie », « et quart » et « moins le quart ».",
-			ideas: {
-				"quarter-clock-match": "associe l'horloge à son écriture en mots",
-				"set-the-clock-quarter": "place les aiguilles sur une heure"
-			}
-		},
-		"G2-TIM-2": {
-			title: "Lire l'heure aux 5 minutes",
-			description: "Lit 3 h 25 et 4 h 50 en comptant de 5 en 5 autour du cadran.",
-			ideas: {
-				"count-fives-clock": "compte de 5 en 5 autour du cadran",
-				"read-the-minute-hand": "quelle minute indique la grande aiguille ?"
-			}
-		},
-		"G2-TIM-3": {
-			title: "Écrire l'heure et matin/après-midi",
-			description: "Écrit 4 h 35 de l'après-midi et dit que le petit-déjeuner est le matin.",
-			ideas: {
-				"digital-analogue-match": "associe l'heure numérique et l'horloge à aiguilles",
-				"am-or-pm-day-sort": "trie les moments de la journée : matin ou après-midi"
-			}
-		},
-		"G2-TIM-4": {
-			title: "Unités de temps : minutes, heures, jours, semaines, mois",
-			description: "Sait que 1 h = 60 min, 1 jour = 24 h, 1 semaine = 7 jours, 1 an = 12 mois.",
-			ideas: {
-				"time-unit-ladder": "range les unités de la plus petite à la plus grande",
-				"how-many-in-a-year": "complète le lien entre les unités"
-			}
-		},
-		"G2-TIM-5": {
-			title: "Nombre de jours de chaque mois",
-			description: "Connaît la comptine des mois de 30 jours et sait que février est le plus court.",
-			ideas: {
-				"days-in-each-month": "jeu de tri avec les jointures des poings et le calendrier",
-				"month-length-rhyme": "complète la comptine"
-			}
-		},
-		"G2-TIM-6": {
-			title: "Durée en heures entières",
-			description: "Dit que de 3 h à 5 h il y a 2 heures.",
-			ideas: {
-				"how-long-timeline": "fais glisser le début et la fin sur la frise du jour pour voir la durée",
-				"hour-hop-line": "saute d'heure en heure"
-			}
-		},
-		"G2-TIM-7": {
-			title: "Durée en demi-heures",
-			description: "Calcule que de 3 h à 5 h 30 il y a 2 heures et demie.",
-			ideas: {
-				"half-hour-train-trip": "voyage en train de la gare de départ à la gare d'arrivée",
-				"lesson-timetable-gap": "combien de temps entre deux cours ?"
-			}
-		},
-		"G2-MON-1": {
-			title: "Symboles de monnaie et écriture des montants (local)",
-			description: "Écrit 45 c ou 45 p et un prix avec le bon symbole.",
-			ideas: {
-				"symbol-price-tags": "mets le bon symbole sur chaque étiquette",
-				"write-the-amount": "tape le montant formé par les pièces"
-			}
-		},
-		"G2-MON-2": {
-			title: "Faire un montant avec des pièces différentes",
-			description: "Fait 50 avec 20 + 20 + 10 ou 25 + 25.",
-			ideas: {
-				"coin-combinations-same-amount": "trouve toutes les façons de payer un prix",
-				"coin-purse-fill": "remplis le porte-monnaie avec le montant exact"
-			}
-		},
-		"G2-MON-3": {
-			title: "Le moins de pièces possible",
-			description: "Paie 65 avec 50 + 10 + 5.",
-			ideas: {
-				"fewest-coin-challenge": "paie avec le moins de pièces possible pour marquer des points",
-				"greedy-coin-hint": "commence par la plus grosse pièce qui convient"
-			}
-		},
-		"G2-MON-4": {
-			title: "Totaux d'achats jusqu'à 100",
-			description: "Calcule le total de 45 + 30 pour deux articles.",
-			ideas: {
-				"money-coin-shop-scene": "jeu de la marchande avec une caisse et la monnaie rendue",
-				"basket-total-builder": "dépose des articles et vois le total"
-			}
-		},
-		"G2-MON-5": {
-			title: "Rendre la monnaie jusqu'à 100",
-			description: "Calcule 100 − 65 = 35 en comptant à partir du prix.",
-			ideas: {
-				"count-up-change-till": "compte à partir du prix jusqu'au montant donné",
-				"exact-change-bag": "rends la monnaie exacte"
-			}
-		},
-		"G2-GEO-1": {
-			title: "Côtés et sommets des polygones",
-			description: "Nomme triangle, quadrilatère, pentagone, hexagone, octogone à partir de 3, 4, 5, 6, 8 côtés et sommets.",
-			ideas: {
-				"polygon-name-match": "associe le nombre de côtés au nom",
-				"vertex-tap-count": "touche chaque sommet pour les compter"
-			}
-		},
-		"G2-GEO-2": {
-			title: "Comparer les propriétés de figures planes",
-			description: "Dit qu'un carré et un rectangle ont tous deux 4 côtés et 4 angles droits.",
-			ideas: {
-				"shape-twins": "trouve deux figures qui partagent une propriété",
-				"mystery-shape-clues": "devine la figure grâce aux indices sur les côtés et les angles"
-			}
-		},
-		"G2-GEO-3": {
-			title: "Faces, arêtes et sommets des solides",
-			description: "Compte 6 faces, 12 arêtes, 8 sommets sur un cube et nomme les faces carrées.",
-			ideas: {
-				"solid-sticker-count": "colle une gommette sur chaque face, arête et sommet",
-				"faces-of-the-solid": "nomme les faces planes d'une pyramide"
-			}
-		},
-		"G2-GEO-4": {
-			title: "Trier des figures selon leurs propriétés",
-			description: "Trie des figures planes en « a un angle droit » et « a 5 côtés », puis des solides (faces planes, surface courbe, peut rouler).",
-			ideas: {
-				"sort-shapes-by-properties": "jeu de tri façon diagramme de Venn",
-				"odd-one-out-shape": "repère la figure qui ne suit pas la règle, avec un niveau de solides (cube, cylindre, sphère, cône)"
-			}
-		},
-		"G2-GEO-5": {
-			title: "Dessiner des figures avec des propriétés données",
-			description: "Dessine une figure à 5 côtés sur une grille de points avec une règle.",
-			ideas: {
-				"draw-on-dot-grid": "défi : dessine d'après des cartes consignes",
-				"shape-recipe-draw": "dessine une figure à 4 côtés et 1 angle droit"
-			}
-		},
-		"G2-GEO-6": {
-			title: "Axe de symétrie par pliage",
-			description: "Trouve le pli vertical qui fait coïncider les deux moitiés.",
-			ideas: {
-				"fold-and-mirror-butterfly": "plie et colorie : fais un papillon symétrique, puis trouve la moitié manquante",
-				"symmetric-or-not": "trie les figures : symétriques ou non"
-			}
-		},
-		"G2-GEO-7": {
-			title: "Angles droits",
-			description: "Repère les angles droits avec une équerre en papier.",
-			ideas: {
-				"corner-checker": "teste les coins avec le gabarit",
-				"right-angle-room-hunt": "cherche les angles droits autour de toi"
-			}
-		},
-		"G2-GEO-8": {
-			title: "Tracer et mesurer un segment",
-			description: "Trace un segment de 7 cm et mesure un segment donné.",
-			ideas: {
-				"draw-segment-ruler": "trace à la bonne longueur avec une règle aimantée",
-				"measure-the-segment-trail": "mesure un chemin fait de segments"
-			}
-		},
-		"G2-GEO-9": {
-			title: "Trois points sont-ils alignés ?",
-			description: "Pose une règle pour vérifier si A, B, C sont alignés.",
-			ideas: {
-				"ruler-line-up": "place la règle pour tester les points",
-				"connect-the-straight-dots": "choisis les points qui sont alignés"
-			}
-		},
-		"G2-GEO-10": {
-			title: "Rangées et colonnes de carreaux",
-			description: "Partage un rectangle de 3 par 4 en 12 carrés égaux.",
-			ideas: {
-				"tile-the-rectangle": "pave le rectangle et compte",
-				"rows-times-columns-link": "relie 3 rangées de 4 au nombre de carreaux"
-			}
-		},
-		"G2-POS-1": {
-			title: "Quarts de tour et demi-tours",
-			description: "Fait tourner un robot d'un quart de tour ou d'un demi-tour.",
-			ideas: {
-				"robot-turn-trainer": "tourne le robot pour qu'il regarde l'étoile",
-				"clock-hand-turns": "de combien l'aiguille a-t-elle tourné ?"
-			}
-		},
-		"G2-POS-2": {
-			title: "Trois quarts de tour, dans le sens des aiguilles ou non",
-			description: "Dit « trois quarts de tour dans le sens inverse des aiguilles d'une montre ».",
-			ideas: {
-				"clockwise-or-not-sort": "trie les rotations selon leur sens",
-				"spinner-turn-code": "tourne la roue comme demandé"
-			}
-		},
-		"G2-POS-3": {
-			title: "Lire une case sur une grille",
-			description: "Trouve la case B4.",
-			ideas: {
-				"treasure-grid-find": "trouve le trésor en B4",
-				"name-the-cell": "nomme la case où se trouve l'étoile"
-			}
-		},
-		"G2-POS-4": {
-			title: "Placer et nommer des positions sur une grille",
-			description: "Met le drapeau en D2 et donne la référence de n'importe quel objet.",
-			ideas: {
-				"grid-battle-places": "place les pièces d'après leur référence",
-				"map-landmark-refs": "marque des lieux sur une carte avec leur référence"
-			}
-		},
-		"G2-POS-5": {
-			title: "Écrire des déplacements pour atteindre une cible",
-			description: "Écrit « droite 3, haut 2 » pour amener un pion à une cible.",
-			ideas: {
-				"grid-token-route": "labyrinthe : programme le robot",
-				"shortest-route-challenge": "atteins la cible en un minimum de déplacements"
-			}
-		},
-		"G2-POS-6": {
-			title: "Parcours avec virages, et corriger un parcours",
-			description: "Combine « avance de 3, tourne à droite, avance de 2 » et trouve l'étape fautive.",
-			ideas: {
-				"route-debug-robot": "repère l'étape fausse",
-				"turn-and-move-maze": "labyrinthe qui demande des virages et des déplacements"
-			}
-		},
-		"G2-DAT-1": {
-			title: "Recueillir des données avec des bâtons de comptage",
-			description: "Compte avec des bâtons par cinq et trouve le total.",
-			ideas: {
-				"tally-the-playground": "compte ce que tu vois dans la cour",
-				"tally-gate-count": "compte avec des bâtons par cinq jusqu'à un total"
-			}
-		},
-		"G2-DAT-2": {
-			title: "Dessiner des graphiques en images",
-			description: "Dessine un graphique en images où 1 symbole vaut 1, 2, 5 ou 10 et choisit la légende.",
-			ideas: {
-				"pictogram-key-builder": "choisis une légende (y compris 1 symbole = 1) puis dessine",
-				"half-symbol-read": "lis un demi-symbole"
-			}
-		},
-		"G2-DAT-3": {
-			title: "Diagrammes en blocs et en barres, jusqu'à 4 catégories",
-			description: "Construit un diagramme en barres à 4 barres sur une échelle graduée.",
-			ideas: {
-				"block-to-bar-switch": "transforme un diagramme en blocs en diagramme en barres",
-				"label-the-bars": "ajoute le titre, les étiquettes et l'échelle"
-			}
-		},
-		"G2-DAT-4": {
-			title: "Lire des tableaux simples",
-			description: "Lit un tableau de votes et trouve le total.",
-			ideas: {
-				"table-to-graph-match": "associe un tableau à son graphique",
-				"fill-the-survey-table": "complète le tableau à partir des bâtons de comptage"
-			}
-		},
-		"G2-DAT-5": {
-			title: "Total, différence et « combien de plus »",
-			description: "Lit que les chats ont 6 votes de plus que les poissons.",
-			ideas: {
-				"graph-question-quest": "réponds à des questions à partir d'un graphique",
-				"how-many-more-bars": "compare la hauteur des barres"
-			}
-		},
-		"G2-DAT-6": {
-			title: "Placer des mesures sur un diagramme en points",
-			description: "Note les longueurs de 8 crayons en points sur une droite graduée en unités entières.",
-			ideas: {
-				"pencil-length-plot": "mesure et dépose les points",
-				"read-the-dot-plot": "quelle longueur revient le plus souvent ?"
-			}
-		},
-		"G2-DAT-7": {
-			title: "Faire une enquête et la représenter",
-			description: "Interroge ses camarades, compte avec des bâtons et dessine son propre graphique.",
-			ideas: {
-				"build-graph-from-data": "construis un graphique à partir d'une enquête menée en classe",
-				"survey-question-picker": "choisis une question avec quelques réponses claires"
-			}
-		},
-		"G2-PRB-1": {
-			title: "Certain et impossible",
-			description: "Dit que « le soleil se lève » est certain et qu'« un chat peut voler » est impossible.",
-			ideas: {
-				"certain-or-impossible-sort": "trie les événements",
-				"bag-of-same-colour": "tire dans un sac d'une seule couleur"
-			}
-		},
-		"G2-PRB-2": {
-			title: "Probable et peu probable",
-			description: "Dit que tirer du rouge dans un sac de 8 rouges et 2 bleus est probable.",
-			ideas: {
-				"likely-bag-guess": "prédis le tirage, puis tire",
-				"chance-word-line": "place les événements sur la droite du hasard"
-			}
-		},
-		"G2-PRB-3": {
-			title: "Lister les résultats possibles d'une pièce ou d'un dé",
-			description: "Liste pile, face et 1–6 comme résultats possibles.",
-			ideas: {
-				"coin-and-dice-outcomes": "jeu d'expérience : prédis, lance, puis compte les résultats",
-				"all-the-outcomes-list": "liste tous les résultats possibles",
-				"spinner-outcomes-match": "associe une roue à ses résultats"
-			}
-		},
-		"G2-PSR-1": {
-			title: "Problèmes à une étape avec + et −, et la phrase mathématique",
-			description: "Résout « Sam a 28 autocollants et en reçoit 15 de plus » et écrit 28 + 15 = 43.",
-			ideas: {
-				"story-to-number-sentence": "associe l'histoire à son calcul",
-				"choose-the-operation": "choisis + ou −"
-			}
-		},
-		"G2-PSR-2": {
-			title: "Problèmes à une étape avec × et ÷",
-			description: "Résout « 4 sacs de 5 pommes » et « 20 partagé entre 4 ».",
-			ideas: {
-				"equal-groups-stories": "joue l'histoire",
-				"times-or-divide-pick": "choisis × ou ÷"
-			}
-		},
-		"G2-PSR-3": {
-			title: "Problèmes à deux étapes avec + et − jusqu'à 100",
-			description: "Résout « 35 + 20 puis en donner 18 ».",
-			ideas: {
-				"two-step-shop-story": "deux achats et la monnaie rendue",
-				"step-by-step-split": "marque l'étape 1 et l'étape 2"
-			}
-		},
-		"G2-PSR-4": {
-			title: "Schéma en barres parties-tout",
-			description: "Dessine une barre avec les parties 18 et ? dans 45.",
-			ideas: {
-				"bar-model-builder": "glisse les parties dans une barre",
-				"which-bar-fits": "choisis la barre qui va avec l'histoire"
-			}
-		},
-		"G2-PSR-5": {
-			title: "Schéma en barres de comparaison",
-			description: "Dessine deux barres pour montrer 12 de plus que 25.",
-			ideas: {
-				"compare-bars-story": "dessine deux barres pour l'écart",
-				"difference-bracket": "marque la différence"
-			}
-		},
-		"G2-PSR-6": {
-			title: "Trouver toutes les combinaisons",
-			description: "Trouve les 6 tenues possibles avec 2 hauts et 3 pantalons.",
-			ideas: {
-				"outfit-maker": "mélange et assortis les tenues",
-				"ice-cream-scoop-combos": "tous les cornets à deux boules"
-			}
-		},
-		"G2-PSR-7": {
-			title: "Listes organisées",
-			description: "Liste les tenues : haut A avec chaque pantalon, puis haut B, pour n'en oublier aucune.",
-			ideas: {
-				"list-it-in-order": "remplis un tableau organisé",
-				"missing-combo-finder": "laquelle manque ?"
-			}
-		},
-		"G2-PSR-8": {
-			title: "Tester une affirmation générale",
-			description: "Teste « impair + impair est toujours pair » avec cinq exemples.",
-			ideas: {
-				"always-sometimes-never-sort": "trie les affirmations : toujours, parfois, jamais",
-				"find-a-counter-example": "essaie de trouver un contre-exemple"
-			}
-		},
-		"G2-PSR-9": {
-			title: "Vérifier une réponse par l'inverse et par estimation",
-			description: "Vérifie 72 − 38 = 34 avec 34 + 38 et par environ 70 − 40.",
-			ideas: {
-				"answer-checker-two-ways": "confirme chaque réponse de deux façons",
-				"spot-the-wrong-answer": "trouve la réponse qui échoue aux deux vérifications"
-			}
+	"K-FL-2": {
+		title: "Estimer « environ combien »",
+		description: "Devine « environ 10 » avant de compter un ensemble, puis vérifie en comptant.",
+		ideas: { "jar-guess": "Deviner combien de haricots sont dans le pot, puis les compter ensemble." }
+	},
+	"K-FL-3": {
+		title: "Les doubles jusqu'à 5 + 5",
+		description: "Se rappelle les doubles jusqu'à 5 + 5 (« le double de 4, c'est 8 »).",
+		ideas: { "mirror-doubles": "Jeu du papillon : les points d'une aile sont reflétés sur l'autre et l'enfant dit le double." }
+	},
+	"K-FL-4": {
+		title: "Moitiés des nombres pairs jusqu'à 20",
+		description: "Partage un nombre pair en deux ensembles égaux et dit la moitié (« la moitié de 8, c'est 4 »).",
+		ideas: {
+			"mirror-halves": "Jeu du papillon : l'enfant couvre une aile et nomme combien de points il y a de chaque côté.",
+			"two-plates-halves": "Glisser des biscuits sur deux assiettes jusqu'à ce qu'elles soient égales et nommer la moitié."
 		}
 	},
-	G3: {
-		"G3-NS-1": {
-			title: "Lire et écrire les nombres jusqu'à 10 000",
-			description: "Lit 6 205 à voix haute et écrit « quatre mille neuf » 4 009, en gérant les zéros au milieu du nombre.",
-			ideas: { "number-word-builder": "assemble un nombre avec des étiquettes de mots (dits ou écrits) et associe-le à ses chiffres ; jeu de construction et d'association" }
-		},
-		"G3-NS-2": {
-			title: "Comparer et ranger les nombres à 4 chiffres",
-			description: "Range 5 342 ; 5 324 ; 4 999 et dit lequel est le plus grand en comparant d'abord les milliers, puis les centaines.",
-			ideas: {
-				"thousands-sorting-race": "dépose des cartes-nombres dans l'ordre avant la fin du chrono ; jeu de tri",
-				"biggest-number-cards": "pioche 4 cartes-chiffres et place-les pour former le plus grand ou le plus petit nombre ; jeu de cartes"
-			}
-		},
-		"G3-NS-3": {
-			title: "Placer un nombre sur une droite jusqu'à 10 000",
-			description: "Place 6 250 sur une droite graduée de 0 à 10 000 en trouvant entre quels milliers il se situe, puis à peu près où.",
-			ideas: { "midpoint-finder": "trouve le milieu entre deux milliers indiqués et place des nombres par rapport à lui ; glisser-déposer" }
-		},
-		"G3-NS-4": {
-			title: "Lire des repères non gradués sur une droite agrandie",
-			description: "Lit le nombre d'un repère sans étiquette sur une droite de 6 000 à 7 000 découpée en dizaines de centaines (le repère est 6 400).",
-			ideas: { "zoom-line-lander": "agrandis la droite étape par étape pour poser un marqueur sur une cible ; jeu" }
-		},
-		"G3-NS-5": {
-			title: "Compter de 4 en 4, 6 en 6, 7 en 7, 8 en 8 et 9 en 9",
-			description: "Compte en avant et en arrière de 4 en 4, 6 en 6, 7 en 7, 8 en 8 et 9 en 9 à partir de n'importe quel multiple (42, 49, 56, 63, 72).",
-			ideas: { "skip-count-frog": "fais sauter une grenouille sur une ligne de nénuphars par bonds de 4, 6, 7, 8 ou 9 ; jeu" }
-		},
-		"G3-NS-6": {
-			title: "Compter de 25 en 25, 50 en 50, 100 en 100 et 1 000 en 1 000",
-			description: "Compte 25, 50, 75, 100, 125, puis de 50 en 50 et de 100 en 100 (350, 400, 450), et 3 000, 4 000, 5 000, et dit le nombre qui suit 975.",
-			ideas: {
-				"quarter-coin-count": "compte des piles de pièces de 25 cents pour atteindre un total ; comptage en histoire",
-				"thousand-steps": "grimpe une grande tour par bonds de 1 000 et dis où tu atterris ; jeu"
-			}
-		},
-		"G3-NS-7": {
-			title: "Chiffres romains jusqu'à C (facultatif)",
-			description: "Lit XXXIV comme 34 et écrit 49 XLIX avec I, V, X, L, C. Petit bonus local.",
-			ideas: { "roman-numeral-builder": "construis des nombres jusqu'à 100 avec des tuiles I, V, X, L, C et relis-les ; jeu de construction et d'association" }
-		},
-		"G3-NS-8": {
-			title: "Comparer des températures sous zéro (découverte)",
-			description: "Dit que −3 °C est plus froid que −1 °C et range −4, −1, 2 sur un thermomètre vertical. Exploration seulement.",
-			ideas: {
-				"thermometer-hop": "fais sauter un personnage le long d'un thermomètre vertical pour correspondre à des cartes météo ; jeu",
-				"colder-or-warmer-cards": "compare deux cartes de température et touche la plus froide ; tri éclair"
-			}
-		},
-		"G3-NS-9": {
-			title: "Compter à rebours en passant par zéro (découverte)",
-			description: "Compte 3, 2, 1, 0, −1, −2 et dit quel étage est deux niveaux sous le rez-de-chaussée. Exploration seulement.",
-			ideas: {
-				"below-zero-lift": "prends un ascenseur à travers les sous-sols en comptant à rebours à travers 0 ; en histoire",
-				"zero-crossing-count": "fais passer un marqueur par zéro sur une droite et lis le nouveau nombre ; comptage guidé"
-			}
-		},
-		"G3-PV-1": {
-			title: "Valeur de chaque chiffre d'un nombre à 4 chiffres",
-			description: "Dit que le 3 de 4 306 vaut 300 et que le 4 vaut 4 000.",
-			ideas: { "digit-worth-cards": "associe chaque chiffre en surbrillance à sa carte-valeur ; jeu d'association" }
-		},
-		"G3-PV-2": {
-			title: "Décomposer les nombres à 4 chiffres, zéro comme place vide",
-			description: "Écrit 4 306 sous la forme 4 000 + 300 + 6 et dit à quoi sert le 0 à la place des dizaines.",
-			ideas: {
-				"partition-puzzle": "décompose un nombre en tuiles de milliers, centaines, dizaines et unités pour remplir une cible ; casse-tête",
-				"zero-placeholder-spot": "repère quel nombre perd de la valeur si on enlève son zéro ; chasse vrai ou faux"
-			}
-		},
-		"G3-PV-3": {
-			title: "Ajouter ou enlever 1, 10, 100 ou 1 000 instantanément",
-			description: "Dit que 10 de plus que 4 396 font 4 406 et que 1 000 de moins que 5 090 font 4 090, sans calcul écrit.",
-			ideas: { "odometer-roll": "tourne les molettes d'un compteur de voiture pour ajouter ou enlever une position à la fois ; molettes à manipuler" }
-		},
-		"G3-PV-4": {
-			title: "Arrondir à la dizaine la plus proche",
-			description: "Arrondit 4 376 à 4 380 et 2 455 à 2 460, en décidant avec le chiffre des unités.",
-			ideas: { "round-to-ten-hill": "fais rouler une balle sur une colline entre deux dizaines pour voir où atterrit un nombre ; droite numérique interactive" }
-		},
-		"G3-PV-5": {
-			title: "Arrondir à la centaine la plus proche",
-			description: "Arrondit 4 376 à 4 400 et 2 450 à 2 500, en décidant avec le chiffre des dizaines.",
-			ideas: { "which-hundred-snap": "fais glisser un nombre vers la centaine la plus proche sur une droite et explique pourquoi ; glisser et justifier" }
-		},
-		"G3-PV-6": {
-			title: "Multiplier par 10 et 100 : les chiffres se décalent",
-			description: "Explique que 35 × 100 = 3 500 : chaque chiffre avance de deux rangs vers la gauche et des zéros occupent les places vides.",
-			ideas: { "digit-slide": "fais glisser les chiffres sur un tableau de numération quand on multiplie par 10 ou 100 ; construction avec une énigme « où est passé le zéro ? »" }
-		},
-		"G3-PV-7": {
-			title: "Diviser des multiples de 10 et 100 par 10 et 100",
-			description: "Dit que 4 500 ÷ 100 = 45, les chiffres se décalant vers la droite, comme l'opération inverse de × 100.",
-			ideas: { "undo-the-shift": "fais le décalage à l'envers : chaque carte × 100 a sa carte ÷ 100 ; jeu d'association" }
-		},
-		"G3-OP-1": {
-			title: "Addition posée jusqu'à 4 chiffres",
-			description: "Additionne 3 478 + 2 356 en colonnes, avec une retenue dans n'importe quelle colonne.",
-			ideas: { "carry-the-crate": "échange dix unités, dizaines ou centaines contre une unité du rang suivant dans une histoire de caisses ; construction à manipuler" }
-		},
-		"G3-OP-2": {
-			title: "Soustraction posée jusqu'à 4 chiffres",
-			description: "Soustrait 6 254 − 2 876 en colonnes, en échangeant avec le rang suivant quand il le faut.",
-			ideas: { "exchange-station": "casse un millier en dix centaines sur un tapis de numération avant de soustraire ; à manipuler" }
-		},
-		"G3-OP-3": {
-			title: "Soustraire en passant par des zéros",
-			description: "Calcule 5 003 − 2 768 en échangeant à travers les zéros.",
-			ideas: { "zero-bridge-subtract": "fais passer l'échange le long d'une rangée de zéros avec une droite numérique ; casse-tête guidé" }
-		},
-		"G3-OP-4": {
-			title: "Vérifier avec l'inverse et une estimation",
-			description: "Vérifie 5 003 − 2 768 = 2 235 en calculant 2 235 + 2 768 et en arrondissant pour voir que c'est proche de 2 200.",
-			ideas: { "broken-column-hunt": "trouve quelle colonne a une mauvaise retenue ou un mauvais échange dans des calculs corrigés ; chasse à l'erreur" }
-		},
-		"G3-OP-5": {
-			title: "Toutes les tables de multiplication jusqu'à 10 × 10",
-			description: "Connaît 7 × 8 = 56 et 56 ÷ 7 = 8, et tous les autres faits jusqu'à 10 × 10."
-		},
-		"G3-OP-6": {
-			title: "Commutativité et familles de calculs",
-			description: "Utilise 6 × 4 = 4 × 6 pour réduire de moitié les faits à apprendre, et écrit les quatre calculs 6 × 4, 4 × 6, 24 ÷ 4, 24 ÷ 6 ; sait que la division n'est pas commutative.",
-			ideas: { "fact-family-houses": "remplis les pièces d'une maison de famille de calculs à partir de trois nombres ; casse-tête d'association" }
-		},
-		"G3-OP-7": {
-			title: "Les tables de 11 et 12 avec les divisions",
-			description: "Connaît 12 × 7 = 84 et 96 ÷ 12 = 8, et 11 × 9 = 99.",
-			ideas: {
-				"table-gap-puzzle": "remplis les cases manquantes d'une table de multiplication avec les faits que tu connais ; casse-tête",
-				"twelve-pack-division": "partage des caisses de 12 objets pour répondre aux divisions par 12 ; en histoire"
-			}
-		},
-		"G3-OP-8": {
-			title: "Multiplier un nombre à 2 ou 3 chiffres par un chiffre",
-			description: "Calcule 47 × 6 et 308 × 4 avec un tableau, des produits partiels ou la multiplication posée.",
-			ideas: { "grid-method-builder": "fais glisser des blocs de dizaines et d'unités dans un tableau et additionne les produits partiels ; construction à manipuler" }
-		},
-		"G3-OP-9": {
-			title: "Diviser par 1 chiffre, avec reste",
-			description: "Calcule 87 ÷ 4 = 21 reste 3 et 453 ÷ 5 = 90 reste 3, en disant que le reste est ce qui reste.",
-			ideas: { "share-out-leftovers": "distribue des jetons à des amis et regarde ce qui reste ; partage à manipuler" }
-		},
-		"G3-OP-10": {
-			title: "Diviser un nombre à 4 chiffres par un chiffre (découverte)",
-			description: "Calcule 4 375 ÷ 5 = 875 par division posée et vérifie en multipliant. Exploration seulement.",
-			ideas: { "short-division-stack": "reporte le reste au rang suivant grâce à une aide en colonnes ; exemple guidé" }
-		},
-		"G3-OP-11": {
-			title: "2 chiffres × 2 chiffres, modèle d'aire (découverte)",
-			description: "Découpe 23 × 14 en 20 × 10, 20 × 4, 3 × 10, 3 × 4 et additionne les quatre produits partiels. Exploration seulement.",
-			ideas: {
-				"area-model-multiplier": "découpe une grille en blocs de dizaines et d'unités pour construire un produit de 2 chiffres par 2 chiffres et vois les produits partiels s'additionner ; construction à manipuler",
-				"partial-products-sum-race": "associe chaque case d'un modèle d'aire à son produit et au total ; course d'association"
-			}
-		},
-		"G3-OP-12": {
-			title: "Parenthèses et ordre des opérations (découverte)",
-			description: "Dit que 3 × (4 + 2) = 18 mais que 3 × 4 + 2 = 14, car les parenthèses passent en premier. Exploration seulement.",
-			ideas: {
-				"bracket-first": "place des parenthèses pour obtenir une valeur cible ; casse-tête avec vérification immédiate",
-				"bracket-or-not-pairs": "décide si deux expressions, avec et sans parenthèses, ont la même valeur ; association de paires"
-			}
-		},
-		"G3-OP-13": {
-			title: "Multiplier trois nombres dans l'ordre voulu (découverte)",
-			description: "Réordonne 2 × 7 × 5 en 2 × 5 × 7 = 10 × 7 = 70 et dit pourquoi l'ordre ne change rien. Exploration seulement.",
-			ideas: { "three-factor-shortcut": "réordonne 2 × 7 × 5 dans l'ordre le plus facile et explique pourquoi ; estime et vérifie" }
-		},
-		"G3-OP-14": {
-			title: "La distributivité comme stratégie (découverte)",
-			description: "Calcule 7 × 14 comme 7 × 10 + 7 × 4 = 98. Exploration seulement.",
-			ideas: { "split-and-multiply": "sépare un facteur en dizaines et unités sur un tableau de points et additionne les deux produits ; tableau de points à manipuler" }
-		},
-		"G3-OP-15": {
-			title: "Les calculs × 0 et × 1",
-			description: "Dit que 7 × 0 = 0 et 7 × 1 = 7, et que 0 ÷ 5 = 0, sachant que multiplier par 1 ne change rien et que multiplier par 0 donne 0. (OP-13/14 restent en exploration.)",
-			ideas: {
-				"zero-and-one-facts": "trie des cartes de calculs dans les bacs « ne change pas » et « devient zéro » ; jeu de tri",
-				"vanishing-multiplier": "passe des nombres dans des machines × 0 et × 1 et devine le résultat ; jeu de machines"
-			}
-		},
-		"G3-FL-1": {
-			title: "Connaître les tables instantanément",
-			description: "Répond à 7 × 8 ou 54 ÷ 6 en environ 3 secondes."
-		},
-		"G3-FL-2": {
-			title: "Juger des calculs de table instantanément",
-			description: "Dit d'un coup d'œil que 6 × 8 = 48 est vrai et que 7 × 8 = 54 est faux.",
-			ideas: { "true-or-trap-facts": "repère le calcul faux parmi les justes contre la montre ; jeu éclair" }
-		},
-		"G3-FL-3": {
-			title: "Passer par la dizaine",
-			description: "Calcule 68 + 7 comme 68 + 2 + 5 = 75, et 8 + 6 comme 8 + 2 + 4.",
-			ideas: { "ten-bridge-hop": "saute le long d'une droite numérique en t'arrêtant à la dizaine suivante avant le reste ; jeu" }
-		},
-		"G3-FL-4": {
-			title: "Passer par la centaine",
-			description: "Calcule 396 + 8 comme 396 + 4 + 4 = 404, et 504 − 7 comme 504 − 4 − 3.",
-			ideas: { "hundred-bridge-hop": "saute à la centaine suivante, puis fais le reste, sur une longue droite numérique ; jeu" }
-		},
-		"G3-FL-9": {
-			title: "Calcul mental : 2 chiffres ± 2 chiffres",
-			description: "Calcule 47 + 36 comme 47 + 30 + 6 = 83 et 62 − 29 comme 62 − 30 + 1 = 33, en décomposant ou en compensant.",
-			ideas: { "partition-or-compensate": "choisis la méthode mentale la plus rapide (séparer les dizaines, ou arrondir et ajuster) pour chaque calcul ; jeu de choix de stratégie" }
-		},
-		"G3-FL-5": {
-			title: "Multiplier par 10 et 100 de tête",
-			description: "Répond à 64 × 10 = 640 et 35 × 100 = 3 500 instantanément."
-		},
-		"G3-FL-6": {
-			title: "Multiplier par des multiples de 10",
-			description: "Calcule 4 × 60 = 240 comme 4 × 6 dizaines.",
-			ideas: { "tens-table-twist": "transforme un calcul connu en sa version « dizaines » ; association de calculs jumeaux" }
-		},
-		"G3-FL-7": {
-			title: "Estimer des sommes et des différences en arrondissant",
-			description: "Dit que 298 + 405 font environ 700 et que 4 980 − 2 010 font environ 3 000.",
-			ideas: { "ballpark-bingo": "marque la case du bingo la plus proche de l'estimation de chaque somme ; jeu de bingo" }
-		},
-		"G3-FL-8": {
-			title: "Estimer des produits en arrondissant",
-			description: "Dit que 49 × 6 font environ 50 × 6 = 300.",
-			ideas: { "round-and-multiply-guess": "choisis l'estimation la plus proche du vrai produit avant de voir la réponse ; estime et vérifie" }
-		},
-		"G3-NT-1": {
-			title: "Les multiples d'un nombre",
-			description: "Liste les premiers multiples de 6 et dit que 42 est un multiple de 6.",
-			ideas: { "multiple-hunt": "colorie des multiples sur un tableau de 100 et repère ce que deux couches ont en commun ; casse-tête" }
-		},
-		"G3-NT-2": {
-			title: "Les paires de facteurs en rectangles",
-			description: "Construit tous les rectangles avec 12 ou 24 carreaux et lit 24 = 1 × 24, 2 × 12, 3 × 8, 4 × 6.",
-			ideas: { "factor-pair-rectangles": "construis tous les rectangles avec 24 carreaux et lis les paires ; construction à manipuler" }
-		},
-		"G3-NT-3": {
-			title: "Toutes les paires de facteurs jusqu'à 100",
-			description: "Liste 36 = 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6 de façon organisée et sait quand s'arrêter.",
-			ideas: { "factor-pair-sweep": "teste les nombres dans l'ordre et note les paires qui marchent ; casse-tête de liste organisée" }
-		},
-		"G3-NT-4": {
-			title: "Bien utiliser « diviseur » et « multiple »",
-			description: "Dit « 6 est un diviseur de 18 ; 18 est un multiple de 6 » et trie des nombres dans chaque groupe.",
-			ideas: {
-				"factor-or-multiple-sorter": "trie des cartes-nombres dans le panier des diviseurs ou des multiples d'un nombre cible ; jeu de tri",
-				"which-word-fits": "complète des phrases « ☐ est un diviseur/multiple de ☐ » ; texte à compléter"
-			}
-		},
-		"G3-FR-1": {
-			title: "Compter en dixièmes",
-			description: "Compte 1/10, 2/10, … 10/10 et au-delà, sachant que les dixièmes viennent d'un tout coupé en dix.",
-			ideas: { "tenths-strip-count": "déroule une bande de dixièmes morceau par morceau en comptant à voix haute ; comptage à manipuler" }
-		},
-		"G3-FR-2": {
-			title: "Compter en centièmes",
-			description: "Compte 1/100, 2/100 … et dit que dix centièmes font un dixième (découverte).",
-			ideas: {
-				"hundredths-grid-count": "colorie un carré de 100 dixième par dixième puis centième par centième en comptant à voix haute ; à manipuler",
-				"ten-hundredths-make-a-tenth": "regroupe des carrés coloriés en colonnes de dixièmes ; jeu de regroupement"
-			}
-		},
-		"G3-FR-8": {
-			title: "Fractions sur une droite de 0 à 1 et au-delà de 1",
-			description: "Place 3/4 et 5/4 sur une droite de 0 à 2, en voyant les fractions comme des nombres qui ont une place.",
-			ideas: {
-				"fraction-line-lander": "dépose des fractions sur une droite de 0 à 2 avec des repères en parts égales ; glisser-déposer",
-				"fraction-hop-past-one": "fais sauter une grenouille par quarts au-delà du repère 1 et nomme où elle atterrit ; jeu"
-			}
-		},
-		"G3-FR-3": {
-			title: "Fractions équivalentes sur un mur de fractions",
-			description: "Montre que ½ = 2/4 = 4/8 en alignant des bandes, avec des modèles seulement.",
-			ideas: { "fraction-wall-match": "fais glisser les bandes du mur de fractions pour trouver toutes celles égales à ⅔ ou ¾ ; association à manipuler" }
-		},
-		"G3-FR-4": {
-			title: "Dixièmes égaux à des centièmes",
-			description: "Montre que 3/10 = 30/100 sur un carré de 100 en coloriant trois colonnes (modèles seulement, sans simplifier).",
-			ideas: { "tenths-to-hundredths-zoom": "agrandis une barre de dixièmes en centièmes et regarde les nombres changer ; interactif" }
-		},
-		"G3-FR-9": {
-			title: "Comparer des fractions de même dénominateur ou numérateur",
-			description: "Dit que 3/8 > 2/8 (parts de même taille, plus nombreuses) et que 1/3 > 1/5 (moins de coupes, parts plus grandes), et justifie avec un modèle.",
-			ideas: {
-				"bigger-slice-duel": "choisis la plus grande de deux fractions et justifie avec une barre ; duel de cartes",
-				"fraction-order-line": "range sur une droite des cartes de fractions de même dénominateur ou de même numérateur et dis pourquoi ; jeu de tri"
-			}
-		},
-		"G3-FR-5": {
-			title: "Additionner des fractions de même dénominateur",
-			description: "Calcule 3/8 + 2/8 = 5/8 avec une barre.",
-			ideas: { "pizza-pieces-add": "réunis des parts de deux pizzas et nomme le total ; construis et nomme" }
-		},
-		"G3-FR-6": {
-			title: "Additionner au-delà d'un entier",
-			description: "Calcule 5/8 + 7/8 = 12/8 et voit que c'est plus qu'un entier. Pas encore de règle de conversion. Aperçu de G4, au-delà de G3.FR.6 « jusqu'à 1 ».",
-			ideas: { "over-the-whole-wall": "empile des bandes de fractions au-delà de la ligne « 1 » et lis le total ; à manipuler" }
-		},
-		"G3-FR-7": {
-			title: "Soustraire des fractions de même dénominateur",
-			description: "Calcule 7/8 − 5/8 = 2/8 et 7/10 − 3/10 = 4/10. Simple aperçu de G4.FR.4 : 12/8 − 5/8 = 7/8.",
-			ideas: { "fraction-take-away": "enlève des bandes d'un total construit et lis ce qui reste ; à manipuler" }
-		},
-		"G3-FR-10": {
-			title: "Fraction d'une quantité",
-			description: "Trouve ¼ de 20 = 5 et ¾ de 20 = 15, et résout un petit problème avec elles.",
-			ideas: { "share-the-stickers-fractions": "sépare un ensemble d'objets en groupes égaux et prends-en 1, 2 ou 3 ; partage à manipuler" }
-		},
-		"G3-FR-11": {
-			title: "Lire a/b comme a parts de taille 1/b",
-			description: "Dit que 3/4 sont trois morceaux qui valent chacun 1/4, pour les dénominateurs 2, 3, 4, 6, 8 et 10.",
-			ideas: {
-				"build-the-fraction": "colorie a parts d'une barre coupée en b pour construire a/b ; construis et nomme",
-				"parts-of-one-over-b": "dis combien de morceaux 1/b font une fraction donnée ; jeu d'association"
-			}
-		},
-		"G3-FR-12": {
-			title: "Les nombres entiers comme fractions",
-			description: "Dit que 3 = 3/1 et 4/4 = 1, et que 6/3 est au même endroit que 2.",
-			ideas: {
-				"whole-as-fraction-match": "associe des nombres entiers et des fractions sur une droite ; jeu d'association",
-				"whole-wall-slices": "vois 4/4 remplir exactement un entier sur le mur ; à manipuler"
-			}
-		},
-		"G3-RP-1": {
-			title: "La virgule dans les prix et les mesures",
-			description: "Lit 3,45 $ et 1,5 m, sachant que la virgule sépare les unités entières des parties.",
-			ideas: { "point-meaning-sort": "trie des prix et des mesures selon la partie entière et la partie décimale ; jeu de tri" }
-		},
-		"G3-RP-2": {
-			title: "Valeur des chiffres décimaux jusqu'aux centièmes",
-			description: "Dit que 3,45 c'est 3 unités, 4 dixièmes, 5 centièmes. Centièmes en découverte seulement.",
-			ideas: { "decimal-place-value-mat": "dépose des jetons-chiffres sur un tapis unités, dixièmes, centièmes ; construction à manipuler" }
-		},
-		"G3-RP-3": {
-			title: "Comparer des nombres décimaux à 2 décimales",
-			description: "Dit que 3,45 est plus petit que 3,5 en comparant d'abord les dixièmes.",
-			ideas: { "decimal-duel": "duel de cartes « plus grand ou plus petit » avec des décimaux ; jeu de cartes" }
-		},
-		"G3-RP-4": {
-			title: "Ranger des nombres décimaux sur une droite",
-			description: "Place 2,7 ; 2,07 ; 2,75 sur une droite de 2 à 3.",
-			ideas: { "decimal-number-line-jump": "fais sauter un jeton sur une droite agrandissable pour atteindre des décimaux cibles ; jeu" }
-		},
-		"G3-RP-5": {
-			title: "Arrondir des décimaux à l'entier le plus proche",
-			description: "Arrondit 3,6 à 4 et 3,2 à 3, en regardant le chiffre des dixièmes (dixièmes seulement).",
-			ideas: { "which-whole-snap": "fais glisser un décimal vers l'entier le plus proche sur une droite ; glisser et justifier" }
-		},
-		"G3-RP-6": {
-			title: "Dixièmes et centièmes en écriture décimale",
-			description: "Écrit 3/10 sous la forme 0,3 et 7/100 sous la forme 0,07 et les place sur une droite.",
-			ideas: { "fraction-to-decimal-match": "associe des cartes de fractions à des décimaux sur une droite commune ; jeu d'association" }
-		},
-		"G3-RP-7": {
-			title: "½, ¼ et ¾ en écriture décimale",
-			description: "Connaît ½ = 0,5, ¼ = 0,25, ¾ = 0,75.",
-			ideas: {
-				"quarter-coin-decimals": "lis 25 ¢, 50 ¢, 75 ¢ comme 0,25, 0,5, 0,75 d'un dollar ; en histoire",
-				"half-quarter-decimal-cards": "associe des fractions repères à des décimaux ; jeu de mémoire"
-			}
-		},
-		"G3-RP-8": {
-			title: "Additionner et soustraire des dixièmes",
-			description: "Calcule 0,4 + 0,3 = 0,7 et 1,2 − 0,5 = 0,7 (dixièmes seulement).",
-			ideas: { "tenths-tape-measure": "mesure des objets réels au dixième d'unité près et additionne deux longueurs ; estime et vérifie" }
-		},
-		"G3-ALG-1": {
-			title: "Nombre manquant dans une multiplication",
-			description: "Résout ☐ × 6 = 42 en pensant : 6 fois combien font 42.",
-			ideas: { "mystery-box-multiply": "ouvre la boîte en trouvant le facteur caché ; casse-tête" }
-		},
-		"G3-ALG-2": {
-			title: "Nombre manquant dans une division",
-			description: "Résout 56 ÷ ☐ = 8 et ☐ ÷ 7 = 6 avec la multiplication correspondante.",
-			ideas: { "division-detective": "utilise le calcul inverse pour trouver le diviseur ou le dividende manquant ; casse-tête d'indices" }
-		},
-		"G3-ALG-3": {
-			title: "Régularités dans les tables",
-			description: "Explique pourquoi un nombre pair × n'importe quel nombre donne un nombre pair et repère la régularité des chiffres de la table de 9.",
-			ideas: { "table-pattern-spotter": "colorie des cases d'un tableau pour révéler une régularité et dis pourquoi ; exploration" }
-		},
-		"G3-ALG-4": {
-			title: "Compléter une machine entrée–sortie",
-			description: "Remplit les sorties d'une machine « × 3 » pour les entrées 2, 5, 9."
-		},
-		"G3-ALG-5": {
-			title: "Trouver la règle de la machine",
-			description: "Voit que les entrées 2, 4, 6 donnent les sorties 8, 16, 24 et dit que la règle est × 4.",
-			ideas: { "g3-finds-machine-rule": "devine la règle d'une machine cachée à partir des entrées et des sorties ; jeu" }
-		},
-		"G3-ALG-6": {
-			title: "Continuer une suite de nombres",
-			description: "Continue 7, 14, 21, … ou 100, 90, 80, … sur plusieurs termes.",
-			ideas: { "sequence-detective": "trouve les termes manquants d'une suite ; casse-tête" }
-		},
-		"G3-ALG-7": {
-			title: "Dire la règle d'une suite avec des mots",
-			description: "Dit « on part de 4 et on ajoute 6 à chaque fois ».",
-			ideas: { "rule-in-a-sentence": "choisis la phrase qui correspond à une suite ; jeu d'association" }
-		},
-		"G3-MEA-1": {
-			title: "Connaître les unités métriques et leurs liens",
-			description: "Connaît 1 m = 100 cm, 1 cm = 10 mm, 1 kg = 1 000 g, 1 l = 1 000 ml.",
-			ideas: { "unit-match-memory": "associe des mesures égales dans une grille de mémoire ; jeu de mémoire" }
-		},
-		"G3-MEA-2": {
-			title: "Comparer et ranger des mesures",
-			description: "Range 3 rubans par longueur et dit quelle carafe contient le plus.",
-			ideas: {
-				"measure-order-lineup": "range des mesures de la plus petite à la plus grande dans la même unité ; jeu de tri",
-				"which-holds-more": "compare des récipients en lisant leur contenance ; jeu éclair"
-			}
-		},
-		"G3-MEA-3": {
-			title: "Additionner et soustraire des mesures",
-			description: "Calcule 2 m 40 cm + 1 m 75 cm et 3 kg − 1 kg 500 g.",
-			ideas: { "ribbon-cut-lengths": "coupe et assemble des rubans pour atteindre une longueur cible ; en histoire" }
-		},
-		"G3-MEA-4": {
-			title: "Convertir entre unités voisines",
-			description: "Dit que 2 kg = 2 000 g et 350 cm = 3 m 50 cm ; aussi 1 m 25 cm = 125 cm.",
-			ideas: { "unit-converter-machine": "mets une mesure dans un convertisseur et choisis l'unité ; jeu de machine" }
-		},
-		"G3-MEA-5": {
-			title: "Lire des échelles de 2 en 2, 5 en 5, 10 en 10",
-			description: "Lit un thermomètre gradué de 2 en 2 et une règle graduée de 5 mm en 5 mm.",
-			ideas: { "ruler-and-jug-reader": "lis différents instruments pour atteindre une cible ; jeu de lecture" }
-		},
-		"G3-MEA-6": {
-			title: "Lire des échelles aux graduations non étiquetées",
-			description: "Trouve le pas à partir de deux repères étiquetés et lit 250 g sur une balance graduée de 50 g en 50 g, ou 100 ml.",
-			ideas: { "missing-labels-scale": "étiquette les graduations vides avant de lire la mesure ; texte à compléter" }
-		},
-		"G3-MEA-7": {
-			title: "Estimer avec des repères",
-			description: "Dit qu'une porte mesure environ 2 m et qu'une bouteille contient environ 1 l, et choisit l'unité qui convient."
-		},
-		"G3-MEA-8": {
-			title: "Périmètre d'un polygone",
-			description: "Mesure et additionne les côtés d'un rectangle ou d'un polygone : 5 + 3 + 5 + 3 = 16 cm.",
-			ideas: { "fence-the-garden": "prévois une clôture autour d'un jardin et calcule la longueur totale ; en histoire" }
-		},
-		"G3-MEA-9": {
-			title: "Trouver un côté manquant avec le périmètre",
-			description: "Trouve le côté inconnu d'un rectangle de périmètre 20 cm dont les côtés sont 7 et ☐.",
-			ideas: { "mystery-side": "trouve le côté caché d'une figure à partir de son périmètre ; casse-tête" }
-		},
-		"G3-MEA-10": {
-			title: "Aire en comptant des carrés",
-			description: "Compte des carreaux unités pour dire qu'une figure couvre 12 cm² (et des carrés de m² pour un sol ou un tapis).",
-			ideas: { "cover-the-floor": "recouvre un plan avec des carreaux carrés et compte-les ; à manipuler" }
-		},
-		"G3-MEA-11": {
-			title: "Aire d'un rectangle : rangées × colonnes",
-			description: "Dit que 4 rangées de 6 carreaux font 24 et écrit longueur × largeur.",
-			ideas: { "array-to-area": "regarde un tableau de points se remplir de carreaux et écris la multiplication ; à manipuler" }
-		},
-		"G3-MEA-12": {
-			title: "Aire de figures faites de rectangles",
-			description: "Découpe une figure en L en deux rectangles et additionne leurs aires, puis compare avec le périmètre.",
-			ideas: {
-				"tile-the-floor": "carrelle le plan d'une pièce et clôture-la en comparant aire et périmètre ; construis et compte",
-				"l-shape-split": "découpe une figure en L en rectangles de différentes façons et vérifie que le total reste le même ; casse-tête"
-			}
-		},
-		"G3-TIM-1": {
-			title: "Lire une horloge à aiguilles à la minute près",
-			description: "Lit 4 h 37 et « 6 h 23 » (23 minutes après 6 heures) sur une horloge à aiguilles.",
-			ideas: { "clock-minute-hunt": "place les aiguilles sur une heure donnée ; horloge interactive" }
-		},
-		"G3-TIM-2": {
-			title: "Horloges avec chiffres romains",
-			description: "Lit l'heure sur une horloge à chiffres romains, par exemple VII pour 7.",
-			ideas: { "roman-face-clock": "lis l'heure sur une horloge à chiffres romains et associe-la à l'heure numérique ; jeu d'association" }
-		},
-		"G3-TIM-3": {
-			title: "Écrire la même heure de trois façons",
-			description: "Écrit 7 h 35 en numérique, dit « huit heures moins vingt-cinq » et les associe.",
-			ideas: { "time-match-three-ways": "associe des cartes d'horloge, d'heure numérique et de mots ; jeu de mémoire" }
-		},
-		"G3-TIM-4": {
-			title: "Durée à l'intérieur de l'heure",
-			description: "Trouve que de 3 h 20 à 3 h 45, il y a 25 minutes.",
-			ideas: { "clock-jump-line": "saute le long d'une droite numérique de l'heure de début à l'heure de fin ; droite interactive" }
-		},
-		"G3-TIM-5": {
-			title: "Durée au-delà de l'heure",
-			description: "Trouve que de 3 h 50 à 4 h 20, il y a 30 minutes en sautant jusqu'à 4 h.",
-			ideas: { "timeline-across-the-hour": "ajoute le saut jusqu'à l'heure suivante sur une frise du temps ; sauts guidés" }
-		},
-		"G3-TIM-6": {
-			title: "Trouver l'heure de fin ou de début avec une durée",
-			description: "Dit qu'un film qui commence à 2 h 15 et dure 50 minutes se termine à 3 h 05.",
-			ideas: { "when-does-it-end": "organise l'emploi du temps d'une journée avec des heures de début et des durées ; en histoire" }
-		},
-		"G3-TIM-7": {
-			title: "Convertir heures, minutes et secondes",
-			description: "Dit que 2 heures = 120 minutes et 3 minutes = 180 secondes.",
-			ideas: { "time-unit-ladder": "monte et descends l'échelle des unités pendant que tu convertis des cartes de temps ; jeu" }
-		},
-		"G3-TIM-8": {
-			title: "Années bissextiles (facultatif)",
-			description: "Sait qu'une année bissextile a 366 jours et un 29 février, et trouve laquelle en est une dans une liste.",
-			ideas: {
-				"leap-year-detective": "fouille des calendriers pour trouver l'année qui a un jour de plus ; casse-tête",
-				"calendar-day-count": "compte les jours d'un mois et d'une année en repérant février ; exploration"
-			}
-		},
-		"G3-MON-1": {
-			title: "Écrire l'argent en écriture décimale",
-			description: "Écrit 4 dollars 5 cents sous la forme 4,05 $.",
-			ideas: { "price-tag-writer": "écris le prix correspondant à des pièces ; écris et construis" }
-		},
-		"G3-MON-2": {
-			title: "Convertir dollars et cents",
-			description: "Dit que 4,05 $ = 405 cents et que 250 cents = 2,50 $.",
-			ideas: { "cents-dollars-swap": "passe un prix des cents aux dollars et inversement ; jeu éclair" }
-		},
-		"G3-MON-3": {
-			title: "Additionner et soustraire des sommes d'argent",
-			description: "Calcule 3,45 $ + 2,80 $ et 10,00 $ − 6,35 $.",
-			ideas: { "shopping-basket-total": "additionne les articles d'un panier ; jeu de courses" }
-		},
-		"G3-MON-4": {
-			title: "Rendre la monnaie en comptant en avançant",
-			description: "Rend la monnaie sur 5 $ pour un achat de 3,40 $ en comptant 60 cents, puis 1 $.",
-			ideas: { "shop-till-change": "tiens la caisse : le client paie, l'enfant compte la monnaie avec des pièces ; jeu de rôle" }
-		},
-		"G3-MON-5": {
-			title: "Comparer des prix",
-			description: "Dit lequel de 4,50 $ et 4,05 $ est moins cher et de combien.",
-			ideas: { "best-buy-pair": "compare deux prix de rayon et choisis le meilleur ; jeu de choix" }
-		},
-		"G3-MON-6": {
-			title: "Décider ce qu'on peut s'offrir",
-			description: "Dit que 7,50 $ permettent d'acheter le livre à 3,20 $ et le jouet à 4 $, mais pas deux jouets.",
-			ideas: { "can-i-buy-it": "vérifie un panier par rapport à la somme d'un porte-monnaie ; jeu oui ou non" }
-		},
-		"G3-GEO-1": {
-			title: "Carrés et rectangles",
-			description: "Dit qu'un rectangle a 4 angles droits et des côtés opposés égaux, et qu'un carré est aussi un rectangle.",
-			ideas: {
-				"rectangle-club": "teste des figures avec les règles pour être un rectangle ; jeu de tri",
-				"square-is-a-rectangle": "vois un carré réussir tous les tests du rectangle ; énigme à dévoiler"
-			}
-		},
-		"G3-GEO-2": {
-			title: "Losanges, parallélogrammes, trapèzes et cerfs-volants",
-			description: "Appelle losange une figure à 4 côtés égaux sans angle droit, trapèze une figure avec une seule paire de côtés parallèles, et sait qu'un carré est aussi un losange.",
-			ideas: {
-				"lean-the-rectangle": "incline un cadre rectangulaire en parallélogramme puis en losange et regarde ce qui reste égal ; à manipuler",
-				"kite-and-trapezoid-spot": "repère des cerfs-volants et des trapèzes dans une galerie de figures ; chasse au trésor"
-			}
-		},
-		"G3-GEO-3": {
-			title: "Trier les quadrilatères selon leurs propriétés",
-			description: "Trie des figures en groupes qui se chevauchent (4 côtés égaux, angles droits, côtés parallèles).",
-			ideas: { "quad-sorting-hoops": "fais glisser des figures dans des cerceaux de propriétés qui se chevauchent ; jeu de tri" }
-		},
-		"G3-GEO-4": {
-			title: "Parts égales comme fractions unitaires",
-			description: "Partage un carré en 4 parts de même aire et nomme chacune 1/4.",
-			ideas: { "name-the-piece": "nomme chaque morceau avec une fraction unitaire ; jeu d'étiquettes" }
-		},
-		"G3-GEO-5": {
-			title: "Même aire, formes différentes",
-			description: "Montre que deux morceaux découpés différemment dans le même carré sont tous deux des moitiés.",
-			ideas: {
-				"fair-share-cutter": "découpe une figure en parts de même aire qui n'ont pas la même allure ; casse-tête à manipuler",
-				"same-area-different-look": "décide si des parts de formes différentes sont égales ; vrai ou faux"
-			}
-		},
-		"G3-GEO-6": {
-			title: "Un angle comme un tour ; l'angle droit",
-			description: "Dit qu'un angle droit est un quart de tour et trouve des angles droits dans une pièce.",
-			ideas: { "corner-checker-hunt": "utilise une équerre en papier pour trouver et trier des angles dans une scène ; chasse au trésor" }
-		},
-		"G3-GEO-7": {
-			title: "Plus petit, égal ou plus grand qu'un angle droit",
-			description: "Dit lequel de trois angles est plus petit qu'un angle droit, avec une équerre.",
-			ideas: { "angle-compare-sort": "trie des angles dans les bacs plus petit, égal et plus grand ; jeu de tri" }
-		},
-		"G3-GEO-8": {
-			title: "Droites parallèles et perpendiculaires",
-			description: "Repère des paires de droites parallèles et perpendiculaires dans un dessin et sur un plan d'étage."
-		},
-		"G3-GEO-9": {
-			title: "Droites horizontales et verticales ; tracer des droites",
-			description: "Nomme les droites horizontales et verticales et trace une droite parallèle à l'une d'elles sur un quadrillage.",
-			ideas: {
-				"horizon-and-plumb": "distingue l'horizontale de la verticale dans une scène ; pointe et nomme",
-				"line-drawing-challenge": "trace des droites parallèles ou perpendiculaires à une droite donnée ; tâche de dessin"
-			}
-		},
-		"G3-GEO-10": {
-			title: "Fabriquer des solides avec du matériel",
-			description: "Construit un cube et une pyramide avec des pailles et de la pâte à modeler et compte les arêtes.",
-			ideas: { "straws-and-clay-build": "construis un solide et compte ses éléments ; à manipuler" }
-		},
-		"G3-GEO-11": {
-			title: "Reconnaître des solides sous différents points de vue",
-			description: "Associe les vues de dessus, de face et de côté au solide.",
-			ideas: { "build-and-view": "construis une maquette à partir d'une image dessus-face-côté et vérifie en la faisant tourner ; construction à manipuler" }
-		},
-		"G3-POS-1": {
-			title: "Points cardinaux N, E, S, O",
-			description: "Dit dans quelle direction un personnage se déplace et donne des consignes comme « va vers l'est de 3 ».",
-			ideas: { "compass-rose-run": "dirige un personnage avec des consignes de boussole ; jeu" }
-		},
-		"G3-POS-2": {
-			title: "Quarts de tour, demi-tours et tours complets",
-			description: "Dit qu'un quart de tour fait 1 angle droit, un demi-tour 2, un tour complet 4.",
-			ideas: { "robot-turn-commands": "fais tourner un robot par quarts de tour et demi-tours pour le mettre face à une cible ; jeu de programmation" }
-		},
-		"G3-POS-3": {
-			title: "Repères de quadrillage sur un plan",
-			description: "Trouve le musée en C4 sur un plan.",
-			ideas: { "map-square-finder": "repère des cases à partir de références sur un plan ; chasse au trésor" }
-		},
-		"G3-POS-4": {
-			title: "Décrire un trajet",
-			description: "Dit « nord 2, tourne à droite, est 3 » pour traverser un plan.",
-			ideas: { "route-describer": "écris des consignes et regarde un personnage les suivre ; jeu de programmation" }
-		},
-		"G3-POS-5": {
-			title: "Lire des coordonnées (découverte)",
-			description: "Lit le point (3, 5) comme 3 vers la droite et 5 vers le haut.",
-			ideas: { "across-then-up-hop": "fais sauter une grenouille vers la droite puis vers le haut pour lire un point ; jeu" }
-		},
-		"G3-POS-6": {
-			title: "Placer des points (découverte)",
-			description: "Place (3, 5) et relie des points pour dessiner une figure.",
-			ideas: { "treasure-point-plot": "place les coordonnées des indices pour révéler une image cachée sur la carte ; casse-tête" }
-		},
-		"G3-DAT-1": {
-			title: "Lire des pictogrammes avec une échelle",
-			description: "Lit un pictogramme où 1 symbole = 5 et dit que 3½ symboles font 17 ou 18, puis donne le total.",
-			ideas: { "symbol-worth-reader": "lis la légende avant de répondre aux questions ; jeu de lecture de légende" }
-		},
-		"G3-DAT-2": {
-			title: "Dessiner des pictogrammes avec une échelle",
-			description: "Dessine 20 avec 4 symboles quand 1 symbole = 5.",
-			ideas: { "draw-the-pictogram": "construis un pictogramme à partir d'un relevé de points ; tâche de construction" }
-		},
-		"G3-DAT-3": {
-			title: "Lire et dessiner des diagrammes en barres avec une échelle",
-			description: "Lit une barre au trait le plus proche sur une échelle de 2, 5 ou 10 et dessine une barre pour 35.",
-			ideas: { "scale-bar-builder": "fais glisser des barres pour correspondre à un tableau avec une échelle donnée ; tâche de construction" }
-		},
-		"G3-DAT-4": {
-			title: "Lire un tableau et comparer",
-			description: "Dit quel groupe en a le plus à l'aide d'un tableau, y compris un tableau à double entrée simple (par exemple garçons/filles selon l'animal préféré)."
-		},
-		"G3-DAT-5": {
-			title: "« Combien de plus ou de moins »",
-			description: "Calcule 35 − 28 = 7 de plus.",
-			ideas: { "gap-finder": "trouve l'écart entre deux barres ; questions sur des diagrammes" }
-		},
-		"G3-DAT-6": {
-			title: "Questions à deux étapes sur des données",
-			description: "Calcule le total de deux groupes, puis de combien il dépasse un troisième.",
-			ideas: { "two-step-chart-quest": "réponds dans l'ordre à des questions liées sur des diagrammes ; quête" }
-		},
-		"G3-DAT-7": {
-			title: "Lire des diagrammes à points en demis et en quarts",
-			description: "Lit un diagramme où des croix se trouvent à 2½ et 2¾.",
-			ideas: { "plot-reader-puzzle": "lis le nombre de croix à chaque repère ; casse-tête" }
-		},
-		"G3-DAT-8": {
-			title: "Dessiner des diagrammes à points en demis et en quarts",
-			description: "Mesure des longueurs et place des croix sur un diagramme à points.",
-			ideas: { "measure-and-plot-leaves": "mesure des feuilles au quart près et place-les sur le diagramme ; à manipuler" }
-		},
-		"G3-DAT-9": {
-			title: "Préparer une enquête",
-			description: "Écrit une question et un plan pour récolter des données (par exemple le fruit préféré).",
-			ideas: { "survey-sticker-wall": "récolte des votes avec des gommettes ; enquête de classe" }
-		},
-		"G3-DAT-10": {
-			title: "Présenter des données et conclure",
-			description: "Dessine un diagramme et dit ce qu'il montre.",
-			ideas: { "investigation-report": "choisis un diagramme et écris une conclusion en une phrase ; tâche d'écriture" }
-		},
-		"G3-PRB-1": {
-			title: "Lister tous les résultats possibles",
-			description: "Liste les six faces d'un dé ou les couleurs d'une roue.",
-			ideas: { "outcome-lister": "nomme tous les résultats possibles d'un objet ; tâche de liste" }
-		},
-		"G3-PRB-2": {
-			title: "Plus ou moins probable",
-			description: "Dit que sur une roue avec 3 cases rouges et 1 bleue, le rouge est plus probable.",
-			ideas: { "spinner-lab": "conçois une roue où le rouge est le plus probable mais pas certain ; construis et teste" }
-		},
-		"G3-PRB-3": {
-			title: "Comparer les résultats avec ce qu'on attend",
-			description: "Lance un dé 30 fois et dit pourquoi le relevé n'est pas exactement égal partout.",
-			ideas: {
-				"fair-or-rigged-dice": "lance deux dés plusieurs fois et décide lequel triche ; expérience et relevé",
-				"tally-then-compare": "fais une expérience et compare avec une prédiction ; expérience"
-			}
-		},
-		"G3-PSR-1": {
-			title: "Problème à deux étapes avec une équation",
-			description: "Résout « 28 pommes, on enlève 3 boîtes de 6 » avec 28 − 3 × 6 = ☐.",
-			ideas: { "two-step-story-equation": "transforme une histoire en équation avec une case pour l'inconnue ; constructeur d'équations" }
-		},
-		"G3-PSR-2": {
-			title: "Choisir les opérations",
-			description: "Décide qu'un problème demande × puis + et explique pourquoi.",
-			ideas: { "which-operation-sorter": "trie les étapes d'une histoire selon les opérations ; jeu de tri" }
-		},
-		"G3-PSR-3": {
-			title: "Schémas en barres de comparaison",
-			description: "Dessine deux barres, 24 et 17, et montre que la différence est 7.",
-			ideas: { "bar-model-match": "associe une histoire à son schéma en barres ; jeu d'association" }
-		},
-		"G3-PSR-4": {
-			title: "Schémas en barres « fois plus »",
-			description: "Montre « 3 fois plus » avec une barre courte et une autre trois fois plus longue.",
-			ideas: { "g3-bar-model-comparison-times-as-many": "construis des barres de comparaison et de « fois plus » à partir d'une histoire ; à manipuler" }
-		},
-		"G3-PSR-5": {
-			title: "Juger si une réponse est raisonnable",
-			description: "Dit que 78 + 49 = 227 est faux parce que ça devrait être proche de 130.",
-			ideas: { "sensible-or-silly": "accepte ou rejette des réponses en estimant ; jeu éclair" }
-		},
-		"G3-PSR-6": {
-			title: "Repérer une information manquante",
-			description: "Dit que « Combien de monnaie ? » a besoin de la somme payée.",
-			ideas: { "missing-piece-problems": "trouve l'information manquante dans une histoire ; casse-tête" }
-		},
-		"G3-PSR-7": {
-			title: "Repérer une information en trop",
-			description: "Barre le renseignement dont on n'a pas besoin.",
-			ideas: { "extra-facts-eraser": "efface les informations inutiles ; jeu de nettoyage" }
-		},
-		"G3-PSR-8": {
-			title: "Expliquer une méthode",
-			description: "Dit dans l'ordre comment 24 × 3 a été calculé."
-		},
-		"G3-PSR-9": {
-			title: "Comparer deux méthodes",
-			description: "Dit laquelle de deux méthodes pour 99 + 36 est la plus rapide et pourquoi.",
-			ideas: { "two-ways-compare": "regarde deux méthodes résolues et choisis-en une ; tâche de comparaison" }
-		},
-		"G3-PSR-10": {
-			title: "Listes organisées pour trouver toutes les solutions",
-			description: "Liste dans l'ordre toutes les paires de nombres dont la somme est 10."
-		},
-		"G3-PSR-11": {
-			title: "Tableaux pour trouver toutes les solutions",
-			description: "Utilise un tableau pour trouver toutes les tenues avec 3 hauts et 2 jupes.",
-			ideas: { "all-the-outfits-table": "remplis un tableau de combinaisons ; jeu de combinaisons" }
+	"K-FL-5": {
+		title: "Calculs rapides dans la limite de 10",
+		description: "Répond vite à de simples additions et soustractions dans la limite de 10, sans pénalité pour les réponses lentes (« 4 et 3 — 7 »).",
+		ideas: {
+			"quick-twenty": "Calculs doux contre la minuterie jusqu'à 20, sans pénalité pour les réponses lentes.",
+			"fact-flash-cards": "Jeu de cartes à retourner : un calcul s'affiche et l'enfant dit la réponse."
 		}
 	},
-	G4: {
-		"G4-NS-1": {
-			title: "Lire et écrire les nombres jusqu'aux millions",
-			description: "Lit et écrit 3 070 400 comme « trois millions soixante-dix mille quatre cents » et inversement.",
-			ideas: { "number-word-match": "associer les nombres chiffrés à leur écriture en lettres ou à leur lecture à voix haute, avec des pièges de zéros au milieu (association)" }
-		},
-		"G4-NS-2": {
-			title: "Comparer et ranger les nombres jusqu'aux millions",
-			description: "Décide que 4 206 090 est plus grand que 4 196 999 en comparant à partir du rang le plus élevé et range 4 ou 5 nombres de ce type.",
-			ideas: {
-				"bigger-number-duel": "duel de cartes : former le plus grand nombre avec des cartes-chiffres et le comparer à celui d'un partenaire (jeu)",
-				"population-lineup": "ranger du plus petit au plus grand des grands nombres de la vie réelle (villes, stades, montagnes) (tri)"
-			}
-		},
-		"G4-NS-3": {
-			title: "Lire les milliards par tranches de 3 chiffres (bonus)",
-			description: "Lit 2 340 000 000 comme « deux milliards trois cent quarante millions » en lisant chaque tranche de trois chiffres.",
-			ideas: {
-				"group-by-three-reader": "glisser les séparateurs de tranches à leur place et lire chaque tranche à voix haute (construction)",
-				"how-big-is-a-billion": "histoire d'échelle : 1 000 millions empilés, comparés à des secondes ou à des pas (histoire)"
-			}
-		},
-		"G4-NS-4": {
-			title: "Placer de grands nombres sur une droite graduée",
-			description: "Place 640 000 sur une droite de 0 à 1 000 000 et trouve le milieu de 2 000 000 et 3 000 000 (la partie milliards est un approfondissement).",
-			ideas: {
-				"big-number-zoom-line": "droite graduée zoomable de 0 à 1 000 000 000 : poser une épingle, l'échelle se précise pour vérifier l'estimation",
-				"halfway-hunt": "trouver le nombre situé à mi-chemin entre deux grands nombres sur une droite (énigme)"
-			}
-		},
-		"G4-NS-5": {
-			title: "Chiffres romains jusqu'à M (local)",
-			description: "Lit XIV, XLIX et MCMXC ainsi que la date gravée sur un monument.",
-			ideas: { "roman-clock-tower": "lire des chiffres romains sur des horloges et des dates de bâtiments (recherche et lecture)" }
-		},
-		"G4-NS-6": {
-			title: "Virgules lakh/crore (local)",
-			description: "Lit 12,50,000 comme « douze lakhs cinquante mille » et sait que cela vaut 1 250 000.",
-			ideas: {
-				"lakh-crore-reader": "passer d'une écriture à tranches de 3 chiffres à celle en lakh/crore et lire le nombre à voix haute en course",
-				"comma-style-compare": "trier des nombres écrits des deux façons en paires égales (association)"
-			}
-		},
-		"G4-NS-7": {
-			title: "Compter à rebours en passant par zéro",
-			description: "Compte 3, 1, −1, −3 sur une droite graduée et dit ce qui vient après −2 en remontant.",
-			ideas: {
-				"below-zero-lift": "histoire : un ascenseur, une benne de mine et un thermomètre passent par zéro ; l'enfant les guide et note la position et le saut",
-				"zero-crossing-count": "sauter en avant et en arrière sur une droite en passant par zéro pour atteindre la cible (jeu)"
-			}
-		},
-		"G4-NS-8": {
-			title: "Écart entre un nombre négatif et un nombre positif",
-			description: "Trouve l'écart entre −4 °C et 7 °C (11 degrés) ou entre l'étage −2 et l'étage 3 (5 étages).",
-			ideas: {
-				"thermometer-walk": "déplacer un personnage le long d'un thermomètre vertical pour répondre aux cartes « de combien fait-il plus chaud ? »",
-				"temperature-swing-cards": "associer deux températures ou deux étages à leur différence (cartes à associer)"
-			}
-		},
-		"G4-PV-1": {
-			title: "Valeur d'un chiffre dans les nombres jusqu'aux millions",
-			description: "Dit que le 4 de 3 482 150 vaut 400 000 et que le 3 vaut 3 000 000.",
-			ideas: { "digit-value-sort": "trier les cartes-chiffres d'un nombre selon leur valeur (tri)" }
-		},
-		"G4-PV-2": {
-			title: "Forme développée et « chaque rang vaut 10 fois le suivant »",
-			description: "Écrit 3 482 150 comme 3 000 000 + 400 000 + … et explique pourquoi le 8 vaut dix fois le 8 situé un rang à sa droite.",
-			ideas: {
-				"expanded-form-builder": "construire un nombre à partir de cartes de valeur et le lire (construction)",
-				"ten-times-ladder": "grimper à une échelle dont chaque barreau vaut 10 fois le précédent (jeu)"
-			}
-		},
-		"G4-PV-3": {
-			title: "Valeur des chiffres décimaux jusqu'aux millièmes",
-			description: "Dit que chaque chiffre de 2,718 vaut 2, 7/10, 1/100 et 8/1000, qu'un millième est le dixième d'un centième, et écrit 3,47 = 3 + 4/10 + 7/100 en forme développée.",
-			ideas: { "thousandths-magnifier": "une loupe zoome dans un tableau de numération, des dixièmes aux millièmes, puis on écrit le nombre décimal en forme développée (exploration)" }
-		},
-		"G4-PV-4": {
-			title: "Arrondir les nombres entiers de 10 à 100 000",
-			description: "Arrondit 458 372 à 458 000 (millier le plus proche) et à 460 000 (dizaine de mille la plus proche) et explique pourquoi.",
-			ideas: {
-				"round-to-the-landmark": "jeu : un nombre roule sur une colline entre deux repères ; l'enfant décide où il s'arrête et à quel rang",
-				"rounding-place-chooser": "choisir la bonne valeur arrondie pour un rang donné parmi des propositions (quiz)"
-			}
-		},
-		"G4-PV-5": {
-			title: "Multiplier et diviser des nombres entiers par 10, 100, 1 000",
-			description: "Décale les chiffres pour obtenir 45 × 100 = 4 500 et 4 500 ÷ 1 000 = 4,5.",
-			ideas: { "digit-slider-machine": "construire une machine ×10 / ÷1 000 en faisant glisser des tuiles-chiffres de part et d'autre de la virgule, puis prévoir le résultat" }
-		},
-		"G4-PV-6": {
-			title: "Multiplier et diviser des décimaux par 10, 100, 1 000",
-			description: "Obtient 3,4 × 100 = 340 et 0,7 ÷ 10 = 0,07 en décalant les chiffres, sans « ajouter des zéros », et écrit 10² = 100 et 10³ = 1 000.",
-			ideas: {
-				"digit-slider-machine": "construire une machine ×10 / ÷1 000 en faisant glisser des tuiles-chiffres de part et d'autre de la virgule, puis prévoir le résultat",
-				"shift-or-zero-trap": "chasse à l'erreur : repérer où « on ajoute juste un zéro » ou un mauvais décalage a mené à l'erreur"
-			}
-		},
-		"G4-OP-1": {
-			title: "Addition et soustraction posées de grands nombres",
-			description: "Pose 4 687 + 2 759 et 5 003 − 2 768 en colonnes, avec retenues et échanges à travers les zéros.",
-			ideas: {
-				"column-regroup-blocks": "faire les retenues et les échanges avec des blocs de base dix pendant que la somme en colonnes se met à jour (manipulation)",
-				"subtraction-error-hunt": "trouver l'échange erroné dans une soustraction posée résolue (chasse à l'erreur)"
-			}
-		},
-		"G4-OP-2": {
-			title: "Vérifier un calcul par estimation et par l’inverse",
-			description: "Vérifie 5 003 − 2 768 = 2 235 en arrondissant à 5 000 − 2 800 et en additionnant 2 235 + 2 768.",
-			ideas: { "inverse-check-detective": "décider quelle réponse résiste à la vérification par l'opération inverse (énigme)" }
-		},
-		"G4-OP-3": {
-			title: "Additionner et soustraire des décimaux en colonnes",
-			description: "Aligne les virgules pour calculer 12,4 + 3,85 et 7 − 2,35, ainsi qu'un cas avec 3 décimales, 2,375 + 1,4.",
-			ideas: { "line-up-the-point": "glisser les chiffres dans des colonnes alignées, la virgule servant de colonne vertébrale (construction)" }
-		},
-		"G4-OP-4": {
-			title: "Multiplier un nombre de 3 ou 4 chiffres par un chiffre",
-			description: "Calcule 4 237 × 6 avec un modèle d'aire, puis en colonne.",
-			ideas: {
-				"area-model-builder": "construire un rectangle avec des blocs de base dix et lire les produits partiels",
-				"carry-the-crate": "multiplication posée avec des caisses qui se reportent au rang suivant (jeu)"
-			}
-		},
-		"G4-OP-5": {
-			title: "Découvrir 4 chiffres × 2 chiffres",
-			description: "Calcule 1 246 × 23 avec deux lignes de produits partiels qu'on additionne (découverte seulement).",
-			ideas: {
-				"area-model-builder": "faire glisser et découper des rectangles pour 23 × 14",
-				"partial-product-lanes": "déposer chaque produit partiel dans sa ligne et faire le total (construction)"
-			}
-		},
-		"G4-OP-6": {
-			title: "Multiplier et diviser un décimal par un nombre entier",
-			description: "Obtient 2,5 × 4 = 10, 3,2 × 3 = 9,6 et un cas avec centièmes, 1,25 × 4 = 5, et partage 4,8 ÷ 4 = 1,2 (découverte seulement).",
-			ideas: { "decimal-times-whole-grid": "répéter une quantité coloriée sur une grille de 100 et lire le total, ou la partager en parts égales (visuel)" }
-		},
-		"G4-OP-7": {
-			title: "Diviser un nombre de 4 chiffres par un chiffre",
-			description: "Calcule 735 ÷ 5 et 4 284 ÷ 6 en partageant rang par rang (division posée courte).",
-			ideas: {
-				"share-out-long-division": "manipulation : partager des blocs de base dix en groupes égaux, échanger des dizaines contre des unités et noter chaque étape",
-				"short-division-stairs": "faire descendre les chiffres sur un escalier en écrivant le quotient et le reste (construction)"
-			}
-		},
-		"G4-OP-8": {
-			title: "Décider quoi faire du reste",
-			description: "Répond à « 58 enfants, 8 par bus » par 8 bus (on arrondit au-dessus) et à « 58 bonbons, 8 par boîte » par 7 boîtes (on ignore le reste).",
-			ideas: { "remainder-sort-stories": "trier des histoires : arrondir au-dessus, ignorer le reste ou le garder en fraction (tri de cartes)" }
-		},
-		"G4-OP-9": {
-			title: "Découvrir la division par un nombre de 2 chiffres",
-			description: "Calcule 156 ÷ 12 en retirant des multiples de 12 (découverte, reste entier seulement).",
-			ideas: { "chunking-by-tens": "retirer des paquets de 10 fois et de 5 fois le diviseur jusqu'à ce qu'il n'en reste plus (construction)" }
-		},
-		"G4-OP-10": {
-			title: "« Fois plus » ou « de plus que »",
-			description: "Dit que 12 est « 3 fois plus que 4 » mais « 8 de plus que 4 ».",
-			ideas: { "times-or-more-sort": "tri de cartes : classer des phrases d'histoires en « fois plus » ou « de plus que », avec une manche aux formulations piégeuses" }
-		},
-		"G4-OP-11": {
-			title: "Distributivité et associativité",
-			description: "Calcule 25 × 4 × 7 comme 100 × 7 et 6 × 98 comme 6 × 100 − 6 × 2.",
-			ideas: {
-				"regroup-factors-race": "réordonner les facteurs pour obtenir un produit rond et battre la montre (jeu)",
-				"split-and-multiply-builder": "décomposer un facteur sur un tableau de points et additionner les produits partiels (construction)"
-			}
-		},
-		"G4-OP-12": {
-			title: "Priorité des opérations sans parenthèses",
-			description: "Calcule 3 + 4 × 2 = 11 et 20 − 12 ÷ 4 = 17 en faisant × et ÷ avant + et −.",
-			ideas: {
-				"order-of-operations-error-hunt": "chasse à l'erreur : trouver l'étape d'un exemple résolu qui a été faite dans le mauvais ordre",
-				"operation-order-race": "faire glisser les opérations dans le bon ordre, avec un score selon la vitesse (jeu)"
-			}
-		},
-		"G4-OP-13": {
-			title: "Parenthèses dans les expressions",
-			description: "Montre que (3 + 4) × 2 = 14 et place des parenthèses dans 2 + 3 × 4 pour obtenir 20.",
-			ideas: {
-				"bracket-bonanza": "énigme : placer des parenthèses dans une suite de nombres et de signes pour atteindre un objectif",
-				"bracket-or-not-match": "associer des expressions avec et sans parenthèses à leur valeur (association)"
-			}
-		},
-		"G4-OP-14": {
-			title: "Multiplier 2 chiffres par 2 chiffres",
-			description: "Calcule 34 × 27 avec un modèle d'aire (30 × 27 + 4 × 27), puis en colonne avec deux lignes de produits partiels.",
-			ideas: {
-				"area-model-builder": "faire glisser et découper des rectangles pour 23 × 14",
-				"two-by-two-box-method": "remplir une grille de quatre cases de produits partiels, puis la relier à la multiplication posée (construction)"
-			}
-		},
-		"G4-FL-1": {
-			title: "Calculer mentalement avec des multiples de 10 et 100",
-			description: "Calcule 30 × 40 = 1 200 et 2 400 ÷ 6 = 400 à partir de la table de base.",
-			ideas: { "zero-count-sprint": "faits en rafale avec des indices pour compter les zéros qui s'estompent peu à peu (entraînement)" }
-		},
-		"G4-FL-2": {
-			title: "Additionner et soustraire en arrondissant puis en compensant",
-			description: "Calcule 346 + 99 comme 346 + 100 − 1 et 502 − 298 comme 502 − 300 + 2.",
-			ideas: { "near-ten-jump": "sauter jusqu'au nombre rond voisin sur une droite, puis corriger (construction)" }
-		},
-		"G4-FL-3": {
-			title: "Doubler et diviser par deux pour simplifier",
-			description: "Transforme 16 × 25 en 8 × 50 puis en 4 × 100 = 400.",
-			ideas: { "double-half-machine": "des paires de nombres passent dans une machine à doubler et à diviser par deux jusqu'à ce que le produit soit facile (énigme)" }
-		},
-		"G4-FL-4": {
-			title: "Estimer des produits",
-			description: "Estime 48 × 6 comme 50 × 6 = 300 et décide si 288 est vraisemblable.",
-			ideas: { "round-then-multiply-bet": "parier sur un intervalle pour un produit, puis découvrir la réponse exacte (jeu)" }
-		},
-		"G4-FL-5": {
-			title: "Estimer des quotients avec des nombres amis",
-			description: "Estime 412 ÷ 8 comme 400 ÷ 8 = 50 avec des nombres compatibles.",
-			ideas: { "compatible-numbers-match": "associer chaque division à son nombre ami (association)" }
-		},
-		"G4-FL-6": {
-			title: "Choisir la meilleure stratégie de calcul mental",
-			description: "Choisit la compensation pour 346 + 99, le double et la moitié pour 16 × 25 et les tables avec des dizaines pour 30 × 40.",
-			ideas: {
-				"strategy-picker": "voir un calcul, choisir la stratégie la plus astucieuse et la justifier (quiz)",
-				"mental-or-paper-sort": "trier des calculs entre « facile dans ma tête » et « il me faut du papier » (tri)"
-			}
-		},
-		"G4-FL-7": {
-			title: "Tables jusqu’à 12 × 12 et divisions associées",
-			description: "Retrouve tout de suite 7 × 8 = 56, 12 × 11 = 132 et 132 ÷ 12 = 11.",
-			ideas: {
-				"times-table-fact-sprint": "entraînement chronométré sur les tables jusqu'à 12 × 12, qui revient sur les faits ratés (entraînement)",
-				"fact-family-match": "associer chaque multiplication à ses deux divisions (association)"
-			}
-		},
-		"G4-NT-1": {
-			title: "Trouver les paires de facteurs jusqu'à 100",
-			description: "Liste toutes les paires de facteurs de 36 : 1×36, 2×18, 3×12, 4×9, 6×6.",
-			ideas: { "factor-rainbow": "relier les paires de facteurs par des arcs-en-ciel jusqu'à ce qu'il n'en manque plus (construction)" }
-		},
-		"G4-NT-2": {
-			title: "Reconnaître les multiples",
-			description: "Dit que 56 est un multiple de 7 et liste les multiples de 9 jusqu'à 100.",
-			ideas: { "multiple-hopper": "sauter sur la droite graduée de n en n et marquer chaque arrivée (jeu)" }
-		},
-		"G4-NT-3": {
-			title: "Diviseurs communs de deux nombres",
-			description: "Trouve que 12 et 18 ont en commun 1, 2, 3 et 6.",
-			ideas: {
-				"common-factor-venn-sort": "faire glisser les diviseurs de deux nombres dans un diagramme de Venn et trouver ceux qu'ils partagent",
-				"shared-factor-match": "associer des paires de nombres à la liste de leurs diviseurs communs (association)"
-			}
-		},
-		"G4-NT-4": {
-			title: "Nombre premier ou composé jusqu'à 100",
-			description: "Décide que 47 est premier et que 51 (3 × 17) est composé.",
-			ideas: { "sieve-sweep": "barrer les multiples sur une grille de 100 jusqu'à ce qu'il ne reste que les nombres premiers (construction)" }
-		},
-		"G4-NT-5": {
-			title: "Critères de divisibilité par 2, 5 et 10",
-			description: "Sait que 3 460 est divisible par 2, 5 et 10 et que 1 375 l'est seulement par 5.",
-			ideas: { "divisible-sort-chutes": "faire tomber les nombres dans les goulottes de 2, de 5, de 10 ou d'aucun (tri)" }
-		},
-		"G4-NT-6": {
-			title: "Nombres carrés et ²",
-			description: "Construit 7² = 49 avec des carreaux et reconnaît 36 et 81 comme des carrés ; connaît les carrés jusqu'à 12².",
-			ideas: {
-				"square-and-cube-builder": "construire des carrés avec des carreaux et des cubes avec des blocs, puis repérer quels totaux sont des carrés",
-				"square-number-spotter": "repérer les carrés dans une grille de nombres mélangés (recherche)"
-			}
-		},
-		"G4-NT-7": {
-			title: "Nombres cubes et ³",
-			description: "Construit 3³ = 27 avec des blocs et lit 2³ comme 2 × 2 × 2 = 8 ; connaît les cubes jusqu'à 5³ (125).",
-			ideas: {
-				"square-and-cube-builder": "construire des carrés avec des carreaux et des cubes avec des blocs, puis repérer quels totaux sont des carrés",
-				"cube-stack-counter": "empiler des cubes unités pour former de plus grands cubes et compter le total (construction)",
-				"power-notation-match": "associer des expressions avec ² et ³ aux produits répétés correspondants (association)"
-			}
-		},
-		"G4-NT-8": {
-			title: "Multiples communs de deux nombres (préparation 5e)",
-			description: "Liste les multiples de 4 et de 6 et trouve ceux qu'ils ont en commun : 12, 24.",
-			ideas: {
-				"common-multiple-hopper": "deux sauteurs avancent sur une même droite de 4 en 4 et de 6 en 6 et se retrouvent sur les arrivées communes (jeu)",
-				"shared-multiple-grid": "colorier les multiples de deux nombres sur une grille de 100 et lire ce qu'ils ont en commun (recherche)"
-			}
-		},
-		"G4-FR-1": {
-			title: "Trouver des fractions équivalentes",
-			description: "Montre que 3/4 = 6/8 = 9/12 en multipliant le numérateur et le dénominateur par le même nombre.",
-			ideas: { "fraction-wall-match": "jeu de mémoire : associer les bandes du mur de fractions qui ont la même longueur" }
-		},
-		"G4-FR-2": {
-			title: "Simplifier une fraction",
-			description: "Réduit 12/18 à 2/3 en divisant le haut et le bas par le diviseur commun 6.",
-			ideas: { "factor-peel-simplifier": "retirer les diviseurs communs d'une fraction jusqu'à ce qu'elle ne puisse plus être simplifiée (énigme)" }
-		},
-		"G4-FR-3": {
-			title: "Comparer des fractions avec un repère",
-			description: "Décide que 5/8 > 1/2 et que 3/7 < 1/2 sans dénominateur commun.",
-			ideas: {
-				"half-or-more-sort": "trier des fractions : plus petites que ½, égales à ½ ou plus grandes que ½ (tri)",
-				"fraction-duel-cards": "duel de cartes de la fraction la plus grande, avec des indices de repères (jeu)"
-			}
-		},
-		"G4-FR-4": {
-			title: "Comparer et ranger des fractions avec un dénominateur commun",
-			description: "Range 3/4, 2/3 et 5/6 en les écrivant en douzièmes.",
-			ideas: { "common-denominator-lineup": "écrire des fractions avec un même dénominateur et les aligner sur une bande (construction)" }
-		},
-		"G4-FR-5": {
-			title: "Passer d'une fraction supérieure à 1 à un nombre mixte",
-			description: "Écrit 11/4 sous la forme 2¾ et 3½ sous la forme 7/2.",
-			ideas: { "mixed-number-stack": "empiler des quarts de disque pour former des disques entiers et lire le nombre mixte (manipulation)" }
-		},
-		"G4-FR-6": {
-			title: "Additionner et soustraire des fractions de même dénominateur",
-			description: "Calcule 5/8 + 7/8 = 12/8 = 1½ et 1 − 3/8 = 5/8.",
-			ideas: {
-				"fraction-strip-add": "joindre et retirer des bandes sur une droite graduée et lire le total (construction)",
-				"wholes-and-parts-puzzle": "remplir des barres entières avec des morceaux de fractions et nommer ce qui reste (énigme)"
-			}
-		},
-		"G4-FR-7": {
-			title: "Additionner et soustraire des dénominateurs liés",
-			description: "Calcule 2/3 + 1/6 = 4/6 + 1/6 = 5/6.",
-			ideas: { "denominator-match-builder": "remplacer une bande par des morceaux plus petits et égaux pour que les deux dénominateurs soient les mêmes (construction)" }
-		},
-		"G4-FR-8": {
-			title: "Additionner et soustraire des nombres mixtes",
-			description: "Calcule 2¼ + 1¾ = 4 et 3½ − 1¾ = 1¾.",
-			ideas: {
-				"recipe-mixed-totals": "agrandir et combiner des quantités de recettes en nombres mixtes (histoire)",
-				"mixed-number-borrow": "casser un entier en fractions pour soustraire (construction)"
-			}
-		},
-		"G4-FR-9": {
-			title: "Décomposer une fraction en somme",
-			description: "Écrit 3/8 = 1/8 + 2/8 et 3/8 = 1/4 + 1/8.",
-			ideas: { "fraction-split-puzzle": "partager une barre d'autant de façons que possible (exploration)" }
-		},
-		"G4-FR-10": {
-			title: "Multiplier une fraction par un nombre entier",
-			description: "Calcule 3 × 2/5 = 6/5 = 1 1/5 comme une addition répétée.",
-			ideas: { "fraction-groups-builder": "répéter n fois une bande de fraction et lire le total (construction)" }
-		},
-		"G4-FR-11": {
-			title: "Trouver une fraction d'une quantité",
-			description: "Trouve 3/5 de 40 comme 3 × (40 ÷ 5) = 24 dans un problème.",
-			ideas: { "fraction-of-a-set-shop": "scènes de magasin où une part des articles est en promotion (histoire)" }
-		},
-		"G4-RP-1": {
-			title: "Comparer des nombres décimaux jusqu'aux millièmes",
-			description: "Décide que 0,45 > 0,405 en comparant rang par rang.",
-			ideas: { "decimal-duel-cards": "duel de cartes du plus grand décimal, avec les mêmes premiers chiffres (jeu)" }
-		},
-		"G4-RP-2": {
-			title: "Ranger et placer des décimaux sur une droite graduée",
-			description: "Place 0,405, 0,45 et 0,5 sur une droite qui zoome des dixièmes aux millièmes.",
-			ideas: {
-				"decimal-number-line-pins": "épingler des décimaux sur une droite graduée qui zoome des dixièmes aux millièmes",
-				"decimal-between-hunt": "trouver un décimal situé entre deux décimaux donnés (énigme)"
-			}
-		},
-		"G4-RP-3": {
-			title: "Arrondir des décimaux à l'unité",
-			description: "Arrondit 6,48 à 6 et 6,5 à 7.",
-			ideas: { "round-the-price-tag": "arrondir des prix et des mesures à l'unité (quiz)" }
-		},
-		"G4-RP-4": {
-			title: "Additionner et soustraire des décimaux (argent, mesures)",
-			description: "Calcule 4,75 € + 2,60 € et 3,4 m − 1,85 m en contexte.",
-			ideas: { "measure-sum-lab": "combiner et comparer des mesures décimales dans un laboratoire (histoire)" }
-		},
-		"G4-RP-5": {
-			title: "Pourcentage : « sur 100 »",
-			description: "Colorie 25 carrés d'une grille de 100 et dit « 25 %, 25 sur 100 ».",
-			ideas: { "hundred-grid-painter": "colorier une grille de 100 selon un pourcentage donné et le nommer en fraction et en décimal" }
-		},
-		"G4-RP-6": {
-			title: "Relier pourcentage, fraction et décimal",
-			description: "Associe 25 % = 25/100 = 0,25 = ¼, pour ½, ¼, ¾, ⅕, les dixièmes (7/10 = 0,7) et les centièmes.",
-			ideas: {
-				"hundred-grid-painter": "colorier une grille de 100 selon un pourcentage donné et le nommer en fraction et en décimal",
-				"percent-fraction-decimal-match": "jeu de mémoire : associer les cartes de pourcentage, de fraction et de décimal",
-				"benchmark-percent-line": "placer 10 %, 25 %, 50 % et 75 % sur une droite (construction)"
-			}
-		},
-		"G4-ALG-1": {
-			title: "Continuer une suite de nombres à partir de sa règle",
-			description: "Continue 4, 7, 10, … à partir de « ajouter 3 ».",
-			ideas: { "pattern-machine-builder": "régler une règle dans une machine et regarder les termes qu'elle produit (construction)" }
-		},
-		"G4-ALG-2": {
-			title: "Remarquer ce que la règle ne dit pas",
-			description: "Repère que 4, 7, 10, 13 alterne pair et impair alors que la règle dit seulement « ajouter 3 ».",
-			ideas: {
-				"pattern-feature-hunt": "trouver des propriétés (parité, dernier chiffre) que la règle n'énonce pas (enquête)",
-				"rule-or-not-sort": "trier des phrases entre « vient de la règle » et « remarqué » (tri de cartes)"
-			}
-		},
-		"G4-ALG-3": {
-			title: "Suites de figures qui grandissent",
-			description: "Prévoit combien d'allumettes il faut pour la 6e figure à partir des quatre premières.",
-			ideas: {
-				"growing-matchstick-patterns": "construire et prolonger des suites de figures en notant un tableau (construction)",
-				"shape-pattern-predictor": "prévoir une figure lointaine avant qu'elle soit révélée (jeu)"
-			}
-		},
-		"G4-ALG-4": {
-			title: "Utiliser un symbole pour une inconnue",
-			description: "Résout □ + 17 = 40 et 6 × □ = 54.",
-			ideas: { "balance-the-mystery-box": "balance à manipuler avec des boîtes de poids caché ; retirer des quantités égales des deux côtés pour trouver l'inconnue" }
-		},
-		"G4-ALG-5": {
-			title: "Inconnue dans une phrase à plusieurs étapes",
-			description: "Résout 3 × □ + 4 = 19 en défaisant d'abord + 4 puis × 3.",
-			ideas: {
-				"balance-the-mystery-box": "balance à manipuler avec des boîtes de poids caché ; retirer des quantités égales des deux côtés pour trouver l'inconnue",
-				"undo-the-steps-solver": "défaire chaque étape d'une chaîne pour retrouver le départ (énigme)"
-			}
-		},
-		"G4-ALG-6": {
-			title: "Énoncer la règle entre deux colonnes",
-			description: "Lit le tableau 1→5, 2→10, 3→15 et dit « multiplier par 5 ».",
-			ideas: { "function-machine-tables": "entrer des nombres dans une machine, remplir le tableau et nommer la règle (jeu)" }
-		},
-		"G4-ALG-7": {
-			title: "Règles de colonnes en deux étapes",
-			description: "Trouve que 1→5, 2→8, 3→11 suit « × 3, puis + 2 ».",
-			ideas: {
-				"two-step-machine": "enchaîner deux machines et prévoir le tableau (construction)",
-				"guess-my-rule-table": "jeu à deux : deviner une règle cachée en deux étapes à partir des lignes d'un tableau"
-			}
-		},
-		"G4-MEA-1": {
-			title: "Relations entre les unités de longueur",
-			description: "Convertit 3,5 km en 3 500 m et 450 cm en 4,5 m.",
-			ideas: { "length-ladder-converter": "faire glisser un nombre le long d'une échelle de km, m, cm, mm (construction)" }
-		},
-		"G4-MEA-2": {
-			title: "Relations entre les unités de masse et de contenance",
-			description: "Convertit 2,4 kg en 2 400 g et 750 ml en 0,75 l.",
-			ideas: {
-				"kg-g-l-ml-matchup": "associer des quantités égales exprimées en unités différentes (association)",
-				"conversion-table-builder": "remplir un tableau de conversion et repérer la régularité (construction)"
-			}
-		},
-		"G4-MEA-3": {
-			title: "Estimer longueurs, masses et contenances",
-			description: "Estime la longueur d'un bureau à environ 120 cm et une bouteille à environ 500 ml, puis vérifie.",
-			ideas: { "estimate-then-measure-lab": "estimer, mesurer avec un outil virtuel et marquer des points selon la précision (jeu)" }
-		},
-		"G4-MEA-4": {
-			title: "Lire des échelles aux graduations sans nombre",
-			description: "Lit une balance de cuisine qui avance par pas de 20 g et où seul 100 g est indiqué.",
-			ideas: { "scale-reader-dials": "trouver la valeur de chaque trait, puis lire des cadrans, des verres doseurs et des règles (énigme)" }
-		},
-		"G4-MEA-5": {
-			title: "Résoudre des problèmes de mesures avec les quatre opérations",
-			description: "Calcule combien de rubans de 35 cm on découpe dans 2,4 m, avec 10 cm de reste.",
-			ideas: { "recipe-and-ribbon-problems": "problèmes de recettes agrandies et de bricolage avec des unités (histoire)" }
-		},
-		"G4-MEA-6": {
-			title: "Aire d'un rectangle avec une formule",
-			description: "Calcule 8 cm × 5 cm = 40 cm² et explique pourquoi c'est « carrés par rangée × rangées ».",
-			ideas: {
-				"area-formula-tiles": "couvrir un rectangle de carrés unités, puis les remplacer par une formule (manipulation)",
-				"square-metres-floor-plan": "choisir cm² ou m² et trouver les aires des pièces sur un plan (histoire)"
-			}
-		},
-		"G4-MEA-7": {
-			title: "Aire de figures composées de rectangles",
-			description: "Découpe une figure en L en deux rectangles et obtient 12 + 8 = 20 cm².",
-			ideas: { "split-the-l-shape": "découper une figure à angles droits en rectangles de différentes façons et comparer les totaux (énigme)" }
-		},
-		"G4-MEA-8": {
-			title: "Périmètre de rectangles et de figures à angles droits",
-			description: "Obtient 2 × (9 + 4) = 26 cm et fait le tour d'une figure en L pour additionner ses côtés.",
-			ideas: {
-				"fence-the-garden": "clôturer un jardin et additionner les longueurs (histoire)",
-				"rectilinear-perimeter-trace": "suivre le contour d'une figure à angles droits, avec des côtés cachés à calculer (énigme)"
-			}
-		},
-		"G4-MEA-9": {
-			title: "Trouver un côté manquant à partir du périmètre ou de l'aire",
-			description: "Trouve qu'un rectangle d'aire 40 cm² et de longueur 8 cm a une largeur de 5 cm, et un côté manquant à partir d'un périmètre de 26 cm.",
-			ideas: { "missing-side-detective": "trouver le côté caché à partir du total donné (énigme)" }
-		},
-		"G4-MEA-10": {
-			title: "Même aire, périmètre différent",
-			description: "Montre que 6 × 4 et 12 × 2 ont tous deux une aire de 24 cm² mais des périmètres de 20 et 28.",
-			ideas: {
-				"same-area-different-fence": "construction : former le plus de rectangles possible d'aire 24 et comparer leurs clôtures",
-				"fence-budget-puzzle": "entourer une aire donnée avec le moins de clôture possible (énigme)"
-			}
-		},
-		"G4-TIM-1": {
-			title: "Passer de l'heure sur 12 heures à l'heure sur 24 heures",
-			description: "Convertit 3 h 45 de l'après-midi en 15:45 et 00:20 en 12 h 20 du matin.",
-			ideas: { "clock-twins-match": "associer des horloges sur 12 heures et sur 24 heures (jeu de mémoire)" }
-		},
-		"G4-TIM-2": {
-			title: "Lire un horaire",
-			description: "Trouve dans un tableau le bus de 14:25 au départ d'une gare et son heure d'arrivée.",
-			ideas: { "timetable-lookup-cards": "répondre à des questions de recherche dans un horaire de bus ou de train (quiz)" }
-		},
-		"G4-TIM-3": {
-			title: "Planifier un trajet avec un horaire",
-			description: "Choisit le train qui permet d'arriver à l'école avant 8 h 30 avec 10 minutes de marche.",
-			ideas: {
-				"plan-my-trip": "trouver le dernier départ possible pour une arrivée donnée (énigme)",
-				"connection-catcher": "planifier un trajet avec un changement de train (énigme)"
-			}
-		},
-		"G4-TIM-4": {
-			title: "Durées à cheval sur l'heure",
-			description: "Calcule de 07:48 à 09:15 comme 1 h 27 min avec une frise du temps.",
-			ideas: {
-				"elapsed-time-number-line": "sauter le long d'une frise du temps jusqu'à l'arrivée et additionner les sauts (construction)",
-				"finish-time-finder": "trouver l'heure de fin à partir d'un début et d'une durée (quiz)"
-			}
-		},
-		"G4-TIM-5": {
-			title: "Durées à cheval sur minuit",
-			description: "Calcule de 22:40 à 01:15 comme 2 h 35 min.",
-			ideas: { "night-train-duration": "histoire d'horaire de train de nuit avec arrivée le lendemain (histoire)" }
-		},
-		"G4-TIM-6": {
-			title: "Trouver une date quelques semaines plus tôt ou plus tard",
-			description: "Trouve la date 3 semaines après le 14 mars et le jour de la semaine correspondant.",
-			ideas: { "calendar-jump": "sauter par semaines et par jours sur une page de calendrier (jeu)" }
-		},
-		"G4-MON-1": {
-			title: "Total et monnaie avec des montants décimaux",
-			description: "Additionne 3,45 € + 2,80 € et trouve la monnaie rendue sur 10 €.",
-			ideas: {
-				"cashier-counter": "passer des articles en caisse et rendre la monnaie avec des pièces et des billets (jeu de magasin)",
-				"change-count-back": "compter à partir du prix jusqu'au montant payé (construction)"
-			}
-		},
-		"G4-MON-2": {
-			title: "Multiplier et diviser avec l'argent",
-			description: "Calcule 4 × 2,45 € = 9,80 € et 7,80 € ÷ 4 = 1,95 € chacun.",
-			ideas: {
-				"price-times-quantity-shop": "acheter plusieurs fois le même article et calculer le coût total (jeu de magasin)",
-				"split-the-bill": "partager une addition équitablement entre amis (histoire)"
-			}
-		},
-		"G4-MON-3": {
-			title: "Problèmes d'achats à plusieurs étapes",
-			description: "Prépare une liste pour une fête : 3 pizzas, 2 boissons chacun pour 6 invités, puis la monnaie rendue sur 50 €.",
-			ideas: { "party-shopping-list": "gérer le budget d'une fête avec plusieurs listes de prix (histoire)" }
-		},
-		"G4-MON-4": {
-			title: "Estimer une addition et vérifier la monnaie",
-			description: "Arrondit 3,45 € + 6,80 € + 1,95 € à environ 12 € et repère que 5 € de monnaie rendue sur 20 € est faux.",
-			ideas: {
-				"change-detective": "chasse à l'erreur : un ticket de caisse a une ligne fausse ou une monnaie fausse ; la repérer par estimation",
-				"can-i-afford-it": "estimer si un panier rentre dans le budget (quiz)"
-			}
-		},
-		"G4-GEO-1": {
-			title: "Points, droites, segments et demi-droites",
-			description: "Distingue un segment d'une demi-droite et d'une droite et les nomme (AB, demi-droite CD).",
-			ideas: { "line-family-sort": "trier des dessins en point, droite, segment et demi-droite (tri)" }
-		},
-		"G4-GEO-2": {
-			title: "Droites parallèles et perpendiculaires",
-			description: "Trouve les paires de droites parallèles et perpendiculaires sur un plan ou sur une lettre et les trace.",
-			ideas: {
-				"parallel-perpendicular-hunt": "repérer des paires sur un plan de ville ou sur une photo de bâtiment (recherche)",
-				"draw-parallel-perpendicular-tool": "tracer des droites avec une équerre virtuelle (construction)"
-			}
-		},
-		"G4-GEO-3": {
-			title: "Nommer les types d'angles",
-			description: "Appelle 45° aigu, 90° droit, 120° obtus, 180° plat et 250° rentrant.",
-			ideas: { "angle-type-sort": "trier des angles par type à l'œil, puis vérifier avec un angle droit (tri)" }
-		},
-		"G4-GEO-4": {
-			title: "Mesurer et tracer des angles avec un rapporteur",
-			description: "Lit 65° sur la bonne graduation et trace un angle de 110°.",
-			ideas: {
-				"protractor-reader": "lire des angles sur un rapporteur virtuel avec les deux graduations (quiz)",
-				"angle-builder": "faire glisser une demi-droite jusqu'à un angle cible (construction)"
-			}
-		},
-		"G4-GEO-5": {
-			title: "Angles sur une droite et autour d'un point",
-			description: "Trouve l'angle manquant : 180° − 125° = 55° sur une droite et 360° − 270° = 90° autour d'un point.",
-			ideas: {
-				"straight-line-missing-angle": "trouver l'angle manquant sur une droite à l'aide d'une demi-droite qui glisse (énigme)",
-				"pizza-slice-angles": "des parts autour d'un point font 360°, trouver la part manquante (histoire)"
-			}
-		},
-		"G4-GEO-6": {
-			title: "Classer les triangles selon leurs côtés",
-			description: "Nomme isocèle un triangle de côtés 5, 5 et 8.",
-			ideas: { "triangle-sides-sort": "mesurer les côtés et trier les triangles en équilatéraux, isocèles et scalènes (tri)" }
-		},
-		"G4-GEO-7": {
-			title: "Classer les triangles selon leurs angles",
-			description: "Nomme obtusangle un triangle ayant un angle de 100° et rectangle un triangle ayant un angle de 90°.",
-			ideas: { "triangle-angle-sort": "trier des triangles en rectangles, acutangles et obtusangles (tri)" }
-		},
-		"G4-GEO-8": {
-			title: "Polygones réguliers et irréguliers",
-			description: "Explique qu'un losange est irrégulier car ses angles ne sont pas égaux, alors qu'un carré est régulier.",
-			ideas: { "regular-or-not-checker": "vérifier les côtés et les angles, puis déclarer régulier ou non (énigme)" }
-		},
-		"G4-GEO-9": {
-			title: "Trouver les axes de symétrie",
-			description: "Trouve les 4 axes de symétrie d'un carré et l'unique axe d'un triangle isocèle.",
-			ideas: { "fold-and-find-mirrors": "plier une figure en papier virtuelle pour tester des axes possibles (manipulation)" }
-		},
-		"G4-GEO-10": {
-			title: "Compléter une figure symétrique",
-			description: "Dessine l'autre moitié d'une figure par rapport à un axe vertical, horizontal ou oblique.",
-			ideas: {
-				"symmetric-completion": "compléter un demi-dessin par rapport à des axes de symétrie verticaux, horizontaux et obliques",
-				"diagonal-mirror-puzzle": "dessiner le symétrique d'une figure par rapport à un axe oblique sur une grille (énigme)"
-			}
-		},
-		"G4-GEO-11": {
-			title: "Parties d'un cercle et tracé au compas",
-			description: "Nomme le centre, le rayon et le diamètre (diamètre = 2 × rayon) et trace un cercle de rayon 3 cm.",
-			ideas: {
-				"compass-circle": "tracer des cercles et une fleur avec un compas virtuel à un rayon choisi",
-				"circle-parts-label-match": "nommer et associer le rayon, le diamètre et le centre sur des dessins (association)"
-			}
-		},
-		"G4-GEO-12": {
-			title: "Faces, arêtes et sommets des prismes et des pyramides",
-			description: "Dit qu'un prisme à base triangulaire a 5 faces, 9 arêtes et 6 sommets et qu'une pyramide à base carrée en a 5, 8 et 5.",
-			ideas: { "solid-sorter": "trier des solides d'aspect réel en prismes, pyramides et autres en comptant faces, arêtes et sommets" }
-		},
-		"G4-POS-1": {
-			title: "Placer et lire des coordonnées dans le premier quadrant",
-			description: "Place (3, 5) et dit que le point est à 3 vers la droite et 5 vers le haut.",
-			ideas: { "treasure-map-coordinates": "trouver un trésor grâce à des coordonnées (jeu)" }
-		},
-		"G4-POS-2": {
-			title: "Tracer un polygone à partir de ses sommets",
-			description: "Place (1, 1), (4, 1), (4, 3), (1, 3) et les relie pour voir un rectangle.",
-			ideas: {
-				"connect-the-vertices": "relier des points placés pour faire apparaître un dessin (construction)",
-				"mystery-polygon-points": "nommer le sommet manquant d'une figure (énigme)"
-			}
-		},
-		"G4-POS-3": {
-			title: "Les huit points cardinaux",
-			description: "Nomme nord-est la direction entre le nord et l'est et prévoit un trajet avec ces directions.",
-			ideas: { "compass-rose-navigator": "diriger un bateau avec les points cardinaux (jeu)" }
-		},
-		"G4-POS-4": {
-			title: "Quarts de tour, demi-tours, trois quarts de tour",
-			description: "Regarde vers le nord, tourne de 270° dans le sens des aiguilles d'une montre et dit vers où il regarde (l'ouest).",
-			ideas: {
-				"robot-turn-routes": "programmer un robot avec des virages et des déplacements (énigme)",
-				"clock-turn-match": "associer des virages dans le sens des aiguilles d'une montre et dans le sens inverse qui mènent au même endroit (association)"
-			}
-		},
-		"G4-POS-5": {
-			title: "Translater une figure et décrire le déplacement",
-			description: "Fait glisser un triangle de « 2 vers la gauche, 3 vers le haut » et décrit le déplacement à partir du départ et de l'arrivée.",
-			ideas: { "slide-the-shape": "faire glisser une figure jusqu'à une cible et écrire la translation (jeu)" }
-		},
-		"G4-POS-6": {
-			title: "Trouver le symétrique d'un point par rapport à un axe",
-			description: "Trouve le symétrique de (2, 5) par rapport à l'axe vertical x = 4 : (6, 5).",
-			ideas: { "mirror-point-hop": "faire sauter un point de l'autre côté de l'axe en gardant la même distance (construction)" }
-		},
-		"G4-POS-7": {
-			title: "Symétrique d’une figure (axe horizontal ou vertical)",
-			description: "Trouve le symétrique d'un polygone entier en prenant le symétrique de chaque sommet.",
-			ideas: {
-				"mirror-grid-shapes": "trouver le symétrique de figures par rapport à des axes horizontaux et verticaux (construction)",
-				"mirror-line-mystery": "retrouver l'axe de symétrie à partir d'une figure et de son image (énigme)"
-			}
-		},
-		"G4-DAT-1": {
-			title: "Tracer et lire des diagrammes en barres avec une échelle",
-			description: "Trace un diagramme en barres avec une échelle de 2 par carreau et lit une barre qui s'arrête entre deux graduations.",
-			ideas: { "bar-chart-scale-builder": "choisir l'échelle, construire les barres et corriger une mauvaise échelle (construction)" }
-		},
-		"G4-DAT-2": {
-			title: "Diagrammes en barres doubles",
-			description: "Compare les garçons et les filles sur un diagramme en barres doubles (« 5 de plus préfèrent la natation »).",
-			ideas: {
-				"compare-two-groups-double-bars": "construire un diagramme en barres doubles à partir de deux groupes de sondage (construction)",
-				"double-bar-question-cards": "répondre à des questions de comparaison à partir de barres doubles (quiz)"
-			}
-		},
-		"G4-DAT-3": {
-			title: "Tracer et lire des graphiques en ligne",
-			description: "Place la température à chaque heure et lit la valeur entre deux repères.",
-			ideas: { "temperature-line-drawer": "placer les températures d'une journée et relier les points (construction)" }
-		},
-		"G4-DAT-4": {
-			title: "Décrire l'évolution d'un graphique en ligne",
-			description: "Dit « ça a monté jusqu'à midi, puis ça a baissé » et à quel moment le changement a été le plus rapide.",
-			ideas: {
-				"trend-story-match": "associer un graphique en ligne à l'histoire qu'il raconte (association)",
-				"line-graph-story-writer": "écrire une courte légende pour la forme d'un graphique (écriture)"
-			}
-		},
-		"G4-DAT-5": {
-			title: "Lire et compléter des tableaux à double entrée",
-			description: "Complète un tableau à double entrée (classe × sport préféré) et répond à « combien de filles ont choisi le football ? ».",
-			ideas: { "fill-the-two-way-table": "remplir un tableau à partir de cartes de pointage et vérifier les totaux (construction)" }
-		},
-		"G4-DAT-6": {
-			title: "Diagrammes en points avec des fractions d'unité",
-			description: "Place des longueurs de crayons au quart de cm sur un diagramme en points et trouve la différence entre le plus long et le plus court.",
-			ideas: {
-				"ruler-measure-line-plot": "mesurer des objets avec une règle et placer chacun sur un diagramme en points (manipulation)",
-				"line-plot-difference-puzzles": "questions sur les totaux et les différences à partir d'un diagramme en points (énigme)"
-			}
-		},
-		"G4-DAT-7": {
-			title: "Poser une question et recueillir des données",
-			description: "Reformule « Aimes-tu le sport ? » en « Quel sport préfères-tu ? » et compte les réponses.",
-			ideas: { "question-sharpener": "améliorer des questions de sondage vagues pour qu'on puisse y répondre (réécriture)" }
-		},
-		"G4-DAT-8": {
-			title: "Choisir le graphique qui convient aux données",
-			description: "Choisit un graphique en ligne pour la température sur une semaine et un diagramme en barres pour les fruits préférés.",
-			ideas: {
-				"survey-to-graph-studio": "sondage de classe : recueillir les votes, essayer trois types de graphiques et défendre celui qui raconte le mieux l'histoire",
-				"graph-type-matchmaker": "associer des histoires de données au graphique le plus adapté (association)"
-			}
-		},
-		"G4-PRB-1": {
-			title: "Lister tous les résultats d'une expérience",
-			description: "Liste les 6 résultats d'un dé et les 4 de deux pièces (PP, PF, FP, FF).",
-			ideas: { "outcome-lister": "lister tous les résultats de dés, de pièces et de roues dans une grille organisée (construction)" }
-		},
-		"G4-PRB-2": {
-			title: "Résultats équiprobables ou non",
-			description: "Dit qu'une roue à 3 couleurs avec des secteurs inégaux n'est pas équitable et explique pourquoi.",
-			ideas: {
-				"spinner-fairness-lab": "faire tourner 50 fois une roue virtuelle, compter les résultats et décider si elle est équitable ou non",
-				"fair-or-not-sort": "trier des roues, des dés et des sacs entre équitables et non équitables (tri)"
-			}
-		},
-		"G4-PRB-3": {
-			title: "Concevoir un jeu équitable ou non",
-			description: "Redécoupe une roue pour qu'un joueur gagne environ deux fois plus souvent, ou pour la rendre équitable.",
-			ideas: {
-				"build-an-unfair-game": "énigme de conception : redécouper une roue pour qu'un joueur gagne environ deux fois plus souvent",
-				"fair-share-spinner-builder": "construire une roue où chaque joueur a la même chance (construction)"
-			}
-		},
-		"G4-PSR-1": {
-			title: "Problèmes à étapes avec opérations et unités variées",
-			description: "Résout « 3 paquets de 250 g plus 1,5 kg, combien de kg ? » en convertissant d'abord.",
-			ideas: {
-				"two-step-story-chain": "enchaîner deux ou trois étapes d'une histoire en choisissant chaque fois l'opération (histoire)",
-				"convert-then-solve": "repérer l'unité qui ne correspond pas avant de calculer (énigme)"
-			}
-		},
-		"G4-PSR-2": {
-			title: "Schémas en barres pour « fois plus »",
-			description: "Dessine une barre pour « Tom a 3 fois plus que Mia » et trouve les deux quantités.",
-			ideas: { "bar-model-builder": "faire glisser des segments de barre pour illustrer une histoire de comparaison (construction)" }
-		},
-		"G4-PSR-3": {
-			title: "Schémas en barres pour les problèmes de fractions",
-			description: "Dessine 5 parts égales pour montrer que 3/5 d'une barre valent 24 et trouve le tout (40).",
-			ideas: {
-				"bar-model-builder": "faire glisser des segments de barre pour illustrer une histoire de comparaison (construction)",
-				"fraction-bar-story": "lire une histoire de fraction et colorier la barre (histoire)",
-				"bar-model-match": "associer des histoires à leurs schémas en barres (association)"
-			}
-		},
-		"G4-PSR-4": {
-			title: "Chercher méthodiquement toutes les solutions",
-			description: "Liste tous les totaux possibles avec 2 pièces parmi {1, 2, 5, 10} dans un tableau ou un arbre organisé et sait qu'il n'en manque aucun.",
-			ideas: {
-				"all-the-outfits-lister": "lister toutes les combinaisons de tenues dans un tableau ou un arbre (construction)",
-				"missing-solution-hunt": "trouver l'unique combinaison oubliée dans une liste (chasse à l'erreur)"
-			}
-		},
-		"G4-PSR-5": {
-			title: "Expliquer et critiquer une méthode",
-			description: "Explique 36 × 5 comme « la moitié de 36 × 10 » pour qu'un ami puisse suivre et dit ce qui ne va pas dans les étapes de quelqu'un d'autre.",
-			ideas: {
-				"explain-it-to-a-friend": "enregistrer ou écrire une explication étape par étape pour un partenaire (oral)",
-				"spot-the-flawed-method": "critiquer la réponse détaillée d'un camarade (chasse à l'erreur)"
-			}
-		},
-		"G4-PSR-6": {
-			title: "Conjectures et contre-exemples",
-			description: "Teste « tous les nombres qui se terminent par 5 sont divisibles par 10 » et trouve 15 comme contre-exemple.",
-			ideas: {
-				"always-sometimes-never-cards": "trier des affirmations en toujours, parfois et jamais vraies (tri)",
-				"counterexample-challenge": "trouver l'exemple qui contredit une affirmation (énigme)"
-			}
+	"K-PV-1": {
+		title: "Montrer les nombres jusqu'à 10 sur un cadre à dix cases",
+		description: "Place des jetons sur un cadre à dix cases et dit combien il en faut de plus pour faire 10 (« 6 sur le cadre, 4 de plus pour le remplir »).",
+		ideas: { "fill-the-frame": "Remplir le cadre jusqu'au chiffre affiché et dire combien de cases restent." }
+	},
+	"K-PV-2": {
+		title: "Construire et dire 11 à 19 en dizaine et unités",
+		description: "Construit 11 à 19 avec une dizaine et quelques unités et le dit (« 14 = 10 + 4 »).",
+		ideas: { "teen-towers": "Jeu de construction : empiler une barre de dix, ajouter des cubes seuls ; la tour annonce son nombre." }
+	},
+	"K-PV-3": {
+		title: "Dix unités font une dizaine (regroupement)",
+		description: "Regroupe dix cubes seuls en une dizaine et voit la dizaine comme une unité (« 10 cubes = 1 barre »).",
+		ideas: {
+			"bundle-the-sticks": "Ranger des cubes seuls dans une barre de dix et compter les barres.",
+			"ten-trade-shop": "Échanger dix cubes seuls contre une barre au comptoir."
 		}
 	},
-	G5: {
-		"G5-NS-1": {
-			title: "Lire et écrire les nombres jusqu'aux milliards",
-			description: "Lit et écrit un nombre en lettres et en chiffres avec les bons groupes (8 431 000 se lit huit millions quatre cent trente et un mille).",
-			ideas: { "place-value-billion-reader": "glisse les chiffres dans un tableau des milliers, millions et milliards et écoute le nombre lu à voix haute" }
-		},
-		"G5-NS-2": {
-			title: "Sentir la taille d'un milliard",
-			description: "Explique qu'un milliard, c'est mille millions, en le construisant avec des piles de milliers et de millions.",
-			ideas: {
-				"billion-scale-explorer": "construis un milliard avec des piles de milliers et de millions",
-				"how-long-is-a-billion-seconds": "compare un million et un milliard de secondes sur une frise de calendrier"
-			}
-		},
-		"G5-NS-3": {
-			title: "Comparer et ranger de grands nombres",
-			description: "Range 4 205 000, 4 250 000 et 420 500 en regardant le plus haut rang qui diffère.",
-			ideas: {
-				"big-number-duel": "deux grands nombres apparaissent, touche le plus grand le plus vite possible",
-				"population-ranking-board": "range des villes et des pays selon leur population"
-			}
-		},
-		"G5-NS-4": {
-			title: "Arrondir de grands nombres dans une histoire",
-			description: "Arrondit un nombre au rang qui convient à l'histoire (8 431 000 habitants, c'est environ 8 millions).",
-			ideas: {
-				"round-the-headline": "réécris des titres de journaux avec des nombres arrondis",
-				"about-how-many-sign": "choisis l'arrondi qui convient à un panneau ou à une affiche"
-			}
-		},
-		"G5-NS-5": {
-			title: "Nombres négatifs : ordre et valeur absolue",
-			description: "Range −7, 2, −3 et 0 et dit que −4 est à 4 de zéro (valeur absolue).",
-			ideas: {
-				"temperature-ladder-order": "fais glisser des cartes de température le long d'un thermomètre pour les ranger",
-				"distance-from-zero-walk": "fais marcher un personnage et lis sa distance à 0"
-			}
-		},
-		"G5-NS-6": {
-			title: "Additionner et soustraire des entiers relatifs",
-			description: "Calcule −3 + 5 et 2 − 6 en sautant sur une droite graduée.",
-			ideas: {
-				"integer-lift-game": "monte et descends un ascenseur dans une tour avec des cartes positives et négatives ; arrête-toi à l'étage visé",
-				"hop-the-line-integers": "fais sauter une grenouille sur une droite graduée pour résoudre des sommes d'entiers relatifs écrites",
-				"temperature-gap-across-zero": "trouve combien de degrés séparent −4 °C et 7 °C sur un thermomètre"
-			}
-		},
-		"G5-NS-7": {
-			title: "Une seule droite pour tous les nombres",
-			description: "Place 0,7, ¾, −1,5 et 3 ensemble sur une même droite, aux bons endroits.",
-			ideas: {
-				"one-line-zoom": "zoome sur une droite graduée, avant et arrière, pour placer des nombres de types différents",
-				"which-number-is-hiding": "retrouve le nombre mystère grâce à un indice sur une droite graduée",
-				"number-line-sort-race": "trie un paquet mélangé de fractions, de décimaux et d'entiers"
-			}
-		},
-		"G5-PV-1": {
-			title: "Multiplier et diviser par 10, 100, 1 000",
-			description: "Décale les chiffres pour calculer 4,7 × 100 = 470 et 3 500 ÷ 1 000 = 3,5, et explique le décalage.",
-			ideas: {
-				"powers-of-ten-slider": "fais glisser la virgule sur un grand affichage quand le nombre change d'échelle",
-				"digit-shift-machine": "entre un nombre dans des machines ×10 / ÷100 et prédis le résultat"
-			}
-		},
-		"G5-PV-2": {
-			title: "Multiplier et diviser par 0,1 et 0,01",
-			description: "Voit que ÷ 0,1 revient à × 10 et × 0,01 à ÷ 100 (6 × 0,1 = 0,6).",
-			ideas: {
-				"scale-down-slider": "réduis et agrandis un nombre avec les facteurs 0,1 et 0,01",
-				"bigger-or-smaller-sorter": "trie des opérations selon qu'elles rendent un nombre plus grand ou plus petit"
-			}
-		},
-		"G5-PV-3": {
-			title: "Les puissances de dix : notation 10ⁿ",
-			description: "Écrit 1 000 = 10³ et lit 10⁵ comme 100 000.",
-			ideas: {
-				"ten-power-match": "associe des nombres, des mots et des cartes 10ⁿ",
-				"exponent-tower-tens": "empile des zéros pour construire une puissance de dix"
-			}
-		},
-		"G5-PV-4": {
-			title: "Arrondir des décimaux à un rang donné",
-			description: "Arrondit 3,476 au dixième (3,5) et au centième (3,48).",
-			ideas: { "nearest-hundredth-hopper": "fais sauter un nombre vers la plus proche de deux graduations voisines" }
-		},
-		"G5-PV-5": {
-			title: "Arrondir selon la précision voulue",
-			description: "Choisit jusqu'où arrondir une longueur, une foule ou une recette, et explique pourquoi.",
-			ideas: {
-				"round-to-fit-the-job": "choisis jusqu'où arrondir pour une recette, une carte et une population, et défends ton choix",
-				"how-precise-is-enough": "repère quand trop ou trop peu de décimales rendent une réponse absurde"
-			}
-		},
-		"G5-PV-6": {
-			title: "Valeur des chiffres et écriture développée (millièmes)",
-			description: "Dit ce que vaut chaque chiffre de 3,472 et écrit 3,47 = 3 + 4/10 + 7/100.",
-			ideas: {
-				"decimal-place-value-chart": "dépose des chiffres dans un tableau unités/dixièmes/centièmes/millièmes et lis la valeur de chacun",
-				"expanded-form-builder": "construis un décimal avec ses morceaux et écris-le en écriture développée"
-			}
-		},
-		"G5-PV-7": {
-			title: "Ranger et placer des décimaux (millièmes)",
-			description: "Range 0,305, 0,35 et 0,3 et les place sur une droite graduée zoomée au millième.",
-			ideas: {
-				"decimal-zoom-line": "zoome sur une droite graduée pour placer des décimaux à 3 chiffres après la virgule",
-				"decimal-order-duel": "range des décimaux qui commencent par les mêmes chiffres"
-			}
-		},
-		"G5-OP-1": {
-			title: "Multiplier des grands nombres par écrit",
-			description: "Calcule 3 482 × 26 avec la multiplication posée et vérifie avec une estimation.",
-			ideas: { "partial-products-grid": "remplis une grille de produits partiels et additionne-les" }
-		},
-		"G5-OP-2": {
-			title: "Multiplier et diviser un décimal par un entier",
-			description: "Calcule 3,45 × 6 et 7,2 ÷ 4 avec une méthode écrite.",
-			ideas: { "money-times-whole-machine": "achète plusieurs exemplaires d'un article à prix décimal et calcule le total" }
-		},
-		"G5-OP-3": {
-			title: "Décimal × décimal",
-			description: "Utilise le changement d'échelle pour voir que 0,3 × 0,4 = 0,12 (3 × 4 = 12, puis ÷ 100).",
-			ideas: {
-				"decimal-scaling-machine": "une machine montre les décalages ×10 / ÷10 qui gardent le produit d'un décimal égal",
-				"area-of-a-decimal-rectangle": "colorie une grille de 100 pour voir 0,3 × 0,4 comme une aire"
-			}
-		},
-		"G5-OP-4": {
-			title: "Division posée par un nombre à 2 chiffres",
-			description: "Calcule 925 ÷ 25 avec une méthode écrite.",
-			ideas: { "long-division-error-hunt": "trouve quelle étape d'une division posée est fausse" }
-		},
-		"G5-OP-5": {
-			title: "Exprimer le reste selon l'histoire",
-			description: "Donne 50 ÷ 8 sous la forme 6 reste 2, 6 ¼ ou 6,25, selon ce que demande l'histoire.",
-			ideas: {
-				"remainder-in-the-story": "choisis entier, fraction ou décimal pour répondre à une histoire",
-				"share-the-leftover": "que deviennent les restes dans une scène de partage équitable"
-			}
-		},
-		"G5-OP-6": {
-			title: "Décimal ÷ décimal (découverte)",
-			description: "Multiplie les deux nombres par 10 pour que 1,2 ÷ 0,3 devienne 12 ÷ 3 = 4.",
-			ideas: {
-				"equal-quotient-pairs": "associe des divisions qui ont le même résultat (1,2 ÷ 0,3 et 12 ÷ 3)",
-				"how-many-quarters-fit": "compte combien de verres de 0,25 l remplissent une carafe de 3 l"
-			}
-		},
-		"G5-OP-7": {
-			title: "Priorités des opérations",
-			description: "Calcule 2 + 3 × 4 = 14 et 18 − 6 ÷ 3 = 16.",
-			ideas: { "order-of-operations-error-hunt": "trouve l'étape faite dans le mauvais ordre" }
-		},
-		"G5-OP-8": {
-			title: "Parenthèses et exposants dans les expressions",
-			description: "Calcule 2 + 3² × 4 et (2 + 3)² × 4 et voit que les parenthèses changent le résultat ; écrit une expression avec parenthèses pour une histoire (3 × (4 + 5)).",
-			ideas: {
-				"expression-tower-puzzle": "place des parenthèses et des opérations pour atteindre un but, puis explique l'ordre",
-				"power-first-spotter": "touche la partie de l'expression à calculer en premier"
-			}
-		},
-		"G5-OP-9": {
-			title: "Choisir une méthode",
-			description: "Choisit entre calcul mental, posé ou calculatrice pour 4 000 − 1 998 et 6 284 ÷ 17, et vérifie avec une estimation.",
-			ideas: { "method-matchmaker": "envoie chaque calcul vers l'outil qui lui convient le mieux" }
-		},
-		"G5-OP-10": {
-			title: "Addition et soustraction posées (entiers et décimaux)",
-			description: "Calcule 12,5 + 3,482 et 20 − 7,35 en colonnes, en alignant les virgules.",
-			ideas: {
-				"line-up-the-point-columns": "glisse les nombres en colonnes avec la virgule alignée, puis additionne ou soustrais",
-				"column-slip-hunt": "trouve la virgule mal alignée ou la retenue oubliée dans une opération posée"
-			}
-		},
-		"G5-FL-1": {
-			title: "Calcul mental : 2 chiffres × 1 chiffre",
-			description: "Calcule 48 × 6 en décomposant : 40 × 6 + 8 × 6.",
-			ideas: { "split-and-multiply-race": "bats la montre avec des produits en décomposant le nombre" }
-		},
-		"G5-FL-2": {
-			title: "Multiples de 10 et de 100 de tête",
-			description: "Calcule 70 × 300 = 21 000 à partir de 7 × 3.",
-			ideas: {
-				"zeros-sidestep": "mets les zéros de côté, multiplie, puis remets-les",
-				"tens-and-hundreds-blitz": "produits de multiples de 10 et de 100 en rafale"
-			}
-		},
-		"G5-FL-3": {
-			title: "Décimaux simples de tête",
-			description: "Calcule 0,6 + 0,7 = 1,3 et 2,5 × 4 = 10 de tête.",
-			ideas: { "decimal-pairs-to-one": "trouve les paires de décimaux qui font 1 et 10" }
-		},
-		"G5-FL-4": {
-			title: "Déduire de nouveaux faits à partir de faits connus",
-			description: "Trouve 4 × 0,3 = 1,2 à partir de 4 × 3 = 12 et les ⅜ de 24 à partir de ⅛ de 24.",
-			ideas: {
-				"known-fact-derive-puzzle": "à partir d'un fait résolu, déduis le plus de faits liés possible",
-				"unit-fraction-first": "trouve les ⅜ d'une quantité à partir de ⅛"
-			}
-		},
-		"G5-FL-5": {
-			title: "Pourcentages usuels d'une quantité",
-			description: "Trouve 50 %, 10 % et 1 % de 360 de tête (180, 36, 3,6).",
-			ideas: { "percent-from-ten-percent-builder": "construis n'importe quel multiple de 10 % à partir du morceau de 10 %" }
-		},
-		"G5-FL-6": {
-			title: "25 % et 75 % en coupant en deux et en quatre",
-			description: "Trouve 25 % de 80 comme la moitié de la moitié, et 75 % comme 3 quarts.",
-			ideas: {
-				"quarter-and-three-quarters-shop": "des pancartes de magasin demandent 25 % ou 75 % d'un prix",
-				"halve-the-halve": "coupe en deux deux fois pour obtenir 25 %, puis construis 75 %"
-			}
-		},
-		"G5-FL-7": {
-			title: "Estimer avant de calculer",
-			description: "Arrondit 4,8 × 52 en 5 × 50 et s'attend à environ 250 avant de calculer.",
-			ideas: { "round-then-calc-estimator": "choisis les nombres arrondis qui donnent une estimation rapide et proche" }
-		},
-		"G5-FL-8": {
-			title: "Repérer les réponses fausses d'un facteur dix",
-			description: "Sait que 4,8 × 52 ne peut pas faire 24,96 ni 2 496, en vérifiant l'ordre de grandeur.",
-			ideas: {
-				"ten-times-too-big-spotter": "touche les réponses impossibles dans un flot, d'après leur ordre de grandeur",
-				"answer-in-the-right-ballpark": "glisse un repère vers la zone plausible avant de calculer"
-			}
-		},
-		"G5-NT-1": {
-			title: "Diviseurs communs",
-			description: "Liste les diviseurs de 12 et de 18 et repère les diviseurs communs (1, 2, 3, 6).",
-			ideas: { "factor-pair-rectangles": "trouve tous les rectangles qui pavent un nombre de carrés" }
-		},
-		"G5-NT-2": {
-			title: "Nombres premiers inférieurs à 100",
-			description: "Liste les nombres premiers inférieurs à 100 et teste si un nombre est premier (91 est-il premier ? 7 × 13, non).",
-			ideas: {
-				"prime-sieve-race": "barre les multiples sur une grille de 100 contre la montre pour révéler les nombres premiers",
-				"prime-or-composite-sorter": "trie des cartes de nombres et donne un diviseur pour chaque nombre non premier"
-			}
-		},
-		"G5-NT-3": {
-			title: "Décomposition en facteurs premiers (découverte)",
-			description: "Construit un arbre de facteurs pour 60 = 2 × 2 × 3 × 5.",
-			ideas: {
-				"factor-tree-builder": "fais glisser pour découper un nombre en branches jusqu'à n'avoir que des nombres premiers",
-				"prime-factor-fingerprint": "associe chaque nombre à son empreinte de facteurs premiers"
-			}
-		},
-		"G5-NT-4": {
-			title: "PGCD et nombres premiers entre eux",
-			description: "Trouve le PGCD de 12 et de 18 (6) et repère que 8 et 15 sont premiers entre eux.",
-			ideas: {
-				"tile-the-floor-hcf": "trouve le plus grand carreau carré qui pave un sol de 12 × 18",
-				"coprime-matchmaker": "associe des nombres qui n'ont aucun diviseur commun autre que 1"
-			}
-		},
-		"G5-NT-5": {
-			title: "Multiples communs et PPCM",
-			description: "Trouve que deux bus partis ensemble se retrouvent après 12 minutes (PPCM de 4 et 6).",
-			ideas: {
-				"hcf-lcm-word-puzzles": "des problèmes en histoires (deux bus partent ensemble, quand se retrouvent-ils ?) avant toute procédure",
-				"lcm-lights-flash": "deux lumières clignotent à des rythmes différents ; prédis le prochain clignotement commun"
-			}
-		},
-		"G5-NT-6": {
-			title: "Critères de divisibilité par 2, 3, 4, 5, 6, 9, 10",
-			description: "Dit sans diviser que 1 236 est divisible par 3 et par 4, mais pas par 9.",
-			ideas: { "divisible-or-not-sorter": "dépose les nombres dans les bonnes cases de critères" }
-		},
-		"G5-NT-7": {
-			title: "Divisibilité par 8 et par 11 (découverte)",
-			description: "Explore pourquoi 1 232 est divisible par 8 (trois derniers chiffres) et 121 par 11 (somme alternée).",
-			ideas: {
-				"explore-divisible-by-8-and-11": "un labo de découverte guidée pour les deux nouveaux critères",
-				"divisibility-detective": "utilise des indices pour nommer un nombre mystère"
-			}
-		},
-		"G5-NT-8": {
-			title: "Carrés et cubes",
-			description: "Connaît les carrés jusqu'à 12² et les cubes jusqu'à 5³ et lit les notations ² et ³.",
-			ideas: {
-				"square-cube-staircase": "construis des carrés et des cubes avec des blocs et lis les nombres",
-				"square-and-cube-flashmatch": "associe une carte de puissance à sa valeur"
-			}
-		},
-		"G5-NT-9": {
-			title: "Suites de nombres triangulaires, carrés et cubes",
-			description: "Voit que 1, 3, 6, 10 augmentent de 2, 3, 4 et que deux nombres triangulaires voisins s'additionnent en un carré.",
-			ideas: {
-				"triangular-number-stairs": "empile des points en triangles et lis la régularité",
-				"handshake-triangle-numbers": "compte les poignées de main dans un groupe et repère les nombres triangulaires"
-			}
-		},
-		"G5-FR-1": {
-			title: "Trouver un dénominateur commun",
-			description: "Écrit ⅔ et ¾ sous la forme 8/12 et 9/12.",
-			ideas: {
-				"common-denominator-matcher": "associe deux fractions à des morceaux de même taille",
-				"fraction-wall-find-the-match": "trouve des barres équivalentes sur un mur de fractions"
-			}
-		},
-		"G5-FR-2": {
-			title: "Additionner et soustraire des fractions inégales",
-			description: "Calcule ⅔ + ¾ = 1 5/12 et ⅚ − ¼ = 7/12.",
-			ideas: { "fraction-sum-race": "enchaîne des sommes de fractions différentes ; les réponses simplifiées rapportent un bonus" }
-		},
-		"G5-FR-3": {
-			title: "Additionner et soustraire des nombres mixtes",
-			description: "Calcule 3 ½ − 1 ¾ = 1 ¾ en regroupant.",
-			ideas: {
-				"mixed-number-error-hunt": "trouve l'erreur dans une somme de nombres mixtes déjà résolue",
-				"recipe-mixed-totals": "additionne ou compare des quantités comme 2 ¼ tasses + 1 ⅔ tasse"
-			}
-		},
-		"G5-FR-4": {
-			title: "Comparer et ranger des fractions supérieures à 1",
-			description: "Range 7/4, 1 ½, 5/3 et 2 ⅙.",
-			ideas: { "fraction-number-line-sorter": "dépose des fractions et des nombres mixtes sur une droite graduée" }
-		},
-		"G5-FR-5": {
-			title: "La fraction comme division",
-			description: "Lit ¾ comme 3 ÷ 4 et écrit 5 ÷ 2 sous la forme 2 ½.",
-			ideas: { "share-pizzas-fairly": "partage 3 pizzas entre 4 amis et nomme la part de chacun" }
-		},
-		"G5-FR-6": {
-			title: "Une fraction multipliée par un entier",
-			description: "Calcule ⅗ × 20 = 12 et 4 × ⅔ = 2 ⅔.",
-			ideas: {
-				"fraction-of-a-crowd": "trouve des fractions de groupes de personnes ou d'objets",
-				"times-whole-bar": "des barres montrent l'addition répétée d'une fraction"
-			}
-		},
-		"G5-FR-7": {
-			title: "Fraction × fraction avec un modèle d'aire",
-			description: "Colorie les ⅔ de ¾ sur une grille pour voir que ⅔ × ¾ = ½ et sait que le résultat est plus petit que chaque fraction.",
-			ideas: {
-				"area-model-fraction-grid": "plie et colorie un rectangle pour construire le produit",
-				"smaller-or-bigger-product-sorter": "prédis si un produit rétrécit ou grandit"
-			}
-		},
-		"G5-FR-8": {
-			title: "Fraction unitaire ÷ entier, entier ÷ fraction unitaire",
-			description: "Calcule ⅓ ÷ 2 = ⅙ et 4 ÷ ⅓ = 12.",
-			ideas: { "share-a-slice-fairly": "partage une part entre des amis et nomme le morceau obtenu" }
-		},
-		"G5-FR-9": {
-			title: "Fraction ÷ fraction (découverte)",
-			description: "Voit que ¾ ÷ ¼ = 3 et 4 ÷ ⅔ = 6 en comptant combien y tiennent.",
-			ideas: {
-				"fraction-strip-division": "découpe des bandes pour voir combien de ⅔ tiennent dans 4",
-				"how-many-fit-tracks": "des pistes de longueurs différentes ; compte combien de morceaux y tiennent"
-			}
-		},
-		"G5-FR-10": {
-			title: "Retrouver le tout à partir d'une partie",
-			description: "Calcule que si les ⅗ d'un nombre valent 30, ce nombre est 50.",
-			ideas: {
-				"find-the-whole-bar-puzzle": "une partie coloriée d'une barre est donnée ; reconstruis la barre entière",
-				"part-to-whole-restorer": "retrouve la quantité totale à partir d'un indice en fraction"
-			}
-		},
-		"G5-FR-11": {
-			title: "Simplifier des fractions",
-			description: "Simplifie 12/18 en ⅔ en divisant le haut et le bas par le diviseur commun 6.",
-			ideas: {
-				"simplify-with-common-factors": "trouve un diviseur commun et divise les deux termes jusqu'à la fraction irréductible",
-				"lowest-terms-fraction-wall": "vérifie une fraction simplifiée avec un mur de fractions"
-			}
-		},
-		"G5-RP-1": {
-			title: "Passer des fractions aux décimaux et aux pourcentages",
-			description: "Convertit ⅛ = 0,125 = 12,5 % en divisant, lit un pourcentage comme « sur 100 » sur un carré de 100 (37 % = 37/100 = 0,37) et passe d'une forme à l'autre pour les valeurs courantes.",
-			ideas: {
-				"fraction-to-decimal-machine": "divise le haut par le bas et regarde le décimal apparaître",
-				"fdp-card-match": "associe des cartes fraction, décimal et pourcentage, en commençant par colorier un carré de 100 pour chaque pourcentage"
-			}
-		},
-		"G5-RP-2": {
-			title: "Ranger fractions, décimaux et pourcentages mélangés",
-			description: "Range ⅗, 0,58 et 61 % du plus petit au plus grand.",
-			ideas: {
-				"fdp-ranking-ladder": "grimpe à une échelle en rangeant des formes mélangées",
-				"closest-to-half-sorter": "trie des formes mélangées selon leur proximité avec ½"
-			}
-		},
-		"G5-RP-3": {
-			title: "Pourcentage d'une quantité",
-			description: "Trouve 15 % de 80 = 12 comme 10 % + 5 %.",
-			ideas: { "percent-by-building-blocks": "construis n'importe quel pourcentage avec des blocs de 10 %, 5 % et 1 %" }
-		},
-		"G5-RP-4": {
-			title: "Augmentation et réduction en pourcentage",
-			description: "Calcule une remise de 25 % sur 40 € (30 €) et une hausse de 10 % sur 60 (66).",
-			ideas: { "sale-sign-puzzle": "associe des pancartes de magasin (25 % de remise, 10 % de plus) au nouveau prix" }
-		},
-		"G5-RP-5": {
-			title: "Quel pourcentage une quantité est d'une autre",
-			description: "Dit que 12 sur 48, c'est 25 %.",
-			ideas: {
-				"what-percent-spinner": "fais tourner la roue pour une partie et un tout, puis réponds : quel pourcentage ?",
-				"test-score-percent-cards": "transforme des notes comme 18 sur 24 en pourcentage"
-			}
-		},
-		"G5-RP-6": {
-			title: "Retrouver le tout à partir d'un pourcentage",
-			description: "Calcule que 45 est 30 % de 150.",
-			ideas: {
-				"percent-detective": "des cartes indices donnent une partie et un pourcentage ; déduis le tout",
-				"reverse-the-sale": "à partir du prix soldé et de la remise, retrouve le prix d'origine"
-			}
-		},
-		"G5-RP-7": {
-			title: "Notation des rapports et simplification",
-			description: "Écrit 6 rouges pour 4 bleus sous la forme 6:4 = 3:2 et écrit a:b:c pour trois parties.",
-			ideas: {
-				"ratio-tower-match": "associe des tours de blocs à des cartes a:b et a:b:c",
-				"ratio-simplify-race": "simplifie des rapports en divisant les deux termes par le même nombre"
-			}
-		},
-		"G5-RP-8": {
-			title: "Partager une quantité selon un rapport",
-			description: "Partage 20 selon le rapport 3:1 (15 et 5).",
-			ideas: { "share-the-prize-ratio": "partage un prix selon un rapport et vérifie que les parts redonnent le total" }
-		},
-		"G5-RP-9": {
-			title: "Proportionnalité : valeur unitaire et changement d'échelle",
-			description: "Résout « 3 coûtent 12, combien coûtent 7 ? » (28).",
-			ideas: { "recipe-ratio-mixer": "agrandis et réduis une recette ou un mélange de peinture en gardant le même goût ou la même couleur" }
-		},
-		"G5-RP-10": {
-			title: "Taux unitaires et vitesse",
-			description: "Trouve que 150 km en 3 h, c'est 50 km/h et s'en sert pour prédire une distance.",
-			ideas: {
-				"speed-and-rate-race": "règle les vitesses de voitures jouets, prédis qui gagne, puis lance la course",
-				"unit-rate-grocery": "trouve le prix d'un seul article et sers-t'en pour n'importe quelle quantité"
-			}
-		},
-		"G5-RP-11": {
-			title: "Convertir des unités par proportionnalité",
-			description: "Convertit 72 km/h en 20 m/s et 250 cm en km.",
-			ideas: {
-				"unit-conversion-ratio-puzzle": "convertis avec des chaînes de rapports",
-				"conversion-chain-builder": "enchaîne les facteurs de conversion dans le bon ordre"
-			}
-		},
-		"G5-ALG-1": {
-			title: "Écrire des expressions avec une lettre",
-			description: "Écrit n + 5 pour « 5 de plus qu'un nombre » et 3 × n pour « 3 fois un nombre ».",
-			ideas: { "expression-story-match": "associe des phrases à des expressions" }
-		},
-		"G5-ALG-2": {
-			title: "Remplacer dans une formule",
-			description: "Utilise P = 2 × (l + w) avec l = 7 et w = 4 (22).",
-			ideas: { "formula-machine": "entre des valeurs dans une formule et lis le résultat" }
-		},
-		"G5-ALG-3": {
-			title: "Équations à une étape et vérification",
-			description: "Résout n + 7 = 15 et 4 × n = 36 et vérifie en remplaçant.",
-			ideas: { "balance-scale-equation-puzzle": "garde une balance en équilibre en faisant la même chose des deux côtés" }
-		},
-		"G5-ALG-4": {
-			title: "Équations simples à deux étapes",
-			description: "Résout 2n + 3 = 13 en défaisant les étapes (n = 5).",
-			ideas: {
-				"two-step-mystery-number": "des indices de nombre mystère en deux étapes",
-				"undo-the-steps-machine": "fais fonctionner une machine à l'envers pour trouver l'entrée"
-			}
-		},
-		"G5-ALG-5": {
-			title: "Paires qui vérifient une équation",
-			description: "Trouve les paires avec a + b = 10 et a > b (9 et 1, 8 et 2, ...).",
-			ideas: { "sum-ten-pairs-grid": "remplis une grille avec toutes les paires qui respectent la règle" }
-		},
-		"G5-ALG-6": {
-			title: "Énoncer la règle d'une suite selon le rang",
-			description: "Dit « 4 × rang + 1 » pour 5, 9, 13, 17.",
-			ideas: { "matchstick-pattern-rule": "construis les figures suivantes en allumettes et trouve la règle" }
-		},
-		"G5-ALG-7": {
-			title: "Utiliser une règle pour prédire un terme lointain",
-			description: "Utilise la règle pour trouver le 50e terme (201).",
-			ideas: {
-				"term-fifty-predictor": "prédis la 50e figure, puis teste avec la règle",
-				"rule-to-term-machine": "entre un rang, lis le terme"
-			}
-		},
-		"G5-ALG-8": {
-			title: "Deux suites issues de deux règles",
-			description: "Construit deux suites (ajouter 2 depuis 0, ajouter 4 depuis 0) et associe les termes : (2, 4), (4, 8).",
-			ideas: { "twin-pattern-table": "remplis un tableau à partir de deux règles et lis en travers" }
-		},
-		"G5-ALG-9": {
-			title: "Relations entre deux suites associées",
-			description: "Voit que chaque terme d'une suite vaut le double de son partenaire et le dit.",
-			ideas: {
-				"plot-the-twin-patterns": "place les paires ordonnées et regarde les points s'aligner",
-				"pair-relationship-spotter": "nomme le lien entre deux suites"
-			}
-		},
-		"G5-MEA-1": {
-			title: "Convertir des unités métriques avec des décimaux",
-			description: "Convertit 2,35 km = 2 350 m et 450 ml = 0,45 l.",
-			ideas: { "decimal-unit-converter": "fais glisser la virgule pour convertir" }
-		},
-		"G5-MEA-2": {
-			title: "Choisir des unités et convertir en deux étapes",
-			description: "Choisit km, m ou cm selon la tâche et convertit des mm en m en passant par les cm.",
-			ideas: {
-				"unit-ladder-climb": "grimpe l'échelle des unités en multipliant ou en divisant à chaque échelon",
-				"which-unit-matchmaker": "choisis l'unité qui convient à chaque objet réel"
-			}
-		},
-		"G5-MEA-3": {
-			title: "Équivalents approximatifs anglo-saxons (facultatif)",
-			description: "Sait qu'un pouce vaut environ 2,5 cm, un pied environ 30 cm, un mile environ 1,6 km, une livre environ 450 g et une pinte environ 570 ml.",
-			ideas: {
-				"pound-or-kilo-guess": "devine laquelle de deux masses est la plus lourde",
-				"foot-mile-pint-guess": "choisis la longueur ou la quantité métrique la plus proche d'un pied, d'un mile ou d'une pinte"
-			}
-		},
-		"G5-MEA-4": {
-			title: "Repères personnels",
-			description: "Utilise sa main, son pas et sa taille pour estimer une pièce (environ 6 pas), une porte ou une étagère.",
-			ideas: { "pace-it-out-estimator": "estime en pas, puis mesure et compare" }
-		},
-		"G5-MEA-5": {
-			title: "Aire d'un parallélogramme",
-			description: "Trouve l'aire d'un parallélogramme comme base × hauteur (6 × 4 = 24).",
-			ideas: {
-				"shear-the-rectangle": "déplace un morceau pour transformer un parallélogramme en rectangle",
-				"base-and-height-hunt": "choisis la bonne base et la hauteur perpendiculaire"
-			}
-		},
-		"G5-MEA-6": {
-			title: "Aire d'un triangle",
-			description: "Trouve l'aire d'un triangle comme la moitié d'un rectangle base × hauteur.",
-			ideas: { "half-a-rectangle-triangle": "copie et fais tourner un triangle pour former un rectangle" }
-		},
-		"G5-MEA-7": {
-			title: "Aire et périmètre de figures composées de rectangles",
-			description: "Trouve l'aire et le périmètre d'une figure en L en la découpant en rectangles.",
-			ideas: {
-				"l-shape-garden-planner": "dessine un jardin et calcule le coût de la clôture et du gazon",
-				"same-area-different-perimeter": "redessine une figure pour garder la même aire mais changer le périmètre"
-			}
-		},
-		"G5-MEA-8": {
-			title: "Volume des pavés droits et des assemblages",
-			description: "Calcule V = L × l × h en cm³ et en m³ (4 × 3 × 2 = 24 cm³), y compris pour deux blocs collés.",
-			ideas: {
-				"stack-the-unit-cubes": "remplis une boîte de cubes unités et compte les couches",
-				"compound-box-builder": "découpe une boîte composée en deux pavés droits et additionne"
-			}
-		},
-		"G5-MEA-9": {
-			title: "Volume et contenance : ml et cm³",
-			description: "Sait que 1 ml = 1 cm³ et 1 l = 1 000 cm³ (un cube de 10 cm contient 1 l).",
-			ideas: { "fill-the-tank-capacity": "trouve combien de litres tiennent dans un réservoir à partir de ses dimensions" }
-		},
-		"G5-TIM-1": {
-			title: "Convertir des unités de temps",
-			description: "Convertit 3 semaines en jours et 2 jours en heures.",
-			ideas: { "time-unit-ladder": "monte et descends l'échelle des secondes aux siècles" }
-		},
-		"G5-TIM-2": {
-			title: "Durées décimales et mixtes",
-			description: "Convertit 2,5 h = 150 min et 135 min = 2 h 15 min.",
-			ideas: {
-				"decimal-hours-converter": "passe des heures décimales aux heures et minutes en glissant",
-				"minutes-to-hours-and-minutes": "transforme des minutes en h et min dans une histoire"
-			}
-		},
-		"G5-TIM-3": {
-			title: "Lire des horaires et trouver des durées",
-			description: "Trouve qu'un bus de 8 h 45 qui arrive à 10 h 20 met 1 h 35 min.",
-			ideas: {
-				"timetable-detective": "lis un horaire pour répondre : qui, quand, combien de temps",
-				"journey-duration-calculator": "saute d'arrêt en arrêt dans un horaire et additionne les durées"
-			}
-		},
-		"G5-TIM-4": {
-			title: "Trajets en plusieurs étapes à travers minuit",
-			description: "Prévoit un voyage avec deux trajets, une attente et une arrivée après minuit.",
-			ideas: { "overnight-train-planner": "prévois un voyage de nuit en suivant le changement de date" }
-		},
-		"G5-TIM-5": {
-			title: "L'heure dans un autre fuseau (découverte)",
-			description: "Dit que quand il est 10 h à Paris, il est 9 h à Londres.",
-			ideas: { "world-clock-sun-map": "observe le jour et la nuit sur une carte avec des horloges" }
-		},
-		"G5-TIM-6": {
-			title: "Planifier entre fuseaux horaires (découverte)",
-			description: "Choisit une heure d'appel raisonnable dans deux villes.",
-			ideas: {
-				"schedule-the-call": "trouve un créneau qui convient à deux villes",
-				"time-difference-ruler": "fais glisser deux bandes d'horloges pour lire le décalage"
-			}
-		},
-		"G5-MON-1": {
-			title: "Comparer des offres selon le prix à l'unité",
-			description: "Trouve que 2 pour 3 € (1,50 € l'un) est plus avantageux qu'à 1,75 € l'un.",
-			ideas: {
-				"best-buy-shelf": "choisis le meilleur rapport qualité-prix parmi des articles en rayon",
-				"per-100g-label-race": "compare les prix au kilo ou aux 100 g sur des étiquettes"
-			}
-		},
-		"G5-MON-2": {
-			title: "Prix après une remise en pourcentage",
-			description: "Calcule une remise de 20 % sur 15 € (12 €).",
-			ideas: {
-				"sale-price-calculator-shop": "calcule le prix d'articles après la remise indiquée sur la pancarte",
-				"discount-ladder": "grimpe une échelle de remises de 10 %, 20 %, 25 %"
-			}
-		},
-		"G5-MON-3": {
-			title: "Rester dans un budget",
-			description: "Choisit des articles dont le total fait au plus 20 € après une remise.",
-			ideas: { "twenty-euro-basket": "remplis un panier sans dépasser le budget" }
-		},
-		"G5-MON-4": {
-			title: "Vérifier un ticket de caisse",
-			description: "Trouve la ligne fausse d'un ticket de caisse (mauvaise remise, mauvais prix unitaire).",
-			ideas: {
-				"receipt-error-hunt": "trouve la ligne fausse sur un ticket de caisse",
-				"change-check-till": "vérifie la monnaie rendue"
-			}
-		},
-		"G5-GEO-1": {
-			title: "Hiérarchie des figures",
-			description: "Dit que tout carré est un rectangle et que tout rectangle est un parallélogramme.",
-			ideas: { "shape-family-tree-builder": "place les figures sur un arbre généalogique" }
-		},
-		"G5-GEO-2": {
-			title: "Propriétés qui définissent les quadrilatères",
-			description: "Distingue un cerf-volant, un losange et un trapèze par les côtés, les parallèles et les diagonales.",
-			ideas: {
-				"mystery-shape-twenty-questions": "devine la figure avec des questions oui/non sur ses propriétés",
-				"diagonal-detective": "reconnais une figure grâce à ses diagonales"
-			}
-		},
-		"G5-GEO-3": {
-			title: "Les parties d'un cercle",
-			description: "Nomme le centre, le rayon, le diamètre et la circonférence.",
-			ideas: { "circle-label-and-measure": "nomme les parties d'un cercle et mesure chacune" }
-		},
-		"G5-GEO-4": {
-			title: "Lien entre rayon et diamètre",
-			description: "Sait que d = 2r, donc un cercle de rayon 4 cm a un diamètre de 8 cm.",
-			ideas: {
-				"radius-diameter-flipper": "passe du rayon au diamètre et inversement",
-				"circle-in-a-box-measure": "mesure la largeur d'un cercle dans une boîte pour trouver le rayon"
-			}
-		},
-		"G5-GEO-5": {
-			title: "Angles d'un triangle",
-			description: "Trouve l'angle manquant d'un triangle qui a 50° et 60° (70°).",
-			ideas: { "missing-angle-triangle-puzzle": "trouve l'angle manquant dans une série de triangles" }
-		},
-		"G5-GEO-6": {
-			title: "Angles d'un quadrilatère",
-			description: "Trouve l'angle manquant d'un quadrilatère qui a 90°, 80° et 100° (90°).",
-			ideas: { "quad-angle-tear-and-fit": "déchire les coins et assemble-les autour d'un point" }
-		},
-		"G5-GEO-7": {
-			title: "Angles opposés par le sommet",
-			description: "Sait que lorsque deux droites se croisent, les angles opposés sont égaux (un angle de 65° fait face à un autre de 65°).",
-			ideas: {
-				"crossing-lines-angle-pairs": "fais glisser une droite qui coupe l'autre et regarde les angles opposés rester égaux",
-				"find-the-crossed-angle": "trouve l'angle inconnu à un croisement"
-			}
-		},
-		"G5-GEO-8": {
-			title: "Construire une figure à partir de consignes",
-			description: "Trace un triangle de côtés 5 cm, 6 cm et 7 cm avec une règle, un rapporteur et un compas.",
-			ideas: {
-				"protractor-triangle-builder": "construis un triangle à partir d'un côté et de deux angles",
-				"compass-circle-pattern": "dessine un motif avec des cercles tracés au compas"
-			}
-		},
-		"G5-GEO-9": {
-			title: "Patrons de solides",
-			description: "Dit quels patrons se plient en cube, en pavé droit, en prisme ou en pyramide.",
-			ideas: {
-				"net-fold-tester": "plie un patron à l'écran pour voir s'il se ferme",
-				"draw-the-net": "dessine un patron de cube, de pavé droit ou de prisme et plie-le pour vérifier"
-			}
-		},
-		"G5-GEO-10": {
-			title: "Vues de dessus, de face et de côté",
-			description: "Associe un solide à ses vues de dessus, de face et de côté.",
-			ideas: {
-				"top-front-side-match": "associe une maquette à ses trois vues",
-				"build-from-views": "construis le solide à partir de ses trois vues"
-			}
-		},
-		"G5-POS-1": {
-			title: "Coordonnées du premier quadrant dans la vie réelle",
-			description: "Lit et place une position comme (4, 7) sur le plan d'un parc.",
-			ideas: { "treasure-map-coordinates": "pars à la chasse au trésor avec des indices en coordonnées" }
-		},
-		"G5-POS-2": {
-			title: "Placer des points dans les quatre quadrants",
-			description: "Place (−3, 2) et (4, −5) et lit les coordonnées d'un point.",
-			ideas: { "four-quadrant-battleship": "trouve des bateaux cachés grâce aux coordonnées" }
-		},
-		"G5-POS-3": {
-			title: "Compléter des figures avec des coordonnées",
-			description: "Trouve le sommet manquant d'un rectangle (par exemple (1, 1), (4, 1), (4, 3) donne (1, 3)) et le symétrique d'un point.",
-			ideas: {
-				"complete-the-rectangle": "trouve le quatrième coin",
-				"mirror-point-hunt": "trouve le symétrique d'un point grâce aux coordonnées"
-			}
-		},
-		"G5-POS-4": {
-			title: "Lire l'échelle d'une carte",
-			description: "Utilise 1 cm : 100 m pour lire que 4,5 cm représentent 450 m.",
-			ideas: { "map-distance-measurer": "mesure une distance sur une carte et convertis-la" }
-		},
-		"G5-POS-5": {
-			title: "Utiliser l'échelle sur des plans",
-			description: "Dessine ou lit un plan à une échelle donnée (une pièce de 4 m à 1 cm : 1 m fait 4 cm).",
-			ideas: {
-				"scale-a-room-plan": "dessine une pièce à l'échelle",
-				"scale-ratio-match": "associe des échelles et des distances réelles"
-			}
-		},
-		"G5-POS-6": {
-			title: "Translater une figure",
-			description: "Glisse une figure de 3 vers la droite et 2 vers le haut et écrit le déplacement en coordonnées.",
-			ideas: {
-				"slide-to-target-grid": "glisse des figures sur une cible",
-				"describe-the-move-coordinates": "écris le déplacement qui a mené à la position"
-			}
-		},
-		"G5-POS-7": {
-			title: "Faire la symétrie d'une figure",
-			description: "Fait la symétrie d'une figure par rapport à l'axe des y et à une droite donnée et écrit les nouvelles coordonnées.",
-			ideas: {
-				"mirror-line-grid-reflector": "fais la symétrie de figures par rapport à des droites sur une grille",
-				"reflect-in-axes-coordinates": "fais la symétrie de points par rapport aux axes et lis les nouvelles coordonnées"
-			}
-		},
-		"G5-POS-8": {
-			title: "Rotation de 90° ou 180° (découverte)",
-			description: "Tourne une figure d'un quart de tour (90°) ou d'un demi-tour (180°) autour d'un point et décrit le résultat.",
-			ideas: { "turn-it-90-explorer": "fais tourner de 90° ou de 180° et compare avec la figure de départ" }
-		},
-		"G5-DAT-1": {
-			title: "Mode et étendue",
-			description: "Trouve le mode 5 et l'étendue 7 dans 2, 5, 5, 9, 3.",
-			ideas: { "data-set-mode-range-cards": "trie des cartes de données pour trouver le mode et l'étendue" }
-		},
-		"G5-DAT-2": {
-			title: "Moyenne",
-			description: "Partage pour égaliser les données et calcule la moyenne (3, 5, 7 donnent 5).",
-			ideas: { "level-the-towers-mean": "égalise des tours de blocs pour voir la moyenne" }
-		},
-		"G5-DAT-3": {
-			title: "Quand la moyenne trompe",
-			description: "Repère qu'une valeur extrême tire la moyenne (1, 2, 2, 3, 40).",
-			ideas: {
-				"outlier-mean-trap": "ajoute une valeur extrême et regarde la moyenne bouger",
-				"which-average-best": "choisis le résumé le plus juste pour une série"
-			}
-		},
-		"G5-DAT-4": {
-			title: "Médiane",
-			description: "Trouve la médiane de 4, 9, 2, 7, 5 en rangeant (5).",
-			ideas: { "median-line-up-queue": "range des personnes par taille et trouve celle du milieu" }
-		},
-		"G5-DAT-5": {
-			title: "Lire un diagramme circulaire",
-			description: "Lit qu'un secteur d'un quart représente 25 % et ¼ du total.",
-			ideas: { "pie-slice-percent-match": "associe des parts à des fractions et à des pourcentages" }
-		},
-		"G5-DAT-6": {
-			title: "Tracer un diagramme circulaire (découverte)",
-			description: "Transforme 50 %, 30 %, 20 % en diagramme circulaire.",
-			ideas: {
-				"build-a-pie-from-percentages": "fais glisser les séparations pour construire un diagramme circulaire",
-				"pie-from-fractions-strip": "plie une bande pour en faire un diagramme circulaire"
-			}
-		},
-		"G5-DAT-7": {
-			title: "Graphiques en courbes à deux séries",
-			description: "Lit deux courbes sur un même graphique et estime une valeur entre deux points.",
-			ideas: { "estimate-between-points": "lis la valeur entre deux points marqués" }
-		},
-		"G5-DAT-8": {
-			title: "Choisir le bon graphique",
-			description: "Choisit un diagramme en barres, un graphique en courbes ou un diagramme circulaire selon les données.",
-			ideas: {
-				"best-graph-chooser": "associe chaque question au meilleur graphique",
-				"same-data-three-graphs": "compare un même jeu de données dans trois graphiques"
-			}
-		},
-		"G5-DAT-9": {
-			title: "Repérer un graphique trompeur",
-			description: "Remarque un axe tronqué, une échelle absente ou un échantillon biaisé.",
-			ideas: {
-				"truncated-axis-lens": "rétablis un axe coupé ou une période choisie à dessein et vois ce qui change",
-				"biased-sample-survey-spotter": "décide si l'échantillon d'une enquête est équitable"
-			}
-		},
-		"G5-PRB-1": {
-			title: "Langage du hasard et échelle de 0 à 1",
-			description: "Place « peu probable » près de 0,2 et « certain » à 1 sur une échelle.",
-			ideas: { "probability-line-sorter": "trie des événements sur une droite de 0 à 1" }
-		},
-		"G5-PRB-2": {
-			title: "Probabilités simples sous forme de fractions",
-			description: "Écrit la chance d'obtenir un 5 avec un dé comme 1/6 et celle de tirer une bille rouge parmi 3 rouges sur 10 comme 3/10.",
-			ideas: {
-				"spinner-fraction-maker": "nomme la chance de chaque couleur d'une roue",
-				"bag-of-marbles-fraction": "nomme la chance à partir du contenu d'un sac"
-			}
-		},
-		"G5-PRB-3": {
-			title: "Équitable ou non",
-			description: "Dit qu'une roue aux secteurs inégaux est injuste et en conçoit une équitable.",
-			ideas: {
-				"fair-spinner-designer": "conçois une roue où chaque couleur a la même chance",
-				"fair-or-unfair-sorter": "trie des jeux en équitables et injustes"
-			}
-		},
-		"G5-PRB-4": {
-			title: "Expériences et prédictions",
-			description: "Prédit 25 piles sur 50 lancers, fait l'expérience et compare.",
-			ideas: { "predict-then-roll-lab": "prédis la fréquence de chaque somme avec deux dés, lance 100 fois, compare" }
-		},
-		"G5-PRB-5": {
-			title: "Plus d'essais, plus près de la prédiction",
-			description: "Voit que 1 000 lancers se rapprochent mieux de la prédiction que 10 lancers.",
-			ideas: {
-				"trials-slider-lab": "augmente le nombre d'essais et regarde les barres se stabiliser",
-				"fair-or-rigged-detective": "décide d'après les résultats si un dé est équilibré ou truqué"
-			}
-		},
-		"G5-PSR-1": {
-			title: "Stratégies : remonter à l'envers et essayer-vérifier-ajuster",
-			description: "Résout « je pense à un nombre, je le double, j'ajoute 3, j'obtiens 17 » en remontant à l'envers.",
-			ideas: { "work-backwards-puzzles": "défais une chaîne d'étapes pour retrouver le départ" }
-		},
-		"G5-PSR-2": {
-			title: "Stratégies : simplifier et chercher une régularité",
-			description: "Essaie un cas plus petit pour trouver une régularité avant le grand cas.",
-			ideas: {
-				"try-a-simpler-case": "résous une version plus petite pour voir la règle",
-				"look-for-a-pattern-puzzles": "trouve la régularité, puis utilise-la"
-			}
-		},
-		"G5-PSR-3": {
-			title: "Informations manquantes et en trop",
-			description: "Dit quelle information manque ou est inutile dans une histoire.",
-			ideas: { "what-do-we-need-to-know": "surligne ce qui est utile, inutile ou manquant" }
-		},
-		"G5-PSR-4": {
-			title: "Trouver sa propre erreur",
-			description: "Trouve l'étape fausse dans une réponse déjà rédigée.",
-			ideas: { "spot-the-slip-worked-solution": "touche l'étape où une solution rédigée se trompe" }
-		},
-		"G5-PSR-5": {
-			title: "Toujours, parfois, jamais et contre-exemples",
-			description: "Réfute « multiplier agrandit toujours » avec ½ × 6.",
-			ideas: { "always-sometimes-never-cards": "trie des affirmations et justifie chacune" }
-		},
-		"G5-PSR-6": {
-			title: "Problèmes à étapes avec fractions, décimaux et pourcentages",
-			description: "Résout une histoire en 3 étapes, comme une sortie au magasin, et justifie chaque étape.",
-			ideas: { "shop-trip-puzzles": "prévois une sortie avec plusieurs fractions et remises" }
-		},
-		"G5-PSR-7": {
-			title: "Modèles en barres",
-			description: "Dessine un modèle en barres pour « les ⅗ des bonbons sont rouges, 12 sont bleus ».",
-			ideas: { "draw-the-bar-first": "dessine un modèle en barres avant de calculer" }
-		},
-		"G5-PSR-8": {
-			title: "La réponse est-elle raisonnable ?",
-			description: "Écarte une réponse grâce à une estimation ou au contexte.",
-			ideas: { "sense-check-stamp": "tamponne chaque réponse « sensée » ou « pas sensée »" }
-		},
-		"G5-PSR-9": {
-			title: "Bien utiliser la calculatrice",
-			description: "Entre un calcul correctement, le vérifie avec une estimation et sait quand ne pas l'utiliser.",
-			ideas: {
-				"calculator-keystroke-detective": "trouve la touche qui a donné un mauvais résultat",
-				"when-not-to-use-calculator": "choisis les cas où le calcul mental bat la calculatrice"
-			}
+	"K-OP-1": {
+		title: "Histoires de réunion : jouer et mettre ensemble",
+		description: "Joue des histoires d'ajout et de réunion jusqu'à 10 avec des objets (« 3 canards, 2 de plus arrivent — 5 en tout »)."
+	},
+	"K-OP-2": {
+		title: "Histoires de retrait : enlever et dire combien il reste",
+		description: "Joue des histoires de retrait jusqu'à 10 et dit ce qui reste (« 5 biscuits, on en mange 2, il en reste 3 »).",
+		ideas: { "snack-nibbles": "Barrer les collations mangées dans une image et dire combien il en reste." }
+	},
+	"K-OP-3": {
+		title: "Choisir plus ou moins pour une histoire",
+		description: "Dit si une histoire ou une image demande de réunir ou d'enlever (« ils s'envolent, donc moins »)."
+	},
+	"K-OP-4": {
+		title: "Résoudre une histoire dans la limite de 10",
+		description: "Résout une histoire de réunion ou de retrait avec des objets, des doigts ou un dessin (« je dessine 4 fleurs, 3 de plus, je compte : 7 »).",
+		ideas: { "draw-the-story": "Dessiner des points ou des traits pour chaque partie de l'histoire et compter." }
+	},
+	"K-OP-5": {
+		title: "Écrire une phrase mathématique",
+		description: "Écrit ou choisit la phrase mathématique qui correspond à une histoire (« 3 + 2 = 5 »).",
+		ideas: { "sentence-builder": "Glisser des tuiles de nombres et de signes pour correspondre à une histoire en image." }
+	},
+	"K-OP-6": {
+		title: "Décomposer un nombre en deux parties",
+		description: "Décompose un nombre jusqu'à 10 de plusieurs façons (« 5 = 4 + 1 = 3 + 2 »).",
+		ideas: { "split-the-beads": "Faire glisser des perles sur un fil pour montrer toutes les décompositions d'un nombre." }
+	},
+	"K-OP-7": {
+		title: "Trouver le complément à 10",
+		description: "Nomme le nombre qui va avec un autre pour faire 10 (« 7 et 3 font 10 »).",
+		ideas: { "ten-pairs-match": "Jeu de mémoire : retourner des cartes pour trouver les paires qui font 10." }
+	},
+	"K-OP-8": {
+		title: "Calculs dans la limite de 5",
+		description: "Se rappelle les additions et soustractions dont le total va jusqu'à 5 (« 2 + 3 = 5 », « 4 − 1 = 3 »).",
+		ideas: { "five-fact-fishing": "Pêcher des poissons dont les sommes vont jusqu'à 5 et dire chaque calcul." }
+	},
+	"K-OP-9": {
+		title: "Premier regard sur le passage de la dizaine (11 à 20)",
+		description: "Remplit un cadre à dix cases puis ajoute le reste au-delà de 10 (« 8 + 5 : 8 et 2 font 10, 3 de plus, 13 »).",
+		ideas: {
+			"bridge-to-twenty": "Jeu de sauts : remplir un cadre à dix cases, puis sauter au-delà de 10 pour atterrir sur la somme.",
+			"teen-train": "Ajouter des wagons au-delà de dix et lire le nombre."
 		}
 	},
-	G6: {
-		"G6-NS-1": {
-			title: "Multiplier des entiers : les règles des signes",
-			description: "Multiplie deux entiers relatifs avec les règles des signes (−4 × −3 = 12, −4 × 3 = −12).",
-			ideas: {
-				"sign-rules-tug-of-war": "Jeu à deux équipes où le signe du produit décide du sens de la traction.",
-				"sign-pattern-detective": "Énigme de suite : prolonge 3 × −2, 2 × −2, 1 × −2 … pour découvrir pourquoi − × − = +."
-			}
-		},
-		"G6-NS-2": {
-			title: "Diviser des entiers et le lien avec la multiplication",
-			description: "Divise des entiers relatifs avec les règles des signes et vérifie en multipliant (−12 ÷ 3 = −4 car −4 × 3 = −12).",
-			ideas: {
-				"divide-and-check-machine": "Machine à fonctions : divise, puis multiplie pour vérifier.",
-				"sign-slip-hunt": "Chasse à l'erreur : trouve le mauvais signe dans des quotients déjà résolus."
-			}
-		},
-		"G6-NS-3": {
-			title: "Aisance avec les signes et calculs mixtes",
-			description: "Retrouve de tête produits et quotients signés et choisit le bon signe dans des enchaînements (−2 × 5 + 3 = −7).",
-			ideas: {
-				"sign-sprint": "Course de rappel chronométrée avec séries de bonnes réponses.",
-				"sign-chain-relay": "Relais enchaînant trois opérations signées pour atteindre un objectif."
-			}
-		},
-		"G6-NS-4": {
-			title: "Fractions et décimaux négatifs sur la droite",
-			description: "Place et range −¾, −0,5 et 0,2 sur une même droite graduée (−¾ < −0,5).",
-			ideas: {
-				"rational-line-lander": "Place par glisser-déposer fractions, décimaux et négatifs sur une droite zoomable.",
-				"order-the-rationals": "Puzzle de tri : range des cartes variées et justifie avec la droite."
-			}
-		},
-		"G6-NS-5": {
-			title: "Additionner et soustraire des nombres rationnels",
-			description: "Additionne et soustrait des fractions et des décimaux signés (−¾ + 0,25 = −½).",
-			ideas: {
-				"rational-arithmetic-relay": "Relais d'histoires de températures et d'altitudes, en nombres purs, qui s'enchaînent.",
-				"rational-jump-walk": "Marche sur la droite par sauts signés et lis où tu atterris."
-			}
-		},
-		"G6-NS-6": {
-			title: "Les familles de nombres",
-			description: "Range les nombres en naturels, entiers relatifs, rationnels et « pas une fraction » (π, √2 : simple idée).",
-			ideas: {
-				"number-family-sort": "Tri en cercles imbriqués : place −¾, 0,5, √2, 7 dans leurs familles.",
-				"which-family-wall": "Mur vrai/faux : « tout entier relatif est-il rationnel ? »"
-			}
-		},
-		"G6-NS-7": {
-			title: "Densité : il y a toujours un nombre entre deux",
-			description: "Trouve un nombre entre deux fractions ou décimaux donnés et explique pourquoi cela ne s'arrête jamais (entre 0,3 et 0,31 il y a 0,305).",
-			ideas: {
-				"between-any-two": "Défi de zoom jusqu'à ce qu'il n'y ait plus de pixels.",
-				"midpoint-hunt": "Trouve la moyenne de deux nombres pour tomber strictement entre eux."
-			}
-		},
-		"G6-NS-8": {
-			title: "Distance entre deux nombres",
-			description: "Trouve la distance avec |a − b|, même en traversant zéro (de −7 à 4, c'est 11).",
-			ideas: {
-				"distance-across-zero": "Estime puis vérifie : parcours la droite, puis lis |a − b|.",
-				"elevator-gap": "Problèmes d'histoires : étages au-dessus et au-dessous du sol, en nombres purs."
-			}
-		},
-		"G6-PV-1": {
-			title: "Ce qui compte comme chiffre significatif",
-			description: "Repère les chiffres significatifs en ignorant les zéros du début (0,004 73 en a 3 ; 48 000 peut en avoir 2).",
-			ideas: {
-				"which-digits-count": "Puzzle de tri : marque les chiffres significatifs parmi zéros de début et de fin.",
-				"digit-highlighter": "Jeu où l'on touche les chiffres, avec réponse immédiate."
-			}
-		},
-		"G6-PV-2": {
-			title: "Arrondir à un nombre de chiffres significatifs",
-			description: "Arrondit à 1, 2 ou 3 chiffres significatifs (48 215 → 48 000 ; 0,004 73 → 0,0047).",
-			ideas: {
-				"sf-snap": "Un curseur zoome jusqu'à ce que le nombre s'ajuste au bon nombre de chiffres significatifs.",
-				"round-or-wrong": "Chasse à l'erreur : trouve les arrondis mal faits."
-			}
-		},
-		"G6-PV-3": {
-			title: "Estimer à 1 chiffre significatif, précision raisonnable",
-			description: "Choisit une précision raisonnable selon le contexte (une longueur mesurée, une population) et estime 4,8 × 21 par 5 × 20.",
-			ideas: {
-				"measure-to-sf": "Activité pratique : donne une longueur mesurée avec une précision raisonnable et explique pourquoi.",
-				"how-precise-headline": "Tri d'histoires : quels chiffres de gros titres sont trop précis ?"
-			}
-		},
-		"G6-PV-4": {
-			title: "Notation scientifique : lire et écrire les grands nombres",
-			description: "Écrit les grands nombres sous la forme A × 10ⁿ avec 1 ≤ A < 10 et revient en arrière (4 500 000 = 4,5 × 10⁶).",
-			ideas: {
-				"planet-scale-cards": "Associe distances et masses de planètes aux cartes en notation scientifique.",
-				"standard-or-not": "Chasse à l'erreur : repère les valeurs de A hors de 1–10 et corrige-les."
-			}
-		},
-		"G6-PV-5": {
-			title: "Comparer des nombres en notation scientifique",
-			description: "Range de grands nombres d'abord par l'exposant, puis par A (3 × 10⁸ > 9 × 10⁷).",
-			ideas: {
-				"biggest-by-exponent": "Course de rangement : d'abord par l'exposant.",
-				"giant-showdown": "Cartes en duel : lequel est le plus grand, et pourquoi ?"
-			}
-		},
-		"G6-PV-6": {
-			title: "Puissances de dix nulles et négatives",
-			description: "Lit 10⁰ = 1, 10⁻¹ = 0,1, 10⁻² = 0,01 comme des colonnes de valeur de position et passe des puissances de dix aux décimaux.",
-			ideas: {
-				"place-value-ladder": "Prolonge l'échelle des colonnes à droite de la virgule pour trouver 10⁻ⁿ.",
-				"exponent-match-up": "Jeu de mémoire : associe 10⁻³, 0,001 et 1/1000.",
-				"powers-of-ten-zoom": "Zoom à explorer de la galaxie à l'atome, en lisant l'exposant."
-			}
-		},
-		"G6-OP-1": {
-			title: "Priorités opératoires avec des négatifs",
-			description: "Calcule avec des négatifs et des parenthèses (−3 × (4 + 5) = −27 ; 2 − 3 × −4 = 14).",
-			ideas: {
-				"bracket-bandit": "Chasse à l'erreur : repère l'étape fausse dans des calculs déjà faits.",
-				"order-chain-builder": "Construis un ordre de calcul valide pour atteindre un objectif."
-			}
-		},
-		"G6-OP-2": {
-			title: "Puissances et racines dans les expressions",
-			description: "Calcule avec carrés, cubes et racines dans le bon ordre (2 + 3² = 11 ; √16 − 2³ = −4).",
-			ideas: {
-				"power-order-puzzle": "Place des parenthèses pour obtenir une valeur donnée.",
-				"which-first-sort": "Tri de cartes : quelle opération passe en premier ?"
-			}
-		},
-		"G6-OP-3": {
-			title: "Modèle d'aire de la multiplication posée",
-			description: "Explique 23 × 14 avec quatre morceaux d'un modèle d'aire et le relie à la méthode écrite.",
-			ideas: {
-				"area-model-builder": "Rectangles à glisser et découper pour 23 × 14.",
-				"column-why": "Associe chaque produit partiel de la multiplication posée à son morceau."
-			}
-		},
-		"G6-OP-4": {
-			title: "La distributivité",
-			description: "Utilise a(b + c) = ab + ac pour calculer (7 × 98 = 7 × 100 − 7 × 2) et expliquer des astuces de calcul mental.",
-			ideas: {
-				"split-and-multiply": "Jeu de calcul mental : choisis la décomposition la plus pratique.",
-				"distribute-detective": "Chasse à l'erreur : repère l'astuce de calcul mental ratée (ex. 7 × 98 mal décomposé)."
-			}
-		},
-		"G6-OP-5": {
-			title: "Modèle d'aire du produit de deux binômes",
-			description: "Montre (x + 3)(x + 2) comme quatre morceaux d'aire (simple découverte).",
-			ideas: {
-				"binomial-area-lab": "Construis le rectangle avec des tuiles x et 1 et lis les quatre parties.",
-				"match-area-to-product": "Associe des cartes : schémas et développements."
-			}
-		},
-		"G6-OP-6": {
-			title: "Multiplier des puissances de même base",
-			description: "Applique aᵐ × aⁿ = aᵐ⁺ⁿ avec de petites puissances entières (2³ × 2⁴ = 2⁷ ; simple découverte).",
-			ideas: {
-				"index-law-machine": "Écris en facteurs, puis devine la règle.",
-				"index-law-slip-hunt": "Chasse à l'erreur : 2³ × 2⁴ ≠ 4⁷."
-			}
-		},
-		"G6-FL-1": {
-			title: "Connaître par cœur carrés et cubes",
-			description: "Connaît les carrés jusqu'à 15² et les cubes jusqu'à 5³.",
-			ideas: {
-				"square-sprint": "Course de rappel chronométrée sur carrés et cubes.",
-				"square-memory-pairs": "Jeu de mémoire : 13² ↔ 169."
-			}
-		},
-		"G6-FL-2": {
-			title: "Puissances de 2 et suites de doublements",
-			description: "Connaît les puissances de 2 jusqu'à 2¹⁰ (2⁸ = 256) et s'en sert comme repères de doublement.",
-			ideas: {
-				"doubling-ladder": "Grimpe l'échelle des puissances de 2 contre la montre.",
-				"chessboard-grains": "Histoire : à quelle vitesse le doublement grandit, estimé avant de calculer."
-			}
-		},
-		"G6-FL-3": {
-			title: "Estimations de Fermi à 1 chiffre significatif",
-			description: "Découpe une grande question en petites parties approchées à 1 chiffre significatif et multiplie (cheveux sur une tête ≈ 100 000).",
-			ideas: {
-				"fermi-quest": "Estime puis vérifie, avec un score selon l'ordre de grandeur.",
-				"fermi-chain-builder": "Construis la chaîne d'estimations pour une question cible."
-			}
-		},
-		"G6-FL-4": {
-			title: "Vérifier par une estimation",
-			description: "Juge si une réponse est raisonnable en arrondissant d'abord (48 × 21 fait environ 1 000).",
-			ideas: {
-				"ballpark-bouncer": "Accepte ou refuse des réponses grâce à une estimation rapide.",
-				"estimate-before-you-press": "Prévois, puis découvre la valeur exacte."
-			}
-		},
-		"G6-FL-5": {
-			title: "Vérifier par l'opération inverse ou par une autre méthode",
-			description: "Vérifie un résultat en le défaisant ou en le résolvant autrement, et repère lequel de trois élèves se trompe.",
-			ideas: {
-				"three-way-check": "Jeu d'enquête : trois élèves ne sont pas d'accord, teste chacun.",
-				"undo-to-verify": "Puzzles où l'on défait l'opération."
-			}
-		},
-		"G6-NT-1": {
-			title: "Racines carrées des carrés parfaits",
-			description: "Trouve la racine carrée des carrés parfaits (√144 = 12) et sait qu'elle défait le carré.",
-			ideas: {
-				"square-garden": "Arrange des carreaux carrés pour voir la racine carrée comme la longueur du côté.",
-				"root-or-not-wall": "Tri : carré parfait, cube parfait ou aucun des deux."
-			}
-		},
-		"G6-NT-2": {
-			title: "Racines cubiques des cubes parfaits",
-			description: "Trouve la racine cubique des cubes parfaits (∛64 = 4) et sait qu'elle défait le cube.",
-			ideas: {
-				"cube-stack-builder": "Construis des cubes avec des petits blocs pour voir la racine cubique comme la longueur de l'arête.",
-				"root-match-up": "Associe chaque puissance à sa racine."
-			}
-		},
-		"G6-NT-3": {
-			title: "Estimer des racines qui ne tombent pas juste",
-			description: "Place √20 entre 4 et 5, puis l'affine à 4,4 par essais.",
-			ideas: {
-				"root-squeeze": "Jeu sur la droite : coince √n entre deux entiers, puis affine.",
-				"guess-and-square": "Jeu de score : essaie et améliore."
-			}
-		},
-		"G6-NT-4": {
-			title: "Décomposition en facteurs premiers avec les puissances",
-			description: "Écrit 360 = 2³ × 3² × 5 avec un arbre de facteurs.",
-			ideas: {
-				"factor-tree-forest": "Activité pratique : fais pousser des arbres de facteurs.",
-				"prime-or-break": "Décide s'il faut encore découper une branche."
-			}
-		},
-		"G6-NT-5": {
-			title: "PGCD à partir des facteurs premiers",
-			description: "Lit le PGCD sur les premiers communs (le PGCD de 36 et 60 est 2² × 3 = 12).",
-			ideas: {
-				"overlap-circles-hcf": "Puzzle de Venn : place les facteurs premiers, lis le PGCD.",
-				"biggest-tile": "Histoire : le plus grand carreau carré qui recouvre exactement un sol."
-			}
-		},
-		"G6-NT-6": {
-			title: "PPCM à partir des facteurs premiers",
-			description: "Lit le PPCM sur tous les premiers avec leur plus grande puissance (le PPCM de 12 et 18 est 36).",
-			ideas: {
-				"gear-meet": "Deux engrenages aux nombres de dents différents se retrouvent après un PPCM de tours.",
-				"overlap-circles-lcm": "Puzzle de Venn : construis le PPCM à partir des deux nombres."
-			}
-		},
-		"G6-NT-7": {
-			title: "Racines de carrés et cubes parfaits par factorisation",
-			description: "Trouve la racine carrée ou cubique de grandes puissances parfaites en divisant les exposants par 2 ou par 3 (√(2⁴ × 3²) = 12).",
-			ideas: {
-				"root-by-factors": "Regroupe par deux (ou par trois) les facteurs premiers sur des cartes.",
-				"perfect-power-test": "Est-ce un carré parfait ? Regarde les exposants."
-			}
-		},
-		"G6-NT-8": {
-			title: "Compter les diviseurs et algorithme d'Euclide",
-			description: "Compte les diviseurs grâce aux exposants (2³ × 3² en a 4 × 3 = 12) et trouve un PGCD par restes successifs.",
-			ideas: {
-				"euclid-rectangles": "Pave un rectangle avec les plus grands carrés pour trouver le PGCD.",
-				"factor-count-predictor": "Prévois le nombre de diviseurs, puis liste-les pour vérifier."
-			}
-		},
-		"G6-NT-9": {
-			title: "Restes, horloges et régularités numériques",
-			description: "Utilise les restes (jour de la semaine dans 100 jours, dernier chiffre de 7ⁿ), trouve des régularités dans les nombres triangulaires, carrés, de Fibonacci et parfaits, et utilise la racine numérique (preuve par neuf) pour contrôler sommes et produits.",
-			ideas: {
-				"clock-remainders": "Jour de la semaine après n jours, dernier chiffre de 7ⁿ, sur un cadran d'horloge.",
-				"sieve-and-pattern-hunt": "Crible d'Ératosthène, puis chasse aux régularités des nombres carrés, triangulaires, de Fibonacci et parfaits.",
-				"nines-check-clock": "Réduis les chiffres à une racine numérique sur une horloge à 9 positions pour accepter ou refuser une somme ou un produit."
-			}
-		},
-		"G6-FR-1": {
-			title: "Additionner et soustraire des fractions signées",
-			description: "Additionne et soustrait des fractions négatives (−½ + ¼ = −¼ ; ¾ − 1½ = −¾).",
-			ideas: {
-				"fraction-balance-signs": "Puzzle de balance où les poids négatifs flottent vers le haut.",
-				"signed-fraction-walk": "Marche sur la droite par sauts de fractions."
-			}
-		},
-		"G6-FR-2": {
-			title: "Multiplier et diviser des fractions signées",
-			description: "Multiplie et divise des fractions négatives (−½ ÷ ¼ = −2), ainsi que des décimaux signés ou des paires décimal-fraction (−0,5 × 0,2 = −0,1 ; −1,2 ÷ 0,4 = −3).",
-			ideas: {
-				"how-many-quarters": "Diviser, c'est compter des morceaux, avec changements de signe.",
-				"sign-fraction-slip-hunt": "Chasse à l'erreur sur des produits et des quotients.",
-				"signed-decimal-mixer": "Cartes « estime puis calcule » qui associent décimaux signés et fractions, le signe d'abord."
-			}
-		},
-		"G6-FR-3": {
-			title: "Fraction d'une fraction",
-			description: "Trouve ¾ de ⅖ = 3/10 par pliage ou modèle d'aire.",
-			ideas: {
-				"fraction-of-fraction-folds": "Modèle de pliage de papier à l'écran.",
-				"overlap-grid-fractions": "Colorie les lignes puis les colonnes, lis la partie commune."
-			}
-		},
-		"G6-FR-4": {
-			title: "Fractions complexes",
-			description: "Simplifie une fraction sur une fraction (½ ÷ ¾ s'écrit (1/2)/(3/4) = 2/3).",
-			ideas: {
-				"stacked-fraction-solver": "Réécris des fractions empilées en division, étape par étape.",
-				"complex-match": "Associe les formes empilées à leurs réponses simples."
-			}
-		},
-		"G6-FR-5": {
-			title: "Taux unitaires avec des fractions",
-			description: "Trouve un taux à partir de quantités fractionnaires (½ mile en ¼ d'heure fait 2 miles par heure).",
-			ideas: {
-				"slow-snail-rates": "Problèmes d'histoires : vitesse à partir d'une distance et d'une durée fractionnaires.",
-				"rate-per-one-cards": "Cartes : ramène les deux quantités à « pour 1 »."
-			}
-		},
-		"G6-FR-6": {
-			title: "Comparer des fractions par produits en croix",
-			description: "Compare 5/7 et 8/11 par produits en croix (55 contre 56).",
-			ideas: {
-				"cross-multiply-duel": "Choisis la plus grande fraction face à un adversaire.",
-				"cross-why-explorer": "Montre que les produits en croix reviennent à un dénominateur commun."
-			}
-		},
-		"G6-FR-7": {
-			title: "Fractions en décimaux : finis ou périodiques",
-			description: "Convertit par division (⅐ = 0,142857…) et teste quand un décimal s'arrête.",
-			ideas: {
-				"recurring-detective": "La division posée s'anime, le bloc qui se répète s'allume.",
-				"terminate-or-repeat-sort": "Prévois d'après les facteurs premiers du dénominateur."
-			}
-		},
-		"G6-FR-8": {
-			title: "0,999… = 1 et les cinq visages d'une fraction",
-			description: "Prouve que 0,999… = 1 avec ⅓ + ⅓ + ⅓ et passe d'une vue à l'autre de ⅔ : partie-tout, nombre, quotient, rapport, opérateur.",
-			ideas: {
-				"is-point-nine-nine-one": "Puzzle d'argumentation avec ⅓ + ⅓ + ⅓.",
-				"five-faces-of-a-fraction": "Associe des cartes : cinq façons de voir ⅔."
-			}
-		},
-		"G6-RP-1": {
-			title: "Le pourcentage comme multiplicateur",
-			description: "Utilise ×1,2 pour +20 % et ×0,85 pour −15 %, y compris au-dessus de 100 % (130 % de 40 = 52).",
-			ideas: {
-				"multiplier-machine": "Cartes multiplicateurs à glisser et enchaîner.",
-				"percent-to-multiplier-match": "Associe chaque variation à son multiplicateur."
-			}
-		},
-		"G6-RP-2": {
-			title: "Variations en pourcentage successives",
-			description: "Enchaîne des multiplicateurs (deux hausses de 10 % font ×1,21 ; +10 % puis −10 % ne ramène pas au départ).",
-			ideas: {
-				"why-not-back-to-start": "À explorer : barres après +10 % puis −10 %.",
-				"chain-the-change": "Relais d'histoires de variations successives."
-			}
-		},
-		"G6-RP-3": {
-			title: "Pourcentages inversés",
-			description: "Retrouve la valeur de départ en divisant par le multiplicateur (après 20 % de réduction on a 48, donc 60).",
-			ideas: {
-				"undo-the-percent": "Modèles en barres parcourus à l'envers.",
-				"sale-detective": "Retrouve le nombre de départ avant une baisse en pourcentage."
-			}
-		},
-		"G6-RP-4": {
-			title: "Erreur en pourcentage",
-			description: "Exprime une erreur en pourcentage de la vraie valeur (estimé 45, réel 50, erreur de 10 %). Arithmétique pure seulement.",
-			ideas: {
-				"percent-error-dartboard": "De combien ton estimation se trompe-t-elle, en pourcentage ?",
-				"estimate-then-error": "Devine une mesure, découvre-la, marque des points."
-			}
-		},
-		"G6-RP-5": {
-			title: "Rapports 1 : n et rapports équivalents",
-			description: "Réécrit 4 : 10 en 1 : 2,5 et compare des rapports.",
-			ideas: {
-				"ratio-simplifier": "Curseurs qui multiplient les deux côtés.",
-				"which-mix-is-stronger": "Compare des mélanges avec 1 : n."
-			}
-		},
-		"G6-RP-6": {
-			title: "Partager selon un rapport à trois parts",
-			description: "Partage une quantité selon un rapport à 3 parts (60 en nombre pur selon 2 : 3 : 5 donne 12, 18, 30), avec des unités mélangées.",
-			ideas: {
-				"three-part-share": "Partage en barres à 3 parts, avec des unités mélangées.",
-				"ratio-recipe-split": "Quantités d'une recette réparties selon un rapport."
-			}
-		},
-		"G6-RP-7": {
-			title: "Proportionnalité directe et coefficient k",
-			description: "Utilise y = kx et trouve k à partir d'un couple (3 livres coûtent 12, donc k = 4).",
-			ideas: {
-				"find-the-k": "Jeu de machine mystère : trouve k, prévois les résultats.",
-				"proportion-table-fill": "Complète des tableaux et des graphiques passant par l'origine."
-			}
-		},
-		"G6-RP-8": {
-			title: "Proportionnalité inverse",
-			description: "Reconnaît que plus d'ouvriers, c'est moins de jours (xy constant : 6 ouvriers mettent 4 jours, donc 3 en mettent 8).",
-			ideas: {
-				"direct-or-inverse": "Puzzle de tri avec graphiques : droite ou courbe descendante.",
-				"workers-and-days": "Problèmes d'histoires avec un produit constant."
-			}
-		},
-		"G6-RP-9": {
-			title: "Raisonnement additif ou multiplicatif",
-			description: "Distingue « ajouter la même quantité » de « multiplier par le même facteur » (passer d'une recette pour 2 à une pour 5 en ajoutant 3 est faux).",
-			ideas: {
-				"recipe-scaler-trap": "Chasse à l'erreur sur une recette agrandie en ajoutant.",
-				"add-or-multiply-sort": "Trie des situations selon le bon raisonnement."
-			}
-		},
-		"G6-ALG-1": {
-			title: "Écrire des expressions à partir de mots",
-			description: "Traduit des mots en expressions (3 de plus que le double de n s'écrit 2n + 3).",
-			ideas: {
-				"word-to-expression-match": "Associe des cartes : mots et expressions.",
-				"function-machine-build": "Construis une machine pour une règle décrite."
-			}
-		},
-		"G6-ALG-2": {
-			title: "Termes, coefficients et termes semblables",
-			description: "Nomme termes et coefficients et repère les termes semblables (3a et 5a sont semblables ; 3a et 3b ne le sont pas).",
-			ideas: {
-				"like-terms-sorter": "Range les termes en groupes.",
-				"algebra-tiles-lab": "Tuiles virtuelles pour x et 1."
-			}
-		},
-		"G6-ALG-3": {
-			title: "Réduire une expression",
-			description: "Simplifie 3a + 2a − a = 4a et 3a + 2b − a + b = 2a + 3b.",
-			ideas: {
-				"tile-collector": "Glisse ensemble les tuiles semblables, les paires opposées s'annulent.",
-				"simplify-slip-hunt": "Chasse à l'erreur : 3a + 2b ≠ 5ab."
-			}
-		},
-		"G6-ALG-4": {
-			title: "Remplacer par des valeurs positives",
-			description: "Calcule des formules en remplaçant les lettres (périmètre P = 2l + 2w avec l = 5, w = 3).",
-			ideas: {
-				"substitution-scavenger": "Remplace par de vraies mesures dans les formules de périmètre et de vitesse.",
-				"value-or-not": "Associe des valeurs à des expressions."
-			}
-		},
-		"G6-ALG-5": {
-			title: "Remplacer par des valeurs négatives",
-			description: "Remplace par des négatifs (a = −2 dans 3a + 5 donne −1 ; a² donne 4).",
-			ideas: {
-				"negative-sub-sprint": "Entraînement rapide avec réponse immédiate sur les signes.",
-				"bracket-your-negative": "Chasse à l'erreur : parenthèse oubliée."
-			}
-		},
-		"G6-ALG-6": {
-			title: "Développer avec une seule parenthèse",
-			description: "Développe 2(x + 3) = 2x + 6 et 3(2x − 1) = 6x − 3.",
-			ideas: {
-				"bracket-boxes": "Tuiles de modèle d'aire avec plusieurs groupes.",
-				"expand-slip-hunt": "Chasse à l'erreur : le terme oublié par la parenthèse."
-			}
-		},
-		"G6-ALG-7": {
-			title: "Machines à fonctions et calcul à rebours",
-			description: "Lit une machine à une ou deux étapes et l'inverse (×3 + 2 donne 17, donc l'entrée est 5).",
-			ideas: {
-				"function-machine-reverse": "Entre une valeur, lis le résultat, remonte en arrière.",
-				"mystery-machine-guess": "Devine la règle à partir de couples entrée/sortie."
-			}
-		},
-		"G6-ALG-8": {
-			title: "Résoudre des équations à une ou deux étapes",
-			description: "Résout 3x + 5 = 20 en équilibrant et vérifie la réponse (x = 5).",
-			ideas: {
-				"balance-scales-two-step": "Glisse des opérations sur les deux plateaux.",
-				"check-your-x": "Remplace pour vérifier ou rejeter."
-			}
-		},
-		"G6-ALG-9": {
-			title: "Mettre un problème en équation",
-			description: "Choisit l'équation, puis résout (« 3 stylos et une règle à 2 € coûtent 11 € » donne 3p + 2 = 11, en nombres purs).",
-			ideas: {
-				"equation-from-story": "Choisis d'abord l'équation, résous ensuite.",
-				"think-of-a-number": "Devinettes lues comme des équations."
-			}
-		},
-		"G6-ALG-10": {
-			title: "Le terme général d'une suite arithmétique",
-			description: "Trouve le terme général à partir de la différence constante (5, 8, 11 … donne 3n + 2) et le 50e terme. Vu seulement ici.",
-			ideas: {
-				"nth-term-matchsticks": "Construis des motifs en allumettes, entre la règle qui prédit le 50e.",
-				"difference-detective": "Trouve d'abord la différence d, puis le terme zéro, puis la règle."
-			}
-		},
-		"G6-MEA-1": {
-			title: "Les parties d'un cercle et l'origine de π",
-			description: "Nomme rayon, diamètre et circonférence, et trouve le rapport C ÷ d ≈ 3,14 en faisant rouler.",
-			ideas: {
-				"wheel-roll-pi": "Fais rouler un cercle d'un tour, compare avec son diamètre.",
-				"string-around-it": "Mesure et note C et d pour de nombreux objets."
-			}
-		},
-		"G6-MEA-2": {
-			title: "La circonférence",
-			description: "Utilise C = πd et C = 2πr (d = 10 cm donne environ 31,4 cm).",
-			ideas: {
-				"fence-the-circle": "Histoire : quelle longueur de bordure pour un bassin rond ?",
-				"circumference-estimate-check": "Estime avec 3, puis calcule."
-			}
-		},
-		"G6-MEA-3": {
-			title: "L'aire d'un disque",
-			description: "Utilise A = πr² et distingue r² de 2r (r = 3 donne environ 28,3).",
-			ideas: {
-				"circle-cut-and-unroll": "Découpe des parts pour former un quasi-rectangle.",
-				"radius-or-diameter-hunt": "Chasse à l'erreur sur les confusions entre r et d."
-			}
-		},
-		"G6-MEA-4": {
-			title: "Comparer des cercles",
-			description: "Compare la taille de cercles en contexte (une pizza de 16 cm est-elle plus grande que deux de 10 cm ?).",
-			ideas: {
-				"pizza-or-two": "Estime puis vérifie.",
-				"which-circle-bigger": "Double le rayon, prévois le changement d'aire."
-			}
-		},
-		"G6-MEA-5": {
-			title: "Volume d'un pavé droit par couches",
-			description: "Calcule le volume comme aire de la base × hauteur par couches (3 × 4 × 5 = 60), et reconnaît un prisme comme un solide à section constante, en nommant cette section.",
-			ideas: {
-				"prism-stack": "Empile des couches et lis le volume dans le décompte.",
-				"layer-counter": "Compte les couches pour prévoir le total.",
-				"prism-or-not-sort": "Trie des solides : prisme ou non, en nommant la section de chaque prisme."
-			}
-		},
-		"G6-MEA-6": {
-			title: "Volume d'un prisme à base triangulaire",
-			description: "Calcule le volume d'un prisme triangulaire comme aire du triangle × longueur.",
-			ideas: {
-				"slice-the-prism": "Fais glisser une section le long de la longueur.",
-				"tent-volume": "Histoire : le volume d'une tente."
-			}
-		},
-		"G6-MEA-7": {
-			title: "Volume d'un prisme circulaire (le cylindre)",
-			description: "Calcule V = πr²h comme aire de la base × hauteur.",
-			ideas: {
-				"can-or-box": "Qui contient le plus ? Estime puis calcule.",
-				"stack-of-coins": "Un cylindre vu comme une pile de disques."
-			}
-		},
-		"G6-MEA-8": {
-			title: "Vitesse, distance et durée",
-			description: "Calcule vitesse = distance ÷ durée et réarrange (120 km en 2 h font 60 km/h ; 60 km/h pendant 3 h font 180 km).",
-			ideas: {
-				"sprinter-vs-cyclist": "Qui gagne une course aux unités mélangées ?",
-				"dst-triangle-sort": "Choisis la formule qui convient à chaque histoire."
-			}
-		},
-		"G6-MEA-9": {
-			title: "Convertir des unités composées et des taux de densité",
-			description: "Convertit km/h ↔ m/s (72 km/h = 20 m/s), utilise des g par cm³ et garde les unités.",
-			ideas: {
-				"speed-converter-race": "Associe des cartes km/h, m/s et mph.",
-				"unit-chain-puzzle": "Construis une chaîne de fractions d'unités qui se simplifie jusqu'à la cible."
-			}
-		},
-		"G6-GEO-1": {
-			title: "Angles sur une droite et autour d'un point",
-			description: "Utilise 180° et 360° pour trouver des angles manquants avec une raison (« les angles sur une droite font 180° »).",
-			ideas: {
-				"angle-chase": "Trouve l'angle marqué en donnant chaque raison.",
-				"line-and-point-fill": "Puzzles à compléter avec des cartes de raisons."
-			}
-		},
-		"G6-GEO-2": {
-			title: "Angles opposés par le sommet",
-			description: "Sait que les angles opposés sont égaux et donne la raison.",
-			ideas: {
-				"cross-lines-explorer": "Fais glisser une droite et observe les paires.",
-				"opposite-or-not": "Trie des paires d'angles."
-			}
-		},
-		"G6-GEO-3": {
-			title: "Angles correspondants et alternes-internes",
-			description: "Repère et utilise les angles correspondants et alternes-internes entre parallèles (les formes en F et en Z).",
-			ideas: {
-				"parallel-lines-explorer": "Fais glisser une sécante, vois quels angles restent égaux.",
-				"f-or-z-hunt": "Repère les paires en F et en Z."
-			}
-		},
-		"G6-GEO-4": {
-			title: "Angles co-internes et enchaînements d'angles",
-			description: "Utilise les angles co-internes (somme 180°) et enchaîne deux règles ou plus.",
-			ideas: {
-				"angle-chain-puzzle": "Enchaînement en plusieurs étapes, avec une raison à chaque étape.",
-				"co-interior-check": "Prévois, puis mesure."
-			}
-		},
-		"G6-GEO-5": {
-			title: "Rédiger les raisons en angles",
-			description: "Écrit une courte raison valable à chaque étape et repère celles qui ne le sont pas.",
-			ideas: {
-				"reason-or-wrong": "Chasse à l'erreur : repère la raison invalide.",
-				"reason-card-match": "Associe des phrases de raison à des schémas."
-			}
-		},
-		"G6-GEO-6": {
-			title: "Médiatrices et bissectrices",
-			description: "Construit une médiatrice et une bissectrice au compas et à la règle.",
-			ideas: {
-				"compass-studio": "Compas et règle virtuels avec vérification à chaque étape.",
-				"treasure-by-bisector": "Trouve le point à égale distance de deux arbres."
-			}
-		},
-		"G6-GEO-7": {
-			title: "Construire un triangle à partir de ses trois côtés",
-			description: "Construit un triangle à partir de trois côtés (CCC) avec des arcs de compas.",
-			ideas: {
-				"arc-triangle-builder": "Construis avec des arcs et vérifie les longueurs des côtés.",
-				"stick-triangle-lab": "De vrais bâtonnets reproduits à l'écran."
-			}
-		},
-		"G6-GEO-8": {
-			title: "Inégalité triangulaire",
-			description: "Sait que deux côtés doivent avoir une somme supérieure au troisième (3, 4, 8 ne se ferme pas).",
-			ideas: {
-				"will-it-close": "Prévois puis teste en faisant glisser les longueurs.",
-				"longest-side-limit": "Trouve le plus grand troisième côté qui permet encore de fermer le triangle."
-			}
-		},
-		"G6-GEO-9": {
-			title: "Trois côtés égaux et triangles superposables (idée)",
-			description: "Sait que trois côtés égaux imposent le même triangle (simple découverte).",
-			ideas: {
-				"same-triangle-sorter": "Trie des paires : superposables ou non.",
-				"flexible-frame": "Compare un triangle rigide avec un quadrilatère qui se déforme."
-			}
-		},
-		"G6-POS-1": {
-			title: "Agrandir avec un facteur d'échelle entier",
-			description: "Agrandit une figure sur une grille depuis un centre avec un facteur d'échelle de 2 ou 3.",
-			ideas: {
-				"enlarge-from-centre": "Fais glisser des rayons depuis un centre pour construire la copie.",
-				"ray-and-measure": "Vérifie les distances à partir du centre."
-			}
-		},
-		"G6-POS-2": {
-			title: "Facteurs d'échelle fractionnaires et recherche du facteur",
-			description: "Agrandit par ½ et trouve le facteur d'échelle entre figures semblables (de 6 cm à 15 cm, c'est ×2,5).",
-			ideas: {
-				"shrink-ray": "Agrandis par ½ ou ⅓.",
-				"similar-or-not": "Trie des paires : agrandissement ou non."
-			}
-		},
-		"G6-POS-3": {
-			title: "Les longueurs changent par k, les aires par k²",
-			description: "Sait que doubler les longueurs multiplie l'aire par 4 (k = 3 donne 9 fois).",
-			ideas: {
-				"photocopier-puzzle": "Quel facteur transforme un A5 en A4, et que devient l'aire ?",
-				"square-count-grow": "Compte les carrés unités quand k grandit."
-			}
-		},
-		"G6-DAT-1": {
-			title: "Tracer un nuage de points",
-			description: "Place des données par paires (taille et envergure des bras) avec des axes bien choisis.",
-			ideas: {
-				"height-vs-armspan": "Mesure la classe et trace le nuage.",
-				"scatter-builder": "Trace à partir d'un tableau, avec choix des axes."
-			}
-		},
-		"G6-DAT-2": {
-			title: "Décrire une corrélation",
-			description: "Décrit une corrélation positive, négative ou nulle et repère les valeurs aberrantes.",
-			ideas: {
-				"correlation-sort": "Trie des nuages de points selon leur type.",
-				"story-to-scatter": "Associe une situation à l'allure probable du nuage."
-			}
-		},
-		"G6-DAT-3": {
-			title: "Droite d'ajustement à l'œil",
-			description: "Trace une droite d'ajustement à l'œil et s'en sert pour estimer une valeur.",
-			ideas: {
-				"best-fit-slider": "Fais glisser une droite et vois les écarts rétrécir.",
-				"estimate-from-the-line": "Lis sur la droite une valeur manquante."
-			}
-		},
-		"G6-DAT-4": {
-			title: "Corrélation n'est pas causalité",
-			description: "Distingue corrélation et causalité dans des affirmations simples.",
-			ideas: {
-				"correlation-or-cause": "Chasse à l'erreur dans des gros titres.",
-				"hidden-third-thing": "Trouve la variable cachée dans une histoire."
-			}
-		},
-		"G6-DAT-5": {
-			title: "Comparer deux séries : moyenne et étendue",
-			description: "Défend une affirmation avec la moyenne et l'étendue (l'équipe qui a la meilleure moyenne mais une plus grande étendue est moins régulière).",
-			ideas: {
-				"which-team-is-better": "Jeu d'argumentation : choisis la moyenne ou l'étendue.",
-				"same-mean-different-spread": "Construis deux séries de même moyenne et d'étendues différentes."
-			}
-		},
-		"G6-DAT-6": {
-			title: "Moyenne pondérée (petite introduction)",
-			description: "Trouve une moyenne quand certaines valeurs comptent plus (2 quiz à 70 et 1 examen à 85, coefficients 1 : 1 : 2).",
-			ideas: {
-				"weighted-grade-lab": "Modifie les coefficients et regarde la moyenne bouger.",
-				"fair-average-or-not": "Décide quand une moyenne simple trompe."
-			}
-		},
-		"G6-PRB-1": {
-			title: "Lister les issues de façon systématique",
-			description: "Liste toutes les issues de deux événements dans une liste ordonnée ou un tableau (pièce et roue).",
-			ideas: {
-				"outcome-lister": "Construis la liste complète sans oubli ni doublon.",
-				"missing-outcome-hunt": "Trouve ce qui manque."
-			}
-		},
-		"G6-PRB-2": {
-			title: "Tableaux de l'univers des possibles",
-			description: "Construit un tableau 6 × 6 pour deux dés et compte les cases favorables (P(somme 7) = 6/36).",
-			ideas: {
-				"two-dice-grid": "Construis le tableau, prévois, puis lance 100 fois.",
-				"sum-frequency-chart": "Trace la fréquence de chaque somme."
-			}
-		},
-		"G6-PRB-3": {
-			title: "Arbres de probabilités",
-			description: "Dessine un arbre pour deux événements et compte ou multiplie le long des branches.",
-			ideas: {
-				"tree-diagram-maze": "Parcours les branches et multiplie.",
-				"grow-the-tree": "Complète des arbres commencés."
-			}
-		},
-		"G6-PRB-4": {
-			title: "La probabilité comme fraction",
-			description: "Donne des probabilités en fractions simplifiées et vérifie que leur somme vaut 1.",
-			ideas: {
-				"probability-card-match": "Associe des événements et des fractions.",
-				"all-outcomes-add-up": "Complète les probabilités manquantes pour arriver à 1."
-			}
-		},
-		"G6-PRB-5": {
-			title: "Expérience et théorie",
-			description: "Compare les fréquences observées à la théorie et sait que plus d'essais rapprochent des deux.",
-			ideas: {
-				"roll-it-many-times": "Fais 10, 100, 1 000 essais et compare.",
-				"lucky-streak-detective": "Décide si un résultat est dû au simple hasard."
-			}
-		},
-		"G6-PRB-6": {
-			title: "Jeux équitables",
-			description: "Décide si un jeu est équitable à partir des issues possibles et le corrige.",
-			ideas: {
-				"fair-game-designer": "Rends équitable un jeu de roue, teste-le, ajuste.",
-				"rigged-or-fair": "Juge des jeux annoncés dans des publicités."
-			}
-		},
-		"G6-PSR-1": {
-			title: "Prouver avec des schémas",
-			description: "Montre qu'une affirmation sur les nombres est vraie avec un schéma (impair + impair = pair avec des paires de points).",
-			ideas: {
-				"prove-it-with-dots": "Construis des motifs de points.",
-				"picture-proof-match": "Associe des affirmations à leurs preuves en images."
-			}
-		},
-		"G6-PSR-2": {
-			title: "Prouver avec des lettres",
-			description: "Prouve avec des lettres (n + (n+1) + (n+2) = 3(n+1) ; 2k est pair).",
-			ideas: {
-				"letters-prove-it": "Complète les étapes d'une preuve.",
-				"consecutive-sum-lab": "Explore, fais une conjecture, prouve."
-			}
-		},
-		"G6-PSR-3": {
-			title: "Contre-exemples",
-			description: "Réfute une affirmation fausse avec un seul contre-exemple (« un carré est plus grand que le nombre » : 0,5² = 0,25).",
-			ideas: {
-				"counterexample-court": "Jeu de tribunal : accuse ou défends avec un seul contre-exemple.",
-				"true-or-find-a-counter": "Vrai, ou trouve le contre-exemple."
-			}
-		},
-		"G6-PSR-4": {
-			title: "Conjecturer, tester, décider",
-			description: "Teste une affirmation sur une régularité avec plusieurs cas et décide : vraie, fausse ou pas encore prouvée.",
-			ideas: {
-				"pattern-claim-lab": "Essaie des cas, puis conclus.",
-				"enough-evidence-sort": "Quand les exemples ne suffisent-ils pas ?"
-			}
-		},
-		"G6-PSR-5": {
-			title: "Trouver et classer les erreurs",
-			description: "Trouve une erreur et la range : signe, valeur de position, retenue ou unité.",
-			ideas: {
-				"mistake-museum": "Galerie de solutions fausses à classer par type d'erreur.",
-				"error-type-sort": "Range les erreurs par type."
-			}
-		},
-		"G6-PSR-6": {
-			title: "Expliquer et corriger une méthode",
-			description: "Écrit ce qui a mal tourné et le corrige (un élève ajoute l'unité mais oublie de convertir).",
-			ideas: {
-				"fix-the-student": "Corrige une solution rédigée et explique pourquoi.",
-				"teach-it-back": "Explique une méthode à un camarade virtuel."
-			}
+	"K-OP-10": {
+		title: "Partager équitablement entre 2 ou 3",
+		description: "Partage un ensemble équitablement et remarque les parts inégales (« 6 biscuits pour 2 amis : 3 chacun »). Pas de symbole ÷.",
+		ideas: { "fair-or-not-plates": "Observer des assiettes partagées et dire qui en a plus ou si le partage est équitable." }
+	},
+	"K-OP-11": {
+		title: "Former des groupes égaux",
+		description: "Forme des groupes ayant le même nombre d'objets chacun (« 3 sacs de 2 »). Pas de symbole ×.",
+		ideas: {
+			"equal-groups-bags": "Histoire à construire : remplir des sacs de fête avec le même nombre d'objets et dire combien de sacs et combien dans chacun.",
+			"groups-of-snap": "Repérer la rangée de groupes où tous ont le même nombre."
+		}
+	},
+	"K-FR-1": {
+		title: "Parts égales et parts inégales",
+		description: "Distingue un partage équitable d'un partage inégal (« ces deux parts n'ont pas la même taille »).",
+		ideas: { "fair-cut-or-not": "Observer des formes coupées et choisir celle qui est partagée équitablement." }
+	},
+	"K-FR-2": {
+		title: "Moitiés de formes",
+		description: "Plie ou coupe une forme en 2 parts égales et nomme chacune « une moitié ».",
+		ideas: {
+			"fold-the-half": "Plier et couper des formes en papier en deux parts égales.",
+			"half-or-not": "Choisir les formes qui sont partagées en moitiés."
+		}
+	},
+	"K-FR-3": {
+		title: "Quarts de formes",
+		description: "Plie ou coupe une forme en 4 parts égales et nomme « un quart ».",
+		ideas: {
+			"fold-halves-quarters": "Plier et couper des formes ; choisir le partage équitable et rejeter le partage inégal.",
+			"pizza-quarters": "Couper une pizza pour quatre amis."
+		}
+	},
+	"K-FR-4": {
+		title: "Moitié d'un ensemble",
+		description: "Partage un petit ensemble en deux parties égales et dit « la moitié de 8, c'est 4 ».",
+		ideas: {
+			"half-the-set": "Histoire de collation : partager un ensemble de gâteries en deux et vérifier que les parties sont égales.",
+			"half-of-my-toys": "Trier des jouets sur deux tapis pour voir la moitié."
+		}
+	},
+	"K-NT-1": {
+		title: "Former des paires sans reste",
+		description: "Apparie des objets jusqu'à 10 et dit s'il en reste un (« 6 font 3 paires, 7 en laissent un de côté »).",
+		ideas: { "pair-up-partners": "Jeu de danse : former des paires avec tout le monde et repérer qui reste seul." }
+	},
+	"K-NT-2": {
+		title: "Pair et impair à l'intuition",
+		description: "Trie les nombres jusqu'à 10 en « font des paires » et « il en reste un » (« 8 fait des paires, 9 non »).",
+		ideas: {
+			"left-over-sock": "Trier des chaussettes en paires et voir quels nombres laissent une chaussette seule.",
+			"even-odd-sort": "Glisser des tuiles de nombres dans les maisons « fait des paires » et « il en reste un »."
+		}
+	},
+	"K-ALG-1": {
+		title: "Continuer une suite AB",
+		description: "Continue une suite AB (« rouge-bleu, rouge-bleu, … puis rouge »).",
+		ideas: { "ab-bead-string": "Enfiler des perles pour prolonger une suite." }
+	},
+	"K-ALG-2": {
+		title: "Nommer le motif et corriger une erreur",
+		description: "Nomme le motif qui se répète et trouve ou comble ce qui est faux ou manquant (« le motif est tape-frappe, celui-ci l'a brisé »).",
+		ideas: { "fix-the-pattern": "Trouver et échanger la tuile fautive dans une bande de suite." }
+	},
+	"K-ALG-3": {
+		title: "Suites ABB et ABC",
+		description: "Continue des suites ABB et ABC (« tape-frappe-frappe, tape-frappe-frappe »).",
+		ideas: {
+			"abc-parade": "Faire défiler des costumes dans un ordre ABC qui se répète.",
+			"abb-clap-stomp": "Reproduire un rythme de tape et de frappe."
+		}
+	},
+	"K-ALG-4": {
+		title: "Créer sa propre suite",
+		description: "Construit une suite avec un motif de son choix et l'explique (« ma suite fait étoile-cœur-cœur »).",
+		ideas: {
+			"pattern-maker": "Choisir des tuiles et prolonger sa propre bande.",
+			"pattern-gallery": "Créer une suite qu'un ami devra continuer."
+		}
+	},
+	"K-ALG-5": {
+		title: "Traduire une suite sous une autre forme",
+		description: "Transforme une suite en une autre forme (« tape-frappe = rouge-bleu »).",
+		ideas: { "sound-to-colour": "Écouter un rythme et colorier la suite correspondante." }
+	},
+	"K-MEA-1": {
+		title: "Mots de grandeur et choix de ce qu'on mesure",
+		description: "Utilise grand/petit, long/court, lourd/léger, plein/vide et choisit la bonne grandeur à mesurer (« je mesure la longueur d'une corde »).",
+		ideas: { "size-word-sort": "Trier des objets selon un mot de grandeur." }
+	},
+	"K-MEA-2": {
+		title: "Comparer deux longueurs",
+		description: "Aligne les bouts et dit lequel est plus long ou plus court (« ce crayon est plus long »).",
+		ideas: { "line-up-the-ends": "Glisser deux rubans vers un départ commun et les comparer." }
+	},
+	"K-MEA-3": {
+		title: "Comparer deux masses",
+		description: "Utilise une balance ou les mains pour dire lequel est plus lourd ou plus léger (« la pomme est plus lourde »).",
+		ideas: { "balance-play": "Poser des objets sur une balance et la regarder pencher." }
+	},
+	"K-MEA-4": {
+		title: "Comparer deux capacités",
+		description: "Verse et dit lequel contient plus ou moins, plein ou vide (« la cruche contient plus que la tasse »).",
+		ideas: { "pour-and-see": "Verser de l'eau d'un contenant à l'autre pour voir lequel remplit lequel." }
+	},
+	"K-MEA-5": {
+		title: "Choisir un outil",
+		description: "Choisit l'outil qui mesure la grandeur voulue (« une règle pour la longueur, une balance pour la masse »).",
+		ideas: { "tool-match": "Associer un outil à la question posée." }
+	},
+	"K-MEA-6": {
+		title: "Ranger 3 à 5 objets",
+		description: "Range 3 à 5 objets par longueur, masse ou capacité et trouve celui du milieu.",
+		ideas: { "size-train": "Aligner des wagons du plus petit au plus grand." }
+	},
+	"K-TIM-1": {
+		title: "Ordonner des événements : d'abord, ensuite, enfin",
+		description: "Ordonne 3 à 5 images d'une routine (« se brosser les dents, puis se laver, puis dodo »).",
+		ideas: { "story-strip-order": "Glisser des cartes images dans une bande." }
+	},
+	"K-TIM-2": {
+		title: "Avant, après, maintenant, plus tard",
+		description: "Utilise avant, après, maintenant et plus tard pour des événements (« le dîner est avant la sieste »).",
+		ideas: {
+			"before-now-later": "Jeu d'histoire à glisser : classer des scènes en avant / maintenant / plus tard (suivi).",
+			"before-after-pairs": "Choisir laquelle de deux scènes arrive en premier."
+		}
+	},
+	"K-TIM-3": {
+		title: "Jour, nuit, matin et soir",
+		description: "Dit ce qui se passe le jour ou la nuit, et le matin ou le soir (« les étoiles sortent la nuit », « on déjeune le matin »).",
+		ideas: { "sun-moon-sort": "Classer des images en jour et nuit, puis en matin et soir." }
+	},
+	"K-TIM-4": {
+		title: "Hier, aujourd'hui, demain",
+		description: "Nomme des événements comme hier, aujourd'hui ou demain (« nous sommes allés au parc hier »).",
+		ideas: { "calendar-corner": "Placer des images sur un tableau hier-aujourd'hui-demain." }
+	},
+	"K-TIM-5": {
+		title: "Ce qui dure le plus longtemps",
+		description: "Compare deux activités (« se brosser les dents est plus court qu'un bain »).",
+		ideas: { "race-the-timer": "Chronométrer deux actions avec un sablier et les comparer." }
+	},
+	"K-TIM-6": {
+		title: "Les jours de la semaine dans l'ordre",
+		description: "Dit les sept jours dans l'ordre (« lundi, mardi, mercredi… »).",
+		ideas: { "week-song": "Chanter et frapper les jours dans l'ordre." }
+	},
+	"K-TIM-7": {
+		title: "Le jour d'avant et le jour d'après",
+		description: "Nomme le jour d'après ou d'avant un jour donné (« après mardi, c'est mercredi »)."
+	},
+	"K-MON-1": {
+		title: "L'argent sert à acheter",
+		description: "Sait que les pièces et les billets servent à acheter (« je donne de l'argent et j'ai le jouet »). Selon la monnaie locale, sans exigence.",
+		ideas: { "what-can-i-buy": "Associer des articles au magasin où on les trouve." }
+	},
+	"K-MON-2": {
+		title: "Reconnaître les pièces locales et payer avec l'une d'elles",
+		description: "Associe chaque pièce à son image et remet la bonne pièce pour un jouet ; associe aussi les billets locaux à leur image. Selon la monnaie locale, sans exigence.",
+		ideas: {
+			"coin-match-shop": "Magasin pour jouer : associer chaque pièce ou billet à son image et remettre la bonne pièce pour un jouet.",
+			"coin-memory": "Cartes de mémoire avec les faces et les valeurs des pièces."
+		}
+	},
+	"K-GEO-1": {
+		title: "Nommer cercle, triangle, carré",
+		description: "Nomme les trois figures planes de base, de toute taille et dans toute orientation (« ceci est un triangle »).",
+		ideas: { "shape-bingo": "Couvrir la figure nommée par l'animateur." }
+	},
+	"K-GEO-2": {
+		title: "Rectangle et hexagone dans toute orientation",
+		description: "Reconnaît les rectangles et les hexagones, penchés ou longs et minces (« un rectangle penché reste un rectangle »).",
+		ideas: { "tilted-shapes": "Faire tourner une figure et dire si c'est toujours la même." }
+	},
+	"K-GEO-3": {
+		title: "Associer des figures identiques",
+		description: "Associe des figures semblables de tailles et de couleurs différentes (« ce sont deux triangles »).",
+		ideas: { "shape-memory": "Retourner des cartes pour trouver des figures identiques." }
+	},
+	"K-GEO-4": {
+		title: "Compter les côtés",
+		description: "Compte les côtés d'une figure plane (« un triangle a 3 côtés »).",
+		ideas: { "side-tapper": "Toucher chaque côté une fois en comptant." }
+	},
+	"K-GEO-5": {
+		title: "Coins et bords courbes",
+		description: "Distingue les coins des côtés et les bords droits des bords courbes (« un cercle n'a pas de coins »).",
+		ideas: {
+			"corners-and-curves": "Trier des figures selon les coins et les courbes dans deux bacs (suivi).",
+			"corner-pop": "Éclater un ballon à chaque coin."
+		}
+	},
+	"K-GEO-6": {
+		title: "Nommer les solides",
+		description: "Nomme le cube, la sphère, le cylindre et le cône (« un ballon est une sphère »).",
+		ideas: { "solid-bingo": "Couvrir le solide nommé par l'animateur." }
+	},
+	"K-GEO-7": {
+		title: "Figure plane ou solide",
+		description: "Dit si une forme est plane ou solide (« une pièce est plate, un ballon est un solide »).",
+		ideas: { "shadow-guess": "Voir une ombre et dire si la forme est plane ou solide." }
+	},
+	"K-GEO-8": {
+		title: "Rouler ou empiler",
+		description: "Trouve quels solides roulent et lesquels s'empilent (« un cylindre peut rouler et s'empiler »).",
+		ideas: { "ramp-race": "Envoyer des solides sur une pente et voir lesquels roulent." }
+	},
+	"K-GEO-9": {
+		title: "Construire de grandes figures avec de plus petites",
+		description: "Assemble des figures pour en former une nouvelle (« deux triangles font un carré ») ; place 3 à 5 pièces dans un casse-tête à encastrer.",
+		ideas: { "tangram-two": "Placer deux pièces, puis 3 à 5, pour couvrir un contour." }
+	},
+	"K-GEO-10": {
+		title: "Repérer les formes autour de nous",
+		description: "Trouve des formes dans le monde (« une roue est un cercle, une boîte est un prisme rectangulaire »)."
+	},
+	"K-POS-1": {
+		title: "Dans, sur, sous, à côté de",
+		description: "Place et trouve des objets décrits avec dans, sur, sous, à côté de (« la balle est sous la table »).",
+		ideas: { "put-it-there": "Suivre une consigne orale pour placer un jouet dans, sur, sous ou à côté de quelque chose." }
+	},
+	"K-POS-2": {
+		title: "Au-dessus, en dessous, près de, entre, derrière, devant",
+		description: "Trouve des objets à partir d'indices comme « entre la chaise et la boîte » ou « près de la lampe ».",
+		ideas: {
+			"hide-the-teddy": "Histoire de cache-cache : suivre des indices comme « entre la chaise et la boîte » pour trouver l'ourson.",
+			"behind-or-in-front": "Choisir l'image qui correspond à l'indice."
+		}
+	},
+	"K-POS-3": {
+		title: "Copier une disposition",
+		description: "Reconstruit une disposition de blocs ou de tuiles à partir d'un modèle (« copie ma tour »).",
+		ideas: { "copy-my-layout": "Copier une disposition de tuiles à partir d'une image." }
+	},
+	"K-POS-4": {
+		title: "Mots de déplacement",
+		description: "Se déplace selon la consigne : haut/bas, en avant/en arrière, vers/loin de (« marche en avant, puis éloigne-toi »).",
+		ideas: { "move-like-me": "Jeu du miroir avec des mots de déplacement." }
+	},
+	"K-POS-5": {
+		title: "Suivre un court trajet",
+		description: "Suit un trajet de quelques étapes (« avancer de 3, tourner »).",
+		ideas: { "robot-grid-moves": "Programmer un robot avec des cartes avancer/tourner pour atteindre l'étoile (suivi)." }
+	},
+	"K-POS-6": {
+		title: "Donner un court trajet",
+		description: "Dit à un ami les étapes pour atteindre un but (« avance de 2, tourne, avance de 1 »).",
+		ideas: {
+			"tell-the-robot": "Choisir des cartes pour guider un robot jusqu'à l'étoile.",
+			"treasure-map-route": "Dire un court trajet jusqu'au trésor."
+		}
+	},
+	"K-DAT-1": {
+		title: "Trier selon un critère",
+		description: "Trie des objets selon un critère (« tous les rouges »).",
+		ideas: { "preschool-sort-into-bins": "Jeu de tri à glisser avec une règle mystère à deviner (suivi)." }
+	},
+	"K-DAT-2": {
+		title: "Nommer la règle de tri",
+		description: "Dit la règle d'un groupe (« ils sont tous ronds »).",
+		ideas: { "guess-my-rule": "Un ami trie, l'enfant nomme la règle." }
+	},
+	"K-DAT-3": {
+		title: "Compter et ordonner les groupes",
+		description: "Compte chaque groupe trié et les range en ordre (« 5 rouges, 3 bleus »), et apparie des objets semblables ou qui vont ensemble (« tasse et soucoupe »).",
+		ideas: { "match-pairs": "Apparier deux objets semblables ou qui vont ensemble (tasse–soucoupe), puis compter les paires." }
+	},
+	"K-DAT-4": {
+		title: "Construire et lire un graphique en images",
+		description: "Construit un graphique avec de vrais objets ou des images et dit lequel est plus nombreux (« plus d'enfants aiment les pommes »).",
+		ideas: { "real-object-graph": "Empiler de vrais cubes en colonnes et les comparer." }
+	},
+	"K-PSR-1": {
+		title: "Les mots de maths pendant le jeu",
+		description: "Utilise des mots comme plus, moins, autant et égal pendant le jeu (« j'en ai plus »).",
+		ideas: { "word-of-the-day": "Un mot de maths illustré d'une image, à utiliser pendant le jeu." }
+	},
+	"K-PSR-2": {
+		title: "Dire comment on le sait",
+		description: "Explique une réponse (« j'ai compté »).",
+		ideas: { "show-me-how": "Enregistrer un court message vocal pour expliquer la réponse." }
+	},
+	"K-PSR-3": {
+		title: "Y en a-t-il assez pour tous ?",
+		description: "Apparie des objets à des enfants et dit s'il y en a assez (« 5 tasses, 6 enfants — il en manque une »).",
+		ideas: { "party-table": "Mettre la table et vérifier que chaque invité a sa place." }
+	},
+	"K-PSR-4": {
+		title: "Essayer autrement",
+		description: "Essaie une autre façon quand une construction ou un casse-tête échoue (« c'est tombé, essayons une base plus large »).",
+		ideas: {
+			"build-it-again": "Défi de tour à construire : le premier essai échoue et un indice aide l'enfant à ajuster.",
+			"puzzle-try-again": "Un casse-tête qui se résout de plusieurs façons."
 		}
 	}
-}, BA = IA, VA = LA.levels, HA = LA.topics;
-function UA(e, t) {
+}, BA = {
+	"G1-NS-1": {
+		title: "Compter en avançant jusqu'à 120 depuis n'importe quel nombre",
+		description: "Compte en avançant jusqu'à 120 en partant de n'importe quel nombre, pas seulement de 0 ou de 1. Exemple : part de 67 et dit « 67, 68, 69, 70… ».",
+		ideas: {
+			"count-on-hop-chart": "jeu : faire sauter un personnage sur un tableau de 120 depuis un nombre de départ au choix",
+			"missing-number-chart-patch": "puzzle : remplir les cases cachées d'un tableau de 120"
+		}
+	},
+	"G1-NS-2": {
+		title: "Compter à rebours jusqu'à 120",
+		description: "Compte à rebours dans les nombres jusqu'à 120 depuis n'importe quel nombre, y compris en passant une dizaine. Exemple : depuis 83, dit « 82, 81, 80, 79… ».",
+		ideas: {
+			"count-back-rocket": "jeu : un compte à rebours avant le décollage, depuis n'importe quel nombre",
+			"backwards-stairs": "construction : numéroter les marches d'un escalier en descendant"
+		}
+	},
+	"G1-NS-3": {
+		title: "Compter de 2 en 2 et de 10 en 10",
+		description: "Compte de 2 en 2 et de 10 en 10 depuis 0 ou depuis un nombre quelconque, en avant et en arrière. Exemple : 30, 40, 50 et 14, 16, 18.",
+		ideas: {
+			"skip-count-frog-hops": "jeu : une grenouille saute de 2 en 2 ou de 10 en 10 et l'enfant dit où elle atterrit",
+			"ten-jump-hundred-square": "puzzle : colorier chaque saut sur un tableau de 100 et voir apparaître la colonne"
+		}
+	},
+	"G1-NS-4": {
+		title: "Compter de 5 en 5 (et de 3 en 3, en découverte)",
+		description: "Compte de 5 en 5 jusqu'à 100 et repère la régularité du chiffre des unités ; explore le comptage de 3 en 3. Exemple : « cinq, dix, quinze… » sur le tableau de 100.",
+		ideas: {
+			"five-hand-count": "manipulation : compter une rangée de mains de cinq en cinq",
+			"three-step-tracks": "jeu : (exploration) sauter de 3 en 3 sur une piste et repérer où l'on tombe"
+		}
+	},
+	"G1-NS-5": {
+		title: "Lire et écrire les nombres jusqu'à 100 en chiffres",
+		description: "Lit et écrit tout nombre jusqu'à 100 en chiffres, avec les chiffres dans le bon sens. Exemple : écrit « 36 » et non « 63 ».",
+		ideas: { "numeral-match-dash": "jeu : associer un nombre entendu à son écriture en chiffres" }
+	},
+	"G1-NS-6": {
+		title: "Les nombres en lettres de zéro à vingt",
+		description: "Lit et écrit les nombres en lettres de zéro à vingt. Exemple : associe « quatorze » à 14.",
+		ideas: { "word-number-snap": "jeu : associer une carte-mot à son nombre en chiffres" }
+	},
+	"G1-NS-7": {
+		title: "Les nombres ordinaux, premier à dixième",
+		description: "Utilise premier à dixième, puis jusqu'à vingtième, pour dire une position dans une file ou une rangée. Exemple : « le chat est quatrième dans la file », « le douzième coureur ».",
+		ideas: {
+			"count-and-ordinal-race": "jeu : nommer du premier au vingtième à mesure que les coureurs arrivent",
+			"ordinal-queue-puzzle": "puzzle : placer des personnages grâce à des indices comme « après le troisième »"
+		}
+	},
+	"G1-NS-8": {
+		title: "Un de plus, un de moins, dix de plus, dix de moins",
+		description: "Trouve un ou dix de plus ou de moins qu'un nombre jusqu'à 100. Exemple : dix de plus que 47, c'est 57.",
+		ideas: { "ten-more-chart-slide": "jeu : faire glisser un jeton vers le haut et vers le bas du tableau de 100" }
+	},
+	"G1-NS-9": {
+		title: "Comparer deux nombres avec <, > et =",
+		description: "Compare deux nombres à 2 chiffres et note le résultat avec un symbole. Exemple : 47 > 39.",
+		ideas: { "crocodile-mouth-compare": "jeu : le crocodile mange le plus grand nombre" }
+	},
+	"G1-NS-10": {
+		title: "Ranger et placer des nombres sur une droite ou un tableau",
+		description: "Range des nombres jusqu'à 100 et place un nombre entre ses voisins sur une droite numérique. Exemple : place 47 entre 40 et 50.",
+		ideas: { "number-line-lander": "jeu : poser une fusée au bon endroit d'une droite vide" }
+	},
+	"G1-NS-11": {
+		title: "Estimer une collection jusqu'à 50 et vérifier",
+		description: "Estime une collection jusqu'à 50 et vérifie en groupant par dizaines. Exemple : devine 30 haricots, en trouve 37.",
+		ideas: { "guess-jar-check": "estimation et vérification : deviner le contenu d'un bocal, puis faire des paquets de dix" }
+	},
+	"G1-PV-1": {
+		title: "Dix unités font une dizaine",
+		description: "Regroupe dix unités en une dizaine et sait que c'est la même quantité. Exemple : 10 bâtonnets seuls deviennent 1 fagot.",
+		ideas: {
+			"bundle-the-sticks": "construction en manipulant : glisser des bâtonnets pour faire des fagots de dix",
+			"ten-frame-trade-up": "jeu : remplir un cadre à dix cases et l'échanger contre une barre de dix"
+		}
+	},
+	"G1-PV-2": {
+		title: "Les dizaines entières, de 10 à 90",
+		description: "Sait que 10, 20 … 90 sont 1 à 9 dizaines avec 0 unité. Exemple : 60, c'est 6 dizaines.",
+		ideas: { "tens-hundred-square-jump": "puzzle : trouver toutes les dizaines entières sur un tableau de 100" }
+	},
+	"G1-PV-3": {
+		title: "Construire un nombre à 2 chiffres avec dizaines et unités",
+		description: "Construit n'importe quel nombre à 2 chiffres avec des blocs ou des fagots. Exemple : construit 43 avec 4 dizaines et 3 unités.",
+		ideas: { "build-it-with-blocks": "construction en manipulant : fabriquer le nombre annoncé avec des barres et des cubes" }
+	},
+	"G1-PV-4": {
+		title: "Nommer un nombre à partir de ses blocs",
+		description: "Lit les dizaines et les unités sur une image et dit le nombre. Exemple : 3 barres et 8 cubes, c'est 38.",
+		ideas: {
+			"read-the-blocks": "jeu : dire le nombre que montrent les blocs",
+			"place-value-mat-flip": "puzzle : retourner des cartes de dizaines et d'unités pour révéler le nombre"
+		}
+	},
+	"G1-PV-5": {
+		title: "Décomposer de plusieurs façons",
+		description: "Décompose un nombre à 2 chiffres en dizaines et unités de façon inhabituelle. Exemple : 43, c'est 3 dizaines et 13 unités.",
+		ideas: { "regroup-shuffle": "puzzle : changer une dizaine en unités sans changer le nombre" }
+	},
+	"G1-PV-6": {
+		title: "La valeur de chaque chiffre",
+		description: "Dit ce que vaut chaque chiffre et que l'ordre des chiffres compte. Exemple : dans 47, le 4 vaut 40 ; 47 et 74 sont différents.",
+		ideas: {
+			"digit-value-detective": "chasse à l'erreur : une marionnette dit ce que vaut un chiffre, l'enfant vérifie",
+			"swap-the-digits": "jeu : échanger les chiffres et dire quel nombre est le plus grand"
+		}
+	},
+	"G1-OP-1": {
+		title: "Les compléments à 10 par cœur",
+		description: "Connaît tout de suite chaque paire qui fait 10. Exemple : 3 et ? font 10.",
+		ideas: { "bond-pairs-memory": "jeu : un memory de paires qui font dix" }
+	},
+	"G1-OP-2": {
+		title: "Échanger les termes d'une addition",
+		description: "Sait que 3 + 8 = 8 + 3 et s'en sert pour partir du plus grand nombre. Exemple : 2 + 9 devient 9 + 2.",
+		ideas: { "swap-and-check-towers": "construction : montrer que deux tours échangées ont la même hauteur" }
+	},
+	"G1-OP-3": {
+		title: "Additionner trois nombres avec des paires amies",
+		description: "Additionne trois nombres à 1 chiffre en repérant une paire qui fait 10. Exemple : 4 + 8 + 6 = 18 en associant 4 et 6.",
+		ideas: {
+			"friendly-pairs-trio": "puzzle : entourer la paire qui fait dix dans un trio",
+			"three-dice-ten-hunt": "jeu : lancer trois dés et les additionner avec la paire amie"
+		}
+	},
+	"G1-OP-4": {
+		title: "Les trois sens de la soustraction",
+		description: "Distingue enlever, écart et partie manquante. Exemple : « combien de rouges en plus que de bleus » est un écart.",
+		ideas: {
+			"three-kinds-of-minus": "trier des cartes-histoires selon les trois sens, puis les mimer",
+			"difference-towers": "construction : aligner deux tours et lire l'écart",
+			"missing-part-bag": "manipulation : un sac cache des jetons, trouver combien"
+		}
+	},
+	"G1-OP-5": {
+		title: "Additions et soustractions liées",
+		description: "Écrit la famille de calculs d'un trio de nombres. Exemple : 3 + 4 = 7 donne 7 − 4 = 3.",
+		ideas: { "fact-family-houses": "puzzle : compléter les quatre calculs d'une maison des nombres" }
+	},
+	"G1-OP-6": {
+		title: "Ajouter des unités ou des dizaines à un nombre à 2 chiffres",
+		description: "Ajoute des unités ou des dizaines entières avec la valeur de position. Exemple : 34 + 5 = 39 et 34 + 20 = 54.",
+		ideas: { "tens-ones-blocks-add": "construction en manipulant : ajouter des barres ou des cubes à un nombre en blocs" }
+	},
+	"G1-OP-7": {
+		title: "Soustraire des dizaines entières",
+		description: "Soustrait une dizaine entière d'une dizaine entière. Exemple : 70 − 30 = 40."
+	},
+	"G1-OP-8": {
+		title: "Additionner et soustraire jusqu'à 100 : dizaines puis unités",
+		description: "Sépare le deuxième nombre en dizaines et unités et saute sur une droite. Exemple : 34 + 25 comme 34 + 20 + 5.",
+		ideas: { "tens-then-ones-jump-line": "jeu : sauter les dizaines puis les unités sur une droite numérique vide" }
+	},
+	"G1-OP-9": {
+		title: "Calculs à 2 chiffres avec échange",
+		description: "Découvre l'échange avec des blocs de dizaines et d'unités, sans opération posée. Exemple : 34 + 28 comme 5 dizaines et 12 unités.",
+		ideas: {
+			"trade-ten-for-ones": "construction en manipulant : échanger une dizaine contre dix unités pour soustraire",
+			"regroup-the-blocks": "jeu : additionner des nombres en blocs et échanger dix unités contre une dizaine"
+		}
+	},
+	"G1-OP-10": {
+		title: "Groupes égaux : addition répétée et ×",
+		description: "Écrit des groupes égaux comme une addition répétée et une multiplication. Exemple : 4 groupes de 5, c'est 5 + 5 + 5 + 5 = 4 × 5.",
+		ideas: { "sticker-sheet-groups": "construction : mettre le même nombre d'autocollants sur chaque feuille et écrire le calcul" }
+	},
+	"G1-OP-11": {
+		title: "Tableaux de points et 3 × 5 = 5 × 3",
+		description: "Montre avec un tableau de points que l'ordre d'un produit peut changer. Exemple : 3 rangées de 5, c'est aussi 5 colonnes de 3.",
+		ideas: { "array-turner": "construction : faire pivoter un tableau de points et lire les deux calculs" }
+	},
+	"G1-OP-12": {
+		title: "Partager ou regrouper, et ÷",
+		description: "Distingue partager et regrouper, l'écrit avec ÷ et relie ÷ à ×. Exemple : 12 partagés en 3, c'est 12 ÷ 3 ; 12 ÷ 3 = 4 car 3 × 4 = 12.",
+		ideas: {
+			"share-or-group-sort": "tri d'histoires : partager ou regrouper, puis écrire avec ÷",
+			"fair-share-picnic": "manipulation : distribuer la nourriture dans les assiettes à parts égales"
+		}
+	},
+	"G1-OP-13": {
+		title: "Table de 2, 5 et 10 en comptant de n en n",
+		description: "Trouve les résultats des tables en comptant de n en n sur des tableaux de points, sans jamais en faire un obstacle. Exemple : 4 × 5 en comptant 5, 10, 15, 20.",
+		ideas: {
+			"table-track-runner": "jeu : courir sur une piste par bonds réguliers et lire le calcul",
+			"array-rows-skip-count": "puzzle : compter les rangées d'un tableau de 2 en 2, de 5 en 5 ou de 10 en 10"
+		}
+	},
+	"G1-OP-14": {
+		title: "Additionner et soustraire dans 10 avec aisance",
+		description: "Connaît tout de suite les sommes et les différences dans 10. Exemple : 7 − 4 = 3 et 6 + 3 = 9 sans compter.",
+		ideas: {
+			"within-ten-flash-race": "jeu : répondre à des cartes d'additions et de soustractions contre la montre",
+			"ten-frame-facts-puzzle": "puzzle : lire un calcul sur une image de cadre à dix cases"
+		}
+	},
+	"G1-FL-1": {
+		title: "Compter en avançant jusqu'à 20 sans les doigts",
+		description: "Additionne et soustrait jusqu'à 20 en comptant en avant ou en arrière dans sa tête. Exemple : 9 + 3 en comptant 10, 11, 12.",
+		ideas: { "count-on-dice-jump": "jeu : lancer le dé et compter en avançant sans toucher le plateau" }
+	},
+	"G1-FL-2": {
+		title: "Faire dix pour additionner",
+		description: "Complète une dizaine, puis ajoute le reste. Exemple : 8 + 5 comme 8 + 2 + 3.",
+		ideas: {
+			"make-ten-frames": "manipulation : déplacer des jetons pour remplir un cadre à dix cases",
+			"make-ten-card-race": "jeu : course pour faire dix et ajouter le reste"
+		}
+	},
+	"G1-FL-3": {
+		title: "Doubles et moitiés",
+		description: "Connaît les doubles jusqu'à 10 + 10 et les moitiés des nombres pairs jusqu'à 20. Exemple : le double de 7 est 14, la moitié de 14 est 7.",
+		ideas: { "double-mirror-dominoes": "jeu : associer chaque domino à son double" }
+	},
+	"G1-FL-4": {
+		title: "Presque-doubles",
+		description: "Utilise un double plus ou moins un. Exemple : 6 + 7 comme le double de 6 plus 1.",
+		ideas: { "near-double-detective": "puzzle : repérer le double caché dans une addition de presque-double" }
+	},
+	"G1-FL-5": {
+		title: "Soustraire jusqu'à 20 en pensant à l'addition",
+		description: "Soustrait en cherchant ce qu'il faut ajouter. Exemple : 15 − 9, penser 9 + 6 = 15.",
+		ideas: {
+			"think-add-to-subtract": "puzzle : sauter du petit nombre jusqu'au grand",
+			"subtract-through-ten": "jeu : soustraire en deux sauts, retour à la dizaine puis la suite"
+		}
+	},
+	"G1-FL-6": {
+		title: "Ajouter ou enlever 10 de tête",
+		description: "Ajoute ou enlève 10 à n'importe quel nombre à 2 chiffres. Exemple : 10 de moins que 63, c'est 53.",
+		ideas: { "ten-lift-tower": "jeu : monter ou descendre de dix à la fois dans une tour" }
+	},
+	"G1-FL-7": {
+		title: "Passer la dizaine en additionnant (47 + 8)",
+		description: "Ajoute un nombre à 1 chiffre à un nombre à 2 chiffres en passant une dizaine. Exemple : 47 + 8 = 47 + 3 + 5 = 55.",
+		ideas: { "bridge-the-ten-hopscotch": "jeu : sauter jusqu'à la dizaine suivante, puis continuer" }
+	},
+	"G1-FL-8": {
+		title: "Passer la dizaine en soustrayant (52 − 7)",
+		description: "Soustrait un nombre à 1 chiffre en passant une dizaine. Exemple : 52 − 7 = 52 − 2 − 5 = 45.",
+		ideas: {
+			"back-over-ten-hop": "jeu : reculer jusqu'à la dizaine, puis faire le reste",
+			"bridge-down-number-line": "puzzle : placer les deux sauts sur une droite"
+		}
+	},
+	"G1-FL-9": {
+		title: "Déduire les calculs de dizaines d'un calcul simple",
+		description: "Utilise un calcul dans 10 pour connaître celui des dizaines. Exemple : 3 + 7 = 10 donc 30 + 70 = 100.",
+		ideas: { "tens-twin-facts": "jeu : associer chaque calcul à son jumeau en dizaines" }
+	},
+	"G1-FL-10": {
+		title: "Calculer de tête à 2 chiffres",
+		description: "Découvre la décomposition ou la compensation de tête, sans jamais en faire un obstacle. Exemple : 34 + 20 + 5, ou 38 + 20 − 1.",
+		ideas: { "partition-and-jump": "jeu : décomposer le deuxième nombre et sauter" }
+	},
+	"G1-NT-1": {
+		title: "Pair et impair en faisant des paires",
+		description: "Fait des paires d'objets et regarde s'il en reste un. Exemple : 14 forme des paires sans reste, il est pair.",
+		ideas: {
+			"odd-even-pairing-trains": "construction en manipulant : mettre les passagers par deux sur les sièges d'un train",
+			"pair-up-party": "jeu : mettre des enfants en paires dans une file et trier pair et impair"
+		}
+	},
+	"G1-NT-2": {
+		title: "Pair ou impair : tableau de 100 et dernier chiffre",
+		description: "Voit les bandes de pairs et d'impairs et décide d'après le dernier chiffre. Exemple : 38 finit par 8, il est pair.",
+		ideas: {
+			"hundred-square-patterns": "puzzle : colorier les pairs et les impairs et repérer les bandes",
+			"last-digit-sorter": "jeu : trier les nombres selon leur dernier chiffre"
+		}
+	},
+	"G1-NT-3": {
+		title: "Un nombre pair est un double",
+		description: "Écrit un nombre pair comme un double. Exemple : 14 = 7 + 7.",
+		ideas: { "double-it-split": "puzzle : couper un nombre pair en deux moitiés égales" }
+	},
+	"G1-FR-1": {
+		title: "Parts égales et parts inégales",
+		description: "Partage une forme en parts égales et refuse les partages inégaux. Exemple : plie un rectangle en deux parties identiques.",
+		ideas: { "shape-splitter": "construction : plier ou couper une forme et refuser les partages inégaux" }
+	},
+	"G1-FR-2": {
+		title: "Moitiés, tiers et quarts par leur nom",
+		description: "Nomme les parts quand on partage en 2, 3 ou 4, en sachant que des parts égales n'ont pas toujours le même aspect. Exemple : deux découpes différentes d'un carré peuvent toutes deux donner des quarts.",
+		ideas: { "same-share-different-shape": "puzzle : prouver que deux morceaux d'aspect différent sont égaux" }
+	},
+	"G1-FR-3": {
+		title: "Lire et écrire 1/2, 1/3, 1/4",
+		description: "Lit et écrit les fractions unitaires et les associe à des images. Exemple : écrit 1/4 pour une part sur quatre.",
+		ideas: { "fraction-card-match": "jeu : associer symbole, mot et image" }
+	},
+	"G1-FR-4": {
+		title: "Trois quarts",
+		description: "Colorie et nomme 3/4 comme trois parts égales sur quatre. Exemple : colorie 3/4 d'un rectangle coupé en quatre.",
+		ideas: {
+			"shade-three-quarters": "construction : colorier le nombre de quarts demandé",
+			"fraction-pizza-orders": "jeu : servir la commande de pizza, par exemple trois quarts"
+		}
+	},
+	"G1-FR-5": {
+		title: "Deux quarts font une moitié",
+		description: "Voit que 2/4 et 1/2 représentent la même quantité. Exemple : plie une moitié en deux quarts.",
+		ideas: {
+			"two-quarters-make-a-half": "manipulation : recouvrir une moitié avec deux quarts",
+			"fold-and-compare": "puzzle : plier des bandes et associer les morceaux égaux"
+		}
+	},
+	"G1-FR-6": {
+		title: "La moitié d'un ensemble",
+		description: "Partage un petit ensemble en deux groupes égaux. Exemple : la moitié de 8, c'est 4.",
+		ideas: { "fair-halves-sort": "jeu : distribuer des jetons en deux équipes égales" }
+	},
+	"G1-FR-7": {
+		title: "Un tiers ou un quart d'un ensemble",
+		description: "Trouve un tiers ou un quart d'un petit ensemble, puis une part de plusieurs unités. Exemple : 1/4 de 12, c'est 3, et 3/4 de 12, c'est 9.",
+		ideas: { "quarter-the-cubes": "manipulation : distribuer des cubes en quatre groupes, lire un quart, puis en prendre trois" }
+	},
+	"G1-FR-8": {
+		title: "Compter en demis et en quarts",
+		description: "Compte le long d'une piste en demis et en quarts. Exemple : 1/4, 1/2, 3/4, 1, 1 1/4.",
+		ideas: { "g2-count-halves-quarters": "compter en quarts le long d'une piste graduée comme une règle" }
+	},
+	"G1-ALG-1": {
+		title: "Le signe égal veut dire « pareil que »",
+		description: "Lit = comme un équilibre. Exemple : 3 + 4 = 5 + 2.",
+		ideas: { "balance-the-scale": "puzzle : équilibrer une balance à deux plateaux et lire le calcul" }
+	},
+	"G1-ALG-2": {
+		title: "Égalités vraies ou fausses",
+		description: "Juge si une égalité est vraie ou fausse. Exemple : 7 = 8 − 1 est vrai.",
+		ideas: {
+			"true-or-false-sentences": "jeu : lever le drapeau vrai ou faux pour chaque phrase",
+			"equation-sorter": "tri d'histoires : ranger les égalités dans les bacs vrai et faux"
+		}
+	},
+	"G1-ALG-3": {
+		title: "Terme manquant ou résultat manquant",
+		description: "Trouve le nombre manquant dans une addition ou à la fin. Exemple : 8 + ? = 11.",
+		ideas: { "mystery-box-sums": "puzzle : une boîte cache un nombre dans un calcul" }
+	},
+	"G1-ALG-4": {
+		title: "Départ manquant ou nombre soustrait manquant",
+		description: "Trouve le nombre manquant au début ou dans une soustraction. Exemple : ? − 3 = 5.",
+		ideas: { "hidden-start-puzzles": "puzzle : défaire les étapes à partir du résultat" }
+	},
+	"G1-ALG-5": {
+		title: "Prolonger une suite qui se répète",
+		description: "Continue et décrit une suite qui se répète. Exemple : rouge, bleu, bleu, rouge, bleu, bleu…",
+		ideas: { "pattern-train-builder": "construction : continuer un train de wagons colorés" }
+	},
+	"G1-ALG-6": {
+		title: "Suites de nombres et leur règle",
+		description: "Prolonge une suite de nombres et énonce la règle. Exemple : 2, 4, 6, 8 suit la règle « ajouter 2 ».",
+		ideas: {
+			"pattern-detective": "chasse à l'erreur : trouver le nombre qui casse la règle",
+			"rule-machine-peek": "puzzle : deviner la règle à partir des entrées et des sorties"
+		}
+	},
+	"G1-ALG-7": {
+		title: "Suites de formes qui grandissent",
+		description: "Prolonge une suite de formes qui grandit et dit comment elle grandit. Exemple : un escalier gagne une tuile à chaque marche.",
+		ideas: {
+			"growing-tile-staircase": "construction : ajouter des tuiles à la marche suivante",
+			"next-shape-builder": "puzzle : construire la forme suivante et dire la règle"
+		}
+	},
+	"G1-MEA-1": {
+		title: "Ranger des longueurs en les comparant directement",
+		description: "Range trois objets selon leur longueur. Exemple : crayon, feutre, gomme, du plus long au plus court.",
+		ideas: { "g1-compare-order-length": "construction : aligner des objets et les ranger" }
+	},
+	"G1-MEA-2": {
+		title: "Comparer des longueurs avec un troisième objet",
+		description: "Compare deux objets qu'on ne peut pas mettre côte à côte avec une ficelle ou un bâton. Exemple : la table passe-t-elle par la porte ?",
+		ideas: {
+			"string-stick-compare": "manipulation : transporter une ficelle pour comparer",
+			"fit-through-the-door": "puzzle : utiliser un bâton pour décider ce qui passe"
+		}
+	},
+	"G1-MEA-3": {
+		title: "Mesurer avec des unités bout à bout",
+		description: "Pose des unités identiques sans trou ni chevauchement. Exemple : le crayon mesure 6 cubes.",
+		ideas: {
+			"g1-nonstandard-units": "manipulation : poser des trombones ou des cubes le long d'objets",
+			"lay-it-end-to-end": "jeu : aligner des unités jusqu'à un repère sans trou"
+		}
+	},
+	"G1-MEA-4": {
+		title: "Estimer puis mesurer en unités (vers le cm)",
+		description: "Devine une longueur en unités et vérifie. Exemple : devine 5 trombones et en trouve 6.",
+		ideas: {
+			"guess-the-clips": "estimation et vérification : deviner, puis poser les trombones",
+			"gaps-and-overlaps-error-hunt": "chasse à l'erreur : repérer où une mesure laisse des trous"
+		}
+	},
+	"G1-MEA-5": {
+		title: "Comparer des masses avec une balance",
+		description: "Dit plus lourd, plus léger ou en équilibre. Exemple : la pomme est plus lourde que la poire.",
+		ideas: { "g1-mass-balance": "jeu : équilibrer des objets sur une balance à deux plateaux" }
+	},
+	"G1-MEA-6": {
+		title: "Mesurer une masse avec des unités identiques",
+		description: "Équilibre un objet avec des unités identiques. Exemple : trois cubes équilibrent la pomme.",
+		ideas: {
+			"cubes-to-balance": "manipulation : ajouter des cubes jusqu'à ce que la balance soit droite",
+			"how-many-cubes-weigh": "jeu : deviner puis équilibrer"
+		}
+	},
+	"G1-MEA-7": {
+		title: "Comparer des capacités en versant",
+		description: "Verse d'un récipient à l'autre pour voir lequel contient le plus. Exemple : la carafe contient plus que la tasse.",
+		ideas: { "g1-capacity-pouring": "manipulation : verser d'un récipient à l'autre pour comparer" }
+	},
+	"G1-MEA-8": {
+		title: "Plein, à moitié plein, vide et mots de mesure",
+		description: "Utilise plein, à moitié plein, vide et le vocabulaire de comparaison. Exemple : « la bouteille est à moitié pleine ».",
+		ideas: { "full-half-empty-fill": "jeu : remplir un verre jusqu'au niveau demandé" }
+	},
+	"G1-TIM-1": {
+		title: "Lire l'heure juste",
+		description: "Lit et règle les heures pile sur des horloges à aiguilles et numériques. Exemple : 7 heures.",
+		ideas: { "set-the-clock-hour": "jeu : placer les aiguilles sur l'heure demandée" }
+	},
+	"G1-TIM-2": {
+		title: "Lire la demi-heure",
+		description: "Lit et règle l'heure et demie. Exemple : 3 heures et demie.",
+		ideas: {
+			"half-past-clock-set": "jeu : placer les aiguilles sur l'heure et demie",
+			"hour-or-half-sort": "jeu de tri : ranger les horloges en heures pile et heures et demie"
+		}
+	},
+	"G1-TIM-3": {
+		title: "Associer heure à aiguilles et heure numérique",
+		description: "Associe un cadran à son affichage numérique et l'écrit. Exemple : 3:30, c'est 3 heures et demie.",
+		ideas: {
+			"clock-match-snap": "jeu : associer une horloge à aiguilles à son jumeau numérique",
+			"digital-twin-writer": "construction : écrire l'heure numérique d'un cadran"
+		}
+	},
+	"G1-TIM-4": {
+		title: "Comparer et ranger des durées",
+		description: "Dit ce qui dure le plus longtemps et range des événements selon leur durée. Exemple : déjeuner dure plus longtemps que se laver les mains.",
+		ideas: { "race-the-sand-timer": "manipulation : chronométrer deux tâches avec un sablier" }
+	},
+	"G1-TIM-5": {
+		title: "Unités de temps approximatives",
+		description: "Choisit secondes, minutes, heures, jours ou semaines pour un événement. Exemple : se brosser les dents prend des minutes, une journée d'école des heures, des vacances des semaines.",
+		ideas: {
+			"seconds-minutes-hours-sort": "tri d'histoires : placer les événements sous la bonne unité",
+			"how-long-does-it-take": "estimation et vérification : deviner puis chronométrer une tâche"
+		}
+	},
+	"G1-TIM-6": {
+		title: "Les jours de la semaine dans l'ordre",
+		description: "Nomme les jours dans l'ordre, avec avant et après. Exemple : le jour après mardi est mercredi.",
+		ideas: {
+			"days-of-week-order": "mise en ordre : glisser les jours dans l'ordre",
+			"yesterday-today-tomorrow": "puzzle : compléter le jour d'avant et le jour d'après"
+		}
+	},
+	"G1-TIM-7": {
+		title: "Les mois et les saisons dans l'ordre",
+		description: "Nomme les mois et les saisons dans l'ordre. Exemple : après le printemps vient l'été.",
+		ideas: { "year-wheel-builder": "construction : placer les mois et les saisons sur une roue" }
+	},
+	"G1-TIM-8": {
+		title: "Trouver une date et un jour sur un calendrier",
+		description: "Lit un calendrier mensuel. Exemple : trouve le troisième vendredi.",
+		ideas: { "calendar-treasure-dates": "puzzle : suivre des indices de dates sur un mois" }
+	},
+	"G1-MON-1": {
+		title: "Nommer les pièces et les billets",
+		description: "Nomme les pièces et les billets de la monnaie locale. Exemple : montre la pièce de 5.",
+		ideas: { "coin-snap": "jeu : associer une pièce à son nom" }
+	},
+	"G1-MON-2": {
+		title: "Connaître la valeur de chaque pièce",
+		description: "Sait ce que vaut chaque pièce et chaque billet et échange des valeurs égales. Exemple : cinq pièces de 1 valent une pièce de 5.",
+		ideas: {
+			"coin-value-sort": "jeu de tri : regrouper les pièces selon leur valeur",
+			"coin-swap-shop": "jeu : échanger pièces et billets contre une valeur égale"
+		}
+	},
+	"G1-MON-3": {
+		title: "Compter des pièces de même valeur",
+		description: "Compte une rangée de pièces identiques en comptant de n en n. Exemple : quatre pièces de 5 font 20.",
+		ideas: {
+			"count-the-fives-purse": "jeu : compter une rangée de pièces de n en n",
+			"coin-row-race": "jeu : compter une rangée de pièces contre la montre"
+		}
+	},
+	"G1-MON-4": {
+		title: "Compter des pièces différentes jusqu'à 20",
+		description: "Compte un ensemble de pièces différentes jusqu'à 20. Exemple : 5 + 5 + 5 + 2 = 17.",
+		ideas: { "purse-total-puzzle": "puzzle : associer un porte-monnaie à son total" }
+	},
+	"G1-MON-5": {
+		title: "Payer un objet à moins de 20",
+		description: "Choisit les pièces pour payer un objet. Exemple : trois pièces de 5 et une pièce de 2 paient un jouet à 17.",
+		ideas: { "corner-shop-pay": "manipulation : payer au comptoir d'une boutique" }
+	},
+	"G1-MON-6": {
+		title: "A-t-on assez d'argent ?",
+		description: "Dit si un porte-monnaie couvre un prix. Exemple : 12 ne suffit pas pour 15.",
+		ideas: {
+			"purse-or-price": "estimation et vérification : dire assez ou pas assez avant de compter",
+			"enough-or-short": "chasse à l'erreur : une marionnette dit que c'est assez, l'enfant vérifie"
+		}
+	},
+	"G1-GEO-1": {
+		title: "Nommer les figures planes",
+		description: "Nomme cercle, triangle, carré, rectangle, pentagone et hexagone. Exemple : « ça, c'est un hexagone ».",
+		ideas: { "shape-name-hunt": "jeu : toucher la forme nommée" }
+	},
+	"G1-GEO-2": {
+		title: "Des formes de toute taille et dans toutes les positions",
+		description: "Sait qu'une forme reste la même quand on la tourne ou qu'on change sa taille. Exemple : un triangle penché reste un triangle.",
+		ideas: { "tilted-shape-sort": "jeu de tri : regrouper par nom des formes penchées, grandes ou petites" }
+	},
+	"G1-GEO-3": {
+		title: "Ce qui fait un triangle",
+		description: "Dit qu'il est fermé avec 3 côtés droits, et que la couleur et la taille n'y changent rien. Exemple : refuse une forme avec un côté courbe.",
+		ideas: {
+			"what-makes-a-triangle": "chasse à l'erreur : une marionnette nomme des triangles, l'enfant décide",
+			"sides-and-corners-count": "jeu : compter côtés et sommets pour nommer la forme"
+		}
+	},
+	"G1-GEO-4": {
+		title: "Nommer les solides 3D",
+		description: "Nomme cube, pavé droit, sphère, cylindre, cône et pyramide. Exemple : choisit le cône dans un sac.",
+		ideas: { "mystery-solid-bag": "jeu : toucher un solide dans un sac et le nommer" }
+	},
+	"G1-GEO-5": {
+		title: "Relier les solides aux objets du quotidien",
+		description: "Associe des solides à des objets autour de nous. Exemple : une boîte de conserve est un cylindre.",
+		ideas: { "shape-scavenger-hunt": "manipulation : trouver un solide à la maison ou en classe" }
+	},
+	"G1-GEO-6": {
+		title: "Construire des formes composées",
+		description: "Construit une forme plus grande avec d'autres, en 2D et avec des blocs 3D. Exemple : une maison avec un carré et un triangle, ou une tour avec des cubes et des pavés.",
+		ideas: {
+			"tangram-house": "construction : remplir un contour avec des formes",
+			"block-tower-model": "construction : copier un modèle avec des blocs 3D"
+		}
+	},
+	"G1-GEO-7": {
+		title: "Copier une figure sur un quadrillage",
+		description: "Copie une figure sur du papier quadrillé ou pointé. Exemple : copie un petit bateau.",
+		ideas: { "dot-paper-twin": "dessin : copier une figure à côté de l'original" }
+	},
+	"G1-GEO-8": {
+		title: "Lignes droites et lignes courbes",
+		description: "Distingue une ligne droite d'une ligne courbe. Exemple : le virage d'une route est courbe.",
+		ideas: { "curved-or-straight-sort": "jeu de tri : ranger les lignes en courbes et en droites" }
+	},
+	"G1-GEO-9": {
+		title: "Tracer une ligne droite à la règle",
+		description: "Relie deux points par une ligne droite. Exemple : trace entre deux points.",
+		ideas: {
+			"ruler-line-draw": "dessin : relier des points avec une ligne à la règle",
+			"connect-the-dots-ruler": "dessin : repasser une image avec des lignes droites"
+		}
+	},
+	"G1-POS-1": {
+		title: "Gauche et droite",
+		description: "Utilise gauche et droite à partir de sa propre position. Exemple : « lève ta main gauche ».",
+		ideas: { "left-right-simon": "jeu : Jacques a dit avec gauche et droite" }
+	},
+	"G1-POS-2": {
+		title: "Pas en avant et pas en arrière",
+		description: "Décrit un trajet en pas. Exemple : « trois pas en avant ».",
+		ideas: { "follow-my-steps": "jeu : guider un partenaire avec des pas" }
+	},
+	"G1-POS-3": {
+		title: "Tour entier, demi-tour et quart de tour",
+		description: "Nomme le tour entier, le demi-tour et le quart de tour. Exemple : un quart de tour vers la droite.",
+		ideas: { "turn-the-puppet": "jeu : tourner la marionnette pour qu'elle regarde le but" }
+	},
+	"G1-POS-4": {
+		title: "Programmer le trajet d'un robot",
+		description: "Combine des pas et des tours pour faire un trajet. Exemple : « deux pas en avant, un quart de tour à droite ».",
+		ideas: {
+			"g1-route-robot-grid": "puzzle : programmer un robot jusqu'à une cible",
+			"floor-robot-obstacle-course": "puzzle : trouver un trajet qui contourne les obstacles"
+		}
+	},
+	"G1-POS-5": {
+		title: "Trouver des objets sur le plan d'une pièce",
+		description: "Repère des objets sur un plan simple. Exemple : « la poubelle est près de la porte » sur le plan.",
+		ideas: { "classroom-plan-hunt": "jeu : trouver l'objet caché grâce à des indices" }
+	},
+	"G1-DAT-1": {
+		title: "Trier selon un critère et expliquer la règle",
+		description: "Trie selon une propriété et nomme la règle. Exemple : rouge et pas rouge.",
+		ideas: { "mystery-rule-sort": "puzzle : deviner la règle de tri" }
+	},
+	"G1-DAT-2": {
+		title: "Trier selon deux critères : Venn ou tableau de Carroll",
+		description: "Trie selon deux propriétés. Exemple : rouge et rond dans deux cerceaux qui se chevauchent.",
+		ideas: {
+			"venn-hoops-sort": "manipulation : déposer des objets dans des cerceaux qui se chevauchent",
+			"carroll-table-fill": "puzzle : remplir un tableau 2×2 avec ses deux règles"
+		}
+	},
+	"G1-DAT-3": {
+		title: "Construire un pictogramme ou un graphique en blocs 1 pour 1",
+		description: "Construit un graphique avec jusqu'à 3 catégories. Exemple : empile 5 icônes rouges et 3 bleues.",
+		ideas: {
+			"pictogram-build": "construction : toucher pour empiler des icônes pour un sondage de classe",
+			"block-graph-stack": "construction : empiler des blocs pour chaque catégorie"
+		}
+	},
+	"G1-DAT-4": {
+		title: "Lire un graphique : combien de plus ou de moins",
+		description: "Répond à des questions à partir d'un graphique. Exemple : 5 rouges, 3 bleus, donc 2 rouges de plus.",
+		ideas: { "more-or-fewer-detective": "jeu : répondre à des questions « de plus » ou « de moins »" }
+	},
+	"G1-PRB-1": {
+		title: "Classer des événements : certain, possible, impossible",
+		description: "Classe des événements du quotidien en « va arriver », « peut arriver » et « ne peut pas arriver » (sans obstacle). Exemple : « le soleil va se lever » est certain.",
+		ideas: { "sure-maybe-never-sort": "tri d'histoires : placer des cartes d'événements sous sûr, peut-être ou jamais" }
+	},
+	"G1-PRB-2": {
+		title: "Prédire, puis vérifier (sans obstacle)",
+		description: "Prédit « sûr, peut-être ou jamais » et vérifie en essayant. Exemple : un sac avec seulement des jetons bleus ne peut jamais donner du rouge.",
+		ideas: {
+			"spinner-guess": "jeu : prédire avant de faire tourner la roue, puis vérifier",
+			"bag-of-colours-guess": "manipulation : deviner ce qu'un sac peut donner"
+		}
+	},
+	"G1-PSR-1": {
+		title: "Choisir + ou −",
+		description: "Décide s'il faut additionner ou soustraire pour une histoire. Exemple : « 3 se sont envolés » veut dire soustraire.",
+		ideas: { "plus-or-minus-story-sort": "tri d'histoires : marquer chaque histoire + ou −" }
+	},
+	"G1-PSR-2": {
+		title: "Les quatre types d'histoires",
+		description: "Reconnaît les histoires où l'on ajoute, où l'on enlève, où l'on réunit et où l'on compare. Exemple : « combien de plus » est une comparaison.",
+		ideas: {
+			"story-type-detective": "jeu : nommer le type de chaque histoire",
+			"act-it-out-stories": "manipulation : jouer une histoire avec des objets"
+		}
+	},
+	"G1-PSR-3": {
+		title: "Départ, changement ou résultat inconnu",
+		description: "Résout un problème quand une partie manque. Exemple : « Il y en avait __, 3 se sont envolés, il en reste 5. »",
+		ideas: { "hidden-number-stories": "puzzle : un nuage cache un nombre dans l'histoire" }
+	},
+	"G1-PSR-4": {
+		title: "Représenter une histoire avec des objets et un dessin",
+		description: "Montre une histoire avec des objets ou un dessin rapide. Exemple : dessine 5 oiseaux et en barre 3.",
+		ideas: {
+			"draw-the-story": "construction : dessiner l'histoire avec des icônes",
+			"cube-bar-story": "construction : montrer les parties et le tout avec des cubes"
+		}
+	},
+	"G1-PSR-5": {
+		title: "Écrire le calcul",
+		description: "Écrit un calcul pour une histoire. Exemple : 8 − 3 = 5.",
+		ideas: { "story-to-sentence-match": "jeu : associer chaque histoire à son calcul" }
+	},
+	"G1-PSR-6": {
+		title: "Expliquer comment on a trouvé la réponse",
+		description: "Dit comment il a trouvé la réponse. Exemple : « J'ai reculé de trois depuis huit ».",
+		ideas: {
+			"tell-how-you-know": "manipulation : enregistrer une explication à voix haute",
+			"explain-it-to-the-puppet": "jeu : apprendre sa méthode à une marionnette"
+		}
+	},
+	"G1-PSR-7": {
+		title: "Vérifier une réponse autrement",
+		description: "Vérifie avec une deuxième méthode. Exemple : additionne pour vérifier une soustraction.",
+		ideas: { "spot-the-wrong-answer": "chasse à l'erreur : une marionnette résout une histoire, l'enfant décide et corrige" }
+	}
+}, VA = {
+	"G2-NS-1": {
+		title: "Compter jusqu'à 1000 en passant les centaines",
+		description: "Compte en avant et en arrière en passant une centaine (398, 399, 400, 401), à partir de n'importe quel nombre à 3 chiffres.",
+		ideas: {
+			"hundreds-odometer-count": "compteur qui tourne : règle le cadran, puis compte jusqu'au nombre suivant",
+			"count-back-bridge-the-hundred": "jeu de l'ascenseur : descends les étages en disant chaque nombre à rebours"
+		}
+	},
+	"G2-NS-2": {
+		title: "Lire et écrire les nombres à 3 chiffres",
+		description: "Écrit 352 en lettres et sous la forme 300 + 50 + 2, et relit chaque écriture en chiffres.",
+		ideas: {
+			"number-name-match": "jeu de paires : carte en chiffres, carte en lettres, carte en somme",
+			"number-dictation-cheque": "dictée de chèque : écris en lettres le nombre entendu"
+		}
+	},
+	"G2-NS-3": {
+		title: "Comparer et ranger les nombres à 3 chiffres",
+		description: "Range 407, 470, 74 et écrit 407 < 470 avec <, > et = en regardant d'abord les centaines.",
+		ideas: {
+			"crocodile-mouth-compare": "nourris le crocodile affamé avec le plus grand nombre",
+			"digit-card-biggest-number": "forme le plus grand ou le plus petit nombre avec trois cartes chiffres tirées"
+		}
+	},
+	"G2-NS-10": {
+		title: "Nombres pairs et impairs",
+		description: "Décide que 17 est impair et 18 est pair en formant des paires ou avec le dernier chiffre, et écrit un nombre pair comme un double (18 = 9 + 9).",
+		ideas: {
+			"odd-even-pairing-party": "forme des paires de danseurs : y a-t-il quelqu'un sans partenaire ?",
+			"last-digit-odd-even-sort": "trie les nombres en pairs et impairs grâce au dernier chiffre"
+		}
+	},
+	"G2-NS-4": {
+		title: "Placer un nombre sur une droite 0–500–1000",
+		description: "Place 640 à peu près au bon endroit sur une droite graduée 0, 500 et 1000 et lit un nombre sur un point marqué.",
+		ideas: {
+			"number-line-darts": "lance une fléchette là où va le nombre, le plus proche gagne",
+			"mystery-point-on-line": "lis le nombre caché grâce aux repères"
+		}
+	},
+	"G2-NS-5": {
+		title: "Compter de 2 en 2, 5 en 5, 10 en 10 et 3 en 3",
+		description: "Compte en avant et en arrière à partir de 36 de 2 en 2, à partir de 7 de 5 en 5, et de 3 en 3 depuis n'importe quel nombre.",
+		ideas: {
+			"skip-count-rhythm-track": "jeu musical : tape le rythme de chaque suite et complète le trou dans la piste",
+			"skip-count-stepping-stones": "fais sauter une grenouille de pierre en pierre, même en arrière"
+		}
+	},
+	"G2-NS-6": {
+		title: "Compter de 4 en 4 et de 8 en 8",
+		description: "Compte de 4 en 4 à partir de 36 (36, 40, 44…) et de 8 en 8 (8, 16, 24…), en avant et en arrière (découverte).",
+		ideas: {
+			"four-and-eight-train": "les wagons du train portent 4 ou 8 passagers, dis le total à chaque arrêt",
+			"double-the-double-count": "compte de 2 en 2, 4 en 4, 8 en 8 côte à côte pour voir les doubles"
+		}
+	},
+	"G2-NS-7": {
+		title: "Compter de 50 en 50 et de 100 en 100",
+		description: "Compte 150, 200, 250… et 340, 440, 540… à partir de n'importe quel nombre à 3 chiffres.",
+		ideas: {
+			"hundred-hop-rocket": "la fusée monte de 100 en 100, complète les étapes manquantes",
+			"fifty-coin-count": "compte des piles de pièces de 50 jusqu'à un total"
+		}
+	},
+	"G2-NS-8": {
+		title: "Découvrir les nombres jusqu'à 10 000",
+		description: "Lit un nombre à 4 chiffres construit avec des blocs (2 milliers, 4 centaines → 2400) et sait que dix centaines font un millier.",
+		ideas: {
+			"meet-ten-thousand": "jeu d'exploration : empile dix blocs de 1000 et lis les nombres à 4 chiffres que tu construis",
+			"big-number-slide-reader": "glisse de 999 à 1000 et dis ce qui change"
+		}
+	},
+	"G2-NS-9": {
+		title: "Chiffres romains I–XII sur les cadrans (local)",
+		description: "Lit un cadran à chiffres romains et dit que IX vaut 9 et VII vaut 7.",
+		ideas: {
+			"roman-clock-faces": "associe les cadrans à chiffres romains à l'heure (local, sans validation)",
+			"roman-numeral-builder": "construis I–XII avec des tuiles I, V et X"
+		}
+	},
+	"G2-PV-1": {
+		title: "100 = 10 dizaines, et construire avec des blocs",
+		description: "Échange 10 dizaines contre 1 centaine et construit 245 avec des blocs.",
+		ideas: {
+			"block-builder-trade-mat": "construis le nombre demandé en échangeant dix contre un sur le tapis",
+			"bundle-the-hundred": "regroupe des bâtonnets en dizaines et en centaines"
+		}
+	},
+	"G2-PV-2": {
+		title: "Valeur de chaque chiffre",
+		description: "Dit que le 7 de 372 vaut 70 et que le 3 vaut 300.",
+		ideas: {
+			"place-value-mystery-number": "énigme : des cartes indices (« mon chiffre des dizaines est le double de celui des unités ») permettent de trouver un nombre caché",
+			"digit-spotlight": "touche le chiffre qui vaut la valeur demandée"
+		}
+	},
+	"G2-PV-3": {
+		title: "Le zéro comme place vide",
+		description: "Distingue 305 de 35 et de 350, et écrit « 3 centaines, 0 dizaine, 5 unités ».",
+		ideas: {
+			"zero-keeper-game": "garde la colonne vide ou perds le nombre",
+			"swap-the-zero": "que devient 305 quand on déplace le zéro ?"
+		}
+	},
+	"G2-PV-7": {
+		title: "Décomposer un nombre de plusieurs façons",
+		description: "Montre 352 comme 34 dizaines + 12 unités et comme 2 centaines + 15 dizaines + 2 unités, avec des blocs.",
+		ideas: {
+			"many-ways-to-build": "tapis de blocs : construis le même nombre avec différents tas de dizaines et d'unités",
+			"partition-swap-puzzle": "échange une centaine ou une dizaine pour obtenir la décomposition demandée"
+		}
+	},
+	"G2-PV-4": {
+		title: "Ajouter ou enlever 10 de tête",
+		description: "Sait que 472 + 10 = 482 et 305 − 10 = 295, et remarque que seul le chiffre des dizaines change (sauf en passant une centaine).",
+		ideas: {
+			"ten-more-ten-less-lift": "l'ascenseur s'arrête à l'étage des dizaines, monte ou descends",
+			"hundred-chart-ten-moves": "une case plus bas dans le tableau de 100 fait +10"
+		}
+	},
+	"G2-PV-5": {
+		title: "Ajouter ou enlever 100 de tête",
+		description: "Sait que 472 + 100 = 572 et 905 − 100 = 805, seul le chiffre des centaines change.",
+		ideas: {
+			"hundred-tower-builder": "ajoute ou retire une tour de cent et lis le total",
+			"odometer-100-more": "le compteur monte ou descend de cent"
+		}
+	},
+	"G2-PV-6": {
+		title: "Valeur des chiffres d'un nombre à 4 chiffres",
+		description: "Lit 2 345 comme 2 milliers, 3 centaines, 4 dizaines, 5 unités avec des blocs.",
+		ideas: {
+			"thousand-block-stack": "exploration : ajoute des blocs de mille à un nombre à 3 chiffres et lis le nouveau nombre",
+			"four-digit-place-peek": "jette un œil à chaque rang d'un nombre à 4 chiffres"
+		}
+	},
+	"G2-OP-1": {
+		title: "Additions de base jusqu'à 20",
+		description: "Retrouve tout de suite 8 + 7 = 15, 9 + 6 = 15 et toutes les décompositions jusqu'à 20.",
+		ideas: {
+			"bond-bubble-pop": "éclate la paire qui fait le total demandé",
+			"fact-flash-race": "bats ton propre record sur des calculs variés"
+		}
+	},
+	"G2-OP-2": {
+		title: "Soustractions de base jusqu'à 20 et familles de calculs",
+		description: "Retrouve 15 − 9 = 6 et écrit la famille 6 + 9 = 15, 9 + 6 = 15, 15 − 6 = 9, 15 − 9 = 6.",
+		ideas: {
+			"fact-family-houses": "place les nombres dans la maison de la famille pour la compléter",
+			"subtraction-lighthouse": "le faisceau du phare descend selon les calculs pour atteindre la réponse"
+		}
+	},
+	"G2-OP-3": {
+		title: "L'addition change d'ordre, pas la soustraction ; l'inverse",
+		description: "Sait que 5 + 3 = 3 + 5 mais que 5 − 3 ≠ 3 − 5, et vérifie 52 − 17 = 35 avec 35 + 17.",
+		ideas: { "g2-check-subtraction-with-addition": "chasse à l'erreur : une soustraction est « vérifiée » par la mauvaise addition, repère-la" }
+	},
+	"G2-OP-4": {
+		title: "Additionner des nombres à 2 chiffres avec retenue",
+		description: "Calcule 47 + 38 par écrit, avec une retenue d'une dizaine.",
+		ideas: {
+			"column-carry-machine": "dépose les unités dans la machine, elle fait un paquet de dix",
+			"sum-bridge-puzzle": "choisis deux nombres qui font le total, d'abord sans retenue, puis avec"
+		}
+	},
+	"G2-OP-5": {
+		title: "Soustraire à 2 chiffres avec échange, puis calcul aisé",
+		description: "Calcule 64 − 37 en ouvrant une dizaine, puis mélange + et − jusqu'à 100 sans hésiter.",
+		ideas: { "trade-a-ten-subtraction": "tapis de blocs : échange une dizaine, puis enlève" }
+	},
+	"G2-OP-6": {
+		title: "Additionner jusqu'à quatre nombres à 2 chiffres",
+		description: "Calcule 23 + 41 + 18 + 7 en regroupant les dizaines et les unités.",
+		ideas: {
+			"g2-add-four-2digit": "casse-tête en colonnes : choisis quatre nombres pour atteindre le total demandé",
+			"shopping-list-total": "additionne quatre prix sur un ticket de caisse"
+		}
+	},
+	"G2-OP-7": {
+		title: "Additionner et soustraire à 3 chiffres avec des blocs",
+		description: "Montre 356 + 278 avec des blocs, échange 10 dizaines contre une centaine, et le dessine.",
+		ideas: {
+			"g2-add-within-1000-models": "construis : échange 10 dizaines contre une centaine sur le tapis de blocs",
+			"draw-the-blocks-subtract": "dessine les blocs et barre-les pour soustraire"
+		}
+	},
+	"G2-OP-8": {
+		title: "Colonnes à 3 chiffres : addition, soustraction, zéro",
+		description: "Écrit 356 + 278 et 403 − 168 en colonnes, avec échange à travers le zéro.",
+		ideas: {
+			"zero-trouble-columns": "répare l'opération en colonnes 403 − 168 qui est cassée",
+			"column-and-blocks-link": "associe chaque étape de la colonne au geste avec les blocs"
+		}
+	},
+	"G2-OP-16": {
+		title: "Groupes égaux et tableaux : addition répétée et ×",
+		description: "Écrit 4 groupes de 3 comme 3 + 3 + 3 + 3 et comme 4 × 3, et lit un tableau de 4 par 3 comme 4 × 3.",
+		ideas: {
+			"equal-groups-to-times": "regroupe les jetons, écris l'addition répétée, puis la multiplication",
+			"array-to-sentence": "construis un tableau, lis-le comme une addition répétée et une multiplication"
+		}
+	},
+	"G2-OP-9": {
+		title: "Tables de 2, 5 et 10 et divisions associées",
+		description: "Retrouve 6 × 5 = 30 et 30 ÷ 5 = 6, 7 × 2 et 70 ÷ 10 tout de suite.",
+		ideas: {
+			"table-tennis-2-5-10": "échange de balles de ping-pong : renvoie le produit",
+			"division-from-the-table": "complète le calcul inverse de chaque produit"
+		}
+	},
+	"G2-OP-10": {
+		title: "Tables de 3 et 4",
+		description: "Retrouve 3 × 7 = 21, 4 × 6 = 24 et leurs divisions associées.",
+		ideas: {
+			"three-and-four-array-builder": "construis des tableaux rangée par rangée et lis le calcul",
+			"double-for-four": "trouve ×4 en doublant ×2"
+		}
+	},
+	"G2-OP-11": {
+		title: "Découvrir les tables de 6, 7, 8 et 9",
+		description: "Explore 6 × 7 avec des tableaux et la régularité des 9 (9 × 4 = 36 : les chiffres font 9). Sans validation."
+	},
+	"G2-OP-12": {
+		title: "×0, ×1 et changer l'ordre des facteurs",
+		description: "Sait que 7 × 0 = 0, 7 × 1 = 7 et que 3 × 5 = 5 × 3 mais 12 ÷ 3 ≠ 3 ÷ 12. Partie de G3.MD.4 : seulement ×0, ×1 et l'ordre des facteurs ; pas d'associativité ni de distributivité (découverte).",
+		ideas: {
+			"turn-the-array": "fais pivoter un tableau et vois le même produit",
+			"zero-and-one-magic-doors": "des portes qui renvoient le nombre ou le font disparaître"
+		}
+	},
+	"G2-OP-13": {
+		title: "Multiplier par des dizaines, 2 chiffres × 1 chiffre",
+		description: "Calcule 4 × 30 à partir de 4 × 3, puis 23 × 4 avec une grille (20 × 4 + 3 × 4).",
+		ideas: { "grid-method-tiles": "remplis la grille d'aire avec les produits partiels" }
+	},
+	"G2-OP-14": {
+		title: "Partager, grouper et penser multiplication",
+		description: "Distingue « 12 partagé entre 3 » de « 12 en groupes de 3 », écrit ÷, résout 32 ÷ 8 en cherchant 8 × ? = 32.",
+		ideas: { "share-or-group-sort": "trie les histoires en partage et en groupement" }
+	},
+	"G2-OP-15": {
+		title: "Restes et division à 2 chiffres par 1 chiffre",
+		description: "Dit ce qui reste dans 14 ÷ 4 = 3 reste 2 et partage 72 en 3 groupes égaux avec des blocs.",
+		ideas: { "share-the-leftovers": "distribue des blocs à des amis et nomme le reste" }
+	},
+	"G2-FL-1": {
+		title: "Passer la dizaine en ajoutant un nombre à 1 chiffre",
+		description: "Ajoute 8 à 47 par 47 + 3 = 50, puis + 5 = 55.",
+		ideas: {
+			"bridge-the-ten-hops": "saute jusqu'à la dizaine suivante, puis ajoute le reste",
+			"plus-nine-shortcut": "+9 comme +10 −1"
+		}
+	},
+	"G2-FL-2": {
+		title: "Soustraire un nombre à 1 chiffre en passant une dizaine",
+		description: "Calcule 52 − 6 par 52 − 2 = 50, puis − 4 = 46.",
+		ideas: {
+			"back-through-ten-frog": "la grenouille recule jusqu'à la dizaine, puis continue",
+			"minus-nine-minus-eight": "−9 comme −10 +1"
+		}
+	},
+	"G2-FL-3": {
+		title: "Ajouter et enlever des dizaines de tête",
+		description: "Calcule 46 + 30 = 76 et 90 − 40 = 50 de tête.",
+		ideas: {
+			"tens-jump-line": "saute de dizaine en dizaine sur une droite numérique",
+			"tens-bonds-to-100": "paires de dizaines qui font 100"
+		}
+	},
+	"G2-FL-11": {
+		title: "Faits dérivés : agrandir un calcul connu",
+		description: "Utilise 3 + 7 = 10 pour savoir 30 + 70 = 100, et 8 − 5 = 3 pour savoir 80 − 50 = 30.",
+		ideas: {
+			"fact-grows-tens": "un calcul connu, puis le même en dizaines : tape la réponse",
+			"derived-fact-match": "associe chaque calcul en dizaines au petit calcul dont il vient"
+		}
+	},
+	"G2-FL-4": {
+		title: "Calcul mental : centaines, dizaines et unités",
+		description: "Calcule 472 + 300 = 772, 472 + 20 = 492, 472 + 5 = 477 sans écrire.",
+		ideas: {
+			"mental-hundreds-hop": "jeu de sauts sur la droite : atteins la cible en un minimum de sauts de 100, 10 et 1",
+			"which-digit-changes": "choisis le chiffre qui change",
+			"mental-mix-challenge": "défi mixte : pas de 100, de 10 et de 1 contre la montre"
+		}
+	},
+	"G2-FL-5": {
+		title: "Doubles jusqu'à 50",
+		description: "Double 17 en 34 et 25 en 50 en doublant les dizaines et les unités.",
+		ideas: {
+			"double-trouble-mirror": "le miroir double les tuiles que tu poses",
+			"near-doubles-detective": "détective des quasi-doubles : 17 + 18 comme double de 17 + 1"
+		}
+	},
+	"G2-FL-6": {
+		title: "Moitiés des nombres pairs jusqu'à 100",
+		description: "Prend la moitié de 86 : 43, en coupant en deux les dizaines et les unités.",
+		ideas: {
+			"half-it-hunt": "chasse aux moitiés : trouve la moitié de chaque nombre et son partenaire",
+			"halving-machine": "la machine coupe en deux, l'enfant retrouve le nombre de départ"
+		}
+	},
+	"G2-FL-7": {
+		title: "Arrondir à la dizaine la plus proche sur une droite",
+		description: "Dit que 38 est plus proche de 40 que de 30, et que 35 s'arrondit vers le haut.",
+		ideas: {
+			"round-to-ten-hop": "quelle dizaine est la plus proche ? Fais sauter la grenouille sur le nénuphar le plus proche",
+			"round-or-not-sort": "trie les nombres selon leur dizaine la plus proche",
+			"midpoint-five-rule": "trouve où la droite bascule"
+		}
+	},
+	"G2-FL-8": {
+		title: "Estimer une somme ou une différence en arrondissant",
+		description: "Dit que 38 + 53 vaut environ 90 et 83 − 41 environ 40.",
+		ideas: {
+			"estimate-then-add": "choisis une estimation raisonnable avant la somme exacte",
+			"about-how-many-receipt": "estime le total d'un panier de courses"
+		}
+	},
+	"G2-FL-9": {
+		title: "Estimer un produit simple en arrondissant",
+		description: "Dit que 4 × 19 vaut environ 80 grâce à 4 × 20 (découverte).",
+		ideas: {
+			"round-then-times": "arrondis un facteur puis multiplie",
+			"product-magnitude-check": "vérifie l'ordre de grandeur : quelle réponse est absurde ?"
+		}
+	},
+	"G2-FL-10": {
+		title: "Vérifier par estimation et par l'opération inverse",
+		description: "Vérifie 63 + 29 = 92 par estimation (60 + 30) et par 92 − 29.",
+		ideas: {
+			"answer-detective": "détective des réponses : trouve la mauvaise réponse dans une liste",
+			"check-it-two-ways": "confirme chaque réponse de deux façons : estimation et opération inverse"
+		}
+	},
+	"G2-NT-1": {
+		title: "Les multiples comme comptage de n en n",
+		description: "Colorie les multiples de 3, 4, 5 et 8 sur un tableau de 100, sait que 24 est dans les tables de 3 et de 4, et compte les nombres communs à deux tables (découverte).",
+		ideas: {
+			"multiples-hundred-chart": "casse-tête de coloriage : colorie les multiples de deux nombres, compte et lis ce qui est partagé",
+			"multiple-or-not-bingo": "loto : 28 est-il un multiple de 4 ?",
+			"frog-lands-on-multiples": "la grenouille saute par pas réguliers : quels nombres touche-t-elle ?"
+		}
+	},
+	"G2-NT-2": {
+		title: "Régularités dans les tables",
+		description: "Remarque que les multiples de 5 finissent par 0 ou 5, que pair × n'importe quel nombre est pair, et que les multiples de 10 finissent par 0 (découverte).",
+		ideas: {
+			"table-pattern-hunt": "jeu de détective : trouve et teste une régularité dans un tableau de multiplication",
+			"even-or-odd-product-predict": "devine si un produit est pair avant de le calculer",
+			"last-digit-clues": "devine la table grâce aux derniers chiffres"
+		}
+	},
+	"G2-FR-1": {
+		title: "Fractions unitaires : 1/b d'un tout",
+		description: "Nomme 1/4 comme une part sur 4 parts égales et 1/6 comme une sur 6, avec les dénominateurs 2, 3, 4, 6, 8, 10 ; sait que des parts égales de touts identiques peuvent avoir des formes différentes.",
+		ideas: {
+			"equal-or-not-split": "cette forme est-elle partagée en parts égales ? (des parts égales peuvent être différentes)",
+			"pizza-slice-names": "nomme une part de chaque pizza"
+		}
+	},
+	"G2-FR-2": {
+		title: "Fractions a/b",
+		description: "Montre 3/4 comme 3 parts sur 4 parts égales (3 morceaux de 1/4).",
+		ideas: {
+			"colour-the-fraction": "colorie a/b d'une bande",
+			"fraction-bar-match": "associe l'image à la fraction"
+		}
+	},
+	"G2-FR-3": {
+		title: "Fractions sur la droite de 0 à 1",
+		description: "Place 3/4 et 3/8 sur une droite de 0 à 1 coupée en parts égales.",
+		ideas: {
+			"fraction-ruler-slider": "fais glisser le repère jusqu'à la fraction",
+			"which-fraction-is-this": "lis la fraction à un point marqué"
+		}
+	},
+	"G2-FR-4": {
+		title: "Fractions plus grandes que 1 et nombres entiers en fractions",
+		description: "Sait que 4/4 = 1, 3 = 3/1 et situe 5/4 juste après 1.",
+		ideas: {
+			"whole-as-fraction-sort": "associe 4/4, 8/8 et 1",
+			"fraction-train-past-one": "le train des fractions : compte les quarts au-delà d'un entier"
+		}
+	},
+	"G2-FR-11": {
+		title: "Compter par demis et par quarts",
+		description: "Compte ¼, ½, ¾, 1, 1¼… et ½, 1, 1½, 2… sur une droite numérique, en avant et en arrière.",
+		ideas: {
+			"quarter-step-line-hop": "fais sauter une grenouille de quart en quart sur une droite et dis chaque arrêt",
+			"half-step-staircase": "monte l'escalier de demi en demi, complète les marches manquantes"
+		}
+	},
+	"G2-FR-5": {
+		title: "Fractions égales avec des modèles",
+		description: "Montre par pliage que 2/4 = 1/2 et 3/6 = 1/2. Avec des modèles, sans règle.",
+		ideas: {
+			"fold-and-match-halves": "plie du papier pour trouver la même quantité",
+			"fraction-wall-twins": "trouve les bandes de même longueur sur un mur de fractions"
+		}
+	},
+	"G2-FR-6": {
+		title: "Comparer des fractions de même dénominateur",
+		description: "Dit que 3/8 < 5/8 et explique « plus de huitièmes ».",
+		ideas: {
+			"bigger-slice-battle": "choisis la plus grosse part",
+			"fraction-order-train": "range des fractions de même dénominateur"
+		}
+	},
+	"G2-FR-7": {
+		title: "Comparer des fractions de même numérateur",
+		description: "Dit que 1/3 > 1/5 et explique « des parts plus petites ».",
+		ideas: {
+			"which-pizza-more": "quelle pizza en a le plus ? Même nombre de parts, tailles différentes",
+			"justify-the-bigger": "choisis le gagnant et explique pourquoi"
+		}
+	},
+	"G2-FR-8": {
+		title: "Compter en dixièmes",
+		description: "Compte par pas de 0,1 comme 1/10, 2/10, 3/10… jusqu'à 10/10 et sait que les dixièmes viennent d'un partage en 10.",
+		ideas: {
+			"tenths-strip-count": "colorie une bande un dixième à la fois",
+			"tenth-hop-line": "saute le long d'une droite de 0 à 1 de dixième en dixième"
+		}
+	},
+	"G2-FR-9": {
+		title: "Additionner des fractions de même dénominateur (modèles)",
+		description: "Montre 2/7 + 3/7 = 5/7 avec des bandes et dit « les septièmes ne changent pas » ; enlève 2/7 à 5/7 pour trouver 3/7.",
+		ideas: {
+			"fraction-strip-join": "joins des bandes pour additionner",
+			"take-away-slices": "enlève des parts à un entier : « 5/7 moins 2/7 il reste 3/7 »"
+		}
+	},
+	"G2-FR-10": {
+		title: "Trouver 1/4 et 3/4 de 20, et des fractions de 6 et 12",
+		description: "Trouve 1/4 de 20 = 5 en partageant en 4 groupes et 3/4 = 15 ; trouve 1/3 de 6 = 2, 1/4 de 12 = 3 et 3/4 de 12 = 9 avec des objets.",
+		ideas: {
+			"share-in-four-groups": "distribue 20 jetons en 4 groupes, compte les groupes",
+			"fraction-of-a-set-shop": "boutique : trouve 1/4 ou 3/4 d'un panier, ou 1/3 d'un ensemble de 6 ou 12"
+		}
+	},
+	"G2-ALG-1": {
+		title: "Nombre manquant dans + et −",
+		description: "Trouve ? dans ? − 7 = 15 (22) et 8 + ? = 17 avec l'opération inverse.",
+		ideas: {
+			"hidden-weight-scale": "énigme : une balance à deux plateaux avec un poids caché à deviner",
+			"missing-number-fix-it": "répare l'égalité avec le nombre manquant"
+		}
+	},
+	"G2-ALG-2": {
+		title: "Nombre manquant dans ×",
+		description: "Trouve 4 × ? = 20 (5) et ? × 3 = 12.",
+		ideas: {
+			"hidden-array-rows": "un tableau avec une rangée cachée : combien ?",
+			"times-mystery-box": "la boîte cache un facteur"
+		}
+	},
+	"G2-ALG-3": {
+		title: "Continuer des suites de 2 en 2, 3 en 3, 5 en 5, 10 en 10",
+		description: "Continue 7, 12, 17… et dit la règle « ajoute 5 ».",
+		ideas: {
+			"sequence-train": "fais glisser les nombres des prochains wagons",
+			"step-rule-match": "associe chaque suite à sa règle"
+		}
+	},
+	"G2-ALG-4": {
+		title: "Suites de 100 en 100 et à rebours",
+		description: "Continue 850, 750, 650… et 500, 400…",
+		ideas: {
+			"hundred-stairs-sequence": "escalier de centaine en centaine, vers le haut et vers le bas",
+			"count-down-code": "la suite à rebours ouvre un cadenas"
+		}
+	},
+	"G2-ALG-5": {
+		title: "Trouver le terme manquant ou intrus",
+		description: "Repère que 3, 6, 9, 13, 15 est faux à 13 et énonce la règle.",
+		ideas: {
+			"sequence-rule-detective": "trouve le terme intrus et la règle",
+			"fill-the-gap-sequence": "remplis les termes cachés"
+		}
+	},
+	"G2-ALG-6": {
+		title: "Comparer des expressions sans calculer",
+		description: "Décide si 8 + 5 est plus grand que 7 + 6 (égaux à 13 : 8 + 5 = 7 + 6) en déplaçant une unité, sans additionner les deux.",
+		ideas: {
+			"balance-scale-reasoning": "vois la balance pencher avant de calculer",
+			"greater-lesser-equal-flip": "choisis <, > ou ="
+		}
+	},
+	"G2-ALG-7": {
+		title: "Rendre les deux côtés égaux",
+		description: "Complète 9 + 4 = 7 + ? et 12 − 5 = ? + 3.",
+		ideas: {
+			"equal-sides-scale": "ajoute le poids manquant pour équilibrer",
+			"make-it-balance-cards": "choisis des cartes pour rendre égal"
+		}
+	},
+	"G2-MEA-1": {
+		title: "Choisir l'outil et l'unité pour mesurer une longueur",
+		description: "Choisit une règle pour un crayon en cm et un mètre ruban pour une pièce en m.",
+		ideas: {
+			"which-tool-sort": "trie les objets : règle, mètre ou ruban",
+			"cm-or-m-pick": "choisis l'unité : cm ou m"
+		}
+	},
+	"G2-MEA-2": {
+		title: "Mesurer au centimètre près",
+		description: "Place un crayon à 0 et lit 14 cm ; avec un mètre ou un ruban mesure une pièce ou une porte en m.",
+		ideas: {
+			"ruler-snap-measure": "règle aimantée : lis la longueur",
+			"measure-the-trail": "mesure des objets le long d'un parcours, avec un niveau mètre (pièce ou porte en m)"
+		}
+	},
+	"G2-MEA-3": {
+		title: "Estimer des longueurs et vérifier",
+		description: "Devine 30 cm pour un livre, puis mesure.",
+		ideas: {
+			"guess-then-measure": "devine puis mesure : la meilleure estimation marque des points",
+			"benchmark-body-lengths": "utilise ta main ou ton pas comme repère"
+		}
+	},
+	"G2-MEA-4": {
+		title: "De combien est-ce plus long ?",
+		description: "Trouve qu'un ruban de 45 cm est plus long de 18 cm qu'un ruban de 27 cm.",
+		ideas: {
+			"longer-by-how-much": "compare deux barres et soustrais",
+			"ribbon-cut-puzzle": "coupe un ruban pour obtenir la différence demandée"
+		}
+	},
+	"G2-MEA-5": {
+		title: "Longueurs et différences sur une droite numérique",
+		description: "Montre 12 cm et 20 cm sur une droite et l'écart de 8 cm.",
+		ideas: {
+			"ruler-as-number-line": "saute sur la règle pour trouver l'écart",
+			"difference-jump-line": "saute d'une longueur à l'autre"
+		}
+	},
+	"G2-MEA-6": {
+		title: "Lire des balances en kg et en g",
+		description: "Lit une balance à la graduation la plus proche : 2 kg, 500 g.",
+		ideas: {
+			"kitchen-scale-reader": "lis le cadran, à la graduation la plus proche",
+			"balance-the-bag": "pèse avec des poids marqués"
+		}
+	},
+	"G2-MEA-7": {
+		title: "Lire des mesures en l et en ml",
+		description: "Lit un pichet à la graduation la plus proche : 300 ml, 2 l.",
+		ideas: {
+			"jug-fill-reader": "remplis le pichet jusqu'à un trait",
+			"pour-to-the-mark": "verse jusqu'au nombre de ml demandé"
+		}
+	},
+	"G2-MEA-8": {
+		title: "Choisir l'unité adaptée et les liens métriques",
+		description: "Choisit kg pour la farine, ml pour une cuillère de sirop, et sait que 1 kg = 1000 g, 1 l = 1000 ml.",
+		ideas: {
+			"unit-sort-kitchen": "trie les objets de cuisine : kg, g, l, ml",
+			"thousand-link-match": "associe 1 kg à 1000 g"
+		}
+	},
+	"G2-MEA-9": {
+		title: "Lire un thermomètre en degrés Celsius",
+		description: "Lit 23 °C et dit s'il fait chaud ou froid.",
+		ideas: {
+			"thermometer-weather-report": "règle le thermomètre pour chaque jour",
+			"hot-or-cold-sort": "associe chaque température à une activité"
+		}
+	},
+	"G2-TIM-1": {
+		title: "Lire l'heure au quart d'heure",
+		description: "Lit « pile », « et demie », « et quart » et « moins le quart ».",
+		ideas: {
+			"quarter-clock-match": "associe l'horloge à son écriture en mots",
+			"set-the-clock-quarter": "place les aiguilles sur une heure"
+		}
+	},
+	"G2-TIM-2": {
+		title: "Lire l'heure aux 5 minutes",
+		description: "Lit 3 h 25 et 4 h 50 en comptant de 5 en 5 autour du cadran.",
+		ideas: {
+			"count-fives-clock": "compte de 5 en 5 autour du cadran",
+			"read-the-minute-hand": "quelle minute indique la grande aiguille ?"
+		}
+	},
+	"G2-TIM-3": {
+		title: "Écrire l'heure et matin/après-midi",
+		description: "Écrit 4 h 35 de l'après-midi et dit que le petit-déjeuner est le matin.",
+		ideas: {
+			"digital-analogue-match": "associe l'heure numérique et l'horloge à aiguilles",
+			"am-or-pm-day-sort": "trie les moments de la journée : matin ou après-midi"
+		}
+	},
+	"G2-TIM-4": {
+		title: "Unités de temps : minutes, heures, jours, semaines, mois",
+		description: "Sait que 1 h = 60 min, 1 jour = 24 h, 1 semaine = 7 jours, 1 an = 12 mois.",
+		ideas: {
+			"time-unit-ladder": "range les unités de la plus petite à la plus grande",
+			"how-many-in-a-year": "complète le lien entre les unités"
+		}
+	},
+	"G2-TIM-5": {
+		title: "Nombre de jours de chaque mois",
+		description: "Connaît la comptine des mois de 30 jours et sait que février est le plus court.",
+		ideas: {
+			"days-in-each-month": "jeu de tri avec les jointures des poings et le calendrier",
+			"month-length-rhyme": "complète la comptine"
+		}
+	},
+	"G2-TIM-6": {
+		title: "Durée en heures entières",
+		description: "Dit que de 3 h à 5 h il y a 2 heures.",
+		ideas: {
+			"how-long-timeline": "fais glisser le début et la fin sur la frise du jour pour voir la durée",
+			"hour-hop-line": "saute d'heure en heure"
+		}
+	},
+	"G2-TIM-7": {
+		title: "Durée en demi-heures",
+		description: "Calcule que de 3 h à 5 h 30 il y a 2 heures et demie.",
+		ideas: {
+			"half-hour-train-trip": "voyage en train de la gare de départ à la gare d'arrivée",
+			"lesson-timetable-gap": "combien de temps entre deux cours ?"
+		}
+	},
+	"G2-MON-1": {
+		title: "Symboles de monnaie et écriture des montants (local)",
+		description: "Écrit 45 c ou 45 p et un prix avec le bon symbole.",
+		ideas: {
+			"symbol-price-tags": "mets le bon symbole sur chaque étiquette",
+			"write-the-amount": "tape le montant formé par les pièces"
+		}
+	},
+	"G2-MON-2": {
+		title: "Faire un montant avec des pièces différentes",
+		description: "Fait 50 avec 20 + 20 + 10 ou 25 + 25.",
+		ideas: {
+			"coin-combinations-same-amount": "trouve toutes les façons de payer un prix",
+			"coin-purse-fill": "remplis le porte-monnaie avec le montant exact"
+		}
+	},
+	"G2-MON-3": {
+		title: "Le moins de pièces possible",
+		description: "Paie 65 avec 50 + 10 + 5.",
+		ideas: {
+			"fewest-coin-challenge": "paie avec le moins de pièces possible pour marquer des points",
+			"greedy-coin-hint": "commence par la plus grosse pièce qui convient"
+		}
+	},
+	"G2-MON-4": {
+		title: "Totaux d'achats jusqu'à 100",
+		description: "Calcule le total de 45 + 30 pour deux articles.",
+		ideas: {
+			"money-coin-shop-scene": "jeu de la marchande avec une caisse et la monnaie rendue",
+			"basket-total-builder": "dépose des articles et vois le total"
+		}
+	},
+	"G2-MON-5": {
+		title: "Rendre la monnaie jusqu'à 100",
+		description: "Calcule 100 − 65 = 35 en comptant à partir du prix.",
+		ideas: {
+			"count-up-change-till": "compte à partir du prix jusqu'au montant donné",
+			"exact-change-bag": "rends la monnaie exacte"
+		}
+	},
+	"G2-GEO-1": {
+		title: "Côtés et sommets des polygones",
+		description: "Nomme triangle, quadrilatère, pentagone, hexagone, octogone à partir de 3, 4, 5, 6, 8 côtés et sommets.",
+		ideas: {
+			"polygon-name-match": "associe le nombre de côtés au nom",
+			"vertex-tap-count": "touche chaque sommet pour les compter"
+		}
+	},
+	"G2-GEO-2": {
+		title: "Comparer les propriétés de figures planes",
+		description: "Dit qu'un carré et un rectangle ont tous deux 4 côtés et 4 angles droits.",
+		ideas: {
+			"shape-twins": "trouve deux figures qui partagent une propriété",
+			"mystery-shape-clues": "devine la figure grâce aux indices sur les côtés et les angles"
+		}
+	},
+	"G2-GEO-3": {
+		title: "Faces, arêtes et sommets des solides",
+		description: "Compte 6 faces, 12 arêtes, 8 sommets sur un cube et nomme les faces carrées.",
+		ideas: {
+			"solid-sticker-count": "colle une gommette sur chaque face, arête et sommet",
+			"faces-of-the-solid": "nomme les faces planes d'une pyramide"
+		}
+	},
+	"G2-GEO-4": {
+		title: "Trier des figures selon leurs propriétés",
+		description: "Trie des figures planes en « a un angle droit » et « a 5 côtés », puis des solides (faces planes, surface courbe, peut rouler).",
+		ideas: {
+			"sort-shapes-by-properties": "jeu de tri façon diagramme de Venn",
+			"odd-one-out-shape": "repère la figure qui ne suit pas la règle, avec un niveau de solides (cube, cylindre, sphère, cône)"
+		}
+	},
+	"G2-GEO-5": {
+		title: "Dessiner des figures avec des propriétés données",
+		description: "Dessine une figure à 5 côtés sur une grille de points avec une règle.",
+		ideas: {
+			"draw-on-dot-grid": "défi : dessine d'après des cartes consignes",
+			"shape-recipe-draw": "dessine une figure à 4 côtés et 1 angle droit"
+		}
+	},
+	"G2-GEO-6": {
+		title: "Axe de symétrie par pliage",
+		description: "Trouve le pli vertical qui fait coïncider les deux moitiés.",
+		ideas: {
+			"fold-and-mirror-butterfly": "plie et colorie : fais un papillon symétrique, puis trouve la moitié manquante",
+			"symmetric-or-not": "trie les figures : symétriques ou non"
+		}
+	},
+	"G2-GEO-7": {
+		title: "Angles droits",
+		description: "Repère les angles droits avec une équerre en papier.",
+		ideas: {
+			"corner-checker": "teste les coins avec le gabarit",
+			"right-angle-room-hunt": "cherche les angles droits autour de toi"
+		}
+	},
+	"G2-GEO-8": {
+		title: "Tracer et mesurer un segment",
+		description: "Trace un segment de 7 cm et mesure un segment donné.",
+		ideas: {
+			"draw-segment-ruler": "trace à la bonne longueur avec une règle aimantée",
+			"measure-the-segment-trail": "mesure un chemin fait de segments"
+		}
+	},
+	"G2-GEO-9": {
+		title: "Trois points sont-ils alignés ?",
+		description: "Pose une règle pour vérifier si A, B, C sont alignés.",
+		ideas: {
+			"ruler-line-up": "place la règle pour tester les points",
+			"connect-the-straight-dots": "choisis les points qui sont alignés"
+		}
+	},
+	"G2-GEO-10": {
+		title: "Rangées et colonnes de carreaux",
+		description: "Partage un rectangle de 3 par 4 en 12 carrés égaux.",
+		ideas: {
+			"tile-the-rectangle": "pave le rectangle et compte",
+			"rows-times-columns-link": "relie 3 rangées de 4 au nombre de carreaux"
+		}
+	},
+	"G2-POS-1": {
+		title: "Quarts de tour et demi-tours",
+		description: "Fait tourner un robot d'un quart de tour ou d'un demi-tour.",
+		ideas: {
+			"robot-turn-trainer": "tourne le robot pour qu'il regarde l'étoile",
+			"clock-hand-turns": "de combien l'aiguille a-t-elle tourné ?"
+		}
+	},
+	"G2-POS-2": {
+		title: "Trois quarts de tour, dans le sens des aiguilles ou non",
+		description: "Dit « trois quarts de tour dans le sens inverse des aiguilles d'une montre ».",
+		ideas: {
+			"clockwise-or-not-sort": "trie les rotations selon leur sens",
+			"spinner-turn-code": "tourne la roue comme demandé"
+		}
+	},
+	"G2-POS-3": {
+		title: "Lire une case sur une grille",
+		description: "Trouve la case B4.",
+		ideas: {
+			"treasure-grid-find": "trouve le trésor en B4",
+			"name-the-cell": "nomme la case où se trouve l'étoile"
+		}
+	},
+	"G2-POS-4": {
+		title: "Placer et nommer des positions sur une grille",
+		description: "Met le drapeau en D2 et donne la référence de n'importe quel objet.",
+		ideas: {
+			"grid-battle-places": "place les pièces d'après leur référence",
+			"map-landmark-refs": "marque des lieux sur une carte avec leur référence"
+		}
+	},
+	"G2-POS-5": {
+		title: "Écrire des déplacements pour atteindre une cible",
+		description: "Écrit « droite 3, haut 2 » pour amener un pion à une cible.",
+		ideas: {
+			"grid-token-route": "labyrinthe : programme le robot",
+			"shortest-route-challenge": "atteins la cible en un minimum de déplacements"
+		}
+	},
+	"G2-POS-6": {
+		title: "Parcours avec virages, et corriger un parcours",
+		description: "Combine « avance de 3, tourne à droite, avance de 2 » et trouve l'étape fautive.",
+		ideas: {
+			"route-debug-robot": "repère l'étape fausse",
+			"turn-and-move-maze": "labyrinthe qui demande des virages et des déplacements"
+		}
+	},
+	"G2-DAT-1": {
+		title: "Recueillir des données avec des bâtons de comptage",
+		description: "Compte avec des bâtons par cinq et trouve le total.",
+		ideas: {
+			"tally-the-playground": "compte ce que tu vois dans la cour",
+			"tally-gate-count": "compte avec des bâtons par cinq jusqu'à un total"
+		}
+	},
+	"G2-DAT-2": {
+		title: "Dessiner des graphiques en images",
+		description: "Dessine un graphique en images où 1 symbole vaut 1, 2, 5 ou 10 et choisit la légende.",
+		ideas: {
+			"pictogram-key-builder": "choisis une légende (y compris 1 symbole = 1) puis dessine",
+			"half-symbol-read": "lis un demi-symbole"
+		}
+	},
+	"G2-DAT-3": {
+		title: "Diagrammes en blocs et en barres, jusqu'à 4 catégories",
+		description: "Construit un diagramme en barres à 4 barres sur une échelle graduée.",
+		ideas: {
+			"block-to-bar-switch": "transforme un diagramme en blocs en diagramme en barres",
+			"label-the-bars": "ajoute le titre, les étiquettes et l'échelle"
+		}
+	},
+	"G2-DAT-4": {
+		title: "Lire des tableaux simples",
+		description: "Lit un tableau de votes et trouve le total.",
+		ideas: {
+			"table-to-graph-match": "associe un tableau à son graphique",
+			"fill-the-survey-table": "complète le tableau à partir des bâtons de comptage"
+		}
+	},
+	"G2-DAT-5": {
+		title: "Total, différence et « combien de plus »",
+		description: "Lit que les chats ont 6 votes de plus que les poissons.",
+		ideas: {
+			"graph-question-quest": "réponds à des questions à partir d'un graphique",
+			"how-many-more-bars": "compare la hauteur des barres"
+		}
+	},
+	"G2-DAT-6": {
+		title: "Placer des mesures sur un diagramme en points",
+		description: "Note les longueurs de 8 crayons en points sur une droite graduée en unités entières.",
+		ideas: {
+			"pencil-length-plot": "mesure et dépose les points",
+			"read-the-dot-plot": "quelle longueur revient le plus souvent ?"
+		}
+	},
+	"G2-DAT-7": {
+		title: "Faire une enquête et la représenter",
+		description: "Interroge ses camarades, compte avec des bâtons et dessine son propre graphique.",
+		ideas: {
+			"build-graph-from-data": "construis un graphique à partir d'une enquête menée en classe",
+			"survey-question-picker": "choisis une question avec quelques réponses claires"
+		}
+	},
+	"G2-PRB-1": {
+		title: "Certain et impossible",
+		description: "Dit que « le soleil se lève » est certain et qu'« un chat peut voler » est impossible.",
+		ideas: {
+			"certain-or-impossible-sort": "trie les événements",
+			"bag-of-same-colour": "tire dans un sac d'une seule couleur"
+		}
+	},
+	"G2-PRB-2": {
+		title: "Probable et peu probable",
+		description: "Dit que tirer du rouge dans un sac de 8 rouges et 2 bleus est probable.",
+		ideas: {
+			"likely-bag-guess": "prédis le tirage, puis tire",
+			"chance-word-line": "place les événements sur la droite du hasard"
+		}
+	},
+	"G2-PRB-3": {
+		title: "Lister les résultats possibles d'une pièce ou d'un dé",
+		description: "Liste pile, face et 1–6 comme résultats possibles.",
+		ideas: {
+			"coin-and-dice-outcomes": "jeu d'expérience : prédis, lance, puis compte les résultats",
+			"all-the-outcomes-list": "liste tous les résultats possibles",
+			"spinner-outcomes-match": "associe une roue à ses résultats"
+		}
+	},
+	"G2-PSR-1": {
+		title: "Problèmes à une étape avec + et −, et la phrase mathématique",
+		description: "Résout « Sam a 28 autocollants et en reçoit 15 de plus » et écrit 28 + 15 = 43.",
+		ideas: {
+			"story-to-number-sentence": "associe l'histoire à son calcul",
+			"choose-the-operation": "choisis + ou −"
+		}
+	},
+	"G2-PSR-2": {
+		title: "Problèmes à une étape avec × et ÷",
+		description: "Résout « 4 sacs de 5 pommes » et « 20 partagé entre 4 ».",
+		ideas: {
+			"equal-groups-stories": "joue l'histoire",
+			"times-or-divide-pick": "choisis × ou ÷"
+		}
+	},
+	"G2-PSR-3": {
+		title: "Problèmes à deux étapes avec + et − jusqu'à 100",
+		description: "Résout « 35 + 20 puis en donner 18 ».",
+		ideas: {
+			"two-step-shop-story": "deux achats et la monnaie rendue",
+			"step-by-step-split": "marque l'étape 1 et l'étape 2"
+		}
+	},
+	"G2-PSR-4": {
+		title: "Schéma en barres parties-tout",
+		description: "Dessine une barre avec les parties 18 et ? dans 45.",
+		ideas: {
+			"bar-model-builder": "glisse les parties dans une barre",
+			"which-bar-fits": "choisis la barre qui va avec l'histoire"
+		}
+	},
+	"G2-PSR-5": {
+		title: "Schéma en barres de comparaison",
+		description: "Dessine deux barres pour montrer 12 de plus que 25.",
+		ideas: {
+			"compare-bars-story": "dessine deux barres pour l'écart",
+			"difference-bracket": "marque la différence"
+		}
+	},
+	"G2-PSR-6": {
+		title: "Trouver toutes les combinaisons",
+		description: "Trouve les 6 tenues possibles avec 2 hauts et 3 pantalons.",
+		ideas: {
+			"outfit-maker": "mélange et assortis les tenues",
+			"ice-cream-scoop-combos": "tous les cornets à deux boules"
+		}
+	},
+	"G2-PSR-7": {
+		title: "Listes organisées",
+		description: "Liste les tenues : haut A avec chaque pantalon, puis haut B, pour n'en oublier aucune.",
+		ideas: {
+			"list-it-in-order": "remplis un tableau organisé",
+			"missing-combo-finder": "laquelle manque ?"
+		}
+	},
+	"G2-PSR-8": {
+		title: "Tester une affirmation générale",
+		description: "Teste « impair + impair est toujours pair » avec cinq exemples.",
+		ideas: {
+			"always-sometimes-never-sort": "trie les affirmations : toujours, parfois, jamais",
+			"find-a-counter-example": "essaie de trouver un contre-exemple"
+		}
+	},
+	"G2-PSR-9": {
+		title: "Vérifier une réponse par l'inverse et par estimation",
+		description: "Vérifie 72 − 38 = 34 avec 34 + 38 et par environ 70 − 40.",
+		ideas: {
+			"answer-checker-two-ways": "confirme chaque réponse de deux façons",
+			"spot-the-wrong-answer": "trouve la réponse qui échoue aux deux vérifications"
+		}
+	}
+}, HA = {
+	"G3-NS-1": {
+		title: "Lire et écrire les nombres jusqu'à 10 000",
+		description: "Lit 6 205 à voix haute et écrit « quatre mille neuf » 4 009, en gérant les zéros au milieu du nombre.",
+		ideas: { "number-word-builder": "assemble un nombre avec des étiquettes de mots (dits ou écrits) et associe-le à ses chiffres ; jeu de construction et d'association" }
+	},
+	"G3-NS-2": {
+		title: "Comparer et ranger les nombres à 4 chiffres",
+		description: "Range 5 342 ; 5 324 ; 4 999 et dit lequel est le plus grand en comparant d'abord les milliers, puis les centaines.",
+		ideas: {
+			"thousands-sorting-race": "dépose des cartes-nombres dans l'ordre avant la fin du chrono ; jeu de tri",
+			"biggest-number-cards": "pioche 4 cartes-chiffres et place-les pour former le plus grand ou le plus petit nombre ; jeu de cartes"
+		}
+	},
+	"G3-NS-3": {
+		title: "Placer un nombre sur une droite jusqu'à 10 000",
+		description: "Place 6 250 sur une droite graduée de 0 à 10 000 en trouvant entre quels milliers il se situe, puis à peu près où.",
+		ideas: { "midpoint-finder": "trouve le milieu entre deux milliers indiqués et place des nombres par rapport à lui ; glisser-déposer" }
+	},
+	"G3-NS-4": {
+		title: "Lire des repères non gradués sur une droite agrandie",
+		description: "Lit le nombre d'un repère sans étiquette sur une droite de 6 000 à 7 000 découpée en dizaines de centaines (le repère est 6 400).",
+		ideas: { "zoom-line-lander": "agrandis la droite étape par étape pour poser un marqueur sur une cible ; jeu" }
+	},
+	"G3-NS-5": {
+		title: "Compter de 4 en 4, 6 en 6, 7 en 7, 8 en 8 et 9 en 9",
+		description: "Compte en avant et en arrière de 4 en 4, 6 en 6, 7 en 7, 8 en 8 et 9 en 9 à partir de n'importe quel multiple (42, 49, 56, 63, 72).",
+		ideas: { "skip-count-frog": "fais sauter une grenouille sur une ligne de nénuphars par bonds de 4, 6, 7, 8 ou 9 ; jeu" }
+	},
+	"G3-NS-6": {
+		title: "Compter de 25 en 25, 50 en 50, 100 en 100 et 1 000 en 1 000",
+		description: "Compte 25, 50, 75, 100, 125, puis de 50 en 50 et de 100 en 100 (350, 400, 450), et 3 000, 4 000, 5 000, et dit le nombre qui suit 975.",
+		ideas: {
+			"quarter-coin-count": "compte des piles de pièces de 25 cents pour atteindre un total ; comptage en histoire",
+			"thousand-steps": "grimpe une grande tour par bonds de 1 000 et dis où tu atterris ; jeu"
+		}
+	},
+	"G3-NS-7": {
+		title: "Chiffres romains jusqu'à C (facultatif)",
+		description: "Lit XXXIV comme 34 et écrit 49 XLIX avec I, V, X, L, C. Petit bonus local.",
+		ideas: { "roman-numeral-builder": "construis des nombres jusqu'à 100 avec des tuiles I, V, X, L, C et relis-les ; jeu de construction et d'association" }
+	},
+	"G3-NS-8": {
+		title: "Comparer des températures sous zéro (découverte)",
+		description: "Dit que −3 °C est plus froid que −1 °C et range −4, −1, 2 sur un thermomètre vertical. Exploration seulement.",
+		ideas: {
+			"thermometer-hop": "fais sauter un personnage le long d'un thermomètre vertical pour correspondre à des cartes météo ; jeu",
+			"colder-or-warmer-cards": "compare deux cartes de température et touche la plus froide ; tri éclair"
+		}
+	},
+	"G3-NS-9": {
+		title: "Compter à rebours en passant par zéro (découverte)",
+		description: "Compte 3, 2, 1, 0, −1, −2 et dit quel étage est deux niveaux sous le rez-de-chaussée. Exploration seulement.",
+		ideas: {
+			"below-zero-lift": "prends un ascenseur à travers les sous-sols en comptant à rebours à travers 0 ; en histoire",
+			"zero-crossing-count": "fais passer un marqueur par zéro sur une droite et lis le nouveau nombre ; comptage guidé"
+		}
+	},
+	"G3-PV-1": {
+		title: "Valeur de chaque chiffre d'un nombre à 4 chiffres",
+		description: "Dit que le 3 de 4 306 vaut 300 et que le 4 vaut 4 000.",
+		ideas: { "digit-worth-cards": "associe chaque chiffre en surbrillance à sa carte-valeur ; jeu d'association" }
+	},
+	"G3-PV-2": {
+		title: "Décomposer les nombres à 4 chiffres, zéro comme place vide",
+		description: "Écrit 4 306 sous la forme 4 000 + 300 + 6 et dit à quoi sert le 0 à la place des dizaines.",
+		ideas: {
+			"partition-puzzle": "décompose un nombre en tuiles de milliers, centaines, dizaines et unités pour remplir une cible ; casse-tête",
+			"zero-placeholder-spot": "repère quel nombre perd de la valeur si on enlève son zéro ; chasse vrai ou faux"
+		}
+	},
+	"G3-PV-3": {
+		title: "Ajouter ou enlever 1, 10, 100 ou 1 000 instantanément",
+		description: "Dit que 10 de plus que 4 396 font 4 406 et que 1 000 de moins que 5 090 font 4 090, sans calcul écrit.",
+		ideas: { "odometer-roll": "tourne les molettes d'un compteur de voiture pour ajouter ou enlever une position à la fois ; molettes à manipuler" }
+	},
+	"G3-PV-4": {
+		title: "Arrondir à la dizaine la plus proche",
+		description: "Arrondit 4 376 à 4 380 et 2 455 à 2 460, en décidant avec le chiffre des unités.",
+		ideas: { "round-to-ten-hill": "fais rouler une balle sur une colline entre deux dizaines pour voir où atterrit un nombre ; droite numérique interactive" }
+	},
+	"G3-PV-5": {
+		title: "Arrondir à la centaine la plus proche",
+		description: "Arrondit 4 376 à 4 400 et 2 450 à 2 500, en décidant avec le chiffre des dizaines.",
+		ideas: { "which-hundred-snap": "fais glisser un nombre vers la centaine la plus proche sur une droite et explique pourquoi ; glisser et justifier" }
+	},
+	"G3-PV-6": {
+		title: "Multiplier par 10 et 100 : les chiffres se décalent",
+		description: "Explique que 35 × 100 = 3 500 : chaque chiffre avance de deux rangs vers la gauche et des zéros occupent les places vides.",
+		ideas: { "digit-slide": "fais glisser les chiffres sur un tableau de numération quand on multiplie par 10 ou 100 ; construction avec une énigme « où est passé le zéro ? »" }
+	},
+	"G3-PV-7": {
+		title: "Diviser des multiples de 10 et 100 par 10 et 100",
+		description: "Dit que 4 500 ÷ 100 = 45, les chiffres se décalant vers la droite, comme l'opération inverse de × 100.",
+		ideas: { "undo-the-shift": "fais le décalage à l'envers : chaque carte × 100 a sa carte ÷ 100 ; jeu d'association" }
+	},
+	"G3-OP-1": {
+		title: "Addition posée jusqu'à 4 chiffres",
+		description: "Additionne 3 478 + 2 356 en colonnes, avec une retenue dans n'importe quelle colonne.",
+		ideas: { "carry-the-crate": "échange dix unités, dizaines ou centaines contre une unité du rang suivant dans une histoire de caisses ; construction à manipuler" }
+	},
+	"G3-OP-2": {
+		title: "Soustraction posée jusqu'à 4 chiffres",
+		description: "Soustrait 6 254 − 2 876 en colonnes, en échangeant avec le rang suivant quand il le faut.",
+		ideas: { "exchange-station": "casse un millier en dix centaines sur un tapis de numération avant de soustraire ; à manipuler" }
+	},
+	"G3-OP-3": {
+		title: "Soustraire en passant par des zéros",
+		description: "Calcule 5 003 − 2 768 en échangeant à travers les zéros.",
+		ideas: { "zero-bridge-subtract": "fais passer l'échange le long d'une rangée de zéros avec une droite numérique ; casse-tête guidé" }
+	},
+	"G3-OP-4": {
+		title: "Vérifier avec l'inverse et une estimation",
+		description: "Vérifie 5 003 − 2 768 = 2 235 en calculant 2 235 + 2 768 et en arrondissant pour voir que c'est proche de 2 200.",
+		ideas: { "broken-column-hunt": "trouve quelle colonne a une mauvaise retenue ou un mauvais échange dans des calculs corrigés ; chasse à l'erreur" }
+	},
+	"G3-OP-5": {
+		title: "Toutes les tables de multiplication jusqu'à 10 × 10",
+		description: "Connaît 7 × 8 = 56 et 56 ÷ 7 = 8, et tous les autres faits jusqu'à 10 × 10."
+	},
+	"G3-OP-6": {
+		title: "Commutativité et familles de calculs",
+		description: "Utilise 6 × 4 = 4 × 6 pour réduire de moitié les faits à apprendre, et écrit les quatre calculs 6 × 4, 4 × 6, 24 ÷ 4, 24 ÷ 6 ; sait que la division n'est pas commutative.",
+		ideas: { "fact-family-houses": "remplis les pièces d'une maison de famille de calculs à partir de trois nombres ; casse-tête d'association" }
+	},
+	"G3-OP-7": {
+		title: "Les tables de 11 et 12 avec les divisions",
+		description: "Connaît 12 × 7 = 84 et 96 ÷ 12 = 8, et 11 × 9 = 99.",
+		ideas: {
+			"table-gap-puzzle": "remplis les cases manquantes d'une table de multiplication avec les faits que tu connais ; casse-tête",
+			"twelve-pack-division": "partage des caisses de 12 objets pour répondre aux divisions par 12 ; en histoire"
+		}
+	},
+	"G3-OP-8": {
+		title: "Multiplier un nombre à 2 ou 3 chiffres par un chiffre",
+		description: "Calcule 47 × 6 et 308 × 4 avec un tableau, des produits partiels ou la multiplication posée.",
+		ideas: { "grid-method-builder": "fais glisser des blocs de dizaines et d'unités dans un tableau et additionne les produits partiels ; construction à manipuler" }
+	},
+	"G3-OP-9": {
+		title: "Diviser par 1 chiffre, avec reste",
+		description: "Calcule 87 ÷ 4 = 21 reste 3 et 453 ÷ 5 = 90 reste 3, en disant que le reste est ce qui reste.",
+		ideas: { "share-out-leftovers": "distribue des jetons à des amis et regarde ce qui reste ; partage à manipuler" }
+	},
+	"G3-OP-10": {
+		title: "Diviser un nombre à 4 chiffres par un chiffre (découverte)",
+		description: "Calcule 4 375 ÷ 5 = 875 par division posée et vérifie en multipliant. Exploration seulement.",
+		ideas: { "short-division-stack": "reporte le reste au rang suivant grâce à une aide en colonnes ; exemple guidé" }
+	},
+	"G3-OP-11": {
+		title: "2 chiffres × 2 chiffres, modèle d'aire (découverte)",
+		description: "Découpe 23 × 14 en 20 × 10, 20 × 4, 3 × 10, 3 × 4 et additionne les quatre produits partiels. Exploration seulement.",
+		ideas: {
+			"area-model-multiplier": "découpe une grille en blocs de dizaines et d'unités pour construire un produit de 2 chiffres par 2 chiffres et vois les produits partiels s'additionner ; construction à manipuler",
+			"partial-products-sum-race": "associe chaque case d'un modèle d'aire à son produit et au total ; course d'association"
+		}
+	},
+	"G3-OP-12": {
+		title: "Parenthèses et ordre des opérations (découverte)",
+		description: "Dit que 3 × (4 + 2) = 18 mais que 3 × 4 + 2 = 14, car les parenthèses passent en premier. Exploration seulement.",
+		ideas: {
+			"bracket-first": "place des parenthèses pour obtenir une valeur cible ; casse-tête avec vérification immédiate",
+			"bracket-or-not-pairs": "décide si deux expressions, avec et sans parenthèses, ont la même valeur ; association de paires"
+		}
+	},
+	"G3-OP-13": {
+		title: "Multiplier trois nombres dans l'ordre voulu (découverte)",
+		description: "Réordonne 2 × 7 × 5 en 2 × 5 × 7 = 10 × 7 = 70 et dit pourquoi l'ordre ne change rien. Exploration seulement.",
+		ideas: { "three-factor-shortcut": "réordonne 2 × 7 × 5 dans l'ordre le plus facile et explique pourquoi ; estime et vérifie" }
+	},
+	"G3-OP-14": {
+		title: "La distributivité comme stratégie (découverte)",
+		description: "Calcule 7 × 14 comme 7 × 10 + 7 × 4 = 98. Exploration seulement.",
+		ideas: { "split-and-multiply": "sépare un facteur en dizaines et unités sur un tableau de points et additionne les deux produits ; tableau de points à manipuler" }
+	},
+	"G3-OP-15": {
+		title: "Les calculs × 0 et × 1",
+		description: "Dit que 7 × 0 = 0 et 7 × 1 = 7, et que 0 ÷ 5 = 0, sachant que multiplier par 1 ne change rien et que multiplier par 0 donne 0. (OP-13/14 restent en exploration.)",
+		ideas: {
+			"zero-and-one-facts": "trie des cartes de calculs dans les bacs « ne change pas » et « devient zéro » ; jeu de tri",
+			"vanishing-multiplier": "passe des nombres dans des machines × 0 et × 1 et devine le résultat ; jeu de machines"
+		}
+	},
+	"G3-FL-1": {
+		title: "Connaître les tables instantanément",
+		description: "Répond à 7 × 8 ou 54 ÷ 6 en environ 3 secondes."
+	},
+	"G3-FL-2": {
+		title: "Juger des calculs de table instantanément",
+		description: "Dit d'un coup d'œil que 6 × 8 = 48 est vrai et que 7 × 8 = 54 est faux.",
+		ideas: { "true-or-trap-facts": "repère le calcul faux parmi les justes contre la montre ; jeu éclair" }
+	},
+	"G3-FL-3": {
+		title: "Passer par la dizaine",
+		description: "Calcule 68 + 7 comme 68 + 2 + 5 = 75, et 8 + 6 comme 8 + 2 + 4.",
+		ideas: { "ten-bridge-hop": "saute le long d'une droite numérique en t'arrêtant à la dizaine suivante avant le reste ; jeu" }
+	},
+	"G3-FL-4": {
+		title: "Passer par la centaine",
+		description: "Calcule 396 + 8 comme 396 + 4 + 4 = 404, et 504 − 7 comme 504 − 4 − 3.",
+		ideas: { "hundred-bridge-hop": "saute à la centaine suivante, puis fais le reste, sur une longue droite numérique ; jeu" }
+	},
+	"G3-FL-9": {
+		title: "Calcul mental : 2 chiffres ± 2 chiffres",
+		description: "Calcule 47 + 36 comme 47 + 30 + 6 = 83 et 62 − 29 comme 62 − 30 + 1 = 33, en décomposant ou en compensant.",
+		ideas: { "partition-or-compensate": "choisis la méthode mentale la plus rapide (séparer les dizaines, ou arrondir et ajuster) pour chaque calcul ; jeu de choix de stratégie" }
+	},
+	"G3-FL-5": {
+		title: "Multiplier par 10 et 100 de tête",
+		description: "Répond à 64 × 10 = 640 et 35 × 100 = 3 500 instantanément."
+	},
+	"G3-FL-6": {
+		title: "Multiplier par des multiples de 10",
+		description: "Calcule 4 × 60 = 240 comme 4 × 6 dizaines.",
+		ideas: { "tens-table-twist": "transforme un calcul connu en sa version « dizaines » ; association de calculs jumeaux" }
+	},
+	"G3-FL-7": {
+		title: "Estimer des sommes et des différences en arrondissant",
+		description: "Dit que 298 + 405 font environ 700 et que 4 980 − 2 010 font environ 3 000.",
+		ideas: { "ballpark-bingo": "marque la case du bingo la plus proche de l'estimation de chaque somme ; jeu de bingo" }
+	},
+	"G3-FL-8": {
+		title: "Estimer des produits en arrondissant",
+		description: "Dit que 49 × 6 font environ 50 × 6 = 300.",
+		ideas: { "round-and-multiply-guess": "choisis l'estimation la plus proche du vrai produit avant de voir la réponse ; estime et vérifie" }
+	},
+	"G3-NT-1": {
+		title: "Les multiples d'un nombre",
+		description: "Liste les premiers multiples de 6 et dit que 42 est un multiple de 6.",
+		ideas: { "multiple-hunt": "colorie des multiples sur un tableau de 100 et repère ce que deux couches ont en commun ; casse-tête" }
+	},
+	"G3-NT-2": {
+		title: "Les paires de facteurs en rectangles",
+		description: "Construit tous les rectangles avec 12 ou 24 carreaux et lit 24 = 1 × 24, 2 × 12, 3 × 8, 4 × 6.",
+		ideas: { "factor-pair-rectangles": "construis tous les rectangles avec 24 carreaux et lis les paires ; construction à manipuler" }
+	},
+	"G3-NT-3": {
+		title: "Toutes les paires de facteurs jusqu'à 100",
+		description: "Liste 36 = 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6 de façon organisée et sait quand s'arrêter.",
+		ideas: { "factor-pair-sweep": "teste les nombres dans l'ordre et note les paires qui marchent ; casse-tête de liste organisée" }
+	},
+	"G3-NT-4": {
+		title: "Bien utiliser « diviseur » et « multiple »",
+		description: "Dit « 6 est un diviseur de 18 ; 18 est un multiple de 6 » et trie des nombres dans chaque groupe.",
+		ideas: {
+			"factor-or-multiple-sorter": "trie des cartes-nombres dans le panier des diviseurs ou des multiples d'un nombre cible ; jeu de tri",
+			"which-word-fits": "complète des phrases « ☐ est un diviseur/multiple de ☐ » ; texte à compléter"
+		}
+	},
+	"G3-FR-1": {
+		title: "Compter en dixièmes",
+		description: "Compte 1/10, 2/10, … 10/10 et au-delà, sachant que les dixièmes viennent d'un tout coupé en dix.",
+		ideas: { "tenths-strip-count": "déroule une bande de dixièmes morceau par morceau en comptant à voix haute ; comptage à manipuler" }
+	},
+	"G3-FR-2": {
+		title: "Compter en centièmes",
+		description: "Compte 1/100, 2/100 … et dit que dix centièmes font un dixième (découverte).",
+		ideas: {
+			"hundredths-grid-count": "colorie un carré de 100 dixième par dixième puis centième par centième en comptant à voix haute ; à manipuler",
+			"ten-hundredths-make-a-tenth": "regroupe des carrés coloriés en colonnes de dixièmes ; jeu de regroupement"
+		}
+	},
+	"G3-FR-8": {
+		title: "Fractions sur une droite de 0 à 1 et au-delà de 1",
+		description: "Place 3/4 et 5/4 sur une droite de 0 à 2, en voyant les fractions comme des nombres qui ont une place.",
+		ideas: {
+			"fraction-line-lander": "dépose des fractions sur une droite de 0 à 2 avec des repères en parts égales ; glisser-déposer",
+			"fraction-hop-past-one": "fais sauter une grenouille par quarts au-delà du repère 1 et nomme où elle atterrit ; jeu"
+		}
+	},
+	"G3-FR-3": {
+		title: "Fractions équivalentes sur un mur de fractions",
+		description: "Montre que ½ = 2/4 = 4/8 en alignant des bandes, avec des modèles seulement.",
+		ideas: { "fraction-wall-match": "fais glisser les bandes du mur de fractions pour trouver toutes celles égales à ⅔ ou ¾ ; association à manipuler" }
+	},
+	"G3-FR-4": {
+		title: "Dixièmes égaux à des centièmes",
+		description: "Montre que 3/10 = 30/100 sur un carré de 100 en coloriant trois colonnes (modèles seulement, sans simplifier).",
+		ideas: { "tenths-to-hundredths-zoom": "agrandis une barre de dixièmes en centièmes et regarde les nombres changer ; interactif" }
+	},
+	"G3-FR-9": {
+		title: "Comparer des fractions de même dénominateur ou numérateur",
+		description: "Dit que 3/8 > 2/8 (parts de même taille, plus nombreuses) et que 1/3 > 1/5 (moins de coupes, parts plus grandes), et justifie avec un modèle.",
+		ideas: {
+			"bigger-slice-duel": "choisis la plus grande de deux fractions et justifie avec une barre ; duel de cartes",
+			"fraction-order-line": "range sur une droite des cartes de fractions de même dénominateur ou de même numérateur et dis pourquoi ; jeu de tri"
+		}
+	},
+	"G3-FR-5": {
+		title: "Additionner des fractions de même dénominateur",
+		description: "Calcule 3/8 + 2/8 = 5/8 avec une barre.",
+		ideas: { "pizza-pieces-add": "réunis des parts de deux pizzas et nomme le total ; construis et nomme" }
+	},
+	"G3-FR-6": {
+		title: "Additionner au-delà d'un entier",
+		description: "Calcule 5/8 + 7/8 = 12/8 et voit que c'est plus qu'un entier. Pas encore de règle de conversion. Aperçu de G4, au-delà de G3.FR.6 « jusqu'à 1 ».",
+		ideas: { "over-the-whole-wall": "empile des bandes de fractions au-delà de la ligne « 1 » et lis le total ; à manipuler" }
+	},
+	"G3-FR-7": {
+		title: "Soustraire des fractions de même dénominateur",
+		description: "Calcule 7/8 − 5/8 = 2/8 et 7/10 − 3/10 = 4/10. Simple aperçu de G4.FR.4 : 12/8 − 5/8 = 7/8.",
+		ideas: { "fraction-take-away": "enlève des bandes d'un total construit et lis ce qui reste ; à manipuler" }
+	},
+	"G3-FR-10": {
+		title: "Fraction d'une quantité",
+		description: "Trouve ¼ de 20 = 5 et ¾ de 20 = 15, et résout un petit problème avec elles.",
+		ideas: { "share-the-stickers-fractions": "sépare un ensemble d'objets en groupes égaux et prends-en 1, 2 ou 3 ; partage à manipuler" }
+	},
+	"G3-FR-11": {
+		title: "Lire a/b comme a parts de taille 1/b",
+		description: "Dit que 3/4 sont trois morceaux qui valent chacun 1/4, pour les dénominateurs 2, 3, 4, 6, 8 et 10.",
+		ideas: {
+			"build-the-fraction": "colorie a parts d'une barre coupée en b pour construire a/b ; construis et nomme",
+			"parts-of-one-over-b": "dis combien de morceaux 1/b font une fraction donnée ; jeu d'association"
+		}
+	},
+	"G3-FR-12": {
+		title: "Les nombres entiers comme fractions",
+		description: "Dit que 3 = 3/1 et 4/4 = 1, et que 6/3 est au même endroit que 2.",
+		ideas: {
+			"whole-as-fraction-match": "associe des nombres entiers et des fractions sur une droite ; jeu d'association",
+			"whole-wall-slices": "vois 4/4 remplir exactement un entier sur le mur ; à manipuler"
+		}
+	},
+	"G3-RP-1": {
+		title: "La virgule dans les prix et les mesures",
+		description: "Lit 3,45 $ et 1,5 m, sachant que la virgule sépare les unités entières des parties.",
+		ideas: { "point-meaning-sort": "trie des prix et des mesures selon la partie entière et la partie décimale ; jeu de tri" }
+	},
+	"G3-RP-2": {
+		title: "Valeur des chiffres décimaux jusqu'aux centièmes",
+		description: "Dit que 3,45 c'est 3 unités, 4 dixièmes, 5 centièmes. Centièmes en découverte seulement.",
+		ideas: { "decimal-place-value-mat": "dépose des jetons-chiffres sur un tapis unités, dixièmes, centièmes ; construction à manipuler" }
+	},
+	"G3-RP-3": {
+		title: "Comparer des nombres décimaux à 2 décimales",
+		description: "Dit que 3,45 est plus petit que 3,5 en comparant d'abord les dixièmes.",
+		ideas: { "decimal-duel": "duel de cartes « plus grand ou plus petit » avec des décimaux ; jeu de cartes" }
+	},
+	"G3-RP-4": {
+		title: "Ranger des nombres décimaux sur une droite",
+		description: "Place 2,7 ; 2,07 ; 2,75 sur une droite de 2 à 3.",
+		ideas: { "decimal-number-line-jump": "fais sauter un jeton sur une droite agrandissable pour atteindre des décimaux cibles ; jeu" }
+	},
+	"G3-RP-5": {
+		title: "Arrondir des décimaux à l'entier le plus proche",
+		description: "Arrondit 3,6 à 4 et 3,2 à 3, en regardant le chiffre des dixièmes (dixièmes seulement).",
+		ideas: { "which-whole-snap": "fais glisser un décimal vers l'entier le plus proche sur une droite ; glisser et justifier" }
+	},
+	"G3-RP-6": {
+		title: "Dixièmes et centièmes en écriture décimale",
+		description: "Écrit 3/10 sous la forme 0,3 et 7/100 sous la forme 0,07 et les place sur une droite.",
+		ideas: { "fraction-to-decimal-match": "associe des cartes de fractions à des décimaux sur une droite commune ; jeu d'association" }
+	},
+	"G3-RP-7": {
+		title: "½, ¼ et ¾ en écriture décimale",
+		description: "Connaît ½ = 0,5, ¼ = 0,25, ¾ = 0,75.",
+		ideas: {
+			"quarter-coin-decimals": "lis 25 ¢, 50 ¢, 75 ¢ comme 0,25, 0,5, 0,75 d'un dollar ; en histoire",
+			"half-quarter-decimal-cards": "associe des fractions repères à des décimaux ; jeu de mémoire"
+		}
+	},
+	"G3-RP-8": {
+		title: "Additionner et soustraire des dixièmes",
+		description: "Calcule 0,4 + 0,3 = 0,7 et 1,2 − 0,5 = 0,7 (dixièmes seulement).",
+		ideas: { "tenths-tape-measure": "mesure des objets réels au dixième d'unité près et additionne deux longueurs ; estime et vérifie" }
+	},
+	"G3-ALG-1": {
+		title: "Nombre manquant dans une multiplication",
+		description: "Résout ☐ × 6 = 42 en pensant : 6 fois combien font 42.",
+		ideas: { "mystery-box-multiply": "ouvre la boîte en trouvant le facteur caché ; casse-tête" }
+	},
+	"G3-ALG-2": {
+		title: "Nombre manquant dans une division",
+		description: "Résout 56 ÷ ☐ = 8 et ☐ ÷ 7 = 6 avec la multiplication correspondante.",
+		ideas: { "division-detective": "utilise le calcul inverse pour trouver le diviseur ou le dividende manquant ; casse-tête d'indices" }
+	},
+	"G3-ALG-3": {
+		title: "Régularités dans les tables",
+		description: "Explique pourquoi un nombre pair × n'importe quel nombre donne un nombre pair et repère la régularité des chiffres de la table de 9.",
+		ideas: { "table-pattern-spotter": "colorie des cases d'un tableau pour révéler une régularité et dis pourquoi ; exploration" }
+	},
+	"G3-ALG-4": {
+		title: "Compléter une machine entrée–sortie",
+		description: "Remplit les sorties d'une machine « × 3 » pour les entrées 2, 5, 9."
+	},
+	"G3-ALG-5": {
+		title: "Trouver la règle de la machine",
+		description: "Voit que les entrées 2, 4, 6 donnent les sorties 8, 16, 24 et dit que la règle est × 4.",
+		ideas: { "g3-finds-machine-rule": "devine la règle d'une machine cachée à partir des entrées et des sorties ; jeu" }
+	},
+	"G3-ALG-6": {
+		title: "Continuer une suite de nombres",
+		description: "Continue 7, 14, 21, … ou 100, 90, 80, … sur plusieurs termes.",
+		ideas: { "sequence-detective": "trouve les termes manquants d'une suite ; casse-tête" }
+	},
+	"G3-ALG-7": {
+		title: "Dire la règle d'une suite avec des mots",
+		description: "Dit « on part de 4 et on ajoute 6 à chaque fois ».",
+		ideas: { "rule-in-a-sentence": "choisis la phrase qui correspond à une suite ; jeu d'association" }
+	},
+	"G3-MEA-1": {
+		title: "Connaître les unités métriques et leurs liens",
+		description: "Connaît 1 m = 100 cm, 1 cm = 10 mm, 1 kg = 1 000 g, 1 l = 1 000 ml.",
+		ideas: { "unit-match-memory": "associe des mesures égales dans une grille de mémoire ; jeu de mémoire" }
+	},
+	"G3-MEA-2": {
+		title: "Comparer et ranger des mesures",
+		description: "Range 3 rubans par longueur et dit quelle carafe contient le plus.",
+		ideas: {
+			"measure-order-lineup": "range des mesures de la plus petite à la plus grande dans la même unité ; jeu de tri",
+			"which-holds-more": "compare des récipients en lisant leur contenance ; jeu éclair"
+		}
+	},
+	"G3-MEA-3": {
+		title: "Additionner et soustraire des mesures",
+		description: "Calcule 2 m 40 cm + 1 m 75 cm et 3 kg − 1 kg 500 g.",
+		ideas: { "ribbon-cut-lengths": "coupe et assemble des rubans pour atteindre une longueur cible ; en histoire" }
+	},
+	"G3-MEA-4": {
+		title: "Convertir entre unités voisines",
+		description: "Dit que 2 kg = 2 000 g et 350 cm = 3 m 50 cm ; aussi 1 m 25 cm = 125 cm.",
+		ideas: { "unit-converter-machine": "mets une mesure dans un convertisseur et choisis l'unité ; jeu de machine" }
+	},
+	"G3-MEA-5": {
+		title: "Lire des échelles de 2 en 2, 5 en 5, 10 en 10",
+		description: "Lit un thermomètre gradué de 2 en 2 et une règle graduée de 5 mm en 5 mm.",
+		ideas: { "ruler-and-jug-reader": "lis différents instruments pour atteindre une cible ; jeu de lecture" }
+	},
+	"G3-MEA-6": {
+		title: "Lire des échelles aux graduations non étiquetées",
+		description: "Trouve le pas à partir de deux repères étiquetés et lit 250 g sur une balance graduée de 50 g en 50 g, ou 100 ml.",
+		ideas: { "missing-labels-scale": "étiquette les graduations vides avant de lire la mesure ; texte à compléter" }
+	},
+	"G3-MEA-7": {
+		title: "Estimer avec des repères",
+		description: "Dit qu'une porte mesure environ 2 m et qu'une bouteille contient environ 1 l, et choisit l'unité qui convient."
+	},
+	"G3-MEA-8": {
+		title: "Périmètre d'un polygone",
+		description: "Mesure et additionne les côtés d'un rectangle ou d'un polygone : 5 + 3 + 5 + 3 = 16 cm.",
+		ideas: { "fence-the-garden": "prévois une clôture autour d'un jardin et calcule la longueur totale ; en histoire" }
+	},
+	"G3-MEA-9": {
+		title: "Trouver un côté manquant avec le périmètre",
+		description: "Trouve le côté inconnu d'un rectangle de périmètre 20 cm dont les côtés sont 7 et ☐.",
+		ideas: { "mystery-side": "trouve le côté caché d'une figure à partir de son périmètre ; casse-tête" }
+	},
+	"G3-MEA-10": {
+		title: "Aire en comptant des carrés",
+		description: "Compte des carreaux unités pour dire qu'une figure couvre 12 cm² (et des carrés de m² pour un sol ou un tapis).",
+		ideas: { "cover-the-floor": "recouvre un plan avec des carreaux carrés et compte-les ; à manipuler" }
+	},
+	"G3-MEA-11": {
+		title: "Aire d'un rectangle : rangées × colonnes",
+		description: "Dit que 4 rangées de 6 carreaux font 24 et écrit longueur × largeur.",
+		ideas: { "array-to-area": "regarde un tableau de points se remplir de carreaux et écris la multiplication ; à manipuler" }
+	},
+	"G3-MEA-12": {
+		title: "Aire de figures faites de rectangles",
+		description: "Découpe une figure en L en deux rectangles et additionne leurs aires, puis compare avec le périmètre.",
+		ideas: {
+			"tile-the-floor": "carrelle le plan d'une pièce et clôture-la en comparant aire et périmètre ; construis et compte",
+			"l-shape-split": "découpe une figure en L en rectangles de différentes façons et vérifie que le total reste le même ; casse-tête"
+		}
+	},
+	"G3-TIM-1": {
+		title: "Lire une horloge à aiguilles à la minute près",
+		description: "Lit 4 h 37 et « 6 h 23 » (23 minutes après 6 heures) sur une horloge à aiguilles.",
+		ideas: { "clock-minute-hunt": "place les aiguilles sur une heure donnée ; horloge interactive" }
+	},
+	"G3-TIM-2": {
+		title: "Horloges avec chiffres romains",
+		description: "Lit l'heure sur une horloge à chiffres romains, par exemple VII pour 7.",
+		ideas: { "roman-face-clock": "lis l'heure sur une horloge à chiffres romains et associe-la à l'heure numérique ; jeu d'association" }
+	},
+	"G3-TIM-3": {
+		title: "Écrire la même heure de trois façons",
+		description: "Écrit 7 h 35 en numérique, dit « huit heures moins vingt-cinq » et les associe.",
+		ideas: { "time-match-three-ways": "associe des cartes d'horloge, d'heure numérique et de mots ; jeu de mémoire" }
+	},
+	"G3-TIM-4": {
+		title: "Durée à l'intérieur de l'heure",
+		description: "Trouve que de 3 h 20 à 3 h 45, il y a 25 minutes.",
+		ideas: { "clock-jump-line": "saute le long d'une droite numérique de l'heure de début à l'heure de fin ; droite interactive" }
+	},
+	"G3-TIM-5": {
+		title: "Durée au-delà de l'heure",
+		description: "Trouve que de 3 h 50 à 4 h 20, il y a 30 minutes en sautant jusqu'à 4 h.",
+		ideas: { "timeline-across-the-hour": "ajoute le saut jusqu'à l'heure suivante sur une frise du temps ; sauts guidés" }
+	},
+	"G3-TIM-6": {
+		title: "Trouver l'heure de fin ou de début avec une durée",
+		description: "Dit qu'un film qui commence à 2 h 15 et dure 50 minutes se termine à 3 h 05.",
+		ideas: { "when-does-it-end": "organise l'emploi du temps d'une journée avec des heures de début et des durées ; en histoire" }
+	},
+	"G3-TIM-7": {
+		title: "Convertir heures, minutes et secondes",
+		description: "Dit que 2 heures = 120 minutes et 3 minutes = 180 secondes.",
+		ideas: { "time-unit-ladder": "monte et descends l'échelle des unités pendant que tu convertis des cartes de temps ; jeu" }
+	},
+	"G3-TIM-8": {
+		title: "Années bissextiles (facultatif)",
+		description: "Sait qu'une année bissextile a 366 jours et un 29 février, et trouve laquelle en est une dans une liste.",
+		ideas: {
+			"leap-year-detective": "fouille des calendriers pour trouver l'année qui a un jour de plus ; casse-tête",
+			"calendar-day-count": "compte les jours d'un mois et d'une année en repérant février ; exploration"
+		}
+	},
+	"G3-MON-1": {
+		title: "Écrire l'argent en écriture décimale",
+		description: "Écrit 4 dollars 5 cents sous la forme 4,05 $.",
+		ideas: { "price-tag-writer": "écris le prix correspondant à des pièces ; écris et construis" }
+	},
+	"G3-MON-2": {
+		title: "Convertir dollars et cents",
+		description: "Dit que 4,05 $ = 405 cents et que 250 cents = 2,50 $.",
+		ideas: { "cents-dollars-swap": "passe un prix des cents aux dollars et inversement ; jeu éclair" }
+	},
+	"G3-MON-3": {
+		title: "Additionner et soustraire des sommes d'argent",
+		description: "Calcule 3,45 $ + 2,80 $ et 10,00 $ − 6,35 $.",
+		ideas: { "shopping-basket-total": "additionne les articles d'un panier ; jeu de courses" }
+	},
+	"G3-MON-4": {
+		title: "Rendre la monnaie en comptant en avançant",
+		description: "Rend la monnaie sur 5 $ pour un achat de 3,40 $ en comptant 60 cents, puis 1 $.",
+		ideas: { "shop-till-change": "tiens la caisse : le client paie, l'enfant compte la monnaie avec des pièces ; jeu de rôle" }
+	},
+	"G3-MON-5": {
+		title: "Comparer des prix",
+		description: "Dit lequel de 4,50 $ et 4,05 $ est moins cher et de combien.",
+		ideas: { "best-buy-pair": "compare deux prix de rayon et choisis le meilleur ; jeu de choix" }
+	},
+	"G3-MON-6": {
+		title: "Décider ce qu'on peut s'offrir",
+		description: "Dit que 7,50 $ permettent d'acheter le livre à 3,20 $ et le jouet à 4 $, mais pas deux jouets.",
+		ideas: { "can-i-buy-it": "vérifie un panier par rapport à la somme d'un porte-monnaie ; jeu oui ou non" }
+	},
+	"G3-GEO-1": {
+		title: "Carrés et rectangles",
+		description: "Dit qu'un rectangle a 4 angles droits et des côtés opposés égaux, et qu'un carré est aussi un rectangle.",
+		ideas: {
+			"rectangle-club": "teste des figures avec les règles pour être un rectangle ; jeu de tri",
+			"square-is-a-rectangle": "vois un carré réussir tous les tests du rectangle ; énigme à dévoiler"
+		}
+	},
+	"G3-GEO-2": {
+		title: "Losanges, parallélogrammes, trapèzes et cerfs-volants",
+		description: "Appelle losange une figure à 4 côtés égaux sans angle droit, trapèze une figure avec une seule paire de côtés parallèles, et sait qu'un carré est aussi un losange.",
+		ideas: {
+			"lean-the-rectangle": "incline un cadre rectangulaire en parallélogramme puis en losange et regarde ce qui reste égal ; à manipuler",
+			"kite-and-trapezoid-spot": "repère des cerfs-volants et des trapèzes dans une galerie de figures ; chasse au trésor"
+		}
+	},
+	"G3-GEO-3": {
+		title: "Trier les quadrilatères selon leurs propriétés",
+		description: "Trie des figures en groupes qui se chevauchent (4 côtés égaux, angles droits, côtés parallèles).",
+		ideas: { "quad-sorting-hoops": "fais glisser des figures dans des cerceaux de propriétés qui se chevauchent ; jeu de tri" }
+	},
+	"G3-GEO-4": {
+		title: "Parts égales comme fractions unitaires",
+		description: "Partage un carré en 4 parts de même aire et nomme chacune 1/4.",
+		ideas: { "name-the-piece": "nomme chaque morceau avec une fraction unitaire ; jeu d'étiquettes" }
+	},
+	"G3-GEO-5": {
+		title: "Même aire, formes différentes",
+		description: "Montre que deux morceaux découpés différemment dans le même carré sont tous deux des moitiés.",
+		ideas: {
+			"fair-share-cutter": "découpe une figure en parts de même aire qui n'ont pas la même allure ; casse-tête à manipuler",
+			"same-area-different-look": "décide si des parts de formes différentes sont égales ; vrai ou faux"
+		}
+	},
+	"G3-GEO-6": {
+		title: "Un angle comme un tour ; l'angle droit",
+		description: "Dit qu'un angle droit est un quart de tour et trouve des angles droits dans une pièce.",
+		ideas: { "corner-checker-hunt": "utilise une équerre en papier pour trouver et trier des angles dans une scène ; chasse au trésor" }
+	},
+	"G3-GEO-7": {
+		title: "Plus petit, égal ou plus grand qu'un angle droit",
+		description: "Dit lequel de trois angles est plus petit qu'un angle droit, avec une équerre.",
+		ideas: { "angle-compare-sort": "trie des angles dans les bacs plus petit, égal et plus grand ; jeu de tri" }
+	},
+	"G3-GEO-8": {
+		title: "Droites parallèles et perpendiculaires",
+		description: "Repère des paires de droites parallèles et perpendiculaires dans un dessin et sur un plan d'étage."
+	},
+	"G3-GEO-9": {
+		title: "Droites horizontales et verticales ; tracer des droites",
+		description: "Nomme les droites horizontales et verticales et trace une droite parallèle à l'une d'elles sur un quadrillage.",
+		ideas: {
+			"horizon-and-plumb": "distingue l'horizontale de la verticale dans une scène ; pointe et nomme",
+			"line-drawing-challenge": "trace des droites parallèles ou perpendiculaires à une droite donnée ; tâche de dessin"
+		}
+	},
+	"G3-GEO-10": {
+		title: "Fabriquer des solides avec du matériel",
+		description: "Construit un cube et une pyramide avec des pailles et de la pâte à modeler et compte les arêtes.",
+		ideas: { "straws-and-clay-build": "construis un solide et compte ses éléments ; à manipuler" }
+	},
+	"G3-GEO-11": {
+		title: "Reconnaître des solides sous différents points de vue",
+		description: "Associe les vues de dessus, de face et de côté au solide.",
+		ideas: { "build-and-view": "construis une maquette à partir d'une image dessus-face-côté et vérifie en la faisant tourner ; construction à manipuler" }
+	},
+	"G3-POS-1": {
+		title: "Points cardinaux N, E, S, O",
+		description: "Dit dans quelle direction un personnage se déplace et donne des consignes comme « va vers l'est de 3 ».",
+		ideas: { "compass-rose-run": "dirige un personnage avec des consignes de boussole ; jeu" }
+	},
+	"G3-POS-2": {
+		title: "Quarts de tour, demi-tours et tours complets",
+		description: "Dit qu'un quart de tour fait 1 angle droit, un demi-tour 2, un tour complet 4.",
+		ideas: { "robot-turn-commands": "fais tourner un robot par quarts de tour et demi-tours pour le mettre face à une cible ; jeu de programmation" }
+	},
+	"G3-POS-3": {
+		title: "Repères de quadrillage sur un plan",
+		description: "Trouve le musée en C4 sur un plan.",
+		ideas: { "map-square-finder": "repère des cases à partir de références sur un plan ; chasse au trésor" }
+	},
+	"G3-POS-4": {
+		title: "Décrire un trajet",
+		description: "Dit « nord 2, tourne à droite, est 3 » pour traverser un plan.",
+		ideas: { "route-describer": "écris des consignes et regarde un personnage les suivre ; jeu de programmation" }
+	},
+	"G3-POS-5": {
+		title: "Lire des coordonnées (découverte)",
+		description: "Lit le point (3, 5) comme 3 vers la droite et 5 vers le haut.",
+		ideas: { "across-then-up-hop": "fais sauter une grenouille vers la droite puis vers le haut pour lire un point ; jeu" }
+	},
+	"G3-POS-6": {
+		title: "Placer des points (découverte)",
+		description: "Place (3, 5) et relie des points pour dessiner une figure.",
+		ideas: { "treasure-point-plot": "place les coordonnées des indices pour révéler une image cachée sur la carte ; casse-tête" }
+	},
+	"G3-DAT-1": {
+		title: "Lire des pictogrammes avec une échelle",
+		description: "Lit un pictogramme où 1 symbole = 5 et dit que 3½ symboles font 17 ou 18, puis donne le total.",
+		ideas: { "symbol-worth-reader": "lis la légende avant de répondre aux questions ; jeu de lecture de légende" }
+	},
+	"G3-DAT-2": {
+		title: "Dessiner des pictogrammes avec une échelle",
+		description: "Dessine 20 avec 4 symboles quand 1 symbole = 5.",
+		ideas: { "draw-the-pictogram": "construis un pictogramme à partir d'un relevé de points ; tâche de construction" }
+	},
+	"G3-DAT-3": {
+		title: "Lire et dessiner des diagrammes en barres avec une échelle",
+		description: "Lit une barre au trait le plus proche sur une échelle de 2, 5 ou 10 et dessine une barre pour 35.",
+		ideas: { "scale-bar-builder": "fais glisser des barres pour correspondre à un tableau avec une échelle donnée ; tâche de construction" }
+	},
+	"G3-DAT-4": {
+		title: "Lire un tableau et comparer",
+		description: "Dit quel groupe en a le plus à l'aide d'un tableau, y compris un tableau à double entrée simple (par exemple garçons/filles selon l'animal préféré)."
+	},
+	"G3-DAT-5": {
+		title: "« Combien de plus ou de moins »",
+		description: "Calcule 35 − 28 = 7 de plus.",
+		ideas: { "gap-finder": "trouve l'écart entre deux barres ; questions sur des diagrammes" }
+	},
+	"G3-DAT-6": {
+		title: "Questions à deux étapes sur des données",
+		description: "Calcule le total de deux groupes, puis de combien il dépasse un troisième.",
+		ideas: { "two-step-chart-quest": "réponds dans l'ordre à des questions liées sur des diagrammes ; quête" }
+	},
+	"G3-DAT-7": {
+		title: "Lire des diagrammes à points en demis et en quarts",
+		description: "Lit un diagramme où des croix se trouvent à 2½ et 2¾.",
+		ideas: { "plot-reader-puzzle": "lis le nombre de croix à chaque repère ; casse-tête" }
+	},
+	"G3-DAT-8": {
+		title: "Dessiner des diagrammes à points en demis et en quarts",
+		description: "Mesure des longueurs et place des croix sur un diagramme à points.",
+		ideas: { "measure-and-plot-leaves": "mesure des feuilles au quart près et place-les sur le diagramme ; à manipuler" }
+	},
+	"G3-DAT-9": {
+		title: "Préparer une enquête",
+		description: "Écrit une question et un plan pour récolter des données (par exemple le fruit préféré).",
+		ideas: { "survey-sticker-wall": "récolte des votes avec des gommettes ; enquête de classe" }
+	},
+	"G3-DAT-10": {
+		title: "Présenter des données et conclure",
+		description: "Dessine un diagramme et dit ce qu'il montre.",
+		ideas: { "investigation-report": "choisis un diagramme et écris une conclusion en une phrase ; tâche d'écriture" }
+	},
+	"G3-PRB-1": {
+		title: "Lister tous les résultats possibles",
+		description: "Liste les six faces d'un dé ou les couleurs d'une roue.",
+		ideas: { "outcome-lister": "nomme tous les résultats possibles d'un objet ; tâche de liste" }
+	},
+	"G3-PRB-2": {
+		title: "Plus ou moins probable",
+		description: "Dit que sur une roue avec 3 cases rouges et 1 bleue, le rouge est plus probable.",
+		ideas: { "spinner-lab": "conçois une roue où le rouge est le plus probable mais pas certain ; construis et teste" }
+	},
+	"G3-PRB-3": {
+		title: "Comparer les résultats avec ce qu'on attend",
+		description: "Lance un dé 30 fois et dit pourquoi le relevé n'est pas exactement égal partout.",
+		ideas: {
+			"fair-or-rigged-dice": "lance deux dés plusieurs fois et décide lequel triche ; expérience et relevé",
+			"tally-then-compare": "fais une expérience et compare avec une prédiction ; expérience"
+		}
+	},
+	"G3-PSR-1": {
+		title: "Problème à deux étapes avec une équation",
+		description: "Résout « 28 pommes, on enlève 3 boîtes de 6 » avec 28 − 3 × 6 = ☐.",
+		ideas: { "two-step-story-equation": "transforme une histoire en équation avec une case pour l'inconnue ; constructeur d'équations" }
+	},
+	"G3-PSR-2": {
+		title: "Choisir les opérations",
+		description: "Décide qu'un problème demande × puis + et explique pourquoi.",
+		ideas: { "which-operation-sorter": "trie les étapes d'une histoire selon les opérations ; jeu de tri" }
+	},
+	"G3-PSR-3": {
+		title: "Schémas en barres de comparaison",
+		description: "Dessine deux barres, 24 et 17, et montre que la différence est 7.",
+		ideas: { "bar-model-match": "associe une histoire à son schéma en barres ; jeu d'association" }
+	},
+	"G3-PSR-4": {
+		title: "Schémas en barres « fois plus »",
+		description: "Montre « 3 fois plus » avec une barre courte et une autre trois fois plus longue.",
+		ideas: { "g3-bar-model-comparison-times-as-many": "construis des barres de comparaison et de « fois plus » à partir d'une histoire ; à manipuler" }
+	},
+	"G3-PSR-5": {
+		title: "Juger si une réponse est raisonnable",
+		description: "Dit que 78 + 49 = 227 est faux parce que ça devrait être proche de 130.",
+		ideas: { "sensible-or-silly": "accepte ou rejette des réponses en estimant ; jeu éclair" }
+	},
+	"G3-PSR-6": {
+		title: "Repérer une information manquante",
+		description: "Dit que « Combien de monnaie ? » a besoin de la somme payée.",
+		ideas: { "missing-piece-problems": "trouve l'information manquante dans une histoire ; casse-tête" }
+	},
+	"G3-PSR-7": {
+		title: "Repérer une information en trop",
+		description: "Barre le renseignement dont on n'a pas besoin.",
+		ideas: { "extra-facts-eraser": "efface les informations inutiles ; jeu de nettoyage" }
+	},
+	"G3-PSR-8": {
+		title: "Expliquer une méthode",
+		description: "Dit dans l'ordre comment 24 × 3 a été calculé."
+	},
+	"G3-PSR-9": {
+		title: "Comparer deux méthodes",
+		description: "Dit laquelle de deux méthodes pour 99 + 36 est la plus rapide et pourquoi.",
+		ideas: { "two-ways-compare": "regarde deux méthodes résolues et choisis-en une ; tâche de comparaison" }
+	},
+	"G3-PSR-10": {
+		title: "Listes organisées pour trouver toutes les solutions",
+		description: "Liste dans l'ordre toutes les paires de nombres dont la somme est 10."
+	},
+	"G3-PSR-11": {
+		title: "Tableaux pour trouver toutes les solutions",
+		description: "Utilise un tableau pour trouver toutes les tenues avec 3 hauts et 2 jupes.",
+		ideas: { "all-the-outfits-table": "remplis un tableau de combinaisons ; jeu de combinaisons" }
+	}
+}, UA = {
+	"G4-NS-1": {
+		title: "Lire et écrire les nombres jusqu'aux millions",
+		description: "Lit et écrit 3 070 400 comme « trois millions soixante-dix mille quatre cents » et inversement.",
+		ideas: { "number-word-match": "associer les nombres chiffrés à leur écriture en lettres ou à leur lecture à voix haute, avec des pièges de zéros au milieu (association)" }
+	},
+	"G4-NS-2": {
+		title: "Comparer et ranger les nombres jusqu'aux millions",
+		description: "Décide que 4 206 090 est plus grand que 4 196 999 en comparant à partir du rang le plus élevé et range 4 ou 5 nombres de ce type.",
+		ideas: {
+			"bigger-number-duel": "duel de cartes : former le plus grand nombre avec des cartes-chiffres et le comparer à celui d'un partenaire (jeu)",
+			"population-lineup": "ranger du plus petit au plus grand des grands nombres de la vie réelle (villes, stades, montagnes) (tri)"
+		}
+	},
+	"G4-NS-3": {
+		title: "Lire les milliards par tranches de 3 chiffres (bonus)",
+		description: "Lit 2 340 000 000 comme « deux milliards trois cent quarante millions » en lisant chaque tranche de trois chiffres.",
+		ideas: {
+			"group-by-three-reader": "glisser les séparateurs de tranches à leur place et lire chaque tranche à voix haute (construction)",
+			"how-big-is-a-billion": "histoire d'échelle : 1 000 millions empilés, comparés à des secondes ou à des pas (histoire)"
+		}
+	},
+	"G4-NS-4": {
+		title: "Placer de grands nombres sur une droite graduée",
+		description: "Place 640 000 sur une droite de 0 à 1 000 000 et trouve le milieu de 2 000 000 et 3 000 000 (la partie milliards est un approfondissement).",
+		ideas: {
+			"big-number-zoom-line": "droite graduée zoomable de 0 à 1 000 000 000 : poser une épingle, l'échelle se précise pour vérifier l'estimation",
+			"halfway-hunt": "trouver le nombre situé à mi-chemin entre deux grands nombres sur une droite (énigme)"
+		}
+	},
+	"G4-NS-5": {
+		title: "Chiffres romains jusqu'à M (local)",
+		description: "Lit XIV, XLIX et MCMXC ainsi que la date gravée sur un monument.",
+		ideas: { "roman-clock-tower": "lire des chiffres romains sur des horloges et des dates de bâtiments (recherche et lecture)" }
+	},
+	"G4-NS-6": {
+		title: "Virgules lakh/crore (local)",
+		description: "Lit 12,50,000 comme « douze lakhs cinquante mille » et sait que cela vaut 1 250 000.",
+		ideas: {
+			"lakh-crore-reader": "passer d'une écriture à tranches de 3 chiffres à celle en lakh/crore et lire le nombre à voix haute en course",
+			"comma-style-compare": "trier des nombres écrits des deux façons en paires égales (association)"
+		}
+	},
+	"G4-NS-7": {
+		title: "Compter à rebours en passant par zéro",
+		description: "Compte 3, 1, −1, −3 sur une droite graduée et dit ce qui vient après −2 en remontant.",
+		ideas: {
+			"below-zero-lift": "histoire : un ascenseur, une benne de mine et un thermomètre passent par zéro ; l'enfant les guide et note la position et le saut",
+			"zero-crossing-count": "sauter en avant et en arrière sur une droite en passant par zéro pour atteindre la cible (jeu)"
+		}
+	},
+	"G4-NS-8": {
+		title: "Écart entre un nombre négatif et un nombre positif",
+		description: "Trouve l'écart entre −4 °C et 7 °C (11 degrés) ou entre l'étage −2 et l'étage 3 (5 étages).",
+		ideas: {
+			"thermometer-walk": "déplacer un personnage le long d'un thermomètre vertical pour répondre aux cartes « de combien fait-il plus chaud ? »",
+			"temperature-swing-cards": "associer deux températures ou deux étages à leur différence (cartes à associer)"
+		}
+	},
+	"G4-PV-1": {
+		title: "Valeur d'un chiffre dans les nombres jusqu'aux millions",
+		description: "Dit que le 4 de 3 482 150 vaut 400 000 et que le 3 vaut 3 000 000.",
+		ideas: { "digit-value-sort": "trier les cartes-chiffres d'un nombre selon leur valeur (tri)" }
+	},
+	"G4-PV-2": {
+		title: "Forme développée et « chaque rang vaut 10 fois le suivant »",
+		description: "Écrit 3 482 150 comme 3 000 000 + 400 000 + … et explique pourquoi le 8 vaut dix fois le 8 situé un rang à sa droite.",
+		ideas: {
+			"expanded-form-builder": "construire un nombre à partir de cartes de valeur et le lire (construction)",
+			"ten-times-ladder": "grimper à une échelle dont chaque barreau vaut 10 fois le précédent (jeu)"
+		}
+	},
+	"G4-PV-3": {
+		title: "Valeur des chiffres décimaux jusqu'aux millièmes",
+		description: "Dit que chaque chiffre de 2,718 vaut 2, 7/10, 1/100 et 8/1000, qu'un millième est le dixième d'un centième, et écrit 3,47 = 3 + 4/10 + 7/100 en forme développée.",
+		ideas: { "thousandths-magnifier": "une loupe zoome dans un tableau de numération, des dixièmes aux millièmes, puis on écrit le nombre décimal en forme développée (exploration)" }
+	},
+	"G4-PV-4": {
+		title: "Arrondir les nombres entiers de 10 à 100 000",
+		description: "Arrondit 458 372 à 458 000 (millier le plus proche) et à 460 000 (dizaine de mille la plus proche) et explique pourquoi.",
+		ideas: {
+			"round-to-the-landmark": "jeu : un nombre roule sur une colline entre deux repères ; l'enfant décide où il s'arrête et à quel rang",
+			"rounding-place-chooser": "choisir la bonne valeur arrondie pour un rang donné parmi des propositions (quiz)"
+		}
+	},
+	"G4-PV-5": {
+		title: "Multiplier et diviser des nombres entiers par 10, 100, 1 000",
+		description: "Décale les chiffres pour obtenir 45 × 100 = 4 500 et 4 500 ÷ 1 000 = 4,5.",
+		ideas: { "digit-slider-machine": "construire une machine ×10 / ÷1 000 en faisant glisser des tuiles-chiffres de part et d'autre de la virgule, puis prévoir le résultat" }
+	},
+	"G4-PV-6": {
+		title: "Multiplier et diviser des décimaux par 10, 100, 1 000",
+		description: "Obtient 3,4 × 100 = 340 et 0,7 ÷ 10 = 0,07 en décalant les chiffres, sans « ajouter des zéros », et écrit 10² = 100 et 10³ = 1 000.",
+		ideas: {
+			"digit-slider-machine": "construire une machine ×10 / ÷1 000 en faisant glisser des tuiles-chiffres de part et d'autre de la virgule, puis prévoir le résultat",
+			"shift-or-zero-trap": "chasse à l'erreur : repérer où « on ajoute juste un zéro » ou un mauvais décalage a mené à l'erreur"
+		}
+	},
+	"G4-OP-1": {
+		title: "Addition et soustraction posées de grands nombres",
+		description: "Pose 4 687 + 2 759 et 5 003 − 2 768 en colonnes, avec retenues et échanges à travers les zéros.",
+		ideas: {
+			"column-regroup-blocks": "faire les retenues et les échanges avec des blocs de base dix pendant que la somme en colonnes se met à jour (manipulation)",
+			"subtraction-error-hunt": "trouver l'échange erroné dans une soustraction posée résolue (chasse à l'erreur)"
+		}
+	},
+	"G4-OP-2": {
+		title: "Vérifier un calcul par estimation et par l’inverse",
+		description: "Vérifie 5 003 − 2 768 = 2 235 en arrondissant à 5 000 − 2 800 et en additionnant 2 235 + 2 768.",
+		ideas: { "inverse-check-detective": "décider quelle réponse résiste à la vérification par l'opération inverse (énigme)" }
+	},
+	"G4-OP-3": {
+		title: "Additionner et soustraire des décimaux en colonnes",
+		description: "Aligne les virgules pour calculer 12,4 + 3,85 et 7 − 2,35, ainsi qu'un cas avec 3 décimales, 2,375 + 1,4.",
+		ideas: { "line-up-the-point": "glisser les chiffres dans des colonnes alignées, la virgule servant de colonne vertébrale (construction)" }
+	},
+	"G4-OP-4": {
+		title: "Multiplier un nombre de 3 ou 4 chiffres par un chiffre",
+		description: "Calcule 4 237 × 6 avec un modèle d'aire, puis en colonne.",
+		ideas: {
+			"area-model-builder": "construire un rectangle avec des blocs de base dix et lire les produits partiels",
+			"carry-the-crate": "multiplication posée avec des caisses qui se reportent au rang suivant (jeu)"
+		}
+	},
+	"G4-OP-5": {
+		title: "Découvrir 4 chiffres × 2 chiffres",
+		description: "Calcule 1 246 × 23 avec deux lignes de produits partiels qu'on additionne (découverte seulement).",
+		ideas: {
+			"area-model-builder": "faire glisser et découper des rectangles pour 23 × 14",
+			"partial-product-lanes": "déposer chaque produit partiel dans sa ligne et faire le total (construction)"
+		}
+	},
+	"G4-OP-6": {
+		title: "Multiplier et diviser un décimal par un nombre entier",
+		description: "Obtient 2,5 × 4 = 10, 3,2 × 3 = 9,6 et un cas avec centièmes, 1,25 × 4 = 5, et partage 4,8 ÷ 4 = 1,2 (découverte seulement).",
+		ideas: { "decimal-times-whole-grid": "répéter une quantité coloriée sur une grille de 100 et lire le total, ou la partager en parts égales (visuel)" }
+	},
+	"G4-OP-7": {
+		title: "Diviser un nombre de 4 chiffres par un chiffre",
+		description: "Calcule 735 ÷ 5 et 4 284 ÷ 6 en partageant rang par rang (division posée courte).",
+		ideas: {
+			"share-out-long-division": "manipulation : partager des blocs de base dix en groupes égaux, échanger des dizaines contre des unités et noter chaque étape",
+			"short-division-stairs": "faire descendre les chiffres sur un escalier en écrivant le quotient et le reste (construction)"
+		}
+	},
+	"G4-OP-8": {
+		title: "Décider quoi faire du reste",
+		description: "Répond à « 58 enfants, 8 par bus » par 8 bus (on arrondit au-dessus) et à « 58 bonbons, 8 par boîte » par 7 boîtes (on ignore le reste).",
+		ideas: { "remainder-sort-stories": "trier des histoires : arrondir au-dessus, ignorer le reste ou le garder en fraction (tri de cartes)" }
+	},
+	"G4-OP-9": {
+		title: "Découvrir la division par un nombre de 2 chiffres",
+		description: "Calcule 156 ÷ 12 en retirant des multiples de 12 (découverte, reste entier seulement).",
+		ideas: { "chunking-by-tens": "retirer des paquets de 10 fois et de 5 fois le diviseur jusqu'à ce qu'il n'en reste plus (construction)" }
+	},
+	"G4-OP-10": {
+		title: "« Fois plus » ou « de plus que »",
+		description: "Dit que 12 est « 3 fois plus que 4 » mais « 8 de plus que 4 ».",
+		ideas: { "times-or-more-sort": "tri de cartes : classer des phrases d'histoires en « fois plus » ou « de plus que », avec une manche aux formulations piégeuses" }
+	},
+	"G4-OP-11": {
+		title: "Distributivité et associativité",
+		description: "Calcule 25 × 4 × 7 comme 100 × 7 et 6 × 98 comme 6 × 100 − 6 × 2.",
+		ideas: {
+			"regroup-factors-race": "réordonner les facteurs pour obtenir un produit rond et battre la montre (jeu)",
+			"split-and-multiply-builder": "décomposer un facteur sur un tableau de points et additionner les produits partiels (construction)"
+		}
+	},
+	"G4-OP-12": {
+		title: "Priorité des opérations sans parenthèses",
+		description: "Calcule 3 + 4 × 2 = 11 et 20 − 12 ÷ 4 = 17 en faisant × et ÷ avant + et −.",
+		ideas: {
+			"order-of-operations-error-hunt": "chasse à l'erreur : trouver l'étape d'un exemple résolu qui a été faite dans le mauvais ordre",
+			"operation-order-race": "faire glisser les opérations dans le bon ordre, avec un score selon la vitesse (jeu)"
+		}
+	},
+	"G4-OP-13": {
+		title: "Parenthèses dans les expressions",
+		description: "Montre que (3 + 4) × 2 = 14 et place des parenthèses dans 2 + 3 × 4 pour obtenir 20.",
+		ideas: {
+			"bracket-bonanza": "énigme : placer des parenthèses dans une suite de nombres et de signes pour atteindre un objectif",
+			"bracket-or-not-match": "associer des expressions avec et sans parenthèses à leur valeur (association)"
+		}
+	},
+	"G4-OP-14": {
+		title: "Multiplier 2 chiffres par 2 chiffres",
+		description: "Calcule 34 × 27 avec un modèle d'aire (30 × 27 + 4 × 27), puis en colonne avec deux lignes de produits partiels.",
+		ideas: {
+			"area-model-builder": "faire glisser et découper des rectangles pour 23 × 14",
+			"two-by-two-box-method": "remplir une grille de quatre cases de produits partiels, puis la relier à la multiplication posée (construction)"
+		}
+	},
+	"G4-FL-1": {
+		title: "Calculer mentalement avec des multiples de 10 et 100",
+		description: "Calcule 30 × 40 = 1 200 et 2 400 ÷ 6 = 400 à partir de la table de base.",
+		ideas: { "zero-count-sprint": "faits en rafale avec des indices pour compter les zéros qui s'estompent peu à peu (entraînement)" }
+	},
+	"G4-FL-2": {
+		title: "Additionner et soustraire en arrondissant puis en compensant",
+		description: "Calcule 346 + 99 comme 346 + 100 − 1 et 502 − 298 comme 502 − 300 + 2.",
+		ideas: { "near-ten-jump": "sauter jusqu'au nombre rond voisin sur une droite, puis corriger (construction)" }
+	},
+	"G4-FL-3": {
+		title: "Doubler et diviser par deux pour simplifier",
+		description: "Transforme 16 × 25 en 8 × 50 puis en 4 × 100 = 400.",
+		ideas: { "double-half-machine": "des paires de nombres passent dans une machine à doubler et à diviser par deux jusqu'à ce que le produit soit facile (énigme)" }
+	},
+	"G4-FL-4": {
+		title: "Estimer des produits",
+		description: "Estime 48 × 6 comme 50 × 6 = 300 et décide si 288 est vraisemblable.",
+		ideas: { "round-then-multiply-bet": "parier sur un intervalle pour un produit, puis découvrir la réponse exacte (jeu)" }
+	},
+	"G4-FL-5": {
+		title: "Estimer des quotients avec des nombres amis",
+		description: "Estime 412 ÷ 8 comme 400 ÷ 8 = 50 avec des nombres compatibles.",
+		ideas: { "compatible-numbers-match": "associer chaque division à son nombre ami (association)" }
+	},
+	"G4-FL-6": {
+		title: "Choisir la meilleure stratégie de calcul mental",
+		description: "Choisit la compensation pour 346 + 99, le double et la moitié pour 16 × 25 et les tables avec des dizaines pour 30 × 40.",
+		ideas: {
+			"strategy-picker": "voir un calcul, choisir la stratégie la plus astucieuse et la justifier (quiz)",
+			"mental-or-paper-sort": "trier des calculs entre « facile dans ma tête » et « il me faut du papier » (tri)"
+		}
+	},
+	"G4-FL-7": {
+		title: "Tables jusqu’à 12 × 12 et divisions associées",
+		description: "Retrouve tout de suite 7 × 8 = 56, 12 × 11 = 132 et 132 ÷ 12 = 11.",
+		ideas: {
+			"times-table-fact-sprint": "entraînement chronométré sur les tables jusqu'à 12 × 12, qui revient sur les faits ratés (entraînement)",
+			"fact-family-match": "associer chaque multiplication à ses deux divisions (association)"
+		}
+	},
+	"G4-NT-1": {
+		title: "Trouver les paires de facteurs jusqu'à 100",
+		description: "Liste toutes les paires de facteurs de 36 : 1×36, 2×18, 3×12, 4×9, 6×6.",
+		ideas: { "factor-rainbow": "relier les paires de facteurs par des arcs-en-ciel jusqu'à ce qu'il n'en manque plus (construction)" }
+	},
+	"G4-NT-2": {
+		title: "Reconnaître les multiples",
+		description: "Dit que 56 est un multiple de 7 et liste les multiples de 9 jusqu'à 100.",
+		ideas: { "multiple-hopper": "sauter sur la droite graduée de n en n et marquer chaque arrivée (jeu)" }
+	},
+	"G4-NT-3": {
+		title: "Diviseurs communs de deux nombres",
+		description: "Trouve que 12 et 18 ont en commun 1, 2, 3 et 6.",
+		ideas: {
+			"common-factor-venn-sort": "faire glisser les diviseurs de deux nombres dans un diagramme de Venn et trouver ceux qu'ils partagent",
+			"shared-factor-match": "associer des paires de nombres à la liste de leurs diviseurs communs (association)"
+		}
+	},
+	"G4-NT-4": {
+		title: "Nombre premier ou composé jusqu'à 100",
+		description: "Décide que 47 est premier et que 51 (3 × 17) est composé.",
+		ideas: { "sieve-sweep": "barrer les multiples sur une grille de 100 jusqu'à ce qu'il ne reste que les nombres premiers (construction)" }
+	},
+	"G4-NT-5": {
+		title: "Critères de divisibilité par 2, 5 et 10",
+		description: "Sait que 3 460 est divisible par 2, 5 et 10 et que 1 375 l'est seulement par 5.",
+		ideas: { "divisible-sort-chutes": "faire tomber les nombres dans les goulottes de 2, de 5, de 10 ou d'aucun (tri)" }
+	},
+	"G4-NT-6": {
+		title: "Nombres carrés et ²",
+		description: "Construit 7² = 49 avec des carreaux et reconnaît 36 et 81 comme des carrés ; connaît les carrés jusqu'à 12².",
+		ideas: {
+			"square-and-cube-builder": "construire des carrés avec des carreaux et des cubes avec des blocs, puis repérer quels totaux sont des carrés",
+			"square-number-spotter": "repérer les carrés dans une grille de nombres mélangés (recherche)"
+		}
+	},
+	"G4-NT-7": {
+		title: "Nombres cubes et ³",
+		description: "Construit 3³ = 27 avec des blocs et lit 2³ comme 2 × 2 × 2 = 8 ; connaît les cubes jusqu'à 5³ (125).",
+		ideas: {
+			"square-and-cube-builder": "construire des carrés avec des carreaux et des cubes avec des blocs, puis repérer quels totaux sont des carrés",
+			"cube-stack-counter": "empiler des cubes unités pour former de plus grands cubes et compter le total (construction)",
+			"power-notation-match": "associer des expressions avec ² et ³ aux produits répétés correspondants (association)"
+		}
+	},
+	"G4-NT-8": {
+		title: "Multiples communs de deux nombres (préparation 5e)",
+		description: "Liste les multiples de 4 et de 6 et trouve ceux qu'ils ont en commun : 12, 24.",
+		ideas: {
+			"common-multiple-hopper": "deux sauteurs avancent sur une même droite de 4 en 4 et de 6 en 6 et se retrouvent sur les arrivées communes (jeu)",
+			"shared-multiple-grid": "colorier les multiples de deux nombres sur une grille de 100 et lire ce qu'ils ont en commun (recherche)"
+		}
+	},
+	"G4-FR-1": {
+		title: "Trouver des fractions équivalentes",
+		description: "Montre que 3/4 = 6/8 = 9/12 en multipliant le numérateur et le dénominateur par le même nombre.",
+		ideas: { "fraction-wall-match": "jeu de mémoire : associer les bandes du mur de fractions qui ont la même longueur" }
+	},
+	"G4-FR-2": {
+		title: "Simplifier une fraction",
+		description: "Réduit 12/18 à 2/3 en divisant le haut et le bas par le diviseur commun 6.",
+		ideas: { "factor-peel-simplifier": "retirer les diviseurs communs d'une fraction jusqu'à ce qu'elle ne puisse plus être simplifiée (énigme)" }
+	},
+	"G4-FR-3": {
+		title: "Comparer des fractions avec un repère",
+		description: "Décide que 5/8 > 1/2 et que 3/7 < 1/2 sans dénominateur commun.",
+		ideas: {
+			"half-or-more-sort": "trier des fractions : plus petites que ½, égales à ½ ou plus grandes que ½ (tri)",
+			"fraction-duel-cards": "duel de cartes de la fraction la plus grande, avec des indices de repères (jeu)"
+		}
+	},
+	"G4-FR-4": {
+		title: "Comparer et ranger des fractions avec un dénominateur commun",
+		description: "Range 3/4, 2/3 et 5/6 en les écrivant en douzièmes.",
+		ideas: { "common-denominator-lineup": "écrire des fractions avec un même dénominateur et les aligner sur une bande (construction)" }
+	},
+	"G4-FR-5": {
+		title: "Passer d'une fraction supérieure à 1 à un nombre mixte",
+		description: "Écrit 11/4 sous la forme 2¾ et 3½ sous la forme 7/2.",
+		ideas: { "mixed-number-stack": "empiler des quarts de disque pour former des disques entiers et lire le nombre mixte (manipulation)" }
+	},
+	"G4-FR-6": {
+		title: "Additionner et soustraire des fractions de même dénominateur",
+		description: "Calcule 5/8 + 7/8 = 12/8 = 1½ et 1 − 3/8 = 5/8.",
+		ideas: {
+			"fraction-strip-add": "joindre et retirer des bandes sur une droite graduée et lire le total (construction)",
+			"wholes-and-parts-puzzle": "remplir des barres entières avec des morceaux de fractions et nommer ce qui reste (énigme)"
+		}
+	},
+	"G4-FR-7": {
+		title: "Additionner et soustraire des dénominateurs liés",
+		description: "Calcule 2/3 + 1/6 = 4/6 + 1/6 = 5/6.",
+		ideas: { "denominator-match-builder": "remplacer une bande par des morceaux plus petits et égaux pour que les deux dénominateurs soient les mêmes (construction)" }
+	},
+	"G4-FR-8": {
+		title: "Additionner et soustraire des nombres mixtes",
+		description: "Calcule 2¼ + 1¾ = 4 et 3½ − 1¾ = 1¾.",
+		ideas: {
+			"recipe-mixed-totals": "agrandir et combiner des quantités de recettes en nombres mixtes (histoire)",
+			"mixed-number-borrow": "casser un entier en fractions pour soustraire (construction)"
+		}
+	},
+	"G4-FR-9": {
+		title: "Décomposer une fraction en somme",
+		description: "Écrit 3/8 = 1/8 + 2/8 et 3/8 = 1/4 + 1/8.",
+		ideas: { "fraction-split-puzzle": "partager une barre d'autant de façons que possible (exploration)" }
+	},
+	"G4-FR-10": {
+		title: "Multiplier une fraction par un nombre entier",
+		description: "Calcule 3 × 2/5 = 6/5 = 1 1/5 comme une addition répétée.",
+		ideas: { "fraction-groups-builder": "répéter n fois une bande de fraction et lire le total (construction)" }
+	},
+	"G4-FR-11": {
+		title: "Trouver une fraction d'une quantité",
+		description: "Trouve 3/5 de 40 comme 3 × (40 ÷ 5) = 24 dans un problème.",
+		ideas: { "fraction-of-a-set-shop": "scènes de magasin où une part des articles est en promotion (histoire)" }
+	},
+	"G4-RP-1": {
+		title: "Comparer des nombres décimaux jusqu'aux millièmes",
+		description: "Décide que 0,45 > 0,405 en comparant rang par rang.",
+		ideas: { "decimal-duel-cards": "duel de cartes du plus grand décimal, avec les mêmes premiers chiffres (jeu)" }
+	},
+	"G4-RP-2": {
+		title: "Ranger et placer des décimaux sur une droite graduée",
+		description: "Place 0,405, 0,45 et 0,5 sur une droite qui zoome des dixièmes aux millièmes.",
+		ideas: {
+			"decimal-number-line-pins": "épingler des décimaux sur une droite graduée qui zoome des dixièmes aux millièmes",
+			"decimal-between-hunt": "trouver un décimal situé entre deux décimaux donnés (énigme)"
+		}
+	},
+	"G4-RP-3": {
+		title: "Arrondir des décimaux à l'unité",
+		description: "Arrondit 6,48 à 6 et 6,5 à 7.",
+		ideas: { "round-the-price-tag": "arrondir des prix et des mesures à l'unité (quiz)" }
+	},
+	"G4-RP-4": {
+		title: "Additionner et soustraire des décimaux (argent, mesures)",
+		description: "Calcule 4,75 € + 2,60 € et 3,4 m − 1,85 m en contexte.",
+		ideas: { "measure-sum-lab": "combiner et comparer des mesures décimales dans un laboratoire (histoire)" }
+	},
+	"G4-RP-5": {
+		title: "Pourcentage : « sur 100 »",
+		description: "Colorie 25 carrés d'une grille de 100 et dit « 25 %, 25 sur 100 ».",
+		ideas: { "hundred-grid-painter": "colorier une grille de 100 selon un pourcentage donné et le nommer en fraction et en décimal" }
+	},
+	"G4-RP-6": {
+		title: "Relier pourcentage, fraction et décimal",
+		description: "Associe 25 % = 25/100 = 0,25 = ¼, pour ½, ¼, ¾, ⅕, les dixièmes (7/10 = 0,7) et les centièmes.",
+		ideas: {
+			"hundred-grid-painter": "colorier une grille de 100 selon un pourcentage donné et le nommer en fraction et en décimal",
+			"percent-fraction-decimal-match": "jeu de mémoire : associer les cartes de pourcentage, de fraction et de décimal",
+			"benchmark-percent-line": "placer 10 %, 25 %, 50 % et 75 % sur une droite (construction)"
+		}
+	},
+	"G4-ALG-1": {
+		title: "Continuer une suite de nombres à partir de sa règle",
+		description: "Continue 4, 7, 10, … à partir de « ajouter 3 ».",
+		ideas: { "pattern-machine-builder": "régler une règle dans une machine et regarder les termes qu'elle produit (construction)" }
+	},
+	"G4-ALG-2": {
+		title: "Remarquer ce que la règle ne dit pas",
+		description: "Repère que 4, 7, 10, 13 alterne pair et impair alors que la règle dit seulement « ajouter 3 ».",
+		ideas: {
+			"pattern-feature-hunt": "trouver des propriétés (parité, dernier chiffre) que la règle n'énonce pas (enquête)",
+			"rule-or-not-sort": "trier des phrases entre « vient de la règle » et « remarqué » (tri de cartes)"
+		}
+	},
+	"G4-ALG-3": {
+		title: "Suites de figures qui grandissent",
+		description: "Prévoit combien d'allumettes il faut pour la 6e figure à partir des quatre premières.",
+		ideas: {
+			"growing-matchstick-patterns": "construire et prolonger des suites de figures en notant un tableau (construction)",
+			"shape-pattern-predictor": "prévoir une figure lointaine avant qu'elle soit révélée (jeu)"
+		}
+	},
+	"G4-ALG-4": {
+		title: "Utiliser un symbole pour une inconnue",
+		description: "Résout □ + 17 = 40 et 6 × □ = 54.",
+		ideas: { "balance-the-mystery-box": "balance à manipuler avec des boîtes de poids caché ; retirer des quantités égales des deux côtés pour trouver l'inconnue" }
+	},
+	"G4-ALG-5": {
+		title: "Inconnue dans une phrase à plusieurs étapes",
+		description: "Résout 3 × □ + 4 = 19 en défaisant d'abord + 4 puis × 3.",
+		ideas: {
+			"balance-the-mystery-box": "balance à manipuler avec des boîtes de poids caché ; retirer des quantités égales des deux côtés pour trouver l'inconnue",
+			"undo-the-steps-solver": "défaire chaque étape d'une chaîne pour retrouver le départ (énigme)"
+		}
+	},
+	"G4-ALG-6": {
+		title: "Énoncer la règle entre deux colonnes",
+		description: "Lit le tableau 1→5, 2→10, 3→15 et dit « multiplier par 5 ».",
+		ideas: { "function-machine-tables": "entrer des nombres dans une machine, remplir le tableau et nommer la règle (jeu)" }
+	},
+	"G4-ALG-7": {
+		title: "Règles de colonnes en deux étapes",
+		description: "Trouve que 1→5, 2→8, 3→11 suit « × 3, puis + 2 ».",
+		ideas: {
+			"two-step-machine": "enchaîner deux machines et prévoir le tableau (construction)",
+			"guess-my-rule-table": "jeu à deux : deviner une règle cachée en deux étapes à partir des lignes d'un tableau"
+		}
+	},
+	"G4-MEA-1": {
+		title: "Relations entre les unités de longueur",
+		description: "Convertit 3,5 km en 3 500 m et 450 cm en 4,5 m.",
+		ideas: { "length-ladder-converter": "faire glisser un nombre le long d'une échelle de km, m, cm, mm (construction)" }
+	},
+	"G4-MEA-2": {
+		title: "Relations entre les unités de masse et de contenance",
+		description: "Convertit 2,4 kg en 2 400 g et 750 ml en 0,75 l.",
+		ideas: {
+			"kg-g-l-ml-matchup": "associer des quantités égales exprimées en unités différentes (association)",
+			"conversion-table-builder": "remplir un tableau de conversion et repérer la régularité (construction)"
+		}
+	},
+	"G4-MEA-3": {
+		title: "Estimer longueurs, masses et contenances",
+		description: "Estime la longueur d'un bureau à environ 120 cm et une bouteille à environ 500 ml, puis vérifie.",
+		ideas: { "estimate-then-measure-lab": "estimer, mesurer avec un outil virtuel et marquer des points selon la précision (jeu)" }
+	},
+	"G4-MEA-4": {
+		title: "Lire des échelles aux graduations sans nombre",
+		description: "Lit une balance de cuisine qui avance par pas de 20 g et où seul 100 g est indiqué.",
+		ideas: { "scale-reader-dials": "trouver la valeur de chaque trait, puis lire des cadrans, des verres doseurs et des règles (énigme)" }
+	},
+	"G4-MEA-5": {
+		title: "Résoudre des problèmes de mesures avec les quatre opérations",
+		description: "Calcule combien de rubans de 35 cm on découpe dans 2,4 m, avec 10 cm de reste.",
+		ideas: { "recipe-and-ribbon-problems": "problèmes de recettes agrandies et de bricolage avec des unités (histoire)" }
+	},
+	"G4-MEA-6": {
+		title: "Aire d'un rectangle avec une formule",
+		description: "Calcule 8 cm × 5 cm = 40 cm² et explique pourquoi c'est « carrés par rangée × rangées ».",
+		ideas: {
+			"area-formula-tiles": "couvrir un rectangle de carrés unités, puis les remplacer par une formule (manipulation)",
+			"square-metres-floor-plan": "choisir cm² ou m² et trouver les aires des pièces sur un plan (histoire)"
+		}
+	},
+	"G4-MEA-7": {
+		title: "Aire de figures composées de rectangles",
+		description: "Découpe une figure en L en deux rectangles et obtient 12 + 8 = 20 cm².",
+		ideas: { "split-the-l-shape": "découper une figure à angles droits en rectangles de différentes façons et comparer les totaux (énigme)" }
+	},
+	"G4-MEA-8": {
+		title: "Périmètre de rectangles et de figures à angles droits",
+		description: "Obtient 2 × (9 + 4) = 26 cm et fait le tour d'une figure en L pour additionner ses côtés.",
+		ideas: {
+			"fence-the-garden": "clôturer un jardin et additionner les longueurs (histoire)",
+			"rectilinear-perimeter-trace": "suivre le contour d'une figure à angles droits, avec des côtés cachés à calculer (énigme)"
+		}
+	},
+	"G4-MEA-9": {
+		title: "Trouver un côté manquant à partir du périmètre ou de l'aire",
+		description: "Trouve qu'un rectangle d'aire 40 cm² et de longueur 8 cm a une largeur de 5 cm, et un côté manquant à partir d'un périmètre de 26 cm.",
+		ideas: { "missing-side-detective": "trouver le côté caché à partir du total donné (énigme)" }
+	},
+	"G4-MEA-10": {
+		title: "Même aire, périmètre différent",
+		description: "Montre que 6 × 4 et 12 × 2 ont tous deux une aire de 24 cm² mais des périmètres de 20 et 28.",
+		ideas: {
+			"same-area-different-fence": "construction : former le plus de rectangles possible d'aire 24 et comparer leurs clôtures",
+			"fence-budget-puzzle": "entourer une aire donnée avec le moins de clôture possible (énigme)"
+		}
+	},
+	"G4-TIM-1": {
+		title: "Passer de l'heure sur 12 heures à l'heure sur 24 heures",
+		description: "Convertit 3 h 45 de l'après-midi en 15:45 et 00:20 en 12 h 20 du matin.",
+		ideas: { "clock-twins-match": "associer des horloges sur 12 heures et sur 24 heures (jeu de mémoire)" }
+	},
+	"G4-TIM-2": {
+		title: "Lire un horaire",
+		description: "Trouve dans un tableau le bus de 14:25 au départ d'une gare et son heure d'arrivée.",
+		ideas: { "timetable-lookup-cards": "répondre à des questions de recherche dans un horaire de bus ou de train (quiz)" }
+	},
+	"G4-TIM-3": {
+		title: "Planifier un trajet avec un horaire",
+		description: "Choisit le train qui permet d'arriver à l'école avant 8 h 30 avec 10 minutes de marche.",
+		ideas: {
+			"plan-my-trip": "trouver le dernier départ possible pour une arrivée donnée (énigme)",
+			"connection-catcher": "planifier un trajet avec un changement de train (énigme)"
+		}
+	},
+	"G4-TIM-4": {
+		title: "Durées à cheval sur l'heure",
+		description: "Calcule de 07:48 à 09:15 comme 1 h 27 min avec une frise du temps.",
+		ideas: {
+			"elapsed-time-number-line": "sauter le long d'une frise du temps jusqu'à l'arrivée et additionner les sauts (construction)",
+			"finish-time-finder": "trouver l'heure de fin à partir d'un début et d'une durée (quiz)"
+		}
+	},
+	"G4-TIM-5": {
+		title: "Durées à cheval sur minuit",
+		description: "Calcule de 22:40 à 01:15 comme 2 h 35 min.",
+		ideas: { "night-train-duration": "histoire d'horaire de train de nuit avec arrivée le lendemain (histoire)" }
+	},
+	"G4-TIM-6": {
+		title: "Trouver une date quelques semaines plus tôt ou plus tard",
+		description: "Trouve la date 3 semaines après le 14 mars et le jour de la semaine correspondant.",
+		ideas: { "calendar-jump": "sauter par semaines et par jours sur une page de calendrier (jeu)" }
+	},
+	"G4-MON-1": {
+		title: "Total et monnaie avec des montants décimaux",
+		description: "Additionne 3,45 € + 2,80 € et trouve la monnaie rendue sur 10 €.",
+		ideas: {
+			"cashier-counter": "passer des articles en caisse et rendre la monnaie avec des pièces et des billets (jeu de magasin)",
+			"change-count-back": "compter à partir du prix jusqu'au montant payé (construction)"
+		}
+	},
+	"G4-MON-2": {
+		title: "Multiplier et diviser avec l'argent",
+		description: "Calcule 4 × 2,45 € = 9,80 € et 7,80 € ÷ 4 = 1,95 € chacun.",
+		ideas: {
+			"price-times-quantity-shop": "acheter plusieurs fois le même article et calculer le coût total (jeu de magasin)",
+			"split-the-bill": "partager une addition équitablement entre amis (histoire)"
+		}
+	},
+	"G4-MON-3": {
+		title: "Problèmes d'achats à plusieurs étapes",
+		description: "Prépare une liste pour une fête : 3 pizzas, 2 boissons chacun pour 6 invités, puis la monnaie rendue sur 50 €.",
+		ideas: { "party-shopping-list": "gérer le budget d'une fête avec plusieurs listes de prix (histoire)" }
+	},
+	"G4-MON-4": {
+		title: "Estimer une addition et vérifier la monnaie",
+		description: "Arrondit 3,45 € + 6,80 € + 1,95 € à environ 12 € et repère que 5 € de monnaie rendue sur 20 € est faux.",
+		ideas: {
+			"change-detective": "chasse à l'erreur : un ticket de caisse a une ligne fausse ou une monnaie fausse ; la repérer par estimation",
+			"can-i-afford-it": "estimer si un panier rentre dans le budget (quiz)"
+		}
+	},
+	"G4-GEO-1": {
+		title: "Points, droites, segments et demi-droites",
+		description: "Distingue un segment d'une demi-droite et d'une droite et les nomme (AB, demi-droite CD).",
+		ideas: { "line-family-sort": "trier des dessins en point, droite, segment et demi-droite (tri)" }
+	},
+	"G4-GEO-2": {
+		title: "Droites parallèles et perpendiculaires",
+		description: "Trouve les paires de droites parallèles et perpendiculaires sur un plan ou sur une lettre et les trace.",
+		ideas: {
+			"parallel-perpendicular-hunt": "repérer des paires sur un plan de ville ou sur une photo de bâtiment (recherche)",
+			"draw-parallel-perpendicular-tool": "tracer des droites avec une équerre virtuelle (construction)"
+		}
+	},
+	"G4-GEO-3": {
+		title: "Nommer les types d'angles",
+		description: "Appelle 45° aigu, 90° droit, 120° obtus, 180° plat et 250° rentrant.",
+		ideas: { "angle-type-sort": "trier des angles par type à l'œil, puis vérifier avec un angle droit (tri)" }
+	},
+	"G4-GEO-4": {
+		title: "Mesurer et tracer des angles avec un rapporteur",
+		description: "Lit 65° sur la bonne graduation et trace un angle de 110°.",
+		ideas: {
+			"protractor-reader": "lire des angles sur un rapporteur virtuel avec les deux graduations (quiz)",
+			"angle-builder": "faire glisser une demi-droite jusqu'à un angle cible (construction)"
+		}
+	},
+	"G4-GEO-5": {
+		title: "Angles sur une droite et autour d'un point",
+		description: "Trouve l'angle manquant : 180° − 125° = 55° sur une droite et 360° − 270° = 90° autour d'un point.",
+		ideas: {
+			"straight-line-missing-angle": "trouver l'angle manquant sur une droite à l'aide d'une demi-droite qui glisse (énigme)",
+			"pizza-slice-angles": "des parts autour d'un point font 360°, trouver la part manquante (histoire)"
+		}
+	},
+	"G4-GEO-6": {
+		title: "Classer les triangles selon leurs côtés",
+		description: "Nomme isocèle un triangle de côtés 5, 5 et 8.",
+		ideas: { "triangle-sides-sort": "mesurer les côtés et trier les triangles en équilatéraux, isocèles et scalènes (tri)" }
+	},
+	"G4-GEO-7": {
+		title: "Classer les triangles selon leurs angles",
+		description: "Nomme obtusangle un triangle ayant un angle de 100° et rectangle un triangle ayant un angle de 90°.",
+		ideas: { "triangle-angle-sort": "trier des triangles en rectangles, acutangles et obtusangles (tri)" }
+	},
+	"G4-GEO-8": {
+		title: "Polygones réguliers et irréguliers",
+		description: "Explique qu'un losange est irrégulier car ses angles ne sont pas égaux, alors qu'un carré est régulier.",
+		ideas: { "regular-or-not-checker": "vérifier les côtés et les angles, puis déclarer régulier ou non (énigme)" }
+	},
+	"G4-GEO-9": {
+		title: "Trouver les axes de symétrie",
+		description: "Trouve les 4 axes de symétrie d'un carré et l'unique axe d'un triangle isocèle.",
+		ideas: { "fold-and-find-mirrors": "plier une figure en papier virtuelle pour tester des axes possibles (manipulation)" }
+	},
+	"G4-GEO-10": {
+		title: "Compléter une figure symétrique",
+		description: "Dessine l'autre moitié d'une figure par rapport à un axe vertical, horizontal ou oblique.",
+		ideas: {
+			"symmetric-completion": "compléter un demi-dessin par rapport à des axes de symétrie verticaux, horizontaux et obliques",
+			"diagonal-mirror-puzzle": "dessiner le symétrique d'une figure par rapport à un axe oblique sur une grille (énigme)"
+		}
+	},
+	"G4-GEO-11": {
+		title: "Parties d'un cercle et tracé au compas",
+		description: "Nomme le centre, le rayon et le diamètre (diamètre = 2 × rayon) et trace un cercle de rayon 3 cm.",
+		ideas: {
+			"compass-circle": "tracer des cercles et une fleur avec un compas virtuel à un rayon choisi",
+			"circle-parts-label-match": "nommer et associer le rayon, le diamètre et le centre sur des dessins (association)"
+		}
+	},
+	"G4-GEO-12": {
+		title: "Faces, arêtes et sommets des prismes et des pyramides",
+		description: "Dit qu'un prisme à base triangulaire a 5 faces, 9 arêtes et 6 sommets et qu'une pyramide à base carrée en a 5, 8 et 5.",
+		ideas: { "solid-sorter": "trier des solides d'aspect réel en prismes, pyramides et autres en comptant faces, arêtes et sommets" }
+	},
+	"G4-POS-1": {
+		title: "Placer et lire des coordonnées dans le premier quadrant",
+		description: "Place (3, 5) et dit que le point est à 3 vers la droite et 5 vers le haut.",
+		ideas: { "treasure-map-coordinates": "trouver un trésor grâce à des coordonnées (jeu)" }
+	},
+	"G4-POS-2": {
+		title: "Tracer un polygone à partir de ses sommets",
+		description: "Place (1, 1), (4, 1), (4, 3), (1, 3) et les relie pour voir un rectangle.",
+		ideas: {
+			"connect-the-vertices": "relier des points placés pour faire apparaître un dessin (construction)",
+			"mystery-polygon-points": "nommer le sommet manquant d'une figure (énigme)"
+		}
+	},
+	"G4-POS-3": {
+		title: "Les huit points cardinaux",
+		description: "Nomme nord-est la direction entre le nord et l'est et prévoit un trajet avec ces directions.",
+		ideas: { "compass-rose-navigator": "diriger un bateau avec les points cardinaux (jeu)" }
+	},
+	"G4-POS-4": {
+		title: "Quarts de tour, demi-tours, trois quarts de tour",
+		description: "Regarde vers le nord, tourne de 270° dans le sens des aiguilles d'une montre et dit vers où il regarde (l'ouest).",
+		ideas: {
+			"robot-turn-routes": "programmer un robot avec des virages et des déplacements (énigme)",
+			"clock-turn-match": "associer des virages dans le sens des aiguilles d'une montre et dans le sens inverse qui mènent au même endroit (association)"
+		}
+	},
+	"G4-POS-5": {
+		title: "Translater une figure et décrire le déplacement",
+		description: "Fait glisser un triangle de « 2 vers la gauche, 3 vers le haut » et décrit le déplacement à partir du départ et de l'arrivée.",
+		ideas: { "slide-the-shape": "faire glisser une figure jusqu'à une cible et écrire la translation (jeu)" }
+	},
+	"G4-POS-6": {
+		title: "Trouver le symétrique d'un point par rapport à un axe",
+		description: "Trouve le symétrique de (2, 5) par rapport à l'axe vertical x = 4 : (6, 5).",
+		ideas: { "mirror-point-hop": "faire sauter un point de l'autre côté de l'axe en gardant la même distance (construction)" }
+	},
+	"G4-POS-7": {
+		title: "Symétrique d’une figure (axe horizontal ou vertical)",
+		description: "Trouve le symétrique d'un polygone entier en prenant le symétrique de chaque sommet.",
+		ideas: {
+			"mirror-grid-shapes": "trouver le symétrique de figures par rapport à des axes horizontaux et verticaux (construction)",
+			"mirror-line-mystery": "retrouver l'axe de symétrie à partir d'une figure et de son image (énigme)"
+		}
+	},
+	"G4-DAT-1": {
+		title: "Tracer et lire des diagrammes en barres avec une échelle",
+		description: "Trace un diagramme en barres avec une échelle de 2 par carreau et lit une barre qui s'arrête entre deux graduations.",
+		ideas: { "bar-chart-scale-builder": "choisir l'échelle, construire les barres et corriger une mauvaise échelle (construction)" }
+	},
+	"G4-DAT-2": {
+		title: "Diagrammes en barres doubles",
+		description: "Compare les garçons et les filles sur un diagramme en barres doubles (« 5 de plus préfèrent la natation »).",
+		ideas: {
+			"compare-two-groups-double-bars": "construire un diagramme en barres doubles à partir de deux groupes de sondage (construction)",
+			"double-bar-question-cards": "répondre à des questions de comparaison à partir de barres doubles (quiz)"
+		}
+	},
+	"G4-DAT-3": {
+		title: "Tracer et lire des graphiques en ligne",
+		description: "Place la température à chaque heure et lit la valeur entre deux repères.",
+		ideas: { "temperature-line-drawer": "placer les températures d'une journée et relier les points (construction)" }
+	},
+	"G4-DAT-4": {
+		title: "Décrire l'évolution d'un graphique en ligne",
+		description: "Dit « ça a monté jusqu'à midi, puis ça a baissé » et à quel moment le changement a été le plus rapide.",
+		ideas: {
+			"trend-story-match": "associer un graphique en ligne à l'histoire qu'il raconte (association)",
+			"line-graph-story-writer": "écrire une courte légende pour la forme d'un graphique (écriture)"
+		}
+	},
+	"G4-DAT-5": {
+		title: "Lire et compléter des tableaux à double entrée",
+		description: "Complète un tableau à double entrée (classe × sport préféré) et répond à « combien de filles ont choisi le football ? ».",
+		ideas: { "fill-the-two-way-table": "remplir un tableau à partir de cartes de pointage et vérifier les totaux (construction)" }
+	},
+	"G4-DAT-6": {
+		title: "Diagrammes en points avec des fractions d'unité",
+		description: "Place des longueurs de crayons au quart de cm sur un diagramme en points et trouve la différence entre le plus long et le plus court.",
+		ideas: {
+			"ruler-measure-line-plot": "mesurer des objets avec une règle et placer chacun sur un diagramme en points (manipulation)",
+			"line-plot-difference-puzzles": "questions sur les totaux et les différences à partir d'un diagramme en points (énigme)"
+		}
+	},
+	"G4-DAT-7": {
+		title: "Poser une question et recueillir des données",
+		description: "Reformule « Aimes-tu le sport ? » en « Quel sport préfères-tu ? » et compte les réponses.",
+		ideas: { "question-sharpener": "améliorer des questions de sondage vagues pour qu'on puisse y répondre (réécriture)" }
+	},
+	"G4-DAT-8": {
+		title: "Choisir le graphique qui convient aux données",
+		description: "Choisit un graphique en ligne pour la température sur une semaine et un diagramme en barres pour les fruits préférés.",
+		ideas: {
+			"survey-to-graph-studio": "sondage de classe : recueillir les votes, essayer trois types de graphiques et défendre celui qui raconte le mieux l'histoire",
+			"graph-type-matchmaker": "associer des histoires de données au graphique le plus adapté (association)"
+		}
+	},
+	"G4-PRB-1": {
+		title: "Lister tous les résultats d'une expérience",
+		description: "Liste les 6 résultats d'un dé et les 4 de deux pièces (PP, PF, FP, FF).",
+		ideas: { "outcome-lister": "lister tous les résultats de dés, de pièces et de roues dans une grille organisée (construction)" }
+	},
+	"G4-PRB-2": {
+		title: "Résultats équiprobables ou non",
+		description: "Dit qu'une roue à 3 couleurs avec des secteurs inégaux n'est pas équitable et explique pourquoi.",
+		ideas: {
+			"spinner-fairness-lab": "faire tourner 50 fois une roue virtuelle, compter les résultats et décider si elle est équitable ou non",
+			"fair-or-not-sort": "trier des roues, des dés et des sacs entre équitables et non équitables (tri)"
+		}
+	},
+	"G4-PRB-3": {
+		title: "Concevoir un jeu équitable ou non",
+		description: "Redécoupe une roue pour qu'un joueur gagne environ deux fois plus souvent, ou pour la rendre équitable.",
+		ideas: {
+			"build-an-unfair-game": "énigme de conception : redécouper une roue pour qu'un joueur gagne environ deux fois plus souvent",
+			"fair-share-spinner-builder": "construire une roue où chaque joueur a la même chance (construction)"
+		}
+	},
+	"G4-PSR-1": {
+		title: "Problèmes à étapes avec opérations et unités variées",
+		description: "Résout « 3 paquets de 250 g plus 1,5 kg, combien de kg ? » en convertissant d'abord.",
+		ideas: {
+			"two-step-story-chain": "enchaîner deux ou trois étapes d'une histoire en choisissant chaque fois l'opération (histoire)",
+			"convert-then-solve": "repérer l'unité qui ne correspond pas avant de calculer (énigme)"
+		}
+	},
+	"G4-PSR-2": {
+		title: "Schémas en barres pour « fois plus »",
+		description: "Dessine une barre pour « Tom a 3 fois plus que Mia » et trouve les deux quantités.",
+		ideas: { "bar-model-builder": "faire glisser des segments de barre pour illustrer une histoire de comparaison (construction)" }
+	},
+	"G4-PSR-3": {
+		title: "Schémas en barres pour les problèmes de fractions",
+		description: "Dessine 5 parts égales pour montrer que 3/5 d'une barre valent 24 et trouve le tout (40).",
+		ideas: {
+			"bar-model-builder": "faire glisser des segments de barre pour illustrer une histoire de comparaison (construction)",
+			"fraction-bar-story": "lire une histoire de fraction et colorier la barre (histoire)",
+			"bar-model-match": "associer des histoires à leurs schémas en barres (association)"
+		}
+	},
+	"G4-PSR-4": {
+		title: "Chercher méthodiquement toutes les solutions",
+		description: "Liste tous les totaux possibles avec 2 pièces parmi {1, 2, 5, 10} dans un tableau ou un arbre organisé et sait qu'il n'en manque aucun.",
+		ideas: {
+			"all-the-outfits-lister": "lister toutes les combinaisons de tenues dans un tableau ou un arbre (construction)",
+			"missing-solution-hunt": "trouver l'unique combinaison oubliée dans une liste (chasse à l'erreur)"
+		}
+	},
+	"G4-PSR-5": {
+		title: "Expliquer et critiquer une méthode",
+		description: "Explique 36 × 5 comme « la moitié de 36 × 10 » pour qu'un ami puisse suivre et dit ce qui ne va pas dans les étapes de quelqu'un d'autre.",
+		ideas: {
+			"explain-it-to-a-friend": "enregistrer ou écrire une explication étape par étape pour un partenaire (oral)",
+			"spot-the-flawed-method": "critiquer la réponse détaillée d'un camarade (chasse à l'erreur)"
+		}
+	},
+	"G4-PSR-6": {
+		title: "Conjectures et contre-exemples",
+		description: "Teste « tous les nombres qui se terminent par 5 sont divisibles par 10 » et trouve 15 comme contre-exemple.",
+		ideas: {
+			"always-sometimes-never-cards": "trier des affirmations en toujours, parfois et jamais vraies (tri)",
+			"counterexample-challenge": "trouver l'exemple qui contredit une affirmation (énigme)"
+		}
+	}
+}, WA = {
+	"G5-NS-1": {
+		title: "Lire et écrire les nombres jusqu'aux milliards",
+		description: "Lit et écrit un nombre en lettres et en chiffres avec les bons groupes (8 431 000 se lit huit millions quatre cent trente et un mille).",
+		ideas: { "place-value-billion-reader": "glisse les chiffres dans un tableau des milliers, millions et milliards et écoute le nombre lu à voix haute" }
+	},
+	"G5-NS-2": {
+		title: "Sentir la taille d'un milliard",
+		description: "Explique qu'un milliard, c'est mille millions, en le construisant avec des piles de milliers et de millions.",
+		ideas: {
+			"billion-scale-explorer": "construis un milliard avec des piles de milliers et de millions",
+			"how-long-is-a-billion-seconds": "compare un million et un milliard de secondes sur une frise de calendrier"
+		}
+	},
+	"G5-NS-3": {
+		title: "Comparer et ranger de grands nombres",
+		description: "Range 4 205 000, 4 250 000 et 420 500 en regardant le plus haut rang qui diffère.",
+		ideas: {
+			"big-number-duel": "deux grands nombres apparaissent, touche le plus grand le plus vite possible",
+			"population-ranking-board": "range des villes et des pays selon leur population"
+		}
+	},
+	"G5-NS-4": {
+		title: "Arrondir de grands nombres dans une histoire",
+		description: "Arrondit un nombre au rang qui convient à l'histoire (8 431 000 habitants, c'est environ 8 millions).",
+		ideas: {
+			"round-the-headline": "réécris des titres de journaux avec des nombres arrondis",
+			"about-how-many-sign": "choisis l'arrondi qui convient à un panneau ou à une affiche"
+		}
+	},
+	"G5-NS-5": {
+		title: "Nombres négatifs : ordre et valeur absolue",
+		description: "Range −7, 2, −3 et 0 et dit que −4 est à 4 de zéro (valeur absolue).",
+		ideas: {
+			"temperature-ladder-order": "fais glisser des cartes de température le long d'un thermomètre pour les ranger",
+			"distance-from-zero-walk": "fais marcher un personnage et lis sa distance à 0"
+		}
+	},
+	"G5-NS-6": {
+		title: "Additionner et soustraire des entiers relatifs",
+		description: "Calcule −3 + 5 et 2 − 6 en sautant sur une droite graduée.",
+		ideas: {
+			"integer-lift-game": "monte et descends un ascenseur dans une tour avec des cartes positives et négatives ; arrête-toi à l'étage visé",
+			"hop-the-line-integers": "fais sauter une grenouille sur une droite graduée pour résoudre des sommes d'entiers relatifs écrites",
+			"temperature-gap-across-zero": "trouve combien de degrés séparent −4 °C et 7 °C sur un thermomètre"
+		}
+	},
+	"G5-NS-7": {
+		title: "Une seule droite pour tous les nombres",
+		description: "Place 0,7, ¾, −1,5 et 3 ensemble sur une même droite, aux bons endroits.",
+		ideas: {
+			"one-line-zoom": "zoome sur une droite graduée, avant et arrière, pour placer des nombres de types différents",
+			"which-number-is-hiding": "retrouve le nombre mystère grâce à un indice sur une droite graduée",
+			"number-line-sort-race": "trie un paquet mélangé de fractions, de décimaux et d'entiers"
+		}
+	},
+	"G5-PV-1": {
+		title: "Multiplier et diviser par 10, 100, 1 000",
+		description: "Décale les chiffres pour calculer 4,7 × 100 = 470 et 3 500 ÷ 1 000 = 3,5, et explique le décalage.",
+		ideas: {
+			"powers-of-ten-slider": "fais glisser la virgule sur un grand affichage quand le nombre change d'échelle",
+			"digit-shift-machine": "entre un nombre dans des machines ×10 / ÷100 et prédis le résultat"
+		}
+	},
+	"G5-PV-2": {
+		title: "Multiplier et diviser par 0,1 et 0,01",
+		description: "Voit que ÷ 0,1 revient à × 10 et × 0,01 à ÷ 100 (6 × 0,1 = 0,6).",
+		ideas: {
+			"scale-down-slider": "réduis et agrandis un nombre avec les facteurs 0,1 et 0,01",
+			"bigger-or-smaller-sorter": "trie des opérations selon qu'elles rendent un nombre plus grand ou plus petit"
+		}
+	},
+	"G5-PV-3": {
+		title: "Les puissances de dix : notation 10ⁿ",
+		description: "Écrit 1 000 = 10³ et lit 10⁵ comme 100 000.",
+		ideas: {
+			"ten-power-match": "associe des nombres, des mots et des cartes 10ⁿ",
+			"exponent-tower-tens": "empile des zéros pour construire une puissance de dix"
+		}
+	},
+	"G5-PV-4": {
+		title: "Arrondir des décimaux à un rang donné",
+		description: "Arrondit 3,476 au dixième (3,5) et au centième (3,48).",
+		ideas: { "nearest-hundredth-hopper": "fais sauter un nombre vers la plus proche de deux graduations voisines" }
+	},
+	"G5-PV-5": {
+		title: "Arrondir selon la précision voulue",
+		description: "Choisit jusqu'où arrondir une longueur, une foule ou une recette, et explique pourquoi.",
+		ideas: {
+			"round-to-fit-the-job": "choisis jusqu'où arrondir pour une recette, une carte et une population, et défends ton choix",
+			"how-precise-is-enough": "repère quand trop ou trop peu de décimales rendent une réponse absurde"
+		}
+	},
+	"G5-PV-6": {
+		title: "Valeur des chiffres et écriture développée (millièmes)",
+		description: "Dit ce que vaut chaque chiffre de 3,472 et écrit 3,47 = 3 + 4/10 + 7/100.",
+		ideas: {
+			"decimal-place-value-chart": "dépose des chiffres dans un tableau unités/dixièmes/centièmes/millièmes et lis la valeur de chacun",
+			"expanded-form-builder": "construis un décimal avec ses morceaux et écris-le en écriture développée"
+		}
+	},
+	"G5-PV-7": {
+		title: "Ranger et placer des décimaux (millièmes)",
+		description: "Range 0,305, 0,35 et 0,3 et les place sur une droite graduée zoomée au millième.",
+		ideas: {
+			"decimal-zoom-line": "zoome sur une droite graduée pour placer des décimaux à 3 chiffres après la virgule",
+			"decimal-order-duel": "range des décimaux qui commencent par les mêmes chiffres"
+		}
+	},
+	"G5-OP-1": {
+		title: "Multiplier des grands nombres par écrit",
+		description: "Calcule 3 482 × 26 avec la multiplication posée et vérifie avec une estimation.",
+		ideas: { "partial-products-grid": "remplis une grille de produits partiels et additionne-les" }
+	},
+	"G5-OP-2": {
+		title: "Multiplier et diviser un décimal par un entier",
+		description: "Calcule 3,45 × 6 et 7,2 ÷ 4 avec une méthode écrite.",
+		ideas: { "money-times-whole-machine": "achète plusieurs exemplaires d'un article à prix décimal et calcule le total" }
+	},
+	"G5-OP-3": {
+		title: "Décimal × décimal",
+		description: "Utilise le changement d'échelle pour voir que 0,3 × 0,4 = 0,12 (3 × 4 = 12, puis ÷ 100).",
+		ideas: {
+			"decimal-scaling-machine": "une machine montre les décalages ×10 / ÷10 qui gardent le produit d'un décimal égal",
+			"area-of-a-decimal-rectangle": "colorie une grille de 100 pour voir 0,3 × 0,4 comme une aire"
+		}
+	},
+	"G5-OP-4": {
+		title: "Division posée par un nombre à 2 chiffres",
+		description: "Calcule 925 ÷ 25 avec une méthode écrite.",
+		ideas: { "long-division-error-hunt": "trouve quelle étape d'une division posée est fausse" }
+	},
+	"G5-OP-5": {
+		title: "Exprimer le reste selon l'histoire",
+		description: "Donne 50 ÷ 8 sous la forme 6 reste 2, 6 ¼ ou 6,25, selon ce que demande l'histoire.",
+		ideas: {
+			"remainder-in-the-story": "choisis entier, fraction ou décimal pour répondre à une histoire",
+			"share-the-leftover": "que deviennent les restes dans une scène de partage équitable"
+		}
+	},
+	"G5-OP-6": {
+		title: "Décimal ÷ décimal (découverte)",
+		description: "Multiplie les deux nombres par 10 pour que 1,2 ÷ 0,3 devienne 12 ÷ 3 = 4.",
+		ideas: {
+			"equal-quotient-pairs": "associe des divisions qui ont le même résultat (1,2 ÷ 0,3 et 12 ÷ 3)",
+			"how-many-quarters-fit": "compte combien de verres de 0,25 l remplissent une carafe de 3 l"
+		}
+	},
+	"G5-OP-7": {
+		title: "Priorités des opérations",
+		description: "Calcule 2 + 3 × 4 = 14 et 18 − 6 ÷ 3 = 16.",
+		ideas: { "order-of-operations-error-hunt": "trouve l'étape faite dans le mauvais ordre" }
+	},
+	"G5-OP-8": {
+		title: "Parenthèses et exposants dans les expressions",
+		description: "Calcule 2 + 3² × 4 et (2 + 3)² × 4 et voit que les parenthèses changent le résultat ; écrit une expression avec parenthèses pour une histoire (3 × (4 + 5)).",
+		ideas: {
+			"expression-tower-puzzle": "place des parenthèses et des opérations pour atteindre un but, puis explique l'ordre",
+			"power-first-spotter": "touche la partie de l'expression à calculer en premier"
+		}
+	},
+	"G5-OP-9": {
+		title: "Choisir une méthode",
+		description: "Choisit entre calcul mental, posé ou calculatrice pour 4 000 − 1 998 et 6 284 ÷ 17, et vérifie avec une estimation.",
+		ideas: { "method-matchmaker": "envoie chaque calcul vers l'outil qui lui convient le mieux" }
+	},
+	"G5-OP-10": {
+		title: "Addition et soustraction posées (entiers et décimaux)",
+		description: "Calcule 12,5 + 3,482 et 20 − 7,35 en colonnes, en alignant les virgules.",
+		ideas: {
+			"line-up-the-point-columns": "glisse les nombres en colonnes avec la virgule alignée, puis additionne ou soustrais",
+			"column-slip-hunt": "trouve la virgule mal alignée ou la retenue oubliée dans une opération posée"
+		}
+	},
+	"G5-FL-1": {
+		title: "Calcul mental : 2 chiffres × 1 chiffre",
+		description: "Calcule 48 × 6 en décomposant : 40 × 6 + 8 × 6.",
+		ideas: { "split-and-multiply-race": "bats la montre avec des produits en décomposant le nombre" }
+	},
+	"G5-FL-2": {
+		title: "Multiples de 10 et de 100 de tête",
+		description: "Calcule 70 × 300 = 21 000 à partir de 7 × 3.",
+		ideas: {
+			"zeros-sidestep": "mets les zéros de côté, multiplie, puis remets-les",
+			"tens-and-hundreds-blitz": "produits de multiples de 10 et de 100 en rafale"
+		}
+	},
+	"G5-FL-3": {
+		title: "Décimaux simples de tête",
+		description: "Calcule 0,6 + 0,7 = 1,3 et 2,5 × 4 = 10 de tête.",
+		ideas: { "decimal-pairs-to-one": "trouve les paires de décimaux qui font 1 et 10" }
+	},
+	"G5-FL-4": {
+		title: "Déduire de nouveaux faits à partir de faits connus",
+		description: "Trouve 4 × 0,3 = 1,2 à partir de 4 × 3 = 12 et les ⅜ de 24 à partir de ⅛ de 24.",
+		ideas: {
+			"known-fact-derive-puzzle": "à partir d'un fait résolu, déduis le plus de faits liés possible",
+			"unit-fraction-first": "trouve les ⅜ d'une quantité à partir de ⅛"
+		}
+	},
+	"G5-FL-5": {
+		title: "Pourcentages usuels d'une quantité",
+		description: "Trouve 50 %, 10 % et 1 % de 360 de tête (180, 36, 3,6).",
+		ideas: { "percent-from-ten-percent-builder": "construis n'importe quel multiple de 10 % à partir du morceau de 10 %" }
+	},
+	"G5-FL-6": {
+		title: "25 % et 75 % en coupant en deux et en quatre",
+		description: "Trouve 25 % de 80 comme la moitié de la moitié, et 75 % comme 3 quarts.",
+		ideas: {
+			"quarter-and-three-quarters-shop": "des pancartes de magasin demandent 25 % ou 75 % d'un prix",
+			"halve-the-halve": "coupe en deux deux fois pour obtenir 25 %, puis construis 75 %"
+		}
+	},
+	"G5-FL-7": {
+		title: "Estimer avant de calculer",
+		description: "Arrondit 4,8 × 52 en 5 × 50 et s'attend à environ 250 avant de calculer.",
+		ideas: { "round-then-calc-estimator": "choisis les nombres arrondis qui donnent une estimation rapide et proche" }
+	},
+	"G5-FL-8": {
+		title: "Repérer les réponses fausses d'un facteur dix",
+		description: "Sait que 4,8 × 52 ne peut pas faire 24,96 ni 2 496, en vérifiant l'ordre de grandeur.",
+		ideas: {
+			"ten-times-too-big-spotter": "touche les réponses impossibles dans un flot, d'après leur ordre de grandeur",
+			"answer-in-the-right-ballpark": "glisse un repère vers la zone plausible avant de calculer"
+		}
+	},
+	"G5-NT-1": {
+		title: "Diviseurs communs",
+		description: "Liste les diviseurs de 12 et de 18 et repère les diviseurs communs (1, 2, 3, 6).",
+		ideas: { "factor-pair-rectangles": "trouve tous les rectangles qui pavent un nombre de carrés" }
+	},
+	"G5-NT-2": {
+		title: "Nombres premiers inférieurs à 100",
+		description: "Liste les nombres premiers inférieurs à 100 et teste si un nombre est premier (91 est-il premier ? 7 × 13, non).",
+		ideas: {
+			"prime-sieve-race": "barre les multiples sur une grille de 100 contre la montre pour révéler les nombres premiers",
+			"prime-or-composite-sorter": "trie des cartes de nombres et donne un diviseur pour chaque nombre non premier"
+		}
+	},
+	"G5-NT-3": {
+		title: "Décomposition en facteurs premiers (découverte)",
+		description: "Construit un arbre de facteurs pour 60 = 2 × 2 × 3 × 5.",
+		ideas: {
+			"factor-tree-builder": "fais glisser pour découper un nombre en branches jusqu'à n'avoir que des nombres premiers",
+			"prime-factor-fingerprint": "associe chaque nombre à son empreinte de facteurs premiers"
+		}
+	},
+	"G5-NT-4": {
+		title: "PGCD et nombres premiers entre eux",
+		description: "Trouve le PGCD de 12 et de 18 (6) et repère que 8 et 15 sont premiers entre eux.",
+		ideas: {
+			"tile-the-floor-hcf": "trouve le plus grand carreau carré qui pave un sol de 12 × 18",
+			"coprime-matchmaker": "associe des nombres qui n'ont aucun diviseur commun autre que 1"
+		}
+	},
+	"G5-NT-5": {
+		title: "Multiples communs et PPCM",
+		description: "Trouve que deux bus partis ensemble se retrouvent après 12 minutes (PPCM de 4 et 6).",
+		ideas: {
+			"hcf-lcm-word-puzzles": "des problèmes en histoires (deux bus partent ensemble, quand se retrouvent-ils ?) avant toute procédure",
+			"lcm-lights-flash": "deux lumières clignotent à des rythmes différents ; prédis le prochain clignotement commun"
+		}
+	},
+	"G5-NT-6": {
+		title: "Critères de divisibilité par 2, 3, 4, 5, 6, 9, 10",
+		description: "Dit sans diviser que 1 236 est divisible par 3 et par 4, mais pas par 9.",
+		ideas: { "divisible-or-not-sorter": "dépose les nombres dans les bonnes cases de critères" }
+	},
+	"G5-NT-7": {
+		title: "Divisibilité par 8 et par 11 (découverte)",
+		description: "Explore pourquoi 1 232 est divisible par 8 (trois derniers chiffres) et 121 par 11 (somme alternée).",
+		ideas: {
+			"explore-divisible-by-8-and-11": "un labo de découverte guidée pour les deux nouveaux critères",
+			"divisibility-detective": "utilise des indices pour nommer un nombre mystère"
+		}
+	},
+	"G5-NT-8": {
+		title: "Carrés et cubes",
+		description: "Connaît les carrés jusqu'à 12² et les cubes jusqu'à 5³ et lit les notations ² et ³.",
+		ideas: {
+			"square-cube-staircase": "construis des carrés et des cubes avec des blocs et lis les nombres",
+			"square-and-cube-flashmatch": "associe une carte de puissance à sa valeur"
+		}
+	},
+	"G5-NT-9": {
+		title: "Suites de nombres triangulaires, carrés et cubes",
+		description: "Voit que 1, 3, 6, 10 augmentent de 2, 3, 4 et que deux nombres triangulaires voisins s'additionnent en un carré.",
+		ideas: {
+			"triangular-number-stairs": "empile des points en triangles et lis la régularité",
+			"handshake-triangle-numbers": "compte les poignées de main dans un groupe et repère les nombres triangulaires"
+		}
+	},
+	"G5-FR-1": {
+		title: "Trouver un dénominateur commun",
+		description: "Écrit ⅔ et ¾ sous la forme 8/12 et 9/12.",
+		ideas: {
+			"common-denominator-matcher": "associe deux fractions à des morceaux de même taille",
+			"fraction-wall-find-the-match": "trouve des barres équivalentes sur un mur de fractions"
+		}
+	},
+	"G5-FR-2": {
+		title: "Additionner et soustraire des fractions inégales",
+		description: "Calcule ⅔ + ¾ = 1 5/12 et ⅚ − ¼ = 7/12.",
+		ideas: { "fraction-sum-race": "enchaîne des sommes de fractions différentes ; les réponses simplifiées rapportent un bonus" }
+	},
+	"G5-FR-3": {
+		title: "Additionner et soustraire des nombres mixtes",
+		description: "Calcule 3 ½ − 1 ¾ = 1 ¾ en regroupant.",
+		ideas: {
+			"mixed-number-error-hunt": "trouve l'erreur dans une somme de nombres mixtes déjà résolue",
+			"recipe-mixed-totals": "additionne ou compare des quantités comme 2 ¼ tasses + 1 ⅔ tasse"
+		}
+	},
+	"G5-FR-4": {
+		title: "Comparer et ranger des fractions supérieures à 1",
+		description: "Range 7/4, 1 ½, 5/3 et 2 ⅙.",
+		ideas: { "fraction-number-line-sorter": "dépose des fractions et des nombres mixtes sur une droite graduée" }
+	},
+	"G5-FR-5": {
+		title: "La fraction comme division",
+		description: "Lit ¾ comme 3 ÷ 4 et écrit 5 ÷ 2 sous la forme 2 ½.",
+		ideas: { "share-pizzas-fairly": "partage 3 pizzas entre 4 amis et nomme la part de chacun" }
+	},
+	"G5-FR-6": {
+		title: "Une fraction multipliée par un entier",
+		description: "Calcule ⅗ × 20 = 12 et 4 × ⅔ = 2 ⅔.",
+		ideas: {
+			"fraction-of-a-crowd": "trouve des fractions de groupes de personnes ou d'objets",
+			"times-whole-bar": "des barres montrent l'addition répétée d'une fraction"
+		}
+	},
+	"G5-FR-7": {
+		title: "Fraction × fraction avec un modèle d'aire",
+		description: "Colorie les ⅔ de ¾ sur une grille pour voir que ⅔ × ¾ = ½ et sait que le résultat est plus petit que chaque fraction.",
+		ideas: {
+			"area-model-fraction-grid": "plie et colorie un rectangle pour construire le produit",
+			"smaller-or-bigger-product-sorter": "prédis si un produit rétrécit ou grandit"
+		}
+	},
+	"G5-FR-8": {
+		title: "Fraction unitaire ÷ entier, entier ÷ fraction unitaire",
+		description: "Calcule ⅓ ÷ 2 = ⅙ et 4 ÷ ⅓ = 12.",
+		ideas: { "share-a-slice-fairly": "partage une part entre des amis et nomme le morceau obtenu" }
+	},
+	"G5-FR-9": {
+		title: "Fraction ÷ fraction (découverte)",
+		description: "Voit que ¾ ÷ ¼ = 3 et 4 ÷ ⅔ = 6 en comptant combien y tiennent.",
+		ideas: {
+			"fraction-strip-division": "découpe des bandes pour voir combien de ⅔ tiennent dans 4",
+			"how-many-fit-tracks": "des pistes de longueurs différentes ; compte combien de morceaux y tiennent"
+		}
+	},
+	"G5-FR-10": {
+		title: "Retrouver le tout à partir d'une partie",
+		description: "Calcule que si les ⅗ d'un nombre valent 30, ce nombre est 50.",
+		ideas: {
+			"find-the-whole-bar-puzzle": "une partie coloriée d'une barre est donnée ; reconstruis la barre entière",
+			"part-to-whole-restorer": "retrouve la quantité totale à partir d'un indice en fraction"
+		}
+	},
+	"G5-FR-11": {
+		title: "Simplifier des fractions",
+		description: "Simplifie 12/18 en ⅔ en divisant le haut et le bas par le diviseur commun 6.",
+		ideas: {
+			"simplify-with-common-factors": "trouve un diviseur commun et divise les deux termes jusqu'à la fraction irréductible",
+			"lowest-terms-fraction-wall": "vérifie une fraction simplifiée avec un mur de fractions"
+		}
+	},
+	"G5-RP-1": {
+		title: "Passer des fractions aux décimaux et aux pourcentages",
+		description: "Convertit ⅛ = 0,125 = 12,5 % en divisant, lit un pourcentage comme « sur 100 » sur un carré de 100 (37 % = 37/100 = 0,37) et passe d'une forme à l'autre pour les valeurs courantes.",
+		ideas: {
+			"fraction-to-decimal-machine": "divise le haut par le bas et regarde le décimal apparaître",
+			"fdp-card-match": "associe des cartes fraction, décimal et pourcentage, en commençant par colorier un carré de 100 pour chaque pourcentage"
+		}
+	},
+	"G5-RP-2": {
+		title: "Ranger fractions, décimaux et pourcentages mélangés",
+		description: "Range ⅗, 0,58 et 61 % du plus petit au plus grand.",
+		ideas: {
+			"fdp-ranking-ladder": "grimpe à une échelle en rangeant des formes mélangées",
+			"closest-to-half-sorter": "trie des formes mélangées selon leur proximité avec ½"
+		}
+	},
+	"G5-RP-3": {
+		title: "Pourcentage d'une quantité",
+		description: "Trouve 15 % de 80 = 12 comme 10 % + 5 %.",
+		ideas: { "percent-by-building-blocks": "construis n'importe quel pourcentage avec des blocs de 10 %, 5 % et 1 %" }
+	},
+	"G5-RP-4": {
+		title: "Augmentation et réduction en pourcentage",
+		description: "Calcule une remise de 25 % sur 40 € (30 €) et une hausse de 10 % sur 60 (66).",
+		ideas: { "sale-sign-puzzle": "associe des pancartes de magasin (25 % de remise, 10 % de plus) au nouveau prix" }
+	},
+	"G5-RP-5": {
+		title: "Quel pourcentage une quantité est d'une autre",
+		description: "Dit que 12 sur 48, c'est 25 %.",
+		ideas: {
+			"what-percent-spinner": "fais tourner la roue pour une partie et un tout, puis réponds : quel pourcentage ?",
+			"test-score-percent-cards": "transforme des notes comme 18 sur 24 en pourcentage"
+		}
+	},
+	"G5-RP-6": {
+		title: "Retrouver le tout à partir d'un pourcentage",
+		description: "Calcule que 45 est 30 % de 150.",
+		ideas: {
+			"percent-detective": "des cartes indices donnent une partie et un pourcentage ; déduis le tout",
+			"reverse-the-sale": "à partir du prix soldé et de la remise, retrouve le prix d'origine"
+		}
+	},
+	"G5-RP-7": {
+		title: "Notation des rapports et simplification",
+		description: "Écrit 6 rouges pour 4 bleus sous la forme 6:4 = 3:2 et écrit a:b:c pour trois parties.",
+		ideas: {
+			"ratio-tower-match": "associe des tours de blocs à des cartes a:b et a:b:c",
+			"ratio-simplify-race": "simplifie des rapports en divisant les deux termes par le même nombre"
+		}
+	},
+	"G5-RP-8": {
+		title: "Partager une quantité selon un rapport",
+		description: "Partage 20 selon le rapport 3:1 (15 et 5).",
+		ideas: { "share-the-prize-ratio": "partage un prix selon un rapport et vérifie que les parts redonnent le total" }
+	},
+	"G5-RP-9": {
+		title: "Proportionnalité : valeur unitaire et changement d'échelle",
+		description: "Résout « 3 coûtent 12, combien coûtent 7 ? » (28).",
+		ideas: { "recipe-ratio-mixer": "agrandis et réduis une recette ou un mélange de peinture en gardant le même goût ou la même couleur" }
+	},
+	"G5-RP-10": {
+		title: "Taux unitaires et vitesse",
+		description: "Trouve que 150 km en 3 h, c'est 50 km/h et s'en sert pour prédire une distance.",
+		ideas: {
+			"speed-and-rate-race": "règle les vitesses de voitures jouets, prédis qui gagne, puis lance la course",
+			"unit-rate-grocery": "trouve le prix d'un seul article et sers-t'en pour n'importe quelle quantité"
+		}
+	},
+	"G5-RP-11": {
+		title: "Convertir des unités par proportionnalité",
+		description: "Convertit 72 km/h en 20 m/s et 250 cm en km.",
+		ideas: {
+			"unit-conversion-ratio-puzzle": "convertis avec des chaînes de rapports",
+			"conversion-chain-builder": "enchaîne les facteurs de conversion dans le bon ordre"
+		}
+	},
+	"G5-ALG-1": {
+		title: "Écrire des expressions avec une lettre",
+		description: "Écrit n + 5 pour « 5 de plus qu'un nombre » et 3 × n pour « 3 fois un nombre ».",
+		ideas: { "expression-story-match": "associe des phrases à des expressions" }
+	},
+	"G5-ALG-2": {
+		title: "Remplacer dans une formule",
+		description: "Utilise P = 2 × (l + w) avec l = 7 et w = 4 (22).",
+		ideas: { "formula-machine": "entre des valeurs dans une formule et lis le résultat" }
+	},
+	"G5-ALG-3": {
+		title: "Équations à une étape et vérification",
+		description: "Résout n + 7 = 15 et 4 × n = 36 et vérifie en remplaçant.",
+		ideas: { "balance-scale-equation-puzzle": "garde une balance en équilibre en faisant la même chose des deux côtés" }
+	},
+	"G5-ALG-4": {
+		title: "Équations simples à deux étapes",
+		description: "Résout 2n + 3 = 13 en défaisant les étapes (n = 5).",
+		ideas: {
+			"two-step-mystery-number": "des indices de nombre mystère en deux étapes",
+			"undo-the-steps-machine": "fais fonctionner une machine à l'envers pour trouver l'entrée"
+		}
+	},
+	"G5-ALG-5": {
+		title: "Paires qui vérifient une équation",
+		description: "Trouve les paires avec a + b = 10 et a > b (9 et 1, 8 et 2, ...).",
+		ideas: { "sum-ten-pairs-grid": "remplis une grille avec toutes les paires qui respectent la règle" }
+	},
+	"G5-ALG-6": {
+		title: "Énoncer la règle d'une suite selon le rang",
+		description: "Dit « 4 × rang + 1 » pour 5, 9, 13, 17.",
+		ideas: { "matchstick-pattern-rule": "construis les figures suivantes en allumettes et trouve la règle" }
+	},
+	"G5-ALG-7": {
+		title: "Utiliser une règle pour prédire un terme lointain",
+		description: "Utilise la règle pour trouver le 50e terme (201).",
+		ideas: {
+			"term-fifty-predictor": "prédis la 50e figure, puis teste avec la règle",
+			"rule-to-term-machine": "entre un rang, lis le terme"
+		}
+	},
+	"G5-ALG-8": {
+		title: "Deux suites issues de deux règles",
+		description: "Construit deux suites (ajouter 2 depuis 0, ajouter 4 depuis 0) et associe les termes : (2, 4), (4, 8).",
+		ideas: { "twin-pattern-table": "remplis un tableau à partir de deux règles et lis en travers" }
+	},
+	"G5-ALG-9": {
+		title: "Relations entre deux suites associées",
+		description: "Voit que chaque terme d'une suite vaut le double de son partenaire et le dit.",
+		ideas: {
+			"plot-the-twin-patterns": "place les paires ordonnées et regarde les points s'aligner",
+			"pair-relationship-spotter": "nomme le lien entre deux suites"
+		}
+	},
+	"G5-MEA-1": {
+		title: "Convertir des unités métriques avec des décimaux",
+		description: "Convertit 2,35 km = 2 350 m et 450 ml = 0,45 l.",
+		ideas: { "decimal-unit-converter": "fais glisser la virgule pour convertir" }
+	},
+	"G5-MEA-2": {
+		title: "Choisir des unités et convertir en deux étapes",
+		description: "Choisit km, m ou cm selon la tâche et convertit des mm en m en passant par les cm.",
+		ideas: {
+			"unit-ladder-climb": "grimpe l'échelle des unités en multipliant ou en divisant à chaque échelon",
+			"which-unit-matchmaker": "choisis l'unité qui convient à chaque objet réel"
+		}
+	},
+	"G5-MEA-3": {
+		title: "Équivalents approximatifs anglo-saxons (facultatif)",
+		description: "Sait qu'un pouce vaut environ 2,5 cm, un pied environ 30 cm, un mile environ 1,6 km, une livre environ 450 g et une pinte environ 570 ml.",
+		ideas: {
+			"pound-or-kilo-guess": "devine laquelle de deux masses est la plus lourde",
+			"foot-mile-pint-guess": "choisis la longueur ou la quantité métrique la plus proche d'un pied, d'un mile ou d'une pinte"
+		}
+	},
+	"G5-MEA-4": {
+		title: "Repères personnels",
+		description: "Utilise sa main, son pas et sa taille pour estimer une pièce (environ 6 pas), une porte ou une étagère.",
+		ideas: { "pace-it-out-estimator": "estime en pas, puis mesure et compare" }
+	},
+	"G5-MEA-5": {
+		title: "Aire d'un parallélogramme",
+		description: "Trouve l'aire d'un parallélogramme comme base × hauteur (6 × 4 = 24).",
+		ideas: {
+			"shear-the-rectangle": "déplace un morceau pour transformer un parallélogramme en rectangle",
+			"base-and-height-hunt": "choisis la bonne base et la hauteur perpendiculaire"
+		}
+	},
+	"G5-MEA-6": {
+		title: "Aire d'un triangle",
+		description: "Trouve l'aire d'un triangle comme la moitié d'un rectangle base × hauteur.",
+		ideas: { "half-a-rectangle-triangle": "copie et fais tourner un triangle pour former un rectangle" }
+	},
+	"G5-MEA-7": {
+		title: "Aire et périmètre de figures composées de rectangles",
+		description: "Trouve l'aire et le périmètre d'une figure en L en la découpant en rectangles.",
+		ideas: {
+			"l-shape-garden-planner": "dessine un jardin et calcule le coût de la clôture et du gazon",
+			"same-area-different-perimeter": "redessine une figure pour garder la même aire mais changer le périmètre"
+		}
+	},
+	"G5-MEA-8": {
+		title: "Volume des pavés droits et des assemblages",
+		description: "Calcule V = L × l × h en cm³ et en m³ (4 × 3 × 2 = 24 cm³), y compris pour deux blocs collés.",
+		ideas: {
+			"stack-the-unit-cubes": "remplis une boîte de cubes unités et compte les couches",
+			"compound-box-builder": "découpe une boîte composée en deux pavés droits et additionne"
+		}
+	},
+	"G5-MEA-9": {
+		title: "Volume et contenance : ml et cm³",
+		description: "Sait que 1 ml = 1 cm³ et 1 l = 1 000 cm³ (un cube de 10 cm contient 1 l).",
+		ideas: { "fill-the-tank-capacity": "trouve combien de litres tiennent dans un réservoir à partir de ses dimensions" }
+	},
+	"G5-TIM-1": {
+		title: "Convertir des unités de temps",
+		description: "Convertit 3 semaines en jours et 2 jours en heures.",
+		ideas: { "time-unit-ladder": "monte et descends l'échelle des secondes aux siècles" }
+	},
+	"G5-TIM-2": {
+		title: "Durées décimales et mixtes",
+		description: "Convertit 2,5 h = 150 min et 135 min = 2 h 15 min.",
+		ideas: {
+			"decimal-hours-converter": "passe des heures décimales aux heures et minutes en glissant",
+			"minutes-to-hours-and-minutes": "transforme des minutes en h et min dans une histoire"
+		}
+	},
+	"G5-TIM-3": {
+		title: "Lire des horaires et trouver des durées",
+		description: "Trouve qu'un bus de 8 h 45 qui arrive à 10 h 20 met 1 h 35 min.",
+		ideas: {
+			"timetable-detective": "lis un horaire pour répondre : qui, quand, combien de temps",
+			"journey-duration-calculator": "saute d'arrêt en arrêt dans un horaire et additionne les durées"
+		}
+	},
+	"G5-TIM-4": {
+		title: "Trajets en plusieurs étapes à travers minuit",
+		description: "Prévoit un voyage avec deux trajets, une attente et une arrivée après minuit.",
+		ideas: { "overnight-train-planner": "prévois un voyage de nuit en suivant le changement de date" }
+	},
+	"G5-TIM-5": {
+		title: "L'heure dans un autre fuseau (découverte)",
+		description: "Dit que quand il est 10 h à Paris, il est 9 h à Londres.",
+		ideas: { "world-clock-sun-map": "observe le jour et la nuit sur une carte avec des horloges" }
+	},
+	"G5-TIM-6": {
+		title: "Planifier entre fuseaux horaires (découverte)",
+		description: "Choisit une heure d'appel raisonnable dans deux villes.",
+		ideas: {
+			"schedule-the-call": "trouve un créneau qui convient à deux villes",
+			"time-difference-ruler": "fais glisser deux bandes d'horloges pour lire le décalage"
+		}
+	},
+	"G5-MON-1": {
+		title: "Comparer des offres selon le prix à l'unité",
+		description: "Trouve que 2 pour 3 € (1,50 € l'un) est plus avantageux qu'à 1,75 € l'un.",
+		ideas: {
+			"best-buy-shelf": "choisis le meilleur rapport qualité-prix parmi des articles en rayon",
+			"per-100g-label-race": "compare les prix au kilo ou aux 100 g sur des étiquettes"
+		}
+	},
+	"G5-MON-2": {
+		title: "Prix après une remise en pourcentage",
+		description: "Calcule une remise de 20 % sur 15 € (12 €).",
+		ideas: {
+			"sale-price-calculator-shop": "calcule le prix d'articles après la remise indiquée sur la pancarte",
+			"discount-ladder": "grimpe une échelle de remises de 10 %, 20 %, 25 %"
+		}
+	},
+	"G5-MON-3": {
+		title: "Rester dans un budget",
+		description: "Choisit des articles dont le total fait au plus 20 € après une remise.",
+		ideas: { "twenty-euro-basket": "remplis un panier sans dépasser le budget" }
+	},
+	"G5-MON-4": {
+		title: "Vérifier un ticket de caisse",
+		description: "Trouve la ligne fausse d'un ticket de caisse (mauvaise remise, mauvais prix unitaire).",
+		ideas: {
+			"receipt-error-hunt": "trouve la ligne fausse sur un ticket de caisse",
+			"change-check-till": "vérifie la monnaie rendue"
+		}
+	},
+	"G5-GEO-1": {
+		title: "Hiérarchie des figures",
+		description: "Dit que tout carré est un rectangle et que tout rectangle est un parallélogramme.",
+		ideas: { "shape-family-tree-builder": "place les figures sur un arbre généalogique" }
+	},
+	"G5-GEO-2": {
+		title: "Propriétés qui définissent les quadrilatères",
+		description: "Distingue un cerf-volant, un losange et un trapèze par les côtés, les parallèles et les diagonales.",
+		ideas: {
+			"mystery-shape-twenty-questions": "devine la figure avec des questions oui/non sur ses propriétés",
+			"diagonal-detective": "reconnais une figure grâce à ses diagonales"
+		}
+	},
+	"G5-GEO-3": {
+		title: "Les parties d'un cercle",
+		description: "Nomme le centre, le rayon, le diamètre et la circonférence.",
+		ideas: { "circle-label-and-measure": "nomme les parties d'un cercle et mesure chacune" }
+	},
+	"G5-GEO-4": {
+		title: "Lien entre rayon et diamètre",
+		description: "Sait que d = 2r, donc un cercle de rayon 4 cm a un diamètre de 8 cm.",
+		ideas: {
+			"radius-diameter-flipper": "passe du rayon au diamètre et inversement",
+			"circle-in-a-box-measure": "mesure la largeur d'un cercle dans une boîte pour trouver le rayon"
+		}
+	},
+	"G5-GEO-5": {
+		title: "Angles d'un triangle",
+		description: "Trouve l'angle manquant d'un triangle qui a 50° et 60° (70°).",
+		ideas: { "missing-angle-triangle-puzzle": "trouve l'angle manquant dans une série de triangles" }
+	},
+	"G5-GEO-6": {
+		title: "Angles d'un quadrilatère",
+		description: "Trouve l'angle manquant d'un quadrilatère qui a 90°, 80° et 100° (90°).",
+		ideas: { "quad-angle-tear-and-fit": "déchire les coins et assemble-les autour d'un point" }
+	},
+	"G5-GEO-7": {
+		title: "Angles opposés par le sommet",
+		description: "Sait que lorsque deux droites se croisent, les angles opposés sont égaux (un angle de 65° fait face à un autre de 65°).",
+		ideas: {
+			"crossing-lines-angle-pairs": "fais glisser une droite qui coupe l'autre et regarde les angles opposés rester égaux",
+			"find-the-crossed-angle": "trouve l'angle inconnu à un croisement"
+		}
+	},
+	"G5-GEO-8": {
+		title: "Construire une figure à partir de consignes",
+		description: "Trace un triangle de côtés 5 cm, 6 cm et 7 cm avec une règle, un rapporteur et un compas.",
+		ideas: {
+			"protractor-triangle-builder": "construis un triangle à partir d'un côté et de deux angles",
+			"compass-circle-pattern": "dessine un motif avec des cercles tracés au compas"
+		}
+	},
+	"G5-GEO-9": {
+		title: "Patrons de solides",
+		description: "Dit quels patrons se plient en cube, en pavé droit, en prisme ou en pyramide.",
+		ideas: {
+			"net-fold-tester": "plie un patron à l'écran pour voir s'il se ferme",
+			"draw-the-net": "dessine un patron de cube, de pavé droit ou de prisme et plie-le pour vérifier"
+		}
+	},
+	"G5-GEO-10": {
+		title: "Vues de dessus, de face et de côté",
+		description: "Associe un solide à ses vues de dessus, de face et de côté.",
+		ideas: {
+			"top-front-side-match": "associe une maquette à ses trois vues",
+			"build-from-views": "construis le solide à partir de ses trois vues"
+		}
+	},
+	"G5-POS-1": {
+		title: "Coordonnées du premier quadrant dans la vie réelle",
+		description: "Lit et place une position comme (4, 7) sur le plan d'un parc.",
+		ideas: { "treasure-map-coordinates": "pars à la chasse au trésor avec des indices en coordonnées" }
+	},
+	"G5-POS-2": {
+		title: "Placer des points dans les quatre quadrants",
+		description: "Place (−3, 2) et (4, −5) et lit les coordonnées d'un point.",
+		ideas: { "four-quadrant-battleship": "trouve des bateaux cachés grâce aux coordonnées" }
+	},
+	"G5-POS-3": {
+		title: "Compléter des figures avec des coordonnées",
+		description: "Trouve le sommet manquant d'un rectangle (par exemple (1, 1), (4, 1), (4, 3) donne (1, 3)) et le symétrique d'un point.",
+		ideas: {
+			"complete-the-rectangle": "trouve le quatrième coin",
+			"mirror-point-hunt": "trouve le symétrique d'un point grâce aux coordonnées"
+		}
+	},
+	"G5-POS-4": {
+		title: "Lire l'échelle d'une carte",
+		description: "Utilise 1 cm : 100 m pour lire que 4,5 cm représentent 450 m.",
+		ideas: { "map-distance-measurer": "mesure une distance sur une carte et convertis-la" }
+	},
+	"G5-POS-5": {
+		title: "Utiliser l'échelle sur des plans",
+		description: "Dessine ou lit un plan à une échelle donnée (une pièce de 4 m à 1 cm : 1 m fait 4 cm).",
+		ideas: {
+			"scale-a-room-plan": "dessine une pièce à l'échelle",
+			"scale-ratio-match": "associe des échelles et des distances réelles"
+		}
+	},
+	"G5-POS-6": {
+		title: "Translater une figure",
+		description: "Glisse une figure de 3 vers la droite et 2 vers le haut et écrit le déplacement en coordonnées.",
+		ideas: {
+			"slide-to-target-grid": "glisse des figures sur une cible",
+			"describe-the-move-coordinates": "écris le déplacement qui a mené à la position"
+		}
+	},
+	"G5-POS-7": {
+		title: "Faire la symétrie d'une figure",
+		description: "Fait la symétrie d'une figure par rapport à l'axe des y et à une droite donnée et écrit les nouvelles coordonnées.",
+		ideas: {
+			"mirror-line-grid-reflector": "fais la symétrie de figures par rapport à des droites sur une grille",
+			"reflect-in-axes-coordinates": "fais la symétrie de points par rapport aux axes et lis les nouvelles coordonnées"
+		}
+	},
+	"G5-POS-8": {
+		title: "Rotation de 90° ou 180° (découverte)",
+		description: "Tourne une figure d'un quart de tour (90°) ou d'un demi-tour (180°) autour d'un point et décrit le résultat.",
+		ideas: { "turn-it-90-explorer": "fais tourner de 90° ou de 180° et compare avec la figure de départ" }
+	},
+	"G5-DAT-1": {
+		title: "Mode et étendue",
+		description: "Trouve le mode 5 et l'étendue 7 dans 2, 5, 5, 9, 3.",
+		ideas: { "data-set-mode-range-cards": "trie des cartes de données pour trouver le mode et l'étendue" }
+	},
+	"G5-DAT-2": {
+		title: "Moyenne",
+		description: "Partage pour égaliser les données et calcule la moyenne (3, 5, 7 donnent 5).",
+		ideas: { "level-the-towers-mean": "égalise des tours de blocs pour voir la moyenne" }
+	},
+	"G5-DAT-3": {
+		title: "Quand la moyenne trompe",
+		description: "Repère qu'une valeur extrême tire la moyenne (1, 2, 2, 3, 40).",
+		ideas: {
+			"outlier-mean-trap": "ajoute une valeur extrême et regarde la moyenne bouger",
+			"which-average-best": "choisis le résumé le plus juste pour une série"
+		}
+	},
+	"G5-DAT-4": {
+		title: "Médiane",
+		description: "Trouve la médiane de 4, 9, 2, 7, 5 en rangeant (5).",
+		ideas: { "median-line-up-queue": "range des personnes par taille et trouve celle du milieu" }
+	},
+	"G5-DAT-5": {
+		title: "Lire un diagramme circulaire",
+		description: "Lit qu'un secteur d'un quart représente 25 % et ¼ du total.",
+		ideas: { "pie-slice-percent-match": "associe des parts à des fractions et à des pourcentages" }
+	},
+	"G5-DAT-6": {
+		title: "Tracer un diagramme circulaire (découverte)",
+		description: "Transforme 50 %, 30 %, 20 % en diagramme circulaire.",
+		ideas: {
+			"build-a-pie-from-percentages": "fais glisser les séparations pour construire un diagramme circulaire",
+			"pie-from-fractions-strip": "plie une bande pour en faire un diagramme circulaire"
+		}
+	},
+	"G5-DAT-7": {
+		title: "Graphiques en courbes à deux séries",
+		description: "Lit deux courbes sur un même graphique et estime une valeur entre deux points.",
+		ideas: { "estimate-between-points": "lis la valeur entre deux points marqués" }
+	},
+	"G5-DAT-8": {
+		title: "Choisir le bon graphique",
+		description: "Choisit un diagramme en barres, un graphique en courbes ou un diagramme circulaire selon les données.",
+		ideas: {
+			"best-graph-chooser": "associe chaque question au meilleur graphique",
+			"same-data-three-graphs": "compare un même jeu de données dans trois graphiques"
+		}
+	},
+	"G5-DAT-9": {
+		title: "Repérer un graphique trompeur",
+		description: "Remarque un axe tronqué, une échelle absente ou un échantillon biaisé.",
+		ideas: {
+			"truncated-axis-lens": "rétablis un axe coupé ou une période choisie à dessein et vois ce qui change",
+			"biased-sample-survey-spotter": "décide si l'échantillon d'une enquête est équitable"
+		}
+	},
+	"G5-PRB-1": {
+		title: "Langage du hasard et échelle de 0 à 1",
+		description: "Place « peu probable » près de 0,2 et « certain » à 1 sur une échelle.",
+		ideas: { "probability-line-sorter": "trie des événements sur une droite de 0 à 1" }
+	},
+	"G5-PRB-2": {
+		title: "Probabilités simples sous forme de fractions",
+		description: "Écrit la chance d'obtenir un 5 avec un dé comme 1/6 et celle de tirer une bille rouge parmi 3 rouges sur 10 comme 3/10.",
+		ideas: {
+			"spinner-fraction-maker": "nomme la chance de chaque couleur d'une roue",
+			"bag-of-marbles-fraction": "nomme la chance à partir du contenu d'un sac"
+		}
+	},
+	"G5-PRB-3": {
+		title: "Équitable ou non",
+		description: "Dit qu'une roue aux secteurs inégaux est injuste et en conçoit une équitable.",
+		ideas: {
+			"fair-spinner-designer": "conçois une roue où chaque couleur a la même chance",
+			"fair-or-unfair-sorter": "trie des jeux en équitables et injustes"
+		}
+	},
+	"G5-PRB-4": {
+		title: "Expériences et prédictions",
+		description: "Prédit 25 piles sur 50 lancers, fait l'expérience et compare.",
+		ideas: { "predict-then-roll-lab": "prédis la fréquence de chaque somme avec deux dés, lance 100 fois, compare" }
+	},
+	"G5-PRB-5": {
+		title: "Plus d'essais, plus près de la prédiction",
+		description: "Voit que 1 000 lancers se rapprochent mieux de la prédiction que 10 lancers.",
+		ideas: {
+			"trials-slider-lab": "augmente le nombre d'essais et regarde les barres se stabiliser",
+			"fair-or-rigged-detective": "décide d'après les résultats si un dé est équilibré ou truqué"
+		}
+	},
+	"G5-PSR-1": {
+		title: "Stratégies : remonter à l'envers et essayer-vérifier-ajuster",
+		description: "Résout « je pense à un nombre, je le double, j'ajoute 3, j'obtiens 17 » en remontant à l'envers.",
+		ideas: { "work-backwards-puzzles": "défais une chaîne d'étapes pour retrouver le départ" }
+	},
+	"G5-PSR-2": {
+		title: "Stratégies : simplifier et chercher une régularité",
+		description: "Essaie un cas plus petit pour trouver une régularité avant le grand cas.",
+		ideas: {
+			"try-a-simpler-case": "résous une version plus petite pour voir la règle",
+			"look-for-a-pattern-puzzles": "trouve la régularité, puis utilise-la"
+		}
+	},
+	"G5-PSR-3": {
+		title: "Informations manquantes et en trop",
+		description: "Dit quelle information manque ou est inutile dans une histoire.",
+		ideas: { "what-do-we-need-to-know": "surligne ce qui est utile, inutile ou manquant" }
+	},
+	"G5-PSR-4": {
+		title: "Trouver sa propre erreur",
+		description: "Trouve l'étape fausse dans une réponse déjà rédigée.",
+		ideas: { "spot-the-slip-worked-solution": "touche l'étape où une solution rédigée se trompe" }
+	},
+	"G5-PSR-5": {
+		title: "Toujours, parfois, jamais et contre-exemples",
+		description: "Réfute « multiplier agrandit toujours » avec ½ × 6.",
+		ideas: { "always-sometimes-never-cards": "trie des affirmations et justifie chacune" }
+	},
+	"G5-PSR-6": {
+		title: "Problèmes à étapes avec fractions, décimaux et pourcentages",
+		description: "Résout une histoire en 3 étapes, comme une sortie au magasin, et justifie chaque étape.",
+		ideas: { "shop-trip-puzzles": "prévois une sortie avec plusieurs fractions et remises" }
+	},
+	"G5-PSR-7": {
+		title: "Modèles en barres",
+		description: "Dessine un modèle en barres pour « les ⅗ des bonbons sont rouges, 12 sont bleus ».",
+		ideas: { "draw-the-bar-first": "dessine un modèle en barres avant de calculer" }
+	},
+	"G5-PSR-8": {
+		title: "La réponse est-elle raisonnable ?",
+		description: "Écarte une réponse grâce à une estimation ou au contexte.",
+		ideas: { "sense-check-stamp": "tamponne chaque réponse « sensée » ou « pas sensée »" }
+	},
+	"G5-PSR-9": {
+		title: "Bien utiliser la calculatrice",
+		description: "Entre un calcul correctement, le vérifie avec une estimation et sait quand ne pas l'utiliser.",
+		ideas: {
+			"calculator-keystroke-detective": "trouve la touche qui a donné un mauvais résultat",
+			"when-not-to-use-calculator": "choisis les cas où le calcul mental bat la calculatrice"
+		}
+	}
+}, GA = {
+	"G6-NS-1": {
+		title: "Multiplier des entiers : les règles des signes",
+		description: "Multiplie deux entiers relatifs avec les règles des signes (−4 × −3 = 12, −4 × 3 = −12).",
+		ideas: {
+			"sign-rules-tug-of-war": "Jeu à deux équipes où le signe du produit décide du sens de la traction.",
+			"sign-pattern-detective": "Énigme de suite : prolonge 3 × −2, 2 × −2, 1 × −2 … pour découvrir pourquoi − × − = +."
+		}
+	},
+	"G6-NS-2": {
+		title: "Diviser des entiers et le lien avec la multiplication",
+		description: "Divise des entiers relatifs avec les règles des signes et vérifie en multipliant (−12 ÷ 3 = −4 car −4 × 3 = −12).",
+		ideas: {
+			"divide-and-check-machine": "Machine à fonctions : divise, puis multiplie pour vérifier.",
+			"sign-slip-hunt": "Chasse à l'erreur : trouve le mauvais signe dans des quotients déjà résolus."
+		}
+	},
+	"G6-NS-3": {
+		title: "Aisance avec les signes et calculs mixtes",
+		description: "Retrouve de tête produits et quotients signés et choisit le bon signe dans des enchaînements (−2 × 5 + 3 = −7).",
+		ideas: {
+			"sign-sprint": "Course de rappel chronométrée avec séries de bonnes réponses.",
+			"sign-chain-relay": "Relais enchaînant trois opérations signées pour atteindre un objectif."
+		}
+	},
+	"G6-NS-4": {
+		title: "Fractions et décimaux négatifs sur la droite",
+		description: "Place et range −¾, −0,5 et 0,2 sur une même droite graduée (−¾ < −0,5).",
+		ideas: {
+			"rational-line-lander": "Place par glisser-déposer fractions, décimaux et négatifs sur une droite zoomable.",
+			"order-the-rationals": "Puzzle de tri : range des cartes variées et justifie avec la droite."
+		}
+	},
+	"G6-NS-5": {
+		title: "Additionner et soustraire des nombres rationnels",
+		description: "Additionne et soustrait des fractions et des décimaux signés (−¾ + 0,25 = −½).",
+		ideas: {
+			"rational-arithmetic-relay": "Relais d'histoires de températures et d'altitudes, en nombres purs, qui s'enchaînent.",
+			"rational-jump-walk": "Marche sur la droite par sauts signés et lis où tu atterris."
+		}
+	},
+	"G6-NS-6": {
+		title: "Les familles de nombres",
+		description: "Range les nombres en naturels, entiers relatifs, rationnels et « pas une fraction » (π, √2 : simple idée).",
+		ideas: {
+			"number-family-sort": "Tri en cercles imbriqués : place −¾, 0,5, √2, 7 dans leurs familles.",
+			"which-family-wall": "Mur vrai/faux : « tout entier relatif est-il rationnel ? »"
+		}
+	},
+	"G6-NS-7": {
+		title: "Densité : il y a toujours un nombre entre deux",
+		description: "Trouve un nombre entre deux fractions ou décimaux donnés et explique pourquoi cela ne s'arrête jamais (entre 0,3 et 0,31 il y a 0,305).",
+		ideas: {
+			"between-any-two": "Défi de zoom jusqu'à ce qu'il n'y ait plus de pixels.",
+			"midpoint-hunt": "Trouve la moyenne de deux nombres pour tomber strictement entre eux."
+		}
+	},
+	"G6-NS-8": {
+		title: "Distance entre deux nombres",
+		description: "Trouve la distance avec |a − b|, même en traversant zéro (de −7 à 4, c'est 11).",
+		ideas: {
+			"distance-across-zero": "Estime puis vérifie : parcours la droite, puis lis |a − b|.",
+			"elevator-gap": "Problèmes d'histoires : étages au-dessus et au-dessous du sol, en nombres purs."
+		}
+	},
+	"G6-PV-1": {
+		title: "Ce qui compte comme chiffre significatif",
+		description: "Repère les chiffres significatifs en ignorant les zéros du début (0,004 73 en a 3 ; 48 000 peut en avoir 2).",
+		ideas: {
+			"which-digits-count": "Puzzle de tri : marque les chiffres significatifs parmi zéros de début et de fin.",
+			"digit-highlighter": "Jeu où l'on touche les chiffres, avec réponse immédiate."
+		}
+	},
+	"G6-PV-2": {
+		title: "Arrondir à un nombre de chiffres significatifs",
+		description: "Arrondit à 1, 2 ou 3 chiffres significatifs (48 215 → 48 000 ; 0,004 73 → 0,0047).",
+		ideas: {
+			"sf-snap": "Un curseur zoome jusqu'à ce que le nombre s'ajuste au bon nombre de chiffres significatifs.",
+			"round-or-wrong": "Chasse à l'erreur : trouve les arrondis mal faits."
+		}
+	},
+	"G6-PV-3": {
+		title: "Estimer à 1 chiffre significatif, précision raisonnable",
+		description: "Choisit une précision raisonnable selon le contexte (une longueur mesurée, une population) et estime 4,8 × 21 par 5 × 20.",
+		ideas: {
+			"measure-to-sf": "Activité pratique : donne une longueur mesurée avec une précision raisonnable et explique pourquoi.",
+			"how-precise-headline": "Tri d'histoires : quels chiffres de gros titres sont trop précis ?"
+		}
+	},
+	"G6-PV-4": {
+		title: "Notation scientifique : lire et écrire les grands nombres",
+		description: "Écrit les grands nombres sous la forme A × 10ⁿ avec 1 ≤ A < 10 et revient en arrière (4 500 000 = 4,5 × 10⁶).",
+		ideas: {
+			"planet-scale-cards": "Associe distances et masses de planètes aux cartes en notation scientifique.",
+			"standard-or-not": "Chasse à l'erreur : repère les valeurs de A hors de 1–10 et corrige-les."
+		}
+	},
+	"G6-PV-5": {
+		title: "Comparer des nombres en notation scientifique",
+		description: "Range de grands nombres d'abord par l'exposant, puis par A (3 × 10⁸ > 9 × 10⁷).",
+		ideas: {
+			"biggest-by-exponent": "Course de rangement : d'abord par l'exposant.",
+			"giant-showdown": "Cartes en duel : lequel est le plus grand, et pourquoi ?"
+		}
+	},
+	"G6-PV-6": {
+		title: "Puissances de dix nulles et négatives",
+		description: "Lit 10⁰ = 1, 10⁻¹ = 0,1, 10⁻² = 0,01 comme des colonnes de valeur de position et passe des puissances de dix aux décimaux.",
+		ideas: {
+			"place-value-ladder": "Prolonge l'échelle des colonnes à droite de la virgule pour trouver 10⁻ⁿ.",
+			"exponent-match-up": "Jeu de mémoire : associe 10⁻³, 0,001 et 1/1000.",
+			"powers-of-ten-zoom": "Zoom à explorer de la galaxie à l'atome, en lisant l'exposant."
+		}
+	},
+	"G6-OP-1": {
+		title: "Priorités opératoires avec des négatifs",
+		description: "Calcule avec des négatifs et des parenthèses (−3 × (4 + 5) = −27 ; 2 − 3 × −4 = 14).",
+		ideas: {
+			"bracket-bandit": "Chasse à l'erreur : repère l'étape fausse dans des calculs déjà faits.",
+			"order-chain-builder": "Construis un ordre de calcul valide pour atteindre un objectif."
+		}
+	},
+	"G6-OP-2": {
+		title: "Puissances et racines dans les expressions",
+		description: "Calcule avec carrés, cubes et racines dans le bon ordre (2 + 3² = 11 ; √16 − 2³ = −4).",
+		ideas: {
+			"power-order-puzzle": "Place des parenthèses pour obtenir une valeur donnée.",
+			"which-first-sort": "Tri de cartes : quelle opération passe en premier ?"
+		}
+	},
+	"G6-OP-3": {
+		title: "Modèle d'aire de la multiplication posée",
+		description: "Explique 23 × 14 avec quatre morceaux d'un modèle d'aire et le relie à la méthode écrite.",
+		ideas: {
+			"area-model-builder": "Rectangles à glisser et découper pour 23 × 14.",
+			"column-why": "Associe chaque produit partiel de la multiplication posée à son morceau."
+		}
+	},
+	"G6-OP-4": {
+		title: "La distributivité",
+		description: "Utilise a(b + c) = ab + ac pour calculer (7 × 98 = 7 × 100 − 7 × 2) et expliquer des astuces de calcul mental.",
+		ideas: {
+			"split-and-multiply": "Jeu de calcul mental : choisis la décomposition la plus pratique.",
+			"distribute-detective": "Chasse à l'erreur : repère l'astuce de calcul mental ratée (ex. 7 × 98 mal décomposé)."
+		}
+	},
+	"G6-OP-5": {
+		title: "Modèle d'aire du produit de deux binômes",
+		description: "Montre (x + 3)(x + 2) comme quatre morceaux d'aire (simple découverte).",
+		ideas: {
+			"binomial-area-lab": "Construis le rectangle avec des tuiles x et 1 et lis les quatre parties.",
+			"match-area-to-product": "Associe des cartes : schémas et développements."
+		}
+	},
+	"G6-OP-6": {
+		title: "Multiplier des puissances de même base",
+		description: "Applique aᵐ × aⁿ = aᵐ⁺ⁿ avec de petites puissances entières (2³ × 2⁴ = 2⁷ ; simple découverte).",
+		ideas: {
+			"index-law-machine": "Écris en facteurs, puis devine la règle.",
+			"index-law-slip-hunt": "Chasse à l'erreur : 2³ × 2⁴ ≠ 4⁷."
+		}
+	},
+	"G6-FL-1": {
+		title: "Connaître par cœur carrés et cubes",
+		description: "Connaît les carrés jusqu'à 15² et les cubes jusqu'à 5³.",
+		ideas: {
+			"square-sprint": "Course de rappel chronométrée sur carrés et cubes.",
+			"square-memory-pairs": "Jeu de mémoire : 13² ↔ 169."
+		}
+	},
+	"G6-FL-2": {
+		title: "Puissances de 2 et suites de doublements",
+		description: "Connaît les puissances de 2 jusqu'à 2¹⁰ (2⁸ = 256) et s'en sert comme repères de doublement.",
+		ideas: {
+			"doubling-ladder": "Grimpe l'échelle des puissances de 2 contre la montre.",
+			"chessboard-grains": "Histoire : à quelle vitesse le doublement grandit, estimé avant de calculer."
+		}
+	},
+	"G6-FL-3": {
+		title: "Estimations de Fermi à 1 chiffre significatif",
+		description: "Découpe une grande question en petites parties approchées à 1 chiffre significatif et multiplie (cheveux sur une tête ≈ 100 000).",
+		ideas: {
+			"fermi-quest": "Estime puis vérifie, avec un score selon l'ordre de grandeur.",
+			"fermi-chain-builder": "Construis la chaîne d'estimations pour une question cible."
+		}
+	},
+	"G6-FL-4": {
+		title: "Vérifier par une estimation",
+		description: "Juge si une réponse est raisonnable en arrondissant d'abord (48 × 21 fait environ 1 000).",
+		ideas: {
+			"ballpark-bouncer": "Accepte ou refuse des réponses grâce à une estimation rapide.",
+			"estimate-before-you-press": "Prévois, puis découvre la valeur exacte."
+		}
+	},
+	"G6-FL-5": {
+		title: "Vérifier par l'opération inverse ou par une autre méthode",
+		description: "Vérifie un résultat en le défaisant ou en le résolvant autrement, et repère lequel de trois élèves se trompe.",
+		ideas: {
+			"three-way-check": "Jeu d'enquête : trois élèves ne sont pas d'accord, teste chacun.",
+			"undo-to-verify": "Puzzles où l'on défait l'opération."
+		}
+	},
+	"G6-NT-1": {
+		title: "Racines carrées des carrés parfaits",
+		description: "Trouve la racine carrée des carrés parfaits (√144 = 12) et sait qu'elle défait le carré.",
+		ideas: {
+			"square-garden": "Arrange des carreaux carrés pour voir la racine carrée comme la longueur du côté.",
+			"root-or-not-wall": "Tri : carré parfait, cube parfait ou aucun des deux."
+		}
+	},
+	"G6-NT-2": {
+		title: "Racines cubiques des cubes parfaits",
+		description: "Trouve la racine cubique des cubes parfaits (∛64 = 4) et sait qu'elle défait le cube.",
+		ideas: {
+			"cube-stack-builder": "Construis des cubes avec des petits blocs pour voir la racine cubique comme la longueur de l'arête.",
+			"root-match-up": "Associe chaque puissance à sa racine."
+		}
+	},
+	"G6-NT-3": {
+		title: "Estimer des racines qui ne tombent pas juste",
+		description: "Place √20 entre 4 et 5, puis l'affine à 4,4 par essais.",
+		ideas: {
+			"root-squeeze": "Jeu sur la droite : coince √n entre deux entiers, puis affine.",
+			"guess-and-square": "Jeu de score : essaie et améliore."
+		}
+	},
+	"G6-NT-4": {
+		title: "Décomposition en facteurs premiers avec les puissances",
+		description: "Écrit 360 = 2³ × 3² × 5 avec un arbre de facteurs.",
+		ideas: {
+			"factor-tree-forest": "Activité pratique : fais pousser des arbres de facteurs.",
+			"prime-or-break": "Décide s'il faut encore découper une branche."
+		}
+	},
+	"G6-NT-5": {
+		title: "PGCD à partir des facteurs premiers",
+		description: "Lit le PGCD sur les premiers communs (le PGCD de 36 et 60 est 2² × 3 = 12).",
+		ideas: {
+			"overlap-circles-hcf": "Puzzle de Venn : place les facteurs premiers, lis le PGCD.",
+			"biggest-tile": "Histoire : le plus grand carreau carré qui recouvre exactement un sol."
+		}
+	},
+	"G6-NT-6": {
+		title: "PPCM à partir des facteurs premiers",
+		description: "Lit le PPCM sur tous les premiers avec leur plus grande puissance (le PPCM de 12 et 18 est 36).",
+		ideas: {
+			"gear-meet": "Deux engrenages aux nombres de dents différents se retrouvent après un PPCM de tours.",
+			"overlap-circles-lcm": "Puzzle de Venn : construis le PPCM à partir des deux nombres."
+		}
+	},
+	"G6-NT-7": {
+		title: "Racines de carrés et cubes parfaits par factorisation",
+		description: "Trouve la racine carrée ou cubique de grandes puissances parfaites en divisant les exposants par 2 ou par 3 (√(2⁴ × 3²) = 12).",
+		ideas: {
+			"root-by-factors": "Regroupe par deux (ou par trois) les facteurs premiers sur des cartes.",
+			"perfect-power-test": "Est-ce un carré parfait ? Regarde les exposants."
+		}
+	},
+	"G6-NT-8": {
+		title: "Compter les diviseurs et algorithme d'Euclide",
+		description: "Compte les diviseurs grâce aux exposants (2³ × 3² en a 4 × 3 = 12) et trouve un PGCD par restes successifs.",
+		ideas: {
+			"euclid-rectangles": "Pave un rectangle avec les plus grands carrés pour trouver le PGCD.",
+			"factor-count-predictor": "Prévois le nombre de diviseurs, puis liste-les pour vérifier."
+		}
+	},
+	"G6-NT-9": {
+		title: "Restes, horloges et régularités numériques",
+		description: "Utilise les restes (jour de la semaine dans 100 jours, dernier chiffre de 7ⁿ), trouve des régularités dans les nombres triangulaires, carrés, de Fibonacci et parfaits, et utilise la racine numérique (preuve par neuf) pour contrôler sommes et produits.",
+		ideas: {
+			"clock-remainders": "Jour de la semaine après n jours, dernier chiffre de 7ⁿ, sur un cadran d'horloge.",
+			"sieve-and-pattern-hunt": "Crible d'Ératosthène, puis chasse aux régularités des nombres carrés, triangulaires, de Fibonacci et parfaits.",
+			"nines-check-clock": "Réduis les chiffres à une racine numérique sur une horloge à 9 positions pour accepter ou refuser une somme ou un produit."
+		}
+	},
+	"G6-FR-1": {
+		title: "Additionner et soustraire des fractions signées",
+		description: "Additionne et soustrait des fractions négatives (−½ + ¼ = −¼ ; ¾ − 1½ = −¾).",
+		ideas: {
+			"fraction-balance-signs": "Puzzle de balance où les poids négatifs flottent vers le haut.",
+			"signed-fraction-walk": "Marche sur la droite par sauts de fractions."
+		}
+	},
+	"G6-FR-2": {
+		title: "Multiplier et diviser des fractions signées",
+		description: "Multiplie et divise des fractions négatives (−½ ÷ ¼ = −2), ainsi que des décimaux signés ou des paires décimal-fraction (−0,5 × 0,2 = −0,1 ; −1,2 ÷ 0,4 = −3).",
+		ideas: {
+			"how-many-quarters": "Diviser, c'est compter des morceaux, avec changements de signe.",
+			"sign-fraction-slip-hunt": "Chasse à l'erreur sur des produits et des quotients.",
+			"signed-decimal-mixer": "Cartes « estime puis calcule » qui associent décimaux signés et fractions, le signe d'abord."
+		}
+	},
+	"G6-FR-3": {
+		title: "Fraction d'une fraction",
+		description: "Trouve ¾ de ⅖ = 3/10 par pliage ou modèle d'aire.",
+		ideas: {
+			"fraction-of-fraction-folds": "Modèle de pliage de papier à l'écran.",
+			"overlap-grid-fractions": "Colorie les lignes puis les colonnes, lis la partie commune."
+		}
+	},
+	"G6-FR-4": {
+		title: "Fractions complexes",
+		description: "Simplifie une fraction sur une fraction (½ ÷ ¾ s'écrit (1/2)/(3/4) = 2/3).",
+		ideas: {
+			"stacked-fraction-solver": "Réécris des fractions empilées en division, étape par étape.",
+			"complex-match": "Associe les formes empilées à leurs réponses simples."
+		}
+	},
+	"G6-FR-5": {
+		title: "Taux unitaires avec des fractions",
+		description: "Trouve un taux à partir de quantités fractionnaires (½ mile en ¼ d'heure fait 2 miles par heure).",
+		ideas: {
+			"slow-snail-rates": "Problèmes d'histoires : vitesse à partir d'une distance et d'une durée fractionnaires.",
+			"rate-per-one-cards": "Cartes : ramène les deux quantités à « pour 1 »."
+		}
+	},
+	"G6-FR-6": {
+		title: "Comparer des fractions par produits en croix",
+		description: "Compare 5/7 et 8/11 par produits en croix (55 contre 56).",
+		ideas: {
+			"cross-multiply-duel": "Choisis la plus grande fraction face à un adversaire.",
+			"cross-why-explorer": "Montre que les produits en croix reviennent à un dénominateur commun."
+		}
+	},
+	"G6-FR-7": {
+		title: "Fractions en décimaux : finis ou périodiques",
+		description: "Convertit par division (⅐ = 0,142857…) et teste quand un décimal s'arrête.",
+		ideas: {
+			"recurring-detective": "La division posée s'anime, le bloc qui se répète s'allume.",
+			"terminate-or-repeat-sort": "Prévois d'après les facteurs premiers du dénominateur."
+		}
+	},
+	"G6-FR-8": {
+		title: "0,999… = 1 et les cinq visages d'une fraction",
+		description: "Prouve que 0,999… = 1 avec ⅓ + ⅓ + ⅓ et passe d'une vue à l'autre de ⅔ : partie-tout, nombre, quotient, rapport, opérateur.",
+		ideas: {
+			"is-point-nine-nine-one": "Puzzle d'argumentation avec ⅓ + ⅓ + ⅓.",
+			"five-faces-of-a-fraction": "Associe des cartes : cinq façons de voir ⅔."
+		}
+	},
+	"G6-RP-1": {
+		title: "Le pourcentage comme multiplicateur",
+		description: "Utilise ×1,2 pour +20 % et ×0,85 pour −15 %, y compris au-dessus de 100 % (130 % de 40 = 52).",
+		ideas: {
+			"multiplier-machine": "Cartes multiplicateurs à glisser et enchaîner.",
+			"percent-to-multiplier-match": "Associe chaque variation à son multiplicateur."
+		}
+	},
+	"G6-RP-2": {
+		title: "Variations en pourcentage successives",
+		description: "Enchaîne des multiplicateurs (deux hausses de 10 % font ×1,21 ; +10 % puis −10 % ne ramène pas au départ).",
+		ideas: {
+			"why-not-back-to-start": "À explorer : barres après +10 % puis −10 %.",
+			"chain-the-change": "Relais d'histoires de variations successives."
+		}
+	},
+	"G6-RP-3": {
+		title: "Pourcentages inversés",
+		description: "Retrouve la valeur de départ en divisant par le multiplicateur (après 20 % de réduction on a 48, donc 60).",
+		ideas: {
+			"undo-the-percent": "Modèles en barres parcourus à l'envers.",
+			"sale-detective": "Retrouve le nombre de départ avant une baisse en pourcentage."
+		}
+	},
+	"G6-RP-4": {
+		title: "Erreur en pourcentage",
+		description: "Exprime une erreur en pourcentage de la vraie valeur (estimé 45, réel 50, erreur de 10 %). Arithmétique pure seulement.",
+		ideas: {
+			"percent-error-dartboard": "De combien ton estimation se trompe-t-elle, en pourcentage ?",
+			"estimate-then-error": "Devine une mesure, découvre-la, marque des points."
+		}
+	},
+	"G6-RP-5": {
+		title: "Rapports 1 : n et rapports équivalents",
+		description: "Réécrit 4 : 10 en 1 : 2,5 et compare des rapports.",
+		ideas: {
+			"ratio-simplifier": "Curseurs qui multiplient les deux côtés.",
+			"which-mix-is-stronger": "Compare des mélanges avec 1 : n."
+		}
+	},
+	"G6-RP-6": {
+		title: "Partager selon un rapport à trois parts",
+		description: "Partage une quantité selon un rapport à 3 parts (60 en nombre pur selon 2 : 3 : 5 donne 12, 18, 30), avec des unités mélangées.",
+		ideas: {
+			"three-part-share": "Partage en barres à 3 parts, avec des unités mélangées.",
+			"ratio-recipe-split": "Quantités d'une recette réparties selon un rapport."
+		}
+	},
+	"G6-RP-7": {
+		title: "Proportionnalité directe et coefficient k",
+		description: "Utilise y = kx et trouve k à partir d'un couple (3 livres coûtent 12, donc k = 4).",
+		ideas: {
+			"find-the-k": "Jeu de machine mystère : trouve k, prévois les résultats.",
+			"proportion-table-fill": "Complète des tableaux et des graphiques passant par l'origine."
+		}
+	},
+	"G6-RP-8": {
+		title: "Proportionnalité inverse",
+		description: "Reconnaît que plus d'ouvriers, c'est moins de jours (xy constant : 6 ouvriers mettent 4 jours, donc 3 en mettent 8).",
+		ideas: {
+			"direct-or-inverse": "Puzzle de tri avec graphiques : droite ou courbe descendante.",
+			"workers-and-days": "Problèmes d'histoires avec un produit constant."
+		}
+	},
+	"G6-RP-9": {
+		title: "Raisonnement additif ou multiplicatif",
+		description: "Distingue « ajouter la même quantité » de « multiplier par le même facteur » (passer d'une recette pour 2 à une pour 5 en ajoutant 3 est faux).",
+		ideas: {
+			"recipe-scaler-trap": "Chasse à l'erreur sur une recette agrandie en ajoutant.",
+			"add-or-multiply-sort": "Trie des situations selon le bon raisonnement."
+		}
+	},
+	"G6-ALG-1": {
+		title: "Écrire des expressions à partir de mots",
+		description: "Traduit des mots en expressions (3 de plus que le double de n s'écrit 2n + 3).",
+		ideas: {
+			"word-to-expression-match": "Associe des cartes : mots et expressions.",
+			"function-machine-build": "Construis une machine pour une règle décrite."
+		}
+	},
+	"G6-ALG-2": {
+		title: "Termes, coefficients et termes semblables",
+		description: "Nomme termes et coefficients et repère les termes semblables (3a et 5a sont semblables ; 3a et 3b ne le sont pas).",
+		ideas: {
+			"like-terms-sorter": "Range les termes en groupes.",
+			"algebra-tiles-lab": "Tuiles virtuelles pour x et 1."
+		}
+	},
+	"G6-ALG-3": {
+		title: "Réduire une expression",
+		description: "Simplifie 3a + 2a − a = 4a et 3a + 2b − a + b = 2a + 3b.",
+		ideas: {
+			"tile-collector": "Glisse ensemble les tuiles semblables, les paires opposées s'annulent.",
+			"simplify-slip-hunt": "Chasse à l'erreur : 3a + 2b ≠ 5ab."
+		}
+	},
+	"G6-ALG-4": {
+		title: "Remplacer par des valeurs positives",
+		description: "Calcule des formules en remplaçant les lettres (périmètre P = 2l + 2w avec l = 5, w = 3).",
+		ideas: {
+			"substitution-scavenger": "Remplace par de vraies mesures dans les formules de périmètre et de vitesse.",
+			"value-or-not": "Associe des valeurs à des expressions."
+		}
+	},
+	"G6-ALG-5": {
+		title: "Remplacer par des valeurs négatives",
+		description: "Remplace par des négatifs (a = −2 dans 3a + 5 donne −1 ; a² donne 4).",
+		ideas: {
+			"negative-sub-sprint": "Entraînement rapide avec réponse immédiate sur les signes.",
+			"bracket-your-negative": "Chasse à l'erreur : parenthèse oubliée."
+		}
+	},
+	"G6-ALG-6": {
+		title: "Développer avec une seule parenthèse",
+		description: "Développe 2(x + 3) = 2x + 6 et 3(2x − 1) = 6x − 3.",
+		ideas: {
+			"bracket-boxes": "Tuiles de modèle d'aire avec plusieurs groupes.",
+			"expand-slip-hunt": "Chasse à l'erreur : le terme oublié par la parenthèse."
+		}
+	},
+	"G6-ALG-7": {
+		title: "Machines à fonctions et calcul à rebours",
+		description: "Lit une machine à une ou deux étapes et l'inverse (×3 + 2 donne 17, donc l'entrée est 5).",
+		ideas: {
+			"function-machine-reverse": "Entre une valeur, lis le résultat, remonte en arrière.",
+			"mystery-machine-guess": "Devine la règle à partir de couples entrée/sortie."
+		}
+	},
+	"G6-ALG-8": {
+		title: "Résoudre des équations à une ou deux étapes",
+		description: "Résout 3x + 5 = 20 en équilibrant et vérifie la réponse (x = 5).",
+		ideas: {
+			"balance-scales-two-step": "Glisse des opérations sur les deux plateaux.",
+			"check-your-x": "Remplace pour vérifier ou rejeter."
+		}
+	},
+	"G6-ALG-9": {
+		title: "Mettre un problème en équation",
+		description: "Choisit l'équation, puis résout (« 3 stylos et une règle à 2 € coûtent 11 € » donne 3p + 2 = 11, en nombres purs).",
+		ideas: {
+			"equation-from-story": "Choisis d'abord l'équation, résous ensuite.",
+			"think-of-a-number": "Devinettes lues comme des équations."
+		}
+	},
+	"G6-ALG-10": {
+		title: "Le terme général d'une suite arithmétique",
+		description: "Trouve le terme général à partir de la différence constante (5, 8, 11 … donne 3n + 2) et le 50e terme. Vu seulement ici.",
+		ideas: {
+			"nth-term-matchsticks": "Construis des motifs en allumettes, entre la règle qui prédit le 50e.",
+			"difference-detective": "Trouve d'abord la différence d, puis le terme zéro, puis la règle."
+		}
+	},
+	"G6-MEA-1": {
+		title: "Les parties d'un cercle et l'origine de π",
+		description: "Nomme rayon, diamètre et circonférence, et trouve le rapport C ÷ d ≈ 3,14 en faisant rouler.",
+		ideas: {
+			"wheel-roll-pi": "Fais rouler un cercle d'un tour, compare avec son diamètre.",
+			"string-around-it": "Mesure et note C et d pour de nombreux objets."
+		}
+	},
+	"G6-MEA-2": {
+		title: "La circonférence",
+		description: "Utilise C = πd et C = 2πr (d = 10 cm donne environ 31,4 cm).",
+		ideas: {
+			"fence-the-circle": "Histoire : quelle longueur de bordure pour un bassin rond ?",
+			"circumference-estimate-check": "Estime avec 3, puis calcule."
+		}
+	},
+	"G6-MEA-3": {
+		title: "L'aire d'un disque",
+		description: "Utilise A = πr² et distingue r² de 2r (r = 3 donne environ 28,3).",
+		ideas: {
+			"circle-cut-and-unroll": "Découpe des parts pour former un quasi-rectangle.",
+			"radius-or-diameter-hunt": "Chasse à l'erreur sur les confusions entre r et d."
+		}
+	},
+	"G6-MEA-4": {
+		title: "Comparer des cercles",
+		description: "Compare la taille de cercles en contexte (une pizza de 16 cm est-elle plus grande que deux de 10 cm ?).",
+		ideas: {
+			"pizza-or-two": "Estime puis vérifie.",
+			"which-circle-bigger": "Double le rayon, prévois le changement d'aire."
+		}
+	},
+	"G6-MEA-5": {
+		title: "Volume d'un pavé droit par couches",
+		description: "Calcule le volume comme aire de la base × hauteur par couches (3 × 4 × 5 = 60), et reconnaît un prisme comme un solide à section constante, en nommant cette section.",
+		ideas: {
+			"prism-stack": "Empile des couches et lis le volume dans le décompte.",
+			"layer-counter": "Compte les couches pour prévoir le total.",
+			"prism-or-not-sort": "Trie des solides : prisme ou non, en nommant la section de chaque prisme."
+		}
+	},
+	"G6-MEA-6": {
+		title: "Volume d'un prisme à base triangulaire",
+		description: "Calcule le volume d'un prisme triangulaire comme aire du triangle × longueur.",
+		ideas: {
+			"slice-the-prism": "Fais glisser une section le long de la longueur.",
+			"tent-volume": "Histoire : le volume d'une tente."
+		}
+	},
+	"G6-MEA-7": {
+		title: "Volume d'un prisme circulaire (le cylindre)",
+		description: "Calcule V = πr²h comme aire de la base × hauteur.",
+		ideas: {
+			"can-or-box": "Qui contient le plus ? Estime puis calcule.",
+			"stack-of-coins": "Un cylindre vu comme une pile de disques."
+		}
+	},
+	"G6-MEA-8": {
+		title: "Vitesse, distance et durée",
+		description: "Calcule vitesse = distance ÷ durée et réarrange (120 km en 2 h font 60 km/h ; 60 km/h pendant 3 h font 180 km).",
+		ideas: {
+			"sprinter-vs-cyclist": "Qui gagne une course aux unités mélangées ?",
+			"dst-triangle-sort": "Choisis la formule qui convient à chaque histoire."
+		}
+	},
+	"G6-MEA-9": {
+		title: "Convertir des unités composées et des taux de densité",
+		description: "Convertit km/h ↔ m/s (72 km/h = 20 m/s), utilise des g par cm³ et garde les unités.",
+		ideas: {
+			"speed-converter-race": "Associe des cartes km/h, m/s et mph.",
+			"unit-chain-puzzle": "Construis une chaîne de fractions d'unités qui se simplifie jusqu'à la cible."
+		}
+	},
+	"G6-GEO-1": {
+		title: "Angles sur une droite et autour d'un point",
+		description: "Utilise 180° et 360° pour trouver des angles manquants avec une raison (« les angles sur une droite font 180° »).",
+		ideas: {
+			"angle-chase": "Trouve l'angle marqué en donnant chaque raison.",
+			"line-and-point-fill": "Puzzles à compléter avec des cartes de raisons."
+		}
+	},
+	"G6-GEO-2": {
+		title: "Angles opposés par le sommet",
+		description: "Sait que les angles opposés sont égaux et donne la raison.",
+		ideas: {
+			"cross-lines-explorer": "Fais glisser une droite et observe les paires.",
+			"opposite-or-not": "Trie des paires d'angles."
+		}
+	},
+	"G6-GEO-3": {
+		title: "Angles correspondants et alternes-internes",
+		description: "Repère et utilise les angles correspondants et alternes-internes entre parallèles (les formes en F et en Z).",
+		ideas: {
+			"parallel-lines-explorer": "Fais glisser une sécante, vois quels angles restent égaux.",
+			"f-or-z-hunt": "Repère les paires en F et en Z."
+		}
+	},
+	"G6-GEO-4": {
+		title: "Angles co-internes et enchaînements d'angles",
+		description: "Utilise les angles co-internes (somme 180°) et enchaîne deux règles ou plus.",
+		ideas: {
+			"angle-chain-puzzle": "Enchaînement en plusieurs étapes, avec une raison à chaque étape.",
+			"co-interior-check": "Prévois, puis mesure."
+		}
+	},
+	"G6-GEO-5": {
+		title: "Rédiger les raisons en angles",
+		description: "Écrit une courte raison valable à chaque étape et repère celles qui ne le sont pas.",
+		ideas: {
+			"reason-or-wrong": "Chasse à l'erreur : repère la raison invalide.",
+			"reason-card-match": "Associe des phrases de raison à des schémas."
+		}
+	},
+	"G6-GEO-6": {
+		title: "Médiatrices et bissectrices",
+		description: "Construit une médiatrice et une bissectrice au compas et à la règle.",
+		ideas: {
+			"compass-studio": "Compas et règle virtuels avec vérification à chaque étape.",
+			"treasure-by-bisector": "Trouve le point à égale distance de deux arbres."
+		}
+	},
+	"G6-GEO-7": {
+		title: "Construire un triangle à partir de ses trois côtés",
+		description: "Construit un triangle à partir de trois côtés (CCC) avec des arcs de compas.",
+		ideas: {
+			"arc-triangle-builder": "Construis avec des arcs et vérifie les longueurs des côtés.",
+			"stick-triangle-lab": "De vrais bâtonnets reproduits à l'écran."
+		}
+	},
+	"G6-GEO-8": {
+		title: "Inégalité triangulaire",
+		description: "Sait que deux côtés doivent avoir une somme supérieure au troisième (3, 4, 8 ne se ferme pas).",
+		ideas: {
+			"will-it-close": "Prévois puis teste en faisant glisser les longueurs.",
+			"longest-side-limit": "Trouve le plus grand troisième côté qui permet encore de fermer le triangle."
+		}
+	},
+	"G6-GEO-9": {
+		title: "Trois côtés égaux et triangles superposables (idée)",
+		description: "Sait que trois côtés égaux imposent le même triangle (simple découverte).",
+		ideas: {
+			"same-triangle-sorter": "Trie des paires : superposables ou non.",
+			"flexible-frame": "Compare un triangle rigide avec un quadrilatère qui se déforme."
+		}
+	},
+	"G6-POS-1": {
+		title: "Agrandir avec un facteur d'échelle entier",
+		description: "Agrandit une figure sur une grille depuis un centre avec un facteur d'échelle de 2 ou 3.",
+		ideas: {
+			"enlarge-from-centre": "Fais glisser des rayons depuis un centre pour construire la copie.",
+			"ray-and-measure": "Vérifie les distances à partir du centre."
+		}
+	},
+	"G6-POS-2": {
+		title: "Facteurs d'échelle fractionnaires et recherche du facteur",
+		description: "Agrandit par ½ et trouve le facteur d'échelle entre figures semblables (de 6 cm à 15 cm, c'est ×2,5).",
+		ideas: {
+			"shrink-ray": "Agrandis par ½ ou ⅓.",
+			"similar-or-not": "Trie des paires : agrandissement ou non."
+		}
+	},
+	"G6-POS-3": {
+		title: "Les longueurs changent par k, les aires par k²",
+		description: "Sait que doubler les longueurs multiplie l'aire par 4 (k = 3 donne 9 fois).",
+		ideas: {
+			"photocopier-puzzle": "Quel facteur transforme un A5 en A4, et que devient l'aire ?",
+			"square-count-grow": "Compte les carrés unités quand k grandit."
+		}
+	},
+	"G6-DAT-1": {
+		title: "Tracer un nuage de points",
+		description: "Place des données par paires (taille et envergure des bras) avec des axes bien choisis.",
+		ideas: {
+			"height-vs-armspan": "Mesure la classe et trace le nuage.",
+			"scatter-builder": "Trace à partir d'un tableau, avec choix des axes."
+		}
+	},
+	"G6-DAT-2": {
+		title: "Décrire une corrélation",
+		description: "Décrit une corrélation positive, négative ou nulle et repère les valeurs aberrantes.",
+		ideas: {
+			"correlation-sort": "Trie des nuages de points selon leur type.",
+			"story-to-scatter": "Associe une situation à l'allure probable du nuage."
+		}
+	},
+	"G6-DAT-3": {
+		title: "Droite d'ajustement à l'œil",
+		description: "Trace une droite d'ajustement à l'œil et s'en sert pour estimer une valeur.",
+		ideas: {
+			"best-fit-slider": "Fais glisser une droite et vois les écarts rétrécir.",
+			"estimate-from-the-line": "Lis sur la droite une valeur manquante."
+		}
+	},
+	"G6-DAT-4": {
+		title: "Corrélation n'est pas causalité",
+		description: "Distingue corrélation et causalité dans des affirmations simples.",
+		ideas: {
+			"correlation-or-cause": "Chasse à l'erreur dans des gros titres.",
+			"hidden-third-thing": "Trouve la variable cachée dans une histoire."
+		}
+	},
+	"G6-DAT-5": {
+		title: "Comparer deux séries : moyenne et étendue",
+		description: "Défend une affirmation avec la moyenne et l'étendue (l'équipe qui a la meilleure moyenne mais une plus grande étendue est moins régulière).",
+		ideas: {
+			"which-team-is-better": "Jeu d'argumentation : choisis la moyenne ou l'étendue.",
+			"same-mean-different-spread": "Construis deux séries de même moyenne et d'étendues différentes."
+		}
+	},
+	"G6-DAT-6": {
+		title: "Moyenne pondérée (petite introduction)",
+		description: "Trouve une moyenne quand certaines valeurs comptent plus (2 quiz à 70 et 1 examen à 85, coefficients 1 : 1 : 2).",
+		ideas: {
+			"weighted-grade-lab": "Modifie les coefficients et regarde la moyenne bouger.",
+			"fair-average-or-not": "Décide quand une moyenne simple trompe."
+		}
+	},
+	"G6-PRB-1": {
+		title: "Lister les issues de façon systématique",
+		description: "Liste toutes les issues de deux événements dans une liste ordonnée ou un tableau (pièce et roue).",
+		ideas: {
+			"outcome-lister": "Construis la liste complète sans oubli ni doublon.",
+			"missing-outcome-hunt": "Trouve ce qui manque."
+		}
+	},
+	"G6-PRB-2": {
+		title: "Tableaux de l'univers des possibles",
+		description: "Construit un tableau 6 × 6 pour deux dés et compte les cases favorables (P(somme 7) = 6/36).",
+		ideas: {
+			"two-dice-grid": "Construis le tableau, prévois, puis lance 100 fois.",
+			"sum-frequency-chart": "Trace la fréquence de chaque somme."
+		}
+	},
+	"G6-PRB-3": {
+		title: "Arbres de probabilités",
+		description: "Dessine un arbre pour deux événements et compte ou multiplie le long des branches.",
+		ideas: {
+			"tree-diagram-maze": "Parcours les branches et multiplie.",
+			"grow-the-tree": "Complète des arbres commencés."
+		}
+	},
+	"G6-PRB-4": {
+		title: "La probabilité comme fraction",
+		description: "Donne des probabilités en fractions simplifiées et vérifie que leur somme vaut 1.",
+		ideas: {
+			"probability-card-match": "Associe des événements et des fractions.",
+			"all-outcomes-add-up": "Complète les probabilités manquantes pour arriver à 1."
+		}
+	},
+	"G6-PRB-5": {
+		title: "Expérience et théorie",
+		description: "Compare les fréquences observées à la théorie et sait que plus d'essais rapprochent des deux.",
+		ideas: {
+			"roll-it-many-times": "Fais 10, 100, 1 000 essais et compare.",
+			"lucky-streak-detective": "Décide si un résultat est dû au simple hasard."
+		}
+	},
+	"G6-PRB-6": {
+		title: "Jeux équitables",
+		description: "Décide si un jeu est équitable à partir des issues possibles et le corrige.",
+		ideas: {
+			"fair-game-designer": "Rends équitable un jeu de roue, teste-le, ajuste.",
+			"rigged-or-fair": "Juge des jeux annoncés dans des publicités."
+		}
+	},
+	"G6-PSR-1": {
+		title: "Prouver avec des schémas",
+		description: "Montre qu'une affirmation sur les nombres est vraie avec un schéma (impair + impair = pair avec des paires de points).",
+		ideas: {
+			"prove-it-with-dots": "Construis des motifs de points.",
+			"picture-proof-match": "Associe des affirmations à leurs preuves en images."
+		}
+	},
+	"G6-PSR-2": {
+		title: "Prouver avec des lettres",
+		description: "Prouve avec des lettres (n + (n+1) + (n+2) = 3(n+1) ; 2k est pair).",
+		ideas: {
+			"letters-prove-it": "Complète les étapes d'une preuve.",
+			"consecutive-sum-lab": "Explore, fais une conjecture, prouve."
+		}
+	},
+	"G6-PSR-3": {
+		title: "Contre-exemples",
+		description: "Réfute une affirmation fausse avec un seul contre-exemple (« un carré est plus grand que le nombre » : 0,5² = 0,25).",
+		ideas: {
+			"counterexample-court": "Jeu de tribunal : accuse ou défends avec un seul contre-exemple.",
+			"true-or-find-a-counter": "Vrai, ou trouve le contre-exemple."
+		}
+	},
+	"G6-PSR-4": {
+		title: "Conjecturer, tester, décider",
+		description: "Teste une affirmation sur une régularité avec plusieurs cas et décide : vraie, fausse ou pas encore prouvée.",
+		ideas: {
+			"pattern-claim-lab": "Essaie des cas, puis conclus.",
+			"enough-evidence-sort": "Quand les exemples ne suffisent-ils pas ?"
+		}
+	},
+	"G6-PSR-5": {
+		title: "Trouver et classer les erreurs",
+		description: "Trouve une erreur et la range : signe, valeur de position, retenue ou unité.",
+		ideas: {
+			"mistake-museum": "Galerie de solutions fausses à classer par type d'erreur.",
+			"error-type-sort": "Range les erreurs par type."
+		}
+	},
+	"G6-PSR-6": {
+		title: "Expliquer et corriger une méthode",
+		description: "Écrit ce qui a mal tourné et le corrige (un élève ajoute l'unité mais oublie de convertir).",
+		ideas: {
+			"fix-the-student": "Corrige une solution rédigée et explique pourquoi.",
+			"teach-it-back": "Explique une méthode à un camarade virtuel."
+		}
+	}
+}, KA = {
+	"K-NS-1": {
+		meaning: "Saying the number words in order to thirty is the first step towards counting, and it is a memory skill before it is a maths skill. A child learns a fixed sequence of words, rather like the verses of a song, and has to say them one after the other without leaving any out. Thirty is a useful target for kindergarten because the sequence changes character along the way: one to nine are all new words, ten to nineteen follow their own irregular pattern, and from twenty onwards the pattern becomes regular, with a tens word followed by a ones word. Once a child can say the sequence smoothly, every later counting skill has something to stand on. This skill does not yet ask the child to count objects; it only asks for the words, in the right order, without skipping.",
+		examples: [
+			"Count the stairs together as you climb them and let your child say the numbers aloud with you, then without you, stopping at thirty even if there are fewer stairs and you simply keep going on the landing.",
+			"Sing or chant a counting rhyme at bath time, pausing before a number so that your child can supply it: \"... eighteen, nineteen, ...\" and let them fill in twenty.",
+			"Play \"stop and go\": count together and stop at a random number, then ask your child what number comes next and carry on from there."
+		],
+		commonMistakes: [
+			"Skipping a number in the teens, for example going from thirteen straight to fifteen. Teens are irregular, so they need more repetition than other numbers and are often the first to slip.",
+			"Jumping from twenty-nine to forty, or repeating the same tens word twice. The change from one tens word to the next is the hardest moment; practise it on its own, saying twenty-eight, twenty-nine, thirty.",
+			"Reciting at high speed with no breaks. Speed can hide gaps, so encourage a steady pace where every word can be heard."
+		]
+	},
+	"K-NS-2": {
+		meaning: "Counting on from any number and counting back from twenty is the moment a child discovers that counting does not always have to begin at one. Counting on means starting at a number such as seven and carrying on, eight, nine, ten, without going back to the start. Counting back means saying the numbers in the reverse order, from twenty down to zero, the way a rocket countdown goes. Both skills show that the number sequence is a line that can be entered at any point and travelled in either direction. Counting on is what later turns into adding, because a child who can start at seven and count three more is already adding without knowing it. Counting back is the early form of taking away.",
+		examples: [
+			"Hide a few toys in a bag, tell your child there are five, and drop in two more while they listen. Ask them to say how many there are now by starting at five and counting on, six, seven.",
+			"Do a family countdown before something exciting, such as a game or a trip, starting at ten and going down to zero, then let your child choose the starting number the next time.",
+			"Put numbered cards or sticky notes in a row on the floor and hop from one to the next, starting at whichever card you point to, forward or backward."
+		],
+		commonMistakes: [
+			"Starting again from one every time. A child who recounts from the beginning has not yet realised that the first number already contains all the earlier ones. Keep the starting number spoken aloud and loud.",
+			"Counting the starting number twice, saying seven, seven, eight. Practise with a finger or a counter placed on the starting number so that it is clearly the start and not the first step.",
+			"Losing the order when counting backward, especially around the teens. Backward counting is harder than forward counting and needs more time; short and frequent practice works far better than a long drill."
+		]
+	},
+	"K-NS-3": {
+		meaning: "Chanting by tens, twos and fives is the first taste of skip counting. The child says ten, twenty, thirty and on to one hundred, and joins in with twos and fives along a track, without being asked to be perfectly accurate. At this age the chanting is a rhythm and a pattern, not yet a calculation. It matters because it shows the child that numbers come in regular families: the tens end in zero, the fives end in five or zero, and the twos are every other number. Those patterns are the foundation for the multiplication tables, for counting coins and for understanding place value. The twos and fives chanting is only an introduction at this level, so the goal is enjoyment and familiarity, not a test.",
+		examples: [
+			"Clap or stamp on each ten as you count to one hundred together, whispering the other numbers or leaving them silent, so that the tens stand out like beats in a song.",
+			"Count shoes by twos while putting them away: two, four, six, eight, one pair at a time, and see how quickly it goes compared with counting each shoe.",
+			"Count the fingers on both hands by fives, then the fingers and toes of the family by fives and tens, laughing at how the numbers grow."
+		],
+		commonMistakes: [
+			"Expecting accuracy too early. Counting by twos and fives is introduced here, not mastered, and a child who sometimes loses the pattern is simply still building it.",
+			"Mixing up the tens words, for example saying twenty, thirty, fifty. The words ending in ty can sound alike, so say them slowly together and emphasise the first sound.",
+			"Chanting without any connection to quantity. Pair the chant with real objects, such as groups of two socks or five counters, so that the numbers mean something."
+		]
+	},
+	"K-NS-4": {
+		meaning: "Touching each object once and knowing that the last number said tells how many is the heart of real counting. It combines two ideas. The first is one-to-one matching: each object receives exactly one number word, so none is skipped and none is counted twice. The second is the cardinal idea: the final number spoken does not just name the last object, it names the whole group. When a child says one, two, three and then answers three to the question how many, they have understood that counting is a way of finding out an amount. Many children can recite number words long before they grasp this, which is why it is worth watching closely how your child counts, not only how far.",
+		examples: [
+			"Line up five toy cars and let your child count them by touching each car once and moving it aside as it is counted, then ask how many cars there are without recounting.",
+			"Put some grapes on a plate and count them together, pointing slowly at each. When you have counted the last grape, say the total and ask your child to tell you again how many there were.",
+			"Scatter a handful of buttons on a table, a harder arrangement than a row, and see whether your child can find a way to keep track, such as moving each button into a bowl as they count."
+		],
+		commonMistakes: [
+			"Counting faster than pointing, so the words and the objects do not match. Slow down the pace and let the child move each object, which makes it clear which have been counted.",
+			"Answering how many by naming the last object instead of the total, or by starting to count again. Ask the question every time after counting, and say the answer back together: one, two, three, so there are three.",
+			"Counting an object twice in a scattered group. Moving objects into a separate pile as they are counted removes this problem and builds a good habit."
+		]
+	},
+	"K-NS-5": {
+		meaning: "Giving or taking out exactly a certain number of objects is counting turned into action. Instead of counting a group that is already there, the child has to make a group of the right size from a larger pile. They must keep the target number in mind while counting, notice when they have reached it, and stop. It is a harder skill than counting a set, because stopping at the right time takes attention and memory. It is also the skill that lets a child do useful, everyday things: put four spoons on the table, hand over three crackers, share out the right number of stickers. It later connects directly to addition and subtraction, since adding is giving more and subtracting is taking some away.",
+		examples: [
+			"Ask your child to give the dog six bones from a bowl of toy bones or dry pasta, then to take two away and say how many are left.",
+			"At the table, ask for exactly four forks or three napkins to be fetched, so that counting out has a real purpose and a visible result.",
+			"Play a shop game: you ask for five apples from a basket of fruit and your child counts them out, then swaps with you so that you can see whether they check your work."
+		],
+		commonMistakes: [
+			"Grabbing a handful and handing it over without counting. This is guessing, so gently ask the child to count while moving the objects one by one.",
+			"Counting to the right number but not stopping, then carrying on to take the whole pile. Practise saying the target number aloud before starting, and again when you reach it.",
+			"Forgetting the target number halfway through. Keep numbers small at first, say them clearly, and let the child repeat the request before beginning."
+		]
+	},
+	"K-NS-6": {
+		meaning: "Knowing that the count stays the same when objects move is called conservation of number, and it is one of the most important ideas of early mathematics. A group of eight objects is eight whether they sit in a tidy row, a loose cluster or a circle. Younger children are often fooled by appearance: a long, spread-out row seems to have more than a small, tight bunch, even if they were counted equal a moment ago. Understanding that number does not change when the arrangement changes shows that a child sees quantity as a property of the group itself and not of how it looks. It is a milestone that develops through experience, and it makes every later comparison and calculation reliable.",
+		examples: [
+			"Count eight counters in a close row with your child, then spread them out along the table and ask whether there are still eight, or more, or fewer. Count them again to check.",
+			"Arrange the same eight objects in a circle, then in a cluster, then in two lines, and ask your child to tell you the number each time before and after counting.",
+			"Play a game in which you move objects secretly while your child closes their eyes, then ask if you added or took anything away or only moved things, and how they know."
+		],
+		commonMistakes: [
+			"Believing that a longer row has more objects. Do not simply correct this; let the child count both rows and discover the result, then repeat with different amounts.",
+			"Recounting every time something moves. That is not wrong, and it is a good way to check, but the goal is for the child to trust that nothing has changed when nothing was added or removed.",
+			"Being unsure when objects are very spread out. Use small groups first and gradually increase the number and the space between objects."
+		]
+	}
+}, qA = {}, JA = {}, YA = {}, XA = {}, ZA = {}, QA = {}, $A = {
+	"K-NS-1": {
+		meaning: "Dire les mots-nombres dans l'ordre jusqu'à trente est le premier pas vers le dénombrement, et c'est d'abord une habileté de mémoire avant d'être une habileté mathématique. L'enfant apprend une suite fixe de mots, un peu comme les couplets d'une chanson, et doit les dire l'un après l'autre sans en oublier. Trente est un objectif utile en maternelle parce que la suite change de visage en chemin : de un à neuf, ce sont des mots tous nouveaux; de dix à dix-neuf, ils suivent leur propre schéma irrégulier; à partir de vingt, le schéma devient régulier, avec un mot de dizaine suivi d'un mot d'unité. Quand l'enfant peut dire la suite avec aisance, toutes les habiletés de comptage qui suivent ont un appui. Cette compétence ne demande pas encore de compter des objets : elle demande seulement les mots, dans le bon ordre, sans en sauter.",
+		examples: [
+			"Comptez les marches en les montant et laissez votre enfant dire les nombres à voix haute avec vous, puis sans vous, jusqu'à trente, même s'il y a moins de marches : continuez simplement sur le palier.",
+			"Chantez ou scandez une comptine numérique au moment du bain en vous arrêtant avant un nombre pour que votre enfant le donne : « ... dix-huit, dix-neuf, ... » et laissez-le compléter par vingt.",
+			"Jouez à « arrête et repars » : comptez ensemble, arrêtez-vous à un nombre au hasard, puis demandez quel nombre vient ensuite et poursuivez à partir de là."
+		],
+		commonMistakes: [
+			"Sauter un nombre entre onze et dix-neuf, par exemple passer de treize à quinze. Ces nombres sont irréguliers : ils demandent plus de répétitions que les autres et sont souvent les premiers à glisser.",
+			"Passer de vingt-neuf à quarante ou répéter deux fois le même mot de dizaine. Le passage d'une dizaine à la suivante est le moment le plus délicat; exercez-le seul : vingt-huit, vingt-neuf, trente.",
+			"Réciter à toute vitesse sans pause. La vitesse peut cacher des trous; encouragez un rythme posé où chaque mot s'entend."
+		]
+	},
+	"K-NS-2": {
+		meaning: "Compter à partir d'un nombre quelconque et à rebours depuis vingt, c'est le moment où l'enfant découvre qu'on n'a pas toujours besoin de commencer à un. Compter en avant, c'est partir d'un nombre comme sept et continuer, huit, neuf, dix, sans revenir au début. Compter à rebours, c'est dire les nombres dans l'ordre inverse, de vingt jusqu'à zéro, comme le décompte d'une fusée. Ces deux habiletés montrent que la suite des nombres est une droite où l'on peut entrer à n'importe quel endroit et circuler dans les deux sens. Compter en avant est ce qui deviendra plus tard l'addition : l'enfant qui sait partir de sept et compter trois de plus additionne déjà sans le savoir. Compter à rebours est la forme première de la soustraction.",
+		examples: [
+			"Cachez quelques jouets dans un sac, dites à votre enfant qu'il y en a cinq et laissez-le en voir tomber deux autres. Demandez-lui combien il y en a maintenant en partant de cinq : six, sept.",
+			"Faites un décompte en famille avant un moment excitant, un jeu ou un départ, en partant de dix jusqu'à zéro, puis laissez votre enfant choisir le nombre de départ la fois suivante.",
+			"Posez des cartes numérotées ou des papillons adhésifs en rangée sur le plancher et sautez de l'une à l'autre en partant de la carte que vous montrez, vers l'avant ou vers l'arrière."
+		],
+		commonMistakes: [
+			"Repartir de un à chaque fois. L'enfant qui recompte depuis le début n'a pas encore compris que le premier nombre contient déjà tous les précédents. Dites le nombre de départ à voix haute et bien fort.",
+			"Compter le nombre de départ deux fois : sept, sept, huit. Posez un doigt ou un jeton sur le nombre de départ pour qu'il soit clairement le point de départ et non le premier pas.",
+			"Perdre l'ordre à rebours, surtout autour des nombres de dix à dix-neuf. Compter à rebours est plus difficile que compter en avant et demande plus de temps; de courts moments fréquents valent bien mieux qu'un long exercice."
+		]
+	},
+	"K-NS-3": {
+		meaning: "Compter de dix en dix, de deux en deux et de cinq en cinq est une première approche du comptage par bonds. L'enfant dit dix, vingt, trente et ainsi de suite jusqu'à cent, et se joint au comptage par deux et par cinq le long d'une piste, sans qu'on exige de lui une exactitude parfaite. À cet âge, la récitation est un rythme et une régularité, pas encore un calcul. Elle compte parce qu'elle montre que les nombres forment des familles régulières : les dizaines se terminent par zéro, les multiples de cinq par cinq ou zéro, et les nombres pairs sont un sur deux. Ces régularités sont la base des tables de multiplication, du dénombrement de pièces de monnaie et de la valeur de position. Le comptage par deux et par cinq n'est qu'une introduction à ce niveau : le but est le plaisir et la familiarité, pas un contrôle.",
+		examples: [
+			"Frappez des mains ou des pieds sur chaque dizaine en comptant ensemble jusqu'à cent, en chuchotant les autres nombres ou en les laissant silencieux, pour que les dizaines ressortent comme les temps forts d'une chanson.",
+			"Comptez les souliers de deux en deux en les rangeant : deux, quatre, six, huit, une paire à la fois, et voyez comme c'est plus rapide que de compter chaque soulier.",
+			"Comptez les doigts des deux mains de cinq en cinq, puis les doigts et les orteils de la famille de cinq en cinq et de dix en dix, en riant de voir les nombres grossir."
+		],
+		commonMistakes: [
+			"Attendre trop tôt de l'exactitude. Compter par deux et par cinq est présenté ici, non maîtrisé; l'enfant qui perd parfois le fil est simplement encore en train de bâtir la régularité.",
+			"Confondre les mots de dizaine, par exemple dire vingt, trente, cinquante. Les mots de dizaine se ressemblent; dites-les lentement ensemble en insistant sur le premier son.",
+			"Réciter sans aucun lien avec la quantité. Associez la récitation à de vrais objets, comme des groupes de deux chaussettes ou de cinq jetons, pour que les nombres aient un sens."
+		]
+	},
+	"K-NS-4": {
+		meaning: "Toucher chaque objet une seule fois et savoir que le dernier nombre dit indique combien il y en a, c'est le cœur du vrai dénombrement. Cela réunit deux idées. La première est la correspondance terme à terme : chaque objet reçoit exactement un mot-nombre, si bien qu'aucun n'est oublié et qu'aucun n'est compté deux fois. La seconde est l'idée cardinale : le dernier nombre prononcé ne nomme pas seulement le dernier objet, il nomme tout le groupe. Quand l'enfant dit un, deux, trois, puis répond trois à la question combien, il a compris que compter sert à connaître une quantité. Beaucoup d'enfants savent réciter les mots-nombres bien avant de saisir cela, d'où l'intérêt d'observer de près comment votre enfant compte, et pas seulement jusqu'où.",
+		examples: [
+			"Alignez cinq petites voitures et laissez votre enfant les compter en touchant chacune une fois et en la déplaçant de côté une fois comptée, puis demandez combien il y a de voitures sans qu'il recompte.",
+			"Mettez des raisins dans une assiette et comptez-les ensemble en les pointant lentement. Quand le dernier est compté, dites le total et demandez à votre enfant de répéter combien il y en avait.",
+			"Éparpillez une poignée de boutons sur la table, une disposition plus difficile qu'une rangée, et voyez si votre enfant trouve un moyen de suivre, par exemple déplacer chaque bouton dans un bol en le comptant."
+		],
+		commonMistakes: [
+			"Compter plus vite que l'on pointe, si bien que les mots et les objets ne correspondent plus. Ralentissez et laissez l'enfant déplacer chaque objet, ce qui montre clairement lesquels sont comptés.",
+			"Répondre à « combien? » en nommant le dernier objet au lieu du total, ou en recommençant à compter. Posez la question à chaque fois après le comptage et dites la réponse ensemble : un, deux, trois, donc il y en a trois.",
+			"Compter deux fois un même objet dans un groupe éparpillé. Les placer dans une pile à part à mesure qu'on les compte règle le problème et crée une bonne habitude."
+		]
+	},
+	"K-NS-5": {
+		meaning: "Donner ou retirer exactement un certain nombre d'objets, c'est le dénombrement mis en action. Au lieu de compter un groupe déjà là, l'enfant doit former un groupe de la bonne taille à partir d'un tas plus grand. Il doit garder en tête le nombre visé pendant qu'il compte, remarquer quand il l'a atteint et s'arrêter. C'est une habileté plus difficile que de compter une collection, car s'arrêter au bon moment exige de l'attention et de la mémoire. C'est aussi ce qui permet à l'enfant de faire des gestes utiles du quotidien : mettre quatre cuillères sur la table, tendre trois biscuits, distribuer le bon nombre d'autocollants. Elle se relie plus tard directement à l'addition et à la soustraction, puisqu'additionner, c'est donner de plus, et soustraire, c'est en retirer.",
+		examples: [
+			"Demandez à votre enfant de donner six os au chien à partir d'un bol d'os en jouet ou de pâtes sèches, puis d'en retirer deux et de dire combien il en reste.",
+			"À table, demandez d'aller chercher exactement quatre fourchettes ou trois serviettes, pour que le dénombrement ait un but réel et un résultat visible.",
+			"Jouez au magasin : vous demandez cinq pommes dans un panier de fruits et votre enfant les compte, puis échangez les rôles pour voir s'il vérifie votre travail."
+		],
+		commonMistakes: [
+			"Prendre une poignée au hasard et la tendre sans compter. C'est deviner; invitez doucement l'enfant à compter en déplaçant les objets un par un.",
+			"Compter jusqu'au bon nombre sans s'arrêter et prendre tout le tas. Dites le nombre visé à voix haute avant de commencer, puis encore une fois en l'atteignant.",
+			"Oublier le nombre visé en cours de route. Gardez d'abord des nombres petits, dites-les clairement et faites répéter la demande à l'enfant avant de commencer."
+		]
+	},
+	"K-NS-6": {
+		meaning: "Savoir que le nombre reste le même quand les objets bougent s'appelle la conservation du nombre, et c'est l'une des idées les plus importantes des premières mathématiques. Un groupe de huit objets est un groupe de huit, qu'il soit en rangée bien serrée, en tas lâche ou en cercle. Les plus jeunes se laissent souvent tromper par l'apparence : une longue rangée étalée semble avoir plus d'objets qu'un petit paquet serré, même si on les a comptés égaux un instant plus tôt. Comprendre que le nombre ne change pas quand la disposition change montre que l'enfant voit la quantité comme une propriété du groupe lui-même et non de son aspect. C'est une étape qui se construit avec l'expérience, et elle rend fiables toutes les comparaisons et tous les calculs qui suivront.",
+		examples: [
+			"Comptez huit jetons en rangée serrée avec votre enfant, puis étalez-les sur la table et demandez s'il y en a encore huit, ou plus, ou moins. Recomptez pour vérifier.",
+			"Disposez les mêmes huit objets en cercle, puis en tas, puis sur deux lignes, et demandez à votre enfant de dire le nombre chaque fois, avant et après avoir compté.",
+			"Jouez à déplacer des objets en cachette pendant que votre enfant ferme les yeux, puis demandez si vous avez ajouté ou retiré quelque chose ou seulement déplacé, et comment il le sait."
+		],
+		commonMistakes: [
+			"Croire qu'une rangée plus longue contient plus d'objets. Ne corrigez pas simplement : laissez l'enfant compter les deux rangées et découvrir le résultat, puis recommencez avec d'autres quantités.",
+			"Recompter chaque fois que quelque chose bouge. Ce n'est pas une erreur, c'est même une bonne vérification, mais le but est que l'enfant fasse confiance au fait que rien n'a changé quand rien n'a été ajouté ni retiré.",
+			"Hésiter quand les objets sont très espacés. Commencez avec de petits groupes, puis augmentez peu à peu le nombre et l'espace entre les objets."
+		]
+	}
+}, ej = {}, tj = {}, nj = {}, rj = {}, ij = {}, aj = {}, oj = {
+	en: {
+		meaning: "What this skill means",
+		examples: "Things to try",
+		mistakes: "Common mistakes"
+	},
+	fr: {
+		meaning: "Ce que signifie cette compétence",
+		examples: "À essayer",
+		mistakes: "Erreurs fréquentes"
+	}
+};
+function sj(e, t) {
+	let n = oj[t];
+	return [
+		`## ${n.meaning}`,
+		e.meaning,
+		`## ${n.examples}`,
+		...e.examples.map((e) => `- ${e}`),
+		`## ${n.mistakes}`,
+		...e.commonMistakes.map((e) => `- ${e}`)
+	].join("\n\n");
+}
+function cj(e) {
+	return e.replace(/```[\s\S]*?```/g, " ").replace(/~~~[\s\S]*?~~~/g, " ").replace(/`[^`\n]*`/g, " ").replace(/<[^>]*>/g, " ").replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^[ \t]{0,3}#{1,6}[ \t]+/gm, "").replace(/^[ \t]*(?:[-*+]|\d+[.)])[ \t]+/gm, "").replace(/^[ \t]*>+[ \t]?/gm, "").replace(/https?:\/\/\S+/g, " ").replace(/[*_~|]+/g, " ").split(/\s+/).filter((e) => /[\p{L}\p{N}]/u.test(e)).length;
+}
+function lj(e, t) {
+	return cj(sj(e, t));
+}
+//#endregion
+//#region src/syllabus/index.ts
+var uj = {
+	en: {
+		K: KA,
+		G1: qA,
+		G2: JA,
+		G3: YA,
+		G4: XA,
+		G5: ZA,
+		G6: QA
+	},
+	fr: {
+		K: $A,
+		G1: ej,
+		G2: tj,
+		G3: nj,
+		G4: rj,
+		G5: ij,
+		G6: aj
+	}
+}, dj = {
+	K: zA,
+	G1: BA,
+	G2: VA,
+	G3: HA,
+	G4: UA,
+	G5: WA,
+	G6: GA
+}, fj = IA, pj = LA.levels, mj = LA.topics;
+function hj(e, t) {
 	let n = {
 		slug: t.slug,
 		role: t.role,
@@ -68744,12 +68952,12 @@ function UA(e, t) {
 		e !== void 0 && (n.exerciseKey = e);
 	} else n.idea = {
 		en: t.idea ?? "",
-		fr: zA[e.level][e.id]?.ideas?.[t.slug] ?? ""
+		fr: dj[e.level][e.id]?.ideas?.[t.slug] ?? ""
 	};
 	return t.decision && (n.decision = t.decision), t.regrade && (n.regrade = t.regrade), n;
 }
-function WA(e) {
-	let t = zA[e.level][e.id], n = {
+function gj(e) {
+	let t = dj[e.level][e.id], n = {
 		id: e.id,
 		level: e.level,
 		topic: e.topic,
@@ -68764,53 +68972,59 @@ function WA(e) {
 		},
 		referenceRows: e.referenceRows,
 		prerequisites: e.prerequisites,
-		activities: e.activities.map((t) => UA(e, t))
+		activities: e.activities.map((t) => hj(e, t))
 	};
-	return e.label && (n.label = e.label), n;
+	e.label && (n.label = e.label);
+	let r = {};
+	for (let t of ["en", "fr"]) {
+		let n = uj[t][e.level][e.id];
+		n !== void 0 && (r[t] = n);
+	}
+	return Object.keys(r).length > 0 && (n.enrichment = r), n;
 }
 var $ = {
 	version: 1,
-	levels: BA.levels.map((e) => ({
+	levels: fj.levels.map((e) => ({
 		id: e.id,
 		ageBand: e.ageBand,
 		gating: e.gating,
-		intro: VA[e.id].intro
+		intro: pj[e.id].intro
 	})),
-	topics: BA.topics.map((e) => ({
+	topics: fj.topics.map((e) => ({
 		code: e.code,
 		group: e.group,
-		name: HA[e.code].name,
-		description: HA[e.code].description
+		name: mj[e.code].name,
+		description: mj[e.code].description
 	})),
-	skills: BA.skills.map(WA)
-}, GA = new Map($.skills.map((e) => [e.id, e]));
-function KA(e) {
-	return GA.get(e);
+	skills: fj.skills.map(gj)
+}, _j = new Map($.skills.map((e) => [e.id, e]));
+function vj(e) {
+	return _j.get(e);
 }
-function qA(e) {
+function yj(e) {
 	return $.skills.filter((t) => t.level === e);
 }
-function JA(e, t) {
+function bj(e, t) {
 	return $.skills.filter((n) => n.level === e && n.topic === t);
 }
-function YA(e) {
-	let t = new Set(qA(e).map((e) => e.topic));
+function xj(e) {
+	let t = new Set(yj(e).map((e) => e.topic));
 	return $.topics.filter((e) => t.has(e.code));
 }
-function XA(e) {
+function Sj(e) {
 	return $.levels.find((t) => t.id === e);
 }
-function ZA(e) {
+function Cj(e) {
 	return $.topics.find((t) => t.code === e);
 }
 //#endregion
 //#region src/skillsReference.ts
-function QA(e) {
+function wj(e) {
 	let t = {};
 	for (let n of $.skills) (t[n.level] ??= []).push(e(n));
 	return t;
 }
-var $A = {
+var Tj = {
 	K: [],
 	G1: [],
 	G2: [],
@@ -68818,37 +69032,37 @@ var $A = {
 	G4: [],
 	G5: [],
 	G6: [],
-	...QA((e) => e.id)
-}, ej = {
-	en: QA((e) => e.description.en),
-	fr: QA((e) => e.description.fr)
+	...wj((e) => e.id)
+}, Ej = {
+	en: wj((e) => e.description.en),
+	fr: wj((e) => e.description.fr)
 };
 //#endregion
 //#region src/skillsTitles.ts
-function tj(e) {
+function Dj(e) {
 	let t = {};
 	for (let n of $.skills) (t[n.level] ??= []).push(n.title[e]);
 	return t;
 }
-var nj = {
-	en: tj("en"),
-	fr: tj("fr")
-}, rj = !1;
-function ij() {
-	rj ||= !0;
+var Oj = {
+	en: Dj("en"),
+	fr: Dj("fr")
+}, kj = !1;
+function Aj() {
+	kj ||= !0;
 }
-var aj = () => ({
+var jj = () => ({
 	subjectId: "math",
 	competencies: PC,
 	plugins: oA.all(),
 	exercises: FA,
 	mathematicsAreas: IC,
 	getMathematicsAreaForCompetency: LC,
-	skillsReference: ej,
-	skillReferenceIds: $A,
-	skillsTitles: nj,
+	skillsReference: Ej,
+	skillReferenceIds: Tj,
+	skillsTitles: Oj,
 	syllabus: $,
-	register: ij
+	register: Aj
 });
 //#endregion
-export { PC as allCompetencies, hC as baselineCompareGroupsCompetency, gC as baselineConcreteArithmeticCompetency, fC as baselineCountingCompetency, vC as baselineDayOrderCompetency, yC as baselineDaysOfWeekCompetency, mC as baselineDigitsCompetency, _C as baselineDirectComparisonCompetency, xC as baselinePositionCompetency, bC as baselineShapesCompetency, pC as baselineSubitizingCompetency, aj as default, LC as getMathematicsAreaForCompetency, XA as levelById, FA as mathExercises, oA as mathPluginRegistry, IC as mathematicsAreas, cC as mentalAdditionCompetency, dC as mentalDivisionCompetency, uC as mentalMultiplicationCompetency, lC as mentalSubtractionCompetency, SC as numberSenseCountingRangeCompetency, EC as numberSenseNegativeNumbersCompetency, wC as numberSenseOddEvenCompetency, TC as numberSenseOrdinalsCompetency, DC as numberSensePrimesFactorsCompetency, kC as numberSenseRomanNumeralsCompetency, CC as numberSenseSkipCountingCompetency, OC as numberSenseSquaresCompetency, NC as placeValueMultiplyDivideTenCompetency, jC as placeValuePowersOfTenCompetency, MC as placeValueRoundingCompetency, AC as placeValueUnderstandingCompetency, KA as skillById, $A as skillReferenceIds, qA as skillsForLevel, JA as skillsForTopic, ej as skillsReference, nj as skillsTitles, $ as syllabus, ZA as topicByCode, YA as topicsForLevel };
+export { PC as allCompetencies, hC as baselineCompareGroupsCompetency, gC as baselineConcreteArithmeticCompetency, fC as baselineCountingCompetency, vC as baselineDayOrderCompetency, yC as baselineDaysOfWeekCompetency, mC as baselineDigitsCompetency, _C as baselineDirectComparisonCompetency, xC as baselinePositionCompetency, bC as baselineShapesCompetency, pC as baselineSubitizingCompetency, jj as default, sj as enrichmentMarkdown, lj as enrichmentWordCount, LC as getMathematicsAreaForCompetency, Sj as levelById, FA as mathExercises, oA as mathPluginRegistry, IC as mathematicsAreas, cC as mentalAdditionCompetency, dC as mentalDivisionCompetency, uC as mentalMultiplicationCompetency, lC as mentalSubtractionCompetency, SC as numberSenseCountingRangeCompetency, EC as numberSenseNegativeNumbersCompetency, wC as numberSenseOddEvenCompetency, TC as numberSenseOrdinalsCompetency, DC as numberSensePrimesFactorsCompetency, kC as numberSenseRomanNumeralsCompetency, CC as numberSenseSkipCountingCompetency, OC as numberSenseSquaresCompetency, NC as placeValueMultiplyDivideTenCompetency, jC as placeValuePowersOfTenCompetency, MC as placeValueRoundingCompetency, AC as placeValueUnderstandingCompetency, cj as readableWordCount, vj as skillById, Tj as skillReferenceIds, yj as skillsForLevel, bj as skillsForTopic, Ej as skillsReference, Oj as skillsTitles, $ as syllabus, Cj as topicByCode, xj as topicsForLevel };
