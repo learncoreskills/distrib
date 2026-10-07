@@ -18,8 +18,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <script type="module" crossorigin src="/assets/index-DoPiPbW0.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B3csIvEJ.css">
+    <script type="module" crossorigin src="/assets/index-DLaJumdw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-utim-D9d.js">
+    <link rel="modulepreload" crossorigin href="/assets/useTranslation-CBN2S99W.js">
+    <link rel="modulepreload" crossorigin href="/assets/BuildInfo-BCnWWwY5.js">
+    <link rel="modulepreload" crossorigin href="/assets/useProfiles-BwTH5sX7.js">
+    <link rel="modulepreload" crossorigin href="/assets/content-X3xAN3Yz.js">
+    <link rel="modulepreload" crossorigin href="/assets/adScript-_KQul1Zj.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-W-P8txnW.css">
   
     <title>Day 10: the rest of French</title>
     <meta name="description" content="A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app's chrome—buttons, menus, status…" />
@@ -48,7 +54,7 @@
 <p><strong>Why this one took longer to catch</strong></p>
 <p>Both of today&#x27;s fixes trace back to the same root cause: a piece of the app quietly remembering something written down once, rather than asking &quot;what language am I in?&quot; every time it needed to say something. A skill&#x27;s name, an activity&#x27;s label, a subject&#x27;s description—each of those had exactly one hardcoded version, and nothing along the way ever stopped to translate it before putting it on screen. The menu worked in French from day one because it was built to ask the translation question every time; the content underneath it was built earlier, before that habit was established everywhere else, and never got revisited—until a family actually using the app in French ran into it and said so.</p>
 <p>That&#x27;s also why it&#x27;s a good sign this got caught at all: it came from someone actually trying the French experience end-to-end, subject by subject, rather than spot-checking a menu and calling it done. The fix isn&#x27;t just today&#x27;s set of translations—it&#x27;s a small piece of plumbing that makes sure every future skill, activity, or subject added to the app has to go through the same translation step before it can render, so the next new thing added won&#x27;t quietly slip back into English-only by accident.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a> · <a href="/en/terms" data-discover="true">Terms</a></nav></footer></div>
-    <!-- Ads: no adsbygoogle.js here on purpose. ads/AdSlot.tsx injects the loader and the single
+    <!-- Ads: no ad loader script here on purpose. ads/AdSlot.tsx injects the loader and the single
          <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
          MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
          content), tagged data-tag-for-age-treatment="1". -->

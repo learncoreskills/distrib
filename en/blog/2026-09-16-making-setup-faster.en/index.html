@@ -18,8 +18,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <script type="module" crossorigin src="/assets/index-DoPiPbW0.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B3csIvEJ.css">
+    <script type="module" crossorigin src="/assets/index-DLaJumdw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-utim-D9d.js">
+    <link rel="modulepreload" crossorigin href="/assets/useTranslation-CBN2S99W.js">
+    <link rel="modulepreload" crossorigin href="/assets/BuildInfo-BCnWWwY5.js">
+    <link rel="modulepreload" crossorigin href="/assets/useProfiles-BwTH5sX7.js">
+    <link rel="modulepreload" crossorigin href="/assets/content-X3xAN3Yz.js">
+    <link rel="modulepreload" crossorigin href="/assets/adScript-_KQul1Zj.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-W-P8txnW.css">
   
     <title>Day 5: making child setup faster and clearer</title>
     <meta name="description" content="Before today, adding a new child to the app meant filling in their name, then scrolling down to find a separate grade selector somewhere below. Today that…" />
@@ -77,7 +83,7 @@
 <p>That two-address trick from earlier—an English page and a French one for everything the site has—turned out to be only half a promise. Switching the flag to French changed the address bar and translated the navigation menu, but almost everything else on screen quietly stayed in English: buttons still said &quot;Submit,&quot; the parent area still said &quot;Active child,&quot; a wrong answer still explained itself in English underneath a French menu. For a genuinely French-speaking family, that&#x27;s worse than not offering French at all—it looks like support that isn&#x27;t really there.</p>
 <p>Today that gap closed everywhere it could be found. Every button, label, heading, status message, and empty-state sentence across the entire app now has a real French counterpart, not a placeholder—from the practice screen&#x27;s &quot;Question 3 of 10&quot; and its correct/incorrect feedback, to the parent area&#x27;s mastery reports and child-export tools, to the documentation and blog sections. Screen readers get the same treatment: the descriptive labels that assistive technology relies on switch language right along with everything else, so the experience is consistent whether you&#x27;re reading the screen or listening to it. And where French naturally needs more words than English to say the same thing, the layout now has room to say them without text getting clipped or run together.</p>
 <p>One detail mattered more than it might seem: French sentences with a number or a name baked into them—&quot;Question 3 of 10,&quot; &quot;42% mastered,&quot; &quot;time&#x27;s up, the answer was 7&quot;—don&#x27;t just swap the English words for French ones in the same order. French often puts things in a different place in the sentence, or changes an ending depending on the number involved, so each of those gets written as its own proper French sentence rather than a fill-in-the-blank translation. And if a brand-new bit of text ever gets added to the app before someone&#x27;s had a chance to translate it, the site quietly shows the English version rather than a blank space or an error—while a check built into the project&#x27;s own workflow now catches anyone who adds new English text and forgets French entirely, before it ever reaches a family using the app.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a> · <a href="/en/terms" data-discover="true">Terms</a></nav></footer></div>
-    <!-- Ads: no adsbygoogle.js here on purpose. ads/AdSlot.tsx injects the loader and the single
+    <!-- Ads: no ad loader script here on purpose. ads/AdSlot.tsx injects the loader and the single
          <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
          MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
          content), tagged data-tag-for-age-treatment="1". -->
