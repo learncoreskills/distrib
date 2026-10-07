@@ -170,6 +170,19 @@
       "reviewed": false
     },
     {
+      "id": "2026-10-07-birth-year-and-clearer-progress.en",
+      "date": "2026-10-07",
+      "title": "Birth year instead of grade, a fuller parent overview, and a score on every activity",
+      "summary": "Three things that used to need a little effort from you now take care of themselves: the app works out your child's grade from their birth year, the parent area shows the whole picture from the very…",
+      "contentUrl": "2026-10-07-birth-year-and-clearer-progress.en.md",
+      "slug": "birth-year-and-clearer-progress",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 466,
+      "reviewed": false
+    },
+    {
       "id": "2026-10-07-terms-page-and-crawlable-home.en",
       "date": "2026-10-07",
       "title": "A Terms of use page, and a home page that search engines can read",
@@ -222,5 +235,5 @@
       "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-07T20:24:28.211Z"
+  "generatedAt": "2026-10-07T21:39:38.660Z"
 }
