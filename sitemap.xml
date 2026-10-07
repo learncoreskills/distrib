@@ -61,6 +61,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/contact"/>
   </url>
   <url>
+    <loc>https://learncoreskills.com/en/terms</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/terms"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/fr/terms</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/terms"/>
+  </url>
+  <url>
     <loc>https://learncoreskills.com/en/mathematics</loc>
     <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/mathematics"/>
@@ -533,6 +545,20 @@
     <lastmod>2026-10-07</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/en/blog/2026-10-07-terms-page-and-crawlable-home.en</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog/2026-10-07-terms-page-and-crawlable-home.en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog/2026-10-07-terms-page-and-crawlable-home.fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learncoreskills.com/en/blog/2026-10-07-terms-page-and-crawlable-home.en"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/fr/blog/2026-10-07-terms-page-and-crawlable-home.fr</loc>
+    <lastmod>2026-10-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog/2026-10-07-terms-page-and-crawlable-home.fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog/2026-10-07-terms-page-and-crawlable-home.en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learncoreskills.com/en/blog/2026-10-07-terms-page-and-crawlable-home.en"/>
   </url>
   <url>
     <loc>https://learncoreskills.com/en/blog/2026-10-07-trust-pages-and-parent-articles.en</loc>
