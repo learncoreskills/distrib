@@ -44092,76 +44092,33 @@ var sA = {
 	],
 	skills: [
 		{
-			activities: [{
-				decision: "KEEP",
-				role: "primary",
-				slug: "preschool-count-in-order",
-				status: "built"
-			}, {
-				decision: "REDESIGN",
-				role: "primary",
-				slug: "preschool-count-to-thirty",
-				status: "built"
-			}],
+			activities: [
+				{
+					decision: "KEEP",
+					role: "primary",
+					slug: "preschool-count-in-order",
+					status: "built"
+				},
+				{
+					idea: "fill-the-gap game: the counting chant stops on a missing word between 11 and 19 and the child picks it",
+					role: "primary",
+					slug: "count-the-teens",
+					status: "planned"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-count-to-thirty",
+					status: "built"
+				}
+			],
 			description: "Says the number words in order from 1 up to 30 without skipping (\"1, 2, 3 … 20 … 30\").",
 			id: "K-NS-1",
 			level: "K",
 			order: 1,
 			prerequisites: [],
 			referenceRows: ["PK.NUM.1", "K.NUM.1"],
-			title: "Say the number words in order to 30",
-			topic: "NS"
-		},
-		{
-			activities: [
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-count-backward",
-					status: "built"
-				},
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-hidden-bag",
-					status: "built"
-				},
-				{
-					idea: "launch game: tap the numbers in reverse order to blast off",
-					role: "primary",
-					slug: "rocket-countdown",
-					status: "planned"
-				}
-			],
-			description: "Starts at any number and counts on or counts down to 0 (\"start at 7: 7, 8, 9…\"; \"5, 4, 3, 2, 1, 0\").",
-			id: "K-NS-2",
-			level: "K",
-			order: 2,
-			prerequisites: ["K-NS-1"],
-			referenceRows: ["K.NUM.2", "K.NUM.3"],
-			title: "Count on from any number and back from 20",
-			topic: "NS"
-		},
-		{
-			activities: [{
-				idea: "rhythm game: a frog hops 2s, 5s or 10s along a track and the child claps each landing number",
-				role: "primary",
-				slug: "skip-count-hops",
-				status: "planned"
-			}, {
-				idea: "climb a staircase where each step says the next ten",
-				role: "primary",
-				slug: "tens-staircase",
-				status: "planned"
-			}],
-			description: "Chants \"10, 20, 30 … 100\" and joins in with 2s and 5s along a track, with no gate on accuracy; the 2s and 5s chanting is introduce-only.",
-			id: "K-NS-3",
-			label: "introduce-only",
-			level: "K",
-			order: 3,
-			prerequisites: ["K-NS-2"],
-			referenceRows: ["K.NUM.1"],
-			title: "Chant by tens, 2s and 5s",
+			title: "Count to 30",
 			topic: "NS"
 		},
 		{
@@ -44185,115 +44142,73 @@ var sA = {
 					status: "built"
 				}
 			],
-			description: "Points to each object exactly once while saying one number each, and answers \"how many?\" with the last number said (\"1, 2, 3, so 3\").",
+			description: "Points at each object once, and answers \"how many?\" with the last number said (\"1, 2, 3, so 3\").",
+			id: "K-NS-2",
+			level: "K",
+			order: 2,
+			prerequisites: ["K-NS-1"],
+			referenceRows: ["PK.NUM.2", "PK.NUM.3"],
+			title: "One word per object",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-flash-dots",
+					status: "built"
+				},
+				{
+					idea: "card game: a pattern flashes for a second, the child taps the matching numeral",
+					role: "primary",
+					slug: "dot-pattern-snap",
+					status: "planned"
+				},
+				{
+					idea: "flash a ten-frame for a second and say the parts of 6–10 (\"7 is 5 and 2\")",
+					role: "primary",
+					slug: "ten-frame-flash",
+					status: "planned"
+				}
+			],
+			description: "Says how many are there without counting: dots, dice and fingers to 5, then 6–10 as \"5 and some\".",
+			id: "K-NS-3",
+			level: "K",
+			order: 3,
+			prerequisites: ["K-NS-2"],
+			referenceRows: ["PK.NUM.5", "K.NUM.6"],
+			title: "See it at a glance",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-still-the-same",
+					status: "built"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-which-row-has-more",
+					status: "built"
+				},
+				{
+					idea: "the same set of 11–20 is shown in a row, a cluster and a circle, and the child says whether the count changed",
+					role: "primary",
+					slug: "same-in-a-circle",
+					status: "planned"
+				}
+			],
+			description: "Knows 8 objects are still 8 when spread out, packed or in a circle, up to 20.",
 			id: "K-NS-4",
 			level: "K",
 			order: 4,
 			prerequisites: ["K-NS-3"],
-			referenceRows: ["PK.NUM.2", "PK.NUM.3"],
-			title: "Touch each object once; the last number tells how many",
-			topic: "NS"
-		},
-		{
-			activities: [
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-give-n",
-					status: "built"
-				},
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-take-n",
-					status: "built"
-				},
-				{
-					idea: "scoop game: grab the exact number named and check by counting",
-					role: "primary",
-					slug: "grab-a-handful",
-					status: "planned"
-				}
-			],
-			description: "Counts out exactly n objects from a pile and gives them, or takes n away (\"give the dog 6 bones\").",
-			id: "K-NS-5",
-			level: "K",
-			order: 5,
-			prerequisites: ["K-NS-4"],
-			referenceRows: ["PK.NUM.4", "K.NUM.5"],
-			title: "Give or take out exactly n",
-			topic: "NS"
-		},
-		{
-			activities: [{
-				decision: "REDESIGN",
-				role: "primary",
-				slug: "preschool-still-the-same",
-				status: "built"
-			}, {
-				decision: "REDESIGN",
-				role: "primary",
-				slug: "preschool-which-row-has-more",
-				status: "built"
-			}],
-			description: "Counts a set to 20 in a row, a cluster or a circle and knows it is still the same number (\"spread out, still 8\").",
-			id: "K-NS-6",
-			level: "K",
-			order: 6,
-			prerequisites: ["K-NS-5"],
 			referenceRows: ["K.NUM.4"],
-			title: "The count stays the same when objects move",
-			topic: "NS"
-		},
-		{
-			activities: [
-				{
-					decision: "TWEAK",
-					role: "primary",
-					slug: "preschool-numeral-twins",
-					status: "built"
-				},
-				{
-					decision: "TWEAK",
-					role: "primary",
-					slug: "preschool-show-the-number",
-					status: "built"
-				},
-				{
-					decision: "TWEAK",
-					role: "primary",
-					slug: "preschool-number-hunt",
-					status: "built"
-				}
-			],
-			description: "Matches a numeral to its quantity and finds it among others (\"the card 12 goes with 12 dots\").",
-			id: "K-NS-7",
-			level: "K",
-			order: 7,
-			prerequisites: ["K-NS-6"],
-			referenceRows: ["PK.NUM.6", "K.NUM.7"],
-			title: "Read and match numerals 0–20",
-			topic: "NS"
-		},
-		{
-			activities: [{
-				decision: "TWEAK",
-				role: "primary",
-				slug: "preschool-pick-the-right-way",
-				status: "built"
-			}, {
-				idea: "finger-trace game with a guided stroke path and a sticker reward (tracker)",
-				role: "primary",
-				slug: "trace-the-numeral",
-				status: "planned"
-			}],
-			description: "Writes each numeral with the right start and stroke direction, and picks the correctly formed one from a reversed one.",
-			id: "K-NS-8",
-			level: "K",
-			order: 8,
-			prerequisites: ["K-NS-7"],
-			referenceRows: ["K.NUM.8"],
-			title: "Write numerals 0–20 with correct formation",
+			title: "Same count, moved around",
 			topic: "NS"
 		},
 		{
@@ -44308,11 +44223,11 @@ var sA = {
 				slug: "preschool-is-zero-a-number",
 				status: "built"
 			}],
-			description: "Says 0 for an empty set and knows it is a number (\"the basket is empty, so 0\").",
-			id: "K-NS-9",
+			description: "Says 0 when there is nothing, and knows 0 is a number (\"the basket is empty, so 0\").",
+			id: "K-NS-5",
 			level: "K",
-			order: 9,
-			prerequisites: ["K-NS-8"],
+			order: 5,
+			prerequisites: ["K-NS-4"],
 			referenceRows: ["K.NUM.13"],
 			title: "Zero means none",
 			topic: "NS"
@@ -44338,13 +44253,169 @@ var sA = {
 					status: "built"
 				}
 			],
-			description: "Says which of two sets has more, fewer or the same by pairing items or counting (\"each cat has a bowl, one bowl left, so more bowls\").",
+			description: "Tells which of two groups has more, fewer or the same, by pairing items or counting.",
+			id: "K-NS-6",
+			level: "K",
+			order: 6,
+			prerequisites: ["K-NS-5"],
+			referenceRows: ["PK.NUM.7", "K.NUM.10"],
+			title: "More, fewer, same",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-give-n",
+					status: "built"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-take-n",
+					status: "built"
+				},
+				{
+					idea: "scoop game: grab the exact number named and check by counting",
+					role: "primary",
+					slug: "grab-a-handful",
+					status: "planned"
+				}
+			],
+			description: "Counts out exactly the number asked and stops there (\"give the dog 6 bones\").",
+			id: "K-NS-7",
+			level: "K",
+			order: 7,
+			prerequisites: ["K-NS-6"],
+			referenceRows: ["PK.NUM.4", "K.NUM.5"],
+			title: "Give exactly n",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "TWEAK",
+					role: "primary",
+					slug: "preschool-numeral-twins",
+					status: "built"
+				},
+				{
+					decision: "TWEAK",
+					role: "primary",
+					slug: "preschool-show-the-number",
+					status: "built"
+				},
+				{
+					decision: "TWEAK",
+					role: "primary",
+					slug: "preschool-number-hunt",
+					status: "built"
+				}
+			],
+			description: "Matches a numeral to its quantity and finds it among others (\"the card 12 goes with 12 dots\").",
+			id: "K-NS-8",
+			level: "K",
+			order: 8,
+			prerequisites: ["K-NS-7"],
+			referenceRows: ["PK.NUM.6", "K.NUM.7"],
+			title: "Numerals 0–20",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-neighbour-houses",
+					status: "built"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-one-more-less",
+					status: "built"
+				},
+				{
+					idea: "a number appears and the child taps the one-more or one-less card",
+					role: "primary",
+					slug: "pop-up-one-more",
+					status: "planned"
+				}
+			],
+			description: "Says the next number, one more, or one less than any number to 20 without counting from 1 (\"one more than 9 is 10\").",
+			id: "K-NS-9",
+			level: "K",
+			order: 9,
+			prerequisites: ["K-NS-8"],
+			referenceRows: ["PK.NUM.8", "K.NUM.9"],
+			title: "One more, one less",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					idea: "count-on game: start at a number from 2 to 9 and pick each next number up to 10",
+					role: "primary",
+					slug: "preschool-count-on-from",
+					status: "planned"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-count-backward",
+					status: "built"
+				},
+				{
+					idea: "launch game: tap the numbers in reverse order to blast off",
+					role: "primary",
+					slug: "rocket-countdown",
+					status: "planned"
+				},
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-hidden-bag",
+					status: "built"
+				}
+			],
+			description: "Starts from any number and counts up, or counts down to 0 (\"start at 7: 7, 8, 9…\"; \"5, 4, 3, 2, 1, 0\").",
 			id: "K-NS-10",
 			level: "K",
 			order: 10,
 			prerequisites: ["K-NS-9"],
-			referenceRows: ["PK.NUM.7", "K.NUM.10"],
-			title: "Compare two sets: more, fewer, same",
+			referenceRows: ["K.NUM.2", "K.NUM.3"],
+			title: "Count on and back",
+			topic: "NS"
+		},
+		{
+			activities: [
+				{
+					decision: "REDESIGN",
+					role: "primary",
+					slug: "preschool-number-track",
+					status: "built"
+				},
+				{
+					idea: "drag numeral cards into a track in order",
+					role: "primary",
+					slug: "line-up-the-cards",
+					status: "planned"
+				},
+				{
+					idea: "number-track puzzle with a gap in the middle or at the ends, or two gaps, from 0 to 10; the child names the missing cards",
+					role: "primary",
+					slug: "missing-card-hard",
+					status: "planned"
+				}
+			],
+			description: "Puts numeral cards 0–10 in order and names the card missing on a number track (\"0, 1, 2, _, 4\").",
+			id: "K-NS-11",
+			level: "K",
+			order: 11,
+			prerequisites: ["K-NS-10"],
+			referenceRows: ["K.NUM.12"],
+			title: "Order 0–10, find the gap",
 			topic: "NS"
 		},
 		{
@@ -44368,34 +44439,13 @@ var sA = {
 					status: "planned"
 				}
 			],
-			description: "Says which of two numerals to 10 is bigger, smaller or equal without counting out objects (\"8 is bigger than 5\").",
-			id: "K-NS-11",
-			level: "K",
-			order: 11,
-			prerequisites: ["K-NS-10"],
-			referenceRows: ["K.NUM.11"],
-			title: "Compare two numerals to 10",
-			topic: "NS"
-		},
-		{
-			activities: [{
-				decision: "REDESIGN",
-				role: "primary",
-				slug: "preschool-number-track",
-				status: "built"
-			}, {
-				idea: "drag numeral cards into a track in order",
-				role: "primary",
-				slug: "line-up-the-cards",
-				status: "planned"
-			}],
-			description: "Puts numeral cards 0–10 in order and names the card missing on a number track (\"0, 1, 2, _, 4\").",
+			description: "Compares two numerals to 10 without counting objects (\"8 is bigger than 5\").",
 			id: "K-NS-12",
 			level: "K",
 			order: 12,
 			prerequisites: ["K-NS-11"],
-			referenceRows: ["K.NUM.12"],
-			title: "Order 0–10 and find the missing number",
+			referenceRows: ["K.NUM.11"],
+			title: "Which number is bigger?",
 			topic: "NS"
 		},
 		{
@@ -44403,29 +44453,29 @@ var sA = {
 				{
 					decision: "REDESIGN",
 					role: "primary",
-					slug: "preschool-one-more-less",
+					slug: "preschool-two-hands",
 					status: "built"
 				},
 				{
 					decision: "REDESIGN",
 					role: "primary",
-					slug: "preschool-neighbour-houses",
+					slug: "preschool-another-way",
 					status: "built"
 				},
 				{
-					idea: "a number appears and the child taps the one-more or one-less card",
+					idea: "split 6 to 10 into two parts and find the missing part (\"8 is 5 and ?\")",
 					role: "primary",
-					slug: "pop-up-one-more",
+					slug: "decompose-to-ten",
 					status: "planned"
 				}
 			],
-			description: "Says the number that comes next and gives one more or one less than any number to 20 without counting from 1 (\"one more than 9 is 10\").",
+			description: "Splits a number into two parts: 5 is 2 and 3 (\"5 = 4 + 1 = 3 + 2\").",
 			id: "K-NS-13",
 			level: "K",
 			order: 13,
 			prerequisites: ["K-NS-12"],
-			referenceRows: ["PK.NUM.8", "K.NUM.9"],
-			title: "Next number, one more and one less",
+			referenceRows: ["K.AS.3"],
+			title: "Parts of a number",
 			topic: "NS"
 		},
 		{
@@ -44449,44 +44499,66 @@ var sA = {
 					status: "built"
 				}
 			],
-			description: "Uses first to fifth and last for positions in a line and tells a position from a count (\"the third dog\" vs \"3 dogs\").",
+			description: "Uses first to fifth and last for positions in a line, and tells \"third\" (place) from \"3\" (amount).",
 			id: "K-NS-14",
 			level: "K",
 			order: 14,
 			prerequisites: ["K-NS-13"],
 			referenceRows: ["K.NUM.14"],
-			title: "Ordinals first to fifth",
+			title: "1st to 5th",
 			topic: "NS"
 		},
 		{
 			activities: [
 				{
-					decision: "REDESIGN",
+					decision: "TWEAK",
 					role: "primary",
-					slug: "preschool-flash-dots",
+					slug: "preschool-pick-the-right-way",
 					status: "built"
 				},
 				{
-					idea: "card game: a pattern flashes for a second, the child taps the matching numeral",
+					idea: "finger-trace game with a guided stroke path and a sticker reward (tracker)",
 					role: "primary",
-					slug: "dot-pattern-snap",
+					slug: "trace-the-numeral",
 					status: "planned"
 				},
 				{
-					idea: "flash a ten-frame for a second and say the parts of 6–10 (\"7 is 5 and 2\")",
+					idea: "pick the correct digit order for writing 10–20 (\"which digit do you write first?\")",
 					role: "primary",
-					slug: "ten-frame-flash",
+					slug: "trace-the-teens",
 					status: "planned"
 				}
 			],
-			description: "Names 1–3 then dot, dice and finger patterns to 5 at a glance without counting (\"that is 4\"); sees 6–10 as parts on a ten-frame (\"7 is 5 and 2\").",
-			id: "K-FL-1",
+			description: "Writes numerals the right way round with the right strokes, and picks the correctly formed one.",
+			id: "K-NS-15",
 			level: "K",
-			order: 1,
-			prerequisites: [],
-			referenceRows: ["PK.NUM.5", "K.NUM.6"],
-			title: "Subitize to 5, then see 6–10 as parts",
-			topic: "FL"
+			order: 15,
+			prerequisites: ["K-NS-14"],
+			referenceRows: ["K.NUM.8"],
+			title: "Write numerals",
+			topic: "NS"
+		},
+		{
+			activities: [{
+				idea: "climb a staircase where each step says the next ten",
+				role: "primary",
+				slug: "tens-staircase",
+				status: "planned"
+			}, {
+				idea: "rhythm game: a frog hops 2s, 5s or 10s along a track and the child claps each landing number",
+				role: "primary",
+				slug: "skip-count-hops",
+				status: "planned"
+			}],
+			description: "Chants by tens to 100, and starts 2s and 5s along a track, just for fun with no pass mark.",
+			id: "K-NS-16",
+			label: "introduce-only",
+			level: "K",
+			order: 16,
+			prerequisites: ["K-NS-15"],
+			referenceRows: ["K.NUM.1"],
+			title: "Count by 10s, 2s, 5s",
+			topic: "NS"
 		},
 		{
 			activities: [{
@@ -44501,10 +44573,10 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Guesses \"about 10\" before counting a set and checks by counting.",
-			id: "K-FL-2",
+			id: "K-FL-1",
 			level: "K",
-			order: 2,
-			prerequisites: ["K-FL-1"],
+			order: 1,
+			prerequisites: [],
 			referenceRows: ["K.PSR.3"],
 			title: "Estimate \"about how many\"",
 			topic: "FL"
@@ -44522,11 +44594,11 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Recalls doubles up to 5 + 5 (\"double 4 is 8\").",
-			id: "K-FL-3",
+			id: "K-FL-2",
 			label: "introduce-only",
 			level: "K",
-			order: 3,
-			prerequisites: ["K-FL-2"],
+			order: 2,
+			prerequisites: ["K-FL-1"],
 			referenceRows: ["K.AS.6", "G1.MD.3"],
 			title: "Doubles to 5 + 5",
 			topic: "FL"
@@ -44544,11 +44616,11 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Shares an even number into two equal sets and says the half (\"half of 8 is 4\").",
-			id: "K-FL-4",
+			id: "K-FL-3",
 			label: "introduce-only",
 			level: "K",
-			order: 4,
-			prerequisites: ["K-FL-3"],
+			order: 3,
+			prerequisites: ["K-FL-2"],
 			referenceRows: ["G1.MD.3"],
 			title: "Halves of even numbers to 20",
 			topic: "FL"
@@ -44566,10 +44638,10 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Answers simple ± within 10 quickly with no penalty for slow answers (\"4 and 3 — 7\").",
-			id: "K-FL-5",
+			id: "K-FL-4",
 			level: "K",
-			order: 5,
-			prerequisites: ["K-FL-4"],
+			order: 4,
+			prerequisites: ["K-FL-3"],
 			referenceRows: ["K.AS.2", "G1.MM.1"],
 			title: "Quick facts within 10",
 			topic: "FL"
@@ -44752,36 +44824,6 @@ var sA = {
 			topic: "OP"
 		},
 		{
-			activities: [
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-two-hands",
-					status: "built"
-				},
-				{
-					decision: "REDESIGN",
-					role: "primary",
-					slug: "preschool-another-way",
-					status: "built"
-				},
-				{
-					idea: "slide beads on a string to show every way to split a number",
-					role: "primary",
-					slug: "split-the-beads",
-					status: "planned"
-				}
-			],
-			description: "Splits a number to 10 in several ways (\"5 = 4 + 1 = 3 + 2\").",
-			id: "K-OP-6",
-			level: "K",
-			order: 6,
-			prerequisites: ["K-OP-5"],
-			referenceRows: ["K.AS.3"],
-			title: "Split a number in two parts",
-			topic: "OP"
-		},
-		{
 			activities: [{
 				decision: "REDESIGN",
 				role: "primary",
@@ -44794,10 +44836,10 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Names the number that goes with another to make 10 (\"7 and 3 make 10\").",
-			id: "K-OP-7",
+			id: "K-OP-6",
 			level: "K",
-			order: 7,
-			prerequisites: ["K-OP-6"],
+			order: 6,
+			prerequisites: ["K-OP-5"],
 			referenceRows: ["K.AS.4"],
 			title: "Find the partner that makes 10",
 			topic: "OP"
@@ -44815,10 +44857,10 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Recalls ± facts with totals up to 5 (\"2 + 3 = 5\", \"4 − 1 = 3\").",
-			id: "K-OP-8",
+			id: "K-OP-7",
 			level: "K",
-			order: 8,
-			prerequisites: ["K-OP-7"],
+			order: 7,
+			prerequisites: ["K-OP-6"],
 			referenceRows: ["K.AS.5"],
 			title: "Facts within 5",
 			topic: "OP"
@@ -44836,11 +44878,11 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Fills a ten-frame then adds the rest over 10 (\"8 + 5: 8 and 2 make 10, 3 more is 13\").",
-			id: "K-OP-9",
+			id: "K-OP-8",
 			label: "introduce-only",
 			level: "K",
-			order: 9,
-			prerequisites: ["K-OP-8"],
+			order: 8,
+			prerequisites: ["K-OP-7"],
 			referenceRows: ["G1.AS.2"],
 			title: "First look at bridging into 11–20",
 			topic: "OP"
@@ -44858,11 +44900,11 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Shares a set fairly and notices unequal shares (\"6 cookies for 2 friends: 3 each\"). No ÷ symbol.",
-			id: "K-OP-10",
+			id: "K-OP-9",
 			label: "introduce-only",
 			level: "K",
-			order: 10,
-			prerequisites: ["K-OP-9"],
+			order: 9,
+			prerequisites: ["K-OP-8"],
 			referenceRows: ["K.MD.1", "G1.MD.2"],
 			title: "Share fairly between 2 or 3",
 			topic: "OP"
@@ -44880,11 +44922,11 @@ var sA = {
 				status: "planned"
 			}],
 			description: "Makes groups with the same number in each (\"3 bags of 2\"). No × symbol.",
-			id: "K-OP-11",
+			id: "K-OP-10",
 			label: "introduce-only",
 			level: "K",
-			order: 11,
-			prerequisites: ["K-OP-10"],
+			order: 10,
+			prerequisites: ["K-OP-9"],
 			referenceRows: ["G1.MD.1"],
 			title: "Make equal groups",
 			topic: "OP"
@@ -45987,7 +46029,7 @@ var sA = {
 			id: "G1-NS-1",
 			level: "G1",
 			order: 1,
-			prerequisites: ["K-NS-14"],
+			prerequisites: ["K-NS-16"],
 			referenceRows: ["G1.NUM.1"],
 			title: "Count on within 120 from any number",
 			topic: "NS"
@@ -46361,7 +46403,7 @@ var sA = {
 			id: "G1-OP-1",
 			level: "G1",
 			order: 1,
-			prerequisites: ["K-OP-11"],
+			prerequisites: ["K-OP-10"],
 			referenceRows: ["G1.AS.1"],
 			title: "Bonds to 10 by heart",
 			topic: "OP"
@@ -46704,7 +46746,7 @@ var sA = {
 			id: "G1-FL-1",
 			level: "G1",
 			order: 1,
-			prerequisites: ["K-FL-5"],
+			prerequisites: ["K-FL-4"],
 			referenceRows: ["G1.MM.1"],
 			title: "Count on within 20 without fingers",
 			topic: "FL"
@@ -63395,90 +63437,106 @@ var sA = {
 	"syllabus-g5-writes-expressions-with-a-letter": "syllabus-g5-writes-expressions-with-a-letter"
 }, zA = {
 	"K-NS-1": {
-		title: "Dire les nombres dans l'ordre jusqu'à 30",
-		description: "Dit les nombres dans l'ordre de 1 à 30 sans en sauter (« 1, 2, 3 … 20 … 30 »)."
+		title: "Compter jusqu'à 30",
+		description: "Dit les nombres dans l'ordre de 1 à 30, sans en oublier (« 1, 2, 3 … 20 … 30 »).",
+		ideas: { "count-the-teens": "Jeu de mot manquant : la comptine s'arrête sur un mot absent entre 11 et 19 et l'enfant le choisit." }
 	},
 	"K-NS-2": {
-		title: "Compter à partir d'un nombre et à rebours depuis 20",
-		description: "Part de n'importe quel nombre pour compter en avant ou à rebours jusqu'à 0 (« je pars de 7 : 7, 8, 9… » ; « 5, 4, 3, 2, 1, 0 »).",
-		ideas: { "rocket-countdown": "Jeu de lancement : toucher les nombres à rebours pour faire décoller la fusée." }
+		title: "Un objet, un mot",
+		description: "Pointe chaque objet une seule fois et répond à « combien ? » avec le dernier mot dit (« 1, 2, 3, donc 3 »)."
 	},
 	"K-NS-3": {
-		title: "Compter de 10 en 10, de 2 en 2 et de 5 en 5",
-		description: "Récite « 10, 20, 30 … 100 » et se joint au comptage de 2 en 2 et de 5 en 5 sur une piste, sans exigence de justesse ; le comptage de 2 en 2 et de 5 en 5 est seulement présenté.",
-		ideas: {
-			"skip-count-hops": "Jeu de rythme : une grenouille saute de 2, 5 ou 10 en 10 le long d'une piste et l'enfant frappe des mains à chaque nombre d'atterrissage.",
-			"tens-staircase": "Monter un escalier où chaque marche dit la dizaine suivante."
-		}
-	},
-	"K-NS-4": {
-		title: "Un nombre par objet ; le dernier dit combien",
-		description: "Pointe chaque objet une seule fois en disant un nombre à la fois, et répond à « combien ? » avec le dernier nombre dit (« 1, 2, 3, donc 3 »)."
-	},
-	"K-NS-5": {
-		title: "Donner ou retirer exactement n objets",
-		description: "Compte exactement n objets dans un tas et les donne, ou en retire n (« donne 6 os au chien »).",
-		ideas: { "grab-a-handful": "Jeu de pelle : prendre exactement le nombre demandé et vérifier en comptant." }
-	},
-	"K-NS-6": {
-		title: "Le nombre reste le même quand les objets bougent",
-		description: "Compte un ensemble jusqu'à 20 en rangée, en tas ou en cercle et sait que le nombre reste le même (« étalés, toujours 8 »)."
-	},
-	"K-NS-7": {
-		title: "Lire et associer les chiffres de 0 à 20",
-		description: "Associe un chiffre à sa quantité et le retrouve parmi d'autres (« la carte 12 va avec 12 points »)."
-	},
-	"K-NS-8": {
-		title: "Écrire les chiffres de 0 à 20 correctement",
-		description: "Écrit chaque chiffre en partant du bon endroit et dans le bon sens du tracé, et repère le chiffre bien formé parmi des chiffres inversés.",
-		ideas: { "trace-the-numeral": "Jeu de traçage au doigt avec un tracé guidé et une vignette en récompense (suivi)." }
-	},
-	"K-NS-9": {
-		title: "Zéro veut dire aucun",
-		description: "Dit 0 pour un ensemble vide et sait que c'est un nombre (« le panier est vide, donc 0 »)."
-	},
-	"K-NS-10": {
-		title: "Comparer deux ensembles : plus, moins, autant",
-		description: "Dit lequel de deux ensembles en contient plus, moins ou autant, en appariant ou en comptant (« chaque chat a un bol, il reste un bol, donc plus de bols »)."
-	},
-	"K-NS-11": {
-		title: "Comparer deux nombres jusqu'à 10",
-		description: "Dit lequel de deux chiffres jusqu'à 10 est plus grand, plus petit ou égal, sans compter d'objets (« 8 est plus grand que 5 »).",
-		ideas: { "number-showdown": "Bataille de cartes : retourner deux cartes de chiffres ; la plus grande l'emporte." }
-	},
-	"K-NS-12": {
-		title: "Ordonner de 0 à 10 et trouver le nombre manquant",
-		description: "Place les cartes de chiffres de 0 à 10 en ordre et nomme la carte manquante sur une piste numérique (« 0, 1, 2, _, 4 »).",
-		ideas: { "line-up-the-cards": "Glisser les cartes de chiffres dans une piste, dans l'ordre." }
-	},
-	"K-NS-13": {
-		title: "Nombre suivant, un de plus et un de moins",
-		description: "Dit le nombre suivant et donne un de plus ou un de moins que n'importe quel nombre jusqu'à 20, sans recompter depuis 1 (« un de plus que 9, c'est 10 »).",
-		ideas: { "pop-up-one-more": "Un nombre apparaît et l'enfant touche la carte « un de plus » ou « un de moins »." }
-	},
-	"K-NS-14": {
-		title: "Les rangs de premier à cinquième",
-		description: "Utilise premier à cinquième et dernier pour les positions dans une file et distingue un rang d'une quantité (« le troisième chien » et « 3 chiens »)."
-	},
-	"K-FL-1": {
-		title: "Voir d'un coup d'œil jusqu'à 5, puis 6 à 10 en parties",
-		description: "Nomme 1 à 3, puis les constellations de points, de dés et de doigts jusqu'à 5 d'un coup d'œil sans compter (« c'est 4 ») ; voit 6 à 10 en parties sur un cadre à dix cases (« 7, c'est 5 et 2 »).",
+		title: "Voir d'un coup d'œil",
+		description: "Dit combien il y en a sans compter : points, dés et doigts jusqu'à 5, puis 6 à 10 comme « 5 et encore quelques-uns ».",
 		ideas: {
 			"dot-pattern-snap": "Jeu de cartes : une constellation s'affiche une seconde et l'enfant touche le chiffre correspondant.",
 			"ten-frame-flash": "Afficher un cadre à dix cases une seconde et dire les parties de 6 à 10 (« 7, c'est 5 et 2 »)."
 		}
 	},
-	"K-FL-2": {
+	"K-NS-4": {
+		title: "Le nombre ne change pas",
+		description: "8 objets, c'est toujours 8, même étalés, serrés ou en cercle, jusqu'à 20.",
+		ideas: { "same-in-a-circle": "Le même ensemble de 11 à 20 est montré en rangée, en tas puis en cercle ; l'enfant dit si le nombre a changé." }
+	},
+	"K-NS-5": {
+		title: "Zéro, c'est rien",
+		description: "Dit 0 quand il n'y a rien, et sait que 0 est un nombre (« le panier est vide, donc 0 »)."
+	},
+	"K-NS-6": {
+		title: "Plus, moins, pareil",
+		description: "Dit quel groupe en a plus, moins, ou autant, en appariant ou en comptant."
+	},
+	"K-NS-7": {
+		title: "Donne-m'en n",
+		description: "Prend exactement le nombre demandé, et s'arrête (« donne 6 os au chien »).",
+		ideas: { "grab-a-handful": "Jeu de pelle : prendre exactement le nombre demandé et vérifier en comptant." }
+	},
+	"K-NS-8": {
+		title: "Reconnaître les chiffres",
+		description: "Associe un chiffre à sa quantité et le retrouve parmi d'autres (« la carte 12 va avec 12 points »)."
+	},
+	"K-NS-9": {
+		title: "Un de plus, un de moins",
+		description: "Donne le nombre suivant, un de plus ou un de moins que n'importe quel nombre jusqu'à 20, sans compter depuis 1 (« un de plus que 9, c'est 10 »).",
+		ideas: { "pop-up-one-more": "Un nombre apparaît et l'enfant touche la carte « un de plus » ou « un de moins »." }
+	},
+	"K-NS-10": {
+		title: "Compter en avant et à rebours",
+		description: "Part de n'importe quel nombre et compte en avant, ou à rebours jusqu'à 0 (« je pars de 7 : 7, 8, 9… » ; « 5, 4, 3, 2, 1, 0 »).",
+		ideas: {
+			"preschool-count-on-from": "Jeu de comptage : partir d'un nombre de 2 à 9 et choisir chaque nombre suivant jusqu'à 10.",
+			"rocket-countdown": "Jeu de lancement : toucher les nombres à rebours pour faire décoller la fusée."
+		}
+	},
+	"K-NS-11": {
+		title: "Ranger les nombres",
+		description: "Range les cartes de 0 à 10 dans l'ordre et nomme celle qui manque sur la piste (« 0, 1, 2, _, 4 »).",
+		ideas: {
+			"line-up-the-cards": "Glisser les cartes de chiffres dans une piste, dans l'ordre.",
+			"missing-card-hard": "Piste de nombres avec un trou au milieu ou aux extrémités, ou deux trous, de 0 à 10 ; l'enfant nomme les cartes manquantes."
+		}
+	},
+	"K-NS-12": {
+		title: "Quel nombre est le plus grand ?",
+		description: "Compare deux chiffres jusqu'à 10 sans compter d'objets (« 8 est plus grand que 5 »).",
+		ideas: { "number-showdown": "Bataille de cartes : retourner deux cartes de chiffres ; la plus grande l'emporte." }
+	},
+	"K-NS-13": {
+		title: "Les parties d'un nombre",
+		description: "Partage un nombre en deux parties : 5, c'est 2 et 3 (« 5 = 4 + 1 = 3 + 2 »).",
+		ideas: { "decompose-to-ten": "Partager 6 à 10 en deux parties et trouver la partie manquante (« 8, c'est 5 et ? »)." }
+	},
+	"K-NS-14": {
+		title: "Premier à cinquième",
+		description: "Utilise premier à cinquième et dernier pour les places dans une file, et distingue « troisième » (rang) de « 3 » (quantité)."
+	},
+	"K-NS-15": {
+		title: "Écrire les chiffres",
+		description: "Écrit les chiffres dans le bon sens, avec le bon tracé, et reconnaît celui qui est bien formé.",
+		ideas: {
+			"trace-the-numeral": "Jeu de traçage au doigt avec un tracé guidé et une vignette en récompense (suivi).",
+			"trace-the-teens": "Choisir le bon ordre des chiffres pour écrire 10 à 20 (« quel chiffre écrit-on en premier ? »)."
+		}
+	},
+	"K-NS-16": {
+		title: "Compter de 10 en 10",
+		description: "Récite de 10 en 10 jusqu'à 100, et découvre de 2 en 2 et de 5 en 5 sur une piste, pour s'amuser et sans note à atteindre.",
+		ideas: {
+			"tens-staircase": "Monter un escalier où chaque marche dit la dizaine suivante.",
+			"skip-count-hops": "Jeu de rythme : une grenouille saute de 2, 5 ou 10 en 10 le long d'une piste et l'enfant frappe des mains à chaque nombre d'atterrissage."
+		}
+	},
+	"K-FL-1": {
 		title: "Estimer « environ combien »",
 		description: "Devine « environ 10 » avant de compter un ensemble, puis vérifie en comptant.",
 		ideas: { "jar-guess": "Deviner combien de haricots sont dans le pot, puis les compter ensemble." }
 	},
-	"K-FL-3": {
+	"K-FL-2": {
 		title: "Les doubles jusqu'à 5 + 5",
 		description: "Se rappelle les doubles jusqu'à 5 + 5 (« le double de 4, c'est 8 »).",
 		ideas: { "mirror-doubles": "Jeu du papillon : les points d'une aile sont reflétés sur l'autre et l'enfant dit le double." }
 	},
-	"K-FL-4": {
+	"K-FL-3": {
 		title: "Moitiés des nombres pairs jusqu'à 20",
 		description: "Partage un nombre pair en deux ensembles égaux et dit la moitié (« la moitié de 8, c'est 4 »).",
 		ideas: {
@@ -63486,7 +63544,7 @@ var sA = {
 			"two-plates-halves": "Glisser des biscuits sur deux assiettes jusqu'à ce qu'elles soient égales et nommer la moitié."
 		}
 	},
-	"K-FL-5": {
+	"K-FL-4": {
 		title: "Calculs rapides dans la limite de 10",
 		description: "Répond vite à de simples additions et soustractions dans la limite de 10, sans pénalité pour les réponses lentes (« 4 et 3 — 7 »).",
 		ideas: {
@@ -63536,21 +63594,16 @@ var sA = {
 		ideas: { "sentence-builder": "Glisser des tuiles de nombres et de signes pour correspondre à une histoire en image." }
 	},
 	"K-OP-6": {
-		title: "Décomposer un nombre en deux parties",
-		description: "Décompose un nombre jusqu'à 10 de plusieurs façons (« 5 = 4 + 1 = 3 + 2 »).",
-		ideas: { "split-the-beads": "Faire glisser des perles sur un fil pour montrer toutes les décompositions d'un nombre." }
-	},
-	"K-OP-7": {
 		title: "Trouver le complément à 10",
 		description: "Nomme le nombre qui va avec un autre pour faire 10 (« 7 et 3 font 10 »).",
 		ideas: { "ten-pairs-match": "Jeu de mémoire : retourner des cartes pour trouver les paires qui font 10." }
 	},
-	"K-OP-8": {
+	"K-OP-7": {
 		title: "Calculs dans la limite de 5",
 		description: "Se rappelle les additions et soustractions dont le total va jusqu'à 5 (« 2 + 3 = 5 », « 4 − 1 = 3 »).",
 		ideas: { "five-fact-fishing": "Pêcher des poissons dont les sommes vont jusqu'à 5 et dire chaque calcul." }
 	},
-	"K-OP-9": {
+	"K-OP-8": {
 		title: "Premier regard sur le passage de la dizaine (11 à 20)",
 		description: "Remplit un cadre à dix cases puis ajoute le reste au-delà de 10 (« 8 + 5 : 8 et 2 font 10, 3 de plus, 13 »).",
 		ideas: {
@@ -63558,12 +63611,12 @@ var sA = {
 			"teen-train": "Ajouter des wagons au-delà de dix et lire le nombre."
 		}
 	},
-	"K-OP-10": {
+	"K-OP-9": {
 		title: "Partager équitablement entre 2 ou 3",
 		description: "Partage un ensemble équitablement et remarque les parts inégales (« 6 biscuits pour 2 amis : 3 chacun »). Pas de symbole ÷.",
 		ideas: { "fair-or-not-plates": "Observer des assiettes partagées et dire qui en a plus ou si le partage est équitable." }
 	},
-	"K-OP-11": {
+	"K-OP-10": {
 		title: "Former des groupes égaux",
 		description: "Forme des groupes ayant le même nombre d'objets chacun (« 3 sacs de 2 »). Pas de symbole ×.",
 		ideas: {
@@ -68739,32 +68792,6 @@ var sA = {
 		]
 	},
 	"K-NS-2": {
-		meaning: "Counting on from any number and counting back from twenty is the moment a child discovers that counting does not always have to begin at one. Counting on means starting at a number such as seven and carrying on, eight, nine, ten, without going back to the start. Counting back means saying the numbers in the reverse order, from twenty down to zero, the way a rocket countdown goes. Both skills show that the number sequence is a line that can be entered at any point and travelled in either direction. Counting on is what later turns into adding, because a child who can start at seven and count three more is already adding without knowing it. Counting back is the early form of taking away.",
-		examples: [
-			"Hide a few toys in a bag, tell your child there are five, and drop in two more while they listen. Ask them to say how many there are now by starting at five and counting on, six, seven.",
-			"Do a family countdown before something exciting, such as a game or a trip, starting at ten and going down to zero, then let your child choose the starting number the next time.",
-			"Put numbered cards or sticky notes in a row on the floor and hop from one to the next, starting at whichever card you point to, forward or backward."
-		],
-		commonMistakes: [
-			"Starting again from one every time. A child who recounts from the beginning has not yet realised that the first number already contains all the earlier ones. Keep the starting number spoken aloud and loud.",
-			"Counting the starting number twice, saying seven, seven, eight. Practise with a finger or a counter placed on the starting number so that it is clearly the start and not the first step.",
-			"Losing the order when counting backward, especially around the teens. Backward counting is harder than forward counting and needs more time; short and frequent practice works far better than a long drill."
-		]
-	},
-	"K-NS-3": {
-		meaning: "Chanting by tens, twos and fives is the first taste of skip counting. The child says ten, twenty, thirty and on to one hundred, and joins in with twos and fives along a track, without being asked to be perfectly accurate. At this age the chanting is a rhythm and a pattern, not yet a calculation. It matters because it shows the child that numbers come in regular families: the tens end in zero, the fives end in five or zero, and the twos are every other number. Those patterns are the foundation for the multiplication tables, for counting coins and for understanding place value. The twos and fives chanting is only an introduction at this level, so the goal is enjoyment and familiarity, not a test.",
-		examples: [
-			"Clap or stamp on each ten as you count to one hundred together, whispering the other numbers or leaving them silent, so that the tens stand out like beats in a song.",
-			"Count shoes by twos while putting them away: two, four, six, eight, one pair at a time, and see how quickly it goes compared with counting each shoe.",
-			"Count the fingers on both hands by fives, then the fingers and toes of the family by fives and tens, laughing at how the numbers grow."
-		],
-		commonMistakes: [
-			"Expecting accuracy too early. Counting by twos and fives is introduced here, not mastered, and a child who sometimes loses the pattern is simply still building it.",
-			"Mixing up the tens words, for example saying twenty, thirty, fifty. The words ending in ty can sound alike, so say them slowly together and emphasise the first sound.",
-			"Chanting without any connection to quantity. Pair the chant with real objects, such as groups of two socks or five counters, so that the numbers mean something."
-		]
-	},
-	"K-NS-4": {
 		meaning: "Touching each object once and knowing that the last number said tells how many is the heart of real counting. It combines two ideas. The first is one-to-one matching: each object receives exactly one number word, so none is skipped and none is counted twice. The second is the cardinal idea: the final number spoken does not just name the last object, it names the whole group. When a child says one, two, three and then answers three to the question how many, they have understood that counting is a way of finding out an amount. Many children can recite number words long before they grasp this, which is why it is worth watching closely how your child counts, not only how far.",
 		examples: [
 			"Line up five toy cars and let your child count them by touching each car once and moving it aside as it is counted, then ask how many cars there are without recounting.",
@@ -68777,7 +68804,20 @@ var sA = {
 			"Counting an object twice in a scattered group. Moving objects into a separate pile as they are counted removes this problem and builds a good habit."
 		]
 	},
-	"K-NS-5": {
+	"K-NS-4": {
+		meaning: "Knowing that the count stays the same when objects move is called conservation of number, and it is one of the most important ideas of early mathematics. A group of eight objects is eight whether they sit in a tidy row, a loose cluster or a circle. Younger children are often fooled by appearance: a long, spread-out row seems to have more than a small, tight bunch, even if they were counted equal a moment ago. Understanding that number does not change when the arrangement changes shows that a child sees quantity as a property of the group itself and not of how it looks. It is a milestone that develops through experience, and it makes every later comparison and calculation reliable.",
+		examples: [
+			"Count eight counters in a close row with your child, then spread them out along the table and ask whether there are still eight, or more, or fewer. Count them again to check.",
+			"Arrange the same eight objects in a circle, then in a cluster, then in two lines, and ask your child to tell you the number each time before and after counting.",
+			"Play a game in which you move objects secretly while your child closes their eyes, then ask if you added or took anything away or only moved things, and how they know."
+		],
+		commonMistakes: [
+			"Believing that a longer row has more objects. Do not simply correct this; let the child count both rows and discover the result, then repeat with different amounts.",
+			"Recounting every time something moves. That is not wrong, and it is a good way to check, but the goal is for the child to trust that nothing has changed when nothing was added or removed.",
+			"Being unsure when objects are very spread out. Use small groups first and gradually increase the number and the space between objects."
+		]
+	},
+	"K-NS-7": {
 		meaning: "Giving or taking out exactly a certain number of objects is counting turned into action. Instead of counting a group that is already there, the child has to make a group of the right size from a larger pile. They must keep the target number in mind while counting, notice when they have reached it, and stop. It is a harder skill than counting a set, because stopping at the right time takes attention and memory. It is also the skill that lets a child do useful, everyday things: put four spoons on the table, hand over three crackers, share out the right number of stickers. It later connects directly to addition and subtraction, since adding is giving more and subtracting is taking some away.",
 		examples: [
 			"Ask your child to give the dog six bones from a bowl of toy bones or dry pasta, then to take two away and say how many are left.",
@@ -68790,17 +68830,30 @@ var sA = {
 			"Forgetting the target number halfway through. Keep numbers small at first, say them clearly, and let the child repeat the request before beginning."
 		]
 	},
-	"K-NS-6": {
-		meaning: "Knowing that the count stays the same when objects move is called conservation of number, and it is one of the most important ideas of early mathematics. A group of eight objects is eight whether they sit in a tidy row, a loose cluster or a circle. Younger children are often fooled by appearance: a long, spread-out row seems to have more than a small, tight bunch, even if they were counted equal a moment ago. Understanding that number does not change when the arrangement changes shows that a child sees quantity as a property of the group itself and not of how it looks. It is a milestone that develops through experience, and it makes every later comparison and calculation reliable.",
+	"K-NS-10": {
+		meaning: "Counting on from any number and counting back from twenty is the moment a child discovers that counting does not always have to begin at one. Counting on means starting at a number such as seven and carrying on, eight, nine, ten, without going back to the start. Counting back means saying the numbers in the reverse order, from twenty down to zero, the way a rocket countdown goes. Both skills show that the number sequence is a line that can be entered at any point and travelled in either direction. Counting on is what later turns into adding, because a child who can start at seven and count three more is already adding without knowing it. Counting back is the early form of taking away.",
 		examples: [
-			"Count eight counters in a close row with your child, then spread them out along the table and ask whether there are still eight, or more, or fewer. Count them again to check.",
-			"Arrange the same eight objects in a circle, then in a cluster, then in two lines, and ask your child to tell you the number each time before and after counting.",
-			"Play a game in which you move objects secretly while your child closes their eyes, then ask if you added or took anything away or only moved things, and how they know."
+			"Hide a few toys in a bag, tell your child there are five, and drop in two more while they listen. Ask them to say how many there are now by starting at five and counting on, six, seven.",
+			"Do a family countdown before something exciting, such as a game or a trip, starting at ten and going down to zero, then let your child choose the starting number the next time.",
+			"Put numbered cards or sticky notes in a row on the floor and hop from one to the next, starting at whichever card you point to, forward or backward."
 		],
 		commonMistakes: [
-			"Believing that a longer row has more objects. Do not simply correct this; let the child count both rows and discover the result, then repeat with different amounts.",
-			"Recounting every time something moves. That is not wrong, and it is a good way to check, but the goal is for the child to trust that nothing has changed when nothing was added or removed.",
-			"Being unsure when objects are very spread out. Use small groups first and gradually increase the number and the space between objects."
+			"Starting again from one every time. A child who recounts from the beginning has not yet realised that the first number already contains all the earlier ones. Keep the starting number spoken aloud and loud.",
+			"Counting the starting number twice, saying seven, seven, eight. Practise with a finger or a counter placed on the starting number so that it is clearly the start and not the first step.",
+			"Losing the order when counting backward, especially around the teens. Backward counting is harder than forward counting and needs more time; short and frequent practice works far better than a long drill."
+		]
+	},
+	"K-NS-16": {
+		meaning: "Chanting by tens, twos and fives is the first taste of skip counting. The child says ten, twenty, thirty and on to one hundred, and joins in with twos and fives along a track, without being asked to be perfectly accurate. At this age the chanting is a rhythm and a pattern, not yet a calculation. It matters because it shows the child that numbers come in regular families: the tens end in zero, the fives end in five or zero, and the twos are every other number. Those patterns are the foundation for the multiplication tables, for counting coins and for understanding place value. The twos and fives chanting is only an introduction at this level, so the goal is enjoyment and familiarity, not a test.",
+		examples: [
+			"Clap or stamp on each ten as you count to one hundred together, whispering the other numbers or leaving them silent, so that the tens stand out like beats in a song.",
+			"Count shoes by twos while putting them away: two, four, six, eight, one pair at a time, and see how quickly it goes compared with counting each shoe.",
+			"Count the fingers on both hands by fives, then the fingers and toes of the family by fives and tens, laughing at how the numbers grow."
+		],
+		commonMistakes: [
+			"Expecting accuracy too early. Counting by twos and fives is introduced here, not mastered, and a child who sometimes loses the pattern is simply still building it.",
+			"Mixing up the tens words, for example saying twenty, thirty, fifty. The words ending in ty can sound alike, so say them slowly together and emphasise the first sound.",
+			"Chanting without any connection to quantity. Pair the chant with real objects, such as groups of two socks or five counters, so that the numbers mean something."
 		]
 	}
 }, qA = {}, JA = {}, YA = {}, XA = {}, ZA = {}, QA = {}, $A = {
@@ -68818,32 +68871,6 @@ var sA = {
 		]
 	},
 	"K-NS-2": {
-		meaning: "Compter à partir d'un nombre quelconque et à rebours depuis vingt, c'est le moment où l'enfant découvre qu'on n'a pas toujours besoin de commencer à un. Compter en avant, c'est partir d'un nombre comme sept et continuer, huit, neuf, dix, sans revenir au début. Compter à rebours, c'est dire les nombres dans l'ordre inverse, de vingt jusqu'à zéro, comme le décompte d'une fusée. Ces deux habiletés montrent que la suite des nombres est une droite où l'on peut entrer à n'importe quel endroit et circuler dans les deux sens. Compter en avant est ce qui deviendra plus tard l'addition : l'enfant qui sait partir de sept et compter trois de plus additionne déjà sans le savoir. Compter à rebours est la forme première de la soustraction.",
-		examples: [
-			"Cachez quelques jouets dans un sac, dites à votre enfant qu'il y en a cinq et laissez-le en voir tomber deux autres. Demandez-lui combien il y en a maintenant en partant de cinq : six, sept.",
-			"Faites un décompte en famille avant un moment excitant, un jeu ou un départ, en partant de dix jusqu'à zéro, puis laissez votre enfant choisir le nombre de départ la fois suivante.",
-			"Posez des cartes numérotées ou des papillons adhésifs en rangée sur le plancher et sautez de l'une à l'autre en partant de la carte que vous montrez, vers l'avant ou vers l'arrière."
-		],
-		commonMistakes: [
-			"Repartir de un à chaque fois. L'enfant qui recompte depuis le début n'a pas encore compris que le premier nombre contient déjà tous les précédents. Dites le nombre de départ à voix haute et bien fort.",
-			"Compter le nombre de départ deux fois : sept, sept, huit. Posez un doigt ou un jeton sur le nombre de départ pour qu'il soit clairement le point de départ et non le premier pas.",
-			"Perdre l'ordre à rebours, surtout autour des nombres de dix à dix-neuf. Compter à rebours est plus difficile que compter en avant et demande plus de temps; de courts moments fréquents valent bien mieux qu'un long exercice."
-		]
-	},
-	"K-NS-3": {
-		meaning: "Compter de dix en dix, de deux en deux et de cinq en cinq est une première approche du comptage par bonds. L'enfant dit dix, vingt, trente et ainsi de suite jusqu'à cent, et se joint au comptage par deux et par cinq le long d'une piste, sans qu'on exige de lui une exactitude parfaite. À cet âge, la récitation est un rythme et une régularité, pas encore un calcul. Elle compte parce qu'elle montre que les nombres forment des familles régulières : les dizaines se terminent par zéro, les multiples de cinq par cinq ou zéro, et les nombres pairs sont un sur deux. Ces régularités sont la base des tables de multiplication, du dénombrement de pièces de monnaie et de la valeur de position. Le comptage par deux et par cinq n'est qu'une introduction à ce niveau : le but est le plaisir et la familiarité, pas un contrôle.",
-		examples: [
-			"Frappez des mains ou des pieds sur chaque dizaine en comptant ensemble jusqu'à cent, en chuchotant les autres nombres ou en les laissant silencieux, pour que les dizaines ressortent comme les temps forts d'une chanson.",
-			"Comptez les souliers de deux en deux en les rangeant : deux, quatre, six, huit, une paire à la fois, et voyez comme c'est plus rapide que de compter chaque soulier.",
-			"Comptez les doigts des deux mains de cinq en cinq, puis les doigts et les orteils de la famille de cinq en cinq et de dix en dix, en riant de voir les nombres grossir."
-		],
-		commonMistakes: [
-			"Attendre trop tôt de l'exactitude. Compter par deux et par cinq est présenté ici, non maîtrisé; l'enfant qui perd parfois le fil est simplement encore en train de bâtir la régularité.",
-			"Confondre les mots de dizaine, par exemple dire vingt, trente, cinquante. Les mots de dizaine se ressemblent; dites-les lentement ensemble en insistant sur le premier son.",
-			"Réciter sans aucun lien avec la quantité. Associez la récitation à de vrais objets, comme des groupes de deux chaussettes ou de cinq jetons, pour que les nombres aient un sens."
-		]
-	},
-	"K-NS-4": {
 		meaning: "Toucher chaque objet une seule fois et savoir que le dernier nombre dit indique combien il y en a, c'est le cœur du vrai dénombrement. Cela réunit deux idées. La première est la correspondance terme à terme : chaque objet reçoit exactement un mot-nombre, si bien qu'aucun n'est oublié et qu'aucun n'est compté deux fois. La seconde est l'idée cardinale : le dernier nombre prononcé ne nomme pas seulement le dernier objet, il nomme tout le groupe. Quand l'enfant dit un, deux, trois, puis répond trois à la question combien, il a compris que compter sert à connaître une quantité. Beaucoup d'enfants savent réciter les mots-nombres bien avant de saisir cela, d'où l'intérêt d'observer de près comment votre enfant compte, et pas seulement jusqu'où.",
 		examples: [
 			"Alignez cinq petites voitures et laissez votre enfant les compter en touchant chacune une fois et en la déplaçant de côté une fois comptée, puis demandez combien il y a de voitures sans qu'il recompte.",
@@ -68856,7 +68883,20 @@ var sA = {
 			"Compter deux fois un même objet dans un groupe éparpillé. Les placer dans une pile à part à mesure qu'on les compte règle le problème et crée une bonne habitude."
 		]
 	},
-	"K-NS-5": {
+	"K-NS-4": {
+		meaning: "Savoir que le nombre reste le même quand les objets bougent s'appelle la conservation du nombre, et c'est l'une des idées les plus importantes des premières mathématiques. Un groupe de huit objets est un groupe de huit, qu'il soit en rangée bien serrée, en tas lâche ou en cercle. Les plus jeunes se laissent souvent tromper par l'apparence : une longue rangée étalée semble avoir plus d'objets qu'un petit paquet serré, même si on les a comptés égaux un instant plus tôt. Comprendre que le nombre ne change pas quand la disposition change montre que l'enfant voit la quantité comme une propriété du groupe lui-même et non de son aspect. C'est une étape qui se construit avec l'expérience, et elle rend fiables toutes les comparaisons et tous les calculs qui suivront.",
+		examples: [
+			"Comptez huit jetons en rangée serrée avec votre enfant, puis étalez-les sur la table et demandez s'il y en a encore huit, ou plus, ou moins. Recomptez pour vérifier.",
+			"Disposez les mêmes huit objets en cercle, puis en tas, puis sur deux lignes, et demandez à votre enfant de dire le nombre chaque fois, avant et après avoir compté.",
+			"Jouez à déplacer des objets en cachette pendant que votre enfant ferme les yeux, puis demandez si vous avez ajouté ou retiré quelque chose ou seulement déplacé, et comment il le sait."
+		],
+		commonMistakes: [
+			"Croire qu'une rangée plus longue contient plus d'objets. Ne corrigez pas simplement : laissez l'enfant compter les deux rangées et découvrir le résultat, puis recommencez avec d'autres quantités.",
+			"Recompter chaque fois que quelque chose bouge. Ce n'est pas une erreur, c'est même une bonne vérification, mais le but est que l'enfant fasse confiance au fait que rien n'a changé quand rien n'a été ajouté ni retiré.",
+			"Hésiter quand les objets sont très espacés. Commencez avec de petits groupes, puis augmentez peu à peu le nombre et l'espace entre les objets."
+		]
+	},
+	"K-NS-7": {
 		meaning: "Donner ou retirer exactement un certain nombre d'objets, c'est le dénombrement mis en action. Au lieu de compter un groupe déjà là, l'enfant doit former un groupe de la bonne taille à partir d'un tas plus grand. Il doit garder en tête le nombre visé pendant qu'il compte, remarquer quand il l'a atteint et s'arrêter. C'est une habileté plus difficile que de compter une collection, car s'arrêter au bon moment exige de l'attention et de la mémoire. C'est aussi ce qui permet à l'enfant de faire des gestes utiles du quotidien : mettre quatre cuillères sur la table, tendre trois biscuits, distribuer le bon nombre d'autocollants. Elle se relie plus tard directement à l'addition et à la soustraction, puisqu'additionner, c'est donner de plus, et soustraire, c'est en retirer.",
 		examples: [
 			"Demandez à votre enfant de donner six os au chien à partir d'un bol d'os en jouet ou de pâtes sèches, puis d'en retirer deux et de dire combien il en reste.",
@@ -68869,17 +68909,30 @@ var sA = {
 			"Oublier le nombre visé en cours de route. Gardez d'abord des nombres petits, dites-les clairement et faites répéter la demande à l'enfant avant de commencer."
 		]
 	},
-	"K-NS-6": {
-		meaning: "Savoir que le nombre reste le même quand les objets bougent s'appelle la conservation du nombre, et c'est l'une des idées les plus importantes des premières mathématiques. Un groupe de huit objets est un groupe de huit, qu'il soit en rangée bien serrée, en tas lâche ou en cercle. Les plus jeunes se laissent souvent tromper par l'apparence : une longue rangée étalée semble avoir plus d'objets qu'un petit paquet serré, même si on les a comptés égaux un instant plus tôt. Comprendre que le nombre ne change pas quand la disposition change montre que l'enfant voit la quantité comme une propriété du groupe lui-même et non de son aspect. C'est une étape qui se construit avec l'expérience, et elle rend fiables toutes les comparaisons et tous les calculs qui suivront.",
+	"K-NS-10": {
+		meaning: "Compter à partir d'un nombre quelconque et à rebours depuis vingt, c'est le moment où l'enfant découvre qu'on n'a pas toujours besoin de commencer à un. Compter en avant, c'est partir d'un nombre comme sept et continuer, huit, neuf, dix, sans revenir au début. Compter à rebours, c'est dire les nombres dans l'ordre inverse, de vingt jusqu'à zéro, comme le décompte d'une fusée. Ces deux habiletés montrent que la suite des nombres est une droite où l'on peut entrer à n'importe quel endroit et circuler dans les deux sens. Compter en avant est ce qui deviendra plus tard l'addition : l'enfant qui sait partir de sept et compter trois de plus additionne déjà sans le savoir. Compter à rebours est la forme première de la soustraction.",
 		examples: [
-			"Comptez huit jetons en rangée serrée avec votre enfant, puis étalez-les sur la table et demandez s'il y en a encore huit, ou plus, ou moins. Recomptez pour vérifier.",
-			"Disposez les mêmes huit objets en cercle, puis en tas, puis sur deux lignes, et demandez à votre enfant de dire le nombre chaque fois, avant et après avoir compté.",
-			"Jouez à déplacer des objets en cachette pendant que votre enfant ferme les yeux, puis demandez si vous avez ajouté ou retiré quelque chose ou seulement déplacé, et comment il le sait."
+			"Cachez quelques jouets dans un sac, dites à votre enfant qu'il y en a cinq et laissez-le en voir tomber deux autres. Demandez-lui combien il y en a maintenant en partant de cinq : six, sept.",
+			"Faites un décompte en famille avant un moment excitant, un jeu ou un départ, en partant de dix jusqu'à zéro, puis laissez votre enfant choisir le nombre de départ la fois suivante.",
+			"Posez des cartes numérotées ou des papillons adhésifs en rangée sur le plancher et sautez de l'une à l'autre en partant de la carte que vous montrez, vers l'avant ou vers l'arrière."
 		],
 		commonMistakes: [
-			"Croire qu'une rangée plus longue contient plus d'objets. Ne corrigez pas simplement : laissez l'enfant compter les deux rangées et découvrir le résultat, puis recommencez avec d'autres quantités.",
-			"Recompter chaque fois que quelque chose bouge. Ce n'est pas une erreur, c'est même une bonne vérification, mais le but est que l'enfant fasse confiance au fait que rien n'a changé quand rien n'a été ajouté ni retiré.",
-			"Hésiter quand les objets sont très espacés. Commencez avec de petits groupes, puis augmentez peu à peu le nombre et l'espace entre les objets."
+			"Repartir de un à chaque fois. L'enfant qui recompte depuis le début n'a pas encore compris que le premier nombre contient déjà tous les précédents. Dites le nombre de départ à voix haute et bien fort.",
+			"Compter le nombre de départ deux fois : sept, sept, huit. Posez un doigt ou un jeton sur le nombre de départ pour qu'il soit clairement le point de départ et non le premier pas.",
+			"Perdre l'ordre à rebours, surtout autour des nombres de dix à dix-neuf. Compter à rebours est plus difficile que compter en avant et demande plus de temps; de courts moments fréquents valent bien mieux qu'un long exercice."
+		]
+	},
+	"K-NS-16": {
+		meaning: "Compter de dix en dix, de deux en deux et de cinq en cinq est une première approche du comptage par bonds. L'enfant dit dix, vingt, trente et ainsi de suite jusqu'à cent, et se joint au comptage par deux et par cinq le long d'une piste, sans qu'on exige de lui une exactitude parfaite. À cet âge, la récitation est un rythme et une régularité, pas encore un calcul. Elle compte parce qu'elle montre que les nombres forment des familles régulières : les dizaines se terminent par zéro, les multiples de cinq par cinq ou zéro, et les nombres pairs sont un sur deux. Ces régularités sont la base des tables de multiplication, du dénombrement de pièces de monnaie et de la valeur de position. Le comptage par deux et par cinq n'est qu'une introduction à ce niveau : le but est le plaisir et la familiarité, pas un contrôle.",
+		examples: [
+			"Frappez des mains ou des pieds sur chaque dizaine en comptant ensemble jusqu'à cent, en chuchotant les autres nombres ou en les laissant silencieux, pour que les dizaines ressortent comme les temps forts d'une chanson.",
+			"Comptez les souliers de deux en deux en les rangeant : deux, quatre, six, huit, une paire à la fois, et voyez comme c'est plus rapide que de compter chaque soulier.",
+			"Comptez les doigts des deux mains de cinq en cinq, puis les doigts et les orteils de la famille de cinq en cinq et de dix en dix, en riant de voir les nombres grossir."
+		],
+		commonMistakes: [
+			"Attendre trop tôt de l'exactitude. Compter par deux et par cinq est présenté ici, non maîtrisé; l'enfant qui perd parfois le fil est simplement encore en train de bâtir la régularité.",
+			"Confondre les mots de dizaine, par exemple dire vingt, trente, cinquante. Les mots de dizaine se ressemblent; dites-les lentement ensemble en insistant sur le premier son.",
+			"Réciter sans aucun lien avec la quantité. Associez la récitation à de vrais objets, comme des groupes de deux chaussettes ou de cinq jetons, pour que les nombres aient un sens."
 		]
 	}
 }, ej = {}, tj = {}, nj = {}, rj = {}, ij = {}, aj = {}, oj = {
