@@ -7,3 +7,5 @@ footer links, so the trust pages are reachable from the very first page a crawle
 
 The blog index page now lists every post as a normal link in the page itself, instead of loading the
 list only after the page starts, so search engines see the posts too.
+
+The home page's plain-HTML copy is now a full page of text, with a how-it-works section, a short list of common questions and a note on privacy and advertising. The site also loads faster on a first visit: the parent area, the practice screens and the documentation pages are now fetched only when someone opens them, instead of being downloaded with the very first screen.
