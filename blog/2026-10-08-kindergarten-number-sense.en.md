@@ -26,3 +26,20 @@ together, for example "Zero means none" or "One word per object".
 
 Children's earlier practice carries over. Games that moved to a different skill keep their scores,
 and each game now belongs to exactly one skill.
+
+## Finding your way around is now much easier
+
+Moving through the app used to mean a lot of backing out. This week the trip from a level, to a
+topic, to a single skill, to an activity became one smooth path. Every page now has one clear way
+to go up a step, with a trail at the top showing where you are. Skills have their own web address
+you can bookmark or share, and the address always matches what's on screen.
+
+**A next step when a game ends.** When a child finishes an activity, they no longer land on a dead
+end. A short summary shows how it went and offers clear choices: play again, try the next game in
+the skill, or head back up. Level and topic switchers sit in the bar at the top, so a parent can
+hop from one grade or topic to another without starting over. Buttons are large and well spaced for
+small fingers, French labels wrap rather than getting cut off, and animations are turned off for
+anyone who prefers reduced motion.
+
+**Faster starts.** Starting an activity now loads the page once instead of reloading it, so the
+first question appears sooner.
