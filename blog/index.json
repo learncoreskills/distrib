@@ -170,6 +170,32 @@
       "reviewed": false
     },
     {
+      "id": "2026-10-07-terms-page-and-crawlable-home.en",
+      "date": "2026-10-07",
+      "title": "A Terms of use page, and a home page that search engines can read",
+      "summary": "The site now has a Terms of use page next to Privacy, About and Contact, in English and French, linked from the footer on every screen. The plain-HTML copy of the home page, which crawlers read when…",
+      "contentUrl": "2026-10-07-terms-page-and-crawlable-home.en.md",
+      "slug": "terms-page-and-crawlable-home",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 117,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-terms-page-and-crawlable-home.fr",
+      "date": "2026-10-07",
+      "title": "Une page Conditions d'utilisation, et une page d'accueil lisible par les moteurs de recherche",
+      "summary": "Le site a maintenant une page Conditions d'utilisation à côté de Confidentialité, À propos et Contact, en français et en anglais, liée depuis le pied de page de chaque écran. La copie en HTML simple…",
+      "contentUrl": "2026-10-07-terms-page-and-crawlable-home.fr.md",
+      "slug": "terms-page-and-crawlable-home",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 135,
+      "reviewed": false
+    },
+    {
       "id": "2026-10-07-trust-pages-and-parent-articles.en",
       "date": "2026-10-07",
       "title": "A clearer, calmer site for parents: new information pages, real articles, and ads kept well away from children",
@@ -196,5 +222,5 @@
       "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-06T23:38:46.771Z"
+  "generatedAt": "2026-10-07T19:54:04.764Z"
 }
