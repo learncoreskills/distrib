@@ -32074,7 +32074,7 @@ function w(e, t) {
 		}]
 	};
 }
-var Op = w("math.number-sense.preschool-subitizing", "mathematics.P.4"), kp = w("math.number-sense.preschool-numerals", "mathematics.P.5"), Ap = w("math.number-sense.preschool-numeral-quantity", "mathematics.P.31"), jp = w("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.6"), Mp = w("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.35"), Np = w("math.addition.preschool-combine", "mathematics.P.9"), Pp = w("math.subtraction.preschool-take-away", "mathematics.P.8"), Fp = w("math.geometry.preschool-shapes-2d", "mathematics.P.59"), Ip = w("math.geometry.preschool-position-words", "mathematics.P.64"), Lp = w("math.measurement.preschool-direct-comparison", "mathematics.P.12"), Rp = w("math.mathematical-reasoning.preschool-patterns", "mathematics.P.10"), zp = w("math.time.preschool-days-of-week", "mathematics.P.56"), Bp = w("math.number-sense.preschool-cardinality", "mathematics.P.2"), Vp = w("math.number-sense.preschool-count-on", "mathematics.P.26"), Hp = w("math.number-sense.preschool-before-after", "mathematics.P.7"), Up = w("math.number-sense.preschool-numeral-formation", "mathematics.P.32"), Wp = w("math.number-sense.preschool-zero", "mathematics.P.37"), Gp = w("math.comparing-ordering.preschool-conservation", "mathematics.P.28"), Kp = w("math.number-sense.preschool-ordinals", "mathematics.P.38"), qp = w("math.addition.preschool-decompose-five", "mathematics.P.43"), Jp = w("math.problem-solving.preschool-story-problems", "mathematics.P.42"), Yp = w("math.geometry.preschool-solids", "mathematics.P.60"), Xp = w("math.geometry.preschool-sides-corners", "mathematics.P.61"), Zp = w("math.geometry.preschool-movement", "mathematics.P.20"), Qp = w("math.measurement.preschool-order-by-size", "mathematics.P.13"), $p = w("math.mathematical-reasoning.preschool-sorting", "mathematics.P.21"), em = w("math.mathematical-reasoning.preschool-name-the-rule", void 0), tm = w("math.mathematical-reasoning.preschool-missing-item", "mathematics.P.49"), nm = w("math.time.preschool-parts-of-day", "mathematics.P.15"), rm = w("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.55"), im = w("math.number-sense.preschool-count-in-order", "mathematics.P.0"), am = w("math.number-sense.preschool-one-to-one", "mathematics.P.1"), om = w("math.number-sense.preschool-give-n", "mathematics.P.3"), sm = w("math.time.preschool-routine-order", "mathematics.P.14"), cm = w("math.geometry.preschool-name-shapes", "mathematics.P.16"), lm = w("math.geometry.preschool-match-shapes", "mathematics.P.17"), um = w("math.geometry.preschool-roll-or-stack", "mathematics.P.18"), dm = w("math.mathematical-reasoning.preschool-quantity-words", "mathematics.P.23"), fm = w("math.number-sense.preschool-count-to-thirty", "mathematics.P.25"), pm = w("math.number-sense.preschool-count-backward", "mathematics.P.27"), mm = w("math.number-sense.preschool-take-n", "mathematics.P.29"), hm = w("math.number-sense.preschool-one-more-less", "mathematics.P.33"), gm = w("math.comparing-ordering.preschool-compare-groups", "mathematics.P.34"), _m = w("math.comparing-ordering.preschool-number-track", "mathematics.P.36"), vm = w("math.number-sense.preschool-ten-frame", "mathematics.P.39"), ym = w("math.number-sense.preschool-teen-numbers", "mathematics.P.40"), bm = w("math.addition.preschool-act-out-add-take", "mathematics.P.41"), xm = w("math.addition.preschool-make-ten", "mathematics.P.44"), Sm = w("math.addition.preschool-facts-within-five", "mathematics.P.45"), Cm = w("math.addition.preschool-doubles", "mathematics.P.46"), wm = w("math.addition.preschool-number-sentences", "mathematics.P.47"), Tm = w("math.mathematical-reasoning.preschool-fair-shares", "mathematics.P.48"), Em = w("math.mathematical-reasoning.preschool-pattern-translate", "mathematics.P.50"), Dm = w("math.number-sense.preschool-pairs", "mathematics.P.51"), Om = w("math.measurement.preschool-what-to-measure", "mathematics.P.52"), km = w("math.measurement.preschool-measuring-tools", "mathematics.P.53"), Am = w("math.measurement.preschool-order-objects", "mathematics.P.54"), jm = w("math.time.preschool-how-long", "mathematics.P.57"), Mm = w("math.problem-solving.preschool-money-play", "mathematics.P.58"), Nm = w("math.geometry.preschool-bigger-shape", "mathematics.P.62"), Pm = w("math.geometry.preschool-shapes-around", "mathematics.P.63"), Fm = w("math.geometry.preschool-routes", "mathematics.P.65"), Im = w("math.geometry.preschool-copy-build", "mathematics.P.66"), Lm = w("math.mathematical-reasoning.preschool-sort-and-count", "mathematics.P.67"), Rm = w("math.mathematical-reasoning.preschool-picture-graph", "mathematics.P.68"), zm = w("math.problem-solving.preschool-explain-answer", "mathematics.P.69"), Bm = w("math.problem-solving.preschool-enough-for-all", "mathematics.P.70"), Vm = w("math.problem-solving.preschool-estimate", "mathematics.P.71"), Hm = [
+var Op = w("math.number-sense.preschool-subitizing", "mathematics.P.4"), kp = w("math.number-sense.preschool-numerals", "mathematics.P.5"), Ap = w("math.number-sense.preschool-numeral-quantity", "mathematics.P.31"), jp = w("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.6"), Mp = w("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.35"), Np = w("math.addition.preschool-combine", "mathematics.P.9"), Pp = w("math.subtraction.preschool-take-away", "mathematics.P.8"), Fp = w("math.geometry.preschool-shapes-2d", "mathematics.P.59"), Ip = w("math.geometry.preschool-position-words", "mathematics.P.64"), Lp = w("math.measurement.preschool-direct-comparison", "mathematics.P.12"), Rp = w("math.mathematical-reasoning.preschool-patterns", "mathematics.P.10"), zp = w("math.time.preschool-days-of-week", "mathematics.P.56"), Bp = w("math.number-sense.preschool-cardinality", "mathematics.P.2"), Vp = w("math.number-sense.preschool-count-on", "mathematics.P.26"), Hp = w("math.number-sense.preschool-before-after", "mathematics.P.7"), Up = w("math.number-sense.preschool-numeral-formation", "mathematics.P.32"), Wp = w("math.number-sense.preschool-zero", "mathematics.P.37"), Gp = w("math.comparing-ordering.preschool-conservation", "mathematics.P.28"), Kp = w("math.number-sense.preschool-ordinals", "mathematics.P.38"), qp = w("math.addition.preschool-decompose-five", "mathematics.P.43"), Jp = w("math.problem-solving.preschool-story-problems", "mathematics.P.42"), Yp = w("math.geometry.preschool-solids", "mathematics.P.60"), Xp = w("math.geometry.preschool-sides-corners", "mathematics.P.61"), Zp = w("math.geometry.preschool-movement", "mathematics.P.20"), Qp = w("math.measurement.preschool-order-by-size", "mathematics.P.13"), $p = w("math.mathematical-reasoning.preschool-sorting", "mathematics.P.21"), em = w("math.mathematical-reasoning.preschool-name-the-rule", void 0), tm = w("math.mathematical-reasoning.preschool-missing-item", "mathematics.P.49"), nm = w("math.time.preschool-parts-of-day", "mathematics.P.15"), rm = w("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.55"), im = w("math.number-sense.preschool-count-in-order", "mathematics.P.0"), am = w("math.number-sense.preschool-one-to-one", "mathematics.P.1"), om = w("math.number-sense.preschool-give-n", "mathematics.P.3"), sm = w("math.time.preschool-routine-order", "mathematics.P.14"), cm = w("math.geometry.preschool-name-shapes", "mathematics.P.16"), lm = w("math.geometry.preschool-match-shapes", "mathematics.P.17"), um = w("math.geometry.preschool-roll-or-stack", "mathematics.P.18"), dm = w("math.mathematical-reasoning.preschool-quantity-words", "mathematics.P.23"), T = w("math.number-sense.preschool-count-to-thirty", "mathematics.P.25"), fm = w("math.number-sense.preschool-count-backward", "mathematics.P.27"), pm = w("math.number-sense.preschool-take-n", "mathematics.P.29"), mm = w("math.number-sense.preschool-one-more-less", "mathematics.P.33"), hm = w("math.comparing-ordering.preschool-compare-groups", "mathematics.P.34"), gm = w("math.comparing-ordering.preschool-number-track", "mathematics.P.36"), _m = w("math.number-sense.preschool-ten-frame", "mathematics.P.39"), vm = w("math.number-sense.preschool-teen-numbers", "mathematics.P.40"), ym = w("math.addition.preschool-act-out-add-take", "mathematics.P.41"), bm = w("math.addition.preschool-make-ten", "mathematics.P.44"), xm = w("math.addition.preschool-facts-within-five", "mathematics.P.45"), Sm = w("math.addition.preschool-doubles", "mathematics.P.46"), Cm = w("math.addition.preschool-number-sentences", "mathematics.P.47"), wm = w("math.mathematical-reasoning.preschool-fair-shares", "mathematics.P.48"), Tm = w("math.mathematical-reasoning.preschool-pattern-translate", "mathematics.P.50"), Em = w("math.number-sense.preschool-pairs", "mathematics.P.51"), Dm = w("math.measurement.preschool-what-to-measure", "mathematics.P.52"), Om = w("math.measurement.preschool-measuring-tools", "mathematics.P.53"), km = w("math.measurement.preschool-order-objects", "mathematics.P.54"), Am = w("math.time.preschool-how-long", "mathematics.P.57"), jm = w("math.problem-solving.preschool-money-play", "mathematics.P.58"), Mm = w("math.geometry.preschool-bigger-shape", "mathematics.P.62"), Nm = w("math.geometry.preschool-shapes-around", "mathematics.P.63"), Pm = w("math.geometry.preschool-routes", "mathematics.P.65"), Fm = w("math.geometry.preschool-copy-build", "mathematics.P.66"), Im = w("math.mathematical-reasoning.preschool-sort-and-count", "mathematics.P.67"), Lm = w("math.mathematical-reasoning.preschool-picture-graph", "mathematics.P.68"), Rm = w("math.problem-solving.preschool-explain-answer", "mathematics.P.69"), zm = w("math.problem-solving.preschool-enough-for-all", "mathematics.P.70"), Bm = w("math.problem-solving.preschool-estimate", "mathematics.P.71"), Vm = [
 	Op,
 	kp,
 	Ap,
@@ -32113,6 +32113,7 @@ var Op = w("math.number-sense.preschool-subitizing", "mathematics.P.4"), kp = w(
 	lm,
 	um,
 	dm,
+	T,
 	fm,
 	pm,
 	mm,
@@ -32141,12 +32142,11 @@ var Op = w("math.number-sense.preschool-subitizing", "mathematics.P.4"), kp = w(
 	Lm,
 	Rm,
 	zm,
-	Bm,
-	Vm
+	Bm
 ];
 //#endregion
 //#region packages/syllabus-content-p/src/banks/helpers.ts
-function T(e, t, n, r) {
+function E(e, t, n, r) {
 	let i = [n, ...r];
 	if (new Set(i).size !== i.length) throw Error(`duplicate options for "${t.en}": ${i.join(", ")}`);
 	return {
@@ -32163,28 +32163,28 @@ function T(e, t, n, r) {
 		}
 	};
 }
-function Um(e) {
+function Hm(e) {
 	let t = [...e].sort((e, t) => e - t);
 	return t.every((e, n) => n === 0 || e === t[n - 1] + 1);
 }
-function Wm(e, t) {
+function Um(e, t) {
 	if (t === 0) return [[]];
 	let n = [];
 	return e.forEach((r, i) => {
-		for (let a of Wm(e.slice(i + 1), t - 1)) n.push([r, ...a]);
+		for (let a of Um(e.slice(i + 1), t - 1)) n.push([r, ...a]);
 	}), n;
 }
-function Gm(e, t, n, r, i = () => !0) {
-	let a = Wm(t.filter((t) => t !== e), n).filter((t) => !Um([e, ...t]) && i(t));
+function Wm(e, t, n, r, i = () => !0) {
+	let a = Um(t.filter((t) => t !== e), n).filter((t) => !Hm([e, ...t]) && i(t));
 	if (a.length === 0) throw Error(`no non-contiguous distractor set for ${e}`);
 	let o = [], s = Math.max(1, Math.floor(a.length / r)), c = e * 5 % a.length;
 	for (let e = 0; e < a.length && o.length < r; e++) o.push(a[(c + e * s) % a.length]);
 	return o;
 }
-function Km(e, t, n, r, i) {
-	return Gm(e, Array.from({ length: n - t + 1 }, (e, n) => t + n), r, i).map((e) => e.map(String));
+function Gm(e, t, n, r, i) {
+	return Wm(e, Array.from({ length: n - t + 1 }, (e, n) => t + n), r, i).map((e) => e.map(String));
 }
-function E(e, t, n, r = 0) {
+function D(e, t, n, r = 0) {
 	if (new Set(t.options).size !== t.options.length) throw Error(`duplicate options for "${t.prompt}": ${t.options.join(", ")}`);
 	return {
 		grade: e,
@@ -32198,7 +32198,7 @@ function E(e, t, n, r = 0) {
 		}
 	};
 }
-function qm(e, t, n) {
+function Km(e, t, n) {
 	return {
 		grade: e,
 		en: {
@@ -32211,7 +32211,7 @@ function qm(e, t, n) {
 		}
 	};
 }
-function Jm(e, t, n) {
+function qm(e, t, n) {
 	return {
 		grade: e,
 		en: { prompt: t.en },
@@ -32219,7 +32219,7 @@ function Jm(e, t, n) {
 		correctValue: n
 	};
 }
-function Ym(e, t, n) {
+function Jm(e, t, n) {
 	for (let e of [t.en, t.fr]) if ((e.match(/___/g) ?? []).length !== 1) throw Error(`promptWithBlank must contain exactly one "___": "${e}"`);
 	return {
 		grade: e,
@@ -32233,7 +32233,7 @@ function Ym(e, t, n) {
 		}
 	};
 }
-var D = [
+var O = [
 	"🍎",
 	"⭐",
 	"🐟",
@@ -32247,24 +32247,24 @@ var D = [
 	"🍪",
 	"🦋"
 ];
-function O(e, t, n, r, i = 0) {
+function k(e, t, n, r, i = 0) {
 	let a = [...new Set(t)].filter((t) => t !== e && t >= n && t <= r), o = Array.from({ length: r - n + 1 }, (e, t) => n + t).filter((t) => t !== e && !a.includes(t)), s = o.length === 0 ? 0 : i % o.length, c = [...o.slice(s), ...o.slice(0, s)];
-	for (let t of Wm(c, 3 - a.length)) {
+	for (let t of Um(c, 3 - a.length)) {
 		let n = [...a, ...t];
-		if (!Um([e, ...n])) return n.map(String);
+		if (!Hm([e, ...n])) return n.map(String);
 	}
 	throw Error(`no non-contiguous distractors for ${e} (${t.join()}) in ${n}..${r}`);
 }
-function Xm(e, t = "\n") {
+function Ym(e, t = "\n") {
 	let n = [];
 	for (let t = 0; t < e.length; t += 5) n.push(e.slice(t, t + 5).join(""));
 	return n.join(t);
 }
-function k(e, t, n = "\n") {
-	return Xm(Array.from({ length: e }, () => t), n);
+function A(e, t, n = "\n") {
+	return Ym(Array.from({ length: e }, () => t), n);
 }
-var Zm = "  ";
-function A(e) {
+var Xm = "  ";
+function j(e) {
 	let t = /* @__PURE__ */ new Set();
 	return e.filter((e) => {
 		let n = e.en.prompt ?? e.en.statement ?? e.en.promptWithBlank ?? JSON.stringify(e.en.pairs), r = `${e.grade}|${n}|${(e.en.options ?? []).join("~")}`;
@@ -32273,7 +32273,7 @@ function A(e) {
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/arithmetic.ts
-var Qm = [
+var Zm = [
 	{
 		level: 1,
 		min: 2,
@@ -32290,94 +32290,94 @@ var Qm = [
 		max: 10
 	}
 ];
-function $m() {
+function Qm() {
 	let e = [], t = 0;
-	for (let { level: n, min: r, max: i } of Qm) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
+	for (let { level: n, min: r, max: i } of Zm) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
 		level: n,
 		a: r,
 		b: a - r,
-		emoji: D[t * 5 % D.length],
+		emoji: O[t * 5 % O.length],
 		index: t
 	}), t++;
 	return e;
 }
-function eh() {
+function $m() {
 	let e = [], t = 0;
-	for (let { level: n, min: r, max: i } of Qm) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
+	for (let { level: n, min: r, max: i } of Zm) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
 		level: n,
 		a,
 		b: r,
-		emoji: D[t * 7 % D.length],
+		emoji: O[t * 7 % O.length],
 		index: t
 	}), t++;
 	return e;
 }
-var th = {
+var eh = {
 	en: "and",
 	fr: "et"
 };
-function nh(e, t) {
-	return `${k(e.a, e.emoji)}\n${th[t]}\n${k(e.b, e.emoji)}`;
+function th(e, t) {
+	return `${A(e.a, e.emoji)}\n${eh[t]}\n${A(e.b, e.emoji)}`;
 }
-function rh(e) {
-	return Xm([...Array.from({ length: e.a - e.b }, () => e.emoji), ...Array.from({ length: e.b }, () => "❌")]);
+function nh(e) {
+	return Ym([...Array.from({ length: e.a - e.b }, () => e.emoji), ...Array.from({ length: e.b }, () => "❌")]);
 }
-function ih() {
-	return A($m().map((e) => Jm(e.level, {
-		en: `${nh(e, "en")}\n\nHow many altogether`,
-		fr: `${nh(e, "fr")}\n\nEn tout, combien`
+function rh() {
+	return j(Qm().map((e) => qm(e.level, {
+		en: `${th(e, "en")}\n\nHow many altogether`,
+		fr: `${th(e, "fr")}\n\nEn tout, combien`
 	}, e.a + e.b)));
 }
-function ah(e) {
+function ih(e) {
 	let t = e.a + e.b, n = t + 1;
-	return Um([
+	return Hm([
 		t,
 		e.a,
 		e.b,
 		n
 	]) ? t + 2 : n;
 }
-function oh() {
-	return A($m().map((e) => {
+function ah() {
+	return j(Qm().map((e) => {
 		let t = e.a + e.b;
-		return T(e.level, {
-			en: `${nh(e, "en")}\n\nHow many altogether?`,
-			fr: `${nh(e, "fr")}\n\nEn tout, combien ?`
-		}, String(t), O(t, [
+		return E(e.level, {
+			en: `${th(e, "en")}\n\nHow many altogether?`,
+			fr: `${th(e, "fr")}\n\nEn tout, combien ?`
+		}, String(t), k(t, [
 			e.a,
 			e.b,
-			ah(e)
+			ih(e)
 		], 1, 12, e.index));
 	}));
 }
-function sh() {
-	return A(eh().map((e) => Jm(e.level, {
-		en: `${rh(e)}\n\nHow many left`,
-		fr: `${rh(e)}\n\nCombien en reste-t-il`
+function oh() {
+	return j($m().map((e) => qm(e.level, {
+		en: `${nh(e)}\n\nHow many left`,
+		fr: `${nh(e)}\n\nCombien en reste-t-il`
 	}, e.a - e.b)));
 }
-function ch() {
-	return A(eh().map((e) => {
-		let t = e.a - e.b, n = O(t, [e.b, e.a], 1, 10, e.index).map(Number), r = (t) => k(t, e.emoji, Zm);
-		return T(e.level, {
-			en: `${rh(e)}\n\nWhich picture shows what is left?`,
-			fr: `${rh(e)}\n\nQuelle image montre ce qui reste ?`
+function sh() {
+	return j($m().map((e) => {
+		let t = e.a - e.b, n = k(t, [e.b, e.a], 1, 10, e.index).map(Number), r = (t) => A(t, e.emoji, Xm);
+		return E(e.level, {
+			en: `${nh(e)}\n\nWhich picture shows what is left?`,
+			fr: `${nh(e)}\n\nQuelle image montre ce qui reste ?`
 		}, r(t), n.map(r));
 	}));
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/extra.ts
-function j(e, t) {
+function M(e, t) {
 	return Array.from({ length: t - e + 1 }, (t, n) => e + n);
 }
-function M(e, t, n, r, i, a, o = 0) {
+function N(e, t, n, r, i, a, o = 0) {
 	for (let s = r.length; s > 0; s--) try {
-		return T(e, t, String(n), O(n, r.slice(0, s), i, a, o));
+		return E(e, t, String(n), k(n, r.slice(0, s), i, a, o));
 	} catch {}
-	return T(e, t, String(n), O(n, [], i, a, o));
+	return E(e, t, String(n), k(n, [], i, a, o));
 }
-function N(e, t, n, r) {
-	return E(e, {
+function P(e, t, n, r) {
+	return D(e, {
 		prompt: t.en,
 		options: [n.en, ...r.map((e) => e.en)]
 	}, {
@@ -32385,22 +32385,22 @@ function N(e, t, n, r) {
 		options: [n.fr, ...r.map((e) => e.fr)]
 	});
 }
-function P(e, t, n, r) {
-	return T(e, t, n, r);
+function F(e, t, n, r) {
+	return E(e, t, n, r);
 }
-function lh(e, t) {
-	return k(e, t, Zm);
+function ch(e, t) {
+	return A(e, t, Xm);
 }
-function F(e, t) {
+function I(e, t) {
 	return e[t % e.length];
 }
-function I(e, t, n) {
+function L(e, t, n) {
 	let r = [...e];
 	return r[t] = e[n], r[n] = e[t], r;
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/countingSkills.ts
-function uh(e) {
+function lh(e) {
 	let t = [], n = e === 5 ? [
 		[1, [3]],
 		[2, [4]],
@@ -32411,13 +32411,13 @@ function uh(e) {
 		[3, [10]]
 	];
 	for (let [e, r] of n) for (let n of r) for (let r = 0; r < 3; r++) {
-		let i = j(1, n), a = 1 + r % (n - 2), o = i.filter((e, t) => t !== a), s = [
+		let i = M(1, n), a = 1 + r % (n - 2), o = i.filter((e, t) => t !== a), s = [
 			...i.slice(0, a + 1),
 			i[a],
 			...i.slice(a + 1)
-		], c = I(i, a, a + 1);
+		], c = L(i, a, a + 1);
 		t.push({
-			...P(e, {
+			...F(e, {
 				en: `Count to ${n}. Which counting is right?`,
 				fr: `Compte jusqu'à ${n}. Quel comptage est juste ?`
 			}, i.join(" "), [
@@ -32436,12 +32436,12 @@ function uh(e) {
 			}
 		});
 	}
-	return A(t);
+	return j(t);
 }
-function dh(e, t) {
+function uh(e, t) {
 	return t.map((t) => t === null ? e : `${e}${t}`).join(" ");
 }
-function fh() {
+function dh() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -32461,23 +32461,23 @@ function fh() {
 		]]
 	]) n.forEach((n, r) => {
 		[0, 1].forEach((i) => {
-			let a = F(D, t * 4 + r * 2 + i), o = j(1, n), s = o.map((e, t) => t < 1 ? t + 1 : t === 1 ? null : t), c = o.map((e, t) => t <= n - 2 ? t + 1 : t), l = o.map((e) => e + 1);
-			e.push(P(t, {
+			let a = I(O, t * 4 + r * 2 + i), o = M(1, n), s = o.map((e, t) => t < 1 ? t + 1 : t === 1 ? null : t), c = o.map((e, t) => t <= n - 2 ? t + 1 : t), l = o.map((e) => e + 1);
+			e.push(F(t, {
 				en: `Touch each ${a} once while you count. Which counting is right?`,
 				fr: `Touche chaque ${a} une seule fois en comptant. Quel comptage est juste ?`
-			}, dh(a, o), [
-				dh(a, s),
-				dh(a, c),
-				dh(a, l)
+			}, uh(a, o), [
+				uh(a, s),
+				uh(a, c),
+				uh(a, l)
 			]));
 		});
 	});
-	return A(e);
+	return j(e);
 }
-function ph(e, t, n, r, i) {
-	return P(e, t, lh(n, i), r.map((e) => lh(e, i)));
+function fh(e, t, n, r, i) {
+	return F(e, t, ch(n, i), r.map((e) => ch(e, i)));
 }
-function mh() {
+function ph() {
 	let e = [], t = [
 		[
 			1,
@@ -32509,16 +32509,16 @@ function mh() {
 	];
 	for (let [n, r, i] of t) r.forEach((t, a) => {
 		for (let o = 0; o < 6 / r.length; o++) {
-			let r = F(D, n * 5 + a * 3 + o);
-			e.push(ph(n, {
-				en: `${k(t + 3, r)}\n\nGive me exactly ${t}. Which group is exactly ${t}?`,
-				fr: `${k(t + 3, r)}\n\nDonne-m'en exactement ${t}. Quel groupe en a exactement ${t} ?`
+			let r = I(O, n * 5 + a * 3 + o);
+			e.push(fh(n, {
+				en: `${A(t + 3, r)}\n\nGive me exactly ${t}. Which group is exactly ${t}?`,
+				fr: `${A(t + 3, r)}\n\nDonne-m'en exactement ${t}. Quel groupe en a exactement ${t} ?`
 			}, t, i(t), r));
 		}
 	});
-	return A(e);
+	return j(e);
 }
-function hh() {
+function mh() {
 	let e = [];
 	for (let [t, n, r] of [
 		[
@@ -32581,34 +32581,34 @@ function hh() {
 		]
 	]) n.forEach(([n, i], a) => {
 		for (let o = 0; o < r; o++) {
-			let r = F(D, t * 7 + a + o * 3);
-			e.push(ph(t, {
+			let r = I(O, t * 7 + a + o * 3);
+			e.push(fh(t, {
 				en: `Take exactly ${n} ${r} from the big pile 🧺.\n\nWhich group is exactly ${n}?`,
 				fr: `Prends exactement ${n} ${r} dans le grand tas 🧺.\n\nQuel groupe en a exactement ${n} ?`
 			}, n, i, r));
 		}
 	});
-	return A(e);
+	return j(e);
 }
-function gh() {
+function hh() {
 	let e = [], t = [
 		[
 			1,
-			j(12, 18),
+			M(12, 18),
 			1,
 			10,
 			30
 		],
 		[
 			2,
-			j(22, 29),
+			M(22, 29),
 			1,
 			10,
 			30
 		],
 		[
 			3,
-			j(3, 9).map((e) => e * 10),
+			M(3, 9).map((e) => e * 10),
 			10,
 			10,
 			100
@@ -32626,11 +32626,11 @@ function gh() {
 			en: `${c}\n\nCount by tens. What number comes next?`,
 			fr: `${c}\n\nCompte de dix en dix. Quel nombre vient ensuite ?`
 		};
-		e.push(M(n, l, s, [t, s + i], a, o, r));
+		e.push(N(n, l, s, [t, s + i], a, o, r));
 	});
-	return A(e);
+	return j(e);
 }
-function _h() {
+function gh() {
 	let e = [];
 	for (let [t, n, r, i] of [
 		[
@@ -32670,27 +32670,27 @@ function _h() {
 			["🚀"]
 		]
 	]) for (let a of r) i.forEach((r, i) => {
-		let o = j(0, a - 1).map((e) => n - e), s = n - a;
-		e.push(M(t, {
+		let o = M(0, a - 1).map((e) => n - e), s = n - a;
+		e.push(N(t, {
 			en: `${r} Countdown: ${o.join(" ")}\n\nWhat comes next?`,
 			fr: `${r} Compte à rebours : ${o.join(" ")}\n\nQu'est-ce qui vient ensuite ?`
 		}, s, [s + 1, s - 1], 0, n, a + i));
 	});
-	return A(e);
+	return j(e);
 }
-function vh() {
+function _h() {
 	let e = [];
-	j(1, 4).forEach((t, n) => {
-		let r = F(D, n);
-		e.push(M(1, {
-			en: `${k(t, r)}\n\nOne more ${r} comes. How many now?`,
-			fr: `${k(t, r)}\n\nUn ${r} de plus arrive. Combien maintenant ?`
+	M(1, 4).forEach((t, n) => {
+		let r = I(O, n);
+		e.push(N(1, {
+			en: `${A(t, r)}\n\nOne more ${r} comes. How many now?`,
+			fr: `${A(t, r)}\n\nUn ${r} de plus arrive. Combien maintenant ?`
 		}, t + 1, [t, t + 2], 0, 6, n));
-	}), j(2, 5).forEach((t, n) => {
-		let r = F(D, n + 4);
-		e.push(M(1, {
-			en: `${k(t, r)}\n\nOne ${r} goes away. How many now?`,
-			fr: `${k(t, r)}\n\nUn ${r} s'en va. Combien maintenant ?`
+	}), M(2, 5).forEach((t, n) => {
+		let r = I(O, n + 4);
+		e.push(N(1, {
+			en: `${A(t, r)}\n\nOne ${r} goes away. How many now?`,
+			fr: `${A(t, r)}\n\nUn ${r} s'en va. Combien maintenant ?`
 		}, t - 1, [t, t - 2], 0, 6, n));
 	});
 	for (let [t, n, r, i, a] of [[
@@ -32734,29 +32734,29 @@ function vh() {
 		5,
 		20
 	]]) n.forEach((n, r) => {
-		e.push(M(t, {
+		e.push(N(t, {
 			en: `What number is one more than ${n}?`,
 			fr: `Quel nombre est un de plus que ${n} ?`
 		}, n + 1, [n, n + 2], i, a, r));
 	}), r.forEach((n, r) => {
-		e.push(M(t, {
+		e.push(N(t, {
 			en: `What number is one less than ${n}?`,
 			fr: `Quel nombre est un de moins que ${n} ?`
 		}, n - 1, [n, n - 2], i, a, r));
 	});
-	return A(e);
+	return j(e);
 }
-var yh = {
+var vh = {
 	en: "greater than",
 	fr: "plus grand que"
-}, bh = {
+}, yh = {
 	en: "less than",
 	fr: "plus petit que"
-}, xh = {
+}, bh = {
 	en: "equal to",
 	fr: "égal à"
 };
-function Sh() {
+function xh() {
 	let e = [], t = [
 		[1, [
 			[1, 3],
@@ -32789,14 +32789,14 @@ function Sh() {
 			[4, 5]
 		]]
 	], n = (t, n, r, i, a) => {
-		let o = n > r ? yh : n < r ? bh : xh, s = [
+		let o = n > r ? vh : n < r ? yh : bh, s = [
+			vh,
 			yh,
-			bh,
-			xh
+			bh
 		].filter((e) => e !== o);
-		e.push(N(t, {
-			en: `${k(n, i)}\n\n${k(r, a)}\n\nIs the ${i} group greater than, less than or equal to the ${a} group?`,
-			fr: `${k(n, i)}\n\n${k(r, a)}\n\nLe groupe de ${i} est-il plus grand que, plus petit que ou égal au groupe de ${a} ?`
+		e.push(P(t, {
+			en: `${A(n, i)}\n\n${A(r, a)}\n\nIs the ${i} group greater than, less than or equal to the ${a} group?`,
+			fr: `${A(n, i)}\n\n${A(r, a)}\n\nLe groupe de ${i} est-il plus grand que, plus petit que ou égal au groupe de ${a} ?`
 		}, o, s));
 	};
 	for (let [e, r] of t) r.forEach(([t, r]) => n(e, t, r, "🍎", "⭐"));
@@ -32817,20 +32817,20 @@ function Sh() {
 	].forEach(([e, t], i) => {
 		let [a, o] = r[i % r.length];
 		n(3, e, t, a, o);
-	}), A(e);
+	}), j(e);
 }
-function Ch() {
+function Sh() {
 	let e = [];
 	for (let t of [0, 1]) for (let n = t + 1; n <= 4; n++) {
-		let r = j(t, 5).map((e) => e === n ? "?" : String(e)).join(" ");
-		e.push(P(1, {
+		let r = M(t, 5).map((e) => e === n ? "?" : String(e)).join(" ");
+		e.push(F(1, {
 			en: `${r}\n\nWhich number is missing?`,
 			fr: `${r}\n\nQuel nombre manque ?`
 		}, String(n), [String(n - 1), String(n + 2)]));
 	}
 	for (let t = 1; t <= 9; t++) {
-		let n = j(0, 10).map((e) => e === t ? "?" : String(e)).join(" ");
-		e.push(M(2, {
+		let n = M(0, 10).map((e) => e === t ? "?" : String(e)).join(" ");
+		e.push(N(2, {
 			en: `${n}\n\nWhich number is missing?`,
 			fr: `${n}\n\nQuel nombre manque ?`
 		}, t, [t - 1, t + 1], 0, 10, t));
@@ -32874,20 +32874,20 @@ function Ch() {
 		]
 	]) {
 		let n = [...t].sort((e, t) => e - t);
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `Cards: ${t.join(" ")}\n\nWhich row has the cards in order, smallest first?`,
 			fr: `Cartes : ${t.join(" ")}\n\nQuelle rangée met les cartes dans l'ordre, la plus petite d'abord ?`
 		}, n.join(" "), [
 			[...n].reverse().join(" "),
-			I(n, 0, 1).join(" "),
+			L(n, 0, 1).join(" "),
 			[...n.slice(1), n[0]].join(" ")
 		]));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sceneBank.ts
-function L(e, t, n, r, i, a) {
+function R(e, t, n, r, i, a) {
 	let o = n.fr ?? n.en;
 	if (new Set(n.en).size !== n.en.length) throw Error(`duplicate options for "${t.en}": ${n.en.join(", ")}`);
 	if (o.length !== n.en.length || a.length !== n.en.length) throw Error(`options/feedback length mismatch for "${t.en}"`);
@@ -32907,7 +32907,7 @@ function L(e, t, n, r, i, a) {
 		feedback: a
 	};
 }
-var wh = [
+var Ch = [
 	{
 		en: "zero",
 		fr: "zéro"
@@ -32948,7 +32948,7 @@ var wh = [
 		en: "nine",
 		fr: "neuf"
 	}
-], Th = [
+], wh = [
 	{
 		en: "ten",
 		fr: "dix"
@@ -32993,8 +32993,8 @@ var wh = [
 		en: "twenty",
 		fr: "vingt"
 	}
-], Eh = (e) => e <= 9 ? wh[e] : Th[e - 10];
-function R(e) {
+], Th = (e) => e <= 9 ? Ch[e] : wh[e - 10];
+function z(e) {
 	let t = /* @__PURE__ */ new Set();
 	return e.filter((e) => {
 		let n = JSON.stringify([
@@ -33008,7 +33008,7 @@ function R(e) {
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/quantityWords.ts
-var Dh = {
+var Eh = {
 	lineUp: "qw.fb.lineUp",
 	leftover: "qw.fb.leftover",
 	pairSame: "qw.fb.pairSame",
@@ -33016,25 +33016,25 @@ var Dh = {
 	someNotAll: "qw.fb.someNotAll",
 	allEvery: "qw.fb.allEvery",
 	noneEmpty: "qw.fb.noneEmpty"
-}, Oh = [
+}, Dh = [
 	"🍎",
 	"🐟",
 	"🚗",
 	"⭐",
 	"🍌",
 	"🐸"
-], kh = [
+], Oh = [
 	"🎈",
 	"🐥",
 	"⚽",
 	"🌼",
 	"🍓",
 	"🐞"
-], Ah = {
+], kh = {
 	en: "Same",
 	fr: "Pareil"
-}, jh = (e, t) => e.repeat(t), Mh = (e, t, n) => {
-	let r = Oh[e % Oh.length], i = kh[(e * 5 + 1) % kh.length];
+}, Ah = (e, t) => e.repeat(t), jh = (e, t, n) => {
+	let r = Dh[e % Dh.length], i = Oh[(e * 5 + 1) % Oh.length];
 	return [{
 		emoji: r,
 		count: t
@@ -33042,7 +33042,7 @@ var Dh = {
 		emoji: i,
 		count: n
 	}];
-}, Nh = [
+}, Mh = [
 	[1, 3],
 	[3, 1],
 	[1, 4],
@@ -33055,7 +33055,7 @@ var Dh = {
 	[5, 2],
 	[3, 5],
 	[5, 3]
-], Ph = [
+], Nh = [
 	[3, 4],
 	[4, 3],
 	[5, 6],
@@ -33068,7 +33068,7 @@ var Dh = {
 	[7, 7],
 	[3, 3],
 	[8, 8]
-], Fh = [
+], Ph = [
 	[3, 0],
 	[0, 3],
 	[2, 1],
@@ -33081,40 +33081,40 @@ var Dh = {
 	[0, 5],
 	[1, 4],
 	[3, 2]
-], Ih = [
+], Fh = [
 	"🍎",
 	"🐥",
 	"⚽",
 	"🍌"
 ];
-function Lh() {
+function Ih() {
 	let e = [];
-	Nh.forEach(([t, n], r) => {
+	Mh.forEach(([t, n], r) => {
 		for (let i of [!0, !1]) {
-			let a = Mh(r + (i ? 0 : 3), t, n), o = (i ? t > n : t < n) ? 0 : 1;
-			e.push(L(1, i ? {
+			let a = jh(r + (i ? 0 : 3), t, n), o = (i ? t > n : t < n) ? 0 : 1;
+			e.push(R(1, i ? {
 				en: "Which has more?",
 				fr: "Lequel en a plus ?"
 			} : {
 				en: "Which has fewer?",
 				fr: "Lequel en a moins ?"
-			}, { en: a.map((e) => jh(e.emoji, e.count)) }, o, {
+			}, { en: a.map((e) => Ah(e.emoji, e.count)) }, o, {
 				type: "pick-group",
 				groups: a,
 				reveal: "pairing"
-			}, a.map((e, t) => t === o ? null : Dh.lineUp)));
+			}, a.map((e, t) => t === o ? null : Eh.lineUp)));
 		}
-	}), Ph.forEach(([t, n], r) => {
-		let i = r % 2 == 0, a = Mh(r, t, n), o = t === n ? 2 : (i ? t > n : t < n) ? 0 : 1;
-		e.push(L(2, i ? {
+	}), Nh.forEach(([t, n], r) => {
+		let i = r % 2 == 0, a = jh(r, t, n), o = t === n ? 2 : (i ? t > n : t < n) ? 0 : 1;
+		e.push(R(2, i ? {
 			en: "Which has more? Or the same?",
 			fr: "Lequel en a plus ? Ou pareil ?"
 		} : {
 			en: "Which has fewer? Or the same?",
 			fr: "Lequel en a moins ? Ou pareil ?"
 		}, {
-			en: [...a.map((e) => jh(e.emoji, e.count)), Ah.en],
-			fr: [...a.map((e) => jh(e.emoji, e.count)), Ah.fr]
+			en: [...a.map((e) => Ah(e.emoji, e.count)), kh.en],
+			fr: [...a.map((e) => Ah(e.emoji, e.count)), kh.fr]
 		}, o, {
 			type: "pick-group",
 			groups: a,
@@ -33124,7 +33124,7 @@ function Lh() {
 			0,
 			1,
 			2
-		].map((e) => e === o ? null : t === n ? Dh.pairSame : Dh.leftover)));
+		].map((e) => e === o ? null : t === n ? Eh.pairSame : Eh.leftover)));
 	});
 	let t = {
 		en: "All",
@@ -33136,13 +33136,13 @@ function Lh() {
 		en: "None",
 		fr: "Aucun"
 	};
-	return Fh.forEach(([i, a], o) => {
-		let s = Ih[o % Ih.length], c = a === 0 ? t : i === 0 ? r : n, l = [
+	return Ph.forEach(([i, a], o) => {
+		let s = Fh[o % Fh.length], c = a === 0 ? t : i === 0 ? r : n, l = [
 			t,
 			n,
 			r
-		].filter((e) => e !== c), u = (e) => c === n ? e === r ? Dh.someNotNone : Dh.someNotAll : c === t ? Dh.allEvery : Dh.noneEmpty;
-		e.push(L(3, {
+		].filter((e) => e !== c), u = (e) => c === n ? e === r ? Eh.someNotNone : Eh.someNotAll : c === t ? Eh.allEvery : Eh.noneEmpty;
+		e.push(R(3, {
 			en: "Basket on the left. All, some or none?",
 			fr: "Le panier est à gauche. Tous, quelques-uns ou aucun ?"
 		}, {
@@ -33159,11 +33159,11 @@ function Lh() {
 			}],
 			operator: "vs"
 		}, [null, ...l.map(u)]));
-	}), R(e);
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/dataLanguage.ts
-var Rh = [
+var Lh = [
 	[
 		{
 			emoji: "🛏️",
@@ -33266,46 +33266,46 @@ var Rh = [
 			fr: "jouer au parc"
 		}
 	]
-], zh = (e, t) => `${e.emoji} ${e[t]}`, z = (e) => ({
-	en: zh(e, "en"),
-	fr: zh(e, "fr")
+], Rh = (e, t) => `${e.emoji} ${e[t]}`, B = (e) => ({
+	en: Rh(e, "en"),
+	fr: Rh(e, "fr")
 });
-function Bh() {
+function zh() {
 	let e = [];
-	return Rh.forEach((t, n) => {
+	return Lh.forEach((t, n) => {
 		let r = [
 			t[2],
 			t[0],
 			t[1]
-		], i = (e) => r.map((t) => zh(t, e)).join(", ");
-		e.push(N(1, {
+		], i = (e) => r.map((t) => Rh(t, e)).join(", ");
+		e.push(P(1, {
 			en: `${i("en")}\n\nWhat do you do FIRST?`,
 			fr: `${i("fr")}\n\nQue fais-tu EN PREMIER ?`
-		}, z(t[0]), [z(t[1]), z(t[2])])), e.push(n % 2 == 0 ? N(2, {
+		}, B(t[0]), [B(t[1]), B(t[2])])), e.push(n % 2 == 0 ? P(2, {
 			en: `${i("en")}\n\nWhat do you do LAST?`,
 			fr: `${i("fr")}\n\nQue fais-tu EN DERNIER ?`
-		}, z(t[2]), [z(t[0]), z(t[1])]) : N(2, {
-			en: `${i("en")}\n\nWhat comes NEXT after: ${zh(t[0], "en")}?`,
-			fr: `${i("fr")}\n\nQue fais-tu ENSUITE après : ${zh(t[0], "fr")} ?`
-		}, z(t[1]), [z(t[0]), z(t[2])]));
-		let a = (e, t) => e.map((e) => zh(e, t)).join(" → ");
-		e.push(N(3, {
+		}, B(t[2]), [B(t[0]), B(t[1])]) : P(2, {
+			en: `${i("en")}\n\nWhat comes NEXT after: ${Rh(t[0], "en")}?`,
+			fr: `${i("fr")}\n\nQue fais-tu ENSUITE après : ${Rh(t[0], "fr")} ?`
+		}, B(t[1]), [B(t[0]), B(t[2])]));
+		let a = (e, t) => e.map((e) => Rh(e, t)).join(" → ");
+		e.push(P(3, {
 			en: `${i("en")}\n\nWhich row goes first, next, last?`,
 			fr: `${i("fr")}\n\nQuelle rangée va d'abord, ensuite, enfin ?`
 		}, {
 			en: a(t, "en"),
 			fr: a(t, "fr")
 		}, [
-			I(t, 0, 1),
-			I(t, 1, 2),
-			I(t, 0, 2)
+			L(t, 0, 1),
+			L(t, 1, 2),
+			L(t, 0, 2)
 		].map((e) => ({
 			en: a(e, "en"),
 			fr: a(e, "fr")
 		}))));
-	}), A(e);
+	}), j(e);
 }
-var Vh = [
+var Bh = [
 	[
 		"🔴",
 		"🔵",
@@ -33321,16 +33321,16 @@ var Vh = [
 		"🐶",
 		"🐭"
 	]
-], Hh = [
+], Vh = [
 	"AB",
 	"AAB",
 	"ABB",
 	"ABC"
 ];
-function Uh(e, t) {
+function Hh(e, t) {
 	return Array.from({ length: 6 }, (n, r) => e[t.charCodeAt(r % t.length) - 65]).join("");
 }
-function Wh() {
+function Uh() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -33358,15 +33358,15 @@ function Wh() {
 			"AAB"
 		]]
 	]) n.forEach((n, r) => {
-		let i = Vh[r % 3], a = Vh[(r + 1 + +(r >= 3)) % 3], o = Hh.filter((e) => e !== n).slice(r % 2, r % 2 + 2);
-		e.push(P(t, {
-			en: `${Uh(i, n)}\n\nWhich one is the same pattern?`,
-			fr: `${Uh(i, n)}\n\nLequel est la même suite ?`
-		}, Uh(a, n), o.map((e) => Uh(a, e))));
+		let i = Bh[r % 3], a = Bh[(r + 1 + +(r >= 3)) % 3], o = Vh.filter((e) => e !== n).slice(r % 2, r % 2 + 2);
+		e.push(F(t, {
+			en: `${Hh(i, n)}\n\nWhich one is the same pattern?`,
+			fr: `${Hh(i, n)}\n\nLequel est la même suite ?`
+		}, Hh(a, n), o.map((e) => Hh(a, e))));
 	});
-	return A(e);
+	return j(e);
 }
-function Gh() {
+function Wh() {
 	let e = [], t = ["🪙", "💵"];
 	[
 		["🧸", "🍎"],
@@ -33376,10 +33376,10 @@ function Gh() {
 		["🧦", "🧢"],
 		["🎲", "🥄"]
 	].forEach(([n, r], i) => {
-		e.push(P(1, {
+		e.push(F(1, {
 			en: "Which one is money, for shopping?",
 			fr: "Lequel est de l'argent, pour faire les courses ?"
-		}, F(t, i), [n, r]));
+		}, I(t, i), [n, r]));
 	});
 	let n = [
 		{
@@ -33415,7 +33415,7 @@ function Gh() {
 		"🍦",
 		"📕"
 	].forEach((t, r) => {
-		e.push(N(2, {
+		e.push(P(2, {
 			en: `You want to buy ${t}. What do you give the shop?`,
 			fr: `Tu veux acheter ${t}. Que donnes-tu au magasin ?`
 		}, {
@@ -33440,31 +33440,31 @@ function Gh() {
 		[3, 3],
 		[4, 5]
 	].forEach(([t, n], a) => {
-		let o = F([
+		let o = I([
 			"🍎",
 			"🍦",
 			"🧸",
 			"🍪"
 		], a), s = n >= t;
-		e.push(N(3, {
+		e.push(P(3, {
 			en: `The ${o} costs ${t} coins.\n\nYou have: ${"🪙".repeat(n)}\n\nCan you buy it?`,
 			fr: `Le ${o} coûte ${t} pièces.\n\nTu as : ${"🪙".repeat(n)}\n\nPeux-tu l'acheter ?`
 		}, s ? r : i, [s ? i : r]));
-	}), A(e);
+	}), j(e);
 }
-function Kh(e, t) {
+function Gh(e, t) {
 	let n = [...e], r = [];
 	for (; n.some((e) => e > 0);) n.forEach((e, i) => {
 		e > 0 && (r.push(t[i]), n[i] = e - 1);
 	});
 	return r;
 }
-var qh = [
+var Kh = [
 	"🍎",
 	"🍌",
 	"🍇"
 ];
-function Jh() {
+function qh() {
 	let e = [];
 	return [
 		[3, 2],
@@ -33474,10 +33474,10 @@ function Jh() {
 		[3, 1],
 		[2, 2]
 	].forEach(([t, n], r) => {
-		let i = r % 2, a = i === 0 ? t : n, o = qh[i];
-		e.push(M(1, {
-			en: `${Kh([t, n], qh).join("")}\n\nHow many ${o}?`,
-			fr: `${Kh([t, n], qh).join("")}\n\nCombien de ${o} ?`
+		let i = r % 2, a = i === 0 ? t : n, o = Kh[i];
+		e.push(N(1, {
+			en: `${Gh([t, n], Kh).join("")}\n\nHow many ${o}?`,
+			fr: `${Gh([t, n], Kh).join("")}\n\nCombien de ${o} ?`
 		}, a, [t + n, a + 1], 0, 6, r));
 	}), [
 		[
@@ -33511,8 +33511,8 @@ function Jh() {
 			2
 		]
 	].forEach((t, n) => {
-		let r = n % 3, i = qh[r], a = Xm(Kh(t, qh));
-		e.push(M(2, {
+		let r = n % 3, i = Kh[r], a = Ym(Gh(t, Kh));
+		e.push(N(2, {
 			en: `${a}\n\nSort them. How many ${i}?`,
 			fr: `${a}\n\nTrie-les. Combien de ${i} ?`
 		}, t[r], [
@@ -33552,21 +33552,21 @@ function Jh() {
 			3
 		]
 	].forEach((t) => {
-		let n = qh.map((e, n) => ({
+		let n = Kh.map((e, n) => ({
 			e,
 			c: t[n]
-		})).sort((e, t) => t.c - e.c).map((e) => e.e), r = Xm(Kh(t, qh));
-		e.push(P(3, {
+		})).sort((e, t) => t.c - e.c).map((e) => e.e), r = Ym(Gh(t, Kh));
+		e.push(F(3, {
 			en: `${r}\n\nSort them. Which row goes from MOST to FEWEST?`,
 			fr: `${r}\n\nTrie-les. Quelle rangée va du PLUS au MOINS ?`
 		}, n.join(" "), [
 			[...n].reverse().join(" "),
-			I(n, 0, 1).join(" "),
+			L(n, 0, 1).join(" "),
 			[...n.slice(1), n[0]].join(" ")
 		]));
-	}), A(e);
+	}), j(e);
 }
-var Yh = [
+var Jh = [
 	[
 		"🍎",
 		"🍌",
@@ -33587,8 +33587,8 @@ var Yh = [
 		"🏀",
 		"🎾"
 	]
-], Xh = (e, t) => e.map((e, n) => `${e} ${"🟦".repeat(t[n])}`).join("\n");
-function Zh() {
+], Yh = (e, t) => e.map((e, n) => `${e} ${"🟦".repeat(t[n])}`).join("\n");
+function Xh() {
 	let e = [];
 	return [
 		[3, 5],
@@ -33598,10 +33598,10 @@ function Zh() {
 		[2, 5],
 		[4, 1]
 	].forEach((t, n) => {
-		let r = F(Yh, n).slice(0, 2), i = t[0] > t[1] ? 0 : 1;
-		e.push(P(1, {
-			en: `${Xh(r, t)}\n\nWhich group has MORE?`,
-			fr: `${Xh(r, t)}\n\nQuel groupe en a LE PLUS ?`
+		let r = I(Jh, n).slice(0, 2), i = t[0] > t[1] ? 0 : 1;
+		e.push(F(1, {
+			en: `${Yh(r, t)}\n\nWhich group has MORE?`,
+			fr: `${Yh(r, t)}\n\nQuel groupe en a LE PLUS ?`
 		}, r[i], [r[1 - i]]));
 	}), [
 		[
@@ -33635,10 +33635,10 @@ function Zh() {
 			1
 		]
 	].forEach((t, n) => {
-		let r = F(Yh, n + 1), i = t.indexOf(Math.max(...t));
-		e.push(P(2, {
-			en: `${Xh(r, t)}\n\nWhich group has the MOST?`,
-			fr: `${Xh(r, t)}\n\nQuel groupe en a LE PLUS ?`
+		let r = I(Jh, n + 1), i = t.indexOf(Math.max(...t));
+		e.push(F(2, {
+			en: `${Yh(r, t)}\n\nWhich group has the MOST?`,
+			fr: `${Yh(r, t)}\n\nQuel groupe en a LE PLUS ?`
 		}, r[i], r.filter((e, t) => t !== i)));
 	}), [
 		[
@@ -33662,10 +33662,10 @@ function Zh() {
 			4
 		]
 	].forEach((t, n) => {
-		let r = F(Yh, n + 2), i = t.indexOf(Math.min(...t));
-		e.push(P(3, {
-			en: `${Xh(r, t)}\n\nWhich group has the FEWEST?`,
-			fr: `${Xh(r, t)}\n\nQuel groupe en a LE MOINS ?`
+		let r = I(Jh, n + 2), i = t.indexOf(Math.min(...t));
+		e.push(F(3, {
+			en: `${Yh(r, t)}\n\nWhich group has the FEWEST?`,
+			fr: `${Yh(r, t)}\n\nQuel groupe en a LE MOINS ?`
 		}, r[i], r.filter((e, t) => t !== i)));
 	}), [
 		[
@@ -33689,26 +33689,26 @@ function Zh() {
 			2
 		]
 	].forEach((t, n) => {
-		let r = F(Yh, n + 3), i = t.indexOf(Math.max(...t)), a = t.indexOf(Math.min(...t)), o = t[i] - t[a];
-		e.push(M(3, {
-			en: `${Xh(r, t)}\n\nHow many more ${r[i]} than ${r[a]}?`,
-			fr: `${Xh(r, t)}\n\nCombien de ${r[i]} de plus que de ${r[a]} ?`
+		let r = I(Jh, n + 3), i = t.indexOf(Math.max(...t)), a = t.indexOf(Math.min(...t)), o = t[i] - t[a];
+		e.push(N(3, {
+			en: `${Yh(r, t)}\n\nHow many more ${r[i]} than ${r[a]}?`,
+			fr: `${Yh(r, t)}\n\nCombien de ${r[i]} de plus que de ${r[a]} ?`
 		}, o, [
 			t[i],
 			t[a],
 			o + 1
 		], 0, 6, n));
-	}), A(e);
+	}), j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameShapes.ts
-var Qh = {
+var Zh = {
 	tryAgain: "math.geo.nameShape.fb.tryAgain",
 	tiltedSquare: "math.geo.nameShape.fb.tiltedSquare",
 	tiltedTriangle: "math.geo.nameShape.fb.tiltedTriangle",
 	rectangle: "math.geo.nameShape.fb.rectangle",
 	oval: "math.geo.nameShape.fb.oval"
-}, $h = {
+}, Qh = {
 	circle: {
 		en: "circle",
 		fr: "cercle"
@@ -33721,22 +33721,22 @@ var Qh = {
 		en: "triangle",
 		fr: "triangle"
 	}
-}, eg = {
+}, $h = {
 	circle: "⚫",
 	square: "⬛",
 	triangle: "🔺"
 };
-function B(e) {
+function V(e) {
 	return {
 		art: `shape:${e}`,
-		emoji: eg[e],
-		en: $h[e].en,
-		fr: $h[e].fr,
+		emoji: $h[e],
+		en: Qh[e].en,
+		fr: Qh[e].fr,
 		is: e
 	};
 }
-function tg(e, t) {
-	let n = B(e);
+function eg(e, t) {
+	let n = V(e);
 	return {
 		...n,
 		art: `shape:${e}:r${t}`,
@@ -33745,26 +33745,26 @@ function tg(e, t) {
 		odd: !0
 	};
 }
-var ng = {
+var tg = {
 	art: "shape:rect:wide",
 	emoji: "▬",
 	en: "rectangle",
 	fr: "rectangle",
 	is: "rectangle"
-}, rg = {
+}, ng = {
 	art: "shape:oval",
 	emoji: "⬯",
 	en: "oval",
 	fr: "ovale",
 	is: "oval"
-}, ig = [
+}, rg = [
 	"circle",
 	"square",
 	"triangle"
-], ag = (e, t) => t.is === "oval" && e.is === "circle" ? Qh.oval : t.is === "rectangle" && e.is === "square" ? Qh.rectangle : e.odd && e.is === "square" ? Qh.tiltedSquare : e.odd && e.is === "triangle" ? Qh.tiltedTriangle : Qh.tryAgain;
-function V(e, t, n, r) {
-	let i = [t, ...n], a = $h[t.is];
-	return L(e, r % 2 == 0 ? {
+], ig = (e, t) => t.is === "oval" && e.is === "circle" ? Zh.oval : t.is === "rectangle" && e.is === "square" ? Zh.rectangle : e.odd && e.is === "square" ? Zh.tiltedSquare : e.odd && e.is === "triangle" ? Zh.tiltedTriangle : Zh.tryAgain;
+function ag(e, t, n, r) {
+	let i = [t, ...n], a = Qh[t.is];
+	return R(e, r % 2 == 0 ? {
 		en: `Find the ${a.en}.`,
 		fr: `Trouve le ${a.fr}.`
 	} : {
@@ -33781,18 +33781,18 @@ function V(e, t, n, r) {
 			glyph: e.art
 		})),
 		reveal: "none"
-	}, [null, ...n.map((e) => ag(t, e))]);
+	}, [null, ...n.map((e) => ig(t, e))]);
 }
 function og() {
 	let e = [];
-	return ig.forEach((t, n) => {
+	return rg.forEach((t, n) => {
 		for (let r of [1, 2]) {
-			let i = ig[(n + r) % 3];
-			e.push(V(1, B(t), [B(i)], n + r));
+			let i = rg[(n + r) % 3];
+			e.push(ag(1, V(t), [V(i)], n + r));
 		}
-	}), ig.forEach((t, n) => {
-		let [r, i] = ig.filter((e) => e !== t);
-		e.push(V(2, B(t), [B(r), B(i)], n), V(2, B(t), [B(i), B(r)], n + 1));
+	}), rg.forEach((t, n) => {
+		let [r, i] = rg.filter((e) => e !== t);
+		e.push(ag(2, V(t), [V(r), V(i)], n), ag(2, V(t), [V(i), V(r)], n + 1));
 	}), [
 		30,
 		60,
@@ -33800,12 +33800,12 @@ function og() {
 		120,
 		180
 	].forEach((t, n) => {
-		e.push(V(3, tg("triangle", t), [B("circle"), n % 2 == 0 ? B("square") : ng], n)), e.push(V(3, tg("square", [
+		e.push(ag(3, eg("triangle", t), [V("circle"), n % 2 == 0 ? V("square") : tg], n)), e.push(ag(3, eg("square", [
 			45,
 			30,
 			60
-		][n % 3]), [n % 2 == 0 ? B("triangle") : B("circle"), ng], n + 1));
-	}), e.push(V(3, B("circle"), [rg, B("square")], 0), V(3, B("circle"), [rg, B("triangle")], 1), V(3, B("square"), [ng, B("circle")], 2), V(3, B("square"), [ng, B("triangle")], 3)), R(e);
+		][n % 3]), [n % 2 == 0 ? V("triangle") : V("circle"), tg], n + 1));
+	}), e.push(ag(3, V("circle"), [ng, V("square")], 0), ag(3, V("circle"), [ng, V("triangle")], 1), ag(3, V("square"), [tg, V("circle")], 2), ag(3, V("square"), [tg, V("triangle")], 3)), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/geometryMore.ts
@@ -33877,16 +33877,16 @@ function gg() {
 			"🟩",
 			"🔺"
 		]
-	]) e.push(P(1, {
+	]) e.push(F(1, {
 		en: `${t}\n\nFind the one that looks exactly the same.`,
 		fr: `${t}\n\nTrouve celui qui est exactement pareil.`
 	}, t, [n, r]));
 	dg.forEach((t, n) => {
-		let r = F(fg, n), i = F(dg, n + 1);
-		e.push(P(2, {
+		let r = I(fg, n), i = I(dg, n + 1);
+		e.push(F(2, {
 			en: `${t}\n\nFind the same SHAPE. The colour can be different.`,
 			fr: `${t}\n\nTrouve la même FORME. La couleur peut être différente.`
-		}, i, [r, F(pg, n)]));
+		}, i, [r, I(pg, n)]));
 	});
 	let t = (e, t) => Array.from({ length: e }, (e, n) => hg[(n + t) % 3]);
 	return [
@@ -33898,11 +33898,11 @@ function gg() {
 		5
 	].forEach((n, r) => {
 		let i = t(n, r), a = i.map((e) => mg[e][0]), o = i.map((e) => mg[e][1]), s = r % n, c = (e) => o.map((t, n) => n === e ? mg[hg[(hg.indexOf(i[n]) + 1) % 3]][1] : t);
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `Puzzle holes: ${a.join(" ")}\n\nWhich pieces fit the holes?`,
 			fr: `Trous du puzzle : ${a.join(" ")}\n\nQuelles pièces vont dans les trous ?`
 		}, o.join(" "), [c(s).join(" "), c((s + 1) % n).join(" ")]));
-	}), A(e);
+	}), j(e);
 }
 function _g() {
 	let e = [], t = [
@@ -33918,25 +33918,25 @@ function _g() {
 		"🛢️",
 		"🧻"
 	];
-	for (let i = 0; i < 3; i++) for (let a = 0; a < 2; a++) e.push(P(1, {
+	for (let i = 0; i < 3; i++) for (let a = 0; a < 2; a++) e.push(F(1, {
 		en: "Which one ROLLS?",
 		fr: "Lequel ROULE ?"
-	}, t[i], [n[(i + a) % 3], n[(i + a + 1) % 3]]), P(2, {
+	}, t[i], [n[(i + a) % 3], n[(i + a + 1) % 3]]), F(2, {
 		en: "Which one STACKS easily?",
 		fr: "Lequel s'EMPILE facilement ?"
-	}, n[i], [t[(i + a) % 3], t[(i + a + 1) % 3]]), P(3, {
+	}, n[i], [t[(i + a) % 3], t[(i + a + 1) % 3]]), F(3, {
 		en: "Which one can ROLL and also STACK?",
 		fr: "Lequel peut ROULER et aussi s'EMPILER ?"
 	}, r[i], [t[(i + a) % 3], n[(i + a + 1) % 3]]));
-	return A(e);
+	return j(e);
 }
 function vg() {
 	let e = [], t = ug;
 	fg.forEach((n, r) => {
-		e.push(N(1, {
+		e.push(P(1, {
 			en: `${n}${n}\n\nTwo squares are put side by side. What shape do they make?`,
 			fr: `${n}${n}\n\nOn met deux carrés côte à côte. Quelle forme obtient-on ?`
-		}, t, [F([sg, lg], r), F([lg, sg], r)]));
+		}, t, [I([sg, lg], r), I([lg, sg], r)]));
 	});
 	for (let [t, n, r] of [
 		[
@@ -34041,7 +34041,7 @@ function vg() {
 				fr: "triangle"
 			}]
 		]
-	]) e.push(N(2, {
+	]) e.push(P(2, {
 		en: `${t.en}\n\nWhat bigger shape do they make?`,
 		fr: `${t.fr}\n\nQuelle plus grande forme obtient-on ?`
 	}, n, r));
@@ -34148,11 +34148,11 @@ function vg() {
 				fr: "deux cercles"
 			}]
 		]
-	]) e.push(N(3, {
+	]) e.push(P(3, {
 		en: `Which pieces can make ${t.en}?`,
 		fr: `Quelles pièces peuvent faire ${t.fr} ?`
 	}, n, r));
-	return A(e);
+	return j(e);
 }
 function yg() {
 	let e = [], t = [
@@ -34253,7 +34253,7 @@ function yg() {
 			},
 			ug
 		]
-	], r = (t, [n, r, i], a) => e.push(N(t, {
+	], r = (t, [n, r, i], a) => e.push(P(t, {
 		en: `${n}\n\nThe ${r.en} has the shape of a...`,
 		fr: `${n}\n\nLa forme de ${r.fr} est un...`
 	}, i, a.filter((e) => e !== i)));
@@ -34334,7 +34334,7 @@ function yg() {
 		a,
 		o,
 		s
-	])), A(e);
+	])), j(e);
 }
 var bg = [
 	"⬆️",
@@ -34348,7 +34348,7 @@ function xg() {
 		1,
 		2,
 		3
-	]) e.push(P(1, {
+	]) e.push(F(1, {
 		en: `🤖 starts at ${n}.\n\n${t}\n\nIt walks forward ${r} steps. Where is it now?`,
 		fr: `🤖 part de ${n}.\n\n${t}\n\nIl avance de ${r} pas. Où est-il maintenant ?`
 	}, String(n + r), [String(n + r + 1), String(n + r + 2)]));
@@ -34385,7 +34385,7 @@ function xg() {
 		]
 	]) {
 		let a = n + r - i;
-		e.push(P(2, {
+		e.push(F(2, {
 			en: `🤖 starts at ${n}.\n\n${t}\n\nForward ${r} steps, then back ${i} steps. Where is it now?`,
 			fr: `🤖 part de ${n}.\n\n${t}\n\nAvance de ${r} pas, puis recule de ${i} pas. Où est-il maintenant ?`
 		}, String(a), [String(n + r), String(n + r + i)]));
@@ -34406,12 +34406,12 @@ function xg() {
 	];
 	for (let t = 0; t < 4; t++) for (let [r, i] of n) {
 		let n = (t + i) % 4;
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `You face ${bg[t]}. ${r.en}.\n\nWhich way do you face now?`,
 			fr: `Tu regardes ${bg[t]}. ${r.fr}.\n\nVers où regardes-tu maintenant ?`
 		}, bg[n], bg.filter((e, t) => t !== n)));
 	}
-	return A(e);
+	return j(e);
 }
 var Sg = [
 	"🟥",
@@ -34560,29 +34560,29 @@ function Cg() {
 	};
 	for (let [t, n, r] of a) r.forEach((r, i) => {
 		let a = (e) => r.map((t, n) => n === e ? Sg[(Sg.indexOf(t) + 1) % Sg.length] : t), s = i % r.length, c = (s + 1) % r.length;
-		e.push(P(t, {
+		e.push(F(t, {
 			en: `Look at the model:\n${o(r, n, "\n")}\n\nWhich build is exactly the same?`,
 			fr: `Regarde le modèle :\n${o(r, n, "\n")}\n\nQuelle construction est exactement pareille ?`
 		}, o(r, n, " / "), [o(a(s), n, " / "), o(a(c), n, " / ")]));
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numberFacts.ts
 function wg(e, t) {
-	return Xm(j(0, 9).map((n) => n < e ? t : "⬜"));
+	return Ym(M(0, 9).map((n) => n < e ? t : "⬜"));
 }
 function Tg() {
 	let e = [], t = ["🟦", "🟥"];
-	for (let [n, r] of [[1, j(1, 5)], [2, j(6, 10)]]) for (let i of r) t.forEach((t, r) => {
-		e.push(M(n, {
+	for (let [n, r] of [[1, M(1, 5)], [2, M(6, 10)]]) for (let i of r) t.forEach((t, r) => {
+		e.push(N(n, {
 			en: `${wg(i, t)}\n\nHow many ${t} are on the ten frame?`,
 			fr: `${wg(i, t)}\n\nCombien de ${t} y a-t-il sur le cadre à dix ?`
 		}, i, [i - 1, i + 1], 0, 10, i + r));
 	});
-	for (let n of j(1, 9)) {
-		let r = F(t, n);
-		e.push(M(3, {
+	for (let n of M(1, 9)) {
+		let r = I(t, n);
+		e.push(N(3, {
 			en: `${wg(n, r)}\n\nHow many more ${r} fill the frame to make 10?`,
 			fr: `${wg(n, r)}\n\nCombien de ${r} de plus pour remplir le cadre et faire 10 ?`
 		}, 10 - n, [
@@ -34591,7 +34591,7 @@ function Tg() {
 			9 - n
 		], 0, 10, n));
 	}
-	return A(e);
+	return j(e);
 }
 function Eg() {
 	let e = [];
@@ -34601,7 +34601,7 @@ function Eg() {
 		1,
 		8,
 		2
-	]) e.push(M(1, {
+	]) e.push(N(1, {
 		en: `${t} and ___ make 10.`,
 		fr: `${t} et ___ font 10.`
 	}, 10 - t, [t, 11 - t], 0, 10, t));
@@ -34610,10 +34610,10 @@ function Eg() {
 		4,
 		6,
 		7
-	]) e.push(M(2, {
+	]) e.push(N(2, {
 		en: `${t} and ___ make 10.`,
 		fr: `${t} et ___ font 10.`
-	}, 10 - t, [t, 11 - t], 0, 10, t), M(2, {
+	}, 10 - t, [t, 11 - t], 0, 10, t), N(2, {
 		en: `___ and ${t} make 10.`,
 		fr: `___ et ${t} font 10.`
 	}, 10 - t, [t, 9 - t], 0, 10, t));
@@ -34624,7 +34624,7 @@ function Eg() {
 		6,
 		7,
 		8
-	]) e.push(P(3, {
+	]) e.push(F(3, {
 		en: "Which pair makes 10?",
 		fr: "Quelle paire fait 10 ?"
 	}, `${t} and ${10 - t}`, [
@@ -34632,7 +34632,7 @@ function Eg() {
 		`${t} and ${11 - t}`,
 		`${t + 1} and ${11 - t}`
 	]));
-	return A(e);
+	return j(e);
 }
 var Dg = {
 	en: "Some came: put together",
@@ -34683,7 +34683,7 @@ function Mg() {
 			Og,
 			kg
 		].filter((e) => e !== r);
-		e.push(N(1, {
+		e.push(P(1, {
 			en: `${n.en}\n\nWhat happened?`,
 			fr: `${n.fr}\n\nQue s'est-il passé ?`
 		}, r, t));
@@ -34716,7 +34716,7 @@ function Mg() {
 	];
 	for (let [t, r] of n) {
 		let n = r === Ag ? jg : Ag;
-		e.push(N(2, {
+		e.push(P(2, {
 			en: `${t.en}\n\nIs it putting together or taking apart?`,
 			fr: `${t.fr}\n\nOn réunit ou on sépare ?`
 		}, r, [n, kg]));
@@ -34749,16 +34749,16 @@ function Mg() {
 		}
 	];
 	return r.forEach((t, n) => {
-		e.push(N(3, {
+		e.push(P(3, {
 			en: "Which story is about ADDING?",
 			fr: "Quelle histoire parle d'AJOUTER ?"
 		}, t, [i[n], i[(n + 1) % 3]]));
 	}), i.forEach((t, n) => {
-		e.push(N(3, {
+		e.push(P(3, {
 			en: "Which story is about TAKING AWAY?",
 			fr: "Quelle histoire parle d'ENLEVER ?"
 		}, t, [r[n], r[(n + 1) % 3]]));
-	}), A(e);
+	}), j(e);
 }
 function Ng() {
 	let e = [];
@@ -34776,21 +34776,21 @@ function Ng() {
 		3
 	]]) n.forEach((n, i) => {
 		for (let a = 0; a < r; a++) {
-			let r = F(D, i * 3 + a + t);
-			e.push(M(t, {
-				en: `${r.repeat(n)}${Zm}${r.repeat(n)}\n\nDouble ${n}: ${n} and ${n} more. How many in all?`,
-				fr: `${r.repeat(n)}${Zm}${r.repeat(n)}\n\nLe double de ${n} : ${n} et ${n} de plus. Combien en tout ?`
+			let r = I(O, i * 3 + a + t);
+			e.push(N(t, {
+				en: `${r.repeat(n)}${Xm}${r.repeat(n)}\n\nDouble ${n}: ${n} and ${n} more. How many in all?`,
+				fr: `${r.repeat(n)}${Xm}${r.repeat(n)}\n\nLe double de ${n} : ${n} et ${n} de plus. Combien en tout ?`
 			}, 2 * n, [n, 2 * n + 1], 0, 10, n + a));
 		}
 	});
-	for (let t of j(1, 5)) e.push(M(3, {
+	for (let t of M(1, 5)) e.push(N(3, {
 		en: `What is double ${t}?`,
 		fr: `Quel est le double de ${t} ?`
 	}, 2 * t, [
 		t,
 		2 * t + 1,
 		2 * t - 1
-	], 0, 10, t), M(3, {
+	], 0, 10, t), N(3, {
 		en: `${t} and ${t} more make...`,
 		fr: `${t} et ${t} de plus font...`
 	}, 2 * t, [
@@ -34798,7 +34798,7 @@ function Ng() {
 		2 * t + 1,
 		2 * t - 1
 	], 0, 10, t + 1));
-	return A(e);
+	return j(e);
 }
 function Pg() {
 	let e = [];
@@ -34812,10 +34812,10 @@ function Pg() {
 		[2, 3],
 		[3, 2]
 	].forEach(([t, n], r) => {
-		let i = F(D, r), a = F(D, r + 3), o = t + n;
-		e.push(P(1, {
-			en: `${k(t, i)}\n\n${k(n, a)}\n\nThe two groups are put together. Which number sentence matches?`,
-			fr: `${k(t, i)}\n\n${k(n, a)}\n\nOn réunit les deux groupes. Quelle phrase mathématique correspond ?`
+		let i = I(O, r), a = I(O, r + 3), o = t + n;
+		e.push(F(1, {
+			en: `${A(t, i)}\n\n${A(n, a)}\n\nThe two groups are put together. Which number sentence matches?`,
+			fr: `${A(t, i)}\n\n${A(n, a)}\n\nOn réunit les deux groupes. Quelle phrase mathématique correspond ?`
 		}, `${t} + ${n} = ${o}`, [`${t} + ${n} = ${o + 1}`, `${t} − ${n} = ${o}`]));
 	}), [
 		[3, 1],
@@ -34827,10 +34827,10 @@ function Pg() {
 		[4, 3],
 		[5, 2]
 	].forEach(([t, n], r) => {
-		let i = F(D, r), a = t - n;
-		e.push(P(2, {
-			en: `${k(t, i)}\n\n${n} of them go away. Which number sentence matches?`,
-			fr: `${k(t, i)}\n\n${n} d'entre eux s'en vont. Quelle phrase mathématique correspond ?`
+		let i = I(O, r), a = t - n;
+		e.push(F(2, {
+			en: `${A(t, i)}\n\n${n} of them go away. Which number sentence matches?`,
+			fr: `${A(t, i)}\n\n${n} d'entre eux s'en vont. Quelle phrase mathématique correspond ?`
 		}, `${t} − ${n} = ${a}`, [`${t} − ${n} = ${a + 1}`, `${t} + ${n} = ${t + n}`]));
 	}), [
 		[
@@ -34875,7 +34875,7 @@ function Pg() {
 		]
 	].forEach(([t, n, r], i) => {
 		let a = r === "+" ? t + n : t - n;
-		e.push(M(3, {
+		e.push(N(3, {
 			en: `What goes in the box?\n\n${t} ${r} ${n} = ?`,
 			fr: `Que met-on dans la case ?\n\n${t} ${r} ${n} = ?`
 		}, a, [
@@ -34883,7 +34883,7 @@ function Pg() {
 			n,
 			a + 1
 		], 0, 6, i));
-	}), A(e);
+	}), j(e);
 }
 function Fg() {
 	let e = [];
@@ -34892,10 +34892,10 @@ function Fg() {
 		4,
 		6
 	]) [0, 1].forEach((n) => {
-		let r = F(["🍪", "🍓"], n);
-		e.push(M(1, {
-			en: `${k(t, r)}\n\nShare these fairly between 2 children 🧒🧒. How many does each child get?`,
-			fr: `${k(t, r)}\n\nPartage-les équitablement entre 2 enfants 🧒🧒. Combien chaque enfant en reçoit-il ?`
+		let r = I(["🍪", "🍓"], n);
+		e.push(N(1, {
+			en: `${A(t, r)}\n\nShare these fairly between 2 children 🧒🧒. How many does each child get?`,
+			fr: `${A(t, r)}\n\nPartage-les équitablement entre 2 enfants 🧒🧒. Combien chaque enfant en reçoit-il ?`
 		}, t / 2, [t, t / 2 + 1], 0, 8, t + n));
 	});
 	[
@@ -34906,10 +34906,10 @@ function Fg() {
 		[9, 3],
 		[4, 2]
 	].forEach(([t, n], r) => {
-		let i = F(D, r), a = "🧒".repeat(n);
-		e.push(M(2, {
-			en: `${k(t, i)}\n\nShare these fairly between ${n} children ${a}. How many does each child get?`,
-			fr: `${k(t, i)}\n\nPartage-les équitablement entre ${n} enfants ${a}. Combien chaque enfant en reçoit-il ?`
+		let i = I(O, r), a = "🧒".repeat(n);
+		e.push(N(2, {
+			en: `${A(t, i)}\n\nShare these fairly between ${n} children ${a}. How many does each child get?`,
+			fr: `${A(t, i)}\n\nPartage-les équitablement entre ${n} enfants ${a}. Combien chaque enfant en reçoit-il ?`
 		}, t / n, [
 			t,
 			n,
@@ -34946,24 +34946,24 @@ function Fg() {
 			1
 		]
 	].forEach((r, i) => {
-		let a = F([
+		let a = I([
 			"🍪",
 			"🍓",
 			"🍎"
 		], i), o = r.map((e) => `🧒 ${Ig(e, a)}`).join("\n"), s = r.every((e) => e === r[0]);
-		e.push(N(3, {
+		e.push(P(3, {
 			en: `${o}\n\nIs this a fair share?`,
 			fr: `${o}\n\nLe partage est-il juste ?`
 		}, s ? t : n, [s ? n : t]));
-	}), A(e);
+	}), j(e);
 }
 function Ig(e, t) {
-	return k(e, t, " ");
+	return A(e, t, " ");
 }
 function Lg(e, t) {
 	let n = [];
 	for (let r = 0; r < e; r += 2) n.push(t.repeat(Math.min(2, e - r)));
-	return n.join(Zm);
+	return n.join(Xm);
 }
 function Rg() {
 	let e = [], t = {
@@ -34973,9 +34973,9 @@ function Rg() {
 		en: "No, one is left over",
 		fr: "Non, il en reste un"
 	};
-	for (let [r, i] of [[1, j(2, 5)], [2, j(6, 10)]]) for (let a of i) ["🍎", "⭐"].forEach((i) => {
+	for (let [r, i] of [[1, M(2, 5)], [2, M(6, 10)]]) for (let a of i) ["🍎", "⭐"].forEach((i) => {
 		let o = a % 2 == 0;
-		e.push(N(r, {
+		e.push(P(r, {
 			en: `${Lg(a, i)}\n\nCan you make pairs with none left over?`,
 			fr: `${Lg(a, i)}\n\nPeux-tu faire des paires sans qu'il en reste ?`
 		}, o ? t : n, [o ? n : t]));
@@ -35012,11 +35012,11 @@ function Rg() {
 			9
 		]]
 	].forEach(([t, n]) => {
-		e.push(P(3, {
+		e.push(F(3, {
 			en: "Which number can be made into pairs, with none left over?",
 			fr: "Quel nombre peut être partagé en paires, sans qu'il en reste ?"
 		}, String(t), n.map(String)));
-	}), A(e);
+	}), j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/measureMore.ts
@@ -35103,14 +35103,14 @@ function Kg() {
 			Wg,
 			Gg
 		].filter((e) => e !== n.tool);
-		e.push(N(1, {
+		e.push(P(1, {
 			en: `${t} ${r}\n\nHow do you ${n.en}?`,
 			fr: `${t} ${r}\n\nComment ${n.fr} ?`
 		}, n.tool, i));
 	}
 	return Hg.forEach(({ weight: t, light: n }, r) => {
 		let i = r % 2 == 0, a = i ? t : n, o = i ? n : t, s = i ? "left" : "right", c = i ? "gauche" : "droite";
-		e.push(P(2, {
+		e.push(F(2, {
 			en: `⚖️ The ${s} side goes DOWN.\n\nLeft: ${a}  Right: ${o}\n\nWhich is heavier?`,
 			fr: `⚖️ Le côté ${c} descend.\n\nGauche : ${a}  Droite : ${o}\n\nLequel est le plus lourd ?`
 		}, t, [n]));
@@ -35121,16 +35121,16 @@ function Kg() {
 		[0, 3]
 	].forEach(([t, n], r) => {
 		let i = Vg[t], a = Vg[n];
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `Pour ${a} into ${i}: it overflows.\n\nWhich holds MORE?`,
 			fr: `Verse ${a} dans ${i} : ça déborde.\n\nLequel contient LE PLUS ?`
 		}, a, [i]));
 		let o = Bg[t], s = Bg[n], c = r % 2 == 0 ? `${o} ${s}` : `${s} ${o}`;
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `Both start at the same line. The ${s} sticks out further.\n\n${c}\n\nWhich is longer?`,
 			fr: `Les deux commencent à la même ligne. Le ${s} dépasse davantage.\n\n${c}\n\nLequel est le plus long ?`
 		}, s, [o]));
-	}), A(e);
+	}), j(e);
 }
 function qg() {
 	let e = [];
@@ -35239,7 +35239,7 @@ function qg() {
 		]]
 	]) n.forEach((n, r) => {
 		[0, 1].forEach((i) => {
-			let a = i === 0, o = a ? Bg : zg, s = n.map((e) => o[e]), c = [...s].reverse(), l = (r + i) % 2 == 0, u = l ? s : c, d = l ? c : s, f = I(I(s, 0, n.length - 1), 1, n.length - 2), p = a ? l ? {
+			let a = i === 0, o = a ? Bg : zg, s = n.map((e) => o[e]), c = [...s].reverse(), l = (r + i) % 2 == 0, u = l ? s : c, d = l ? c : s, f = L(L(s, 0, n.length - 1), 1, n.length - 2), p = a ? l ? {
 				en: "SHORTEST to LONGEST",
 				fr: "du plus COURT au plus LONG"
 			} : {
@@ -35252,17 +35252,17 @@ function qg() {
 				en: "HEAVIEST to LIGHTEST",
 				fr: "du plus LOURD au plus LÉGER"
 			};
-			e.push(P(t, {
+			e.push(F(t, {
 				en: `${f.join(" ")}\n\nWhich row goes from ${p.en}?`,
 				fr: `${f.join(" ")}\n\nQuelle rangée va ${p.fr} ?`
 			}, u.join(" "), [
 				d.join(" "),
-				I(u, 0, 1).join(" "),
-				I(u, u.length - 2, u.length - 1).join(" ")
+				L(u, 0, 1).join(" "),
+				L(u, u.length - 2, u.length - 1).join(" ")
 			]));
 		});
 	});
-	return A(e);
+	return j(e);
 }
 var Jg = [
 	{
@@ -35344,7 +35344,7 @@ function Zg() {
 	let e = [];
 	for (let [t, n, r] of Xg) Yg(n, r).slice(0, 12).forEach(([n, r], i) => {
 		let a = Jg[n], o = Jg[r], s = i % 2 == 0, c = (e, t) => `${e.emoji} ${e[t]}`;
-		e.push(N(t, {
+		e.push(P(t, {
 			en: `Which takes ${s ? "LONGER" : "LESS TIME"}?`,
 			fr: `Qu'est-ce qui prend ${s ? "PLUS" : "MOINS"} de temps ?`
 		}, {
@@ -35355,7 +35355,7 @@ function Zg() {
 			fr: c(s ? a : o, "fr")
 		}]));
 	});
-	return A(e);
+	return j(e);
 }
 var Qg = {
 	en: "Enough: one for each",
@@ -35384,14 +35384,14 @@ function t_() {
 		[6, 6],
 		[5, 3]
 	]]]) n.forEach(([n, r], i) => {
-		let a = F([
+		let a = I([
 			"🥛",
 			"🍽️",
 			"🪑"
 		], i), o = r === n ? Qg : r > n ? e_ : $g;
-		e.push(N(t, {
-			en: `${k(n, "🧒")}\n\n${k(r, a)}\n\nIs there ${a} for every child?`,
-			fr: `${k(n, "🧒")}\n\n${k(r, a)}\n\nY a-t-il un ${a} pour chaque enfant ?`
+		e.push(P(t, {
+			en: `${A(n, "🧒")}\n\n${A(r, a)}\n\nIs there ${a} for every child?`,
+			fr: `${A(n, "🧒")}\n\n${A(r, a)}\n\nY a-t-il un ${a} pour chaque enfant ?`
 		}, o, [
 			Qg,
 			e_,
@@ -35408,20 +35408,20 @@ function t_() {
 		[5, 1],
 		[8, 6]
 	].forEach(([t, n], r) => {
-		let i = F([
+		let i = I([
 			"🥛",
 			"🍽️",
 			"🪑"
 		], r), a = t - n;
-		e.push(M(3, {
-			en: `${k(t, "🧒")}\n\n${k(n, i)}\n\nHow many more ${i} do we need so every child has one?`,
-			fr: `${k(t, "🧒")}\n\n${k(n, i)}\n\nCombien de ${i} en plus faut-il pour que chaque enfant en ait un ?`
+		e.push(N(3, {
+			en: `${A(t, "🧒")}\n\n${A(n, i)}\n\nHow many more ${i} do we need so every child has one?`,
+			fr: `${A(t, "🧒")}\n\n${A(n, i)}\n\nCombien de ${i} en plus faut-il pour que chaque enfant en ait un ?`
 		}, a, [
 			n,
 			t,
 			a + 1
 		], 0, 8, r));
-	}), A(e);
+	}), j(e);
 }
 function n_() {
 	let e = [], t = {
@@ -35442,10 +35442,10 @@ function n_() {
 		1,
 		8
 	].forEach((i, a) => {
-		let o = F(D, a);
-		e.push(N(1, {
-			en: `${k(i, o)}\n\nWithout counting: are there few or many?`,
-			fr: `${k(i, o)}\n\nSans compter : y en a-t-il peu ou beaucoup ?`
+		let o = I(O, a);
+		e.push(P(1, {
+			en: `${A(i, o)}\n\nWithout counting: are there few or many?`,
+			fr: `${A(i, o)}\n\nSans compter : y en a-t-il peu ou beaucoup ?`
 		}, i <= 3 ? t : n, [i <= 3 ? n : t, r]));
 	}), [
 		2,
@@ -35457,14 +35457,14 @@ function n_() {
 		9,
 		10
 	].forEach((t, n) => {
-		let r = F(D, n + 2), i = [
+		let r = I(O, n + 2), i = [
 			2,
 			5,
 			10
 		].reduce((e, n) => Math.abs(n - t) < Math.abs(e - t) ? n : e);
-		e.push(P(2, {
-			en: `${k(t, r)}\n\nGuess without counting. About how many?`,
-			fr: `${k(t, r)}\n\nDevine sans compter. Environ combien ?`
+		e.push(F(2, {
+			en: `${A(t, r)}\n\nGuess without counting. About how many?`,
+			fr: `${A(t, r)}\n\nDevine sans compter. Environ combien ?`
 		}, `about ${i}`, [
 			2,
 			5,
@@ -35488,19 +35488,19 @@ function n_() {
 		[10, 10],
 		[2, 3]
 	].forEach(([t, n], r) => {
-		let o = F(D, r + 5), s = Math.abs(t - n) <= 2;
-		e.push(N(3, {
-			en: `Dan guessed about ${t}. Count to check:\n\n${k(n, o)}\n\nWas the guess close?`,
-			fr: `Dan a deviné environ ${t}. Compte pour vérifier :\n\n${k(n, o)}\n\nSa réponse était-elle proche ?`
+		let o = I(O, r + 5), s = Math.abs(t - n) <= 2;
+		e.push(P(3, {
+			en: `Dan guessed about ${t}. Count to check:\n\n${A(n, o)}\n\nWas the guess close?`,
+			fr: `Dan a deviné environ ${t}. Compte pour vérifier :\n\n${A(n, o)}\n\nSa réponse était-elle proche ?`
 		}, s ? i : a, [s ? a : i]));
-	}), A(e);
+	}), j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/beforeAfter.ts
 function r_() {
 	let e = [], t = (e, t) => t === "after" ? `🏠${e} ➡️ ___` : `___ ⬅️ 🏠${e}`, n = (n, r, i) => {
 		let a = i === "before" ? r - 1 : r + 1;
-		a < 1 || e.push(Ym(n, {
+		a < 1 || e.push(Jm(n, {
 			en: `${t(r, i)}\n\nWhich house number is missing?`,
 			fr: `${t(r, i)}\n\nQuel numéro de maison manque ?`
 		}, {
@@ -35529,14 +35529,14 @@ function a_() {
 	]) {
 		let [n, r] = i_[t];
 		for (let i = n; i <= r; i++) {
-			let a = D[i % D.length], o = `${k(i, a)}\n❓`;
-			e.push(T(t, {
+			let a = O[i % O.length], o = `${A(i, a)}\n❓`;
+			e.push(E(t, {
 				en: `${o}\n\nHow many were there?`,
 				fr: `${o}\n\nCombien y en avait-il ?`
-			}, String(i), O(i, [], Math.max(0, n - 2), r + 2, i)));
+			}, String(i), k(i, [], Math.max(0, n - 2), r + 2, i)));
 		}
 	}
-	return A(e);
+	return j(e);
 }
 function o_() {
 	let e = [], t = {
@@ -35555,33 +35555,33 @@ function o_() {
 	]) {
 		let [r, i] = i_[n];
 		for (let a = r; a <= i; a++) {
-			let r = D[a * 3 % D.length], i = (e) => k(e, r), o = {
+			let r = O[a * 3 % O.length], i = (e) => A(e, r), o = {
 				en: `Counting: ..., ${a}!`,
 				fr: `On compte : ..., ${a} !`
 			};
-			e.push(qm(n, {
+			e.push(Km(n, {
 				en: `${i(a)}\n\n${o.en}\n\nThere are ${a}.`,
 				fr: `${i(a)}\n\n${o.fr}\n\nIl y en a ${a}.`
 			}, !0));
 			for (let s of t[n]) if (s === "off-by-one") {
 				let t = a + (a % 2 == 0 ? 1 : -1);
-				e.push(qm(n, {
+				e.push(Km(n, {
 					en: `${i(a)}\n\n${o.en}\n\nThere are ${t}.`,
 					fr: `${i(a)}\n\n${o.fr}\n\nIl y en a ${t}.`
 				}, !1));
 			} else if (s === "rearranged" && a >= 2) {
-				let t = `${k(a, r, " ")} (moved around)`;
-				e.push(qm(n, {
+				let t = `${A(a, r, " ")} (moved around)`;
+				e.push(Km(n, {
 					en: `${t}\n\n${o.en}\n\nThere are still ${a}.`,
 					fr: `${t}\n\n${o.fr}\n\nIl y en a toujours ${a}.`
 				}, !0));
-			} else s === "added-after" && e.push(qm(n, {
-				en: `${i(a)}\n\n${o.en}\n\n${D[(a + 1) % D.length]} was added after counting.\n\nThere are still ${a}.`,
-				fr: `${i(a)}\n\n${o.fr}\n\n${D[(a + 1) % D.length]} a été ajouté après le comptage.\n\nIl y en a toujours ${a}.`
+			} else s === "added-after" && e.push(Km(n, {
+				en: `${i(a)}\n\n${o.en}\n\n${O[(a + 1) % O.length]} was added after counting.\n\nThere are still ${a}.`,
+				fr: `${i(a)}\n\n${o.fr}\n\n${O[(a + 1) % O.length]} a été ajouté après le comptage.\n\nIl y en a toujours ${a}.`
 			}, !1));
 		}
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/compareNumerals.ts
@@ -35639,7 +35639,7 @@ function m_(e, t, n) {
 function h_() {
 	let e = [], t = (t, n, r, i, a) => {
 		let o = i ? c_ : s_, s = i ? n : r, c = i ? r : n, l = (n + r + a) % 2 == 1 ? [c, s] : [s, c], u = t === 1 ? p_("dots", l[0], l[1], n + r) : t === 3 ? p_("line", n, r, 0) : void 0;
-		e.push(L(t, {
+		e.push(R(t, {
 			en: `Which number is ${o.en}?`,
 			fr: `Quel nombre est ${o.fr} ?`
 		}, { en: l.map(String) }, l.indexOf(s), u, l.map((e) => e === s ? null : m_(s, e, i))));
@@ -35647,7 +35647,7 @@ function h_() {
 	for (let [e, n] of f_(1, 5, 2)) t(1, e, n, !1, 0), t(1, e, n, !0, 0);
 	f_(0, 10).forEach(([e, n], r) => t(2, e, n, r % 2 == 1, 0));
 	for (let [e, n] of f_(0, 10, 1, 2)) t(3, e, n, !1, 0), t(3, e, n, !0, 0);
-	return R(e);
+	return z(e);
 }
 function g_(e, t, n, r) {
 	return Math.min(e, t) === 0 && Math.abs(e - t) === 1 ? d_.zero : Math.abs(e - t) <= 1 || r === 2 || n === 2 ? d_.matchUp : d_.moreBy;
@@ -35655,7 +35655,7 @@ function g_(e, t, n, r) {
 function __() {
 	let e = [], t = (t, n, r, i) => {
 		let a = (n * 2 + r + i) % 3 == 0, [o, s] = (n + r + i) % 2 == 1 ? [r, n] : [n, r], c = a ? c_ : s_, l = a ? n : r, u = a ? r : n, d = `${o} ${s}`, f = t === 3 ? p_("line", n, r, 0) : p_("dots", o, s, n + r + i);
-		e.push(L(t, {
+		e.push(R(t, {
 			en: `${d}\n\nWhich is ${c.en}?`,
 			fr: `${d}\n\nLequel est ${c.fr} ?`
 		}, { en: [String(l), String(u)] }, 0, f, [null, g_(n, r, u, 0)]));
@@ -35685,13 +35685,13 @@ function __() {
 			let r = t + i;
 			if (r < 0 || r > 10) continue;
 			let a = t > r ? 0 : t < r ? 1 : 2;
-			e.push(L(4, {
+			e.push(R(4, {
 				en: `${t} ${r}\n\nLeft: bigger, smaller or same?`,
 				fr: `${t} ${r}\n\nGauche : plus grand, plus petit ou pareil ?`
 			}, n, a, p_("line", t, r, 0), n.en.map((e, n) => n === a ? null : g_(t, r, n, a))));
 		}
 	}
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/conservation.ts
@@ -35713,13 +35713,13 @@ var v_ = {
 	fr: ["Pareil", "Pas pareil"]
 };
 function S_(e, t) {
-	let n = (e * 2 + t) % D.length;
-	return [D[n], D[(n + 1 + e % 3) % D.length]];
+	let n = (e * 2 + t) % O.length;
+	return [O[n], O[(n + 1 + e % 3) % O.length]];
 }
 function C_() {
 	let e = [], t = (t, n, r, i, a) => {
 		let [o, s] = S_(n, a), c = t === 1 ? o : s, l = n === r, u = t === 3, d = l ? t === 2 ? v_.kindDoesNotMatter : t === 1 ? v_.longerNotMore : v_.pairedSame : u ? v_.addedHidden : v_.leftover;
-		e.push(L(t, b_, x_, +!l, {
+		e.push(R(t, b_, x_, +!l, {
 			type: "counters",
 			groups: [{
 				emoji: o,
@@ -35736,7 +35736,7 @@ function C_() {
 	for (let e = 2; e <= 5; e++) t(1, e, e, "spread", 0), t(1, e, e, "squeeze", 4), e <= 3 ? t(1, e, e + 1, "add", 2) : t(1, e, e - 1, "remove", 2);
 	for (let e = 2; e <= 8; e++) t(2, e, e, e % 2 == 0 ? "spread" : "squeeze", 1), e <= 4 ? t(2, e, e + 1, "add", 3) : t(2, e, e - 1, "remove", 3);
 	for (let e = 3; e <= 10; e++) t(3, e, e, e % 2 == 0 ? "spread" : "squeeze", 2), e <= 6 ? t(3, e, e + 1, "add", 5) : t(3, e, e - 1, "remove", 5);
-	return R(e);
+	return z(e);
 }
 var w_ = {
 	top: {
@@ -35755,7 +35755,7 @@ var w_ = {
 function T_() {
 	let e = [], t = 0, n = (t, n, r, i) => {
 		let [a, o] = S_(n + r, i), s = n === r ? 2 : n > r ? 0 : 1, c = n === r ? y_.spreadSame : Math.abs(n - r) === 1 ? y_.longerTrap : y_.leftover;
-		e.push(L(t, {
+		e.push(R(t, {
 			en: "Which row has more?",
 			fr: "Quelle rangée en a le plus ?"
 		}, {
@@ -35791,7 +35791,7 @@ function T_() {
 	for (let e = 3; e <= 6; e++) n(2, ...r(e + 2, e), 4);
 	for (let e = 2; e <= 8; e++) n(3, ...r(e + 1, e), 2), n(3, ...r(e + 1, e), 7);
 	for (let e = 3; e <= 6; e++) n(3, e, e, 5);
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/countOn.ts
@@ -35834,13 +35834,13 @@ function D_() {
 		2,
 		3
 	]) E_[t].forEach((n, r) => {
-		let i = n + 1, a = `${D[(n * 5 + r) % D.length]} 🎒 (${n} inside)`;
-		e.push(T(t, {
+		let i = n + 1, a = `${O[(n * 5 + r) % O.length]} 🎒 (${n} inside)`;
+		e.push(E(t, {
 			en: `${a}\n\nStart counting at ${n}. What comes next?`,
 			fr: `${a}\n\nCommence à compter à ${n}. Quel est le suivant ?`
-		}, String(i), O(i, [n], 0, Math.max(12, Math.min(20, i + 2)), n + r)));
+		}, String(i), k(i, [n], 0, Math.max(12, Math.min(20, i + 2)), n + r)));
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/days.ts
@@ -35904,7 +35904,7 @@ function L_() {
 		], a = i.filter((e, n) => n !== t).map((e) => e % 7), o = i[t] % 7, s = I_.filter((e) => e !== o && !a.includes(e));
 		for (let r = 0; r < s.length; r++) {
 			let a = s.filter((e, t) => t !== r), c = (e) => i.map((n, r) => r === t ? "❓" : e(n)).join(" ");
-			e.push(E(n, {
+			e.push(D(n, {
 				prompt: `${c(P_)}\n\nWhich day is missing?\n${M_.en}`,
 				options: [o, ...a].map(P_)
 			}, {
@@ -35913,7 +35913,7 @@ function L_() {
 			}));
 		}
 	}
-	return A(e);
+	return j(e);
 }
 function R_() {
 	let e = [], t = (t, n, r) => {
@@ -35932,7 +35932,7 @@ function R_() {
 				en: `Which day comes ${u.en} ${O_[n]}?`,
 				fr: `Quel jour vient ${u.fr} ${k_[n]} ?`
 			};
-			e.push(E(t, {
+			e.push(D(t, {
 				prompt: `${P_(n)}\n\n${d.en}\n${M_.en}`,
 				options: [i, ...l].map(P_)
 			}, {
@@ -35946,7 +35946,7 @@ function R_() {
 	for (let e = 0; e < 6; e++) t(2, e, !0);
 	for (let e = 1; e < 7; e++) t(2, e, !1);
 	for (let e = 0; e < 7; e++) t(3, e, !0), t(3, e, !1);
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/decomposeFive.ts
@@ -35959,34 +35959,34 @@ var z_ = [
 	[5, 0]
 ];
 function B_() {
-	let e = [], t = D[3];
-	for (let [t, n] of z_) e.push(Ym(1, {
+	let e = [], t = O[3];
+	for (let [t, n] of z_) e.push(Jm(1, {
 		en: `${t} and ___ make 5`,
 		fr: `${t} et ___ font 5`
 	}, {
 		en: String(n),
 		fr: String(n)
-	})), e.push(Ym(2, {
+	})), e.push(Jm(2, {
 		en: `___ and ${n} make 5`,
 		fr: `___ et ${n} font 5`
 	}, {
 		en: String(t),
 		fr: String(t)
-	})), e.push(Ym(2, {
+	})), e.push(Jm(2, {
 		en: `${t} and ___ make 5`,
 		fr: `${t} et ___ font 5`
 	}, {
 		en: String(n),
 		fr: String(n)
 	}));
-	for (let [n, r] of z_) e.push(Ym(3, {
+	for (let [n, r] of z_) e.push(Jm(3, {
 		en: `${t.repeat(n)} ${t.repeat(r)}\n\nHow do these two groups split 5? ___`,
 		fr: `${t.repeat(n)} ${t.repeat(r)}\n\nComment ces deux groupes partagent-ils 5 ? ___`
 	}, {
 		en: `${n} and ${r}`,
 		fr: `${n} et ${r}`
 	}));
-	return A(e);
+	return j(e);
 }
 function V_() {
 	let e = [], t = (e, t) => `${e} + ${t}`, n = [[1, 4], [2, 3]];
@@ -36001,7 +36001,7 @@ function V_() {
 			"1 + 5",
 			"2 + 2"
 		];
-		new Set(c).size < c.length || e.push(E(r, {
+		new Set(c).size < c.length || e.push(D(r, {
 			prompt: `${i} + ${a} = 5.\n\nWhich is a DIFFERENT way to make 5?`,
 			options: c
 		}, {
@@ -36009,7 +36009,7 @@ function V_() {
 			options: c
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/countingFoundation.ts
@@ -36080,23 +36080,23 @@ function J_() {
 		r - 1,
 		r - 2
 	]].forEach((n, i) => {
-		let a = n.filter((e) => e !== null), o = n.map((e) => e === null ? "___" : String(e)).join(", "), s = [r - 10, ...Array.from({ length: 11 }, (e, t) => 10 + t)].filter((e) => e !== r && !a.includes(e)), c = Gm(r, s, 3, 2), l = (c[i] ?? c[0]).map(String);
-		e.push(T(t, {
+		let a = n.filter((e) => e !== null), o = n.map((e) => e === null ? "___" : String(e)).join(", "), s = [r - 10, ...Array.from({ length: 11 }, (e, t) => 10 + t)].filter((e) => e !== r && !a.includes(e)), c = Wm(r, s, 3, 2), l = (c[i] ?? c[0]).map(String);
+		e.push(E(t, {
 			en: `Count: ${o}. Which number is missing?`,
 			fr: `Compte : ${o}. Quel nombre manque ?`
 		}, String(r), l));
 	});
-	return A(e);
+	return j(e);
 }
 function Y_() {
-	let e = [], t = (t, n, r, i) => e.push(T(t, {
+	let e = [], t = (t, n, r, i) => e.push(E(t, {
 		en: `${r}\n\nWhich number is it?`,
 		fr: `${r}\n\nQuel nombre est-ce ?`
-	}, String(n), O(n, [n === 1 ? 2 : n - 1, n + 1], 1, 8, i)));
+	}, String(n), k(n, [n === 1 ? 2 : n - 1, n + 1], 1, 8, i)));
 	for (let e = 1; e <= 3; e++) t(1, e, G_[e], e), t(1, e, W_[e], e + 1);
 	for (let e = 1; e <= 5; e++) t(2, e, G_[e], e + 2), t(2, e, W_[e], e + 3);
 	for (let e = 3; e <= 5; e++) K_[e].forEach((n, r) => t(3, e, n, e + r));
-	return A(e);
+	return j(e);
 }
 var X_ = [
 	"🔴",
@@ -36113,7 +36113,7 @@ function Z_() {
 			fr: "Cinq et combien de plus ?"
 		};
 		e.push({
-			...T(t, l, String(o), O(o, [o + 1, o - 1], s, c, n)),
+			...E(t, l, String(o), k(o, [o + 1, o - 1], s, c, n)),
 			scene: {
 				type: "ten-frame",
 				filled: n,
@@ -36141,7 +36141,7 @@ function Z_() {
 		9,
 		10
 	]) X_.slice(1).forEach((n) => t(3, e, n, "total", 1e3));
-	return R(e);
+	return z(e);
 }
 var Q_ = [
 	{
@@ -36180,26 +36180,26 @@ function $_() {
 			20
 		]]
 	]) for (let r of n) {
-		let n = D[r * 5 % D.length], i = k(r, n);
+		let n = O[r * 5 % O.length], i = A(r, n);
 		Q_.forEach((n, a) => {
-			e.push(T(t, {
+			e.push(E(t, {
 				en: `${i}\n\nNow they ${n.en}. How many are there now?`,
 				fr: `${i}\n\nMaintenant ils ${n.fr}. Combien y en a-t-il ?`
-			}, String(r), O(r, [
+			}, String(r), k(r, [
 				r - 1,
 				r + 1,
 				5
 			], 5, 22, r + a)));
-		}), t === 3 && e.push(T(t, {
+		}), t === 3 && e.push(E(t, {
 			en: `${i}\n\nNow they stand in a circle and 1 more joins. How many in all?`,
 			fr: `${i}\n\nMaintenant ils se mettent en cercle et 1 de plus arrive. Combien en tout ?`
-		}, String(r + 1), O(r + 1, [
+		}, String(r + 1), k(r + 1, [
 			r,
 			r + 2,
 			5
 		], 5, 22, r)));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/flashDots.ts
@@ -36237,8 +36237,8 @@ function av(e, t) {
 	}
 }
 function ov(e, t, n, r) {
-	let i = O(t, [n % 2 == 0 ? t < 5 ? t + 1 : t - 1 : t > 1 ? t - 1 : t + 1], 1, 5, n), a = [String(t), ...i], o = a.map((e, n) => n === 0 ? null : Math.abs(Number(e) - t) === 1 ? iv.offByOne : iv.regroup);
-	return L(e, rv, { en: a }, 0, r, o);
+	let i = k(t, [n % 2 == 0 ? t < 5 ? t + 1 : t - 1 : t > 1 ? t - 1 : t + 1], 1, 5, n), a = [String(t), ...i], o = a.map((e, n) => n === 0 ? null : Math.abs(Number(e) - t) === 1 ? iv.offByOne : iv.regroup);
+	return R(e, rv, { en: a }, 0, r, o);
 }
 function sv() {
 	let e = [];
@@ -36278,25 +36278,109 @@ function sv() {
 			flashMs: av(4, t)
 		}));
 	}
-	return R(e);
+	return z(e);
+}
+//#endregion
+//#region packages/syllabus-content-p/src/banks/numberHunt.ts
+var U = {
+	0: [6, 8],
+	1: [7, 4],
+	2: [5, 7],
+	3: [8, 5],
+	4: [9, 1],
+	5: [2, 6],
+	6: [9, 0],
+	7: [1, 2],
+	8: [3, 0],
+	9: [6, 4]
+}, cv = {
+	lookalike: "numberHunt.feedback.lookalike",
+	generic: "numberHunt.feedback.generic"
+}, lv = [
+	"⭐",
+	"🍎",
+	"🐟"
+];
+function uv(e) {
+	let t = Th(e);
+	return {
+		en: `Find ${t.en}.`,
+		fr: `Trouve le ${t.fr}.`
+	};
+}
+function dv(e, t, n) {
+	let r = [
+		...U[t],
+		...U[n],
+		...U[e]
+	];
+	return [...new Set(r)].filter((r) => r !== e && r !== t && r !== n && !Hm([
+		e,
+		t,
+		n,
+		r
+	]));
+}
+var fv = (e) => Number([...String(e)].reverse().join(""));
+function pv(e) {
+	let t = e % 10, n = [
+		fv(e),
+		Math.floor(e / 10) * 10 + U[t][0],
+		e >= 20 ? e - 10 : e + 10,
+		t === 0 ? 1 : t,
+		e - 1,
+		e + 1
+	], r = [...new Set(n)].filter((t) => t !== e), i = r.slice(0, 2), a = r.slice(2).find((t) => !Hm([
+		e,
+		...i,
+		t
+	]));
+	if (a === void 0) throw Error(`no distractors for ${e}`);
+	return [...i, a];
+}
+function mv(e, t) {
+	return e < 10 ? U[e].includes(t) : t === fv(e) || t === Math.floor(e / 10) * 10 + U[e % 10][0];
+}
+function hv() {
+	let e = [], t = (t, n, r, i) => {
+		e.push(R(t, uv(n), { en: [String(n), ...r] }, 0, i, [null, ...r.map((e) => mv(n, Number(e)) ? cv.lookalike : cv.generic)]));
+	};
+	for (let e = 0; e <= 9; e++) {
+		e >= 1 && e <= 5 && Gm(e, 1, 5, 3, 3).forEach((n, r) => t(1, e, n, {
+			type: "counters",
+			groups: [{
+				emoji: lv[r % lv.length],
+				count: e
+			}]
+		}));
+		for (let n of Gm(e, 0, 9, 3, 3)) t(2, e, n);
+		let [n, r] = U[e];
+		for (let i of dv(e, n, r).slice(0, 3)) t(3, e, [
+			String(n),
+			String(r),
+			String(i)
+		]);
+	}
+	for (let e = 10; e <= 20; e++) t(3, e, pv(e).map(String));
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numberSenseK.ts
-var cv = {
+var gv = {
 	en: "Keep them: it is exactly right",
 	fr: "Garde-les : c'est exactement ça"
-}, lv = (e) => ({
+}, _v = (e) => ({
 	en: `Put ${e} back`,
 	fr: `Remets-en ${e}`
-}), uv = (e) => ({
+}), vv = (e) => ({
 	en: `Grab ${e} more`,
 	fr: `Prends-en ${e} de plus`
 });
-function dv() {
+function yv() {
 	let e = [], t = [
 		[
 			1,
-			j(5, 10),
+			M(5, 10),
 			[
 				0,
 				2,
@@ -36305,7 +36389,7 @@ function dv() {
 		],
 		[
 			2,
-			j(11, 15),
+			M(11, 15),
 			[
 				0,
 				1,
@@ -36314,7 +36398,7 @@ function dv() {
 		],
 		[
 			3,
-			j(16, 20),
+			M(16, 20),
 			[
 				0,
 				-1,
@@ -36327,28 +36411,28 @@ function dv() {
 		i.forEach((i, a) => {
 			let o = t + i;
 			if (o > 20) return;
-			let s = F(D, n * 5 + r + a * 3), c = Math.abs(i), [l, u] = i === 0 ? [cv, [
-				lv(1),
-				uv(1),
-				lv(2)
-			]] : i > 0 ? [lv(c), [
-				cv,
-				uv(c),
-				lv(c + 1)
-			]] : [uv(c), [
-				cv,
-				lv(c),
-				uv(c + 1)
+			let s = I(O, n * 5 + r + a * 3), c = Math.abs(i), [l, u] = i === 0 ? [gv, [
+				_v(1),
+				vv(1),
+				_v(2)
+			]] : i > 0 ? [_v(c), [
+				gv,
+				vv(c),
+				_v(c + 1)
+			]] : [vv(c), [
+				gv,
+				_v(c),
+				vv(c + 1)
 			]];
-			e.push(N(n, {
-				en: `You want exactly ${t} ${s}. Your hand 🤲 has:\n\n${k(o, s)}\n\nCount them. What do you do?`,
-				fr: `Tu veux exactement ${t} ${s}. Dans ta main 🤲 il y a :\n\n${k(o, s)}\n\nCompte-les. Que fais-tu ?`
+			e.push(P(n, {
+				en: `You want exactly ${t} ${s}. Your hand 🤲 has:\n\n${A(o, s)}\n\nCount them. What do you do?`,
+				fr: `Tu veux exactement ${t} ${s}. Dans ta main 🤲 il y a :\n\n${A(o, s)}\n\nCompte-les. Que fais-tu ?`
 			}, l, u));
 		});
 	});
-	return A(e);
+	return j(e);
 }
-function fv() {
+function bv() {
 	let e = [], t = (t, n, r, i) => {
 		let a = r ? n + 1 : n - 1, o = r ? n - 1 : n + 1, s = r ? n + 2 : n - 2, c = r ? {
 			en: "Tap the card for ONE MORE.",
@@ -36357,7 +36441,7 @@ function fv() {
 			en: "Tap the card for ONE LESS.",
 			fr: "Touche la carte « un de moins »."
 		};
-		e.push(M(t, {
+		e.push(N(t, {
 			en: `🎈 Pop! ${n} pops up.\n\n${c.en}`,
 			fr: `🎈 Pop ! ${n} apparaît.\n\n${c.fr}`
 		}, a, [
@@ -36369,40 +36453,40 @@ function fv() {
 	for (let e = 0; e <= 9; e++) t(1, e, !0, 10);
 	for (let e = 0; e <= 10; e++) e < 10 && t(2, e, !0, 10), e > 0 && t(2, e, !1, 10);
 	for (let e = 0; e <= 20; e++) e < 20 && t(3, e, !0, 20), e > 0 && t(3, e, !1, 20);
-	return A(e);
+	return j(e);
 }
-var pv = (e, t) => j(e, t).join(" ");
-function mv() {
+var xv = (e, t) => M(e, t).join(" ");
+function Sv() {
 	let e = [];
-	for (let t of j(2, 8)) e.push(M(1, {
+	for (let t of M(2, 8)) e.push(N(1, {
 		en: `Count on: ${t} ${t + 1} ...\n\nWhat comes next?`,
 		fr: `On compte en avant : ${t} ${t + 1} ...\n\nQu'est-ce qui vient ensuite ?`
 	}, t + 2, [t + 1, t + 3], 0, 10, t));
-	for (let t of j(2, 9)) e.push(M(2, {
+	for (let t of M(2, 9)) e.push(N(2, {
 		en: `Start at ${t}. Count on.\n\nWhat do you say next?`,
 		fr: `Commence à ${t}. Compte en avant.\n\nQue dis-tu ensuite ?`
 	}, t + 1, [t - 1, t + 2], 0, 10, t));
-	for (let t of j(2, 9)) {
-		let n = j(t, 10).filter((e) => e !== t + 1).join(" "), r = j(0, t).reverse().join(" ");
-		e.push(P(3, {
+	for (let t of M(2, 9)) {
+		let n = M(t, 10).filter((e) => e !== t + 1).join(" "), r = M(0, t).reverse().join(" ");
+		e.push(F(3, {
 			en: `Start at ${t} and count on to 10.\n\nWhich row is right?`,
 			fr: `Commence à ${t} et compte en avant jusqu'à 10.\n\nQuelle rangée est la bonne ?`
-		}, pv(t, 10), t === 9 ? [
+		}, xv(t, 10), t === 9 ? [
 			"10 9",
 			r,
 			"8 9 10"
 		] : [
 			n,
-			pv(t, 9),
+			xv(t, 9),
 			r
 		]));
 	}
-	return A(e);
+	return j(e);
 }
-function hv() {
+function Cv() {
 	let e = [], t = (t, n, r, i) => {
-		let a = Math.min(n, r + 3), o = Math.max(0, r - 2), s = j(o, a).reverse().map((e) => e === r ? "?" : String(e)).join(" "), c = `${a < n ? "... " : ""}${s}${o === 0 ? " 🚀" : " ..."}`;
-		e.push(M(t, {
+		let a = Math.min(n, r + 3), o = Math.max(0, r - 2), s = M(o, a).reverse().map((e) => e === r ? "?" : String(e)).join(" "), c = `${a < n ? "... " : ""}${s}${o === 0 ? " 🚀" : " ..."}`;
+		e.push(N(t, {
 			en: `🚀 Countdown from ${n}!\n\n${c}\n\nWhich number is missing?`,
 			fr: `🚀 Compte à rebours depuis ${n} !\n\n${c}\n\nQuel nombre manque ?`
 		}, r, [r + 1, r - 1], 0, Math.max(n, 6), i));
@@ -36411,7 +36495,7 @@ function hv() {
 		5,
 		4,
 		3
-	].forEach((e, n) => j(0, e - 1).forEach((r) => t(1, e, r, n + r))), [
+	].forEach((e, n) => M(0, e - 1).forEach((r) => t(1, e, r, n + r))), [
 		10,
 		9,
 		8,
@@ -36433,9 +36517,9 @@ function hv() {
 		1,
 		2,
 		5
-	].forEach((r) => t(3, e, r, n + r))), A(e);
+	].forEach((r) => t(3, e, r, n + r))), j(e);
 }
-function gv() {
+function wv() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -36553,8 +36637,8 @@ function gv() {
 			]
 		]]
 	]) n.forEach((n, r) => {
-		let i = t < 3 || r % 2 == 0, a = [...n].sort((e, t) => i ? e - t : t - e), o = (e, t) => I(a, e, t).join(" "), s = a.length - 1;
-		e.push(P(t, {
+		let i = t < 3 || r % 2 == 0, a = [...n].sort((e, t) => i ? e - t : t - e), o = (e, t) => L(a, e, t).join(" "), s = a.length - 1;
+		e.push(F(t, {
 			en: `Cards: ${n.join(" ")}\n\nLine them up, ${i ? "smallest" : "biggest"} first. Which row is right?`,
 			fr: `Cartes : ${n.join(" ")}\n\nRange-les, ${i ? "la plus petite" : "la plus grande"} d'abord. Quelle rangée est la bonne ?`
 		}, a.join(" "), [
@@ -36563,14 +36647,14 @@ function gv() {
 			o(s - 1, s)
 		]));
 	});
-	return A(e);
+	return j(e);
 }
-function _v() {
-	let e = [], t = (e, t, n) => j(e, t).map((e) => n.includes(e) ? "?" : String(e)).join(" "), n = {
+function Tv() {
+	let e = [], t = (e, t, n) => M(e, t).map((e) => n.includes(e) ? "?" : String(e)).join(" "), n = {
 		en: "Which card is missing?",
 		fr: "Quelle carte manque ?"
 	};
-	for (let r of j(2, 8)) e.push(M(1, {
+	for (let r of M(2, 8)) e.push(N(1, {
 		en: `${t(r - 2, r + 2, [r])}\n\n${n.en}`,
 		fr: `${t(r - 2, r + 2, [r])}\n\n${n.fr}`
 	}, r, [r - 1, r + 1], 0, 10, r));
@@ -36580,7 +36664,7 @@ function _v() {
 		2
 	]) {
 		let i = t(0, 5, [r]);
-		e.push(M(2, {
+		e.push(N(2, {
 			en: `${i}\n\n${n.en}`,
 			fr: `${i}\n\n${n.fr}`
 		}, r, [r + 1, r + 2], 0, 10, r));
@@ -36591,7 +36675,7 @@ function _v() {
 		10
 	]) {
 		let i = t(5, 10, [r]);
-		e.push(M(2, {
+		e.push(N(2, {
 			en: `${i}\n\n${n.en}`,
 			fr: `${i}\n\n${n.fr}`
 		}, r, [r - 1, r - 2], 0, 10, r));
@@ -36607,7 +36691,7 @@ function _v() {
 		[0, 6]
 	]) {
 		let i = t(0, 10, [n, r]), a = (e, t) => `${e} ${t}`;
-		e.push(P(3, {
+		e.push(F(3, {
 			en: `${i}\n\nWhich two cards are missing, in order?`,
 			fr: `${i}\n\nQuelles deux cartes manquent, dans l'ordre ?`
 		}, a(n, r), [
@@ -36616,9 +36700,9 @@ function _v() {
 			a(n, Math.min(10, r + 1) === r ? r - 1 : r + 1)
 		]));
 	}
-	return A(e);
+	return j(e);
 }
-function vv() {
+function Ev() {
 	let e = [];
 	for (let [t, , n] of [
 		[
@@ -36661,7 +36745,7 @@ function vv() {
 		]
 	]) n.forEach(([n, r], i) => {
 		let [a, o] = i % 2 == 0 ? [n, r] : [r, n];
-		e.push(M(t, {
+		e.push(N(t, {
 			en: `🃏 Showdown!  ${a}  vs  ${o}\n\nThe bigger card wins. Which card wins?`,
 			fr: `🃏 Bataille !  ${a}  contre  ${o}\n\nLa plus grande carte gagne. Quelle carte gagne ?`
 		}, r, [
@@ -36670,11 +36754,273 @@ function vv() {
 			n - 1
 		], 0, 10, i + t));
 	});
-	return A(e);
+	return j(e);
+}
+function Dv() {
+	let e = [], t = (t, n, r, i, a) => {
+		let o = n - r, s = i ? `? and ${o}` : `${r} and ?`, c = i ? `? et ${o}` : `${r} et ?`;
+		e.push(N(t, {
+			en: `${n} is ${s}\n\nWhat is the missing part?`,
+			fr: `${n}, c'est ${c}\n\nQuelle est la partie qui manque ?`
+		}, i ? r : o, [
+			i ? o : r,
+			n,
+			(i ? r : o) + 1
+		], 0, 10, a));
+	};
+	for (let e of [6, 7]) M(1, e - 1).forEach((n) => t(1, e, n, !1, n + e));
+	for (let e of [
+		8,
+		9,
+		10
+	]) for (let n of [
+		2,
+		3,
+		4,
+		5,
+		6
+	]) t(2, e, n, !1, n + e), t(2, e, n, !0, n + e + 1);
+	for (let t of M(6, 10)) for (let n of M(2, Math.floor(t / 2) + 1)) {
+		let r = t - n;
+		e.push(F(3, {
+			en: `Which two parts make ${t}?`,
+			fr: `Quelles deux parties font ${t} ?`
+		}, `${n} + ${r}`, [
+			`${n + 1} + ${r}`,
+			`${n} + ${r + 1}`,
+			`${n - 1} + ${r}`
+		]));
+	}
+	return j(e);
+}
+var Ov = [
+	{
+		en: "Start at the top, go round to the left and down, then come back up to the top.",
+		fr: "Pars du haut, tourne vers la gauche et descends, puis remonte jusqu'en haut."
+	},
+	{
+		en: "Start at the top and go straight down.",
+		fr: "Pars du haut et descends tout droit."
+	},
+	{
+		en: "Start at the top left, curve right and down, then slide along the bottom to the right.",
+		fr: "Pars en haut à gauche, courbe vers la droite et descends, puis glisse vers la droite en bas."
+	},
+	{
+		en: "Start at the top left, curve round to the middle, then curve round again to the bottom.",
+		fr: "Pars en haut à gauche, courbe jusqu'au milieu, puis courbe encore jusqu'en bas."
+	},
+	{
+		en: "Go down and across to the right, then lift your pencil and go down on the right side.",
+		fr: "Descends puis va vers la droite, lève le crayon et descends sur le côté droit."
+	},
+	{
+		en: "Go down, curve round the belly, then lift your pencil and add a flat hat on top.",
+		fr: "Descends, fais un ventre rond, puis lève le crayon et ajoute un chapeau plat en haut."
+	},
+	{
+		en: "Start at the top, curve down and left, then close a round loop at the bottom.",
+		fr: "Pars du haut, courbe vers la gauche en descendant, puis ferme une boucle ronde en bas."
+	},
+	{
+		en: "Go across the top to the right, then slant down to the left.",
+		fr: "Va vers la droite en haut, puis descends en biais vers la gauche."
+	},
+	{
+		en: "Make an S from the top, then come back up to close it: two round loops, one on top of the other.",
+		fr: "Dessine un S depuis le haut, puis remonte pour le fermer : deux boucles rondes l'une sur l'autre."
+	},
+	{
+		en: "Make a round loop at the top, then a straight line down.",
+		fr: "Fais une boucle ronde en haut, puis une ligne droite vers le bas."
+	}
+];
+function kv() {
+	let e = [], t = (e) => Ov[e], n = (n, r, i) => e.push(P(n, {
+		en: `✏️ How do you write ${r}?`,
+		fr: `✏️ Comment écrit-on ${r} ?`
+	}, t(r), i.map(t)));
+	for (let e of [
+		1,
+		7,
+		0,
+		4,
+		2,
+		9
+	]) n(1, e, [
+		(e + 3) % 10,
+		(e + 5) % 10,
+		(e + 7) % 10
+	]);
+	for (let e = 0; e <= 9; e++) {
+		let t = [.../* @__PURE__ */ new Set([
+			...U[e],
+			(e + 5) % 10,
+			(e + 3) % 10,
+			(e + 7) % 10,
+			(e + 1) % 10
+		])].filter((t) => t !== e);
+		n(2, e, t.slice(0, 3));
+	}
+	for (let n of [
+		3,
+		8,
+		6,
+		5,
+		1,
+		7,
+		2,
+		4
+	]) e.push(N(3, {
+		en: `✏️ Your pencil does this:\n\n${t(n).en}\n\nWhich numeral is it?`,
+		fr: `✏️ Ton crayon fait ceci :\n\n${t(n).fr}\n\nQuel chiffre est-ce ?`
+	}, n, [...U[n], (n + 5) % 10], 0, 9, n));
+	return j(e);
+}
+var Av = (e, t, n) => [...new Set(t)].filter((t) => t !== e).slice(0, n);
+function jv() {
+	let e = [];
+	for (let t = 10; t <= 20; t++) {
+		let n = Math.floor(t / 10), r = t % 10;
+		e.push(N(1, {
+			en: `✏️ You write ${t}.\n\nWhich digit do you write FIRST?`,
+			fr: `✏️ Tu écris ${t}.\n\nQuel chiffre écris-tu EN PREMIER ?`
+		}, n, [
+			r,
+			n + 1,
+			0
+		], 0, 9, t)), e.push(N(2, {
+			en: `✏️ You write ${t}.\n\nWhich digit do you write SECOND?`,
+			fr: `✏️ Tu écris ${t}.\n\nQuel chiffre écris-tu EN SECOND ?`
+		}, r, [
+			n,
+			(r + 5) % 10,
+			(r + 2) % 10
+		], 0, 9, t));
+		let i = String(t);
+		e.push(F(3, {
+			en: `You write a ${n}, and then a ${r}.\n\nWhich numeral did you write?`,
+			fr: `Tu écris un ${n}, puis un ${r}.\n\nQuel nombre as-tu écrit ?`
+		}, i, Av(i, [
+			`${r}${n}`,
+			`${n}0${r}`,
+			`${r}`,
+			`${n}${n}${r}`,
+			`${t + 1}`
+		], 3)));
+	}
+	return j(e);
+}
+var Mv = (e) => M(0, 10).map((e) => e * 10).filter((t) => t !== e).sort((t, n) => Math.abs(t - e) - Math.abs(n - e) || t - n).slice(0, 3);
+function Nv() {
+	let e = [], t = (t, n, r, i) => {
+		let a = n.join(" ");
+		e.push(N(t, {
+			en: `🪜 Tens staircase:\n\n${a}\n\nWhich number is on the missing step?`,
+			fr: `🪜 Escalier des dizaines :\n\n${a}\n\nQuel nombre est sur la marche qui manque ?`
+		}, r, Mv(r), 0, 100, i));
+	};
+	for (let e of [
+		10,
+		20,
+		30
+	]) t(1, [
+		e,
+		e + 10,
+		e + 20,
+		"?"
+	], e + 30, e), t(1, [
+		e,
+		e + 10,
+		"?"
+	], e + 20, e + 1);
+	for (let e of [
+		10,
+		20,
+		30,
+		40,
+		50,
+		60
+	]) for (let n of [1, 3]) t(2, M(0, 4).map((t) => t === n ? "?" : e + t * 10), e + n * 10, e + n);
+	for (let t = 0; t <= 100; t += 10) t < 100 && e.push(N(3, {
+		en: `🪜 You stand on step ${t}. Climb ONE step up (10 more).\n\nWhere are you?`,
+		fr: `🪜 Tu es sur la marche ${t}. Monte d'UNE marche (10 de plus).\n\nOù es-tu ?`
+	}, t + 10, Mv(t + 10), 0, 100, t)), t > 0 && e.push(N(3, {
+		en: `🪜 You stand on step ${t}. Go ONE step down (10 less).\n\nWhere are you?`,
+		fr: `🪜 Tu es sur la marche ${t}. Descends d'UNE marche (10 de moins).\n\nOù es-tu ?`
+	}, t - 10, Mv(t - 10), 0, 100, t));
+	return j(e);
+}
+function Pv() {
+	let e = [], t = (t, n, r) => {
+		let i = [
+			r,
+			r + n,
+			r + 2 * n
+		], a = i[2];
+		e.push(N(t, {
+			en: `🐸 The frog hops by ${n}:\n\n${i.join(" ")} ?\n\nWhere does it land next?`,
+			fr: `🐸 La grenouille saute de ${n} en ${n} :\n\n${i.join(" ")} ?\n\nOù atterrit-elle ensuite ?`
+		}, a + n, [
+			a,
+			a + 1,
+			a + 2 * n
+		], 0, 100, r));
+	};
+	for (let e of [
+		2,
+		4,
+		6,
+		8,
+		10,
+		12
+	]) t(1, 2, e);
+	for (let e of [
+		5,
+		10,
+		15,
+		20
+	]) t(2, 5, e);
+	for (let e of [
+		10,
+		20,
+		30,
+		40
+	]) t(2, 10, e);
+	let n = (t, n) => e.push(N(3, {
+		en: `🐸 The frog starts at 0 and hops by ${t}.\n\nWhich number does it land on?`,
+		fr: `🐸 La grenouille part de 0 et saute de ${t} en ${t}.\n\nSur quel nombre atterrit-elle ?`
+	}, n, [
+		n - 1,
+		n + 1,
+		n + 3
+	], 0, 100, n));
+	for (let e of [
+		12,
+		18,
+		24,
+		30,
+		20
+	]) n(2, e);
+	for (let e of [
+		15,
+		25,
+		35,
+		50,
+		40
+	]) n(5, e);
+	for (let e of [
+		30,
+		50,
+		70,
+		60,
+		90
+	]) n(10, e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/missingItem.ts
-var yv = [
+var Fv = [
 	"🔵",
 	"🟥",
 	"🔺",
@@ -36683,7 +37029,7 @@ var yv = [
 	"🌙",
 	"🍎",
 	"🐟"
-], bv = {
+], Iv = {
 	1: [[0, 1]],
 	2: [[
 		0,
@@ -36700,34 +37046,34 @@ var yv = [
 		2
 	]]
 };
-function xv() {
+function Lv() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n = 0; n < yv.length; n++) for (let r of bv[t]) {
-		let i = Math.max(...r) + 1, a = Array.from({ length: i }, (e, t) => yv[(n + t) % yv.length]), o = (e) => a[r[e % r.length]], s = r.length * 3, c = r.length + Math.floor(r.length / 2), l = Array.from({ length: s }, (e, t) => t === c ? "❓" : o(t)), u = o(c), d = a.filter((e) => e !== u), f = l.join(" ");
-		e.push(T(t, {
+	]) for (let n = 0; n < Fv.length; n++) for (let r of Iv[t]) {
+		let i = Math.max(...r) + 1, a = Array.from({ length: i }, (e, t) => Fv[(n + t) % Fv.length]), o = (e) => a[r[e % r.length]], s = r.length * 3, c = r.length + Math.floor(r.length / 2), l = Array.from({ length: s }, (e, t) => t === c ? "❓" : o(t)), u = o(c), d = a.filter((e) => e !== u), f = l.join(" ");
+		e.push(E(t, {
 			en: `${f}\n\nWhich one fills the gap?`,
 			fr: `${f}\n\nLequel comble le vide ?`
 		}, u, d));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/measurement.ts
-function Sv(e, t, n) {
+function Rv(e, t, n) {
 	let r = [];
 	for (let i = 0; i < e; i++) for (let a = i + t; a <= Math.min(e - 1, i + n); a++) r.push([i, a]);
 	return r;
 }
-function Cv(e, t, n) {
+function zv(e, t, n) {
 	let r = [];
-	for (let { level: i, low: a, high: o } of t) Sv(e.length, a, o).forEach(([t, a], o) => {
+	for (let { level: i, low: a, high: o } of t) Rv(e.length, a, o).forEach(([t, a], o) => {
 		n.forEach((n, s) => {
 			let c = ((o + s) % 2 == 0 ? [e[t], e[a]] : [e[a], e[t]]).join("  "), l = n.larger ? e[a] : e[t], u = n.larger ? e[t] : e[a];
-			r.push(E(i, {
+			r.push(D(i, {
 				prompt: `${c}\n\n${n.en}`,
 				options: [l, u]
 			}, {
@@ -36736,9 +37082,9 @@ function Cv(e, t, n) {
 			}));
 		});
 	});
-	return A(r);
+	return j(r);
 }
-var wv = [
+var Bv = [
 	"🪶",
 	"🐭",
 	"🍎",
@@ -36747,7 +37093,7 @@ var wv = [
 	"🚗",
 	"🐘",
 	"🚢"
-], Tv = [
+], Vv = [
 	"🥄",
 	"🍶",
 	"🥛",
@@ -36756,7 +37102,7 @@ var wv = [
 	"🪣",
 	"🛁",
 	"🏊"
-], Ev = [{
+], Hv = [{
 	en: "Which is HEAVIER?",
 	fr: "Lequel est le PLUS LOURD ?",
 	larger: !0
@@ -36764,7 +37110,7 @@ var wv = [
 	en: "Which is LIGHTER?",
 	fr: "Lequel est le PLUS LÉGER ?",
 	larger: !1
-}], Dv = [{
+}], Uv = [{
 	en: "Which can hold MORE water?",
 	fr: "Lequel peut contenir PLUS d'eau ?",
 	larger: !0
@@ -36773,8 +37119,8 @@ var wv = [
 	fr: "Lequel peut contenir MOINS d'eau ?",
 	larger: !1
 }];
-function Ov() {
-	return Cv(wv, [
+function Wv() {
+	return zv(Bv, [
 		{
 			level: 1,
 			low: 4,
@@ -36790,10 +37136,10 @@ function Ov() {
 			low: 2,
 			high: 2
 		}
-	], Ev);
+	], Hv);
 }
-function kv() {
-	return Cv(Tv, [
+function Gv() {
+	return zv(Vv, [
 		{
 			level: 1,
 			low: 4,
@@ -36809,9 +37155,9 @@ function kv() {
 			low: 2,
 			high: 2
 		}
-	], Dv);
+	], Uv);
 }
-var Av = [{
+var Kv = [{
 	emoji: "🟥",
 	en: "Red",
 	fr: "Rouge"
@@ -36820,7 +37166,7 @@ var Av = [{
 	en: "Blue",
 	fr: "Bleu"
 }];
-function jv() {
+function qv() {
 	let e = [];
 	for (let { level: t, low: n, high: r, staggered: i } of [
 		{
@@ -36841,17 +37187,17 @@ function jv() {
 			high: 1,
 			staggered: !0
 		}
-	]) Sv(7, n, r).forEach(([n, r], a) => {
+	]) Rv(7, n, r).forEach(([n, r], a) => {
 		let o = n + 2, s = r + 2;
 		[0, 1].forEach((n) => {
-			let [r, c] = n === 0 ? [Av[0], Av[1]] : [Av[1], Av[0]], l = r.emoji.repeat(s), u = (i ? "⬜".repeat(s - o) : "") + c.emoji.repeat(o), d = (a + n) % 2 == 0 ? [l, u] : [u, l], f = (a + n) % 2 == 1, p = f ? c : r, m = f ? r : c, ee = f ? {
+			let [r, c] = n === 0 ? [Kv[0], Kv[1]] : [Kv[1], Kv[0]], l = r.emoji.repeat(s), u = (i ? "⬜".repeat(s - o) : "") + c.emoji.repeat(o), d = (a + n) % 2 == 0 ? [l, u] : [u, l], f = (a + n) % 2 == 1, p = f ? c : r, m = f ? r : c, ee = f ? {
 				en: "SHORTER",
 				fr: "PLUS COURT"
 			} : {
 				en: "LONGER",
 				fr: "PLUS LONG"
 			}, te = d.join("\n");
-			e.push(E(t, {
+			e.push(D(t, {
 				prompt: `${te}\n\nWhich is ${ee.en}?`,
 				options: [`${p.emoji} ${p.en}`, `${m.emoji} ${m.en}`]
 			}, {
@@ -36860,11 +37206,11 @@ function jv() {
 			}));
 		});
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/movement.ts
-var U = {
+var W = {
 	forward: {
 		en: "Forward",
 		fr: "Avance"
@@ -36881,12 +37227,12 @@ var U = {
 		en: "Down",
 		fr: "Descend"
 	}
-}, Mv = "🤖", Nv = "🎯";
-function Pv() {
+}, Jv = "🤖", Yv = "🎯";
+function Xv() {
 	let e = [];
 	for (let t = 1; t <= 5; t++) {
-		let n = t % 2 == 0, r = n ? `${Mv}${"⬜".repeat(t)}${Nv}` : `${Nv}${"⬜".repeat(t)}${Mv}`, i = n ? U.forward : U.back, a = n ? U.back : U.forward;
-		e.push(E(1, {
+		let n = t % 2 == 0, r = n ? `${Jv}${"⬜".repeat(t)}${Yv}` : `${Yv}${"⬜".repeat(t)}${Jv}`, i = n ? W.forward : W.back, a = n ? W.back : W.forward;
+		e.push(D(1, {
 			prompt: `${r}\n\nWhich instruction moves the robot to the target?`,
 			options: [i.en, a.en]
 		}, {
@@ -36895,8 +37241,8 @@ function Pv() {
 		}));
 	}
 	for (let t = 1; t <= 5; t++) {
-		let n = t % 2 == 0, r = Array.from({ length: t + 1 }, (e, r) => n ? r === t ? Nv : r === 0 ? Mv : "⬜" : r === t ? Mv : r === 0 ? Nv : "⬜").join("\n"), i = n ? U.up : U.down, a = n ? U.down : U.up;
-		e.push(E(2, {
+		let n = t % 2 == 0, r = Array.from({ length: t + 1 }, (e, r) => n ? r === t ? Yv : r === 0 ? Jv : "⬜" : r === t ? Jv : r === 0 ? Yv : "⬜").join("\n"), i = n ? W.up : W.down, a = n ? W.down : W.up;
+		e.push(D(2, {
 			prompt: `${r}\n\nWhich instruction moves the robot to the target?`,
 			options: [i.en, a.en]
 		}, {
@@ -36904,10 +37250,10 @@ function Pv() {
 			options: [i.fr, a.fr]
 		}));
 	}
-	let t = [U.forward, U.back], n = [U.up, U.down];
+	let t = [W.forward, W.back], n = [W.up, W.down];
 	for (let r of t) for (let t of n) for (let n of [1, 2]) {
-		let i = `${r.en} then ${t.en}`, a = `${r.fr} puis ${t.fr}`, o = `${t.en} then ${r.en}`, s = `${t.fr} puis ${r.fr}`, c = r === U.forward ? U.back : U.forward, l = `${c.en} then ${t.en}`, u = `${c.fr} puis ${t.fr}`, d = `${Mv} ${"➡️".repeat(n) + (t === U.up ? "⬆️" : "⬇️").repeat(n)} ${Nv}`;
-		e.push(E(3, {
+		let i = `${r.en} then ${t.en}`, a = `${r.fr} puis ${t.fr}`, o = `${t.en} then ${r.en}`, s = `${t.fr} puis ${r.fr}`, c = r === W.forward ? W.back : W.forward, l = `${c.en} then ${t.en}`, u = `${c.fr} puis ${t.fr}`, d = `${Jv} ${"➡️".repeat(n) + (t === W.up ? "⬆️" : "⬇️").repeat(n)} ${Yv}`;
+		e.push(D(3, {
 			prompt: `${d}\n\nWhich two-step instruction reaches the target?`,
 			options: [
 				i,
@@ -36923,47 +37269,47 @@ function Pv() {
 			]
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/moreFewer.ts
-function Fv(e, t) {
-	let n = (e * 3 + t) % D.length;
-	return [D[n], D[(n + 1 + e % 3) % D.length]];
+function Zv(e, t) {
+	let n = (e * 3 + t) % O.length;
+	return [O[n], O[(n + 1 + e % 3) % O.length]];
 }
-function Iv(e, t, n, r) {
+function Qv(e, t, n, r) {
 	let i = [];
 	for (let a = e; a <= t; a++) for (let e = a + n; e <= Math.min(t, a + r); e++) i.push([a, e]);
 	return i;
 }
-function Lv(e, t, n, r, i = Zm) {
-	if (!n) return Xm(Array.from({ length: e }, () => t), i);
+function $v(e, t, n, r, i = Xm) {
+	if (!n) return Ym(Array.from({ length: e }, () => t), i);
 	let a = [];
 	for (let n = e, i = 0; n > 0; n -= 5, i++) a.push(tv(Math.min(5, n), t, r + i));
 	return a.join(i);
 }
-function Rv() {
+function ey() {
 	let e = [], t = [
 		{
 			level: 1,
-			pairs: Iv(1, 10, 3, 9),
+			pairs: Qv(1, 10, 3, 9),
 			scatter: !1
 		},
 		{
 			level: 2,
-			pairs: Iv(1, 10, 1, 2),
+			pairs: Qv(1, 10, 1, 2),
 			scatter: !0
 		},
 		{
 			level: 3,
-			pairs: Iv(1, 10, 1, 4),
+			pairs: Qv(1, 10, 1, 4),
 			scatter: !0
 		}
 	];
 	for (let { level: n, pairs: r, scatter: i } of t) r.forEach(([t, r], a) => {
-		let [o, s] = Fv(t, r);
+		let [o, s] = Zv(t, r);
 		for (let c of [!1, !0]) {
-			let l = (a + +!!c) % 2 == 0, u = l ? o : s, d = l ? s : o, f = Lv(t, u, i, a), p = Lv(r, d, i, a + 1), m = c ? {
+			let l = (a + +!!c) % 2 == 0, u = l ? o : s, d = l ? s : o, f = $v(t, u, i, a), p = $v(r, d, i, a + 1), m = c ? {
 				en: "FEWER",
 				fr: "MOINS"
 			} : {
@@ -36977,7 +37323,7 @@ function Rv() {
 				count: r
 			};
 			e.push({
-				...E(n, {
+				...D(n, {
 					prompt: `Which has ${m.en}?`,
 					options: [ee, te]
 				}, {
@@ -36991,21 +37337,21 @@ function Rv() {
 			});
 		}
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sameOrNot.ts
-var zv = {
+var ty = {
 	leftover: "sameOrNot.feedback.leftover",
 	spread: "sameOrNot.feedback.spread",
 	kindDoesNotMatter: "sameOrNot.feedback.kindDoesNotMatter"
-}, Bv = {
+}, ny = {
 	en: "Same number?",
 	fr: "Le même nombre ?"
-}, Vv = {
+}, ry = {
 	en: ["Same", "Not same"],
 	fr: ["Pareil", "Pas pareil"]
-}, Hv = [
+}, iy = [
 	{
 		level: 1,
 		max: 5,
@@ -37028,12 +37374,12 @@ var zv = {
 		sameKind: !1
 	}
 ];
-function Uv() {
+function ay() {
 	let e = [];
-	for (let { level: t, max: n, low: r, high: i, sameKind: a } of Hv) {
+	for (let { level: t, max: n, low: r, high: i, sameKind: a } of iy) {
 		let o = 0;
 		for (let s = 1; s <= n; s++) for (let c = s + r; c <= Math.min(n, s + i); c++) for (let n of [0, 1]) {
-			let r = D[(s * 3 + c + n * 5) % D.length], i = n === 1 && a ? r : D[(s * 3 + c + n * 5 + 1 + s % 3) % D.length], l = (o + n) % 2 == 1, u = (e, n) => {
+			let r = O[(s * 3 + c + n * 5) % O.length], i = n === 1 && a ? r : O[(s * 3 + c + n * 5 + 1 + s % 3) % O.length], l = (o + n) % 2 == 1, u = (e, n) => {
 				let a = {
 					type: "counters",
 					groups: [{
@@ -37044,23 +37390,23 @@ function Uv() {
 						count: l ? e : n
 					}],
 					operator: "vs"
-				}, o = e === n, s = o ? [null, r !== i && t === 3 ? zv.kindDoesNotMatter : zv.spread] : [zv.leftover, null];
-				return L(t, Bv, Vv, +!o, a, s);
+				}, o = e === n, s = o ? [null, r !== i && t === 3 ? ty.kindDoesNotMatter : ty.spread] : [ty.leftover, null];
+				return R(t, ny, ry, +!o, a, s);
 			};
 			e.push(u(s, c));
 			let d = o % 2 == 0 ? s : c;
 			e.push(u(d, d)), o++;
 		}
 	}
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameTheRule.ts
-var Wv = {
+var oy = {
 	showRule: "nameGroup.fb.showRule",
 	sameColourNotKind: "nameGroup.fb.sameColourNotKind",
 	sameKindNotColour: "nameGroup.fb.sameKindNotColour"
-}, W = {
+}, G = {
 	fruit: [
 		"🍎",
 		"🍌",
@@ -37125,7 +37471,7 @@ var Wv = {
 		"🍅",
 		"🍆"
 	]
-}, Gv = {
+}, sy = {
 	red: [
 		"🍎",
 		"🍓",
@@ -37158,193 +37504,109 @@ var Wv = {
 		"🎾",
 		"🍩"
 	]
-}, Kv = (e) => Object.keys(W).find((t) => W[t].includes(e)), qv = (e) => Object.keys(Gv).filter((t) => Gv[t].includes(e)), Jv = Object.keys(W), Yv = Object.keys(Gv), Xv = (e, t, n) => Array.from({ length: n }, (n, r) => e[(t + r) % e.length]), Zv = (e, t, n) => {
+}, cy = (e) => Object.keys(G).find((t) => G[t].includes(e)), ly = (e) => Object.keys(sy).filter((t) => sy[t].includes(e)), uy = Object.keys(G), dy = Object.keys(sy), fy = (e, t, n) => Array.from({ length: n }, (n, r) => e[(t + r) % e.length]), py = (e, t, n) => {
 	let r = e.filter((e) => !t.includes(e));
 	return r[n % r.length];
-}, Qv = (e) => ({
+}, my = (e) => ({
 	emoji: e,
 	count: 1
 });
-function $v(e, t, n, r) {
-	return L(e, t, { en: r.map((e) => e.emoji) }, 0, {
+function hy(e, t, n, r) {
+	return R(e, t, { en: r.map((e) => e.emoji) }, 0, {
 		type: "pick-group",
-		groups: r.map((e) => Qv(e.emoji)),
+		groups: r.map((e) => my(e.emoji)),
 		...n && { prompts: n.map((e) => ({ emoji: e })) },
 		reveal: "none"
 	}, r.map((e) => e.feedback));
 }
-var ey = {
+var gy = {
 	en: "What goes with these?",
 	fr: "Qu'est-ce qui va avec ?"
-}, ty = {
+}, _y = {
 	en: "Which one does not belong?",
 	fr: "Lequel ne va pas avec les autres ?"
 };
-function ny() {
+function vy() {
 	let e = [];
-	return Jv.forEach((t, n) => {
+	return uy.forEach((t, n) => {
 		for (let r of [0, 2]) {
-			let i = Xv(W[t], r, 3), a = Zv(W[t], i, r), o = W[Jv[(n + 3 + r) % Jv.length]][(n + r) % 6];
-			e.push($v(1, ey, i, [{
+			let i = fy(G[t], r, 3), a = py(G[t], i, r), o = G[uy[(n + 3 + r) % uy.length]][(n + r) % 6];
+			e.push(hy(1, gy, i, [{
 				emoji: a,
 				feedback: null
 			}, {
 				emoji: o,
-				feedback: Wv.showRule
+				feedback: oy.showRule
 			}]));
 		}
-	}), Yv.forEach((t, n) => {
+	}), dy.forEach((t, n) => {
 		for (let r of [
 			0,
 			1,
 			2,
 			3
 		]) {
-			let i = Xv(Gv[t], r, 3), a = Zv(Gv[t], i, r), o = new Set(i.map(Kv)), s = Object.values(W).flat().filter((e) => o.has(Kv(e)) && !qv(e).includes(t)), c = s[(n * 3 + r) % s.length], l = Yv[(n + 1 + r % 3) % Yv.length], u = Zv(Gv[l].filter((e) => !qv(e).includes(t) && e !== c), [], r);
-			e.push($v(2, ey, i, [
+			let i = fy(sy[t], r, 3), a = py(sy[t], i, r), o = new Set(i.map(cy)), s = Object.values(G).flat().filter((e) => o.has(cy(e)) && !ly(e).includes(t)), c = s[(n * 3 + r) % s.length], l = dy[(n + 1 + r % 3) % dy.length], u = py(sy[l].filter((e) => !ly(e).includes(t) && e !== c), [], r);
+			e.push(hy(2, gy, i, [
 				{
 					emoji: a,
 					feedback: null
 				},
 				{
 					emoji: c,
-					feedback: Wv.sameKindNotColour
+					feedback: oy.sameKindNotColour
 				},
 				{
 					emoji: u,
-					feedback: Wv.showRule
+					feedback: oy.showRule
 				}
 			]));
 		}
-	}), Jv.forEach((t, n) => {
+	}), uy.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = Xv(W[t], r, 3), a = Zv(W[t], i, r), o = qv(a).find((e) => e !== "round"), s = o ? Gv[o].find((e) => Kv(e) !== t && !i.includes(e)) : void 0, c = W[Jv[(n + 2 + r) % Jv.length]][(n + r) % 6], l = [
+			let i = fy(G[t], r, 3), a = py(G[t], i, r), o = ly(a).find((e) => e !== "round"), s = o ? sy[o].find((e) => cy(e) !== t && !i.includes(e)) : void 0, c = G[uy[(n + 2 + r) % uy.length]][(n + r) % 6], l = [
 				{
 					emoji: a,
 					feedback: null
 				},
 				...s ? [{
 					emoji: s,
-					feedback: Wv.sameColourNotKind
+					feedback: oy.sameColourNotKind
 				}] : [],
 				{
 					emoji: c,
-					feedback: Wv.showRule
+					feedback: oy.showRule
 				}
 			];
-			new Set(l.map((e) => e.emoji)).size === l.length && l.length >= 2 && e.push($v(3, ey, i, l));
+			new Set(l.map((e) => e.emoji)).size === l.length && l.length >= 2 && e.push(hy(3, gy, i, l));
 		}
-	}), Jv.forEach((t, n) => {
-		let r = Xv(W[t], n, 3), i = qv(r[0]).find((e) => e !== "round"), a = (i ? Gv[i].find((e) => Kv(e) !== t) : void 0) ?? W[Jv[(n + 4) % Jv.length]][n % 6];
-		e.push($v(3, ty, null, [{
+	}), uy.forEach((t, n) => {
+		let r = fy(G[t], n, 3), i = ly(r[0]).find((e) => e !== "round"), a = (i ? sy[i].find((e) => cy(e) !== t) : void 0) ?? G[uy[(n + 4) % uy.length]][n % 6];
+		e.push(hy(3, _y, null, [{
 			emoji: a,
 			feedback: null
 		}, ...r.map((e) => ({
 			emoji: e,
-			feedback: Wv.showRule
+			feedback: oy.showRule
 		}))]));
-	}), R(e);
-}
-//#endregion
-//#region packages/syllabus-content-p/src/banks/numberHunt.ts
-var G = {
-	0: [6, 8],
-	1: [7, 4],
-	2: [5, 7],
-	3: [8, 5],
-	4: [9, 1],
-	5: [2, 6],
-	6: [9, 0],
-	7: [1, 2],
-	8: [3, 0],
-	9: [6, 4]
-}, ry = {
-	lookalike: "numberHunt.feedback.lookalike",
-	generic: "numberHunt.feedback.generic"
-}, iy = [
-	"⭐",
-	"🍎",
-	"🐟"
-];
-function ay(e) {
-	let t = Eh(e);
-	return {
-		en: `Find ${t.en}.`,
-		fr: `Trouve le ${t.fr}.`
-	};
-}
-function oy(e, t, n) {
-	let r = [
-		...G[t],
-		...G[n],
-		...G[e]
-	];
-	return [...new Set(r)].filter((r) => r !== e && r !== t && r !== n && !Um([
-		e,
-		t,
-		n,
-		r
-	]));
-}
-var sy = (e) => Number([...String(e)].reverse().join(""));
-function cy(e) {
-	let t = e % 10, n = [
-		sy(e),
-		Math.floor(e / 10) * 10 + G[t][0],
-		e >= 20 ? e - 10 : e + 10,
-		t === 0 ? 1 : t,
-		e - 1,
-		e + 1
-	], r = [...new Set(n)].filter((t) => t !== e), i = r.slice(0, 2), a = r.slice(2).find((t) => !Um([
-		e,
-		...i,
-		t
-	]));
-	if (a === void 0) throw Error(`no distractors for ${e}`);
-	return [...i, a];
-}
-function ly(e, t) {
-	return e < 10 ? G[e].includes(t) : t === sy(e) || t === Math.floor(e / 10) * 10 + G[e % 10][0];
-}
-function uy() {
-	let e = [], t = (t, n, r, i) => {
-		e.push(L(t, ay(n), { en: [String(n), ...r] }, 0, i, [null, ...r.map((e) => ly(n, Number(e)) ? ry.lookalike : ry.generic)]));
-	};
-	for (let e = 0; e <= 9; e++) {
-		e >= 1 && e <= 5 && Km(e, 1, 5, 3, 3).forEach((n, r) => t(1, e, n, {
-			type: "counters",
-			groups: [{
-				emoji: iy[r % iy.length],
-				count: e
-			}]
-		}));
-		for (let n of Km(e, 0, 9, 3, 3)) t(2, e, n);
-		let [n, r] = G[e];
-		for (let i of oy(e, n, r).slice(0, 3)) t(3, e, [
-			String(n),
-			String(r),
-			String(i)
-		]);
-	}
-	for (let e = 10; e <= 20; e++) t(3, e, cy(e).map(String));
-	return R(e);
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numeralFormation.ts
-var dy = {
+var yy = {
 	sixNine: "pickRightWay.feedback.sixNine",
 	digitOrder: "pickRightWay.feedback.digitOrder",
 	lookalike: "pickRightWay.feedback.lookalike"
-}, fy = (e) => ({
-	en: `Find ${Eh(e).en}.`,
-	fr: `Trouve le ${Eh(e).fr}.`
-}), py = (e, t) => e === 6 && t === 9 || e === 9 && t === 6, my = (e) => Number(String(e).split("").reverse().join(""));
-function hy(e) {
-	return Math.floor(e / 10) * 10 + G[e % 10][0];
+}, by = (e) => ({
+	en: `Find ${Th(e).en}.`,
+	fr: `Trouve le ${Th(e).fr}.`
+}), xy = (e, t) => e === 6 && t === 9 || e === 9 && t === 6, Sy = (e) => Number(String(e).split("").reverse().join(""));
+function Cy(e) {
+	return Math.floor(e / 10) * 10 + U[e % 10][0];
 }
-function gy() {
+function wy() {
 	let e = [], t = (t, n, r) => {
-		e.push(L(t, fy(n), { en: [n, ...r].map(String) }, 0, void 0, [null, ...r.map((e) => py(n, e) ? dy.sixNine : t === 3 && e === my(n) ? dy.digitOrder : dy.lookalike)]));
+		e.push(R(t, by(n), { en: [n, ...r].map(String) }, 0, void 0, [null, ...r.map((e) => xy(n, e) ? yy.sixNine : t === 3 && e === Sy(n) ? yy.digitOrder : yy.lookalike)]));
 	};
 	for (let e of [
 		6,
@@ -37355,14 +37617,14 @@ function gy() {
 		8,
 		1,
 		7
-	]) t(1, e, [G[e][0]]);
-	for (let e = 0; e <= 9; e++) t(2, e, [...G[e]]);
-	for (let e = 12; e <= 20; e++) e === 20 ? t(3, e, [26, 25]) : t(3, e, [my(e), hy(e)]);
-	return R(e);
+	]) t(1, e, [U[e][0]]);
+	for (let e = 0; e <= 9; e++) t(2, e, [...U[e]]);
+	for (let e = 12; e <= 20; e++) e === 20 ? t(3, e, [26, 25]) : t(3, e, [Sy(e), Cy(e)]);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numeralTwins.ts
-var _y = {
+var Ty = {
 	0: [
 		6,
 		8,
@@ -37413,27 +37675,27 @@ var _y = {
 		4,
 		0
 	]
-}, vy = [
+}, Ey = [
 	[6, 9],
 	[2, 5],
 	[3, 8],
 	[1, 7],
 	[0, 6]
-], yy = (e, t) => {
+], Dy = (e, t) => {
 	let [n, r] = e < t ? [e, t] : [t, e];
-	return vy.some(([e, t]) => e === n && t === r) ? `numeralTwins.hint.${n}-${r}` : null;
-}, by = {
+	return Ey.some(([e, t]) => e === n && t === r) ? `numeralTwins.hint.${n}-${r}` : null;
+}, Oy = {
 	en: "Same number?",
 	fr: "Le même nombre ?"
-}, xy = (e) => String.fromCharCode(65296 + e), Sy = (e) => ({
+}, ky = (e) => String.fromCharCode(65296 + e), Ay = (e) => ({
 	type: "counters",
 	groups: [{
 		emoji: "⚫",
 		count: e
 	}]
 });
-function Cy(e, t, n) {
-	if (e === 3) return _y[t][n];
+function jy(e, t, n) {
+	if (e === 3) return Ty[t][n];
 	if (e === 1) {
 		let e = [
 			1,
@@ -37450,7 +37712,7 @@ function Cy(e, t, n) {
 		5
 	][n]) % 10;
 }
-function wy() {
+function My() {
 	let e = [];
 	for (let t of [
 		1,
@@ -37478,51 +37740,51 @@ function wy() {
 		for (let r of n) for (let n = 0; n < 3; n++) {
 			if (n === 2 && r === 0) continue;
 			let i = (r + n) % 2 == 1, a = (e, a) => {
-				let o = n === 1 ? xy(e) : String(e), [s, c] = i ? [o, String(r)] : [String(r), o], l = `${s}  ${c}\n\n`, u = a ? "numeralTwins.feedback.same" : yy(r, e) ?? "numeralTwins.feedback.diff";
+				let o = n === 1 ? ky(e) : String(e), [s, c] = i ? [o, String(r)] : [String(r), o], l = `${s}  ${c}\n\n`, u = a ? "numeralTwins.feedback.same" : Dy(r, e) ?? "numeralTwins.feedback.diff";
 				return {
 					grade: t,
 					en: {
-						statement: `${l}${by.en}`,
+						statement: `${l}${Oy.en}`,
 						isTrue: a
 					},
 					fr: {
-						statement: `${l}${by.fr}`,
+						statement: `${l}${Oy.fr}`,
 						isTrue: a
 					},
-					...n === 2 && r > 0 && { scene: Sy(r) },
+					...n === 2 && r > 0 && { scene: Ay(r) },
 					feedbackKey: u
 				};
 			};
-			e.push(a(r, !0), a(Cy(t, r, n), !1));
+			e.push(a(r, !0), a(jy(t, r, n), !1));
 		}
 	}
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/ordinals.ts
-var Ty = {
+var Ny = {
 	countFromFlag: "ordinals.feedback.countFromFlag",
 	neighbour: "ordinals.feedback.neighbour",
 	fromEnd: "ordinals.feedback.fromEnd",
 	ends: "ordinals.feedback.ends",
 	countAll: "ordinals.feedback.countAll",
 	countFlag: "ordinals.feedback.countFlag"
-}, Ey = [
+}, Py = [
 	"1st",
 	"2nd",
 	"3rd",
 	"4th",
 	"5th"
-], Dy = [
+], Fy = [
 	"1er",
 	"2e",
 	"3e",
 	"4e",
 	"5e"
-], Oy = {
+], Iy = {
 	en: "last",
 	fr: "dernier"
-}, ky = "🚩", Ay = [
+}, Ly = "🚩", Ry = [
 	[
 		"🐱",
 		"🐶",
@@ -37548,11 +37810,11 @@ var Ty = {
 		"🍐"
 	]
 ];
-function jy(e, t, n) {
-	let r = Ay[e % Ay.length];
+function zy(e, t, n) {
+	let r = Ry[e % Ry.length];
 	return Array.from({ length: t }, (e, t) => r[(n + t) % r.length]);
 }
-function My(e, t) {
+function By(e, t) {
 	let n = e.map((e) => ({
 		emoji: e,
 		count: 1
@@ -37560,21 +37822,21 @@ function My(e, t) {
 	return {
 		type: "counters",
 		groups: t ? [...n.reverse(), {
-			emoji: ky,
+			emoji: Ly,
 			count: 1
 		}] : [{
-			emoji: ky,
+			emoji: Ly,
 			count: 1
 		}, ...n]
 	};
 }
-function Ny(e, t, n) {
-	return n && e === t ? Oy : {
-		en: Ey[e - 1],
-		fr: Dy[e - 1]
+function Vy(e, t, n) {
+	return n && e === t ? Iy : {
+		en: Py[e - 1],
+		fr: Fy[e - 1]
 	};
 }
-function Py(e, t, n) {
+function Hy(e, t, n) {
 	let r = [
 		t + 1 - e,
 		...[e - 1, e + 1].filter((e) => e >= 1 && e <= t),
@@ -37582,10 +37844,10 @@ function Py(e, t, n) {
 	];
 	return [...new Set(r)].filter((t) => t !== e).slice(0, n);
 }
-function Fy(e, t, n) {
-	return e === 1 && t === n || e === n && t === 1 ? Ty.ends : t === n + 1 - e ? Ty.fromEnd : Math.abs(t - e) === 1 ? Ty.neighbour : Ty.countFromFlag;
+function Uy(e, t, n) {
+	return e === 1 && t === n || e === n && t === 1 ? Ny.ends : t === n + 1 - e ? Ny.fromEnd : Math.abs(t - e) === 1 ? Ny.neighbour : Ny.countFromFlag;
 }
-var Iy = [
+var Wy = [
 	{
 		level: 1,
 		size: 3,
@@ -37602,28 +37864,28 @@ var Iy = [
 		flagRight: (e) => e % 2 == 1
 	}
 ];
-function Ly() {
+function Gy() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Iy) for (let i = 0; i < 6; i++) {
-		let a = jy(i % 3, n, i);
+	for (let { level: t, size: n, flagRight: r } of Wy) for (let i = 0; i < 6; i++) {
+		let a = zy(i % 3, n, i);
 		for (let o = 1; o <= n; o++) {
-			let s = Ny(o, n, !0), c = Py(o, n, t === 1 ? 2 : 3);
-			e.push(L(t, {
+			let s = Vy(o, n, !0), c = Hy(o, n, t === 1 ? 2 : 3);
+			e.push(R(t, {
 				en: `Which one is ${s.en}? Start at the flag.`,
 				fr: `Lequel est le ${s.fr} ? Commence au drapeau.`
-			}, { en: [o, ...c].map((e) => a[e - 1]) }, 0, My(a, r(i)), [null, ...c.map((e) => Fy(o, e, n))]));
+			}, { en: [o, ...c].map((e) => a[e - 1]) }, 0, By(a, r(i)), [null, ...c.map((e) => Uy(o, e, n))]));
 		}
 	}
-	return R(e);
+	return z(e);
 }
-function Ry() {
+function Ky() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Iy) for (let i = 0; i < 6; i++) {
-		let a = jy(i % 3, n, i), o = My(a, r(i)), s = (i + t) % n + 1, c = Ny(s, n, !0), l = Py(s, n, 2);
-		e.push(L(t, {
+	for (let { level: t, size: n, flagRight: r } of Wy) for (let i = 0; i < 6; i++) {
+		let a = zy(i % 3, n, i), o = By(a, r(i)), s = (i + t) % n + 1, c = Vy(s, n, !0), l = Hy(s, n, 2);
+		e.push(R(t, {
 			en: `Which one is ${c.en}?`,
 			fr: `Lequel est le ${c.fr} ?`
-		}, { en: [s, ...l].map((e) => a[e - 1]) }, 0, o, [null, ...l.map((e) => Fy(s, e, n))])), e.push(L(t, {
+		}, { en: [s, ...l].map((e) => a[e - 1]) }, 0, o, [null, ...l.map((e) => Uy(s, e, n))])), e.push(R(t, {
 			en: "How many are in line?",
 			fr: "Combien y en a-t-il dans la file ?"
 		}, { en: [
@@ -37632,35 +37894,35 @@ function Ry() {
 			String(n - 1)
 		] }, 0, o, [
 			null,
-			Ty.countFlag,
-			Ty.countAll
+			Ny.countFlag,
+			Ny.countAll
 		]));
 	}
-	return R(e);
+	return z(e);
 }
-var zy = [
+var qy = [
 	"🟩",
 	"🟦",
 	"🟨",
 	"🟥"
-], By = "⬜";
-function Vy() {
+], Jy = "⬜";
+function Yy() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Iy) for (let i = 0; i < 4; i++) for (let a = 1; a <= n; a++) {
-		let o = zy[(i + a) % zy.length], s = Array.from({ length: n }, (e, t) => t + 1 === a ? o : By), c = Py(a, n, 2), l = (e) => Ny(e, n, t === 3);
-		e.push(L(t, {
+	for (let { level: t, size: n, flagRight: r } of Wy) for (let i = 0; i < 4; i++) for (let a = 1; a <= n; a++) {
+		let o = qy[(i + a) % qy.length], s = Array.from({ length: n }, (e, t) => t + 1 === a ? o : Jy), c = Hy(a, n, 2), l = (e) => Vy(e, n, t === 3);
+		e.push(R(t, {
 			en: "Which place is coloured? Start at the flag.",
 			fr: "Quelle place est coloriée ? Commence au drapeau."
 		}, {
 			en: [a, ...c].map((e) => l(e).en),
 			fr: [a, ...c].map((e) => l(e).fr)
-		}, 0, My(s, r(i)), [null, ...c.map((e) => Fy(a, e, n))]));
+		}, 0, By(s, r(i)), [null, ...c.map((e) => Uy(a, e, n))]));
 	}
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/orderBySize.ts
-var Hy = [
+var Xy = [
 	"🔴",
 	"🟦",
 	"⭐",
@@ -37668,10 +37930,10 @@ var Hy = [
 	"🔺",
 	"🟪"
 ];
-function Uy(e, t) {
+function Zy(e, t) {
 	return e.repeat(t);
 }
-function Wy() {
+function Qy() {
 	let e = [], t = {
 		1: {
 			en: "small",
@@ -37690,7 +37952,7 @@ function Wy() {
 		1,
 		2,
 		3
-	]) Hy.forEach((r, i) => {
+	]) Xy.forEach((r, i) => {
 		let a = [
 			[
 				1,
@@ -37707,8 +37969,8 @@ function Wy() {
 				3,
 				1
 			]
-		], o = a[i % a.length], s = o.map((e) => Uy(r, e)), c = Uy(r, 2), l = s.filter((e) => e !== c), u = n === 1 ? s.join("   ") : s.join(" "), d = n >= 2 ? `\n(${t[o[0]].en} / ${t[o[1]].en} / ${t[o[2]].en})` : "", f = n >= 2 ? `\n(${t[o[0]].fr} / ${t[o[1]].fr} / ${t[o[2]].fr})` : "";
-		e.push(E(n, {
+		], o = a[i % a.length], s = o.map((e) => Zy(r, e)), c = Zy(r, 2), l = s.filter((e) => e !== c), u = n === 1 ? s.join("   ") : s.join(" "), d = n >= 2 ? `\n(${t[o[0]].en} / ${t[o[1]].en} / ${t[o[2]].en})` : "", f = n >= 2 ? `\n(${t[o[0]].fr} / ${t[o[1]].fr} / ${t[o[2]].fr})` : "";
+		e.push(D(n, {
 			prompt: `${u}${d}\n\nWhich one goes in the middle when ordered by size?`,
 			options: [c, ...l]
 		}, {
@@ -37716,11 +37978,11 @@ function Wy() {
 			options: [c, ...l]
 		}));
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/patterns.ts
-var Gy = [
+var $y = [
 	"🔵",
 	"🟥",
 	"🔺",
@@ -37729,7 +37991,7 @@ var Gy = [
 	"🌙",
 	"🍎",
 	"🐟"
-], Ky = {
+], eb = {
 	1: [[0, 1]],
 	2: [[
 		0,
@@ -37745,38 +38007,38 @@ var Gy = [
 		1,
 		2
 	]]
-}, qy = {
+}, tb = {
 	1: [7, 8],
 	2: [10, 11],
 	3: [10, 11]
 };
-function Jy(e) {
+function nb(e) {
 	let t = [];
 	for (let n = 0; n < e.length; n += 5) t.push(e.slice(n, n + 5).join(" "));
 	return t.join("\n");
 }
-function Yy() {
+function rb() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n = 0; n < Gy.length; n++) for (let r of Ky[t]) for (let i of [
+	]) for (let n = 0; n < $y.length; n++) for (let r of eb[t]) for (let i of [
 		1,
 		2,
 		3
-	]) for (let a of qy[t]) {
-		let o = Math.max(...r) + 1, s = Array.from({ length: o }, (e, t) => Gy[(n + t * i) % Gy.length]), c = (e) => s[r[e % r.length]], l = Array.from({ length: a }, (e, t) => c(t)), u = c(a), d = s.filter((e) => e !== u), f = Gy.filter((e) => !s.includes(e)).slice(0, 3 - d.length), p = Jy([...l, "❓"]);
-		e.push(T(t, {
+	]) for (let a of tb[t]) {
+		let o = Math.max(...r) + 1, s = Array.from({ length: o }, (e, t) => $y[(n + t * i) % $y.length]), c = (e) => s[r[e % r.length]], l = Array.from({ length: a }, (e, t) => c(t)), u = c(a), d = s.filter((e) => e !== u), f = $y.filter((e) => !s.includes(e)).slice(0, 3 - d.length), p = nb([...l, "❓"]);
+		e.push(E(t, {
 			en: `${p}\n\nWhich one comes next?`,
 			fr: `${p}\n\nQuelle forme vient ensuite ?`
 		}, u, [...d, ...f]));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/partsOfDay.ts
-var Xy = [
+var ib = [
 	{
 		glyph: "🥣",
 		en: "eating breakfast",
@@ -37825,7 +38087,7 @@ var Xy = [
 		fr: "regarder les étoiles",
 		part: "night"
 	}
-], Zy = {
+], ab = {
 	morning: {
 		en: "Morning",
 		fr: "Matin"
@@ -37842,12 +38104,12 @@ var Xy = [
 		en: "Night",
 		fr: "Nuit"
 	}
-}, Qy = "☀️", $y = "🌙";
-function eb() {
+}, ob = "☀️", sb = "🌙";
+function cb() {
 	let e = [];
-	for (let t of Xy) {
-		let n = t.part !== "night", r = n ? Qy : $y, i = n ? $y : Qy;
-		e.push(E(1, {
+	for (let t of ib) {
+		let n = t.part !== "night", r = n ? ob : sb, i = n ? sb : ob;
+		e.push(D(1, {
 			prompt: `${t.glyph} ${t.en}\n\nDoes this happen when it's sunny or when it's dark?`,
 			options: [r, i]
 		}, {
@@ -37860,9 +38122,9 @@ function eb() {
 		"afternoon",
 		"evening"
 	];
-	for (let n of Xy.filter((e) => t.includes(e.part))) {
-		let r = t.map((e) => Zy[e].en), i = t.map((e) => Zy[e].fr), a = t.indexOf(n.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
-		e.push(E(2, {
+	for (let n of ib.filter((e) => t.includes(e.part))) {
+		let r = t.map((e) => ab[e].en), i = t.map((e) => ab[e].fr), a = t.indexOf(n.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
+		e.push(D(2, {
 			prompt: `${n.glyph} ${n.en}\n\nWhich part of the day is this?`,
 			options: o
 		}, {
@@ -37876,9 +38138,9 @@ function eb() {
 		"evening",
 		"night"
 	];
-	for (let t of Xy) {
-		let r = n.map((e) => Zy[e].en), i = n.map((e) => Zy[e].fr), a = n.indexOf(t.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
-		e.push(E(3, {
+	for (let t of ib) {
+		let r = n.map((e) => ab[e].en), i = n.map((e) => ab[e].fr), a = n.indexOf(t.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
+		e.push(D(3, {
 			prompt: `${t.glyph} ${t.en}\n\nWhich part of the day is this?`,
 			options: o
 		}, {
@@ -37886,11 +38148,11 @@ function eb() {
 			options: s
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/position.ts
-var tb = {
+var lb = {
 	on: {
 		en: "on",
 		fr: "sur"
@@ -37919,7 +38181,7 @@ var tb = {
 		en: "below",
 		fr: "en dessous de"
 	}
-}, nb = {
+}, ub = {
 	1: [
 		"on",
 		"under",
@@ -37936,7 +38198,7 @@ var tb = {
 		"above",
 		"below"
 	]
-}, rb = {
+}, db = {
 	1: ["on", "under"],
 	2: ["in", "next"],
 	3: [
@@ -37944,7 +38206,7 @@ var tb = {
 		"above",
 		"below"
 	]
-}, ib = [
+}, fb = [
 	{
 		emoji: "🐱",
 		en: "cat",
@@ -37975,51 +38237,51 @@ var tb = {
 		en: "rabbit",
 		fr: "le lapin"
 	}
-], ab = "📦", ob = "🪑", sb = "\n \n \n";
-function cb(e) {
+], pb = "📦", mb = "🪑", hb = "\n \n \n";
+function gb(e) {
 	let t = "🟫🟫🟫";
 	return `${t}\n🟫${e}🟫\n${t}`;
 }
-function lb(e, t, n, r) {
+function _b(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
 		case "next": return `${t}  ${n}`;
-		case "in": return cb(t);
+		case "in": return gb(t);
 		case "between": return `${n} ${t} ${r}`;
-		case "above": return `${t}${sb}${n}`;
-		case "below": return `${n}${sb}${t}`;
+		case "above": return `${t}${hb}${n}`;
+		case "below": return `${n}${hb}${t}`;
 	}
 }
-function ub() {
+function vb() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of rb[t]) {
-		let r = n === "in" ? [[ab, ob]] : [[ab, ob], [ob, ab]];
-		for (let i of ib) for (let [a, o] of r) {
-			let r = lb(n, i.emoji, a, o), s = [n, ...nb[t].filter((e) => e !== n)];
-			e.push(E(t, {
+	]) for (let n of db[t]) {
+		let r = n === "in" ? [[pb, mb]] : [[pb, mb], [mb, pb]];
+		for (let i of fb) for (let [a, o] of r) {
+			let r = _b(n, i.emoji, a, o), s = [n, ...ub[t].filter((e) => e !== n)];
+			e.push(D(t, {
 				prompt: `${r}\n\nWhere is the ${i.en}?`,
-				options: s.map((e) => tb[e].en)
+				options: s.map((e) => lb[e].en)
 			}, {
 				prompt: `${r}\n\nOù est ${i.fr} ?`,
-				options: s.map((e) => tb[e].fr)
+				options: s.map((e) => lb[e].fr)
 			}));
 		}
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/shapes.ts
-var db = [
+var yb = [
 	"circle",
 	"square",
 	"triangle",
 	"rectangle"
-], fb = {
+], bb = {
 	circle: {
 		en: "circle",
 		fr: "cercle"
@@ -38036,7 +38298,7 @@ var db = [
 		en: "rectangle",
 		fr: "rectangle"
 	}
-}, pb = {
+}, xb = {
 	1: {
 		circle: [
 			"🔴",
@@ -38103,24 +38365,24 @@ var db = [
 			"▭"
 		]
 	}
-}, mb = [(e) => ({
+}, Sb = [(e) => ({
 	en: `Find the ${e.en}.`,
 	fr: `Trouve le ${e.fr}.`
 }), (e) => ({
 	en: `Tap the ${e.en}.`,
 	fr: `Touche le ${e.fr}.`
 })];
-function hb() {
+function Cb() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of db) for (let r = 0; r < 3; r++) {
-		let i = (e) => pb[t][e][r], a = db.filter((e) => e !== n).map(i);
-		for (let r of mb) {
-			let o = r(fb[n]), s = [i(n), ...a];
-			e.push(E(t, {
+	]) for (let n of yb) for (let r = 0; r < 3; r++) {
+		let i = (e) => xb[t][e][r], a = yb.filter((e) => e !== n).map(i);
+		for (let r of Sb) {
+			let o = r(bb[n]), s = [i(n), ...a];
+			e.push(D(t, {
 				prompt: o.en,
 				options: s
 			}, {
@@ -38129,9 +38391,9 @@ function hb() {
 			}));
 		}
 	}
-	return A(e);
+	return j(e);
 }
-var gb = {
+var wb = {
 	1: [
 		"📱",
 		"🚪",
@@ -38162,7 +38424,7 @@ var gb = {
 		"🪟",
 		"✉️"
 	]
-}, _b = {
+}, Tb = {
 	1: [
 		"🔵",
 		"🔴",
@@ -38193,77 +38455,77 @@ var gb = {
 		"🔻",
 		"⭐"
 	]
-}, vb = [{
+}, Eb = [{
 	en: "Is this a rectangle?",
 	fr: "Est-ce un rectangle ?"
 }, {
 	en: "Is this shape a rectangle?",
 	fr: "Cette forme est-elle un rectangle ?"
 }];
-function yb() {
+function Db() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) gb[t].forEach((n, r) => {
-		let i = vb[r % 2];
-		e.push(qm(t, {
+	]) wb[t].forEach((n, r) => {
+		let i = Eb[r % 2];
+		e.push(Km(t, {
 			en: `${n}\n\n${i.en}`,
 			fr: `${n}\n\n${i.fr}`
 		}, !0));
-	}), _b[t].forEach((n, r) => {
-		let i = vb[(r + 1) % 2];
-		e.push(qm(t, {
+	}), Tb[t].forEach((n, r) => {
+		let i = Eb[(r + 1) % 2];
+		e.push(Km(t, {
 			en: `${n}\n\n${i.en}`,
 			fr: `${n}\n\n${i.fr}`
 		}, !1));
 	});
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/showTheNumber.ts
-var bb = 4, xb = 60, Sb = {
+var Ob = 4, kb = 60, Ab = {
 	recount: "activity.show-the-number.hint.recount",
 	longerNotMore: "activity.show-the-number.hint.longer-not-more",
 	tensFirst: "activity.show-the-number.hint.tens-first"
 };
-function Cb(e, t, n, r) {
-	if (!n) return Xm(Array.from({ length: e }, () => t), Zm);
+function jb(e, t, n, r) {
+	if (!n) return Ym(Array.from({ length: e }, () => t), Xm);
 	let i = [];
 	for (let n = e, a = 0; n > 0; n -= 5, a++) i.push(tv(Math.min(5, n), t, r + a));
-	return i.join(Zm);
+	return i.join(Xm);
 }
-function wb(e, t) {
-	return e >= 11 && t <= 10 ? Sb.tensFirst : Math.abs(t - e) === 1 ? Sb.recount : t > e ? Sb.longerNotMore : Sb.recount;
+function Mb(e, t) {
+	return e >= 11 && t <= 10 ? Ab.tensFirst : Math.abs(t - e) === 1 ? Ab.recount : t > e ? Ab.longerNotMore : Ab.recount;
 }
-function Tb() {
+function Nb() {
 	let e = [], t = (e) => ({
 		en: `Which group shows ${e}?`,
 		fr: `Quel groupe montre ${e} ?`
 	}), n = (n, r, i, a, o) => {
-		let s = (e) => D[(r + a * 3 + e * 5) % D.length], c = [r, ...i], l = c.map((e, t) => Cb(e, s(t), o, a + t));
-		e.push(L(n, t(r), { en: l }, 0, {
+		let s = (e) => O[(r + a * 3 + e * 5) % O.length], c = [r, ...i], l = c.map((e, t) => jb(e, s(t), o, a + t));
+		e.push(R(n, t(r), { en: l }, 0, {
 			type: "pick-group",
 			groups: c.map((e, t) => ({
 				emoji: s(t),
 				count: e
 			}))
-		}, c.map((e, t) => t === 0 ? null : wb(r, e))));
+		}, c.map((e, t) => t === 0 ? null : Mb(r, e))));
 	}, r = (e, t = 1) => Array.from({ length: e - t + 1 }, (e, n) => t + n);
-	for (let e = 1; e <= 20; e++) if (e <= 5 && Gm(e, r(5), 2, bb, (t) => t.every((t) => Math.abs(t - e) >= 2)).forEach((t, r) => n(1, e, t, r, !1)), e <= 10 && Gm(e, r(10), 3, bb, (t) => t.some((t) => Math.abs(t - e) === 1)).forEach((t, r) => n(2, e, t, r, !1)), e >= 6) {
+	for (let e = 1; e <= 20; e++) if (e <= 5 && Wm(e, r(5), 2, Ob, (t) => t.every((t) => Math.abs(t - e) >= 2)).forEach((t, r) => n(1, e, t, r, !1)), e <= 10 && Wm(e, r(10), 3, Ob, (t) => t.some((t) => Math.abs(t - e) === 1)).forEach((t, r) => n(2, e, t, r, !1)), e >= 6) {
 		let t = r(20);
-		Gm(e, t, e >= 14 ? 2 : 3, bb, (t) => t.every((t) => Math.abs(t - e) <= 4) && t.some((t) => Math.abs(t - e) === 1) && e + t.reduce((e, t) => e + t, 0) <= xb).forEach((t, r) => n(3, e, t, r, !0));
+		Wm(e, t, e >= 14 ? 2 : 3, Ob, (t) => t.every((t) => Math.abs(t - e) <= 4) && t.some((t) => Math.abs(t - e) === 1) && e + t.reduce((e, t) => e + t, 0) <= kb).forEach((t, r) => n(3, e, t, r, !0));
 	}
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameTheThing.ts
-var Eb = {
+var Pb = {
 	coneVsCylinder: "solids.name.fb.coneVsCylinder",
 	cubeVsSphere: "solids.name.fb.cubeVsSphere",
 	tryAgain: "solids.name.fb.tryAgain"
-}, Db = {
+}, Fb = {
 	sphere: {
 		en: "sphere",
 		fr: "sphère",
@@ -38284,14 +38546,14 @@ var Eb = {
 		fr: "cône",
 		emoji: "🍦"
 	}
-}, Ob = (e, t) => e === "cone" && t === "cylinder" || e === "cylinder" && t === "cone" ? Eb.coneVsCylinder : e === "cube" && t === "sphere" || e === "sphere" && t === "cube" ? Eb.cubeVsSphere : Eb.tryAgain, kb = [
+}, Ib = (e, t) => e === "cone" && t === "cylinder" || e === "cylinder" && t === "cone" ? Pb.coneVsCylinder : e === "cube" && t === "sphere" || e === "sphere" && t === "cube" ? Pb.cubeVsSphere : Pb.tryAgain, Lb = [
 	["cube", "sphere"],
 	["cube", "cone"],
 	["sphere", "cylinder"],
 	["cone", "cylinder"],
 	["sphere", "cone"],
 	["cube", "cylinder"]
-], Ab = [
+], Rb = [
 	[
 		"cube",
 		"sphere",
@@ -38312,12 +38574,12 @@ var Eb = {
 		"cylinder",
 		"cone"
 	]
-], jb = [
+], zb = [
 	"cube",
 	"sphere",
 	"cylinder",
 	"cone"
-], Mb = [
+], Bb = [
 	(e) => ({
 		en: `Find the ${e.en}.`,
 		fr: `Trouve le ${e.fr}.`
@@ -38331,26 +38593,26 @@ var Eb = {
 		fr: `Lequel est le ${e.fr} ?`
 	})
 ];
-function Nb(e, t, n, r) {
-	let i = [t, ...n], a = Db[t];
-	return L(e, Mb[r % Mb.length](a), {
-		en: i.map((e) => Db[e].en),
-		fr: i.map((e) => Db[e].fr)
+function Vb(e, t, n, r) {
+	let i = [t, ...n], a = Fb[t];
+	return R(e, Bb[r % Bb.length](a), {
+		en: i.map((e) => Fb[e].en),
+		fr: i.map((e) => Fb[e].fr)
 	}, 0, {
 		type: "pick-group",
 		groups: i.map((e) => ({
-			emoji: Db[e].emoji,
+			emoji: Fb[e].emoji,
 			count: 1,
 			glyph: `solid:${e}`
 		})),
 		reveal: "none"
-	}, [null, ...n.map((e) => Ob(t, e))]);
+	}, [null, ...n.map((e) => Ib(t, e))]);
 }
-function Pb() {
+function Hb() {
 	let e = [];
-	return kb.forEach(([t, n], r) => {
-		e.push(Nb(1, t, [n], r), Nb(1, n, [t], r + 1));
-	}), e.push(L(1, {
+	return Lb.forEach(([t, n], r) => {
+		e.push(Vb(1, t, [n], r), Vb(1, n, [t], r + 1));
+	}), e.push(R(1, {
 		en: "Find the ball.",
 		fr: "Trouve la balle."
 	}, {
@@ -38359,29 +38621,29 @@ function Pb() {
 	}, 0, {
 		type: "pick-group",
 		groups: [{
-			emoji: Db.sphere.emoji,
+			emoji: Fb.sphere.emoji,
 			count: 1,
 			glyph: "solid:sphere"
 		}, {
-			emoji: Db.cube.emoji,
+			emoji: Fb.cube.emoji,
 			count: 1,
 			glyph: "solid:cube"
 		}],
 		reveal: "none"
-	}, [null, Eb.cubeVsSphere])), Ab.forEach((t, n) => {
+	}, [null, Pb.cubeVsSphere])), Rb.forEach((t, n) => {
 		t.forEach((r, i) => {
-			e.push(Nb(2, r, t.filter((e) => e !== r).reverse().slice(0, 2), n + i));
+			e.push(Vb(2, r, t.filter((e) => e !== r).reverse().slice(0, 2), n + i));
 		});
-	}), jb.forEach((t, n) => {
-		Mb.forEach((r, i) => {
-			let a = jb.filter((e) => e !== t);
-			e.push(Nb(3, t, i === 1 ? a.reverse() : a, i + n));
+	}), zb.forEach((t, n) => {
+		Bb.forEach((r, i) => {
+			let a = zb.filter((e) => e !== t);
+			e.push(Vb(3, t, i === 1 ? a.reverse() : a, i + n));
 		});
-	}), R(e);
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/solids.ts
-var Fb = [
+var Ub = [
 	{
 		solid: {
 			en: "ball",
@@ -38431,11 +38693,11 @@ var Fb = [
 		}
 	}
 ];
-function Ib() {
+function Wb() {
 	let e = [], t = {
-		1: Fb.slice(0, 2),
-		2: Fb,
-		3: Fb
+		1: Ub.slice(0, 2),
+		2: Ub,
+		3: Ub
 	}, n = {
 		en: "Solid (3D)",
 		fr: "Solide (3D)"
@@ -38455,7 +38717,7 @@ function Ib() {
 		3
 	]) for (let o of t[a]) for (let t of [!0, !1]) for (let s of i) {
 		let i = t ? o.solid : o.flat, c = t ? n : r, l = t ? r : n, u = a === 3 ? ` (${t ? o.flat.en : o.solid.en}?)` : "";
-		e.push(E(a, {
+		e.push(D(a, {
 			prompt: `${i.glyph}${u}\n\n${s.en}`,
 			options: [c.en, l.en]
 		}, {
@@ -38463,16 +38725,16 @@ function Ib() {
 			options: [c.fr, l.fr]
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/solidMatch.ts
-var Lb = {
+var Gb = {
 	cubeVsSquare: "math.p.solidmatch.hint.cubeVsSquare",
 	cylinderVsRect: "math.p.solidmatch.hint.cylinderVsRect",
 	coneVsTriangle: "math.p.solidmatch.hint.coneVsTriangle",
 	sphereRolls: "math.p.solidmatch.hint.sphereRolls"
-}, Rb = {
+}, Kb = {
 	cube: [
 		{
 			emoji: "🎲",
@@ -38541,19 +38803,19 @@ var Lb = {
 			fr: "chapeau de fête"
 		}
 	]
-}, zb = {
+}, qb = {
 	emoji: "🖼️",
 	en: "picture frame",
 	fr: "cadre"
-}, Bb = {
-	cube: Lb.cubeVsSquare,
-	sphere: Lb.sphereRolls,
-	cylinder: Lb.cylinderVsRect,
-	cone: Lb.coneVsTriangle
+}, Jb = {
+	cube: Gb.cubeVsSquare,
+	sphere: Gb.sphereRolls,
+	cylinder: Gb.cylinderVsRect,
+	cone: Gb.coneVsTriangle
 };
-function Vb(e, t, n, r, i) {
-	let a = [Rb[t][n % 3], ...r.map((e, t) => e === "flat" ? zb : Rb[e][(n + t + 1) % 3])];
-	return L(e, i % 2 == 0 ? {
+function Yb(e, t, n, r, i) {
+	let a = [Kb[t][n % 3], ...r.map((e, t) => e === "flat" ? qb : Kb[e][(n + t + 1) % 3])];
+	return R(e, i % 2 == 0 ? {
 		en: "Which looks like this?",
 		fr: "Lequel ressemble à ceci ?"
 	} : {
@@ -38570,11 +38832,11 @@ function Vb(e, t, n, r, i) {
 		})),
 		prompts: [{ glyph: `solid:${t}` }],
 		reveal: "none"
-	}, [null, ...r.map(() => Bb[t])]);
+	}, [null, ...r.map(() => Jb[t])]);
 }
-function Hb() {
+function Xb() {
 	let e = [];
-	for (let [t, n] of [["cube", "sphere"], ["sphere", "cube"]]) for (let r = 0; r < 3; r++) e.push(Vb(1, t, r, [n], r), Vb(1, t, r, [n], r + 1));
+	for (let [t, n] of [["cube", "sphere"], ["sphere", "cube"]]) for (let r = 0; r < 3; r++) e.push(Yb(1, t, r, [n], r), Yb(1, t, r, [n], r + 1));
 	for (let [t, n, r] of [
 		[
 			"cube",
@@ -38591,7 +38853,7 @@ function Hb() {
 			"cube",
 			"sphere"
 		]
-	]) for (let i = 0; i < 3; i++) e.push(Vb(2, t, i, [n, r], i), Vb(2, t, i + 1, [r, n], i + 1));
+	]) for (let i = 0; i < 3; i++) e.push(Yb(2, t, i, [n, r], i), Yb(2, t, i + 1, [r, n], i + 1));
 	let t = [
 		"cube",
 		"sphere",
@@ -38600,32 +38862,32 @@ function Hb() {
 	];
 	t.forEach((n, r) => {
 		let i = t.filter((e) => e !== n);
-		for (let t = 0; t < 3; t++) e.push(Vb(3, n, t, t % 2 == 0 ? i : [...i].reverse(), r + t));
+		for (let t = 0; t < 3; t++) e.push(Yb(3, n, t, t % 2 == 0 ? i : [...i].reverse(), r + t));
 	});
-	for (let t = 0; t < 3; t++) e.push(Vb(3, "cube", t, [
+	for (let t = 0; t < 3; t++) e.push(Yb(3, "cube", t, [
 		"flat",
 		"sphere",
 		"cone"
-	], t), Vb(3, "cone", t, [
+	], t), Yb(3, "cone", t, [
 		"flat",
 		"cylinder",
 		"sphere"
 	], t));
-	return R(e);
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/whatToMeasure.ts
-var Ub = {
+var Zb = {
 	longVsTall: "measure.what.hint.longVsTall",
 	heavyVsBig: "measure.what.hint.heavyVsBig",
 	capacityVsWeight: "measure.what.hint.capacityVsWeight",
 	tryAgain: "measure.what.hint.tryAgain"
-}, Wb = [
+}, Qb = [
 	"length",
 	"height",
 	"weight",
 	"capacity"
-], Gb = {
+], $b = {
 	length: {
 		emoji: "📏",
 		en: "ruler across",
@@ -38646,7 +38908,7 @@ var Ub = {
 		en: "cup of water",
 		fr: "verre d'eau"
 	}
-}, Kb = {
+}, ex = {
 	length: {
 		en: "How long is it?",
 		fr: "Quelle est sa longueur ?"
@@ -38663,7 +38925,7 @@ var Ub = {
 		en: "How much does it hold?",
 		fr: "Combien peut-il contenir ?"
 	}
-}, qb = {
+}, tx = {
 	length: [
 		{
 			emoji: "🐍",
@@ -38793,13 +39055,13 @@ var Ub = {
 		}
 	]
 };
-function Jb(e, t) {
+function nx(e, t) {
 	let n = (e) => e === "length" || e === "height";
-	return n(e) && n(t) ? Ub.longVsTall : e === "weight" && t === "capacity" || e === "capacity" && t === "weight" ? Ub.capacityVsWeight : e === "weight" ? Ub.heavyVsBig : Ub.tryAgain;
+	return n(e) && n(t) ? Zb.longVsTall : e === "weight" && t === "capacity" || e === "capacity" && t === "weight" ? Zb.capacityVsWeight : e === "weight" ? Zb.heavyVsBig : Zb.tryAgain;
 }
-function Yb(e, t, n, r) {
-	let i = qb[t][n % 6], a = [t, ...r].map((e) => Gb[e]);
-	return L(e, Kb[t], {
+function rx(e, t, n, r) {
+	let i = tx[t][n % 6], a = [t, ...r].map((e) => $b[e]);
+	return R(e, ex[t], {
 		en: a.map((e) => e.en),
 		fr: a.map((e) => e.fr)
 	}, 0, {
@@ -38810,11 +39072,11 @@ function Yb(e, t, n, r) {
 		})),
 		prompts: [{ emoji: i.emoji }],
 		reveal: "none"
-	}, [null, ...r.map((e) => Jb(t, e))]);
+	}, [null, ...r.map((e) => nx(t, e))]);
 }
-function Xb(e, t, n) {
-	let r = [qb[e][t % 6], ...n.map((e, n) => qb[e][(t + n) % 6])];
-	return L(3, {
+function ix(e, t, n) {
+	let r = [tx[e][t % 6], ...n.map((e, n) => tx[e][(t + n) % 6])];
+	return R(3, {
 		en: "Which one needs this?",
 		fr: "Lequel a besoin de ceci ?"
 	}, {
@@ -38826,40 +39088,40 @@ function Xb(e, t, n) {
 			emoji: e.emoji,
 			count: 1
 		})),
-		prompts: [{ emoji: Gb[e].emoji }],
+		prompts: [{ emoji: $b[e].emoji }],
 		reveal: "none"
-	}, [null, ...n.map((t) => Jb(e, t))]);
+	}, [null, ...n.map((t) => nx(e, t))]);
 }
-function Zb() {
+function ax() {
 	let e = [];
-	for (let t = 0; t < 6; t++) e.push(Yb(1, "length", t, ["weight"]), Yb(1, "weight", t, ["length"])), t < 3 && e.push(Yb(1, "height", t, ["capacity"]), Yb(1, "capacity", t, ["height"]));
-	return Wb.forEach((t) => {
-		let n = Wb.filter((e) => e !== t);
-		for (let r = 0; r < 6; r++) e.push(Yb(2, t, r, r % 2 == 0 ? n : [...n].reverse()));
-	}), Wb.forEach((t, n) => {
-		let r = Wb.filter((e) => e !== t);
-		for (let i = 0; i < 4; i++) e.push(Xb(t, i, [r[(n + i) % 3], r[(n + i + 1) % 3]]));
-	}), R(e);
+	for (let t = 0; t < 6; t++) e.push(rx(1, "length", t, ["weight"]), rx(1, "weight", t, ["length"])), t < 3 && e.push(rx(1, "height", t, ["capacity"]), rx(1, "capacity", t, ["height"]));
+	return Qb.forEach((t) => {
+		let n = Qb.filter((e) => e !== t);
+		for (let r = 0; r < 6; r++) e.push(rx(2, t, r, r % 2 == 0 ? n : [...n].reverse()));
+	}), Qb.forEach((t, n) => {
+		let r = Qb.filter((e) => e !== t);
+		for (let i = 0; i < 4; i++) e.push(ix(t, i, [r[(n + i) % 3], r[(n + i + 1) % 3]]));
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/factsWithinFive.ts
-var Qb = {
+var ox = {
 	ignoredSecond: "factsFive.feedback.ignoredSecond",
 	offByOne: "factsFive.feedback.offByOne",
 	mixedOp: "factsFive.feedback.mixedOp",
 	reveal: "factsFive.feedback.reveal"
-}, $b = [
+}, sx = [
 	["🔴", "🔵"],
 	["🍎", "🍐"],
 	["⭐", "🌙"]
-], ex = (e, t, n) => e === "add" ? t + n : t - n;
-function tx(e, t, n, r) {
-	return r === t && n > 0 ? Qb.ignoredSecond : r === ex(e === "add" ? "take" : "add", t, n) ? Qb.mixedOp : Math.abs(r - ex(e, t, n)) === 1 ? Qb.offByOne : Qb.reveal;
+], cx = (e, t, n) => e === "add" ? t + n : t - n;
+function lx(e, t, n, r) {
+	return r === t && n > 0 ? ox.ignoredSecond : r === cx(e === "add" ? "take" : "add", t, n) ? ox.mixedOp : Math.abs(r - cx(e, t, n)) === 1 ? ox.offByOne : ox.reveal;
 }
-function nx(e, t, n, r) {
-	let i = ex(e, t, n), a = [
+function ux(e, t, n, r) {
+	let i = cx(e, t, n), a = [
 		t,
-		ex(e === "add" ? "take" : "add", t, n),
+		cx(e === "add" ? "take" : "add", t, n),
 		i + 1,
 		i - 1,
 		i + 2,
@@ -38870,8 +39132,8 @@ function nx(e, t, n, r) {
 	for (let e of a) if (e >= 0 && e <= 5 && e !== i && !o.includes(e) && o.push(e), o.length === r) break;
 	return o;
 }
-function rx(e, t, n, r, i, a) {
-	let o = ex(t, n, r), s = nx(t, n, r, 3), [c, l] = $b[i % $b.length], u = t === "add" ? {
+function dx(e, t, n, r, i, a) {
+	let o = cx(t, n, r), s = ux(t, n, r, 3), [c, l] = sx[i % sx.length], u = t === "add" ? {
 		en: `${n} and ${r} more. How many?`,
 		fr: `${n} et ${r} en plus. Combien ?`
 	} : {
@@ -38889,10 +39151,10 @@ function rx(e, t, n, r, i, a) {
 		operator: t === "add" ? "+" : "-",
 		...a === "cover" && { flashMs: 2e3 }
 	};
-	return L(e, u, { en: [o, ...s].map(String) }, 0, d, [null, ...s.map((e) => tx(t, n, r, e))]);
+	return R(e, u, { en: [o, ...s].map(String) }, 0, d, [null, ...s.map((e) => lx(t, n, r, e))]);
 }
-function ix() {
-	let e = [], t = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(rx(t, "add", n, a, i + o, r)))), n = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(rx(t, "take", n, a, i + o, r))));
+function fx() {
+	let e = [], t = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(dx(t, "add", n, a, i + o, r)))), n = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(dx(t, "take", n, a, i + o, r))));
 	return t(1, [
 		[1, 1],
 		[1, 2],
@@ -38933,19 +39195,19 @@ function ix() {
 		[3, 2],
 		[1, 4],
 		[4, 1]
-	], "bare", [0]), R(e);
+	], "bare", [0]), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/teenNumbers.ts
-var ax = {
+var px = {
 	forgotTen: "activity.teen-numbers.hint.forgot-ten",
 	onlyExtras: "activity.teen-numbers.hint.only-extras",
 	recount: "activity.teen-numbers.hint.recount",
 	wholeNotExtras: "activity.teen-numbers.hint.whole-not-extras"
-}, ox = ["🟦", "🟥"];
-function sx(e, t, n, r) {
+}, mx = ["🟦", "🟥"];
+function hx(e, t, n, r) {
 	let i = 10 + t;
-	return L(e, {
+	return R(e, {
 		en: "Ten and some more. How many in all?",
 		fr: "Dix et encore des jetons. Combien en tout ?"
 	}, { en: [
@@ -38960,13 +39222,13 @@ function sx(e, t, n, r) {
 		...r && { flashMs: 2e3 }
 	}, [
 		null,
-		ax.forgotTen,
-		ax.onlyExtras,
-		ax.recount
+		px.forgotTen,
+		px.onlyExtras,
+		px.recount
 	]);
 }
-function cx(e, t, n, r) {
-	return L(e, {
+function gx(e, t, n, r) {
+	return R(e, {
 		en: "Ten and how many more?",
 		fr: "Dix et combien de plus ?"
 	}, { en: [
@@ -38981,37 +39243,37 @@ function cx(e, t, n, r) {
 		...r && { flashMs: 2e3 }
 	}, [
 		null,
-		ax.wholeNotExtras,
-		ax.recount,
-		ax.recount
+		px.wholeNotExtras,
+		px.recount,
+		px.recount
 	]);
 }
-function lx() {
+function _x() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) ox.forEach((n) => e.push(sx(1, t, n, !1)));
+	]) mx.forEach((n) => e.push(hx(1, t, n, !1)));
 	for (let t of [
 		4,
 		5,
 		6
-	]) ox.forEach((n) => e.push(sx(2, t, n, !1), cx(2, t, n, !1)));
+	]) mx.forEach((n) => e.push(hx(2, t, n, !1), gx(2, t, n, !1)));
 	for (let t of [
 		7,
 		8,
 		9
-	]) ox.forEach((n) => e.push(sx(3, t, n, !0), cx(3, t, n, !0)));
-	return R(e);
+	]) mx.forEach((n) => e.push(hx(3, t, n, !0), gx(3, t, n, !0)));
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/explainAnswer.ts
-var ux = {
+var vx = {
 	lineUp: "ea.fb.lineUp",
 	matchNotCount: "ea.fb.matchNotCount",
 	showClue: "ea.fb.showClue"
-}, dx = {
+}, yx = {
 	counted: {
 		en: "I counted",
 		fr: "J'ai compté"
@@ -39033,27 +39295,27 @@ var ux = {
 		fr: "J'ai deviné"
 	}
 };
-function fx(e, t) {
-	return t === "looksBigger" ? ux.lineUp : t === "counted" && e === "matched" ? ux.matchNotCount : ux.showClue;
+function bx(e, t) {
+	return t === "looksBigger" ? vx.lineUp : t === "counted" && e === "matched" ? vx.matchNotCount : vx.showClue;
 }
-function px(e, t, n, r, i) {
+function xx(e, t, n, r, i) {
 	let a = [n, ...r];
-	return L(e, t, {
-		en: a.map((e) => dx[e].en),
-		fr: a.map((e) => dx[e].fr)
-	}, 0, i, [null, ...r.map((e) => fx(n, e))]);
+	return R(e, t, {
+		en: a.map((e) => yx[e].en),
+		fr: a.map((e) => yx[e].fr)
+	}, 0, i, [null, ...r.map((e) => bx(n, e))]);
 }
-var mx = (e, t, n) => {
+var Sx = (e, t, n) => {
 	let r = t.filter((t) => t !== e);
 	return n % 3 == 0 ? [r[0], r[1]] : n % 3 == 1 ? [r[1], r[2]] : [r[2], r[0]];
-}, hx = [
+}, Cx = [
 	"counted",
 	"matched",
 	"repeats",
 	"looksBigger",
 	"guessed"
 ];
-function gx() {
+function wx() {
 	let e = [], t = [
 		"matched",
 		"looksBigger",
@@ -39074,10 +39336,10 @@ function gx() {
 	];
 	n.forEach(([n, i], a) => {
 		let [o, s] = r[a % 3];
-		e.push(px(1, {
+		e.push(xx(1, {
 			en: "The first group has more. Why?",
 			fr: "Le premier groupe en a plus. Pourquoi ?"
-		}, "counted", mx("counted", ["counted", ...t], a), {
+		}, "counted", Sx("counted", ["counted", ...t], a), {
 			type: "counters",
 			groups: [{
 				emoji: o,
@@ -39104,10 +39366,10 @@ function gx() {
 		"🪑"
 	];
 	return i.forEach(([t, n], r) => {
-		e.push(px(2, {
+		e.push(xx(2, {
 			en: "One for each child. How?",
 			fr: "Un pour chaque enfant. Comment ?"
-		}, "matched", mx("matched", hx.filter((e) => e !== "repeats"), r), {
+		}, "matched", Sx("matched", Cx.filter((e) => e !== "repeats"), r), {
 			type: "counters",
 			groups: [{
 				emoji: "🧒",
@@ -39145,21 +39407,21 @@ function gx() {
 		]
 	].forEach((t, n) => {
 		let r = Array.from({ length: 5 }, (e, n) => t[n % t.length]);
-		e.push(px(3, {
+		e.push(xx(3, {
 			en: "How do you know what's next?",
 			fr: "Comment sais-tu la suite ?"
-		}, "repeats", mx("repeats", hx.filter((e) => e !== "looksBigger"), n), {
+		}, "repeats", Sx("repeats", Cx.filter((e) => e !== "looksBigger"), n), {
 			type: "counters",
 			groups: r.map((e) => ({
 				emoji: e,
 				count: 1
 			}))
 		}));
-	}), R(e);
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sidesCorners.ts
-var _x = [
+var Tx = [
 	{
 		en: "triangle",
 		fr: "triangle",
@@ -39202,30 +39464,30 @@ var _x = [
 		sides: 0,
 		corners: 0
 	}
-], vx = {
-	1: _x.filter((e) => e.sides === 3 || e.sides === 4),
-	2: _x.filter((e) => e.sides > 0),
-	3: _x
-}, yx = [{
+], Ex = {
+	1: Tx.filter((e) => e.sides === 3 || e.sides === 4),
+	2: Tx.filter((e) => e.sides > 0),
+	3: Tx
+}, Dx = [{
 	en: "How many sides does this shape have",
 	fr: "Combien de côtés cette forme a-t-elle"
 }, {
 	en: "Count the sides of this shape",
 	fr: "Compte les côtés de cette forme"
 }];
-function bx() {
+function Ox() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of vx[t]) for (let r of yx) e.push(Jm(t, {
+	]) for (let n of Ex[t]) for (let r of Dx) e.push(qm(t, {
 		en: `${n.glyph}\n\n${r.en}`,
 		fr: `${n.glyph}\n\n${r.fr}`
 	}, n.sides));
-	return A(e);
+	return j(e);
 }
-function xx() {
+function kx() {
 	let e = [], t = {
 		en: "Sides",
 		fr: "Côtés"
@@ -39237,9 +39499,9 @@ function xx() {
 		1,
 		2,
 		3
-	]) for (let i of vx[r]) for (let a of [!0, !1]) {
+	]) for (let i of Ex[r]) for (let a of [!0, !1]) {
 		let o = a ? i.sides : i.corners, s = a ? t : n, c = a ? n : t;
-		e.push(E(r, {
+		e.push(D(r, {
 			prompt: `${i.glyph} has ${o}. Is that its sides or its corners?`,
 			options: [s.en, c.en]
 		}, {
@@ -39247,24 +39509,24 @@ function xx() {
 			options: [s.fr, c.fr]
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/oddOneOut.ts
-var Sx = {
+var Ax = {
 	wrongSameGroup: "oddOneOut.fb.wrongSameGroup",
 	wrongIrrelevantAttr: "oddOneOut.fb.wrongIrrelevantAttr"
-}, Cx = {
+}, jx = {
 	en: "Which one does not belong?",
 	fr: "Lequel ne va pas avec les autres ?"
-}, wx = [
+}, Mx = [
 	"🔴",
 	"🔵",
 	"🟢",
 	"🟡",
 	"🟣",
 	"🟠"
-], Tx = {
+], Nx = {
 	circle: "⚫",
 	square: "⬛",
 	triangle: "🔺",
@@ -39272,8 +39534,8 @@ var Sx = {
 	pentagon: "⬟",
 	hexagon: "⬢"
 };
-function Ex(e, t) {
-	return L(e, Cx, { en: t.map((e, t) => `${e.emoji} ${t + 1}`) }, 0, {
+function Px(e, t) {
+	return R(e, jx, { en: t.map((e, t) => `${e.emoji} ${t + 1}`) }, 0, {
 		type: "pick-group",
 		groups: t.map((e) => ({
 			emoji: e.emoji,
@@ -39281,25 +39543,25 @@ function Ex(e, t) {
 			...e.glyph && { glyph: e.glyph }
 		})),
 		reveal: "none"
-	}, t.map((e, t) => t === 0 ? null : e.turned ? Sx.wrongIrrelevantAttr : Sx.wrongSameGroup));
+	}, t.map((e, t) => t === 0 ? null : e.turned ? Ax.wrongIrrelevantAttr : Ax.wrongSameGroup));
 }
-var Dx = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, Ox = (e, t = 0) => ({
-	emoji: Tx[e],
-	glyph: Dx(e, t),
+var Fx = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, Ix = (e, t = 0) => ({
+	emoji: Nx[e],
+	glyph: Fx(e, t),
 	turned: t !== 0
-}), kx = [
+}), Lx = [
 	"circle",
 	"square",
 	"triangle",
 	"star",
 	"pentagon",
 	"hexagon"
-], Ax = [
+], Rx = [
 	"triangle",
 	"star",
 	"pentagon",
 	"hexagon"
-], jx = [
+], zx = [
 	[
 		0,
 		25,
@@ -39325,39 +39587,39 @@ var Dx = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, Ox = (e, t =
 		135
 	]
 ];
-function Mx() {
+function Bx() {
 	let e = [];
-	return wx.forEach((t, n) => {
+	return Mx.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = wx[(n + r) % wx.length];
-			e.push(Ex(1, [
+			let i = Mx[(n + r) % Mx.length];
+			e.push(Px(1, [
 				{ emoji: i },
 				{ emoji: t },
 				{ emoji: t },
 				{ emoji: t }
 			]));
 		}
-	}), kx.forEach((t, n) => {
+	}), Lx.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = kx[(n + r) % kx.length];
-			e.push(Ex(2, [
-				Ox(i),
-				Ox(t),
-				Ox(t),
-				Ox(t)
+			let i = Lx[(n + r) % Lx.length];
+			e.push(Px(2, [
+				Ix(i),
+				Ix(t),
+				Ix(t),
+				Ix(t)
 			]));
 		}
-	}), Ax.forEach((t, n) => {
-		let r = kx.filter((e) => e !== t);
+	}), Rx.forEach((t, n) => {
+		let r = Lx.filter((e) => e !== t);
 		for (let i = 0; i < 3; i++) {
-			let a = r[(n + i * 2) % r.length], o = jx[(n + i) % jx.length];
-			e.push(Ex(3, [Ox(a), ...o.map((e) => Ox(t, e))]));
+			let a = r[(n + i * 2) % r.length], o = zx[(n + i) % zx.length];
+			e.push(Px(3, [Ix(a), ...o.map((e) => Ix(t, e))]));
 		}
-	}), R(e);
+	}), z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/storyProblems.ts
-function Nx() {
+function Vx() {
 	let e = [], t = {
 		1: 5,
 		2: 8,
@@ -39382,38 +39644,38 @@ function Nx() {
 	}
 	return e;
 }
-function Px(e, t) {
-	let n = D[(e.start + e.change) % D.length];
+function Hx(e, t) {
+	let n = O[(e.start + e.change) % O.length];
 	return t === "en" ? e.join ? e.telegraphed ? `You have ${e.start} ${n}. You get ${e.change} more.` : `You have ${e.start} ${n}. Later, ${e.change} more show up.` : e.telegraphed ? `You have ${e.start} ${n}. You give away ${e.change}.` : `You have ${e.start} ${n}. Later, ${e.change} go away.` : e.join ? e.telegraphed ? `Tu as ${e.start} ${n}. Tu en reçois ${e.change} de plus.` : `Tu as ${e.start} ${n}. Plus tard, ${e.change} de plus arrivent.` : e.telegraphed ? `Tu as ${e.start} ${n}. Tu en donnes ${e.change}.` : `Tu as ${e.start} ${n}. Plus tard, ${e.change} s'en vont.`;
 }
-function Fx() {
+function Ux() {
 	let e = [];
-	for (let t of Nx()) {
+	for (let t of Vx()) {
 		let n = t.join ? "+" : "−", r = t.join ? "−" : "+";
-		e.push(E(t.level, {
-			prompt: `${Px(t, "en")}\n\nDo you ADD or TAKE AWAY?`,
+		e.push(D(t.level, {
+			prompt: `${Hx(t, "en")}\n\nDo you ADD or TAKE AWAY?`,
 			options: [n, r]
 		}, {
-			prompt: `${Px(t, "fr")}\n\nTu AJOUTES ou tu ENLÈVES ?`,
+			prompt: `${Hx(t, "fr")}\n\nTu AJOUTES ou tu ENLÈVES ?`,
 			options: [n, r]
 		}));
 	}
-	return A(e);
+	return j(e);
 }
-function Ix() {
+function Wx() {
 	let e = [];
-	for (let t of Nx()) {
+	for (let t of Vx()) {
 		let n = t.join ? t.start + t.change : t.start - t.change;
-		e.push(Jm(t.level, {
-			en: `${Px(t, "en")}\n\nHow many ${t.join ? "do you have now" : "are left"}`,
-			fr: `${Px(t, "fr")}\n\n${t.join ? "Combien en as-tu maintenant" : "Combien en reste-t-il"}`
+		e.push(qm(t.level, {
+			en: `${Hx(t, "en")}\n\nHow many ${t.join ? "do you have now" : "are left"}`,
+			fr: `${Hx(t, "fr")}\n\n${t.join ? "Combien en as-tu maintenant" : "Combien en reste-t-il"}`
 		}, n));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/zero.ts
-var Lx = {
+var Gx = {
 	1: [
 		3,
 		3,
@@ -39429,45 +39691,45 @@ var Lx = {
 		5
 	]
 };
-function Rx() {
+function Kx() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) Lx[t].forEach((n, r) => {
+	]) Gx[t].forEach((n, r) => {
 		for (let i = n; i >= 0; i--) {
-			let a = D[(n * 3 + i + r) % D.length], o = i === 0 ? `🧺 (empty, was ${a})` : `🧺 ${k(i, a)}`;
-			e.push(T(t, {
+			let a = O[(n * 3 + i + r) % O.length], o = i === 0 ? `🧺 (empty, was ${a})` : `🧺 ${A(i, a)}`;
+			e.push(E(t, {
 				en: `${o}\n\nHow many are left in the basket?`,
 				fr: `${o}\n\nCombien en reste-t-il dans le panier ?`
-			}, String(i), O(i, [], 0, Math.max(n + 2, 6), i + r)));
+			}, String(i), k(i, [], 0, Math.max(n + 2, 6), i + r)));
 		}
 	});
-	return A(e);
+	return j(e);
 }
-var zx = {
+var qx = {
 	oneNotZero: "isZero.feedback.oneNotZero",
 	emptyMeansZero: "isZero.feedback.emptyMeansZero",
 	zeroFirst: "isZero.feedback.zeroFirst"
-}, Bx = [
+}, Jx = [
 	"🧺",
 	"📦",
 	"🪣",
 	"🥡"
-], Vx = (e) => e.count === 0 ? e.emoji : e.emoji.repeat(e.count), Hx = (e) => e === 1 ? zx.oneNotZero : zx.emptyMeansZero;
-function Ux() {
+], Yx = (e) => e.count === 0 ? e.emoji : e.emoji.repeat(e.count), Xx = (e) => e === 1 ? qx.oneNotZero : qx.emptyMeansZero;
+function Zx() {
 	let e = [], t = {
 		en: "Tap the basket with 0.",
 		fr: "Touche le panier avec 0."
 	};
-	Bx.forEach((n, r) => {
+	Jx.forEach((n, r) => {
 		for (let i of [
 			1,
 			2,
 			3
 		]) {
-			let a = D[(r * 3 + i) % D.length];
+			let a = O[(r * 3 + i) % O.length];
 			for (let r of [!0, !1]) {
 				let o = [{
 					emoji: n,
@@ -39476,10 +39738,10 @@ function Ux() {
 					emoji: a,
 					count: i
 				}];
-				r || o.reverse(), e.push(L(1, t, { en: o.map(Vx) }, o.findIndex((e) => e.count === 0), {
+				r || o.reverse(), e.push(R(1, t, { en: o.map(Yx) }, o.findIndex((e) => e.count === 0), {
 					type: "pick-group",
 					groups: o
-				}, o.map((e) => e.count === 0 ? null : Hx(e.count))));
+				}, o.map((e) => e.count === 0 ? null : Xx(e.count))));
 			}
 		}
 	}), [
@@ -39495,26 +39757,26 @@ function Ux() {
 			2
 		]) {
 			let o = [{
-				emoji: D[i * 2 % D.length],
+				emoji: O[i * 2 % O.length],
 				count: n
 			}, {
-				emoji: D[(i * 2 + 5) % D.length],
+				emoji: O[(i * 2 + 5) % O.length],
 				count: r
 			}];
 			o.splice(a, 0, {
-				emoji: Bx[(i + a) % Bx.length],
+				emoji: Jx[(i + a) % Jx.length],
 				count: 0
-			}), e.push(L(2, t, { en: o.map(Vx) }, a, {
+			}), e.push(R(2, t, { en: o.map(Yx) }, a, {
 				type: "pick-group",
 				groups: o
-			}, o.map((e) => e.count === 0 ? null : Hx(e.count))));
+			}, o.map((e) => e.count === 0 ? null : Xx(e.count))));
 		}
-	}), Bx.forEach((t) => {
+	}), Jx.forEach((t) => {
 		for (let n of [
 			["1", "3"],
 			["2", "4"],
 			["1", "5"]
-		]) e.push(L(2, {
+		]) e.push(R(2, {
 			en: "Which numeral is for an empty basket?",
 			fr: "Quel chiffre va avec un panier vide ?"
 		}, { en: ["0", ...n] }, 0, {
@@ -39523,7 +39785,7 @@ function Ux() {
 				emoji: t,
 				count: 0
 			}]
-		}, [null, ...n.map((e) => e === "1" ? zx.oneNotZero : zx.emptyMeansZero)]));
+		}, [null, ...n.map((e) => e === "1" ? qx.oneNotZero : qx.emptyMeansZero)]));
 	});
 	for (let t of [
 		["1", "5"],
@@ -39531,7 +39793,7 @@ function Ux() {
 		["2", "5"],
 		["1", "4"],
 		["3", "5"]
-	]) e.push(L(3, {
+	]) e.push(R(3, {
 		en: "Which numeral goes at the ? on the line?",
 		fr: "Quel chiffre va au ? sur la droite ?"
 	}, { en: ["0", ...t] }, 0, {
@@ -39541,8 +39803,8 @@ function Ux() {
 		step: 1,
 		marked: [],
 		unknown: 0
-	}, [null, ...t.map(() => zx.zeroFirst)]));
-	return R(e);
+	}, [null, ...t.map(() => qx.zeroFirst)]));
+	return z(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/yesterdayTodayTomorrow.ts
@@ -39562,7 +39824,7 @@ var K = [
 	"vendredi",
 	"samedi",
 	"dimanche"
-], Wx = {
+], Qx = {
 	yesterday: {
 		en: "Yesterday",
 		fr: "Hier"
@@ -39576,7 +39838,7 @@ var K = [
 		fr: "Demain"
 	}
 };
-function Gx() {
+function $x() {
 	let e = [], t = [
 		"🎂 birthday",
 		"⚽ football",
@@ -39607,12 +39869,12 @@ function Gx() {
 				i,
 				r,
 				a
-			].map((e, t) => t === n ? `[${q[e]}]` : q[e]).join(" → "), c = Wx[t], l = [
+			].map((e, t) => t === n ? `[${q[e]}]` : q[e]).join(" → "), c = Qx[t], l = [
 				"yesterday",
 				"today",
 				"tomorrow"
-			].filter((e) => e !== t).map((e) => Wx[e]);
-			e.push(E(1, {
+			].filter((e) => e !== t).map((e) => Qx[e]);
+			e.push(D(1, {
 				prompt: `${o}\n\nWhat do we call the highlighted day?`,
 				options: [c.en, ...l.map((e) => e.en)]
 			}, {
@@ -39628,12 +39890,12 @@ function Gx() {
 			"yesterday",
 			"today",
 			"tomorrow"
-		][r % 3], u = `${K[i]} → ${K[r]} → ${K[a]}\n${o} is on ${K[c]}.`, d = `${q[i]} → ${q[r]} → ${q[a]}\n${s} est ${q[c]}.`, f = Wx[l], p = [
+		][r % 3], u = `${K[i]} → ${K[r]} → ${K[a]}\n${o} is on ${K[c]}.`, d = `${q[i]} → ${q[r]} → ${q[a]}\n${s} est ${q[c]}.`, f = Qx[l], p = [
 			"yesterday",
 			"today",
 			"tomorrow"
-		].filter((e) => e !== l).map((e) => Wx[e]);
-		e.push(E(2, {
+		].filter((e) => e !== l).map((e) => Qx[e]);
+		e.push(D(2, {
 			prompt: `${u}\n\nWhen is the event?`,
 			options: [f.en, ...p.map((e) => e.en)]
 		}, {
@@ -39648,12 +39910,12 @@ function Gx() {
 				a,
 				r,
 				i
-			], s = o.map((e, t) => t === 2 - n ? `[${K[e]}]` : K[e]).join(" → "), c = o.map((e, t) => t === 2 - n ? `[${q[e]}]` : q[e]).join(" → "), l = Wx[t], u = [
+			], s = o.map((e, t) => t === 2 - n ? `[${K[e]}]` : K[e]).join(" → "), c = o.map((e, t) => t === 2 - n ? `[${q[e]}]` : q[e]).join(" → "), l = Qx[t], u = [
 				"yesterday",
 				"today",
 				"tomorrow"
-			].filter((e) => e !== t).map((e) => Wx[e]);
-			e.push(E(3, {
+			].filter((e) => e !== t).map((e) => Qx[e]);
+			e.push(D(3, {
 				prompt: `${s}\n\nWhat do we call the highlighted day?`,
 				options: [l.en, ...u.map((e) => e.en)]
 			}, {
@@ -39662,19 +39924,19 @@ function Gx() {
 			}));
 		});
 	}
-	return A(e);
+	return j(e);
 }
-function Kx() {
+function eS() {
 	let e = [];
 	for (let t = 0; t < 7; t++) {
 		let n = (t + 6) % 7, r = (t + 1) % 7;
-		e.push(Ym(1, {
+		e.push(Jm(1, {
 			en: `Today is ${K[t]}. Yesterday was ___.`,
 			fr: `Aujourd'hui, c'est ${q[t]}. Hier, c'était ___.`
 		}, {
 			en: K[n],
 			fr: q[n]
-		})), e.push(Ym(2, {
+		})), e.push(Jm(2, {
 			en: `Today is ${K[t]}. Tomorrow will be ___.`,
 			fr: `Aujourd'hui, c'est ${q[t]}. Demain, ce sera ___.`
 		}, {
@@ -39682,7 +39944,7 @@ function Kx() {
 			fr: q[r]
 		}));
 		let i = t % 2 == 0, a = i ? r : n;
-		e.push(Ym(3, {
+		e.push(Jm(3, {
 			en: `Today is ${K[t]}. ${i ? "Tomorrow" : "Yesterday"} ${i ? "will be" : "was"} ___.`,
 			fr: `Aujourd'hui, c'est ${q[t]}. ${i ? "Demain, ce sera" : "Hier, c'était"} ___.`
 		}, {
@@ -39690,1032 +39952,1082 @@ function Kx() {
 			fr: q[a]
 		}));
 	}
-	return A(e);
+	return j(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/content.ts
-var qx = g({
+var tS = g({
 	pluginId: "preschool-flash-dots",
 	competencyId: Op.id,
 	bank: sv()
-}), Jx = g({
+}), nS = g({
 	pluginId: "preschool-number-hunt",
 	competencyId: kp.id,
-	bank: uy()
-}), Yx = y({
+	bank: hv()
+}), rS = y({
 	pluginId: "preschool-numeral-twins",
 	competencyId: kp.id,
-	bank: wy()
-}), Xx = g({
+	bank: My()
+}), iS = g({
 	pluginId: "preschool-show-the-number",
 	competencyId: Ap.id,
-	bank: Tb()
-}), Zx = g({
+	bank: Nb()
+}), aS = g({
 	pluginId: "preschool-which-has-more",
 	competencyId: jp.id,
-	bank: Rv()
-}), Qx = g({
+	bank: ey()
+}), oS = g({
 	pluginId: "preschool-same-or-not",
 	competencyId: jp.id,
-	bank: Uv()
-}), $x = g({
+	bank: ay()
+}), sS = g({
 	pluginId: "preschool-bigger-number",
 	competencyId: Mp.id,
 	bank: h_()
-}), eS = g({
+}), cS = g({
 	pluginId: "preschool-bigger-smaller-same",
 	competencyId: Mp.id,
 	bank: __()
-}), tS = _({
+}), lS = _({
 	pluginId: "preschool-all-together",
 	competencyId: Np.id,
-	bank: ih()
-}), nS = g({
+	bank: rh()
+}), uS = g({
 	pluginId: "preschool-how-many-altogether",
 	competencyId: Np.id,
-	bank: oh()
-}), rS = _({
+	bank: ah()
+}), dS = _({
 	pluginId: "preschool-how-many-left",
 	competencyId: Pp.id,
-	bank: sh()
-}), iS = g({
+	bank: oh()
+}), fS = g({
 	pluginId: "preschool-which-picture",
 	competencyId: Pp.id,
-	bank: ch()
-}), aS = g({
+	bank: sh()
+}), pS = g({
 	pluginId: "preschool-shape-hunt",
 	competencyId: Fp.id,
-	bank: hb()
-}), oS = y({
+	bank: Cb()
+}), mS = y({
 	pluginId: "preschool-is-it-a-rectangle",
 	competencyId: Fp.id,
-	bank: yb()
-}), sS = g({
+	bank: Db()
+}), hS = g({
 	pluginId: "preschool-where-is-the-ball",
 	competencyId: Ip.id,
-	bank: ub()
-}), cS = g({
+	bank: vb()
+}), gS = g({
 	pluginId: "preschool-longer-or-shorter",
 	competencyId: Lp.id,
-	bank: jv()
-}), lS = g({
+	bank: qv()
+}), _S = g({
 	pluginId: "preschool-heavy-or-light",
 	competencyId: Lp.id,
-	bank: Ov()
-}), uS = g({
+	bank: Wv()
+}), vS = g({
 	pluginId: "preschool-holds-more",
 	competencyId: Lp.id,
-	bank: kv()
-}), dS = g({
+	bank: Gv()
+}), yS = g({
 	pluginId: "preschool-what-comes-next",
 	competencyId: Rp.id,
-	bank: Yy()
-}), fS = g({
+	bank: rb()
+}), bS = g({
 	pluginId: "preschool-days-in-order",
 	competencyId: zp.id,
 	bank: L_()
-}), pS = g({
+}), xS = g({
 	pluginId: "preschool-day-after",
 	competencyId: zp.id,
 	bank: R_()
-}), mS = g({
+}), SS = g({
 	pluginId: "preschool-how-many-all-together",
 	competencyId: Bp.id,
 	bank: a_()
-}), hS = y({
+}), CS = y({
 	pluginId: "preschool-how-many-last-tag",
 	competencyId: Bp.id,
 	bank: o_()
-}), gS = g({
+}), wS = g({
 	pluginId: "preschool-hidden-bag",
 	competencyId: Vp.id,
 	bank: D_()
-}), _S = h({
+}), TS = h({
 	pluginId: "preschool-neighbour-houses",
 	competencyId: Hp.id,
 	bank: r_()
-}), vS = g({
+}), ES = g({
 	pluginId: "preschool-pick-the-right-way",
 	competencyId: Up.id,
-	bank: gy()
-}), yS = g({
+	bank: wy()
+}), DS = g({
 	pluginId: "preschool-empty-basket",
 	competencyId: Wp.id,
-	bank: Rx()
-}), bS = g({
+	bank: Kx()
+}), OS = g({
 	pluginId: "preschool-is-zero-a-number",
 	competencyId: Wp.id,
-	bank: Ux()
-}), xS = g({
+	bank: Zx()
+}), kS = g({
 	pluginId: "preschool-still-the-same",
 	competencyId: Gp.id,
 	bank: C_()
-}), SS = g({
+}), AS = g({
 	pluginId: "preschool-which-row-has-more",
 	competencyId: Gp.id,
 	bank: T_()
-}), CS = g({
+}), jS = g({
 	pluginId: "preschool-who-is-nth",
 	competencyId: Kp.id,
-	bank: Ly()
-}), wS = g({
+	bank: Gy()
+}), MS = g({
 	pluginId: "preschool-ordinal-or-count",
 	competencyId: Kp.id,
-	bank: Ry()
-}), TS = g({
+	bank: Ky()
+}), NS = g({
 	pluginId: "preschool-colour-the-nth",
 	competencyId: Kp.id,
-	bank: Vy()
-}), ES = h({
+	bank: Yy()
+}), PS = h({
 	pluginId: "preschool-two-hands",
 	competencyId: qp.id,
 	bank: B_()
-}), DS = g({
+}), FS = g({
 	pluginId: "preschool-another-way",
 	competencyId: qp.id,
 	bank: V_()
-}), OS = g({
+}), IS = g({
 	pluginId: "preschool-story-plus-or-minus",
 	competencyId: Jp.id,
-	bank: Fx()
-}), kS = _({
+	bank: Ux()
+}), LS = _({
 	pluginId: "preschool-solve-it",
 	competencyId: Jp.id,
-	bank: Ix()
-}), AS = g({
+	bank: Wx()
+}), RS = g({
 	pluginId: "preschool-solid-or-flat",
 	competencyId: Yp.id,
-	bank: Ib()
-}), jS = g({
+	bank: Wb()
+}), zS = g({
 	pluginId: "preschool-name-the-thing",
 	competencyId: Yp.id,
-	bank: Pb()
-}), MS = g({
+	bank: Hb()
+}), BS = g({
 	pluginId: "preschool-solid-match",
 	competencyId: Yp.id,
-	bank: Hb()
-}), NS = _({
+	bank: Xb()
+}), VS = _({
 	pluginId: "preschool-count-the-sides",
 	competencyId: Xp.id,
-	bank: bx()
-}), PS = g({
+	bank: Ox()
+}), HS = g({
 	pluginId: "preschool-sides-or-corners",
 	competencyId: Xp.id,
-	bank: xx()
-}), FS = g({
+	bank: kx()
+}), US = g({
 	pluginId: "preschool-robot-says",
 	competencyId: Zp.id,
-	bank: Pv()
-}), IS = g({
+	bank: Xv()
+}), WS = g({
 	pluginId: "preschool-goes-in-the-middle",
 	competencyId: Qp.id,
-	bank: Wy()
-}), LS = g({
+	bank: Qy()
+}), GS = g({
 	pluginId: "preschool-odd-one-out",
 	competencyId: $p.id,
-	bank: Mx()
-}), RS = g({
+	bank: Bx()
+}), KS = g({
 	pluginId: "preschool-name-the-group",
 	competencyId: em.id,
-	bank: ny()
-}), zS = g({
+	bank: vy()
+}), qS = g({
 	pluginId: "preschool-fill-the-gap",
 	competencyId: tm.id,
-	bank: xv()
-}), BS = g({
+	bank: Lv()
+}), JS = g({
 	pluginId: "preschool-when-does-it-happen",
 	competencyId: nm.id,
-	bank: eb()
-}), VS = g({
+	bank: cb()
+}), YS = g({
 	pluginId: "preschool-yesterday-today-tomorrow",
 	competencyId: rm.id,
-	bank: Gx()
-}), HS = h({
+	bank: $x()
+}), XS = h({
 	pluginId: "preschool-what-day-was-it",
 	competencyId: rm.id,
-	bank: Kx()
-}), US = g({
+	bank: eS()
+}), ZS = g({
 	pluginId: "preschool-count-in-order-5",
 	competencyId: im.id,
-	bank: uh(5)
-}), WS = g({
+	bank: lh(5)
+}), QS = g({
 	pluginId: "preschool-count-in-order-10",
 	competencyId: im.id,
-	bank: uh(10)
-}), GS = g({
+	bank: lh(10)
+}), $S = g({
 	pluginId: "preschool-one-to-one",
 	competencyId: am.id,
-	bank: fh()
-}), KS = g({
+	bank: dh()
+}), eC = g({
 	pluginId: "preschool-give-n",
 	competencyId: om.id,
-	bank: mh()
-}), qS = g({
+	bank: ph()
+}), tC = g({
 	pluginId: "preschool-routine-order",
 	competencyId: sm.id,
-	bank: Bh()
-}), JS = g({
+	bank: zh()
+}), nC = g({
 	pluginId: "preschool-name-shapes",
 	competencyId: cm.id,
 	bank: og()
-}), YS = g({
+}), rC = g({
 	pluginId: "preschool-match-shapes",
 	competencyId: lm.id,
 	bank: gg()
-}), XS = g({
+}), iC = g({
 	pluginId: "preschool-roll-or-stack",
 	competencyId: um.id,
 	bank: _g()
-}), ZS = g({
+}), aC = g({
 	pluginId: "preschool-quantity-words",
 	competencyId: dm.id,
-	bank: Lh()
-}), QS = g({
+	bank: Ih()
+}), oC = g({
 	pluginId: "preschool-count-to-thirty",
+	competencyId: T.id,
+	bank: hh()
+}), sC = g({
+	pluginId: "preschool-count-backward",
 	competencyId: fm.id,
 	bank: gh()
-}), $S = g({
-	pluginId: "preschool-count-backward",
-	competencyId: pm.id,
-	bank: _h()
-}), eC = g({
+}), cC = g({
 	pluginId: "preschool-take-n",
-	competencyId: mm.id,
-	bank: hh()
-}), tC = g({
+	competencyId: pm.id,
+	bank: mh()
+}), lC = g({
 	pluginId: "preschool-one-more-less",
-	competencyId: hm.id,
-	bank: vh()
-}), nC = g({
+	competencyId: mm.id,
+	bank: _h()
+}), uC = g({
 	pluginId: "preschool-compare-groups",
+	competencyId: hm.id,
+	bank: xh()
+}), dC = g({
+	pluginId: "preschool-number-track",
 	competencyId: gm.id,
 	bank: Sh()
-}), rC = g({
-	pluginId: "preschool-number-track",
-	competencyId: _m.id,
-	bank: Ch()
-}), iC = g({
-	pluginId: "preschool-ten-frame",
-	competencyId: vm.id,
-	bank: Tg()
-}), aC = g({
-	pluginId: "preschool-teen-numbers",
-	competencyId: ym.id,
-	bank: lx()
-}), oC = g({
-	pluginId: "preschool-act-out-add-take",
-	competencyId: bm.id,
-	bank: Mg()
-}), sC = g({
-	pluginId: "preschool-make-ten",
-	competencyId: xm.id,
-	bank: Eg()
-}), cC = g({
-	pluginId: "preschool-facts-within-five",
-	competencyId: Sm.id,
-	bank: ix()
-}), lC = g({
-	pluginId: "preschool-doubles",
-	competencyId: Cm.id,
-	bank: Ng()
-}), uC = g({
-	pluginId: "preschool-number-sentences",
-	competencyId: wm.id,
-	bank: Pg()
-}), dC = g({
-	pluginId: "preschool-fair-shares",
-	competencyId: Tm.id,
-	bank: Fg()
 }), fC = g({
-	pluginId: "preschool-pattern-translate",
-	competencyId: Em.id,
-	bank: Wh()
+	pluginId: "preschool-ten-frame",
+	competencyId: _m.id,
+	bank: Tg()
 }), pC = g({
-	pluginId: "preschool-pairs",
-	competencyId: Dm.id,
-	bank: Rg()
+	pluginId: "preschool-teen-numbers",
+	competencyId: vm.id,
+	bank: _x()
 }), mC = g({
-	pluginId: "preschool-what-to-measure",
-	competencyId: Om.id,
-	bank: Zb()
+	pluginId: "preschool-act-out-add-take",
+	competencyId: ym.id,
+	bank: Mg()
 }), hC = g({
-	pluginId: "preschool-measuring-tools",
-	competencyId: km.id,
-	bank: Kg()
+	pluginId: "preschool-make-ten",
+	competencyId: bm.id,
+	bank: Eg()
 }), gC = g({
-	pluginId: "preschool-order-objects",
-	competencyId: Am.id,
-	bank: qg()
+	pluginId: "preschool-facts-within-five",
+	competencyId: xm.id,
+	bank: fx()
 }), _C = g({
-	pluginId: "preschool-how-long",
-	competencyId: jm.id,
-	bank: Zg()
+	pluginId: "preschool-doubles",
+	competencyId: Sm.id,
+	bank: Ng()
 }), vC = g({
-	pluginId: "preschool-money-play",
-	competencyId: Mm.id,
-	bank: Gh()
+	pluginId: "preschool-number-sentences",
+	competencyId: Cm.id,
+	bank: Pg()
 }), yC = g({
-	pluginId: "preschool-bigger-shape",
-	competencyId: Nm.id,
-	bank: vg()
+	pluginId: "preschool-fair-shares",
+	competencyId: wm.id,
+	bank: Fg()
 }), bC = g({
-	pluginId: "preschool-shapes-around",
-	competencyId: Pm.id,
-	bank: yg()
+	pluginId: "preschool-pattern-translate",
+	competencyId: Tm.id,
+	bank: Uh()
 }), xC = g({
-	pluginId: "preschool-routes",
-	competencyId: Fm.id,
-	bank: xg()
+	pluginId: "preschool-pairs",
+	competencyId: Em.id,
+	bank: Rg()
 }), SC = g({
-	pluginId: "preschool-copy-build",
-	competencyId: Im.id,
-	bank: Cg()
+	pluginId: "preschool-what-to-measure",
+	competencyId: Dm.id,
+	bank: ax()
 }), CC = g({
-	pluginId: "preschool-sort-and-count",
-	competencyId: Lm.id,
-	bank: Jh()
+	pluginId: "preschool-measuring-tools",
+	competencyId: Om.id,
+	bank: Kg()
 }), wC = g({
-	pluginId: "preschool-picture-graph",
-	competencyId: Rm.id,
-	bank: Zh()
+	pluginId: "preschool-order-objects",
+	competencyId: km.id,
+	bank: qg()
 }), TC = g({
-	pluginId: "preschool-explain-answer",
-	competencyId: zm.id,
-	bank: gx()
+	pluginId: "preschool-how-long",
+	competencyId: Am.id,
+	bank: Zg()
 }), EC = g({
-	pluginId: "preschool-enough-for-all",
-	competencyId: Bm.id,
-	bank: t_()
+	pluginId: "preschool-money-play",
+	competencyId: jm.id,
+	bank: Wh()
 }), DC = g({
-	pluginId: "preschool-estimate",
-	competencyId: Vm.id,
-	bank: n_()
+	pluginId: "preschool-bigger-shape",
+	competencyId: Mm.id,
+	bank: vg()
 }), OC = g({
-	pluginId: "count-the-teens",
-	competencyId: fm.id,
-	bank: J_()
+	pluginId: "preschool-shapes-around",
+	competencyId: Nm.id,
+	bank: yg()
 }), kC = g({
+	pluginId: "preschool-routes",
+	competencyId: Pm.id,
+	bank: xg()
+}), AC = g({
+	pluginId: "preschool-copy-build",
+	competencyId: Fm.id,
+	bank: Cg()
+}), jC = g({
+	pluginId: "preschool-sort-and-count",
+	competencyId: Im.id,
+	bank: qh()
+}), MC = g({
+	pluginId: "preschool-picture-graph",
+	competencyId: Lm.id,
+	bank: Xh()
+}), NC = g({
+	pluginId: "preschool-explain-answer",
+	competencyId: Rm.id,
+	bank: wx()
+}), PC = g({
+	pluginId: "preschool-enough-for-all",
+	competencyId: zm.id,
+	bank: t_()
+}), FC = g({
+	pluginId: "preschool-estimate",
+	competencyId: Bm.id,
+	bank: n_()
+}), IC = g({
+	pluginId: "count-the-teens",
+	competencyId: T.id,
+	bank: J_()
+}), LC = g({
 	pluginId: "dot-pattern-snap",
 	competencyId: Op.id,
 	bank: Y_()
-}), AC = g({
+}), RC = g({
 	pluginId: "ten-frame-flash",
 	competencyId: Op.id,
 	bank: Z_()
-}), jC = g({
+}), zC = g({
 	pluginId: "same-in-a-circle",
 	competencyId: Gp.id,
 	bank: $_()
-}), MC = g({
+}), BC = g({
 	pluginId: "grab-a-handful",
-	competencyId: mm.id,
-	bank: dv()
-}), NC = g({
+	competencyId: pm.id,
+	bank: yv()
+}), VC = g({
 	pluginId: "pop-up-one-more",
-	competencyId: hm.id,
-	bank: fv()
-}), PC = g({
+	competencyId: mm.id,
+	bank: bv()
+}), HC = g({
 	pluginId: "preschool-count-on-from",
 	competencyId: Vp.id,
-	bank: mv()
-}), FC = g({
+	bank: Sv()
+}), UC = g({
 	pluginId: "rocket-countdown",
-	competencyId: pm.id,
-	bank: hv()
-}), IC = g({
+	competencyId: fm.id,
+	bank: Cv()
+}), WC = g({
 	pluginId: "line-up-the-cards",
-	competencyId: _m.id,
-	bank: gv()
-}), LC = g({
+	competencyId: gm.id,
+	bank: wv()
+}), GC = g({
 	pluginId: "missing-card-hard",
-	competencyId: _m.id,
-	bank: _v()
-}), RC = g({
+	competencyId: gm.id,
+	bank: Tv()
+}), KC = g({
 	pluginId: "number-showdown",
 	competencyId: Mp.id,
-	bank: vv()
-}), zC = {
+	bank: Ev()
+}), qC = g({
+	pluginId: "decompose-to-ten",
+	competencyId: qp.id,
+	bank: Dv()
+}), JC = g({
+	pluginId: "trace-the-numeral",
+	competencyId: Up.id,
+	bank: kv()
+}), YC = g({
+	pluginId: "trace-the-teens",
+	competencyId: Up.id,
+	bank: jv()
+}), XC = g({
+	pluginId: "tens-staircase",
+	competencyId: T.id,
+	bank: Nv()
+}), ZC = g({
+	pluginId: "skip-count-hops",
+	competencyId: T.id,
+	bank: Pv()
+}), QC = {
 	"preschool-count-in-order-5": 1,
 	"preschool-count-in-order-10": 2
 };
-function BC(e, t, n) {
+function $C(e, t, n) {
 	let r = e;
 	return {
 		...t,
 		pluginId: r.plugin.id,
-		...zC[r.plugin.id] === void 0 ? {} : { weight: zC[r.plugin.id] },
+		...QC[r.plugin.id] === void 0 ? {} : { weight: QC[r.plugin.id] },
 		competency: n,
 		competencies: [n],
 		createSession: r.createSession,
 		createMasterySignal: r.createMasterySignal
 	};
 }
-var VC = [
+var ew = [
 	[
-		qx,
+		tS,
 		"Flash Dots",
 		"🎲",
 		Op
 	],
 	[
-		Jx,
+		nS,
 		"Number Hunt",
 		"🔍",
 		kp
 	],
 	[
-		Yx,
+		rS,
 		"Numeral Twins",
 		"👯",
 		kp
 	],
 	[
-		Xx,
+		iS,
 		"Show the Number",
 		"🖐️",
 		Ap
 	],
 	[
-		Zx,
+		aS,
 		"Which Has More?",
 		"⚖️",
 		jp
 	],
 	[
-		Qx,
+		oS,
 		"Same or Not?",
 		"🟰",
 		jp
 	],
 	[
-		$x,
+		sS,
 		"Bigger Number",
 		"🔢",
 		Mp
 	],
 	[
-		eS,
+		cS,
 		"Bigger, Smaller or Same",
 		"↔️",
 		Mp
 	],
 	[
-		tS,
+		lS,
 		"All Together",
 		"➕",
 		Np
 	],
 	[
-		nS,
+		uS,
 		"How Many Altogether?",
 		"🧺",
 		Np
 	],
 	[
-		rS,
+		dS,
 		"How Many Left?",
 		"➖",
 		Pp
 	],
 	[
-		iS,
+		fS,
 		"Which Picture?",
 		"🖼️",
 		Pp
 	],
 	[
-		aS,
+		pS,
 		"Shape Hunt",
 		"🔷",
 		Fp
 	],
 	[
-		oS,
+		mS,
 		"Is It a Rectangle?",
 		"▭",
 		Fp
 	],
 	[
-		sS,
+		hS,
 		"Where Is the Ball?",
 		"⚽",
 		Ip
 	],
 	[
-		cS,
+		gS,
 		"Longer or Shorter?",
 		"📏",
 		Lp
 	],
 	[
-		lS,
+		_S,
 		"Heavy or Light?",
 		"🪨",
 		Lp
 	],
 	[
-		uS,
+		vS,
 		"Holds More?",
 		"🥛",
 		Lp
 	],
 	[
-		dS,
+		yS,
 		"What Comes Next?",
 		"🔴",
 		Rp
 	],
 	[
-		fS,
+		bS,
 		"Days in Order",
 		"📅",
 		zp
 	],
 	[
-		pS,
+		xS,
 		"Day After",
 		"🗓️",
 		zp
 	],
 	[
-		mS,
+		SS,
 		"How Many All Together?",
 		"🧮",
 		Bp
 	],
 	[
-		hS,
+		CS,
 		"How Many?",
 		"🔢",
 		Bp
 	],
 	[
-		gS,
+		wS,
 		"Hidden Bag",
 		"🎒",
 		Vp
 	],
 	[
-		_S,
+		TS,
 		"Neighbour Houses",
 		"🏠",
 		Hp
 	],
 	[
-		vS,
+		ES,
 		"Pick the Right Way",
 		"✍️",
 		Up
 	],
 	[
-		yS,
+		DS,
 		"Empty Basket",
 		"🧺",
 		Wp
 	],
 	[
-		bS,
+		OS,
 		"Is Zero a Number?",
 		"0️⃣",
 		Wp
 	],
 	[
-		xS,
+		kS,
 		"Still the Same?",
 		"⚖️",
 		Gp
 	],
 	[
-		SS,
+		AS,
 		"Which Row Has More?",
 		"📏",
 		Gp
 	],
 	[
-		CS,
+		jS,
 		"Who Is Nth?",
 		"🥇",
 		Kp
 	],
 	[
-		wS,
+		MS,
 		"Ordinal or Count?",
 		"🔟",
 		Kp
 	],
 	[
-		TS,
+		NS,
 		"Colour the Nth",
 		"🖍️",
 		Kp
 	],
 	[
-		ES,
+		PS,
 		"Two Hands",
 		"🙌",
 		qp
 	],
 	[
-		DS,
+		FS,
 		"Another Way",
 		"🔀",
 		qp
 	],
 	[
-		OS,
+		IS,
 		"Story + Objects",
 		"📖",
 		Jp
 	],
 	[
-		kS,
+		LS,
 		"Solve It",
 		"🧠",
 		Jp
 	],
 	[
-		AS,
+		RS,
 		"Solid or Flat?",
 		"🧊",
 		Yp
 	],
 	[
-		jS,
+		zS,
 		"Name the Thing",
 		"🏷️",
 		Yp
 	],
 	[
-		MS,
+		BS,
 		"Solid Match",
 		"🧩",
 		Yp
 	],
 	[
-		NS,
+		VS,
 		"Count the Sides",
 		"🔺",
 		Xp
 	],
 	[
-		PS,
+		HS,
 		"Sides or Corners?",
 		"📐",
 		Xp
 	],
 	[
-		FS,
+		US,
 		"Robot Says",
 		"🤖",
 		Zp
 	],
 	[
-		IS,
+		WS,
 		"Which Goes in the Middle?",
 		"↔️",
 		Qp
 	],
 	[
-		LS,
+		GS,
 		"Odd One Out",
 		"🚫",
 		$p
 	],
 	[
-		RS,
+		KS,
 		"Name the Group",
 		"🏷️",
 		em
 	],
 	[
-		zS,
+		qS,
 		"Fill the Gap",
 		"🧩",
 		tm
 	],
 	[
-		BS,
+		JS,
 		"When Does It Happen?",
 		"🌗",
 		nm
 	],
 	[
-		VS,
+		YS,
 		"Yesterday, Today, Tomorrow",
 		"📆",
 		rm
 	],
 	[
-		HS,
+		XS,
 		"What Day Was It?",
 		"🗓️",
 		rm
 	],
 	[
-		US,
+		ZS,
 		"Count in Order (1-5)",
 		"🔢",
 		im
 	],
 	[
-		WS,
+		QS,
 		"Count in Order (1-10)",
 		"🔢",
 		im
 	],
 	[
-		GS,
+		$S,
 		"Touch Once",
 		"👆",
 		am
 	],
 	[
-		KS,
+		eC,
 		"Give Me Some",
 		"🎁",
 		om
 	],
 	[
-		qS,
+		tC,
 		"First, Next, Last",
 		"🌅",
 		sm
 	],
 	[
-		JS,
+		nC,
 		"Name That Shape",
 		"🔵",
 		cm
 	],
 	[
-		YS,
+		rC,
 		"Same Shape",
 		"🧩",
 		lm
 	],
 	[
-		XS,
+		iC,
 		"Roll or Stack?",
 		"🎳",
 		um
 	],
 	[
-		ZS,
+		aC,
 		"Say It with Words",
 		"💬",
 		dm
 	],
 	[
-		QS,
+		oC,
 		"Count Further",
 		"🔟",
-		fm
-	],
-	[
-		$S,
-		"Countdown",
-		"🚀",
-		pm
-	],
-	[
-		eC,
-		"Take Exactly",
-		"🧺",
-		mm
-	],
-	[
-		tC,
-		"One More, One Less",
-		"↕️",
-		hm
-	],
-	[
-		nC,
-		"Greater, Less, Equal",
-		"⚖️",
-		gm
-	],
-	[
-		rC,
-		"Number Track",
-		"🛤️",
-		_m
-	],
-	[
-		iC,
-		"Ten Frame",
-		"🟦",
-		vm
-	],
-	[
-		aC,
-		"Ten and More",
-		"🔟",
-		ym
-	],
-	[
-		oC,
-		"Add or Take?",
-		"🎭",
-		bm
+		T
 	],
 	[
 		sC,
-		"Make Ten",
-		"🔟",
-		xm
-	],
-	[
-		cC,
-		"Quick Facts",
-		"⚡",
-		Sm
-	],
-	[
-		lC,
-		"Doubles",
-		"👯",
-		Cm
-	],
-	[
-		uC,
-		"Number Sentences",
-		"📝",
-		wm
-	],
-	[
-		dC,
-		"Fair Shares",
-		"🍪",
-		Tm
-	],
-	[
-		fC,
-		"Same Pattern",
-		"🔁",
-		Em
-	],
-	[
-		pC,
-		"Pairs, None Left",
-		"🧦",
-		Dm
-	],
-	[
-		mC,
-		"What Do We Measure?",
-		"📐",
-		Om
-	],
-	[
-		hC,
-		"Pick the Tool",
-		"⚖️",
-		km
-	],
-	[
-		gC,
-		"Line Them Up",
-		"📏",
-		Am
-	],
-	[
-		_C,
-		"Which Takes Longer?",
-		"⏳",
-		jm
-	],
-	[
-		vC,
-		"Shop Play",
-		"🛒",
-		Mm
-	],
-	[
-		yC,
-		"Build a Bigger Shape",
-		"🏗️",
-		Nm
-	],
-	[
-		bC,
-		"Shapes Around Us",
-		"🌍",
-		Pm
-	],
-	[
-		xC,
-		"Follow the Route",
-		"🧭",
-		Fm
-	],
-	[
-		SC,
-		"Copy the Build",
-		"🧱",
-		Im
-	],
-	[
-		CC,
-		"Sort and Count",
-		"🗂️",
-		Lm
-	],
-	[
-		wC,
-		"Picture Graph",
-		"📊",
-		Rm
-	],
-	[
-		TC,
-		"How Do You Know?",
-		"🗣️",
-		zm
-	],
-	[
-		EC,
-		"Enough for Everyone?",
-		"🥛",
-		Bm
-	],
-	[
-		DC,
-		"Guess and Check",
-		"🎯",
-		Vm
-	],
-	[
-		OC,
-		"Count the Teens",
-		"🔢",
+		"Countdown",
+		"🚀",
 		fm
 	],
 	[
+		cC,
+		"Take Exactly",
+		"🧺",
+		pm
+	],
+	[
+		lC,
+		"One More, One Less",
+		"↕️",
+		mm
+	],
+	[
+		uC,
+		"Greater, Less, Equal",
+		"⚖️",
+		hm
+	],
+	[
+		dC,
+		"Number Track",
+		"🛤️",
+		gm
+	],
+	[
+		fC,
+		"Ten Frame",
+		"🟦",
+		_m
+	],
+	[
+		pC,
+		"Ten and More",
+		"🔟",
+		vm
+	],
+	[
+		mC,
+		"Add or Take?",
+		"🎭",
+		ym
+	],
+	[
+		hC,
+		"Make Ten",
+		"🔟",
+		bm
+	],
+	[
+		gC,
+		"Quick Facts",
+		"⚡",
+		xm
+	],
+	[
+		_C,
+		"Doubles",
+		"👯",
+		Sm
+	],
+	[
+		vC,
+		"Number Sentences",
+		"📝",
+		Cm
+	],
+	[
+		yC,
+		"Fair Shares",
+		"🍪",
+		wm
+	],
+	[
+		bC,
+		"Same Pattern",
+		"🔁",
+		Tm
+	],
+	[
+		xC,
+		"Pairs, None Left",
+		"🧦",
+		Em
+	],
+	[
+		SC,
+		"What Do We Measure?",
+		"📐",
+		Dm
+	],
+	[
+		CC,
+		"Pick the Tool",
+		"⚖️",
+		Om
+	],
+	[
+		wC,
+		"Line Them Up",
+		"📏",
+		km
+	],
+	[
+		TC,
+		"Which Takes Longer?",
+		"⏳",
+		Am
+	],
+	[
+		EC,
+		"Shop Play",
+		"🛒",
+		jm
+	],
+	[
+		DC,
+		"Build a Bigger Shape",
+		"🏗️",
+		Mm
+	],
+	[
+		OC,
+		"Shapes Around Us",
+		"🌍",
+		Nm
+	],
+	[
 		kC,
+		"Follow the Route",
+		"🧭",
+		Pm
+	],
+	[
+		AC,
+		"Copy the Build",
+		"🧱",
+		Fm
+	],
+	[
+		jC,
+		"Sort and Count",
+		"🗂️",
+		Im
+	],
+	[
+		MC,
+		"Picture Graph",
+		"📊",
+		Lm
+	],
+	[
+		NC,
+		"How Do You Know?",
+		"🗣️",
+		Rm
+	],
+	[
+		PC,
+		"Enough for Everyone?",
+		"🥛",
+		zm
+	],
+	[
+		FC,
+		"Guess and Check",
+		"🎯",
+		Bm
+	],
+	[
+		IC,
+		"Count the Teens",
+		"🔢",
+		T
+	],
+	[
+		LC,
 		"Dot Pattern Snap",
 		"🎲",
 		Op
 	],
 	[
-		AC,
+		RC,
 		"Ten-Frame Flash",
 		"🟦",
 		Op
 	],
 	[
-		jC,
+		zC,
 		"Same in a Circle",
 		"⭕",
 		Gp
 	],
 	[
-		MC,
+		BC,
 		"Grab a Handful",
 		"🤲",
+		pm
+	],
+	[
+		VC,
+		"Pop-Up One More",
+		"🎈",
 		mm
 	],
 	[
-		NC,
-		"Pop-Up One More",
-		"🎈",
-		hm
-	],
-	[
-		PC,
+		HC,
 		"Count On From",
 		"👣",
 		Vp
 	],
 	[
-		FC,
+		UC,
 		"Rocket Countdown",
 		"🚀",
-		pm
+		fm
 	],
 	[
-		IC,
+		WC,
 		"Line Up the Cards",
 		"🃏",
-		_m
+		gm
 	],
 	[
-		LC,
+		GC,
 		"Missing Card, Hard",
 		"🧩",
-		_m
+		gm
 	],
 	[
-		RC,
+		KC,
 		"Number Showdown",
 		"⚔️",
 		Mp
+	],
+	[
+		qC,
+		"Decompose to Ten",
+		"🧮",
+		qp
+	],
+	[
+		JC,
+		"Trace the Numeral",
+		"✏️",
+		Up
+	],
+	[
+		YC,
+		"Trace the Teens",
+		"🖍️",
+		Up
+	],
+	[
+		XC,
+		"Tens Staircase",
+		"🪜",
+		T
+	],
+	[
+		ZC,
+		"Skip-Count Hops",
+		"🐸",
+		T
 	]
-], HC = VC.map(([e]) => e.plugin), UC = VC.map(([e]) => e.plugin.id), WC = VC.map(([e, t, n, r], i) => BC(e, {
-	key: UC[i],
+], tw = ew.map(([e]) => e.plugin), nw = ew.map(([e]) => e.plugin.id), rw = ew.map(([e, t, n, r], i) => $C(e, {
+	key: nw[i],
 	label: t,
 	icon: n
-}, r)), GC = {
+}, r)), iw = {
 	id: "math.addition.mental",
 	nameKey: "competency.math.addition.mental.name",
 	descriptionKey: "competency.math.addition.mental.description",
@@ -40731,7 +41043,7 @@ var VC = [
 		kind: "competency",
 		id: "math.addition.baseline-concrete"
 	}]
-}, KC = {
+}, aw = {
 	id: "math.subtraction.mental",
 	nameKey: "competency.math.subtraction.mental.name",
 	descriptionKey: "competency.math.subtraction.mental.description",
@@ -40754,7 +41066,7 @@ var VC = [
 			id: "math.addition.baseline-concrete"
 		}
 	]
-}, qC = {
+}, ow = {
 	id: "math.multiplication.mental",
 	nameKey: "competency.math.multiplication.mental.name",
 	descriptionKey: "competency.math.multiplication.mental.description",
@@ -40767,7 +41079,7 @@ var VC = [
 		kind: "activity",
 		id: "math.multiplication.mental"
 	}]
-}, JC = {
+}, sw = {
 	id: "math.division.mental",
 	nameKey: "competency.math.division.mental.name",
 	descriptionKey: "competency.math.division.mental.description",
@@ -40783,7 +41095,7 @@ var VC = [
 		kind: "competency",
 		id: "math.multiplication.mental"
 	}]
-}, YC = {
+}, cw = {
 	id: "math.number-sense.baseline-counting",
 	nameKey: "competency.math.number-sense.baseline-counting.name",
 	descriptionKey: "competency.math.number-sense.baseline-counting.description",
@@ -40796,7 +41108,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.baseline-counting"
 	}]
-}, XC = {
+}, lw = {
 	id: "math.number-sense.baseline-subitizing",
 	nameKey: "competency.math.number-sense.baseline-subitizing.name",
 	descriptionKey: "competency.math.number-sense.baseline-subitizing.description",
@@ -40809,7 +41121,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.baseline-subitizing"
 	}]
-}, ZC = {
+}, uw = {
 	id: "math.number-sense.baseline-digits",
 	nameKey: "competency.math.number-sense.baseline-digits.name",
 	descriptionKey: "competency.math.number-sense.baseline-digits.description",
@@ -40822,7 +41134,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.baseline-digits"
 	}]
-}, QC = {
+}, dw = {
 	id: "math.comparing-ordering.baseline-groups",
 	nameKey: "competency.math.comparing-ordering.baseline-groups.name",
 	descriptionKey: "competency.math.comparing-ordering.baseline-groups.description",
@@ -40835,7 +41147,7 @@ var VC = [
 		kind: "activity",
 		id: "math.comparing-ordering.baseline-groups"
 	}]
-}, $C = {
+}, fw = {
 	id: "math.addition.baseline-concrete",
 	nameKey: "competency.math.addition.baseline-concrete.name",
 	descriptionKey: "competency.math.addition.baseline-concrete.description",
@@ -40848,7 +41160,7 @@ var VC = [
 		kind: "activity",
 		id: "math.addition.baseline-concrete"
 	}]
-}, ew = {
+}, pw = {
 	id: "math.measurement.baseline-comparison",
 	nameKey: "competency.math.measurement.baseline-comparison.name",
 	descriptionKey: "competency.math.measurement.baseline-comparison.description",
@@ -40861,7 +41173,7 @@ var VC = [
 		kind: "activity",
 		id: "math.measurement.baseline-comparison"
 	}]
-}, tw = {
+}, mw = {
 	id: "math.time.baseline-day-order",
 	nameKey: "competency.math.time.baseline-day-order.name",
 	descriptionKey: "competency.math.time.baseline-day-order.description",
@@ -40874,7 +41186,7 @@ var VC = [
 		kind: "activity",
 		id: "math.time.baseline-day-order"
 	}]
-}, nw = {
+}, hw = {
 	id: "math.time.baseline-days-of-week",
 	nameKey: "competency.math.time.baseline-days-of-week.name",
 	descriptionKey: "competency.math.time.baseline-days-of-week.description",
@@ -40887,7 +41199,7 @@ var VC = [
 		kind: "activity",
 		id: "math.time.baseline-days-of-week"
 	}]
-}, rw = {
+}, gw = {
 	id: "math.geometry.baseline-shapes",
 	nameKey: "competency.math.geometry.baseline-shapes.name",
 	descriptionKey: "competency.math.geometry.baseline-shapes.description",
@@ -40900,7 +41212,7 @@ var VC = [
 		kind: "activity",
 		id: "math.geometry.baseline-shapes"
 	}]
-}, iw = {
+}, _w = {
 	id: "math.geometry.baseline-position",
 	nameKey: "competency.math.geometry.baseline-position.name",
 	descriptionKey: "competency.math.geometry.baseline-position.description",
@@ -40913,7 +41225,7 @@ var VC = [
 		kind: "activity",
 		id: "math.geometry.baseline-position"
 	}]
-}, aw = {
+}, vw = {
 	id: "math.number-sense.counting-range",
 	nameKey: "competency.math.number-sense.counting-range.name",
 	descriptionKey: "competency.math.number-sense.counting-range.description",
@@ -40926,7 +41238,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.counting-range"
 	}]
-}, ow = {
+}, yw = {
 	id: "math.number-sense.skip-counting",
 	nameKey: "competency.math.number-sense.skip-counting.name",
 	descriptionKey: "competency.math.number-sense.skip-counting.description",
@@ -40939,7 +41251,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.skip-counting"
 	}]
-}, sw = {
+}, bw = {
 	id: "math.number-sense.odd-even",
 	nameKey: "competency.math.number-sense.odd-even.name",
 	descriptionKey: "competency.math.number-sense.odd-even.description",
@@ -40951,7 +41263,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.odd-even"
 	}]
-}, cw = {
+}, xw = {
 	id: "math.number-sense.ordinals",
 	nameKey: "competency.math.number-sense.ordinals.name",
 	descriptionKey: "competency.math.number-sense.ordinals.description",
@@ -40964,7 +41276,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.ordinals"
 	}]
-}, lw = {
+}, Sw = {
 	id: "math.number-sense.negative-numbers",
 	nameKey: "competency.math.number-sense.negative-numbers.name",
 	descriptionKey: "competency.math.number-sense.negative-numbers.description",
@@ -40977,7 +41289,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.negative-numbers"
 	}]
-}, uw = {
+}, Cw = {
 	id: "math.number-sense.primes-factors",
 	nameKey: "competency.math.number-sense.primes-factors.name",
 	descriptionKey: "competency.math.number-sense.primes-factors.description",
@@ -40990,7 +41302,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.primes-factors"
 	}]
-}, dw = {
+}, ww = {
 	id: "math.number-sense.squares",
 	nameKey: "competency.math.number-sense.squares.name",
 	descriptionKey: "competency.math.number-sense.squares.description",
@@ -41003,7 +41315,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.squares"
 	}]
-}, fw = {
+}, Tw = {
 	id: "math.number-sense.roman-numerals",
 	nameKey: "competency.math.number-sense.roman-numerals.name",
 	descriptionKey: "competency.math.number-sense.roman-numerals.description",
@@ -41015,7 +41327,7 @@ var VC = [
 		kind: "activity",
 		id: "math.number-sense.roman-numerals"
 	}]
-}, pw = {
+}, Ew = {
 	id: "math.place-value.understanding",
 	nameKey: "competency.math.place-value.understanding.name",
 	descriptionKey: "competency.math.place-value.understanding.description",
@@ -41028,7 +41340,7 @@ var VC = [
 		kind: "activity",
 		id: "math.place-value.understanding"
 	}]
-}, mw = {
+}, Dw = {
 	id: "math.place-value.powers-of-ten",
 	nameKey: "competency.math.place-value.powers-of-ten.name",
 	descriptionKey: "competency.math.place-value.powers-of-ten.description",
@@ -41041,7 +41353,7 @@ var VC = [
 		kind: "activity",
 		id: "math.place-value.powers-of-ten"
 	}]
-}, hw = {
+}, Ow = {
 	id: "math.place-value.rounding",
 	nameKey: "competency.math.place-value.rounding.name",
 	descriptionKey: "competency.math.place-value.rounding.description",
@@ -41054,7 +41366,7 @@ var VC = [
 		kind: "activity",
 		id: "math.place-value.rounding"
 	}]
-}, gw = {
+}, kw = {
 	id: "math.place-value.multiply-divide-ten",
 	nameKey: "competency.math.place-value.multiply-divide-ten.name",
 	descriptionKey: "competency.math.place-value.multiply-divide-ten.description",
@@ -41067,20 +41379,7 @@ var VC = [
 		kind: "activity",
 		id: "math.place-value.multiply-divide-ten"
 	}]
-}, _w = [
-	GC,
-	KC,
-	qC,
-	JC,
-	YC,
-	XC,
-	ZC,
-	QC,
-	$C,
-	ew,
-	tw,
-	nw,
-	rw,
+}, Aw = [
 	iw,
 	aw,
 	ow,
@@ -41094,18 +41393,31 @@ var VC = [
 	mw,
 	hw,
 	gw,
+	_w,
+	vw,
+	yw,
+	bw,
+	xw,
+	Sw,
+	Cw,
+	ww,
+	Tw,
+	Ew,
+	Dw,
+	Ow,
+	kw,
 	...Le,
 	...Mr,
 	...Eo,
 	...vl,
 	...sf,
-	...Hm
-], vw = n([{
+	...Vm
+], jw = n([{
 	id: "mathematics",
 	nameKey: "subject.mathematics.name"
-}], _w, _w.map((e) => e.id));
-if (!vw.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(vw.errors)}`);
-var yw = [
+}], Aw, Aw.map((e) => e.id));
+if (!jw.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(jw.errors)}`);
+var Mw = [
 	{
 		areaKey: "number-sense",
 		nameKey: "curriculum.area.number-sense",
@@ -41197,16 +41509,16 @@ var yw = [
 		label: "Problem solving"
 	}
 ];
-function bw(e) {
+function Nw(e) {
 	let [t, n] = e.id.split(".");
-	if (t === "math") return yw.some((e) => e.areaKey === n) ? n : void 0;
+	if (t === "math") return Mw.some((e) => e.areaKey === n) ? n : void 0;
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/types.ts
-var xw = "math.time.baseline-day-order", Sw = "math.time.baseline-days-of-week";
+var Pw = "math.time.baseline-day-order", Fw = "math.time.baseline-days-of-week";
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/rng.ts
-function Cw(e) {
+function Iw(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41214,17 +41526,17 @@ function Cw(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function ww(e, t, n) {
+function Lw(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/generate.ts
-var Tw = [
+var Rw = [
 	"morning",
 	"afternoon",
 	"evening",
 	"night"
-], Ew = [
+], zw = [
 	"Monday",
 	"Tuesday",
 	"Wednesday",
@@ -41233,58 +41545,58 @@ var Tw = [
 	"Saturday",
 	"Sunday"
 ];
-function Dw(e) {
+function Bw(e) {
 	return e === "P" || e === 1;
 }
-function Ow(e, t) {
-	let n = ww(e, 0, t - 1), r = ww(e, 0, t - 1);
-	for (; r === n;) r = ww(e, 0, t - 1);
+function Vw(e, t) {
+	let n = Lw(e, 0, t - 1), r = Lw(e, 0, t - 1);
+	for (; r === n;) r = Lw(e, 0, t - 1);
 	return [n, r];
 }
-function kw(e, t, n) {
-	let [r, i] = Ow(n, Tw.length), a = Math.min(r, i), o = {
+function Hw(e, t, n) {
+	let [r, i] = Vw(n, Rw.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: Tw[r]
+		label: Rw[r]
 	}, s = {
 		id: "b",
-		label: Tw[i]
+		label: Rw[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-day-order-${e}-${t}`,
 		kind: "day-order",
 		grade: e,
-		competencyId: xw,
+		competencyId: Pw,
 		prompt: "Which comes first in the day?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function Aw(e, t, n) {
-	let [r, i] = Ow(n, Ew.length), a = Math.min(r, i), o = {
+function Uw(e, t, n) {
+	let [r, i] = Vw(n, zw.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: Ew[r]
+		label: zw[r]
 	}, s = {
 		id: "b",
-		label: Ew[i]
+		label: zw[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-days-of-week-${e}-${t}`,
 		kind: "days-of-week",
 		grade: e,
-		competencyId: Sw,
+		competencyId: Fw,
 		prompt: "Which comes first in the week?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function jw(e, t) {
-	if (!Dw(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Cw(t);
-	return n() < .5 ? kw(e, t, n) : Aw(e, t, n);
+function Ww(e, t) {
+	if (!Bw(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Iw(t);
+	return n() < .5 ? Hw(e, t, n) : Uw(e, t, n);
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/plugin.ts
-function Mw(e) {
+function Gw(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -41294,7 +41606,7 @@ function Mw(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function Nw(e, t, n, r, i, a) {
+function Kw(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -41302,36 +41614,36 @@ function Nw(e, t, n, r, i, a) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Mw(e).correctAnswer,
+		correctAnswer: Gw(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function Pw(e, t) {
-	let n = Cw(t), r = [];
+function qw(e, t) {
+	let n = Iw(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(jw(e, t));
+		r.push(Ww(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Fw = {
+var Jw = {
 	id: "baseline-calendar-time-basics",
-	competencyIds: [xw, Sw],
+	competencyIds: [Pw, Fw],
 	generateQuestion(e, t) {
-		return jw(e, t);
+		return Ww(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: Mw
-}, Iw = "math.addition.baseline-concrete";
+	toPresentation: Gw
+}, Yw = "math.addition.baseline-concrete";
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/rng.ts
-function Lw(e) {
+function Xw(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41339,53 +41651,53 @@ function Lw(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Rw(e, t, n) {
+function Zw(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/generate.ts
-var zw = [
+var Qw = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function Bw(e) {
+function $w(e) {
 	return e === "P" || e === 1;
 }
-function Vw(e, t, n) {
-	let r = Rw(n, 1, 5), i = Rw(n, 1, 5);
+function eT(e, t, n) {
+	let r = Zw(n, 1, 5), i = Zw(n, 1, 5);
 	return {
 		id: `baseline-concrete-addition-subtraction-add-${e}-${t}`,
 		grade: e,
 		operator: "+",
 		leftCount: r,
 		rightCount: i,
-		emoji: zw[Rw(n, 0, zw.length - 1)],
+		emoji: Qw[Zw(n, 0, Qw.length - 1)],
 		correctAnswer: r + i
 	};
 }
-function Hw(e, t, n) {
-	let r = Rw(n, 2, 10), i = Rw(n, 1, r - 1);
+function tT(e, t, n) {
+	let r = Zw(n, 2, 10), i = Zw(n, 1, r - 1);
 	return {
 		id: `baseline-concrete-addition-subtraction-sub-${e}-${t}`,
 		grade: e,
 		operator: "-",
 		leftCount: r,
 		rightCount: i,
-		emoji: zw[Rw(n, 0, zw.length - 1)],
+		emoji: Qw[Zw(n, 0, Qw.length - 1)],
 		correctAnswer: r - i
 	};
 }
-function Uw(e, t) {
-	if (!Bw(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Lw(t);
-	return n() < .5 ? Vw(e, t, n) : Hw(e, t, n);
+function nT(e, t) {
+	if (!$w(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = Xw(t);
+	return n() < .5 ? eT(e, t, n) : tT(e, t, n);
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/plugin.ts
-function Ww(e) {
+function rT(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -41405,44 +41717,44 @@ function Ww(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function Gw(e, t, n, r, i, a) {
+function iT(e, t, n, r, i, a) {
 	return {
-		competencyId: Iw,
+		competencyId: Yw,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Ww(e).correctAnswer,
+		correctAnswer: rT(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function Kw(e, t) {
-	let n = Lw(t), r = [];
+function aT(e, t) {
+	let n = Xw(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Uw(e, t));
+		r.push(nT(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var qw = {
+var oT = {
 	id: "baseline-concrete-addition-subtraction",
-	competencyIds: [Iw],
+	competencyIds: [Yw],
 	generateQuestion(e, t) {
-		return Uw(e, t);
+		return nT(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: Ww
-}, Jw = "math.number-sense.baseline-counting", Yw = "math.number-sense.baseline-subitizing", Xw = "math.number-sense.baseline-digits", Zw = "math.comparing-ordering.baseline-groups";
+	toPresentation: rT
+}, sT = "math.number-sense.baseline-counting", cT = "math.number-sense.baseline-subitizing", lT = "math.number-sense.baseline-digits", uT = "math.comparing-ordering.baseline-groups";
 //#endregion
 //#region packages/baseline-counting-quantities/src/rng.ts
-function Qw(e) {
+function dT(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41455,20 +41767,20 @@ function J(e, t, n) {
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/generate.ts
-var $w = [
+var fT = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function eT(e) {
+function pT(e) {
 	return e === "P" || e === 1;
 }
-function tT(e) {
-	return $w[J(e, 0, $w.length - 1)];
+function mT(e) {
+	return fT[J(e, 0, fT.length - 1)];
 }
-function nT(e, t) {
+function hT(e, t) {
 	let n = /* @__PURE__ */ new Set();
 	for (; n.size < 3;) {
 		let r = J(e, 0, 9);
@@ -41487,52 +41799,52 @@ function nT(e, t) {
 		correctOptionId: `digit-${t}`
 	};
 }
-function rT(e, t, n) {
+function gT(e, t, n) {
 	let r = J(n, 1, 20);
 	return {
 		id: `baseline-counting-quantities-counting-${e}-${t}`,
 		kind: "counting",
 		grade: e,
-		competencyId: Jw,
+		competencyId: sT,
 		count: r,
-		emoji: tT(n),
+		emoji: mT(n),
 		correctAnswer: r
 	};
 }
-function iT(e, t, n) {
+function _T(e, t, n) {
 	let r = J(n, 1, 5);
 	return {
 		id: `baseline-counting-quantities-subitizing-${e}-${t}`,
 		kind: "subitizing",
 		grade: e,
-		competencyId: Yw,
+		competencyId: cT,
 		count: r,
-		emoji: tT(n),
+		emoji: mT(n),
 		correctAnswer: r
 	};
 }
-function aT(e, t, n) {
-	let r = J(n, 0, 9), i = tT(n), { options: a, correctOptionId: o } = nT(n, r);
+function vT(e, t, n) {
+	let r = J(n, 0, 9), i = mT(n), { options: a, correctOptionId: o } = hT(n, r);
 	return {
 		id: `baseline-counting-quantities-digit-${e}-${t}`,
 		kind: "digit",
 		grade: e,
-		competencyId: Xw,
+		competencyId: lT,
 		count: r,
 		emoji: i,
 		options: a,
 		correctOptionId: o
 	};
 }
-function oT(e, t, n) {
+function yT(e, t, n) {
 	let r = J(n, 1, 10), i = J(n, 1, 10);
 	for (; i === r;) i = J(n, 1, 10);
-	let a = tT(n), o = tT(n), s = r > i ? "left" : "right";
+	let a = mT(n), o = mT(n), s = r > i ? "left" : "right";
 	return {
 		id: `baseline-counting-quantities-compare-groups-${e}-${t}`,
 		kind: "compare-groups",
 		grade: e,
-		competencyId: Zw,
+		competencyId: uT,
 		leftCount: r,
 		rightCount: i,
 		leftEmoji: a,
@@ -41547,20 +41859,20 @@ function oT(e, t, n) {
 		correctOptionId: s
 	};
 }
-function sT(e, t) {
-	if (!eT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Qw(t);
+function bT(e, t) {
+	if (!pT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = dT(t);
 	switch (J(n, 0, 3)) {
-		case 0: return rT(e, t, n);
-		case 1: return iT(e, t, n);
-		case 2: return aT(e, t, n);
-		default: return oT(e, t, n);
+		case 0: return gT(e, t, n);
+		case 1: return _T(e, t, n);
+		case 2: return vT(e, t, n);
+		default: return yT(e, t, n);
 	}
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/plugin.ts
-var cT = 1500;
-function lT(e) {
+var xT = 1500;
+function ST(e) {
 	return e.kind === "counting" ? {
 		presentation: {
 			kind: "equation",
@@ -41582,7 +41894,7 @@ function lT(e) {
 				type: "ten-frame",
 				filled: e.count,
 				emoji: e.emoji,
-				flashMs: cT
+				flashMs: xT
 			}
 		},
 		correctAnswer: e.correctAnswer
@@ -41622,7 +41934,7 @@ function lT(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function uT(e, t, n, r, i, a) {
+function CT(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -41630,32 +41942,32 @@ function uT(e, t, n, r, i, a) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: lT(e).correctAnswer,
+		correctAnswer: ST(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function dT(e, t) {
-	let n = Qw(t), r = [];
+function wT(e, t) {
+	let n = dT(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(sT(e, t));
+		r.push(bT(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var fT = {
+var TT = {
 	id: "baseline-counting-quantities",
 	competencyIds: [
-		Jw,
-		Yw,
-		Xw,
-		Zw
+		sT,
+		cT,
+		lT,
+		uT
 	],
 	generateQuestion(e, t) {
-		return sT(e, t);
+		return bT(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -41665,11 +41977,11 @@ var fT = {
 			case "compare-groups": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation: lT
-}, pT = "math.measurement.baseline-comparison";
+	toPresentation: ST
+}, ET = "math.measurement.baseline-comparison";
 //#endregion
 //#region packages/baseline-direct-comparison/src/rng.ts
-function mT(e) {
+function DT(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41677,12 +41989,12 @@ function mT(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function hT(e, t, n) {
+function OT(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/generate.ts
-var gT = {
+var kT = {
 	length: [
 		"🐛 the worm",
 		"🐍 the snake",
@@ -41701,26 +42013,26 @@ var gT = {
 		"🧴 the bottle",
 		"🛁 the bathtub"
 	]
-}, _T = [
+}, AT = [
 	"length",
 	"weight",
 	"capacity"
-], vT = {
+], jT = {
 	length: "Which one is longer?",
 	weight: "Which one is heavier?",
 	capacity: "Which one holds more?"
 };
-function yT(e) {
+function MT(e) {
 	return e === "P" || e === 1;
 }
-function bT(e, t) {
-	let n = hT(e, 0, t.length - 1), r = hT(e, 0, t.length - 1);
-	for (; r === n;) r = hT(e, 0, t.length - 1);
+function NT(e, t) {
+	let n = OT(e, 0, t.length - 1), r = OT(e, 0, t.length - 1);
+	for (; r === n;) r = OT(e, 0, t.length - 1);
 	return [t[n], t[r]];
 }
-function xT(e, t) {
-	if (!yT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = mT(t), r = _T[hT(n, 0, _T.length - 1)], [i, a] = bT(n, gT[r]), o = n() < .5, s = {
+function PT(e, t) {
+	if (!MT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = DT(t), r = AT[OT(n, 0, AT.length - 1)], [i, a] = NT(n, kT[r]), o = n() < .5, s = {
 		id: "a",
 		label: i
 	}, c = {
@@ -41731,14 +42043,14 @@ function xT(e, t) {
 		id: `baseline-direct-comparison-${r}-${e}-${t}`,
 		grade: e,
 		attribute: r,
-		prompt: vT[r],
+		prompt: jT[r],
 		options: [s, c],
 		correctOptionId: o ? "a" : "b"
 	};
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/plugin.ts
-function ST(e) {
+function FT(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -41748,44 +42060,44 @@ function ST(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function CT(e, t, n, r, i, a) {
+function IT(e, t, n, r, i, a) {
 	return {
-		competencyId: pT,
+		competencyId: ET,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: ST(e).correctAnswer,
+		correctAnswer: FT(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function wT(e, t) {
-	let n = mT(t), r = [];
+function LT(e, t) {
+	let n = DT(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(xT(e, t));
+		r.push(PT(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var TT = {
+var RT = {
 	id: "baseline-direct-comparison",
-	competencyIds: [pT],
+	competencyIds: [ET],
 	generateQuestion(e, t) {
-		return xT(e, t);
+		return PT(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: ST
-}, ET = "math.geometry.baseline-position";
+	toPresentation: FT
+}, zT = "math.geometry.baseline-position";
 //#endregion
 //#region packages/baseline-positional-language/src/rng.ts
-function DT(e) {
+function BT(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41793,38 +42105,38 @@ function DT(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function OT(e, t, n) {
+function VT(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-positional-language/src/generate.ts
-var kT = [
+var HT = [
 	"🐱 the cat",
 	"🐶 the dog",
 	"⭐ the star",
 	"🧸 the toy"
-], AT = [
+], UT = [
 	"📦 the box",
 	"🪑 the chair",
 	"🛏️ the bed",
 	"🌳 the tree"
-], jT = [
+], WT = [
 	"on",
 	"under",
 	"behind",
 	"between",
 	"next-to"
-], MT = {
+], GT = {
 	on: "on",
 	under: "under",
 	behind: "behind",
 	between: "between",
 	"next-to": "next to"
 };
-function NT(e) {
+function KT(e) {
 	return e === "P" || e === 1;
 }
-function PT(e, t, n, r) {
+function qT(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
@@ -41833,35 +42145,35 @@ function PT(e, t, n, r) {
 		case "between": return `${n}  ${t}  ${r}`;
 	}
 }
-function FT(e) {
-	let t = [...jT];
+function JT(e) {
+	let t = [...WT];
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = OT(e, 0, n), i = t[n];
+		let r = VT(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function IT(e, t) {
-	if (!NT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = DT(t), r = jT[OT(n, 0, jT.length - 1)], i = kT[OT(n, 0, kT.length - 1)], a = OT(n, 0, AT.length - 1), o = OT(n, 0, AT.length - 1);
-	for (; o === a;) o = OT(n, 0, AT.length - 1);
-	let s = AT[a], c = AT[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = FT(n).map((e) => ({
+function YT(e, t) {
+	if (!KT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = BT(t), r = WT[VT(n, 0, WT.length - 1)], i = HT[VT(n, 0, HT.length - 1)], a = VT(n, 0, UT.length - 1), o = VT(n, 0, UT.length - 1);
+	for (; o === a;) o = VT(n, 0, UT.length - 1);
+	let s = UT[a], c = UT[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = JT(n).map((e) => ({
 		id: `position-${e}`,
-		label: MT[e]
+		label: GT[e]
 	}));
 	return {
 		id: `baseline-positional-language-${e}-${t}`,
 		grade: e,
 		position: r,
 		subjectLabel: i,
-		scene: PT(r, l, u, d),
+		scene: qT(r, l, u, d),
 		options: f,
 		correctOptionId: `position-${r}`
 	};
 }
 //#endregion
 //#region packages/baseline-positional-language/src/plugin.ts
-function LT(e) {
+function XT(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -41871,44 +42183,44 @@ function LT(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function RT(e, t, n, r, i, a) {
+function ZT(e, t, n, r, i, a) {
 	return {
-		competencyId: ET,
+		competencyId: zT,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: LT(e).correctAnswer,
+		correctAnswer: XT(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function zT(e, t) {
-	let n = DT(t), r = [];
+function QT(e, t) {
+	let n = BT(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(IT(e, t));
+		r.push(YT(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var BT = {
+var $T = {
 	id: "baseline-positional-language",
-	competencyIds: [ET],
+	competencyIds: [zT],
 	generateQuestion(e, t) {
-		return IT(e, t);
+		return YT(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: LT
-}, VT = "math.geometry.baseline-shapes";
+	toPresentation: XT
+}, eE = "math.geometry.baseline-shapes";
 //#endregion
 //#region packages/baseline-shape-recognition/src/rng.ts
-function HT(e) {
+function tE(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -41916,12 +42228,12 @@ function HT(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function UT(e, t, n) {
+function nE(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/generate.ts
-var WT = [
+var rE = [
 	{
 		name: "circle",
 		emoji: "🔵"
@@ -41939,20 +42251,20 @@ var WT = [
 		emoji: "▭"
 	}
 ];
-function GT(e) {
+function iE(e) {
 	return e === "P" || e === 1;
 }
-function KT(e) {
-	let t = WT.map((e) => e.name);
+function aE(e) {
+	let t = rE.map((e) => e.name);
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = UT(e, 0, n), i = t[n];
+		let r = nE(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function qT(e, t) {
-	if (!GT(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = HT(t), r = WT[UT(n, 0, WT.length - 1)], i = KT(n).map((e) => ({
+function oE(e, t) {
+	if (!iE(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = tE(t), r = rE[nE(n, 0, rE.length - 1)], i = aE(n).map((e) => ({
 		id: `shape-${e}`,
 		label: e
 	}));
@@ -41967,7 +42279,7 @@ function qT(e, t) {
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/plugin.ts
-function JT(e) {
+function sE(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -41977,44 +42289,44 @@ function JT(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function YT(e, t, n, r, i, a) {
+function cE(e, t, n, r, i, a) {
 	return {
-		competencyId: VT,
+		competencyId: eE,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: JT(e).correctAnswer,
+		correctAnswer: sE(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function XT(e, t) {
-	let n = HT(t), r = [];
+function lE(e, t) {
+	let n = tE(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(qT(e, t));
+		r.push(oE(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var ZT = {
+var uE = {
 	id: "baseline-shape-recognition",
-	competencyIds: [VT],
+	competencyIds: [eE],
 	generateQuestion(e, t) {
-		return qT(e, t);
+		return oE(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: JT
+	toPresentation: sE
 };
 //#endregion
 //#region packages/mental-addition/src/rng.ts
-function QT(e) {
+function dE(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42027,54 +42339,54 @@ function Y(e, t, n) {
 }
 //#endregion
 //#region packages/mental-addition/src/generate.ts
-function $T(e) {
+function fE(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function eE(e) {
+function pE(e) {
 	let t = Y(e, 0, 9);
 	return {
 		operandA: t,
 		operandB: Y(e, 0, 9 - t)
 	};
 }
-function tE(e) {
+function mE(e) {
 	let t = Y(e, 1, 9);
 	return {
 		operandA: t,
 		operandB: Y(e, Math.max(1, 10 - t), 9)
 	};
 }
-function nE(e) {
+function hE(e) {
 	let t = Y(e, 0, 9), n = Y(e, 0, 9 - t);
 	return {
 		operandA: Y(e, 1, 9) * 10 + n,
 		operandB: t
 	};
 }
-function rE(e) {
+function gE(e) {
 	let t = Y(e, 1, 9);
 	return {
 		onesA: Y(e, Math.max(0, 10 - t), 9),
 		onesB: t
 	};
 }
-function iE(e) {
-	let { onesA: t, onesB: n } = rE(e), r = Y(e, 1, 9), i = Y(e, 1, 9);
+function _E(e) {
+	let { onesA: t, onesB: n } = gE(e), r = Y(e, 1, 9), i = Y(e, 1, 9);
 	return {
 		operandA: r * 10 + t,
 		operandB: i * 10 + n
 	};
 }
-function aE(e) {
-	let { onesA: t, onesB: n } = rE(e), r = Y(e, 0, 9), i = Y(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = Y(e, +!a, 9);
+function vE(e) {
+	let { onesA: t, onesB: n } = gE(e), r = Y(e, 0, 9), i = Y(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = Y(e, +!a, 9);
 	return {
 		operandA: i,
 		operandB: (a ? Y(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function oE(e, t) {
-	if (!$T(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = QT(t), { operandA: r, operandB: i } = e === 1 ? eE(n) : e === 2 ? tE(n) : e === 3 ? nE(n) : e === 4 ? iE(n) : aE(n);
+function yE(e, t) {
+	if (!fE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = dE(t), { operandA: r, operandB: i } = e === 1 ? pE(n) : e === 2 ? mE(n) : e === 3 ? hE(n) : e === 4 ? _E(n) : vE(n);
 	return {
 		id: `mental-addition-${e}-${t}`,
 		grade: e,
@@ -42085,8 +42397,8 @@ function oE(e, t) {
 }
 //#endregion
 //#region packages/mental-addition/src/plugin.ts
-var sE = "math.addition.mental";
-function cE(e) {
+var bE = "math.addition.mental";
+function xE(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -42095,44 +42407,44 @@ function cE(e) {
 		correctAnswer: e.correctSum
 	};
 }
-function lE(e, t, n, r, i, a) {
+function SE(e, t, n, r, i, a) {
 	return {
-		competencyId: sE,
+		competencyId: bE,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: cE(e).correctAnswer,
+		correctAnswer: xE(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function uE(e, t) {
-	let n = QT(t), r = [];
+function CE(e, t) {
+	let n = dE(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(oE(e, t));
+		r.push(yE(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var dE = {
+var wE = {
 	id: "mental-addition",
-	competencyIds: [sE],
+	competencyIds: [bE],
 	generateQuestion(e, t) {
-		return oE(e, t);
+		return yE(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctSum };
 	},
-	toPresentation: cE
+	toPresentation: xE
 };
 //#endregion
 //#region packages/mental-division/src/rng.ts
-function fE(e) {
+function TE(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42140,29 +42452,29 @@ function fE(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function pE(e, t, n) {
+function EE(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-division/src/generate.ts
-function mE(e) {
+function DE(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function hE(e, t) {
+function OE(e, t) {
 	return {
-		divisor: pE(e, 1, t),
-		correctQuotient: pE(e, 0, t)
+		divisor: EE(e, 1, t),
+		correctQuotient: EE(e, 0, t)
 	};
 }
-function gE(e) {
+function kE(e) {
 	return {
-		divisor: pE(e, 1, 9),
-		correctQuotient: pE(e, 11, 20)
+		divisor: EE(e, 1, 9),
+		correctQuotient: EE(e, 11, 20)
 	};
 }
-function _E(e, t) {
-	if (!mE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = fE(t), { divisor: r, correctQuotient: i } = e === 1 ? hE(n, 2) : e === 2 ? hE(n, 5) : e === 3 ? hE(n, 10) : e === 4 ? hE(n, 12) : gE(n);
+function AE(e, t) {
+	if (!DE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = TE(t), { divisor: r, correctQuotient: i } = e === 1 ? OE(n, 2) : e === 2 ? OE(n, 5) : e === 3 ? OE(n, 10) : e === 4 ? OE(n, 12) : kE(n);
 	return {
 		id: `mental-division-${e}-${t}`,
 		grade: e,
@@ -42173,8 +42485,8 @@ function _E(e, t) {
 }
 //#endregion
 //#region packages/mental-division/src/plugin.ts
-var vE = "math.division.mental";
-function yE(e) {
+var jE = "math.division.mental";
+function ME(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -42183,44 +42495,44 @@ function yE(e) {
 		correctAnswer: e.correctQuotient
 	};
 }
-function bE(e, t, n, r, i, a) {
+function NE(e, t, n, r, i, a) {
 	return {
-		competencyId: vE,
+		competencyId: jE,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: yE(e).correctAnswer,
+		correctAnswer: ME(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function xE(e, t) {
-	let n = fE(t), r = [];
+function PE(e, t) {
+	let n = TE(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(_E(e, t));
+		r.push(AE(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var SE = {
+var FE = {
 	id: "mental-division",
-	competencyIds: [vE],
+	competencyIds: [jE],
 	generateQuestion(e, t) {
-		return _E(e, t);
+		return AE(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctQuotient };
 	},
-	toPresentation: yE
+	toPresentation: ME
 };
 //#endregion
 //#region packages/mental-multiplication/src/rng.ts
-function CE(e) {
+function IE(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42228,29 +42540,29 @@ function CE(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function wE(e, t, n) {
+function LE(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-multiplication/src/generate.ts
-function TE(e) {
+function RE(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function EE(e, t) {
+function zE(e, t) {
 	return {
-		factorA: wE(e, 0, t),
-		factorB: wE(e, 0, t)
+		factorA: LE(e, 0, t),
+		factorB: LE(e, 0, t)
 	};
 }
-function DE(e) {
+function BE(e) {
 	return {
-		factorA: wE(e, 11, 20),
-		factorB: wE(e, 0, 9)
+		factorA: LE(e, 11, 20),
+		factorB: LE(e, 0, 9)
 	};
 }
-function OE(e, t) {
-	if (!TE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = CE(t), { factorA: r, factorB: i } = e === 1 ? EE(n, 2) : e === 2 ? EE(n, 5) : e === 3 ? EE(n, 10) : e === 4 ? EE(n, 12) : DE(n);
+function VE(e, t) {
+	if (!RE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = IE(t), { factorA: r, factorB: i } = e === 1 ? zE(n, 2) : e === 2 ? zE(n, 5) : e === 3 ? zE(n, 10) : e === 4 ? zE(n, 12) : BE(n);
 	return {
 		id: `mental-multiplication-${e}-${t}`,
 		grade: e,
@@ -42261,8 +42573,8 @@ function OE(e, t) {
 }
 //#endregion
 //#region packages/mental-multiplication/src/plugin.ts
-var kE = "math.multiplication.mental";
-function AE(e) {
+var HE = "math.multiplication.mental";
+function UE(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -42271,44 +42583,44 @@ function AE(e) {
 		correctAnswer: e.correctProduct
 	};
 }
-function jE(e, t, n, r, i, a) {
+function WE(e, t, n, r, i, a) {
 	return {
-		competencyId: kE,
+		competencyId: HE,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: AE(e).correctAnswer,
+		correctAnswer: UE(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function ME(e, t) {
-	let n = CE(t), r = [];
+function GE(e, t) {
+	let n = IE(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(OE(e, t));
+		r.push(VE(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var NE = {
+var KE = {
 	id: "mental-multiplication",
-	competencyIds: [kE],
+	competencyIds: [HE],
 	generateQuestion(e, t) {
-		return OE(e, t);
+		return VE(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctProduct };
 	},
-	toPresentation: AE
+	toPresentation: UE
 };
 //#endregion
 //#region packages/mental-subtraction/src/rng.ts
-function PE(e) {
+function qE(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42321,54 +42633,54 @@ function X(e, t, n) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/generate.ts
-function FE(e) {
+function JE(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function IE(e) {
+function YE(e) {
 	let t = X(e, 0, 9);
 	return {
 		correctDifference: t,
 		subtrahend: X(e, 0, 9 - t)
 	};
 }
-function LE(e) {
+function XE(e) {
 	let t = X(e, 1, 9);
 	return {
 		correctDifference: t,
 		subtrahend: X(e, Math.max(1, 10 - t), 9)
 	};
 }
-function RE(e) {
+function ZE(e) {
 	let t = X(e, 0, 9), n = X(e, 0, 9 - t);
 	return {
 		correctDifference: X(e, 1, 9) * 10 + n,
 		subtrahend: t
 	};
 }
-function zE(e) {
+function QE(e) {
 	let t = X(e, 1, 9);
 	return {
 		onesDiff: X(e, Math.max(0, 10 - t), 9),
 		onesSubtrahend: t
 	};
 }
-function BE(e) {
-	let { onesDiff: t, onesSubtrahend: n } = zE(e), r = X(e, 1, 9), i = X(e, 1, 9);
+function $E(e) {
+	let { onesDiff: t, onesSubtrahend: n } = QE(e), r = X(e, 1, 9), i = X(e, 1, 9);
 	return {
 		correctDifference: r * 10 + t,
 		subtrahend: i * 10 + n
 	};
 }
-function VE(e) {
-	let { onesDiff: t, onesSubtrahend: n } = zE(e), r = X(e, 0, 9), i = X(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = X(e, +!a, 9);
+function eD(e) {
+	let { onesDiff: t, onesSubtrahend: n } = QE(e), r = X(e, 0, 9), i = X(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = X(e, +!a, 9);
 	return {
 		correctDifference: i,
 		subtrahend: (a ? X(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function HE(e, t) {
-	if (!FE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = PE(t), { correctDifference: r, subtrahend: i } = e === 1 ? IE(n) : e === 2 ? LE(n) : e === 3 ? RE(n) : e === 4 ? BE(n) : VE(n);
+function tD(e, t) {
+	if (!JE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = qE(t), { correctDifference: r, subtrahend: i } = e === 1 ? YE(n) : e === 2 ? XE(n) : e === 3 ? ZE(n) : e === 4 ? $E(n) : eD(n);
 	return {
 		id: `mental-subtraction-${e}-${t}`,
 		grade: e,
@@ -42379,8 +42691,8 @@ function HE(e, t) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/plugin.ts
-var UE = "math.subtraction.mental";
-function WE(e) {
+var nD = "math.subtraction.mental";
+function rD(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -42389,44 +42701,44 @@ function WE(e) {
 		correctAnswer: e.correctDifference
 	};
 }
-function GE(e, t, n, r, i, a) {
+function iD(e, t, n, r, i, a) {
 	return {
-		competencyId: UE,
+		competencyId: nD,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: WE(e).correctAnswer,
+		correctAnswer: rD(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function KE(e, t) {
-	let n = PE(t), r = [];
+function aD(e, t) {
+	let n = qE(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(HE(e, t));
+		r.push(tD(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var qE = {
+var oD = {
 	id: "mental-subtraction",
-	competencyIds: [UE],
+	competencyIds: [nD],
 	generateQuestion(e, t) {
-		return HE(e, t);
+		return tD(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctDifference };
 	},
-	toPresentation: WE
-}, JE = "math.number-sense.counting-range";
+	toPresentation: rD
+}, sD = "math.number-sense.counting-range";
 //#endregion
 //#region packages/number-sense-counting-range/src/rng.ts
-function YE(e) {
+function cD(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42434,22 +42746,22 @@ function YE(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function XE(e, t, n) {
+function lD(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/generate.ts
-function ZE(e) {
+function uD(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 4;
 }
-var QE = {
+var dD = {
 	1: 100,
 	2: 1e3,
 	3: 1e4,
 	4: 1e6
 };
-function $E(e, t, n, r) {
-	let i = XE(r, 0, n - 1);
+function fD(e, t, n, r) {
+	let i = lD(r, 0, n - 1);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
 		grade: e,
@@ -42458,8 +42770,8 @@ function $E(e, t, n, r) {
 		numericAnswer: i + 1
 	};
 }
-function eD(e, t, n, r) {
-	let i = XE(r, 1, n);
+function pD(e, t, n, r) {
+	let i = lD(r, 1, n);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
 		grade: e,
@@ -42468,9 +42780,9 @@ function eD(e, t, n, r) {
 		numericAnswer: i - 1
 	};
 }
-function tD(e, t, n, r) {
-	let i = XE(r, 0, n), a = XE(r, 0, n);
-	for (; a === i;) a = XE(r, 0, n);
+function mD(e, t, n, r) {
+	let i = lD(r, 0, n), a = lD(r, 0, n);
+	for (; a === i;) a = lD(r, 0, n);
 	let o = i > a ? "a" : "b";
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -42487,18 +42799,18 @@ function tD(e, t, n, r) {
 		correctOptionId: o
 	};
 }
-function nD(e, t) {
-	if (!ZE(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
-	let n = QE[e], r = YE(t);
-	switch (XE(r, 0, 2)) {
-		case 0: return $E(e, t, n, r);
-		case 1: return eD(e, t, n, r);
-		default: return tD(e, t, n, r);
+function hD(e, t) {
+	if (!uD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
+	let n = dD[e], r = cD(t);
+	switch (lD(r, 0, 2)) {
+		case 0: return fD(e, t, n, r);
+		case 1: return pD(e, t, n, r);
+		default: return mD(e, t, n, r);
 	}
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/plugin.ts
-function rD(e) {
+function gD(e) {
 	if (e.kind === "compare") return {
 		presentation: {
 			kind: "choice",
@@ -42516,44 +42828,44 @@ function rD(e) {
 		correctAnswer: e.numericAnswer
 	};
 }
-function iD(e, t, n, r, i, a) {
+function _D(e, t, n, r, i, a) {
 	return {
-		competencyId: JE,
+		competencyId: sD,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: rD(e).correctAnswer,
+		correctAnswer: gD(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function aD(e, t) {
-	let n = YE(t), r = [];
+function vD(e, t) {
+	let n = cD(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(nD(e, t));
+		r.push(hD(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var oD = {
+var yD = {
 	id: "number-sense-counting-range",
-	competencyIds: [JE],
+	competencyIds: [sD],
 	generateQuestion(e, t) {
-		return nD(e, t);
+		return hD(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation: rD
-}, sD = "math.number-sense.negative-numbers";
+	toPresentation: gD
+}, bD = "math.number-sense.negative-numbers";
 //#endregion
 //#region packages/number-sense-negative-numbers/src/rng.ts
-function cD(e) {
+function xD(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42561,16 +42873,16 @@ function cD(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function lD(e, t, n) {
+function SD(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/generate.ts
-function uD(e) {
+function CD(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function dD(e, t, n, r) {
-	let i = lD(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
+function wD(e, t, n, r) {
+	let i = SD(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
 		grade: e,
@@ -42579,9 +42891,9 @@ function dD(e, t, n, r) {
 		numericAnswer: o
 	};
 }
-function fD(e, t, n, r, i) {
-	let a = lD(n, i[0], i[1]), o = lD(n, i[0], i[1]);
-	for (; o === a;) o = lD(n, i[0], i[1]);
+function TD(e, t, n, r, i) {
+	let a = SD(n, i[0], i[1]), o = SD(n, i[0], i[1]);
+	for (; o === a;) o = SD(n, i[0], i[1]);
 	let s = r === "temperature" ? `Which is colder, ${a}° or ${o}°?` : `Who owes more money: someone who owes $${Math.abs(a)} or someone who owes $${Math.abs(o)}?`, c = (e) => r === "temperature" ? `${e}°` : `owes $${Math.abs(e)}`, l = a < o ? "a" : "b";
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
@@ -42598,20 +42910,20 @@ function fD(e, t, n, r, i) {
 		correctOptionId: l
 	};
 }
-function pD(e, t) {
-	if (!uD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = cD(t);
-	if (e === 1) return dD(e, t, n, [-10, 10]);
-	if (e === 2) return dD(e, t, n, [-20, 20]);
-	if (e === 3) return fD(e, t, n, "temperature", [-20, 20]);
-	if (e === 4) return fD(e, t, n, "debt", [-50, -1]);
-	if (n() < .5) return dD(e, t, n, [-100, 100]);
+function ED(e, t) {
+	if (!CD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = xD(t);
+	if (e === 1) return wD(e, t, n, [-10, 10]);
+	if (e === 2) return wD(e, t, n, [-20, 20]);
+	if (e === 3) return TD(e, t, n, "temperature", [-20, 20]);
+	if (e === 4) return TD(e, t, n, "debt", [-50, -1]);
+	if (n() < .5) return wD(e, t, n, [-100, 100]);
 	let r = n() < .5 ? "temperature" : "debt";
-	return fD(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
+	return TD(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/plugin.ts
-function mD(e) {
+function DD(e) {
 	return e.kind === "compare" ? {
 		presentation: {
 			kind: "choice",
@@ -42627,44 +42939,44 @@ function mD(e) {
 		correctAnswer: e.numericAnswer
 	};
 }
-function hD(e, t, n, r, i, a) {
+function OD(e, t, n, r, i, a) {
 	return {
-		competencyId: sD,
+		competencyId: bD,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: mD(e).correctAnswer,
+		correctAnswer: DD(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function gD(e, t) {
-	let n = cD(t), r = [];
+function kD(e, t) {
+	let n = xD(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(pD(e, t));
+		r.push(ED(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var _D = {
+var AD = {
 	id: "number-sense-negative-numbers",
-	competencyIds: [sD],
+	competencyIds: [bD],
 	generateQuestion(e, t) {
-		return pD(e, t);
+		return ED(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation: mD
-}, vD = "math.number-sense.odd-even";
+	toPresentation: DD
+}, jD = "math.number-sense.odd-even";
 //#endregion
 //#region packages/number-sense-odd-even/src/rng.ts
-function yD(e) {
+function MD(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42672,30 +42984,30 @@ function yD(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function bD(e, t, n) {
+function ND(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/generate.ts
-function xD(e) {
+function PD(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var SD = {
+var FD = {
 	1: 20,
 	2: 100,
 	3: 1e3,
 	4: 1e4,
 	5: 1e4
 };
-function CD(e) {
+function ID(e) {
 	return e % 2 == 0 ? "even" : "odd";
 }
-function wD(e, t, n) {
+function LD(e, t, n) {
 	let r = t === "even" ? 0 : 1;
-	return r + 2 * bD(e, 0, Math.floor((n - r) / 2) + 1 - 1);
+	return r + 2 * ND(e, 0, Math.floor((n - r) / 2) + 1 - 1);
 }
-function TD(e, t, n) {
-	let r = SD[e], i = bD(n, 0, r);
+function RD(e, t, n) {
+	let r = FD[e], i = ND(n, 0, r);
 	return {
 		id: `number-sense-odd-even-${e}-${t}`,
 		grade: e,
@@ -42708,16 +43020,16 @@ function TD(e, t, n) {
 			id: "even",
 			label: "Even"
 		}],
-		correctOptionId: CD(i)
+		correctOptionId: ID(i)
 	};
 }
-function ED(e, t, n) {
+function zD(e, t, n) {
 	let r = n() < .5 ? "odd" : "even", i = r === "odd" ? "even" : "odd", a = [];
 	for (; a.length < 3;) {
-		let e = wD(n, r, 1e4);
+		let e = LD(n, r, 1e4);
 		a.includes(e) || a.push(e);
 	}
-	let o = wD(n, i, 1e4), s = [
+	let o = LD(n, i, 1e4), s = [
 		{
 			value: a[0],
 			isOddOneOut: !1
@@ -42736,7 +43048,7 @@ function ED(e, t, n) {
 		}
 	];
 	for (let e = s.length - 1; e > 0; e--) {
-		let t = bD(n, 0, e), r = s[e];
+		let t = ND(n, 0, e), r = s[e];
 		s[e] = s[t], s[t] = r;
 	}
 	let c = [
@@ -42760,14 +43072,14 @@ function ED(e, t, n) {
 		correctOptionId: l
 	};
 }
-function DD(e, t) {
-	if (!xD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = yD(t);
-	return e === 5 && n() < .5 ? ED(e, t, n) : TD(e, t, n);
+function BD(e, t) {
+	if (!PD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = MD(t);
+	return e === 5 && n() < .5 ? zD(e, t, n) : RD(e, t, n);
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/plugin.ts
-function OD(e) {
+function VD(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -42777,44 +43089,44 @@ function OD(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function kD(e, t, n, r, i, a) {
+function HD(e, t, n, r, i, a) {
 	return {
-		competencyId: vD,
+		competencyId: jD,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: OD(e).correctAnswer,
+		correctAnswer: VD(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function AD(e, t) {
-	let n = yD(t), r = [];
+function UD(e, t) {
+	let n = MD(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(DD(e, t));
+		r.push(BD(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var jD = {
+var WD = {
 	id: "number-sense-odd-even",
-	competencyIds: [vD],
+	competencyIds: [jD],
 	generateQuestion(e, t) {
-		return DD(e, t);
+		return BD(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: OD
-}, MD = "math.number-sense.ordinals";
+	toPresentation: VD
+}, GD = "math.number-sense.ordinals";
 //#endregion
 //#region packages/number-sense-ordinals/src/ordinal.ts
-function ND(e) {
+function KD(e) {
 	let t = e % 100;
 	if (t >= 11 && t <= 13) return `${e}th`;
 	switch (e % 10) {
@@ -42826,7 +43138,7 @@ function ND(e) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/rng.ts
-function PD(e) {
+function qD(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42834,31 +43146,31 @@ function PD(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function FD(e, t, n) {
+function JD(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/generate.ts
-var ID = {
+var YD = {
 	1: 5,
 	2: 10,
 	3: 20,
 	4: 50,
 	5: 100
 };
-function LD(e) {
+function XD(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function RD(e, t) {
+function ZD(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = FD(t, 0, e), i = n[e];
+		let r = JD(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function zD(e, t) {
-	let n = RD(e, t), r = n.map((e, t) => ({
+function QD(e, t) {
+	let n = ZD(e, t), r = n.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e.label
 	}));
@@ -42867,7 +43179,7 @@ function zD(e, t) {
 		correctOptionId: r[n.findIndex((e) => e.correct)].id
 	};
 }
-function BD(e, t) {
+function $D(e, t) {
 	let n = [
 		e - 1,
 		e + 1,
@@ -42879,7 +43191,7 @@ function BD(e, t) {
 	for (let a of n) a >= 1 && a <= t && a !== e && !r.has(a) && (r.add(a), i.push(a));
 	return i;
 }
-function VD(e, t, n, r) {
+function eO(e, t, n, r) {
 	let i = new Set(t), a = [];
 	for (let t of e) {
 		if (a.length >= r) break;
@@ -42888,9 +43200,9 @@ function VD(e, t, n, r) {
 	for (let e = 1; e <= n && a.length < r; e++) i.has(e) || (a.push(e), i.add(e));
 	return a;
 }
-function HD(e, t, n, r) {
-	let i = VD(BD(e, t), /* @__PURE__ */ new Set([e]), t, 3);
-	return zD([{
+function tO(e, t, n, r) {
+	let i = eO($D(e, t), /* @__PURE__ */ new Set([e]), t, 3);
+	return QD([{
 		label: r(e),
 		correct: !0
 	}, ...i.map((e) => ({
@@ -42898,9 +43210,9 @@ function HD(e, t, n, r) {
 		correct: !1
 	}))], n);
 }
-function UD(e, t) {
-	if (!LD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = ID[e], r = PD(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = FD(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? HD(a, n, r, ND) : HD(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${ND(a)}?`;
+function nO(e, t) {
+	if (!XD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = YD[e], r = qD(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = JD(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? tO(a, n, r, KD) : tO(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${KD(a)}?`;
 	return {
 		id: `number-sense-ordinals-${e}-${t}`,
 		grade: e,
@@ -42912,7 +43224,7 @@ function UD(e, t) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/plugin.ts
-function WD(e) {
+function rO(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -42922,44 +43234,44 @@ function WD(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function GD(e, t, n, r, i, a) {
+function iO(e, t, n, r, i, a) {
 	return {
-		competencyId: MD,
+		competencyId: GD,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: WD(e).correctAnswer,
+		correctAnswer: rO(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function KD(e, t) {
-	let n = PD(t), r = [];
+function aO(e, t) {
+	let n = qD(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(UD(e, t));
+		r.push(nO(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var qD = {
+var oO = {
 	id: "number-sense-ordinals",
-	competencyIds: [MD],
+	competencyIds: [GD],
 	generateQuestion(e, t) {
-		return UD(e, t);
+		return nO(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: WD
-}, JD = "math.number-sense.primes-factors";
+	toPresentation: rO
+}, sO = "math.number-sense.primes-factors";
 //#endregion
 //#region packages/number-sense-primes-factors/src/rng.ts
-function YD(e) {
+function cO(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -42972,41 +43284,41 @@ function Z(e, t, n) {
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/generate.ts
-function XD(e) {
+function lO(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function ZD(e) {
+function uO(e) {
 	if (e < 2) return !1;
 	for (let t = 2; t * t <= e; t++) if (e % t === 0) return !1;
 	return !0;
 }
-function QD(e, t) {
-	return t === 0 ? e : QD(t, e % t);
+function dO(e, t) {
+	return t === 0 ? e : dO(t, e % t);
 }
-function $D(e, t) {
-	return e * t / QD(e, t);
+function fO(e, t) {
+	return e * t / dO(e, t);
 }
-var eO = {
+var pO = {
 	1: 20,
 	2: 50,
 	5: 50
-}, tO = {
+}, mO = {
 	3: 50,
 	4: 100,
 	5: 100
 };
-function nO(e, t) {
+function hO(e, t) {
 	let n = [];
 	for (let e = 2; e < t; e++) t % e === 0 && n.push(e);
 	return n.length === 0 ? Z(e, 2, t - 1) : n[Z(e, 0, n.length - 1)];
 }
-function rO(e, t) {
+function gO(e, t) {
 	let n = Z(e, 2, t - 1), r = 0;
 	for (; t % n === 0 && r < 20;) n = Z(e, 2, t - 1), r++;
 	return n;
 }
-function iO(e, t, n) {
-	let r = Z(n, 2, eO[e] ?? 50);
+function _O(e, t, n) {
+	let r = Z(n, 2, pO[e] ?? 50);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -43019,12 +43331,12 @@ function iO(e, t, n) {
 			id: "no",
 			label: "No"
 		}],
-		correctOptionId: ZD(r) ? "yes" : "no",
+		correctOptionId: uO(r) ? "yes" : "no",
 		n: r
 	};
 }
-function aO(e, t, n) {
-	let r = Z(n, 4, (tO[e] ?? 100) - 1), i = n() < .5 ? nO(n, r) : rO(n, r);
+function vO(e, t, n) {
+	let r = Z(n, 4, (mO[e] ?? 100) - 1), i = n() < .5 ? hO(n, r) : gO(n, r);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -43040,7 +43352,7 @@ function aO(e, t, n) {
 		correctOptionId: r % i === 0 ? "yes" : "no"
 	};
 }
-function oO(e, t, n) {
+function yO(e, t, n) {
 	let r = Z(n, 2, 12), i = Z(n, 2, 12);
 	for (; i === r;) i = Z(n, 2, 12);
 	return {
@@ -43048,23 +43360,23 @@ function oO(e, t, n) {
 		grade: e,
 		kind: "common-multiple",
 		prompt: `What is the smallest common multiple of ${r} and ${i}?`,
-		numericAnswer: $D(r, i)
+		numericAnswer: fO(r, i)
 	};
 }
-function sO(e, t) {
-	if (!XD(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = YD(t);
-	if (e === 1 || e === 2) return iO(e, t, n);
-	if (e === 3 || e === 4) return aO(e, t, n);
+function bO(e, t) {
+	if (!lO(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = cO(t);
+	if (e === 1 || e === 2) return _O(e, t, n);
+	if (e === 3 || e === 4) return vO(e, t, n);
 	switch (Z(n, 0, 2)) {
-		case 0: return iO(e, t, n);
-		case 1: return aO(e, t, n);
-		default: return oO(e, t, n);
+		case 0: return _O(e, t, n);
+		case 1: return vO(e, t, n);
+		default: return yO(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/plugin.ts
-function cO(e) {
+function xO(e) {
 	if (e.kind === "common-multiple") {
 		let t = e.prompt.match(/of (\d+) and (\d+)/);
 		return {
@@ -43084,44 +43396,44 @@ function cO(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function lO(e, t, n, r, i, a) {
+function SO(e, t, n, r, i, a) {
 	return {
-		competencyId: JD,
+		competencyId: sO,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: cO(e).correctAnswer,
+		correctAnswer: xO(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function uO(e, t) {
-	let n = YD(t), r = [];
+function CO(e, t) {
+	let n = cO(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(sO(e, t));
+		r.push(bO(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var dO = {
+var wO = {
 	id: "number-sense-primes-factors",
-	competencyIds: [JD],
+	competencyIds: [sO],
 	generateQuestion(e, t) {
-		return sO(e, t);
+		return bO(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "common-multiple" ? { correct: t === e.numericAnswer } : { correct: t === e.correctOptionId };
 	},
-	toPresentation: cO
-}, fO = "math.number-sense.roman-numerals";
+	toPresentation: xO
+}, TO = "math.number-sense.roman-numerals";
 //#endregion
 //#region packages/number-sense-roman-numerals/src/rng.ts
-function pO(e) {
+function EO(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43129,12 +43441,12 @@ function pO(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function mO(e, t, n) {
+function DO(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/generate.ts
-var hO = [
+var OO = [
 	[1e3, "M"],
 	[900, "CM"],
 	[500, "D"],
@@ -43149,33 +43461,33 @@ var hO = [
 	[4, "IV"],
 	[1, "I"]
 ];
-function gO(e) {
+function kO(e) {
 	let t = e, n = "";
-	for (let [e, r] of hO) for (; t >= e;) n += r, t -= e;
+	for (let [e, r] of OO) for (; t >= e;) n += r, t -= e;
 	return n;
 }
-function _O(e) {
+function AO(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var vO = {
+var jO = {
 	1: [1, 10],
 	2: [1, 50],
 	3: [1, 100],
 	4: [1, 500],
 	5: [1, 1e3]
 };
-function yO(e, t) {
+function MO(e, t) {
 	return e <= 3 || t() < .5 ? "read" : "write";
 }
-function bO(e, t) {
+function NO(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = mO(t, 0, e), i = n[e];
+		let r = DO(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function xO(e, t, n, r) {
+function PO(e, t, n, r) {
 	let i = /* @__PURE__ */ new Set();
 	for (let a of [
 		1,
@@ -43199,31 +43511,31 @@ function xO(e, t, n, r) {
 	for (; i.size < r && a <= n;) a !== e && i.add(a), a++;
 	return Array.from(i).slice(0, r);
 }
-function SO(e, t, n) {
-	let [r, i] = t, a = bO([e, ...xO(e, r, i, 3)], n), o = a.map((e, t) => ({
+function FO(e, t, n) {
+	let [r, i] = t, a = NO([e, ...PO(e, r, i, 3)], n), o = a.map((e, t) => ({
 		id: `opt-${t}`,
 		label: String(e)
 	})), s = a.indexOf(e);
 	return {
-		prompt: `Which number does the Roman numeral ${gO(e)} represent?`,
+		prompt: `Which number does the Roman numeral ${kO(e)} represent?`,
 		options: o,
 		correctOptionId: `opt-${s}`
 	};
 }
-function CO(e, t, n) {
-	let [r, i] = t, a = xO(e, r, i, 3), o = bO([gO(e), ...a.map(gO)], n), s = o.map((e, t) => ({
+function IO(e, t, n) {
+	let [r, i] = t, a = PO(e, r, i, 3), o = NO([kO(e), ...a.map(kO)], n), s = o.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
-	})), c = o.indexOf(gO(e));
+	})), c = o.indexOf(kO(e));
 	return {
 		prompt: `Which Roman numeral represents ${e}?`,
 		options: s,
 		correctOptionId: `opt-${c}`
 	};
 }
-function wO(e, t) {
-	if (!_O(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = pO(t), r = vO[e], i = yO(e, n), a = mO(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? SO(a, r, n) : CO(a, r, n);
+function LO(e, t) {
+	if (!AO(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = EO(t), r = jO[e], i = MO(e, n), a = DO(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? FO(a, r, n) : IO(a, r, n);
 	return {
 		id: `number-sense-roman-numerals-${e}-${t}`,
 		grade: e,
@@ -43235,7 +43547,7 @@ function wO(e, t) {
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/plugin.ts
-function TO(e) {
+function RO(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -43245,44 +43557,44 @@ function TO(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function EO(e, t, n, r, i, a) {
+function zO(e, t, n, r, i, a) {
 	return {
-		competencyId: fO,
+		competencyId: TO,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: TO(e).correctAnswer,
+		correctAnswer: RO(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function DO(e, t) {
-	let n = pO(t), r = [];
+function BO(e, t) {
+	let n = EO(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(wO(e, t));
+		r.push(LO(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var OO = {
+var VO = {
 	id: "number-sense-roman-numerals",
-	competencyIds: [fO],
+	competencyIds: [TO],
 	generateQuestion(e, t) {
-		return wO(e, t);
+		return LO(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: TO
+	toPresentation: RO
 };
 //#endregion
 //#region packages/number-sense-skip-counting/src/rng.ts
-function kO(e) {
+function HO(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43290,39 +43602,39 @@ function kO(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function AO(e, t, n) {
+function UO(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/generate.ts
-function jO(e) {
+function WO(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function MO() {
+function GO() {
 	return {
 		step: 2,
 		maxRange: 20
 	};
 }
-function NO() {
+function KO() {
 	return {
 		step: 2,
 		maxRange: 50
 	};
 }
-function PO() {
+function qO() {
 	return {
 		step: 5,
 		maxRange: 100
 	};
 }
-function FO() {
+function JO() {
 	return {
 		step: 10,
 		maxRange: 200
 	};
 }
-function IO(e) {
+function YO(e) {
 	let t = [
 		2,
 		5,
@@ -43331,13 +43643,13 @@ function IO(e) {
 		50
 	];
 	return {
-		step: t[AO(e, 0, t.length - 1)],
+		step: t[UO(e, 0, t.length - 1)],
 		maxRange: 500
 	};
 }
-function LO(e, t) {
-	if (!jO(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = kO(t), { step: r, maxRange: i } = e === 1 ? MO() : e === 2 ? NO() : e === 3 ? PO() : e === 4 ? FO() : IO(n), a = AO(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
+function XO(e, t) {
+	if (!WO(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = HO(t), { step: r, maxRange: i } = e === 1 ? GO() : e === 2 ? KO() : e === 3 ? qO() : e === 4 ? JO() : YO(n), a = UO(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
 	return {
 		id: `number-sense-skip-counting-${e}-${t}`,
 		grade: e,
@@ -43353,8 +43665,8 @@ function LO(e, t) {
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/plugin.ts
-var RO = "math.number-sense.skip-counting";
-function zO(e) {
+var ZO = "math.number-sense.skip-counting";
+function QO(e) {
 	let [t] = e.sequence;
 	return {
 		presentation: {
@@ -43372,44 +43684,44 @@ function zO(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function BO(e, t, n, r, i, a) {
+function $O(e, t, n, r, i, a) {
 	return {
-		competencyId: RO,
+		competencyId: ZO,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: zO(e).correctAnswer,
+		correctAnswer: QO(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function VO(e, t) {
-	let n = kO(t), r = [];
+function ek(e, t) {
+	let n = HO(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(LO(e, t));
+		r.push(XO(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var HO = {
+var tk = {
 	id: "number-sense-skip-counting",
-	competencyIds: [RO],
+	competencyIds: [ZO],
 	generateQuestion(e, t) {
-		return LO(e, t);
+		return XO(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: zO
+	toPresentation: QO
 };
 //#endregion
 //#region packages/number-sense-squares/src/rng.ts
-function UO(e) {
+function nk(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43417,21 +43729,21 @@ function UO(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function WO(e, t, n) {
+function rk(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-squares/src/generate.ts
-function GO(e) {
+function ik(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var KO = [{
+var ak = [{
 	id: "yes",
 	label: "Yes"
 }, {
 	id: "no",
 	label: "No"
-}], qO = {
+}], ok = {
 	1: {
 		baseMin: 1,
 		baseMax: 5,
@@ -43450,7 +43762,7 @@ var KO = [{
 		numberMin: 1,
 		numberMax: 144
 	}
-}, JO = {
+}, sk = {
 	4: {
 		baseMin: 1,
 		baseMax: 8
@@ -43460,25 +43772,25 @@ var KO = [{
 		baseMax: 12
 	}
 };
-function YO(e) {
+function ck(e) {
 	return Number.isInteger(Math.sqrt(e));
 }
-function XO(e, t, n) {
-	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = qO[e], s = n() < .5 ? (() => {
-		let e = WO(n, r, i);
+function lk(e, t, n) {
+	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = ok[e], s = n() < .5 ? (() => {
+		let e = rk(n, r, i);
 		return e * e;
-	})() : WO(n, a, o), c = YO(s) ? "yes" : "no";
+	})() : rk(n, a, o), c = ck(s) ? "yes" : "no";
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
 		kind: "recognize",
 		prompt: `Is ${s} a square number?`,
-		options: KO,
+		options: ak,
 		correctOptionId: c
 	};
 }
-function ZO(e, t, n) {
-	let { baseMin: r, baseMax: i } = JO[e], a = WO(n, r, i);
+function uk(e, t, n) {
+	let { baseMin: r, baseMax: i } = sk[e], a = rk(n, r, i);
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
@@ -43487,21 +43799,21 @@ function ZO(e, t, n) {
 		numericAnswer: a * a
 	};
 }
-function QO(e, t) {
-	if (!GO(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = UO(t);
+function dk(e, t) {
+	if (!ik(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = nk(t);
 	switch (e) {
 		case 1:
 		case 2:
-		case 3: return XO(e, t, n);
+		case 3: return lk(e, t, n);
 		case 4:
-		case 5: return ZO(e, t, n);
+		case 5: return uk(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-squares/src/plugin.ts
-var $O = "math.number-sense.squares";
-function ek(e) {
+var fk = "math.number-sense.squares";
+function pk(e) {
 	if (e.kind === "recall") {
 		let t = Math.sqrt(e.numericAnswer);
 		return {
@@ -43521,35 +43833,35 @@ function ek(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function tk(e, t, n, r, i, a) {
+function mk(e, t, n, r, i, a) {
 	return {
-		competencyId: $O,
+		competencyId: fk,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: ek(e).correctAnswer,
+		correctAnswer: pk(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function nk(e, t) {
-	let n = UO(t), r = [];
+function hk(e, t) {
+	let n = nk(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(QO(e, t));
+		r.push(dk(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var rk = {
+var gk = {
 	id: "number-sense-squares",
-	competencyIds: [$O],
+	competencyIds: [fk],
 	generateQuestion(e, t) {
-		return QO(e, t);
+		return dk(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -43557,11 +43869,11 @@ var rk = {
 			case "recognize": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation: ek
+	toPresentation: pk
 };
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/rng.ts
-function ik(e) {
+function _k(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43569,94 +43881,94 @@ function ik(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function ak(e, t, n) {
+function vk(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/generate.ts
-function ok(e) {
+function yk(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function sk(e) {
+function bk(e) {
 	return `${Math.floor(e / 10)}.${e % 10}`;
 }
-function ck(e) {
-	let t = ak(e, 1, 999);
+function xk(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 10`,
 		correctAnswer: t * 10
 	};
 }
-function lk(e) {
-	let t = ak(e, 1, 999);
+function Sk(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 100`,
 		correctAnswer: t * 100
 	};
 }
-function uk(e) {
-	let t = ak(e, 1, 999);
+function Ck(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 1000`,
 		correctAnswer: t * 1e3
 	};
 }
-function dk(e) {
-	let t = e() < .5 ? 10 : 100, n = ak(e, 1, 999);
+function wk(e) {
+	let t = e() < .5 ? 10 : 100, n = vk(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${n * t} ÷ ${t}`,
 		correctAnswer: n
 	};
 }
-function fk(e) {
-	let t = ak(e, 1, 999);
+function Tk(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${t * 1e3} ÷ 1000`,
 		correctAnswer: t
 	};
 }
-function pk(e) {
-	let t = ak(e, 1, 999);
+function Ek(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${sk(t)} × 10`,
+		equation: `${bk(t)} × 10`,
 		correctAnswer: t
 	};
 }
-function mk(e) {
-	let t = ak(e, 1, 999);
+function Dk(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${sk(t)} × 100`,
+		equation: `${bk(t)} × 100`,
 		correctAnswer: t * 10
 	};
 }
-function hk(e) {
-	let t = ak(e, 1, 999);
+function Ok(e) {
+	let t = vk(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${t * 10} ÷ 10`,
 		correctAnswer: t
 	};
 }
-var gk = [
-	fk,
-	pk,
-	mk,
-	hk
+var kk = [
+	Tk,
+	Ek,
+	Dk,
+	Ok
 ];
-function _k(e) {
-	let t = gk[ak(e, 0, gk.length - 1)];
+function Ak(e) {
+	let t = kk[vk(e, 0, kk.length - 1)];
 	return t(e);
 }
-function vk(e, t) {
-	if (!ok(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = ik(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? ck(n) : e === 2 ? lk(n) : e === 3 ? uk(n) : e === 4 ? dk(n) : _k(n);
+function jk(e, t) {
+	if (!yk(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = _k(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? xk(n) : e === 2 ? Sk(n) : e === 3 ? Ck(n) : e === 4 ? wk(n) : Ak(n);
 	return {
 		id: `place-value-multiply-divide-ten-${e}-${t}`,
 		grade: e,
@@ -43667,8 +43979,8 @@ function vk(e, t) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/plugin.ts
-var yk = "math.place-value.multiply-divide-ten";
-function bk(e) {
+var Mk = "math.place-value.multiply-divide-ten";
+function Nk(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -43677,44 +43989,44 @@ function bk(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function xk(e, t, n, r, i, a) {
+function Pk(e, t, n, r, i, a) {
 	return {
-		competencyId: yk,
+		competencyId: Mk,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: bk(e).correctAnswer,
+		correctAnswer: Nk(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function Sk(e, t) {
-	let n = ik(t), r = [];
+function Fk(e, t) {
+	let n = _k(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(vk(e, t));
+		r.push(jk(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Ck = {
+var Ik = {
 	id: "place-value-multiply-divide-ten",
-	competencyIds: [yk],
+	competencyIds: [Mk],
 	generateQuestion(e, t) {
-		return vk(e, t);
+		return jk(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: bk
+	toPresentation: Nk
 };
 //#endregion
 //#region packages/place-value-powers-of-ten/src/rng.ts
-function wk(e) {
+function Lk(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43722,54 +44034,54 @@ function wk(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Tk(e, t, n) {
+function Rk(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/generate.ts
-function Ek(e) {
+function zk(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var Dk = [
+var Bk = [
 	1,
 	10,
 	100,
 	1e3
 ];
-function Ok(e) {
+function Vk(e) {
 	return {
-		operand: Tk(e, 1, 99),
+		operand: Rk(e, 1, 99),
 		magnitude: 1
 	};
 }
-function kk(e) {
+function Hk(e) {
 	return {
-		operand: Tk(e, 10, 999),
+		operand: Rk(e, 10, 999),
 		magnitude: 10
 	};
 }
-function Ak(e) {
+function Uk(e) {
 	return {
-		operand: Tk(e, 100, 9999),
+		operand: Rk(e, 100, 9999),
 		magnitude: 100
 	};
 }
-function jk(e) {
+function Wk(e) {
 	return {
-		operand: Tk(e, 1e3, 99999),
+		operand: Rk(e, 1e3, 99999),
 		magnitude: 1e3
 	};
 }
-function Mk(e) {
-	let t = Dk[Tk(e, 0, Dk.length - 1)];
+function Gk(e) {
+	let t = Bk[Rk(e, 0, Bk.length - 1)];
 	return {
-		operand: Tk(e, t, 999999),
+		operand: Rk(e, t, 999999),
 		magnitude: t
 	};
 }
-function Nk(e, t) {
-	if (!Ek(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = wk(t), { operand: r, magnitude: i } = e === 1 ? Ok(n) : e === 2 ? kk(n) : e === 3 ? Ak(n) : e === 4 ? jk(n) : Mk(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
+function Kk(e, t) {
+	if (!zk(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = Lk(t), { operand: r, magnitude: i } = e === 1 ? Vk(n) : e === 2 ? Hk(n) : e === 3 ? Uk(n) : e === 4 ? Wk(n) : Gk(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
 	return {
 		id: `place-value-powers-of-ten-${e}-${t}`,
 		grade: e,
@@ -43782,8 +44094,8 @@ function Nk(e, t) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/plugin.ts
-var Pk = "math.place-value.powers-of-ten";
-function Fk(e) {
+var qk = "math.place-value.powers-of-ten";
+function Jk(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -43792,44 +44104,44 @@ function Fk(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function Ik(e, t, n, r, i, a) {
+function Yk(e, t, n, r, i, a) {
 	return {
-		competencyId: Pk,
+		competencyId: qk,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Fk(e).correctAnswer,
+		correctAnswer: Jk(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function Lk(e, t) {
-	let n = wk(t), r = [];
+function Xk(e, t) {
+	let n = Lk(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Nk(e, t));
+		r.push(Kk(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Rk = {
+var Zk = {
 	id: "place-value-powers-of-ten",
-	competencyIds: [Pk],
+	competencyIds: [qk],
 	generateQuestion(e, t) {
-		return Nk(e, t);
+		return Kk(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: Fk
-}, zk = "math.place-value.rounding";
+	toPresentation: Jk
+}, Qk = "math.place-value.rounding";
 //#endregion
 //#region packages/place-value-rounding/src/rng.ts
-function Bk(e) {
+function $k(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -43837,30 +44149,30 @@ function Bk(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Vk(e, t, n) {
+function eA(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-rounding/src/generate.ts
-function Hk(e) {
+function tA(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Uk(e, t) {
+function nA(e, t) {
 	let n = e % t, r = e - n;
 	return n * 2 >= t ? r + t : r;
 }
-function Wk(e, t) {
+function rA(e, t) {
 	return e - e % t;
 }
-function Gk(e, t) {
+function iA(e, t) {
 	let n = e % t;
 	return n === 0 ? e : e - n + t;
 }
-function Kk(e, t) {
+function aA(e, t) {
 	let n = String(e).padStart(t + 1, "0");
 	return `${n.slice(0, -t)}.${n.slice(-t)}`;
 }
-function qk(e, t, n) {
+function oA(e, t, n) {
 	let r = /* @__PURE__ */ new Set([e]), i = [];
 	for (let e of t) if (!r.has(e) && (r.add(e), i.push(e), i.length === 3)) return i;
 	let a = 1;
@@ -43870,7 +44182,7 @@ function qk(e, t, n) {
 	}
 	return i;
 }
-function Jk(e, t, n, r, i, a) {
+function sA(e, t, n, r, i, a) {
 	let o = [{
 		label: i,
 		isCorrect: !0
@@ -43879,7 +44191,7 @@ function Jk(e, t, n, r, i, a) {
 		isCorrect: !1
 	}))];
 	for (let e = o.length - 1; e > 0; e--) {
-		let t = Vk(n, 0, e), r = o[e];
+		let t = eA(n, 0, e), r = o[e];
 		o[e] = o[t], o[t] = r;
 	}
 	let s = "", c = o.map((e, t) => {
@@ -43897,32 +44209,32 @@ function Jk(e, t, n, r, i, a) {
 		correctOptionId: s
 	};
 }
-var Yk = {
+var cA = {
 	1: 999,
 	2: 9999,
 	3: 99999
-}, Xk = {
+}, lA = {
 	1: 10,
 	2: 100,
 	3: 1e3
-}, Zk = {
+}, uA = {
 	1: "10",
 	2: "100",
 	3: "1,000"
 };
-function Qk(e, t, n) {
-	let r = Xk[e], i = Vk(n, 0, Yk[e]), a = Uk(i, r), o = String(a), s = qk(o, [
-		Wk(i, r),
-		Gk(i, r),
+function dA(e, t, n) {
+	let r = lA[e], i = eA(n, 0, cA[e]), a = nA(i, r), o = String(a), s = oA(o, [
+		rA(i, r),
+		iA(i, r),
 		i,
 		a - r,
 		a + r,
 		a - 2 * r,
 		a + 2 * r
 	].filter((e) => e >= 0).map(String), (e) => String(a + (e + 2) * r));
-	return Jk(e, t, n, `Round ${i} to the nearest ${Zk[e]}.`, o, s);
+	return sA(e, t, n, `Round ${i} to the nearest ${uA[e]}.`, o, s);
 }
-var $k = {
+var fA = {
 	4: {
 		maxScaled: 999,
 		sourceDecimalPlaces: 2,
@@ -43935,29 +44247,29 @@ var $k = {
 		targetDecimalPlaces: 2,
 		precisionLabel: "2"
 	}
-}, eA = 10;
-function tA(e, t, n) {
-	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = $k[e], s = Vk(n, 0, r), c = Kk(s, i), l = Uk(s, eA) / eA, u = Kk(l, a), d = Wk(s, eA) / eA, f = Gk(s, eA) / eA, p = qk(u, [
-		Kk(d, a),
-		Kk(f, a),
+}, pA = 10;
+function mA(e, t, n) {
+	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = fA[e], s = eA(n, 0, r), c = aA(s, i), l = nA(s, pA) / pA, u = aA(l, a), d = rA(s, pA) / pA, f = iA(s, pA) / pA, p = oA(u, [
+		aA(d, a),
+		aA(f, a),
 		c,
 		...[
 			l - 1,
 			l + 1,
 			l - 2,
 			l + 2
-		].filter((e) => e >= 0).map((e) => Kk(e, a))
-	], (e) => Kk(l + e + 2, a));
-	return Jk(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
+		].filter((e) => e >= 0).map((e) => aA(e, a))
+	], (e) => aA(l + e + 2, a));
+	return sA(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
 }
-function nA(e, t) {
-	if (!Hk(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Bk(t);
-	return e === 1 || e === 2 || e === 3 ? Qk(e, t, n) : tA(e, t, n);
+function hA(e, t) {
+	if (!tA(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = $k(t);
+	return e === 1 || e === 2 || e === 3 ? dA(e, t, n) : mA(e, t, n);
 }
 //#endregion
 //#region packages/place-value-rounding/src/plugin.ts
-function rA(e) {
+function gA(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -43967,44 +44279,44 @@ function rA(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function iA(e, t, n, r, i, a) {
+function _A(e, t, n, r, i, a) {
 	return {
-		competencyId: zk,
+		competencyId: Qk,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: rA(e).correctAnswer,
+		correctAnswer: gA(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function aA(e, t) {
-	let n = Bk(t), r = [];
+function vA(e, t) {
+	let n = $k(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(nA(e, t));
+		r.push(hA(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var oA = {
+var yA = {
 	id: "place-value-rounding",
-	competencyIds: [zk],
+	competencyIds: [Qk],
 	generateQuestion(e, t) {
-		return nA(e, t);
+		return hA(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: rA
-}, sA = "math.place-value.understanding";
+	toPresentation: gA
+}, bA = "math.place-value.understanding";
 //#endregion
 //#region packages/place-value-understanding/src/rng.ts
-function cA(e) {
+function xA(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -44012,117 +44324,117 @@ function cA(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function lA(e, t, n) {
+function SA(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-understanding/src/generate.ts
-function uA(e) {
+function CA(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var dA = {
+var wA = {
 	name: "units",
 	value: 1,
 	decimals: 0
-}, fA = {
+}, TA = {
 	name: "tens",
 	value: 10,
 	decimals: 0
-}, pA = {
+}, EA = {
 	name: "hundreds",
 	value: 100,
 	decimals: 0
-}, mA = {
+}, DA = {
 	name: "thousands",
 	value: 1e3,
 	decimals: 0
-}, hA = {
+}, OA = {
 	name: "ten-thousands",
 	value: 1e4,
 	decimals: 0
-}, gA = {
+}, kA = {
 	name: "hundred-thousands",
 	value: 1e5,
 	decimals: 0
-}, _A = {
+}, AA = {
 	name: "millions",
 	value: 1e6,
 	decimals: 0
-}, vA = {
+}, jA = {
 	name: "ones",
 	value: 1,
 	decimals: 0
-}, yA = {
+}, MA = {
 	name: "tenths",
 	value: .1,
 	decimals: 1
-}, bA = {
+}, NA = {
 	name: "hundredths",
 	value: .01,
 	decimals: 2
-}, xA = {
+}, PA = {
 	name: "thousandths",
 	value: .001,
 	decimals: 3
-}, SA = {
-	1: [dA, fA],
+}, FA = {
+	1: [wA, TA],
 	2: [
-		dA,
-		fA,
-		pA
+		wA,
+		TA,
+		EA
 	],
 	3: [
-		dA,
-		fA,
-		pA,
-		mA
+		wA,
+		TA,
+		EA,
+		DA
 	],
 	4: [
-		dA,
-		fA,
-		pA,
-		mA,
-		hA,
-		gA,
-		_A
+		wA,
+		TA,
+		EA,
+		DA,
+		OA,
+		kA,
+		AA
 	]
-}, CA = [
-	xA,
-	bA,
-	yA,
-	vA
-], wA = [
-	xA,
-	bA,
-	yA
-], TA = {
+}, IA = [
+	PA,
+	NA,
+	MA,
+	jA
+], LA = [
+	PA,
+	NA,
+	MA
+], RA = {
 	1: {
-		composePlaces: SA[1],
-		scopePlaces: SA[1],
+		composePlaces: FA[1],
+		scopePlaces: FA[1],
 		isDecimal: !1
 	},
 	2: {
-		composePlaces: SA[2],
-		scopePlaces: SA[2],
+		composePlaces: FA[2],
+		scopePlaces: FA[2],
 		isDecimal: !1
 	},
 	3: {
-		composePlaces: SA[3],
-		scopePlaces: SA[3],
+		composePlaces: FA[3],
+		scopePlaces: FA[3],
 		isDecimal: !1
 	},
 	4: {
-		composePlaces: SA[4],
-		scopePlaces: SA[4],
+		composePlaces: FA[4],
+		scopePlaces: FA[4],
 		isDecimal: !1
 	},
 	5: {
-		composePlaces: CA,
-		scopePlaces: wA,
+		composePlaces: IA,
+		scopePlaces: LA,
 		isDecimal: !0
 	}
 };
-function EA(e, t) {
+function zA(e, t) {
 	let n = [
 		1,
 		2,
@@ -44135,15 +44447,15 @@ function EA(e, t) {
 		9
 	];
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = lA(e, 0, t), i = n[t];
+		let r = SA(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n.slice(0, t);
 }
-function DA(e, t) {
+function BA(e, t) {
 	return t.decimals === 0 ? String(e * t.value) : `0.${"0".repeat(t.decimals - 1)}${e}`;
 }
-function OA(e, t) {
+function VA(e, t) {
 	if (!e.isDecimal) {
 		let n = t.reduce((t, n, r) => t + n * e.composePlaces[r].value, 0);
 		return String(n);
@@ -44151,16 +44463,16 @@ function OA(e, t) {
 	let [n, r, i, a] = t;
 	return `${a}.${i}${r}${n}`;
 }
-function kA(e) {
+function HA(e) {
 	return e.length === 1 ? e[0] : `${e.slice(0, -1).join(", ")} and ${e[e.length - 1]}`;
 }
-function AA(e, t, n) {
+function UA(e, t, n) {
 	let r = t.map((e, t) => ({
 		label: e,
 		isCorrect: t === n
 	}));
 	for (let t = r.length - 1; t > 0; t--) {
-		let n = lA(e, 0, t), i = r[t];
+		let n = SA(e, 0, t), i = r[t];
 		r[t] = r[n], r[n] = i;
 	}
 	let i = "";
@@ -44175,13 +44487,13 @@ function AA(e, t, n) {
 		correctOptionId: i
 	};
 }
-function jA(e, t, n, r) {
+function WA(e, t, n, r) {
 	let i = e[t], a = n.get(i.name), o = [], s = /* @__PURE__ */ new Set([r]);
 	function c(e) {
 		o.length >= 3 || s.has(e) || (s.add(e), o.push(e));
 	}
-	c(String(a)), t > 0 && c(DA(a, e[t - 1])), t < e.length - 1 && c(DA(a, e[t + 1]));
-	for (let [e, t] of n) e !== i.name && c(DA(t, i));
+	c(String(a)), t > 0 && c(BA(a, e[t - 1])), t < e.length - 1 && c(BA(a, e[t + 1]));
+	for (let [e, t] of n) e !== i.name && c(BA(t, i));
 	for (let e of [
 		1,
 		-1,
@@ -44189,16 +44501,16 @@ function jA(e, t, n, r) {
 		-2
 	]) {
 		let t = a + e;
-		t >= 1 && t <= 9 && c(DA(t, i));
+		t >= 1 && t <= 9 && c(BA(t, i));
 	}
-	for (let e = 1; e <= 9 && o.length < 3; e++) c(DA(e, i));
+	for (let e = 1; e <= 9 && o.length < 3; e++) c(BA(e, i));
 	return o;
 }
-function MA(e, t, n) {
+function GA(e, t, n) {
 	let r = [], i = /* @__PURE__ */ new Set([n]), a = t.length;
 	function o(t) {
 		if (r.length >= 3) return;
-		let n = OA(e, t);
+		let n = VA(e, t);
 		i.has(n) || (i.add(n), r.push(n));
 	}
 	for (let e = 0; e < a - 1; e++) {
@@ -44230,8 +44542,8 @@ function MA(e, t, n) {
 	}
 	return r;
 }
-function NA(e, t, n, r) {
-	let i = EA(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = OA(r, i), s = lA(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = DA(a.get(c.name), c), { options: u, correctOptionId: d } = AA(n, [l, ...jA(r.scopePlaces, s, a, l)], 0);
+function KA(e, t, n, r) {
+	let i = zA(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = VA(r, i), s = SA(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = BA(a.get(c.name), c), { options: u, correctOptionId: d } = UA(n, [l, ...WA(r.scopePlaces, s, a, l)], 0);
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -44247,8 +44559,8 @@ function NA(e, t, n, r) {
 		selectedPlace: c
 	};
 }
-function PA(e, t, n, r) {
-	let i = EA(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = OA(r, i), { options: s, correctOptionId: c } = AA(n, [o, ...MA(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${kA(d)}?`;
+function qA(e, t, n, r) {
+	let i = zA(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = VA(r, i), { options: s, correctOptionId: c } = UA(n, [o, ...GA(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${HA(d)}?`;
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -44263,17 +44575,17 @@ function PA(e, t, n, r) {
 		digitsByPlaceName: a
 	};
 }
-function FA(e, t) {
-	if (!uA(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = cA(t), r = n() < .5 ? "digit-value" : "compose", i = TA[e];
-	return r === "digit-value" ? NA(e, t, n, i) : PA(e, t, n, i);
+function JA(e, t) {
+	if (!CA(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = xA(t), r = n() < .5 ? "digit-value" : "compose", i = RA[e];
+	return r === "digit-value" ? KA(e, t, n, i) : qA(e, t, n, i);
 }
-function IA(e, t) {
-	return FA(e, t).question;
+function YA(e, t) {
+	return JA(e, t).question;
 }
 //#endregion
 //#region packages/place-value-understanding/src/plugin.ts
-function LA(e) {
+function XA(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -44283,44 +44595,44 @@ function LA(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function RA(e, t, n, r, i, a) {
+function ZA(e, t, n, r, i, a) {
 	return {
-		competencyId: sA,
+		competencyId: bA,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: LA(e).correctAnswer,
+		correctAnswer: XA(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function zA(e, t) {
-	let n = cA(t), r = [];
+function QA(e, t) {
+	let n = xA(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(IA(e, t));
+		r.push(YA(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var BA = {
+var $A = {
 	id: "place-value-understanding",
-	competencyIds: [sA],
+	competencyIds: [bA],
 	generateQuestion(e, t) {
-		return IA(e, t);
+		return YA(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: LA
+	toPresentation: XA
 };
 //#endregion
 //#region node_modules/@learncoreskills/plugin-engine/dist/src/registry.js
-function VA(e, t) {
+function ej(e, t) {
 	let n = [], r = new Set(t.map((e) => e.id)), i = /* @__PURE__ */ new Set();
 	for (let t of e) i.has(t.id) && n.push({
 		kind: "duplicate-plugin-id",
@@ -44336,16 +44648,16 @@ function VA(e, t) {
 		errors: n
 	};
 }
-function HA(e) {
+function tj(e) {
 	switch (e.kind) {
 		case "duplicate-plugin-id": return `duplicate plugin id: "${e.id}"`;
 		case "unknown-competency-reference": return `plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`;
 	}
 }
-function UA(e, t) {
-	let n = VA(e, t);
+function nj(e, t) {
+	let n = ej(e, t);
 	if (!n.valid) {
-		let e = n.errors.map(HA).join("; ");
+		let e = n.errors.map(tj).join("; ");
 		throw Error(`Invalid plugin registry: ${e}`);
 	}
 	let r = new Map(e.map((e) => [e.id, e]));
@@ -44363,49 +44675,36 @@ function UA(e, t) {
 }
 //#endregion
 //#region src/pluginRegistry.ts
-var WA = UA([
-	dE,
-	qE,
-	NE,
-	SE,
-	fT,
-	qw,
-	TT,
-	Fw,
-	ZT,
-	BT,
+var rj = nj([
+	wE,
 	oD,
-	HO,
-	jD,
-	qD,
-	_D,
-	dO,
-	rk,
-	OO,
-	BA,
-	Rk,
-	oA,
-	Ck,
+	KE,
+	FE,
+	TT,
+	oT,
+	RT,
+	Jw,
+	uE,
+	$T,
+	yD,
+	tk,
+	WD,
+	oO,
+	AD,
+	wO,
+	gk,
+	VO,
+	$A,
+	Zk,
+	yA,
+	Ik,
 	...hn,
 	...ua,
 	...Xs,
 	...Bu,
 	...Ep,
-	...HC
+	...tw
 ], [
-	GC,
-	KC,
-	qC,
-	JC,
-	YC,
-	XC,
-	ZC,
-	QC,
-	$C,
-	ew,
-	tw,
-	nw,
-	rw,
 	iw,
 	aw,
 	ow,
@@ -44419,17 +44718,30 @@ var WA = UA([
 	mw,
 	hw,
 	gw,
+	_w,
+	vw,
+	yw,
+	bw,
+	xw,
+	Sw,
+	Cw,
+	ww,
+	Tw,
+	Ew,
+	Dw,
+	Ow,
+	kw,
 	...Le,
 	...Mr,
 	...Eo,
 	...vl,
 	...sf,
-	...Hm
+	...Vm
 ]);
 //#endregion
 //#region src/exerciseDefinitions.ts
 function Q(e, t) {
-	let n = WA.getPlugin(e);
+	let n = rj.getPlugin(e);
 	return {
 		grade: t.grade,
 		questions: t.questions.map((e) => {
@@ -44445,264 +44757,264 @@ function Q(e, t) {
 		})
 	};
 }
-var GA = {
+var ij = {
 	key: "addition",
 	label: "Addition",
 	icon: "➕",
 	pluginId: "mental-addition",
-	competency: GC,
-	competencies: [GC],
+	competency: iw,
+	competencies: [iw],
 	createSession(e, t) {
-		return Q("mental-addition", uE(e, t));
+		return Q("mental-addition", CE(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => lE(e, t, n, r, i, a)
-}, KA = {
+	createMasterySignal: (e, t, n, r, i, a) => SE(e, t, n, r, i, a)
+}, aj = {
 	key: "subtraction",
 	label: "Subtraction",
 	icon: "➖",
 	pluginId: "mental-subtraction",
-	competency: KC,
-	competencies: [KC],
+	competency: aw,
+	competencies: [aw],
 	createSession(e, t) {
-		return Q("mental-subtraction", KE(e, t));
+		return Q("mental-subtraction", aD(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => GE(e, t, n, r, i, a)
-}, qA = {
+	createMasterySignal: (e, t, n, r, i, a) => iD(e, t, n, r, i, a)
+}, oj = {
 	key: "multiplication",
 	label: "Multiplication",
 	icon: "✖️",
 	pluginId: "mental-multiplication",
-	competency: qC,
-	competencies: [qC],
+	competency: ow,
+	competencies: [ow],
 	createSession(e, t) {
-		return Q("mental-multiplication", ME(e, t));
+		return Q("mental-multiplication", GE(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => jE(e, t, n, r, i, a)
-}, JA = {
+	createMasterySignal: (e, t, n, r, i, a) => WE(e, t, n, r, i, a)
+}, sj = {
 	key: "division",
 	label: "Division",
 	icon: "➗",
 	pluginId: "mental-division",
-	competency: JC,
-	competencies: [JC],
+	competency: sw,
+	competencies: [sw],
 	createSession(e, t) {
-		return Q("mental-division", xE(e, t));
+		return Q("mental-division", PE(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => bE(e, t, n, r, i, a)
-}, YA = {
+	createMasterySignal: (e, t, n, r, i, a) => NE(e, t, n, r, i, a)
+}, cj = {
 	key: "baseline-counting-quantities",
 	label: "Counting & Quantities",
 	icon: "🔢",
 	pluginId: "baseline-counting-quantities",
-	competency: YC,
+	competency: cw,
 	competencies: [
-		YC,
-		XC,
-		ZC,
-		QC
+		cw,
+		lw,
+		uw,
+		dw
 	],
 	competencyLabels: {
-		[YC.id]: "Counting to 20",
-		[XC.id]: "Subitizing to 5",
-		[ZC.id]: "Recognising digits",
-		[QC.id]: "Comparing groups"
+		[cw.id]: "Counting to 20",
+		[lw.id]: "Subitizing to 5",
+		[uw.id]: "Recognising digits",
+		[dw.id]: "Comparing groups"
 	},
 	createSession(e, t) {
-		return Q("baseline-counting-quantities", dT(e, t));
+		return Q("baseline-counting-quantities", wT(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => uT(e, t, n, r, i, a)
-}, XA = {
+	createMasterySignal: (e, t, n, r, i, a) => CT(e, t, n, r, i, a)
+}, lj = {
 	key: "baseline-concrete-addition-subtraction",
 	label: "Concrete Addition & Subtraction",
 	icon: "🍎",
 	pluginId: "baseline-concrete-addition-subtraction",
-	competency: $C,
-	competencies: [$C],
+	competency: fw,
+	competencies: [fw],
 	createSession(e, t) {
-		return Q("baseline-concrete-addition-subtraction", Kw(e, t));
+		return Q("baseline-concrete-addition-subtraction", aT(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Gw(e, t, n, r, i, a)
-}, ZA = {
+	createMasterySignal: (e, t, n, r, i, a) => iT(e, t, n, r, i, a)
+}, uj = {
 	key: "baseline-direct-comparison",
 	label: "Direct Comparison",
 	icon: "⚖️",
 	pluginId: "baseline-direct-comparison",
-	competency: ew,
-	competencies: [ew],
+	competency: pw,
+	competencies: [pw],
 	createSession(e, t) {
-		return Q("baseline-direct-comparison", wT(e, t));
+		return Q("baseline-direct-comparison", LT(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => CT(e, t, n, r, i, a)
-}, QA = {
+	createMasterySignal: (e, t, n, r, i, a) => IT(e, t, n, r, i, a)
+}, dj = {
 	key: "baseline-calendar-time-basics",
 	label: "Calendar & Time Basics",
 	icon: "📅",
 	pluginId: "baseline-calendar-time-basics",
-	competency: tw,
-	competencies: [tw, nw],
+	competency: mw,
+	competencies: [mw, hw],
 	competencyLabels: {
-		[tw.id]: "Order of the day",
-		[nw.id]: "Days of the week"
+		[mw.id]: "Order of the day",
+		[hw.id]: "Days of the week"
 	},
 	createSession(e, t) {
-		return Q("baseline-calendar-time-basics", Pw(e, t));
+		return Q("baseline-calendar-time-basics", qw(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Nw(e, t, n, r, i, a)
-}, $A = {
+	createMasterySignal: (e, t, n, r, i, a) => Kw(e, t, n, r, i, a)
+}, fj = {
 	key: "baseline-shape-recognition",
 	label: "Shape Recognition",
 	icon: "🔺",
 	pluginId: "baseline-shape-recognition",
-	competency: rw,
-	competencies: [rw],
+	competency: gw,
+	competencies: [gw],
 	createSession(e, t) {
-		return Q("baseline-shape-recognition", XT(e, t));
+		return Q("baseline-shape-recognition", lE(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => YT(e, t, n, r, i, a)
-}, ej = {
+	createMasterySignal: (e, t, n, r, i, a) => cE(e, t, n, r, i, a)
+}, pj = {
 	key: "baseline-positional-language",
 	label: "Positional Language",
 	icon: "📍",
 	pluginId: "baseline-positional-language",
-	competency: iw,
-	competencies: [iw],
+	competency: _w,
+	competencies: [_w],
 	createSession(e, t) {
-		return Q("baseline-positional-language", zT(e, t));
+		return Q("baseline-positional-language", QT(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => RT(e, t, n, r, i, a)
-}, tj = {
+	createMasterySignal: (e, t, n, r, i, a) => ZT(e, t, n, r, i, a)
+}, mj = {
 	key: "number-sense-counting-range",
 	label: "Counting & Number Range",
 	icon: "🔢",
 	pluginId: "number-sense-counting-range",
-	competency: aw,
-	competencies: [aw],
+	competency: vw,
+	competencies: [vw],
 	createSession(e, t) {
-		return Q("number-sense-counting-range", aD(e, t));
+		return Q("number-sense-counting-range", vD(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => iD(e, t, n, r, i, a)
-}, nj = {
+	createMasterySignal: (e, t, n, r, i, a) => _D(e, t, n, r, i, a)
+}, hj = {
 	key: "number-sense-skip-counting",
 	label: "Skip Counting",
 	icon: "➡️",
 	pluginId: "number-sense-skip-counting",
-	competency: ow,
-	competencies: [ow],
+	competency: yw,
+	competencies: [yw],
 	createSession(e, t) {
-		return Q("number-sense-skip-counting", VO(e, t));
+		return Q("number-sense-skip-counting", ek(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => BO(e, t, n, r, i, a)
-}, rj = {
+	createMasterySignal: (e, t, n, r, i, a) => $O(e, t, n, r, i, a)
+}, gj = {
 	key: "number-sense-odd-even",
 	label: "Odd & Even",
 	icon: "🔀",
 	pluginId: "number-sense-odd-even",
-	competency: sw,
-	competencies: [sw],
+	competency: bw,
+	competencies: [bw],
 	createSession(e, t) {
-		return Q("number-sense-odd-even", AD(e, t));
+		return Q("number-sense-odd-even", UD(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => kD(e, t, n, r, i, a)
-}, ij = {
+	createMasterySignal: (e, t, n, r, i, a) => HD(e, t, n, r, i, a)
+}, _j = {
 	key: "number-sense-ordinals",
 	label: "Ordinal Numbers",
 	icon: "🥇",
 	pluginId: "number-sense-ordinals",
-	competency: cw,
-	competencies: [cw],
+	competency: xw,
+	competencies: [xw],
 	createSession(e, t) {
-		return Q("number-sense-ordinals", KD(e, t));
+		return Q("number-sense-ordinals", aO(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => GD(e, t, n, r, i, a)
-}, aj = {
+	createMasterySignal: (e, t, n, r, i, a) => iO(e, t, n, r, i, a)
+}, vj = {
 	key: "number-sense-negative-numbers",
 	label: "Negative Numbers",
 	icon: "🌡️",
 	pluginId: "number-sense-negative-numbers",
-	competency: lw,
-	competencies: [lw],
+	competency: Sw,
+	competencies: [Sw],
 	createSession(e, t) {
-		return Q("number-sense-negative-numbers", gD(e, t));
+		return Q("number-sense-negative-numbers", kD(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => hD(e, t, n, r, i, a)
-}, oj = {
+	createMasterySignal: (e, t, n, r, i, a) => OD(e, t, n, r, i, a)
+}, yj = {
 	key: "number-sense-primes-factors",
 	label: "Primes & Factors",
 	icon: "🧮",
 	pluginId: "number-sense-primes-factors",
-	competency: uw,
-	competencies: [uw],
+	competency: Cw,
+	competencies: [Cw],
 	createSession(e, t) {
-		return Q("number-sense-primes-factors", uO(e, t));
+		return Q("number-sense-primes-factors", CO(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => lO(e, t, n, r, i, a)
-}, sj = {
+	createMasterySignal: (e, t, n, r, i, a) => SO(e, t, n, r, i, a)
+}, bj = {
 	key: "number-sense-squares",
 	label: "Square Numbers",
 	icon: "⬜",
 	pluginId: "number-sense-squares",
-	competency: dw,
-	competencies: [dw],
+	competency: ww,
+	competencies: [ww],
 	createSession(e, t) {
-		return Q("number-sense-squares", nk(e, t));
+		return Q("number-sense-squares", hk(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => tk(e, t, n, r, i, a)
-}, cj = {
+	createMasterySignal: (e, t, n, r, i, a) => mk(e, t, n, r, i, a)
+}, xj = {
 	key: "number-sense-roman-numerals",
 	label: "Roman Numerals",
 	icon: "🏛️",
 	pluginId: "number-sense-roman-numerals",
-	competency: fw,
-	competencies: [fw],
+	competency: Tw,
+	competencies: [Tw],
 	createSession(e, t) {
-		return Q("number-sense-roman-numerals", DO(e, t));
+		return Q("number-sense-roman-numerals", BO(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => EO(e, t, n, r, i, a)
-}, lj = {
+	createMasterySignal: (e, t, n, r, i, a) => zO(e, t, n, r, i, a)
+}, Sj = {
 	key: "place-value-understanding",
 	label: "Place Value Understanding",
 	icon: "🔟",
 	pluginId: "place-value-understanding",
-	competency: pw,
-	competencies: [pw],
+	competency: Ew,
+	competencies: [Ew],
 	createSession(e, t) {
-		return Q("place-value-understanding", zA(e, t));
+		return Q("place-value-understanding", QA(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => RA(e, t, n, r, i, a)
-}, uj = {
+	createMasterySignal: (e, t, n, r, i, a) => ZA(e, t, n, r, i, a)
+}, Cj = {
 	key: "place-value-powers-of-ten",
 	label: "Add/Subtract Powers of Ten",
 	icon: "➕",
 	pluginId: "place-value-powers-of-ten",
-	competency: mw,
-	competencies: [mw],
+	competency: Dw,
+	competencies: [Dw],
 	createSession(e, t) {
-		return Q("place-value-powers-of-ten", Lk(e, t));
+		return Q("place-value-powers-of-ten", Xk(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Ik(e, t, n, r, i, a)
-}, dj = {
+	createMasterySignal: (e, t, n, r, i, a) => Yk(e, t, n, r, i, a)
+}, wj = {
 	key: "place-value-rounding",
 	label: "Rounding",
 	icon: "🔵",
 	pluginId: "place-value-rounding",
-	competency: hw,
-	competencies: [hw],
+	competency: Ow,
+	competencies: [Ow],
 	createSession(e, t) {
-		return Q("place-value-rounding", aA(e, t));
+		return Q("place-value-rounding", vA(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => iA(e, t, n, r, i, a)
-}, fj = {
+	createMasterySignal: (e, t, n, r, i, a) => _A(e, t, n, r, i, a)
+}, Tj = {
 	key: "place-value-multiply-divide-ten",
 	label: "Multiply/Divide by Powers of Ten",
 	icon: "✖️",
 	pluginId: "place-value-multiply-divide-ten",
-	competency: gw,
-	competencies: [gw],
+	competency: kw,
+	competencies: [kw],
 	createSession(e, t) {
-		return Q("place-value-multiply-divide-ten", Sk(e, t));
+		return Q("place-value-multiply-divide-ten", Fk(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => xk(e, t, n, r, i, a)
-}, pj = gn.map((e) => ({
+	createMasterySignal: (e, t, n, r, i, a) => Pk(e, t, n, r, i, a)
+}, Ej = gn.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44711,7 +45023,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), mj = da.map((e) => ({
+})), Dj = da.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44720,7 +45032,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), hj = Zs.map((e) => ({
+})), Oj = Zs.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44729,7 +45041,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), gj = Vu.map((e) => ({
+})), kj = Vu.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44738,7 +45050,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), _j = Dp.map((e) => ({
+})), Aj = Dp.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44747,7 +45059,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), vj = WC.map((e) => ({
+})), jj = rw.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -44757,20 +45069,7 @@ var GA = {
 	competencies: e.competencies,
 	createSession: (t, n) => Q(e.pluginId, e.createSession(t === "P" ? 1 : t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), yj = [
-	GA,
-	KA,
-	qA,
-	JA,
-	YA,
-	XA,
-	ZA,
-	QA,
-	$A,
-	ej,
-	tj,
-	nj,
-	rj,
+})), Mj = [
 	ij,
 	aj,
 	oj,
@@ -44780,13 +45079,26 @@ var GA = {
 	uj,
 	dj,
 	fj,
-	...pj,
-	...mj,
-	...hj,
-	...gj,
-	..._j,
-	...vj
-], bj = {
+	pj,
+	mj,
+	hj,
+	gj,
+	_j,
+	vj,
+	yj,
+	bj,
+	xj,
+	Sj,
+	Cj,
+	wj,
+	Tj,
+	...Ej,
+	...Dj,
+	...Oj,
+	...kj,
+	...Aj,
+	...jj
+], Nj = {
 	levels: [
 		{
 			ageBand: "4–6",
@@ -45186,10 +45498,9 @@ var GA = {
 					status: "built"
 				},
 				{
-					idea: "split 6 to 10 into two parts and find the missing part (\"8 is 5 and ?\")",
 					role: "primary",
 					slug: "decompose-to-ten",
-					status: "planned"
+					status: "built"
 				}
 			],
 			description: "Splits a number into two parts: 5 is 2 and 3 (\"5 = 4 + 1 = 3 + 2\").",
@@ -45240,16 +45551,14 @@ var GA = {
 					status: "built"
 				},
 				{
-					idea: "finger-trace game with a guided stroke path and a sticker reward (tracker)",
 					role: "primary",
 					slug: "trace-the-numeral",
-					status: "planned"
+					status: "built"
 				},
 				{
-					idea: "pick the correct digit order for writing 10–20 (\"which digit do you write first?\")",
 					role: "primary",
 					slug: "trace-the-teens",
-					status: "planned"
+					status: "built"
 				}
 			],
 			description: "Writes numerals the right way round with the right strokes, and picks the correctly formed one.",
@@ -45263,15 +45572,13 @@ var GA = {
 		},
 		{
 			activities: [{
-				idea: "climb a staircase where each step says the next ten",
 				role: "primary",
 				slug: "tens-staircase",
-				status: "planned"
+				status: "built"
 			}, {
-				idea: "rhythm game: a frog hops 2s, 5s or 10s along a track and the child claps each landing number",
 				role: "primary",
 				slug: "skip-count-hops",
-				status: "planned"
+				status: "built"
 			}],
 			description: "Chants by tens to 100, and starts 2s and 5s along a track, just for fun with no pass mark.",
 			id: "K-NS-16",
@@ -63545,7 +63852,7 @@ var GA = {
 		}
 	],
 	version: 1
-}, xj = {
+}, Pj = {
 	levels: {
 		K: { intro: {
 			en: "Ages 4–6: playing with numbers up to 10, shapes, sizes and patterns through hands-on games.",
@@ -63738,8 +64045,9 @@ var GA = {
 			}
 		}
 	}
-}, Sj = {
+}, Fj = {
 	"count-the-teens": "count-the-teens",
+	"decompose-to-ten": "decompose-to-ten",
 	"dot-pattern-snap": "dot-pattern-snap",
 	"grab-a-handful": "grab-a-handful",
 	"line-up-the-cards": "line-up-the-cards",
@@ -63837,6 +64145,7 @@ var GA = {
 	"preschool-yesterday-today-tomorrow": "preschool-yesterday-today-tomorrow",
 	"rocket-countdown": "rocket-countdown",
 	"same-in-a-circle": "same-in-a-circle",
+	"skip-count-hops": "skip-count-hops",
 	"syllabus-g1-add-subtract-within-20": "syllabus-g1-add-subtract-within-20",
 	"syllabus-g1-adds-subtracts-ten-mentally": "syllabus-g1-adds-subtracts-ten-mentally",
 	"syllabus-g1-adds-to-two-digit-number": "syllabus-g1-adds-to-two-digit-number",
@@ -64168,8 +64477,11 @@ var GA = {
 	"syllabus-g5-uses-letter-for-unknown-substitutes": "syllabus-g5-uses-letter-for-unknown-substitutes",
 	"syllabus-g5-uses-scale-on-plan-or-map": "syllabus-g5-uses-scale-on-plan-or-map",
 	"syllabus-g5-writes-expressions-with-a-letter": "syllabus-g5-writes-expressions-with-a-letter",
-	"ten-frame-flash": "ten-frame-flash"
-}, Cj = {
+	"ten-frame-flash": "ten-frame-flash",
+	"tens-staircase": "tens-staircase",
+	"trace-the-numeral": "trace-the-numeral",
+	"trace-the-teens": "trace-the-teens"
+}, Ij = {
 	"K-NS-1": {
 		title: "Compter jusqu'à 30",
 		description: "Dit les nombres dans l'ordre de 1 à 30, sans en oublier (« 1, 2, 3 … 20 … 30 »).",
@@ -64642,7 +64954,7 @@ var GA = {
 			"puzzle-try-again": "Un casse-tête qui se résout de plusieurs façons."
 		}
 	}
-}, wj = {
+}, Lj = {
 	"G1-NS-1": {
 		title: "Compter en avançant jusqu'à 120 depuis n'importe quel nombre",
 		description: "Compte en avançant jusqu'à 120 en partant de n'importe quel nombre, pas seulement de 0 ou de 1. Exemple : part de 67 et dit « 67, 68, 69, 70… ».",
@@ -65318,7 +65630,7 @@ var GA = {
 		description: "Vérifie avec une deuxième méthode. Exemple : additionne pour vérifier une soustraction.",
 		ideas: { "spot-the-wrong-answer": "chasse à l'erreur : une marionnette résout une histoire, l'enfant décide et corrige" }
 	}
-}, Tj = {
+}, Rj = {
 	"G2-NS-1": {
 		title: "Compter jusqu'à 1000 en passant les centaines",
 		description: "Compte en avant et en arrière en passant une centaine (398, 399, 400, 401), à partir de n'importe quel nombre à 3 chiffres.",
@@ -66265,7 +66577,7 @@ var GA = {
 			"spot-the-wrong-answer": "trouve la réponse qui échoue aux deux vérifications"
 		}
 	}
-}, Ej = {
+}, zj = {
 	"G3-NS-1": {
 		title: "Lire et écrire les nombres jusqu'à 10 000",
 		description: "Lit 6 205 à voix haute et écrit « quatre mille neuf » 4 009, en gérant les zéros au milieu du nombre.",
@@ -67019,7 +67331,7 @@ var GA = {
 		description: "Utilise un tableau pour trouver toutes les tenues avec 3 hauts et 2 jupes.",
 		ideas: { "all-the-outfits-table": "remplis un tableau de combinaisons ; jeu de combinaisons" }
 	}
-}, Dj = {
+}, Bj = {
 	"G4-NS-1": {
 		title: "Lire et écrire les nombres jusqu'aux millions",
 		description: "Lit et écrit 3 070 400 comme « trois millions soixante-dix mille quatre cents » et inversement.",
@@ -67818,7 +68130,7 @@ var GA = {
 			"counterexample-challenge": "trouver l'exemple qui contredit une affirmation (énigme)"
 		}
 	}
-}, Oj = {
+}, Vj = {
 	"G5-NS-1": {
 		title: "Lire et écrire les nombres jusqu'aux milliards",
 		description: "Lit et écrit un nombre en lettres et en chiffres avec les bons groupes (8 431 000 se lit huit millions quatre cent trente et un mille).",
@@ -68706,7 +69018,7 @@ var GA = {
 			"when-not-to-use-calculator": "choisis les cas où le calcul mental bat la calculatrice"
 		}
 	}
-}, kj = {
+}, Hj = {
 	"G6-NS-1": {
 		title: "Multiplier des entiers : les règles des signes",
 		description: "Multiplie deux entiers relatifs avec les règles des signes (−4 × −3 = 12, −4 × 3 = −12).",
@@ -69511,7 +69823,7 @@ var GA = {
 			"teach-it-back": "Explique une méthode à un camarade virtuel."
 		}
 	}
-}, Aj = {
+}, Uj = {
 	"K-NS-1": {
 		meaning: "Saying the number words in order to thirty is the first step towards counting, and it is a memory skill before it is a maths skill. A child learns a fixed sequence of words, rather like the verses of a song, and has to say them one after the other without leaving any out. Thirty is a useful target for kindergarten because the sequence changes character along the way: one to nine are all new words, ten to nineteen follow their own irregular pattern, and from twenty onwards the pattern becomes regular, with a tens word followed by a ones word. Once a child can say the sequence smoothly, every later counting skill has something to stand on. This skill does not yet ask the child to count objects; it only asks for the words, in the right order, without skipping.",
 		examples: [
@@ -69590,7 +69902,7 @@ var GA = {
 			"Chanting without any connection to quantity. Pair the chant with real objects, such as groups of two socks or five counters, so that the numbers mean something."
 		]
 	}
-}, jj = {}, Mj = {}, Nj = {}, Pj = {}, Fj = {}, Ij = {}, Lj = {
+}, Wj = {}, Gj = {}, Kj = {}, qj = {}, Jj = {}, Yj = {}, Xj = {
 	"K-NS-1": {
 		meaning: "Dire les mots-nombres dans l'ordre jusqu'à trente est le premier pas vers le dénombrement, et c'est d'abord une habileté de mémoire avant d'être une habileté mathématique. L'enfant apprend une suite fixe de mots, un peu comme les couplets d'une chanson, et doit les dire l'un après l'autre sans en oublier. Trente est un objectif utile en maternelle parce que la suite change de visage en chemin : de un à neuf, ce sont des mots tous nouveaux; de dix à dix-neuf, ils suivent leur propre schéma irrégulier; à partir de vingt, le schéma devient régulier, avec un mot de dizaine suivi d'un mot d'unité. Quand l'enfant peut dire la suite avec aisance, toutes les habiletés de comptage qui suivent ont un appui. Cette compétence ne demande pas encore de compter des objets : elle demande seulement les mots, dans le bon ordre, sans en sauter.",
 		examples: [
@@ -69669,7 +69981,7 @@ var GA = {
 			"Réciter sans aucun lien avec la quantité. Associez la récitation à de vrais objets, comme des groupes de deux chaussettes ou de cinq jetons, pour que les nombres aient un sens."
 		]
 	}
-}, Rj = {}, zj = {}, Bj = {}, Vj = {}, Hj = {}, Uj = {}, Wj = {
+}, Zj = {}, Qj = {}, $j = {}, eM = {}, tM = {}, nM = {}, rM = {
 	en: {
 		meaning: "What this skill means",
 		examples: "Things to try",
@@ -69681,8 +69993,8 @@ var GA = {
 		mistakes: "Erreurs fréquentes"
 	}
 };
-function Gj(e, t) {
-	let n = Wj[t];
+function iM(e, t) {
+	let n = rM[t];
 	return [
 		`## ${n.meaning}`,
 		e.meaning,
@@ -69692,59 +70004,59 @@ function Gj(e, t) {
 		...e.commonMistakes.map((e) => `- ${e}`)
 	].join("\n\n");
 }
-function Kj(e) {
+function aM(e) {
 	return e.replace(/```[\s\S]*?```/g, " ").replace(/~~~[\s\S]*?~~~/g, " ").replace(/`[^`\n]*`/g, " ").replace(/<[^>]*>/g, " ").replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^[ \t]{0,3}#{1,6}[ \t]+/gm, "").replace(/^[ \t]*(?:[-*+]|\d+[.)])[ \t]+/gm, "").replace(/^[ \t]*>+[ \t]?/gm, "").replace(/https?:\/\/\S+/g, " ").replace(/[*_~|]+/g, " ").split(/\s+/).filter((e) => /[\p{L}\p{N}]/u.test(e)).length;
 }
-function qj(e, t) {
-	return Kj(Gj(e, t));
+function oM(e, t) {
+	return aM(iM(e, t));
 }
 //#endregion
 //#region src/syllabus/index.ts
-var Jj = {
+var sM = {
 	en: {
-		K: Aj,
-		G1: jj,
-		G2: Mj,
-		G3: Nj,
-		G4: Pj,
-		G5: Fj,
-		G6: Ij
+		K: Uj,
+		G1: Wj,
+		G2: Gj,
+		G3: Kj,
+		G4: qj,
+		G5: Jj,
+		G6: Yj
 	},
 	fr: {
-		K: Lj,
-		G1: Rj,
-		G2: zj,
-		G3: Bj,
-		G4: Vj,
-		G5: Hj,
-		G6: Uj
+		K: Xj,
+		G1: Zj,
+		G2: Qj,
+		G3: $j,
+		G4: eM,
+		G5: tM,
+		G6: nM
 	}
-}, Yj = {
-	K: Cj,
-	G1: wj,
-	G2: Tj,
-	G3: Ej,
-	G4: Dj,
-	G5: Oj,
-	G6: kj
-}, Xj = bj, Zj = xj.levels, Qj = xj.topics;
-function $j(e, t) {
+}, cM = {
+	K: Ij,
+	G1: Lj,
+	G2: Rj,
+	G3: zj,
+	G4: Bj,
+	G5: Vj,
+	G6: Hj
+}, lM = Nj, uM = Pj.levels, dM = Pj.topics;
+function fM(e, t) {
 	let n = {
 		slug: t.slug,
 		role: t.role,
 		status: t.status
 	};
 	if (t.status === "built") {
-		let e = Sj[t.slug];
+		let e = Fj[t.slug];
 		e !== void 0 && (n.exerciseKey = e);
 	} else n.idea = {
 		en: t.idea ?? "",
-		fr: Yj[e.level][e.id]?.ideas?.[t.slug] ?? ""
+		fr: cM[e.level][e.id]?.ideas?.[t.slug] ?? ""
 	};
 	return t.decision && (n.decision = t.decision), t.regrade && (n.regrade = t.regrade), n;
 }
-function eM(e) {
-	let t = Yj[e.level][e.id], n = {
+function pM(e) {
+	let t = cM[e.level][e.id], n = {
 		id: e.id,
 		level: e.level,
 		topic: e.topic,
@@ -69759,59 +70071,59 @@ function eM(e) {
 		},
 		referenceRows: e.referenceRows,
 		prerequisites: e.prerequisites,
-		activities: e.activities.map((t) => $j(e, t))
+		activities: e.activities.map((t) => fM(e, t))
 	};
 	e.label && (n.label = e.label);
 	let r = {};
 	for (let t of ["en", "fr"]) {
-		let n = Jj[t][e.level][e.id];
+		let n = sM[t][e.level][e.id];
 		n !== void 0 && (r[t] = n);
 	}
 	return Object.keys(r).length > 0 && (n.enrichment = r), n;
 }
 var $ = {
 	version: 1,
-	levels: Xj.levels.map((e) => ({
+	levels: lM.levels.map((e) => ({
 		id: e.id,
 		ageBand: e.ageBand,
 		gating: e.gating,
-		intro: Zj[e.id].intro
+		intro: uM[e.id].intro
 	})),
-	topics: Xj.topics.map((e) => ({
+	topics: lM.topics.map((e) => ({
 		code: e.code,
 		group: e.group,
-		name: Qj[e.code].name,
-		description: Qj[e.code].description
+		name: dM[e.code].name,
+		description: dM[e.code].description
 	})),
-	skills: Xj.skills.map(eM)
-}, tM = new Map($.skills.map((e) => [e.id, e]));
-function nM(e) {
-	return tM.get(e);
+	skills: lM.skills.map(pM)
+}, mM = new Map($.skills.map((e) => [e.id, e]));
+function hM(e) {
+	return mM.get(e);
 }
-function rM(e) {
+function gM(e) {
 	return $.skills.filter((t) => t.level === e);
 }
-function iM(e, t) {
+function _M(e, t) {
 	return $.skills.filter((n) => n.level === e && n.topic === t);
 }
-function aM(e) {
-	let t = new Set(rM(e).map((e) => e.topic));
+function vM(e) {
+	let t = new Set(gM(e).map((e) => e.topic));
 	return $.topics.filter((e) => t.has(e.code));
 }
-function oM(e) {
+function yM(e) {
 	return $.levels.find((t) => t.id === e);
 }
-function sM(e) {
+function bM(e) {
 	return $.topics.find((t) => t.code === e);
 }
 //#endregion
 //#region src/skillsReference.ts
-function cM(e) {
+function xM(e) {
 	let t = {};
 	for (let n of $.skills) (t[n.level] ??= []).push(e(n));
 	return t;
 }
-var lM = {
+var SM = {
 	K: [],
 	G1: [],
 	G2: [],
@@ -69819,37 +70131,37 @@ var lM = {
 	G4: [],
 	G5: [],
 	G6: [],
-	...cM((e) => e.id)
-}, uM = {
-	en: cM((e) => e.description.en),
-	fr: cM((e) => e.description.fr)
+	...xM((e) => e.id)
+}, CM = {
+	en: xM((e) => e.description.en),
+	fr: xM((e) => e.description.fr)
 };
 //#endregion
 //#region src/skillsTitles.ts
-function dM(e) {
+function wM(e) {
 	let t = {};
 	for (let n of $.skills) (t[n.level] ??= []).push(n.title[e]);
 	return t;
 }
-var fM = {
-	en: dM("en"),
-	fr: dM("fr")
-}, pM = !1;
-function mM() {
-	pM ||= !0;
+var TM = {
+	en: wM("en"),
+	fr: wM("fr")
+}, EM = !1;
+function DM() {
+	EM ||= !0;
 }
-var hM = () => ({
+var OM = () => ({
 	subjectId: "math",
-	competencies: _w,
-	plugins: WA.all(),
-	exercises: yj,
-	mathematicsAreas: yw,
-	getMathematicsAreaForCompetency: bw,
-	skillsReference: uM,
-	skillReferenceIds: lM,
-	skillsTitles: fM,
+	competencies: Aw,
+	plugins: rj.all(),
+	exercises: Mj,
+	mathematicsAreas: Mw,
+	getMathematicsAreaForCompetency: Nw,
+	skillsReference: CM,
+	skillReferenceIds: SM,
+	skillsTitles: TM,
 	syllabus: $,
-	register: mM
+	register: DM
 });
 //#endregion
-export { _w as allCompetencies, QC as baselineCompareGroupsCompetency, $C as baselineConcreteArithmeticCompetency, YC as baselineCountingCompetency, tw as baselineDayOrderCompetency, nw as baselineDaysOfWeekCompetency, ZC as baselineDigitsCompetency, ew as baselineDirectComparisonCompetency, iw as baselinePositionCompetency, rw as baselineShapesCompetency, XC as baselineSubitizingCompetency, hM as default, Gj as enrichmentMarkdown, qj as enrichmentWordCount, bw as getMathematicsAreaForCompetency, oM as levelById, yj as mathExercises, WA as mathPluginRegistry, yw as mathematicsAreas, GC as mentalAdditionCompetency, JC as mentalDivisionCompetency, qC as mentalMultiplicationCompetency, KC as mentalSubtractionCompetency, aw as numberSenseCountingRangeCompetency, lw as numberSenseNegativeNumbersCompetency, sw as numberSenseOddEvenCompetency, cw as numberSenseOrdinalsCompetency, uw as numberSensePrimesFactorsCompetency, fw as numberSenseRomanNumeralsCompetency, ow as numberSenseSkipCountingCompetency, dw as numberSenseSquaresCompetency, gw as placeValueMultiplyDivideTenCompetency, mw as placeValuePowersOfTenCompetency, hw as placeValueRoundingCompetency, pw as placeValueUnderstandingCompetency, Kj as readableWordCount, nM as skillById, lM as skillReferenceIds, rM as skillsForLevel, iM as skillsForTopic, uM as skillsReference, fM as skillsTitles, $ as syllabus, sM as topicByCode, aM as topicsForLevel };
+export { Aw as allCompetencies, dw as baselineCompareGroupsCompetency, fw as baselineConcreteArithmeticCompetency, cw as baselineCountingCompetency, mw as baselineDayOrderCompetency, hw as baselineDaysOfWeekCompetency, uw as baselineDigitsCompetency, pw as baselineDirectComparisonCompetency, _w as baselinePositionCompetency, gw as baselineShapesCompetency, lw as baselineSubitizingCompetency, OM as default, iM as enrichmentMarkdown, oM as enrichmentWordCount, Nw as getMathematicsAreaForCompetency, yM as levelById, Mj as mathExercises, rj as mathPluginRegistry, Mw as mathematicsAreas, iw as mentalAdditionCompetency, sw as mentalDivisionCompetency, ow as mentalMultiplicationCompetency, aw as mentalSubtractionCompetency, vw as numberSenseCountingRangeCompetency, Sw as numberSenseNegativeNumbersCompetency, bw as numberSenseOddEvenCompetency, xw as numberSenseOrdinalsCompetency, Cw as numberSensePrimesFactorsCompetency, Tw as numberSenseRomanNumeralsCompetency, yw as numberSenseSkipCountingCompetency, ww as numberSenseSquaresCompetency, kw as placeValueMultiplyDivideTenCompetency, Dw as placeValuePowersOfTenCompetency, Ow as placeValueRoundingCompetency, Ew as placeValueUnderstandingCompetency, aM as readableWordCount, hM as skillById, SM as skillReferenceIds, gM as skillsForLevel, _M as skillsForTopic, CM as skillsReference, TM as skillsTitles, $ as syllabus, bM as topicByCode, vM as topicsForLevel };
