@@ -9,22 +9,33 @@
     <meta name="google-adsense-account" content="ca-pub-2503112416832365">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-blocking: the stylesheet is fetched as "print" and switched to "all" once loaded, so text
+         paints in the fallback font instead of waiting on Google Fonts (display=swap does the rest). -->
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <script type="module" crossorigin src="/assets/index-D1AoTbG0.js"></script>
+    <script type="module" crossorigin src="/assets/index-E3iPUkZK.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-utim-D9d.js">
     <link rel="modulepreload" crossorigin href="/assets/useTranslation-aErMOIMG.js">
-    <link rel="modulepreload" crossorigin href="/assets/BuildInfo-BCnWWwY5.js">
-    <link rel="modulepreload" crossorigin href="/assets/useProfiles-CiqhIOqf.js">
-    <link rel="modulepreload" crossorigin href="/assets/content-BeXySexQ.js">
-    <link rel="modulepreload" crossorigin href="/assets/adScript-D5fNNBtV.js">
+    <link rel="modulepreload" crossorigin href="/assets/BuildInfo-CZg3V2vA.js">
+    <link rel="modulepreload" crossorigin href="/assets/useProfiles-CE1JVYi8.js">
+    <link rel="modulepreload" crossorigin href="/assets/contentIndex-6lUpAFZH.js">
+    <link rel="modulepreload" crossorigin href="/assets/blogStore-DE3pqVRv.js">
+    <link rel="modulepreload" crossorigin href="/assets/AdSlot-CYuIusV_.js">
     <link rel="stylesheet" crossorigin href="/assets/index-o0O2nF-f.css">
   
     <title>Learn Core Skills — Mastery-based practice for children</title>
@@ -43,8 +54,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Learn Core Skills","url":"https://learncoreskills.com","logo":"https://learncoreskills.com/icon-512.png","description":"Free, mastery-based practice activities across mathematics and the whole-child skills framework, tracked per child with no lesson videos to sit through.","inLanguage":"en"}</script>
   </head>
   <body>
-    <div id="root"><noscript>
-      <header>
+    <div id="root"><header>
         <nav aria-label="Explore">
           <a href="/en/mathematics">Mathematics</a> ·
           <a href="/en/parent">Parent area</a> ·
@@ -59,6 +69,29 @@
           <p>Free, mastery-based practice activities across mathematics and the whole-child skills framework, tracked per child with no lesson videos to sit through.</p>
           <h2>What your child can practise</h2>
           <p>Mathematics and life-skills activities from pre-kindergarten to grade 5, with mastery tracked for every child. No lesson videos to sit through: children practise, get instant feedback and move on at their own pace.</p>
+          <h2>Subjects</h2>
+          <ul>
+            <li><a href="/en/mathematics">Mathematics</a></li>
+            <li><a href="/en/language-literacy">Language</a></li>
+            <li><a href="/en/science">Science</a></li>
+            <li><a href="/en/geography">Geography</a></li>
+            <li><a href="/en/history">History</a></li>
+            <li><a href="/en/civics-ethics">Civics &amp; Ethics</a></li>
+            <li><a href="/en/money-financial-literacy">Money</a></li>
+            <li><a href="/en/digital-literacy">Digital Literacy</a></li>
+            <li><a href="/en/physical-skills-sport">Physical Skills</a></li>
+            <li><a href="/en/health-safety-first-aid">Health &amp; Safety</a></li>
+            <li><a href="/en/music">Music</a></li>
+            <li><a href="/en/visual-arts">Visual Arts</a></li>
+            <li><a href="/en/dance-drama-performance">Dance &amp; Drama</a></li>
+            <li><a href="/en/practical-life">Practical Life</a></li>
+            <li><a href="/en/outdoors-nature">Outdoors &amp; Nature</a></li>
+            <li><a href="/en/social-emotional">Social &amp; Emotional</a></li>
+            <li><a href="/en/learning-how-to-learn">Learning Skills</a></li>
+            <li><a href="/en/second-language">2nd Language</a></li>
+            <li><a href="/en/games-logic-strategy">Games &amp; Logic</a></li>
+            <li><a href="/en/general-knowledge">General Knowledge</a></li>
+          </ul>
           <h2>How it works</h2>
           <p>A child picks a skill and answers short questions. Every answer is marked straight away, with an explanation when it is wrong. When a skill is solid the next one unlocks; otherwise the child gets more examples. Parents see, skill by skill, what is secure and what needs another look, with no account to create.</p>
           <h2>Why mastery</h2>
@@ -85,16 +118,7 @@
           <h2>About this site</h2>
           <p>learnCoreSkills is an independent, free educational project. Activities are short, marked instantly and tracked for each child; practice data stays on the family's device. Children's screens never show advertising.</p>
         </article>
-      </main>
-      <footer>
-        <nav aria-label="Site">
-          <a href="/en/privacy">Privacy</a> ·
-          <a href="/en/about">About</a> ·
-          <a href="/en/contact">Contact</a> ·
-          <a href="/en/terms">Terms of use</a>
-        </nav>
-      </footer>
-    </noscript><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a> · <a href="/en/terms" data-discover="true">Terms</a> · <a href="https://www.facebook.com/learncoreskills" target="_blank" rel="noopener noreferrer">Facebook</a></nav></footer></div>
+      </main><footer class="site-footer"><nav aria-label="Site"><a href="/en/privacy" data-discover="true">Privacy</a> · <a href="/en/about" data-discover="true">About</a> · <a href="/en/contact" data-discover="true">Contact</a> · <a href="/en/terms" data-discover="true">Terms</a> · <a href="https://www.facebook.com/learncoreskills" target="_blank" rel="noopener noreferrer">Facebook</a></nav></footer></div>
     <!-- Ads: no ad loader script here on purpose. ads/AdSlot.tsx injects the loader and the single
          <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
          MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
