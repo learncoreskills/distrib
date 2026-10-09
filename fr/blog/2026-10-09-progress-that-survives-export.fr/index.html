@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Analytics (Google Tag Manager) is not in the static head on purpose: ads/analytics.ts loads
+         it, after the consent-mode defaults are set, only on adult-facing routes (058, FR-019). -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-2503112416832365">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-blocking: the stylesheet is fetched as "print" and switched to "all" once loaded, so text
+         paints in the fallback font instead of waiting on Google Fonts (display=swap does the rest). -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <script type="module" crossorigin src="/assets/index-Cx98Iaer.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-utim-D9d.js">
+    <link rel="modulepreload" crossorigin href="/assets/useTranslation-B8Q5YGaB.js">
+    <link rel="modulepreload" crossorigin href="/assets/BuildInfo-ouX82BVQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/useProfiles-CjG9V-NO.js">
+    <link rel="modulepreload" crossorigin href="/assets/contentIndex-6lUpAFZH.js">
+    <link rel="modulepreload" crossorigin href="/assets/blogStore-DE3pqVRv.js">
+    <link rel="modulepreload" crossorigin href="/assets/AdSlot-DmIfIjes.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CQIiUujx.css">
+  
+    <title>Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu</title>
+    <meta name="description" content="Un parent qui exportait la progression d'un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à…" />
+    <link rel="canonical" href="https://learncoreskills.com/fr/blog/2026-10-09-progress-that-survives-export.fr" />
+    <link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog/2026-10-09-progress-that-survives-export.en" />
+    <link rel="alternate" hreflang="x-default" href="https://learncoreskills.com/en/blog/2026-10-09-progress-that-survives-export.en" />
+    <meta property="og:title" content="Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu" />
+    <meta property="og:description" content="Un parent qui exportait la progression d'un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à…" />
+    <meta property="og:url" content="https://learncoreskills.com/fr/blog/2026-10-09-progress-that-survives-export.fr" />
+    <meta property="og:image" content="https://learncoreskills.com/social-default.png" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu" />
+    <meta name="twitter:description" content="Un parent qui exportait la progression d'un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à…" />
+    <meta name="twitter:image" content="https://learncoreskills.com/social-default.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu","inLanguage":"fr","datePublished":"2026-10-09"}</script>
+  </head>
+  <body>
+    <div id="root"><div class="docs-theme"><main class="docs-main"><div class="card"><p class="docs-entry-meta">2026-10-09</p><div class="docs-markdown"><h1>Exportez la progression d&#x27;un enfant, réimportez-la, et rien n&#x27;est perdu</h1>
+<p>Un parent qui exportait la progression d&#x27;un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à l&#x27;original. C&#x27;est corrigé : la progression est maintenant conservée à un seul endroit, et ce que vous exportez est exactement ce qui revient.</p>
+<p><strong>Le problème.</strong> Les résultats d&#x27;exercices étaient gardés à deux endroits sur l&#x27;appareil. Le rapport lisait l&#x27;un, le fichier d&#x27;export était construit à partir de l&#x27;autre. Chacun conservait une quantité d&#x27;historique différente, si bien qu&#x27;un aller-retour pouvait faire disparaître des réponses et que les scores affichés ensuite ne correspondaient pas toujours.</p>
+<p><strong>Ce qui change.</strong> Il existe désormais un seul stockage des réponses de chaque enfant. Le rapport, les pourcentages de maîtrise, le radar et les scores d&#x27;activité en sont tous tirés, et le fichier d&#x27;export est fait avec les mêmes données.</p>
+<pre><code>exercices -&gt; un seul stockage -&gt; rapport, radar, scores
+                             \-&gt; fichier d&#x27;export -&gt; import -&gt; même stockage
+</code></pre>
+<p><strong>Quantité d&#x27;historique conservée.</strong> Pour chaque compétence, niveau et activité, l&#x27;application garde les 50 réponses les plus récentes. La règle est fixe : exporter puis importer ne change jamais ce qui est conservé.</p>
+<p><strong>Familles qui utilisent déjà l&#x27;application.</strong> La progression enregistrée avant cette mise à jour est reprise automatiquement à la première ouverture, et l&#x27;ancienne copie n&#x27;est supprimée qu&#x27;une fois le transfert réussi. Les anciens fichiers d&#x27;export, de toutes les versions précédentes, s&#x27;importent toujours.</p>
+<p><strong>Suppression et import plus sûrs.</strong> Supprimer un enfant efface désormais toute sa progression : un nouveau profil repart de zéro. Si un import échoue en cours de route, aucun enfant à moitié restauré ne reste, et un message clair en français ou en anglais explique ce qui s&#x27;est passé.</p></div></div></main></div><footer class="site-footer"><nav aria-label="Site"><a href="/fr/privacy" data-discover="true">Confidentialité</a> · <a href="/fr/about" data-discover="true">À propos</a> · <a href="/fr/contact" data-discover="true">Contact</a> · <a href="/fr/terms" data-discover="true">Conditions</a> · <a href="https://www.facebook.com/learncoreskills" target="_blank" rel="noopener noreferrer">Facebook</a></nav></footer></div>
+    <!-- Ads: no ad loader script here on purpose. ads/AdSlot.tsx injects the loader and the single
+         <ins> only beneath parent-facing articles and the syllabus/activity lists with >=
+         MIN_AD_CONTENT_WORDS readable words (AdSense policy: no ads on screens without publisher
+         content), tagged data-tag-for-age-treatment="1". -->
+  </body>
+</html>
