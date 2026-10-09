@@ -183,6 +183,19 @@
       "reviewed": false
     },
     {
+      "id": "2026-10-07-birth-year-and-clearer-progress.fr",
+      "date": "2026-10-07",
+      "title": "L'année de naissance au lieu de l'année scolaire, une vue d'ensemble plus complète pour les parents, et un score pour chaque activité",
+      "summary": "Trois choses qui demandaient un petit effort se font maintenant toutes seules : l'application calcule l'année scolaire de votre enfant à partir de son année de naissance, l'espace parent montre le…",
+      "contentUrl": "2026-10-07-birth-year-and-clearer-progress.fr.md",
+      "slug": "birth-year-and-clearer-progress",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 496,
+      "reviewed": false
+    },
+    {
       "id": "2026-10-07-terms-page-and-crawlable-home.en",
       "date": "2026-10-07",
       "title": "A Terms of use page, and a home page that search engines can read",
@@ -192,7 +205,7 @@
       "lang": "en",
       "kind": "news",
       "topics": [],
-      "words": 182,
+      "words": 468,
       "reviewed": false
     },
     {
@@ -205,7 +218,7 @@
       "lang": "fr",
       "kind": "news",
       "topics": [],
-      "words": 212,
+      "words": 518,
       "reviewed": false
     },
     {
@@ -246,7 +259,98 @@
       "topics": [],
       "words": 550,
       "reviewed": false
+    },
+    {
+      "id": "2026-10-08-kindergarten-number-sense.fr",
+      "date": "2026-10-08",
+      "title": "Le sens du nombre à la maternelle, maintenant un parcours complet de 16 compétences",
+      "summary": "Les enfants de maternelle peuvent maintenant suivre un parcours complet et ordonné du sens du nombre : seize compétences, depuis la récitation des mots-nombres dans l'ordre jusqu'aux premiers pas du…",
+      "contentUrl": "2026-10-08-kindergarten-number-sense.fr.md",
+      "slug": "kindergarten-number-sense",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 623,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-grade-1-place-value.en",
+      "date": "2026-10-09",
+      "title": "Grade 1 place value gets ten new games, from bundling sticks to spotting a puppet's mistake",
+      "summary": "Grade 1 children now have ten new games for place value, the idea that in 47 the 4 means four tens and the 7 means seven ones. They move from bundling loose sticks into tens to checking whether a…",
+      "contentUrl": "2026-10-09-grade-1-place-value.en.md",
+      "slug": "grade-1-place-value",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 590,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-grade-1-place-value.fr",
+      "date": "2026-10-09",
+      "title": "La valeur de position en 1re année gagne dix nouveaux jeux, de la mise en fagots à la chasse à l'erreur",
+      "summary": "Les élèves de 1re année disposent maintenant de dix nouveaux jeux sur la valeur de position, l'idée que dans 47, le 4 veut dire quatre dizaines et le 7 sept unités. Ils vont de la mise en fagots de…",
+      "contentUrl": "2026-10-09-grade-1-place-value.fr.md",
+      "slug": "grade-1-place-value",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 631,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-progress-that-survives-export.en",
+      "date": "2026-10-09",
+      "title": "Export a child's progress, import it back, and nothing is lost",
+      "summary": "A parent who exported a child's progress, deleted the profile and imported the file again could find the report looking different from before. That is fixed: progress now lives in one place, so what…",
+      "contentUrl": "2026-10-09-progress-that-survives-export.en.md",
+      "slug": "progress-that-survives-export",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 264,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-progress-that-survives-export.fr",
+      "date": "2026-10-09",
+      "title": "Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu",
+      "summary": "Un parent qui exportait la progression d'un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à l'original. C'est corrigé : la progression…",
+      "contentUrl": "2026-10-09-progress-that-survives-export.fr.md",
+      "slug": "progress-that-survives-export",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 266,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-ten-frames-in-kindergarten.en",
+      "date": "2026-10-09",
+      "title": "Kindergarten place value now focuses on the ten-frame, with three new games",
+      "summary": "Kindergarten place value has been tidied up to do one thing well: helping children see the numbers up to 10 on a ten-frame, the little grid of two rows of five boxes. Three games now practise it, and…",
+      "contentUrl": "2026-10-09-ten-frames-in-kindergarten.en.md",
+      "slug": "ten-frames-in-kindergarten",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 552,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-ten-frames-in-kindergarten.fr",
+      "date": "2026-10-09",
+      "title": "La valeur de position à la maternelle se concentre sur le cadre à dix cases, avec trois nouveaux jeux",
+      "summary": "La valeur de position à la maternelle a été simplifiée pour bien faire une seule chose : aider les enfants à voir les nombres jusqu'à 10 sur un cadre à dix cases, cette petite grille de deux rangées…",
+      "contentUrl": "2026-10-09-ten-frames-in-kindergarten.fr.md",
+      "slug": "ten-frames-in-kindergarten",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 643,
+      "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-07T23:48:50.650Z"
+  "generatedAt": "2026-10-09T21:20:17.376Z"
 }
