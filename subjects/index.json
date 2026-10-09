@@ -107,6 +107,7 @@
         "math.number-sense.odd-even-numbers-and-doubles",
         "math.place-value.partitions-in-non-standard-ways",
         "math.place-value.adds-subtracts-10-or-100",
+        "math.place-value.adds-subtracts-100",
         "math.addition.adds-subtracts-within-100-fluently",
         "math.addition.adds-up-to-four-two-digit-numbers",
         "math.addition.adds-subtracts-within-1000-base-ten",
@@ -361,6 +362,12 @@
         "math.problem-solving.solves-multi-step-fraction-decimal-percent-problems",
         "math.mathematical-reasoning.refutes-statements-with-counterexamples",
         "math.mathematical-reasoning.uses-bar-models-for-fractions-ratios-percentages",
+        "math.place-value.sig-figs.identify",
+        "math.place-value.sig-figs.round",
+        "math.place-value.sig-figs.accuracy",
+        "math.place-value.standard-form.large-numbers",
+        "math.place-value.standard-form.compare",
+        "math.place-value.standard-form.negative-powers",
         "math.number-sense.preschool-subitizing",
         "math.number-sense.preschool-numerals",
         "math.number-sense.preschool-numeral-quantity",
@@ -432,5 +439,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-08T21:46:53.204Z"
+  "generatedAt": "2026-10-09T19:05:29.517Z"
 }
