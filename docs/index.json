@@ -1,0 +1,75 @@
+{
+  "entries": [
+    {
+      "id": "product-curriculum",
+      "title": "Mathematics Curriculum (MVP)",
+      "contentUrl": "product-curriculum.md"
+    },
+    {
+      "id": "product-math-competency-reference",
+      "title": "Mathematics Competency Reference — Pre-K to Grade 5 (worldwide)",
+      "contentUrl": "product-math-competency-reference.md"
+    },
+    {
+      "id": "product-numbers-syllabus-proposal",
+      "title": "product-numbers-syllabus-proposal",
+      "contentUrl": "product-numbers-syllabus-proposal.md"
+    },
+    {
+      "id": "product-preschool-readiness",
+      "title": "Preschool readiness (pre-Grade-1) — syllabus & activity proposals",
+      "contentUrl": "product-preschool-readiness.md"
+    },
+    {
+      "id": "product-primary-skills-framework",
+      "title": "The Primary Skills Framework",
+      "contentUrl": "product-primary-skills-framework.md"
+    },
+    {
+      "id": "product-vision",
+      "title": "Primary Learning Platform",
+      "contentUrl": "product-vision.md"
+    },
+    {
+      "id": "architecture-architecture",
+      "title": "Technical Architecture",
+      "contentUrl": "architecture-architecture.md"
+    },
+    {
+      "id": "architecture-0001-frontend-stack",
+      "title": "ADR-0001: Frontend Stack",
+      "contentUrl": "architecture-0001-frontend-stack.md"
+    },
+    {
+      "id": "architecture-0002-backend-stack",
+      "title": "ADR-0002: Backend Stack",
+      "contentUrl": "architecture-0002-backend-stack.md"
+    },
+    {
+      "id": "architecture-0003-client-server-split-and-hosting",
+      "title": "ADR-0003: Client/Server Split, Repo Topology & Hosting",
+      "contentUrl": "architecture-0003-client-server-split-and-hosting.md"
+    },
+    {
+      "id": "architecture-0004-testing-and-quality-gates",
+      "title": "ADR-0004: Testing & Quality Gates",
+      "contentUrl": "architecture-0004-testing-and-quality-gates.md"
+    },
+    {
+      "id": "architecture-0005-client-server-responsibility-boundary",
+      "title": "ADR-0005: Client/Server Responsibility Boundary & API Contract",
+      "contentUrl": "architecture-0005-client-server-responsibility-boundary.md"
+    },
+    {
+      "id": "architecture-0006-client-only-architecture",
+      "title": "ADR-0006: Client-Only Architecture for V1",
+      "contentUrl": "architecture-0006-client-only-architecture.md"
+    },
+    {
+      "id": "architecture-0007-frontend-framework-react",
+      "title": "ADR-0007: Frontend Framework — React over Angular",
+      "contentUrl": "architecture-0007-frontend-framework-react.md"
+    }
+  ],
+  "generatedAt": "2026-10-09T22:03:50.037Z"
+}
