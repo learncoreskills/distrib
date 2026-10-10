@@ -856,8 +856,61 @@ function h(e) {
 	};
 }
 //#endregion
+//#region node_modules/@learncoreskills/plugin-engine/dist/src/registry.js
+function We(e, t) {
+	let n = [], r = new Set(t.map((e) => e.id)), i = /* @__PURE__ */ new Set();
+	for (let t of e) i.has(t.id) && n.push({
+		kind: "duplicate-plugin-id",
+		id: t.id
+	}), i.add(t.id);
+	for (let t of e) for (let e of t.competencyIds) r.has(e) || n.push({
+		kind: "unknown-competency-reference",
+		pluginId: t.id,
+		competencyId: e
+	});
+	return {
+		valid: n.length === 0,
+		errors: n
+	};
+}
+function Ge(e) {
+	switch (e.kind) {
+		case "duplicate-plugin-id": return `duplicate plugin id: "${e.id}"`;
+		case "unknown-competency-reference": return `plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`;
+	}
+}
+function Ke(e, t) {
+	let n = We(e, t);
+	if (!n.valid) {
+		let e = n.errors.map(Ge).join("; ");
+		throw Error(`Invalid plugin registry: ${e}`);
+	}
+	let r = new Map(e.map((e) => [e.id, e]));
+	return {
+		getPlugin(e) {
+			return r.get(e);
+		},
+		getPluginsForCompetency(t) {
+			return e.filter((e) => e.competencyIds.includes(t));
+		},
+		all() {
+			return [...e];
+		}
+	};
+}
+//#endregion
+//#region node_modules/@learncoreskills/plugin-engine/dist/src/sceneAnswers.js
+function qe(e) {
+	return e.split("|").map(Number);
+}
+function Je(e, t) {
+	if (typeof t == "string") return e === t;
+	let n = qe(e);
+	return n.some((e) => !Number.isFinite(e)) ? !1 : t.op === "sum" ? n.reduce((e, t) => e + t, 0) === t.value : n.length === 1 && n[0] === t.value;
+}
+//#endregion
 //#region packages/template-multiple-choice/src/rng.ts
-function We(e) {
+function Ye(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -865,64 +918,64 @@ function We(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Ge(e, t, n) {
+function Xe(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
-function Ke(e, t) {
+function Ze(e, t) {
 	let n = t.slice();
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = Ge(e, 0, t), i = n[t];
+		let r = Xe(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n;
 }
 //#endregion
 //#region packages/template-multiple-choice/src/factory.ts
-function qe(e) {
+function Qe(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Je(e, t) {
+function $e(e, t) {
 	let n = e.filter((e) => e.grade === t);
 	if (n.length === 0) throw Error(`no content bank entries for grade: ${t}`);
 	return n;
 }
-function Ye(e) {
+function et(e) {
 	return Array.from({ length: e }, (e, t) => String.fromCharCode(97 + t));
 }
-function Xe(e, t) {
+function tt(e, t) {
 	return e.map((e, n) => ({
 		id: t[n],
 		label: e
 	}));
 }
-function Ze(e, t, n) {
-	if (!qe(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
-	let r = Je(e.bank, t), i = We(n), a = r[Ge(i, 0, r.length - 1)], o = Ye(a.en.options.length);
+function nt(e, t, n) {
+	if (!Qe(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
+	let r = $e(e.bank, t), i = Ye(n), a = r[Xe(i, 0, r.length - 1)], o = a.scene?.type === "build-set" ? [...a.en.options] : et(a.en.options.length);
 	a.scene?.type === "pick-group" && a.scene.allowSame === !0 && a.scene.groups.length === o.length - 1 && (o[o.length - 1] = "same");
-	let s = Ke(i, o), c = s.map((e) => a.en.options[o.indexOf(e)]), l = s.map((e) => a.fr.options[o.indexOf(e)]), u = o[a.en.correctIndex];
+	let s = Ze(i, o), c = s.map((e) => a.en.options[o.indexOf(e)]), l = s.map((e) => a.fr.options[o.indexOf(e)]), u = o[a.en.correctIndex];
 	return {
 		id: `${e.pluginId}-${t}-${n}`,
 		grade: t,
 		en: {
 			prompt: a.en.prompt,
-			options: Xe(c, s)
+			options: tt(c, s)
 		},
 		fr: {
 			prompt: a.fr.prompt,
-			options: Xe(l, s)
+			options: tt(l, s)
 		},
 		correctOptionId: u,
-		...a.scene && { scene: $e(a.scene, o, s, n) },
-		...a.feedback && { feedback: Qe(a.feedback, o) }
+		...a.scene && { scene: it(a.scene, o, s, n) },
+		...a.feedback && { feedback: rt(a.feedback, o) }
 	};
 }
-function Qe(e, t) {
+function rt(e, t) {
 	let n = {};
 	return e.forEach((e, r) => {
 		e && (n[t[r]] = e);
 	}), n;
 }
-function $e(e, t, n, r) {
+function it(e, t, n, r) {
 	let i = (e) => t.indexOf(e);
 	return e.type === "pick-group" ? {
 		type: "pick-group",
@@ -953,9 +1006,13 @@ function g(e) {
 		id: e.pluginId,
 		competencyIds: [e.competencyId],
 		generateQuestion(t, n) {
-			return Ze(e, t, n);
+			return nt(e, t, n);
 		},
 		validateAnswer(e, t) {
+			if (e.scene?.type === "build-set" && e.scene.target !== void 0) {
+				let { target: n } = e.scene;
+				return { correct: (typeof n == "string" ? n.split("/") : [n]).some((e) => Je(t, e)) };
+			}
 			return { correct: t === e.correctOptionId };
 		},
 		toPresentation(e, t = "en") {
@@ -971,10 +1028,10 @@ function g(e) {
 		}
 	};
 	function n(t, n) {
-		let r = We(n), i = [];
+		let r = Ye(n), i = [];
 		for (let n = 0; n < 10; n++) {
 			let n = Math.floor(r() * 4294967295);
-			i.push(Ze(e, t, n));
+			i.push(nt(e, t, n));
 		}
 		return {
 			grade: t,
@@ -1002,7 +1059,7 @@ function g(e) {
 }
 //#endregion
 //#region packages/template-numeric-answer/src/rng.ts
-function et(e) {
+function at(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -1010,22 +1067,22 @@ function et(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function tt(e, t, n) {
+function ot(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/template-numeric-answer/src/factory.ts
-function nt(e) {
+function st(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function rt(e, t) {
+function ct(e, t) {
 	let n = e.filter((e) => e.grade === t);
 	if (n.length === 0) throw Error(`no content bank entries for grade: ${t}`);
 	return n;
 }
-function it(e, t, n) {
-	if (!nt(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
-	let r = rt(e.bank, t), i = r[tt(et(n), 0, r.length - 1)];
+function lt(e, t, n) {
+	if (!st(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
+	let r = ct(e.bank, t), i = r[ot(at(n), 0, r.length - 1)];
 	return {
 		id: `${e.pluginId}-${t}-${n}`,
 		grade: t,
@@ -1039,7 +1096,7 @@ function _(e) {
 		id: e.pluginId,
 		competencyIds: [e.competencyId],
 		generateQuestion(t, n) {
-			return it(e, t, n);
+			return lt(e, t, n);
 		},
 		validateAnswer(e, t) {
 			return { correct: t === e.correctValue };
@@ -1055,10 +1112,10 @@ function _(e) {
 		}
 	};
 	function n(t, n) {
-		let r = et(n), i = [];
+		let r = at(n), i = [];
 		for (let n = 0; n < 10; n++) {
 			let n = Math.floor(r() * 4294967295);
-			i.push(it(e, t, n));
+			i.push(lt(e, t, n));
 		}
 		return {
 			grade: t,
@@ -1086,7 +1143,7 @@ function _(e) {
 }
 //#endregion
 //#region packages/syllabus-content-g1/src/rng.ts
-function at(e) {
+function ut(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -1094,12 +1151,12 @@ function at(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function ot(e, t, n) {
+function dt(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/syllabus-content-g1/src/content.ts
-var st = _({
+var ft = _({
 	pluginId: "syllabus-g1-reads-writes-to-100",
 	competencyId: r.id,
 	bank: [{
@@ -1113,7 +1170,7 @@ var st = _({
 		fr: { prompt: "Écris le nombre : quatre-vingt-seize" },
 		correctValue: 96
 	}]
-}), ct = _({
+}), pt = _({
 	pluginId: "syllabus-g1-number-bonds-within-10",
 	competencyId: i.id,
 	bank: [{
@@ -1127,7 +1184,7 @@ var st = _({
 		fr: { prompt: "Quels sont les deux nombres qui font 9 ? 9 = 2 + ?" },
 		correctValue: 7
 	}]
-}), lt = _({
+}), mt = _({
 	pluginId: "syllabus-g1-add-subtract-within-20",
 	competencyId: a.id,
 	bank: [{
@@ -1141,7 +1198,7 @@ var st = _({
 		fr: { prompt: "18 - 9 = ?" },
 		correctValue: 9
 	}]
-}), ut = [
+}), ht = [
 	{
 		grade: 1,
 		en: { prompt: "Half of 8 apples is how many apples?" },
@@ -1190,7 +1247,7 @@ var st = _({
 		fr: { prompt: "La moitié de 20 boutons, ça fait combien de boutons ?" },
 		correctValue: 10
 	}
-], dt = [
+], gt = [
 	{
 		grade: 1,
 		en: {
@@ -1296,17 +1353,17 @@ var st = _({
 		}
 	}
 ];
-function ft(e, t) {
+function _t(e, t) {
 	return e.filter((e) => e.grade === t);
 }
-function pt(e) {
+function vt(e) {
 	return e === 1 || e === 2;
 }
-function mt(e) {
+function yt(e) {
 	return Array.from({ length: e }, (e, t) => String.fromCharCode(97 + t));
 }
-function ht(e, t, n) {
-	let r = ft(ut, e), i = r[ot(n, 0, r.length - 1)];
+function bt(e, t, n) {
+	let r = _t(ht, e), i = r[dt(n, 0, r.length - 1)];
 	return {
 		id: `syllabus-g1-half-and-quarter-${e}-${t}`,
 		grade: e,
@@ -1316,8 +1373,8 @@ function ht(e, t, n) {
 		correctValue: i.correctValue
 	};
 }
-function gt(e, t, n) {
-	let r = ft(dt, e), i = r[ot(n, 0, r.length - 1)], a = mt(i.en.options.length), o = mt(i.fr.options.length);
+function xt(e, t, n) {
+	let r = _t(gt, e), i = r[dt(n, 0, r.length - 1)], a = yt(i.en.options.length), o = yt(i.fr.options.length);
 	return {
 		id: `syllabus-g1-half-and-quarter-${e}-${t}`,
 		grade: e,
@@ -1339,12 +1396,12 @@ function gt(e, t, n) {
 		correctOptionId: a[i.en.correctIndex]
 	};
 }
-function _t(e, t) {
-	if (!pt(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..2)`);
-	let n = at(t);
-	return ot(n, 0, 1) === 0 ? ht(e, t, n) : gt(e, t, n);
+function St(e, t) {
+	if (!vt(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..2)`);
+	let n = ut(t);
+	return dt(n, 0, 1) === 0 ? bt(e, t, n) : xt(e, t, n);
 }
-function vt(e) {
+function Ct(e) {
 	return e.kind === "recognise-split" ? {
 		presentation: {
 			kind: "choice",
@@ -1360,29 +1417,29 @@ function vt(e) {
 		correctAnswer: e.correctValue
 	};
 }
-var yt = {
+var wt = {
 	id: "syllabus-g1-half-and-quarter",
 	competencyIds: [o.id],
 	generateQuestion(e, t) {
-		return _t(e, t);
+		return St(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "recognise-split" ? { correct: t === e.correctOptionId } : { correct: t === e.correctValue };
 	},
-	toPresentation: vt
+	toPresentation: Ct
 };
-function bt(e, t) {
-	let n = at(t), r = [];
+function Tt(e, t) {
+	let n = ut(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(_t(e, t));
+		r.push(St(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-function xt(e, t, n, r, i, a) {
+function Et(e, t, n, r, i, a) {
 	return {
 		competencyId: o.id,
 		grade: e.grade,
@@ -1390,16 +1447,16 @@ function xt(e, t, n, r, i, a) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: vt(e).correctAnswer,
+		correctAnswer: Ct(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-var St = {
-	plugin: yt,
-	createSession: bt,
-	createMasterySignal: xt
-}, Ct = _({
+var Dt = {
+	plugin: wt,
+	createSession: Tt,
+	createMasterySignal: Et
+}, Ot = _({
 	pluginId: "syllabus-g1-length-in-cm",
 	competencyId: s.id,
 	bank: [
@@ -1440,7 +1497,7 @@ var St = {
 			correctValue: 15
 		}
 	]
-}), wt = g({
+}), kt = g({
 	pluginId: "syllabus-g1-measurement-vocabulary",
 	competencyId: c.id,
 	bank: [{
@@ -1484,7 +1541,7 @@ var St = {
 			correctIndex: 1
 		}
 	}]
-}), Tt = g({
+}), At = g({
 	pluginId: "syllabus-g1-time-hour-half-hour",
 	competencyId: l.id,
 	bank: [{
@@ -1528,7 +1585,7 @@ var St = {
 			correctIndex: 1
 		}
 	}]
-}), Et = h({
+}), jt = h({
 	pluginId: "syllabus-g1-months-and-seasons",
 	competencyId: u.id,
 	bank: [{
@@ -1552,7 +1609,7 @@ var St = {
 			answer: "printemps"
 		}
 	}]
-}), Dt = g({
+}), Mt = g({
 	pluginId: "syllabus-g1-names-2d-3d-shapes",
 	competencyId: d.id,
 	bank: [{
@@ -1596,7 +1653,7 @@ var St = {
 			correctIndex: 1
 		}
 	}]
-}), Ot = g({
+}), Nt = g({
 	pluginId: "syllabus-g1-shape-orientation-invariance",
 	competencyId: f.id,
 	bank: [
@@ -1727,7 +1784,7 @@ var St = {
 			}
 		}
 	]
-}), kt = g({
+}), Pt = g({
 	pluginId: "syllabus-g1-describes-route",
 	competencyId: p.id,
 	bank: [{
@@ -1771,7 +1828,7 @@ var St = {
 			correctIndex: 2
 		}
 	}]
-}), At = g({
+}), Ft = g({
 	pluginId: "syllabus-g1-sorts-objects-by-criterion",
 	competencyId: ee.id,
 	bank: [
@@ -1902,7 +1959,7 @@ var St = {
 			}
 		}
 	]
-}), jt = _({
+}), It = _({
 	pluginId: "syllabus-g1-reads-simple-pictogram",
 	competencyId: te.id,
 	bank: [
@@ -1931,7 +1988,7 @@ var St = {
 			correctValue: 6
 		}
 	]
-}), Mt = h({
+}), Lt = h({
 	pluginId: "syllabus-g1-continues-repeating-pattern",
 	competencyId: ne.id,
 	bank: [{
@@ -1955,7 +2012,7 @@ var St = {
 			answer: "2"
 		}
 	}]
-}), Nt = g({
+}), Rt = g({
 	pluginId: "syllabus-g1-choose-addition-or-subtraction",
 	competencyId: re.id,
 	bank: [{
@@ -1999,7 +2056,7 @@ var St = {
 			correctIndex: 1
 		}
 	}]
-}), Pt = g({
+}), zt = g({
 	pluginId: "syllabus-g1-number-words-to-20",
 	competencyId: ie.id,
 	bank: [
@@ -2277,7 +2334,7 @@ var St = {
 			}
 		}
 	]
-}), Ft = _({
+}), Bt = _({
 	pluginId: "syllabus-g1-one-more-less-ten-more-less",
 	competencyId: ae.id,
 	bank: [
@@ -2354,7 +2411,7 @@ var St = {
 			correctValue: 100
 		}
 	]
-}), It = g({
+}), Vt = g({
 	pluginId: "syllabus-g1-compares-two-digit-numbers",
 	competencyId: oe.id,
 	bank: [
@@ -2590,7 +2647,7 @@ var St = {
 			}
 		}
 	]
-}), Lt = g({
+}), Ht = g({
 	pluginId: "syllabus-g1-orders-numbers-to-100",
 	competencyId: se.id,
 	bank: [
@@ -2868,7 +2925,7 @@ var St = {
 			}
 		}
 	]
-}), Rt = g({
+}), Ut = g({
 	pluginId: "syllabus-g1-estimates-up-to-50",
 	competencyId: ce.id,
 	bank: [
@@ -3062,7 +3119,7 @@ var St = {
 			}
 		}
 	]
-}), zt = _({
+}), Wt = _({
 	pluginId: "syllabus-g1-related-addition-subtraction-facts",
 	competencyId: le.id,
 	bank: [
@@ -3127,7 +3184,7 @@ var St = {
 			correctValue: 6
 		}
 	]
-}), Bt = _({
+}), Gt = _({
 	pluginId: "syllabus-g1-swap-and-group-addends",
 	competencyId: ue.id,
 	bank: [
@@ -3192,7 +3249,7 @@ var St = {
 			correctValue: 17
 		}
 	]
-}), Vt = _({
+}), Kt = _({
 	pluginId: "syllabus-g1-adds-to-two-digit-number",
 	competencyId: de.id,
 	bank: [
@@ -3257,7 +3314,7 @@ var St = {
 			correctValue: 85
 		}
 	]
-}), Ht = _({
+}), qt = _({
 	pluginId: "syllabus-g1-subtracts-multiples-of-ten",
 	competencyId: fe.id,
 	bank: [
@@ -3322,7 +3379,7 @@ var St = {
 			correctValue: 40
 		}
 	]
-}), Ut = _({
+}), Jt = _({
 	pluginId: "syllabus-g1-doubles-and-halves",
 	competencyId: pe.id,
 	bank: [
@@ -3399,7 +3456,7 @@ var St = {
 			correctValue: 5
 		}
 	]
-}), Wt = _({
+}), Yt = _({
 	pluginId: "syllabus-g1-doubles-and-near-doubles",
 	competencyId: me.id,
 	bank: [
@@ -3470,7 +3527,7 @@ var St = {
 			correctValue: 17
 		}
 	]
-}), Gt = _({
+}), Xt = _({
 	pluginId: "syllabus-g1-adds-subtracts-ten-mentally",
 	competencyId: he.id,
 	bank: [
@@ -3541,7 +3598,7 @@ var St = {
 			correctValue: 29
 		}
 	]
-}), Kt = g({
+}), Zt = g({
 	pluginId: "syllabus-g1-half-and-quarter-of-a-set",
 	competencyId: ge.id,
 	bank: [
@@ -3735,7 +3792,7 @@ var St = {
 			}
 		}
 	]
-}), qt = g({
+}), Qt = g({
 	pluginId: "syllabus-g1-equals-means-the-same-as",
 	competencyId: _e.id,
 	bank: [
@@ -3870,7 +3927,7 @@ var St = {
 			}
 		}
 	]
-}), Jt = _({
+}), $t = _({
 	pluginId: "syllabus-g1-finds-missing-number",
 	competencyId: ve.id,
 	bank: [
@@ -3935,7 +3992,7 @@ var St = {
 			correctValue: 13
 		}
 	]
-}), Yt = g({
+}), en = g({
 	pluginId: "syllabus-g1-orders-and-compares-lengths",
 	competencyId: ye.id,
 	bank: [
@@ -4108,7 +4165,7 @@ var St = {
 			}
 		}
 	]
-}), Xt = g({
+}), tn = g({
 	pluginId: "syllabus-g1-compares-masses-on-a-balance",
 	competencyId: be.id,
 	bank: [
@@ -4281,7 +4338,7 @@ var St = {
 			}
 		}
 	]
-}), Zt = g({
+}), nn = g({
 	pluginId: "syllabus-g1-compares-capacities",
 	competencyId: xe.id,
 	bank: [
@@ -4454,7 +4511,7 @@ var St = {
 			}
 		}
 	]
-}), Qt = g({
+}), rn = g({
 	pluginId: "syllabus-g1-compares-and-orders-durations",
 	competencyId: Se.id,
 	bank: [
@@ -4648,7 +4705,7 @@ var St = {
 			}
 		}
 	]
-}), $t = g({
+}), an = g({
 	pluginId: "syllabus-g1-finds-date-on-calendar",
 	competencyId: Ce.id,
 	bank: [
@@ -4863,7 +4920,7 @@ var St = {
 			}
 		}
 	]
-}), en = g({
+}), on = g({
 	pluginId: "syllabus-g1-recognises-coins-and-values",
 	competencyId: we.id,
 	bank: [
@@ -5078,7 +5135,7 @@ var St = {
 			}
 		}
 	]
-}), tn = _({
+}), sn = _({
 	pluginId: "syllabus-g1-counts-coins-to-20",
 	competencyId: Te.id,
 	bank: [
@@ -5143,7 +5200,7 @@ var St = {
 			correctValue: 18
 		}
 	]
-}), nn = g({
+}), cn = g({
 	pluginId: "syllabus-g1-pays-for-an-item",
 	competencyId: Ee.id,
 	bank: [
@@ -5284,7 +5341,7 @@ var St = {
 			}
 		}
 	]
-}), rn = g({
+}), ln = g({
 	pluginId: "syllabus-g1-matches-3d-shapes-to-objects",
 	competencyId: De.id,
 	bank: [
@@ -5478,7 +5535,7 @@ var St = {
 			}
 		}
 	]
-}), an = g({
+}), un = g({
 	pluginId: "syllabus-g1-builds-composite-shapes",
 	competencyId: Oe.id,
 	bank: [
@@ -5672,7 +5729,7 @@ var St = {
 			}
 		}
 	]
-}), on = g({
+}), dn = g({
 	pluginId: "syllabus-g1-copies-a-figure-on-a-grid",
 	competencyId: ke.id,
 	bank: [
@@ -5845,7 +5902,7 @@ var St = {
 			}
 		}
 	]
-}), sn = g({
+}), fn = g({
 	pluginId: "syllabus-g1-straight-and-curved-lines",
 	competencyId: Ae.id,
 	bank: [
@@ -6039,7 +6096,7 @@ var St = {
 			}
 		}
 	]
-}), cn = g({
+}), pn = g({
 	pluginId: "syllabus-g1-left-and-right",
 	competencyId: je.id,
 	bank: [
@@ -6233,7 +6290,7 @@ var St = {
 			}
 		}
 	]
-}), ln = g({
+}), mn = g({
 	pluginId: "syllabus-g1-locates-objects-on-a-plan",
 	competencyId: Me.id,
 	bank: [
@@ -6406,7 +6463,7 @@ var St = {
 			}
 		}
 	]
-}), un = g({
+}), hn = g({
 	pluginId: "syllabus-g1-certain-possible-impossible",
 	competencyId: Ne.id,
 	bank: [
@@ -6600,7 +6657,7 @@ var St = {
 			}
 		}
 	]
-}), dn = _({
+}), gn = _({
 	pluginId: "syllabus-g1-unknown-start-change-or-result",
 	competencyId: Pe.id,
 	bank: [
@@ -6665,7 +6722,7 @@ var St = {
 			correctValue: 8
 		}
 	]
-}), fn = g({
+}), _n = g({
 	pluginId: "syllabus-g1-represents-problem-as-number-sentence",
 	competencyId: Fe.id,
 	bank: [
@@ -6838,7 +6895,7 @@ var St = {
 			}
 		}
 	]
-}), pn = g({
+}), vn = g({
 	pluginId: "syllabus-g1-checks-an-answer-another-way",
 	competencyId: Ie.id,
 	bank: [
@@ -7027,7 +7084,7 @@ var St = {
 	onesOnly: "pv3.feedback.onesOnly",
 	countAll: "pv3.feedback.countAll",
 	oneTen: "pv3.feedback.oneTen"
-}, mn = {
+}, yn = {
 	digitValue: "pv6.feedback.digitValue",
 	onesValue: "pv6.feedback.onesValue",
 	orderMatters: "pv6.feedback.orderMatters",
@@ -7054,10 +7111,10 @@ function x(e, t, n, r, i) {
 		feedback: [null, ...a.slice(0, 3).map((e) => e[1])]
 	};
 }
-var hn = ["🥢", "✏️"];
-function gn() {
+var bn = ["🥢", "✏️"];
+function xn() {
 	let e = [];
-	hn.forEach((t) => {
+	bn.forEach((t) => {
 		let n = (e) => ({
 			type: "counters",
 			groups: [{
@@ -7089,7 +7146,7 @@ function gn() {
 		let r = t * 10 + n, i = {
 			type: "counters",
 			groups: [{
-				emoji: hn[(t + n) % 2],
+				emoji: bn[(t + n) % 2],
 				count: r
 			}]
 		};
@@ -7111,10 +7168,10 @@ function gn() {
 	}
 	return e;
 }
-var _n = ["🟦", "🟥"];
-function vn() {
+var Sn = ["🟦", "🟥"];
+function Cn() {
 	let e = [];
-	return _n.forEach((t) => {
+	return Sn.forEach((t) => {
 		for (let n of [1, 2]) {
 			let r = n * 10, i = {
 				type: "ten-frame",
@@ -7157,7 +7214,7 @@ function vn() {
 		}
 	}), e;
 }
-var yn = [
+var wn = [
 	1,
 	2,
 	3,
@@ -7168,9 +7225,9 @@ var yn = [
 	8,
 	9
 ];
-function bn() {
+function Tn() {
 	let e = [];
-	for (let t of yn) {
+	for (let t of wn) {
 		let n = t * 10, r = Array.from({ length: t + 1 }, (e, t) => t * 10);
 		e.push(x(1, {
 			en: `Hop by tens from 0. After ${t.toString()} hops, which number do you land on?`,
@@ -7211,9 +7268,9 @@ function bn() {
 	}
 	return e;
 }
-function xn() {
+function En() {
 	let e = [];
-	for (let t of yn) {
+	for (let t of wn) {
 		let n = t * 10;
 		e.push(x(1, {
 			en: `Each ten-rod is 10 cubes. You buy ${t.toString()} ten-rods. How many cubes do you get?`,
@@ -7246,27 +7303,27 @@ function xn() {
 	}
 	return e;
 }
-var Sn = "🧱", Cn = "🧊";
-function wn(e, t) {
+var Dn = "🧱", On = "🧊";
+function kn(e, t) {
 	return {
 		type: "counters",
 		groups: [{
-			emoji: Sn,
+			emoji: Dn,
 			count: e
 		}, ...t > 0 ? [{
-			emoji: Cn,
+			emoji: On,
 			count: t
 		}] : []]
 	};
 }
-function Tn(e, t) {
+function An(e, t) {
 	return [
 		[t * 10 + e, b.swapped],
 		[e * 10, b.tensOnly],
 		[e + t, b.countAll]
 	];
 }
-function En() {
+function jn() {
 	let e = [];
 	for (let t of [
 		2,
@@ -7282,7 +7339,7 @@ function En() {
 	]) e.push(x(1, {
 		en: `You build with ${t.toString()} ten-rods and ${n.toString()} loose cubes. Which number is it?`,
 		fr: `Tu construis avec ${t.toString()} barres de dix et ${n.toString()} cubes seuls. Quel est ce nombre ?`
-	}, t * 10 + n, Tn(t, n), wn(t, n)));
+	}, t * 10 + n, An(t, n), kn(t, n)));
 	for (let t of [
 		2,
 		3,
@@ -7317,9 +7374,9 @@ function En() {
 	}
 	return e;
 }
-function Dn() {
+function Mn() {
 	let e = [];
-	for (let t of yn) {
+	for (let t of wn) {
 		let n = 10 + t;
 		e.push(x(1, {
 			en: `The tower has 1 ten-rod and ${t.toString()} loose cubes. What number does it say?`,
@@ -7328,14 +7385,14 @@ function Dn() {
 			[t * 10 + 1, b.swapped],
 			[t, b.onesOnly],
 			[11 + t, b.countAll]
-		], wn(1, t)), x(2, {
+		], kn(1, t)), x(2, {
 			en: `The tower says ${n.toString()}. It has 1 ten-rod. How many loose cubes are on top?`,
 			fr: `La tour annonce ${n.toString()}. Un nombre de 11 à 19 a 1 dizaine. Combien de cubes seuls y a-t-il dessus ?`
 		}, t, [
 			[1, b.oneTen],
 			[n, b.countAll],
 			[t + 1, v.groupByTen]
-		], wn(1, t)), x(2, {
+		], kn(1, t)), x(2, {
 			en: `Which number is 1 ten and ${t.toString()} ones?`,
 			fr: `Quel nombre est 1 dizaine et ${t.toString()} unités ?`
 		}, n, [
@@ -7346,7 +7403,7 @@ function Dn() {
 	}
 	return e;
 }
-function On() {
+function Nn() {
 	let e = [];
 	for (let t of [
 		2,
@@ -7362,7 +7419,7 @@ function On() {
 	]) e.push(x(1, {
 		en: "Look at the ten-rods and the loose cubes. Which number do the blocks show?",
 		fr: "Regarde les barres de dix et les cubes seuls. Quel nombre les blocs montrent-ils ?"
-	}, t * 10 + n, Tn(t, n), wn(t, n)));
+	}, t * 10 + n, An(t, n), kn(t, n)));
 	for (let t of [
 		3,
 		4,
@@ -7381,7 +7438,7 @@ function On() {
 	]) e.push(x(2, {
 		en: `${t.toString()} rods and ${n.toString()} cubes. Which number is it?`,
 		fr: `${t.toString()} barres et ${n.toString()} cubes. Quel est ce nombre ?`
-	}, t * 10 + n, Tn(t, n), void 0));
+	}, t * 10 + n, An(t, n), void 0));
 	for (let t of [
 		6,
 		7,
@@ -7394,10 +7451,10 @@ function On() {
 	]) e.push(x(2, {
 		en: "Count the ten-rods as tens and the cubes as ones. Which number do the blocks show?",
 		fr: "Compte les barres de dix comme des dizaines et les cubes comme des unités. Quel nombre les blocs montrent-ils ?"
-	}, t * 10 + n, Tn(t, n), wn(t, n)));
+	}, t * 10 + n, An(t, n), kn(t, n)));
 	return e;
 }
-function kn() {
+function Pn() {
 	let e = [];
 	for (let t of [
 		2,
@@ -7413,7 +7470,7 @@ function kn() {
 	]) e.push(x(1, {
 		en: `The tens card shows ${t.toString()} and the ones card shows ${n.toString()}. Flip them together. Which number appears?`,
 		fr: `La carte des dizaines montre ${t.toString()} et la carte des unités montre ${n.toString()}. Retourne-les ensemble. Quel nombre apparaît ?`
-	}, t * 10 + n, Tn(t, n), void 0));
+	}, t * 10 + n, An(t, n), void 0));
 	for (let t of [
 		3,
 		4,
@@ -7432,7 +7489,7 @@ function kn() {
 		e.push(x(2, {
 			en: `The tens card shows ${(t * 10).toString()} and the ones card shows ${n.toString()}. Flip them together. Which number appears?`,
 			fr: `La carte des dizaines montre ${(t * 10).toString()} et la carte des unités montre ${n.toString()}. Retourne-les ensemble. Quel nombre apparaît ?`
-		}, r, Tn(t, n), void 0), x(2, {
+		}, r, An(t, n), void 0), x(2, {
 			en: `The number ${r.toString()} splits into a tens card and a ones card. What does the ones card show?`,
 			fr: `Le nombre ${r.toString()} se sépare en une carte des dizaines et une carte des unités. Que montre la carte des unités ?`
 		}, n, [
@@ -7443,7 +7500,7 @@ function kn() {
 	}
 	return e;
 }
-var An = [
+var Fn = [
 	[4, 7],
 	[2, 5],
 	[6, 3],
@@ -7455,48 +7512,48 @@ var An = [
 	[3, 4],
 	[6, 8]
 ];
-function jn() {
+function In() {
 	let e = [];
-	for (let [t, n] of An) {
+	for (let [t, n] of Fn) {
 		let r = t * 10 + n;
 		e.push(x(1, {
 			en: `Look at ${r.toString()}. The ${t.toString()} is in the tens place. What is the ${t.toString()} worth?`,
 			fr: `Regarde ${r.toString()}. Le ${t.toString()} est à la place des dizaines. Que vaut le ${t.toString()} ?`
 		}, t * 10, [
-			[t, mn.digitValue],
+			[t, yn.digitValue],
 			[r, b.countAll],
-			[n, mn.onesValue]
-		], wn(t, n)));
+			[n, yn.onesValue]
+		], kn(t, n)));
 	}
-	for (let [t, n] of An) {
+	for (let [t, n] of Fn) {
 		let r = t * 10 + n;
 		e.push(x(2, {
 			en: `The puppet says: "In ${r.toString()}, the ${t.toString()} is worth ${t.toString()}." The puppet is wrong! What is the ${t.toString()} really worth?`,
 			fr: `La marionnette dit : « Dans ${r.toString()}, le ${t.toString()} vaut ${t.toString()}. » Elle se trompe ! Que vaut vraiment le ${t.toString()} ?`
 		}, t * 10, [
-			[t, mn.digitValue],
+			[t, yn.digitValue],
 			[r, b.countAll],
-			[n * 10, mn.orderMatters]
+			[n * 10, yn.orderMatters]
 		], void 0), x(2, {
 			en: `The puppet says: "In ${r.toString()}, the ${n.toString()} is worth ${(n * 10).toString()}." The puppet is wrong! What is the ${n.toString()} really worth?`,
 			fr: `La marionnette dit : « Dans ${r.toString()}, le ${n.toString()} vaut ${(n * 10).toString()}. » Elle se trompe ! Que vaut vraiment le ${n.toString()} ?`
 		}, n, [
-			[n * 10, mn.onesValue],
-			[t * 10, mn.digitValue],
+			[n * 10, yn.onesValue],
+			[t * 10, yn.digitValue],
 			[r, b.countAll]
 		], void 0));
 	}
 	return e;
 }
-function Mn() {
+function Ln() {
 	let e = [];
-	for (let [t, n] of An) {
+	for (let [t, n] of Fn) {
 		let r = t * 10 + n, i = n * 10 + t;
 		e.push(x(1, {
 			en: `Swap the digits of ${r.toString()}: the ${t.toString()} and the ${n.toString()} trade places. Which number do you get?`,
 			fr: `Échange les chiffres de ${r.toString()} : le ${t.toString()} et le ${n.toString()} changent de place. Quel nombre obtiens-tu ?`
 		}, i, [
-			[r, mn.orderMatters],
+			[r, yn.orderMatters],
 			[t + n, b.countAll],
 			[t * 10, b.tensOnly]
 		], void 0));
@@ -7505,55 +7562,55 @@ function Mn() {
 			en: `${r.toString()} and ${i.toString()} use the same digits. Which number is bigger?`,
 			fr: `${r.toString()} et ${i.toString()} utilisent les mêmes chiffres. Quel nombre est le plus grand ?`
 		}, a, [
-			[o, mn.tensFirst],
+			[o, yn.tensFirst],
 			[t + n, b.countAll],
 			[a + 10, v.groupByTen]
 		], void 0));
 	}
 	return e;
 }
-var Nn = g({
+var Rn = g({
 	pluginId: "bundle-the-sticks",
 	competencyId: m.id,
-	bank: gn()
-}), Pn = g({
+	bank: xn()
+}), zn = g({
 	pluginId: "ten-frame-trade-up",
 	competencyId: m.id,
-	bank: vn()
-}), Fn = g({
+	bank: Cn()
+}), Bn = g({
 	pluginId: "tens-hundred-square-jump",
 	competencyId: m.id,
-	bank: bn()
-}), In = g({
+	bank: Tn()
+}), Vn = g({
 	pluginId: "ten-rod-shop",
 	competencyId: m.id,
-	bank: xn()
-}), Ln = g({
+	bank: En()
+}), Hn = g({
 	pluginId: "build-it-with-blocks",
 	competencyId: m.id,
-	bank: En()
-}), Rn = g({
+	bank: jn()
+}), Un = g({
 	pluginId: "teen-towers",
 	competencyId: m.id,
-	bank: Dn()
-}), zn = g({
+	bank: Mn()
+}), Wn = g({
 	pluginId: "read-the-blocks",
 	competencyId: m.id,
-	bank: On()
-}), Bn = g({
+	bank: Nn()
+}), Gn = g({
 	pluginId: "place-value-mat-flip",
 	competencyId: m.id,
-	bank: kn()
-}), Vn = g({
+	bank: Pn()
+}), Kn = g({
 	pluginId: "digit-value-detective",
 	competencyId: m.id,
-	bank: jn()
-}), Hn = g({
+	bank: In()
+}), qn = g({
 	pluginId: "swap-the-digits",
 	competencyId: m.id,
-	bank: Mn()
+	bank: Ln()
 });
-function Un(e, t, n) {
+function Jn(e, t, n) {
 	let r = e;
 	return {
 		key: r.plugin.id,
@@ -7565,67 +7622,62 @@ function Un(e, t, n) {
 		createMasterySignal: r.createMasterySignal
 	};
 }
-var Wn = [
-	Nn.plugin,
-	Pn.plugin,
-	Fn.plugin,
-	In.plugin,
-	Ln.plugin,
+var Yn = [
 	Rn.plugin,
 	zn.plugin,
 	Bn.plugin,
 	Vn.plugin,
-	Hn.plugin
-], Gn = [
-	Un(Nn, {
+	Hn.plugin,
+	Un.plugin,
+	Wn.plugin,
+	Gn.plugin,
+	Kn.plugin,
+	qn.plugin
+], Xn = [
+	Jn(Rn, {
 		label: "Bundle the Sticks",
 		icon: "🎋"
 	}, m),
-	Un(Pn, {
+	Jn(zn, {
 		label: "Ten-Frame Trade-Up",
 		icon: "🔟"
 	}, m),
-	Un(Fn, {
+	Jn(Bn, {
 		label: "Tens Hundred-Square Jump",
 		icon: "🦘"
 	}, m),
-	Un(In, {
+	Jn(Vn, {
 		label: "Ten-Rod Shop",
 		icon: "🏪"
 	}, m),
-	Un(Ln, {
+	Jn(Hn, {
 		label: "Build It with Blocks",
 		icon: "🧱"
 	}, m),
-	Un(Rn, {
+	Jn(Un, {
 		label: "Teen Towers",
 		icon: "🗼"
 	}, m),
-	Un(zn, {
+	Jn(Wn, {
 		label: "Read the Blocks",
 		icon: "👓"
 	}, m),
-	Un(Bn, {
+	Jn(Gn, {
 		label: "Place-Value Mat Flip",
 		icon: "🃏"
 	}, m),
-	Un(Vn, {
+	Jn(Kn, {
 		label: "Digit Value Detective",
 		icon: "🕵️"
 	}, m),
-	Un(Hn, {
+	Jn(qn, {
 		label: "Swap the Digits",
 		icon: "🔄"
 	}, m)
-], Kn = [
-	st.plugin,
-	ct.plugin,
-	lt.plugin,
-	St.plugin,
-	Ct.plugin,
-	wt.plugin,
-	Tt.plugin,
-	Et.plugin,
+], Zn = [
+	ft.plugin,
+	pt.plugin,
+	mt.plugin,
 	Dt.plugin,
 	Ot.plugin,
 	kt.plugin,
@@ -7665,493 +7717,498 @@ var Wn = [
 	un.plugin,
 	dn.plugin,
 	fn.plugin,
-	pn.plugin
+	pn.plugin,
+	mn.plugin,
+	hn.plugin,
+	gn.plugin,
+	_n.plugin,
+	vn.plugin
 ];
 function S(e) {
 	return e;
 }
-var qn = [
+var Qn = [
 	S({
 		key: "syllabus-g1-reads-writes-to-100",
 		label: "Reading & Writing Numbers to 100",
 		icon: "🔢",
-		pluginId: st.plugin.id,
+		pluginId: ft.plugin.id,
 		competency: r,
 		competencies: [r],
-		createSession: st.createSession,
-		createMasterySignal: st.createMasterySignal
+		createSession: ft.createSession,
+		createMasterySignal: ft.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-number-bonds-within-10",
 		label: "Number Bonds to 10",
 		icon: "🔗",
-		pluginId: ct.plugin.id,
+		pluginId: pt.plugin.id,
 		competency: i,
 		competencies: [i],
-		createSession: ct.createSession,
-		createMasterySignal: ct.createMasterySignal
+		createSession: pt.createSession,
+		createMasterySignal: pt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-add-subtract-within-20",
 		label: "Add & Subtract within 20",
 		icon: "🧮",
-		pluginId: lt.plugin.id,
+		pluginId: mt.plugin.id,
 		competency: a,
 		competencies: [a],
-		createSession: lt.createSession,
-		createMasterySignal: lt.createMasterySignal
+		createSession: mt.createSession,
+		createMasterySignal: mt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-half-and-quarter",
 		label: "Halves & Quarters",
 		icon: "🍕",
-		pluginId: St.plugin.id,
+		pluginId: Dt.plugin.id,
 		competency: o,
 		competencies: [o],
-		createSession: St.createSession,
-		createMasterySignal: St.createMasterySignal
+		createSession: Dt.createSession,
+		createMasterySignal: Dt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-length-in-cm",
 		label: "Measuring Length in cm",
 		icon: "📏",
-		pluginId: Ct.plugin.id,
+		pluginId: Ot.plugin.id,
 		competency: s,
 		competencies: [s],
-		createSession: Ct.createSession,
-		createMasterySignal: Ct.createMasterySignal
+		createSession: Ot.createSession,
+		createMasterySignal: Ot.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-measurement-vocabulary",
 		label: "Measurement Vocabulary",
 		icon: "⚖️",
-		pluginId: wt.plugin.id,
+		pluginId: kt.plugin.id,
 		competency: c,
 		competencies: [c],
-		createSession: wt.createSession,
-		createMasterySignal: wt.createMasterySignal
+		createSession: kt.createSession,
+		createMasterySignal: kt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-time-hour-half-hour",
 		label: "Telling Time: Hour & Half-Hour",
 		icon: "🕐",
-		pluginId: Tt.plugin.id,
+		pluginId: At.plugin.id,
 		competency: l,
 		competencies: [l],
-		createSession: Tt.createSession,
-		createMasterySignal: Tt.createMasterySignal
+		createSession: At.createSession,
+		createMasterySignal: At.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-months-and-seasons",
 		label: "Months & Seasons",
 		icon: "📅",
-		pluginId: Et.plugin.id,
+		pluginId: jt.plugin.id,
 		competency: u,
 		competencies: [u],
-		createSession: Et.createSession,
-		createMasterySignal: Et.createMasterySignal
+		createSession: jt.createSession,
+		createMasterySignal: jt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-names-2d-3d-shapes",
 		label: "Naming 2D & 3D Shapes",
 		icon: "🔺",
-		pluginId: Dt.plugin.id,
+		pluginId: Mt.plugin.id,
 		competency: d,
 		competencies: [d],
-		createSession: Dt.createSession,
-		createMasterySignal: Dt.createMasterySignal
+		createSession: Mt.createSession,
+		createMasterySignal: Mt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-shape-orientation-invariance",
 		label: "Shapes in Any Orientation",
 		icon: "🔄",
-		pluginId: Ot.plugin.id,
+		pluginId: Nt.plugin.id,
 		competency: f,
 		competencies: [f],
-		createSession: Ot.createSession,
-		createMasterySignal: Ot.createMasterySignal
+		createSession: Nt.createSession,
+		createMasterySignal: Nt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-describes-route",
 		label: "Describing a Route",
 		icon: "🧭",
-		pluginId: kt.plugin.id,
+		pluginId: Pt.plugin.id,
 		competency: p,
 		competencies: [p],
-		createSession: kt.createSession,
-		createMasterySignal: kt.createMasterySignal
+		createSession: Pt.createSession,
+		createMasterySignal: Pt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-sorts-objects-by-criterion",
 		label: "Sorting by a Rule",
 		icon: "🗂️",
-		pluginId: At.plugin.id,
+		pluginId: Ft.plugin.id,
 		competency: ee,
 		competencies: [ee],
-		createSession: At.createSession,
-		createMasterySignal: At.createMasterySignal
+		createSession: Ft.createSession,
+		createMasterySignal: Ft.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-reads-simple-pictogram",
 		label: "Reading a Pictogram",
 		icon: "📊",
-		pluginId: jt.plugin.id,
+		pluginId: It.plugin.id,
 		competency: te,
 		competencies: [te],
-		createSession: jt.createSession,
-		createMasterySignal: jt.createMasterySignal
+		createSession: It.createSession,
+		createMasterySignal: It.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-continues-repeating-pattern",
 		label: "Continuing a Pattern",
 		icon: "🔁",
-		pluginId: Mt.plugin.id,
+		pluginId: Lt.plugin.id,
 		competency: ne,
 		competencies: [ne],
-		createSession: Mt.createSession,
-		createMasterySignal: Mt.createMasterySignal
+		createSession: Lt.createSession,
+		createMasterySignal: Lt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-choose-addition-or-subtraction",
 		label: "Addition or Subtraction?",
 		icon: "❓",
-		pluginId: Nt.plugin.id,
+		pluginId: Rt.plugin.id,
 		competency: re,
 		competencies: [re],
-		createSession: Nt.createSession,
-		createMasterySignal: Nt.createMasterySignal
+		createSession: Rt.createSession,
+		createMasterySignal: Rt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-number-words-to-20",
 		label: "Number Words 0–20",
 		icon: "🔤",
-		pluginId: Pt.plugin.id,
+		pluginId: zt.plugin.id,
 		competency: ie,
 		competencies: [ie],
-		createSession: Pt.createSession,
-		createMasterySignal: Pt.createMasterySignal
+		createSession: zt.createSession,
+		createMasterySignal: zt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-one-more-less-ten-more-less",
 		label: "1 More, 1 Less, 10 More, 10 Less",
 		icon: "🔼",
-		pluginId: Ft.plugin.id,
+		pluginId: Bt.plugin.id,
 		competency: ae,
 		competencies: [ae],
-		createSession: Ft.createSession,
-		createMasterySignal: Ft.createMasterySignal
+		createSession: Bt.createSession,
+		createMasterySignal: Bt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-compares-two-digit-numbers",
 		label: "Comparing with <, > and =",
 		icon: "🐊",
-		pluginId: It.plugin.id,
+		pluginId: Vt.plugin.id,
 		competency: oe,
 		competencies: [oe],
-		createSession: It.createSession,
-		createMasterySignal: It.createMasterySignal
+		createSession: Vt.createSession,
+		createMasterySignal: Vt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-orders-numbers-to-100",
 		label: "Ordering Numbers to 100",
 		icon: "📈",
-		pluginId: Lt.plugin.id,
+		pluginId: Ht.plugin.id,
 		competency: se,
 		competencies: [se],
-		createSession: Lt.createSession,
-		createMasterySignal: Lt.createMasterySignal
+		createSession: Ht.createSession,
+		createMasterySignal: Ht.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-estimates-up-to-50",
 		label: "Estimating up to 50",
 		icon: "🔍",
-		pluginId: Rt.plugin.id,
+		pluginId: Ut.plugin.id,
 		competency: ce,
 		competencies: [ce],
-		createSession: Rt.createSession,
-		createMasterySignal: Rt.createMasterySignal
+		createSession: Ut.createSession,
+		createMasterySignal: Ut.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-related-addition-subtraction-facts",
 		label: "Related Facts",
 		icon: "👪",
-		pluginId: zt.plugin.id,
+		pluginId: Wt.plugin.id,
 		competency: le,
 		competencies: [le],
-		createSession: zt.createSession,
-		createMasterySignal: zt.createMasterySignal
+		createSession: Wt.createSession,
+		createMasterySignal: Wt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-swap-and-group-addends",
 		label: "Swap and Group to Add",
 		icon: "↔️",
-		pluginId: Bt.plugin.id,
+		pluginId: Gt.plugin.id,
 		competency: ue,
 		competencies: [ue],
-		createSession: Bt.createSession,
-		createMasterySignal: Bt.createMasterySignal
+		createSession: Gt.createSession,
+		createMasterySignal: Gt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-adds-to-two-digit-number",
 		label: "Adding to 2-Digit Numbers",
 		icon: "➕",
-		pluginId: Vt.plugin.id,
+		pluginId: Kt.plugin.id,
 		competency: de,
 		competencies: [de],
-		createSession: Vt.createSession,
-		createMasterySignal: Vt.createMasterySignal
+		createSession: Kt.createSession,
+		createMasterySignal: Kt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-subtracts-multiples-of-ten",
 		label: "Subtracting Tens",
 		icon: "➖",
-		pluginId: Ht.plugin.id,
+		pluginId: qt.plugin.id,
 		competency: fe,
 		competencies: [fe],
-		createSession: Ht.createSession,
-		createMasterySignal: Ht.createMasterySignal
+		createSession: qt.createSession,
+		createMasterySignal: qt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-doubles-and-halves",
 		label: "Doubles and Halves",
 		icon: "👯",
-		pluginId: Ut.plugin.id,
+		pluginId: Jt.plugin.id,
 		competency: pe,
 		competencies: [pe],
-		createSession: Ut.createSession,
-		createMasterySignal: Ut.createMasterySignal
+		createSession: Jt.createSession,
+		createMasterySignal: Jt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-doubles-and-near-doubles",
 		label: "Doubles and Near Doubles",
 		icon: "🎲",
-		pluginId: Wt.plugin.id,
+		pluginId: Yt.plugin.id,
 		competency: me,
 		competencies: [me],
-		createSession: Wt.createSession,
-		createMasterySignal: Wt.createMasterySignal
+		createSession: Yt.createSession,
+		createMasterySignal: Yt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-adds-subtracts-ten-mentally",
 		label: "Add or Subtract 10 in Your Head",
 		icon: "🧠",
-		pluginId: Gt.plugin.id,
+		pluginId: Xt.plugin.id,
 		competency: he,
 		competencies: [he],
-		createSession: Gt.createSession,
-		createMasterySignal: Gt.createMasterySignal
+		createSession: Xt.createSession,
+		createMasterySignal: Xt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-half-and-quarter-of-a-set",
 		label: "Half and Quarter of a Set",
 		icon: "🍇",
-		pluginId: Kt.plugin.id,
+		pluginId: Zt.plugin.id,
 		competency: ge,
 		competencies: [ge],
-		createSession: Kt.createSession,
-		createMasterySignal: Kt.createMasterySignal
+		createSession: Zt.createSession,
+		createMasterySignal: Zt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-equals-means-the-same-as",
 		label: "True or False Equations",
 		icon: "⚖️",
-		pluginId: qt.plugin.id,
+		pluginId: Qt.plugin.id,
 		competency: _e,
 		competencies: [_e],
-		createSession: qt.createSession,
-		createMasterySignal: qt.createMasterySignal
+		createSession: Qt.createSession,
+		createMasterySignal: Qt.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-finds-missing-number",
 		label: "Find the Missing Number",
 		icon: "❔",
-		pluginId: Jt.plugin.id,
+		pluginId: $t.plugin.id,
 		competency: ve,
 		competencies: [ve],
-		createSession: Jt.createSession,
-		createMasterySignal: Jt.createMasterySignal
+		createSession: $t.createSession,
+		createMasterySignal: $t.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-orders-and-compares-lengths",
 		label: "Ordering and Comparing Lengths",
 		icon: "🪢",
-		pluginId: Yt.plugin.id,
+		pluginId: en.plugin.id,
 		competency: ye,
 		competencies: [ye],
-		createSession: Yt.createSession,
-		createMasterySignal: Yt.createMasterySignal
+		createSession: en.createSession,
+		createMasterySignal: en.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-compares-masses-on-a-balance",
 		label: "Heavier, Lighter, Balances",
 		icon: "⚖️",
-		pluginId: Xt.plugin.id,
+		pluginId: tn.plugin.id,
 		competency: be,
 		competencies: [be],
-		createSession: Xt.createSession,
-		createMasterySignal: Xt.createMasterySignal
+		createSession: tn.createSession,
+		createMasterySignal: tn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-compares-capacities",
 		label: "Full, Half Full, Empty",
 		icon: "🥛",
-		pluginId: Zt.plugin.id,
+		pluginId: nn.plugin.id,
 		competency: xe,
 		competencies: [xe],
-		createSession: Zt.createSession,
-		createMasterySignal: Zt.createMasterySignal
+		createSession: nn.createSession,
+		createMasterySignal: nn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-compares-and-orders-durations",
 		label: "How Long Does It Take?",
 		icon: "⏳",
-		pluginId: Qt.plugin.id,
+		pluginId: rn.plugin.id,
 		competency: Se,
 		competencies: [Se],
-		createSession: Qt.createSession,
-		createMasterySignal: Qt.createMasterySignal
+		createSession: rn.createSession,
+		createMasterySignal: rn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-finds-date-on-calendar",
 		label: "Using a Calendar",
 		icon: "🗓️",
-		pluginId: $t.plugin.id,
+		pluginId: an.plugin.id,
 		competency: Ce,
 		competencies: [Ce],
-		createSession: $t.createSession,
-		createMasterySignal: $t.createMasterySignal
+		createSession: an.createSession,
+		createMasterySignal: an.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-recognises-coins-and-values",
 		label: "Coins and Their Values",
 		icon: "🪙",
-		pluginId: en.plugin.id,
+		pluginId: on.plugin.id,
 		competency: we,
 		competencies: [we],
-		createSession: en.createSession,
-		createMasterySignal: en.createMasterySignal
+		createSession: on.createSession,
+		createMasterySignal: on.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-counts-coins-to-20",
 		label: "Counting Coins up to 20",
 		icon: "💰",
-		pluginId: tn.plugin.id,
+		pluginId: sn.plugin.id,
 		competency: Te,
 		competencies: [Te],
-		createSession: tn.createSession,
-		createMasterySignal: tn.createMasterySignal
+		createSession: sn.createSession,
+		createMasterySignal: sn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-pays-for-an-item",
 		label: "Do I Have Enough?",
 		icon: "🛒",
-		pluginId: nn.plugin.id,
+		pluginId: cn.plugin.id,
 		competency: Ee,
 		competencies: [Ee],
-		createSession: nn.createSession,
-		createMasterySignal: nn.createMasterySignal
+		createSession: cn.createSession,
+		createMasterySignal: cn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-matches-3d-shapes-to-objects",
 		label: "3D Shapes Around Us",
 		icon: "🧊",
-		pluginId: rn.plugin.id,
+		pluginId: ln.plugin.id,
 		competency: De,
 		competencies: [De],
-		createSession: rn.createSession,
-		createMasterySignal: rn.createMasterySignal
+		createSession: ln.createSession,
+		createMasterySignal: ln.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-builds-composite-shapes",
 		label: "Building New Shapes",
 		icon: "🧩",
-		pluginId: an.plugin.id,
+		pluginId: un.plugin.id,
 		competency: Oe,
 		competencies: [Oe],
-		createSession: an.createSession,
-		createMasterySignal: an.createMasterySignal
+		createSession: un.createSession,
+		createMasterySignal: un.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-copies-a-figure-on-a-grid",
 		label: "Copying on Dot or Square Paper",
 		icon: "🔲",
-		pluginId: on.plugin.id,
+		pluginId: dn.plugin.id,
 		competency: ke,
 		competencies: [ke],
-		createSession: on.createSession,
-		createMasterySignal: on.createMasterySignal
+		createSession: dn.createSession,
+		createMasterySignal: dn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-straight-and-curved-lines",
 		label: "Straight or Curved?",
 		icon: "〰️",
-		pluginId: sn.plugin.id,
+		pluginId: fn.plugin.id,
 		competency: Ae,
 		competencies: [Ae],
-		createSession: sn.createSession,
-		createMasterySignal: sn.createMasterySignal
+		createSession: fn.createSession,
+		createMasterySignal: fn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-left-and-right",
 		label: "Left and Right",
 		icon: "↔️",
-		pluginId: cn.plugin.id,
+		pluginId: pn.plugin.id,
 		competency: je,
 		competencies: [je],
-		createSession: cn.createSession,
-		createMasterySignal: cn.createMasterySignal
+		createSession: pn.createSession,
+		createMasterySignal: pn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-locates-objects-on-a-plan",
 		label: "Finding Things on a Plan",
 		icon: "🗺️",
-		pluginId: ln.plugin.id,
+		pluginId: mn.plugin.id,
 		competency: Me,
 		competencies: [Me],
-		createSession: ln.createSession,
-		createMasterySignal: ln.createMasterySignal
+		createSession: mn.createSession,
+		createMasterySignal: mn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-certain-possible-impossible",
 		label: "Certain, Possible, Impossible",
 		icon: "🎲",
-		pluginId: un.plugin.id,
+		pluginId: hn.plugin.id,
 		competency: Ne,
 		competencies: [Ne],
-		createSession: un.createSession,
-		createMasterySignal: un.createMasterySignal
+		createSession: hn.createSession,
+		createMasterySignal: hn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-unknown-start-change-or-result",
 		label: "Find the Missing Part of a Story",
 		icon: "🕵️",
-		pluginId: dn.plugin.id,
+		pluginId: gn.plugin.id,
 		competency: Pe,
 		competencies: [Pe],
-		createSession: dn.createSession,
-		createMasterySignal: dn.createMasterySignal
+		createSession: gn.createSession,
+		createMasterySignal: gn.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-represents-problem-as-number-sentence",
 		label: "Match the Story to a Number Sentence",
 		icon: "✏️",
-		pluginId: fn.plugin.id,
+		pluginId: _n.plugin.id,
 		competency: Fe,
 		competencies: [Fe],
-		createSession: fn.createSession,
-		createMasterySignal: fn.createMasterySignal
+		createSession: _n.createSession,
+		createMasterySignal: _n.createMasterySignal
 	}),
 	S({
 		key: "syllabus-g1-checks-an-answer-another-way",
 		label: "Checking My Answer",
 		icon: "✅",
-		pluginId: pn.plugin.id,
+		pluginId: vn.plugin.id,
 		competency: Ie,
 		competencies: [Ie],
-		createSession: pn.createSession,
-		createMasterySignal: pn.createMasterySignal
+		createSession: vn.createSession,
+		createMasterySignal: vn.createMasterySignal
 	})
-], Jn = {
+], $n = {
 	id: "math.number-sense.counts-reads-writes-to-1000",
 	nameKey: "competency.math.number-sense.counts-reads-writes-to-1000.name",
 	descriptionKey: "competency.math.number-sense.counts-reads-writes-to-1000.description",
@@ -8164,7 +8221,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.counts-reads-writes-to-1000"
 	}]
-}, Yn = {
+}, er = {
 	id: "math.number-sense.orders-numbers-to-1000",
 	nameKey: "competency.math.number-sense.orders-numbers-to-1000.name",
 	descriptionKey: "competency.math.number-sense.orders-numbers-to-1000.description",
@@ -8177,7 +8234,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.orders-numbers-to-1000"
 	}]
-}, Xn = {
+}, tr = {
 	id: "math.place-value.partitions-three-digit-numbers",
 	nameKey: "competency.math.place-value.partitions-three-digit-numbers.name",
 	descriptionKey: "competency.math.place-value.partitions-three-digit-numbers.description",
@@ -8190,7 +8247,7 @@ var qn = [
 		kind: "activity",
 		id: "math.place-value.partitions-three-digit-numbers"
 	}]
-}, Zn = {
+}, nr = {
 	id: "math.place-value.digit-value-in-three-digit-number",
 	nameKey: "competency.math.place-value.digit-value-in-three-digit-number.name",
 	descriptionKey: "competency.math.place-value.digit-value-in-three-digit-number.description",
@@ -8203,7 +8260,7 @@ var qn = [
 		kind: "activity",
 		id: "math.place-value.digit-value-in-three-digit-number"
 	}]
-}, Qn = {
+}, rr = {
 	id: "math.addition.number-bonds-within-20",
 	nameKey: "competency.math.addition.number-bonds-within-20.name",
 	descriptionKey: "competency.math.addition.number-bonds-within-20.description",
@@ -8216,7 +8273,7 @@ var qn = [
 		kind: "activity",
 		id: "math.addition.number-bonds-within-20"
 	}]
-}, $n = {
+}, ir = {
 	id: "math.addition.add-subtract-two-digit-with-regrouping",
 	nameKey: "competency.math.addition.add-subtract-two-digit-with-regrouping.name",
 	descriptionKey: "competency.math.addition.add-subtract-two-digit-with-regrouping.description",
@@ -8229,7 +8286,7 @@ var qn = [
 		kind: "activity",
 		id: "math.addition.add-subtract-two-digit-with-regrouping"
 	}]
-}, er = {
+}, ar = {
 	id: "math.mathematical-reasoning.addition-commutative-subtraction-not",
 	nameKey: "competency.math.mathematical-reasoning.addition-commutative-subtraction-not.name",
 	descriptionKey: "competency.math.mathematical-reasoning.addition-commutative-subtraction-not.description",
@@ -8242,7 +8299,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.addition-commutative-subtraction-not"
 	}]
-}, tr = {
+}, or = {
 	id: "math.multiplication.times-tables-2-5-10",
 	nameKey: "competency.math.multiplication.times-tables-2-5-10.name",
 	descriptionKey: "competency.math.multiplication.times-tables-2-5-10.description",
@@ -8255,7 +8312,7 @@ var qn = [
 		kind: "activity",
 		id: "math.multiplication.times-tables-2-5-10"
 	}]
-}, nr = {
+}, sr = {
 	id: "math.division.sharing-grouping-remainders",
 	nameKey: "competency.math.division.sharing-grouping-remainders.name",
 	descriptionKey: "competency.math.division.sharing-grouping-remainders.description",
@@ -8268,7 +8325,7 @@ var qn = [
 		kind: "activity",
 		id: "math.division.sharing-grouping-remainders"
 	}]
-}, rr = {
+}, cr = {
 	id: "math.mental-mathematics.add-subtract-one-digit-to-two-digit",
 	nameKey: "competency.math.mental-mathematics.add-subtract-one-digit-to-two-digit.name",
 	descriptionKey: "competency.math.mental-mathematics.add-subtract-one-digit-to-two-digit.description",
@@ -8281,7 +8338,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mental-mathematics.add-subtract-one-digit-to-two-digit"
 	}]
-}, ir = {
+}, lr = {
 	id: "math.mental-mathematics.doubles-halves-to-50",
 	nameKey: "competency.math.mental-mathematics.doubles-halves-to-50.name",
 	descriptionKey: "competency.math.mental-mathematics.doubles-halves-to-50.description",
@@ -8294,7 +8351,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mental-mathematics.doubles-halves-to-50"
 	}]
-}, ar = {
+}, ur = {
 	id: "math.fractions.thirds-quarters-fifths",
 	nameKey: "competency.math.fractions.thirds-quarters-fifths.name",
 	descriptionKey: "competency.math.fractions.thirds-quarters-fifths.description",
@@ -8307,7 +8364,7 @@ var qn = [
 		kind: "activity",
 		id: "math.fractions.thirds-quarters-fifths"
 	}]
-}, or = {
+}, dr = {
 	id: "math.measurement.mass-and-capacity",
 	nameKey: "competency.math.measurement.mass-and-capacity.name",
 	descriptionKey: "competency.math.measurement.mass-and-capacity.description",
@@ -8320,7 +8377,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.mass-and-capacity"
 	}]
-}, sr = {
+}, fr = {
 	id: "math.measurement.metric-units-relationships",
 	nameKey: "competency.math.measurement.metric-units-relationships.name",
 	descriptionKey: "competency.math.measurement.metric-units-relationships.description",
@@ -8332,7 +8389,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.metric-units-relationships"
 	}]
-}, cr = {
+}, pr = {
 	id: "math.time.five-minutes-quarter-hour",
 	nameKey: "competency.math.time.five-minutes-quarter-hour.name",
 	descriptionKey: "competency.math.time.five-minutes-quarter-hour.description",
@@ -8345,7 +8402,7 @@ var qn = [
 		kind: "activity",
 		id: "math.time.five-minutes-quarter-hour"
 	}]
-}, lr = {
+}, mr = {
 	id: "math.time.days-weeks-months-counts",
 	nameKey: "competency.math.time.days-weeks-months-counts.name",
 	descriptionKey: "competency.math.time.days-weeks-months-counts.description",
@@ -8358,7 +8415,7 @@ var qn = [
 		kind: "activity",
 		id: "math.time.days-weeks-months-counts"
 	}]
-}, ur = {
+}, hr = {
 	id: "math.geometry.counts-shape-properties",
 	nameKey: "competency.math.geometry.counts-shape-properties.name",
 	descriptionKey: "competency.math.geometry.counts-shape-properties.description",
@@ -8371,7 +8428,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.counts-shape-properties"
 	}]
-}, dr = {
+}, gr = {
 	id: "math.geometry.recognises-line-of-symmetry",
 	nameKey: "competency.math.geometry.recognises-line-of-symmetry.name",
 	descriptionKey: "competency.math.geometry.recognises-line-of-symmetry.description",
@@ -8384,7 +8441,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.recognises-line-of-symmetry"
 	}]
-}, fr = {
+}, _r = {
 	id: "math.geometry.describes-grid-position",
 	nameKey: "competency.math.geometry.describes-grid-position.name",
 	descriptionKey: "competency.math.geometry.describes-grid-position.description",
@@ -8397,7 +8454,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.describes-grid-position"
 	}]
-}, pr = {
+}, vr = {
 	id: "math.data-graphs.tally-chart-bar-chart",
 	nameKey: "competency.math.data-graphs.tally-chart-bar-chart.name",
 	descriptionKey: "competency.math.data-graphs.tally-chart-bar-chart.description",
@@ -8410,7 +8467,7 @@ var qn = [
 		kind: "activity",
 		id: "math.data-graphs.tally-chart-bar-chart"
 	}]
-}, mr = {
+}, yr = {
 	id: "math.mathematical-reasoning.finds-missing-number-in-equation",
 	nameKey: "competency.math.mathematical-reasoning.finds-missing-number-in-equation.name",
 	descriptionKey: "competency.math.mathematical-reasoning.finds-missing-number-in-equation.description",
@@ -8423,7 +8480,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.finds-missing-number-in-equation"
 	}]
-}, hr = {
+}, br = {
 	id: "math.problem-solving.solves-one-step-word-problem",
 	nameKey: "competency.math.problem-solving.solves-one-step-word-problem.name",
 	descriptionKey: "competency.math.problem-solving.solves-one-step-word-problem.description",
@@ -8436,7 +8493,7 @@ var qn = [
 		kind: "activity",
 		id: "math.problem-solving.solves-one-step-word-problem"
 	}]
-}, gr = {
+}, xr = {
 	id: "math.number-sense.counts-in-steps-of-2-3-5-10",
 	nameKey: "competency.math.number-sense.counts-in-steps-of-2-3-5-10.name",
 	descriptionKey: "competency.math.number-sense.counts-in-steps-of-2-3-5-10.description",
@@ -8449,7 +8506,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.counts-in-steps-of-2-3-5-10"
 	}]
-}, _r = {
+}, Sr = {
 	id: "math.number-sense.reads-writes-numbers-digits-words-expanded",
 	nameKey: "competency.math.number-sense.reads-writes-numbers-digits-words-expanded.name",
 	descriptionKey: "competency.math.number-sense.reads-writes-numbers-digits-words-expanded.description",
@@ -8462,7 +8519,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.reads-writes-numbers-digits-words-expanded"
 	}]
-}, vr = {
+}, Cr = {
 	id: "math.number-sense.places-numbers-on-number-line-0-1000",
 	nameKey: "competency.math.number-sense.places-numbers-on-number-line-0-1000.name",
 	descriptionKey: "competency.math.number-sense.places-numbers-on-number-line-0-1000.description",
@@ -8475,7 +8532,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.places-numbers-on-number-line-0-1000"
 	}]
-}, yr = {
+}, wr = {
 	id: "math.number-sense.odd-even-numbers-and-doubles",
 	nameKey: "competency.math.number-sense.odd-even-numbers-and-doubles.name",
 	descriptionKey: "competency.math.number-sense.odd-even-numbers-and-doubles.description",
@@ -8488,7 +8545,7 @@ var qn = [
 		kind: "activity",
 		id: "math.number-sense.odd-even-numbers-and-doubles"
 	}]
-}, br = {
+}, Tr = {
 	id: "math.place-value.partitions-in-non-standard-ways",
 	nameKey: "competency.math.place-value.partitions-in-non-standard-ways.name",
 	descriptionKey: "competency.math.place-value.partitions-in-non-standard-ways.description",
@@ -8501,7 +8558,7 @@ var qn = [
 		kind: "activity",
 		id: "math.place-value.partitions-in-non-standard-ways"
 	}]
-}, xr = {
+}, Er = {
 	id: "math.place-value.adds-subtracts-10-or-100",
 	nameKey: "competency.math.place-value.adds-subtracts-10-or-100.name",
 	descriptionKey: "competency.math.place-value.adds-subtracts-10-or-100.description",
@@ -8514,7 +8571,7 @@ var qn = [
 		kind: "activity",
 		id: "math.place-value.adds-subtracts-10-or-100"
 	}]
-}, Sr = {
+}, Dr = {
 	id: "math.place-value.adds-subtracts-100",
 	nameKey: "competency.math.place-value.adds-subtracts-100.name",
 	descriptionKey: "competency.math.place-value.adds-subtracts-100.description",
@@ -8526,7 +8583,7 @@ var qn = [
 		kind: "activity",
 		id: "math.place-value.adds-subtracts-100"
 	}]
-}, Cr = {
+}, Or = {
 	id: "math.addition.adds-subtracts-within-100-fluently",
 	nameKey: "competency.math.addition.adds-subtracts-within-100-fluently.name",
 	descriptionKey: "competency.math.addition.adds-subtracts-within-100-fluently.description",
@@ -8539,7 +8596,7 @@ var qn = [
 		kind: "activity",
 		id: "math.addition.adds-subtracts-within-100-fluently"
 	}]
-}, wr = {
+}, kr = {
 	id: "math.addition.adds-up-to-four-two-digit-numbers",
 	nameKey: "competency.math.addition.adds-up-to-four-two-digit-numbers.name",
 	descriptionKey: "competency.math.addition.adds-up-to-four-two-digit-numbers.description",
@@ -8552,7 +8609,7 @@ var qn = [
 		kind: "activity",
 		id: "math.addition.adds-up-to-four-two-digit-numbers"
 	}]
-}, Tr = {
+}, Ar = {
 	id: "math.addition.adds-subtracts-within-1000-base-ten",
 	nameKey: "competency.math.addition.adds-subtracts-within-1000-base-ten.name",
 	descriptionKey: "competency.math.addition.adds-subtracts-within-1000-base-ten.description",
@@ -8565,7 +8622,7 @@ var qn = [
 		kind: "activity",
 		id: "math.addition.adds-subtracts-within-1000-base-ten"
 	}]
-}, Er = {
+}, jr = {
 	id: "math.multiplication.writes-equal-groups-and-arrays-as-multiplication",
 	nameKey: "competency.math.multiplication.writes-equal-groups-and-arrays-as-multiplication.name",
 	descriptionKey: "competency.math.multiplication.writes-equal-groups-and-arrays-as-multiplication.description",
@@ -8578,7 +8635,7 @@ var qn = [
 		kind: "activity",
 		id: "math.multiplication.writes-equal-groups-and-arrays-as-multiplication"
 	}]
-}, Dr = {
+}, Mr = {
 	id: "math.multiplication.arrays-show-multiplication-commutative",
 	nameKey: "competency.math.multiplication.arrays-show-multiplication-commutative.name",
 	descriptionKey: "competency.math.multiplication.arrays-show-multiplication-commutative.description",
@@ -8591,7 +8648,7 @@ var qn = [
 		kind: "activity",
 		id: "math.multiplication.arrays-show-multiplication-commutative"
 	}]
-}, Or = {
+}, Nr = {
 	id: "math.division.meets-remainders-in-sharing",
 	nameKey: "competency.math.division.meets-remainders-in-sharing.name",
 	descriptionKey: "competency.math.division.meets-remainders-in-sharing.description",
@@ -8604,7 +8661,7 @@ var qn = [
 		kind: "activity",
 		id: "math.division.meets-remainders-in-sharing"
 	}]
-}, kr = {
+}, Pr = {
 	id: "math.mental-mathematics.adds-subtracts-multiples-of-10",
 	nameKey: "competency.math.mental-mathematics.adds-subtracts-multiples-of-10.name",
 	descriptionKey: "competency.math.mental-mathematics.adds-subtracts-multiples-of-10.description",
@@ -8617,7 +8674,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mental-mathematics.adds-subtracts-multiples-of-10"
 	}]
-}, Ar = {
+}, Fr = {
 	id: "math.mental-mathematics.uses-number-facts-to-10-to-know-multiples-of-10",
 	nameKey: "competency.math.mental-mathematics.uses-number-facts-to-10-to-know-multiples-of-10.name",
 	descriptionKey: "competency.math.mental-mathematics.uses-number-facts-to-10-to-know-multiples-of-10.description",
@@ -8630,7 +8687,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mental-mathematics.uses-number-facts-to-10-to-know-multiples-of-10"
 	}]
-}, jr = {
+}, Ir = {
 	id: "math.mental-mathematics.estimates-sum-to-nearest-10",
 	nameKey: "competency.math.mental-mathematics.estimates-sum-to-nearest-10.name",
 	descriptionKey: "competency.math.mental-mathematics.estimates-sum-to-nearest-10.description",
@@ -8643,7 +8700,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mental-mathematics.estimates-sum-to-nearest-10"
 	}]
-}, Mr = {
+}, Lr = {
 	id: "math.fractions.splits-shapes-into-equal-shares",
 	nameKey: "competency.math.fractions.splits-shapes-into-equal-shares.name",
 	descriptionKey: "competency.math.fractions.splits-shapes-into-equal-shares.description",
@@ -8656,7 +8713,7 @@ var qn = [
 		kind: "activity",
 		id: "math.fractions.splits-shapes-into-equal-shares"
 	}]
-}, Nr = {
+}, Rr = {
 	id: "math.fractions.reads-writes-fractions-and-matches-pictures",
 	nameKey: "competency.math.fractions.reads-writes-fractions-and-matches-pictures.name",
 	descriptionKey: "competency.math.fractions.reads-writes-fractions-and-matches-pictures.description",
@@ -8669,7 +8726,7 @@ var qn = [
 		kind: "activity",
 		id: "math.fractions.reads-writes-fractions-and-matches-pictures"
 	}]
-}, Pr = {
+}, zr = {
 	id: "math.fractions.finds-fraction-of-a-quantity",
 	nameKey: "competency.math.fractions.finds-fraction-of-a-quantity.name",
 	descriptionKey: "competency.math.fractions.finds-fraction-of-a-quantity.description",
@@ -8682,7 +8739,7 @@ var qn = [
 		kind: "activity",
 		id: "math.fractions.finds-fraction-of-a-quantity"
 	}]
-}, Fr = {
+}, Br = {
 	id: "math.fractions.counts-in-halves-and-quarters",
 	nameKey: "competency.math.fractions.counts-in-halves-and-quarters.name",
 	descriptionKey: "competency.math.fractions.counts-in-halves-and-quarters.description",
@@ -8695,7 +8752,7 @@ var qn = [
 		kind: "activity",
 		id: "math.fractions.counts-in-halves-and-quarters"
 	}]
-}, Ir = {
+}, Vr = {
 	id: "math.mathematical-reasoning.continues-sequences-and-states-rule",
 	nameKey: "competency.math.mathematical-reasoning.continues-sequences-and-states-rule.name",
 	descriptionKey: "competency.math.mathematical-reasoning.continues-sequences-and-states-rule.description",
@@ -8708,7 +8765,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.continues-sequences-and-states-rule"
 	}]
-}, Lr = {
+}, Hr = {
 	id: "math.mathematical-reasoning.compares-expressions-by-reasoning",
 	nameKey: "competency.math.mathematical-reasoning.compares-expressions-by-reasoning.name",
 	descriptionKey: "competency.math.mathematical-reasoning.compares-expressions-by-reasoning.description",
@@ -8721,7 +8778,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.compares-expressions-by-reasoning"
 	}]
-}, Rr = {
+}, Ur = {
 	id: "math.measurement.measures-lengths-chooses-tool-and-unit",
 	nameKey: "competency.math.measurement.measures-lengths-chooses-tool-and-unit.name",
 	descriptionKey: "competency.math.measurement.measures-lengths-chooses-tool-and-unit.description",
@@ -8734,7 +8791,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.measures-lengths-chooses-tool-and-unit"
 	}]
-}, zr = {
+}, Wr = {
 	id: "math.measurement.estimates-lengths-in-cm-and-m",
 	nameKey: "competency.math.measurement.estimates-lengths-in-cm-and-m.name",
 	descriptionKey: "competency.math.measurement.estimates-lengths-in-cm-and-m.description",
@@ -8747,7 +8804,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.estimates-lengths-in-cm-and-m"
 	}]
-}, Br = {
+}, Gr = {
 	id: "math.measurement.finds-how-much-longer-in-standard-units",
 	nameKey: "competency.math.measurement.finds-how-much-longer-in-standard-units.name",
 	descriptionKey: "competency.math.measurement.finds-how-much-longer-in-standard-units.description",
@@ -8760,7 +8817,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.finds-how-much-longer-in-standard-units"
 	}]
-}, Vr = {
+}, Kr = {
 	id: "math.measurement.reads-temperature-in-celsius",
 	nameKey: "competency.math.measurement.reads-temperature-in-celsius.name",
 	descriptionKey: "competency.math.measurement.reads-temperature-in-celsius.description",
@@ -8773,7 +8830,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.reads-temperature-in-celsius"
 	}]
-}, Hr = {
+}, qr = {
 	id: "math.measurement.lengths-and-differences-on-number-line",
 	nameKey: "competency.math.measurement.lengths-and-differences-on-number-line.name",
 	descriptionKey: "competency.math.measurement.lengths-and-differences-on-number-line.description",
@@ -8786,7 +8843,7 @@ var qn = [
 		kind: "activity",
 		id: "math.measurement.lengths-and-differences-on-number-line"
 	}]
-}, Ur = {
+}, Jr = {
 	id: "math.time.finds-durations-in-whole-and-half-hours",
 	nameKey: "competency.math.time.finds-durations-in-whole-and-half-hours.name",
 	descriptionKey: "competency.math.time.finds-durations-in-whole-and-half-hours.description",
@@ -8799,7 +8856,7 @@ var qn = [
 		kind: "activity",
 		id: "math.time.finds-durations-in-whole-and-half-hours"
 	}]
-}, Wr = {
+}, Yr = {
 	id: "math.money.uses-currency-symbols-and-writes-amounts",
 	nameKey: "competency.math.money.uses-currency-symbols-and-writes-amounts.name",
 	descriptionKey: "competency.math.money.uses-currency-symbols-and-writes-amounts.description",
@@ -8812,7 +8869,7 @@ var qn = [
 		kind: "activity",
 		id: "math.money.uses-currency-symbols-and-writes-amounts"
 	}]
-}, Gr = {
+}, Xr = {
 	id: "math.money.makes-amounts-with-different-coins-fewest",
 	nameKey: "competency.math.money.makes-amounts-with-different-coins-fewest.name",
 	descriptionKey: "competency.math.money.makes-amounts-with-different-coins-fewest.description",
@@ -8825,7 +8882,7 @@ var qn = [
 		kind: "activity",
 		id: "math.money.makes-amounts-with-different-coins-fewest"
 	}]
-}, Kr = {
+}, Zr = {
 	id: "math.money.finds-totals-and-change-within-100",
 	nameKey: "competency.math.money.finds-totals-and-change-within-100.name",
 	descriptionKey: "competency.math.money.finds-totals-and-change-within-100.description",
@@ -8838,7 +8895,7 @@ var qn = [
 		kind: "activity",
 		id: "math.money.finds-totals-and-change-within-100"
 	}]
-}, qr = {
+}, Qr = {
 	id: "math.geometry.describes-polygons-by-sides-and-vertices",
 	nameKey: "competency.math.geometry.describes-polygons-by-sides-and-vertices.name",
 	descriptionKey: "competency.math.geometry.describes-polygons-by-sides-and-vertices.description",
@@ -8851,7 +8908,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.describes-polygons-by-sides-and-vertices"
 	}]
-}, Jr = {
+}, $r = {
 	id: "math.geometry.counts-faces-edges-vertices-of-3d-shapes",
 	nameKey: "competency.math.geometry.counts-faces-edges-vertices-of-3d-shapes.name",
 	descriptionKey: "competency.math.geometry.counts-faces-edges-vertices-of-3d-shapes.description",
@@ -8864,7 +8921,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.counts-faces-edges-vertices-of-3d-shapes"
 	}]
-}, Yr = {
+}, ei = {
 	id: "math.geometry.draws-shapes-with-given-attributes",
 	nameKey: "competency.math.geometry.draws-shapes-with-given-attributes.name",
 	descriptionKey: "competency.math.geometry.draws-shapes-with-given-attributes.description",
@@ -8877,7 +8934,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.draws-shapes-with-given-attributes"
 	}]
-}, Xr = {
+}, ti = {
 	id: "math.geometry.splits-rectangle-into-rows-and-columns",
 	nameKey: "competency.math.geometry.splits-rectangle-into-rows-and-columns.name",
 	descriptionKey: "competency.math.geometry.splits-rectangle-into-rows-and-columns.description",
@@ -8890,7 +8947,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.splits-rectangle-into-rows-and-columns"
 	}]
-}, Zr = {
+}, ni = {
 	id: "math.geometry.recognises-right-angles",
 	nameKey: "competency.math.geometry.recognises-right-angles.name",
 	descriptionKey: "competency.math.geometry.recognises-right-angles.description",
@@ -8903,7 +8960,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.recognises-right-angles"
 	}]
-}, Qr = {
+}, ri = {
 	id: "math.geometry.line-segments-and-points-on-a-straight-line",
 	nameKey: "competency.math.geometry.line-segments-and-points-on-a-straight-line.name",
 	descriptionKey: "competency.math.geometry.line-segments-and-points-on-a-straight-line.description",
@@ -8916,7 +8973,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.line-segments-and-points-on-a-straight-line"
 	}]
-}, $r = {
+}, ii = {
 	id: "math.geometry.describes-turns-quarter-half-three-quarter",
 	nameKey: "competency.math.geometry.describes-turns-quarter-half-three-quarter.name",
 	descriptionKey: "competency.math.geometry.describes-turns-quarter-half-three-quarter.description",
@@ -8929,7 +8986,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.describes-turns-quarter-half-three-quarter"
 	}]
-}, ei = {
+}, ai = {
 	id: "math.geometry.writes-moves-to-reach-grid-target",
 	nameKey: "competency.math.geometry.writes-moves-to-reach-grid-target.name",
 	descriptionKey: "competency.math.geometry.writes-moves-to-reach-grid-target.description",
@@ -8942,7 +8999,7 @@ var qn = [
 		kind: "activity",
 		id: "math.geometry.writes-moves-to-reach-grid-target"
 	}]
-}, ti = {
+}, oi = {
 	id: "math.data-graphs.pictograms-block-graphs-bar-graphs",
 	nameKey: "competency.math.data-graphs.pictograms-block-graphs-bar-graphs.name",
 	descriptionKey: "competency.math.data-graphs.pictograms-block-graphs-bar-graphs.description",
@@ -8955,7 +9012,7 @@ var qn = [
 		kind: "activity",
 		id: "math.data-graphs.pictograms-block-graphs-bar-graphs"
 	}]
-}, ni = {
+}, si = {
 	id: "math.data-graphs.answers-total-and-comparison-questions-from-graph",
 	nameKey: "competency.math.data-graphs.answers-total-and-comparison-questions-from-graph.name",
 	descriptionKey: "competency.math.data-graphs.answers-total-and-comparison-questions-from-graph.description",
@@ -8968,7 +9025,7 @@ var qn = [
 		kind: "activity",
 		id: "math.data-graphs.answers-total-and-comparison-questions-from-graph"
 	}]
-}, ri = {
+}, ci = {
 	id: "math.data-graphs.records-measurements-on-line-plot",
 	nameKey: "competency.math.data-graphs.records-measurements-on-line-plot.name",
 	descriptionKey: "competency.math.data-graphs.records-measurements-on-line-plot.description",
@@ -8981,7 +9038,7 @@ var qn = [
 		kind: "activity",
 		id: "math.data-graphs.records-measurements-on-line-plot"
 	}]
-}, ii = {
+}, li = {
 	id: "math.probability.describes-events-certain-likely-unlikely-impossible",
 	nameKey: "competency.math.probability.describes-events-certain-likely-unlikely-impossible.name",
 	descriptionKey: "competency.math.probability.describes-events-certain-likely-unlikely-impossible.description",
@@ -8994,7 +9051,7 @@ var qn = [
 		kind: "activity",
 		id: "math.probability.describes-events-certain-likely-unlikely-impossible"
 	}]
-}, ai = {
+}, ui = {
 	id: "math.problem-solving.solves-two-step-addition-subtraction-problems",
 	nameKey: "competency.math.problem-solving.solves-two-step-addition-subtraction-problems.name",
 	descriptionKey: "competency.math.problem-solving.solves-two-step-addition-subtraction-problems.description",
@@ -9007,7 +9064,7 @@ var qn = [
 		kind: "activity",
 		id: "math.problem-solving.solves-two-step-addition-subtraction-problems"
 	}]
-}, oi = {
+}, di = {
 	id: "math.problem-solving.uses-part-whole-and-comparison-bar-models",
 	nameKey: "competency.math.problem-solving.uses-part-whole-and-comparison-bar-models.name",
 	descriptionKey: "competency.math.problem-solving.uses-part-whole-and-comparison-bar-models.description",
@@ -9020,7 +9077,7 @@ var qn = [
 		kind: "activity",
 		id: "math.problem-solving.uses-part-whole-and-comparison-bar-models"
 	}]
-}, si = {
+}, fi = {
 	id: "math.problem-solving.checks-answers-with-inverse-and-estimating",
 	nameKey: "competency.math.problem-solving.checks-answers-with-inverse-and-estimating.name",
 	descriptionKey: "competency.math.problem-solving.checks-answers-with-inverse-and-estimating.description",
@@ -9033,7 +9090,7 @@ var qn = [
 		kind: "activity",
 		id: "math.problem-solving.checks-answers-with-inverse-and-estimating"
 	}]
-}, ci = {
+}, pi = {
 	id: "math.problem-solving.finds-all-combinations-in-small-problems",
 	nameKey: "competency.math.problem-solving.finds-all-combinations-in-small-problems.name",
 	descriptionKey: "competency.math.problem-solving.finds-all-combinations-in-small-problems.description",
@@ -9046,7 +9103,7 @@ var qn = [
 		kind: "activity",
 		id: "math.problem-solving.finds-all-combinations-in-small-problems"
 	}]
-}, li = {
+}, mi = {
 	id: "math.mathematical-reasoning.notices-and-tests-general-statements",
 	nameKey: "competency.math.mathematical-reasoning.notices-and-tests-general-statements.name",
 	descriptionKey: "competency.math.mathematical-reasoning.notices-and-tests-general-statements.description",
@@ -9059,12 +9116,7 @@ var qn = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.notices-and-tests-general-statements"
 	}]
-}, ui = [
-	Jn,
-	Yn,
-	Xn,
-	Zn,
-	Qn,
+}, hi = [
 	$n,
 	er,
 	tr,
@@ -9129,11 +9181,16 @@ var qn = [
 	oi,
 	si,
 	ci,
-	li
+	li,
+	ui,
+	di,
+	fi,
+	pi,
+	mi
 ];
 //#endregion
 //#region packages/template-ordering/src/rng.ts
-function di(e) {
+function gi(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9141,42 +9198,42 @@ function di(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function fi(e, t, n) {
+function _i(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
-function pi(e, t) {
+function vi(e, t) {
 	let n = t.slice();
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = fi(e, 0, t), i = n[t];
+		let r = _i(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n;
 }
 //#endregion
 //#region packages/template-ordering/src/factory.ts
-function mi(e) {
+function yi(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function hi(e, t) {
+function bi(e, t) {
 	let n = e.filter((e) => e.grade === t);
 	if (n.length === 0) throw Error(`no content bank entries for grade: ${t}`);
 	return n;
 }
-function gi(e) {
+function xi(e) {
 	return e.items.slice().sort((e, t) => e.correctPosition - t.correctPosition).map((e) => e.id);
 }
-function _i(e, t) {
+function Si(e, t) {
 	return e.map((e) => ({
 		id: e.id,
 		label: e.label[t]
 	}));
 }
-function vi(e, t, n) {
-	let r = pi(e, t), i = 0;
-	for (; r.map((e) => e.id).join(",") === n.join(",") && i < 1e3;) r = pi(e, t), i++;
+function Ci(e, t, n) {
+	let r = vi(e, t), i = 0;
+	for (; r.map((e) => e.id).join(",") === n.join(",") && i < 1e3;) r = vi(e, t), i++;
 	return r;
 }
-function yi(e, t, n) {
+function wi(e, t, n) {
 	let r = /* @__PURE__ */ new Set([t.join(",")]), i = [], a = (e) => {
 		let t = e.join(",");
 		r.has(t) || (r.add(t), i.push(e));
@@ -9186,17 +9243,17 @@ function yi(e, t, n) {
 		let n = t.slice();
 		[n[e], n[e + 1]] = [n[e + 1], n[e]], a(n);
 	}
-	let o = pi(e, [t, ...pi(e, i).slice(0, 3)]);
+	let o = vi(e, [t, ...vi(e, i).slice(0, 3)]);
 	return {
 		choices: o,
 		correctChoiceIndex: o.findIndex((e) => e.join(",") === t.join(","))
 	};
 }
-function bi(e, t, n) {
-	if (!mi(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
-	let r = hi(e.bank, t), i = di(n), a = r[fi(i, 0, r.length - 1)], o = gi(a), s = Math.floor(i() * 4294967295), c = di(s);
-	di(s);
-	let l = vi(c, _i(a.items, "en"), o), u = new Map(_i(a.items, "fr").map((e) => [e.id, e])), d = l.map((e) => u.get(e.id)), { choices: f, correctChoiceIndex: p } = yi(i, o, l.map((e) => e.id));
+function Ti(e, t, n) {
+	if (!yi(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
+	let r = bi(e.bank, t), i = gi(n), a = r[_i(i, 0, r.length - 1)], o = xi(a), s = Math.floor(i() * 4294967295), c = gi(s);
+	gi(s);
+	let l = Ci(c, Si(a.items, "en"), o), u = new Map(Si(a.items, "fr").map((e) => [e.id, e])), d = l.map((e) => u.get(e.id)), { choices: f, correctChoiceIndex: p } = wi(i, o, l.map((e) => e.id));
 	return {
 		id: `${e.pluginId}-${t}-${n}`,
 		grade: t,
@@ -9208,18 +9265,18 @@ function bi(e, t, n) {
 		correctChoiceIndex: p
 	};
 }
-function xi(e, t) {
+function Ei(e, t) {
 	return typeof t == "string" ? t === `c${e.correctChoiceIndex}` : t.length === e.correctOrder.length && t.every((t, n) => t === e.correctOrder[n]);
 }
-function Si(e) {
+function Di(e) {
 	let t = {
 		id: e.pluginId,
 		competencyIds: [e.competencyId],
 		generateQuestion(t, n) {
-			return bi(e, t, n);
+			return Ti(e, t, n);
 		},
 		validateAnswer(e, t) {
-			return { correct: xi(e, t) };
+			return { correct: Ei(e, t) };
 		},
 		toPresentation(e, t = "en") {
 			let n = new Map(e[t].items.map((e) => [e.id, e.label])), r = e.direction === "ascending";
@@ -9237,10 +9294,10 @@ function Si(e) {
 		}
 	};
 	function n(t, n) {
-		let r = di(n), i = [];
+		let r = gi(n), i = [];
 		for (let n = 0; n < 10; n++) {
 			let n = Math.floor(r() * 4294967295);
-			i.push(bi(e, t, n));
+			i.push(Ti(e, t, n));
 		}
 		return {
 			grade: t,
@@ -9268,7 +9325,7 @@ function Si(e) {
 }
 //#endregion
 //#region packages/template-true-false/src/rng.ts
-function Ci(e) {
+function Oi(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -9276,22 +9333,22 @@ function Ci(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function wi(e, t, n) {
+function ki(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/template-true-false/src/factory.ts
-function Ti(e) {
+function Ai(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Ei(e, t) {
+function ji(e, t) {
 	let n = e.filter((e) => e.grade === t);
 	if (n.length === 0) throw Error(`no content bank entries for grade: ${t}`);
 	return n;
 }
-function Di(e, t, n) {
-	if (!Ti(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
-	let r = Ei(e.bank, t), i = r[wi(Ci(n), 0, r.length - 1)];
+function Mi(e, t, n) {
+	if (!Ai(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
+	let r = ji(e.bank, t), i = r[ki(Oi(n), 0, r.length - 1)];
 	return {
 		id: `${e.pluginId}-${t}-${n}`,
 		grade: t,
@@ -9307,7 +9364,7 @@ function C(e) {
 		id: e.pluginId,
 		competencyIds: [e.competencyId],
 		generateQuestion(t, n) {
-			return Di(e, t, n);
+			return Mi(e, t, n);
 		},
 		validateAnswer(e, t) {
 			return { correct: t === "true" === e.isTrue };
@@ -9331,10 +9388,10 @@ function C(e) {
 		}
 	};
 	function n(t, n) {
-		let r = Ci(n), i = [];
+		let r = Oi(n), i = [];
 		for (let n = 0; n < 10; n++) {
 			let n = Math.floor(r() * 4294967295);
-			i.push(Di(e, t, n));
+			i.push(Mi(e, t, n));
 		}
 		return {
 			grade: t,
@@ -9362,9 +9419,9 @@ function C(e) {
 }
 //#endregion
 //#region packages/syllabus-content-g2/src/content.ts
-var Oi = _({
+var Ni = _({
 	pluginId: "syllabus-g2-counts-reads-writes-to-1000",
-	competencyId: Jn.id,
+	competencyId: $n.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Write the number: four hundred and twenty-six" },
@@ -9376,9 +9433,9 @@ var Oi = _({
 		fr: { prompt: "Écris le nombre : neuf cent huit" },
 		correctValue: 908
 	}]
-}), ki = Si({
+}), Pi = Di({
 	pluginId: "syllabus-g2-orders-numbers-to-1000",
-	competencyId: Yn.id,
+	competencyId: er.id,
 	bank: [{
 		grade: 1,
 		direction: "ascending",
@@ -9446,9 +9503,9 @@ var Oi = _({
 			}
 		]
 	}]
-}), Ai = _({
+}), Fi = _({
 	pluginId: "syllabus-g2-number-bonds-within-20",
-	competencyId: Qn.id,
+	competencyId: rr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "14 + ? = 20" },
@@ -9460,9 +9517,9 @@ var Oi = _({
 		fr: { prompt: "Quels sont les deux nombres qui font 17 ? 17 = 9 + ?" },
 		correctValue: 8
 	}]
-}), ji = _({
+}), Ii = _({
 	pluginId: "syllabus-g2-add-subtract-two-digit-with-regrouping",
-	competencyId: $n.id,
+	competencyId: ir.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "37 + 26 = ?" },
@@ -9474,9 +9531,9 @@ var Oi = _({
 		fr: { prompt: "82 - 47 = ?" },
 		correctValue: 35
 	}]
-}), Mi = C({
+}), Li = C({
 	pluginId: "syllabus-g2-addition-commutative-subtraction-not",
-	competencyId: er.id,
+	competencyId: ar.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9498,9 +9555,9 @@ var Oi = _({
 			isTrue: !1
 		}
 	}]
-}), Ni = _({
+}), Ri = _({
 	pluginId: "syllabus-g2-times-tables-2-5-10",
-	competencyId: tr.id,
+	competencyId: or.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "5 x 4 = ?" },
@@ -9512,9 +9569,9 @@ var Oi = _({
 		fr: { prompt: "Combien de fois 2 dans 18 ? 18 ÷ 2 = ?" },
 		correctValue: 9
 	}]
-}), Pi = _({
+}), zi = _({
 	pluginId: "syllabus-g2-division-sharing-grouping-remainders",
-	competencyId: nr.id,
+	competencyId: sr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Share 12 sweets equally between 3 children. How many does each get?" },
@@ -9526,9 +9583,9 @@ var Oi = _({
 		fr: { prompt: "13 brioches sont mises dans des boîtes de 4. Combien de brioches restent-elles ?" },
 		correctValue: 1
 	}]
-}), Fi = _({
+}), Bi = _({
 	pluginId: "syllabus-g2-add-subtract-one-digit-to-two-digit",
-	competencyId: rr.id,
+	competencyId: cr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "34 + 8 = ?" },
@@ -9540,9 +9597,9 @@ var Oi = _({
 		fr: { prompt: "71 - 6 = ?" },
 		correctValue: 65
 	}]
-}), Ii = _({
+}), Vi = _({
 	pluginId: "syllabus-g2-doubles-halves-to-50",
-	competencyId: ir.id,
+	competencyId: lr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Double 14. What is the answer?" },
@@ -9554,9 +9611,9 @@ var Oi = _({
 		fr: { prompt: "La moitié de 46. Quel est le résultat ?" },
 		correctValue: 23
 	}]
-}), Li = g({
+}), Hi = g({
 	pluginId: "syllabus-g2-thirds-quarters-fifths",
-	competencyId: ar.id,
+	competencyId: ur.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9598,9 +9655,9 @@ var Oi = _({
 			correctIndex: 0
 		}
 	}]
-}), Ri = _({
+}), Ui = _({
 	pluginId: "syllabus-g2-mass-and-capacity",
-	competencyId: or.id,
+	competencyId: dr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A scale's pointer stops exactly on the 300 g mark. What is the mass, in g?" },
@@ -9612,9 +9669,9 @@ var Oi = _({
 		fr: { prompt: "Le niveau d'eau du récipient est exactement sur 450 ml. Quelle est la contenance, en ml ?" },
 		correctValue: 450
 	}]
-}), zi = g({
+}), Wi = g({
 	pluginId: "syllabus-g2-metric-units-relationships",
-	competencyId: sr.id,
+	competencyId: fr.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9656,9 +9713,9 @@ var Oi = _({
 			correctIndex: 2
 		}
 	}]
-}), Bi = g({
+}), Gi = g({
 	pluginId: "syllabus-g2-time-five-minutes-quarter-hour",
-	competencyId: cr.id,
+	competencyId: pr.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9700,9 +9757,9 @@ var Oi = _({
 			correctIndex: 2
 		}
 	}]
-}), Vi = _({
+}), Ki = _({
 	pluginId: "syllabus-g2-days-weeks-months-counts",
-	competencyId: lr.id,
+	competencyId: mr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "How many days are in one week?" },
@@ -9714,9 +9771,9 @@ var Oi = _({
 		fr: { prompt: "Combien de semaines y a-t-il dans une année ?" },
 		correctValue: 52
 	}]
-}), Hi = _({
+}), qi = _({
 	pluginId: "syllabus-g2-counts-shape-properties",
-	competencyId: ur.id,
+	competencyId: hr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "How many sides does a hexagon have?" },
@@ -9728,9 +9785,9 @@ var Oi = _({
 		fr: { prompt: "Combien de faces a un cube ?" },
 		correctValue: 6
 	}]
-}), Ui = C({
+}), Ji = C({
 	pluginId: "syllabus-g2-recognises-line-of-symmetry",
-	competencyId: dr.id,
+	competencyId: gr.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9752,9 +9809,9 @@ var Oi = _({
 			isTrue: !0
 		}
 	}]
-}), Wi = h({
+}), Yi = h({
 	pluginId: "syllabus-g2-describes-grid-position",
-	competencyId: fr.id,
+	competencyId: _r.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9776,9 +9833,9 @@ var Oi = _({
 			answer: "D2"
 		}
 	}]
-}), Gi = _({
+}), Xi = _({
 	pluginId: "syllabus-g2-tally-chart-bar-chart",
-	competencyId: pr.id,
+	competencyId: vr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A tally chart shows |||| | for pets counted. How many pets is that?" },
@@ -9790,9 +9847,9 @@ var Oi = _({
 		fr: { prompt: "La barre 'Pommes' d'un diagramme en barres atteint la marque 9 sur l'échelle. Combien de pommes la barre montre-t-elle ?" },
 		correctValue: 9
 	}]
-}), Ki = _({
+}), Zi = _({
 	pluginId: "syllabus-g2-finds-missing-number-in-equation",
-	competencyId: mr.id,
+	competencyId: yr.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "7 + ? = 12" },
@@ -9804,9 +9861,9 @@ var Oi = _({
 		fr: { prompt: "? - 6 = 15" },
 		correctValue: 21
 	}]
-}), qi = g({
+}), Qi = g({
 	pluginId: "syllabus-g2-solves-one-step-word-problem",
-	competencyId: hr.id,
+	competencyId: br.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -9848,9 +9905,9 @@ var Oi = _({
 			correctIndex: 0
 		}
 	}]
-}), Ji = _({
+}), $i = _({
 	pluginId: "syllabus-g2-counts-in-steps-of-2-3-5-10",
-	competencyId: gr.id,
+	competencyId: xr.id,
 	bank: [
 		{
 			grade: 1,
@@ -9895,9 +9952,9 @@ var Oi = _({
 			correctValue: 53
 		}
 	]
-}), Yi = g({
+}), ea = g({
 	pluginId: "syllabus-g2-reads-writes-numbers-digits-words-expanded",
-	competencyId: _r.id,
+	competencyId: Sr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10047,9 +10104,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Xi = g({
+}), ta = g({
 	pluginId: "syllabus-g2-places-numbers-on-number-line-0-1000",
-	competencyId: vr.id,
+	competencyId: Cr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10178,9 +10235,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Zi = g({
+}), na = g({
 	pluginId: "syllabus-g2-odd-even-numbers-and-doubles",
-	competencyId: yr.id,
+	competencyId: wr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10309,9 +10366,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Qi = _({
+}), ra = _({
 	pluginId: "syllabus-g2-adds-subtracts-10-or-100",
-	competencyId: xr.id,
+	competencyId: Er.id,
 	bank: [
 		{
 			grade: 1,
@@ -10374,9 +10431,9 @@ var Oi = _({
 			correctValue: 600
 		}
 	]
-}), $i = _({
+}), ia = _({
 	pluginId: "syllabus-g2-adds-subtracts-100",
-	competencyId: Sr.id,
+	competencyId: Dr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10439,9 +10496,9 @@ var Oi = _({
 			correctValue: 630
 		}
 	]
-}), ea = _({
+}), aa = _({
 	pluginId: "syllabus-g2-adds-subtracts-within-100-fluently",
-	competencyId: Cr.id,
+	competencyId: Or.id,
 	bank: [
 		{
 			grade: 1,
@@ -10480,9 +10537,9 @@ var Oi = _({
 			correctValue: 85
 		}
 	]
-}), ta = _({
+}), oa = _({
 	pluginId: "syllabus-g2-adds-up-to-four-two-digit-numbers",
-	competencyId: wr.id,
+	competencyId: kr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10521,9 +10578,9 @@ var Oi = _({
 			correctValue: 92
 		}
 	]
-}), na = _({
+}), sa = _({
 	pluginId: "syllabus-g2-adds-subtracts-within-1000-base-ten",
-	competencyId: Tr.id,
+	competencyId: Ar.id,
 	bank: [
 		{
 			grade: 1,
@@ -10568,9 +10625,9 @@ var Oi = _({
 			correctValue: 357
 		}
 	]
-}), ra = g({
+}), ca = g({
 	pluginId: "syllabus-g2-writes-equal-groups-and-arrays-as-multiplication",
-	competencyId: Er.id,
+	competencyId: jr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10699,9 +10756,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ia = C({
+}), la = C({
 	pluginId: "syllabus-g2-arrays-show-multiplication-commutative",
-	competencyId: Dr.id,
+	competencyId: Mr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10770,9 +10827,9 @@ var Oi = _({
 			}
 		}
 	]
-}), aa = _({
+}), ua = _({
 	pluginId: "syllabus-g2-meets-remainders-in-sharing",
-	competencyId: Or.id,
+	competencyId: Nr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10811,9 +10868,9 @@ var Oi = _({
 			correctValue: 1
 		}
 	]
-}), oa = _({
+}), da = _({
 	pluginId: "syllabus-g2-adds-subtracts-multiples-of-10",
-	competencyId: kr.id,
+	competencyId: Pr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10858,9 +10915,9 @@ var Oi = _({
 			correctValue: 98
 		}
 	]
-}), sa = _({
+}), fa = _({
 	pluginId: "syllabus-g2-uses-number-facts-to-10-to-know-multiples-of-10",
-	competencyId: Ar.id,
+	competencyId: Fr.id,
 	bank: [
 		{
 			grade: 1,
@@ -10905,9 +10962,9 @@ var Oi = _({
 			correctValue: 80
 		}
 	]
-}), ca = g({
+}), pa = g({
 	pluginId: "syllabus-g2-estimates-sum-to-nearest-10",
-	competencyId: jr.id,
+	competencyId: Ir.id,
 	bank: [
 		{
 			grade: 1,
@@ -11036,9 +11093,9 @@ var Oi = _({
 			}
 		}
 	]
-}), la = C({
+}), ma = C({
 	pluginId: "syllabus-g2-splits-shapes-into-equal-shares",
-	competencyId: Mr.id,
+	competencyId: Lr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11107,9 +11164,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ua = g({
+}), ha = g({
 	pluginId: "syllabus-g2-reads-writes-fractions-and-matches-pictures",
-	competencyId: Nr.id,
+	competencyId: Rr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11238,9 +11295,9 @@ var Oi = _({
 			}
 		}
 	]
-}), da = _({
+}), ga = _({
 	pluginId: "syllabus-g2-finds-fraction-of-a-quantity",
-	competencyId: Pr.id,
+	competencyId: zr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11279,9 +11336,9 @@ var Oi = _({
 			correctValue: 6
 		}
 	]
-}), fa = g({
+}), _a = g({
 	pluginId: "syllabus-g2-counts-in-halves-and-quarters",
-	competencyId: Fr.id,
+	competencyId: Br.id,
 	bank: [
 		{
 			grade: 1,
@@ -11410,9 +11467,9 @@ var Oi = _({
 			}
 		}
 	]
-}), pa = g({
+}), va = g({
 	pluginId: "syllabus-g2-continues-sequences-and-states-rule",
-	competencyId: Ir.id,
+	competencyId: Vr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11541,9 +11598,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ma = g({
+}), ya = g({
 	pluginId: "syllabus-g2-compares-expressions-by-reasoning",
-	competencyId: Lr.id,
+	competencyId: Hr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11693,9 +11750,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ha = g({
+}), ba = g({
 	pluginId: "syllabus-g2-measures-lengths-chooses-tool-and-unit",
-	competencyId: Rr.id,
+	competencyId: Ur.id,
 	bank: [
 		{
 			grade: 1,
@@ -11824,9 +11881,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ga = g({
+}), xa = g({
 	pluginId: "syllabus-g2-estimates-lengths-in-cm-and-m",
-	competencyId: zr.id,
+	competencyId: Wr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11955,9 +12012,9 @@ var Oi = _({
 			}
 		}
 	]
-}), _a = _({
+}), Sa = _({
 	pluginId: "syllabus-g2-finds-how-much-longer-in-standard-units",
-	competencyId: Br.id,
+	competencyId: Gr.id,
 	bank: [
 		{
 			grade: 1,
@@ -11996,9 +12053,9 @@ var Oi = _({
 			correctValue: 19
 		}
 	]
-}), va = _({
+}), Ca = _({
 	pluginId: "syllabus-g2-reads-temperature-in-celsius",
-	competencyId: Vr.id,
+	competencyId: Kr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12037,9 +12094,9 @@ var Oi = _({
 			correctValue: 26
 		}
 	]
-}), ya = _({
+}), wa = _({
 	pluginId: "syllabus-g2-lengths-and-differences-on-number-line",
-	competencyId: Hr.id,
+	competencyId: qr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12078,9 +12135,9 @@ var Oi = _({
 			correctValue: 15
 		}
 	]
-}), ba = g({
+}), Ta = g({
 	pluginId: "syllabus-g2-finds-durations-in-whole-and-half-hours",
-	competencyId: Ur.id,
+	competencyId: Jr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12209,9 +12266,9 @@ var Oi = _({
 			}
 		}
 	]
-}), xa = g({
+}), Ea = g({
 	pluginId: "syllabus-g2-uses-currency-symbols-and-writes-amounts",
-	competencyId: Wr.id,
+	competencyId: Yr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12361,9 +12418,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Sa = _({
+}), Da = _({
 	pluginId: "syllabus-g2-makes-amounts-with-different-coins-fewest",
-	competencyId: Gr.id,
+	competencyId: Xr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12408,9 +12465,9 @@ var Oi = _({
 			correctValue: 3
 		}
 	]
-}), Ca = _({
+}), Oa = _({
 	pluginId: "syllabus-g2-finds-totals-and-change-within-100",
-	competencyId: Kr.id,
+	competencyId: Zr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12455,9 +12512,9 @@ var Oi = _({
 			correctValue: 28
 		}
 	]
-}), wa = _({
+}), ka = _({
 	pluginId: "syllabus-g2-describes-polygons-by-sides-and-vertices",
-	competencyId: qr.id,
+	competencyId: Qr.id,
 	bank: [
 		{
 			grade: 1,
@@ -12502,9 +12559,9 @@ var Oi = _({
 			correctValue: 4
 		}
 	]
-}), Ta = _({
+}), Aa = _({
 	pluginId: "syllabus-g2-counts-faces-edges-vertices-of-3d-shapes",
-	competencyId: Jr.id,
+	competencyId: $r.id,
 	bank: [
 		{
 			grade: 1,
@@ -12549,9 +12606,9 @@ var Oi = _({
 			correctValue: 3
 		}
 	]
-}), Ea = g({
+}), ja = g({
 	pluginId: "syllabus-g2-draws-shapes-with-given-attributes",
-	competencyId: Yr.id,
+	competencyId: ei.id,
 	bank: [
 		{
 			grade: 1,
@@ -12680,9 +12737,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Da = _({
+}), Ma = _({
 	pluginId: "syllabus-g2-splits-rectangle-into-rows-and-columns",
-	competencyId: Xr.id,
+	competencyId: ti.id,
 	bank: [
 		{
 			grade: 1,
@@ -12721,9 +12778,9 @@ var Oi = _({
 			correctValue: 18
 		}
 	]
-}), Oa = C({
+}), Na = C({
 	pluginId: "syllabus-g2-recognises-right-angles",
-	competencyId: Zr.id,
+	competencyId: ni.id,
 	bank: [
 		{
 			grade: 1,
@@ -12792,9 +12849,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ka = g({
+}), Pa = g({
 	pluginId: "syllabus-g2-line-segments-and-points-on-a-straight-line",
-	competencyId: Qr.id,
+	competencyId: ri.id,
 	bank: [
 		{
 			grade: 1,
@@ -12907,9 +12964,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Aa = g({
+}), Fa = g({
 	pluginId: "syllabus-g2-describes-turns-quarter-half-three-quarter",
-	competencyId: $r.id,
+	competencyId: ii.id,
 	bank: [
 		{
 			grade: 1,
@@ -13038,9 +13095,9 @@ var Oi = _({
 			}
 		}
 	]
-}), ja = g({
+}), Ia = g({
 	pluginId: "syllabus-g2-writes-moves-to-reach-grid-target",
-	competencyId: ei.id,
+	competencyId: ai.id,
 	bank: [
 		{
 			grade: 1,
@@ -13169,9 +13226,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Ma = _({
+}), La = _({
 	pluginId: "syllabus-g2-pictograms-block-graphs-bar-graphs",
-	competencyId: ti.id,
+	competencyId: oi.id,
 	bank: [
 		{
 			grade: 1,
@@ -13216,9 +13273,9 @@ var Oi = _({
 			correctValue: 4
 		}
 	]
-}), Na = _({
+}), Ra = _({
 	pluginId: "syllabus-g2-answers-total-and-comparison-questions-from-graph",
-	competencyId: ni.id,
+	competencyId: si.id,
 	bank: [
 		{
 			grade: 1,
@@ -13263,9 +13320,9 @@ var Oi = _({
 			correctValue: 6
 		}
 	]
-}), Pa = _({
+}), za = _({
 	pluginId: "syllabus-g2-records-measurements-on-line-plot",
-	competencyId: ri.id,
+	competencyId: ci.id,
 	bank: [
 		{
 			grade: 1,
@@ -13304,9 +13361,9 @@ var Oi = _({
 			correctValue: 8
 		}
 	]
-}), Fa = g({
+}), Ba = g({
 	pluginId: "syllabus-g2-describes-events-certain-likely-unlikely-impossible",
-	competencyId: ii.id,
+	competencyId: li.id,
 	bank: [
 		{
 			grade: 1,
@@ -13456,9 +13513,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Ia = _({
+}), Va = _({
 	pluginId: "syllabus-g2-solves-two-step-addition-subtraction-problems",
-	competencyId: ai.id,
+	competencyId: ui.id,
 	bank: [
 		{
 			grade: 1,
@@ -13503,9 +13560,9 @@ var Oi = _({
 			correctValue: 27
 		}
 	]
-}), La = g({
+}), Ha = g({
 	pluginId: "syllabus-g2-uses-part-whole-and-comparison-bar-models",
-	competencyId: oi.id,
+	competencyId: di.id,
 	bank: [
 		{
 			grade: 1,
@@ -13634,9 +13691,9 @@ var Oi = _({
 			}
 		}
 	]
-}), Ra = g({
+}), Ua = g({
 	pluginId: "syllabus-g2-checks-answers-with-inverse-and-estimating",
-	competencyId: si.id,
+	competencyId: fi.id,
 	bank: [
 		{
 			grade: 1,
@@ -13765,9 +13822,9 @@ var Oi = _({
 			}
 		}
 	]
-}), za = _({
+}), Wa = _({
 	pluginId: "syllabus-g2-finds-all-combinations-in-small-problems",
-	competencyId: ci.id,
+	competencyId: pi.id,
 	bank: [
 		{
 			grade: 1,
@@ -13806,9 +13863,9 @@ var Oi = _({
 			correctValue: 12
 		}
 	]
-}), Ba = C({
+}), Ga = C({
 	pluginId: "syllabus-g2-notices-and-tests-general-statements",
-	competencyId: li.id,
+	competencyId: mi.id,
 	bank: [
 		{
 			grade: 1,
@@ -13916,40 +13973,40 @@ function T(e, t, n, r, i) {
 		feedback: [null, ...a.slice(0, 3).map((e) => e[1])]
 	};
 }
-var Va = "🟧", Ha = "🧱", Ua = "🧊";
+var Ka = "🟧", qa = "🧱", Ja = "🧊";
 function E(e, t, n) {
 	return {
 		type: "counters",
 		groups: [
 			...e > 0 ? [{
-				emoji: Va,
+				emoji: Ka,
 				count: e
 			}] : [],
 			...t > 0 ? [{
-				emoji: Ha,
+				emoji: qa,
 				count: t
 			}] : [],
 			...n > 0 ? [{
-				emoji: Ua,
+				emoji: Ja,
 				count: n
 			}] : []
 		]
 	};
 }
-function Wa(e, t, n) {
+function Ya(e, t, n) {
 	return [
 		[n * 100 + t * 10 + e, w.swapped],
 		[e * 100 + (t === 0 ? n : t * 10), w.missingPlace],
 		[e + t + n, w.countAll]
 	];
 }
-function Ga() {
+function Xa() {
 	let e = [], t = (t, n, r, i, a, o) => {
 		let s = n * 100 + r * 10 + i;
 		e.push(T(t, {
 			en: a,
 			fr: o
-		}, s, Wa(n, r, i), E(n, r, i)));
+		}, s, Ya(n, r, i), E(n, r, i)));
 	};
 	for (let e of [
 		1,
@@ -14072,11 +14129,11 @@ function Ga() {
 	}
 	return e;
 }
-function Ka() {
+function Za() {
 	let e = [], t = (e) => ({
 		type: "counters",
 		groups: [{
-			emoji: Ha,
+			emoji: qa,
 			count: e
 		}]
 	});
@@ -14182,10 +14239,10 @@ function Ka() {
 		], {
 			type: "counters",
 			groups: [{
-				emoji: Ha,
+				emoji: qa,
 				count: i
 			}, {
-				emoji: Ua,
+				emoji: Ja,
 				count: r
 			}]
 		}));
@@ -14244,7 +14301,7 @@ function Ka() {
 	}
 	return e;
 }
-function qa() {
+function Qa() {
 	let e = [], t = {
 		en: "Read the blocks. Which number do they show?",
 		fr: "Lis les blocs. Quel nombre montrent-ils ?"
@@ -14326,7 +14383,7 @@ function qa() {
 			2,
 			5
 		]
-	]) e.push(T(3, t, n * 100 + r * 10 + i, Wa(n, r, i), E(n, r, i)));
+	]) e.push(T(3, t, n * 100 + r * 10 + i, Ya(n, r, i), E(n, r, i)));
 	for (let [t, n, r] of [
 		[
 			3,
@@ -14371,7 +14428,7 @@ function qa() {
 	]) e.push(T(4, {
 		en: `${t.toString()} hundreds + ${n.toString()} tens + ${r.toString()} ones. Which number is it?`,
 		fr: `${t.toString()} centaines + ${n.toString()} dizaines + ${r.toString()} unités. Quel est ce nombre ?`
-	}, t * 100 + n * 10 + r, Wa(t, n, r), void 0));
+	}, t * 100 + n * 10 + r, Ya(t, n, r), void 0));
 	return e;
 }
 var D = {
@@ -14380,7 +14437,7 @@ var D = {
 	otherDigit: "g2pv2.feedback.otherDigit",
 	compare: "g2pv2.feedback.compare",
 	order: "g2pv2.feedback.order"
-}, Ja = [
+}, $a = [
 	100,
 	10,
 	1
@@ -14392,22 +14449,22 @@ function O(e) {
 		e % 10
 	];
 }
-function Ya(e, t) {
-	let n = O(e), r = n[Ja.indexOf(t)], i = [];
+function eo(e, t) {
+	let n = O(e), r = n[$a.indexOf(t)], i = [];
 	t !== 1 && i.push([r, D.digitItself]);
-	for (let e of Ja) e !== t && i.push([r * e, D.wrongPlace]);
-	return Ja.forEach((e, r) => {
+	for (let e of $a) e !== t && i.push([r * e, D.wrongPlace]);
+	return $a.forEach((e, r) => {
 		e !== t && i.push([n[r] * e, D.otherDigit]);
 	}), i;
 }
-function Xa(e, t, n, r, i) {
-	let a = O(t)[Ja.indexOf(n)];
+function to(e, t, n, r, i) {
+	let a = O(t)[$a.indexOf(n)];
 	return T(e, {
 		en: `${r.en}In ${t.toString()}, what is the digit ${a.toString()} worth?`,
 		fr: `${r.fr}Dans ${t.toString()}, que vaut le chiffre ${a.toString()} ?`
-	}, a * n, Ya(t, n), i);
+	}, a * n, eo(t, n), i);
 }
-var Za = [
+var no = [
 	243,
 	358,
 	462,
@@ -14420,7 +14477,7 @@ var Za = [
 	291,
 	365,
 	478
-], Qa = [
+], ro = [
 	305,
 	407,
 	560,
@@ -14432,7 +14489,7 @@ var Za = [
 	270,
 	906
 ];
-function $a() {
+function io() {
 	let e = [], t = {
 		en: "",
 		fr: ""
@@ -14446,12 +14503,12 @@ function $a() {
 		734,
 		825,
 		936
-	]) e.push(Xa(1, t, 100, {
+	]) e.push(to(1, t, 100, {
 		en: "The spotlight is on the hundreds place. ",
 		fr: "Le projecteur est sur les centaines. "
 	}, void 0));
-	for (let n of Za) for (let r of [10, 1]) (n + r) % 2 == 0 && e.push(Xa(2, n, r, t, void 0));
-	for (let n of Qa) for (let r of Ja) O(n)[Ja.indexOf(r)] !== 0 && (n + r) % 2 == 0 && e.push(Xa(3, n, r, t, void 0));
+	for (let n of no) for (let r of [10, 1]) (n + r) % 2 == 0 && e.push(to(2, n, r, t, void 0));
+	for (let n of ro) for (let r of $a) O(n)[$a.indexOf(r)] !== 0 && (n + r) % 2 == 0 && e.push(to(3, n, r, t, void 0));
 	for (let [t, n, r] of [
 		[
 			7,
@@ -14494,7 +14551,7 @@ function $a() {
 			852
 		]
 	]) {
-		let i = (e) => t * Ja[e.toString().indexOf(t.toString())], a = Math.max(i(n), i(r)), o = Math.min(i(n), i(r));
+		let i = (e) => t * $a[e.toString().indexOf(t.toString())], a = Math.max(i(n), i(r)), o = Math.min(i(n), i(r));
 		e.push(T(4, {
 			en: `Compare the digit ${t.toString()} in ${n.toString()} and in ${r.toString()}. What is its bigger value?`,
 			fr: `Compare le chiffre ${t.toString()} dans ${n.toString()} et dans ${r.toString()}. Quelle est sa plus grande valeur ?`
@@ -14506,7 +14563,7 @@ function $a() {
 	}
 	return e;
 }
-function eo() {
+function ao() {
 	let e = [], t = (e, t, n) => [
 		[n * 100 + t * 10 + e, D.order],
 		[e + t + n, D.digitItself],
@@ -14704,7 +14761,7 @@ function eo() {
 	}
 	return e;
 }
-function to() {
+function oo() {
 	let e = [], t = {
 		en: "Look at the blocks. ",
 		fr: "Regarde les blocs. "
@@ -14718,9 +14775,9 @@ function to() {
 		734,
 		825,
 		936
-	]) e.push(Xa(1, r, 100, t, n(r)));
-	for (let r of Za) for (let i of [10, 1]) (r + i) % 2 == 0 && e.push(Xa(2, r, i, t, n(r)));
-	for (let r of Qa) for (let i of Ja) O(r)[Ja.indexOf(i)] !== 0 && (r + i) % 2 == 0 && e.push(Xa(3, r, i, t, n(r)));
+	]) e.push(to(1, r, 100, t, n(r)));
+	for (let r of no) for (let i of [10, 1]) (r + i) % 2 == 0 && e.push(to(2, r, i, t, n(r)));
+	for (let r of ro) for (let i of $a) O(r)[$a.indexOf(i)] !== 0 && (r + i) % 2 == 0 && e.push(to(3, r, i, t, n(r)));
 	for (let t of [
 		352,
 		417,
@@ -14749,7 +14806,7 @@ var k = {
 	zeroWorth: "g2pv3.feedback.zeroWorth",
 	compare: "g2pv3.feedback.compare"
 };
-function no() {
+function so() {
 	let e = [];
 	for (let [t, n] of [
 		[3, 5],
@@ -14839,14 +14896,14 @@ function no() {
 	], void 0));
 	return e;
 }
-var ro = [
+var co = [
 	[3, 5],
 	[4, 7],
 	[2, 6],
 	[6, 3],
 	[8, 4],
 	[7, 9]
-], io = [
+], lo = [
 	[2, 4],
 	[3, 6],
 	[5, 7],
@@ -14854,9 +14911,9 @@ var ro = [
 	[6, 2],
 	[8, 3]
 ];
-function ao() {
+function uo() {
 	let e = [];
-	for (let [t, n] of ro) e.push(T(1, {
+	for (let [t, n] of co) e.push(T(1, {
 		en: "Which of these numbers has a zero in the tens place?",
 		fr: "Lequel de ces nombres a un zéro à la place des dizaines ?"
 	}, t * 100 + n, [
@@ -14864,7 +14921,7 @@ function ao() {
 		[n * 100 + t * 10, k.movedZero],
 		[t * 10 + n, k.dropZero]
 	], void 0));
-	for (let [t, n] of ro) e.push(T(2, {
+	for (let [t, n] of co) e.push(T(2, {
 		en: `Swap the 0 and the ${n.toString()} in ${(t * 100 + n).toString()}. What is the new number?`,
 		fr: `Échange le 0 et le ${n.toString()} dans ${(t * 100 + n).toString()}. Quel est le nouveau nombre ?`
 	}, t * 100 + n * 10, [
@@ -14872,7 +14929,7 @@ function ao() {
 		[t * 10 + n, k.dropZero],
 		[n * 100 + t * 10, k.movedZero]
 	], void 0));
-	for (let [t, n] of io) e.push(T(3, {
+	for (let [t, n] of lo) e.push(T(3, {
 		en: `Swap the 0 and the ${n.toString()} in ${(t * 100 + n * 10).toString()}. What is the new number?`,
 		fr: `Échange le 0 et le ${n.toString()} dans ${(t * 100 + n * 10).toString()}. Quel est le nouveau nombre ?`
 	}, t * 100 + n, [
@@ -14880,7 +14937,7 @@ function ao() {
 		[t * 10 + n, k.dropZero],
 		[n * 100 + t * 10, k.movedZero]
 	], void 0));
-	for (let [t, [n, r]] of ro.entries()) {
+	for (let [t, [n, r]] of co.entries()) {
 		let i = n * 100 + r, a = n * 100 + r * 10, o = t % 2 == 0;
 		e.push(T(4, {
 			en: `Which is ${o ? "bigger" : "smaller"}: ${i.toString()} or ${a.toString()}?`,
@@ -14900,7 +14957,7 @@ var A = {
 	wholeNumber: "g2pv4.feedback.wholeNumber",
 	waysCount: "g2pv4.feedback.waysCount"
 };
-function oo(e, t) {
+function fo(e, t) {
 	let [, n, r] = O(e);
 	return [
 		[r, A.noTrade],
@@ -14911,14 +14968,14 @@ function oo(e, t) {
 		[r + 10 * t + 2, A.swappedParts]
 	];
 }
-function so(e, t, n, r) {
+function po(e, t, n, r) {
 	let [, i, a] = O(t), o = (i - n).toString();
 	return T(e, {
 		en: `${r.en}${t.toString()} = ${o} tens + ? ones`,
 		fr: `${r.fr}${t.toString()} = ${o} dizaines + ? unités`
-	}, a + 10 * n, oo(t, n), E(0, i, a));
+	}, a + 10 * n, fo(t, n), E(0, i, a));
 }
-function co(e, t, n, r) {
+function mo(e, t, n, r) {
 	let [, i, a] = O(t), o = a + 10 * n;
 	return T(e, {
 		en: `${t.toString()} = ? tens + ${o.toString()} ones`,
@@ -14932,7 +14989,7 @@ function co(e, t, n, r) {
 		[i - n + 2, A.swappedParts]
 	], r);
 }
-var lo = [
+var ho = [
 	42,
 	53,
 	67,
@@ -14946,21 +15003,21 @@ var lo = [
 	47,
 	73
 ];
-function uo() {
+function go() {
 	let e = [], t = {
 		en: "Shuffle the blocks. ",
 		fr: "Mélange les blocs. "
 	};
-	for (let t of lo.slice(0, 8)) e.push(so(1, t, 1, {
+	for (let t of ho.slice(0, 8)) e.push(po(1, t, 1, {
 		en: "Trade one ten for ten ones. ",
 		fr: "Échange une dizaine contre dix unités. "
 	}));
-	for (let [n, r] of lo.entries()) e.push(so(2, r, 2 + n % 3, t));
-	for (let [t, n] of lo.slice(0, 10).entries()) {
+	for (let [n, r] of ho.entries()) e.push(po(2, r, 2 + n % 3, t));
+	for (let [t, n] of ho.slice(0, 10).entries()) {
 		let [, r, i] = O(n);
-		e.push(co(3, n, 1 + t % 3, E(0, r, i)));
+		e.push(mo(3, n, 1 + t % 3, E(0, r, i)));
 	}
-	for (let t of lo.slice(0, 8)) {
+	for (let t of ho.slice(0, 8)) {
 		let [, n, r] = O(t);
 		e.push(T(4, {
 			en: `You can show ${t.toString()} with 0 tens, 1 ten, 2 tens and so on. How many different ways are there?`,
@@ -14975,7 +15032,7 @@ function uo() {
 	}
 	return e;
 }
-function fo() {
+function _o() {
 	let e = [], t = {
 		en: "",
 		fr: ""
@@ -14989,7 +15046,7 @@ function fo() {
 		91,
 		36,
 		57
-	]) e.push(so(1, n, 1, t));
+	]) e.push(po(1, n, 1, t));
 	for (let [n, r] of [
 		46,
 		57,
@@ -14999,7 +15056,7 @@ function fo() {
 		94,
 		68,
 		71
-	].entries()) e.push(so(2, r, 2 + n % 3, t));
+	].entries()) e.push(po(2, r, 2 + n % 3, t));
 	for (let [t, n] of [
 		64,
 		85,
@@ -15009,7 +15066,7 @@ function fo() {
 		48,
 		79,
 		61
-	].entries()) e.push(so(3, n, 1 + t % 4, {
+	].entries()) e.push(po(3, n, 1 + t % 4, {
 		en: "Use the blocks to help. ",
 		fr: "Aide-toi des blocs. "
 	}));
@@ -15022,17 +15079,17 @@ function fo() {
 		48,
 		79,
 		61
-	].entries()) e.push(co(4, n, 2 + t % 3, void 0));
+	].entries()) e.push(mo(4, n, 2 + t % 3, void 0));
 	return e;
 }
-var po = [
+var vo = [
 	340,
 	520,
 	760,
 	280,
 	410,
 	630
-], mo = [
+], yo = [
 	352,
 	463,
 	275,
@@ -15046,7 +15103,7 @@ var po = [
 	583,
 	694
 ];
-function ho(e, t, n, r) {
+function bo(e, t, n, r) {
 	return [
 		[t, A.noTrade],
 		[n, A.swappedParts],
@@ -15056,28 +15113,28 @@ function ho(e, t, n, r) {
 		[r + 2, A.swappedParts]
 	];
 }
-function go(e, t, n) {
+function xo(e, t, n) {
 	let [r, i, a] = O(t), o = Math.min(n, i), s = a + 10 * o;
 	return T(e, {
 		en: `${t.toString()} = ${r.toString()} hundreds + ${(i - o).toString()} tens + ? ones`,
 		fr: `${t.toString()} = ${r.toString()} centaines + ${(i - o).toString()} dizaines + ? unités`
-	}, s, ho(t, a, i - o, s), E(r, i, a));
+	}, s, bo(t, a, i - o, s), E(r, i, a));
 }
-function _o(e, t, n, r, i) {
+function So(e, t, n, r, i) {
 	let [a, o, s] = O(t), c = o + 10 - n, l = s + 10 * n, u = (a - 1).toString();
 	return r ? T(e, {
 		en: `${t.toString()} = ${u} hundreds + ? tens + ${l.toString()} ones`,
 		fr: `${t.toString()} = ${u} centaines + ? dizaines + ${l.toString()} unités`
-	}, c, ho(t, o, l, c), i) : T(e, {
+	}, c, bo(t, o, l, c), i) : T(e, {
 		en: `${t.toString()} = ${u} hundreds + ${c.toString()} tens + ? ones`,
 		fr: `${t.toString()} = ${u} centaines + ${c.toString()} dizaines + ? unités`
-	}, l, ho(t, s, c, l), i);
+	}, l, bo(t, s, c, l), i);
 }
-function vo() {
+function Co() {
 	let e = [];
-	for (let t of mo.slice(0, 8)) e.push(go(1, t, 1));
-	for (let [t, n] of mo.entries()) e.push(go(2, n, 2 + t % 3));
-	for (let [t, n] of mo.slice(0, 10).entries()) {
+	for (let t of yo.slice(0, 8)) e.push(xo(1, t, 1));
+	for (let [t, n] of yo.entries()) e.push(xo(2, n, 2 + t % 3));
+	for (let [t, n] of yo.slice(0, 10).entries()) {
 		let [r, i, a] = O(n), o = t % 2 == 0, s = o ? i + 1 : i;
 		e.push(T(3, o ? {
 			en: `Keep the ${r.toString()} hundreds of ${n.toString()}. How many ways can the rest be tens and ones?`,
@@ -15093,20 +15150,20 @@ function vo() {
 			[i - 1, A.waysCount]
 		], E(r, i, a)));
 	}
-	for (let t of po) {
+	for (let t of vo) {
 		let [n, r] = O(t);
 		e.push(T(3, {
 			en: `Build ${t.toString()} with tens only, no hundreds and no ones. How many tens?`,
 			fr: `Construis ${t.toString()} avec des dizaines seulement, sans centaines ni unités. Combien de dizaines ?`
-		}, n * 10 + r, ho(t, n, r, n * 10 + r), E(n, r, 0)));
+		}, n * 10 + r, bo(t, n, r, n * 10 + r), E(n, r, 0)));
 	}
-	for (let [t, n] of mo.slice(0, 8).entries()) {
+	for (let [t, n] of yo.slice(0, 8).entries()) {
 		let [r, i, a] = O(n);
-		e.push(_o(4, n, 1 + t % 3, t % 2 == 0, E(r, i, a)));
+		e.push(So(4, n, 1 + t % 3, t % 2 == 0, E(r, i, a)));
 	}
 	return e;
 }
-function yo() {
+function wo() {
 	let e = [], t = (e) => {
 		let [t, n, r] = O(e);
 		return {
@@ -15117,54 +15174,54 @@ function yo() {
 			fr: `${t.toString()} centaines, ${n.toString()} dizaines, ${r.toString()} unités`
 		};
 	};
-	for (let n of mo.slice(0, 8)) {
+	for (let n of yo.slice(0, 8)) {
 		let r = t(n);
 		e.push(T(1, {
 			en: `${n.toString()} is ${r.en}. Trade one ten for ones. How many ones now?`,
 			fr: `${n.toString()} fait ${r.fr}. Échange une dizaine. Combien d'unités maintenant ?`
-		}, r.o + 10, ho(n, r.o, r.t - 1, r.o + 10), E(r.h, r.t, r.o)));
+		}, r.o + 10, bo(n, r.o, r.t - 1, r.o + 10), E(r.h, r.t, r.o)));
 	}
-	for (let n of mo.slice(0, 8)) {
+	for (let n of yo.slice(0, 8)) {
 		let r = t(n);
 		e.push(T(2, {
 			en: `${n.toString()} is ${r.en}. Trade one hundred for tens. How many tens now?`,
 			fr: `${n.toString()} fait ${r.fr}. Échange une centaine. Combien de dizaines maintenant ?`
-		}, r.t + 10, ho(n, r.t, r.h - 1, r.t + 10), E(r.h, r.t, r.o)));
+		}, r.t + 10, bo(n, r.t, r.h - 1, r.t + 10), E(r.h, r.t, r.o)));
 	}
-	for (let n of mo.slice(0, 8)) {
+	for (let n of yo.slice(0, 8)) {
 		let r = t(n);
 		e.push(T(3, {
 			en: `${n.toString()} is ${r.en}. Trade one hundred for tens, then one ten for ones. How many tens now?`,
 			fr: `${n.toString()} fait ${r.fr}. Échange une centaine contre des dizaines, puis une dizaine contre des unités. Combien de dizaines maintenant ?`
-		}, r.t + 9, ho(n, r.t, r.o + 10, r.t + 9), E(r.h, r.t, r.o)));
+		}, r.t + 9, bo(n, r.t, r.o + 10, r.t + 9), E(r.h, r.t, r.o)));
 	}
-	for (let n of po) {
+	for (let n of vo) {
 		let r = t(n);
 		e.push(T(3, {
 			en: `${n.toString()} is ${r.en}. Trade every hundred for tens. How many tens in all?`,
 			fr: `${n.toString()} fait ${r.fr}. Échange chaque centaine contre des dizaines. Combien de dizaines en tout ?`
-		}, r.h * 10 + r.t, ho(n, r.t, r.h, r.h * 10 + r.t), E(r.h, r.t, r.o)));
+		}, r.h * 10 + r.t, bo(n, r.t, r.h, r.h * 10 + r.t), E(r.h, r.t, r.o)));
 	}
-	for (let [t, n] of mo.slice(0, 8).entries()) e.push(_o(4, n, 2 + t % 3, !1, void 0));
+	for (let [t, n] of yo.slice(0, 8).entries()) e.push(So(4, n, 2 + t % 3, !1, void 0));
 	return e;
 }
-var bo = {
+var To = {
 	wrongAmount: "g2pv6.feedback.wrongAmount",
 	wrongDirection: "g2pv6.feedback.wrongDirection",
 	noBridge: "g2pv6.feedback.noBridge",
 	hundredsMoved: "g2pv6.feedback.hundredsMoved",
 	chainMiss: "g2pv6.feedback.chainMiss"
 };
-function xo(e, t) {
+function Eo(e, t) {
 	let [n, r, i] = O(e), a = t > 0, o = n * 100 + (a ? (r + 1) % 10 : (r + 9) % 10) * 10 + i;
 	return [
-		[e + (a ? 1 : -1), bo.wrongAmount],
-		[e - t, bo.wrongDirection],
-		[o, bo.noBridge],
-		[e + t * 10, bo.hundredsMoved]
+		[e + (a ? 1 : -1), To.wrongAmount],
+		[e - t, To.wrongDirection],
+		[o, To.noBridge],
+		[e + t * 10, To.hundredsMoved]
 	];
 }
-var So = [
+var Do = [
 	46,
 	73,
 	58,
@@ -15175,7 +15232,7 @@ var So = [
 	584,
 	631,
 	752
-], Co = [
+], Oo = [
 	95,
 	190,
 	292,
@@ -15186,7 +15243,7 @@ var So = [
 	791,
 	894,
 	97
-], wo = [
+], ko = [
 	105,
 	200,
 	301,
@@ -15197,7 +15254,7 @@ var So = [
 	802,
 	905,
 	100
-], To = [
+], Ao = [
 	[85, [
 		10,
 		10,
@@ -15239,75 +15296,75 @@ var So = [
 		10
 	]]
 ];
-function Eo(e, t, n, r, i) {
+function jo(e, t, n, r, i) {
 	let [a, o, s] = O(t);
-	return T(e, r(t, n > 0), t + n, xo(t, n), i ? E(a, o, s) : void 0);
+	return T(e, r(t, n > 0), t + n, Eo(t, n), i ? E(a, o, s) : void 0);
 }
-function Do(e, t, n) {
+function Mo(e, t, n) {
 	let r = t.reduce((e, t) => e + t, 0), i = t.filter((e) => e > 0).length * 10;
 	return T(4, n(e, t), e + r, [
-		[e + i, bo.chainMiss],
-		[e - r, bo.wrongDirection],
-		[e + r + (r > 0 ? 1 : -1), bo.wrongAmount],
-		[e + r * 10, bo.hundredsMoved]
+		[e + i, To.chainMiss],
+		[e - r, To.wrongDirection],
+		[e + r + (r > 0 ? 1 : -1), To.wrongAmount],
+		[e + r * 10, To.hundredsMoved]
 	], void 0);
 }
-function Oo(e, t, n) {
+function No(e, t, n) {
 	let r = [];
-	for (let [t, i] of So.entries()) r.push(Eo(1, i, t % 2 == 0 ? 10 : -10, e, n));
-	for (let t of Co) r.push(Eo(2, t, 10, e, n));
-	for (let t of wo) r.push(Eo(3, t, -10, e, n));
-	for (let [e, n] of To) r.push(Do(e, n, t));
+	for (let [t, i] of Do.entries()) r.push(jo(1, i, t % 2 == 0 ? 10 : -10, e, n));
+	for (let t of Oo) r.push(jo(2, t, 10, e, n));
+	for (let t of ko) r.push(jo(3, t, -10, e, n));
+	for (let [e, n] of Ao) r.push(Mo(e, n, t));
 	return r;
 }
-function ko(e, t, n) {
+function Po(e, t, n) {
 	return {
 		en: e.map((e) => e > 0 ? t[0] : t[1]).join(", "),
 		fr: e.map((e) => e > 0 ? n[0] : n[1]).join(", ")
 	};
 }
-function Ao() {
-	return Oo((e, t) => ({
+function Fo() {
+	return No((e, t) => ({
 		en: `The lift is at floor ${e.toString()}. Go ${t ? "up" : "down"} 10 floors. Which floor now?`,
 		fr: `L'ascenseur est à l'étage ${e.toString()}. ${t ? "Monte" : "Descends"} de 10 étages. À quel étage ?`
 	}), (e, t) => {
-		let n = ko(t, ["up 10", "down 10"], ["monte de 10", "descends de 10"]);
+		let n = Po(t, ["up 10", "down 10"], ["monte de 10", "descends de 10"]);
 		return {
 			en: `The lift starts at floor ${e.toString()}. Ride: ${n.en}. Which floor at the end?`,
 			fr: `L'ascenseur part de l'étage ${e.toString()}. Trajet : ${n.fr}. À quel étage à la fin ?`
 		};
 	}, !0);
 }
-function jo() {
-	return Oo((e, t) => ({
+function Io() {
+	return No((e, t) => ({
 		en: `You are on ${e.toString()} on the number chart. Move ${t ? "down" : "up"} one row. Which number?`,
 		fr: `Tu es sur ${e.toString()} dans le tableau des nombres. Déplace-toi d'une ligne vers le ${t ? "bas" : "haut"}. Quel nombre ?`
 	}), (e, t) => {
-		let n = ko(t, ["down a row", "up a row"], ["une ligne vers le bas", "une ligne vers le haut"]);
+		let n = Po(t, ["down a row", "up a row"], ["une ligne vers le bas", "une ligne vers le haut"]);
 		return {
 			en: `You start on ${e.toString()} on the number chart. Moves: ${n.en}. Which number do you land on?`,
 			fr: `Tu pars de ${e.toString()} dans le tableau des nombres. Déplacements : ${n.fr}. Sur quel nombre arrives-tu ?`
 		};
 	}, !1);
 }
-var Mo = {
+var Lo = {
 	tensMoved: "g2pv7.feedback.tensMoved",
 	onesMoved: "g2pv7.feedback.onesMoved",
 	wrongDirection: "g2pv7.feedback.wrongDirection",
 	lostDigit: "g2pv7.feedback.lostDigit",
 	chainMiss: "g2pv7.feedback.chainMiss"
 };
-function No(e, t) {
+function Ro(e, t) {
 	let n = t > 0 ? 1 : -1, [r, i, a] = O(e);
 	return [
-		[e + n * 10, Mo.tensMoved],
-		[e + n, Mo.onesMoved],
-		[e - t, Mo.wrongDirection],
-		[(r + n) * 100 + a, Mo.lostDigit],
-		[(r + n) * 100 + i * 10, Mo.lostDigit]
+		[e + n * 10, Lo.tensMoved],
+		[e + n, Lo.onesMoved],
+		[e - t, Lo.wrongDirection],
+		[(r + n) * 100 + a, Lo.lostDigit],
+		[(r + n) * 100 + i * 10, Lo.lostDigit]
 	].filter((e) => e[0] <= 999);
 }
-var Po = [
+var zo = [
 	100,
 	200,
 	300,
@@ -15316,7 +15373,7 @@ var Po = [
 	600,
 	700,
 	800
-], Fo = [
+], Bo = [
 	[347, 100],
 	[582, -100],
 	[126, 100],
@@ -15327,7 +15384,7 @@ var Po = [
 	[693, -100],
 	[172, 100],
 	[949, -100]
-], Io = [
+], Vo = [
 	[405, 100],
 	[760, -100],
 	[506, -100],
@@ -15338,7 +15395,7 @@ var Po = [
 	[201, 100],
 	[790, -100],
 	[350, -100]
-], Lo = [
+], Ho = [
 	[250, [
 		100,
 		100,
@@ -15380,117 +15437,117 @@ var Po = [
 		100
 	]]
 ];
-function Ro(e, t, n, r, i) {
+function Uo(e, t, n, r, i) {
 	let [a, o, s] = O(t);
-	return T(e, r(t, n > 0), t + n, No(t, n), i ? E(a, o, s) : void 0);
+	return T(e, r(t, n > 0), t + n, Ro(t, n), i ? E(a, o, s) : void 0);
 }
-function zo(e, t, n) {
+function Wo(e, t, n) {
 	let r = t.reduce((e, t) => e + t, 0), i = [
-		[e + t.filter((e) => e > 0).length * 100, Mo.chainMiss],
-		[e - r, Mo.wrongDirection],
-		[e + r / 10, Mo.tensMoved],
-		[e + r + (r > 0 ? 10 : -10), Mo.tensMoved]
+		[e + t.filter((e) => e > 0).length * 100, Lo.chainMiss],
+		[e - r, Lo.wrongDirection],
+		[e + r / 10, Lo.tensMoved],
+		[e + r + (r > 0 ? 10 : -10), Lo.tensMoved]
 	];
 	return T(4, n(e, t), e + r, i.filter((e) => e[0] <= 999), void 0);
 }
-function Bo(e, t, n) {
+function Go(e, t, n) {
 	let r = [];
-	for (let t of Po) r.push(Ro(1, t, 100, e, n));
-	for (let [t, i] of Fo) r.push(Ro(2, t, i, e, n));
-	for (let [t, i] of Io) r.push(Ro(3, t, i, e, n));
-	for (let [e, n] of Lo) r.push(zo(e, n, t));
+	for (let t of zo) r.push(Uo(1, t, 100, e, n));
+	for (let [t, i] of Bo) r.push(Uo(2, t, i, e, n));
+	for (let [t, i] of Vo) r.push(Uo(3, t, i, e, n));
+	for (let [e, n] of Ho) r.push(Wo(e, n, t));
 	return r;
 }
-function Vo() {
-	return Bo((e, t) => ({
+function Ko() {
+	return Go((e, t) => ({
 		en: `The tower holds ${e.toString()}. ${t ? "Add" : "Take away"} one hundred-block. How much is in the tower now?`,
 		fr: `La tour contient ${e.toString()}. ${t ? "Ajoute" : "Retire"} un bloc de cent. Combien y a-t-il maintenant dans la tour ?`
 	}), (e, t) => {
-		let n = ko(t, ["add a hundred", "take away a hundred"], ["ajoute cent", "retire cent"]);
+		let n = Po(t, ["add a hundred", "take away a hundred"], ["ajoute cent", "retire cent"]);
 		return {
 			en: `The tower starts at ${e.toString()}. Build: ${n.en}. How much at the end?`,
 			fr: `La tour part de ${e.toString()}. Construis : ${n.fr}. Combien à la fin ?`
 		};
 	}, !0);
 }
-function Ho() {
-	return Bo((e, t) => ({
+function qo() {
+	return Go((e, t) => ({
 		en: `The odometer reads ${e.toString()}. Turn the hundreds wheel ${t ? "up" : "down"} one click. What does it read now?`,
 		fr: `Le compteur indique ${e.toString()}. Tourne la roue des centaines d'un cran vers le ${t ? "haut" : "bas"}. Que lit-on maintenant ?`
 	}), (e, t) => {
-		let n = ko(t, ["one click up", "one click down"], ["un cran vers le haut", "un cran vers le bas"]);
+		let n = Po(t, ["one click up", "one click down"], ["un cran vers le haut", "un cran vers le bas"]);
 		return {
 			en: `The odometer starts at ${e.toString()}. Hundreds wheel: ${n.en}. What does it read at the end?`,
 			fr: `Le compteur part de ${e.toString()}. Roue des centaines : ${n.fr}. Que lit-on à la fin ?`
 		};
 	}, !1);
 }
-var Uo = g({
+var Jo = g({
 	pluginId: "block-builder-trade-mat",
-	competencyId: Xn.id,
-	bank: Ga()
-}), Wo = g({
-	pluginId: "bundle-the-hundred",
-	competencyId: Xn.id,
-	bank: Ka()
-}), Go = g({
-	pluginId: "syllabus-g2-partitions-three-digit-numbers",
-	competencyId: Xn.id,
-	bank: qa()
-}), Ko = g({
-	pluginId: "digit-spotlight",
-	competencyId: Zn.id,
-	bank: $a()
-}), qo = g({
-	pluginId: "place-value-mystery-number",
-	competencyId: Zn.id,
-	bank: eo()
-}), Jo = g({
-	pluginId: "syllabus-g2-digit-value-in-three-digit-number",
-	competencyId: Zn.id,
-	bank: to()
+	competencyId: tr.id,
+	bank: Xa()
 }), Yo = g({
-	pluginId: "zero-keeper-game",
-	competencyId: Xn.id,
-	bank: no()
+	pluginId: "bundle-the-hundred",
+	competencyId: tr.id,
+	bank: Za()
 }), Xo = g({
-	pluginId: "swap-the-zero",
-	competencyId: Xn.id,
-	bank: ao()
+	pluginId: "syllabus-g2-partitions-three-digit-numbers",
+	competencyId: tr.id,
+	bank: Qa()
 }), Zo = g({
-	pluginId: "regroup-shuffle",
-	competencyId: br.id,
-	bank: uo()
+	pluginId: "digit-spotlight",
+	competencyId: nr.id,
+	bank: io()
 }), Qo = g({
-	pluginId: "many-ways-to-build",
-	competencyId: br.id,
-	bank: vo()
+	pluginId: "place-value-mystery-number",
+	competencyId: nr.id,
+	bank: ao()
 }), $o = g({
-	pluginId: "partition-swap-puzzle",
-	competencyId: br.id,
-	bank: yo()
+	pluginId: "syllabus-g2-digit-value-in-three-digit-number",
+	competencyId: nr.id,
+	bank: oo()
 }), es = g({
-	pluginId: "ten-more-ten-less-lift",
-	competencyId: xr.id,
-	bank: Ao()
+	pluginId: "zero-keeper-game",
+	competencyId: tr.id,
+	bank: so()
 }), ts = g({
-	pluginId: "hundred-chart-ten-moves",
-	competencyId: xr.id,
-	bank: jo()
+	pluginId: "swap-the-zero",
+	competencyId: tr.id,
+	bank: uo()
 }), ns = g({
-	pluginId: "hundred-tower-builder",
-	competencyId: Sr.id,
-	bank: Vo()
+	pluginId: "regroup-shuffle",
+	competencyId: Tr.id,
+	bank: go()
 }), rs = g({
-	pluginId: "odometer-100-more",
-	competencyId: Sr.id,
-	bank: Ho()
+	pluginId: "many-ways-to-build",
+	competencyId: Tr.id,
+	bank: Co()
 }), is = g({
+	pluginId: "partition-swap-puzzle",
+	competencyId: Tr.id,
+	bank: wo()
+}), as = g({
+	pluginId: "ten-more-ten-less-lift",
+	competencyId: Er.id,
+	bank: Fo()
+}), os = g({
+	pluginId: "hundred-chart-ten-moves",
+	competencyId: Er.id,
+	bank: Io()
+}), ss = g({
+	pluginId: "hundred-tower-builder",
+	competencyId: Dr.id,
+	bank: Ko()
+}), cs = g({
+	pluginId: "odometer-100-more",
+	competencyId: Dr.id,
+	bank: qo()
+}), ls = g({
 	pluginId: "syllabus-g2-partitions-in-non-standard-ways",
-	competencyId: br.id,
-	bank: fo()
+	competencyId: Tr.id,
+	bank: _o()
 });
-function as(e, t, n) {
+function us(e, t, n) {
 	let r = e;
 	return {
 		key: r.plugin.id,
@@ -15502,83 +15559,78 @@ function as(e, t, n) {
 		createMasterySignal: r.createMasterySignal
 	};
 }
-var os = [
-	Uo.plugin,
-	Wo.plugin,
-	Ko.plugin,
-	qo.plugin,
+var ds = [
+	Jo.plugin,
 	Yo.plugin,
-	Xo.plugin,
 	Zo.plugin,
 	Qo.plugin,
-	$o.plugin,
 	es.plugin,
 	ts.plugin,
 	ns.plugin,
-	rs.plugin
-], ss = [
-	as(Uo, {
+	rs.plugin,
+	is.plugin,
+	as.plugin,
+	os.plugin,
+	ss.plugin,
+	cs.plugin
+], fs = [
+	us(Jo, {
 		label: "Block Builder Trade Mat",
 		icon: "🧱"
-	}, Xn),
-	as(Wo, {
+	}, tr),
+	us(Yo, {
 		label: "Bundle the Hundred",
 		icon: "💯"
-	}, Xn),
-	as(Ko, {
+	}, tr),
+	us(Zo, {
 		label: "Digit Spotlight",
 		icon: "🔦"
-	}, Zn),
-	as(qo, {
+	}, nr),
+	us(Qo, {
 		label: "Place Value Mystery Number",
 		icon: "🕵️"
-	}, Zn),
-	as(Yo, {
+	}, nr),
+	us(es, {
 		label: "Zero Keeper",
 		icon: "0️⃣"
-	}, Xn),
-	as(Xo, {
+	}, tr),
+	us(ts, {
 		label: "Swap the Zero",
 		icon: "🔀"
-	}, Xn),
-	as(Zo, {
+	}, tr),
+	us(ns, {
 		label: "Regroup Shuffle",
 		icon: "🔄"
-	}, br),
-	as(Qo, {
+	}, Tr),
+	us(rs, {
 		label: "Many Ways to Build",
 		icon: "🧩"
-	}, br),
-	as($o, {
+	}, Tr),
+	us(is, {
 		label: "Partition Swap Puzzle",
 		icon: "🔁"
-	}, br),
-	as(es, {
+	}, Tr),
+	us(as, {
 		label: "Ten More, Ten Less Lift",
 		icon: "🛗"
-	}, xr),
-	as(ts, {
+	}, Er),
+	us(os, {
 		label: "Hundred Chart Ten Moves",
 		icon: "🔢"
-	}, xr),
-	as(ns, {
+	}, Er),
+	us(ss, {
 		label: "Hundred Tower Builder",
 		icon: "🗼"
-	}, Sr),
-	as(rs, {
+	}, Dr),
+	us(cs, {
 		label: "Odometer 100 More",
 		icon: "⏱️"
-	}, Sr)
-], cs = [
-	Oi.plugin,
-	ki.plugin,
-	Go.plugin,
-	Jo.plugin,
-	Ai.plugin,
-	ji.plugin,
-	Mi.plugin,
+	}, Dr)
+], ps = [
 	Ni.plugin,
 	Pi.plugin,
+	Xo.plugin,
+	$o.plugin,
 	Fi.plugin,
 	Ii.plugin,
 	Li.plugin,
@@ -15596,12 +15648,12 @@ var os = [
 	Yi.plugin,
 	Xi.plugin,
 	Zi.plugin,
-	is.plugin,
 	Qi.plugin,
 	$i.plugin,
 	ea.plugin,
 	ta.plugin,
 	na.plugin,
+	ls.plugin,
 	ra.plugin,
 	ia.plugin,
 	aa.plugin,
@@ -15639,106 +15691,61 @@ var os = [
 	La.plugin,
 	Ra.plugin,
 	za.plugin,
-	Ba.plugin
+	Ba.plugin,
+	Va.plugin,
+	Ha.plugin,
+	Ua.plugin,
+	Wa.plugin,
+	Ga.plugin
 ];
 function j(e) {
 	return e;
 }
-var ls = [
+var ms = [
 	j({
 		key: "syllabus-g2-counts-reads-writes-to-1000",
 		label: "Counting to 1,000",
 		icon: "🔢",
-		pluginId: Oi.plugin.id,
-		competency: Jn,
-		competencies: [Jn],
-		createSession: Oi.createSession,
-		createMasterySignal: Oi.createMasterySignal
+		pluginId: Ni.plugin.id,
+		competency: $n,
+		competencies: [$n],
+		createSession: Ni.createSession,
+		createMasterySignal: Ni.createMasterySignal
 	}),
 	j({
 		key: "syllabus-g2-orders-numbers-to-1000",
 		label: "Ordering Numbers to 1,000",
 		icon: "📈",
-		pluginId: ki.plugin.id,
-		competency: Yn,
-		competencies: [Yn],
-		createSession: ki.createSession,
-		createMasterySignal: ki.createMasterySignal
+		pluginId: Pi.plugin.id,
+		competency: er,
+		competencies: [er],
+		createSession: Pi.createSession,
+		createMasterySignal: Pi.createMasterySignal
 	}),
 	j({
 		key: "syllabus-g2-partitions-three-digit-numbers",
 		label: "Partitioning 3-Digit Numbers",
 		icon: "🧩",
-		pluginId: Go.plugin.id,
-		competency: Xn,
-		competencies: [Xn],
-		createSession: Go.createSession,
-		createMasterySignal: Go.createMasterySignal
+		pluginId: Xo.plugin.id,
+		competency: tr,
+		competencies: [tr],
+		createSession: Xo.createSession,
+		createMasterySignal: Xo.createMasterySignal
 	}),
 	j({
 		key: "syllabus-g2-digit-value-in-three-digit-number",
 		label: "Digit Value in a 3-Digit Number",
 		icon: "🔠",
-		pluginId: Jo.plugin.id,
-		competency: Zn,
-		competencies: [Zn],
-		createSession: Jo.createSession,
-		createMasterySignal: Jo.createMasterySignal
+		pluginId: $o.plugin.id,
+		competency: nr,
+		competencies: [nr],
+		createSession: $o.createSession,
+		createMasterySignal: $o.createMasterySignal
 	}),
 	j({
 		key: "syllabus-g2-number-bonds-within-20",
 		label: "Number Bonds to 20",
 		icon: "🔗",
-		pluginId: Ai.plugin.id,
-		competency: Qn,
-		competencies: [Qn],
-		createSession: Ai.createSession,
-		createMasterySignal: Ai.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-add-subtract-two-digit-with-regrouping",
-		label: "Add & Subtract with Regrouping",
-		icon: "🧮",
-		pluginId: ji.plugin.id,
-		competency: $n,
-		competencies: [$n],
-		createSession: ji.createSession,
-		createMasterySignal: ji.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-addition-commutative-subtraction-not",
-		label: "Addition & Subtraction: Order Matters?",
-		icon: "🔄",
-		pluginId: Mi.plugin.id,
-		competency: er,
-		competencies: [er],
-		createSession: Mi.createSession,
-		createMasterySignal: Mi.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-times-tables-2-5-10",
-		label: "2, 5 & 10 Times Tables",
-		icon: "✖️",
-		pluginId: Ni.plugin.id,
-		competency: tr,
-		competencies: [tr],
-		createSession: Ni.createSession,
-		createMasterySignal: Ni.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-division-sharing-grouping-remainders",
-		label: "Division: Sharing & Remainders",
-		icon: "➗",
-		pluginId: Pi.plugin.id,
-		competency: nr,
-		competencies: [nr],
-		createSession: Pi.createSession,
-		createMasterySignal: Pi.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-add-subtract-one-digit-to-two-digit",
-		label: "Mental Add & Subtract to 2-Digit",
-		icon: "🧠",
 		pluginId: Fi.plugin.id,
 		competency: rr,
 		competencies: [rr],
@@ -15746,9 +15753,9 @@ var ls = [
 		createMasterySignal: Fi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-doubles-halves-to-50",
-		label: "Doubles & Halves to 50",
-		icon: "🪞",
+		key: "syllabus-g2-add-subtract-two-digit-with-regrouping",
+		label: "Add & Subtract with Regrouping",
+		icon: "🧮",
 		pluginId: Ii.plugin.id,
 		competency: ir,
 		competencies: [ir],
@@ -15756,9 +15763,9 @@ var ls = [
 		createMasterySignal: Ii.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-thirds-quarters-fifths",
-		label: "Thirds, Quarters & Fifths",
-		icon: "🍰",
+		key: "syllabus-g2-addition-commutative-subtraction-not",
+		label: "Addition & Subtraction: Order Matters?",
+		icon: "🔄",
 		pluginId: Li.plugin.id,
 		competency: ar,
 		competencies: [ar],
@@ -15766,9 +15773,9 @@ var ls = [
 		createMasterySignal: Li.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-mass-and-capacity",
-		label: "Measuring Mass & Capacity",
-		icon: "⚖️",
+		key: "syllabus-g2-times-tables-2-5-10",
+		label: "2, 5 & 10 Times Tables",
+		icon: "✖️",
 		pluginId: Ri.plugin.id,
 		competency: or,
 		competencies: [or],
@@ -15776,9 +15783,9 @@ var ls = [
 		createMasterySignal: Ri.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-metric-units-relationships",
-		label: "Metric Units & Relationships",
-		icon: "📏",
+		key: "syllabus-g2-division-sharing-grouping-remainders",
+		label: "Division: Sharing & Remainders",
+		icon: "➗",
 		pluginId: zi.plugin.id,
 		competency: sr,
 		competencies: [sr],
@@ -15786,9 +15793,9 @@ var ls = [
 		createMasterySignal: zi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-time-five-minutes-quarter-hour",
-		label: "Telling Time: 5 Minutes & Quarter Hour",
-		icon: "🕐",
+		key: "syllabus-g2-add-subtract-one-digit-to-two-digit",
+		label: "Mental Add & Subtract to 2-Digit",
+		icon: "🧠",
 		pluginId: Bi.plugin.id,
 		competency: cr,
 		competencies: [cr],
@@ -15796,9 +15803,9 @@ var ls = [
 		createMasterySignal: Bi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-days-weeks-months-counts",
-		label: "Days, Weeks & Months",
-		icon: "📅",
+		key: "syllabus-g2-doubles-halves-to-50",
+		label: "Doubles & Halves to 50",
+		icon: "🪞",
 		pluginId: Vi.plugin.id,
 		competency: lr,
 		competencies: [lr],
@@ -15806,9 +15813,9 @@ var ls = [
 		createMasterySignal: Vi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-counts-shape-properties",
-		label: "Counting Shape Properties",
-		icon: "🔺",
+		key: "syllabus-g2-thirds-quarters-fifths",
+		label: "Thirds, Quarters & Fifths",
+		icon: "🍰",
 		pluginId: Hi.plugin.id,
 		competency: ur,
 		competencies: [ur],
@@ -15816,9 +15823,9 @@ var ls = [
 		createMasterySignal: Hi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-recognises-line-of-symmetry",
-		label: "Lines of Symmetry",
-		icon: "🦋",
+		key: "syllabus-g2-mass-and-capacity",
+		label: "Measuring Mass & Capacity",
+		icon: "⚖️",
 		pluginId: Ui.plugin.id,
 		competency: dr,
 		competencies: [dr],
@@ -15826,9 +15833,9 @@ var ls = [
 		createMasterySignal: Ui.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-describes-grid-position",
-		label: "Grid Positions",
-		icon: "🗺️",
+		key: "syllabus-g2-metric-units-relationships",
+		label: "Metric Units & Relationships",
+		icon: "📏",
 		pluginId: Wi.plugin.id,
 		competency: fr,
 		competencies: [fr],
@@ -15836,9 +15843,9 @@ var ls = [
 		createMasterySignal: Wi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-tally-chart-bar-chart",
-		label: "Tally Charts & Bar Charts",
-		icon: "📊",
+		key: "syllabus-g2-time-five-minutes-quarter-hour",
+		label: "Telling Time: 5 Minutes & Quarter Hour",
+		icon: "🕐",
 		pluginId: Gi.plugin.id,
 		competency: pr,
 		competencies: [pr],
@@ -15846,9 +15853,9 @@ var ls = [
 		createMasterySignal: Gi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-missing-number-in-equation",
-		label: "Finding the Missing Number",
-		icon: "❓",
+		key: "syllabus-g2-days-weeks-months-counts",
+		label: "Days, Weeks & Months",
+		icon: "📅",
 		pluginId: Ki.plugin.id,
 		competency: mr,
 		competencies: [mr],
@@ -15856,9 +15863,9 @@ var ls = [
 		createMasterySignal: Ki.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-solves-one-step-word-problem",
-		label: "One-Step Word Problems",
-		icon: "📝",
+		key: "syllabus-g2-counts-shape-properties",
+		label: "Counting Shape Properties",
+		icon: "🔺",
 		pluginId: qi.plugin.id,
 		competency: hr,
 		competencies: [hr],
@@ -15866,9 +15873,9 @@ var ls = [
 		createMasterySignal: qi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-counts-in-steps-of-2-3-5-10",
-		label: "Counting in Steps",
-		icon: "🐸",
+		key: "syllabus-g2-recognises-line-of-symmetry",
+		label: "Lines of Symmetry",
+		icon: "🦋",
 		pluginId: Ji.plugin.id,
 		competency: gr,
 		competencies: [gr],
@@ -15876,9 +15883,9 @@ var ls = [
 		createMasterySignal: Ji.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-reads-writes-numbers-digits-words-expanded",
-		label: "Numbers in Digits, Words & Expanded Form",
-		icon: "🔤",
+		key: "syllabus-g2-describes-grid-position",
+		label: "Grid Positions",
+		icon: "🗺️",
 		pluginId: Yi.plugin.id,
 		competency: _r,
 		competencies: [_r],
@@ -15886,9 +15893,9 @@ var ls = [
 		createMasterySignal: Yi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-places-numbers-on-number-line-0-1000",
-		label: "Number Line to 1,000",
-		icon: "📍",
+		key: "syllabus-g2-tally-chart-bar-chart",
+		label: "Tally Charts & Bar Charts",
+		icon: "📊",
 		pluginId: Xi.plugin.id,
 		competency: vr,
 		competencies: [vr],
@@ -15896,9 +15903,9 @@ var ls = [
 		createMasterySignal: Xi.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-odd-even-numbers-and-doubles",
-		label: "Odd, Even & Doubles",
-		icon: "👯",
+		key: "syllabus-g2-finds-missing-number-in-equation",
+		label: "Finding the Missing Number",
+		icon: "❓",
 		pluginId: Zi.plugin.id,
 		competency: yr,
 		competencies: [yr],
@@ -15906,69 +15913,69 @@ var ls = [
 		createMasterySignal: Zi.createMasterySignal
 	}),
 	j({
+		key: "syllabus-g2-solves-one-step-word-problem",
+		label: "One-Step Word Problems",
+		icon: "📝",
+		pluginId: Qi.plugin.id,
+		competency: br,
+		competencies: [br],
+		createSession: Qi.createSession,
+		createMasterySignal: Qi.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-counts-in-steps-of-2-3-5-10",
+		label: "Counting in Steps",
+		icon: "🐸",
+		pluginId: $i.plugin.id,
+		competency: xr,
+		competencies: [xr],
+		createSession: $i.createSession,
+		createMasterySignal: $i.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-reads-writes-numbers-digits-words-expanded",
+		label: "Numbers in Digits, Words & Expanded Form",
+		icon: "🔤",
+		pluginId: ea.plugin.id,
+		competency: Sr,
+		competencies: [Sr],
+		createSession: ea.createSession,
+		createMasterySignal: ea.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-places-numbers-on-number-line-0-1000",
+		label: "Number Line to 1,000",
+		icon: "📍",
+		pluginId: ta.plugin.id,
+		competency: Cr,
+		competencies: [Cr],
+		createSession: ta.createSession,
+		createMasterySignal: ta.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-odd-even-numbers-and-doubles",
+		label: "Odd, Even & Doubles",
+		icon: "👯",
+		pluginId: na.plugin.id,
+		competency: wr,
+		competencies: [wr],
+		createSession: na.createSession,
+		createMasterySignal: na.createMasterySignal
+	}),
+	j({
 		key: "syllabus-g2-partitions-in-non-standard-ways",
 		label: "Partitioning in Different Ways",
 		icon: "🧱",
-		pluginId: is.plugin.id,
-		competency: br,
-		competencies: [br],
-		createSession: is.createSession,
-		createMasterySignal: is.createMasterySignal
+		pluginId: ls.plugin.id,
+		competency: Tr,
+		competencies: [Tr],
+		createSession: ls.createSession,
+		createMasterySignal: ls.createMasterySignal
 	}),
 	j({
 		key: "syllabus-g2-adds-subtracts-10-or-100",
 		label: "Add & Subtract 10 or 100",
 		icon: "🔟",
-		pluginId: Qi.plugin.id,
-		competency: xr,
-		competencies: [xr],
-		createSession: Qi.createSession,
-		createMasterySignal: Qi.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-adds-subtracts-100",
-		label: "Add & Subtract 100",
-		icon: "💯",
-		pluginId: $i.plugin.id,
-		competency: Sr,
-		competencies: [Sr],
-		createSession: $i.createSession,
-		createMasterySignal: $i.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-adds-subtracts-within-100-fluently",
-		label: "Add & Subtract within 100",
-		icon: "💯",
-		pluginId: ea.plugin.id,
-		competency: Cr,
-		competencies: [Cr],
-		createSession: ea.createSession,
-		createMasterySignal: ea.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-adds-up-to-four-two-digit-numbers",
-		label: "Adding Several 2-Digit Numbers",
-		icon: "➕",
-		pluginId: ta.plugin.id,
-		competency: wr,
-		competencies: [wr],
-		createSession: ta.createSession,
-		createMasterySignal: ta.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-adds-subtracts-within-1000-base-ten",
-		label: "Base-Ten Models to 1,000",
-		icon: "🧊",
-		pluginId: na.plugin.id,
-		competency: Tr,
-		competencies: [Tr],
-		createSession: na.createSession,
-		createMasterySignal: na.createMasterySignal
-	}),
-	j({
-		key: "syllabus-g2-writes-equal-groups-and-arrays-as-multiplication",
-		label: "Groups & Arrays as Multiplication",
-		icon: "🔲",
 		pluginId: ra.plugin.id,
 		competency: Er,
 		competencies: [Er],
@@ -15976,9 +15983,9 @@ var ls = [
 		createMasterySignal: ra.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-arrays-show-multiplication-commutative",
-		label: "Arrays: 3 x 5 = 5 x 3",
-		icon: "🔁",
+		key: "syllabus-g2-adds-subtracts-100",
+		label: "Add & Subtract 100",
+		icon: "💯",
 		pluginId: ia.plugin.id,
 		competency: Dr,
 		competencies: [Dr],
@@ -15986,9 +15993,9 @@ var ls = [
 		createMasterySignal: ia.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-meets-remainders-in-sharing",
-		label: "What Is Left Over?",
-		icon: "🍪",
+		key: "syllabus-g2-adds-subtracts-within-100-fluently",
+		label: "Add & Subtract within 100",
+		icon: "💯",
 		pluginId: aa.plugin.id,
 		competency: Or,
 		competencies: [Or],
@@ -15996,9 +16003,9 @@ var ls = [
 		createMasterySignal: aa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-adds-subtracts-multiples-of-10",
-		label: "Mental Tens",
-		icon: "🔢",
+		key: "syllabus-g2-adds-up-to-four-two-digit-numbers",
+		label: "Adding Several 2-Digit Numbers",
+		icon: "➕",
 		pluginId: oa.plugin.id,
 		competency: kr,
 		competencies: [kr],
@@ -16006,9 +16013,9 @@ var ls = [
 		createMasterySignal: oa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-uses-number-facts-to-10-to-know-multiples-of-10",
-		label: "From 3 + 7 to 30 + 70",
-		icon: "🪄",
+		key: "syllabus-g2-adds-subtracts-within-1000-base-ten",
+		label: "Base-Ten Models to 1,000",
+		icon: "🧊",
 		pluginId: sa.plugin.id,
 		competency: Ar,
 		competencies: [Ar],
@@ -16016,9 +16023,9 @@ var ls = [
 		createMasterySignal: sa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-estimates-sum-to-nearest-10",
-		label: "Estimating Sums",
-		icon: "🎯",
+		key: "syllabus-g2-writes-equal-groups-and-arrays-as-multiplication",
+		label: "Groups & Arrays as Multiplication",
+		icon: "🔲",
 		pluginId: ca.plugin.id,
 		competency: jr,
 		competencies: [jr],
@@ -16026,9 +16033,9 @@ var ls = [
 		createMasterySignal: ca.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-splits-shapes-into-equal-shares",
-		label: "Equal Shares",
-		icon: "🍕",
+		key: "syllabus-g2-arrays-show-multiplication-commutative",
+		label: "Arrays: 3 x 5 = 5 x 3",
+		icon: "🔁",
 		pluginId: la.plugin.id,
 		competency: Mr,
 		competencies: [Mr],
@@ -16036,9 +16043,9 @@ var ls = [
 		createMasterySignal: la.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-reads-writes-fractions-and-matches-pictures",
-		label: "Reading & Writing Fractions",
-		icon: "🥧",
+		key: "syllabus-g2-meets-remainders-in-sharing",
+		label: "What Is Left Over?",
+		icon: "🍪",
 		pluginId: ua.plugin.id,
 		competency: Nr,
 		competencies: [Nr],
@@ -16046,9 +16053,9 @@ var ls = [
 		createMasterySignal: ua.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-fraction-of-a-quantity",
-		label: "Fractions of Amounts",
-		icon: "🍫",
+		key: "syllabus-g2-adds-subtracts-multiples-of-10",
+		label: "Mental Tens",
+		icon: "🔢",
 		pluginId: da.plugin.id,
 		competency: Pr,
 		competencies: [Pr],
@@ -16056,9 +16063,9 @@ var ls = [
 		createMasterySignal: da.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-counts-in-halves-and-quarters",
-		label: "Counting in Halves & Quarters",
-		icon: "🪜",
+		key: "syllabus-g2-uses-number-facts-to-10-to-know-multiples-of-10",
+		label: "From 3 + 7 to 30 + 70",
+		icon: "🪄",
 		pluginId: fa.plugin.id,
 		competency: Fr,
 		competencies: [Fr],
@@ -16066,9 +16073,9 @@ var ls = [
 		createMasterySignal: fa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-continues-sequences-and-states-rule",
-		label: "Number Patterns & Rules",
-		icon: "🧬",
+		key: "syllabus-g2-estimates-sum-to-nearest-10",
+		label: "Estimating Sums",
+		icon: "🎯",
 		pluginId: pa.plugin.id,
 		competency: Ir,
 		competencies: [Ir],
@@ -16076,9 +16083,9 @@ var ls = [
 		createMasterySignal: pa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-compares-expressions-by-reasoning",
-		label: "Compare Without Calculating",
-		icon: "⚖️",
+		key: "syllabus-g2-splits-shapes-into-equal-shares",
+		label: "Equal Shares",
+		icon: "🍕",
 		pluginId: ma.plugin.id,
 		competency: Lr,
 		competencies: [Lr],
@@ -16086,9 +16093,9 @@ var ls = [
 		createMasterySignal: ma.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-measures-lengths-chooses-tool-and-unit",
-		label: "Measuring Length",
-		icon: "📐",
+		key: "syllabus-g2-reads-writes-fractions-and-matches-pictures",
+		label: "Reading & Writing Fractions",
+		icon: "🥧",
 		pluginId: ha.plugin.id,
 		competency: Rr,
 		competencies: [Rr],
@@ -16096,9 +16103,9 @@ var ls = [
 		createMasterySignal: ha.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-estimates-lengths-in-cm-and-m",
-		label: "Estimating Length",
-		icon: "🦒",
+		key: "syllabus-g2-finds-fraction-of-a-quantity",
+		label: "Fractions of Amounts",
+		icon: "🍫",
 		pluginId: ga.plugin.id,
 		competency: zr,
 		competencies: [zr],
@@ -16106,9 +16113,9 @@ var ls = [
 		createMasterySignal: ga.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-how-much-longer-in-standard-units",
-		label: "How Much Longer?",
-		icon: "🐛",
+		key: "syllabus-g2-counts-in-halves-and-quarters",
+		label: "Counting in Halves & Quarters",
+		icon: "🪜",
 		pluginId: _a.plugin.id,
 		competency: Br,
 		competencies: [Br],
@@ -16116,9 +16123,9 @@ var ls = [
 		createMasterySignal: _a.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-reads-temperature-in-celsius",
-		label: "Reading a Thermometer",
-		icon: "🌡️",
+		key: "syllabus-g2-continues-sequences-and-states-rule",
+		label: "Number Patterns & Rules",
+		icon: "🧬",
 		pluginId: va.plugin.id,
 		competency: Vr,
 		competencies: [Vr],
@@ -16126,9 +16133,9 @@ var ls = [
 		createMasterySignal: va.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-lengths-and-differences-on-number-line",
-		label: "Lengths on a Number Line",
-		icon: "📏",
+		key: "syllabus-g2-compares-expressions-by-reasoning",
+		label: "Compare Without Calculating",
+		icon: "⚖️",
 		pluginId: ya.plugin.id,
 		competency: Hr,
 		competencies: [Hr],
@@ -16136,9 +16143,9 @@ var ls = [
 		createMasterySignal: ya.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-durations-in-whole-and-half-hours",
-		label: "How Long Did It Take?",
-		icon: "⏳",
+		key: "syllabus-g2-measures-lengths-chooses-tool-and-unit",
+		label: "Measuring Length",
+		icon: "📐",
 		pluginId: ba.plugin.id,
 		competency: Ur,
 		competencies: [Ur],
@@ -16146,9 +16153,9 @@ var ls = [
 		createMasterySignal: ba.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-uses-currency-symbols-and-writes-amounts",
-		label: "Money Symbols & Amounts",
-		icon: "💶",
+		key: "syllabus-g2-estimates-lengths-in-cm-and-m",
+		label: "Estimating Length",
+		icon: "🦒",
 		pluginId: xa.plugin.id,
 		competency: Wr,
 		competencies: [Wr],
@@ -16156,9 +16163,9 @@ var ls = [
 		createMasterySignal: xa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-makes-amounts-with-different-coins-fewest",
-		label: "Making Amounts with Coins",
-		icon: "🪙",
+		key: "syllabus-g2-finds-how-much-longer-in-standard-units",
+		label: "How Much Longer?",
+		icon: "🐛",
 		pluginId: Sa.plugin.id,
 		competency: Gr,
 		competencies: [Gr],
@@ -16166,9 +16173,9 @@ var ls = [
 		createMasterySignal: Sa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-totals-and-change-within-100",
-		label: "Totals & Change",
-		icon: "🛍️",
+		key: "syllabus-g2-reads-temperature-in-celsius",
+		label: "Reading a Thermometer",
+		icon: "🌡️",
 		pluginId: Ca.plugin.id,
 		competency: Kr,
 		competencies: [Kr],
@@ -16176,9 +16183,9 @@ var ls = [
 		createMasterySignal: Ca.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-describes-polygons-by-sides-and-vertices",
-		label: "Sides & Corners of Shapes",
-		icon: "🔷",
+		key: "syllabus-g2-lengths-and-differences-on-number-line",
+		label: "Lengths on a Number Line",
+		icon: "📏",
 		pluginId: wa.plugin.id,
 		competency: qr,
 		competencies: [qr],
@@ -16186,9 +16193,9 @@ var ls = [
 		createMasterySignal: wa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-counts-faces-edges-vertices-of-3d-shapes",
-		label: "Faces, Edges & Vertices",
-		icon: "📦",
+		key: "syllabus-g2-finds-durations-in-whole-and-half-hours",
+		label: "How Long Did It Take?",
+		icon: "⏳",
 		pluginId: Ta.plugin.id,
 		competency: Jr,
 		competencies: [Jr],
@@ -16196,9 +16203,9 @@ var ls = [
 		createMasterySignal: Ta.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-draws-shapes-with-given-attributes",
-		label: "Shapes with Given Features",
-		icon: "✏️",
+		key: "syllabus-g2-uses-currency-symbols-and-writes-amounts",
+		label: "Money Symbols & Amounts",
+		icon: "💶",
 		pluginId: Ea.plugin.id,
 		competency: Yr,
 		competencies: [Yr],
@@ -16206,9 +16213,9 @@ var ls = [
 		createMasterySignal: Ea.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-splits-rectangle-into-rows-and-columns",
-		label: "Rows & Columns of Squares",
-		icon: "🟦",
+		key: "syllabus-g2-makes-amounts-with-different-coins-fewest",
+		label: "Making Amounts with Coins",
+		icon: "🪙",
 		pluginId: Da.plugin.id,
 		competency: Xr,
 		competencies: [Xr],
@@ -16216,9 +16223,9 @@ var ls = [
 		createMasterySignal: Da.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-recognises-right-angles",
-		label: "Right Angles",
-		icon: "📐",
+		key: "syllabus-g2-finds-totals-and-change-within-100",
+		label: "Totals & Change",
+		icon: "🛍️",
 		pluginId: Oa.plugin.id,
 		competency: Zr,
 		competencies: [Zr],
@@ -16226,9 +16233,9 @@ var ls = [
 		createMasterySignal: Oa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-line-segments-and-points-on-a-straight-line",
-		label: "Line Segments & Straight Lines",
-		icon: "📏",
+		key: "syllabus-g2-describes-polygons-by-sides-and-vertices",
+		label: "Sides & Corners of Shapes",
+		icon: "🔷",
 		pluginId: ka.plugin.id,
 		competency: Qr,
 		competencies: [Qr],
@@ -16236,9 +16243,9 @@ var ls = [
 		createMasterySignal: ka.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-describes-turns-quarter-half-three-quarter",
-		label: "Turns",
-		icon: "🔄",
+		key: "syllabus-g2-counts-faces-edges-vertices-of-3d-shapes",
+		label: "Faces, Edges & Vertices",
+		icon: "📦",
 		pluginId: Aa.plugin.id,
 		competency: $r,
 		competencies: [$r],
@@ -16246,9 +16253,9 @@ var ls = [
 		createMasterySignal: Aa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-writes-moves-to-reach-grid-target",
-		label: "Moves on a Grid",
-		icon: "🤖",
+		key: "syllabus-g2-draws-shapes-with-given-attributes",
+		label: "Shapes with Given Features",
+		icon: "✏️",
 		pluginId: ja.plugin.id,
 		competency: ei,
 		competencies: [ei],
@@ -16256,9 +16263,9 @@ var ls = [
 		createMasterySignal: ja.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-pictograms-block-graphs-bar-graphs",
-		label: "Pictograms & Bar Graphs",
-		icon: "🖼️",
+		key: "syllabus-g2-splits-rectangle-into-rows-and-columns",
+		label: "Rows & Columns of Squares",
+		icon: "🟦",
 		pluginId: Ma.plugin.id,
 		competency: ti,
 		competencies: [ti],
@@ -16266,9 +16273,9 @@ var ls = [
 		createMasterySignal: Ma.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-answers-total-and-comparison-questions-from-graph",
-		label: "Questions from a Graph",
-		icon: "📊",
+		key: "syllabus-g2-recognises-right-angles",
+		label: "Right Angles",
+		icon: "📐",
 		pluginId: Na.plugin.id,
 		competency: ni,
 		competencies: [ni],
@@ -16276,9 +16283,9 @@ var ls = [
 		createMasterySignal: Na.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-records-measurements-on-line-plot",
-		label: "Line Plots",
-		icon: "📈",
+		key: "syllabus-g2-line-segments-and-points-on-a-straight-line",
+		label: "Line Segments & Straight Lines",
+		icon: "📏",
 		pluginId: Pa.plugin.id,
 		competency: ri,
 		competencies: [ri],
@@ -16286,9 +16293,9 @@ var ls = [
 		createMasterySignal: Pa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-describes-events-certain-likely-unlikely-impossible",
-		label: "Chance & Outcomes",
-		icon: "🎲",
+		key: "syllabus-g2-describes-turns-quarter-half-three-quarter",
+		label: "Turns",
+		icon: "🔄",
 		pluginId: Fa.plugin.id,
 		competency: ii,
 		competencies: [ii],
@@ -16296,9 +16303,9 @@ var ls = [
 		createMasterySignal: Fa.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-solves-two-step-addition-subtraction-problems",
-		label: "Two-Step Problems",
-		icon: "🧩",
+		key: "syllabus-g2-writes-moves-to-reach-grid-target",
+		label: "Moves on a Grid",
+		icon: "🤖",
 		pluginId: Ia.plugin.id,
 		competency: ai,
 		competencies: [ai],
@@ -16306,9 +16313,9 @@ var ls = [
 		createMasterySignal: Ia.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-uses-part-whole-and-comparison-bar-models",
-		label: "Bar Models",
-		icon: "🧱",
+		key: "syllabus-g2-pictograms-block-graphs-bar-graphs",
+		label: "Pictograms & Bar Graphs",
+		icon: "🖼️",
 		pluginId: La.plugin.id,
 		competency: oi,
 		competencies: [oi],
@@ -16316,9 +16323,9 @@ var ls = [
 		createMasterySignal: La.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-checks-answers-with-inverse-and-estimating",
-		label: "Check Your Answer",
-		icon: "✅",
+		key: "syllabus-g2-answers-total-and-comparison-questions-from-graph",
+		label: "Questions from a Graph",
+		icon: "📊",
 		pluginId: Ra.plugin.id,
 		competency: si,
 		competencies: [si],
@@ -16326,9 +16333,9 @@ var ls = [
 		createMasterySignal: Ra.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-finds-all-combinations-in-small-problems",
-		label: "How Many Combinations?",
-		icon: "👕",
+		key: "syllabus-g2-records-measurements-on-line-plot",
+		label: "Line Plots",
+		icon: "📈",
 		pluginId: za.plugin.id,
 		competency: ci,
 		competencies: [ci],
@@ -16336,16 +16343,66 @@ var ls = [
 		createMasterySignal: za.createMasterySignal
 	}),
 	j({
-		key: "syllabus-g2-notices-and-tests-general-statements",
-		label: "Always, Sometimes, Never?",
-		icon: "🕵️",
+		key: "syllabus-g2-describes-events-certain-likely-unlikely-impossible",
+		label: "Chance & Outcomes",
+		icon: "🎲",
 		pluginId: Ba.plugin.id,
 		competency: li,
 		competencies: [li],
 		createSession: Ba.createSession,
 		createMasterySignal: Ba.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-solves-two-step-addition-subtraction-problems",
+		label: "Two-Step Problems",
+		icon: "🧩",
+		pluginId: Va.plugin.id,
+		competency: ui,
+		competencies: [ui],
+		createSession: Va.createSession,
+		createMasterySignal: Va.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-uses-part-whole-and-comparison-bar-models",
+		label: "Bar Models",
+		icon: "🧱",
+		pluginId: Ha.plugin.id,
+		competency: di,
+		competencies: [di],
+		createSession: Ha.createSession,
+		createMasterySignal: Ha.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-checks-answers-with-inverse-and-estimating",
+		label: "Check Your Answer",
+		icon: "✅",
+		pluginId: Ua.plugin.id,
+		competency: fi,
+		competencies: [fi],
+		createSession: Ua.createSession,
+		createMasterySignal: Ua.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-finds-all-combinations-in-small-problems",
+		label: "How Many Combinations?",
+		icon: "👕",
+		pluginId: Wa.plugin.id,
+		competency: pi,
+		competencies: [pi],
+		createSession: Wa.createSession,
+		createMasterySignal: Wa.createMasterySignal
+	}),
+	j({
+		key: "syllabus-g2-notices-and-tests-general-statements",
+		label: "Always, Sometimes, Never?",
+		icon: "🕵️",
+		pluginId: Ga.plugin.id,
+		competency: mi,
+		competencies: [mi],
+		createSession: Ga.createSession,
+		createMasterySignal: Ga.createMasterySignal
 	})
-], us = {
+], hs = {
 	id: "math.number-sense.reads-writes-orders-to-10000",
 	nameKey: "competency.math.number-sense.reads-writes-orders-to-10000.name",
 	descriptionKey: "competency.math.number-sense.reads-writes-orders-to-10000.description",
@@ -16358,7 +16415,7 @@ var ls = [
 		kind: "activity",
 		id: "math.number-sense.reads-writes-orders-to-10000"
 	}]
-}, ds = {
+}, gs = {
 	id: "math.addition.add-subtract-three-digit-columns",
 	nameKey: "competency.math.addition.add-subtract-three-digit-columns.name",
 	descriptionKey: "competency.math.addition.add-subtract-three-digit-columns.description",
@@ -16371,7 +16428,7 @@ var ls = [
 		kind: "activity",
 		id: "math.addition.add-subtract-three-digit-columns"
 	}]
-}, fs = {
+}, _s = {
 	id: "math.mathematical-reasoning.checks-subtraction-with-inverse-addition",
 	nameKey: "competency.math.mathematical-reasoning.checks-subtraction-with-inverse-addition.name",
 	descriptionKey: "competency.math.mathematical-reasoning.checks-subtraction-with-inverse-addition.description",
@@ -16384,7 +16441,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.checks-subtraction-with-inverse-addition"
 	}]
-}, ps = {
+}, vs = {
 	id: "math.multiplication.times-tables-3-4-8",
 	nameKey: "competency.math.multiplication.times-tables-3-4-8.name",
 	descriptionKey: "competency.math.multiplication.times-tables-3-4-8.description",
@@ -16397,7 +16454,7 @@ var ls = [
 		kind: "activity",
 		id: "math.multiplication.times-tables-3-4-8"
 	}]
-}, ms = {
+}, ys = {
 	id: "math.multiplication.multiplies-two-digit-by-one-digit-written",
 	nameKey: "competency.math.multiplication.multiplies-two-digit-by-one-digit-written.name",
 	descriptionKey: "competency.math.multiplication.multiplies-two-digit-by-one-digit-written.description",
@@ -16410,7 +16467,7 @@ var ls = [
 		kind: "activity",
 		id: "math.multiplication.multiplies-two-digit-by-one-digit-written"
 	}]
-}, hs = {
+}, bs = {
 	id: "math.mathematical-reasoning.multiplication-commutative-division-not",
 	nameKey: "competency.math.mathematical-reasoning.multiplication-commutative-division-not.name",
 	descriptionKey: "competency.math.mathematical-reasoning.multiplication-commutative-division-not.description",
@@ -16423,7 +16480,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.multiplication-commutative-division-not"
 	}]
-}, gs = {
+}, xs = {
 	id: "math.mental-mathematics.add-subtract-two-two-digit-mentally",
 	nameKey: "competency.math.mental-mathematics.add-subtract-two-two-digit-mentally.name",
 	descriptionKey: "competency.math.mental-mathematics.add-subtract-two-two-digit-mentally.description",
@@ -16436,7 +16493,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mental-mathematics.add-subtract-two-two-digit-mentally"
 	}]
-}, _s = {
+}, Ss = {
 	id: "math.mental-mathematics.bridges-through-10-and-100",
 	nameKey: "competency.math.mental-mathematics.bridges-through-10-and-100.name",
 	descriptionKey: "competency.math.mental-mathematics.bridges-through-10-and-100.description",
@@ -16449,7 +16506,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mental-mathematics.bridges-through-10-and-100"
 	}]
-}, vs = {
+}, Cs = {
 	id: "math.fractions.fraction-as-number-on-number-line",
 	nameKey: "competency.math.fractions.fraction-as-number-on-number-line.name",
 	descriptionKey: "competency.math.fractions.fraction-as-number-on-number-line.description",
@@ -16462,7 +16519,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.fraction-as-number-on-number-line"
 	}]
-}, ys = {
+}, ws = {
 	id: "math.fractions.finds-equivalent-fractions-simplifies",
 	nameKey: "competency.math.fractions.finds-equivalent-fractions-simplifies.name",
 	descriptionKey: "competency.math.fractions.finds-equivalent-fractions-simplifies.description",
@@ -16475,7 +16532,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.finds-equivalent-fractions-simplifies"
 	}]
-}, bs = {
+}, Ts = {
 	id: "math.fractions.add-subtract-fractions-same-denominator",
 	nameKey: "competency.math.fractions.add-subtract-fractions-same-denominator.name",
 	descriptionKey: "competency.math.fractions.add-subtract-fractions-same-denominator.description",
@@ -16488,7 +16545,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.add-subtract-fractions-same-denominator"
 	}]
-}, xs = {
+}, Es = {
 	id: "math.number-sense.reads-decimal-in-price-and-measurement",
 	nameKey: "competency.math.number-sense.reads-decimal-in-price-and-measurement.name",
 	descriptionKey: "competency.math.number-sense.reads-decimal-in-price-and-measurement.description",
@@ -16501,7 +16558,7 @@ var ls = [
 		kind: "activity",
 		id: "math.number-sense.reads-decimal-in-price-and-measurement"
 	}]
-}, Ss = {
+}, Ds = {
 	id: "math.measurement.converts-between-adjacent-metric-units",
 	nameKey: "competency.math.measurement.converts-between-adjacent-metric-units.name",
 	descriptionKey: "competency.math.measurement.converts-between-adjacent-metric-units.description",
@@ -16514,7 +16571,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.converts-between-adjacent-metric-units"
 	}]
-}, Cs = {
+}, Os = {
 	id: "math.measurement.measures-perimeter-rectangle-compound",
 	nameKey: "competency.math.measurement.measures-perimeter-rectangle-compound.name",
 	descriptionKey: "competency.math.measurement.measures-perimeter-rectangle-compound.description",
@@ -16527,7 +16584,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.measures-perimeter-rectangle-compound"
 	}]
-}, ws = {
+}, ks = {
 	id: "math.time.tells-time-to-minute-converts-12-24",
 	nameKey: "competency.math.time.tells-time-to-minute-converts-12-24.name",
 	descriptionKey: "competency.math.time.tells-time-to-minute-converts-12-24.description",
@@ -16540,7 +16597,7 @@ var ls = [
 		kind: "activity",
 		id: "math.time.tells-time-to-minute-converts-12-24"
 	}]
-}, Ts = {
+}, As = {
 	id: "math.time.calculates-duration-within-hour",
 	nameKey: "competency.math.time.calculates-duration-within-hour.name",
 	descriptionKey: "competency.math.time.calculates-duration-within-hour.description",
@@ -16553,7 +16610,7 @@ var ls = [
 		kind: "activity",
 		id: "math.time.calculates-duration-within-hour"
 	}]
-}, Es = {
+}, js = {
 	id: "math.geometry.classifies-triangles",
 	nameKey: "competency.math.geometry.classifies-triangles.name",
 	descriptionKey: "competency.math.geometry.classifies-triangles.description",
@@ -16565,7 +16622,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.classifies-triangles"
 	}]
-}, Ds = {
+}, Ms = {
 	id: "math.geometry.classifies-quadrilaterals",
 	nameKey: "competency.math.geometry.classifies-quadrilaterals.name",
 	descriptionKey: "competency.math.geometry.classifies-quadrilaterals.description",
@@ -16578,7 +16635,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.classifies-quadrilaterals"
 	}]
-}, Os = {
+}, Ns = {
 	id: "math.geometry.identifies-right-angles",
 	nameKey: "competency.math.geometry.identifies-right-angles.name",
 	descriptionKey: "competency.math.geometry.identifies-right-angles.description",
@@ -16591,7 +16648,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.identifies-right-angles"
 	}]
-}, ks = {
+}, Ps = {
 	id: "math.geometry.uses-compass-directions-quarter-half-turns",
 	nameKey: "competency.math.geometry.uses-compass-directions-quarter-half-turns.name",
 	descriptionKey: "competency.math.geometry.uses-compass-directions-quarter-half-turns.description",
@@ -16604,7 +16661,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.uses-compass-directions-quarter-half-turns"
 	}]
-}, As = {
+}, Fs = {
 	id: "math.data-graphs.reads-bar-chart-pictogram-scale",
 	nameKey: "competency.math.data-graphs.reads-bar-chart-pictogram-scale.name",
 	descriptionKey: "competency.math.data-graphs.reads-bar-chart-pictogram-scale.description",
@@ -16617,7 +16674,7 @@ var ls = [
 		kind: "activity",
 		id: "math.data-graphs.reads-bar-chart-pictogram-scale"
 	}]
-}, js = {
+}, Is = {
 	id: "math.data-graphs.answers-comparison-questions-from-table",
 	nameKey: "competency.math.data-graphs.answers-comparison-questions-from-table.name",
 	descriptionKey: "competency.math.data-graphs.answers-comparison-questions-from-table.description",
@@ -16630,7 +16687,7 @@ var ls = [
 		kind: "activity",
 		id: "math.data-graphs.answers-comparison-questions-from-table"
 	}]
-}, Ms = {
+}, Ls = {
 	id: "math.mathematical-reasoning.continues-number-sequence-states-rule",
 	nameKey: "competency.math.mathematical-reasoning.continues-number-sequence-states-rule.name",
 	descriptionKey: "competency.math.mathematical-reasoning.continues-number-sequence-states-rule.description",
@@ -16643,7 +16700,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.continues-number-sequence-states-rule"
 	}]
-}, Ns = {
+}, Rs = {
 	id: "math.problem-solving.solves-two-step-word-problem",
 	nameKey: "competency.math.problem-solving.solves-two-step-word-problem.name",
 	descriptionKey: "competency.math.problem-solving.solves-two-step-word-problem.description",
@@ -16656,7 +16713,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.solves-two-step-word-problem"
 	}]
-}, Ps = {
+}, zs = {
 	id: "math.problem-solving.draws-bar-model-to-represent-problem",
 	nameKey: "competency.math.problem-solving.draws-bar-model-to-represent-problem.name",
 	descriptionKey: "competency.math.problem-solving.draws-bar-model-to-represent-problem.description",
@@ -16669,7 +16726,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.draws-bar-model-to-represent-problem"
 	}]
-}, Fs = {
+}, Bs = {
 	id: "math.number-sense.counts-in-multiples",
 	nameKey: "competency.math.number-sense.counts-in-multiples.name",
 	descriptionKey: "competency.math.number-sense.counts-in-multiples.description",
@@ -16682,7 +16739,7 @@ var ls = [
 		kind: "activity",
 		id: "math.number-sense.counts-in-multiples"
 	}]
-}, Is = {
+}, Vs = {
 	id: "math.number-sense.places-numbers-on-number-line-to-10000",
 	nameKey: "competency.math.number-sense.places-numbers-on-number-line-to-10000.name",
 	descriptionKey: "competency.math.number-sense.places-numbers-on-number-line-to-10000.description",
@@ -16695,7 +16752,7 @@ var ls = [
 		kind: "activity",
 		id: "math.number-sense.places-numbers-on-number-line-to-10000"
 	}]
-}, Ls = {
+}, Hs = {
 	id: "math.number-sense.reads-roman-numerals-to-100",
 	nameKey: "competency.math.number-sense.reads-roman-numerals-to-100.name",
 	descriptionKey: "competency.math.number-sense.reads-roman-numerals-to-100.description",
@@ -16708,7 +16765,7 @@ var ls = [
 		kind: "activity",
 		id: "math.number-sense.reads-roman-numerals-to-100"
 	}]
-}, Rs = {
+}, Us = {
 	id: "math.place-value.digit-value-and-partitioning-4-digit",
 	nameKey: "competency.math.place-value.digit-value-and-partitioning-4-digit.name",
 	descriptionKey: "competency.math.place-value.digit-value-and-partitioning-4-digit.description",
@@ -16721,7 +16778,7 @@ var ls = [
 		kind: "activity",
 		id: "math.place-value.digit-value-and-partitioning-4-digit"
 	}]
-}, zs = {
+}, Ws = {
 	id: "math.place-value.rounds-to-nearest-10-and-100",
 	nameKey: "competency.math.place-value.rounds-to-nearest-10-and-100.name",
 	descriptionKey: "competency.math.place-value.rounds-to-nearest-10-and-100.description",
@@ -16734,7 +16791,7 @@ var ls = [
 		kind: "activity",
 		id: "math.place-value.rounds-to-nearest-10-and-100"
 	}]
-}, Bs = {
+}, Gs = {
 	id: "math.place-value.adds-subtracts-1-10-100-1000",
 	nameKey: "competency.math.place-value.adds-subtracts-1-10-100-1000.name",
 	descriptionKey: "competency.math.place-value.adds-subtracts-1-10-100-1000.description",
@@ -16747,7 +16804,7 @@ var ls = [
 		kind: "activity",
 		id: "math.place-value.adds-subtracts-1-10-100-1000"
 	}]
-}, Vs = {
+}, Ks = {
 	id: "math.multiplication.times-tables-6-7-9",
 	nameKey: "competency.math.multiplication.times-tables-6-7-9.name",
 	descriptionKey: "competency.math.multiplication.times-tables-6-7-9.description",
@@ -16760,7 +16817,7 @@ var ls = [
 		kind: "activity",
 		id: "math.multiplication.times-tables-6-7-9"
 	}]
-}, Hs = {
+}, qs = {
 	id: "math.multiplication.all-facts-to-10-x-10",
 	nameKey: "competency.math.multiplication.all-facts-to-10-x-10.name",
 	descriptionKey: "competency.math.multiplication.all-facts-to-10-x-10.description",
@@ -16773,7 +16830,7 @@ var ls = [
 		kind: "activity",
 		id: "math.multiplication.all-facts-to-10-x-10"
 	}]
-}, Us = {
+}, Js = {
 	id: "math.multiplication.multiplies-by-multiple-of-10",
 	nameKey: "competency.math.multiplication.multiplies-by-multiple-of-10.name",
 	descriptionKey: "competency.math.multiplication.multiplies-by-multiple-of-10.description",
@@ -16786,7 +16843,7 @@ var ls = [
 		kind: "activity",
 		id: "math.multiplication.multiplies-by-multiple-of-10"
 	}]
-}, Ws = {
+}, Ys = {
 	id: "math.division.divides-with-remainder",
 	nameKey: "competency.math.division.divides-with-remainder.name",
 	descriptionKey: "competency.math.division.divides-with-remainder.description",
@@ -16799,7 +16856,7 @@ var ls = [
 		kind: "activity",
 		id: "math.division.divides-with-remainder"
 	}]
-}, Gs = {
+}, Xs = {
 	id: "math.division.divides-by-thinking-multiplication",
 	nameKey: "competency.math.division.divides-by-thinking-multiplication.name",
 	descriptionKey: "competency.math.division.divides-by-thinking-multiplication.description",
@@ -16812,7 +16869,7 @@ var ls = [
 		kind: "activity",
 		id: "math.division.divides-by-thinking-multiplication"
 	}]
-}, Ks = {
+}, Zs = {
 	id: "math.mental-mathematics.recalls-table-facts-quickly",
 	nameKey: "competency.math.mental-mathematics.recalls-table-facts-quickly.name",
 	descriptionKey: "competency.math.mental-mathematics.recalls-table-facts-quickly.description",
@@ -16825,7 +16882,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mental-mathematics.recalls-table-facts-quickly"
 	}]
-}, qs = {
+}, Qs = {
 	id: "math.mental-mathematics.multiplies-by-10-100-mentally",
 	nameKey: "competency.math.mental-mathematics.multiplies-by-10-100-mentally.name",
 	descriptionKey: "competency.math.mental-mathematics.multiplies-by-10-100-mentally.description",
@@ -16838,7 +16895,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mental-mathematics.multiplies-by-10-100-mentally"
 	}]
-}, Js = {
+}, $s = {
 	id: "math.mental-mathematics.estimates-by-rounding",
 	nameKey: "competency.math.mental-mathematics.estimates-by-rounding.name",
 	descriptionKey: "competency.math.mental-mathematics.estimates-by-rounding.description",
@@ -16851,7 +16908,7 @@ var ls = [
 		kind: "activity",
 		id: "math.mental-mathematics.estimates-by-rounding"
 	}]
-}, Ys = {
+}, ec = {
 	id: "math.fractions.understands-unit-and-non-unit-fractions",
 	nameKey: "competency.math.fractions.understands-unit-and-non-unit-fractions.name",
 	descriptionKey: "competency.math.fractions.understands-unit-and-non-unit-fractions.description",
@@ -16864,7 +16921,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.understands-unit-and-non-unit-fractions"
 	}]
-}, Xs = {
+}, tc = {
 	id: "math.fractions.compares-fractions-same-numerator-denominator",
 	nameKey: "competency.math.fractions.compares-fractions-same-numerator-denominator.name",
 	descriptionKey: "competency.math.fractions.compares-fractions-same-numerator-denominator.description",
@@ -16877,7 +16934,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.compares-fractions-same-numerator-denominator"
 	}]
-}, Zs = {
+}, nc = {
 	id: "math.fractions.counts-in-tenths",
 	nameKey: "competency.math.fractions.counts-in-tenths.name",
 	descriptionKey: "competency.math.fractions.counts-in-tenths.description",
@@ -16890,7 +16947,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.counts-in-tenths"
 	}]
-}, Qs = {
+}, rc = {
 	id: "math.fractions.finds-quarter-and-three-quarters-of-20",
 	nameKey: "competency.math.fractions.finds-quarter-and-three-quarters-of-20.name",
 	descriptionKey: "competency.math.fractions.finds-quarter-and-three-quarters-of-20.description",
@@ -16903,7 +16960,7 @@ var ls = [
 		kind: "activity",
 		id: "math.fractions.finds-quarter-and-three-quarters-of-20"
 	}]
-}, $s = {
+}, ic = {
 	id: "math.algebra.solves-missing-number-equations",
 	nameKey: "competency.math.algebra.solves-missing-number-equations.name",
 	descriptionKey: "competency.math.algebra.solves-missing-number-equations.description",
@@ -16916,7 +16973,7 @@ var ls = [
 		kind: "activity",
 		id: "math.algebra.solves-missing-number-equations"
 	}]
-}, ec = {
+}, ac = {
 	id: "math.algebra.explains-patterns-in-tables",
 	nameKey: "competency.math.algebra.explains-patterns-in-tables.name",
 	descriptionKey: "competency.math.algebra.explains-patterns-in-tables.description",
@@ -16929,7 +16986,7 @@ var ls = [
 		kind: "activity",
 		id: "math.algebra.explains-patterns-in-tables"
 	}]
-}, tc = {
+}, oc = {
 	id: "math.algebra.completes-function-machine-tables",
 	nameKey: "competency.math.algebra.completes-function-machine-tables.name",
 	descriptionKey: "competency.math.algebra.completes-function-machine-tables.description",
@@ -16942,7 +16999,7 @@ var ls = [
 		kind: "activity",
 		id: "math.algebra.completes-function-machine-tables"
 	}]
-}, nc = {
+}, sc = {
 	id: "math.measurement.compares-adds-subtracts-metric-measures",
 	nameKey: "competency.math.measurement.compares-adds-subtracts-metric-measures.name",
 	descriptionKey: "competency.math.measurement.compares-adds-subtracts-metric-measures.description",
@@ -16955,7 +17012,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.compares-adds-subtracts-metric-measures"
 	}]
-}, rc = {
+}, cc = {
 	id: "math.measurement.reads-scales-with-intervals",
 	nameKey: "competency.math.measurement.reads-scales-with-intervals.name",
 	descriptionKey: "competency.math.measurement.reads-scales-with-intervals.description",
@@ -16968,7 +17025,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.reads-scales-with-intervals"
 	}]
-}, ic = {
+}, lc = {
 	id: "math.measurement.finds-area-by-counting-squares",
 	nameKey: "competency.math.measurement.finds-area-by-counting-squares.name",
 	descriptionKey: "competency.math.measurement.finds-area-by-counting-squares.description",
@@ -16981,7 +17038,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.finds-area-by-counting-squares"
 	}]
-}, ac = {
+}, uc = {
 	id: "math.measurement.estimates-measures-with-benchmarks",
 	nameKey: "competency.math.measurement.estimates-measures-with-benchmarks.name",
 	descriptionKey: "competency.math.measurement.estimates-measures-with-benchmarks.description",
@@ -16994,7 +17051,7 @@ var ls = [
 		kind: "activity",
 		id: "math.measurement.estimates-measures-with-benchmarks"
 	}]
-}, oc = {
+}, dc = {
 	id: "math.time.converts-hours-minutes-seconds",
 	nameKey: "competency.math.time.converts-hours-minutes-seconds.name",
 	descriptionKey: "competency.math.time.converts-hours-minutes-seconds.description",
@@ -17007,7 +17064,7 @@ var ls = [
 		kind: "activity",
 		id: "math.time.converts-hours-minutes-seconds"
 	}]
-}, sc = {
+}, fc = {
 	id: "math.money.writes-money-in-decimal-notation",
 	nameKey: "competency.math.money.writes-money-in-decimal-notation.name",
 	descriptionKey: "competency.math.money.writes-money-in-decimal-notation.description",
@@ -17020,7 +17077,7 @@ var ls = [
 		kind: "activity",
 		id: "math.money.writes-money-in-decimal-notation"
 	}]
-}, cc = {
+}, pc = {
 	id: "math.money.adds-subtracts-money-and-gives-change",
 	nameKey: "competency.math.money.adds-subtracts-money-and-gives-change.name",
 	descriptionKey: "competency.math.money.adds-subtracts-money-and-gives-change.description",
@@ -17033,7 +17090,7 @@ var ls = [
 		kind: "activity",
 		id: "math.money.adds-subtracts-money-and-gives-change"
 	}]
-}, lc = {
+}, mc = {
 	id: "math.money.compares-prices-and-decides-affordability",
 	nameKey: "competency.math.money.compares-prices-and-decides-affordability.name",
 	descriptionKey: "competency.math.money.compares-prices-and-decides-affordability.description",
@@ -17046,7 +17103,7 @@ var ls = [
 		kind: "activity",
 		id: "math.money.compares-prices-and-decides-affordability"
 	}]
-}, uc = {
+}, hc = {
 	id: "math.geometry.identifies-parallel-perpendicular-lines",
 	nameKey: "competency.math.geometry.identifies-parallel-perpendicular-lines.name",
 	descriptionKey: "competency.math.geometry.identifies-parallel-perpendicular-lines.description",
@@ -17059,7 +17116,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.identifies-parallel-perpendicular-lines"
 	}]
-}, dc = {
+}, gc = {
 	id: "math.geometry.splits-shapes-into-equal-parts-unit-fractions",
 	nameKey: "competency.math.geometry.splits-shapes-into-equal-parts-unit-fractions.name",
 	descriptionKey: "competency.math.geometry.splits-shapes-into-equal-parts-unit-fractions.description",
@@ -17072,7 +17129,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.splits-shapes-into-equal-parts-unit-fractions"
 	}]
-}, fc = {
+}, _c = {
 	id: "math.geometry.recognizes-3d-shapes-from-views",
 	nameKey: "competency.math.geometry.recognizes-3d-shapes-from-views.name",
 	descriptionKey: "competency.math.geometry.recognizes-3d-shapes-from-views.description",
@@ -17085,7 +17142,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.recognizes-3d-shapes-from-views"
 	}]
-}, pc = {
+}, vc = {
 	id: "math.geometry.relates-turns-to-right-angles",
 	nameKey: "competency.math.geometry.relates-turns-to-right-angles.name",
 	descriptionKey: "competency.math.geometry.relates-turns-to-right-angles.description",
@@ -17098,7 +17155,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.relates-turns-to-right-angles"
 	}]
-}, mc = {
+}, yc = {
 	id: "math.geometry.uses-grid-references-and-routes",
 	nameKey: "competency.math.geometry.uses-grid-references-and-routes.name",
 	descriptionKey: "competency.math.geometry.uses-grid-references-and-routes.description",
@@ -17111,7 +17168,7 @@ var ls = [
 		kind: "activity",
 		id: "math.geometry.uses-grid-references-and-routes"
 	}]
-}, hc = {
+}, bc = {
 	id: "math.data-graphs.answers-how-many-more-fewer-and-total-questions",
 	nameKey: "competency.math.data-graphs.answers-how-many-more-fewer-and-total-questions.name",
 	descriptionKey: "competency.math.data-graphs.answers-how-many-more-fewer-and-total-questions.description",
@@ -17124,7 +17181,7 @@ var ls = [
 		kind: "activity",
 		id: "math.data-graphs.answers-how-many-more-fewer-and-total-questions"
 	}]
-}, gc = {
+}, xc = {
 	id: "math.data-graphs.reads-line-plots-in-halves-and-quarters",
 	nameKey: "competency.math.data-graphs.reads-line-plots-in-halves-and-quarters.name",
 	descriptionKey: "competency.math.data-graphs.reads-line-plots-in-halves-and-quarters.description",
@@ -17137,7 +17194,7 @@ var ls = [
 		kind: "activity",
 		id: "math.data-graphs.reads-line-plots-in-halves-and-quarters"
 	}]
-}, _c = {
+}, Sc = {
 	id: "math.data-graphs.plans-a-simple-investigation",
 	nameKey: "competency.math.data-graphs.plans-a-simple-investigation.name",
 	descriptionKey: "competency.math.data-graphs.plans-a-simple-investigation.description",
@@ -17150,7 +17207,7 @@ var ls = [
 		kind: "activity",
 		id: "math.data-graphs.plans-a-simple-investigation"
 	}]
-}, vc = {
+}, Cc = {
 	id: "math.probability.compares-likelihood-of-outcomes",
 	nameKey: "competency.math.probability.compares-likelihood-of-outcomes.name",
 	descriptionKey: "competency.math.probability.compares-likelihood-of-outcomes.description",
@@ -17163,7 +17220,7 @@ var ls = [
 		kind: "activity",
 		id: "math.probability.compares-likelihood-of-outcomes"
 	}]
-}, yc = {
+}, wc = {
 	id: "math.problem-solving.judges-whether-an-answer-makes-sense",
 	nameKey: "competency.math.problem-solving.judges-whether-an-answer-makes-sense.name",
 	descriptionKey: "competency.math.problem-solving.judges-whether-an-answer-makes-sense.description",
@@ -17176,7 +17233,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.judges-whether-an-answer-makes-sense"
 	}]
-}, bc = {
+}, Tc = {
 	id: "math.problem-solving.spots-missing-or-unneeded-information",
 	nameKey: "competency.math.problem-solving.spots-missing-or-unneeded-information.name",
 	descriptionKey: "competency.math.problem-solving.spots-missing-or-unneeded-information.description",
@@ -17189,7 +17246,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.spots-missing-or-unneeded-information"
 	}]
-}, xc = {
+}, Ec = {
 	id: "math.problem-solving.explains-a-method-and-compares-methods",
 	nameKey: "competency.math.problem-solving.explains-a-method-and-compares-methods.name",
 	descriptionKey: "competency.math.problem-solving.explains-a-method-and-compares-methods.description",
@@ -17202,7 +17259,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.explains-a-method-and-compares-methods"
 	}]
-}, Sc = {
+}, Dc = {
 	id: "math.problem-solving.uses-organised-lists-to-find-all-solutions",
 	nameKey: "competency.math.problem-solving.uses-organised-lists-to-find-all-solutions.name",
 	descriptionKey: "competency.math.problem-solving.uses-organised-lists-to-find-all-solutions.description",
@@ -17215,12 +17272,7 @@ var ls = [
 		kind: "activity",
 		id: "math.problem-solving.uses-organised-lists-to-find-all-solutions"
 	}]
-}, Cc = [
-	us,
-	ds,
-	fs,
-	ps,
-	ms,
+}, Oc = [
 	hs,
 	gs,
 	_s,
@@ -17282,11 +17334,16 @@ var ls = [
 	yc,
 	bc,
 	xc,
-	Sc
+	Sc,
+	Cc,
+	wc,
+	Tc,
+	Ec,
+	Dc
 ];
 //#endregion
 //#region packages/template-matching/src/rng.ts
-function wc(e) {
+function kc(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -17294,64 +17351,64 @@ function wc(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Tc(e, t, n) {
+function Ac(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
-function Ec(e, t) {
+function jc(e, t) {
 	let n = t.slice();
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = Tc(e, 0, t), i = n[t];
+		let r = Ac(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n;
 }
 //#endregion
 //#region packages/template-matching/src/factory.ts
-function Dc(e) {
+function Mc(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Oc(e, t) {
+function Nc(e, t) {
 	let n = e.filter((e) => e.grade === t);
 	if (n.length === 0) throw Error(`no content bank entries for grade: ${t}`);
 	return n;
 }
-function kc(e, t) {
+function Pc(e, t) {
 	let n = t === "left" ? "l" : "r";
 	return e.map((e, r) => ({
 		id: `${n}${r}`,
 		label: e[t]
 	}));
 }
-function Ac(e, t) {
-	let n = kc(e, "left"), r = kc(e, "right"), i = Ec(t, r);
+function Fc(e, t) {
+	let n = Pc(e, "left"), r = Pc(e, "right"), i = jc(t, r);
 	return n.map((e, t) => ({
 		left: e,
 		rightOptions: i,
 		correctRightId: r[t].id
 	}));
 }
-function jc(e, t, n) {
-	if (!Dc(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
-	let r = Oc(e.bank, t), i = wc(n), a = r[Tc(i, 0, r.length - 1)], o = Math.floor(i() * 4294967295), s = wc(o), c = wc(o);
+function Ic(e, t, n) {
+	if (!Mc(t)) throw Error(`invalid grade: ${t} (must be an integer in 1..5)`);
+	let r = Nc(e.bank, t), i = kc(n), a = r[Ac(i, 0, r.length - 1)], o = Math.floor(i() * 4294967295), s = kc(o), c = kc(o);
 	return {
 		id: `${e.pluginId}-${t}-${n}`,
 		grade: t,
-		en: { pairs: Ac(a.en.pairs, s) },
-		fr: { pairs: Ac(a.fr.pairs, c) }
+		en: { pairs: Fc(a.en.pairs, s) },
+		fr: { pairs: Fc(a.fr.pairs, c) }
 	};
 }
-function Mc(e, t) {
+function Lc(e, t) {
 	return e.en.pairs.every((e) => t[e.left.id] === e.correctRightId);
 }
-function Nc(e) {
+function Rc(e) {
 	let t = {
 		id: e.pluginId,
 		competencyIds: [e.competencyId],
 		generateQuestion(t, n) {
-			return jc(e, t, n);
+			return Ic(e, t, n);
 		},
 		validateAnswer(e, t) {
-			return { correct: Mc(e, t) };
+			return { correct: Lc(e, t) };
 		},
 		toPresentation(e) {
 			let t = e.en.pairs[0];
@@ -17366,10 +17423,10 @@ function Nc(e) {
 		}
 	};
 	function n(t, n) {
-		let r = wc(n), i = [];
+		let r = kc(n), i = [];
 		for (let n = 0; n < 10; n++) {
 			let n = Math.floor(r() * 4294967295);
-			i.push(jc(e, t, n));
+			i.push(Ic(e, t, n));
 		}
 		return {
 			grade: t,
@@ -17397,9 +17454,9 @@ function Nc(e) {
 }
 //#endregion
 //#region packages/syllabus-content-g3/src/content.ts
-var Pc = _({
+var zc = _({
 	pluginId: "syllabus-g3-reads-writes-orders-to-10000",
-	competencyId: us.id,
+	competencyId: hs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Write the number: three thousand, two hundred and fifteen" },
@@ -17411,9 +17468,9 @@ var Pc = _({
 		fr: { prompt: "Écris le nombre : neuf mille six" },
 		correctValue: 9006
 	}]
-}), Fc = _({
+}), Bc = _({
 	pluginId: "syllabus-g3-add-subtract-three-digit-columns",
-	competencyId: ds.id,
+	competencyId: gs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "245 + 387 = ?" },
@@ -17425,9 +17482,9 @@ var Pc = _({
 		fr: { prompt: "603 - 258 = ?" },
 		correctValue: 345
 	}]
-}), Ic = C({
+}), Vc = C({
 	pluginId: "syllabus-g3-checks-subtraction-with-inverse-addition",
-	competencyId: fs.id,
+	competencyId: _s.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17449,9 +17506,9 @@ var Pc = _({
 			isTrue: !0
 		}
 	}]
-}), Lc = _({
+}), Hc = _({
 	pluginId: "syllabus-g3-times-tables-3-4-8",
-	competencyId: ps.id,
+	competencyId: vs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "3 x 7 = ?" },
@@ -17463,9 +17520,9 @@ var Pc = _({
 		fr: { prompt: "8 x 6 = ?" },
 		correctValue: 48
 	}]
-}), Rc = _({
+}), Uc = _({
 	pluginId: "syllabus-g3-multiplies-two-digit-by-one-digit-written",
-	competencyId: ms.id,
+	competencyId: ys.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "23 x 4 = ?" },
@@ -17477,9 +17534,9 @@ var Pc = _({
 		fr: { prompt: "37 x 6 = ?" },
 		correctValue: 222
 	}]
-}), zc = C({
+}), Wc = C({
 	pluginId: "syllabus-g3-multiplication-commutative-division-not",
-	competencyId: hs.id,
+	competencyId: bs.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17501,9 +17558,9 @@ var Pc = _({
 			isTrue: !1
 		}
 	}]
-}), Bc = _({
+}), Gc = _({
 	pluginId: "syllabus-g3-add-subtract-two-two-digit-mentally",
-	competencyId: gs.id,
+	competencyId: xs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "34 + 28 = ?" },
@@ -17515,9 +17572,9 @@ var Pc = _({
 		fr: { prompt: "71 - 39 = ?" },
 		correctValue: 32
 	}]
-}), Vc = _({
+}), Kc = _({
 	pluginId: "syllabus-g3-bridges-through-10-and-100",
-	competencyId: _s.id,
+	competencyId: Ss.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "8 + 5 = ? (bridge through 10: 8 + 2 + 3)" },
@@ -17529,9 +17586,9 @@ var Pc = _({
 		fr: { prompt: "96 + 7 = ? (passer par 100 : 96 + 4 + 3)" },
 		correctValue: 103
 	}]
-}), Hc = g({
+}), qc = g({
 	pluginId: "syllabus-g3-fraction-as-number-on-number-line",
-	competencyId: vs.id,
+	competencyId: Cs.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17573,9 +17630,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), Uc = h({
+}), Jc = h({
 	pluginId: "syllabus-g3-finds-equivalent-fractions-simplifies",
-	competencyId: ys.id,
+	competencyId: ws.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17597,9 +17654,9 @@ var Pc = _({
 			answer: "3/4"
 		}
 	}]
-}), Wc = h({
+}), Yc = h({
 	pluginId: "syllabus-g3-add-subtract-fractions-same-denominator",
-	competencyId: bs.id,
+	competencyId: Ts.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17621,9 +17678,9 @@ var Pc = _({
 			answer: "4/8"
 		}
 	}]
-}), Gc = _({
+}), Xc = _({
 	pluginId: "syllabus-g3-reads-decimal-in-price-and-measurement",
-	competencyId: xs.id,
+	competencyId: Es.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A price tag reads $3.50. How many cents is that in total?" },
@@ -17635,9 +17692,9 @@ var Pc = _({
 		fr: { prompt: "Un ruban mesure 2,75 m. Combien de centimètres cela fait-il ?" },
 		correctValue: 275
 	}]
-}), Kc = _({
+}), Zc = _({
 	pluginId: "syllabus-g3-converts-between-adjacent-metric-units",
-	competencyId: Ss.id,
+	competencyId: Ds.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Convert 250 cm to metres. How many metres is that?" },
@@ -17649,9 +17706,9 @@ var Pc = _({
 		fr: { prompt: "Convertis 1,4 kg en grammes. Combien de grammes cela fait-il ?" },
 		correctValue: 1400
 	}]
-}), qc = _({
+}), Qc = _({
 	pluginId: "syllabus-g3-measures-perimeter-rectangle-compound",
-	competencyId: Cs.id,
+	competencyId: Os.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A rectangle is 8 cm long and 3 cm wide. What is its perimeter, in cm?" },
@@ -17663,9 +17720,9 @@ var Pc = _({
 		fr: { prompt: "Une forme en L est formée d'un rectangle 6 cm x 4 cm avec un coin de 2 cm x 2 cm retiré. Son périmètre est 24 cm. Quel est le périmètre, en cm ?" },
 		correctValue: 24
 	}]
-}), Jc = g({
+}), $c = g({
 	pluginId: "syllabus-g3-tells-time-to-minute-converts-12-24",
-	competencyId: ws.id,
+	competencyId: ks.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17707,9 +17764,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), Yc = _({
+}), el = _({
 	pluginId: "syllabus-g3-calculates-duration-within-hour",
-	competencyId: Ts.id,
+	competencyId: As.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A film starts at 2:10 and ends at 2:45. How many minutes long is it?" },
@@ -17721,9 +17778,9 @@ var Pc = _({
 		fr: { prompt: "Un cours dure de 9h05 à 9h50. Combien de minutes dure-t-il ?" },
 		correctValue: 45
 	}]
-}), Xc = Nc({
+}), tl = Rc({
 	pluginId: "syllabus-g3-classifies-triangles",
-	competencyId: Es.id,
+	competencyId: js.id,
 	bank: [{
 		grade: 1,
 		en: { pairs: [
@@ -17801,9 +17858,9 @@ var Pc = _({
 			}
 		] }
 	}]
-}), Zc = C({
+}), nl = C({
 	pluginId: "syllabus-g3-classifies-quadrilaterals",
-	competencyId: Ds.id,
+	competencyId: Ms.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17825,9 +17882,9 @@ var Pc = _({
 			isTrue: !1
 		}
 	}]
-}), Qc = g({
+}), rl = g({
 	pluginId: "syllabus-g3-identifies-right-angles",
-	competencyId: Os.id,
+	competencyId: Ns.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17869,9 +17926,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), $c = g({
+}), il = g({
 	pluginId: "syllabus-g3-uses-compass-directions-quarter-half-turns",
-	competencyId: ks.id,
+	competencyId: Ps.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17913,9 +17970,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), el = _({
+}), al = _({
 	pluginId: "syllabus-g3-reads-bar-chart-pictogram-scale",
-	competencyId: As.id,
+	competencyId: Fs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A bar for 'Oranges' reaches the 12 mark on a bar chart scale. How many oranges does the bar show?" },
@@ -17927,9 +17984,9 @@ var Pc = _({
 		fr: { prompt: "Un pictogramme utilise un symbole pour 5 animaux. Une ligne montre 3 symboles entiers. Combien d'animaux cela fait-il ?" },
 		correctValue: 15
 	}]
-}), tl = g({
+}), ol = g({
 	pluginId: "syllabus-g3-answers-comparison-questions-from-table",
-	competencyId: js.id,
+	competencyId: Is.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17971,9 +18028,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), nl = h({
+}), sl = h({
 	pluginId: "syllabus-g3-continues-number-sequence-states-rule",
-	competencyId: Ms.id,
+	competencyId: Ls.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -17995,9 +18052,9 @@ var Pc = _({
 			answer: "22"
 		}
 	}]
-}), rl = _({
+}), cl = _({
 	pluginId: "syllabus-g3-solves-two-step-word-problem",
-	competencyId: Ns.id,
+	competencyId: Rs.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A shop has 40 apples. It sells 15, then receives a delivery of 8 more. How many apples now?" },
@@ -18009,9 +18066,9 @@ var Pc = _({
 		fr: { prompt: "Les billets coûtent 4 $ chacun. Sam en achète 5 et paie avec un billet de 50 $. Combien de monnaie Sam reçoit-il ?" },
 		correctValue: 30
 	}]
-}), il = g({
+}), ll = g({
 	pluginId: "syllabus-g3-draws-bar-model-to-represent-problem",
-	competencyId: Ps.id,
+	competencyId: zs.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -18053,9 +18110,9 @@ var Pc = _({
 			correctIndex: 0
 		}
 	}]
-}), al = h({
+}), ul = h({
 	pluginId: "syllabus-g3-counts-in-multiples",
-	competencyId: Fs.id,
+	competencyId: Bs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18157,9 +18214,9 @@ var Pc = _({
 			}
 		}
 	]
-}), ol = g({
+}), dl = g({
 	pluginId: "syllabus-g3-places-numbers-on-number-line-to-10000",
-	competencyId: Is.id,
+	competencyId: Vs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18288,9 +18345,9 @@ var Pc = _({
 			}
 		}
 	]
-}), sl = g({
+}), fl = g({
 	pluginId: "syllabus-g3-reads-roman-numerals-to-100",
-	competencyId: Ls.id,
+	competencyId: Hs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18440,9 +18497,9 @@ var Pc = _({
 			}
 		}
 	]
-}), cl = _({
+}), pl = _({
 	pluginId: "syllabus-g3-digit-value-and-partitioning-4-digit",
-	competencyId: Rs.id,
+	competencyId: Us.id,
 	bank: [
 		{
 			grade: 1,
@@ -18481,9 +18538,9 @@ var Pc = _({
 			correctValue: 200
 		}
 	]
-}), ll = _({
+}), ml = _({
 	pluginId: "syllabus-g3-rounds-to-nearest-10-and-100",
-	competencyId: zs.id,
+	competencyId: Ws.id,
 	bank: [
 		{
 			grade: 1,
@@ -18528,9 +18585,9 @@ var Pc = _({
 			correctValue: 1300
 		}
 	]
-}), ul = _({
+}), hl = _({
 	pluginId: "syllabus-g3-adds-subtracts-1-10-100-1000",
-	competencyId: Bs.id,
+	competencyId: Gs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18581,9 +18638,9 @@ var Pc = _({
 			correctValue: 9007
 		}
 	]
-}), dl = _({
+}), gl = _({
 	pluginId: "syllabus-g3-times-tables-6-7-9",
-	competencyId: Vs.id,
+	competencyId: Ks.id,
 	bank: [
 		{
 			grade: 1,
@@ -18640,9 +18697,9 @@ var Pc = _({
 			correctValue: 8
 		}
 	]
-}), fl = _({
+}), _l = _({
 	pluginId: "syllabus-g3-all-facts-to-10-x-10",
-	competencyId: Hs.id,
+	competencyId: qs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18705,9 +18762,9 @@ var Pc = _({
 			correctValue: 100
 		}
 	]
-}), pl = _({
+}), vl = _({
 	pluginId: "syllabus-g3-multiplies-by-multiple-of-10",
-	competencyId: Us.id,
+	competencyId: Js.id,
 	bank: [
 		{
 			grade: 1,
@@ -18758,9 +18815,9 @@ var Pc = _({
 			correctValue: 450
 		}
 	]
-}), ml = _({
+}), yl = _({
 	pluginId: "syllabus-g3-divides-with-remainder",
-	competencyId: Ws.id,
+	competencyId: Ys.id,
 	bank: [
 		{
 			grade: 1,
@@ -18817,9 +18874,9 @@ var Pc = _({
 			correctValue: 7
 		}
 	]
-}), hl = _({
+}), bl = _({
 	pluginId: "syllabus-g3-divides-by-thinking-multiplication",
-	competencyId: Gs.id,
+	competencyId: Xs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18864,9 +18921,9 @@ var Pc = _({
 			correctValue: 8
 		}
 	]
-}), gl = _({
+}), xl = _({
 	pluginId: "syllabus-g3-recalls-table-facts-quickly",
-	competencyId: Ks.id,
+	competencyId: Zs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18911,9 +18968,9 @@ var Pc = _({
 			correctValue: 9
 		}
 	]
-}), _l = _({
+}), Sl = _({
 	pluginId: "syllabus-g3-multiplies-by-10-100-mentally",
-	competencyId: qs.id,
+	competencyId: Qs.id,
 	bank: [
 		{
 			grade: 1,
@@ -18958,9 +19015,9 @@ var Pc = _({
 			correctValue: 1200
 		}
 	]
-}), vl = g({
+}), Cl = g({
 	pluginId: "syllabus-g3-estimates-by-rounding",
-	competencyId: Js.id,
+	competencyId: $s.id,
 	bank: [
 		{
 			grade: 1,
@@ -19089,9 +19146,9 @@ var Pc = _({
 			}
 		}
 	]
-}), yl = g({
+}), wl = g({
 	pluginId: "syllabus-g3-understands-unit-and-non-unit-fractions",
-	competencyId: Ys.id,
+	competencyId: ec.id,
 	bank: [
 		{
 			grade: 1,
@@ -19220,9 +19277,9 @@ var Pc = _({
 			}
 		}
 	]
-}), bl = g({
+}), Tl = g({
 	pluginId: "syllabus-g3-compares-fractions-same-numerator-denominator",
-	competencyId: Xs.id,
+	competencyId: tc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19351,9 +19408,9 @@ var Pc = _({
 			}
 		}
 	]
-}), xl = h({
+}), El = h({
 	pluginId: "syllabus-g3-counts-in-tenths",
-	competencyId: Zs.id,
+	competencyId: nc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19433,9 +19490,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Sl = _({
+}), Dl = _({
 	pluginId: "syllabus-g3-finds-quarter-and-three-quarters-of-20",
-	competencyId: Qs.id,
+	competencyId: rc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19480,9 +19537,9 @@ var Pc = _({
 			correctValue: 15
 		}
 	]
-}), Cl = _({
+}), Ol = _({
 	pluginId: "syllabus-g3-solves-missing-number-equations",
-	competencyId: $s.id,
+	competencyId: ic.id,
 	bank: [
 		{
 			grade: 1,
@@ -19533,9 +19590,9 @@ var Pc = _({
 			correctValue: 9
 		}
 	]
-}), wl = C({
+}), kl = C({
 	pluginId: "syllabus-g3-explains-patterns-in-tables",
-	competencyId: ec.id,
+	competencyId: ac.id,
 	bank: [
 		{
 			grade: 1,
@@ -19637,9 +19694,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Tl = h({
+}), Al = h({
 	pluginId: "syllabus-g3-completes-function-machine-tables",
-	competencyId: tc.id,
+	competencyId: oc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19719,9 +19776,9 @@ var Pc = _({
 			}
 		}
 	]
-}), El = _({
+}), jl = _({
 	pluginId: "syllabus-g3-compares-adds-subtracts-metric-measures",
-	competencyId: nc.id,
+	competencyId: sc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19766,9 +19823,9 @@ var Pc = _({
 			correctValue: 155
 		}
 	]
-}), Dl = g({
+}), Ml = g({
 	pluginId: "syllabus-g3-reads-scales-with-intervals",
-	competencyId: rc.id,
+	competencyId: cc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19918,9 +19975,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Ol = _({
+}), Nl = _({
 	pluginId: "syllabus-g3-finds-area-by-counting-squares",
-	competencyId: ic.id,
+	competencyId: lc.id,
 	bank: [
 		{
 			grade: 1,
@@ -19965,9 +20022,9 @@ var Pc = _({
 			correctValue: 42
 		}
 	]
-}), kl = g({
+}), Pl = g({
 	pluginId: "syllabus-g3-estimates-measures-with-benchmarks",
-	competencyId: ac.id,
+	competencyId: uc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20117,9 +20174,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Al = _({
+}), Fl = _({
 	pluginId: "syllabus-g3-converts-hours-minutes-seconds",
-	competencyId: oc.id,
+	competencyId: dc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20170,9 +20227,9 @@ var Pc = _({
 			correctValue: 366
 		}
 	]
-}), jl = _({
+}), Il = _({
 	pluginId: "syllabus-g3-writes-money-in-decimal-notation",
-	competencyId: sc.id,
+	competencyId: fc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20217,9 +20274,9 @@ var Pc = _({
 			correctValue: 9
 		}
 	]
-}), Ml = _({
+}), Ll = _({
 	pluginId: "syllabus-g3-adds-subtracts-money-and-gives-change",
-	competencyId: cc.id,
+	competencyId: pc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20264,9 +20321,9 @@ var Pc = _({
 			correctValue: 225
 		}
 	]
-}), Nl = g({
+}), Rl = g({
 	pluginId: "syllabus-g3-compares-prices-and-decides-affordability",
-	competencyId: lc.id,
+	competencyId: mc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20395,9 +20452,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Pl = g({
+}), zl = g({
 	pluginId: "syllabus-g3-identifies-parallel-perpendicular-lines",
-	competencyId: uc.id,
+	competencyId: hc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20526,9 +20583,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Fl = g({
+}), Bl = g({
 	pluginId: "syllabus-g3-splits-shapes-into-equal-parts-unit-fractions",
-	competencyId: dc.id,
+	competencyId: gc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20678,9 +20735,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Il = g({
+}), Vl = g({
 	pluginId: "syllabus-g3-recognizes-3d-shapes-from-views",
-	competencyId: fc.id,
+	competencyId: _c.id,
 	bank: [
 		{
 			grade: 1,
@@ -20830,9 +20887,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Ll = _({
+}), Hl = _({
 	pluginId: "syllabus-g3-relates-turns-to-right-angles",
-	competencyId: pc.id,
+	competencyId: vc.id,
 	bank: [
 		{
 			grade: 1,
@@ -20877,9 +20934,9 @@ var Pc = _({
 			correctValue: 3
 		}
 	]
-}), Rl = g({
+}), Ul = g({
 	pluginId: "syllabus-g3-uses-grid-references-and-routes",
-	competencyId: mc.id,
+	competencyId: yc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21008,9 +21065,9 @@ var Pc = _({
 			}
 		}
 	]
-}), zl = _({
+}), Wl = _({
 	pluginId: "syllabus-g3-answers-how-many-more-fewer-and-total-questions",
-	competencyId: hc.id,
+	competencyId: bc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21055,9 +21112,9 @@ var Pc = _({
 			correctValue: 4
 		}
 	]
-}), Bl = _({
+}), Gl = _({
 	pluginId: "syllabus-g3-reads-line-plots-in-halves-and-quarters",
-	competencyId: gc.id,
+	competencyId: xc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21096,9 +21153,9 @@ var Pc = _({
 			correctValue: 9
 		}
 	]
-}), Vl = g({
+}), Kl = g({
 	pluginId: "syllabus-g3-plans-a-simple-investigation",
-	competencyId: _c.id,
+	competencyId: Sc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21227,9 +21284,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Hl = g({
+}), ql = g({
 	pluginId: "syllabus-g3-compares-likelihood-of-outcomes",
-	competencyId: vc.id,
+	competencyId: Cc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21379,9 +21436,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Ul = g({
+}), Jl = g({
 	pluginId: "syllabus-g3-judges-whether-an-answer-makes-sense",
-	competencyId: yc.id,
+	competencyId: wc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21510,9 +21567,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Wl = g({
+}), Yl = g({
 	pluginId: "syllabus-g3-spots-missing-or-unneeded-information",
-	competencyId: bc.id,
+	competencyId: Tc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21641,9 +21698,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Gl = g({
+}), Xl = g({
 	pluginId: "syllabus-g3-explains-a-method-and-compares-methods",
-	competencyId: xc.id,
+	competencyId: Ec.id,
 	bank: [
 		{
 			grade: 1,
@@ -21772,9 +21829,9 @@ var Pc = _({
 			}
 		}
 	]
-}), Kl = _({
+}), Zl = _({
 	pluginId: "syllabus-g3-uses-organised-lists-to-find-all-solutions",
-	competencyId: Sc.id,
+	competencyId: Dc.id,
 	bank: [
 		{
 			grade: 1,
@@ -21813,12 +21870,7 @@ var Pc = _({
 			correctValue: 12
 		}
 	]
-}), ql = [
-	Pc.plugin,
-	Fc.plugin,
-	Ic.plugin,
-	Lc.plugin,
-	Rc.plugin,
+}), Ql = [
 	zc.plugin,
 	Bc.plugin,
 	Vc.plugin,
@@ -21880,66 +21932,21 @@ var Pc = _({
 	Ul.plugin,
 	Wl.plugin,
 	Gl.plugin,
-	Kl.plugin
+	Kl.plugin,
+	ql.plugin,
+	Jl.plugin,
+	Yl.plugin,
+	Xl.plugin,
+	Zl.plugin
 ];
 function M(e) {
 	return e;
 }
-var Jl = [
+var $l = [
 	M({
 		key: "syllabus-g3-reads-writes-orders-to-10000",
 		label: "Numbers to 10,000",
 		icon: "🔢",
-		pluginId: Pc.plugin.id,
-		competency: us,
-		competencies: [us],
-		createSession: Pc.createSession,
-		createMasterySignal: Pc.createMasterySignal
-	}),
-	M({
-		key: "syllabus-g3-add-subtract-three-digit-columns",
-		label: "Column Addition & Subtraction",
-		icon: "🧮",
-		pluginId: Fc.plugin.id,
-		competency: ds,
-		competencies: [ds],
-		createSession: Fc.createSession,
-		createMasterySignal: Fc.createMasterySignal
-	}),
-	M({
-		key: "syllabus-g3-checks-subtraction-with-inverse-addition",
-		label: "Checking Subtraction with Addition",
-		icon: "✅",
-		pluginId: Ic.plugin.id,
-		competency: fs,
-		competencies: [fs],
-		createSession: Ic.createSession,
-		createMasterySignal: Ic.createMasterySignal
-	}),
-	M({
-		key: "syllabus-g3-times-tables-3-4-8",
-		label: "3, 4 & 8 Times Tables",
-		icon: "✖️",
-		pluginId: Lc.plugin.id,
-		competency: ps,
-		competencies: [ps],
-		createSession: Lc.createSession,
-		createMasterySignal: Lc.createMasterySignal
-	}),
-	M({
-		key: "syllabus-g3-multiplies-two-digit-by-one-digit-written",
-		label: "Written Multiplication",
-		icon: "📝",
-		pluginId: Rc.plugin.id,
-		competency: ms,
-		competencies: [ms],
-		createSession: Rc.createSession,
-		createMasterySignal: Rc.createMasterySignal
-	}),
-	M({
-		key: "syllabus-g3-multiplication-commutative-division-not",
-		label: "Multiplication & Division: Order Matters?",
-		icon: "🔄",
 		pluginId: zc.plugin.id,
 		competency: hs,
 		competencies: [hs],
@@ -21947,9 +21954,9 @@ var Jl = [
 		createMasterySignal: zc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-add-subtract-two-two-digit-mentally",
-		label: "Mental Add & Subtract: Two 2-Digit Numbers",
-		icon: "🧠",
+		key: "syllabus-g3-add-subtract-three-digit-columns",
+		label: "Column Addition & Subtraction",
+		icon: "🧮",
 		pluginId: Bc.plugin.id,
 		competency: gs,
 		competencies: [gs],
@@ -21957,9 +21964,9 @@ var Jl = [
 		createMasterySignal: Bc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-bridges-through-10-and-100",
-		label: "Bridging Through 10 & 100",
-		icon: "🌉",
+		key: "syllabus-g3-checks-subtraction-with-inverse-addition",
+		label: "Checking Subtraction with Addition",
+		icon: "✅",
 		pluginId: Vc.plugin.id,
 		competency: _s,
 		competencies: [_s],
@@ -21967,9 +21974,9 @@ var Jl = [
 		createMasterySignal: Vc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-fraction-as-number-on-number-line",
-		label: "Fractions on a Number Line",
-		icon: "📏",
+		key: "syllabus-g3-times-tables-3-4-8",
+		label: "3, 4 & 8 Times Tables",
+		icon: "✖️",
 		pluginId: Hc.plugin.id,
 		competency: vs,
 		competencies: [vs],
@@ -21977,9 +21984,9 @@ var Jl = [
 		createMasterySignal: Hc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-finds-equivalent-fractions-simplifies",
-		label: "Equivalent Fractions & Simplifying",
-		icon: "🍰",
+		key: "syllabus-g3-multiplies-two-digit-by-one-digit-written",
+		label: "Written Multiplication",
+		icon: "📝",
 		pluginId: Uc.plugin.id,
 		competency: ys,
 		competencies: [ys],
@@ -21987,9 +21994,9 @@ var Jl = [
 		createMasterySignal: Uc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-add-subtract-fractions-same-denominator",
-		label: "Add & Subtract Fractions",
-		icon: "➗",
+		key: "syllabus-g3-multiplication-commutative-division-not",
+		label: "Multiplication & Division: Order Matters?",
+		icon: "🔄",
 		pluginId: Wc.plugin.id,
 		competency: bs,
 		competencies: [bs],
@@ -21997,9 +22004,9 @@ var Jl = [
 		createMasterySignal: Wc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-reads-decimal-in-price-and-measurement",
-		label: "Reading Decimals in Prices & Measurements",
-		icon: "💲",
+		key: "syllabus-g3-add-subtract-two-two-digit-mentally",
+		label: "Mental Add & Subtract: Two 2-Digit Numbers",
+		icon: "🧠",
 		pluginId: Gc.plugin.id,
 		competency: xs,
 		competencies: [xs],
@@ -22007,9 +22014,9 @@ var Jl = [
 		createMasterySignal: Gc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-converts-between-adjacent-metric-units",
-		label: "Converting Metric Units",
-		icon: "📐",
+		key: "syllabus-g3-bridges-through-10-and-100",
+		label: "Bridging Through 10 & 100",
+		icon: "🌉",
 		pluginId: Kc.plugin.id,
 		competency: Ss,
 		competencies: [Ss],
@@ -22017,9 +22024,9 @@ var Jl = [
 		createMasterySignal: Kc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-measures-perimeter-rectangle-compound",
-		label: "Measuring Perimeter",
-		icon: "🔲",
+		key: "syllabus-g3-fraction-as-number-on-number-line",
+		label: "Fractions on a Number Line",
+		icon: "📏",
 		pluginId: qc.plugin.id,
 		competency: Cs,
 		competencies: [Cs],
@@ -22027,9 +22034,9 @@ var Jl = [
 		createMasterySignal: qc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-tells-time-to-minute-converts-12-24",
-		label: "Telling Time to the Minute",
-		icon: "🕐",
+		key: "syllabus-g3-finds-equivalent-fractions-simplifies",
+		label: "Equivalent Fractions & Simplifying",
+		icon: "🍰",
 		pluginId: Jc.plugin.id,
 		competency: ws,
 		competencies: [ws],
@@ -22037,9 +22044,9 @@ var Jl = [
 		createMasterySignal: Jc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-calculates-duration-within-hour",
-		label: "Calculating Duration",
-		icon: "⏱️",
+		key: "syllabus-g3-add-subtract-fractions-same-denominator",
+		label: "Add & Subtract Fractions",
+		icon: "➗",
 		pluginId: Yc.plugin.id,
 		competency: Ts,
 		competencies: [Ts],
@@ -22047,9 +22054,9 @@ var Jl = [
 		createMasterySignal: Yc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-classifies-triangles",
-		label: "Classifying Triangles",
-		icon: "🔺",
+		key: "syllabus-g3-reads-decimal-in-price-and-measurement",
+		label: "Reading Decimals in Prices & Measurements",
+		icon: "💲",
 		pluginId: Xc.plugin.id,
 		competency: Es,
 		competencies: [Es],
@@ -22057,9 +22064,9 @@ var Jl = [
 		createMasterySignal: Xc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-classifies-quadrilaterals",
-		label: "Classifying Quadrilaterals",
-		icon: "🔷",
+		key: "syllabus-g3-converts-between-adjacent-metric-units",
+		label: "Converting Metric Units",
+		icon: "📐",
 		pluginId: Zc.plugin.id,
 		competency: Ds,
 		competencies: [Ds],
@@ -22067,9 +22074,9 @@ var Jl = [
 		createMasterySignal: Zc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-identifies-right-angles",
-		label: "Identifying Right Angles",
-		icon: "📐",
+		key: "syllabus-g3-measures-perimeter-rectangle-compound",
+		label: "Measuring Perimeter",
+		icon: "🔲",
 		pluginId: Qc.plugin.id,
 		competency: Os,
 		competencies: [Os],
@@ -22077,9 +22084,9 @@ var Jl = [
 		createMasterySignal: Qc.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-uses-compass-directions-quarter-half-turns",
-		label: "Compass Directions & Turns",
-		icon: "🧭",
+		key: "syllabus-g3-tells-time-to-minute-converts-12-24",
+		label: "Telling Time to the Minute",
+		icon: "🕐",
 		pluginId: $c.plugin.id,
 		competency: ks,
 		competencies: [ks],
@@ -22087,9 +22094,9 @@ var Jl = [
 		createMasterySignal: $c.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-reads-bar-chart-pictogram-scale",
-		label: "Bar Charts & Pictograms",
-		icon: "📊",
+		key: "syllabus-g3-calculates-duration-within-hour",
+		label: "Calculating Duration",
+		icon: "⏱️",
 		pluginId: el.plugin.id,
 		competency: As,
 		competencies: [As],
@@ -22097,9 +22104,9 @@ var Jl = [
 		createMasterySignal: el.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-answers-comparison-questions-from-table",
-		label: "Comparing Data in Tables",
-		icon: "📋",
+		key: "syllabus-g3-classifies-triangles",
+		label: "Classifying Triangles",
+		icon: "🔺",
 		pluginId: tl.plugin.id,
 		competency: js,
 		competencies: [js],
@@ -22107,9 +22114,9 @@ var Jl = [
 		createMasterySignal: tl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-continues-number-sequence-states-rule",
-		label: "Number Sequences & Rules",
-		icon: "🔁",
+		key: "syllabus-g3-classifies-quadrilaterals",
+		label: "Classifying Quadrilaterals",
+		icon: "🔷",
 		pluginId: nl.plugin.id,
 		competency: Ms,
 		competencies: [Ms],
@@ -22117,9 +22124,9 @@ var Jl = [
 		createMasterySignal: nl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-solves-two-step-word-problem",
-		label: "Two-Step Word Problems",
-		icon: "📝",
+		key: "syllabus-g3-identifies-right-angles",
+		label: "Identifying Right Angles",
+		icon: "📐",
 		pluginId: rl.plugin.id,
 		competency: Ns,
 		competencies: [Ns],
@@ -22127,9 +22134,9 @@ var Jl = [
 		createMasterySignal: rl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-draws-bar-model-to-represent-problem",
-		label: "Bar Models for Word Problems",
-		icon: "📊",
+		key: "syllabus-g3-uses-compass-directions-quarter-half-turns",
+		label: "Compass Directions & Turns",
+		icon: "🧭",
 		pluginId: il.plugin.id,
 		competency: Ps,
 		competencies: [Ps],
@@ -22137,9 +22144,9 @@ var Jl = [
 		createMasterySignal: il.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-counts-in-multiples",
-		label: "Counting in Multiples",
-		icon: "🔢",
+		key: "syllabus-g3-reads-bar-chart-pictogram-scale",
+		label: "Bar Charts & Pictograms",
+		icon: "📊",
 		pluginId: al.plugin.id,
 		competency: Fs,
 		competencies: [Fs],
@@ -22147,9 +22154,9 @@ var Jl = [
 		createMasterySignal: al.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-places-numbers-on-number-line-to-10000",
-		label: "Number Lines to 10,000",
-		icon: "📏",
+		key: "syllabus-g3-answers-comparison-questions-from-table",
+		label: "Comparing Data in Tables",
+		icon: "📋",
 		pluginId: ol.plugin.id,
 		competency: Is,
 		competencies: [Is],
@@ -22157,9 +22164,9 @@ var Jl = [
 		createMasterySignal: ol.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-reads-roman-numerals-to-100",
-		label: "Roman Numerals",
-		icon: "🏛️",
+		key: "syllabus-g3-continues-number-sequence-states-rule",
+		label: "Number Sequences & Rules",
+		icon: "🔁",
 		pluginId: sl.plugin.id,
 		competency: Ls,
 		competencies: [Ls],
@@ -22167,9 +22174,9 @@ var Jl = [
 		createMasterySignal: sl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-digit-value-and-partitioning-4-digit",
-		label: "Digit Values & Partitioning",
-		icon: "🔟",
+		key: "syllabus-g3-solves-two-step-word-problem",
+		label: "Two-Step Word Problems",
+		icon: "📝",
 		pluginId: cl.plugin.id,
 		competency: Rs,
 		competencies: [Rs],
@@ -22177,9 +22184,9 @@ var Jl = [
 		createMasterySignal: cl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-rounds-to-nearest-10-and-100",
-		label: "Rounding to 10 & 100",
-		icon: "🎯",
+		key: "syllabus-g3-draws-bar-model-to-represent-problem",
+		label: "Bar Models for Word Problems",
+		icon: "📊",
 		pluginId: ll.plugin.id,
 		competency: zs,
 		competencies: [zs],
@@ -22187,9 +22194,9 @@ var Jl = [
 		createMasterySignal: ll.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-adds-subtracts-1-10-100-1000",
-		label: "Adding & Subtracting 1, 10, 100, 1000",
-		icon: "➕",
+		key: "syllabus-g3-counts-in-multiples",
+		label: "Counting in Multiples",
+		icon: "🔢",
 		pluginId: ul.plugin.id,
 		competency: Bs,
 		competencies: [Bs],
@@ -22197,9 +22204,9 @@ var Jl = [
 		createMasterySignal: ul.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-times-tables-6-7-9",
-		label: "6, 7 & 9 Times Tables",
-		icon: "✖️",
+		key: "syllabus-g3-places-numbers-on-number-line-to-10000",
+		label: "Number Lines to 10,000",
+		icon: "📏",
 		pluginId: dl.plugin.id,
 		competency: Vs,
 		competencies: [Vs],
@@ -22207,9 +22214,9 @@ var Jl = [
 		createMasterySignal: dl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-all-facts-to-10-x-10",
-		label: "All Times Tables to 10 x 10",
-		icon: "💯",
+		key: "syllabus-g3-reads-roman-numerals-to-100",
+		label: "Roman Numerals",
+		icon: "🏛️",
 		pluginId: fl.plugin.id,
 		competency: Hs,
 		competencies: [Hs],
@@ -22217,8 +22224,8 @@ var Jl = [
 		createMasterySignal: fl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-multiplies-by-multiple-of-10",
-		label: "Multiplying by Multiples of 10",
+		key: "syllabus-g3-digit-value-and-partitioning-4-digit",
+		label: "Digit Values & Partitioning",
 		icon: "🔟",
 		pluginId: pl.plugin.id,
 		competency: Us,
@@ -22227,9 +22234,9 @@ var Jl = [
 		createMasterySignal: pl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-divides-with-remainder",
-		label: "Division with Remainders",
-		icon: "➗",
+		key: "syllabus-g3-rounds-to-nearest-10-and-100",
+		label: "Rounding to 10 & 100",
+		icon: "🎯",
 		pluginId: ml.plugin.id,
 		competency: Ws,
 		competencies: [Ws],
@@ -22237,9 +22244,9 @@ var Jl = [
 		createMasterySignal: ml.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-divides-by-thinking-multiplication",
-		label: "Division from Multiplication Facts",
-		icon: "🔁",
+		key: "syllabus-g3-adds-subtracts-1-10-100-1000",
+		label: "Adding & Subtracting 1, 10, 100, 1000",
+		icon: "➕",
 		pluginId: hl.plugin.id,
 		competency: Gs,
 		competencies: [Gs],
@@ -22247,9 +22254,9 @@ var Jl = [
 		createMasterySignal: hl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-recalls-table-facts-quickly",
-		label: "Quick Table Facts",
-		icon: "⚡",
+		key: "syllabus-g3-times-tables-6-7-9",
+		label: "6, 7 & 9 Times Tables",
+		icon: "✖️",
 		pluginId: gl.plugin.id,
 		competency: Ks,
 		competencies: [Ks],
@@ -22257,9 +22264,9 @@ var Jl = [
 		createMasterySignal: gl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-multiplies-by-10-100-mentally",
-		label: "Mental x10 & x100",
-		icon: "🧠",
+		key: "syllabus-g3-all-facts-to-10-x-10",
+		label: "All Times Tables to 10 x 10",
+		icon: "💯",
 		pluginId: _l.plugin.id,
 		competency: qs,
 		competencies: [qs],
@@ -22267,9 +22274,9 @@ var Jl = [
 		createMasterySignal: _l.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-estimates-by-rounding",
-		label: "Estimating by Rounding",
-		icon: "🎯",
+		key: "syllabus-g3-multiplies-by-multiple-of-10",
+		label: "Multiplying by Multiples of 10",
+		icon: "🔟",
 		pluginId: vl.plugin.id,
 		competency: Js,
 		competencies: [Js],
@@ -22277,9 +22284,9 @@ var Jl = [
 		createMasterySignal: vl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-understands-unit-and-non-unit-fractions",
-		label: "Understanding Fractions",
-		icon: "🍕",
+		key: "syllabus-g3-divides-with-remainder",
+		label: "Division with Remainders",
+		icon: "➗",
 		pluginId: yl.plugin.id,
 		competency: Ys,
 		competencies: [Ys],
@@ -22287,9 +22294,9 @@ var Jl = [
 		createMasterySignal: yl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-compares-fractions-same-numerator-denominator",
-		label: "Comparing Fractions",
-		icon: "⚖️",
+		key: "syllabus-g3-divides-by-thinking-multiplication",
+		label: "Division from Multiplication Facts",
+		icon: "🔁",
 		pluginId: bl.plugin.id,
 		competency: Xs,
 		competencies: [Xs],
@@ -22297,9 +22304,9 @@ var Jl = [
 		createMasterySignal: bl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-counts-in-tenths",
-		label: "Counting in Tenths",
-		icon: "🔢",
+		key: "syllabus-g3-recalls-table-facts-quickly",
+		label: "Quick Table Facts",
+		icon: "⚡",
 		pluginId: xl.plugin.id,
 		competency: Zs,
 		competencies: [Zs],
@@ -22307,9 +22314,9 @@ var Jl = [
 		createMasterySignal: xl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-finds-quarter-and-three-quarters-of-20",
-		label: "Quarters of a Number",
-		icon: "🍰",
+		key: "syllabus-g3-multiplies-by-10-100-mentally",
+		label: "Mental x10 & x100",
+		icon: "🧠",
 		pluginId: Sl.plugin.id,
 		competency: Qs,
 		competencies: [Qs],
@@ -22317,9 +22324,9 @@ var Jl = [
 		createMasterySignal: Sl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-solves-missing-number-equations",
-		label: "Missing Number Equations",
-		icon: "❓",
+		key: "syllabus-g3-estimates-by-rounding",
+		label: "Estimating by Rounding",
+		icon: "🎯",
 		pluginId: Cl.plugin.id,
 		competency: $s,
 		competencies: [$s],
@@ -22327,9 +22334,9 @@ var Jl = [
 		createMasterySignal: Cl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-explains-patterns-in-tables",
-		label: "Patterns in Number Tables",
-		icon: "🧩",
+		key: "syllabus-g3-understands-unit-and-non-unit-fractions",
+		label: "Understanding Fractions",
+		icon: "🍕",
 		pluginId: wl.plugin.id,
 		competency: ec,
 		competencies: [ec],
@@ -22337,9 +22344,9 @@ var Jl = [
 		createMasterySignal: wl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-completes-function-machine-tables",
-		label: "Function Machines",
-		icon: "⚙️",
+		key: "syllabus-g3-compares-fractions-same-numerator-denominator",
+		label: "Comparing Fractions",
+		icon: "⚖️",
 		pluginId: Tl.plugin.id,
 		competency: tc,
 		competencies: [tc],
@@ -22347,9 +22354,9 @@ var Jl = [
 		createMasterySignal: Tl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-compares-adds-subtracts-metric-measures",
-		label: "Adding & Comparing Measures",
-		icon: "📏",
+		key: "syllabus-g3-counts-in-tenths",
+		label: "Counting in Tenths",
+		icon: "🔢",
 		pluginId: El.plugin.id,
 		competency: nc,
 		competencies: [nc],
@@ -22357,9 +22364,9 @@ var Jl = [
 		createMasterySignal: El.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-reads-scales-with-intervals",
-		label: "Reading Scales",
-		icon: "⚖️",
+		key: "syllabus-g3-finds-quarter-and-three-quarters-of-20",
+		label: "Quarters of a Number",
+		icon: "🍰",
 		pluginId: Dl.plugin.id,
 		competency: rc,
 		competencies: [rc],
@@ -22367,9 +22374,9 @@ var Jl = [
 		createMasterySignal: Dl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-finds-area-by-counting-squares",
-		label: "Area by Counting Squares",
-		icon: "🟦",
+		key: "syllabus-g3-solves-missing-number-equations",
+		label: "Missing Number Equations",
+		icon: "❓",
 		pluginId: Ol.plugin.id,
 		competency: ic,
 		competencies: [ic],
@@ -22377,9 +22384,9 @@ var Jl = [
 		createMasterySignal: Ol.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-estimates-measures-with-benchmarks",
-		label: "Estimating Measures",
-		icon: "🔮",
+		key: "syllabus-g3-explains-patterns-in-tables",
+		label: "Patterns in Number Tables",
+		icon: "🧩",
 		pluginId: kl.plugin.id,
 		competency: ac,
 		competencies: [ac],
@@ -22387,9 +22394,9 @@ var Jl = [
 		createMasterySignal: kl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-converts-hours-minutes-seconds",
-		label: "Hours, Minutes & Seconds",
-		icon: "⏳",
+		key: "syllabus-g3-completes-function-machine-tables",
+		label: "Function Machines",
+		icon: "⚙️",
 		pluginId: Al.plugin.id,
 		competency: oc,
 		competencies: [oc],
@@ -22397,9 +22404,9 @@ var Jl = [
 		createMasterySignal: Al.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-writes-money-in-decimal-notation",
-		label: "Money in Decimals",
-		icon: "💲",
+		key: "syllabus-g3-compares-adds-subtracts-metric-measures",
+		label: "Adding & Comparing Measures",
+		icon: "📏",
 		pluginId: jl.plugin.id,
 		competency: sc,
 		competencies: [sc],
@@ -22407,9 +22414,9 @@ var Jl = [
 		createMasterySignal: jl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-adds-subtracts-money-and-gives-change",
-		label: "Money Totals & Change",
-		icon: "🪙",
+		key: "syllabus-g3-reads-scales-with-intervals",
+		label: "Reading Scales",
+		icon: "⚖️",
 		pluginId: Ml.plugin.id,
 		competency: cc,
 		competencies: [cc],
@@ -22417,9 +22424,9 @@ var Jl = [
 		createMasterySignal: Ml.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-compares-prices-and-decides-affordability",
-		label: "Comparing Prices",
-		icon: "🛍️",
+		key: "syllabus-g3-finds-area-by-counting-squares",
+		label: "Area by Counting Squares",
+		icon: "🟦",
 		pluginId: Nl.plugin.id,
 		competency: lc,
 		competencies: [lc],
@@ -22427,9 +22434,9 @@ var Jl = [
 		createMasterySignal: Nl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-identifies-parallel-perpendicular-lines",
-		label: "Parallel & Perpendicular Lines",
-		icon: "📐",
+		key: "syllabus-g3-estimates-measures-with-benchmarks",
+		label: "Estimating Measures",
+		icon: "🔮",
 		pluginId: Pl.plugin.id,
 		competency: uc,
 		competencies: [uc],
@@ -22437,9 +22444,9 @@ var Jl = [
 		createMasterySignal: Pl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-splits-shapes-into-equal-parts-unit-fractions",
-		label: "Equal Parts of Shapes",
-		icon: "🧩",
+		key: "syllabus-g3-converts-hours-minutes-seconds",
+		label: "Hours, Minutes & Seconds",
+		icon: "⏳",
 		pluginId: Fl.plugin.id,
 		competency: dc,
 		competencies: [dc],
@@ -22447,9 +22454,9 @@ var Jl = [
 		createMasterySignal: Fl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-recognizes-3d-shapes-from-views",
-		label: "3D Shapes & Views",
-		icon: "🧊",
+		key: "syllabus-g3-writes-money-in-decimal-notation",
+		label: "Money in Decimals",
+		icon: "💲",
 		pluginId: Il.plugin.id,
 		competency: fc,
 		competencies: [fc],
@@ -22457,9 +22464,9 @@ var Jl = [
 		createMasterySignal: Il.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-relates-turns-to-right-angles",
-		label: "Turns & Right Angles",
-		icon: "🔄",
+		key: "syllabus-g3-adds-subtracts-money-and-gives-change",
+		label: "Money Totals & Change",
+		icon: "🪙",
 		pluginId: Ll.plugin.id,
 		competency: pc,
 		competencies: [pc],
@@ -22467,9 +22474,9 @@ var Jl = [
 		createMasterySignal: Ll.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-uses-grid-references-and-routes",
-		label: "Grid References & Routes",
-		icon: "🗺️",
+		key: "syllabus-g3-compares-prices-and-decides-affordability",
+		label: "Comparing Prices",
+		icon: "🛍️",
 		pluginId: Rl.plugin.id,
 		competency: mc,
 		competencies: [mc],
@@ -22477,9 +22484,9 @@ var Jl = [
 		createMasterySignal: Rl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-answers-how-many-more-fewer-and-total-questions",
-		label: "More, Fewer & Total",
-		icon: "➕",
+		key: "syllabus-g3-identifies-parallel-perpendicular-lines",
+		label: "Parallel & Perpendicular Lines",
+		icon: "📐",
 		pluginId: zl.plugin.id,
 		competency: hc,
 		competencies: [hc],
@@ -22487,9 +22494,9 @@ var Jl = [
 		createMasterySignal: zl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-reads-line-plots-in-halves-and-quarters",
-		label: "Line Plots",
-		icon: "📈",
+		key: "syllabus-g3-splits-shapes-into-equal-parts-unit-fractions",
+		label: "Equal Parts of Shapes",
+		icon: "🧩",
 		pluginId: Bl.plugin.id,
 		competency: gc,
 		competencies: [gc],
@@ -22497,9 +22504,9 @@ var Jl = [
 		createMasterySignal: Bl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-plans-a-simple-investigation",
-		label: "Planning an Investigation",
-		icon: "🔎",
+		key: "syllabus-g3-recognizes-3d-shapes-from-views",
+		label: "3D Shapes & Views",
+		icon: "🧊",
 		pluginId: Vl.plugin.id,
 		competency: _c,
 		competencies: [_c],
@@ -22507,9 +22514,9 @@ var Jl = [
 		createMasterySignal: Vl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-compares-likelihood-of-outcomes",
-		label: "Chance & Likelihood",
-		icon: "🎲",
+		key: "syllabus-g3-relates-turns-to-right-angles",
+		label: "Turns & Right Angles",
+		icon: "🔄",
 		pluginId: Hl.plugin.id,
 		competency: vc,
 		competencies: [vc],
@@ -22517,9 +22524,9 @@ var Jl = [
 		createMasterySignal: Hl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-judges-whether-an-answer-makes-sense",
-		label: "Does the Answer Make Sense?",
-		icon: "🤔",
+		key: "syllabus-g3-uses-grid-references-and-routes",
+		label: "Grid References & Routes",
+		icon: "🗺️",
 		pluginId: Ul.plugin.id,
 		competency: yc,
 		competencies: [yc],
@@ -22527,9 +22534,9 @@ var Jl = [
 		createMasterySignal: Ul.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-spots-missing-or-unneeded-information",
-		label: "Missing or Extra Information",
-		icon: "🧐",
+		key: "syllabus-g3-answers-how-many-more-fewer-and-total-questions",
+		label: "More, Fewer & Total",
+		icon: "➕",
 		pluginId: Wl.plugin.id,
 		competency: bc,
 		competencies: [bc],
@@ -22537,9 +22544,9 @@ var Jl = [
 		createMasterySignal: Wl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-explains-a-method-and-compares-methods",
-		label: "Explaining & Comparing Methods",
-		icon: "💬",
+		key: "syllabus-g3-reads-line-plots-in-halves-and-quarters",
+		label: "Line Plots",
+		icon: "📈",
 		pluginId: Gl.plugin.id,
 		competency: xc,
 		competencies: [xc],
@@ -22547,16 +22554,66 @@ var Jl = [
 		createMasterySignal: Gl.createMasterySignal
 	}),
 	M({
-		key: "syllabus-g3-uses-organised-lists-to-find-all-solutions",
-		label: "Organised Lists",
-		icon: "📋",
+		key: "syllabus-g3-plans-a-simple-investigation",
+		label: "Planning an Investigation",
+		icon: "🔎",
 		pluginId: Kl.plugin.id,
 		competency: Sc,
 		competencies: [Sc],
 		createSession: Kl.createSession,
 		createMasterySignal: Kl.createMasterySignal
+	}),
+	M({
+		key: "syllabus-g3-compares-likelihood-of-outcomes",
+		label: "Chance & Likelihood",
+		icon: "🎲",
+		pluginId: ql.plugin.id,
+		competency: Cc,
+		competencies: [Cc],
+		createSession: ql.createSession,
+		createMasterySignal: ql.createMasterySignal
+	}),
+	M({
+		key: "syllabus-g3-judges-whether-an-answer-makes-sense",
+		label: "Does the Answer Make Sense?",
+		icon: "🤔",
+		pluginId: Jl.plugin.id,
+		competency: wc,
+		competencies: [wc],
+		createSession: Jl.createSession,
+		createMasterySignal: Jl.createMasterySignal
+	}),
+	M({
+		key: "syllabus-g3-spots-missing-or-unneeded-information",
+		label: "Missing or Extra Information",
+		icon: "🧐",
+		pluginId: Yl.plugin.id,
+		competency: Tc,
+		competencies: [Tc],
+		createSession: Yl.createSession,
+		createMasterySignal: Yl.createMasterySignal
+	}),
+	M({
+		key: "syllabus-g3-explains-a-method-and-compares-methods",
+		label: "Explaining & Comparing Methods",
+		icon: "💬",
+		pluginId: Xl.plugin.id,
+		competency: Ec,
+		competencies: [Ec],
+		createSession: Xl.createSession,
+		createMasterySignal: Xl.createMasterySignal
+	}),
+	M({
+		key: "syllabus-g3-uses-organised-lists-to-find-all-solutions",
+		label: "Organised Lists",
+		icon: "📋",
+		pluginId: Zl.plugin.id,
+		competency: Dc,
+		competencies: [Dc],
+		createSession: Zl.createSession,
+		createMasterySignal: Zl.createMasterySignal
 	})
-], Yl = {
+], eu = {
 	id: "math.number-sense.reads-writes-orders-to-million",
 	nameKey: "competency.math.number-sense.reads-writes-orders-to-million.name",
 	descriptionKey: "competency.math.number-sense.reads-writes-orders-to-million.description",
@@ -22569,7 +22626,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.number-sense.reads-writes-orders-to-million"
 	}]
-}, Xl = {
+}, tu = {
 	id: "math.place-value.extends-place-value-to-millions",
 	nameKey: "competency.math.place-value.extends-place-value-to-millions.name",
 	descriptionKey: "competency.math.place-value.extends-place-value-to-millions.description",
@@ -22582,7 +22639,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.place-value.extends-place-value-to-millions"
 	}]
-}, Zl = {
+}, nu = {
 	id: "math.subtraction.add-subtract-four-digit-across-zeros",
 	nameKey: "competency.math.subtraction.add-subtract-four-digit-across-zeros.name",
 	descriptionKey: "competency.math.subtraction.add-subtract-four-digit-across-zeros.description",
@@ -22595,7 +22652,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.subtraction.add-subtract-four-digit-across-zeros"
 	}]
-}, Ql = {
+}, ru = {
 	id: "math.multiplication.knows-tables-to-12x12",
 	nameKey: "competency.math.multiplication.knows-tables-to-12x12.name",
 	descriptionKey: "competency.math.multiplication.knows-tables-to-12x12.description",
@@ -22608,7 +22665,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.multiplication.knows-tables-to-12x12"
 	}]
-}, $l = {
+}, iu = {
 	id: "math.multiplication.multiplies-three-digit-by-one-digit",
 	nameKey: "competency.math.multiplication.multiplies-three-digit-by-one-digit.name",
 	descriptionKey: "competency.math.multiplication.multiplies-three-digit-by-one-digit.description",
@@ -22621,7 +22678,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.multiplication.multiplies-three-digit-by-one-digit"
 	}]
-}, eu = {
+}, au = {
 	id: "math.division.divides-three-digit-by-one-digit-with-remainder",
 	nameKey: "competency.math.division.divides-three-digit-by-one-digit-with-remainder.name",
 	descriptionKey: "competency.math.division.divides-three-digit-by-one-digit-with-remainder.description",
@@ -22634,7 +22691,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.division.divides-three-digit-by-one-digit-with-remainder"
 	}]
-}, tu = {
+}, ou = {
 	id: "math.mental-mathematics.rounding-compensation-mentally",
 	nameKey: "competency.math.mental-mathematics.rounding-compensation-mentally.name",
 	descriptionKey: "competency.math.mental-mathematics.rounding-compensation-mentally.description",
@@ -22647,7 +22704,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mental-mathematics.rounding-compensation-mentally"
 	}]
-}, nu = {
+}, su = {
 	id: "math.mental-mathematics.instant-table-fact-recall",
 	nameKey: "competency.math.mental-mathematics.instant-table-fact-recall.name",
 	descriptionKey: "competency.math.mental-mathematics.instant-table-fact-recall.description",
@@ -22659,7 +22716,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mental-mathematics.instant-table-fact-recall"
 	}]
-}, ru = {
+}, cu = {
 	id: "math.fractions.compares-orders-fractions-different-denominators",
 	nameKey: "competency.math.fractions.compares-orders-fractions-different-denominators.name",
 	descriptionKey: "competency.math.fractions.compares-orders-fractions-different-denominators.description",
@@ -22672,7 +22729,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.compares-orders-fractions-different-denominators"
 	}]
-}, iu = {
+}, lu = {
 	id: "math.fractions.converts-improper-fractions-mixed-numbers",
 	nameKey: "competency.math.fractions.converts-improper-fractions-mixed-numbers.name",
 	descriptionKey: "competency.math.fractions.converts-improper-fractions-mixed-numbers.description",
@@ -22685,7 +22742,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.converts-improper-fractions-mixed-numbers"
 	}]
-}, au = {
+}, uu = {
 	id: "math.fractions.finds-fraction-of-quantity",
 	nameKey: "competency.math.fractions.finds-fraction-of-quantity.name",
 	descriptionKey: "competency.math.fractions.finds-fraction-of-quantity.description",
@@ -22698,7 +22755,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.finds-fraction-of-quantity"
 	}]
-}, ou = {
+}, du = {
 	id: "math.decimals.tenths-hundredths-as-decimals-number-line",
 	nameKey: "competency.math.decimals.tenths-hundredths-as-decimals-number-line.name",
 	descriptionKey: "competency.math.decimals.tenths-hundredths-as-decimals-number-line.description",
@@ -22711,7 +22768,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.decimals.tenths-hundredths-as-decimals-number-line"
 	}]
-}, su = {
+}, fu = {
 	id: "math.decimals.add-subtract-decimals-two-places",
 	nameKey: "competency.math.decimals.add-subtract-decimals-two-places.name",
 	descriptionKey: "competency.math.decimals.add-subtract-decimals-two-places.description",
@@ -22724,7 +22781,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.decimals.add-subtract-decimals-two-places"
 	}]
-}, cu = {
+}, pu = {
 	id: "math.percentages.understands-percentage-as-out-of-100",
 	nameKey: "competency.math.percentages.understands-percentage-as-out-of-100.name",
 	descriptionKey: "competency.math.percentages.understands-percentage-as-out-of-100.description",
@@ -22736,7 +22793,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.percentages.understands-percentage-as-out-of-100"
 	}]
-}, lu = {
+}, mu = {
 	id: "math.measurement.calculates-area-rectangle-compound",
 	nameKey: "competency.math.measurement.calculates-area-rectangle-compound.name",
 	descriptionKey: "competency.math.measurement.calculates-area-rectangle-compound.description",
@@ -22749,7 +22806,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.calculates-area-rectangle-compound"
 	}]
-}, uu = {
+}, hu = {
 	id: "math.measurement.estimates-length-mass-volume",
 	nameKey: "competency.math.measurement.estimates-length-mass-volume.name",
 	descriptionKey: "competency.math.measurement.estimates-length-mass-volume.description",
@@ -22762,7 +22819,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.estimates-length-mass-volume"
 	}]
-}, du = {
+}, gu = {
 	id: "math.measurement.reads-scale-with-unlabelled-divisions",
 	nameKey: "competency.math.measurement.reads-scale-with-unlabelled-divisions.name",
 	descriptionKey: "competency.math.measurement.reads-scale-with-unlabelled-divisions.description",
@@ -22775,7 +22832,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.reads-scale-with-unlabelled-divisions"
 	}]
-}, fu = {
+}, _u = {
 	id: "math.time.calculates-durations-crossing-hours-midnight",
 	nameKey: "competency.math.time.calculates-durations-crossing-hours-midnight.name",
 	descriptionKey: "competency.math.time.calculates-durations-crossing-hours-midnight.description",
@@ -22788,7 +22845,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.time.calculates-durations-crossing-hours-midnight"
 	}]
-}, pu = {
+}, vu = {
 	id: "math.time.uses-calendar-date-weeks-ahead",
 	nameKey: "competency.math.time.uses-calendar-date-weeks-ahead.name",
 	descriptionKey: "competency.math.time.uses-calendar-date-weeks-ahead.description",
@@ -22801,7 +22858,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.time.uses-calendar-date-weeks-ahead"
 	}]
-}, mu = {
+}, yu = {
 	id: "math.geometry.measures-draws-angle-with-protractor",
 	nameKey: "competency.math.geometry.measures-draws-angle-with-protractor.name",
 	descriptionKey: "competency.math.geometry.measures-draws-angle-with-protractor.description",
@@ -22814,7 +22871,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.measures-draws-angle-with-protractor"
 	}]
-}, hu = {
+}, bu = {
 	id: "math.geometry.angles-on-line-and-around-point",
 	nameKey: "competency.math.geometry.angles-on-line-and-around-point.name",
 	descriptionKey: "competency.math.geometry.angles-on-line-and-around-point.description",
@@ -22827,7 +22884,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.angles-on-line-and-around-point"
 	}]
-}, gu = {
+}, xu = {
 	id: "math.geometry.triangle-angles-sum-180",
 	nameKey: "competency.math.geometry.triangle-angles-sum-180.name",
 	descriptionKey: "competency.math.geometry.triangle-angles-sum-180.description",
@@ -22839,7 +22896,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.triangle-angles-sum-180"
 	}]
-}, _u = {
+}, Su = {
 	id: "math.geometry.plots-reads-coordinates-first-quadrant",
 	nameKey: "competency.math.geometry.plots-reads-coordinates-first-quadrant.name",
 	descriptionKey: "competency.math.geometry.plots-reads-coordinates-first-quadrant.description",
@@ -22852,7 +22909,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.plots-reads-coordinates-first-quadrant"
 	}]
-}, vu = {
+}, Cu = {
 	id: "math.geometry.translates-reflects-shape-on-grid",
 	nameKey: "competency.math.geometry.translates-reflects-shape-on-grid.name",
 	descriptionKey: "competency.math.geometry.translates-reflects-shape-on-grid.description",
@@ -22865,7 +22922,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.translates-reflects-shape-on-grid"
 	}]
-}, yu = {
+}, wu = {
 	id: "math.data-graphs.draws-reads-line-graph-trend",
 	nameKey: "competency.math.data-graphs.draws-reads-line-graph-trend.name",
 	descriptionKey: "competency.math.data-graphs.draws-reads-line-graph-trend.description",
@@ -22878,7 +22935,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data-graphs.draws-reads-line-graph-trend"
 	}]
-}, bu = {
+}, Tu = {
 	id: "math.data-graphs.finds-mode-range-data-set",
 	nameKey: "competency.math.data-graphs.finds-mode-range-data-set.name",
 	descriptionKey: "competency.math.data-graphs.finds-mode-range-data-set.description",
@@ -22890,7 +22947,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data-graphs.finds-mode-range-data-set"
 	}]
-}, xu = {
+}, Eu = {
 	id: "math.mathematical-reasoning.uses-symbol-box-for-unknown",
 	nameKey: "competency.math.mathematical-reasoning.uses-symbol-box-for-unknown.name",
 	descriptionKey: "competency.math.mathematical-reasoning.uses-symbol-box-for-unknown.description",
@@ -22903,7 +22960,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.uses-symbol-box-for-unknown"
 	}]
-}, Su = {
+}, Du = {
 	id: "math.mathematical-reasoning.describes-relationship-between-columns",
 	nameKey: "competency.math.mathematical-reasoning.describes-relationship-between-columns.name",
 	descriptionKey: "competency.math.mathematical-reasoning.describes-relationship-between-columns.description",
@@ -22916,7 +22973,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.describes-relationship-between-columns"
 	}]
-}, Cu = {
+}, Ou = {
 	id: "math.problem-solving.solves-multi-step-mixed-operations-units",
 	nameKey: "competency.math.problem-solving.solves-multi-step-mixed-operations-units.name",
 	descriptionKey: "competency.math.problem-solving.solves-multi-step-mixed-operations-units.description",
@@ -22929,7 +22986,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.problem-solving.solves-multi-step-mixed-operations-units"
 	}]
-}, wu = {
+}, ku = {
 	id: "math.problem-solving.works-systematically-all-solutions",
 	nameKey: "competency.math.problem-solving.works-systematically-all-solutions.name",
 	descriptionKey: "competency.math.problem-solving.works-systematically-all-solutions.description",
@@ -22942,7 +22999,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.problem-solving.works-systematically-all-solutions"
 	}]
-}, Tu = {
+}, Au = {
 	id: "math.problem-solving.explains-method-aloud",
 	nameKey: "competency.math.problem-solving.explains-method-aloud.name",
 	descriptionKey: "competency.math.problem-solving.explains-method-aloud.description",
@@ -22955,7 +23012,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.problem-solving.explains-method-aloud"
 	}]
-}, Eu = {
+}, ju = {
 	id: "math.number-sense.finds-factor-pairs-recognizes-multiples",
 	nameKey: "competency.math.number-sense.finds-factor-pairs-recognizes-multiples.name",
 	descriptionKey: "competency.math.number-sense.finds-factor-pairs-recognizes-multiples.description",
@@ -22968,7 +23025,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.number-sense.finds-factor-pairs-recognizes-multiples"
 	}]
-}, Du = {
+}, Mu = {
 	id: "math.number-sense.decides-prime-or-composite-to-100",
 	nameKey: "competency.math.number-sense.decides-prime-or-composite-to-100.name",
 	descriptionKey: "competency.math.number-sense.decides-prime-or-composite-to-100.description",
@@ -22981,7 +23038,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.number-sense.decides-prime-or-composite-to-100"
 	}]
-}, Ou = {
+}, Nu = {
 	id: "math.number-sense.reads-roman-numerals-to-1000",
 	nameKey: "competency.math.number-sense.reads-roman-numerals-to-1000.name",
 	descriptionKey: "competency.math.number-sense.reads-roman-numerals-to-1000.description",
@@ -22994,7 +23051,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.number-sense.reads-roman-numerals-to-1000"
 	}]
-}, ku = {
+}, Pu = {
 	id: "math.place-value.multiplies-divides-by-10-100-1000",
 	nameKey: "competency.math.place-value.multiplies-divides-by-10-100-1000.name",
 	descriptionKey: "competency.math.place-value.multiplies-divides-by-10-100-1000.description",
@@ -23007,7 +23064,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.place-value.multiplies-divides-by-10-100-1000"
 	}]
-}, Au = {
+}, Fu = {
 	id: "math.addition.checks-results-rounding-inverse",
 	nameKey: "competency.math.addition.checks-results-rounding-inverse.name",
 	descriptionKey: "competency.math.addition.checks-results-rounding-inverse.description",
@@ -23020,7 +23077,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.addition.checks-results-rounding-inverse"
 	}]
-}, ju = {
+}, Iu = {
 	id: "math.division.decides-what-to-do-with-remainder",
 	nameKey: "competency.math.division.decides-what-to-do-with-remainder.name",
 	descriptionKey: "competency.math.division.decides-what-to-do-with-remainder.description",
@@ -23033,7 +23090,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.division.decides-what-to-do-with-remainder"
 	}]
-}, Mu = {
+}, Lu = {
 	id: "math.multiplication.tells-times-as-many-from-more-than",
 	nameKey: "competency.math.multiplication.tells-times-as-many-from-more-than.name",
 	descriptionKey: "competency.math.multiplication.tells-times-as-many-from-more-than.description",
@@ -23046,7 +23103,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.multiplication.tells-times-as-many-from-more-than"
 	}]
-}, Nu = {
+}, Ru = {
 	id: "math.multiplication.uses-distributive-associative-properties",
 	nameKey: "competency.math.multiplication.uses-distributive-associative-properties.name",
 	descriptionKey: "competency.math.multiplication.uses-distributive-associative-properties.description",
@@ -23059,7 +23116,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.multiplication.uses-distributive-associative-properties"
 	}]
-}, Pu = {
+}, zu = {
 	id: "math.multiplication.uses-divisibility-rules-2-5-10",
 	nameKey: "competency.math.multiplication.uses-divisibility-rules-2-5-10.name",
 	descriptionKey: "competency.math.multiplication.uses-divisibility-rules-2-5-10.description",
@@ -23072,7 +23129,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.multiplication.uses-divisibility-rules-2-5-10"
 	}]
-}, Fu = {
+}, Bu = {
 	id: "math.mental-math.calculates-tens-and-thousands-mentally",
 	nameKey: "competency.math.mental-math.calculates-tens-and-thousands-mentally.name",
 	descriptionKey: "competency.math.mental-math.calculates-tens-and-thousands-mentally.description",
@@ -23085,7 +23142,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mental-math.calculates-tens-and-thousands-mentally"
 	}]
-}, Iu = {
+}, Vu = {
 	id: "math.mental-math.uses-doubling-and-halving-to-simplify",
 	nameKey: "competency.math.mental-math.uses-doubling-and-halving-to-simplify.name",
 	descriptionKey: "competency.math.mental-math.uses-doubling-and-halving-to-simplify.description",
@@ -23098,7 +23155,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mental-math.uses-doubling-and-halving-to-simplify"
 	}]
-}, Lu = {
+}, Hu = {
 	id: "math.mental-math.estimates-products-and-quotients",
 	nameKey: "competency.math.mental-math.estimates-products-and-quotients.name",
 	descriptionKey: "competency.math.mental-math.estimates-products-and-quotients.description",
@@ -23111,7 +23168,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.mental-math.estimates-products-and-quotients"
 	}]
-}, Ru = {
+}, Uu = {
 	id: "math.fractions.generates-equivalent-fractions-and-simplifies",
 	nameKey: "competency.math.fractions.generates-equivalent-fractions-and-simplifies.name",
 	descriptionKey: "competency.math.fractions.generates-equivalent-fractions-and-simplifies.description",
@@ -23124,7 +23181,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.generates-equivalent-fractions-and-simplifies"
 	}]
-}, zu = {
+}, Wu = {
 	id: "math.fractions.adds-subtracts-related-denominator-fractions",
 	nameKey: "competency.math.fractions.adds-subtracts-related-denominator-fractions.name",
 	descriptionKey: "competency.math.fractions.adds-subtracts-related-denominator-fractions.description",
@@ -23137,7 +23194,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.adds-subtracts-related-denominator-fractions"
 	}]
-}, Bu = {
+}, Gu = {
 	id: "math.fractions.decomposes-fraction-into-sum",
 	nameKey: "competency.math.fractions.decomposes-fraction-into-sum.name",
 	descriptionKey: "competency.math.fractions.decomposes-fraction-into-sum.description",
@@ -23150,7 +23207,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.decomposes-fraction-into-sum"
 	}]
-}, Vu = {
+}, Ku = {
 	id: "math.fractions.multiplies-fraction-by-whole-number",
 	nameKey: "competency.math.fractions.multiplies-fraction-by-whole-number.name",
 	descriptionKey: "competency.math.fractions.multiplies-fraction-by-whole-number.description",
@@ -23163,7 +23220,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.fractions.multiplies-fraction-by-whole-number"
 	}]
-}, Hu = {
+}, qu = {
 	id: "math.decimals.says-value-of-decimal-digits-to-hundredths",
 	nameKey: "competency.math.decimals.says-value-of-decimal-digits-to-hundredths.name",
 	descriptionKey: "competency.math.decimals.says-value-of-decimal-digits-to-hundredths.description",
@@ -23176,7 +23233,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.decimals.says-value-of-decimal-digits-to-hundredths"
 	}]
-}, Uu = {
+}, Ju = {
 	id: "math.decimals.compares-orders-decimals-to-two-places",
 	nameKey: "competency.math.decimals.compares-orders-decimals-to-two-places.name",
 	descriptionKey: "competency.math.decimals.compares-orders-decimals-to-two-places.description",
@@ -23189,7 +23246,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.decimals.compares-orders-decimals-to-two-places"
 	}]
-}, Wu = {
+}, Yu = {
 	id: "math.decimals.rounds-decimals-to-nearest-whole-number",
 	nameKey: "competency.math.decimals.rounds-decimals-to-nearest-whole-number.name",
 	descriptionKey: "competency.math.decimals.rounds-decimals-to-nearest-whole-number.description",
@@ -23202,7 +23259,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.decimals.rounds-decimals-to-nearest-whole-number"
 	}]
-}, Gu = {
+}, Xu = {
 	id: "math.algebra.generates-pattern-from-rule",
 	nameKey: "competency.math.algebra.generates-pattern-from-rule.name",
 	descriptionKey: "competency.math.algebra.generates-pattern-from-rule.description",
@@ -23215,7 +23272,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.algebra.generates-pattern-from-rule"
 	}]
-}, Ku = {
+}, Zu = {
 	id: "math.measurement.knows-metric-unit-relationships",
 	nameKey: "competency.math.measurement.knows-metric-unit-relationships.name",
 	descriptionKey: "competency.math.measurement.knows-metric-unit-relationships.description",
@@ -23228,7 +23285,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.knows-metric-unit-relationships"
 	}]
-}, qu = {
+}, Qu = {
 	id: "math.measurement.uses-perimeter-and-missing-sides",
 	nameKey: "competency.math.measurement.uses-perimeter-and-missing-sides.name",
 	descriptionKey: "competency.math.measurement.uses-perimeter-and-missing-sides.description",
@@ -23241,7 +23298,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.uses-perimeter-and-missing-sides"
 	}]
-}, Ju = {
+}, $u = {
 	id: "math.measurement.solves-measurement-problems-four-operations",
 	nameKey: "competency.math.measurement.solves-measurement-problems-four-operations.name",
 	descriptionKey: "competency.math.measurement.solves-measurement-problems-four-operations.description",
@@ -23254,7 +23311,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.measurement.solves-measurement-problems-four-operations"
 	}]
-}, Yu = {
+}, ed = {
 	id: "math.time.converts-12-hour-and-24-hour-times",
 	nameKey: "competency.math.time.converts-12-hour-and-24-hour-times.name",
 	descriptionKey: "competency.math.time.converts-12-hour-and-24-hour-times.description",
@@ -23267,7 +23324,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.time.converts-12-hour-and-24-hour-times"
 	}]
-}, Xu = {
+}, td = {
 	id: "math.time.reads-timetables-and-plans-journeys",
 	nameKey: "competency.math.time.reads-timetables-and-plans-journeys.name",
 	descriptionKey: "competency.math.time.reads-timetables-and-plans-journeys.description",
@@ -23280,7 +23337,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.time.reads-timetables-and-plans-journeys"
 	}]
-}, Zu = {
+}, nd = {
 	id: "math.money.solves-multi-step-shopping-problems-decimals",
 	nameKey: "competency.math.money.solves-multi-step-shopping-problems-decimals.name",
 	descriptionKey: "competency.math.money.solves-multi-step-shopping-problems-decimals.description",
@@ -23293,7 +23350,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.money.solves-multi-step-shopping-problems-decimals"
 	}]
-}, Qu = {
+}, rd = {
 	id: "math.money.estimates-total-cost-and-checks-change",
 	nameKey: "competency.math.money.estimates-total-cost-and-checks-change.name",
 	descriptionKey: "competency.math.money.estimates-total-cost-and-checks-change.description",
@@ -23306,7 +23363,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.money.estimates-total-cost-and-checks-change"
 	}]
-}, $u = {
+}, id = {
 	id: "math.geometry.identifies-points-lines-segments-rays-parallel-perpendicular",
 	nameKey: "competency.math.geometry.identifies-points-lines-segments-rays-parallel-perpendicular.name",
 	descriptionKey: "competency.math.geometry.identifies-points-lines-segments-rays-parallel-perpendicular.description",
@@ -23319,7 +23376,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.identifies-points-lines-segments-rays-parallel-perpendicular"
 	}]
-}, ed = {
+}, ad = {
 	id: "math.geometry.names-acute-right-obtuse-straight-reflex-angles",
 	nameKey: "competency.math.geometry.names-acute-right-obtuse-straight-reflex-angles.name",
 	descriptionKey: "competency.math.geometry.names-acute-right-obtuse-straight-reflex-angles.description",
@@ -23332,7 +23389,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.names-acute-right-obtuse-straight-reflex-angles"
 	}]
-}, td = {
+}, od = {
 	id: "math.geometry.classifies-triangles-by-sides-and-angles",
 	nameKey: "competency.math.geometry.classifies-triangles-by-sides-and-angles.name",
 	descriptionKey: "competency.math.geometry.classifies-triangles-by-sides-and-angles.description",
@@ -23345,7 +23402,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.classifies-triangles-by-sides-and-angles"
 	}]
-}, nd = {
+}, sd = {
 	id: "math.geometry.distinguishes-regular-from-irregular-polygons",
 	nameKey: "competency.math.geometry.distinguishes-regular-from-irregular-polygons.name",
 	descriptionKey: "competency.math.geometry.distinguishes-regular-from-irregular-polygons.description",
@@ -23358,7 +23415,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.distinguishes-regular-from-irregular-polygons"
 	}]
-}, rd = {
+}, cd = {
 	id: "math.geometry.finds-lines-of-symmetry",
 	nameKey: "competency.math.geometry.finds-lines-of-symmetry.name",
 	descriptionKey: "competency.math.geometry.finds-lines-of-symmetry.description",
@@ -23371,7 +23428,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.finds-lines-of-symmetry"
 	}]
-}, id = {
+}, ld = {
 	id: "math.geometry.names-parts-of-a-circle",
 	nameKey: "competency.math.geometry.names-parts-of-a-circle.name",
 	descriptionKey: "competency.math.geometry.names-parts-of-a-circle.description",
@@ -23384,7 +23441,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.names-parts-of-a-circle"
 	}]
-}, ad = {
+}, ud = {
 	id: "math.geometry.describes-prisms-and-pyramids-by-faces-edges-vertices",
 	nameKey: "competency.math.geometry.describes-prisms-and-pyramids-by-faces-edges-vertices.name",
 	descriptionKey: "competency.math.geometry.describes-prisms-and-pyramids-by-faces-edges-vertices.description",
@@ -23397,7 +23454,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.geometry.describes-prisms-and-pyramids-by-faces-edges-vertices"
 	}]
-}, od = {
+}, dd = {
 	id: "math.position.reflects-point-in-mirror-line-on-grid",
 	nameKey: "competency.math.position.reflects-point-in-mirror-line-on-grid.name",
 	descriptionKey: "competency.math.position.reflects-point-in-mirror-line-on-grid.description",
@@ -23410,7 +23467,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.position.reflects-point-in-mirror-line-on-grid"
 	}]
-}, sd = {
+}, fd = {
 	id: "math.position.uses-compass-points-and-turns",
 	nameKey: "competency.math.position.uses-compass-points-and-turns.name",
 	descriptionKey: "competency.math.position.uses-compass-points-and-turns.description",
@@ -23423,7 +23480,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.position.uses-compass-points-and-turns"
 	}]
-}, cd = {
+}, pd = {
 	id: "math.data.reads-bar-charts-and-double-bar-charts",
 	nameKey: "competency.math.data.reads-bar-charts-and-double-bar-charts.name",
 	descriptionKey: "competency.math.data.reads-bar-charts-and-double-bar-charts.description",
@@ -23436,7 +23493,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data.reads-bar-charts-and-double-bar-charts"
 	}]
-}, ld = {
+}, md = {
 	id: "math.data.reads-two-way-tables-and-timetables",
 	nameKey: "competency.math.data.reads-two-way-tables-and-timetables.name",
 	descriptionKey: "competency.math.data.reads-two-way-tables-and-timetables.description",
@@ -23449,7 +23506,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data.reads-two-way-tables-and-timetables"
 	}]
-}, ud = {
+}, hd = {
 	id: "math.data.draws-line-plots-with-fractions-of-a-unit",
 	nameKey: "competency.math.data.draws-line-plots-with-fractions-of-a-unit.name",
 	descriptionKey: "competency.math.data.draws-line-plots-with-fractions-of-a-unit.description",
@@ -23462,7 +23519,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data.draws-line-plots-with-fractions-of-a-unit"
 	}]
-}, dd = {
+}, gd = {
 	id: "math.data.poses-questions-collects-data-picks-graph",
 	nameKey: "competency.math.data.poses-questions-collects-data-picks-graph.name",
 	descriptionKey: "competency.math.data.poses-questions-collects-data-picks-graph.description",
@@ -23475,7 +23532,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.data.poses-questions-collects-data-picks-graph"
 	}]
-}, fd = {
+}, _d = {
 	id: "math.probability.lists-outcomes-and-judges-equally-likely",
 	nameKey: "competency.math.probability.lists-outcomes-and-judges-equally-likely.name",
 	descriptionKey: "competency.math.probability.lists-outcomes-and-judges-equally-likely.description",
@@ -23488,7 +23545,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.probability.lists-outcomes-and-judges-equally-likely"
 	}]
-}, pd = {
+}, vd = {
 	id: "math.problem-solving.uses-bar-models-for-multiplicative-comparison-and-fractions",
 	nameKey: "competency.math.problem-solving.uses-bar-models-for-multiplicative-comparison-and-fractions.name",
 	descriptionKey: "competency.math.problem-solving.uses-bar-models-for-multiplicative-comparison-and-fractions.description",
@@ -23501,7 +23558,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.problem-solving.uses-bar-models-for-multiplicative-comparison-and-fractions"
 	}]
-}, md = {
+}, yd = {
 	id: "math.problem-solving.makes-conjectures-and-finds-counterexamples",
 	nameKey: "competency.math.problem-solving.makes-conjectures-and-finds-counterexamples.name",
 	descriptionKey: "competency.math.problem-solving.makes-conjectures-and-finds-counterexamples.description",
@@ -23514,12 +23571,7 @@ var Jl = [
 		kind: "activity",
 		id: "math.problem-solving.makes-conjectures-and-finds-counterexamples"
 	}]
-}, hd = [
-	Yl,
-	Xl,
-	Zl,
-	Ql,
-	$l,
+}, bd = [
 	eu,
 	tu,
 	nu,
@@ -23588,12 +23640,17 @@ var Jl = [
 	dd,
 	fd,
 	pd,
-	md
-], gd = {
+	md,
+	hd,
+	gd,
+	_d,
+	vd,
+	yd
+], xd = {
 	1: 6,
 	2: 7
 };
-function _d(e) {
+function Sd(e) {
 	let t = e >>> 0;
 	return () => {
 		t = t + 1831565813 >>> 0;
@@ -23601,16 +23658,16 @@ function _d(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function vd(e, t) {
+function Cd(e, t) {
 	return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g, t);
 }
-function yd(e) {
-	return vd(e, ",");
+function wd(e) {
+	return Cd(e, ",");
 }
-function bd(e) {
-	return vd(e, " ");
+function Td(e) {
+	return Cd(e, " ");
 }
-function xd(e, t, n, r) {
+function Ed(e, t, n, r) {
 	let i = 0;
 	for (let a = r - 1; a >= 0; a--) {
 		let o;
@@ -23622,7 +23679,7 @@ function xd(e, t, n, r) {
 	}
 	return i;
 }
-function Sd(e, t) {
+function Dd(e, t) {
 	return (t === 6 ? [
 		0,
 		1,
@@ -23635,12 +23692,12 @@ function Sd(e, t) {
 		5
 	]).map((n) => (e + n) % t);
 }
-function Cd(e) {
-	let t = gd[e], n = _d(4e3 + e), r = [];
+function Od(e) {
+	let t = xd[e], n = Sd(4e3 + e), r = [];
 	for (let e = 0; e < t * 3; e++) {
-		let i = 1 + e % 9, a = Sd(e, t).map((e) => {
+		let i = 1 + e % 9, a = Dd(e, t).map((e) => {
 			let r = Math.min(t, Math.max(e + 1, 3 + Math.floor(n() * (t - 2))));
-			return [xd(n, i, e, r), e];
+			return [Ed(n, i, e, r), e];
 		});
 		r.push({
 			digit: i,
@@ -23649,9 +23706,9 @@ function Cd(e) {
 	}
 	return r;
 }
-function wd() {
+function kd() {
 	let e = [];
-	for (let t of [1, 2]) for (let n of Cd(t)) {
+	for (let t of [1, 2]) for (let n of Od(t)) {
 		let r = n.cards.map(([e, t], n) => ({
 			n: e,
 			place: t,
@@ -23663,8 +23720,8 @@ function wd() {
 			items: r.map((e, t) => ({
 				id: e.id,
 				label: {
-					en: `the ${n.digit.toString()} in ${yd(e.n)}`,
-					fr: `le ${n.digit.toString()} dans ${bd(e.n)}`
+					en: `the ${n.digit.toString()} in ${wd(e.n)}`,
+					fr: `le ${n.digit.toString()} dans ${Td(e.n)}`
 				},
 				correctPosition: t + 1
 			}))
@@ -23672,19 +23729,19 @@ function wd() {
 	}
 	return e;
 }
-function Td(e) {
-	let t = gd[e], n = _d(5e3 + e), r = [];
+function Ad(e) {
+	let t = xd[e], n = Sd(5e3 + e), r = [];
 	for (let i = 0; i < t * 4; i++) {
 		let a = i % t, o = 1 + (i * 2 + e) % 9, s = Math.min(t, Math.max(a + 1, t - Math.floor(n() * 2)));
 		r.push({
-			n: xd(n, o, a, s),
+			n: Ed(n, o, a, s),
 			digit: o,
 			place: a
 		});
 	}
 	return r;
 }
-function Ed(e) {
+function jd(e) {
 	let { digit: t, place: n } = e, r = t * 10 ** n, i = [
 		t,
 		t * 10 ** (n + 1),
@@ -23698,27 +23755,27 @@ function Ed(e) {
 		wrong: a.slice(0, 3)
 	};
 }
-function Dd() {
+function Md() {
 	let e = [];
-	for (let t of [1, 2]) for (let n of Td(t)) {
-		let { answer: r, wrong: i } = Ed(n), a = [r, ...i];
+	for (let t of [1, 2]) for (let n of Ad(t)) {
+		let { answer: r, wrong: i } = jd(n), a = [r, ...i];
 		e.push({
 			grade: t,
 			en: {
-				prompt: `In ${yd(n.n)}, what is the value of the digit ${n.digit.toString()}?`,
-				options: a.map(yd),
+				prompt: `In ${wd(n.n)}, what is the value of the digit ${n.digit.toString()}?`,
+				options: a.map(wd),
 				correctIndex: 0
 			},
 			fr: {
-				prompt: `Dans ${bd(n.n)}, quelle est la valeur du chiffre ${n.digit.toString()} ?`,
-				options: a.map(bd),
+				prompt: `Dans ${Td(n.n)}, quelle est la valeur du chiffre ${n.digit.toString()} ?`,
+				options: a.map(Td),
 				correctIndex: 0
 			}
 		});
 	}
 	return e;
 }
-function Od(e) {
+function Nd(e) {
 	let t = [];
 	for (let n = e.toString().length - 1; n >= 0; n--) {
 		let r = Math.floor(e / 10 ** n) % 10;
@@ -23726,12 +23783,12 @@ function Od(e) {
 	}
 	return t;
 }
-function kd(e) {
-	let t = gd[e], n = _d(6e3 + e), r = [];
+function Pd(e) {
+	let t = xd[e], n = Sd(6e3 + e), r = [];
 	for (let e = 0; e < 20; e++) {
 		let i = Math.min(t, 4 + e % (t - 3)), a = e % 4 == 3 ? 1 + e % (i - 2) : -1, o = 0;
 		for (let e = i - 1; e >= 0; e--) o = o * 10 + (e === a ? 0 : 1 + Math.floor(n() * 9));
-		let s = Od(o), c = s[e % s.length][0];
+		let s = Nd(o), c = s[e % s.length][0];
 		r.push({
 			n: o,
 			blankPlace: c
@@ -23739,30 +23796,30 @@ function kd(e) {
 	}
 	return r;
 }
-function Ad(e, t) {
-	let n = Od(e.n).map(([n, r]) => n === e.blankPlace ? "___" : t(r));
+function Fd(e, t) {
+	let n = Nd(e.n).map(([n, r]) => n === e.blankPlace ? "___" : t(r));
 	return `${t(e.n)} = ${n.join(" + ")}`;
 }
-function jd() {
+function Id() {
 	let e = [];
-	for (let t of [1, 2]) for (let n of kd(t)) {
+	for (let t of [1, 2]) for (let n of Pd(t)) {
 		let r = 10 ** n.blankPlace * (Math.floor(n.n / 10 ** n.blankPlace) % 10);
 		e.push({
 			grade: t,
 			en: {
-				promptWithBlank: Ad(n, yd),
-				answer: yd(r)
+				promptWithBlank: Fd(n, wd),
+				answer: wd(r)
 			},
 			fr: {
-				promptWithBlank: Ad(n, bd),
-				answer: bd(r)
+				promptWithBlank: Fd(n, Td),
+				answer: Td(r)
 			}
 		});
 	}
 	return e;
 }
-function Md(e) {
-	let t = gd[e] - 1, n = [];
+function Ld(e) {
+	let t = xd[e] - 1, n = [];
 	for (let e = 0; e < 18; e++) {
 		let r = e % 3 == 2 ? 2 : 1;
 		n.push({
@@ -23773,7 +23830,7 @@ function Md(e) {
 	}
 	return n;
 }
-function Nd(e) {
+function Rd(e) {
 	let t = e.digit * 10 ** e.fromPlace, n = t * 10 ** e.steps, r = [
 		t * 10 ** (e.steps + 1),
 		t * 10 ** (e.steps - 1),
@@ -23786,44 +23843,44 @@ function Nd(e) {
 		wrong: i.slice(0, 3)
 	};
 }
-function Pd() {
+function zd() {
 	let e = [];
-	for (let t of [1, 2]) for (let n of Md(t)) {
-		let { answer: r, wrong: i } = Nd(n), a = n.digit * 10 ** n.fromPlace, o = [r, ...i], s = n.steps.toString();
+	for (let t of [1, 2]) for (let n of Ld(t)) {
+		let { answer: r, wrong: i } = Rd(n), a = n.digit * 10 ** n.fromPlace, o = [r, ...i], s = n.steps.toString();
 		e.push({
 			grade: t,
 			en: {
-				prompt: `Each rung is worth 10 times the rung below. You stand on ${yd(a)}. Climb ${s} rung${n.steps === 1 ? "" : "s"}: which value do you reach?`,
-				options: o.map(yd),
+				prompt: `Each rung is worth 10 times the rung below. You stand on ${wd(a)}. Climb ${s} rung${n.steps === 1 ? "" : "s"}: which value do you reach?`,
+				options: o.map(wd),
 				correctIndex: 0
 			},
 			fr: {
-				prompt: `Chaque barreau vaut 10 fois le barreau du dessous. Tu es sur ${bd(a)}. Monte de ${s} barreau${n.steps === 1 ? "" : "x"} : quelle valeur atteins-tu ?`,
-				options: o.map(bd),
+				prompt: `Chaque barreau vaut 10 fois le barreau du dessous. Tu es sur ${Td(a)}. Monte de ${s} barreau${n.steps === 1 ? "" : "x"} : quelle valeur atteins-tu ?`,
+				options: o.map(Td),
 				correctIndex: 0
 			}
 		});
 	}
 	return e;
 }
-var Fd = h({
+var Bd = h({
 	pluginId: "expanded-form-builder",
-	competencyId: Xl.id,
-	bank: jd()
-}), Id = g({
+	competencyId: tu.id,
+	bank: Id()
+}), Vd = g({
 	pluginId: "ten-times-ladder",
-	competencyId: Xl.id,
-	bank: Pd()
-}), Ld = Si({
+	competencyId: tu.id,
+	bank: zd()
+}), Hd = Di({
 	pluginId: "digit-value-sort",
-	competencyId: Xl.id,
-	bank: wd()
-}), Rd = g({
+	competencyId: tu.id,
+	bank: kd()
+}), Ud = g({
 	pluginId: "syllabus-g4-extends-place-value-to-millions",
-	competencyId: Xl.id,
-	bank: Dd()
+	competencyId: tu.id,
+	bank: Md()
 });
-function zd(e, t, n) {
+function Wd(e, t, n) {
 	let r = e;
 	return {
 		key: r.plugin.id,
@@ -23835,26 +23892,26 @@ function zd(e, t, n) {
 		createMasterySignal: r.createMasterySignal
 	};
 }
-var Bd = [
-	Ld.plugin,
-	Fd.plugin,
-	Id.plugin
-], Vd = [
-	zd(Ld, {
+var Gd = [
+	Hd.plugin,
+	Bd.plugin,
+	Vd.plugin
+], Kd = [
+	Wd(Hd, {
 		label: "Digit Value Sort",
 		icon: "🔀"
-	}, Xl),
-	zd(Fd, {
+	}, tu),
+	Wd(Bd, {
 		label: "Expanded Form Builder",
 		icon: "🧱"
-	}, Xl),
-	zd(Id, {
+	}, tu),
+	Wd(Vd, {
 		label: "Ten-Times Ladder",
 		icon: "🪜"
-	}, Xl)
-], Hd = _({
+	}, tu)
+], qd = _({
 	pluginId: "syllabus-g4-reads-writes-orders-to-million",
-	competencyId: Yl.id,
+	competencyId: eu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Write the number: four hundred twelve thousand, six hundred" },
@@ -23866,9 +23923,9 @@ var Bd = [
 		fr: { prompt: "Écris le nombre : deux millions trente mille cinq" },
 		correctValue: 2030005
 	}]
-}), Ud = _({
+}), Jd = _({
 	pluginId: "syllabus-g4-add-subtract-four-digit-across-zeros",
-	competencyId: Zl.id,
+	competencyId: nu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "4,002 - 1,586 = ?" },
@@ -23880,9 +23937,9 @@ var Bd = [
 		fr: { prompt: "5 000 - 2 347 = ?" },
 		correctValue: 2653
 	}]
-}), Wd = _({
+}), Yd = _({
 	pluginId: "syllabus-g4-knows-tables-to-12x12",
-	competencyId: Ql.id,
+	competencyId: ru.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "9 x 11 = ?" },
@@ -23894,9 +23951,9 @@ var Bd = [
 		fr: { prompt: "144 ÷ 12 = ?" },
 		correctValue: 12
 	}]
-}), Gd = _({
+}), Xd = _({
 	pluginId: "syllabus-g4-multiplies-three-digit-by-one-digit",
-	competencyId: $l.id,
+	competencyId: iu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "213 x 4 = ?" },
@@ -23908,9 +23965,9 @@ var Bd = [
 		fr: { prompt: "348 x 6 = ?" },
 		correctValue: 2088
 	}]
-}), Kd = h({
+}), Zd = h({
 	pluginId: "syllabus-g4-divides-three-digit-by-one-digit-with-remainder",
-	competencyId: eu.id,
+	competencyId: au.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -23932,9 +23989,9 @@ var Bd = [
 			answer: "31"
 		}
 	}]
-}), qd = _({
+}), Qd = _({
 	pluginId: "syllabus-g4-rounding-compensation-mentally",
-	competencyId: tu.id,
+	competencyId: ou.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "356 + 99 = ? (think: +100 then -1)" },
@@ -23946,9 +24003,9 @@ var Bd = [
 		fr: { prompt: "482 - 199 = ? (pense : -200 puis +1)" },
 		correctValue: 283
 	}]
-}), Jd = _({
+}), $d = _({
 	pluginId: "syllabus-g4-instant-table-fact-recall",
-	competencyId: nu.id,
+	competencyId: su.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "7 x 8 = ?" },
@@ -23960,9 +24017,9 @@ var Bd = [
 		fr: { prompt: "108 ÷ 9 = ?" },
 		correctValue: 12
 	}]
-}), Yd = C({
+}), ef = C({
 	pluginId: "syllabus-g4-instant-table-fact-judgment",
-	competencyId: nu.id,
+	competencyId: su.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -23984,9 +24041,9 @@ var Bd = [
 			isTrue: !1
 		}
 	}]
-}), Xd = g({
+}), tf = g({
 	pluginId: "syllabus-g4-compares-orders-fractions-different-denominators",
-	competencyId: ru.id,
+	competencyId: cu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24028,9 +24085,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), Zd = h({
+}), nf = h({
 	pluginId: "syllabus-g4-converts-improper-fractions-mixed-numbers",
-	competencyId: iu.id,
+	competencyId: lu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24052,9 +24109,9 @@ var Bd = [
 			answer: "11/4"
 		}
 	}]
-}), Qd = _({
+}), rf = _({
 	pluginId: "syllabus-g4-finds-fraction-of-quantity",
-	competencyId: au.id,
+	competencyId: uu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "What is 3/5 of 40?" },
@@ -24066,9 +24123,9 @@ var Bd = [
 		fr: { prompt: "Combien font 5/6 de 72 ?" },
 		correctValue: 60
 	}]
-}), $d = g({
+}), af = g({
 	pluginId: "syllabus-g4-tenths-hundredths-as-decimals-number-line",
-	competencyId: ou.id,
+	competencyId: du.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24110,9 +24167,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), ef = _({
+}), of = _({
 	pluginId: "syllabus-g4-add-subtract-decimals-two-places",
-	competencyId: su.id,
+	competencyId: fu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "12.45 + 3.60 = ?" },
@@ -24124,9 +24181,9 @@ var Bd = [
 		fr: { prompt: "20,30 - 8,75 = ?" },
 		correctValue: 11.55
 	}]
-}), tf = g({
+}), sf = g({
 	pluginId: "syllabus-g4-understands-percentage-as-out-of-100",
-	competencyId: cu.id,
+	competencyId: pu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24168,9 +24225,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), nf = _({
+}), cf = _({
 	pluginId: "syllabus-g4-calculates-area-rectangle-compound",
-	competencyId: lu.id,
+	competencyId: mu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A rectangle is 9 cm long and 4 cm wide. What is its area, in cm²?" },
@@ -24182,9 +24239,9 @@ var Bd = [
 		fr: { prompt: "Une forme en L est formée d'un rectangle 6 cm x 5 cm auquel on retire un rectangle 2 cm x 3 cm dans un coin. Quelle est son aire, en cm² ?" },
 		correctValue: 24
 	}]
-}), rf = g({
+}), lf = g({
 	pluginId: "syllabus-g4-estimates-length-mass-volume",
-	competencyId: uu.id,
+	competencyId: hu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24226,9 +24283,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), af = _({
+}), uf = _({
 	pluginId: "syllabus-g4-reads-scale-with-unlabelled-divisions",
-	competencyId: du.id,
+	competencyId: gu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A scale has marks at 0, 10 and 20 with two unlabelled marks evenly spaced between them. What number does the first unlabelled mark show?" },
@@ -24240,9 +24297,9 @@ var Bd = [
 		fr: { prompt: "Un verre doseur a des marques à 0 ml, 100 ml et 200 ml avec quatre marques non étiquetées également espacées entre 100 et 200. Que montre la deuxième marque non étiquetée après 100 ?" },
 		correctValue: 140
 	}]
-}), of = _({
+}), df = _({
 	pluginId: "syllabus-g4-calculates-durations-crossing-hours-midnight",
-	competencyId: fu.id,
+	competencyId: _u.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A train leaves at 23:40 and arrives at 00:15. How many minutes is the journey?" },
@@ -24254,9 +24311,9 @@ var Bd = [
 		fr: { prompt: "Un bus part à 21h50 et l'horaire indique que le trajet dure 55 minutes. À quelle heure arrive-t-il ? (Réponds en minutes après minuit, par exemple 22h45 = 1365)" },
 		correctValue: 1365
 	}]
-}), sf = h({
+}), ff = h({
 	pluginId: "syllabus-g4-uses-calendar-date-weeks-ahead",
-	competencyId: pu.id,
+	competencyId: vu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24278,9 +24335,9 @@ var Bd = [
 			answer: "23"
 		}
 	}]
-}), cf = _({
+}), pf = _({
 	pluginId: "syllabus-g4-measures-draws-angle-with-protractor",
-	competencyId: mu.id,
+	competencyId: yu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A protractor reading shows an angle starting at 0° and ending at 47°. What is the angle, in degrees?" },
@@ -24292,9 +24349,9 @@ var Bd = [
 		fr: { prompt: "Tu dois tracer un angle de 132° avec un rapporteur. Quel nombre marques-tu sur l'échelle ?" },
 		correctValue: 132
 	}]
-}), lf = C({
+}), mf = C({
 	pluginId: "syllabus-g4-angles-on-line-and-around-point",
-	competencyId: hu.id,
+	competencyId: bu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24316,9 +24373,9 @@ var Bd = [
 			isTrue: !1
 		}
 	}]
-}), uf = _({
+}), hf = _({
 	pluginId: "syllabus-g4-triangle-angles-sum-180",
-	competencyId: gu.id,
+	competencyId: xu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A triangle has angles of 60° and 70°. What is the third angle, in degrees?" },
@@ -24330,9 +24387,9 @@ var Bd = [
 		fr: { prompt: "Un triangle a des angles de 35° et 95°. Quel est le troisième angle, en degrés ?" },
 		correctValue: 50
 	}]
-}), df = g({
+}), gf = g({
 	pluginId: "syllabus-g4-plots-reads-coordinates-first-quadrant",
-	competencyId: _u.id,
+	competencyId: Su.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24374,9 +24431,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), ff = g({
+}), _f = g({
 	pluginId: "syllabus-g4-translates-reflects-shape-on-grid",
-	competencyId: vu.id,
+	competencyId: Cu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24418,9 +24475,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), pf = g({
+}), vf = g({
 	pluginId: "syllabus-g4-draws-reads-line-graph-trend",
-	competencyId: yu.id,
+	competencyId: wu.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24462,9 +24519,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), mf = _({
+}), yf = _({
 	pluginId: "syllabus-g4-finds-mode-range-data-set",
-	competencyId: bu.id,
+	competencyId: Tu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Data set: 4, 7, 4, 9, 4, 2. What is the mode?" },
@@ -24476,9 +24533,9 @@ var Bd = [
 		fr: { prompt: "Ensemble de données : 12, 5, 19, 8, 15. Quelle est l'étendue ?" },
 		correctValue: 14
 	}]
-}), hf = _({
+}), bf = _({
 	pluginId: "syllabus-g4-uses-symbol-box-for-unknown",
-	competencyId: xu.id,
+	competencyId: Eu.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "☐ + 17 = 42. What number goes in the box?" },
@@ -24490,9 +24547,9 @@ var Bd = [
 		fr: { prompt: "6 x ☐ = 54. Quel nombre va dans la case ?" },
 		correctValue: 9
 	}]
-}), gf = g({
+}), xf = g({
 	pluginId: "syllabus-g4-describes-relationship-between-columns",
-	competencyId: Su.id,
+	competencyId: Du.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24534,9 +24591,9 @@ var Bd = [
 			correctIndex: 0
 		}
 	}]
-}), _f = _({
+}), Sf = _({
 	pluginId: "syllabus-g4-solves-multi-step-mixed-operations-units",
-	competencyId: Cu.id,
+	competencyId: Ou.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A rope is 5 metres long. It is cut into pieces of 40 cm each. How many whole pieces can be cut?" },
@@ -24548,9 +24605,9 @@ var Bd = [
 		fr: { prompt: "Une recette nécessite 250 g de farine par lot. Combien de lots entiers peut-on faire avec un sac de 2 kg ?" },
 		correctValue: 8
 	}]
-}), vf = C({
+}), Cf = C({
 	pluginId: "syllabus-g4-works-systematically-all-solutions",
-	competencyId: wu.id,
+	competencyId: ku.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24572,9 +24629,9 @@ var Bd = [
 			isTrue: !1
 		}
 	}]
-}), yf = C({
+}), wf = C({
 	pluginId: "syllabus-g4-explains-method-aloud",
-	competencyId: Tu.id,
+	competencyId: Au.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -24596,9 +24653,9 @@ var Bd = [
 			isTrue: !1
 		}
 	}]
-}), bf = g({
+}), Tf = g({
 	pluginId: "syllabus-g4-finds-factor-pairs-recognizes-multiples",
-	competencyId: Eu.id,
+	competencyId: ju.id,
 	bank: [
 		{
 			grade: 1,
@@ -24727,9 +24784,9 @@ var Bd = [
 			}
 		}
 	]
-}), xf = C({
+}), Ef = C({
 	pluginId: "syllabus-g4-decides-prime-or-composite-to-100",
-	competencyId: Du.id,
+	competencyId: Mu.id,
 	bank: [
 		{
 			grade: 1,
@@ -24798,9 +24855,9 @@ var Bd = [
 			}
 		}
 	]
-}), Sf = g({
+}), Df = g({
 	pluginId: "syllabus-g4-reads-roman-numerals-to-1000",
-	competencyId: Ou.id,
+	competencyId: Nu.id,
 	bank: [
 		{
 			grade: 1,
@@ -24929,9 +24986,9 @@ var Bd = [
 			}
 		}
 	]
-}), Cf = _({
+}), Of = _({
 	pluginId: "syllabus-g4-multiplies-divides-by-10-100-1000",
-	competencyId: ku.id,
+	competencyId: Pu.id,
 	bank: [
 		{
 			grade: 1,
@@ -24970,9 +25027,9 @@ var Bd = [
 			correctValue: 40700
 		}
 	]
-}), wf = g({
+}), kf = g({
 	pluginId: "syllabus-g4-checks-results-rounding-inverse",
-	competencyId: Au.id,
+	competencyId: Fu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25101,9 +25158,9 @@ var Bd = [
 			}
 		}
 	]
-}), Tf = g({
+}), Af = g({
 	pluginId: "syllabus-g4-decides-what-to-do-with-remainder",
-	competencyId: ju.id,
+	competencyId: Iu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25232,9 +25289,9 @@ var Bd = [
 			}
 		}
 	]
-}), Ef = g({
+}), jf = g({
 	pluginId: "syllabus-g4-tells-times-as-many-from-more-than",
-	competencyId: Mu.id,
+	competencyId: Lu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25363,9 +25420,9 @@ var Bd = [
 			}
 		}
 	]
-}), Df = _({
+}), Mf = _({
 	pluginId: "syllabus-g4-uses-distributive-associative-properties",
-	competencyId: Nu.id,
+	competencyId: Ru.id,
 	bank: [
 		{
 			grade: 1,
@@ -25404,9 +25461,9 @@ var Bd = [
 			correctValue: 588
 		}
 	]
-}), Of = C({
+}), Nf = C({
 	pluginId: "syllabus-g4-uses-divisibility-rules-2-5-10",
-	competencyId: Pu.id,
+	competencyId: zu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25475,9 +25532,9 @@ var Bd = [
 			}
 		}
 	]
-}), kf = _({
+}), Pf = _({
 	pluginId: "syllabus-g4-calculates-tens-and-thousands-mentally",
-	competencyId: Fu.id,
+	competencyId: Bu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25516,9 +25573,9 @@ var Bd = [
 			correctValue: 4e3
 		}
 	]
-}), Af = _({
+}), Ff = _({
 	pluginId: "syllabus-g4-uses-doubling-and-halving-to-simplify",
-	competencyId: Iu.id,
+	competencyId: Vu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25557,9 +25614,9 @@ var Bd = [
 			correctValue: 800
 		}
 	]
-}), jf = g({
+}), If = g({
 	pluginId: "syllabus-g4-estimates-products-and-quotients",
-	competencyId: Lu.id,
+	competencyId: Hu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25688,9 +25745,9 @@ var Bd = [
 			}
 		}
 	]
-}), Mf = h({
+}), Lf = h({
 	pluginId: "syllabus-g4-generates-equivalent-fractions-and-simplifies",
-	competencyId: Ru.id,
+	competencyId: Uu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25759,9 +25816,9 @@ var Bd = [
 			}
 		}
 	]
-}), Nf = h({
+}), Rf = h({
 	pluginId: "syllabus-g4-adds-subtracts-related-denominator-fractions",
-	competencyId: zu.id,
+	competencyId: Wu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25830,9 +25887,9 @@ var Bd = [
 			}
 		}
 	]
-}), Pf = g({
+}), zf = g({
 	pluginId: "syllabus-g4-decomposes-fraction-into-sum",
-	competencyId: Bu.id,
+	competencyId: Gu.id,
 	bank: [
 		{
 			grade: 1,
@@ -25961,9 +26018,9 @@ var Bd = [
 			}
 		}
 	]
-}), Ff = h({
+}), Bf = h({
 	pluginId: "syllabus-g4-multiplies-fraction-by-whole-number",
-	competencyId: Vu.id,
+	competencyId: Ku.id,
 	bank: [
 		{
 			grade: 1,
@@ -26032,9 +26089,9 @@ var Bd = [
 			}
 		}
 	]
-}), If = g({
+}), Vf = g({
 	pluginId: "syllabus-g4-says-value-of-decimal-digits-to-hundredths",
-	competencyId: Hu.id,
+	competencyId: qu.id,
 	bank: [
 		{
 			grade: 1,
@@ -26163,9 +26220,9 @@ var Bd = [
 			}
 		}
 	]
-}), Lf = g({
+}), Hf = g({
 	pluginId: "syllabus-g4-compares-orders-decimals-to-two-places",
-	competencyId: Uu.id,
+	competencyId: Ju.id,
 	bank: [
 		{
 			grade: 1,
@@ -26294,9 +26351,9 @@ var Bd = [
 			}
 		}
 	]
-}), Rf = _({
+}), Uf = _({
 	pluginId: "syllabus-g4-rounds-decimals-to-nearest-whole-number",
-	competencyId: Wu.id,
+	competencyId: Yu.id,
 	bank: [
 		{
 			grade: 1,
@@ -26335,9 +26392,9 @@ var Bd = [
 			correctValue: 20
 		}
 	]
-}), zf = _({
+}), Wf = _({
 	pluginId: "syllabus-g4-generates-pattern-from-rule",
-	competencyId: Gu.id,
+	competencyId: Xu.id,
 	bank: [
 		{
 			grade: 1,
@@ -26376,9 +26433,9 @@ var Bd = [
 			correctValue: 36
 		}
 	]
-}), Bf = _({
+}), Gf = _({
 	pluginId: "syllabus-g4-knows-metric-unit-relationships",
-	competencyId: Ku.id,
+	competencyId: Zu.id,
 	bank: [
 		{
 			grade: 1,
@@ -26417,9 +26474,9 @@ var Bd = [
 			correctValue: 5500
 		}
 	]
-}), Vf = _({
+}), Kf = _({
 	pluginId: "syllabus-g4-uses-perimeter-and-missing-sides",
-	competencyId: qu.id,
+	competencyId: Qu.id,
 	bank: [
 		{
 			grade: 1,
@@ -26458,9 +26515,9 @@ var Bd = [
 			correctValue: 22
 		}
 	]
-}), Hf = _({
+}), qf = _({
 	pluginId: "syllabus-g4-solves-measurement-problems-four-operations",
-	competencyId: Ju.id,
+	competencyId: $u.id,
 	bank: [
 		{
 			grade: 1,
@@ -26499,9 +26556,9 @@ var Bd = [
 			correctValue: .8
 		}
 	]
-}), Uf = g({
+}), Jf = g({
 	pluginId: "syllabus-g4-converts-12-hour-and-24-hour-times",
-	competencyId: Yu.id,
+	competencyId: ed.id,
 	bank: [
 		{
 			grade: 1,
@@ -26630,9 +26687,9 @@ var Bd = [
 			}
 		}
 	]
-}), Wf = _({
+}), Yf = _({
 	pluginId: "syllabus-g4-reads-timetables-and-plans-journeys",
-	competencyId: Xu.id,
+	competencyId: td.id,
 	bank: [
 		{
 			grade: 1,
@@ -26671,9 +26728,9 @@ var Bd = [
 			correctValue: 100
 		}
 	]
-}), Gf = _({
+}), Xf = _({
 	pluginId: "syllabus-g4-solves-multi-step-shopping-problems-decimals",
-	competencyId: Zu.id,
+	competencyId: nd.id,
 	bank: [
 		{
 			grade: 1,
@@ -26712,9 +26769,9 @@ var Bd = [
 			correctValue: 9.15
 		}
 	]
-}), Kf = g({
+}), Zf = g({
 	pluginId: "syllabus-g4-estimates-total-cost-and-checks-change",
-	competencyId: Qu.id,
+	competencyId: rd.id,
 	bank: [
 		{
 			grade: 1,
@@ -26843,9 +26900,9 @@ var Bd = [
 			}
 		}
 	]
-}), qf = g({
+}), Qf = g({
 	pluginId: "syllabus-g4-identifies-points-lines-segments-rays-parallel-perpendicular",
-	competencyId: $u.id,
+	competencyId: id.id,
 	bank: [
 		{
 			grade: 1,
@@ -26974,9 +27031,9 @@ var Bd = [
 			}
 		}
 	]
-}), Jf = g({
+}), $f = g({
 	pluginId: "syllabus-g4-names-acute-right-obtuse-straight-reflex-angles",
-	competencyId: ed.id,
+	competencyId: ad.id,
 	bank: [
 		{
 			grade: 1,
@@ -27105,9 +27162,9 @@ var Bd = [
 			}
 		}
 	]
-}), Yf = g({
+}), ep = g({
 	pluginId: "syllabus-g4-classifies-triangles-by-sides-and-angles",
-	competencyId: td.id,
+	competencyId: od.id,
 	bank: [
 		{
 			grade: 1,
@@ -27236,9 +27293,9 @@ var Bd = [
 			}
 		}
 	]
-}), Xf = C({
+}), tp = C({
 	pluginId: "syllabus-g4-distinguishes-regular-from-irregular-polygons",
-	competencyId: nd.id,
+	competencyId: sd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27307,9 +27364,9 @@ var Bd = [
 			}
 		}
 	]
-}), Zf = _({
+}), np = _({
 	pluginId: "syllabus-g4-finds-lines-of-symmetry",
-	competencyId: rd.id,
+	competencyId: cd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27348,9 +27405,9 @@ var Bd = [
 			correctValue: 6
 		}
 	]
-}), Qf = g({
+}), rp = g({
 	pluginId: "syllabus-g4-names-parts-of-a-circle",
-	competencyId: id.id,
+	competencyId: ld.id,
 	bank: [
 		{
 			grade: 1,
@@ -27479,9 +27536,9 @@ var Bd = [
 			}
 		}
 	]
-}), $f = _({
+}), ip = _({
 	pluginId: "syllabus-g4-describes-prisms-and-pyramids-by-faces-edges-vertices",
-	competencyId: ad.id,
+	competencyId: ud.id,
 	bank: [
 		{
 			grade: 1,
@@ -27520,9 +27577,9 @@ var Bd = [
 			correctValue: 6
 		}
 	]
-}), ep = g({
+}), ap = g({
 	pluginId: "syllabus-g4-reflects-point-in-mirror-line-on-grid",
-	competencyId: od.id,
+	competencyId: dd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27651,9 +27708,9 @@ var Bd = [
 			}
 		}
 	]
-}), tp = g({
+}), op = g({
 	pluginId: "syllabus-g4-uses-compass-points-and-turns",
-	competencyId: sd.id,
+	competencyId: fd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27782,9 +27839,9 @@ var Bd = [
 			}
 		}
 	]
-}), np = _({
+}), sp = _({
 	pluginId: "syllabus-g4-reads-bar-charts-and-double-bar-charts",
-	competencyId: cd.id,
+	competencyId: pd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27823,9 +27880,9 @@ var Bd = [
 			correctValue: 35
 		}
 	]
-}), rp = _({
+}), cp = _({
 	pluginId: "syllabus-g4-reads-two-way-tables-and-timetables",
-	competencyId: ld.id,
+	competencyId: md.id,
 	bank: [
 		{
 			grade: 1,
@@ -27864,9 +27921,9 @@ var Bd = [
 			correctValue: 6
 		}
 	]
-}), ip = _({
+}), lp = _({
 	pluginId: "syllabus-g4-draws-line-plots-with-fractions-of-a-unit",
-	competencyId: ud.id,
+	competencyId: hd.id,
 	bank: [
 		{
 			grade: 1,
@@ -27905,9 +27962,9 @@ var Bd = [
 			correctValue: .5
 		}
 	]
-}), ap = g({
+}), up = g({
 	pluginId: "syllabus-g4-poses-questions-collects-data-picks-graph",
-	competencyId: dd.id,
+	competencyId: gd.id,
 	bank: [
 		{
 			grade: 1,
@@ -28036,9 +28093,9 @@ var Bd = [
 			}
 		}
 	]
-}), op = g({
+}), dp = g({
 	pluginId: "syllabus-g4-lists-outcomes-and-judges-equally-likely",
-	competencyId: fd.id,
+	competencyId: _d.id,
 	bank: [
 		{
 			grade: 1,
@@ -28167,9 +28224,9 @@ var Bd = [
 			}
 		}
 	]
-}), sp = _({
+}), fp = _({
 	pluginId: "syllabus-g4-uses-bar-models-for-multiplicative-comparison-and-fractions",
-	competencyId: pd.id,
+	competencyId: vd.id,
 	bank: [
 		{
 			grade: 1,
@@ -28208,9 +28265,9 @@ var Bd = [
 			correctValue: 64
 		}
 	]
-}), cp = g({
+}), pp = g({
 	pluginId: "syllabus-g4-makes-conjectures-and-finds-counterexamples",
-	competencyId: md.id,
+	competencyId: yd.id,
 	bank: [
 		{
 			grade: 1,
@@ -28339,14 +28396,9 @@ var Bd = [
 			}
 		}
 	]
-}), lp = [
-	Hd.plugin,
-	Rd.plugin,
-	Ud.plugin,
-	Wd.plugin,
-	Gd.plugin,
-	Kd.plugin,
+}), mp = [
 	qd.plugin,
+	Ud.plugin,
 	Jd.plugin,
 	Yd.plugin,
 	Xd.plugin,
@@ -28415,86 +28467,41 @@ var Bd = [
 	op.plugin,
 	sp.plugin,
 	cp.plugin,
-	...Bd
+	lp.plugin,
+	up.plugin,
+	dp.plugin,
+	fp.plugin,
+	pp.plugin,
+	...Gd
 ];
 function N(e) {
 	return e;
 }
-var up = [
+var hp = [
 	N({
 		key: "syllabus-g4-reads-writes-orders-to-million",
 		label: "Numbers to a Million",
 		icon: "🔢",
-		pluginId: Hd.plugin.id,
-		competency: Yl,
-		competencies: [Yl],
-		createSession: Hd.createSession,
-		createMasterySignal: Hd.createMasterySignal
+		pluginId: qd.plugin.id,
+		competency: eu,
+		competencies: [eu],
+		createSession: qd.createSession,
+		createMasterySignal: qd.createMasterySignal
 	}),
 	N({
 		key: "syllabus-g4-extends-place-value-to-millions",
 		label: "Place Value to Millions",
 		icon: "🧮",
-		pluginId: Rd.plugin.id,
-		competency: Xl,
-		competencies: [Xl],
-		createSession: Rd.createSession,
-		createMasterySignal: Rd.createMasterySignal
+		pluginId: Ud.plugin.id,
+		competency: tu,
+		competencies: [tu],
+		createSession: Ud.createSession,
+		createMasterySignal: Ud.createMasterySignal
 	}),
 	N({
 		key: "syllabus-g4-add-subtract-four-digit-across-zeros",
 		label: "Adding & Subtracting Across Zeros",
 		icon: "➖",
-		pluginId: Ud.plugin.id,
-		competency: Zl,
-		competencies: [Zl],
-		createSession: Ud.createSession,
-		createMasterySignal: Ud.createMasterySignal
-	}),
-	N({
-		key: "syllabus-g4-knows-tables-to-12x12",
-		label: "Times Tables to 12x12",
-		icon: "✖️",
-		pluginId: Wd.plugin.id,
-		competency: Ql,
-		competencies: [Ql],
-		createSession: Wd.createSession,
-		createMasterySignal: Wd.createMasterySignal
-	}),
-	N({
-		key: "syllabus-g4-multiplies-three-digit-by-one-digit",
-		label: "3-Digit by 1-Digit Multiplication",
-		icon: "📝",
-		pluginId: Gd.plugin.id,
-		competency: $l,
-		competencies: [$l],
-		createSession: Gd.createSession,
-		createMasterySignal: Gd.createMasterySignal
-	}),
-	N({
-		key: "syllabus-g4-divides-three-digit-by-one-digit-with-remainder",
-		label: "Division with Remainders",
-		icon: "➗",
-		pluginId: Kd.plugin.id,
-		competency: eu,
-		competencies: [eu],
-		createSession: Kd.createSession,
-		createMasterySignal: Kd.createMasterySignal
-	}),
-	N({
-		key: "syllabus-g4-rounding-compensation-mentally",
-		label: "Mental Rounding & Compensation",
-		icon: "🧠",
-		pluginId: qd.plugin.id,
-		competency: tu,
-		competencies: [tu],
-		createSession: qd.createSession,
-		createMasterySignal: qd.createMasterySignal
-	}),
-	N({
-		key: "syllabus-g4-instant-table-fact-recall",
-		label: "Instant Table Facts",
-		icon: "⚡",
 		pluginId: Jd.plugin.id,
 		competency: nu,
 		competencies: [nu],
@@ -28502,59 +28509,59 @@ var up = [
 		createMasterySignal: Jd.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-instant-table-fact-judgment",
-		label: "True or False: Table Facts",
-		icon: "❓",
+		key: "syllabus-g4-knows-tables-to-12x12",
+		label: "Times Tables to 12x12",
+		icon: "✖️",
 		pluginId: Yd.plugin.id,
-		competency: nu,
-		competencies: [nu],
+		competency: ru,
+		competencies: [ru],
 		createSession: Yd.createSession,
 		createMasterySignal: Yd.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-compares-orders-fractions-different-denominators",
-		label: "Comparing Fractions",
-		icon: "🍰",
+		key: "syllabus-g4-multiplies-three-digit-by-one-digit",
+		label: "3-Digit by 1-Digit Multiplication",
+		icon: "📝",
 		pluginId: Xd.plugin.id,
-		competency: ru,
-		competencies: [ru],
+		competency: iu,
+		competencies: [iu],
 		createSession: Xd.createSession,
 		createMasterySignal: Xd.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-converts-improper-fractions-mixed-numbers",
-		label: "Improper Fractions & Mixed Numbers",
-		icon: "🔀",
+		key: "syllabus-g4-divides-three-digit-by-one-digit-with-remainder",
+		label: "Division with Remainders",
+		icon: "➗",
 		pluginId: Zd.plugin.id,
-		competency: iu,
-		competencies: [iu],
+		competency: au,
+		competencies: [au],
 		createSession: Zd.createSession,
 		createMasterySignal: Zd.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-finds-fraction-of-quantity",
-		label: "Fraction of a Quantity",
-		icon: "🍕",
+		key: "syllabus-g4-rounding-compensation-mentally",
+		label: "Mental Rounding & Compensation",
+		icon: "🧠",
 		pluginId: Qd.plugin.id,
-		competency: au,
-		competencies: [au],
+		competency: ou,
+		competencies: [ou],
 		createSession: Qd.createSession,
 		createMasterySignal: Qd.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-tenths-hundredths-as-decimals-number-line",
-		label: "Tenths & Hundredths as Decimals",
-		icon: "🔟",
+		key: "syllabus-g4-instant-table-fact-recall",
+		label: "Instant Table Facts",
+		icon: "⚡",
 		pluginId: $d.plugin.id,
-		competency: ou,
-		competencies: [ou],
+		competency: su,
+		competencies: [su],
 		createSession: $d.createSession,
 		createMasterySignal: $d.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-add-subtract-decimals-two-places",
-		label: "Adding & Subtracting Decimals",
-		icon: "💲",
+		key: "syllabus-g4-instant-table-fact-judgment",
+		label: "True or False: Table Facts",
+		icon: "❓",
 		pluginId: ef.plugin.id,
 		competency: su,
 		competencies: [su],
@@ -28562,9 +28569,9 @@ var up = [
 		createMasterySignal: ef.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-understands-percentage-as-out-of-100",
-		label: "Percentage as Out of 100",
-		icon: "💯",
+		key: "syllabus-g4-compares-orders-fractions-different-denominators",
+		label: "Comparing Fractions",
+		icon: "🍰",
 		pluginId: tf.plugin.id,
 		competency: cu,
 		competencies: [cu],
@@ -28572,9 +28579,9 @@ var up = [
 		createMasterySignal: tf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-calculates-area-rectangle-compound",
-		label: "Area of Rectangles & Compound Shapes",
-		icon: "🔲",
+		key: "syllabus-g4-converts-improper-fractions-mixed-numbers",
+		label: "Improper Fractions & Mixed Numbers",
+		icon: "🔀",
 		pluginId: nf.plugin.id,
 		competency: lu,
 		competencies: [lu],
@@ -28582,9 +28589,9 @@ var up = [
 		createMasterySignal: nf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-estimates-length-mass-volume",
-		label: "Estimating Length, Mass & Volume",
-		icon: "📏",
+		key: "syllabus-g4-finds-fraction-of-quantity",
+		label: "Fraction of a Quantity",
+		icon: "🍕",
 		pluginId: rf.plugin.id,
 		competency: uu,
 		competencies: [uu],
@@ -28592,9 +28599,9 @@ var up = [
 		createMasterySignal: rf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reads-scale-with-unlabelled-divisions",
-		label: "Reading Unlabelled Scales",
-		icon: "📐",
+		key: "syllabus-g4-tenths-hundredths-as-decimals-number-line",
+		label: "Tenths & Hundredths as Decimals",
+		icon: "🔟",
 		pluginId: af.plugin.id,
 		competency: du,
 		competencies: [du],
@@ -28602,9 +28609,9 @@ var up = [
 		createMasterySignal: af.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-calculates-durations-crossing-hours-midnight",
-		label: "Durations Crossing Hours & Midnight",
-		icon: "⏱️",
+		key: "syllabus-g4-add-subtract-decimals-two-places",
+		label: "Adding & Subtracting Decimals",
+		icon: "💲",
 		pluginId: of.plugin.id,
 		competency: fu,
 		competencies: [fu],
@@ -28612,9 +28619,9 @@ var up = [
 		createMasterySignal: of.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-calendar-date-weeks-ahead",
-		label: "Calendar: Weeks Ahead",
-		icon: "📅",
+		key: "syllabus-g4-understands-percentage-as-out-of-100",
+		label: "Percentage as Out of 100",
+		icon: "💯",
 		pluginId: sf.plugin.id,
 		competency: pu,
 		competencies: [pu],
@@ -28622,9 +28629,9 @@ var up = [
 		createMasterySignal: sf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-measures-draws-angle-with-protractor",
-		label: "Measuring Angles with a Protractor",
-		icon: "📐",
+		key: "syllabus-g4-calculates-area-rectangle-compound",
+		label: "Area of Rectangles & Compound Shapes",
+		icon: "🔲",
 		pluginId: cf.plugin.id,
 		competency: mu,
 		competencies: [mu],
@@ -28632,8 +28639,8 @@ var up = [
 		createMasterySignal: cf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-angles-on-line-and-around-point",
-		label: "Angles on a Line & Around a Point",
+		key: "syllabus-g4-estimates-length-mass-volume",
+		label: "Estimating Length, Mass & Volume",
 		icon: "📏",
 		pluginId: lf.plugin.id,
 		competency: hu,
@@ -28642,9 +28649,9 @@ var up = [
 		createMasterySignal: lf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-triangle-angles-sum-180",
-		label: "Triangle Angle Sum",
-		icon: "🔺",
+		key: "syllabus-g4-reads-scale-with-unlabelled-divisions",
+		label: "Reading Unlabelled Scales",
+		icon: "📐",
 		pluginId: uf.plugin.id,
 		competency: gu,
 		competencies: [gu],
@@ -28652,9 +28659,9 @@ var up = [
 		createMasterySignal: uf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-plots-reads-coordinates-first-quadrant",
-		label: "Coordinates in the First Quadrant",
-		icon: "🧭",
+		key: "syllabus-g4-calculates-durations-crossing-hours-midnight",
+		label: "Durations Crossing Hours & Midnight",
+		icon: "⏱️",
 		pluginId: df.plugin.id,
 		competency: _u,
 		competencies: [_u],
@@ -28662,9 +28669,9 @@ var up = [
 		createMasterySignal: df.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-translates-reflects-shape-on-grid",
-		label: "Translating & Reflecting Shapes",
-		icon: "🔄",
+		key: "syllabus-g4-uses-calendar-date-weeks-ahead",
+		label: "Calendar: Weeks Ahead",
+		icon: "📅",
 		pluginId: ff.plugin.id,
 		competency: vu,
 		competencies: [vu],
@@ -28672,9 +28679,9 @@ var up = [
 		createMasterySignal: ff.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-draws-reads-line-graph-trend",
-		label: "Line Graphs & Trends",
-		icon: "📈",
+		key: "syllabus-g4-measures-draws-angle-with-protractor",
+		label: "Measuring Angles with a Protractor",
+		icon: "📐",
 		pluginId: pf.plugin.id,
 		competency: yu,
 		competencies: [yu],
@@ -28682,9 +28689,9 @@ var up = [
 		createMasterySignal: pf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-finds-mode-range-data-set",
-		label: "Mode & Range",
-		icon: "📊",
+		key: "syllabus-g4-angles-on-line-and-around-point",
+		label: "Angles on a Line & Around a Point",
+		icon: "📏",
 		pluginId: mf.plugin.id,
 		competency: bu,
 		competencies: [bu],
@@ -28692,9 +28699,9 @@ var up = [
 		createMasterySignal: mf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-symbol-box-for-unknown",
-		label: "Solving for an Unknown Box",
-		icon: "❓",
+		key: "syllabus-g4-triangle-angles-sum-180",
+		label: "Triangle Angle Sum",
+		icon: "🔺",
 		pluginId: hf.plugin.id,
 		competency: xu,
 		competencies: [xu],
@@ -28702,9 +28709,9 @@ var up = [
 		createMasterySignal: hf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-describes-relationship-between-columns",
-		label: "Table Rules",
-		icon: "📋",
+		key: "syllabus-g4-plots-reads-coordinates-first-quadrant",
+		label: "Coordinates in the First Quadrant",
+		icon: "🧭",
 		pluginId: gf.plugin.id,
 		competency: Su,
 		competencies: [Su],
@@ -28712,9 +28719,9 @@ var up = [
 		createMasterySignal: gf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-solves-multi-step-mixed-operations-units",
-		label: "Multi-Step Problems with Units",
-		icon: "🧩",
+		key: "syllabus-g4-translates-reflects-shape-on-grid",
+		label: "Translating & Reflecting Shapes",
+		icon: "🔄",
 		pluginId: _f.plugin.id,
 		competency: Cu,
 		competencies: [Cu],
@@ -28722,9 +28729,9 @@ var up = [
 		createMasterySignal: _f.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-works-systematically-all-solutions",
-		label: "Finding All Solutions Systematically",
-		icon: "🔍",
+		key: "syllabus-g4-draws-reads-line-graph-trend",
+		label: "Line Graphs & Trends",
+		icon: "📈",
 		pluginId: vf.plugin.id,
 		competency: wu,
 		competencies: [wu],
@@ -28732,9 +28739,9 @@ var up = [
 		createMasterySignal: vf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-explains-method-aloud",
-		label: "Explaining Your Method",
-		icon: "🗣️",
+		key: "syllabus-g4-finds-mode-range-data-set",
+		label: "Mode & Range",
+		icon: "📊",
 		pluginId: yf.plugin.id,
 		competency: Tu,
 		competencies: [Tu],
@@ -28742,9 +28749,9 @@ var up = [
 		createMasterySignal: yf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-finds-factor-pairs-recognizes-multiples",
-		label: "Factor Pairs and Multiples",
-		icon: "👫",
+		key: "syllabus-g4-uses-symbol-box-for-unknown",
+		label: "Solving for an Unknown Box",
+		icon: "❓",
 		pluginId: bf.plugin.id,
 		competency: Eu,
 		competencies: [Eu],
@@ -28752,9 +28759,9 @@ var up = [
 		createMasterySignal: bf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-decides-prime-or-composite-to-100",
-		label: "Prime or Composite?",
-		icon: "🔎",
+		key: "syllabus-g4-describes-relationship-between-columns",
+		label: "Table Rules",
+		icon: "📋",
 		pluginId: xf.plugin.id,
 		competency: Du,
 		competencies: [Du],
@@ -28762,9 +28769,9 @@ var up = [
 		createMasterySignal: xf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reads-roman-numerals-to-1000",
-		label: "Roman Numerals",
-		icon: "🏛️",
+		key: "syllabus-g4-solves-multi-step-mixed-operations-units",
+		label: "Multi-Step Problems with Units",
+		icon: "🧩",
 		pluginId: Sf.plugin.id,
 		competency: Ou,
 		competencies: [Ou],
@@ -28772,9 +28779,9 @@ var up = [
 		createMasterySignal: Sf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-multiplies-divides-by-10-100-1000",
-		label: "Times and Divide by 10, 100, 1000",
-		icon: "🔟",
+		key: "syllabus-g4-works-systematically-all-solutions",
+		label: "Finding All Solutions Systematically",
+		icon: "🔍",
 		pluginId: Cf.plugin.id,
 		competency: ku,
 		competencies: [ku],
@@ -28782,9 +28789,9 @@ var up = [
 		createMasterySignal: Cf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-checks-results-rounding-inverse",
-		label: "Checking Your Answer",
-		icon: "✅",
+		key: "syllabus-g4-explains-method-aloud",
+		label: "Explaining Your Method",
+		icon: "🗣️",
 		pluginId: wf.plugin.id,
 		competency: Au,
 		competencies: [Au],
@@ -28792,9 +28799,9 @@ var up = [
 		createMasterySignal: wf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-decides-what-to-do-with-remainder",
-		label: "What About the Remainder?",
-		icon: "🚌",
+		key: "syllabus-g4-finds-factor-pairs-recognizes-multiples",
+		label: "Factor Pairs and Multiples",
+		icon: "👫",
 		pluginId: Tf.plugin.id,
 		competency: ju,
 		competencies: [ju],
@@ -28802,9 +28809,9 @@ var up = [
 		createMasterySignal: Tf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-tells-times-as-many-from-more-than",
-		label: "Times As Many or More Than?",
-		icon: "✖️",
+		key: "syllabus-g4-decides-prime-or-composite-to-100",
+		label: "Prime or Composite?",
+		icon: "🔎",
 		pluginId: Ef.plugin.id,
 		competency: Mu,
 		competencies: [Mu],
@@ -28812,9 +28819,9 @@ var up = [
 		createMasterySignal: Ef.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-distributive-associative-properties",
-		label: "Smart Multiplying",
-		icon: "🧠",
+		key: "syllabus-g4-reads-roman-numerals-to-1000",
+		label: "Roman Numerals",
+		icon: "🏛️",
 		pluginId: Df.plugin.id,
 		competency: Nu,
 		competencies: [Nu],
@@ -28822,9 +28829,9 @@ var up = [
 		createMasterySignal: Df.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-divisibility-rules-2-5-10",
-		label: "Divisibility Rules 2, 5, 10",
-		icon: "🧮",
+		key: "syllabus-g4-multiplies-divides-by-10-100-1000",
+		label: "Times and Divide by 10, 100, 1000",
+		icon: "🔟",
 		pluginId: Of.plugin.id,
 		competency: Pu,
 		competencies: [Pu],
@@ -28832,9 +28839,9 @@ var up = [
 		createMasterySignal: Of.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-calculates-tens-and-thousands-mentally",
-		label: "Mental Tens and Hundreds",
-		icon: "💭",
+		key: "syllabus-g4-checks-results-rounding-inverse",
+		label: "Checking Your Answer",
+		icon: "✅",
 		pluginId: kf.plugin.id,
 		competency: Fu,
 		competencies: [Fu],
@@ -28842,9 +28849,9 @@ var up = [
 		createMasterySignal: kf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-doubling-and-halving-to-simplify",
-		label: "Double and Halve",
-		icon: "⚖️",
+		key: "syllabus-g4-decides-what-to-do-with-remainder",
+		label: "What About the Remainder?",
+		icon: "🚌",
 		pluginId: Af.plugin.id,
 		competency: Iu,
 		competencies: [Iu],
@@ -28852,9 +28859,9 @@ var up = [
 		createMasterySignal: Af.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-estimates-products-and-quotients",
-		label: "Estimate First",
-		icon: "🎯",
+		key: "syllabus-g4-tells-times-as-many-from-more-than",
+		label: "Times As Many or More Than?",
+		icon: "✖️",
 		pluginId: jf.plugin.id,
 		competency: Lu,
 		competencies: [Lu],
@@ -28862,9 +28869,9 @@ var up = [
 		createMasterySignal: jf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-generates-equivalent-fractions-and-simplifies",
-		label: "Equivalent Fractions",
-		icon: "🟰",
+		key: "syllabus-g4-uses-distributive-associative-properties",
+		label: "Smart Multiplying",
+		icon: "🧠",
 		pluginId: Mf.plugin.id,
 		competency: Ru,
 		competencies: [Ru],
@@ -28872,9 +28879,9 @@ var up = [
 		createMasterySignal: Mf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-adds-subtracts-related-denominator-fractions",
-		label: "Adding and Subtracting Fractions",
-		icon: "➕",
+		key: "syllabus-g4-uses-divisibility-rules-2-5-10",
+		label: "Divisibility Rules 2, 5, 10",
+		icon: "🧮",
 		pluginId: Nf.plugin.id,
 		competency: zu,
 		competencies: [zu],
@@ -28882,9 +28889,9 @@ var up = [
 		createMasterySignal: Nf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-decomposes-fraction-into-sum",
-		label: "Splitting Fractions",
-		icon: "✂️",
+		key: "syllabus-g4-calculates-tens-and-thousands-mentally",
+		label: "Mental Tens and Hundreds",
+		icon: "💭",
 		pluginId: Pf.plugin.id,
 		competency: Bu,
 		competencies: [Bu],
@@ -28892,9 +28899,9 @@ var up = [
 		createMasterySignal: Pf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-multiplies-fraction-by-whole-number",
-		label: "Fraction Times Whole Number",
-		icon: "🔢",
+		key: "syllabus-g4-uses-doubling-and-halving-to-simplify",
+		label: "Double and Halve",
+		icon: "⚖️",
 		pluginId: Ff.plugin.id,
 		competency: Vu,
 		competencies: [Vu],
@@ -28902,9 +28909,9 @@ var up = [
 		createMasterySignal: Ff.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-says-value-of-decimal-digits-to-hundredths",
-		label: "Decimal Digit Values",
-		icon: "🔠",
+		key: "syllabus-g4-estimates-products-and-quotients",
+		label: "Estimate First",
+		icon: "🎯",
 		pluginId: If.plugin.id,
 		competency: Hu,
 		competencies: [Hu],
@@ -28912,9 +28919,9 @@ var up = [
 		createMasterySignal: If.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-compares-orders-decimals-to-two-places",
-		label: "Comparing Decimals",
-		icon: "⚖️",
+		key: "syllabus-g4-generates-equivalent-fractions-and-simplifies",
+		label: "Equivalent Fractions",
+		icon: "🟰",
 		pluginId: Lf.plugin.id,
 		competency: Uu,
 		competencies: [Uu],
@@ -28922,9 +28929,9 @@ var up = [
 		createMasterySignal: Lf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-rounds-decimals-to-nearest-whole-number",
-		label: "Rounding Decimals",
-		icon: "🎈",
+		key: "syllabus-g4-adds-subtracts-related-denominator-fractions",
+		label: "Adding and Subtracting Fractions",
+		icon: "➕",
 		pluginId: Rf.plugin.id,
 		competency: Wu,
 		competencies: [Wu],
@@ -28932,9 +28939,9 @@ var up = [
 		createMasterySignal: Rf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-generates-pattern-from-rule",
-		label: "Patterns from Rules",
-		icon: "🔁",
+		key: "syllabus-g4-decomposes-fraction-into-sum",
+		label: "Splitting Fractions",
+		icon: "✂️",
 		pluginId: zf.plugin.id,
 		competency: Gu,
 		competencies: [Gu],
@@ -28942,9 +28949,9 @@ var up = [
 		createMasterySignal: zf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-knows-metric-unit-relationships",
-		label: "Metric Conversions",
-		icon: "📏",
+		key: "syllabus-g4-multiplies-fraction-by-whole-number",
+		label: "Fraction Times Whole Number",
+		icon: "🔢",
 		pluginId: Bf.plugin.id,
 		competency: Ku,
 		competencies: [Ku],
@@ -28952,9 +28959,9 @@ var up = [
 		createMasterySignal: Bf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-perimeter-and-missing-sides",
-		label: "Perimeter and Missing Sides",
-		icon: "🔲",
+		key: "syllabus-g4-says-value-of-decimal-digits-to-hundredths",
+		label: "Decimal Digit Values",
+		icon: "🔠",
 		pluginId: Vf.plugin.id,
 		competency: qu,
 		competencies: [qu],
@@ -28962,9 +28969,9 @@ var up = [
 		createMasterySignal: Vf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-solves-measurement-problems-four-operations",
-		label: "Measurement Problems",
-		icon: "🧪",
+		key: "syllabus-g4-compares-orders-decimals-to-two-places",
+		label: "Comparing Decimals",
+		icon: "⚖️",
 		pluginId: Hf.plugin.id,
 		competency: Ju,
 		competencies: [Ju],
@@ -28972,9 +28979,9 @@ var up = [
 		createMasterySignal: Hf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-converts-12-hour-and-24-hour-times",
-		label: "12-Hour and 24-Hour Time",
-		icon: "🕒",
+		key: "syllabus-g4-rounds-decimals-to-nearest-whole-number",
+		label: "Rounding Decimals",
+		icon: "🎈",
 		pluginId: Uf.plugin.id,
 		competency: Yu,
 		competencies: [Yu],
@@ -28982,9 +28989,9 @@ var up = [
 		createMasterySignal: Uf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reads-timetables-and-plans-journeys",
-		label: "Timetables and Journeys",
-		icon: "🚉",
+		key: "syllabus-g4-generates-pattern-from-rule",
+		label: "Patterns from Rules",
+		icon: "🔁",
 		pluginId: Wf.plugin.id,
 		competency: Xu,
 		competencies: [Xu],
@@ -28992,9 +28999,9 @@ var up = [
 		createMasterySignal: Wf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-solves-multi-step-shopping-problems-decimals",
-		label: "Shopping Problems",
-		icon: "🛒",
+		key: "syllabus-g4-knows-metric-unit-relationships",
+		label: "Metric Conversions",
+		icon: "📏",
 		pluginId: Gf.plugin.id,
 		competency: Zu,
 		competencies: [Zu],
@@ -29002,9 +29009,9 @@ var up = [
 		createMasterySignal: Gf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-estimates-total-cost-and-checks-change",
-		label: "Estimating Cost and Change",
-		icon: "🧾",
+		key: "syllabus-g4-uses-perimeter-and-missing-sides",
+		label: "Perimeter and Missing Sides",
+		icon: "🔲",
 		pluginId: Kf.plugin.id,
 		competency: Qu,
 		competencies: [Qu],
@@ -29012,9 +29019,9 @@ var up = [
 		createMasterySignal: Kf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-identifies-points-lines-segments-rays-parallel-perpendicular",
-		label: "Lines, Rays and Segments",
-		icon: "📐",
+		key: "syllabus-g4-solves-measurement-problems-four-operations",
+		label: "Measurement Problems",
+		icon: "🧪",
 		pluginId: qf.plugin.id,
 		competency: $u,
 		competencies: [$u],
@@ -29022,9 +29029,9 @@ var up = [
 		createMasterySignal: qf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-names-acute-right-obtuse-straight-reflex-angles",
-		label: "Naming Angles",
-		icon: "📐",
+		key: "syllabus-g4-converts-12-hour-and-24-hour-times",
+		label: "12-Hour and 24-Hour Time",
+		icon: "🕒",
 		pluginId: Jf.plugin.id,
 		competency: ed,
 		competencies: [ed],
@@ -29032,9 +29039,9 @@ var up = [
 		createMasterySignal: Jf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-classifies-triangles-by-sides-and-angles",
-		label: "Classifying Triangles",
-		icon: "🔺",
+		key: "syllabus-g4-reads-timetables-and-plans-journeys",
+		label: "Timetables and Journeys",
+		icon: "🚉",
 		pluginId: Yf.plugin.id,
 		competency: td,
 		competencies: [td],
@@ -29042,9 +29049,9 @@ var up = [
 		createMasterySignal: Yf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-distinguishes-regular-from-irregular-polygons",
-		label: "Regular or Irregular?",
-		icon: "⬡",
+		key: "syllabus-g4-solves-multi-step-shopping-problems-decimals",
+		label: "Shopping Problems",
+		icon: "🛒",
 		pluginId: Xf.plugin.id,
 		competency: nd,
 		competencies: [nd],
@@ -29052,9 +29059,9 @@ var up = [
 		createMasterySignal: Xf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-finds-lines-of-symmetry",
-		label: "Lines of Symmetry",
-		icon: "🦋",
+		key: "syllabus-g4-estimates-total-cost-and-checks-change",
+		label: "Estimating Cost and Change",
+		icon: "🧾",
 		pluginId: Zf.plugin.id,
 		competency: rd,
 		competencies: [rd],
@@ -29062,9 +29069,9 @@ var up = [
 		createMasterySignal: Zf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-names-parts-of-a-circle",
-		label: "Parts of a Circle",
-		icon: "⭕",
+		key: "syllabus-g4-identifies-points-lines-segments-rays-parallel-perpendicular",
+		label: "Lines, Rays and Segments",
+		icon: "📐",
 		pluginId: Qf.plugin.id,
 		competency: id,
 		competencies: [id],
@@ -29072,9 +29079,9 @@ var up = [
 		createMasterySignal: Qf.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-describes-prisms-and-pyramids-by-faces-edges-vertices",
-		label: "Prisms and Pyramids",
-		icon: "🔷",
+		key: "syllabus-g4-names-acute-right-obtuse-straight-reflex-angles",
+		label: "Naming Angles",
+		icon: "📐",
 		pluginId: $f.plugin.id,
 		competency: ad,
 		competencies: [ad],
@@ -29082,9 +29089,9 @@ var up = [
 		createMasterySignal: $f.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reflects-point-in-mirror-line-on-grid",
-		label: "Mirror Reflections",
-		icon: "🪞",
+		key: "syllabus-g4-classifies-triangles-by-sides-and-angles",
+		label: "Classifying Triangles",
+		icon: "🔺",
 		pluginId: ep.plugin.id,
 		competency: od,
 		competencies: [od],
@@ -29092,9 +29099,9 @@ var up = [
 		createMasterySignal: ep.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-compass-points-and-turns",
-		label: "Compass Points and Turns",
-		icon: "🧭",
+		key: "syllabus-g4-distinguishes-regular-from-irregular-polygons",
+		label: "Regular or Irregular?",
+		icon: "⬡",
 		pluginId: tp.plugin.id,
 		competency: sd,
 		competencies: [sd],
@@ -29102,9 +29109,9 @@ var up = [
 		createMasterySignal: tp.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reads-bar-charts-and-double-bar-charts",
-		label: "Reading Bar Charts",
-		icon: "📊",
+		key: "syllabus-g4-finds-lines-of-symmetry",
+		label: "Lines of Symmetry",
+		icon: "🦋",
 		pluginId: np.plugin.id,
 		competency: cd,
 		competencies: [cd],
@@ -29112,9 +29119,9 @@ var up = [
 		createMasterySignal: np.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-reads-two-way-tables-and-timetables",
-		label: "Two-Way Tables",
-		icon: "🗂️",
+		key: "syllabus-g4-names-parts-of-a-circle",
+		label: "Parts of a Circle",
+		icon: "⭕",
 		pluginId: rp.plugin.id,
 		competency: ld,
 		competencies: [ld],
@@ -29122,9 +29129,9 @@ var up = [
 		createMasterySignal: rp.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-draws-line-plots-with-fractions-of-a-unit",
-		label: "Line Plots with Fractions",
-		icon: "📈",
+		key: "syllabus-g4-describes-prisms-and-pyramids-by-faces-edges-vertices",
+		label: "Prisms and Pyramids",
+		icon: "🔷",
 		pluginId: ip.plugin.id,
 		competency: ud,
 		competencies: [ud],
@@ -29132,9 +29139,9 @@ var up = [
 		createMasterySignal: ip.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-poses-questions-collects-data-picks-graph",
-		label: "Choosing a Graph",
-		icon: "🗳️",
+		key: "syllabus-g4-reflects-point-in-mirror-line-on-grid",
+		label: "Mirror Reflections",
+		icon: "🪞",
 		pluginId: ap.plugin.id,
 		competency: dd,
 		competencies: [dd],
@@ -29142,9 +29149,9 @@ var up = [
 		createMasterySignal: ap.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-lists-outcomes-and-judges-equally-likely",
-		label: "Outcomes and Chance",
-		icon: "🎲",
+		key: "syllabus-g4-uses-compass-points-and-turns",
+		label: "Compass Points and Turns",
+		icon: "🧭",
 		pluginId: op.plugin.id,
 		competency: fd,
 		competencies: [fd],
@@ -29152,9 +29159,9 @@ var up = [
 		createMasterySignal: op.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-uses-bar-models-for-multiplicative-comparison-and-fractions",
-		label: "Bar Models",
-		icon: "🟦",
+		key: "syllabus-g4-reads-bar-charts-and-double-bar-charts",
+		label: "Reading Bar Charts",
+		icon: "📊",
 		pluginId: sp.plugin.id,
 		competency: pd,
 		competencies: [pd],
@@ -29162,17 +29169,67 @@ var up = [
 		createMasterySignal: sp.createMasterySignal
 	}),
 	N({
-		key: "syllabus-g4-makes-conjectures-and-finds-counterexamples",
-		label: "Counterexamples",
-		icon: "🕵️",
+		key: "syllabus-g4-reads-two-way-tables-and-timetables",
+		label: "Two-Way Tables",
+		icon: "🗂️",
 		pluginId: cp.plugin.id,
 		competency: md,
 		competencies: [md],
 		createSession: cp.createSession,
 		createMasterySignal: cp.createMasterySignal
 	}),
-	...Vd
-], dp = {
+	N({
+		key: "syllabus-g4-draws-line-plots-with-fractions-of-a-unit",
+		label: "Line Plots with Fractions",
+		icon: "📈",
+		pluginId: lp.plugin.id,
+		competency: hd,
+		competencies: [hd],
+		createSession: lp.createSession,
+		createMasterySignal: lp.createMasterySignal
+	}),
+	N({
+		key: "syllabus-g4-poses-questions-collects-data-picks-graph",
+		label: "Choosing a Graph",
+		icon: "🗳️",
+		pluginId: up.plugin.id,
+		competency: gd,
+		competencies: [gd],
+		createSession: up.createSession,
+		createMasterySignal: up.createMasterySignal
+	}),
+	N({
+		key: "syllabus-g4-lists-outcomes-and-judges-equally-likely",
+		label: "Outcomes and Chance",
+		icon: "🎲",
+		pluginId: dp.plugin.id,
+		competency: _d,
+		competencies: [_d],
+		createSession: dp.createSession,
+		createMasterySignal: dp.createMasterySignal
+	}),
+	N({
+		key: "syllabus-g4-uses-bar-models-for-multiplicative-comparison-and-fractions",
+		label: "Bar Models",
+		icon: "🟦",
+		pluginId: fp.plugin.id,
+		competency: vd,
+		competencies: [vd],
+		createSession: fp.createSession,
+		createMasterySignal: fp.createMasterySignal
+	}),
+	N({
+		key: "syllabus-g4-makes-conjectures-and-finds-counterexamples",
+		label: "Counterexamples",
+		icon: "🕵️",
+		pluginId: pp.plugin.id,
+		competency: yd,
+		competencies: [yd],
+		createSession: pp.createSession,
+		createMasterySignal: pp.createMasterySignal
+	}),
+	...Kd
+], gp = {
 	id: "math.number-sense.finds-factors-common-multiples",
 	nameKey: "competency.math.number-sense.finds-factors-common-multiples.name",
 	descriptionKey: "competency.math.number-sense.finds-factors-common-multiples.description",
@@ -29185,7 +29242,7 @@ var up = [
 		kind: "activity",
 		id: "math.number-sense.finds-factors-common-multiples"
 	}]
-}, fp = {
+}, _p = {
 	id: "math.place-value.extends-place-value-right-of-decimal",
 	nameKey: "competency.math.place-value.extends-place-value-right-of-decimal.name",
 	descriptionKey: "competency.math.place-value.extends-place-value-right-of-decimal.description",
@@ -29198,7 +29255,7 @@ var up = [
 		kind: "activity",
 		id: "math.place-value.extends-place-value-right-of-decimal"
 	}]
-}, pp = {
+}, vp = {
 	id: "math.decimals.rounds-decimals-to-given-places",
 	nameKey: "competency.math.decimals.rounds-decimals-to-given-places.name",
 	descriptionKey: "competency.math.decimals.rounds-decimals-to-given-places.description",
@@ -29211,7 +29268,7 @@ var up = [
 		kind: "activity",
 		id: "math.decimals.rounds-decimals-to-given-places"
 	}]
-}, mp = {
+}, yp = {
 	id: "math.addition.adds-subtracts-whole-decimals-columns",
 	nameKey: "competency.math.addition.adds-subtracts-whole-decimals-columns.name",
 	descriptionKey: "competency.math.addition.adds-subtracts-whole-decimals-columns.description",
@@ -29224,7 +29281,7 @@ var up = [
 		kind: "activity",
 		id: "math.addition.adds-subtracts-whole-decimals-columns"
 	}]
-}, hp = {
+}, bp = {
 	id: "math.multiplication.multiplies-four-digit-by-two-digit",
 	nameKey: "competency.math.multiplication.multiplies-four-digit-by-two-digit.name",
 	descriptionKey: "competency.math.multiplication.multiplies-four-digit-by-two-digit.description",
@@ -29237,7 +29294,7 @@ var up = [
 		kind: "activity",
 		id: "math.multiplication.multiplies-four-digit-by-two-digit"
 	}]
-}, gp = {
+}, xp = {
 	id: "math.division.divides-by-two-digit-expresses-remainder",
 	nameKey: "competency.math.division.divides-by-two-digit-expresses-remainder.name",
 	descriptionKey: "competency.math.division.divides-by-two-digit-expresses-remainder.description",
@@ -29250,7 +29307,7 @@ var up = [
 		kind: "activity",
 		id: "math.division.divides-by-two-digit-expresses-remainder"
 	}]
-}, _p = {
+}, Sp = {
 	id: "math.number-sense.knows-divisibility-tests",
 	nameKey: "competency.math.number-sense.knows-divisibility-tests.name",
 	descriptionKey: "competency.math.number-sense.knows-divisibility-tests.description",
@@ -29263,7 +29320,7 @@ var up = [
 		kind: "activity",
 		id: "math.number-sense.knows-divisibility-tests"
 	}]
-}, vp = {
+}, Cp = {
 	id: "math.mathematical-reasoning.applies-order-of-operations",
 	nameKey: "competency.math.mathematical-reasoning.applies-order-of-operations.name",
 	descriptionKey: "competency.math.mathematical-reasoning.applies-order-of-operations.description",
@@ -29276,7 +29333,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.applies-order-of-operations"
 	}]
-}, yp = {
+}, wp = {
 	id: "math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally",
 	nameKey: "competency.math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally.name",
 	descriptionKey: "competency.math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally.description",
@@ -29289,7 +29346,7 @@ var up = [
 		kind: "activity",
 		id: "math.mental-mathematics.multiplies-two-digit-by-one-digit-mentally"
 	}]
-}, bp = {
+}, Tp = {
 	id: "math.percentages.finds-common-percentages-mentally",
 	nameKey: "competency.math.percentages.finds-common-percentages-mentally.name",
 	descriptionKey: "competency.math.percentages.finds-common-percentages-mentally.description",
@@ -29302,7 +29359,7 @@ var up = [
 		kind: "activity",
 		id: "math.percentages.finds-common-percentages-mentally"
 	}]
-}, xp = {
+}, Ep = {
 	id: "math.mathematical-reasoning.estimates-before-calculating",
 	nameKey: "competency.math.mathematical-reasoning.estimates-before-calculating.name",
 	descriptionKey: "competency.math.mathematical-reasoning.estimates-before-calculating.description",
@@ -29315,7 +29372,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.estimates-before-calculating"
 	}]
-}, Sp = {
+}, Dp = {
 	id: "math.fractions.adds-subtracts-fractions-different-denominators",
 	nameKey: "competency.math.fractions.adds-subtracts-fractions-different-denominators.name",
 	descriptionKey: "competency.math.fractions.adds-subtracts-fractions-different-denominators.description",
@@ -29328,7 +29385,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.adds-subtracts-fractions-different-denominators"
 	}]
-}, Cp = {
+}, Op = {
 	id: "math.fractions.multiplies-fraction-by-whole-or-fraction",
 	nameKey: "competency.math.fractions.multiplies-fraction-by-whole-or-fraction.name",
 	descriptionKey: "competency.math.fractions.multiplies-fraction-by-whole-or-fraction.description",
@@ -29341,7 +29398,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.multiplies-fraction-by-whole-or-fraction"
 	}]
-}, wp = {
+}, kp = {
 	id: "math.percentages.converts-fluently-fractions-decimals-percentages",
 	nameKey: "competency.math.percentages.converts-fluently-fractions-decimals-percentages.name",
 	descriptionKey: "competency.math.percentages.converts-fluently-fractions-decimals-percentages.description",
@@ -29354,7 +29411,7 @@ var up = [
 		kind: "activity",
 		id: "math.percentages.converts-fluently-fractions-decimals-percentages"
 	}]
-}, Tp = {
+}, Ap = {
 	id: "math.decimals.multiplies-divides-decimals-by-whole-numbers",
 	nameKey: "competency.math.decimals.multiplies-divides-decimals-by-whole-numbers.name",
 	descriptionKey: "competency.math.decimals.multiplies-divides-decimals-by-whole-numbers.description",
@@ -29367,7 +29424,7 @@ var up = [
 		kind: "activity",
 		id: "math.decimals.multiplies-divides-decimals-by-whole-numbers"
 	}]
-}, Ep = {
+}, jp = {
 	id: "math.percentages.finds-any-percentage-of-quantity",
 	nameKey: "competency.math.percentages.finds-any-percentage-of-quantity.name",
 	descriptionKey: "competency.math.percentages.finds-any-percentage-of-quantity.description",
@@ -29380,7 +29437,7 @@ var up = [
 		kind: "activity",
 		id: "math.percentages.finds-any-percentage-of-quantity"
 	}]
-}, Dp = {
+}, Mp = {
 	id: "math.percentages.calculates-percentage-increase-decrease",
 	nameKey: "competency.math.percentages.calculates-percentage-increase-decrease.name",
 	descriptionKey: "competency.math.percentages.calculates-percentage-increase-decrease.description",
@@ -29393,7 +29450,7 @@ var up = [
 		kind: "activity",
 		id: "math.percentages.calculates-percentage-increase-decrease"
 	}]
-}, Op = {
+}, Np = {
 	id: "math.number-sense.understands-ratio-shares-quantity",
 	nameKey: "competency.math.number-sense.understands-ratio-shares-quantity.name",
 	descriptionKey: "competency.math.number-sense.understands-ratio-shares-quantity.description",
@@ -29406,7 +29463,7 @@ var up = [
 		kind: "activity",
 		id: "math.number-sense.understands-ratio-shares-quantity"
 	}]
-}, kp = {
+}, Pp = {
 	id: "math.mathematical-reasoning.solves-simple-scaling-problems",
 	nameKey: "competency.math.mathematical-reasoning.solves-simple-scaling-problems.name",
 	descriptionKey: "competency.math.mathematical-reasoning.solves-simple-scaling-problems.description",
@@ -29419,7 +29476,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.solves-simple-scaling-problems"
 	}]
-}, Ap = {
+}, Fp = {
 	id: "math.measurement.calculates-volume-cuboid",
 	nameKey: "competency.math.measurement.calculates-volume-cuboid.name",
 	descriptionKey: "competency.math.measurement.calculates-volume-cuboid.description",
@@ -29432,7 +29489,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.calculates-volume-cuboid"
 	}]
-}, jp = {
+}, Ip = {
 	id: "math.measurement.converts-metric-units-two-steps",
 	nameKey: "competency.math.measurement.converts-metric-units-two-steps.name",
 	descriptionKey: "competency.math.measurement.converts-metric-units-two-steps.description",
@@ -29445,7 +29502,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.converts-metric-units-two-steps"
 	}]
-}, Mp = {
+}, Lp = {
 	id: "math.measurement.knows-imperial-metric-rough-equivalence",
 	nameKey: "competency.math.measurement.knows-imperial-metric-rough-equivalence.name",
 	descriptionKey: "competency.math.measurement.knows-imperial-metric-rough-equivalence.description",
@@ -29458,7 +29515,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.knows-imperial-metric-rough-equivalence"
 	}]
-}, Np = {
+}, Rp = {
 	id: "math.measurement.has-reliable-body-ruler",
 	nameKey: "competency.math.measurement.has-reliable-body-ruler.name",
 	descriptionKey: "competency.math.measurement.has-reliable-body-ruler.description",
@@ -29471,7 +29528,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.has-reliable-body-ruler"
 	}]
-}, Pp = {
+}, zp = {
 	id: "math.time.converts-seconds-minutes-hours-days-years",
 	nameKey: "competency.math.time.converts-seconds-minutes-hours-days-years.name",
 	descriptionKey: "competency.math.time.converts-seconds-minutes-hours-days-years.description",
@@ -29484,7 +29541,7 @@ var up = [
 		kind: "activity",
 		id: "math.time.converts-seconds-minutes-hours-days-years"
 	}]
-}, Fp = {
+}, Bp = {
 	id: "math.time.handles-time-zone-differences",
 	nameKey: "competency.math.time.handles-time-zone-differences.name",
 	descriptionKey: "competency.math.time.handles-time-zone-differences.description",
@@ -29497,7 +29554,7 @@ var up = [
 		kind: "activity",
 		id: "math.time.handles-time-zone-differences"
 	}]
-}, Ip = {
+}, Vp = {
 	id: "math.geometry.draws-shape-accurately-from-specification",
 	nameKey: "competency.math.geometry.draws-shape-accurately-from-specification.name",
 	descriptionKey: "competency.math.geometry.draws-shape-accurately-from-specification.description",
@@ -29510,7 +29567,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.draws-shape-accurately-from-specification"
 	}]
-}, Lp = {
+}, Hp = {
 	id: "math.geometry.names-parts-of-circle",
 	nameKey: "competency.math.geometry.names-parts-of-circle.name",
 	descriptionKey: "competency.math.geometry.names-parts-of-circle.description",
@@ -29523,7 +29580,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.names-parts-of-circle"
 	}]
-}, Rp = {
+}, Up = {
 	id: "math.geometry.identifies-net-of-cube-solids",
 	nameKey: "competency.math.geometry.identifies-net-of-cube-solids.name",
 	descriptionKey: "competency.math.geometry.identifies-net-of-cube-solids.description",
@@ -29536,7 +29593,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.identifies-net-of-cube-solids"
 	}]
-}, zp = {
+}, Wp = {
 	id: "math.geometry.plots-coordinates-all-four-quadrants",
 	nameKey: "competency.math.geometry.plots-coordinates-all-four-quadrants.name",
 	descriptionKey: "competency.math.geometry.plots-coordinates-all-four-quadrants.description",
@@ -29549,7 +29606,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.plots-coordinates-all-four-quadrants"
 	}]
-}, Bp = {
+}, Gp = {
 	id: "math.geometry.rotates-shape-about-point",
 	nameKey: "competency.math.geometry.rotates-shape-about-point.name",
 	descriptionKey: "competency.math.geometry.rotates-shape-about-point.description",
@@ -29562,7 +29619,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.rotates-shape-about-point"
 	}]
-}, Vp = {
+}, Kp = {
 	id: "math.measurement.uses-scale-on-plan-or-map",
 	nameKey: "competency.math.measurement.uses-scale-on-plan-or-map.name",
 	descriptionKey: "competency.math.measurement.uses-scale-on-plan-or-map.description",
@@ -29575,7 +29632,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.uses-scale-on-plan-or-map"
 	}]
-}, Hp = {
+}, qp = {
 	id: "math.data-graphs.calculates-mean",
 	nameKey: "competency.math.data-graphs.calculates-mean.name",
 	descriptionKey: "competency.math.data-graphs.calculates-mean.description",
@@ -29588,7 +29645,7 @@ var up = [
 		kind: "activity",
 		id: "math.data-graphs.calculates-mean"
 	}]
-}, Up = {
+}, Jp = {
 	id: "math.data-graphs.reads-pie-chart-fractions-percentages",
 	nameKey: "competency.math.data-graphs.reads-pie-chart-fractions-percentages.name",
 	descriptionKey: "competency.math.data-graphs.reads-pie-chart-fractions-percentages.description",
@@ -29601,7 +29658,7 @@ var up = [
 		kind: "activity",
 		id: "math.data-graphs.reads-pie-chart-fractions-percentages"
 	}]
-}, Wp = {
+}, Yp = {
 	id: "math.data-graphs.uses-language-of-chance",
 	nameKey: "competency.math.data-graphs.uses-language-of-chance.name",
 	descriptionKey: "competency.math.data-graphs.uses-language-of-chance.description",
@@ -29614,7 +29671,7 @@ var up = [
 		kind: "activity",
 		id: "math.data-graphs.uses-language-of-chance"
 	}]
-}, Gp = {
+}, Xp = {
 	id: "math.data-graphs.spots-misleading-graph",
 	nameKey: "competency.math.data-graphs.spots-misleading-graph.name",
 	descriptionKey: "competency.math.data-graphs.spots-misleading-graph.description",
@@ -29627,7 +29684,7 @@ var up = [
 		kind: "activity",
 		id: "math.data-graphs.spots-misleading-graph"
 	}]
-}, Kp = {
+}, Zp = {
 	id: "math.mathematical-reasoning.uses-letter-for-unknown-substitutes",
 	nameKey: "competency.math.mathematical-reasoning.uses-letter-for-unknown-substitutes.name",
 	descriptionKey: "competency.math.mathematical-reasoning.uses-letter-for-unknown-substitutes.description",
@@ -29640,7 +29697,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.uses-letter-for-unknown-substitutes"
 	}]
-}, qp = {
+}, Qp = {
 	id: "math.mathematical-reasoning.solves-one-step-equation-checks",
 	nameKey: "competency.math.mathematical-reasoning.solves-one-step-equation-checks.name",
 	descriptionKey: "competency.math.mathematical-reasoning.solves-one-step-equation-checks.description",
@@ -29653,7 +29710,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.solves-one-step-equation-checks"
 	}]
-}, Jp = {
+}, $p = {
 	id: "math.mathematical-reasoning.expresses-general-rule-for-sequence",
 	nameKey: "competency.math.mathematical-reasoning.expresses-general-rule-for-sequence.name",
 	descriptionKey: "competency.math.mathematical-reasoning.expresses-general-rule-for-sequence.description",
@@ -29666,7 +29723,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.expresses-general-rule-for-sequence"
 	}]
-}, Yp = {
+}, em = {
 	id: "math.mathematical-reasoning.judges-whether-answer-reasonable",
 	nameKey: "competency.math.mathematical-reasoning.judges-whether-answer-reasonable.name",
 	descriptionKey: "competency.math.mathematical-reasoning.judges-whether-answer-reasonable.description",
@@ -29678,7 +29735,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.judges-whether-answer-reasonable"
 	}]
-}, Xp = {
+}, tm = {
 	id: "math.mathematical-reasoning.finds-own-mistake-in-wrong-answer",
 	nameKey: "competency.math.mathematical-reasoning.finds-own-mistake-in-wrong-answer.name",
 	descriptionKey: "competency.math.mathematical-reasoning.finds-own-mistake-in-wrong-answer.description",
@@ -29691,7 +29748,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.finds-own-mistake-in-wrong-answer"
 	}]
-}, Zp = {
+}, nm = {
 	id: "math.problem-solving.solves-problem-missing-surplus-info",
 	nameKey: "competency.math.problem-solving.solves-problem-missing-surplus-info.name",
 	descriptionKey: "competency.math.problem-solving.solves-problem-missing-surplus-info.description",
@@ -29704,7 +29761,7 @@ var up = [
 		kind: "activity",
 		id: "math.problem-solving.solves-problem-missing-surplus-info"
 	}]
-}, Qp = {
+}, rm = {
 	id: "math.problem-solving.tackles-unfamiliar-problem",
 	nameKey: "competency.math.problem-solving.tackles-unfamiliar-problem.name",
 	descriptionKey: "competency.math.problem-solving.tackles-unfamiliar-problem.description",
@@ -29717,7 +29774,7 @@ var up = [
 		kind: "activity",
 		id: "math.problem-solving.tackles-unfamiliar-problem"
 	}]
-}, $p = {
+}, im = {
 	id: "math.mathematical-reasoning.uses-calculator-correctly-checks-estimate",
 	nameKey: "competency.math.mathematical-reasoning.uses-calculator-correctly-checks-estimate.name",
 	descriptionKey: "competency.math.mathematical-reasoning.uses-calculator-correctly-checks-estimate.description",
@@ -29730,7 +29787,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.uses-calculator-correctly-checks-estimate"
 	}]
-}, em = {
+}, am = {
 	id: "math.number-sense.reads-orders-numbers-to-ten-million",
 	nameKey: "competency.math.number-sense.reads-orders-numbers-to-ten-million.name",
 	descriptionKey: "competency.math.number-sense.reads-orders-numbers-to-ten-million.description",
@@ -29743,7 +29800,7 @@ var up = [
 		kind: "activity",
 		id: "math.number-sense.reads-orders-numbers-to-ten-million"
 	}]
-}, tm = {
+}, om = {
 	id: "math.number-sense.orders-negatives-intervals-across-zero",
 	nameKey: "competency.math.number-sense.orders-negatives-intervals-across-zero.name",
 	descriptionKey: "competency.math.number-sense.orders-negatives-intervals-across-zero.description",
@@ -29756,7 +29813,7 @@ var up = [
 		kind: "activity",
 		id: "math.number-sense.orders-negatives-intervals-across-zero"
 	}]
-}, nm = {
+}, sm = {
 	id: "math.addition.picks-method-mental-written-calculator",
 	nameKey: "competency.math.addition.picks-method-mental-written-calculator.name",
 	descriptionKey: "competency.math.addition.picks-method-mental-written-calculator.description",
@@ -29769,7 +29826,7 @@ var up = [
 		kind: "activity",
 		id: "math.addition.picks-method-mental-written-calculator"
 	}]
-}, rm = {
+}, cm = {
 	id: "math.mental-math.calculates-simple-decimals-mentally",
 	nameKey: "competency.math.mental-math.calculates-simple-decimals-mentally.name",
 	descriptionKey: "competency.math.mental-math.calculates-simple-decimals-mentally.description",
@@ -29782,7 +29839,7 @@ var up = [
 		kind: "activity",
 		id: "math.mental-math.calculates-simple-decimals-mentally"
 	}]
-}, im = {
+}, lm = {
 	id: "math.fractions.interprets-fraction-as-division",
 	nameKey: "competency.math.fractions.interprets-fraction-as-division.name",
 	descriptionKey: "competency.math.fractions.interprets-fraction-as-division.description",
@@ -29795,7 +29852,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.interprets-fraction-as-division"
 	}]
-}, am = {
+}, um = {
 	id: "math.fractions.divides-unit-fractions-and-wholes",
 	nameKey: "competency.math.fractions.divides-unit-fractions-and-wholes.name",
 	descriptionKey: "competency.math.fractions.divides-unit-fractions-and-wholes.description",
@@ -29808,7 +29865,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.divides-unit-fractions-and-wholes"
 	}]
-}, om = {
+}, dm = {
 	id: "math.fractions.simplifies-fractions-lowest-terms",
 	nameKey: "competency.math.fractions.simplifies-fractions-lowest-terms.name",
 	descriptionKey: "competency.math.fractions.simplifies-fractions-lowest-terms.description",
@@ -29821,7 +29878,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.simplifies-fractions-lowest-terms"
 	}]
-}, sm = {
+}, fm = {
 	id: "math.fractions.compares-orders-fractions-mixed-numbers",
 	nameKey: "competency.math.fractions.compares-orders-fractions-mixed-numbers.name",
 	descriptionKey: "competency.math.fractions.compares-orders-fractions-mixed-numbers.description",
@@ -29834,7 +29891,7 @@ var up = [
 		kind: "activity",
 		id: "math.fractions.compares-orders-fractions-mixed-numbers"
 	}]
-}, cm = {
+}, pm = {
 	id: "math.decimals.compares-orders-decimals-three-places",
 	nameKey: "competency.math.decimals.compares-orders-decimals-three-places.name",
 	descriptionKey: "competency.math.decimals.compares-orders-decimals-three-places.description",
@@ -29847,7 +29904,7 @@ var up = [
 		kind: "activity",
 		id: "math.decimals.compares-orders-decimals-three-places"
 	}]
-}, lm = {
+}, mm = {
 	id: "math.decimals.understands-percent-out-of-100",
 	nameKey: "competency.math.decimals.understands-percent-out-of-100.name",
 	descriptionKey: "competency.math.decimals.understands-percent-out-of-100.description",
@@ -29860,7 +29917,7 @@ var up = [
 		kind: "activity",
 		id: "math.decimals.understands-percent-out-of-100"
 	}]
-}, um = {
+}, hm = {
 	id: "math.algebra.writes-expressions-with-a-letter",
 	nameKey: "competency.math.algebra.writes-expressions-with-a-letter.name",
 	descriptionKey: "competency.math.algebra.writes-expressions-with-a-letter.description",
@@ -29873,7 +29930,7 @@ var up = [
 		kind: "activity",
 		id: "math.algebra.writes-expressions-with-a-letter"
 	}]
-}, dm = {
+}, gm = {
 	id: "math.algebra.finds-pairs-two-unknowns",
 	nameKey: "competency.math.algebra.finds-pairs-two-unknowns.name",
 	descriptionKey: "competency.math.algebra.finds-pairs-two-unknowns.description",
@@ -29886,7 +29943,7 @@ var up = [
 		kind: "activity",
 		id: "math.algebra.finds-pairs-two-unknowns"
 	}]
-}, fm = {
+}, _m = {
 	id: "math.algebra.generates-two-patterns-pairs-terms",
 	nameKey: "competency.math.algebra.generates-two-patterns-pairs-terms.name",
 	descriptionKey: "competency.math.algebra.generates-two-patterns-pairs-terms.description",
@@ -29899,7 +29956,7 @@ var up = [
 		kind: "activity",
 		id: "math.algebra.generates-two-patterns-pairs-terms"
 	}]
-}, pm = {
+}, vm = {
 	id: "math.measurement.relates-millilitres-cubic-centimetres",
 	nameKey: "competency.math.measurement.relates-millilitres-cubic-centimetres.name",
 	descriptionKey: "competency.math.measurement.relates-millilitres-cubic-centimetres.description",
@@ -29912,7 +29969,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.relates-millilitres-cubic-centimetres"
 	}]
-}, mm = {
+}, ym = {
 	id: "math.measurement.area-triangles-parallelograms",
 	nameKey: "competency.math.measurement.area-triangles-parallelograms.name",
 	descriptionKey: "competency.math.measurement.area-triangles-parallelograms.description",
@@ -29925,7 +29982,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.area-triangles-parallelograms"
 	}]
-}, hm = {
+}, bm = {
 	id: "math.measurement.area-perimeter-compound-rectilinear",
 	nameKey: "competency.math.measurement.area-perimeter-compound-rectilinear.name",
 	descriptionKey: "competency.math.measurement.area-perimeter-compound-rectilinear.description",
@@ -29938,7 +29995,7 @@ var up = [
 		kind: "activity",
 		id: "math.measurement.area-perimeter-compound-rectilinear"
 	}]
-}, gm = {
+}, xm = {
 	id: "math.time.plans-multi-leg-journey-timetables",
 	nameKey: "competency.math.time.plans-multi-leg-journey-timetables.name",
 	descriptionKey: "competency.math.time.plans-multi-leg-journey-timetables.description",
@@ -29951,7 +30008,7 @@ var up = [
 		kind: "activity",
 		id: "math.time.plans-multi-leg-journey-timetables"
 	}]
-}, _m = {
+}, Sm = {
 	id: "math.money.compares-offers-by-unit-price",
 	nameKey: "competency.math.money.compares-offers-by-unit-price.name",
 	descriptionKey: "competency.math.money.compares-offers-by-unit-price.description",
@@ -29964,7 +30021,7 @@ var up = [
 		kind: "activity",
 		id: "math.money.compares-offers-by-unit-price"
 	}]
-}, vm = {
+}, Cm = {
 	id: "math.money.stays-within-budget-after-discount",
 	nameKey: "competency.math.money.stays-within-budget-after-discount.name",
 	descriptionKey: "competency.math.money.stays-within-budget-after-discount.description",
@@ -29977,7 +30034,7 @@ var up = [
 		kind: "activity",
 		id: "math.money.stays-within-budget-after-discount"
 	}]
-}, ym = {
+}, wm = {
 	id: "math.geometry.classifies-2d-shapes-in-hierarchy",
 	nameKey: "competency.math.geometry.classifies-2d-shapes-in-hierarchy.name",
 	descriptionKey: "competency.math.geometry.classifies-2d-shapes-in-hierarchy.description",
@@ -29990,7 +30047,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.classifies-2d-shapes-in-hierarchy"
 	}]
-}, bm = {
+}, Tm = {
 	id: "math.geometry.finds-unknown-angles-angle-sums",
 	nameKey: "competency.math.geometry.finds-unknown-angles-angle-sums.name",
 	descriptionKey: "competency.math.geometry.finds-unknown-angles-angle-sums.description",
@@ -30003,7 +30060,7 @@ var up = [
 		kind: "activity",
 		id: "math.geometry.finds-unknown-angles-angle-sums"
 	}]
-}, xm = {
+}, Em = {
 	id: "math.position.uses-first-quadrant-coordinates-real-world",
 	nameKey: "competency.math.position.uses-first-quadrant-coordinates-real-world.name",
 	descriptionKey: "competency.math.position.uses-first-quadrant-coordinates-real-world.description",
@@ -30016,7 +30073,7 @@ var up = [
 		kind: "activity",
 		id: "math.position.uses-first-quadrant-coordinates-real-world"
 	}]
-}, Sm = {
+}, Dm = {
 	id: "math.position.translates-reflects-shapes-on-grid",
 	nameKey: "competency.math.position.translates-reflects-shapes-on-grid.name",
 	descriptionKey: "competency.math.position.translates-reflects-shapes-on-grid.description",
@@ -30029,7 +30086,7 @@ var up = [
 		kind: "activity",
 		id: "math.position.translates-reflects-shapes-on-grid"
 	}]
-}, Cm = {
+}, Om = {
 	id: "math.data.finds-median-mode-range",
 	nameKey: "competency.math.data.finds-median-mode-range.name",
 	descriptionKey: "competency.math.data.finds-median-mode-range.description",
@@ -30042,7 +30099,7 @@ var up = [
 		kind: "activity",
 		id: "math.data.finds-median-mode-range"
 	}]
-}, wm = {
+}, km = {
 	id: "math.data.reads-line-graphs-with-two-series",
 	nameKey: "competency.math.data.reads-line-graphs-with-two-series.name",
 	descriptionKey: "competency.math.data.reads-line-graphs-with-two-series.description",
@@ -30055,7 +30112,7 @@ var up = [
 		kind: "activity",
 		id: "math.data.reads-line-graphs-with-two-series"
 	}]
-}, Tm = {
+}, Am = {
 	id: "math.probability.compares-observed-frequencies-with-prediction",
 	nameKey: "competency.math.probability.compares-observed-frequencies-with-prediction.name",
 	descriptionKey: "competency.math.probability.compares-observed-frequencies-with-prediction.description",
@@ -30068,7 +30125,7 @@ var up = [
 		kind: "activity",
 		id: "math.probability.compares-observed-frequencies-with-prediction"
 	}]
-}, Em = {
+}, jm = {
 	id: "math.problem-solving.solves-multi-step-fraction-decimal-percent-problems",
 	nameKey: "competency.math.problem-solving.solves-multi-step-fraction-decimal-percent-problems.name",
 	descriptionKey: "competency.math.problem-solving.solves-multi-step-fraction-decimal-percent-problems.description",
@@ -30081,7 +30138,7 @@ var up = [
 		kind: "activity",
 		id: "math.problem-solving.solves-multi-step-fraction-decimal-percent-problems"
 	}]
-}, Dm = {
+}, Mm = {
 	id: "math.mathematical-reasoning.refutes-statements-with-counterexamples",
 	nameKey: "competency.math.mathematical-reasoning.refutes-statements-with-counterexamples.name",
 	descriptionKey: "competency.math.mathematical-reasoning.refutes-statements-with-counterexamples.description",
@@ -30094,7 +30151,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.refutes-statements-with-counterexamples"
 	}]
-}, Om = {
+}, Nm = {
 	id: "math.mathematical-reasoning.uses-bar-models-for-fractions-ratios-percentages",
 	nameKey: "competency.math.mathematical-reasoning.uses-bar-models-for-fractions-ratios-percentages.name",
 	descriptionKey: "competency.math.mathematical-reasoning.uses-bar-models-for-fractions-ratios-percentages.description",
@@ -30107,12 +30164,7 @@ var up = [
 		kind: "activity",
 		id: "math.mathematical-reasoning.uses-bar-models-for-fractions-ratios-percentages"
 	}]
-}, km = [
-	dp,
-	fp,
-	pp,
-	mp,
-	hp,
+}, Pm = [
 	gp,
 	_p,
 	vp,
@@ -30179,10 +30231,15 @@ var up = [
 	Tm,
 	Em,
 	Dm,
-	Om
-], Am = h({
+	Om,
+	km,
+	Am,
+	jm,
+	Mm,
+	Nm
+], Fm = h({
 	pluginId: "syllabus-g5-finds-factors-common-multiples",
-	competencyId: dp.id,
+	competencyId: gp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30204,9 +30261,9 @@ var up = [
 			answer: "12"
 		}
 	}]
-}), jm = g({
+}), Im = g({
 	pluginId: "syllabus-g5-extends-place-value-right-of-decimal",
-	competencyId: fp.id,
+	competencyId: _p.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30248,9 +30305,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), Mm = _({
+}), Lm = _({
 	pluginId: "syllabus-g5-rounds-decimals-to-given-places",
-	competencyId: pp.id,
+	competencyId: vp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Round 3.482 to 2 decimal places." },
@@ -30262,9 +30319,9 @@ var up = [
 		fr: { prompt: "Arrondis 7,096 à 1 décimale." },
 		correctValue: 7.1
 	}]
-}), Nm = _({
+}), Rm = _({
 	pluginId: "syllabus-g5-adds-subtracts-whole-decimals-columns",
-	competencyId: mp.id,
+	competencyId: yp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "348.6 + 27.35 = ?" },
@@ -30276,9 +30333,9 @@ var up = [
 		fr: { prompt: "902,4 - 356,78 = ?" },
 		correctValue: 545.62
 	}]
-}), Pm = _({
+}), zm = _({
 	pluginId: "syllabus-g5-multiplies-four-digit-by-two-digit",
-	competencyId: hp.id,
+	competencyId: bp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "2,314 x 12 = ?" },
@@ -30290,9 +30347,9 @@ var up = [
 		fr: { prompt: "3 608 x 24 = ?" },
 		correctValue: 86592
 	}]
-}), Fm = h({
+}), Bm = h({
 	pluginId: "syllabus-g5-divides-by-two-digit-expresses-remainder",
-	competencyId: gp.id,
+	competencyId: xp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30314,9 +30371,9 @@ var up = [
 			answer: "13"
 		}
 	}]
-}), Im = C({
+}), Vm = C({
 	pluginId: "syllabus-g5-knows-divisibility-tests",
-	competencyId: _p.id,
+	competencyId: Sp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30338,9 +30395,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), Lm = _({
+}), Hm = _({
 	pluginId: "syllabus-g5-applies-order-of-operations",
-	competencyId: vp.id,
+	competencyId: Cp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "(4 + 3) x 5 = ?" },
@@ -30352,9 +30409,9 @@ var up = [
 		fr: { prompt: "20 - (2 x 6) + 3 = ?" },
 		correctValue: 11
 	}]
-}), Rm = _({
+}), Um = _({
 	pluginId: "syllabus-g5-multiplies-two-digit-by-one-digit-mentally",
-	competencyId: yp.id,
+	competencyId: wp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "34 x 6 = ? (do it mentally)" },
@@ -30366,9 +30423,9 @@ var up = [
 		fr: { prompt: "58 x 7 = ? (calcule-le mentalement)" },
 		correctValue: 406
 	}]
-}), zm = _({
+}), Wm = _({
 	pluginId: "syllabus-g5-finds-common-percentages-mentally",
-	competencyId: bp.id,
+	competencyId: Tp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "What is 25% of 84? (do it mentally)" },
@@ -30380,9 +30437,9 @@ var up = [
 		fr: { prompt: "Combien font 75 % de 120 ? (calcule-le mentalement)" },
 		correctValue: 90
 	}]
-}), Bm = C({
+}), Gm = C({
 	pluginId: "syllabus-g5-estimates-before-calculating",
-	competencyId: xp.id,
+	competencyId: Ep.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30404,9 +30461,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), Vm = h({
+}), Km = h({
 	pluginId: "syllabus-g5-adds-subtracts-fractions-different-denominators",
-	competencyId: Sp.id,
+	competencyId: Dp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30428,9 +30485,9 @@ var up = [
 			answer: "7/12"
 		}
 	}]
-}), Hm = _({
+}), qm = _({
 	pluginId: "syllabus-g5-multiplies-fraction-by-whole-or-fraction",
-	competencyId: Cp.id,
+	competencyId: Op.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "2/5 x 15 = ?" },
@@ -30442,9 +30499,9 @@ var up = [
 		fr: { prompt: "1/2 x 1/4 = ? (réponds en décimal)" },
 		correctValue: .125
 	}]
-}), Um = g({
+}), Jm = g({
 	pluginId: "syllabus-g5-converts-fluently-fractions-decimals-percentages",
-	competencyId: wp.id,
+	competencyId: kp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30486,9 +30543,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), Wm = _({
+}), Ym = _({
 	pluginId: "syllabus-g5-multiplies-divides-decimals-by-whole-numbers",
-	competencyId: Tp.id,
+	competencyId: Ap.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "3.6 x 4 = ?" },
@@ -30500,9 +30557,9 @@ var up = [
 		fr: { prompt: "9,6 ÷ 4 = ?" },
 		correctValue: 2.4
 	}]
-}), Gm = _({
+}), Xm = _({
 	pluginId: "syllabus-g5-finds-any-percentage-of-quantity",
-	competencyId: Ep.id,
+	competencyId: jp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "What is 15% of 60?" },
@@ -30514,9 +30571,9 @@ var up = [
 		fr: { prompt: "Combien font 32 % de 250 ?" },
 		correctValue: 80
 	}]
-}), Km = _({
+}), Zm = _({
 	pluginId: "syllabus-g5-calculates-percentage-increase-decrease",
-	competencyId: Dp.id,
+	competencyId: Mp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A $40 jacket is reduced by 20%. What is the new price, in dollars?" },
@@ -30528,9 +30585,9 @@ var up = [
 		fr: { prompt: "Le prix d'un vélo à 150 $ augmente de 10 %. Quel est le nouveau prix, en dollars ?" },
 		correctValue: 165
 	}]
-}), qm = h({
+}), Qm = h({
 	pluginId: "syllabus-g5-understands-ratio-shares-quantity",
-	competencyId: Op.id,
+	competencyId: Np.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30552,9 +30609,9 @@ var up = [
 			answer: "10"
 		}
 	}]
-}), Jm = _({
+}), $m = _({
 	pluginId: "syllabus-g5-solves-simple-scaling-problems",
-	competencyId: kp.id,
+	competencyId: Pp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "If 3 items cost $12, how much do 7 items cost, in dollars?" },
@@ -30566,9 +30623,9 @@ var up = [
 		fr: { prompt: "Si 5 stylos coûtent 9 $, combien coûtent 15 stylos, en dollars ?" },
 		correctValue: 27
 	}]
-}), Ym = _({
+}), eh = _({
 	pluginId: "syllabus-g5-calculates-volume-cuboid",
-	competencyId: Ap.id,
+	competencyId: Fp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A cuboid is 4 cm x 3 cm x 5 cm. What is its volume, in cm³?" },
@@ -30580,9 +30637,9 @@ var up = [
 		fr: { prompt: "Une boîte contient 2 000 cm³ d'eau. Combien de litres cela fait-il ?" },
 		correctValue: 2
 	}]
-}), Xm = _({
+}), th = _({
 	pluginId: "syllabus-g5-converts-metric-units-two-steps",
-	competencyId: jp.id,
+	competencyId: Ip.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Convert 3,450 mm to metres. How many metres is that?" },
@@ -30594,9 +30651,9 @@ var up = [
 		fr: { prompt: "Convertis 2,6 litres en centilitres. Combien de centilitres cela fait-il ?" },
 		correctValue: 260
 	}]
-}), Zm = g({
+}), nh = g({
 	pluginId: "syllabus-g5-knows-imperial-metric-rough-equivalence",
-	competencyId: Mp.id,
+	competencyId: Lp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30638,9 +30695,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), Qm = C({
+}), rh = C({
 	pluginId: "syllabus-g5-has-reliable-body-ruler",
-	competencyId: Np.id,
+	competencyId: Rp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30662,9 +30719,9 @@ var up = [
 			isTrue: !0
 		}
 	}]
-}), $m = _({
+}), ih = _({
 	pluginId: "syllabus-g5-converts-seconds-minutes-hours-days-years",
-	competencyId: Pp.id,
+	competencyId: zp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "How many seconds are in 4 minutes?" },
@@ -30676,9 +30733,9 @@ var up = [
 		fr: { prompt: "Combien de jours y a-t-il dans 3 ans (sans compter les années bissextiles) ?" },
 		correctValue: 1095
 	}]
-}), eh = _({
+}), ah = _({
 	pluginId: "syllabus-g5-handles-time-zone-differences",
-	competencyId: Fp.id,
+	competencyId: Bp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "It is 14:00 where you are. A friend's city is 5 hours behind. What time is it there? (answer in 24-hour format as a number, e.g. 09:00 = 900)" },
@@ -30690,9 +30747,9 @@ var up = [
 		fr: { prompt: "Il est 09h00 chez toi. La ville d'un ami est 8 heures en avance. Quelle heure est-il là-bas ? (réponds au format 24h comme un nombre, par exemple 17h00 = 1700)" },
 		correctValue: 1700
 	}]
-}), th = C({
+}), oh = C({
 	pluginId: "syllabus-g5-draws-shape-accurately-from-specification",
-	competencyId: Ip.id,
+	competencyId: Vp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30714,9 +30771,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), nh = g({
+}), sh = g({
 	pluginId: "syllabus-g5-names-parts-of-circle",
-	competencyId: Lp.id,
+	competencyId: Hp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30758,9 +30815,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), rh = g({
+}), ch = g({
 	pluginId: "syllabus-g5-identifies-net-of-cube-solids",
-	competencyId: Rp.id,
+	competencyId: Up.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30802,9 +30859,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), ih = g({
+}), lh = g({
 	pluginId: "syllabus-g5-plots-coordinates-all-four-quadrants",
-	competencyId: zp.id,
+	competencyId: Wp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30846,9 +30903,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), ah = g({
+}), uh = g({
 	pluginId: "syllabus-g5-rotates-shape-about-point",
-	competencyId: Bp.id,
+	competencyId: Gp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30890,9 +30947,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), oh = _({
+}), dh = _({
 	pluginId: "syllabus-g5-uses-scale-on-plan-or-map",
-	competencyId: Vp.id,
+	competencyId: Kp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "A map has a scale of 1 cm : 100 m. Two towns are 4 cm apart on the map. How many metres apart are they in real life?" },
@@ -30904,9 +30961,9 @@ var up = [
 		fr: { prompt: "Une carte a une échelle de 1 cm : 100 m. Une route mesure 2 500 m en réalité. Combien de cm cela fait-il sur la carte ?" },
 		correctValue: 25
 	}]
-}), sh = _({
+}), fh = _({
 	pluginId: "syllabus-g5-calculates-mean",
-	competencyId: Hp.id,
+	competencyId: qp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Find the mean of: 4, 8, 6, 2." },
@@ -30918,9 +30975,9 @@ var up = [
 		fr: { prompt: "Trouve la moyenne de : 10, 15, 20, 25, 30." },
 		correctValue: 20
 	}]
-}), ch = g({
+}), ph = g({
 	pluginId: "syllabus-g5-reads-pie-chart-fractions-percentages",
-	competencyId: Up.id,
+	competencyId: Jp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -30962,9 +31019,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), lh = g({
+}), mh = g({
 	pluginId: "syllabus-g5-uses-language-of-chance",
-	competencyId: Wp.id,
+	competencyId: Yp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31006,9 +31063,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), uh = C({
+}), hh = C({
 	pluginId: "syllabus-g5-spots-misleading-graph",
-	competencyId: Gp.id,
+	competencyId: Xp.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31030,9 +31087,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), dh = _({
+}), gh = _({
 	pluginId: "syllabus-g5-uses-letter-for-unknown-substitutes",
-	competencyId: Kp.id,
+	competencyId: Zp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "If n = 8, what is 3n + 2?" },
@@ -31044,9 +31101,9 @@ var up = [
 		fr: { prompt: "Si x = 5, combien font 2x² - 3 ?" },
 		correctValue: 47
 	}]
-}), fh = _({
+}), _h = _({
 	pluginId: "syllabus-g5-solves-one-step-equation-checks",
-	competencyId: qp.id,
+	competencyId: Qp.id,
 	bank: [{
 		grade: 1,
 		en: { prompt: "Solve for x: x + 14 = 23." },
@@ -31058,9 +31115,9 @@ var up = [
 		fr: { prompt: "Résous pour y : 6y = 42." },
 		correctValue: 7
 	}]
-}), ph = h({
+}), vh = h({
 	pluginId: "syllabus-g5-expresses-general-rule-for-sequence",
-	competencyId: Jp.id,
+	competencyId: $p.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31082,9 +31139,9 @@ var up = [
 			answer: "2"
 		}
 	}]
-}), mh = C({
+}), yh = C({
 	pluginId: "syllabus-g5-judges-whether-answer-reasonable",
-	competencyId: Yp.id,
+	competencyId: em.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31106,9 +31163,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), hh = C({
+}), bh = C({
 	pluginId: "syllabus-g5-finds-own-mistake-in-wrong-answer",
-	competencyId: Xp.id,
+	competencyId: tm.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31130,9 +31187,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), gh = g({
+}), xh = g({
 	pluginId: "syllabus-g5-solves-problem-missing-surplus-info",
-	competencyId: Zp.id,
+	competencyId: nm.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31174,9 +31231,9 @@ var up = [
 			correctIndex: 0
 		}
 	}]
-}), _h = C({
+}), Sh = C({
 	pluginId: "syllabus-g5-tackles-unfamiliar-problem",
-	competencyId: Qp.id,
+	competencyId: rm.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31198,9 +31255,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), vh = C({
+}), Ch = C({
 	pluginId: "syllabus-g5-uses-calculator-correctly-checks-estimate",
-	competencyId: $p.id,
+	competencyId: im.id,
 	bank: [{
 		grade: 1,
 		en: {
@@ -31222,9 +31279,9 @@ var up = [
 			isTrue: !1
 		}
 	}]
-}), yh = g({
+}), wh = g({
 	pluginId: "syllabus-g5-reads-orders-numbers-to-ten-million",
-	competencyId: em.id,
+	competencyId: am.id,
 	bank: [
 		{
 			grade: 1,
@@ -31353,9 +31410,9 @@ var up = [
 			}
 		}
 	]
-}), bh = _({
+}), Th = _({
 	pluginId: "syllabus-g5-orders-negatives-intervals-across-zero",
-	competencyId: tm.id,
+	competencyId: om.id,
 	bank: [
 		{
 			grade: 1,
@@ -31394,9 +31451,9 @@ var up = [
 			correctValue: 13
 		}
 	]
-}), xh = g({
+}), Eh = g({
 	pluginId: "syllabus-g5-picks-method-mental-written-calculator",
-	competencyId: nm.id,
+	competencyId: sm.id,
 	bank: [
 		{
 			grade: 1,
@@ -31525,9 +31582,9 @@ var up = [
 			}
 		}
 	]
-}), Sh = _({
+}), Dh = _({
 	pluginId: "syllabus-g5-calculates-simple-decimals-mentally",
-	competencyId: rm.id,
+	competencyId: cm.id,
 	bank: [
 		{
 			grade: 1,
@@ -31566,9 +31623,9 @@ var up = [
 			correctValue: 2
 		}
 	]
-}), Ch = g({
+}), Oh = g({
 	pluginId: "syllabus-g5-interprets-fraction-as-division",
-	competencyId: im.id,
+	competencyId: lm.id,
 	bank: [
 		{
 			grade: 1,
@@ -31697,9 +31754,9 @@ var up = [
 			}
 		}
 	]
-}), wh = g({
+}), kh = g({
 	pluginId: "syllabus-g5-divides-unit-fractions-and-wholes",
-	competencyId: am.id,
+	competencyId: um.id,
 	bank: [
 		{
 			grade: 1,
@@ -31828,9 +31885,9 @@ var up = [
 			}
 		}
 	]
-}), Th = g({
+}), Ah = g({
 	pluginId: "syllabus-g5-simplifies-fractions-lowest-terms",
-	competencyId: om.id,
+	competencyId: dm.id,
 	bank: [
 		{
 			grade: 1,
@@ -31959,9 +32016,9 @@ var up = [
 			}
 		}
 	]
-}), Eh = g({
+}), jh = g({
 	pluginId: "syllabus-g5-compares-orders-fractions-mixed-numbers",
-	competencyId: sm.id,
+	competencyId: fm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32090,9 +32147,9 @@ var up = [
 			}
 		}
 	]
-}), Dh = g({
+}), Mh = g({
 	pluginId: "syllabus-g5-compares-orders-decimals-three-places",
-	competencyId: cm.id,
+	competencyId: pm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32221,9 +32278,9 @@ var up = [
 			}
 		}
 	]
-}), Oh = g({
+}), Nh = g({
 	pluginId: "syllabus-g5-understands-percent-out-of-100",
-	competencyId: lm.id,
+	competencyId: mm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32352,9 +32409,9 @@ var up = [
 			}
 		}
 	]
-}), kh = g({
+}), Ph = g({
 	pluginId: "syllabus-g5-writes-expressions-with-a-letter",
-	competencyId: um.id,
+	competencyId: hm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32483,9 +32540,9 @@ var up = [
 			}
 		}
 	]
-}), Ah = g({
+}), Fh = g({
 	pluginId: "syllabus-g5-finds-pairs-two-unknowns",
-	competencyId: dm.id,
+	competencyId: gm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32614,9 +32671,9 @@ var up = [
 			}
 		}
 	]
-}), jh = _({
+}), Ih = _({
 	pluginId: "syllabus-g5-generates-two-patterns-pairs-terms",
-	competencyId: fm.id,
+	competencyId: _m.id,
 	bank: [
 		{
 			grade: 1,
@@ -32655,9 +32712,9 @@ var up = [
 			correctValue: 24
 		}
 	]
-}), Mh = _({
+}), Lh = _({
 	pluginId: "syllabus-g5-relates-millilitres-cubic-centimetres",
-	competencyId: pm.id,
+	competencyId: vm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32696,9 +32753,9 @@ var up = [
 			correctValue: 3
 		}
 	]
-}), Nh = _({
+}), Rh = _({
 	pluginId: "syllabus-g5-area-triangles-parallelograms",
-	competencyId: mm.id,
+	competencyId: ym.id,
 	bank: [
 		{
 			grade: 1,
@@ -32737,9 +32794,9 @@ var up = [
 			correctValue: 35
 		}
 	]
-}), Ph = _({
+}), zh = _({
 	pluginId: "syllabus-g5-area-perimeter-compound-rectilinear",
-	competencyId: hm.id,
+	competencyId: bm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32778,9 +32835,9 @@ var up = [
 			correctValue: 28
 		}
 	]
-}), Fh = _({
+}), Bh = _({
 	pluginId: "syllabus-g5-plans-multi-leg-journey-timetables",
-	competencyId: gm.id,
+	competencyId: xm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32819,9 +32876,9 @@ var up = [
 			correctValue: 165
 		}
 	]
-}), Ih = g({
+}), Vh = g({
 	pluginId: "syllabus-g5-compares-offers-by-unit-price",
-	competencyId: _m.id,
+	competencyId: Sm.id,
 	bank: [
 		{
 			grade: 1,
@@ -32950,9 +33007,9 @@ var up = [
 			}
 		}
 	]
-}), Lh = g({
+}), Hh = g({
 	pluginId: "syllabus-g5-stays-within-budget-after-discount",
-	competencyId: vm.id,
+	competencyId: Cm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33081,9 +33138,9 @@ var up = [
 			}
 		}
 	]
-}), Rh = C({
+}), Uh = C({
 	pluginId: "syllabus-g5-classifies-2d-shapes-in-hierarchy",
-	competencyId: ym.id,
+	competencyId: wm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33152,9 +33209,9 @@ var up = [
 			}
 		}
 	]
-}), zh = _({
+}), Wh = _({
 	pluginId: "syllabus-g5-finds-unknown-angles-angle-sums",
-	competencyId: bm.id,
+	competencyId: Tm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33193,9 +33250,9 @@ var up = [
 			correctValue: 125
 		}
 	]
-}), Bh = _({
+}), Gh = _({
 	pluginId: "syllabus-g5-uses-first-quadrant-coordinates-real-world",
-	competencyId: xm.id,
+	competencyId: Em.id,
 	bank: [
 		{
 			grade: 1,
@@ -33234,9 +33291,9 @@ var up = [
 			correctValue: 8
 		}
 	]
-}), Vh = g({
+}), Kh = g({
 	pluginId: "syllabus-g5-translates-reflects-shapes-on-grid",
-	competencyId: Sm.id,
+	competencyId: Dm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33365,9 +33422,9 @@ var up = [
 			}
 		}
 	]
-}), Hh = _({
+}), qh = _({
 	pluginId: "syllabus-g5-finds-median-mode-range",
-	competencyId: Cm.id,
+	competencyId: Om.id,
 	bank: [
 		{
 			grade: 1,
@@ -33406,9 +33463,9 @@ var up = [
 			correctValue: 8
 		}
 	]
-}), Uh = _({
+}), Jh = _({
 	pluginId: "syllabus-g5-reads-line-graphs-with-two-series",
-	competencyId: wm.id,
+	competencyId: km.id,
 	bank: [
 		{
 			grade: 1,
@@ -33447,9 +33504,9 @@ var up = [
 			correctValue: 50
 		}
 	]
-}), Wh = g({
+}), Yh = g({
 	pluginId: "syllabus-g5-compares-observed-frequencies-with-prediction",
-	competencyId: Tm.id,
+	competencyId: Am.id,
 	bank: [
 		{
 			grade: 1,
@@ -33578,9 +33635,9 @@ var up = [
 			}
 		}
 	]
-}), Gh = _({
+}), Xh = _({
 	pluginId: "syllabus-g5-solves-multi-step-fraction-decimal-percent-problems",
-	competencyId: Em.id,
+	competencyId: jm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33619,9 +33676,9 @@ var up = [
 			correctValue: 6.2
 		}
 	]
-}), Kh = g({
+}), Zh = g({
 	pluginId: "syllabus-g5-refutes-statements-with-counterexamples",
-	competencyId: Dm.id,
+	competencyId: Mm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33750,9 +33807,9 @@ var up = [
 			}
 		}
 	]
-}), qh = _({
+}), Qh = _({
 	pluginId: "syllabus-g5-uses-bar-models-for-fractions-ratios-percentages",
-	competencyId: Om.id,
+	competencyId: Nm.id,
 	bank: [
 		{
 			grade: 1,
@@ -33791,12 +33848,7 @@ var up = [
 			correctValue: 80
 		}
 	]
-}), Jh = [
-	Am.plugin,
-	jm.plugin,
-	Mm.plugin,
-	Nm.plugin,
-	Pm.plugin,
+}), $h = [
 	Fm.plugin,
 	Im.plugin,
 	Lm.plugin,
@@ -33863,66 +33915,21 @@ var up = [
 	Wh.plugin,
 	Gh.plugin,
 	Kh.plugin,
-	qh.plugin
+	qh.plugin,
+	Jh.plugin,
+	Yh.plugin,
+	Xh.plugin,
+	Zh.plugin,
+	Qh.plugin
 ];
 function P(e) {
 	return e;
 }
-var Yh = [
+var eg = [
 	P({
 		key: "syllabus-g5-finds-factors-common-multiples",
 		label: "Factors & Common Multiples",
 		icon: "🔢",
-		pluginId: Am.plugin.id,
-		competency: dp,
-		competencies: [dp],
-		createSession: Am.createSession,
-		createMasterySignal: Am.createMasterySignal
-	}),
-	P({
-		key: "syllabus-g5-extends-place-value-right-of-decimal",
-		label: "Decimal Place Value",
-		icon: "🧮",
-		pluginId: jm.plugin.id,
-		competency: fp,
-		competencies: [fp],
-		createSession: jm.createSession,
-		createMasterySignal: jm.createMasterySignal
-	}),
-	P({
-		key: "syllabus-g5-rounds-decimals-to-given-places",
-		label: "Rounding Decimals",
-		icon: "📐",
-		pluginId: Mm.plugin.id,
-		competency: pp,
-		competencies: [pp],
-		createSession: Mm.createSession,
-		createMasterySignal: Mm.createMasterySignal
-	}),
-	P({
-		key: "syllabus-g5-adds-subtracts-whole-decimals-columns",
-		label: "Column Addition & Subtraction with Decimals",
-		icon: "➕",
-		pluginId: Nm.plugin.id,
-		competency: mp,
-		competencies: [mp],
-		createSession: Nm.createSession,
-		createMasterySignal: Nm.createMasterySignal
-	}),
-	P({
-		key: "syllabus-g5-multiplies-four-digit-by-two-digit",
-		label: "Long Multiplication",
-		icon: "✖️",
-		pluginId: Pm.plugin.id,
-		competency: hp,
-		competencies: [hp],
-		createSession: Pm.createSession,
-		createMasterySignal: Pm.createMasterySignal
-	}),
-	P({
-		key: "syllabus-g5-divides-by-two-digit-expresses-remainder",
-		label: "Long Division & Remainders",
-		icon: "➗",
 		pluginId: Fm.plugin.id,
 		competency: gp,
 		competencies: [gp],
@@ -33930,9 +33937,9 @@ var Yh = [
 		createMasterySignal: Fm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-knows-divisibility-tests",
-		label: "Divisibility Tests",
-		icon: "✅",
+		key: "syllabus-g5-extends-place-value-right-of-decimal",
+		label: "Decimal Place Value",
+		icon: "🧮",
 		pluginId: Im.plugin.id,
 		competency: _p,
 		competencies: [_p],
@@ -33940,9 +33947,9 @@ var Yh = [
 		createMasterySignal: Im.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-applies-order-of-operations",
-		label: "Order of Operations",
-		icon: "🧩",
+		key: "syllabus-g5-rounds-decimals-to-given-places",
+		label: "Rounding Decimals",
+		icon: "📐",
 		pluginId: Lm.plugin.id,
 		competency: vp,
 		competencies: [vp],
@@ -33950,9 +33957,9 @@ var Yh = [
 		createMasterySignal: Lm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-multiplies-two-digit-by-one-digit-mentally",
-		label: "Mental Multiplication",
-		icon: "🧠",
+		key: "syllabus-g5-adds-subtracts-whole-decimals-columns",
+		label: "Column Addition & Subtraction with Decimals",
+		icon: "➕",
 		pluginId: Rm.plugin.id,
 		competency: yp,
 		competencies: [yp],
@@ -33960,9 +33967,9 @@ var Yh = [
 		createMasterySignal: Rm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-common-percentages-mentally",
-		label: "Mental Percentages",
-		icon: "💯",
+		key: "syllabus-g5-multiplies-four-digit-by-two-digit",
+		label: "Long Multiplication",
+		icon: "✖️",
 		pluginId: zm.plugin.id,
 		competency: bp,
 		competencies: [bp],
@@ -33970,9 +33977,9 @@ var Yh = [
 		createMasterySignal: zm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-estimates-before-calculating",
-		label: "Estimating Before Calculating",
-		icon: "🔍",
+		key: "syllabus-g5-divides-by-two-digit-expresses-remainder",
+		label: "Long Division & Remainders",
+		icon: "➗",
 		pluginId: Bm.plugin.id,
 		competency: xp,
 		competencies: [xp],
@@ -33980,9 +33987,9 @@ var Yh = [
 		createMasterySignal: Bm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-adds-subtracts-fractions-different-denominators",
-		label: "Adding & Subtracting Unlike Fractions",
-		icon: "🍰",
+		key: "syllabus-g5-knows-divisibility-tests",
+		label: "Divisibility Tests",
+		icon: "✅",
 		pluginId: Vm.plugin.id,
 		competency: Sp,
 		competencies: [Sp],
@@ -33990,9 +33997,9 @@ var Yh = [
 		createMasterySignal: Vm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-multiplies-fraction-by-whole-or-fraction",
-		label: "Multiplying Fractions",
-		icon: "🍕",
+		key: "syllabus-g5-applies-order-of-operations",
+		label: "Order of Operations",
+		icon: "🧩",
 		pluginId: Hm.plugin.id,
 		competency: Cp,
 		competencies: [Cp],
@@ -34000,9 +34007,9 @@ var Yh = [
 		createMasterySignal: Hm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-converts-fluently-fractions-decimals-percentages",
-		label: "Fractions, Decimals & Percentages",
-		icon: "🔀",
+		key: "syllabus-g5-multiplies-two-digit-by-one-digit-mentally",
+		label: "Mental Multiplication",
+		icon: "🧠",
 		pluginId: Um.plugin.id,
 		competency: wp,
 		competencies: [wp],
@@ -34010,9 +34017,9 @@ var Yh = [
 		createMasterySignal: Um.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-multiplies-divides-decimals-by-whole-numbers",
-		label: "Multiplying & Dividing Decimals",
-		icon: "💲",
+		key: "syllabus-g5-finds-common-percentages-mentally",
+		label: "Mental Percentages",
+		icon: "💯",
 		pluginId: Wm.plugin.id,
 		competency: Tp,
 		competencies: [Tp],
@@ -34020,9 +34027,9 @@ var Yh = [
 		createMasterySignal: Wm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-any-percentage-of-quantity",
-		label: "Any Percentage of a Quantity",
-		icon: "💯",
+		key: "syllabus-g5-estimates-before-calculating",
+		label: "Estimating Before Calculating",
+		icon: "🔍",
 		pluginId: Gm.plugin.id,
 		competency: Ep,
 		competencies: [Ep],
@@ -34030,9 +34037,9 @@ var Yh = [
 		createMasterySignal: Gm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-calculates-percentage-increase-decrease",
-		label: "Percentage Increase & Decrease",
-		icon: "📈",
+		key: "syllabus-g5-adds-subtracts-fractions-different-denominators",
+		label: "Adding & Subtracting Unlike Fractions",
+		icon: "🍰",
 		pluginId: Km.plugin.id,
 		competency: Dp,
 		competencies: [Dp],
@@ -34040,9 +34047,9 @@ var Yh = [
 		createMasterySignal: Km.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-understands-ratio-shares-quantity",
-		label: "Ratio & Sharing",
-		icon: "⚖️",
+		key: "syllabus-g5-multiplies-fraction-by-whole-or-fraction",
+		label: "Multiplying Fractions",
+		icon: "🍕",
 		pluginId: qm.plugin.id,
 		competency: Op,
 		competencies: [Op],
@@ -34050,9 +34057,9 @@ var Yh = [
 		createMasterySignal: qm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-solves-simple-scaling-problems",
-		label: "Scaling Problems",
-		icon: "🧩",
+		key: "syllabus-g5-converts-fluently-fractions-decimals-percentages",
+		label: "Fractions, Decimals & Percentages",
+		icon: "🔀",
 		pluginId: Jm.plugin.id,
 		competency: kp,
 		competencies: [kp],
@@ -34060,9 +34067,9 @@ var Yh = [
 		createMasterySignal: Jm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-calculates-volume-cuboid",
-		label: "Volume of a Cuboid",
-		icon: "🧊",
+		key: "syllabus-g5-multiplies-divides-decimals-by-whole-numbers",
+		label: "Multiplying & Dividing Decimals",
+		icon: "💲",
 		pluginId: Ym.plugin.id,
 		competency: Ap,
 		competencies: [Ap],
@@ -34070,9 +34077,9 @@ var Yh = [
 		createMasterySignal: Ym.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-converts-metric-units-two-steps",
-		label: "Converting Metric Units (Two Steps)",
-		icon: "📏",
+		key: "syllabus-g5-finds-any-percentage-of-quantity",
+		label: "Any Percentage of a Quantity",
+		icon: "💯",
 		pluginId: Xm.plugin.id,
 		competency: jp,
 		competencies: [jp],
@@ -34080,9 +34087,9 @@ var Yh = [
 		createMasterySignal: Xm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-knows-imperial-metric-rough-equivalence",
-		label: "Imperial & Metric Units",
-		icon: "🔄",
+		key: "syllabus-g5-calculates-percentage-increase-decrease",
+		label: "Percentage Increase & Decrease",
+		icon: "📈",
 		pluginId: Zm.plugin.id,
 		competency: Mp,
 		competencies: [Mp],
@@ -34090,9 +34097,9 @@ var Yh = [
 		createMasterySignal: Zm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-has-reliable-body-ruler",
-		label: "Body-Ruler Estimation",
-		icon: "📏",
+		key: "syllabus-g5-understands-ratio-shares-quantity",
+		label: "Ratio & Sharing",
+		icon: "⚖️",
 		pluginId: Qm.plugin.id,
 		competency: Np,
 		competencies: [Np],
@@ -34100,9 +34107,9 @@ var Yh = [
 		createMasterySignal: Qm.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-converts-seconds-minutes-hours-days-years",
-		label: "Converting Time Units",
-		icon: "⏱️",
+		key: "syllabus-g5-solves-simple-scaling-problems",
+		label: "Scaling Problems",
+		icon: "🧩",
 		pluginId: $m.plugin.id,
 		competency: Pp,
 		competencies: [Pp],
@@ -34110,9 +34117,9 @@ var Yh = [
 		createMasterySignal: $m.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-handles-time-zone-differences",
-		label: "Time Zones",
-		icon: "🌐",
+		key: "syllabus-g5-calculates-volume-cuboid",
+		label: "Volume of a Cuboid",
+		icon: "🧊",
 		pluginId: eh.plugin.id,
 		competency: Fp,
 		competencies: [Fp],
@@ -34120,9 +34127,9 @@ var Yh = [
 		createMasterySignal: eh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-draws-shape-accurately-from-specification",
-		label: "Accurate Shape Drawing",
-		icon: "📐",
+		key: "syllabus-g5-converts-metric-units-two-steps",
+		label: "Converting Metric Units (Two Steps)",
+		icon: "📏",
 		pluginId: th.plugin.id,
 		competency: Ip,
 		competencies: [Ip],
@@ -34130,9 +34137,9 @@ var Yh = [
 		createMasterySignal: th.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-names-parts-of-circle",
-		label: "Parts of a Circle",
-		icon: "⭕",
+		key: "syllabus-g5-knows-imperial-metric-rough-equivalence",
+		label: "Imperial & Metric Units",
+		icon: "🔄",
 		pluginId: nh.plugin.id,
 		competency: Lp,
 		competencies: [Lp],
@@ -34140,9 +34147,9 @@ var Yh = [
 		createMasterySignal: nh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-identifies-net-of-cube-solids",
-		label: "Nets of Solids",
-		icon: "🧊",
+		key: "syllabus-g5-has-reliable-body-ruler",
+		label: "Body-Ruler Estimation",
+		icon: "📏",
 		pluginId: rh.plugin.id,
 		competency: Rp,
 		competencies: [Rp],
@@ -34150,9 +34157,9 @@ var Yh = [
 		createMasterySignal: rh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-plots-coordinates-all-four-quadrants",
-		label: "Coordinates in Four Quadrants",
-		icon: "🧭",
+		key: "syllabus-g5-converts-seconds-minutes-hours-days-years",
+		label: "Converting Time Units",
+		icon: "⏱️",
 		pluginId: ih.plugin.id,
 		competency: zp,
 		competencies: [zp],
@@ -34160,9 +34167,9 @@ var Yh = [
 		createMasterySignal: ih.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-rotates-shape-about-point",
-		label: "Rotating Shapes",
-		icon: "🔄",
+		key: "syllabus-g5-handles-time-zone-differences",
+		label: "Time Zones",
+		icon: "🌐",
 		pluginId: ah.plugin.id,
 		competency: Bp,
 		competencies: [Bp],
@@ -34170,9 +34177,9 @@ var Yh = [
 		createMasterySignal: ah.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-scale-on-plan-or-map",
-		label: "Scale on Plans & Maps",
-		icon: "🗺️",
+		key: "syllabus-g5-draws-shape-accurately-from-specification",
+		label: "Accurate Shape Drawing",
+		icon: "📐",
 		pluginId: oh.plugin.id,
 		competency: Vp,
 		competencies: [Vp],
@@ -34180,9 +34187,9 @@ var Yh = [
 		createMasterySignal: oh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-calculates-mean",
-		label: "Calculating the Mean",
-		icon: "📊",
+		key: "syllabus-g5-names-parts-of-circle",
+		label: "Parts of a Circle",
+		icon: "⭕",
 		pluginId: sh.plugin.id,
 		competency: Hp,
 		competencies: [Hp],
@@ -34190,9 +34197,9 @@ var Yh = [
 		createMasterySignal: sh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-reads-pie-chart-fractions-percentages",
-		label: "Reading Pie Charts",
-		icon: "🥧",
+		key: "syllabus-g5-identifies-net-of-cube-solids",
+		label: "Nets of Solids",
+		icon: "🧊",
 		pluginId: ch.plugin.id,
 		competency: Up,
 		competencies: [Up],
@@ -34200,9 +34207,9 @@ var Yh = [
 		createMasterySignal: ch.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-language-of-chance",
-		label: "Language of Chance",
-		icon: "🎲",
+		key: "syllabus-g5-plots-coordinates-all-four-quadrants",
+		label: "Coordinates in Four Quadrants",
+		icon: "🧭",
 		pluginId: lh.plugin.id,
 		competency: Wp,
 		competencies: [Wp],
@@ -34210,9 +34217,9 @@ var Yh = [
 		createMasterySignal: lh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-spots-misleading-graph",
-		label: "Spotting Misleading Graphs",
-		icon: "📉",
+		key: "syllabus-g5-rotates-shape-about-point",
+		label: "Rotating Shapes",
+		icon: "🔄",
 		pluginId: uh.plugin.id,
 		competency: Gp,
 		competencies: [Gp],
@@ -34220,9 +34227,9 @@ var Yh = [
 		createMasterySignal: uh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-letter-for-unknown-substitutes",
-		label: "Algebraic Substitution",
-		icon: "🔤",
+		key: "syllabus-g5-uses-scale-on-plan-or-map",
+		label: "Scale on Plans & Maps",
+		icon: "🗺️",
 		pluginId: dh.plugin.id,
 		competency: Kp,
 		competencies: [Kp],
@@ -34230,9 +34237,9 @@ var Yh = [
 		createMasterySignal: dh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-solves-one-step-equation-checks",
-		label: "One-Step Equations",
-		icon: "❓",
+		key: "syllabus-g5-calculates-mean",
+		label: "Calculating the Mean",
+		icon: "📊",
 		pluginId: fh.plugin.id,
 		competency: qp,
 		competencies: [qp],
@@ -34240,9 +34247,9 @@ var Yh = [
 		createMasterySignal: fh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-expresses-general-rule-for-sequence",
-		label: "General Rule for a Sequence",
-		icon: "🔁",
+		key: "syllabus-g5-reads-pie-chart-fractions-percentages",
+		label: "Reading Pie Charts",
+		icon: "🥧",
 		pluginId: ph.plugin.id,
 		competency: Jp,
 		competencies: [Jp],
@@ -34250,9 +34257,9 @@ var Yh = [
 		createMasterySignal: ph.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-judges-whether-answer-reasonable",
-		label: "Judging a Reasonable Answer",
-		icon: "🤔",
+		key: "syllabus-g5-uses-language-of-chance",
+		label: "Language of Chance",
+		icon: "🎲",
 		pluginId: mh.plugin.id,
 		competency: Yp,
 		competencies: [Yp],
@@ -34260,9 +34267,9 @@ var Yh = [
 		createMasterySignal: mh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-own-mistake-in-wrong-answer",
-		label: "Finding Your Own Mistake",
-		icon: "🔍",
+		key: "syllabus-g5-spots-misleading-graph",
+		label: "Spotting Misleading Graphs",
+		icon: "📉",
 		pluginId: hh.plugin.id,
 		competency: Xp,
 		competencies: [Xp],
@@ -34270,9 +34277,9 @@ var Yh = [
 		createMasterySignal: hh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-solves-problem-missing-surplus-info",
-		label: "Missing or Surplus Information",
-		icon: "🧩",
+		key: "syllabus-g5-uses-letter-for-unknown-substitutes",
+		label: "Algebraic Substitution",
+		icon: "🔤",
 		pluginId: gh.plugin.id,
 		competency: Zp,
 		competencies: [Zp],
@@ -34280,9 +34287,9 @@ var Yh = [
 		createMasterySignal: gh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-tackles-unfamiliar-problem",
-		label: "Tackling Unfamiliar Problems",
-		icon: "🧗",
+		key: "syllabus-g5-solves-one-step-equation-checks",
+		label: "One-Step Equations",
+		icon: "❓",
 		pluginId: _h.plugin.id,
 		competency: Qp,
 		competencies: [Qp],
@@ -34290,9 +34297,9 @@ var Yh = [
 		createMasterySignal: _h.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-calculator-correctly-checks-estimate",
-		label: "Using a Calculator Wisely",
-		icon: "🖩",
+		key: "syllabus-g5-expresses-general-rule-for-sequence",
+		label: "General Rule for a Sequence",
+		icon: "🔁",
 		pluginId: vh.plugin.id,
 		competency: $p,
 		competencies: [$p],
@@ -34300,9 +34307,9 @@ var Yh = [
 		createMasterySignal: vh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-reads-orders-numbers-to-ten-million",
-		label: "Numbers to Ten Million",
-		icon: "🔢",
+		key: "syllabus-g5-judges-whether-answer-reasonable",
+		label: "Judging a Reasonable Answer",
+		icon: "🤔",
 		pluginId: yh.plugin.id,
 		competency: em,
 		competencies: [em],
@@ -34310,9 +34317,9 @@ var Yh = [
 		createMasterySignal: yh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-orders-negatives-intervals-across-zero",
-		label: "Negatives and Intervals",
-		icon: "🌡️",
+		key: "syllabus-g5-finds-own-mistake-in-wrong-answer",
+		label: "Finding Your Own Mistake",
+		icon: "🔍",
 		pluginId: bh.plugin.id,
 		competency: tm,
 		competencies: [tm],
@@ -34320,9 +34327,9 @@ var Yh = [
 		createMasterySignal: bh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-picks-method-mental-written-calculator",
-		label: "Choose Your Method",
-		icon: "🧰",
+		key: "syllabus-g5-solves-problem-missing-surplus-info",
+		label: "Missing or Surplus Information",
+		icon: "🧩",
 		pluginId: xh.plugin.id,
 		competency: nm,
 		competencies: [nm],
@@ -34330,9 +34337,9 @@ var Yh = [
 		createMasterySignal: xh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-calculates-simple-decimals-mentally",
-		label: "Mental Decimals",
-		icon: "🧠",
+		key: "syllabus-g5-tackles-unfamiliar-problem",
+		label: "Tackling Unfamiliar Problems",
+		icon: "🧗",
 		pluginId: Sh.plugin.id,
 		competency: rm,
 		competencies: [rm],
@@ -34340,9 +34347,9 @@ var Yh = [
 		createMasterySignal: Sh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-interprets-fraction-as-division",
-		label: "Fractions as Division",
-		icon: "➗",
+		key: "syllabus-g5-uses-calculator-correctly-checks-estimate",
+		label: "Using a Calculator Wisely",
+		icon: "🖩",
 		pluginId: Ch.plugin.id,
 		competency: im,
 		competencies: [im],
@@ -34350,9 +34357,9 @@ var Yh = [
 		createMasterySignal: Ch.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-divides-unit-fractions-and-wholes",
-		label: "Dividing with Unit Fractions",
-		icon: "🍕",
+		key: "syllabus-g5-reads-orders-numbers-to-ten-million",
+		label: "Numbers to Ten Million",
+		icon: "🔢",
 		pluginId: wh.plugin.id,
 		competency: am,
 		competencies: [am],
@@ -34360,9 +34367,9 @@ var Yh = [
 		createMasterySignal: wh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-simplifies-fractions-lowest-terms",
-		label: "Simplifying Fractions",
-		icon: "✂️",
+		key: "syllabus-g5-orders-negatives-intervals-across-zero",
+		label: "Negatives and Intervals",
+		icon: "🌡️",
 		pluginId: Th.plugin.id,
 		competency: om,
 		competencies: [om],
@@ -34370,9 +34377,9 @@ var Yh = [
 		createMasterySignal: Th.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-compares-orders-fractions-mixed-numbers",
-		label: "Comparing Fractions",
-		icon: "⚖️",
+		key: "syllabus-g5-picks-method-mental-written-calculator",
+		label: "Choose Your Method",
+		icon: "🧰",
 		pluginId: Eh.plugin.id,
 		competency: sm,
 		competencies: [sm],
@@ -34380,9 +34387,9 @@ var Yh = [
 		createMasterySignal: Eh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-compares-orders-decimals-three-places",
-		label: "Ordering Decimals",
-		icon: "📏",
+		key: "syllabus-g5-calculates-simple-decimals-mentally",
+		label: "Mental Decimals",
+		icon: "🧠",
 		pluginId: Dh.plugin.id,
 		competency: cm,
 		competencies: [cm],
@@ -34390,9 +34397,9 @@ var Yh = [
 		createMasterySignal: Dh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-understands-percent-out-of-100",
-		label: "Percent Means Out of 100",
-		icon: "💯",
+		key: "syllabus-g5-interprets-fraction-as-division",
+		label: "Fractions as Division",
+		icon: "➗",
 		pluginId: Oh.plugin.id,
 		competency: lm,
 		competencies: [lm],
@@ -34400,9 +34407,9 @@ var Yh = [
 		createMasterySignal: Oh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-writes-expressions-with-a-letter",
-		label: "Expressions with a Letter",
-		icon: "🔤",
+		key: "syllabus-g5-divides-unit-fractions-and-wholes",
+		label: "Dividing with Unit Fractions",
+		icon: "🍕",
 		pluginId: kh.plugin.id,
 		competency: um,
 		competencies: [um],
@@ -34410,9 +34417,9 @@ var Yh = [
 		createMasterySignal: kh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-pairs-two-unknowns",
-		label: "Pairs for Two Unknowns",
-		icon: "🎯",
+		key: "syllabus-g5-simplifies-fractions-lowest-terms",
+		label: "Simplifying Fractions",
+		icon: "✂️",
 		pluginId: Ah.plugin.id,
 		competency: dm,
 		competencies: [dm],
@@ -34420,9 +34427,9 @@ var Yh = [
 		createMasterySignal: Ah.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-generates-two-patterns-pairs-terms",
-		label: "Two Patterns, Paired",
-		icon: "📈",
+		key: "syllabus-g5-compares-orders-fractions-mixed-numbers",
+		label: "Comparing Fractions",
+		icon: "⚖️",
 		pluginId: jh.plugin.id,
 		competency: fm,
 		competencies: [fm],
@@ -34430,9 +34437,9 @@ var Yh = [
 		createMasterySignal: jh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-relates-millilitres-cubic-centimetres",
-		label: "Millilitres and Cubic Centimetres",
-		icon: "🧪",
+		key: "syllabus-g5-compares-orders-decimals-three-places",
+		label: "Ordering Decimals",
+		icon: "📏",
 		pluginId: Mh.plugin.id,
 		competency: pm,
 		competencies: [pm],
@@ -34440,9 +34447,9 @@ var Yh = [
 		createMasterySignal: Mh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-area-triangles-parallelograms",
-		label: "Area of Triangles and Parallelograms",
-		icon: "🔺",
+		key: "syllabus-g5-understands-percent-out-of-100",
+		label: "Percent Means Out of 100",
+		icon: "💯",
 		pluginId: Nh.plugin.id,
 		competency: mm,
 		competencies: [mm],
@@ -34450,9 +34457,9 @@ var Yh = [
 		createMasterySignal: Nh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-area-perimeter-compound-rectilinear",
-		label: "Area and Perimeter of Compound Shapes",
-		icon: "🧱",
+		key: "syllabus-g5-writes-expressions-with-a-letter",
+		label: "Expressions with a Letter",
+		icon: "🔤",
 		pluginId: Ph.plugin.id,
 		competency: hm,
 		competencies: [hm],
@@ -34460,9 +34467,9 @@ var Yh = [
 		createMasterySignal: Ph.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-plans-multi-leg-journey-timetables",
-		label: "Planning a Journey",
-		icon: "🚆",
+		key: "syllabus-g5-finds-pairs-two-unknowns",
+		label: "Pairs for Two Unknowns",
+		icon: "🎯",
 		pluginId: Fh.plugin.id,
 		competency: gm,
 		competencies: [gm],
@@ -34470,9 +34477,9 @@ var Yh = [
 		createMasterySignal: Fh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-compares-offers-by-unit-price",
-		label: "Best Buy",
-		icon: "🛒",
+		key: "syllabus-g5-generates-two-patterns-pairs-terms",
+		label: "Two Patterns, Paired",
+		icon: "📈",
 		pluginId: Ih.plugin.id,
 		competency: _m,
 		competencies: [_m],
@@ -34480,9 +34487,9 @@ var Yh = [
 		createMasterySignal: Ih.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-stays-within-budget-after-discount",
-		label: "Staying Within Budget",
-		icon: "🏷️",
+		key: "syllabus-g5-relates-millilitres-cubic-centimetres",
+		label: "Millilitres and Cubic Centimetres",
+		icon: "🧪",
 		pluginId: Lh.plugin.id,
 		competency: vm,
 		competencies: [vm],
@@ -34490,9 +34497,9 @@ var Yh = [
 		createMasterySignal: Lh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-classifies-2d-shapes-in-hierarchy",
-		label: "Shape Families",
-		icon: "🔷",
+		key: "syllabus-g5-area-triangles-parallelograms",
+		label: "Area of Triangles and Parallelograms",
+		icon: "🔺",
 		pluginId: Rh.plugin.id,
 		competency: ym,
 		competencies: [ym],
@@ -34500,9 +34507,9 @@ var Yh = [
 		createMasterySignal: Rh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-unknown-angles-angle-sums",
-		label: "Missing Angles",
-		icon: "📐",
+		key: "syllabus-g5-area-perimeter-compound-rectilinear",
+		label: "Area and Perimeter of Compound Shapes",
+		icon: "🧱",
 		pluginId: zh.plugin.id,
 		competency: bm,
 		competencies: [bm],
@@ -34510,9 +34517,9 @@ var Yh = [
 		createMasterySignal: zh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-first-quadrant-coordinates-real-world",
-		label: "Coordinates in the Real World",
-		icon: "🗺️",
+		key: "syllabus-g5-plans-multi-leg-journey-timetables",
+		label: "Planning a Journey",
+		icon: "🚆",
 		pluginId: Bh.plugin.id,
 		competency: xm,
 		competencies: [xm],
@@ -34520,9 +34527,9 @@ var Yh = [
 		createMasterySignal: Bh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-translates-reflects-shapes-on-grid",
-		label: "Translate and Reflect",
-		icon: "↔️",
+		key: "syllabus-g5-compares-offers-by-unit-price",
+		label: "Best Buy",
+		icon: "🛒",
 		pluginId: Vh.plugin.id,
 		competency: Sm,
 		competencies: [Sm],
@@ -34530,9 +34537,9 @@ var Yh = [
 		createMasterySignal: Vh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-finds-median-mode-range",
-		label: "Median, Mode and Range",
-		icon: "📊",
+		key: "syllabus-g5-stays-within-budget-after-discount",
+		label: "Staying Within Budget",
+		icon: "🏷️",
 		pluginId: Hh.plugin.id,
 		competency: Cm,
 		competencies: [Cm],
@@ -34540,9 +34547,9 @@ var Yh = [
 		createMasterySignal: Hh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-reads-line-graphs-with-two-series",
-		label: "Reading Line Graphs",
-		icon: "📉",
+		key: "syllabus-g5-classifies-2d-shapes-in-hierarchy",
+		label: "Shape Families",
+		icon: "🔷",
 		pluginId: Uh.plugin.id,
 		competency: wm,
 		competencies: [wm],
@@ -34550,9 +34557,9 @@ var Yh = [
 		createMasterySignal: Uh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-compares-observed-frequencies-with-prediction",
-		label: "Predictions and Experiments",
-		icon: "🎲",
+		key: "syllabus-g5-finds-unknown-angles-angle-sums",
+		label: "Missing Angles",
+		icon: "📐",
 		pluginId: Wh.plugin.id,
 		competency: Tm,
 		competencies: [Tm],
@@ -34560,9 +34567,9 @@ var Yh = [
 		createMasterySignal: Wh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-solves-multi-step-fraction-decimal-percent-problems",
-		label: "Multi-Step Problems",
-		icon: "🧮",
+		key: "syllabus-g5-uses-first-quadrant-coordinates-real-world",
+		label: "Coordinates in the Real World",
+		icon: "🗺️",
 		pluginId: Gh.plugin.id,
 		competency: Em,
 		competencies: [Em],
@@ -34570,9 +34577,9 @@ var Yh = [
 		createMasterySignal: Gh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-refutes-statements-with-counterexamples",
-		label: "Counterexamples",
-		icon: "🕵️",
+		key: "syllabus-g5-translates-reflects-shapes-on-grid",
+		label: "Translate and Reflect",
+		icon: "↔️",
 		pluginId: Kh.plugin.id,
 		competency: Dm,
 		competencies: [Dm],
@@ -34580,25 +34587,75 @@ var Yh = [
 		createMasterySignal: Kh.createMasterySignal
 	}),
 	P({
-		key: "syllabus-g5-uses-bar-models-for-fractions-ratios-percentages",
-		label: "Bar Models",
-		icon: "🧱",
+		key: "syllabus-g5-finds-median-mode-range",
+		label: "Median, Mode and Range",
+		icon: "📊",
 		pluginId: qh.plugin.id,
 		competency: Om,
 		competencies: [Om],
 		createSession: qh.createSession,
 		createMasterySignal: qh.createMasterySignal
+	}),
+	P({
+		key: "syllabus-g5-reads-line-graphs-with-two-series",
+		label: "Reading Line Graphs",
+		icon: "📉",
+		pluginId: Jh.plugin.id,
+		competency: km,
+		competencies: [km],
+		createSession: Jh.createSession,
+		createMasterySignal: Jh.createMasterySignal
+	}),
+	P({
+		key: "syllabus-g5-compares-observed-frequencies-with-prediction",
+		label: "Predictions and Experiments",
+		icon: "🎲",
+		pluginId: Yh.plugin.id,
+		competency: Am,
+		competencies: [Am],
+		createSession: Yh.createSession,
+		createMasterySignal: Yh.createMasterySignal
+	}),
+	P({
+		key: "syllabus-g5-solves-multi-step-fraction-decimal-percent-problems",
+		label: "Multi-Step Problems",
+		icon: "🧮",
+		pluginId: Xh.plugin.id,
+		competency: jm,
+		competencies: [jm],
+		createSession: Xh.createSession,
+		createMasterySignal: Xh.createMasterySignal
+	}),
+	P({
+		key: "syllabus-g5-refutes-statements-with-counterexamples",
+		label: "Counterexamples",
+		icon: "🕵️",
+		pluginId: Zh.plugin.id,
+		competency: Mm,
+		competencies: [Mm],
+		createSession: Zh.createSession,
+		createMasterySignal: Zh.createMasterySignal
+	}),
+	P({
+		key: "syllabus-g5-uses-bar-models-for-fractions-ratios-percentages",
+		label: "Bar Models",
+		icon: "🧱",
+		pluginId: Qh.plugin.id,
+		competency: Nm,
+		competencies: [Nm],
+		createSession: Qh.createSession,
+		createMasterySignal: Qh.createMasterySignal
 	})
-], Xh = [
+], tg = [
 	1,
 	2,
 	3,
 	4,
 	5
-], Zh = "math.place-value.sig-figs.identify", Qh = "math.place-value.sig-figs.round", $h = "math.place-value.sig-figs.accuracy";
+], ng = "math.place-value.sig-figs.identify", rg = "math.place-value.sig-figs.round", ig = "math.place-value.sig-figs.accuracy";
 //#endregion
 //#region packages/place-value-sig-figs/src/rng.ts
-function eg(e) {
+function ag(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -34609,7 +34666,7 @@ function eg(e) {
 function F(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
-function tg(e, t, n = 200) {
+function og(e, t, n = 200) {
 	let r = /* @__PURE__ */ new Set();
 	return () => {
 		for (let i = 0; i < n; i++) {
@@ -34621,10 +34678,10 @@ function tg(e, t, n = 200) {
 }
 //#endregion
 //#region packages/place-value-sig-figs/src/sigfigs.ts
-var ng = /^[+-]?(\d+\.?\d*|\.\d+)$/;
-function rg(e) {
+var sg = /^[+-]?(\d+\.?\d*|\.\d+)$/;
+function cg(e) {
 	let t = e.trim();
-	if (!ng.test(t)) throw Error(`Invalid decimal string: "${e}"`);
+	if (!sg.test(t)) throw Error(`Invalid decimal string: "${e}"`);
 	let n = t.startsWith("-"), r = t.replace(/^[+-]/, ""), [i = "", a = ""] = r.split("."), o = i + a, s = o.length - o.replace(/^0+/, "").length;
 	return {
 		negative: n,
@@ -34633,52 +34690,52 @@ function rg(e) {
 		hasPoint: r.includes(".")
 	};
 }
-function ig(e) {
-	let t = rg(e);
+function lg(e) {
+	let t = cg(e);
 	return t.digits === "" || /^0*$/.test(t.digits) ? 1 : (t.hasPoint ? t.digits : t.digits.replace(/0+$/, "")).length;
 }
-function ag(e, t, n) {
+function ug(e, t, n) {
 	let r;
 	return r = n >= t.length ? t + "0".repeat(n - t.length) : n <= 0 ? "0." + "0".repeat(-n) + t : t.slice(0, n) + "." + t.slice(n), e ? "-" + r : r;
 }
-function og(e, t) {
+function dg(e, t) {
 	if (!Number.isInteger(t) || t < 1) throw Error("n must be a positive integer");
-	let n = rg(e);
+	let n = cg(e);
 	if (n.digits === "" || /^0*$/.test(n.digits)) return "0";
-	if (n.digits.length <= t) return ag(n.negative, n.digits, n.pointPos);
+	if (n.digits.length <= t) return ug(n.negative, n.digits, n.pointPos);
 	let r = n.digits.slice(0, t), i = n.pointPos;
-	return n.digits.charCodeAt(t) >= 53 && (r = (BigInt(r) + 1n).toString(), r.length > t && (r = r.slice(0, t), i += 1)), ag(n.negative, r, i);
+	return n.digits.charCodeAt(t) >= 53 && (r = (BigInt(r) + 1n).toString(), r.length > t && (r = r.slice(0, t), i += 1)), ug(n.negative, r, i);
 }
 //#endregion
 //#region packages/place-value-sig-figs/src/generate.ts
-function sg(e) {
-	if (!Xh.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function fg(e) {
+	if (!tg.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var cg = (e) => String(F(e, 1, 9));
-function lg(e, t, n) {
-	let r = F(e, t, n), i = Array.from({ length: r }, () => cg(e));
+var pg = (e) => String(F(e, 1, 9));
+function mg(e, t, n) {
+	let r = F(e, t, n), i = Array.from({ length: r }, () => pg(e));
 	return i[F(e, 1, r - 2)] = "0", i.join("");
 }
-function ug(e) {
-	let t = "0".repeat(F(e, 1, 3)), n = F(e, 1, 3), r = Array.from({ length: n }, () => cg(e));
+function hg(e) {
+	let t = "0".repeat(F(e, 1, 3)), n = F(e, 1, 3), r = Array.from({ length: n }, () => pg(e));
 	return n === 3 && (r[1] = "0"), `0.${t}${r.join("")}`;
 }
-function dg(e) {
-	return `${e() < .5 ? cg(e) : `${cg(e)}0`}.${e() < .5 ? cg(e) : `0${cg(e)}`}`;
+function gg(e) {
+	return `${e() < .5 ? pg(e) : `${pg(e)}0`}.${e() < .5 ? pg(e) : `0${pg(e)}`}`;
 }
-function fg(e, t) {
+function _g(e, t) {
 	switch (e) {
-		case 1: return lg(t, 3, 4);
-		case 2: return t() < .5 ? lg(t, 4, 5) : dg(t);
-		case 3: return ug(t);
-		case 4: return (t() < .5 ? dg(t) : ug(t)) + "0".repeat(F(t, 1, 2));
+		case 1: return mg(t, 3, 4);
+		case 2: return t() < .5 ? mg(t, 4, 5) : gg(t);
+		case 3: return hg(t);
+		case 4: return (t() < .5 ? gg(t) : hg(t)) + "0".repeat(F(t, 1, 2));
 		default: {
 			let e = F(t, 0, 2);
-			return e === 0 ? ug(t) + "0".repeat(F(t, 1, 2)) : e === 1 ? `${cg(t)}00.${"0".repeat(F(t, 1, 2))}` : `${dg(t)}0`;
+			return e === 0 ? hg(t) + "0".repeat(F(t, 1, 2)) : e === 1 ? `${pg(t)}00.${"0".repeat(F(t, 1, 2))}` : `${gg(t)}0`;
 		}
 	}
 }
-function pg(e, t, n) {
+function vg(e, t, n) {
 	let r = "", i = 0;
 	for (let a of e) {
 		if (a === ".") {
@@ -34689,23 +34746,23 @@ function pg(e, t, n) {
 	}
 	return r;
 }
-function mg(e) {
+function yg(e) {
 	let t = e.replace(".", "").search(/[1-9]/);
 	return {
 		start: t,
-		end: t + ig(e) - 1
+		end: t + lg(e) - 1
 	};
 }
-function hg(e, t) {
+function bg(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = F(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function gg(e, t) {
-	sg(e);
-	let n = eg(t), r = fg(e, n), i = r.replace(".", "").length, { start: a, end: o } = mg(r), s = pg(r, a, o), c = [s], l = [
+function xg(e, t) {
+	fg(e);
+	let n = ag(t), r = _g(e, n), i = r.replace(".", "").length, { start: a, end: o } = yg(r), s = vg(r, a, o), c = [s], l = [
 		[0, i - 1],
 		[0, o],
 		[a, i - 1],
@@ -34716,14 +34773,14 @@ function gg(e, t) {
 	for (let [e, t] of l) {
 		if (c.length === 4) break;
 		if (e > t || e < 0 || t >= i) continue;
-		let n = pg(r, e, t);
+		let n = vg(r, e, t);
 		c.includes(n) || c.push(n);
 	}
 	for (let e = 0; c.length < 4; e++) {
-		let t = pg(r, e, e);
+		let t = vg(r, e, e);
 		c.includes(t) || c.push(t);
 	}
-	hg(c, n);
+	bg(c, n);
 	let u = c.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
@@ -34738,43 +34795,43 @@ function gg(e, t) {
 		correctOptionId: u.find((e) => e.label === s).id
 	};
 }
-function _g(e, t) {
-	sg(e);
-	let n = fg(e, eg(t));
+function Sg(e, t) {
+	fg(e);
+	let n = _g(e, ag(t));
 	return {
 		id: `digit-highlighter-${e}-${t}`,
 		level: e,
 		value: n,
 		en: { prompt: `How many significant figures does ${n} have?` },
 		fr: { prompt: `Combien de chiffres significatifs a ${n} ?` },
-		correctValue: ig(n)
+		correctValue: lg(n)
 	};
 }
-function vg(e, t, n) {
-	sg(e);
-	let r = eg(t), i = tg(() => n(e, Math.floor(r() * 4294967295)), (e) => e.value);
+function Cg(e, t, n) {
+	fg(e);
+	let r = ag(t), i = og(() => n(e, Math.floor(r() * 4294967295)), (e) => e.value);
 	return Array.from({ length: 10 }, () => i());
 }
 //#endregion
 //#region packages/place-value-sig-figs/src/accuracy.ts
-function yg(e) {
-	if (!Xh.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function wg(e) {
+	if (!tg.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var bg = (e) => String(F(e, 1, 9)), xg = (e, t) => Array.from({ length: t }, () => bg(e)).join("");
-function Sg(e, t) {
+var Tg = (e) => String(F(e, 1, 9)), Eg = (e, t) => Array.from({ length: t }, () => Tg(e)).join("");
+function Dg(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = F(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function Cg(e, t) {
-	return Sg([...e], t).map((e, t) => ({
+function Og(e, t) {
+	return Dg([...e], t).map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
 	}));
 }
-var wg = {
+var kg = {
 	1: {
 		unit: "cm",
 		decimals: 0,
@@ -34801,14 +34858,14 @@ var wg = {
 		intDigits: 0
 	}
 };
-function Tg(e, t) {
-	yg(e);
-	let n = eg(t), { unit: r, decimals: i, intDigits: a } = wg[e], o = a === 0 ? "0" : xg(n, a), s = i === 0 ? "" : xg(n, i), c = i === 0 ? o : `${o}.${s}`, l = `${c}${i === 0 ? "." : ""}${F(n, 1, 4)}`, u = [
+function Ag(e, t) {
+	wg(e);
+	let n = ag(t), { unit: r, decimals: i, intDigits: a } = kg[e], o = a === 0 ? "0" : Eg(n, a), s = i === 0 ? "" : Eg(n, i), c = i === 0 ? o : `${o}.${s}`, l = `${c}${i === 0 ? "." : ""}${F(n, 1, 4)}`, u = [
 		c,
 		l,
-		`${l}${bg(n)}`,
-		og(c, Math.max(1, c.replace(/^0\.0*|\./g, "").length - 1))
-	], d = i === 0 ? "1" : `0.${"0".repeat(i - 1)}1`, f = Cg(u.map((e) => `${e} ${r}`), n);
+		`${l}${Tg(n)}`,
+		dg(c, Math.max(1, c.replace(/^0\.0*|\./g, "").length - 1))
+	], d = i === 0 ? "1" : `0.${"0".repeat(i - 1)}1`, f = Og(u.map((e) => `${e} ${r}`), n);
 	return {
 		id: `measure-to-sf-${e}-${t}`,
 		level: e,
@@ -34822,7 +34879,7 @@ function Tg(e, t) {
 		fr: { prompt: `Une règle a des graduations tous les ${d.replace(".", ",")} ${r}. Un crayon se termine à ${l.replace(".", ",")} ${r}. Quelle mesure est raisonnable pour cette règle ?` }
 	};
 }
-var Eg = [
+var jg = [
 	{
 		en: (e) => `${e} people came to a match. Which number is best for a newspaper headline?`,
 		fr: (e) => `${e} personnes sont venues à un match. Quel nombre convient le mieux pour un titre de journal ?`
@@ -34835,32 +34892,32 @@ var Eg = [
 		en: (e) => `A club raised ${e} euros. Which number is best for a newspaper headline?`,
 		fr: (e) => `Un club a récolté ${e} euros. Quel nombre convient le mieux pour un titre de journal ?`
 	}
-], Dg = [{
+], Mg = [{
 	en: (e, t) => `${e} boxes hold ${t} pencils each. Estimate the total by rounding each number to 1 significant figure.`,
 	fr: (e, t) => `${e} boîtes contiennent chacune ${t} crayons. Estime le total en arrondissant chaque nombre à 1 chiffre significatif.`
 }, {
 	en: (e, t) => `${e} tickets cost ${t} euros each. Estimate the total price by rounding each number to 1 significant figure.`,
 	fr: (e, t) => `${e} billets coûtent ${t} euros chacun. Estime le prix total en arrondissant chaque nombre à 1 chiffre significatif.`
-}], Og = {
+}], Ng = {
 	1: 3,
 	2: 4,
 	3: 5,
 	4: 6,
 	5: 7
 };
-function kg(e, t) {
-	yg(e);
-	let n = eg(t);
-	if (n() < .4) return Ag(e, t, n);
-	let r = Og[e], i = xg(n, r), a = og(i, 1), o = 10 ** (r - 1), s = [
-		og(i, 2),
+function Pg(e, t) {
+	wg(e);
+	let n = ag(t);
+	if (n() < .4) return Fg(e, t, n);
+	let r = Ng[e], i = Eg(n, r), a = dg(i, 1), o = 10 ** (r - 1), s = [
+		dg(i, 2),
 		i,
-		og(i, 3),
+		dg(i, 3),
 		String(Number(a) + o),
 		String(Number(a) - o)
 	], c = [];
 	for (let e of s) if (Number(e) !== Number(a) && !c.some((t) => Number(t) === Number(e)) && c.push(e), c.length === 3) break;
-	let l = Cg([a, ...c], n), u = Eg[F(n, 0, Eg.length - 1)];
+	let l = Og([a, ...c], n), u = jg[F(n, 0, jg.length - 1)];
 	return {
 		id: `how-precise-headline-${e}-${t}`,
 		level: e,
@@ -34873,8 +34930,8 @@ function kg(e, t) {
 		fr: { prompt: u.fr(i) }
 	};
 }
-function Ag(e, t, n) {
-	let r = xg(n, e + 1), i = xg(n, e < 4 ? 2 : 3), a = BigInt(og(r, 1)), o = BigInt(og(i, 1)), s = a * o, c = s.toString(), l = [
+function Fg(e, t, n) {
+	let r = Eg(n, e + 1), i = Eg(n, e < 4 ? 2 : 3), a = BigInt(dg(r, 1)), o = BigInt(dg(i, 1)), s = a * o, c = s.toString(), l = [
 		BigInt(r) * BigInt(i),
 		a * BigInt(i),
 		BigInt(r) * o,
@@ -34886,7 +34943,7 @@ function Ag(e, t, n) {
 		let t = e.toString();
 		if (t !== c && !u.includes(t) && u.push(t), u.length === 3) break;
 	}
-	let d = Cg([c, ...u], n), f = Dg[F(n, 0, Dg.length - 1)];
+	let d = Og([c, ...u], n), f = Mg[F(n, 0, Mg.length - 1)];
 	return {
 		id: `how-precise-headline-${e}-${t}`,
 		level: e,
@@ -34902,52 +34959,52 @@ function Ag(e, t, n) {
 }
 //#endregion
 //#region packages/place-value-sig-figs/src/rounding.ts
-function jg(e) {
-	if (!Xh.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function Ig(e) {
+	if (!tg.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var Mg = (e) => String(F(e, 1, 9)), Ng = (e, t) => Array.from({ length: t }, () => Mg(e)).join("");
-function Pg(e, t) {
+var Lg = (e) => String(F(e, 1, 9)), Rg = (e, t) => Array.from({ length: t }, () => Lg(e)).join("");
+function zg(e, t) {
 	switch (e) {
 		case 1: return {
-			value: Ng(t, F(t, 3, 4)),
+			value: Rg(t, F(t, 3, 4)),
 			sf: 1
 		};
 		case 2: return {
-			value: Ng(t, F(t, 4, 5)),
+			value: Rg(t, F(t, 4, 5)),
 			sf: 2
 		};
 		case 3: {
-			let e = Ng(t, F(t, 4, 5)), n = F(t, 1, 2);
+			let e = Rg(t, F(t, 4, 5)), n = F(t, 1, 2);
 			return {
 				value: `${e.slice(0, n)}.${e.slice(n)}`,
 				sf: F(t, 1, 2)
 			};
 		}
 		case 4: return {
-			value: `0.${"0".repeat(F(t, 1, 3))}${Ng(t, F(t, 3, 4))}`,
+			value: `0.${"0".repeat(F(t, 1, 3))}${Rg(t, F(t, 3, 4))}`,
 			sf: F(t, 1, 2)
 		};
 		default: {
 			let e = F(t, 0, 2);
 			return e === 0 ? {
-				value: `${Ng(t, 3)}.${Ng(t, 2)}`,
+				value: `${Rg(t, 3)}.${Rg(t, 2)}`,
 				sf: 3
 			} : e === 1 ? {
-				value: `0.${"0".repeat(F(t, 1, 2))}${Ng(t, 5)}`,
+				value: `0.${"0".repeat(F(t, 1, 2))}${Rg(t, 5)}`,
 				sf: 3
 			} : {
-				value: `${"9".repeat(F(t, 2, 3))}.${Ng(t, 2)}`.replace(/\.(\d)(\d)/, ".$1$2"),
+				value: `${"9".repeat(F(t, 2, 3))}.${Rg(t, 2)}`.replace(/\.(\d)(\d)/, ".$1$2"),
 				sf: 2
 			};
 		}
 	}
 }
-function Fg(e) {
+function Bg(e) {
 	return Number(e);
 }
-function Ig(e, t) {
-	jg(e);
-	let { value: n, sf: r } = Pg(e, eg(t)), i = og(n, r);
+function Vg(e, t) {
+	Ig(e);
+	let { value: n, sf: r } = zg(e, ag(t)), i = dg(n, r);
 	return {
 		id: `sf-snap-${e}-${t}`,
 		level: e,
@@ -34956,34 +35013,34 @@ function Ig(e, t) {
 		rounded: i,
 		en: { prompt: `Round ${n} to ${r} significant figure${r === 1 ? "" : "s"}.` },
 		fr: { prompt: `Arrondis ${n} à ${r} chiffre${r === 1 ? "" : "s"} significatif${r === 1 ? "" : "s"}.` },
-		correctValue: Fg(i)
+		correctValue: Bg(i)
 	};
 }
-function Lg(e, t, n) {
+function Hg(e, t, n) {
 	let r = [], i = (e) => {
 		e !== void 0 && e !== n && Number(e) !== Number(n) && !r.includes(e) && r.push(e);
-	}, a = ig(e);
-	t + 1 < a && i(og(e, t + 1)), t > 1 && i(og(e, t - 1));
+	}, a = lg(e);
+	t + 1 < a && i(dg(e, t + 1)), t > 1 && i(dg(e, t - 1));
 	let o = 0;
-	i(og(e.replace(/d/g, (e) => ((e !== "0" || o > 0) && (o += 1), o <= t ? e : "0")), t));
-	let s = og(e, t);
+	i(dg(e.replace(/d/g, (e) => ((e !== "0" || o > 0) && (o += 1), o <= t ? e : "0")), t));
+	let s = dg(e, t);
 	return i(String(Number(s) * 10)), i(String(Number(s) / 10)), r;
 }
-function Rg(e, t) {
+function Ug(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = F(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function zg(e, t) {
-	jg(e);
-	let n = eg(t), { value: r, sf: i } = Pg(e, n), a = og(r, i), o = Lg(r, i, a), s = o.shift(), c = [a, ...o.slice(0, 3)];
+function Wg(e, t) {
+	Ig(e);
+	let n = ag(t), { value: r, sf: i } = zg(e, n), a = dg(r, i), o = Hg(r, i, a), s = o.shift(), c = [a, ...o.slice(0, 3)];
 	for (let e = 1; c.length < 4; e++) {
 		let t = String(Number(a) + e * 10 ** Math.max(0, Math.floor(Math.log10(Math.abs(Number(a)) || 1)) - i + 1));
 		t !== s && !c.includes(t) && c.push(t);
 	}
-	Rg(c, n);
+	Ug(c, n);
 	let l = c.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
@@ -35002,7 +35059,7 @@ function zg(e, t) {
 }
 //#endregion
 //#region packages/place-value-sig-figs/src/plugin.ts
-function Bg(e, t = "en") {
+function Gg(e, t = "en") {
 	return {
 		presentation: {
 			kind: "choice",
@@ -35012,7 +35069,7 @@ function Bg(e, t = "en") {
 		correctAnswer: e.correctOptionId
 	};
 }
-function Vg(e, t = "en") {
+function Kg(e, t = "en") {
 	return {
 		presentation: {
 			kind: "equation",
@@ -35021,22 +35078,22 @@ function Vg(e, t = "en") {
 		correctAnswer: e.correctValue
 	};
 }
-var Hg = {
+var qg = {
 	id: "which-digits-count",
-	competencyIds: [Zh],
-	generateQuestion: (e, t) => gg(e, t),
+	competencyIds: [ng],
+	generateQuestion: (e, t) => xg(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
-	toPresentation: Bg
-}, Ug = {
+	toPresentation: Gg
+}, Jg = {
 	id: "digit-highlighter",
-	competencyIds: [Zh],
-	generateQuestion: (e, t) => _g(e, t),
+	competencyIds: [ng],
+	generateQuestion: (e, t) => Sg(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctValue }),
-	toPresentation: Vg
-}, Wg = {
+	toPresentation: Kg
+}, Yg = {
 	id: "sf-snap",
-	competencyIds: [Qh],
-	generateQuestion: (e, t) => Ig(e, t),
+	competencyIds: [rg],
+	generateQuestion: (e, t) => Vg(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctValue }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35045,10 +35102,10 @@ var Hg = {
 		},
 		correctAnswer: e.correctValue
 	})
-}, Gg = {
+}, Xg = {
 	id: "round-or-wrong",
-	competencyIds: [Qh],
-	generateQuestion: (e, t) => zg(e, t),
+	competencyIds: [rg],
+	generateQuestion: (e, t) => Wg(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35058,10 +35115,10 @@ var Hg = {
 		},
 		correctAnswer: e.correctOptionId
 	})
-}, Kg = {
+}, Zg = {
 	id: "measure-to-sf",
-	competencyIds: [$h],
-	generateQuestion: (e, t) => Tg(e, t),
+	competencyIds: [ig],
+	generateQuestion: (e, t) => Ag(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35071,10 +35128,10 @@ var Hg = {
 		},
 		correctAnswer: e.correctOptionId
 	})
-}, qg = {
+}, Qg = {
 	id: "how-precise-headline",
-	competencyIds: [$h],
-	generateQuestion: (e, t) => kg(e, t),
+	competencyIds: [ig],
+	generateQuestion: (e, t) => Pg(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35085,54 +35142,54 @@ var Hg = {
 		correctAnswer: e.correctOptionId
 	})
 };
-function Jg(e, t) {
-	return {
-		level: e,
-		questions: vg(e, t, Tg)
-	};
-}
-function Yg(e, t) {
-	return {
-		level: e,
-		questions: vg(e, t, kg)
-	};
-}
-function Xg(e, t) {
-	return {
-		level: e,
-		questions: vg(e, t, Ig)
-	};
-}
-function Zg(e, t) {
-	return {
-		level: e,
-		questions: vg(e, t, zg)
-	};
-}
-function Qg(e, t) {
-	return {
-		level: e,
-		questions: vg(e, t, gg)
-	};
-}
 function $g(e, t) {
 	return {
 		level: e,
-		questions: vg(e, t, _g)
+		questions: Cg(e, t, Ag)
+	};
+}
+function e_(e, t) {
+	return {
+		level: e,
+		questions: Cg(e, t, Pg)
+	};
+}
+function t_(e, t) {
+	return {
+		level: e,
+		questions: Cg(e, t, Vg)
+	};
+}
+function n_(e, t) {
+	return {
+		level: e,
+		questions: Cg(e, t, Wg)
+	};
+}
+function r_(e, t) {
+	return {
+		level: e,
+		questions: Cg(e, t, xg)
+	};
+}
+function i_(e, t) {
+	return {
+		level: e,
+		questions: Cg(e, t, Sg)
 	};
 }
 //#endregion
 //#region packages/place-value-standard-form/src/types.ts
-var e_ = [
+var a_ = [
 	1,
 	2,
 	3,
 	4,
 	5
-], t_ = "math.place-value.standard-form.negative-powers", n_ = "math.place-value.standard-form.large-numbers", r_ = "math.place-value.standard-form.compare";
+], o_ = "math.place-value.standard-form.negative-powers", s_ = "math.place-value.standard-form.large-numbers", c_ = "math.place-value.standard-form.compare";
 //#endregion
 //#region packages/place-value-standard-form/src/rng.ts
-function i_(e) {
+function l_(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -35143,7 +35200,7 @@ function i_(e) {
 function I(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
-function a_(e, t, n = 200) {
+function u_(e, t, n = 200) {
 	let r = /* @__PURE__ */ new Set();
 	return () => {
 		for (let i = 0; i < n; i++) {
@@ -35155,60 +35212,60 @@ function a_(e, t, n = 200) {
 }
 //#endregion
 //#region packages/place-value-standard-form/src/standardForm.ts
-var o_ = "⁰¹²³⁴⁵⁶⁷⁸⁹";
-function s_(e) {
+var d_ = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+function f_(e) {
 	let [t = "", n = ""] = e.mantissa.split("."), r = t + n, i = t.length + e.exponent;
 	return i >= r.length ? r + "0".repeat(i - r.length) : r.slice(0, i) + "." + r.slice(i);
 }
-function c_(e) {
-	let t = String(e.exponent).split("").map((e) => e === "-" ? "⁻" : o_[Number(e)]).join("");
+function p_(e) {
+	let t = String(e.exponent).split("").map((e) => e === "-" ? "⁻" : d_[Number(e)]).join("");
 	return `${e.mantissa} × 10${t}`;
 }
 //#endregion
 //#region packages/place-value-standard-form/src/powers.ts
-function l_(e) {
-	if (!e_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function m_(e) {
+	if (!a_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var u_ = {
+var h_ = {
 	1: [-4, 0],
 	2: [-5, 0],
 	3: [-6, -1],
 	4: [-8, -2],
 	5: [-9, -3]
 };
-function d_(e) {
+function g_(e) {
 	if (!Number.isInteger(e)) throw Error(`exponent must be an integer: ${e}`);
 	return e >= 0 ? "1" + "0".repeat(e) : "0." + "0".repeat(-e - 1) + "1";
 }
-var f_ = "⁰¹²³⁴⁵⁶⁷⁸⁹";
-function p_(e) {
-	return `10${String(e).split("").map((e) => e === "-" ? "⁻" : f_[Number(e)]).join("")}`;
+var __ = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+function v_(e) {
+	return `10${String(e).split("").map((e) => e === "-" ? "⁻" : __[Number(e)]).join("")}`;
 }
-var m_ = (e) => e.replace(".", ","), h_ = (e) => `1/${p_(e)}`, g_ = [
+var y_ = (e) => e.replace(".", ","), b_ = (e) => `1/${v_(e)}`, x_ = [
 	"to-decimal",
 	"to-power",
 	"to-fraction",
 	"from-fraction"
 ];
-function __(e, t) {
-	let [n, r] = u_[e];
+function S_(e, t) {
+	let [n, r] = h_[e];
 	return I(t, n, r);
 }
-function v_(e, t) {
+function C_(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = I(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function y_(e, t) {
-	l_(e);
-	let n = i_(t), r = n(), i = r < .4 ? "power" : r < .85 ? "ladder" : "zero", a = i === "zero" ? 0 : __(e, n), o = d_(a), s, c;
-	if (i === "zero") s = `Write ${p_(0)} as a number.`, c = `Écris ${p_(0)} sous forme d’un nombre.`;
-	else if (i === "power") s = `Write ${p_(a)} as a decimal.`, c = `Écris ${p_(a)} sous forme décimale.`;
+function w_(e, t) {
+	m_(e);
+	let n = l_(t), r = n(), i = r < .4 ? "power" : r < .85 ? "ladder" : "zero", a = i === "zero" ? 0 : S_(e, n), o = g_(a), s, c;
+	if (i === "zero") s = `Write ${v_(0)} as a number.`, c = `Écris ${v_(0)} sous forme d’un nombre.`;
+	else if (i === "power") s = `Write ${v_(a)} as a decimal.`, c = `Écris ${v_(a)} sous forme décimale.`;
 	else {
-		let e = d_(a + 1);
-		s = `${e} ÷ 10 = ?`, c = `${m_(e)} ÷ 10 = ?`;
+		let e = g_(a + 1);
+		s = `${e} ÷ 10 = ?`, c = `${y_(e)} ÷ 10 = ?`;
 	}
 	return {
 		id: `place-value-ladder-${e}-${t}`,
@@ -35222,37 +35279,37 @@ function y_(e, t) {
 		correctValue: Number(o)
 	};
 }
-function b_(e, t) {
-	l_(e);
-	let n = i_(t), r = __(e, n), i = g_[I(n, 0, g_.length - 1)], a = r === 0 && i.endsWith("fraction") ? "to-decimal" : i, o = d_(r), s = h_(-r), c = a === "to-decimal" ? o : a === "to-fraction" ? s : p_(r), l = a === "to-decimal" ? [
+function T_(e, t) {
+	m_(e);
+	let n = l_(t), r = S_(e, n), i = x_[I(n, 0, x_.length - 1)], a = r === 0 && i.endsWith("fraction") ? "to-decimal" : i, o = g_(r), s = b_(-r), c = a === "to-decimal" ? o : a === "to-fraction" ? s : v_(r), l = a === "to-decimal" ? [
 		r - 1,
 		r + 1,
 		-r,
 		r - 2
-	].map(d_) : a === "to-fraction" ? [
+	].map(g_) : a === "to-fraction" ? [
 		-r + 1,
 		-r - 1,
 		-r + 2,
 		-r + 3
-	].filter((e) => e >= 1).map(h_) : [
+	].filter((e) => e >= 1).map(b_) : [
 		r - 1,
 		r + 1,
 		-r,
 		r - 2
-	].map(p_), u = [c];
+	].map(v_), u = [c];
 	for (let e of l) u.length < 4 && !u.includes(e) && u.push(e);
-	v_(u, n);
+	C_(u, n);
 	let d = u.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
-	})), f = p_(r), p = {
+	})), f = v_(r), p = {
 		"to-decimal": `Which decimal is equal to ${f}?`,
 		"to-power": `Which power of ten is equal to ${o}?`,
 		"to-fraction": `Which fraction is equal to ${f}?`,
 		"from-fraction": `Which power of ten is equal to ${s}?`
 	}[a], ee = {
 		"to-decimal": `Quel nombre décimal est égal à ${f} ?`,
-		"to-power": `Quelle puissance de dix est égale à ${m_(o)} ?`,
+		"to-power": `Quelle puissance de dix est égale à ${y_(o)} ?`,
 		"to-fraction": `Quelle fraction est égale à ${f} ?`,
 		"from-fraction": `Quelle puissance de dix est égale à ${s} ?`
 	}[a];
@@ -35268,17 +35325,17 @@ function b_(e, t) {
 		correctOptionId: d.find((e) => e.label === c).id
 	};
 }
-function x_(e, t, n) {
-	l_(e);
-	let r = i_(t), i = a_(() => n(e, Math.floor(r() * 4294967295)), (e) => e.value);
+function E_(e, t, n) {
+	m_(e);
+	let r = l_(t), i = u_(() => n(e, Math.floor(r() * 4294967295)), (e) => e.value);
 	return Array.from({ length: 10 }, () => i());
 }
 //#endregion
 //#region packages/place-value-standard-form/src/largeNumbers.ts
-function S_(e) {
-	if (!e_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function D_(e) {
+	if (!a_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var C_ = {
+var O_ = {
 	1: {
 		exp: [2, 4],
 		digits: [1, 1]
@@ -35300,25 +35357,25 @@ var C_ = {
 		digits: [2, 4]
 	}
 };
-function w_(e, t) {
+function k_(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = I(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function T_(e, t) {
-	let n = C_[e], r = I(t, n.exp[0], n.exp[1]), i = I(t, n.digits[0], n.digits[1]), a = String(I(t, 1, 9));
+function A_(e, t) {
+	let n = O_[e], r = I(t, n.exp[0], n.exp[1]), i = I(t, n.digits[0], n.digits[1]), a = String(I(t, 1, 9));
 	for (let e = 1; e < i; e++) a += String(e === i - 1 ? I(t, 1, 9) : I(t, 0, 9));
 	return {
 		mantissa: a.length === 1 ? a : `${a[0]}.${a.slice(1)}`,
 		exponent: r
 	};
 }
-function E_(e) {
+function j_(e) {
 	return e.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
-function D_(e) {
+function M_(e) {
 	let [t = "", n = ""] = e.mantissa.split("."), r = t + n, i = [
 		{
 			mantissa: e.mantissa,
@@ -35346,10 +35403,10 @@ function D_(e) {
 	}
 	return i;
 }
-function O_(e, t, n, r = 4) {
+function N_(e, t, n, r = 4) {
 	let i = [e];
 	for (let e of t) i.length < r && !i.includes(e) && i.push(e);
-	w_(i, n);
+	k_(i, n);
 	let a = i.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
@@ -35359,33 +35416,33 @@ function O_(e, t, n, r = 4) {
 		correctOptionId: a.find((t) => t.label === e).id
 	};
 }
-function k_(e, t) {
-	S_(e);
-	let n = i_(t), r = T_(e, n), i = s_(r), a = n() < .5 ? "to-standard" : "to-ordinary", o = a === "to-ordinary", s = c_(r), { options: c, correctOptionId: l } = O_(o ? E_(i) : s, D_(r).map((e) => o ? E_(s_(e)) : c_(e)), n);
+function P_(e, t) {
+	D_(e);
+	let n = l_(t), r = A_(e, n), i = f_(r), a = n() < .5 ? "to-standard" : "to-ordinary", o = a === "to-ordinary", s = p_(r), { options: c, correctOptionId: l } = N_(o ? j_(i) : s, M_(r).map((e) => o ? j_(f_(e)) : p_(e)), n);
 	return {
 		id: `planet-scale-cards-${e}-${t}`,
 		level: e,
 		value: i,
 		number: i,
 		direction: a,
-		en: { prompt: o ? `Which ordinary number is ${s}?` : `Match ${E_(i)} with its standard form.` },
-		fr: { prompt: o ? `Quel nombre est égal à ${s} ?` : `Associe ${E_(i)} à son écriture en notation scientifique.` },
+		en: { prompt: o ? `Which ordinary number is ${s}?` : `Match ${j_(i)} with its standard form.` },
+		fr: { prompt: o ? `Quel nombre est égal à ${s} ?` : `Associe ${j_(i)} à son écriture en notation scientifique.` },
 		options: c,
 		correctOptionId: l
 	};
 }
-var A_ = "yes";
-function j_(e, t) {
-	S_(e);
-	let n = i_(t), r = T_(e, n), i = c_(r), a = n() < (e >= 4 ? .3 : .5), o = i;
+var F_ = "yes";
+function I_(e, t) {
+	D_(e);
+	let n = l_(t), r = A_(e, n), i = p_(r), a = n() < (e >= 4 ? .3 : .5), o = i;
 	if (!a) {
 		let [t = "", i = ""] = r.mantissa.split("."), a = t + i, s = I(n, 1, Math.min(r.exponent, e >= 4 ? 3 : 2)), c = a.padEnd(1 + s, "0"), l = c.slice(0, 1 + s), u = c.slice(1 + s).replace(/0+$/, "");
-		o = c_({
+		o = p_({
 			mantissa: u ? `${l}.${u}` : l,
 			exponent: r.exponent - s
 		});
 	}
-	let s = D_(r).map(c_), c = A_, { options: l, correctOptionId: u } = O_(a ? c : i, [c, ...s].filter((e) => e !== (a ? c : i)), n);
+	let s = M_(r).map(p_), c = F_, { options: l, correctOptionId: u } = N_(a ? c : i, [c, ...s].filter((e) => e !== (a ? c : i)), n);
 	if (!l.some((e) => e.label === c)) {
 		let e = l.findIndex((e) => e.id !== u);
 		l[e] = {
@@ -35414,10 +35471,10 @@ function j_(e, t) {
 }
 //#endregion
 //#region packages/place-value-standard-form/src/compare.ts
-function M_(e) {
-	if (!e_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
+function L_(e) {
+	if (!a_.includes(e)) throw Error(`invalid level: ${e} (must be an integer in 1..5)`);
 }
-var N_ = {
+var R_ = {
 	1: {
 		exp: [2, 4],
 		digits: [1, 1],
@@ -35444,40 +35501,40 @@ var N_ = {
 		count: 4
 	}
 };
-function P_(e, t) {
+function z_(e, t) {
 	for (let n = e.length - 1; n > 0; n--) {
 		let r = I(t, 0, n), i = e[n];
 		e[n] = e[r], e[r] = i;
 	}
 	return e;
 }
-function F_(e, t, n) {
+function B_(e, t, n) {
 	let r = I(e, t, n), i = String(I(e, 1, 9));
 	for (let t = 1; t < r; t++) i += String(t === r - 1 ? I(e, 1, 9) : I(e, 0, 9));
 	return i.length === 1 ? i : `${i[0]}.${i.slice(1)}`;
 }
-function I_(e, t) {
+function V_(e, t) {
 	if (e.exponent !== t.exponent) return e.exponent - t.exponent;
 	let [n = "", r = ""] = e.mantissa.split("."), [i = "", a = ""] = t.mantissa.split("."), o = Math.max(r.length, a.length), s = n + r.padEnd(o, "0"), c = i + a.padEnd(o, "0");
 	return s < c ? -1 : +(s > c);
 }
-var L_ = (e) => `${e.mantissa}e${e.exponent}`, R_ = (e) => c_(e).replace(".", ",");
-function z_(e, t, n) {
-	let r = N_[e], i = [], a = /* @__PURE__ */ new Set(), o = 0;
+var H_ = (e) => `${e.mantissa}e${e.exponent}`, U_ = (e) => p_(e).replace(".", ",");
+function W_(e, t, n) {
+	let r = R_[e], i = [], a = /* @__PURE__ */ new Set(), o = 0;
 	for (; i.length < n && o++ < 500;) {
 		let n = {
-			mantissa: F_(t, r.digits[0], r.digits[1]),
+			mantissa: B_(t, r.digits[0], r.digits[1]),
 			exponent: I(t, r.exp[0], r.exp[1])
 		};
-		a.has(L_(n)) || e <= 2 && i.some((e) => e.exponent === n.exponent) || (a.add(L_(n)), i.push(n));
+		a.has(H_(n)) || e <= 2 && i.some((e) => e.exponent === n.exponent) || (a.add(H_(n)), i.push(n));
 	}
 	if (i.length < n) throw Error("could not draw distinct numbers");
 	return i;
 }
-function B_(e, t) {
-	M_(e);
-	let n = i_(t), r = N_[e], i = z_(e, n, r.count), a = [...i].sort(I_), o = P_([...i], n), s = /* @__PURE__ */ new Map(), c = (e) => {
-		let t = e.map(L_).join("|");
+function G_(e, t) {
+	L_(e);
+	let n = l_(t), r = R_[e], i = W_(e, n, r.count), a = [...i].sort(V_), o = z_([...i], n), s = /* @__PURE__ */ new Map(), c = (e) => {
+		let t = e.map(H_).join("|");
 		s.has(t) || s.set(t, e);
 	};
 	c(a), c([...a].reverse()), c([...i].sort((e, t) => Number(e.mantissa) - Number(t.mantissa)));
@@ -35485,41 +35542,41 @@ function B_(e, t) {
 		let t = [...a];
 		[t[e], t[e + 1]] = [t[e + 1], t[e]], c(t);
 	}
-	let l = a.map(L_).join("|"), u = [a, ...[...s.entries()].filter(([e]) => e !== l).map(([, e]) => e).slice(0, 3)];
-	P_(u, n);
+	let l = a.map(H_).join("|"), u = [a, ...[...s.entries()].filter(([e]) => e !== l).map(([, e]) => e).slice(0, 3)];
+	z_(u, n);
 	let d = u.map((e, t) => ({
 		id: `opt-${t}`,
-		label: e.map(c_).join(" < ")
-	})), f = d[u.indexOf(a)].id, p = o.map(c_).join(",  "), ee = o.map(R_).join(" ;  ");
+		label: e.map(p_).join(" < ")
+	})), f = d[u.indexOf(a)].id, p = o.map(p_).join(",  "), ee = o.map(U_).join(" ;  ");
 	return {
 		id: `biggest-by-exponent-${e}-${t}`,
 		level: e,
-		value: a.map(L_).join("|"),
-		numbers: o.map(c_),
-		sorted: a.map(c_),
+		value: a.map(H_).join("|"),
+		numbers: o.map(p_),
+		sorted: a.map(p_),
 		en: { prompt: `Race to order these from smallest to largest: ${p}` },
 		fr: { prompt: `Range du plus petit au plus grand : ${ee}` },
 		options: d,
 		correctOptionId: f
 	};
 }
-function V_(e, t) {
-	M_(e);
-	let n = i_(t), r = N_[e], i = e >= 3 && n() < .4, a = e >= 2 && !i && n() < .6, o, s;
+function K_(e, t) {
+	L_(e);
+	let n = l_(t), r = R_[e], i = e >= 3 && n() < .4, a = e >= 2 && !i && n() < .6, o, s;
 	for (let e = 0; e < 500; e++) if (o = {
-		mantissa: F_(n, r.digits[0], r.digits[1]),
+		mantissa: B_(n, r.digits[0], r.digits[1]),
 		exponent: I(n, r.exp[0], r.exp[1])
 	}, s = {
-		mantissa: F_(n, r.digits[0], r.digits[1]),
+		mantissa: B_(n, r.digits[0], r.digits[1]),
 		exponent: i ? o.exponent : I(n, r.exp[0], r.exp[1])
-	}, I_(o, s) !== 0 && (i || o.exponent !== s.exponent)) {
+	}, V_(o, s) !== 0 && (i || o.exponent !== s.exponent)) {
 		if (a) {
 			let e = Number(o.mantissa) > Number(s.mantissa), t = o.exponent > s.exponent;
 			if (Number(o.mantissa) === Number(s.mantissa) || e === t) continue;
 		}
 		break;
 	}
-	let c = I_(o, s) > 0 ? "A" : "B", l = o.exponent === s.exponent ? "mantissa" : "exponent", u = c_(o), d = c_(s), f = {
+	let c = V_(o, s) > 0 ? "A" : "B", l = o.exponent === s.exponent ? "mantissa" : "exponent", u = p_(o), d = p_(s), f = {
 		en: {
 			exponent: "its power of ten is bigger",
 			mantissa: "its first number is bigger",
@@ -35548,34 +35605,34 @@ function V_(e, t) {
 			reason: "mantissa"
 		}
 	];
-	P_(p, n);
+	z_(p, n);
 	let ee = p.map((e, t) => ({
 		id: `opt-${t}`,
 		label: `${e.winner === "A" ? u : d} ${f.en.is} ${f.en[e.reason]}`,
-		labelFr: `${e.winner === "A" ? R_(o) : R_(s)} ${f.fr.is} ${f.fr[e.reason]}`,
+		labelFr: `${e.winner === "A" ? U_(o) : U_(s)} ${f.fr.is} ${f.fr[e.reason]}`,
 		winner: e.winner,
 		reason: e.reason
 	})), te = ee.find((e) => e.winner === c && e.reason === l);
 	return {
 		id: `giant-showdown-${e}-${t}`,
 		level: e,
-		value: `${L_(o)}|${L_(s)}`,
+		value: `${H_(o)}|${H_(s)}`,
 		a: u,
 		b: d,
 		winner: c,
 		reason: l,
 		en: { prompt: `Showdown: which is bigger, ${u} or ${d}? Pick the winner and the reason.` },
-		fr: { prompt: `Duel : lequel est le plus grand, ${R_(o)} ou ${R_(s)} ? Choisis le gagnant et la raison.` },
+		fr: { prompt: `Duel : lequel est le plus grand, ${U_(o)} ou ${U_(s)} ? Choisis le gagnant et la raison.` },
 		options: ee,
 		correctOptionId: te.id
 	};
 }
 //#endregion
 //#region packages/place-value-standard-form/src/plugin.ts
-var H_ = {
+var q_ = {
 	id: "place-value-ladder",
-	competencyIds: [t_],
-	generateQuestion: (e, t) => y_(e, t),
+	competencyIds: [o_],
+	generateQuestion: (e, t) => w_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctValue }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35584,10 +35641,10 @@ var H_ = {
 		},
 		correctAnswer: e.correctValue
 	})
-}, U_ = {
+}, J_ = {
 	id: "exponent-match-up",
-	competencyIds: [t_],
-	generateQuestion: (e, t) => b_(e, t),
+	competencyIds: [o_],
+	generateQuestion: (e, t) => T_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35598,22 +35655,22 @@ var H_ = {
 		correctAnswer: e.correctOptionId
 	})
 };
-function W_(e, t) {
+function Y_(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, y_)
+		questions: E_(e, t, w_)
 	};
 }
-function G_(e, t) {
+function X_(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, b_)
+		questions: E_(e, t, T_)
 	};
 }
-var K_ = {
+var Z_ = {
 	id: "planet-scale-cards",
-	competencyIds: [n_],
-	generateQuestion: (e, t) => k_(e, t),
+	competencyIds: [s_],
+	generateQuestion: (e, t) => P_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35623,10 +35680,10 @@ var K_ = {
 		},
 		correctAnswer: e.correctOptionId
 	})
-}, q_ = {
+}, Q_ = {
 	id: "standard-or-not",
-	competencyIds: [n_],
-	generateQuestion: (e, t) => j_(e, t),
+	competencyIds: [s_],
+	generateQuestion: (e, t) => I_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35640,22 +35697,22 @@ var K_ = {
 		correctAnswer: e.correctOptionId
 	})
 };
-function J_(e, t) {
+function $_(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, k_)
+		questions: E_(e, t, P_)
 	};
 }
-function Y_(e, t) {
+function ev(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, j_)
+		questions: E_(e, t, I_)
 	};
 }
-var X_ = {
+var tv = {
 	id: "biggest-by-exponent",
-	competencyIds: [r_],
-	generateQuestion: (e, t) => B_(e, t),
+	competencyIds: [c_],
+	generateQuestion: (e, t) => G_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35665,10 +35722,10 @@ var X_ = {
 		},
 		correctAnswer: e.correctOptionId
 	})
-}, Z_ = {
+}, nv = {
 	id: "giant-showdown",
-	competencyIds: [r_],
-	generateQuestion: (e, t) => V_(e, t),
+	competencyIds: [c_],
+	generateQuestion: (e, t) => K_(e, t),
 	validateAnswer: (e, t) => ({ correct: t === e.correctOptionId }),
 	toPresentation: (e, t = "en") => ({
 		presentation: {
@@ -35682,21 +35739,21 @@ var X_ = {
 		correctAnswer: e.correctOptionId
 	})
 };
-function Q_(e, t) {
+function rv(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, B_)
+		questions: E_(e, t, G_)
 	};
 }
-function $_(e, t) {
+function iv(e, t) {
 	return {
 		level: e,
-		questions: x_(e, t, V_)
+		questions: E_(e, t, K_)
 	};
 }
 //#endregion
 //#region src/g6PlaceValue.ts
-function ev(e, t) {
+function av(e, t) {
 	return {
 		id: e,
 		nameKey: `competency.${e}.name`,
@@ -35712,28 +35769,28 @@ function ev(e, t) {
 		}]
 	};
 }
-var tv = ev(Zh, 8), nv = ev(Qh, 9), rv = ev($h, 10), iv = ev(n_, 11), av = ev(r_, 12), ov = ev(t_, 13), sv = [
+var ov = av(ng, 8), sv = av(rg, 9), cv = av(ig, 10), lv = av(s_, 11), uv = av(c_, 12), dv = av(o_, 13), fv = [
+	ov,
+	sv,
+	cv,
+	lv,
+	uv,
+	dv
+], pv = [
+	qg,
+	Jg,
+	Yg,
+	Xg,
+	Zg,
+	Qg,
+	Z_,
+	Q_,
 	tv,
 	nv,
-	rv,
-	iv,
-	av,
-	ov
-], cv = [
-	Hg,
-	Ug,
-	Wg,
-	Gg,
-	Kg,
-	qg,
-	K_,
 	q_,
-	X_,
-	Z_,
-	H_,
-	U_
+	J_
 ];
-function lv(e, t, n, r, i) {
+function mv(e, t, n, r, i) {
 	return {
 		key: e,
 		label: t,
@@ -35767,19 +35824,19 @@ function lv(e, t, n, r, i) {
 		}
 	};
 }
-var uv = [
-	lv("which-digits-count", "Which Digits Count", "🔢", tv, Qg),
-	lv("digit-highlighter", "Digit Highlighter", "🖍️", tv, $g),
-	lv("sf-snap", "Significant Figures Snap", "🎯", nv, Xg),
-	lv("round-or-wrong", "Round or Wrong", "🕵️", nv, Zg),
-	lv("measure-to-sf", "Measure to Sensible Accuracy", "📏", rv, Jg),
-	lv("how-precise-headline", "How Precise Is the Headline?", "📰", rv, Yg),
-	lv("place-value-ladder", "Place-Value Ladder", "🪜", ov, W_),
-	lv("exponent-match-up", "Exponent Match-Up", "🃏", ov, G_),
-	lv("planet-scale-cards", "Planet Scale Cards", "🪐", iv, J_),
-	lv("standard-or-not", "Standard Form or Not", "🔍", iv, Y_),
-	lv("biggest-by-exponent", "Biggest by Exponent", "🏁", av, Q_),
-	lv("giant-showdown", "Giant Showdown", "⚔️", av, $_)
+var hv = [
+	mv("which-digits-count", "Which Digits Count", "🔢", ov, r_),
+	mv("digit-highlighter", "Digit Highlighter", "🖍️", ov, i_),
+	mv("sf-snap", "Significant Figures Snap", "🎯", sv, t_),
+	mv("round-or-wrong", "Round or Wrong", "🕵️", sv, n_),
+	mv("measure-to-sf", "Measure to Sensible Accuracy", "📏", cv, $g),
+	mv("how-precise-headline", "How Precise Is the Headline?", "📰", cv, e_),
+	mv("place-value-ladder", "Place-Value Ladder", "🪜", dv, Y_),
+	mv("exponent-match-up", "Exponent Match-Up", "🃏", dv, X_),
+	mv("planet-scale-cards", "Planet Scale Cards", "🪐", lv, $_),
+	mv("standard-or-not", "Standard Form or Not", "🔍", lv, ev),
+	mv("biggest-by-exponent", "Biggest by Exponent", "🏁", uv, rv),
+	mv("giant-showdown", "Giant Showdown", "⚔️", uv, iv)
 ];
 function L(e, t) {
 	return {
@@ -35797,12 +35854,7 @@ function L(e, t) {
 		}]
 	};
 }
-var dv = L("math.number-sense.preschool-subitizing", "mathematics.P.4"), fv = L("math.number-sense.preschool-numerals", "mathematics.P.5"), pv = L("math.number-sense.preschool-numeral-quantity", "mathematics.P.31"), mv = L("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.6"), hv = L("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.35"), gv = L("math.addition.preschool-combine", "mathematics.P.9"), _v = L("math.subtraction.preschool-take-away", "mathematics.P.8"), vv = L("math.geometry.preschool-shapes-2d", "mathematics.P.59"), yv = L("math.geometry.preschool-position-words", "mathematics.P.64"), bv = L("math.measurement.preschool-direct-comparison", "mathematics.P.12"), xv = L("math.mathematical-reasoning.preschool-patterns", "mathematics.P.10"), Sv = L("math.time.preschool-days-of-week", "mathematics.P.56"), Cv = L("math.number-sense.preschool-cardinality", "mathematics.P.2"), wv = L("math.number-sense.preschool-count-on", "mathematics.P.26"), Tv = L("math.number-sense.preschool-before-after", "mathematics.P.7"), Ev = L("math.number-sense.preschool-numeral-formation", "mathematics.P.32"), Dv = L("math.number-sense.preschool-zero", "mathematics.P.37"), Ov = L("math.comparing-ordering.preschool-conservation", "mathematics.P.28"), kv = L("math.number-sense.preschool-ordinals", "mathematics.P.38"), Av = L("math.addition.preschool-decompose-five", "mathematics.P.43"), jv = L("math.problem-solving.preschool-story-problems", "mathematics.P.42"), Mv = L("math.geometry.preschool-solids", "mathematics.P.60"), Nv = L("math.geometry.preschool-sides-corners", "mathematics.P.61"), Pv = L("math.geometry.preschool-movement", "mathematics.P.20"), Fv = L("math.measurement.preschool-order-by-size", "mathematics.P.13"), Iv = L("math.mathematical-reasoning.preschool-sorting", "mathematics.P.21"), Lv = L("math.mathematical-reasoning.preschool-name-the-rule", void 0), Rv = L("math.mathematical-reasoning.preschool-missing-item", "mathematics.P.49"), zv = L("math.time.preschool-parts-of-day", "mathematics.P.15"), Bv = L("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.55"), Vv = L("math.number-sense.preschool-count-in-order", "mathematics.P.0"), Hv = L("math.number-sense.preschool-one-to-one", "mathematics.P.1"), Uv = L("math.number-sense.preschool-give-n", "mathematics.P.3"), Wv = L("math.time.preschool-routine-order", "mathematics.P.14"), Gv = L("math.geometry.preschool-name-shapes", "mathematics.P.16"), Kv = L("math.geometry.preschool-match-shapes", "mathematics.P.17"), qv = L("math.geometry.preschool-roll-or-stack", "mathematics.P.18"), Jv = L("math.mathematical-reasoning.preschool-quantity-words", "mathematics.P.23"), Yv = L("math.number-sense.preschool-count-to-thirty", "mathematics.P.25"), Xv = L("math.number-sense.preschool-count-backward", "mathematics.P.27"), Zv = L("math.number-sense.preschool-take-n", "mathematics.P.29"), Qv = L("math.number-sense.preschool-one-more-less", "mathematics.P.33"), $v = L("math.comparing-ordering.preschool-compare-groups", "mathematics.P.34"), ey = L("math.comparing-ordering.preschool-number-track", "mathematics.P.36"), ty = L("math.number-sense.preschool-ten-frame", "mathematics.P.39"), ny = L("math.number-sense.preschool-teen-numbers", "mathematics.P.40"), ry = L("math.addition.preschool-act-out-add-take", "mathematics.P.41"), iy = L("math.addition.preschool-make-ten", "mathematics.P.44"), ay = L("math.addition.preschool-facts-within-five", "mathematics.P.45"), oy = L("math.addition.preschool-doubles", "mathematics.P.46"), sy = L("math.addition.preschool-number-sentences", "mathematics.P.47"), cy = L("math.mathematical-reasoning.preschool-fair-shares", "mathematics.P.48"), ly = L("math.mathematical-reasoning.preschool-pattern-translate", "mathematics.P.50"), uy = L("math.number-sense.preschool-pairs", "mathematics.P.51"), dy = L("math.measurement.preschool-what-to-measure", "mathematics.P.52"), fy = L("math.measurement.preschool-measuring-tools", "mathematics.P.53"), py = L("math.measurement.preschool-order-objects", "mathematics.P.54"), my = L("math.time.preschool-how-long", "mathematics.P.57"), hy = L("math.problem-solving.preschool-money-play", "mathematics.P.58"), gy = L("math.geometry.preschool-bigger-shape", "mathematics.P.62"), _y = L("math.geometry.preschool-shapes-around", "mathematics.P.63"), vy = L("math.geometry.preschool-routes", "mathematics.P.65"), yy = L("math.geometry.preschool-copy-build", "mathematics.P.66"), by = L("math.mathematical-reasoning.preschool-sort-and-count", "mathematics.P.67"), xy = L("math.mathematical-reasoning.preschool-picture-graph", "mathematics.P.68"), Sy = L("math.problem-solving.preschool-explain-answer", "mathematics.P.69"), Cy = L("math.problem-solving.preschool-enough-for-all", "mathematics.P.70"), wy = L("math.problem-solving.preschool-estimate", "mathematics.P.71"), Ty = [
-	dv,
-	fv,
-	pv,
-	mv,
-	hv,
+var gv = L("math.number-sense.preschool-subitizing", "mathematics.P.4"), _v = L("math.number-sense.preschool-numerals", "mathematics.P.5"), vv = L("math.number-sense.preschool-numeral-quantity", "mathematics.P.31"), yv = L("math.comparing-ordering.preschool-more-fewer-same", "mathematics.P.6"), bv = L("math.comparing-ordering.preschool-compare-numerals", "mathematics.P.35"), xv = L("math.addition.preschool-combine", "mathematics.P.9"), Sv = L("math.subtraction.preschool-take-away", "mathematics.P.8"), Cv = L("math.geometry.preschool-shapes-2d", "mathematics.P.59"), wv = L("math.geometry.preschool-position-words", "mathematics.P.64"), Tv = L("math.measurement.preschool-direct-comparison", "mathematics.P.12"), Ev = L("math.mathematical-reasoning.preschool-patterns", "mathematics.P.10"), Dv = L("math.time.preschool-days-of-week", "mathematics.P.56"), Ov = L("math.number-sense.preschool-cardinality", "mathematics.P.2"), kv = L("math.number-sense.preschool-count-on", "mathematics.P.26"), Av = L("math.number-sense.preschool-before-after", "mathematics.P.7"), jv = L("math.number-sense.preschool-numeral-formation", "mathematics.P.32"), Mv = L("math.number-sense.preschool-zero", "mathematics.P.37"), Nv = L("math.comparing-ordering.preschool-conservation", "mathematics.P.28"), Pv = L("math.number-sense.preschool-ordinals", "mathematics.P.38"), Fv = L("math.addition.preschool-decompose-five", "mathematics.P.43"), Iv = L("math.problem-solving.preschool-story-problems", "mathematics.P.42"), Lv = L("math.geometry.preschool-solids", "mathematics.P.60"), Rv = L("math.geometry.preschool-sides-corners", "mathematics.P.61"), zv = L("math.geometry.preschool-movement", "mathematics.P.20"), Bv = L("math.measurement.preschool-order-by-size", "mathematics.P.13"), Vv = L("math.mathematical-reasoning.preschool-sorting", "mathematics.P.21"), Hv = L("math.mathematical-reasoning.preschool-name-the-rule", void 0), Uv = L("math.mathematical-reasoning.preschool-missing-item", "mathematics.P.49"), Wv = L("math.time.preschool-parts-of-day", "mathematics.P.15"), Gv = L("math.time.preschool-yesterday-today-tomorrow", "mathematics.P.55"), Kv = L("math.number-sense.preschool-count-in-order", "mathematics.P.0"), qv = L("math.number-sense.preschool-one-to-one", "mathematics.P.1"), Jv = L("math.number-sense.preschool-give-n", "mathematics.P.3"), Yv = L("math.time.preschool-routine-order", "mathematics.P.14"), Xv = L("math.geometry.preschool-name-shapes", "mathematics.P.16"), Zv = L("math.geometry.preschool-match-shapes", "mathematics.P.17"), Qv = L("math.geometry.preschool-roll-or-stack", "mathematics.P.18"), $v = L("math.mathematical-reasoning.preschool-quantity-words", "mathematics.P.23"), ey = L("math.number-sense.preschool-count-to-thirty", "mathematics.P.25"), ty = L("math.number-sense.preschool-count-backward", "mathematics.P.27"), ny = L("math.number-sense.preschool-take-n", "mathematics.P.29"), ry = L("math.number-sense.preschool-one-more-less", "mathematics.P.33"), iy = L("math.comparing-ordering.preschool-compare-groups", "mathematics.P.34"), ay = L("math.comparing-ordering.preschool-number-track", "mathematics.P.36"), oy = L("math.number-sense.preschool-ten-frame", "mathematics.P.39"), sy = L("math.number-sense.preschool-teen-numbers", "mathematics.P.40"), cy = L("math.addition.preschool-act-out-add-take", "mathematics.P.41"), ly = L("math.addition.preschool-make-ten", "mathematics.P.44"), uy = L("math.addition.preschool-facts-within-five", "mathematics.P.45"), dy = L("math.addition.preschool-doubles", "mathematics.P.46"), fy = L("math.addition.preschool-number-sentences", "mathematics.P.47"), py = L("math.mathematical-reasoning.preschool-fair-shares", "mathematics.P.48"), my = L("math.mathematical-reasoning.preschool-pattern-translate", "mathematics.P.50"), hy = L("math.number-sense.preschool-pairs", "mathematics.P.51"), gy = L("math.measurement.preschool-what-to-measure", "mathematics.P.52"), _y = L("math.measurement.preschool-measuring-tools", "mathematics.P.53"), vy = L("math.measurement.preschool-order-objects", "mathematics.P.54"), yy = L("math.time.preschool-how-long", "mathematics.P.57"), by = L("math.problem-solving.preschool-money-play", "mathematics.P.58"), xy = L("math.geometry.preschool-bigger-shape", "mathematics.P.62"), Sy = L("math.geometry.preschool-shapes-around", "mathematics.P.63"), Cy = L("math.geometry.preschool-routes", "mathematics.P.65"), wy = L("math.geometry.preschool-copy-build", "mathematics.P.66"), Ty = L("math.mathematical-reasoning.preschool-sort-and-count", "mathematics.P.67"), Ey = L("math.mathematical-reasoning.preschool-picture-graph", "mathematics.P.68"), Dy = L("math.problem-solving.preschool-explain-answer", "mathematics.P.69"), Oy = L("math.problem-solving.preschool-enough-for-all", "mathematics.P.70"), ky = L("math.problem-solving.preschool-estimate", "mathematics.P.71"), Ay = [
 	gv,
 	_v,
 	vv,
@@ -35865,11 +35917,16 @@ var dv = L("math.number-sense.preschool-subitizing", "mathematics.P.4"), fv = L(
 	xy,
 	Sy,
 	Cy,
-	wy
+	wy,
+	Ty,
+	Ey,
+	Dy,
+	Oy,
+	ky
 ];
 //#endregion
 //#region packages/syllabus-content-p/src/banks/helpers.ts
-function R(e, t, n, r) {
+function jy(e, t, n, r) {
 	let i = [n, ...r];
 	if (new Set(i).size !== i.length) throw Error(`duplicate options for "${t.en}": ${i.join(", ")}`);
 	return {
@@ -35886,28 +35943,28 @@ function R(e, t, n, r) {
 		}
 	};
 }
-function Ey(e) {
+function My(e) {
 	let t = [...e].sort((e, t) => e - t);
 	return t.every((e, n) => n === 0 || e === t[n - 1] + 1);
 }
-function Dy(e, t) {
+function Ny(e, t) {
 	if (t === 0) return [[]];
 	let n = [];
 	return e.forEach((r, i) => {
-		for (let a of Dy(e.slice(i + 1), t - 1)) n.push([r, ...a]);
+		for (let a of Ny(e.slice(i + 1), t - 1)) n.push([r, ...a]);
 	}), n;
 }
-function Oy(e, t, n, r, i = () => !0) {
-	let a = Dy(t.filter((t) => t !== e), n).filter((t) => !Ey([e, ...t]) && i(t));
+function Py(e, t, n, r, i = () => !0) {
+	let a = Ny(t.filter((t) => t !== e), n).filter((t) => !My([e, ...t]) && i(t));
 	if (a.length === 0) throw Error(`no non-contiguous distractor set for ${e}`);
 	let o = [], s = Math.max(1, Math.floor(a.length / r)), c = e * 5 % a.length;
 	for (let e = 0; e < a.length && o.length < r; e++) o.push(a[(c + e * s) % a.length]);
 	return o;
 }
-function ky(e, t, n, r, i) {
-	return Oy(e, Array.from({ length: n - t + 1 }, (e, n) => t + n), r, i).map((e) => e.map(String));
+function Fy(e, t, n, r, i) {
+	return Py(e, Array.from({ length: n - t + 1 }, (e, n) => t + n), r, i).map((e) => e.map(String));
 }
-function z(e, t, n, r = 0) {
+function R(e, t, n, r = 0) {
 	if (new Set(t.options).size !== t.options.length) throw Error(`duplicate options for "${t.prompt}": ${t.options.join(", ")}`);
 	return {
 		grade: e,
@@ -35921,7 +35978,7 @@ function z(e, t, n, r = 0) {
 		}
 	};
 }
-function Ay(e, t, n) {
+function Iy(e, t, n) {
 	return {
 		grade: e,
 		en: {
@@ -35934,7 +35991,7 @@ function Ay(e, t, n) {
 		}
 	};
 }
-function jy(e, t, n) {
+function Ly(e, t, n) {
 	return {
 		grade: e,
 		en: { prompt: t.en },
@@ -35942,7 +35999,7 @@ function jy(e, t, n) {
 		correctValue: n
 	};
 }
-function My(e, t, n) {
+function Ry(e, t, n) {
 	for (let e of [t.en, t.fr]) if ((e.match(/___/g) ?? []).length !== 1) throw Error(`promptWithBlank must contain exactly one "___": "${e}"`);
 	return {
 		grade: e,
@@ -35956,7 +36013,7 @@ function My(e, t, n) {
 		}
 	};
 }
-var B = [
+var z = [
 	"🍎",
 	"⭐",
 	"🐟",
@@ -35970,24 +36027,24 @@ var B = [
 	"🍪",
 	"🦋"
 ];
-function V(e, t, n, r, i = 0) {
+function zy(e, t, n, r, i = 0) {
 	let a = [...new Set(t)].filter((t) => t !== e && t >= n && t <= r), o = Array.from({ length: r - n + 1 }, (e, t) => n + t).filter((t) => t !== e && !a.includes(t)), s = o.length === 0 ? 0 : i % o.length, c = [...o.slice(s), ...o.slice(0, s)];
-	for (let t of Dy(c, 3 - a.length)) {
+	for (let t of Ny(c, 3 - a.length)) {
 		let n = [...a, ...t];
-		if (!Ey([e, ...n])) return n.map(String);
+		if (!My([e, ...n])) return n.map(String);
 	}
 	throw Error(`no non-contiguous distractors for ${e} (${t.join()}) in ${n}..${r}`);
 }
-function Ny(e, t = "\n") {
+function By(e, t = "\n") {
 	let n = [];
 	for (let t = 0; t < e.length; t += 5) n.push(e.slice(t, t + 5).join(""));
 	return n.join(t);
 }
-function H(e, t, n = "\n") {
-	return Ny(Array.from({ length: e }, () => t), n);
+function B(e, t, n = "\n") {
+	return By(Array.from({ length: e }, () => t), n);
 }
-var Py = "  ";
-function U(e) {
+var Vy = "  ";
+function V(e) {
 	let t = /* @__PURE__ */ new Set();
 	return e.filter((e) => {
 		let n = e.en.prompt ?? e.en.statement ?? e.en.promptWithBlank ?? JSON.stringify(e.en.pairs), r = `${e.grade}|${n}|${(e.en.options ?? []).join("~")}`;
@@ -35996,7 +36053,7 @@ function U(e) {
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/arithmetic.ts
-var Fy = [
+var Hy = [
 	{
 		level: 1,
 		min: 2,
@@ -36013,604 +36070,88 @@ var Fy = [
 		max: 10
 	}
 ];
-function Iy() {
+function Uy() {
 	let e = [], t = 0;
-	for (let { level: n, min: r, max: i } of Fy) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
-		level: n,
-		a: r,
-		b: a - r,
-		emoji: B[t * 5 % B.length],
-		index: t
-	}), t++;
-	return e;
-}
-function Ly() {
-	let e = [], t = 0;
-	for (let { level: n, min: r, max: i } of Fy) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
+	for (let { level: n, min: r, max: i } of Hy) for (let a = r; a <= i; a++) for (let r = 1; r < a; r++) e.push({
 		level: n,
 		a,
 		b: r,
-		emoji: B[t * 7 % B.length],
+		emoji: z[t * 7 % z.length],
 		index: t
 	}), t++;
 	return e;
 }
-var Ry = {
-	en: "and",
-	fr: "et"
-};
-function zy(e, t) {
-	return `${H(e.a, e.emoji)}\n${Ry[t]}\n${H(e.b, e.emoji)}`;
-}
-function By(e) {
-	return Ny([...Array.from({ length: e.a - e.b }, () => e.emoji), ...Array.from({ length: e.b }, () => "❌")]);
-}
-function Vy() {
-	return U(Iy().map((e) => jy(e.level, {
-		en: `${zy(e, "en")}\n\nHow many altogether`,
-		fr: `${zy(e, "fr")}\n\nEn tout, combien`
-	}, e.a + e.b)));
-}
-function Hy(e) {
-	let t = e.a + e.b, n = t + 1;
-	return Ey([
-		t,
-		e.a,
-		e.b,
-		n
-	]) ? t + 2 : n;
-}
-function Uy() {
-	return U(Iy().map((e) => {
-		let t = e.a + e.b;
-		return R(e.level, {
-			en: `${zy(e, "en")}\n\nHow many altogether?`,
-			fr: `${zy(e, "fr")}\n\nEn tout, combien ?`
-		}, String(t), V(t, [
-			e.a,
-			e.b,
-			Hy(e)
-		], 1, 12, e.index));
-	}));
-}
-function Wy() {
-	return U(Ly().map((e) => jy(e.level, {
-		en: `${By(e)}\n\nHow many left`,
-		fr: `${By(e)}\n\nCombien en reste-t-il`
-	}, e.a - e.b)));
+function Wy(e) {
+	return By([...Array.from({ length: e.a - e.b }, () => e.emoji), ...Array.from({ length: e.b }, () => "❌")]);
 }
 function Gy() {
-	return U(Ly().map((e) => {
-		let t = e.a - e.b, n = V(t, [e.b, e.a], 1, 10, e.index).map(Number), r = (t) => H(t, e.emoji, Py);
-		return R(e.level, {
-			en: `${By(e)}\n\nWhich picture shows what is left?`,
-			fr: `${By(e)}\n\nQuelle image montre ce qui reste ?`
+	return V(Uy().map((e) => {
+		let t = e.a - e.b, n = zy(t, [e.b, e.a], 1, 10, e.index).map(Number), r = (t) => B(t, e.emoji, Vy);
+		return jy(e.level, {
+			en: `${Wy(e)}\n\nWhich picture shows what is left?`,
+			fr: `${Wy(e)}\n\nQuelle image montre ce qui reste ?`
 		}, r(t), n.map(r));
 	}));
 }
 //#endregion
-//#region packages/syllabus-content-p/src/banks/extra.ts
-function W(e, t) {
-	return Array.from({ length: t - e + 1 }, (t, n) => e + n);
-}
-function G(e, t, n, r, i, a, o = 0) {
-	for (let s = r.length; s > 0; s--) try {
-		return R(e, t, String(n), V(n, r.slice(0, s), i, a, o));
-	} catch {}
-	return R(e, t, String(n), V(n, [], i, a, o));
-}
-function K(e, t, n, r) {
-	return z(e, {
-		prompt: t.en,
-		options: [n.en, ...r.map((e) => e.en)]
-	}, {
-		prompt: t.fr,
-		options: [n.fr, ...r.map((e) => e.fr)]
-	});
-}
-function q(e, t, n, r) {
-	return R(e, t, n, r);
-}
-function Ky(e, t) {
-	return H(e, t, Py);
-}
-function J(e, t) {
-	return e[t % e.length];
-}
-function qy(e, t, n) {
-	let r = [...e];
-	return r[t] = e[n], r[n] = e[t], r;
-}
-//#endregion
-//#region packages/syllabus-content-p/src/banks/countingSkills.ts
-function Jy(e) {
-	let t = [], n = e === 5 ? [
-		[1, [3]],
-		[2, [4]],
-		[3, [5]]
-	] : [
-		[1, [6, 7]],
-		[2, [8, 9]],
-		[3, [10]]
-	];
-	for (let [e, r] of n) for (let n of r) for (let r = 0; r < 3; r++) {
-		let i = W(1, n), a = 1 + r % (n - 2), o = i.filter((e, t) => t !== a), s = [
-			...i.slice(0, a + 1),
-			i[a],
-			...i.slice(a + 1)
-		], c = qy(i, a, a + 1);
-		t.push({
-			...q(e, {
-				en: `Count to ${n}. Which counting is right?`,
-				fr: `Compte jusqu'à ${n}. Quel comptage est juste ?`
-			}, i.join(" "), [
-				o.join(" "),
-				s.join(" "),
-				c.join(" ")
-			]),
-			scene: {
-				type: "count-path",
-				paths: [
-					i,
-					o,
-					s,
-					c
-				]
-			}
-		});
-	}
-	return U(t);
-}
-function Yy(e, t) {
-	return t.map((t) => t === null ? e : `${e}${t}`).join(" ");
-}
-function Xy() {
-	let e = [];
-	for (let [t, n] of [
-		[1, [
-			2,
-			3,
-			4
-		]],
-		[2, [
-			5,
-			6,
-			7
-		]],
-		[3, [
-			8,
-			9,
-			10
-		]]
-	]) n.forEach((n, r) => {
-		[0, 1].forEach((i) => {
-			let a = J(B, t * 4 + r * 2 + i), o = W(1, n), s = o.map((e, t) => t < 1 ? t + 1 : t === 1 ? null : t), c = o.map((e, t) => t <= n - 2 ? t + 1 : t), l = o.map((e) => e + 1);
-			e.push(q(t, {
-				en: `Touch each ${a} once while you count. Which counting is right?`,
-				fr: `Touche chaque ${a} une seule fois en comptant. Quel comptage est juste ?`
-			}, Yy(a, o), [
-				Yy(a, s),
-				Yy(a, c),
-				Yy(a, l)
-			]));
-		});
-	});
-	return U(e);
-}
-function Zy(e, t, n, r, i) {
-	return q(e, t, Ky(n, i), r.map((e) => Ky(e, i)));
-}
-function Qy() {
-	let e = [], t = [
-		[
-			1,
-			[
-				1,
-				2,
-				3
-			],
-			(e) => [e + 2, e + 3]
-		],
-		[
-			2,
-			[3, 4],
-			(e) => [e - 1, e + 1]
-		],
-		[
-			3,
-			[
-				3,
-				4,
-				5
-			],
-			(e) => [
-				e - 1,
-				e + 1,
-				e + 2
-			]
-		]
-	];
-	for (let [n, r, i] of t) r.forEach((t, a) => {
-		for (let o = 0; o < 6 / r.length; o++) {
-			let r = J(B, n * 5 + a * 3 + o);
-			e.push(Zy(n, {
-				en: `${H(t + 3, r)}\n\nGive me exactly ${t}. Which group is exactly ${t}?`,
-				fr: `${H(t + 3, r)}\n\nDonne-m'en exactement ${t}. Quel groupe en a exactement ${t} ?`
-			}, t, i(t), r));
-		}
-	});
-	return U(e);
-}
-function $y() {
-	let e = [];
-	for (let [t, n, r] of [
-		[
-			1,
-			[
-				[5, [3, 7]],
-				[6, [4, 8]],
-				[7, [5, 9]],
-				[8, [6, 10]]
-			],
-			2
-		],
-		[
-			2,
-			[
-				[9, [8, 10]],
-				[10, [9, 11]],
-				[11, [10, 12]],
-				[12, [11, 13]],
-				[13, [12, 14]],
-				[14, [13, 15]]
-			],
-			1
-		],
-		[
-			3,
-			[
-				[15, [
-					14,
-					16,
-					13
-				]],
-				[16, [
-					15,
-					17,
-					14
-				]],
-				[17, [
-					16,
-					18,
-					15
-				]],
-				[18, [
-					17,
-					19,
-					16
-				]],
-				[19, [
-					18,
-					20,
-					17
-				]],
-				[20, [
-					19,
-					18,
-					17
-				]]
-			],
-			1
-		]
-	]) n.forEach(([n, i], a) => {
-		for (let o = 0; o < r; o++) {
-			let r = J(B, t * 7 + a + o * 3);
-			e.push(Zy(t, {
-				en: `Take exactly ${n} ${r} from the big pile 🧺.\n\nWhich group is exactly ${n}?`,
-				fr: `Prends exactement ${n} ${r} dans le grand tas 🧺.\n\nQuel groupe en a exactement ${n} ?`
-			}, n, i, r));
-		}
-	});
-	return U(e);
-}
-function eb() {
-	let e = [], t = [
-		[
-			1,
-			W(12, 18),
-			1,
-			10,
-			30
-		],
-		[
-			2,
-			W(22, 29),
-			1,
-			10,
-			30
-		],
-		[
-			3,
-			W(3, 9).map((e) => e * 10),
-			10,
-			10,
-			100
-		]
-	];
-	for (let [n, r, i, a, o] of t) r.forEach((t, r) => {
-		let s = t + i, c = [
-			t - 2 * i,
-			t - i,
-			t
-		].join(" "), l = i === 1 ? {
-			en: `${c}\n\nCount on. What number comes next?`,
-			fr: `${c}\n\nContinue de compter. Quel nombre vient ensuite ?`
-		} : {
-			en: `${c}\n\nCount by tens. What number comes next?`,
-			fr: `${c}\n\nCompte de dix en dix. Quel nombre vient ensuite ?`
-		};
-		e.push(G(n, l, s, [t, s + i], a, o, r));
-	});
-	return U(e);
-}
-function tb() {
-	let e = [];
-	for (let [t, n, r, i] of [
-		[
-			1,
-			10,
-			[
-				2,
-				3,
-				4
-			],
-			["🚀", "🎈"]
-		],
-		[
-			2,
-			10,
-			[
-				5,
-				6,
-				7,
-				8,
-				9,
-				10
-			],
-			["🚀"]
-		],
-		[
-			3,
-			20,
-			[
-				3,
-				4,
-				5,
-				6,
-				7,
-				8
-			],
-			["🚀"]
-		]
-	]) for (let a of r) i.forEach((r, i) => {
-		let o = W(0, a - 1).map((e) => n - e), s = n - a;
-		e.push(G(t, {
-			en: `${r} Countdown: ${o.join(" ")}\n\nWhat comes next?`,
-			fr: `${r} Compte à rebours : ${o.join(" ")}\n\nQu'est-ce qui vient ensuite ?`
-		}, s, [s + 1, s - 1], 0, n, a + i));
-	});
-	return U(e);
-}
-function nb() {
-	let e = [];
-	W(1, 4).forEach((t, n) => {
-		let r = J(B, n);
-		e.push(G(1, {
-			en: `${H(t, r)}\n\nOne more ${r} comes. How many now?`,
-			fr: `${H(t, r)}\n\nUn ${r} de plus arrive. Combien maintenant ?`
-		}, t + 1, [t, t + 2], 0, 6, n));
-	}), W(2, 5).forEach((t, n) => {
-		let r = J(B, n + 4);
-		e.push(G(1, {
-			en: `${H(t, r)}\n\nOne ${r} goes away. How many now?`,
-			fr: `${H(t, r)}\n\nUn ${r} s'en va. Combien maintenant ?`
-		}, t - 1, [t, t - 2], 0, 6, n));
-	});
-	for (let [t, n, r, i, a] of [[
-		2,
-		[
-			4,
-			5,
-			6,
-			7,
-			8,
-			9
-		],
-		[
-			5,
-			6,
-			7,
-			8,
-			9,
-			10
-		],
-		0,
-		10
-	], [
-		3,
-		[
-			10,
-			12,
-			14,
-			16,
-			17,
-			19
-		],
-		[
-			11,
-			13,
-			15,
-			17,
-			18,
-			20
-		],
-		5,
-		20
-	]]) n.forEach((n, r) => {
-		e.push(G(t, {
-			en: `What number is one more than ${n}?`,
-			fr: `Quel nombre est un de plus que ${n} ?`
-		}, n + 1, [n, n + 2], i, a, r));
-	}), r.forEach((n, r) => {
-		e.push(G(t, {
-			en: `What number is one less than ${n}?`,
-			fr: `Quel nombre est un de moins que ${n} ?`
-		}, n - 1, [n, n - 2], i, a, r));
-	});
-	return U(e);
-}
-var rb = {
-	en: "greater than",
-	fr: "plus grand que"
-}, ib = {
-	en: "less than",
-	fr: "plus petit que"
-}, ab = {
-	en: "equal to",
-	fr: "égal à"
+//#region packages/syllabus-content-p/src/banks/buildSet.ts
+var Ky = {
+	tooFew: "scene.build-set.tooFew",
+	tooMany: "scene.build-set.tooMany",
+	offByOne: "scene.build-set.offByOne",
+	onlyOne: "scene.build-set.onlyOne",
+	wrong: "scene.build-set.wrong"
+}, qy = {
+	groupA: "scene.build-set.zone.groupA",
+	groupB: "scene.build-set.zone.groupB",
+	together: "scene.build-set.zone.together",
+	away: "scene.build-set.zone.away",
+	leftHand: "scene.build-set.zone.leftHand",
+	rightHand: "scene.build-set.zone.rightHand",
+	friend: (e) => `scene.build-set.zone.friend${e.toString()}`
 };
-function ob() {
-	let e = [], t = [
-		[1, [
-			[1, 3],
-			[3, 1],
-			[2, 4],
-			[4, 2],
-			[1, 4],
-			[5, 2],
-			[2, 5],
-			[4, 1]
-		]],
-		[2, [
-			[6, 7],
-			[7, 6],
-			[8, 10],
-			[10, 8],
-			[7, 9],
-			[9, 7],
-			[6, 9],
-			[10, 7]
-		]],
-		[3, [
-			[5, 5],
-			[8, 8],
-			[7, 7],
-			[9, 10],
-			[10, 9],
-			[6, 6],
-			[10, 10],
-			[4, 5]
-		]]
-	], n = (t, n, r, i, a) => {
-		let o = n > r ? rb : n < r ? ib : ab, s = [
-			rb,
-			ib,
-			ab
-		].filter((e) => e !== o);
-		e.push(K(t, {
-			en: `${H(n, i)}\n\n${H(r, a)}\n\nIs the ${i} group greater than, less than or equal to the ${a} group?`,
-			fr: `${H(n, i)}\n\n${H(r, a)}\n\nLe groupe de ${i} est-il plus grand que, plus petit que ou égal au groupe de ${a} ?`
-		}, o, s));
+function Jy(e, t, n, r = e) {
+	return Array.from({ length: t }, (t, i) => ({
+		id: `${r}${i.toString()}`,
+		glyph: n,
+		zone: e
+	}));
+}
+function Yy({ level: e, prompt: t, scene: n, correct: r, wrong: i }) {
+	let a = /* @__PURE__ */ new Set([r]), o = i.filter((e) => !a.has(e.answer) && a.add(e.answer)), s = [r, ...o.map((e) => e.answer)];
+	return {
+		grade: e,
+		en: {
+			prompt: t.en,
+			options: s,
+			correctIndex: 0
+		},
+		fr: {
+			prompt: t.fr,
+			options: s,
+			correctIndex: 0
+		},
+		scene: n,
+		feedback: [null, ...o.map((e) => e.feedback)]
 	};
-	for (let [e, r] of t) r.forEach(([t, r]) => n(e, t, r, "🍎", "⭐"));
-	let r = [
-		["🐘", "🐜"],
-		["🍉", "🍇"],
-		["🌳", "🌱"]
-	];
-	return [
-		[12, 15],
-		[16, 13],
-		[11, 11],
-		[18, 20],
-		[14, 17],
-		[20, 20],
-		[19, 15],
-		[13, 14]
-	].forEach(([e, t], i) => {
-		let [a, o] = r[i % r.length];
-		n(3, e, t, a, o);
-	}), U(e);
 }
-function sb() {
-	let e = [];
-	for (let t of [0, 1]) for (let n = t + 1; n <= 4; n++) {
-		let r = W(t, 5).map((e) => e === n ? "?" : String(e)).join(" ");
-		e.push(q(1, {
-			en: `${r}\n\nWhich number is missing?`,
-			fr: `${r}\n\nQuel nombre manque ?`
-		}, String(n), [String(n - 1), String(n + 2)]));
-	}
-	for (let t = 1; t <= 9; t++) {
-		let n = W(0, 10).map((e) => e === t ? "?" : String(e)).join(" ");
-		e.push(G(2, {
-			en: `${n}\n\nWhich number is missing?`,
-			fr: `${n}\n\nQuel nombre manque ?`
-		}, t, [t - 1, t + 1], 0, 10, t));
-	}
-	for (let t of [
-		[
-			3,
-			9,
-			1,
-			6
-		],
-		[
-			7,
-			2,
-			10,
-			4
-		],
-		[
-			5,
-			0,
-			8,
-			2
-		],
-		[
-			9,
-			4,
-			6,
-			1
-		],
-		[
-			2,
-			8,
-			5,
-			10
-		],
-		[
-			6,
-			1,
-			9,
-			3
-		]
-	]) {
-		let n = [...t].sort((e, t) => e - t);
-		e.push(q(3, {
-			en: `Cards: ${t.join(" ")}\n\nWhich row has the cards in order, smallest first?`,
-			fr: `Cartes : ${t.join(" ")}\n\nQuelle rangée met les cartes dans l'ordre, la plus petite d'abord ?`
-		}, n.join(" "), [
-			[...n].reverse().join(" "),
-			qy(n, 0, 1).join(" "),
-			[...n.slice(1), n[0]].join(" ")
-		]));
-	}
-	return U(e);
-}
+var Xy = [
+	"🍎",
+	"⭐",
+	"🐟",
+	"🎈",
+	"🐥",
+	"🚗",
+	"🍓",
+	"🐸",
+	"🌻",
+	"🧁",
+	"🍪",
+	"🦋"
+];
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sceneBank.ts
-function Y(e, t, n, r, i, a) {
+function H(e, t, n, r, i, a) {
 	let o = n.fr ?? n.en;
 	if (new Set(n.en).size !== n.en.length) throw Error(`duplicate options for "${t.en}": ${n.en.join(", ")}`);
 	if (o.length !== n.en.length || a.length !== n.en.length) throw Error(`options/feedback length mismatch for "${t.en}"`);
@@ -36630,7 +36171,7 @@ function Y(e, t, n, r, i, a) {
 		feedback: a
 	};
 }
-var cb = [
+var Zy = [
 	{
 		en: "zero",
 		fr: "zéro"
@@ -36671,7 +36212,7 @@ var cb = [
 		en: "nine",
 		fr: "neuf"
 	}
-], lb = [
+], Qy = [
 	{
 		en: "ten",
 		fr: "dix"
@@ -36716,8 +36257,8 @@ var cb = [
 		en: "twenty",
 		fr: "vingt"
 	}
-], ub = (e) => e <= 9 ? cb[e] : lb[e - 10];
-function X(e) {
+], $y = (e) => e <= 9 ? Zy[e] : Qy[e - 10];
+function U(e) {
 	let t = /* @__PURE__ */ new Set();
 	return e.filter((e) => {
 		let n = JSON.stringify([
@@ -36730,8 +36271,985 @@ function X(e) {
 	});
 }
 //#endregion
+//#region packages/syllabus-content-p/src/banks/buildSetActivities.ts
+var W = (e) => Xy[e % Xy.length], eb = (...e) => e.reduce((e, t) => e * 31 + t + 7 >>> 0, 17);
+function tb(e) {
+	return Math.abs(e) === 1 ? Ky.offByOne : e < 0 ? Ky.tooFew : Ky.tooMany;
+}
+function nb({ level: e, a: t, b: n, glyphA: r, glyphB: i, prompt: a, showCount: o, merged: s, seed: c }) {
+	let l = t + n;
+	return Yy({
+		level: e,
+		prompt: a,
+		scene: {
+			type: "build-set",
+			variant: "combine",
+			emoji: r,
+			items: [...Jy("a", t, r), ...Jy("b", n, i)],
+			zones: [
+				{
+					id: "a",
+					kind: "tray",
+					label: qy.groupA
+				},
+				{
+					id: "b",
+					kind: "tray",
+					label: qy.groupB
+				},
+				{
+					id: "all",
+					kind: s,
+					label: qy.together
+				}
+			],
+			target: `0|0|${l.toString()}`,
+			showCount: o,
+			layoutSeed: c
+		},
+		correct: `0|0|${l.toString()}`,
+		wrong: [{
+			answer: `0|${n.toString()}|${t.toString()}`,
+			feedback: Ky.onlyOne
+		}, {
+			answer: `${t.toString()}|0|${n.toString()}`,
+			feedback: Ky.onlyOne
+		}]
+	});
+}
+var rb = [
+	[
+		1,
+		2,
+		5
+	],
+	[
+		2,
+		6,
+		8
+	],
+	[
+		3,
+		9,
+		10
+	]
+];
+function ib() {
+	let e = [];
+	for (let [t, n, r] of rb) for (let i = n; i <= r; i++) for (let n = 1; n < i; n++) e.push({
+		level: t,
+		a: n,
+		b: i - n,
+		index: e.length
+	});
+	return e;
+}
+function ab() {
+	return U(ib().map(({ level: e, a: t, b: n, index: r }) => {
+		let i = W(r * 5);
+		return nb({
+			level: e,
+			a: t,
+			b: n,
+			glyphA: i,
+			glyphB: i,
+			prompt: {
+				en: "Put them all together.",
+				fr: "Mets-les tous ensemble."
+			},
+			showCount: e === 1,
+			merged: "tray",
+			seed: eb(t, n, r)
+		});
+	}));
+}
+function ob() {
+	return U(ib().map(({ level: e, a: t, b: n, index: r }) => nb({
+		level: e,
+		a: t,
+		b: n,
+		glyphA: W(r * 7),
+		glyphB: W(r * 7 + 5),
+		prompt: {
+			en: "Put everything in the basket.",
+			fr: "Mets tout dans le panier."
+		},
+		showCount: e === 1,
+		merged: "basket",
+		seed: eb(n, t, r + 3)
+	})));
+}
+function sb({ level: e, start: t, taken: n, glyph: r, prompt: i, showCount: a, into: o, seed: s }) {
+	let c = (e) => `${(t - e).toString()}|${e.toString()}`, l = {
+		type: "build-set",
+		variant: "take",
+		emoji: r,
+		items: Jy("pile", t, r),
+		zones: [{
+			id: "pile",
+			kind: "pile"
+		}, o === "away" ? {
+			id: "gone",
+			kind: "bin",
+			label: qy.away
+		} : {
+			id: "gone",
+			kind: "basket"
+		}],
+		target: c(n),
+		showCount: a,
+		layoutSeed: s
+	}, u = [
+		n - 1,
+		n + 1,
+		n - 2,
+		n + 2
+	].filter((e) => e >= 0 && e <= t && e !== n).map((e) => ({
+		answer: c(e),
+		feedback: tb(e - n)
+	}));
+	return Yy({
+		level: e,
+		prompt: i,
+		scene: l,
+		correct: c(n),
+		wrong: u
+	});
+}
+var cb = [
+	[
+		1,
+		2,
+		5
+	],
+	[
+		2,
+		6,
+		8
+	],
+	[
+		3,
+		9,
+		10
+	]
+];
+function lb() {
+	let e = [];
+	for (let [t, n, r] of cb) for (let i = n; i <= r; i++) for (let n = 1; n < i; n++) e.push(sb({
+		level: t,
+		start: i,
+		taken: n,
+		glyph: W(e.length * 7),
+		prompt: {
+			en: `Take away ${n.toString()}.`,
+			fr: `Enlève ${n.toString()}.`
+		},
+		showCount: t === 1,
+		into: "away",
+		seed: eb(i, n, e.length)
+	}));
+	return U(e);
+}
+function ub() {
+	let e = [];
+	for (let [t, n] of [
+		[1, [
+			5,
+			6,
+			7,
+			8
+		]],
+		[2, [
+			9,
+			10,
+			11,
+			12,
+			13,
+			14
+		]],
+		[3, [
+			15,
+			16,
+			17,
+			18,
+			19,
+			20
+		]]
+	]) n.forEach((n, r) => {
+		for (let i = 0; i < 2; i++) {
+			let a = n + 3 + i * 2 <= 24 ? n + 3 + i * 2 : n + 3;
+			e.push(sb({
+				level: t,
+				start: a,
+				taken: n,
+				glyph: W(t * 5 + r * 3 + i * 4),
+				prompt: {
+					en: `Take ${n.toString()}.`,
+					fr: `Prends ${n.toString()}.`
+				},
+				showCount: t < 3,
+				into: "basket",
+				seed: eb(t, n, i, a)
+			}));
+		}
+	});
+	return U(e);
+}
+function db() {
+	let e = [];
+	for (let [t, n, r] of [
+		[
+			1,
+			[
+				1,
+				2,
+				3
+			],
+			[5, 6]
+		],
+		[
+			2,
+			[3, 4],
+			[
+				6,
+				7,
+				8
+			]
+		],
+		[
+			3,
+			[4, 5],
+			[
+				8,
+				9,
+				10
+			]
+		]
+	]) n.forEach((n, i) => {
+		r.forEach((r, a) => {
+			for (let o = 0; o < 2; o++) {
+				let s = W(t * 3 + i * 5 + a * 2 + o * 7), c = (e) => `${(r - e).toString()}|${e.toString()}`, l = {
+					type: "build-set",
+					variant: "give",
+					emoji: s,
+					items: Jy("pile", r, s),
+					zones: [{
+						id: "pile",
+						kind: "pile"
+					}, {
+						id: "plate",
+						kind: "plate"
+					}],
+					target: c(n),
+					showCount: t < 3,
+					layoutSeed: eb(t, n, r, o)
+				};
+				e.push(Yy({
+					level: t,
+					prompt: {
+						en: `Give ${n.toString()}.`,
+						fr: `Donne ${n.toString()}.`
+					},
+					scene: l,
+					correct: c(n),
+					wrong: [
+						n - 2,
+						n - 1,
+						n + 1,
+						n + 2
+					].filter((e) => e >= 0 && e <= r).map((e) => ({
+						answer: c(e),
+						feedback: tb(e - n)
+					}))
+				}));
+			}
+		});
+	});
+	return U(e);
+}
+function fb() {
+	let e = [], t = {
+		1: 5,
+		2: 8,
+		3: 10
+	};
+	for (let n of [
+		1,
+		2,
+		3
+	]) {
+		let r = t[n];
+		for (let t = 1; t < r; t++) for (let i = 1; t + i <= r; i++) for (let r of n === 1 ? [!0] : [!0, !1]) {
+			if (!r && i >= t) continue;
+			let a = W(t * 3 + i + n), o = i.toString(), s = n === 3, c = r ? s ? {
+				en: `Later, ${o} more show up.`,
+				fr: `Plus tard, ${o} de plus arrivent.`
+			} : {
+				en: `${o} more come.`,
+				fr: `${o} de plus arrivent.`
+			} : s ? {
+				en: `Later, ${o} go away.`,
+				fr: `Plus tard, ${o} s'en vont.`
+			} : {
+				en: `${o} go away.`,
+				fr: `${o} s'en vont.`
+			};
+			e.push(r ? nb({
+				level: n,
+				a: t,
+				b: i,
+				glyphA: a,
+				glyphB: a,
+				prompt: c,
+				showCount: n === 1,
+				merged: "tray",
+				seed: eb(t, i, n)
+			}) : sb({
+				level: n,
+				start: t,
+				taken: i,
+				glyph: a,
+				prompt: c,
+				showCount: !1,
+				into: "away",
+				seed: eb(t, i, n, 1)
+			}));
+		}
+	}
+	return U(e);
+}
+function pb(e, t, n, r, i, a = !0) {
+	return {
+		type: "build-set",
+		variant: "split",
+		emoji: n,
+		items: [...Jy("left", t[0], n), ...Jy("right", t[1], n)],
+		zones: [{
+			id: "left",
+			kind: "hand",
+			label: qy.leftHand
+		}, {
+			id: "right",
+			kind: "hand",
+			label: qy.rightHand
+		}],
+		...r !== void 0 && { target: r },
+		showCount: a,
+		layoutSeed: i + e
+	};
+}
+function mb() {
+	let e = [], t = (e, t) => `${e.toString()}|${t.toString()}`, n = (e, n, r, i) => Yy({
+		level: e,
+		prompt: {
+			en: `Put ${r.toString()} in the right hand.`,
+			fr: `Mets-en ${r.toString()} dans la main droite.`
+		},
+		scene: pb(n, [n, 0], i, t(n - r, r), eb(n, r)),
+		correct: t(n - r, r),
+		wrong: [
+			r - 2,
+			r - 1,
+			r + 1,
+			r + 2
+		].filter((e) => e >= 0 && e <= n && e !== r).map((e) => ({
+			answer: t(n - e, e),
+			feedback: tb(e - r)
+		}))
+	});
+	for (let t = 1; t <= 4; t++) for (let r = 0; r < 3; r++) e.push(n(1, 5, t, W(t * 2 + r * 5)));
+	for (let t of [
+		6,
+		7,
+		8
+	]) for (let r = 1; r < t; r++) e.push(n(2, t, r, W(t + r)));
+	for (let n of [
+		5,
+		6,
+		7,
+		8,
+		9,
+		10
+	]) for (let r = 0; r < 2; r++) {
+		let i = Math.floor(n / 2);
+		e.push(Yy({
+			level: 3,
+			prompt: {
+				en: `Split ${n.toString()} your way.`,
+				fr: `Partage ${n.toString()} à ta façon.`
+			},
+			scene: pb(n, [n, 0], W(n * 3 + r), {
+				op: "sum",
+				value: n
+			}, eb(n, r, 9)),
+			correct: t(n - i, i),
+			wrong: [{
+				answer: t(n - 1, 0),
+				feedback: Ky.wrong
+			}]
+		}));
+	}
+	return U(e);
+}
+function hb() {
+	let e = [], t = (t, n, r, i) => {
+		let a = (e) => `${e.toString()}|${(n - e).toString()}`, o = Array.from({ length: n + 1 }, (e, t) => t).filter((e) => e !== r && e !== n - r);
+		o.sort((e, t) => Math.abs(e - n / 2) - Math.abs(t - n / 2) || e - t), e.push(Yy({
+			level: t,
+			prompt: {
+				en: "Find a new way.",
+				fr: "Trouve une autre façon."
+			},
+			scene: pb(n, [r, n - r], i, o.map(a).join("/"), eb(n, r, 4)),
+			correct: a(o[0]),
+			wrong: [{
+				answer: `${(n - r).toString()}|${r.toString()}`,
+				feedback: "scene.flaw.mirror"
+			}]
+		}));
+	};
+	for (let e = 1; e <= 4; e++) for (let n = 0; n < 2; n++) t(1, 5, e, W(e * 3 + n * 5));
+	for (let e of [6, 7]) for (let n = 1; n < e; n++) t(2, e, n, W(e + n * 2));
+	for (let e of [
+		8,
+		9,
+		10
+	]) for (let n = 1; n < e; n++) t(3, e, n, W(e * 2 + n));
+	return U(e);
+}
+function gb(e, t, n, r) {
+	let i = e / t;
+	return {
+		type: "build-set",
+		variant: "deal",
+		emoji: n,
+		items: Jy("pile", e, n),
+		zones: [{
+			id: "pile",
+			kind: "pile"
+		}, ...Array.from({ length: t }, (e, t) => ({
+			id: `p${(t + 1).toString()}`,
+			kind: "person",
+			label: qy.friend(t + 1)
+		}))],
+		target: ["0", ...Array.from({ length: t }, () => i.toString())].join("|"),
+		showCount: !0,
+		layoutSeed: r
+	};
+}
+function _b() {
+	let e = [], t = (e, t) => ["0", ...Array.from({ length: t }, () => (e / t).toString())].join("|"), n = (n, r, i, a) => {
+		let o = r / i;
+		e.push(Yy({
+			level: n,
+			prompt: {
+				en: "Give everyone the same.",
+				fr: "Donne la même chose à chacun."
+			},
+			scene: gb(r, i, a, eb(r, i, n)),
+			correct: t(r, i),
+			wrong: [{
+				answer: [
+					"0",
+					r.toString(),
+					...Array.from({ length: i - 1 }, () => "0")
+				].join("|"),
+				feedback: Ky.wrong
+			}, {
+				answer: [
+					"0",
+					(o + 1).toString(),
+					(o - 1).toString(),
+					...Array.from({ length: i - 2 }, () => o.toString())
+				].join("|"),
+				feedback: Ky.offByOne
+			}]
+		}));
+	};
+	for (let e of [
+		2,
+		4,
+		6
+	]) for (let t = 0; t < 3; t++) n(1, e, 2, W(e + t * 4));
+	for (let e of [
+		6,
+		8,
+		10
+	]) for (let t = 0; t < 2; t++) n(2, e, 2, W(e + t * 3));
+	for (let e of [
+		3,
+		6,
+		9
+	]) for (let t = 0; t < 2; t++) n(2, e, 3, W(e * 2 + t));
+	let r = (t, n, r) => {
+		let i = t.reduce((e, t) => e + t, 0), a = t.length, o = i / a, s = Array.from({ length: a }, () => o.toString()).join("|");
+		e.push(Yy({
+			level: 3,
+			prompt: {
+				en: "Make it fair.",
+				fr: "Rends le partage juste."
+			},
+			scene: {
+				type: "build-set",
+				variant: "split",
+				emoji: n,
+				items: t.flatMap((e, t) => Jy(`p${(t + 1).toString()}`, e, n)),
+				zones: t.map((e, t) => ({
+					id: `p${(t + 1).toString()}`,
+					kind: "person",
+					label: qy.friend(t + 1)
+				})),
+				target: s,
+				showCount: !0,
+				layoutSeed: r
+			},
+			correct: s,
+			wrong: [{
+				answer: [
+					o + 1,
+					o - 1,
+					...t.slice(2).map(() => o)
+				].join("|"),
+				feedback: Ky.offByOne
+			}]
+		}));
+	};
+	return [
+		[5, 1],
+		[1, 5],
+		[4, 0],
+		[0, 4],
+		[6, 2],
+		[2, 6],
+		[3, 7],
+		[7, 3]
+	].forEach((e, t) => r(e, W(t * 5 + 2), eb(...e, 6))), [
+		[
+			4,
+			1,
+			1
+		],
+		[
+			1,
+			4,
+			1
+		],
+		[
+			5,
+			1,
+			0
+		],
+		[
+			0,
+			5,
+			1
+		]
+	].forEach((e, t) => r(e, W(t * 3 + 1), eb(...e, 8))), U(e);
+}
+//#endregion
+//#region packages/syllabus-content-p/src/banks/extra.ts
+function G(e, t) {
+	return Array.from({ length: t - e + 1 }, (t, n) => e + n);
+}
+function K(e, t, n, r, i, a, o = 0) {
+	for (let s = r.length; s > 0; s--) try {
+		return jy(e, t, String(n), zy(n, r.slice(0, s), i, a, o));
+	} catch {}
+	return jy(e, t, String(n), zy(n, [], i, a, o));
+}
+function q(e, t, n, r) {
+	return R(e, {
+		prompt: t.en,
+		options: [n.en, ...r.map((e) => e.en)]
+	}, {
+		prompt: t.fr,
+		options: [n.fr, ...r.map((e) => e.fr)]
+	});
+}
+function J(e, t, n, r) {
+	return jy(e, t, n, r);
+}
+function Y(e, t) {
+	return e[t % e.length];
+}
+function vb(e, t, n) {
+	let r = [...e];
+	return r[t] = e[n], r[n] = e[t], r;
+}
+//#endregion
+//#region packages/syllabus-content-p/src/banks/countingSkills.ts
+function yb(e) {
+	let t = [], n = e === 5 ? [
+		[1, [3]],
+		[2, [4]],
+		[3, [5]]
+	] : [
+		[1, [6, 7]],
+		[2, [8, 9]],
+		[3, [10]]
+	];
+	for (let [e, r] of n) for (let n of r) for (let r = 0; r < 3; r++) {
+		let i = G(1, n), a = 1 + r % (n - 2), o = i.filter((e, t) => t !== a), s = [
+			...i.slice(0, a + 1),
+			i[a],
+			...i.slice(a + 1)
+		], c = vb(i, a, a + 1);
+		t.push({
+			...J(e, {
+				en: `Count to ${n}. Which counting is right?`,
+				fr: `Compte jusqu'à ${n}. Quel comptage est juste ?`
+			}, i.join(" "), [
+				o.join(" "),
+				s.join(" "),
+				c.join(" ")
+			]),
+			scene: {
+				type: "count-path",
+				paths: [
+					i,
+					o,
+					s,
+					c
+				]
+			}
+		});
+	}
+	return V(t);
+}
+function bb(e, t) {
+	return t.map((t) => t === null ? e : `${e}${t}`).join(" ");
+}
+function xb() {
+	let e = [];
+	for (let [t, n] of [
+		[1, [
+			2,
+			3,
+			4
+		]],
+		[2, [
+			5,
+			6,
+			7
+		]],
+		[3, [
+			8,
+			9,
+			10
+		]]
+	]) n.forEach((n, r) => {
+		[0, 1].forEach((i) => {
+			let a = Y(z, t * 4 + r * 2 + i), o = G(1, n), s = o.map((e, t) => t < 1 ? t + 1 : t === 1 ? null : t), c = o.map((e, t) => t <= n - 2 ? t + 1 : t), l = o.map((e) => e + 1);
+			e.push(J(t, {
+				en: `Touch each ${a} once while you count. Which counting is right?`,
+				fr: `Touche chaque ${a} une seule fois en comptant. Quel comptage est juste ?`
+			}, bb(a, o), [
+				bb(a, s),
+				bb(a, c),
+				bb(a, l)
+			]));
+		});
+	});
+	return V(e);
+}
+function Sb() {
+	let e = [], t = [
+		[
+			1,
+			G(12, 18),
+			1,
+			10,
+			30
+		],
+		[
+			2,
+			G(22, 29),
+			1,
+			10,
+			30
+		],
+		[
+			3,
+			G(3, 9).map((e) => e * 10),
+			10,
+			10,
+			100
+		]
+	];
+	for (let [n, r, i, a, o] of t) r.forEach((t, r) => {
+		let s = t + i, c = [
+			t - 2 * i,
+			t - i,
+			t
+		].join(" "), l = i === 1 ? {
+			en: `${c}\n\nCount on. What number comes next?`,
+			fr: `${c}\n\nContinue de compter. Quel nombre vient ensuite ?`
+		} : {
+			en: `${c}\n\nCount by tens. What number comes next?`,
+			fr: `${c}\n\nCompte de dix en dix. Quel nombre vient ensuite ?`
+		};
+		e.push(K(n, l, s, [t, s + i], a, o, r));
+	});
+	return V(e);
+}
+function Cb() {
+	let e = [];
+	for (let [t, n, r, i] of [
+		[
+			1,
+			10,
+			[
+				2,
+				3,
+				4
+			],
+			["🚀", "🎈"]
+		],
+		[
+			2,
+			10,
+			[
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			],
+			["🚀"]
+		],
+		[
+			3,
+			20,
+			[
+				3,
+				4,
+				5,
+				6,
+				7,
+				8
+			],
+			["🚀"]
+		]
+	]) for (let a of r) i.forEach((r, i) => {
+		let o = G(0, a - 1).map((e) => n - e), s = n - a;
+		e.push(K(t, {
+			en: `${r} Countdown: ${o.join(" ")}\n\nWhat comes next?`,
+			fr: `${r} Compte à rebours : ${o.join(" ")}\n\nQu'est-ce qui vient ensuite ?`
+		}, s, [s + 1, s - 1], 0, n, a + i));
+	});
+	return V(e);
+}
+function wb() {
+	let e = [];
+	G(1, 4).forEach((t, n) => {
+		let r = Y(z, n);
+		e.push(K(1, {
+			en: `${B(t, r)}\n\nOne more ${r} comes. How many now?`,
+			fr: `${B(t, r)}\n\nUn ${r} de plus arrive. Combien maintenant ?`
+		}, t + 1, [t, t + 2], 0, 6, n));
+	}), G(2, 5).forEach((t, n) => {
+		let r = Y(z, n + 4);
+		e.push(K(1, {
+			en: `${B(t, r)}\n\nOne ${r} goes away. How many now?`,
+			fr: `${B(t, r)}\n\nUn ${r} s'en va. Combien maintenant ?`
+		}, t - 1, [t, t - 2], 0, 6, n));
+	});
+	for (let [t, n, r, i, a] of [[
+		2,
+		[
+			4,
+			5,
+			6,
+			7,
+			8,
+			9
+		],
+		[
+			5,
+			6,
+			7,
+			8,
+			9,
+			10
+		],
+		0,
+		10
+	], [
+		3,
+		[
+			10,
+			12,
+			14,
+			16,
+			17,
+			19
+		],
+		[
+			11,
+			13,
+			15,
+			17,
+			18,
+			20
+		],
+		5,
+		20
+	]]) n.forEach((n, r) => {
+		e.push(K(t, {
+			en: `What number is one more than ${n}?`,
+			fr: `Quel nombre est un de plus que ${n} ?`
+		}, n + 1, [n, n + 2], i, a, r));
+	}), r.forEach((n, r) => {
+		e.push(K(t, {
+			en: `What number is one less than ${n}?`,
+			fr: `Quel nombre est un de moins que ${n} ?`
+		}, n - 1, [n, n - 2], i, a, r));
+	});
+	return V(e);
+}
+var Tb = {
+	en: "greater than",
+	fr: "plus grand que"
+}, Eb = {
+	en: "less than",
+	fr: "plus petit que"
+}, Db = {
+	en: "equal to",
+	fr: "égal à"
+};
+function Ob() {
+	let e = [], t = [
+		[1, [
+			[1, 3],
+			[3, 1],
+			[2, 4],
+			[4, 2],
+			[1, 4],
+			[5, 2],
+			[2, 5],
+			[4, 1]
+		]],
+		[2, [
+			[6, 7],
+			[7, 6],
+			[8, 10],
+			[10, 8],
+			[7, 9],
+			[9, 7],
+			[6, 9],
+			[10, 7]
+		]],
+		[3, [
+			[5, 5],
+			[8, 8],
+			[7, 7],
+			[9, 10],
+			[10, 9],
+			[6, 6],
+			[10, 10],
+			[4, 5]
+		]]
+	], n = (t, n, r, i, a) => {
+		let o = n > r ? Tb : n < r ? Eb : Db, s = [
+			Tb,
+			Eb,
+			Db
+		].filter((e) => e !== o);
+		e.push(q(t, {
+			en: `${B(n, i)}\n\n${B(r, a)}\n\nIs the ${i} group greater than, less than or equal to the ${a} group?`,
+			fr: `${B(n, i)}\n\n${B(r, a)}\n\nLe groupe de ${i} est-il plus grand que, plus petit que ou égal au groupe de ${a} ?`
+		}, o, s));
+	};
+	for (let [e, r] of t) r.forEach(([t, r]) => n(e, t, r, "🍎", "⭐"));
+	let r = [
+		["🐘", "🐜"],
+		["🍉", "🍇"],
+		["🌳", "🌱"]
+	];
+	return [
+		[12, 15],
+		[16, 13],
+		[11, 11],
+		[18, 20],
+		[14, 17],
+		[20, 20],
+		[19, 15],
+		[13, 14]
+	].forEach(([e, t], i) => {
+		let [a, o] = r[i % r.length];
+		n(3, e, t, a, o);
+	}), V(e);
+}
+function kb() {
+	let e = [];
+	for (let t of [0, 1]) for (let n = t + 1; n <= 4; n++) {
+		let r = G(t, 5).map((e) => e === n ? "?" : String(e)).join(" ");
+		e.push(J(1, {
+			en: `${r}\n\nWhich number is missing?`,
+			fr: `${r}\n\nQuel nombre manque ?`
+		}, String(n), [String(n - 1), String(n + 2)]));
+	}
+	for (let t = 1; t <= 9; t++) {
+		let n = G(0, 10).map((e) => e === t ? "?" : String(e)).join(" ");
+		e.push(K(2, {
+			en: `${n}\n\nWhich number is missing?`,
+			fr: `${n}\n\nQuel nombre manque ?`
+		}, t, [t - 1, t + 1], 0, 10, t));
+	}
+	for (let t of [
+		[
+			3,
+			9,
+			1,
+			6
+		],
+		[
+			7,
+			2,
+			10,
+			4
+		],
+		[
+			5,
+			0,
+			8,
+			2
+		],
+		[
+			9,
+			4,
+			6,
+			1
+		],
+		[
+			2,
+			8,
+			5,
+			10
+		],
+		[
+			6,
+			1,
+			9,
+			3
+		]
+	]) {
+		let n = [...t].sort((e, t) => e - t);
+		e.push(J(3, {
+			en: `Cards: ${t.join(" ")}\n\nWhich row has the cards in order, smallest first?`,
+			fr: `Cartes : ${t.join(" ")}\n\nQuelle rangée met les cartes dans l'ordre, la plus petite d'abord ?`
+		}, n.join(" "), [
+			[...n].reverse().join(" "),
+			vb(n, 0, 1).join(" "),
+			[...n.slice(1), n[0]].join(" ")
+		]));
+	}
+	return V(e);
+}
+//#endregion
 //#region packages/syllabus-content-p/src/banks/quantityWords.ts
-var db = {
+var Ab = {
 	lineUp: "qw.fb.lineUp",
 	leftover: "qw.fb.leftover",
 	pairSame: "qw.fb.pairSame",
@@ -36739,25 +37257,25 @@ var db = {
 	someNotAll: "qw.fb.someNotAll",
 	allEvery: "qw.fb.allEvery",
 	noneEmpty: "qw.fb.noneEmpty"
-}, fb = [
+}, jb = [
 	"🍎",
 	"🐟",
 	"🚗",
 	"⭐",
 	"🍌",
 	"🐸"
-], pb = [
+], Mb = [
 	"🎈",
 	"🐥",
 	"⚽",
 	"🌼",
 	"🍓",
 	"🐞"
-], mb = {
+], Nb = {
 	en: "Same",
 	fr: "Pareil"
-}, hb = (e, t) => e.repeat(t), gb = (e, t, n) => {
-	let r = fb[e % fb.length], i = pb[(e * 5 + 1) % pb.length];
+}, Pb = (e, t) => e.repeat(t), Fb = (e, t, n) => {
+	let r = jb[e % jb.length], i = Mb[(e * 5 + 1) % Mb.length];
 	return [{
 		emoji: r,
 		count: t
@@ -36765,7 +37283,7 @@ var db = {
 		emoji: i,
 		count: n
 	}];
-}, _b = [
+}, Ib = [
 	[1, 3],
 	[3, 1],
 	[1, 4],
@@ -36778,7 +37296,7 @@ var db = {
 	[5, 2],
 	[3, 5],
 	[5, 3]
-], vb = [
+], Lb = [
 	[3, 4],
 	[4, 3],
 	[5, 6],
@@ -36791,7 +37309,7 @@ var db = {
 	[7, 7],
 	[3, 3],
 	[8, 8]
-], yb = [
+], Rb = [
 	[3, 0],
 	[0, 3],
 	[2, 1],
@@ -36804,40 +37322,40 @@ var db = {
 	[0, 5],
 	[1, 4],
 	[3, 2]
-], bb = [
+], zb = [
 	"🍎",
 	"🐥",
 	"⚽",
 	"🍌"
 ];
-function xb() {
+function Bb() {
 	let e = [];
-	_b.forEach(([t, n], r) => {
+	Ib.forEach(([t, n], r) => {
 		for (let i of [!0, !1]) {
-			let a = gb(r + (i ? 0 : 3), t, n), o = (i ? t > n : t < n) ? 0 : 1;
-			e.push(Y(1, i ? {
+			let a = Fb(r + (i ? 0 : 3), t, n), o = (i ? t > n : t < n) ? 0 : 1;
+			e.push(H(1, i ? {
 				en: "Which has more?",
 				fr: "Lequel en a plus ?"
 			} : {
 				en: "Which has fewer?",
 				fr: "Lequel en a moins ?"
-			}, { en: a.map((e) => hb(e.emoji, e.count)) }, o, {
+			}, { en: a.map((e) => Pb(e.emoji, e.count)) }, o, {
 				type: "pick-group",
 				groups: a,
 				reveal: "pairing"
-			}, a.map((e, t) => t === o ? null : db.lineUp)));
+			}, a.map((e, t) => t === o ? null : Ab.lineUp)));
 		}
-	}), vb.forEach(([t, n], r) => {
-		let i = r % 2 == 0, a = gb(r, t, n), o = t === n ? 2 : (i ? t > n : t < n) ? 0 : 1;
-		e.push(Y(2, i ? {
+	}), Lb.forEach(([t, n], r) => {
+		let i = r % 2 == 0, a = Fb(r, t, n), o = t === n ? 2 : (i ? t > n : t < n) ? 0 : 1;
+		e.push(H(2, i ? {
 			en: "Which has more? Or the same?",
 			fr: "Lequel en a plus ? Ou pareil ?"
 		} : {
 			en: "Which has fewer? Or the same?",
 			fr: "Lequel en a moins ? Ou pareil ?"
 		}, {
-			en: [...a.map((e) => hb(e.emoji, e.count)), mb.en],
-			fr: [...a.map((e) => hb(e.emoji, e.count)), mb.fr]
+			en: [...a.map((e) => Pb(e.emoji, e.count)), Nb.en],
+			fr: [...a.map((e) => Pb(e.emoji, e.count)), Nb.fr]
 		}, o, {
 			type: "pick-group",
 			groups: a,
@@ -36847,7 +37365,7 @@ function xb() {
 			0,
 			1,
 			2
-		].map((e) => e === o ? null : t === n ? db.pairSame : db.leftover)));
+		].map((e) => e === o ? null : t === n ? Ab.pairSame : Ab.leftover)));
 	});
 	let t = {
 		en: "All",
@@ -36859,13 +37377,13 @@ function xb() {
 		en: "None",
 		fr: "Aucun"
 	};
-	return yb.forEach(([i, a], o) => {
-		let s = bb[o % bb.length], c = a === 0 ? t : i === 0 ? r : n, l = [
+	return Rb.forEach(([i, a], o) => {
+		let s = zb[o % zb.length], c = a === 0 ? t : i === 0 ? r : n, l = [
 			t,
 			n,
 			r
-		].filter((e) => e !== c), u = (e) => c === n ? e === r ? db.someNotNone : db.someNotAll : c === t ? db.allEvery : db.noneEmpty;
-		e.push(Y(3, {
+		].filter((e) => e !== c), u = (e) => c === n ? e === r ? Ab.someNotNone : Ab.someNotAll : c === t ? Ab.allEvery : Ab.noneEmpty;
+		e.push(H(3, {
 			en: "Basket on the left. All, some or none?",
 			fr: "Le panier est à gauche. Tous, quelques-uns ou aucun ?"
 		}, {
@@ -36882,11 +37400,11 @@ function xb() {
 			}],
 			operator: "vs"
 		}, [null, ...l.map(u)]));
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/dataLanguage.ts
-var Sb = [
+var Vb = [
 	[
 		{
 			emoji: "🛏️",
@@ -36989,46 +37507,46 @@ var Sb = [
 			fr: "jouer au parc"
 		}
 	]
-], Cb = (e, t) => `${e.emoji} ${e[t]}`, wb = (e) => ({
-	en: Cb(e, "en"),
-	fr: Cb(e, "fr")
+], Hb = (e, t) => `${e.emoji} ${e[t]}`, Ub = (e) => ({
+	en: Hb(e, "en"),
+	fr: Hb(e, "fr")
 });
-function Tb() {
+function Wb() {
 	let e = [];
-	return Sb.forEach((t, n) => {
+	return Vb.forEach((t, n) => {
 		let r = [
 			t[2],
 			t[0],
 			t[1]
-		], i = (e) => r.map((t) => Cb(t, e)).join(", ");
-		e.push(K(1, {
+		], i = (e) => r.map((t) => Hb(t, e)).join(", ");
+		e.push(q(1, {
 			en: `${i("en")}\n\nWhat do you do FIRST?`,
 			fr: `${i("fr")}\n\nQue fais-tu EN PREMIER ?`
-		}, wb(t[0]), [wb(t[1]), wb(t[2])])), e.push(n % 2 == 0 ? K(2, {
+		}, Ub(t[0]), [Ub(t[1]), Ub(t[2])])), e.push(n % 2 == 0 ? q(2, {
 			en: `${i("en")}\n\nWhat do you do LAST?`,
 			fr: `${i("fr")}\n\nQue fais-tu EN DERNIER ?`
-		}, wb(t[2]), [wb(t[0]), wb(t[1])]) : K(2, {
-			en: `${i("en")}\n\nWhat comes NEXT after: ${Cb(t[0], "en")}?`,
-			fr: `${i("fr")}\n\nQue fais-tu ENSUITE après : ${Cb(t[0], "fr")} ?`
-		}, wb(t[1]), [wb(t[0]), wb(t[2])]));
-		let a = (e, t) => e.map((e) => Cb(e, t)).join(" → ");
-		e.push(K(3, {
+		}, Ub(t[2]), [Ub(t[0]), Ub(t[1])]) : q(2, {
+			en: `${i("en")}\n\nWhat comes NEXT after: ${Hb(t[0], "en")}?`,
+			fr: `${i("fr")}\n\nQue fais-tu ENSUITE après : ${Hb(t[0], "fr")} ?`
+		}, Ub(t[1]), [Ub(t[0]), Ub(t[2])]));
+		let a = (e, t) => e.map((e) => Hb(e, t)).join(" → ");
+		e.push(q(3, {
 			en: `${i("en")}\n\nWhich row goes first, next, last?`,
 			fr: `${i("fr")}\n\nQuelle rangée va d'abord, ensuite, enfin ?`
 		}, {
 			en: a(t, "en"),
 			fr: a(t, "fr")
 		}, [
-			qy(t, 0, 1),
-			qy(t, 1, 2),
-			qy(t, 0, 2)
+			vb(t, 0, 1),
+			vb(t, 1, 2),
+			vb(t, 0, 2)
 		].map((e) => ({
 			en: a(e, "en"),
 			fr: a(e, "fr")
 		}))));
-	}), U(e);
+	}), V(e);
 }
-var Eb = [
+var Gb = [
 	[
 		"🔴",
 		"🔵",
@@ -37044,16 +37562,16 @@ var Eb = [
 		"🐶",
 		"🐭"
 	]
-], Db = [
+], Kb = [
 	"AB",
 	"AAB",
 	"ABB",
 	"ABC"
 ];
-function Ob(e, t) {
+function qb(e, t) {
 	return Array.from({ length: 6 }, (n, r) => e[t.charCodeAt(r % t.length) - 65]).join("");
 }
-function kb() {
+function Jb() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -37081,15 +37599,15 @@ function kb() {
 			"AAB"
 		]]
 	]) n.forEach((n, r) => {
-		let i = Eb[r % 3], a = Eb[(r + 1 + +(r >= 3)) % 3], o = Db.filter((e) => e !== n).slice(r % 2, r % 2 + 2);
-		e.push(q(t, {
-			en: `${Ob(i, n)}\n\nWhich one is the same pattern?`,
-			fr: `${Ob(i, n)}\n\nLequel est la même suite ?`
-		}, Ob(a, n), o.map((e) => Ob(a, e))));
+		let i = Gb[r % 3], a = Gb[(r + 1 + +(r >= 3)) % 3], o = Kb.filter((e) => e !== n).slice(r % 2, r % 2 + 2);
+		e.push(J(t, {
+			en: `${qb(i, n)}\n\nWhich one is the same pattern?`,
+			fr: `${qb(i, n)}\n\nLequel est la même suite ?`
+		}, qb(a, n), o.map((e) => qb(a, e))));
 	});
-	return U(e);
+	return V(e);
 }
-function Ab() {
+function Yb() {
 	let e = [], t = ["🪙", "💵"];
 	[
 		["🧸", "🍎"],
@@ -37099,10 +37617,10 @@ function Ab() {
 		["🧦", "🧢"],
 		["🎲", "🥄"]
 	].forEach(([n, r], i) => {
-		e.push(q(1, {
+		e.push(J(1, {
 			en: "Which one is money, for shopping?",
 			fr: "Lequel est de l'argent, pour faire les courses ?"
-		}, J(t, i), [n, r]));
+		}, Y(t, i), [n, r]));
 	});
 	let n = [
 		{
@@ -37138,7 +37656,7 @@ function Ab() {
 		"🍦",
 		"📕"
 	].forEach((t, r) => {
-		e.push(K(2, {
+		e.push(q(2, {
 			en: `You want to buy ${t}. What do you give the shop?`,
 			fr: `Tu veux acheter ${t}. Que donnes-tu au magasin ?`
 		}, {
@@ -37163,31 +37681,31 @@ function Ab() {
 		[3, 3],
 		[4, 5]
 	].forEach(([t, n], a) => {
-		let o = J([
+		let o = Y([
 			"🍎",
 			"🍦",
 			"🧸",
 			"🍪"
 		], a), s = n >= t;
-		e.push(K(3, {
+		e.push(q(3, {
 			en: `The ${o} costs ${t} coins.\n\nYou have: ${"🪙".repeat(n)}\n\nCan you buy it?`,
 			fr: `Le ${o} coûte ${t} pièces.\n\nTu as : ${"🪙".repeat(n)}\n\nPeux-tu l'acheter ?`
 		}, s ? r : i, [s ? i : r]));
-	}), U(e);
+	}), V(e);
 }
-function jb(e, t) {
+function Xb(e, t) {
 	let n = [...e], r = [];
 	for (; n.some((e) => e > 0);) n.forEach((e, i) => {
 		e > 0 && (r.push(t[i]), n[i] = e - 1);
 	});
 	return r;
 }
-var Mb = [
+var Zb = [
 	"🍎",
 	"🍌",
 	"🍇"
 ];
-function Nb() {
+function Qb() {
 	let e = [];
 	return [
 		[3, 2],
@@ -37197,10 +37715,10 @@ function Nb() {
 		[3, 1],
 		[2, 2]
 	].forEach(([t, n], r) => {
-		let i = r % 2, a = i === 0 ? t : n, o = Mb[i];
-		e.push(G(1, {
-			en: `${jb([t, n], Mb).join("")}\n\nHow many ${o}?`,
-			fr: `${jb([t, n], Mb).join("")}\n\nCombien de ${o} ?`
+		let i = r % 2, a = i === 0 ? t : n, o = Zb[i];
+		e.push(K(1, {
+			en: `${Xb([t, n], Zb).join("")}\n\nHow many ${o}?`,
+			fr: `${Xb([t, n], Zb).join("")}\n\nCombien de ${o} ?`
 		}, a, [t + n, a + 1], 0, 6, r));
 	}), [
 		[
@@ -37234,8 +37752,8 @@ function Nb() {
 			2
 		]
 	].forEach((t, n) => {
-		let r = n % 3, i = Mb[r], a = Ny(jb(t, Mb));
-		e.push(G(2, {
+		let r = n % 3, i = Zb[r], a = By(Xb(t, Zb));
+		e.push(K(2, {
 			en: `${a}\n\nSort them. How many ${i}?`,
 			fr: `${a}\n\nTrie-les. Combien de ${i} ?`
 		}, t[r], [
@@ -37275,21 +37793,21 @@ function Nb() {
 			3
 		]
 	].forEach((t) => {
-		let n = Mb.map((e, n) => ({
+		let n = Zb.map((e, n) => ({
 			e,
 			c: t[n]
-		})).sort((e, t) => t.c - e.c).map((e) => e.e), r = Ny(jb(t, Mb));
-		e.push(q(3, {
+		})).sort((e, t) => t.c - e.c).map((e) => e.e), r = By(Xb(t, Zb));
+		e.push(J(3, {
 			en: `${r}\n\nSort them. Which row goes from MOST to FEWEST?`,
 			fr: `${r}\n\nTrie-les. Quelle rangée va du PLUS au MOINS ?`
 		}, n.join(" "), [
 			[...n].reverse().join(" "),
-			qy(n, 0, 1).join(" "),
+			vb(n, 0, 1).join(" "),
 			[...n.slice(1), n[0]].join(" ")
 		]));
-	}), U(e);
+	}), V(e);
 }
-var Pb = [
+var $b = [
 	[
 		"🍎",
 		"🍌",
@@ -37310,8 +37828,8 @@ var Pb = [
 		"🏀",
 		"🎾"
 	]
-], Fb = (e, t) => e.map((e, n) => `${e} ${"🟦".repeat(t[n])}`).join("\n");
-function Ib() {
+], ex = (e, t) => e.map((e, n) => `${e} ${"🟦".repeat(t[n])}`).join("\n");
+function tx() {
 	let e = [];
 	return [
 		[3, 5],
@@ -37321,10 +37839,10 @@ function Ib() {
 		[2, 5],
 		[4, 1]
 	].forEach((t, n) => {
-		let r = J(Pb, n).slice(0, 2), i = t[0] > t[1] ? 0 : 1;
-		e.push(q(1, {
-			en: `${Fb(r, t)}\n\nWhich group has MORE?`,
-			fr: `${Fb(r, t)}\n\nQuel groupe en a LE PLUS ?`
+		let r = Y($b, n).slice(0, 2), i = t[0] > t[1] ? 0 : 1;
+		e.push(J(1, {
+			en: `${ex(r, t)}\n\nWhich group has MORE?`,
+			fr: `${ex(r, t)}\n\nQuel groupe en a LE PLUS ?`
 		}, r[i], [r[1 - i]]));
 	}), [
 		[
@@ -37358,10 +37876,10 @@ function Ib() {
 			1
 		]
 	].forEach((t, n) => {
-		let r = J(Pb, n + 1), i = t.indexOf(Math.max(...t));
-		e.push(q(2, {
-			en: `${Fb(r, t)}\n\nWhich group has the MOST?`,
-			fr: `${Fb(r, t)}\n\nQuel groupe en a LE PLUS ?`
+		let r = Y($b, n + 1), i = t.indexOf(Math.max(...t));
+		e.push(J(2, {
+			en: `${ex(r, t)}\n\nWhich group has the MOST?`,
+			fr: `${ex(r, t)}\n\nQuel groupe en a LE PLUS ?`
 		}, r[i], r.filter((e, t) => t !== i)));
 	}), [
 		[
@@ -37385,10 +37903,10 @@ function Ib() {
 			4
 		]
 	].forEach((t, n) => {
-		let r = J(Pb, n + 2), i = t.indexOf(Math.min(...t));
-		e.push(q(3, {
-			en: `${Fb(r, t)}\n\nWhich group has the FEWEST?`,
-			fr: `${Fb(r, t)}\n\nQuel groupe en a LE MOINS ?`
+		let r = Y($b, n + 2), i = t.indexOf(Math.min(...t));
+		e.push(J(3, {
+			en: `${ex(r, t)}\n\nWhich group has the FEWEST?`,
+			fr: `${ex(r, t)}\n\nQuel groupe en a LE MOINS ?`
 		}, r[i], r.filter((e, t) => t !== i)));
 	}), [
 		[
@@ -37412,26 +37930,26 @@ function Ib() {
 			2
 		]
 	].forEach((t, n) => {
-		let r = J(Pb, n + 3), i = t.indexOf(Math.max(...t)), a = t.indexOf(Math.min(...t)), o = t[i] - t[a];
-		e.push(G(3, {
-			en: `${Fb(r, t)}\n\nHow many more ${r[i]} than ${r[a]}?`,
-			fr: `${Fb(r, t)}\n\nCombien de ${r[i]} de plus que de ${r[a]} ?`
+		let r = Y($b, n + 3), i = t.indexOf(Math.max(...t)), a = t.indexOf(Math.min(...t)), o = t[i] - t[a];
+		e.push(K(3, {
+			en: `${ex(r, t)}\n\nHow many more ${r[i]} than ${r[a]}?`,
+			fr: `${ex(r, t)}\n\nCombien de ${r[i]} de plus que de ${r[a]} ?`
 		}, o, [
 			t[i],
 			t[a],
 			o + 1
 		], 0, 6, n));
-	}), U(e);
+	}), V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameShapes.ts
-var Lb = {
+var nx = {
 	tryAgain: "math.geo.nameShape.fb.tryAgain",
 	tiltedSquare: "math.geo.nameShape.fb.tiltedSquare",
 	tiltedTriangle: "math.geo.nameShape.fb.tiltedTriangle",
 	rectangle: "math.geo.nameShape.fb.rectangle",
 	oval: "math.geo.nameShape.fb.oval"
-}, Rb = {
+}, rx = {
 	circle: {
 		en: "circle",
 		fr: "cercle"
@@ -37444,22 +37962,22 @@ var Lb = {
 		en: "triangle",
 		fr: "triangle"
 	}
-}, zb = {
+}, ix = {
 	circle: "⚫",
 	square: "⬛",
 	triangle: "🔺"
 };
-function Z(e) {
+function X(e) {
 	return {
 		art: `shape:${e}`,
-		emoji: zb[e],
-		en: Rb[e].en,
-		fr: Rb[e].fr,
+		emoji: ix[e],
+		en: rx[e].en,
+		fr: rx[e].fr,
 		is: e
 	};
 }
-function Bb(e, t) {
-	let n = Z(e);
+function ax(e, t) {
+	let n = X(e);
 	return {
 		...n,
 		art: `shape:${e}:r${t}`,
@@ -37468,26 +37986,26 @@ function Bb(e, t) {
 		odd: !0
 	};
 }
-var Vb = {
+var ox = {
 	art: "shape:rect:wide",
 	emoji: "▬",
 	en: "rectangle",
 	fr: "rectangle",
 	is: "rectangle"
-}, Hb = {
+}, sx = {
 	art: "shape:oval",
 	emoji: "⬯",
 	en: "oval",
 	fr: "ovale",
 	is: "oval"
-}, Ub = [
+}, cx = [
 	"circle",
 	"square",
 	"triangle"
-], Wb = (e, t) => t.is === "oval" && e.is === "circle" ? Lb.oval : t.is === "rectangle" && e.is === "square" ? Lb.rectangle : e.odd && e.is === "square" ? Lb.tiltedSquare : e.odd && e.is === "triangle" ? Lb.tiltedTriangle : Lb.tryAgain;
-function Gb(e, t, n, r) {
-	let i = [t, ...n], a = Rb[t.is];
-	return Y(e, r % 2 == 0 ? {
+], lx = (e, t) => t.is === "oval" && e.is === "circle" ? nx.oval : t.is === "rectangle" && e.is === "square" ? nx.rectangle : e.odd && e.is === "square" ? nx.tiltedSquare : e.odd && e.is === "triangle" ? nx.tiltedTriangle : nx.tryAgain;
+function ux(e, t, n, r) {
+	let i = [t, ...n], a = rx[t.is];
+	return H(e, r % 2 == 0 ? {
 		en: `Find the ${a.en}.`,
 		fr: `Trouve le ${a.fr}.`
 	} : {
@@ -37504,18 +38022,18 @@ function Gb(e, t, n, r) {
 			glyph: e.art
 		})),
 		reveal: "none"
-	}, [null, ...n.map((e) => Wb(t, e))]);
+	}, [null, ...n.map((e) => lx(t, e))]);
 }
-function Kb() {
+function dx() {
 	let e = [];
-	return Ub.forEach((t, n) => {
+	return cx.forEach((t, n) => {
 		for (let r of [1, 2]) {
-			let i = Ub[(n + r) % 3];
-			e.push(Gb(1, Z(t), [Z(i)], n + r));
+			let i = cx[(n + r) % 3];
+			e.push(ux(1, X(t), [X(i)], n + r));
 		}
-	}), Ub.forEach((t, n) => {
-		let [r, i] = Ub.filter((e) => e !== t);
-		e.push(Gb(2, Z(t), [Z(r), Z(i)], n), Gb(2, Z(t), [Z(i), Z(r)], n + 1));
+	}), cx.forEach((t, n) => {
+		let [r, i] = cx.filter((e) => e !== t);
+		e.push(ux(2, X(t), [X(r), X(i)], n), ux(2, X(t), [X(i), X(r)], n + 1));
 	}), [
 		30,
 		60,
@@ -37523,51 +38041,51 @@ function Kb() {
 		120,
 		180
 	].forEach((t, n) => {
-		e.push(Gb(3, Bb("triangle", t), [Z("circle"), n % 2 == 0 ? Z("square") : Vb], n)), e.push(Gb(3, Bb("square", [
+		e.push(ux(3, ax("triangle", t), [X("circle"), n % 2 == 0 ? X("square") : ox], n)), e.push(ux(3, ax("square", [
 			45,
 			30,
 			60
-		][n % 3]), [n % 2 == 0 ? Z("triangle") : Z("circle"), Vb], n + 1));
-	}), e.push(Gb(3, Z("circle"), [Hb, Z("square")], 0), Gb(3, Z("circle"), [Hb, Z("triangle")], 1), Gb(3, Z("square"), [Vb, Z("circle")], 2), Gb(3, Z("square"), [Vb, Z("triangle")], 3)), X(e);
+		][n % 3]), [n % 2 == 0 ? X("triangle") : X("circle"), ox], n + 1));
+	}), e.push(ux(3, X("circle"), [sx, X("square")], 0), ux(3, X("circle"), [sx, X("triangle")], 1), ux(3, X("square"), [ox, X("circle")], 2), ux(3, X("square"), [ox, X("triangle")], 3)), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/geometryMore.ts
-var qb = {
+var fx = {
 	en: "circle",
 	fr: "cercle"
-}, Jb = {
+}, px = {
 	en: "square",
 	fr: "carré"
-}, Yb = {
+}, mx = {
 	en: "triangle",
 	fr: "triangle"
-}, Xb = {
+}, hx = {
 	en: "rectangle",
 	fr: "rectangle"
-}, Zb = [
+}, gx = [
 	"🔴",
 	"🔵",
 	"🟢",
 	"🟡",
 	"🟠",
 	"🟣"
-], Qb = [
+], _x = [
 	"🟥",
 	"🟦",
 	"🟩",
 	"🟨",
 	"🟧",
 	"🟪"
-], $b = ["🔺", "🔻"], ex = {
-	circle: Zb,
-	square: Qb,
-	triangle: $b
-}, tx = [
+], vx = ["🔺", "🔻"], yx = {
+	circle: gx,
+	square: _x,
+	triangle: vx
+}, bx = [
 	"circle",
 	"square",
 	"triangle"
 ];
-function nx() {
+function xx() {
 	let e = [];
 	for (let [t, n, r] of [
 		[
@@ -37600,18 +38118,18 @@ function nx() {
 			"🟩",
 			"🔺"
 		]
-	]) e.push(q(1, {
+	]) e.push(J(1, {
 		en: `${t}\n\nFind the one that looks exactly the same.`,
 		fr: `${t}\n\nTrouve celui qui est exactement pareil.`
 	}, t, [n, r]));
-	Zb.forEach((t, n) => {
-		let r = J(Qb, n), i = J(Zb, n + 1);
-		e.push(q(2, {
+	gx.forEach((t, n) => {
+		let r = Y(_x, n), i = Y(gx, n + 1);
+		e.push(J(2, {
 			en: `${t}\n\nFind the same SHAPE. The colour can be different.`,
 			fr: `${t}\n\nTrouve la même FORME. La couleur peut être différente.`
-		}, i, [r, J($b, n)]));
+		}, i, [r, Y(vx, n)]));
 	});
-	let t = (e, t) => Array.from({ length: e }, (e, n) => tx[(n + t) % 3]);
+	let t = (e, t) => Array.from({ length: e }, (e, n) => bx[(n + t) % 3]);
 	return [
 		3,
 		4,
@@ -37620,14 +38138,14 @@ function nx() {
 		4,
 		5
 	].forEach((n, r) => {
-		let i = t(n, r), a = i.map((e) => ex[e][0]), o = i.map((e) => ex[e][1]), s = r % n, c = (e) => o.map((t, n) => n === e ? ex[tx[(tx.indexOf(i[n]) + 1) % 3]][1] : t);
-		e.push(q(3, {
+		let i = t(n, r), a = i.map((e) => yx[e][0]), o = i.map((e) => yx[e][1]), s = r % n, c = (e) => o.map((t, n) => n === e ? yx[bx[(bx.indexOf(i[n]) + 1) % 3]][1] : t);
+		e.push(J(3, {
 			en: `Puzzle holes: ${a.join(" ")}\n\nWhich pieces fit the holes?`,
 			fr: `Trous du puzzle : ${a.join(" ")}\n\nQuelles pièces vont dans les trous ?`
 		}, o.join(" "), [c(s).join(" "), c((s + 1) % n).join(" ")]));
-	}), U(e);
+	}), V(e);
 }
-function rx() {
+function Sx() {
 	let e = [], t = [
 		"⚽",
 		"🏀",
@@ -37641,25 +38159,25 @@ function rx() {
 		"🛢️",
 		"🧻"
 	];
-	for (let i = 0; i < 3; i++) for (let a = 0; a < 2; a++) e.push(q(1, {
+	for (let i = 0; i < 3; i++) for (let a = 0; a < 2; a++) e.push(J(1, {
 		en: "Which one ROLLS?",
 		fr: "Lequel ROULE ?"
-	}, t[i], [n[(i + a) % 3], n[(i + a + 1) % 3]]), q(2, {
+	}, t[i], [n[(i + a) % 3], n[(i + a + 1) % 3]]), J(2, {
 		en: "Which one STACKS easily?",
 		fr: "Lequel s'EMPILE facilement ?"
-	}, n[i], [t[(i + a) % 3], t[(i + a + 1) % 3]]), q(3, {
+	}, n[i], [t[(i + a) % 3], t[(i + a + 1) % 3]]), J(3, {
 		en: "Which one can ROLL and also STACK?",
 		fr: "Lequel peut ROULER et aussi s'EMPILER ?"
 	}, r[i], [t[(i + a) % 3], n[(i + a + 1) % 3]]));
-	return U(e);
+	return V(e);
 }
-function ix() {
-	let e = [], t = Xb;
-	Qb.forEach((n, r) => {
-		e.push(K(1, {
+function Cx() {
+	let e = [], t = hx;
+	_x.forEach((n, r) => {
+		e.push(q(1, {
 			en: `${n}${n}\n\nTwo squares are put side by side. What shape do they make?`,
 			fr: `${n}${n}\n\nOn met deux carrés côte à côte. Quelle forme obtient-on ?`
-		}, t, [J([qb, Yb], r), J([Yb, qb], r)]));
+		}, t, [Y([fx, mx], r), Y([mx, fx], r)]));
 	});
 	for (let [t, n, r] of [
 		[
@@ -37764,7 +38282,7 @@ function ix() {
 				fr: "triangle"
 			}]
 		]
-	]) e.push(K(2, {
+	]) e.push(q(2, {
 		en: `${t.en}\n\nWhat bigger shape do they make?`,
 		fr: `${t.fr}\n\nQuelle plus grande forme obtient-on ?`
 	}, n, r));
@@ -37871,13 +38389,13 @@ function ix() {
 				fr: "deux cercles"
 			}]
 		]
-	]) e.push(K(3, {
+	]) e.push(q(3, {
 		en: `Which pieces can make ${t.en}?`,
 		fr: `Quelles pièces peuvent faire ${t.fr} ?`
 	}, n, r));
-	return U(e);
+	return V(e);
 }
-function ax() {
+function wx() {
 	let e = [], t = [
 		[
 			"🛞",
@@ -37885,7 +38403,7 @@ function ax() {
 				en: "wheel",
 				fr: "roue"
 			},
-			qb
+			fx
 		],
 		[
 			"🕐",
@@ -37893,7 +38411,7 @@ function ax() {
 				en: "clock",
 				fr: "horloge"
 			},
-			qb
+			fx
 		],
 		[
 			"🧇",
@@ -37901,7 +38419,7 @@ function ax() {
 				en: "waffle",
 				fr: "gaufre"
 			},
-			Jb
+			px
 		],
 		[
 			"🍕",
@@ -37909,7 +38427,7 @@ function ax() {
 				en: "slice of pizza",
 				fr: "part de pizza"
 			},
-			Yb
+			mx
 		],
 		[
 			"⛺",
@@ -37917,7 +38435,7 @@ function ax() {
 				en: "tent",
 				fr: "tente"
 			},
-			Yb
+			mx
 		],
 		[
 			"🍪",
@@ -37925,7 +38443,7 @@ function ax() {
 				en: "cookie",
 				fr: "biscuit"
 			},
-			qb
+			fx
 		]
 	], n = [
 		[
@@ -37934,7 +38452,7 @@ function ax() {
 				en: "door",
 				fr: "porte"
 			},
-			Xb
+			hx
 		],
 		[
 			"📱",
@@ -37942,7 +38460,7 @@ function ax() {
 				en: "phone",
 				fr: "téléphone"
 			},
-			Xb
+			hx
 		],
 		[
 			"📖",
@@ -37950,7 +38468,7 @@ function ax() {
 				en: "book",
 				fr: "livre"
 			},
-			Xb
+			hx
 		],
 		[
 			"📺",
@@ -37958,7 +38476,7 @@ function ax() {
 				en: "TV",
 				fr: "télé"
 			},
-			Xb
+			hx
 		],
 		[
 			"🧇",
@@ -37966,7 +38484,7 @@ function ax() {
 				en: "waffle",
 				fr: "gaufre"
 			},
-			Jb
+			px
 		],
 		[
 			"🧱",
@@ -37974,21 +38492,21 @@ function ax() {
 				en: "brick",
 				fr: "brique"
 			},
-			Xb
+			hx
 		]
-	], r = (t, [n, r, i], a) => e.push(K(t, {
+	], r = (t, [n, r, i], a) => e.push(q(t, {
 		en: `${n}\n\nThe ${r.en} has the shape of a...`,
 		fr: `${n}\n\nLa forme de ${r.fr} est un...`
 	}, i, a.filter((e) => e !== i)));
 	t.forEach((e) => r(1, e, [
-		qb,
-		Jb,
-		Yb
+		fx,
+		px,
+		mx
 	])), [...t.slice(0, 2), ...n].forEach((e) => r(2, e, [
-		qb,
-		Jb,
-		Yb,
-		Xb
+		fx,
+		px,
+		mx,
+		hx
 	]));
 	let i = {
 		en: "sphere",
@@ -38057,21 +38575,21 @@ function ax() {
 		a,
 		o,
 		s
-	])), U(e);
+	])), V(e);
 }
-var ox = [
+var Tx = [
 	"⬆️",
 	"➡️",
 	"⬇️",
 	"⬅️"
 ];
-function sx() {
+function Ex() {
 	let e = [], t = "0 1 2 3 4 5 6 7 8";
 	for (let n of [0, 1]) for (let r of [
 		1,
 		2,
 		3
-	]) e.push(q(1, {
+	]) e.push(J(1, {
 		en: `🤖 starts at ${n}.\n\n${t}\n\nIt walks forward ${r} steps. Where is it now?`,
 		fr: `🤖 part de ${n}.\n\n${t}\n\nIl avance de ${r} pas. Où est-il maintenant ?`
 	}, String(n + r), [String(n + r + 1), String(n + r + 2)]));
@@ -38108,7 +38626,7 @@ function sx() {
 		]
 	]) {
 		let a = n + r - i;
-		e.push(q(2, {
+		e.push(J(2, {
 			en: `🤖 starts at ${n}.\n\n${t}\n\nForward ${r} steps, then back ${i} steps. Where is it now?`,
 			fr: `🤖 part de ${n}.\n\n${t}\n\nAvance de ${r} pas, puis recule de ${i} pas. Où est-il maintenant ?`
 		}, String(a), [String(n + r), String(n + r + i)]));
@@ -38129,21 +38647,21 @@ function sx() {
 	];
 	for (let t = 0; t < 4; t++) for (let [r, i] of n) {
 		let n = (t + i) % 4;
-		e.push(q(3, {
-			en: `You face ${ox[t]}. ${r.en}.\n\nWhich way do you face now?`,
-			fr: `Tu regardes ${ox[t]}. ${r.fr}.\n\nVers où regardes-tu maintenant ?`
-		}, ox[n], ox.filter((e, t) => t !== n)));
+		e.push(J(3, {
+			en: `You face ${Tx[t]}. ${r.en}.\n\nWhich way do you face now?`,
+			fr: `Tu regardes ${Tx[t]}. ${r.fr}.\n\nVers où regardes-tu maintenant ?`
+		}, Tx[n], Tx.filter((e, t) => t !== n)));
 	}
-	return U(e);
+	return V(e);
 }
-var cx = [
+var Dx = [
 	"🟥",
 	"🟦",
 	"🟨",
 	"🟩"
 ];
-function lx() {
-	let e = [], [t, n, r, i] = cx, a = [
+function Ox() {
+	let e = [], [t, n, r, i] = Dx, a = [
 		[
 			1,
 			3,
@@ -38282,17 +38800,17 @@ function lx() {
 		return r.join(n);
 	};
 	for (let [t, n, r] of a) r.forEach((r, i) => {
-		let a = (e) => r.map((t, n) => n === e ? cx[(cx.indexOf(t) + 1) % cx.length] : t), s = i % r.length, c = (s + 1) % r.length;
-		e.push(q(t, {
+		let a = (e) => r.map((t, n) => n === e ? Dx[(Dx.indexOf(t) + 1) % Dx.length] : t), s = i % r.length, c = (s + 1) % r.length;
+		e.push(J(t, {
 			en: `Look at the model:\n${o(r, n, "\n")}\n\nWhich build is exactly the same?`,
 			fr: `Regarde le modèle :\n${o(r, n, "\n")}\n\nQuelle construction est exactement pareille ?`
 		}, o(r, n, " / "), [o(a(s), n, " / "), o(a(c), n, " / ")]));
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numberFacts.ts
-function ux() {
+function kx() {
 	let e = [];
 	for (let t of [
 		5,
@@ -38300,7 +38818,7 @@ function ux() {
 		1,
 		8,
 		2
-	]) e.push(G(1, {
+	]) e.push(K(1, {
 		en: `${t} and ___ make 10.`,
 		fr: `${t} et ___ font 10.`
 	}, 10 - t, [t, 11 - t], 0, 10, t));
@@ -38309,10 +38827,10 @@ function ux() {
 		4,
 		6,
 		7
-	]) e.push(G(2, {
+	]) e.push(K(2, {
 		en: `${t} and ___ make 10.`,
 		fr: `${t} et ___ font 10.`
-	}, 10 - t, [t, 11 - t], 0, 10, t), G(2, {
+	}, 10 - t, [t, 11 - t], 0, 10, t), K(2, {
 		en: `___ and ${t} make 10.`,
 		fr: `___ et ${t} font 10.`
 	}, 10 - t, [t, 9 - t], 0, 10, t));
@@ -38323,7 +38841,7 @@ function ux() {
 		6,
 		7,
 		8
-	]) e.push(q(3, {
+	]) e.push(J(3, {
 		en: "Which pair makes 10?",
 		fr: "Quelle paire fait 10 ?"
 	}, `${t} and ${10 - t}`, [
@@ -38331,58 +38849,58 @@ function ux() {
 		`${t} and ${11 - t}`,
 		`${t + 1} and ${11 - t}`
 	]));
-	return U(e);
+	return V(e);
 }
-var dx = {
+var Ax = {
 	en: "Some came: put together",
 	fr: "Il en est venu : on réunit"
-}, fx = {
+}, jx = {
 	en: "Some went: take away",
 	fr: "Il en est parti : on enlève"
-}, px = {
+}, Mx = {
 	en: "Nothing changed",
 	fr: "Rien n'a changé"
-}, mx = {
+}, Nx = {
 	en: "Put together",
 	fr: "Réunir"
-}, hx = {
+}, Px = {
 	en: "Take apart",
 	fr: "Séparer"
 };
-function gx() {
+function Fx() {
 	let e = [], t = [
 		[{
 			en: "🐦🐦 sit on a branch. 🐦 flies in.",
 			fr: "🐦🐦 sont sur une branche. 🐦 arrive."
-		}, dx],
+		}, Ax],
 		[{
 			en: "🍪🍪🍪 are on a plate. 🍪 is eaten.",
 			fr: "🍪🍪🍪 sont sur une assiette. 🍪 est mangé."
-		}, fx],
+		}, jx],
 		[{
 			en: "🚗 is parked. 🚗🚗 drive in.",
 			fr: "🚗 est garée. 🚗🚗 arrivent."
-		}, dx],
+		}, Ax],
 		[{
 			en: "🎈🎈🎈🎈 float. 🎈 pops.",
 			fr: "🎈🎈🎈🎈 flottent. 🎈 éclate."
-		}, fx],
+		}, jx],
 		[{
 			en: "🐟🐟 swim. 🐟 swims over to join them.",
 			fr: "🐟🐟 nagent. 🐟 vient les rejoindre."
-		}, dx],
+		}, Ax],
 		[{
 			en: "🍎🍎🍎 are in a bowl. 🍎🍎 are taken out.",
 			fr: "🍎🍎🍎 sont dans un bol. 🍎🍎 en sont sorties."
-		}, fx]
+		}, jx]
 	];
 	for (let [n, r] of t) {
 		let t = [
-			dx,
-			fx,
-			px
+			Ax,
+			jx,
+			Mx
 		].filter((e) => e !== r);
-		e.push(K(1, {
+		e.push(q(1, {
 			en: `${n.en}\n\nWhat happened?`,
 			fr: `${n.fr}\n\nQue s'est-il passé ?`
 		}, r, t));
@@ -38391,34 +38909,34 @@ function gx() {
 		[{
 			en: "🍎🍎 and 🍎 are pushed together.",
 			fr: "🍎🍎 et 🍎 sont poussées ensemble."
-		}, mx],
+		}, Nx],
 		[{
 			en: "🧱🧱🧱🧱 are split into two piles.",
 			fr: "🧱🧱🧱🧱 sont séparés en deux piles."
-		}, hx],
+		}, Px],
 		[{
 			en: "🐶🐶 and 🐶🐶 play together.",
 			fr: "🐶🐶 et 🐶🐶 jouent ensemble."
-		}, mx],
+		}, Nx],
 		[{
 			en: "🍓🍓🍓🍓🍓 are shared into two bowls.",
 			fr: "🍓🍓🍓🍓🍓 sont partagées dans deux bols."
-		}, hx],
+		}, Px],
 		[{
 			en: "🧸 and 🧸🧸 go in the same box.",
 			fr: "🧸 et 🧸🧸 vont dans la même boîte."
-		}, mx],
+		}, Nx],
 		[{
 			en: "🚌 with 🧒🧒🧒: the group splits up and some get off.",
 			fr: "🚌 avec 🧒🧒🧒 : le groupe se sépare et certains descendent."
-		}, hx]
+		}, Px]
 	];
 	for (let [t, r] of n) {
-		let n = r === mx ? hx : mx;
-		e.push(K(2, {
+		let n = r === Nx ? Px : Nx;
+		e.push(q(2, {
 			en: `${t.en}\n\nIs it putting together or taking apart?`,
 			fr: `${t.fr}\n\nOn réunit ou on sépare ?`
-		}, r, [n, px]));
+		}, r, [n, Mx]));
 	}
 	let r = [
 		{
@@ -38448,18 +38966,18 @@ function gx() {
 		}
 	];
 	return r.forEach((t, n) => {
-		e.push(K(3, {
+		e.push(q(3, {
 			en: "Which story is about ADDING?",
 			fr: "Quelle histoire parle d'AJOUTER ?"
 		}, t, [i[n], i[(n + 1) % 3]]));
 	}), i.forEach((t, n) => {
-		e.push(K(3, {
+		e.push(q(3, {
 			en: "Which story is about TAKING AWAY?",
 			fr: "Quelle histoire parle d'ENLEVER ?"
 		}, t, [r[n], r[(n + 1) % 3]]));
-	}), U(e);
+	}), V(e);
 }
-function _x() {
+function Ix() {
 	let e = [];
 	for (let [t, n, r] of [[
 		1,
@@ -38475,21 +38993,21 @@ function _x() {
 		3
 	]]) n.forEach((n, i) => {
 		for (let a = 0; a < r; a++) {
-			let r = J(B, i * 3 + a + t);
-			e.push(G(t, {
-				en: `${r.repeat(n)}${Py}${r.repeat(n)}\n\nDouble ${n}: ${n} and ${n} more. How many in all?`,
-				fr: `${r.repeat(n)}${Py}${r.repeat(n)}\n\nLe double de ${n} : ${n} et ${n} de plus. Combien en tout ?`
+			let r = Y(z, i * 3 + a + t);
+			e.push(K(t, {
+				en: `${r.repeat(n)}${Vy}${r.repeat(n)}\n\nDouble ${n}: ${n} and ${n} more. How many in all?`,
+				fr: `${r.repeat(n)}${Vy}${r.repeat(n)}\n\nLe double de ${n} : ${n} et ${n} de plus. Combien en tout ?`
 			}, 2 * n, [n, 2 * n + 1], 0, 10, n + a));
 		}
 	});
-	for (let t of W(1, 5)) e.push(G(3, {
+	for (let t of G(1, 5)) e.push(K(3, {
 		en: `What is double ${t}?`,
 		fr: `Quel est le double de ${t} ?`
 	}, 2 * t, [
 		t,
 		2 * t + 1,
 		2 * t - 1
-	], 0, 10, t), G(3, {
+	], 0, 10, t), K(3, {
 		en: `${t} and ${t} more make...`,
 		fr: `${t} et ${t} de plus font...`
 	}, 2 * t, [
@@ -38497,9 +39015,9 @@ function _x() {
 		2 * t + 1,
 		2 * t - 1
 	], 0, 10, t + 1));
-	return U(e);
+	return V(e);
 }
-function vx() {
+function Lx() {
 	let e = [];
 	return [
 		[1, 1],
@@ -38511,10 +39029,10 @@ function vx() {
 		[2, 3],
 		[3, 2]
 	].forEach(([t, n], r) => {
-		let i = J(B, r), a = J(B, r + 3), o = t + n;
-		e.push(q(1, {
-			en: `${H(t, i)}\n\n${H(n, a)}\n\nThe two groups are put together. Which number sentence matches?`,
-			fr: `${H(t, i)}\n\n${H(n, a)}\n\nOn réunit les deux groupes. Quelle phrase mathématique correspond ?`
+		let i = Y(z, r), a = Y(z, r + 3), o = t + n;
+		e.push(J(1, {
+			en: `${B(t, i)}\n\n${B(n, a)}\n\nThe two groups are put together. Which number sentence matches?`,
+			fr: `${B(t, i)}\n\n${B(n, a)}\n\nOn réunit les deux groupes. Quelle phrase mathématique correspond ?`
 		}, `${t} + ${n} = ${o}`, [`${t} + ${n} = ${o + 1}`, `${t} − ${n} = ${o}`]));
 	}), [
 		[3, 1],
@@ -38526,10 +39044,10 @@ function vx() {
 		[4, 3],
 		[5, 2]
 	].forEach(([t, n], r) => {
-		let i = J(B, r), a = t - n;
-		e.push(q(2, {
-			en: `${H(t, i)}\n\n${n} of them go away. Which number sentence matches?`,
-			fr: `${H(t, i)}\n\n${n} d'entre eux s'en vont. Quelle phrase mathématique correspond ?`
+		let i = Y(z, r), a = t - n;
+		e.push(J(2, {
+			en: `${B(t, i)}\n\n${n} of them go away. Which number sentence matches?`,
+			fr: `${B(t, i)}\n\n${n} d'entre eux s'en vont. Quelle phrase mathématique correspond ?`
 		}, `${t} − ${n} = ${a}`, [`${t} − ${n} = ${a + 1}`, `${t} + ${n} = ${t + n}`]));
 	}), [
 		[
@@ -38574,7 +39092,7 @@ function vx() {
 		]
 	].forEach(([t, n, r], i) => {
 		let a = r === "+" ? t + n : t - n;
-		e.push(G(3, {
+		e.push(K(3, {
 			en: `What goes in the box?\n\n${t} ${r} ${n} = ?`,
 			fr: `Que met-on dans la case ?\n\n${t} ${r} ${n} = ?`
 		}, a, [
@@ -38582,89 +39100,14 @@ function vx() {
 			n,
 			a + 1
 		], 0, 6, i));
-	}), U(e);
+	}), V(e);
 }
-function yx() {
-	let e = [];
-	for (let t of [
-		2,
-		4,
-		6
-	]) [0, 1].forEach((n) => {
-		let r = J(["🍪", "🍓"], n);
-		e.push(G(1, {
-			en: `${H(t, r)}\n\nShare these fairly between 2 children 🧒🧒. How many does each child get?`,
-			fr: `${H(t, r)}\n\nPartage-les équitablement entre 2 enfants 🧒🧒. Combien chaque enfant en reçoit-il ?`
-		}, t / 2, [t, t / 2 + 1], 0, 8, t + n));
-	});
-	[
-		[8, 2],
-		[10, 2],
-		[3, 3],
-		[6, 3],
-		[9, 3],
-		[4, 2]
-	].forEach(([t, n], r) => {
-		let i = J(B, r), a = "🧒".repeat(n);
-		e.push(G(2, {
-			en: `${H(t, i)}\n\nShare these fairly between ${n} children ${a}. How many does each child get?`,
-			fr: `${H(t, i)}\n\nPartage-les équitablement entre ${n} enfants ${a}. Combien chaque enfant en reçoit-il ?`
-		}, t / n, [
-			t,
-			n,
-			t / n + 1
-		], 0, 10, r));
-	});
-	let t = {
-		en: "Fair: the shares are equal",
-		fr: "Juste : les parts sont égales"
-	}, n = {
-		en: "Not fair: the shares are not equal",
-		fr: "Pas juste : les parts ne sont pas égales"
-	};
-	return [
-		[3, 1],
-		[2, 2],
-		[4, 4],
-		[5, 3],
-		[1, 4],
-		[3, 3],
-		[
-			2,
-			2,
-			2
-		],
-		[
-			3,
-			1,
-			3
-		],
-		[
-			1,
-			2,
-			1
-		]
-	].forEach((r, i) => {
-		let a = J([
-			"🍪",
-			"🍓",
-			"🍎"
-		], i), o = r.map((e) => `🧒 ${bx(e, a)}`).join("\n"), s = r.every((e) => e === r[0]);
-		e.push(K(3, {
-			en: `${o}\n\nIs this a fair share?`,
-			fr: `${o}\n\nLe partage est-il juste ?`
-		}, s ? t : n, [s ? n : t]));
-	}), U(e);
-}
-function bx(e, t) {
-	return H(e, t, " ");
-}
-function xx(e, t) {
+function Rx(e, t) {
 	let n = [];
 	for (let r = 0; r < e; r += 2) n.push(t.repeat(Math.min(2, e - r)));
-	return n.join(Py);
+	return n.join(Vy);
 }
-function Sx() {
+function zx() {
 	let e = [], t = {
 		en: "Yes, none left over",
 		fr: "Oui, il n'en reste aucun"
@@ -38672,11 +39115,11 @@ function Sx() {
 		en: "No, one is left over",
 		fr: "Non, il en reste un"
 	};
-	for (let [r, i] of [[1, W(2, 5)], [2, W(6, 10)]]) for (let a of i) ["🍎", "⭐"].forEach((i) => {
+	for (let [r, i] of [[1, G(2, 5)], [2, G(6, 10)]]) for (let a of i) ["🍎", "⭐"].forEach((i) => {
 		let o = a % 2 == 0;
-		e.push(K(r, {
-			en: `${xx(a, i)}\n\nCan you make pairs with none left over?`,
-			fr: `${xx(a, i)}\n\nPeux-tu faire des paires sans qu'il en reste ?`
+		e.push(q(r, {
+			en: `${Rx(a, i)}\n\nCan you make pairs with none left over?`,
+			fr: `${Rx(a, i)}\n\nPeux-tu faire des paires sans qu'il en reste ?`
 		}, o ? t : n, [o ? n : t]));
 	});
 	return [
@@ -38711,36 +39154,36 @@ function Sx() {
 			9
 		]]
 	].forEach(([t, n]) => {
-		e.push(q(3, {
+		e.push(J(3, {
 			en: "Which number can be made into pairs, with none left over?",
 			fr: "Quel nombre peut être partagé en paires, sans qu'il en reste ?"
 		}, String(t), n.map(String)));
-	}), U(e);
+	}), V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/measureMore.ts
-var Cx = [
+var Bx = [
 	"🪶",
 	"🐭",
 	"🐕",
 	"🐴",
 	"🐘",
 	"🚢"
-], wx = [
+], Vx = [
 	"🐜",
 	"✏️",
 	"🪑",
 	"🚌",
 	"🚂",
 	"🛣️"
-], Tx = [
+], Hx = [
 	"🥄",
 	"🥛",
 	"🥤",
 	"🪣",
 	"🛁",
 	"🏊"
-], Ex = [
+], Ux = [
 	{
 		weight: "🐘",
 		light: "🐭"
@@ -38765,51 +39208,51 @@ var Cx = [
 		weight: "🐘",
 		light: "🐕"
 	}
-], Dx = {
+], Wx = {
 	en: "Line up the ends",
 	fr: "Aligner les bouts"
-}, Ox = {
+}, Gx = {
 	en: "Use a balance ⚖️",
 	fr: "Utiliser une balance ⚖️"
-}, kx = {
+}, Kx = {
 	en: "Pour water from one into the other",
 	fr: "Verser de l'eau de l'un dans l'autre"
 };
-function Ax() {
+function qx() {
 	let e = [], t = [
 		{
 			en: "find out which is LONGER",
 			fr: "trouver lequel est le plus LONG",
-			tool: Dx,
+			tool: Wx,
 			pairs: [["🐍", "✏️"], ["🛣️", "🚂"]]
 		},
 		{
 			en: "find out which is HEAVIER",
 			fr: "trouver lequel est le plus LOURD",
-			tool: Ox,
+			tool: Gx,
 			pairs: [["🪨", "🍉"], ["🐘", "🐴"]]
 		},
 		{
 			en: "find out which HOLDS MORE",
 			fr: "trouver lequel CONTIENT LE PLUS",
-			tool: kx,
+			tool: Kx,
 			pairs: [["🥛", "🥤"], ["🛁", "🪣"]]
 		}
 	];
 	for (let n of t) for (let [t, r] of n.pairs) {
 		let i = [
-			Dx,
-			Ox,
-			kx
+			Wx,
+			Gx,
+			Kx
 		].filter((e) => e !== n.tool);
-		e.push(K(1, {
+		e.push(q(1, {
 			en: `${t} ${r}\n\nHow do you ${n.en}?`,
 			fr: `${t} ${r}\n\nComment ${n.fr} ?`
 		}, n.tool, i));
 	}
-	return Ex.forEach(({ weight: t, light: n }, r) => {
+	return Ux.forEach(({ weight: t, light: n }, r) => {
 		let i = r % 2 == 0, a = i ? t : n, o = i ? n : t, s = i ? "left" : "right", c = i ? "gauche" : "droite";
-		e.push(q(2, {
+		e.push(J(2, {
 			en: `⚖️ The ${s} side goes DOWN.\n\nLeft: ${a}  Right: ${o}\n\nWhich is heavier?`,
 			fr: `⚖️ Le côté ${c} descend.\n\nGauche : ${a}  Droite : ${o}\n\nLequel est le plus lourd ?`
 		}, t, [n]));
@@ -38819,19 +39262,19 @@ function Ax() {
 		[2, 5],
 		[0, 3]
 	].forEach(([t, n], r) => {
-		let i = Tx[t], a = Tx[n];
-		e.push(q(3, {
+		let i = Hx[t], a = Hx[n];
+		e.push(J(3, {
 			en: `Pour ${a} into ${i}: it overflows.\n\nWhich holds MORE?`,
 			fr: `Verse ${a} dans ${i} : ça déborde.\n\nLequel contient LE PLUS ?`
 		}, a, [i]));
-		let o = wx[t], s = wx[n], c = r % 2 == 0 ? `${o} ${s}` : `${s} ${o}`;
-		e.push(q(3, {
+		let o = Vx[t], s = Vx[n], c = r % 2 == 0 ? `${o} ${s}` : `${s} ${o}`;
+		e.push(J(3, {
 			en: `Both start at the same line. The ${s} sticks out further.\n\n${c}\n\nWhich is longer?`,
 			fr: `Les deux commencent à la même ligne. Le ${s} dépasse davantage.\n\n${c}\n\nLequel est le plus long ?`
 		}, s, [o]));
-	}), U(e);
+	}), V(e);
 }
-function jx() {
+function Jx() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -38938,7 +39381,7 @@ function jx() {
 		]]
 	]) n.forEach((n, r) => {
 		[0, 1].forEach((i) => {
-			let a = i === 0, o = a ? wx : Cx, s = n.map((e) => o[e]), c = [...s].reverse(), l = (r + i) % 2 == 0, u = l ? s : c, d = l ? c : s, f = qy(qy(s, 0, n.length - 1), 1, n.length - 2), p = a ? l ? {
+			let a = i === 0, o = a ? Vx : Bx, s = n.map((e) => o[e]), c = [...s].reverse(), l = (r + i) % 2 == 0, u = l ? s : c, d = l ? c : s, f = vb(vb(s, 0, n.length - 1), 1, n.length - 2), p = a ? l ? {
 				en: "SHORTEST to LONGEST",
 				fr: "du plus COURT au plus LONG"
 			} : {
@@ -38951,19 +39394,19 @@ function jx() {
 				en: "HEAVIEST to LIGHTEST",
 				fr: "du plus LOURD au plus LÉGER"
 			};
-			e.push(q(t, {
+			e.push(J(t, {
 				en: `${f.join(" ")}\n\nWhich row goes from ${p.en}?`,
 				fr: `${f.join(" ")}\n\nQuelle rangée va ${p.fr} ?`
 			}, u.join(" "), [
 				d.join(" "),
-				qy(u, 0, 1).join(" "),
-				qy(u, u.length - 2, u.length - 1).join(" ")
+				vb(u, 0, 1).join(" "),
+				vb(u, u.length - 2, u.length - 1).join(" ")
 			]));
 		});
 	});
-	return U(e);
+	return V(e);
 }
-var Mx = [
+var Yx = [
 	{
 		emoji: "👁️",
 		en: "blink",
@@ -39013,16 +39456,16 @@ var Mx = [
 		seconds: 36e3
 	}
 ];
-function Nx(e, t) {
+function Xx(e, t) {
 	let n = [];
-	return Mx.forEach((r, i) => {
-		Mx.forEach((a, o) => {
+	return Yx.forEach((r, i) => {
+		Yx.forEach((a, o) => {
 			let s = a.seconds / r.seconds;
 			s >= e && s < t && n.push([i, o]);
 		});
 	}), n;
 }
-var Px = [
+var Zx = [
 	[
 		1,
 		300,
@@ -39039,11 +39482,11 @@ var Px = [
 		40
 	]
 ];
-function Fx() {
+function Qx() {
 	let e = [];
-	for (let [t, n, r] of Px) Nx(n, r).slice(0, 12).forEach(([n, r], i) => {
-		let a = Mx[n], o = Mx[r], s = i % 2 == 0, c = (e, t) => `${e.emoji} ${e[t]}`;
-		e.push(K(t, {
+	for (let [t, n, r] of Zx) Xx(n, r).slice(0, 12).forEach(([n, r], i) => {
+		let a = Yx[n], o = Yx[r], s = i % 2 == 0, c = (e, t) => `${e.emoji} ${e[t]}`;
+		e.push(q(t, {
 			en: `Which takes ${s ? "LONGER" : "LESS TIME"}?`,
 			fr: `Qu'est-ce qui prend ${s ? "PLUS" : "MOINS"} de temps ?`
 		}, {
@@ -39054,19 +39497,19 @@ function Fx() {
 			fr: c(s ? a : o, "fr")
 		}]));
 	});
-	return U(e);
+	return V(e);
 }
-var Ix = {
+var $x = {
 	en: "Enough: one for each",
 	fr: "Assez : un pour chacun"
-}, Lx = {
+}, eS = {
 	en: "Not enough",
 	fr: "Pas assez"
-}, Rx = {
+}, tS = {
 	en: "More than enough",
 	fr: "Plus qu'assez"
 };
-function zx() {
+function nS() {
 	let e = [];
 	for (let [t, n] of [[1, [
 		[2, 4],
@@ -39083,18 +39526,18 @@ function zx() {
 		[6, 6],
 		[5, 3]
 	]]]) n.forEach(([n, r], i) => {
-		let a = J([
+		let a = Y([
 			"🥛",
 			"🍽️",
 			"🪑"
-		], i), o = r === n ? Ix : r > n ? Rx : Lx;
-		e.push(K(t, {
-			en: `${H(n, "🧒")}\n\n${H(r, a)}\n\nIs there ${a} for every child?`,
-			fr: `${H(n, "🧒")}\n\n${H(r, a)}\n\nY a-t-il un ${a} pour chaque enfant ?`
+		], i), o = r === n ? $x : r > n ? tS : eS;
+		e.push(q(t, {
+			en: `${B(n, "🧒")}\n\n${B(r, a)}\n\nIs there ${a} for every child?`,
+			fr: `${B(n, "🧒")}\n\n${B(r, a)}\n\nY a-t-il un ${a} pour chaque enfant ?`
 		}, o, [
-			Ix,
-			Rx,
-			Lx
+			$x,
+			tS,
+			eS
 		].filter((e) => e !== o)));
 	});
 	return [
@@ -39107,22 +39550,22 @@ function zx() {
 		[5, 1],
 		[8, 6]
 	].forEach(([t, n], r) => {
-		let i = J([
+		let i = Y([
 			"🥛",
 			"🍽️",
 			"🪑"
 		], r), a = t - n;
-		e.push(G(3, {
-			en: `${H(t, "🧒")}\n\n${H(n, i)}\n\nHow many more ${i} do we need so every child has one?`,
-			fr: `${H(t, "🧒")}\n\n${H(n, i)}\n\nCombien de ${i} en plus faut-il pour que chaque enfant en ait un ?`
+		e.push(K(3, {
+			en: `${B(t, "🧒")}\n\n${B(n, i)}\n\nHow many more ${i} do we need so every child has one?`,
+			fr: `${B(t, "🧒")}\n\n${B(n, i)}\n\nCombien de ${i} en plus faut-il pour que chaque enfant en ait un ?`
 		}, a, [
 			n,
 			t,
 			a + 1
 		], 0, 8, r));
-	}), U(e);
+	}), V(e);
 }
-function Bx() {
+function rS() {
 	let e = [], t = {
 		en: "Few",
 		fr: "Peu"
@@ -39141,10 +39584,10 @@ function Bx() {
 		1,
 		8
 	].forEach((i, a) => {
-		let o = J(B, a);
-		e.push(K(1, {
-			en: `${H(i, o)}\n\nWithout counting: are there few or many?`,
-			fr: `${H(i, o)}\n\nSans compter : y en a-t-il peu ou beaucoup ?`
+		let o = Y(z, a);
+		e.push(q(1, {
+			en: `${B(i, o)}\n\nWithout counting: are there few or many?`,
+			fr: `${B(i, o)}\n\nSans compter : y en a-t-il peu ou beaucoup ?`
 		}, i <= 3 ? t : n, [i <= 3 ? n : t, r]));
 	}), [
 		2,
@@ -39156,14 +39599,14 @@ function Bx() {
 		9,
 		10
 	].forEach((t, n) => {
-		let r = J(B, n + 2), i = [
+		let r = Y(z, n + 2), i = [
 			2,
 			5,
 			10
 		].reduce((e, n) => Math.abs(n - t) < Math.abs(e - t) ? n : e);
-		e.push(q(2, {
-			en: `${H(t, r)}\n\nGuess without counting. About how many?`,
-			fr: `${H(t, r)}\n\nDevine sans compter. Environ combien ?`
+		e.push(J(2, {
+			en: `${B(t, r)}\n\nGuess without counting. About how many?`,
+			fr: `${B(t, r)}\n\nDevine sans compter. Environ combien ?`
 		}, `about ${i}`, [
 			2,
 			5,
@@ -39187,19 +39630,19 @@ function Bx() {
 		[10, 10],
 		[2, 3]
 	].forEach(([t, n], r) => {
-		let o = J(B, r + 5), s = Math.abs(t - n) <= 2;
-		e.push(K(3, {
-			en: `Dan guessed about ${t}. Count to check:\n\n${H(n, o)}\n\nWas the guess close?`,
-			fr: `Dan a deviné environ ${t}. Compte pour vérifier :\n\n${H(n, o)}\n\nSa réponse était-elle proche ?`
+		let o = Y(z, r + 5), s = Math.abs(t - n) <= 2;
+		e.push(q(3, {
+			en: `Dan guessed about ${t}. Count to check:\n\n${B(n, o)}\n\nWas the guess close?`,
+			fr: `Dan a deviné environ ${t}. Compte pour vérifier :\n\n${B(n, o)}\n\nSa réponse était-elle proche ?`
 		}, s ? i : a, [s ? a : i]));
-	}), U(e);
+	}), V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/beforeAfter.ts
-function Vx() {
+function iS() {
 	let e = [], t = (e, t) => t === "after" ? `🏠${e} ➡️ ___` : `___ ⬅️ 🏠${e}`, n = (n, r, i) => {
 		let a = i === "before" ? r - 1 : r + 1;
-		a < 1 || e.push(My(n, {
+		a < 1 || e.push(Ry(n, {
 			en: `${t(r, i)}\n\nWhich house number is missing?`,
 			fr: `${t(r, i)}\n\nQuel numéro de maison manque ?`
 		}, {
@@ -39214,30 +39657,30 @@ function Vx() {
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/cardinality.ts
-var Hx = {
+var aS = {
 	1: [1, 5],
 	2: [6, 10],
 	3: [11, 20]
 };
-function Ux() {
+function oS() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
 	]) {
-		let [n, r] = Hx[t];
+		let [n, r] = aS[t];
 		for (let i = n; i <= r; i++) {
-			let a = B[i % B.length], o = `${H(i, a)}\n❓`;
-			e.push(R(t, {
+			let a = z[i % z.length], o = `${B(i, a)}\n❓`;
+			e.push(jy(t, {
 				en: `${o}\n\nHow many were there?`,
 				fr: `${o}\n\nCombien y en avait-il ?`
-			}, String(i), V(i, [], Math.max(0, n - 2), r + 2, i)));
+			}, String(i), zy(i, [], Math.max(0, n - 2), r + 2, i)));
 		}
 	}
-	return U(e);
+	return V(e);
 }
-function Wx() {
+function sS() {
 	let e = [], t = {
 		1: ["off-by-one"],
 		2: ["off-by-one", "rearranged"],
@@ -39252,65 +39695,65 @@ function Wx() {
 		2,
 		3
 	]) {
-		let [r, i] = Hx[n];
+		let [r, i] = aS[n];
 		for (let a = r; a <= i; a++) {
-			let r = B[a * 3 % B.length], i = (e) => H(e, r), o = {
+			let r = z[a * 3 % z.length], i = (e) => B(e, r), o = {
 				en: `Counting: ..., ${a}!`,
 				fr: `On compte : ..., ${a} !`
 			};
-			e.push(Ay(n, {
+			e.push(Iy(n, {
 				en: `${i(a)}\n\n${o.en}\n\nThere are ${a}.`,
 				fr: `${i(a)}\n\n${o.fr}\n\nIl y en a ${a}.`
 			}, !0));
 			for (let s of t[n]) if (s === "off-by-one") {
 				let t = a + (a % 2 == 0 ? 1 : -1);
-				e.push(Ay(n, {
+				e.push(Iy(n, {
 					en: `${i(a)}\n\n${o.en}\n\nThere are ${t}.`,
 					fr: `${i(a)}\n\n${o.fr}\n\nIl y en a ${t}.`
 				}, !1));
 			} else if (s === "rearranged" && a >= 2) {
-				let t = `${H(a, r, " ")} (moved around)`;
-				e.push(Ay(n, {
+				let t = `${B(a, r, " ")} (moved around)`;
+				e.push(Iy(n, {
 					en: `${t}\n\n${o.en}\n\nThere are still ${a}.`,
 					fr: `${t}\n\n${o.fr}\n\nIl y en a toujours ${a}.`
 				}, !0));
-			} else s === "added-after" && e.push(Ay(n, {
-				en: `${i(a)}\n\n${o.en}\n\n${B[(a + 1) % B.length]} was added after counting.\n\nThere are still ${a}.`,
-				fr: `${i(a)}\n\n${o.fr}\n\n${B[(a + 1) % B.length]} a été ajouté après le comptage.\n\nIl y en a toujours ${a}.`
+			} else s === "added-after" && e.push(Iy(n, {
+				en: `${i(a)}\n\n${o.en}\n\n${z[(a + 1) % z.length]} was added after counting.\n\nThere are still ${a}.`,
+				fr: `${i(a)}\n\n${o.fr}\n\n${z[(a + 1) % z.length]} a été ajouté après le comptage.\n\nIl y en a toujours ${a}.`
 			}, !1));
 		}
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/compareNumerals.ts
-var Gx = {
+var cS = {
 	en: "BIGGER",
 	fr: "PLUS GRAND"
-}, Kx = {
+}, lS = {
 	en: "SMALLER",
 	fr: "PLUS PETIT"
-}, qx = [
+}, uS = [
 	"⭐",
 	"🍎",
 	"🐟",
 	"🎈"
-], Jx = {
+], dS = {
 	moreDots: "activity.preschool-bigger-number.feedback.reveal.moreDots",
 	fewerDots: "activity.preschool-bigger-number.feedback.reveal.fewerDots",
 	zeroVsOne: "activity.preschool-bigger-number.feedback.zeroVsOne",
 	oneMore: "activity.preschool-bigger-number.feedback.oneMore"
-}, Yx = {
+}, fS = {
 	moreBy: "compareNum.feedback.moreBy",
 	matchUp: "compareNum.feedback.matchUp",
 	zero: "compareNum.feedback.zero"
 };
-function Xx(e, t, n = 1, r = 99) {
+function pS(e, t, n = 1, r = 99) {
 	let i = [];
 	for (let a = e; a <= t; a++) for (let e = a + n; e <= Math.min(t, a + r); e++) i.push([a, e]);
 	return i;
 }
-function Zx(e, t, n, r) {
+function mS(e, t, n, r) {
 	if (e === "line") return {
 		type: "number-line",
 		min: 0,
@@ -39318,7 +39761,7 @@ function Zx(e, t, n, r) {
 		step: 1,
 		marked: t === n ? [t] : [Math.min(t, n), Math.max(t, n)]
 	};
-	let i = qx[r % qx.length];
+	let i = uS[r % uS.length];
 	return {
 		type: "counters",
 		groups: [{
@@ -39331,37 +39774,37 @@ function Zx(e, t, n, r) {
 		operator: "vs"
 	};
 }
-function Qx(e, t, n) {
+function hS(e, t, n) {
 	let r = Math.min(e, t), i = Math.max(e, t);
-	return r === 0 && i === 1 ? Jx.zeroVsOne : i - r === 1 ? Jx.oneMore : n ? Jx.fewerDots : Jx.moreDots;
+	return r === 0 && i === 1 ? dS.zeroVsOne : i - r === 1 ? dS.oneMore : n ? dS.fewerDots : dS.moreDots;
 }
-function $x() {
+function gS() {
 	let e = [], t = (t, n, r, i, a) => {
-		let o = i ? Kx : Gx, s = i ? n : r, c = i ? r : n, l = (n + r + a) % 2 == 1 ? [c, s] : [s, c], u = t === 1 ? Zx("dots", l[0], l[1], n + r) : t === 3 ? Zx("line", n, r, 0) : void 0;
-		e.push(Y(t, {
+		let o = i ? lS : cS, s = i ? n : r, c = i ? r : n, l = (n + r + a) % 2 == 1 ? [c, s] : [s, c], u = t === 1 ? mS("dots", l[0], l[1], n + r) : t === 3 ? mS("line", n, r, 0) : void 0;
+		e.push(H(t, {
 			en: `Which number is ${o.en}?`,
 			fr: `Quel nombre est ${o.fr} ?`
-		}, { en: l.map(String) }, l.indexOf(s), u, l.map((e) => e === s ? null : Qx(s, e, i))));
+		}, { en: l.map(String) }, l.indexOf(s), u, l.map((e) => e === s ? null : hS(s, e, i))));
 	};
-	for (let [e, n] of Xx(1, 5, 2)) t(1, e, n, !1, 0), t(1, e, n, !0, 0);
-	Xx(0, 10).forEach(([e, n], r) => t(2, e, n, r % 2 == 1, 0));
-	for (let [e, n] of Xx(0, 10, 1, 2)) t(3, e, n, !1, 0), t(3, e, n, !0, 0);
-	return X(e);
+	for (let [e, n] of pS(1, 5, 2)) t(1, e, n, !1, 0), t(1, e, n, !0, 0);
+	pS(0, 10).forEach(([e, n], r) => t(2, e, n, r % 2 == 1, 0));
+	for (let [e, n] of pS(0, 10, 1, 2)) t(3, e, n, !1, 0), t(3, e, n, !0, 0);
+	return U(e);
 }
-function eS(e, t, n, r) {
-	return Math.min(e, t) === 0 && Math.abs(e - t) === 1 ? Yx.zero : Math.abs(e - t) <= 1 || r === 2 || n === 2 ? Yx.matchUp : Yx.moreBy;
+function _S(e, t, n, r) {
+	return Math.min(e, t) === 0 && Math.abs(e - t) === 1 ? fS.zero : Math.abs(e - t) <= 1 || r === 2 || n === 2 ? fS.matchUp : fS.moreBy;
 }
-function tS() {
+function vS() {
 	let e = [], t = (t, n, r, i) => {
-		let a = (n * 2 + r + i) % 3 == 0, [o, s] = (n + r + i) % 2 == 1 ? [r, n] : [n, r], c = a ? Kx : Gx, l = a ? n : r, u = a ? r : n, d = `${o} ${s}`, f = t === 3 ? Zx("line", n, r, 0) : Zx("dots", o, s, n + r + i);
-		e.push(Y(t, {
+		let a = (n * 2 + r + i) % 3 == 0, [o, s] = (n + r + i) % 2 == 1 ? [r, n] : [n, r], c = a ? lS : cS, l = a ? n : r, u = a ? r : n, d = `${o} ${s}`, f = t === 3 ? mS("line", n, r, 0) : mS("dots", o, s, n + r + i);
+		e.push(H(t, {
 			en: `${d}\n\nWhich is ${c.en}?`,
 			fr: `${d}\n\nLequel est ${c.fr} ?`
-		}, { en: [String(l), String(u)] }, 0, f, [null, eS(n, r, u, 0)]));
+		}, { en: [String(l), String(u)] }, 0, f, [null, _S(n, r, u, 0)]));
 	};
-	for (let [e, n] of Xx(1, 5, 2)) t(1, e, n, 0), t(1, e, n, 1);
-	for (let [e, n] of Xx(0, 10, 1, 3)) t(2, e, n, 0);
-	for (let [e, n] of Xx(0, 10, 1, 3)) t(3, e, n, 1);
+	for (let [e, n] of pS(1, 5, 2)) t(1, e, n, 0), t(1, e, n, 1);
+	for (let [e, n] of pS(0, 10, 1, 3)) t(2, e, n, 0);
+	for (let [e, n] of pS(0, 10, 1, 3)) t(3, e, n, 1);
 	let n = {
 		en: [
 			"Bigger",
@@ -39384,41 +39827,41 @@ function tS() {
 			let r = t + i;
 			if (r < 0 || r > 10) continue;
 			let a = t > r ? 0 : t < r ? 1 : 2;
-			e.push(Y(4, {
+			e.push(H(4, {
 				en: `${t} ${r}\n\nLeft: bigger, smaller or same?`,
 				fr: `${t} ${r}\n\nGauche : plus grand, plus petit ou pareil ?`
-			}, n, a, Zx("line", t, r, 0), n.en.map((e, n) => n === a ? null : eS(t, r, n, a))));
+			}, n, a, mS("line", t, r, 0), n.en.map((e, n) => n === a ? null : _S(t, r, n, a))));
 		}
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/conservation.ts
-var nS = {
+var yS = {
 	longerNotMore: "stillTheSame.feedback.longerNotMore",
 	pairedSame: "stillTheSame.feedback.pairedSame",
 	leftover: "stillTheSame.feedback.leftover",
 	addedHidden: "stillTheSame.feedback.addedHidden",
 	kindDoesNotMatter: "stillTheSame.feedback.kindDoesNotMatter"
-}, rS = {
+}, bS = {
 	longerTrap: "whichRowHasMore.feedback.longerTrap",
 	spreadSame: "whichRowHasMore.feedback.spreadSame",
 	leftover: "whichRowHasMore.feedback.leftover"
-}, iS = {
+}, xS = {
 	en: "Same number now?",
 	fr: "Toujours le même nombre ?"
-}, aS = {
+}, SS = {
 	en: ["Same", "Not same"],
 	fr: ["Pareil", "Pas pareil"]
 };
-function oS(e, t) {
-	let n = (e * 2 + t) % B.length;
-	return [B[n], B[(n + 1 + e % 3) % B.length]];
+function CS(e, t) {
+	let n = (e * 2 + t) % z.length;
+	return [z[n], z[(n + 1 + e % 3) % z.length]];
 }
-function sS() {
+function wS() {
 	let e = [], t = (t, n, r, i, a) => {
-		let [o, s] = oS(n, a), c = t === 1 ? o : s, l = n === r, u = t === 3, d = l ? t === 2 ? nS.kindDoesNotMatter : t === 1 ? nS.longerNotMore : nS.pairedSame : u ? nS.addedHidden : nS.leftover;
-		e.push(Y(t, iS, aS, +!l, {
+		let [o, s] = CS(n, a), c = t === 1 ? o : s, l = n === r, u = t === 3, d = l ? t === 2 ? yS.kindDoesNotMatter : t === 1 ? yS.longerNotMore : yS.pairedSame : u ? yS.addedHidden : yS.leftover;
+		e.push(H(t, xS, SS, +!l, {
 			type: "counters",
 			groups: [{
 				emoji: o,
@@ -39435,9 +39878,9 @@ function sS() {
 	for (let e = 2; e <= 5; e++) t(1, e, e, "spread", 0), t(1, e, e, "squeeze", 4), e <= 3 ? t(1, e, e + 1, "add", 2) : t(1, e, e - 1, "remove", 2);
 	for (let e = 2; e <= 8; e++) t(2, e, e, e % 2 == 0 ? "spread" : "squeeze", 1), e <= 4 ? t(2, e, e + 1, "add", 3) : t(2, e, e - 1, "remove", 3);
 	for (let e = 3; e <= 10; e++) t(3, e, e, e % 2 == 0 ? "spread" : "squeeze", 2), e <= 6 ? t(3, e, e + 1, "add", 5) : t(3, e, e - 1, "remove", 5);
-	return X(e);
+	return U(e);
 }
-var cS = {
+var TS = {
 	top: {
 		en: "Top row",
 		fr: "Rangée du haut"
@@ -39451,22 +39894,22 @@ var cS = {
 		fr: "Pareil"
 	}
 };
-function lS() {
+function ES() {
 	let e = [], t = 0, n = (t, n, r, i) => {
-		let [a, o] = oS(n + r, i), s = n === r ? 2 : n > r ? 0 : 1, c = n === r ? rS.spreadSame : Math.abs(n - r) === 1 ? rS.longerTrap : rS.leftover;
-		e.push(Y(t, {
+		let [a, o] = CS(n + r, i), s = n === r ? 2 : n > r ? 0 : 1, c = n === r ? bS.spreadSame : Math.abs(n - r) === 1 ? bS.longerTrap : bS.leftover;
+		e.push(H(t, {
 			en: "Which row has more?",
 			fr: "Quelle rangée en a le plus ?"
 		}, {
 			en: [
-				cS.top.en,
-				cS.bottom.en,
-				cS.same.en
+				TS.top.en,
+				TS.bottom.en,
+				TS.same.en
 			],
 			fr: [
-				cS.top.fr,
-				cS.bottom.fr,
-				cS.same.fr
+				TS.top.fr,
+				TS.bottom.fr,
+				TS.same.fr
 			]
 		}, s, {
 			type: "pick-group",
@@ -39490,11 +39933,11 @@ function lS() {
 	for (let e = 3; e <= 6; e++) n(2, ...r(e + 2, e), 4);
 	for (let e = 2; e <= 8; e++) n(3, ...r(e + 1, e), 2), n(3, ...r(e + 1, e), 7);
 	for (let e = 3; e <= 6; e++) n(3, e, e, 5);
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/countOn.ts
-var uS = {
+var DS = {
 	1: [
 		2,
 		2,
@@ -39526,24 +39969,24 @@ var uS = {
 		19
 	]
 };
-function dS() {
+function OS() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) uS[t].forEach((n, r) => {
-		let i = n + 1, a = `${B[(n * 5 + r) % B.length]} 🎒 (${n} inside)`;
-		e.push(R(t, {
+	]) DS[t].forEach((n, r) => {
+		let i = n + 1, a = `${z[(n * 5 + r) % z.length]} 🎒 (${n} inside)`;
+		e.push(jy(t, {
 			en: `${a}\n\nStart counting at ${n}. What comes next?`,
 			fr: `${a}\n\nCommence à compter à ${n}. Quel est le suivant ?`
-		}, String(i), V(i, [n], 0, Math.max(12, Math.min(20, i + 2)), n + r)));
+		}, String(i), zy(i, [n], 0, Math.max(12, Math.min(20, i + 2)), n + r)));
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/days.ts
-var fS = [
+var kS = [
 	"Monday",
 	"Tuesday",
 	"Wednesday",
@@ -39551,7 +39994,7 @@ var fS = [
 	"Friday",
 	"Saturday",
 	"Sunday"
-], pS = [
+], AS = [
 	"lundi",
 	"mardi",
 	"mercredi",
@@ -39559,14 +40002,14 @@ var fS = [
 	"vendredi",
 	"samedi",
 	"dimanche"
-], mS = "🏫", hS = "🏠", gS = {
-	en: `${mS} school  ${hS} weekend`,
-	fr: `${mS} école  ${hS} week-end`
+], jS = "🏫", MS = "🏠", NS = {
+	en: `${jS} school  ${MS} weekend`,
+	fr: `${jS} école  ${MS} week-end`
 };
-function _S(e, t) {
-	return `${t % 7 >= 5 ? hS : mS} ${e[t % 7]}`;
+function PS(e, t) {
+	return `${t % 7 >= 5 ? MS : jS} ${e[t % 7]}`;
 }
-var vS = (e) => _S(fS, e), yS = (e) => _S(pS, e), bS = [
+var FS = (e) => PS(kS, e), IS = (e) => PS(AS, e), LS = [
 	0,
 	1,
 	2,
@@ -39575,7 +40018,7 @@ var vS = (e) => _S(fS, e), yS = (e) => _S(pS, e), bS = [
 	5,
 	6
 ];
-function xS() {
+function RS() {
 	let e = [], t = {
 		1: [
 			0,
@@ -39600,23 +40043,23 @@ function xS() {
 			r,
 			r + 1,
 			r + 2
-		], a = i.filter((e, n) => n !== t).map((e) => e % 7), o = i[t] % 7, s = bS.filter((e) => e !== o && !a.includes(e));
+		], a = i.filter((e, n) => n !== t).map((e) => e % 7), o = i[t] % 7, s = LS.filter((e) => e !== o && !a.includes(e));
 		for (let r = 0; r < s.length; r++) {
 			let a = s.filter((e, t) => t !== r), c = (e) => i.map((n, r) => r === t ? "❓" : e(n)).join(" ");
-			e.push(z(n, {
-				prompt: `${c(vS)}\n\nWhich day is missing?\n${gS.en}`,
-				options: [o, ...a].map(vS)
+			e.push(R(n, {
+				prompt: `${c(FS)}\n\nWhich day is missing?\n${NS.en}`,
+				options: [o, ...a].map(FS)
 			}, {
-				prompt: `${c(yS)}\n\nQuel jour manque ?\n${gS.fr}`,
-				options: [o, ...a].map(yS)
+				prompt: `${c(IS)}\n\nQuel jour manque ?\n${NS.fr}`,
+				options: [o, ...a].map(IS)
 			}));
 		}
 	}
-	return U(e);
+	return V(e);
 }
-function SS() {
+function zS() {
 	let e = [], t = (t, n, r) => {
-		let i = (n + (r ? 1 : 6)) % 7, a = (n + (r ? 6 : 1)) % 7, o = bS.filter((e) => e !== n && e !== i && e !== a);
+		let i = (n + (r ? 1 : 6)) % 7, a = (n + (r ? 6 : 1)) % 7, o = LS.filter((e) => e !== n && e !== i && e !== a);
 		for (let s = 0; s < 3; s++) {
 			let c = o.filter((e, t) => t !== s), l = t === 1 ? c : [a, ...c.slice(0, 2)], u = r ? {
 				en: "AFTER",
@@ -39625,18 +40068,18 @@ function SS() {
 				en: "BEFORE",
 				fr: "AVANT"
 			}, d = s === 1 ? {
-				en: `Today is ${fS[n]}. ${r ? "Tomorrow" : "Yesterday"} is...?`,
-				fr: `Aujourd'hui, c'est ${pS[n]}. ${r ? "Demain, c'est" : "Hier, c'était"}...?`
+				en: `Today is ${kS[n]}. ${r ? "Tomorrow" : "Yesterday"} is...?`,
+				fr: `Aujourd'hui, c'est ${AS[n]}. ${r ? "Demain, c'est" : "Hier, c'était"}...?`
 			} : {
-				en: `Which day comes ${u.en} ${fS[n]}?`,
-				fr: `Quel jour vient ${u.fr} ${pS[n]} ?`
+				en: `Which day comes ${u.en} ${kS[n]}?`,
+				fr: `Quel jour vient ${u.fr} ${AS[n]} ?`
 			};
-			e.push(z(t, {
-				prompt: `${vS(n)}\n\n${d.en}\n${gS.en}`,
-				options: [i, ...l].map(vS)
+			e.push(R(t, {
+				prompt: `${FS(n)}\n\n${d.en}\n${NS.en}`,
+				options: [i, ...l].map(FS)
 			}, {
-				prompt: `${yS(n)}\n\n${d.fr}\n${gS.fr}`,
-				options: [i, ...l].map(yS)
+				prompt: `${IS(n)}\n\n${d.fr}\n${NS.fr}`,
+				options: [i, ...l].map(IS)
 			}));
 		}
 	};
@@ -39645,111 +40088,48 @@ function SS() {
 	for (let e = 0; e < 6; e++) t(2, e, !0);
 	for (let e = 1; e < 7; e++) t(2, e, !1);
 	for (let e = 0; e < 7; e++) t(3, e, !0), t(3, e, !1);
-	return U(e);
-}
-//#endregion
-//#region packages/syllabus-content-p/src/banks/decomposeFive.ts
-var CS = [
-	[0, 5],
-	[1, 4],
-	[2, 3],
-	[3, 2],
-	[4, 1],
-	[5, 0]
-];
-function wS() {
-	let e = [], t = B[3];
-	for (let [t, n] of CS) e.push(My(1, {
-		en: `${t} and ___ make 5`,
-		fr: `${t} et ___ font 5`
-	}, {
-		en: String(n),
-		fr: String(n)
-	})), e.push(My(2, {
-		en: `___ and ${n} make 5`,
-		fr: `___ et ${n} font 5`
-	}, {
-		en: String(t),
-		fr: String(t)
-	})), e.push(My(2, {
-		en: `${t} and ___ make 5`,
-		fr: `${t} et ___ font 5`
-	}, {
-		en: String(n),
-		fr: String(n)
-	}));
-	for (let [n, r] of CS) e.push(My(3, {
-		en: `${t.repeat(n)} ${t.repeat(r)}\n\nHow do these two groups split 5? ___`,
-		fr: `${t.repeat(n)} ${t.repeat(r)}\n\nComment ces deux groupes partagent-ils 5 ? ___`
-	}, {
-		en: `${n} and ${r}`,
-		fr: `${n} et ${r}`
-	}));
-	return U(e);
-}
-function TS() {
-	let e = [], t = (e, t) => `${e} + ${t}`, n = [[1, 4], [2, 3]];
-	for (let r of [
-		1,
-		2,
-		3
-	]) for (let [i, a] of CS) {
-		let o = [i, a].sort((e, t) => e - t).join("-"), s = n.find(([e, t]) => [e, t].sort((e, t) => e - t).join("-") !== o), c = [
-			t(s[0], s[1]),
-			t(i, a),
-			"1 + 5",
-			"2 + 2"
-		];
-		new Set(c).size < c.length || e.push(z(r, {
-			prompt: `${i} + ${a} = 5.\n\nWhich is a DIFFERENT way to make 5?`,
-			options: c
-		}, {
-			prompt: `${i} + ${a} = 5.\n\nQuelle est une AUTRE façon de faire 5 ?`,
-			options: c
-		}));
-	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/countingFoundation.ts
-var ES = "⚫", DS = "⚪";
-function OS(e) {
-	let t = [...e].map((e) => e === "x" ? ES : DS);
+var BS = "⚫", VS = "⚪";
+function HS(e) {
+	let t = [...e].map((e) => e === "x" ? BS : VS);
 	return [
 		0,
 		3,
 		6
 	].map((e) => t.slice(e, e + 3).join("")).join("\n");
 }
-var kS = {
-	1: OS("....x...."),
-	2: OS("x.......x"),
-	3: OS("x...x...x"),
-	4: OS("x.x...x.x"),
-	5: OS("x.x.x.x.x")
-}, AS = {
+var US = {
+	1: HS("....x...."),
+	2: HS("x.......x"),
+	3: HS("x...x...x"),
+	4: HS("x.x...x.x"),
+	5: HS("x.x.x.x.x")
+}, WS = {
 	1: "⚀",
 	2: "⚁",
 	3: "⚂",
 	4: "⚃",
 	5: "⚄"
-}, jS = {
+}, GS = {
 	3: [
-		OS("xx......x"),
-		OS("xxx......"),
-		OS("x..x..x..")
+		HS("xx......x"),
+		HS("xxx......"),
+		HS("x..x..x..")
 	],
 	4: [
-		OS("xx.xx...."),
-		OS("xxxx....."),
-		OS("x..x..x.x")
+		HS("xx.xx...."),
+		HS("xxxx....."),
+		HS("x..x..x.x")
 	],
 	5: [
-		OS("xxx.xx..."),
-		OS("xxxxx...."),
-		OS("x.xx.x..x")
+		HS("xxx.xx..."),
+		HS("xxxxx...."),
+		HS("x.xx.x..x")
 	]
-}, MS = [
+}, KS = [
 	[1, [
 		11,
 		12,
@@ -39766,9 +40146,9 @@ var kS = {
 		19
 	]]
 ];
-function NS() {
+function qS() {
 	let e = [];
-	for (let [t, n] of MS) for (let r of n) [[
+	for (let [t, n] of KS) for (let r of n) [[
 		r - 2,
 		r - 1,
 		null,
@@ -39779,30 +40159,30 @@ function NS() {
 		r - 1,
 		r - 2
 	]].forEach((n, i) => {
-		let a = n.filter((e) => e !== null), o = n.map((e) => e === null ? "___" : String(e)).join(", "), s = [r - 10, ...Array.from({ length: 11 }, (e, t) => 10 + t)].filter((e) => e !== r && !a.includes(e)), c = Oy(r, s, 3, 2), l = (c[i] ?? c[0]).map(String);
-		e.push(R(t, {
+		let a = n.filter((e) => e !== null), o = n.map((e) => e === null ? "___" : String(e)).join(", "), s = [r - 10, ...Array.from({ length: 11 }, (e, t) => 10 + t)].filter((e) => e !== r && !a.includes(e)), c = Py(r, s, 3, 2), l = (c[i] ?? c[0]).map(String);
+		e.push(jy(t, {
 			en: `Count: ${o}. Which number is missing?`,
 			fr: `Compte : ${o}. Quel nombre manque ?`
 		}, String(r), l));
 	});
-	return U(e);
+	return V(e);
 }
-function PS() {
-	let e = [], t = (t, n, r, i) => e.push(R(t, {
+function JS() {
+	let e = [], t = (t, n, r, i) => e.push(jy(t, {
 		en: `${r}\n\nWhich number is it?`,
 		fr: `${r}\n\nQuel nombre est-ce ?`
-	}, String(n), V(n, [n === 1 ? 2 : n - 1, n + 1], 1, 8, i)));
-	for (let e = 1; e <= 3; e++) t(1, e, AS[e], e), t(1, e, kS[e], e + 1);
-	for (let e = 1; e <= 5; e++) t(2, e, AS[e], e + 2), t(2, e, kS[e], e + 3);
-	for (let e = 3; e <= 5; e++) jS[e].forEach((n, r) => t(3, e, n, e + r));
-	return U(e);
+	}, String(n), zy(n, [n === 1 ? 2 : n - 1, n + 1], 1, 8, i)));
+	for (let e = 1; e <= 3; e++) t(1, e, WS[e], e), t(1, e, US[e], e + 1);
+	for (let e = 1; e <= 5; e++) t(2, e, WS[e], e + 2), t(2, e, US[e], e + 3);
+	for (let e = 3; e <= 5; e++) GS[e].forEach((n, r) => t(3, e, n, e + r));
+	return V(e);
 }
-var FS = [
+var YS = [
 	"🔴",
 	"🔵",
 	"🟡"
 ];
-function IS() {
+function XS() {
 	let e = [], t = (t, n, r, i, a) => {
 		let o = i === "total" ? n : n - 5, [s, c] = i === "total" ? [4, 10] : [0, 6], l = i === "total" ? {
 			en: "How many in all?",
@@ -39812,7 +40192,7 @@ function IS() {
 			fr: "Cinq et combien de plus ?"
 		};
 		e.push({
-			...R(t, l, String(o), V(o, [o + 1, o - 1], s, c, n)),
+			...jy(t, l, String(o), zy(o, [o + 1, o - 1], s, c, n)),
 			scene: {
 				type: "ten-frame",
 				filled: n,
@@ -39825,24 +40205,24 @@ function IS() {
 		6,
 		7,
 		8
-	]) FS.slice(0, 2).forEach((n) => t(1, e, n, "total"));
+	]) YS.slice(0, 2).forEach((n) => t(1, e, n, "total"));
 	for (let e of [
 		6,
 		7,
 		8,
 		9,
 		10
-	]) FS.slice(0, 2).forEach((n) => t(2, e, n, "extra", 2e3));
+	]) YS.slice(0, 2).forEach((n) => t(2, e, n, "extra", 2e3));
 	for (let e of [
 		6,
 		7,
 		8,
 		9,
 		10
-	]) FS.slice(1).forEach((n) => t(3, e, n, "total", 1e3));
-	return X(e);
+	]) YS.slice(1).forEach((n) => t(3, e, n, "total", 1e3));
+	return U(e);
 }
-var LS = [
+var ZS = [
 	{
 		key: "circle",
 		en: "stand in a circle",
@@ -39859,7 +40239,7 @@ var LS = [
 		fr: "sont très espacés"
 	}
 ];
-function RS() {
+function QS() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -39879,30 +40259,30 @@ function RS() {
 			20
 		]]
 	]) for (let r of n) {
-		let n = B[r * 5 % B.length], i = H(r, n);
-		LS.forEach((n, a) => {
-			e.push(R(t, {
+		let n = z[r * 5 % z.length], i = B(r, n);
+		ZS.forEach((n, a) => {
+			e.push(jy(t, {
 				en: `${i}\n\nNow they ${n.en}. How many are there now?`,
 				fr: `${i}\n\nMaintenant ils ${n.fr}. Combien y en a-t-il ?`
-			}, String(r), V(r, [
+			}, String(r), zy(r, [
 				r - 1,
 				r + 1,
 				5
 			], 5, 22, r + a)));
-		}), t === 3 && e.push(R(t, {
+		}), t === 3 && e.push(jy(t, {
 			en: `${i}\n\nNow they stand in a circle and 1 more joins. How many in all?`,
 			fr: `${i}\n\nMaintenant ils se mettent en cercle et 1 de plus arrive. Combien en tout ?`
-		}, String(r + 1), V(r + 1, [
+		}, String(r + 1), zy(r + 1, [
 			r,
 			r + 2,
 			5
 		], 5, 22, r)));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/tenFrameActivities.ts
-var zS = {
+var $S = {
 	count: "tenFrame.feedback.count",
 	fiveAnd: (e) => `tenFrame.feedback.n${e.toString()}`,
 	fillAddMissing: "fillTheFrame.feedback.addMissing",
@@ -39913,11 +40293,11 @@ var zS = {
 	hideTotal: "hideCounters.feedback.total",
 	hideRecount: "hideCounters.feedback.recount"
 };
-function BS(e, t, n, r, i, a, o, s, c) {
-	let l = [String(n), ...V(n, r, i, a, o)];
-	return Y(e, t, { en: l }, 0, s, l.map((e, t) => t === 0 ? null : c));
+function eC(e, t, n, r, i, a, o, s, c) {
+	let l = [String(n), ...zy(n, r, i, a, o)];
+	return H(e, t, { en: l }, 0, s, l.map((e, t) => t === 0 ? null : c));
 }
-var VS = [{
+var tC = [{
 	emoji: "⭐",
 	en: "stars",
 	fr: "Combien d'étoiles le magicien a-t-il cachées ?"
@@ -39925,7 +40305,7 @@ var VS = [{
 	emoji: "🔵",
 	en: "dots",
 	fr: "Combien de points le magicien a-t-il cachés ?"
-}], HS = 3e3, US = (e, t) => e <= 1 || e < 10 && (e + t) % 2 == 0 ? e + 1 : e - 1, WS = [[
+}], nC = 3e3, rC = (e, t) => e <= 1 || e < 10 && (e + t) % 2 == 0 ? e + 1 : e - 1, iC = [[
 	5,
 	6,
 	7,
@@ -39948,14 +40328,14 @@ var VS = [{
 	4,
 	9
 ]];
-function GS(e, t, n) {
+function aC(e, t, n) {
 	let r = Array.from({ length: 10 }, () => "⬜");
-	return WS[t].slice(0, e).forEach((e) => r[e] = n), Ny(r);
+	return iC[t].slice(0, e).forEach((e) => r[e] = n), By(r);
 }
-var KS = (e) => e > 5 ? zS.fiveAnd(e) : zS.count;
-function qS() {
+var oC = (e) => e > 5 ? $S.fiveAnd(e) : $S.count;
+function sC() {
 	let e = [];
-	return VS.forEach(({ emoji: t, en: n, fr: r }, i) => {
+	return tC.forEach(({ emoji: t, en: n, fr: r }, i) => {
 		let a = {
 			en: `How many ${n} did the magician hide?`,
 			fr: r
@@ -39963,19 +40343,19 @@ function qS() {
 			type: "ten-frame",
 			filled: e,
 			emoji: t,
-			flashMs: HS
+			flashMs: nC
 		});
-		for (let t = 1; t <= 5; t++) e.push(BS(1, a, t, [US(t, i)], 1, 10, t + i, o(t), KS(t)));
-		for (let t = 6; t <= 10; t++) e.push(BS(2, a, t, [US(t, i), 5], 1, 10, t + i, o(t), KS(t)));
-		for (let n = 4; n <= 9; n++) WS.forEach((r, a) => {
-			e.push(BS(3, {
-				en: `${GS(n, a, t)}\n\nHow many ${t} are on the frame?`,
-				fr: `${GS(n, a, t)}\n\nCombien de ${t} y a-t-il sur le cadre ?`
-			}, n, [US(n, i), 5], 1, 10, n + a + i, void 0, KS(n)));
+		for (let t = 1; t <= 5; t++) e.push(eC(1, a, t, [rC(t, i)], 1, 10, t + i, o(t), oC(t)));
+		for (let t = 6; t <= 10; t++) e.push(eC(2, a, t, [rC(t, i), 5], 1, 10, t + i, o(t), oC(t)));
+		for (let n = 4; n <= 9; n++) iC.forEach((r, a) => {
+			e.push(eC(3, {
+				en: `${aC(n, a, t)}\n\nHow many ${t} are on the frame?`,
+				fr: `${aC(n, a, t)}\n\nCombien de ${t} y a-t-il sur le cadre ?`
+			}, n, [rC(n, i), 5], 1, 10, n + a + i, void 0, oC(n)));
 		});
-	}), X(e);
+	}), U(e);
 }
-var JS = [{
+var cC = [{
 	emoji: "🐰",
 	en: "bunnies",
 	fr: "lapins"
@@ -39983,7 +40363,7 @@ var JS = [{
 	emoji: "🐥",
 	en: "chicks",
 	fr: "poussins"
-}], YS = {
+}], lC = {
 	1: [
 		[3, 1],
 		[4, 2],
@@ -40009,9 +40389,9 @@ var JS = [{
 		[9, 7]
 	]
 };
-function XS() {
+function uC() {
 	let e = [];
-	return JS.forEach((t, n) => {
+	return cC.forEach((t, n) => {
 		let r = (e) => ({
 			type: "ten-frame",
 			filled: e,
@@ -40021,21 +40401,21 @@ function XS() {
 			1,
 			2,
 			3
-		]) for (let [a, o] of YS[i]) e.push(BS(i, {
+		]) for (let [a, o] of lC[i]) e.push(eC(i, {
 			en: `${o.toString()} ${t.en} are inside. The house needs ${a.toString()}. How many more must come in?`,
 			fr: `${o.toString()} ${t.fr} sont dedans. La maison en veut ${a.toString()}. Combien doivent encore entrer ?`
-		}, a - o, [o, a], 0, 10, a + n, r(o), zS.fillAddMissing));
-	}), X(e);
+		}, a - o, [o, a], 0, 10, a + n, r(o), $S.fillAddMissing));
+	}), U(e);
 }
-var ZS = ["🧒", "🐻"];
-function QS() {
+var dC = ["🧒", "🐻"];
+function fC() {
 	let e = [];
-	return ZS.forEach((t, n) => {
+	return dC.forEach((t, n) => {
 		let r = (e) => ({
 			type: "ten-frame",
 			filled: e,
 			emoji: t
-		}), i = (e, t, i) => BS(e, i, 10 - t, [t, n % 2 == 0 ? 11 - t : 9 - t], 0, 10, t + n, r(t), zS.gap), a = (e) => ({
+		}), i = (e, t, i) => eC(e, i, 10 - t, [t, n % 2 == 0 ? 11 - t : 9 - t], 0, 10, t + n, r(t), $S.gap), a = (e) => ({
 			en: `The bus has 10 seats. ${e.toString()} ${t} are on it. How many empty seats?`,
 			fr: `Le bus a 10 places. ${e.toString()} ${t} sont montés. Combien de places vides ?`
 		});
@@ -40054,17 +40434,17 @@ function QS() {
 			en: `${t.toString()} and ___ make 10. Look at the bus.`,
 			fr: `${t.toString()} et ___ font 10. Regarde le bus.`
 		}));
-	}), X(e);
+	}), U(e);
 }
-var $S = [
+var pC = [
 	"🟠",
 	"🔵",
 	"🟢"
 ];
-function eC(e, t, n) {
-	return Ny(Array.from({ length: t }, (t, r) => r < e ? n : "⬜"), Py);
+function mC(e, t, n) {
+	return By(Array.from({ length: t }, (t, r) => r < e ? n : "⬜"), Vy);
 }
-var tC = {
+var hC = {
 	1: {
 		answers: [
 			1,
@@ -40096,26 +40476,26 @@ var tC = {
 		size: 10
 	}
 };
-function nC() {
+function gC() {
 	let e = [];
-	return $S.forEach((t, n) => {
+	return pC.forEach((t, n) => {
 		for (let r of [
 			1,
 			2,
 			3
 		]) {
-			let { answers: i, size: a } = tC[r];
+			let { answers: i, size: a } = hC[r];
 			for (let o of i) {
-				let i = V(o, [o - 1, o + 1], 0, a, o + n).map(Number), s = [o, ...i].map((e) => eC(e, a, t));
-				e.push(Y(r, {
+				let i = zy(o, [o - 1, o + 1], 0, a, o + n).map(Number), s = [o, ...i].map((e) => mC(e, a, t));
+				e.push(H(r, {
 					en: `Find the frame that shows ${o.toString()}.`,
 					fr: `Trouve le cadre qui montre ${o.toString()}.`
-				}, { en: s }, 0, void 0, [null, ...i.map((e) => e < o ? zS.frameFew : zS.frameMany)]));
+				}, { en: s }, 0, void 0, [null, ...i.map((e) => e < o ? $S.frameFew : $S.frameMany)]));
 			}
 		}
-	}), X(e);
+	}), U(e);
 }
-var rC = [{
+var _C = [{
 	emoji: "🐞",
 	en: "ladybugs",
 	fr: "coccinelles"
@@ -40123,7 +40503,7 @@ var rC = [{
 	emoji: "🐥",
 	en: "chicks",
 	fr: "poussins"
-}], iC = {
+}], vC = {
 	1: [
 		[2, 1],
 		[3, 1],
@@ -40161,16 +40541,16 @@ var rC = [{
 		[10, 5]
 	]
 };
-function aC() {
+function yC() {
 	let e = [];
-	return rC.forEach((t, n) => {
+	return _C.forEach((t, n) => {
 		for (let r of [
 			1,
 			2,
 			3
-		]) for (let [i, a] of iC[r]) {
-			let o = i - a, s = [a, ...V(a, [i, o], 0, 10, i + n).map(Number)];
-			e.push(Y(r, {
+		]) for (let [i, a] of vC[r]) {
+			let o = i - a, s = [a, ...zy(a, [i, o], 0, 10, i + n).map(Number)];
+			e.push(H(r, {
 				en: `There are ${i.toString()} ${t.en} in all. You can see ${o.toString()}. The others hide under the leaves. How many are hiding?`,
 				fr: `Il y a ${i.toString()} ${t.fr} en tout. Tu en vois ${o.toString()}. Les autres se cachent sous les feuilles. Combien sont cachés ?`
 			}, { en: s.map(String) }, 0, {
@@ -40178,37 +40558,37 @@ function aC() {
 				filled: o,
 				emoji: t.emoji,
 				hidden: a
-			}, s.map((e, t) => t === 0 ? null : e === o ? zS.hideSeen : e === i ? zS.hideTotal : zS.hideRecount)));
+			}, s.map((e, t) => t === 0 ? null : e === o ? $S.hideSeen : e === i ? $S.hideTotal : $S.hideRecount)));
 		}
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/flashDots.ts
-var oC = [
+var bC = [
 	"  ",
 	"    ",
 	" ",
 	"   ",
 	" "
 ];
-function sC(e, t, n) {
+function xC(e, t, n) {
 	let r = t;
-	for (let i = 1; i < e; i++) r += oC[(i + n * 2) % oC.length] + t;
+	for (let i = 1; i < e; i++) r += bC[(i + n * 2) % bC.length] + t;
 	return r;
 }
-var cC = [
+var SC = [
 	"⭐",
 	"🍎",
 	"🐟",
 	"🎈"
-], lC = {
+], CC = {
 	en: "How many?",
 	fr: "Combien ?"
-}, uC = {
+}, wC = {
 	offByOne: "flashDots.feedback.offByOne",
 	regroup: "flashDots.feedback.regroup"
 };
-function dC(e, t) {
+function TC(e, t) {
 	let n = t <= 3;
 	switch (e) {
 		case 1: return 1800;
@@ -40217,37 +40597,37 @@ function dC(e, t) {
 		default: return n ? 1200 : 1500;
 	}
 }
-function fC(e, t, n, r) {
-	let i = V(t, [n % 2 == 0 ? t < 5 ? t + 1 : t - 1 : t > 1 ? t - 1 : t + 1], 1, 5, n), a = [String(t), ...i], o = a.map((e, n) => n === 0 ? null : Math.abs(Number(e) - t) === 1 ? uC.offByOne : uC.regroup);
-	return Y(e, lC, { en: a }, 0, r, o);
+function EC(e, t, n, r) {
+	let i = zy(t, [n % 2 == 0 ? t < 5 ? t + 1 : t - 1 : t > 1 ? t - 1 : t + 1], 1, 5, n), a = [String(t), ...i], o = a.map((e, n) => n === 0 ? null : Math.abs(Number(e) - t) === 1 ? wC.offByOne : wC.regroup);
+	return H(e, CC, { en: a }, 0, r, o);
 }
-function pC() {
+function DC() {
 	let e = [];
-	for (let t = 1; t <= 3; t++) cC.forEach((n, r) => e.push(fC(1, t, r, {
+	for (let t = 1; t <= 3; t++) SC.forEach((n, r) => e.push(EC(1, t, r, {
 		type: "counters",
 		groups: [{
 			emoji: n,
 			count: t
 		}],
-		flashMs: dC(1, t)
+		flashMs: TC(1, t)
 	})));
-	for (let t = 1; t <= 5; t++) cC.slice(0, 3).forEach((n, r) => e.push(fC(2, t, r, {
+	for (let t = 1; t <= 5; t++) SC.slice(0, 3).forEach((n, r) => e.push(EC(2, t, r, {
 		type: "ten-frame",
 		filled: t,
 		emoji: n,
-		flashMs: dC(2, t)
+		flashMs: TC(2, t)
 	})));
-	for (let t = 1; t <= 5; t++) cC.forEach((n, r) => e.push(fC(3, t, r + 1, {
+	for (let t = 1; t <= 5; t++) SC.forEach((n, r) => e.push(EC(3, t, r + 1, {
 		type: "counters",
 		groups: [{
 			emoji: n,
 			count: t
 		}],
-		flashMs: dC(3, t)
+		flashMs: TC(3, t)
 	})));
 	for (let t = 2; t <= 5; t++) for (let n = 1; n < t; n++) {
-		let [r, i] = [cC[(t + n) % 4], cC[(t + n + 1) % 4]];
-		e.push(fC(4, t, n, {
+		let [r, i] = [SC[(t + n) % 4], SC[(t + n + 1) % 4]];
+		e.push(EC(4, t, n, {
 			type: "counters",
 			groups: [{
 				emoji: r,
@@ -40256,14 +40636,14 @@ function pC() {
 				emoji: i,
 				count: t - n
 			}],
-			flashMs: dC(4, t)
+			flashMs: TC(4, t)
 		}));
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numberHunt.ts
-var mC = {
+var OC = {
 	0: [6, 8],
 	1: [7, 4],
 	2: [5, 7],
@@ -40274,44 +40654,44 @@ var mC = {
 	7: [1, 2],
 	8: [3, 0],
 	9: [6, 4]
-}, hC = {
+}, kC = {
 	lookalike: "numberHunt.feedback.lookalike",
 	generic: "numberHunt.feedback.generic"
-}, gC = [
+}, AC = [
 	"⭐",
 	"🍎",
 	"🐟"
 ];
-function _C(e) {
-	let t = ub(e);
+function jC(e) {
+	let t = $y(e);
 	return {
 		en: `Find ${t.en}.`,
 		fr: `Trouve le ${t.fr}.`
 	};
 }
-function vC(e, t, n) {
+function MC(e, t, n) {
 	let r = [
-		...mC[t],
-		...mC[n],
-		...mC[e]
+		...OC[t],
+		...OC[n],
+		...OC[e]
 	];
-	return [...new Set(r)].filter((r) => r !== e && r !== t && r !== n && !Ey([
+	return [...new Set(r)].filter((r) => r !== e && r !== t && r !== n && !My([
 		e,
 		t,
 		n,
 		r
 	]));
 }
-var yC = (e) => Number([...String(e)].reverse().join(""));
-function bC(e) {
+var NC = (e) => Number([...String(e)].reverse().join(""));
+function PC(e) {
 	let t = e % 10, n = [
-		yC(e),
-		Math.floor(e / 10) * 10 + mC[t][0],
+		NC(e),
+		Math.floor(e / 10) * 10 + OC[t][0],
 		e >= 20 ? e - 10 : e + 10,
 		t === 0 ? 1 : t,
 		e - 1,
 		e + 1
-	], r = [...new Set(n)].filter((t) => t !== e), i = r.slice(0, 2), a = r.slice(2).find((t) => !Ey([
+	], r = [...new Set(n)].filter((t) => t !== e), i = r.slice(0, 2), a = r.slice(2).find((t) => !My([
 		e,
 		...i,
 		t
@@ -40319,49 +40699,49 @@ function bC(e) {
 	if (a === void 0) throw Error(`no distractors for ${e}`);
 	return [...i, a];
 }
-function xC(e, t) {
-	return e < 10 ? mC[e].includes(t) : t === yC(e) || t === Math.floor(e / 10) * 10 + mC[e % 10][0];
+function FC(e, t) {
+	return e < 10 ? OC[e].includes(t) : t === NC(e) || t === Math.floor(e / 10) * 10 + OC[e % 10][0];
 }
-function SC() {
+function IC() {
 	let e = [], t = (t, n, r, i) => {
-		e.push(Y(t, _C(n), { en: [String(n), ...r] }, 0, i, [null, ...r.map((e) => xC(n, Number(e)) ? hC.lookalike : hC.generic)]));
+		e.push(H(t, jC(n), { en: [String(n), ...r] }, 0, i, [null, ...r.map((e) => FC(n, Number(e)) ? kC.lookalike : kC.generic)]));
 	};
 	for (let e = 0; e <= 9; e++) {
-		e >= 1 && e <= 5 && ky(e, 1, 5, 3, 3).forEach((n, r) => t(1, e, n, {
+		e >= 1 && e <= 5 && Fy(e, 1, 5, 3, 3).forEach((n, r) => t(1, e, n, {
 			type: "counters",
 			groups: [{
-				emoji: gC[r % gC.length],
+				emoji: AC[r % AC.length],
 				count: e
 			}]
 		}));
-		for (let n of ky(e, 0, 9, 3, 3)) t(2, e, n);
-		let [n, r] = mC[e];
-		for (let i of vC(e, n, r).slice(0, 3)) t(3, e, [
+		for (let n of Fy(e, 0, 9, 3, 3)) t(2, e, n);
+		let [n, r] = OC[e];
+		for (let i of MC(e, n, r).slice(0, 3)) t(3, e, [
 			String(n),
 			String(r),
 			String(i)
 		]);
 	}
-	for (let e = 10; e <= 20; e++) t(3, e, bC(e).map(String));
-	return X(e);
+	for (let e = 10; e <= 20; e++) t(3, e, PC(e).map(String));
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numberSenseK.ts
-var CC = {
+var LC = {
 	en: "Keep them: it is exactly right",
 	fr: "Garde-les : c'est exactement ça"
-}, wC = (e) => ({
+}, RC = (e) => ({
 	en: `Put ${e} back`,
 	fr: `Remets-en ${e}`
-}), TC = (e) => ({
+}), zC = (e) => ({
 	en: `Grab ${e} more`,
 	fr: `Prends-en ${e} de plus`
 });
-function EC() {
+function BC() {
 	let e = [], t = [
 		[
 			1,
-			W(5, 10),
+			G(5, 10),
 			[
 				0,
 				2,
@@ -40370,7 +40750,7 @@ function EC() {
 		],
 		[
 			2,
-			W(11, 15),
+			G(11, 15),
 			[
 				0,
 				1,
@@ -40379,7 +40759,7 @@ function EC() {
 		],
 		[
 			3,
-			W(16, 20),
+			G(16, 20),
 			[
 				0,
 				-1,
@@ -40392,28 +40772,28 @@ function EC() {
 		i.forEach((i, a) => {
 			let o = t + i;
 			if (o > 20) return;
-			let s = J(B, n * 5 + r + a * 3), c = Math.abs(i), [l, u] = i === 0 ? [CC, [
-				wC(1),
-				TC(1),
-				wC(2)
-			]] : i > 0 ? [wC(c), [
-				CC,
-				TC(c),
-				wC(c + 1)
-			]] : [TC(c), [
-				CC,
-				wC(c),
-				TC(c + 1)
+			let s = Y(z, n * 5 + r + a * 3), c = Math.abs(i), [l, u] = i === 0 ? [LC, [
+				RC(1),
+				zC(1),
+				RC(2)
+			]] : i > 0 ? [RC(c), [
+				LC,
+				zC(c),
+				RC(c + 1)
+			]] : [zC(c), [
+				LC,
+				RC(c),
+				zC(c + 1)
 			]];
-			e.push(K(n, {
-				en: `You want exactly ${t} ${s}. Your hand 🤲 has:\n\n${H(o, s)}\n\nCount them. What do you do?`,
-				fr: `Tu veux exactement ${t} ${s}. Dans ta main 🤲 il y a :\n\n${H(o, s)}\n\nCompte-les. Que fais-tu ?`
+			e.push(q(n, {
+				en: `You want exactly ${t} ${s}. Your hand 🤲 has:\n\n${B(o, s)}\n\nCount them. What do you do?`,
+				fr: `Tu veux exactement ${t} ${s}. Dans ta main 🤲 il y a :\n\n${B(o, s)}\n\nCompte-les. Que fais-tu ?`
 			}, l, u));
 		});
 	});
-	return U(e);
+	return V(e);
 }
-function DC() {
+function VC() {
 	let e = [], t = (t, n, r, i) => {
 		let a = r ? n + 1 : n - 1, o = r ? n - 1 : n + 1, s = r ? n + 2 : n - 2, c = r ? {
 			en: "Tap the card for ONE MORE.",
@@ -40422,7 +40802,7 @@ function DC() {
 			en: "Tap the card for ONE LESS.",
 			fr: "Touche la carte « un de moins »."
 		};
-		e.push(G(t, {
+		e.push(K(t, {
 			en: `🎈 Pop! ${n} pops up.\n\n${c.en}`,
 			fr: `🎈 Pop ! ${n} apparaît.\n\n${c.fr}`
 		}, a, [
@@ -40434,40 +40814,40 @@ function DC() {
 	for (let e = 0; e <= 9; e++) t(1, e, !0, 10);
 	for (let e = 0; e <= 10; e++) e < 10 && t(2, e, !0, 10), e > 0 && t(2, e, !1, 10);
 	for (let e = 0; e <= 20; e++) e < 20 && t(3, e, !0, 20), e > 0 && t(3, e, !1, 20);
-	return U(e);
+	return V(e);
 }
-var OC = (e, t) => W(e, t).join(" ");
-function kC() {
+var HC = (e, t) => G(e, t).join(" ");
+function UC() {
 	let e = [];
-	for (let t of W(2, 8)) e.push(G(1, {
+	for (let t of G(2, 8)) e.push(K(1, {
 		en: `Count on: ${t} ${t + 1} ...\n\nWhat comes next?`,
 		fr: `On compte en avant : ${t} ${t + 1} ...\n\nQu'est-ce qui vient ensuite ?`
 	}, t + 2, [t + 1, t + 3], 0, 10, t));
-	for (let t of W(2, 9)) e.push(G(2, {
+	for (let t of G(2, 9)) e.push(K(2, {
 		en: `Start at ${t}. Count on.\n\nWhat do you say next?`,
 		fr: `Commence à ${t}. Compte en avant.\n\nQue dis-tu ensuite ?`
 	}, t + 1, [t - 1, t + 2], 0, 10, t));
-	for (let t of W(2, 9)) {
-		let n = W(t, 10).filter((e) => e !== t + 1).join(" "), r = W(0, t).reverse().join(" ");
-		e.push(q(3, {
+	for (let t of G(2, 9)) {
+		let n = G(t, 10).filter((e) => e !== t + 1).join(" "), r = G(0, t).reverse().join(" ");
+		e.push(J(3, {
 			en: `Start at ${t} and count on to 10.\n\nWhich row is right?`,
 			fr: `Commence à ${t} et compte en avant jusqu'à 10.\n\nQuelle rangée est la bonne ?`
-		}, OC(t, 10), t === 9 ? [
+		}, HC(t, 10), t === 9 ? [
 			"10 9",
 			r,
 			"8 9 10"
 		] : [
 			n,
-			OC(t, 9),
+			HC(t, 9),
 			r
 		]));
 	}
-	return U(e);
+	return V(e);
 }
-function AC() {
+function WC() {
 	let e = [], t = (t, n, r, i) => {
-		let a = Math.min(n, r + 3), o = Math.max(0, r - 2), s = W(o, a).reverse().map((e) => e === r ? "?" : String(e)).join(" "), c = `${a < n ? "... " : ""}${s}${o === 0 ? " 🚀" : " ..."}`;
-		e.push(G(t, {
+		let a = Math.min(n, r + 3), o = Math.max(0, r - 2), s = G(o, a).reverse().map((e) => e === r ? "?" : String(e)).join(" "), c = `${a < n ? "... " : ""}${s}${o === 0 ? " 🚀" : " ..."}`;
+		e.push(K(t, {
 			en: `🚀 Countdown from ${n}!\n\n${c}\n\nWhich number is missing?`,
 			fr: `🚀 Compte à rebours depuis ${n} !\n\n${c}\n\nQuel nombre manque ?`
 		}, r, [r + 1, r - 1], 0, Math.max(n, 6), i));
@@ -40476,7 +40856,7 @@ function AC() {
 		5,
 		4,
 		3
-	].forEach((e, n) => W(0, e - 1).forEach((r) => t(1, e, r, n + r))), [
+	].forEach((e, n) => G(0, e - 1).forEach((r) => t(1, e, r, n + r))), [
 		10,
 		9,
 		8,
@@ -40498,9 +40878,9 @@ function AC() {
 		1,
 		2,
 		5
-	].forEach((r) => t(3, e, r, n + r))), U(e);
+	].forEach((r) => t(3, e, r, n + r))), V(e);
 }
-function jC() {
+function GC() {
 	let e = [];
 	for (let [t, n] of [
 		[1, [
@@ -40618,8 +40998,8 @@ function jC() {
 			]
 		]]
 	]) n.forEach((n, r) => {
-		let i = t < 3 || r % 2 == 0, a = [...n].sort((e, t) => i ? e - t : t - e), o = (e, t) => qy(a, e, t).join(" "), s = a.length - 1;
-		e.push(q(t, {
+		let i = t < 3 || r % 2 == 0, a = [...n].sort((e, t) => i ? e - t : t - e), o = (e, t) => vb(a, e, t).join(" "), s = a.length - 1;
+		e.push(J(t, {
 			en: `Cards: ${n.join(" ")}\n\nLine them up, ${i ? "smallest" : "biggest"} first. Which row is right?`,
 			fr: `Cartes : ${n.join(" ")}\n\nRange-les, ${i ? "la plus petite" : "la plus grande"} d'abord. Quelle rangée est la bonne ?`
 		}, a.join(" "), [
@@ -40628,14 +41008,14 @@ function jC() {
 			o(s - 1, s)
 		]));
 	});
-	return U(e);
+	return V(e);
 }
-function MC() {
-	let e = [], t = (e, t, n) => W(e, t).map((e) => n.includes(e) ? "?" : String(e)).join(" "), n = {
+function KC() {
+	let e = [], t = (e, t, n) => G(e, t).map((e) => n.includes(e) ? "?" : String(e)).join(" "), n = {
 		en: "Which card is missing?",
 		fr: "Quelle carte manque ?"
 	};
-	for (let r of W(2, 8)) e.push(G(1, {
+	for (let r of G(2, 8)) e.push(K(1, {
 		en: `${t(r - 2, r + 2, [r])}\n\n${n.en}`,
 		fr: `${t(r - 2, r + 2, [r])}\n\n${n.fr}`
 	}, r, [r - 1, r + 1], 0, 10, r));
@@ -40645,7 +41025,7 @@ function MC() {
 		2
 	]) {
 		let i = t(0, 5, [r]);
-		e.push(G(2, {
+		e.push(K(2, {
 			en: `${i}\n\n${n.en}`,
 			fr: `${i}\n\n${n.fr}`
 		}, r, [r + 1, r + 2], 0, 10, r));
@@ -40656,7 +41036,7 @@ function MC() {
 		10
 	]) {
 		let i = t(5, 10, [r]);
-		e.push(G(2, {
+		e.push(K(2, {
 			en: `${i}\n\n${n.en}`,
 			fr: `${i}\n\n${n.fr}`
 		}, r, [r - 1, r - 2], 0, 10, r));
@@ -40672,7 +41052,7 @@ function MC() {
 		[0, 6]
 	]) {
 		let i = t(0, 10, [n, r]), a = (e, t) => `${e} ${t}`;
-		e.push(q(3, {
+		e.push(J(3, {
 			en: `${i}\n\nWhich two cards are missing, in order?`,
 			fr: `${i}\n\nQuelles deux cartes manquent, dans l'ordre ?`
 		}, a(n, r), [
@@ -40681,9 +41061,9 @@ function MC() {
 			a(n, Math.min(10, r + 1) === r ? r - 1 : r + 1)
 		]));
 	}
-	return U(e);
+	return V(e);
 }
-function NC() {
+function qC() {
 	let e = [];
 	for (let [t, , n] of [
 		[
@@ -40726,7 +41106,7 @@ function NC() {
 		]
 	]) n.forEach(([n, r], i) => {
 		let [a, o] = i % 2 == 0 ? [n, r] : [r, n];
-		e.push(G(t, {
+		e.push(K(t, {
 			en: `🃏 Showdown!  ${a}  vs  ${o}\n\nThe bigger card wins. Which card wins?`,
 			fr: `🃏 Bataille !  ${a}  contre  ${o}\n\nLa plus grande carte gagne. Quelle carte gagne ?`
 		}, r, [
@@ -40735,12 +41115,12 @@ function NC() {
 			n - 1
 		], 0, 10, i + t));
 	});
-	return U(e);
+	return V(e);
 }
-function PC() {
+function JC() {
 	let e = [], t = (t, n, r, i, a) => {
 		let o = n - r, s = i ? `? and ${o}` : `${r} and ?`, c = i ? `? et ${o}` : `${r} et ?`;
-		e.push(G(t, {
+		e.push(K(t, {
 			en: `${n} is ${s}\n\nWhat is the missing part?`,
 			fr: `${n}, c'est ${c}\n\nQuelle est la partie qui manque ?`
 		}, i ? r : o, [
@@ -40749,7 +41129,7 @@ function PC() {
 			(i ? r : o) + 1
 		], 0, 10, a));
 	};
-	for (let e of [6, 7]) W(1, e - 1).forEach((n) => t(1, e, n, !1, n + e));
+	for (let e of [6, 7]) G(1, e - 1).forEach((n) => t(1, e, n, !1, n + e));
 	for (let e of [
 		8,
 		9,
@@ -40761,9 +41141,9 @@ function PC() {
 		5,
 		6
 	]) t(2, e, n, !1, n + e), t(2, e, n, !0, n + e + 1);
-	for (let t of W(6, 10)) for (let n of W(2, Math.floor(t / 2) + 1)) {
+	for (let t of G(6, 10)) for (let n of G(2, Math.floor(t / 2) + 1)) {
 		let r = t - n;
-		e.push(q(3, {
+		e.push(J(3, {
 			en: `Which two parts make ${t}?`,
 			fr: `Quelles deux parties font ${t} ?`
 		}, `${n} + ${r}`, [
@@ -40772,9 +41152,9 @@ function PC() {
 			`${n - 1} + ${r}`
 		]));
 	}
-	return U(e);
+	return V(e);
 }
-var FC = [
+var YC = [
 	{
 		en: "Start at the top, go round to the left and down, then come back up to the top.",
 		fr: "Pars du haut, tourne vers la gauche et descends, puis remonte jusqu'en haut."
@@ -40816,8 +41196,8 @@ var FC = [
 		fr: "Fais une boucle ronde en haut, puis une ligne droite vers le bas."
 	}
 ];
-function IC() {
-	let e = [], t = (e) => FC[e], n = (n, r, i) => e.push(K(n, {
+function XC() {
+	let e = [], t = (e) => YC[e], n = (n, r, i) => e.push(q(n, {
 		en: `✏️ How do you write ${r}?`,
 		fr: `✏️ Comment écrit-on ${r} ?`
 	}, t(r), i.map(t)));
@@ -40835,7 +41215,7 @@ function IC() {
 	]);
 	for (let e = 0; e <= 9; e++) {
 		let t = [.../* @__PURE__ */ new Set([
-			...mC[e],
+			...OC[e],
 			(e + 5) % 10,
 			(e + 3) % 10,
 			(e + 7) % 10,
@@ -40852,25 +41232,25 @@ function IC() {
 		7,
 		2,
 		4
-	]) e.push(G(3, {
+	]) e.push(K(3, {
 		en: `✏️ Your pencil does this:\n\n${t(n).en}\n\nWhich numeral is it?`,
 		fr: `✏️ Ton crayon fait ceci :\n\n${t(n).fr}\n\nQuel chiffre est-ce ?`
-	}, n, [...mC[n], (n + 5) % 10], 0, 9, n));
-	return U(e);
+	}, n, [...OC[n], (n + 5) % 10], 0, 9, n));
+	return V(e);
 }
-var LC = (e, t, n) => [...new Set(t)].filter((t) => t !== e).slice(0, n);
-function RC() {
+var ZC = (e, t, n) => [...new Set(t)].filter((t) => t !== e).slice(0, n);
+function QC() {
 	let e = [];
 	for (let t = 10; t <= 20; t++) {
 		let n = Math.floor(t / 10), r = t % 10;
-		e.push(G(1, {
+		e.push(K(1, {
 			en: `✏️ You write ${t}.\n\nWhich digit do you write FIRST?`,
 			fr: `✏️ Tu écris ${t}.\n\nQuel chiffre écris-tu EN PREMIER ?`
 		}, n, [
 			r,
 			n + 1,
 			0
-		], 0, 9, t)), e.push(G(2, {
+		], 0, 9, t)), e.push(K(2, {
 			en: `✏️ You write ${t}.\n\nWhich digit do you write SECOND?`,
 			fr: `✏️ Tu écris ${t}.\n\nQuel chiffre écris-tu EN SECOND ?`
 		}, r, [
@@ -40879,10 +41259,10 @@ function RC() {
 			(r + 2) % 10
 		], 0, 9, t));
 		let i = String(t);
-		e.push(q(3, {
+		e.push(J(3, {
 			en: `You write a ${n}, and then a ${r}.\n\nWhich numeral did you write?`,
 			fr: `Tu écris un ${n}, puis un ${r}.\n\nQuel nombre as-tu écrit ?`
-		}, i, LC(i, [
+		}, i, ZC(i, [
 			`${r}${n}`,
 			`${n}0${r}`,
 			`${r}`,
@@ -40890,16 +41270,16 @@ function RC() {
 			`${t + 1}`
 		], 3)));
 	}
-	return U(e);
+	return V(e);
 }
-var zC = (e) => W(0, 10).map((e) => e * 10).filter((t) => t !== e).sort((t, n) => Math.abs(t - e) - Math.abs(n - e) || t - n).slice(0, 3);
-function BC() {
+var $C = (e) => G(0, 10).map((e) => e * 10).filter((t) => t !== e).sort((t, n) => Math.abs(t - e) - Math.abs(n - e) || t - n).slice(0, 3);
+function ew() {
 	let e = [], t = (t, n, r, i) => {
 		let a = n.join(" ");
-		e.push(G(t, {
+		e.push(K(t, {
 			en: `🪜 Tens staircase:\n\n${a}\n\nWhich number is on the missing step?`,
 			fr: `🪜 Escalier des dizaines :\n\n${a}\n\nQuel nombre est sur la marche qui manque ?`
-		}, r, zC(r), 0, 100, i));
+		}, r, $C(r), 0, 100, i));
 	};
 	for (let e of [
 		10,
@@ -40922,24 +41302,24 @@ function BC() {
 		40,
 		50,
 		60
-	]) for (let n of [1, 3]) t(2, W(0, 4).map((t) => t === n ? "?" : e + t * 10), e + n * 10, e + n);
-	for (let t = 0; t <= 100; t += 10) t < 100 && e.push(G(3, {
+	]) for (let n of [1, 3]) t(2, G(0, 4).map((t) => t === n ? "?" : e + t * 10), e + n * 10, e + n);
+	for (let t = 0; t <= 100; t += 10) t < 100 && e.push(K(3, {
 		en: `🪜 You stand on step ${t}. Climb ONE step up (10 more).\n\nWhere are you?`,
 		fr: `🪜 Tu es sur la marche ${t}. Monte d'UNE marche (10 de plus).\n\nOù es-tu ?`
-	}, t + 10, zC(t + 10), 0, 100, t)), t > 0 && e.push(G(3, {
+	}, t + 10, $C(t + 10), 0, 100, t)), t > 0 && e.push(K(3, {
 		en: `🪜 You stand on step ${t}. Go ONE step down (10 less).\n\nWhere are you?`,
 		fr: `🪜 Tu es sur la marche ${t}. Descends d'UNE marche (10 de moins).\n\nOù es-tu ?`
-	}, t - 10, zC(t - 10), 0, 100, t));
-	return U(e);
+	}, t - 10, $C(t - 10), 0, 100, t));
+	return V(e);
 }
-function VC() {
+function tw() {
 	let e = [], t = (t, n, r) => {
 		let i = [
 			r,
 			r + n,
 			r + 2 * n
 		], a = i[2];
-		e.push(G(t, {
+		e.push(K(t, {
 			en: `🐸 The frog hops by ${n}:\n\n${i.join(" ")} ?\n\nWhere does it land next?`,
 			fr: `🐸 La grenouille saute de ${n} en ${n} :\n\n${i.join(" ")} ?\n\nOù atterrit-elle ensuite ?`
 		}, a + n, [
@@ -40968,7 +41348,7 @@ function VC() {
 		30,
 		40
 	]) t(2, 10, e);
-	let n = (t, n) => e.push(G(3, {
+	let n = (t, n) => e.push(K(3, {
 		en: `🐸 The frog starts at 0 and hops by ${t}.\n\nWhich number does it land on?`,
 		fr: `🐸 La grenouille part de 0 et saute de ${t} en ${t}.\n\nSur quel nombre atterrit-elle ?`
 	}, n, [
@@ -40997,11 +41377,11 @@ function VC() {
 		60,
 		90
 	]) n(10, e);
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/missingItem.ts
-var HC = [
+var nw = [
 	"🔵",
 	"🟥",
 	"🔺",
@@ -41010,7 +41390,7 @@ var HC = [
 	"🌙",
 	"🍎",
 	"🐟"
-], UC = {
+], rw = {
 	1: [[0, 1]],
 	2: [[
 		0,
@@ -41027,34 +41407,34 @@ var HC = [
 		2
 	]]
 };
-function WC() {
+function iw() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n = 0; n < HC.length; n++) for (let r of UC[t]) {
-		let i = Math.max(...r) + 1, a = Array.from({ length: i }, (e, t) => HC[(n + t) % HC.length]), o = (e) => a[r[e % r.length]], s = r.length * 3, c = r.length + Math.floor(r.length / 2), l = Array.from({ length: s }, (e, t) => t === c ? "❓" : o(t)), u = o(c), d = a.filter((e) => e !== u), f = l.join(" ");
-		e.push(R(t, {
+	]) for (let n = 0; n < nw.length; n++) for (let r of rw[t]) {
+		let i = Math.max(...r) + 1, a = Array.from({ length: i }, (e, t) => nw[(n + t) % nw.length]), o = (e) => a[r[e % r.length]], s = r.length * 3, c = r.length + Math.floor(r.length / 2), l = Array.from({ length: s }, (e, t) => t === c ? "❓" : o(t)), u = o(c), d = a.filter((e) => e !== u), f = l.join(" ");
+		e.push(jy(t, {
 			en: `${f}\n\nWhich one fills the gap?`,
 			fr: `${f}\n\nLequel comble le vide ?`
 		}, u, d));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/measurement.ts
-function GC(e, t, n) {
+function aw(e, t, n) {
 	let r = [];
 	for (let i = 0; i < e; i++) for (let a = i + t; a <= Math.min(e - 1, i + n); a++) r.push([i, a]);
 	return r;
 }
-function KC(e, t, n) {
+function ow(e, t, n) {
 	let r = [];
-	for (let { level: i, low: a, high: o } of t) GC(e.length, a, o).forEach(([t, a], o) => {
+	for (let { level: i, low: a, high: o } of t) aw(e.length, a, o).forEach(([t, a], o) => {
 		n.forEach((n, s) => {
 			let c = ((o + s) % 2 == 0 ? [e[t], e[a]] : [e[a], e[t]]).join("  "), l = n.larger ? e[a] : e[t], u = n.larger ? e[t] : e[a];
-			r.push(z(i, {
+			r.push(R(i, {
 				prompt: `${c}\n\n${n.en}`,
 				options: [l, u]
 			}, {
@@ -41063,9 +41443,9 @@ function KC(e, t, n) {
 			}));
 		});
 	});
-	return U(r);
+	return V(r);
 }
-var qC = [
+var sw = [
 	"🪶",
 	"🐭",
 	"🍎",
@@ -41074,7 +41454,7 @@ var qC = [
 	"🚗",
 	"🐘",
 	"🚢"
-], JC = [
+], cw = [
 	"🥄",
 	"🍶",
 	"🥛",
@@ -41083,7 +41463,7 @@ var qC = [
 	"🪣",
 	"🛁",
 	"🏊"
-], YC = [{
+], lw = [{
 	en: "Which is HEAVIER?",
 	fr: "Lequel est le PLUS LOURD ?",
 	larger: !0
@@ -41091,7 +41471,7 @@ var qC = [
 	en: "Which is LIGHTER?",
 	fr: "Lequel est le PLUS LÉGER ?",
 	larger: !1
-}], XC = [{
+}], uw = [{
 	en: "Which can hold MORE water?",
 	fr: "Lequel peut contenir PLUS d'eau ?",
 	larger: !0
@@ -41100,8 +41480,8 @@ var qC = [
 	fr: "Lequel peut contenir MOINS d'eau ?",
 	larger: !1
 }];
-function ZC() {
-	return KC(qC, [
+function dw() {
+	return ow(sw, [
 		{
 			level: 1,
 			low: 4,
@@ -41117,10 +41497,10 @@ function ZC() {
 			low: 2,
 			high: 2
 		}
-	], YC);
+	], lw);
 }
-function QC() {
-	return KC(JC, [
+function fw() {
+	return ow(cw, [
 		{
 			level: 1,
 			low: 4,
@@ -41136,9 +41516,9 @@ function QC() {
 			low: 2,
 			high: 2
 		}
-	], XC);
+	], uw);
 }
-var $C = [{
+var pw = [{
 	emoji: "🟥",
 	en: "Red",
 	fr: "Rouge"
@@ -41147,7 +41527,7 @@ var $C = [{
 	en: "Blue",
 	fr: "Bleu"
 }];
-function ew() {
+function mw() {
 	let e = [];
 	for (let { level: t, low: n, high: r, staggered: i } of [
 		{
@@ -41168,17 +41548,17 @@ function ew() {
 			high: 1,
 			staggered: !0
 		}
-	]) GC(7, n, r).forEach(([n, r], a) => {
+	]) aw(7, n, r).forEach(([n, r], a) => {
 		let o = n + 2, s = r + 2;
 		[0, 1].forEach((n) => {
-			let [r, c] = n === 0 ? [$C[0], $C[1]] : [$C[1], $C[0]], l = r.emoji.repeat(s), u = (i ? "⬜".repeat(s - o) : "") + c.emoji.repeat(o), d = (a + n) % 2 == 0 ? [l, u] : [u, l], f = (a + n) % 2 == 1, p = f ? c : r, ee = f ? r : c, te = f ? {
+			let [r, c] = n === 0 ? [pw[0], pw[1]] : [pw[1], pw[0]], l = r.emoji.repeat(s), u = (i ? "⬜".repeat(s - o) : "") + c.emoji.repeat(o), d = (a + n) % 2 == 0 ? [l, u] : [u, l], f = (a + n) % 2 == 1, p = f ? c : r, ee = f ? r : c, te = f ? {
 				en: "SHORTER",
 				fr: "PLUS COURT"
 			} : {
 				en: "LONGER",
 				fr: "PLUS LONG"
 			}, ne = d.join("\n");
-			e.push(z(t, {
+			e.push(R(t, {
 				prompt: `${ne}\n\nWhich is ${te.en}?`,
 				options: [`${p.emoji} ${p.en}`, `${ee.emoji} ${ee.en}`]
 			}, {
@@ -41187,11 +41567,11 @@ function ew() {
 			}));
 		});
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/movement.ts
-var Q = {
+var Z = {
 	forward: {
 		en: "Forward",
 		fr: "Avance"
@@ -41208,12 +41588,12 @@ var Q = {
 		en: "Down",
 		fr: "Descend"
 	}
-}, tw = "🤖", nw = "🎯";
-function rw() {
+}, hw = "🤖", gw = "🎯";
+function _w() {
 	let e = [];
 	for (let t = 1; t <= 5; t++) {
-		let n = t % 2 == 0, r = n ? `${tw}${"⬜".repeat(t)}${nw}` : `${nw}${"⬜".repeat(t)}${tw}`, i = n ? Q.forward : Q.back, a = n ? Q.back : Q.forward;
-		e.push(z(1, {
+		let n = t % 2 == 0, r = n ? `${hw}${"⬜".repeat(t)}${gw}` : `${gw}${"⬜".repeat(t)}${hw}`, i = n ? Z.forward : Z.back, a = n ? Z.back : Z.forward;
+		e.push(R(1, {
 			prompt: `${r}\n\nWhich instruction moves the robot to the target?`,
 			options: [i.en, a.en]
 		}, {
@@ -41222,8 +41602,8 @@ function rw() {
 		}));
 	}
 	for (let t = 1; t <= 5; t++) {
-		let n = t % 2 == 0, r = Array.from({ length: t + 1 }, (e, r) => n ? r === t ? nw : r === 0 ? tw : "⬜" : r === t ? tw : r === 0 ? nw : "⬜").join("\n"), i = n ? Q.up : Q.down, a = n ? Q.down : Q.up;
-		e.push(z(2, {
+		let n = t % 2 == 0, r = Array.from({ length: t + 1 }, (e, r) => n ? r === t ? gw : r === 0 ? hw : "⬜" : r === t ? hw : r === 0 ? gw : "⬜").join("\n"), i = n ? Z.up : Z.down, a = n ? Z.down : Z.up;
+		e.push(R(2, {
 			prompt: `${r}\n\nWhich instruction moves the robot to the target?`,
 			options: [i.en, a.en]
 		}, {
@@ -41231,10 +41611,10 @@ function rw() {
 			options: [i.fr, a.fr]
 		}));
 	}
-	let t = [Q.forward, Q.back], n = [Q.up, Q.down];
+	let t = [Z.forward, Z.back], n = [Z.up, Z.down];
 	for (let r of t) for (let t of n) for (let n of [1, 2]) {
-		let i = `${r.en} then ${t.en}`, a = `${r.fr} puis ${t.fr}`, o = `${t.en} then ${r.en}`, s = `${t.fr} puis ${r.fr}`, c = r === Q.forward ? Q.back : Q.forward, l = `${c.en} then ${t.en}`, u = `${c.fr} puis ${t.fr}`, d = `${tw} ${"➡️".repeat(n) + (t === Q.up ? "⬆️" : "⬇️").repeat(n)} ${nw}`;
-		e.push(z(3, {
+		let i = `${r.en} then ${t.en}`, a = `${r.fr} puis ${t.fr}`, o = `${t.en} then ${r.en}`, s = `${t.fr} puis ${r.fr}`, c = r === Z.forward ? Z.back : Z.forward, l = `${c.en} then ${t.en}`, u = `${c.fr} puis ${t.fr}`, d = `${hw} ${"➡️".repeat(n) + (t === Z.up ? "⬆️" : "⬇️").repeat(n)} ${gw}`;
+		e.push(R(3, {
 			prompt: `${d}\n\nWhich two-step instruction reaches the target?`,
 			options: [
 				i,
@@ -41250,47 +41630,47 @@ function rw() {
 			]
 		}));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/moreFewer.ts
-function iw(e, t) {
-	let n = (e * 3 + t) % B.length;
-	return [B[n], B[(n + 1 + e % 3) % B.length]];
+function vw(e, t) {
+	let n = (e * 3 + t) % z.length;
+	return [z[n], z[(n + 1 + e % 3) % z.length]];
 }
-function aw(e, t, n, r) {
+function yw(e, t, n, r) {
 	let i = [];
 	for (let a = e; a <= t; a++) for (let e = a + n; e <= Math.min(t, a + r); e++) i.push([a, e]);
 	return i;
 }
-function ow(e, t, n, r, i = Py) {
-	if (!n) return Ny(Array.from({ length: e }, () => t), i);
+function bw(e, t, n, r, i = Vy) {
+	if (!n) return By(Array.from({ length: e }, () => t), i);
 	let a = [];
-	for (let n = e, i = 0; n > 0; n -= 5, i++) a.push(sC(Math.min(5, n), t, r + i));
+	for (let n = e, i = 0; n > 0; n -= 5, i++) a.push(xC(Math.min(5, n), t, r + i));
 	return a.join(i);
 }
-function sw() {
+function xw() {
 	let e = [], t = [
 		{
 			level: 1,
-			pairs: aw(1, 10, 3, 9),
+			pairs: yw(1, 10, 3, 9),
 			scatter: !1
 		},
 		{
 			level: 2,
-			pairs: aw(1, 10, 1, 2),
+			pairs: yw(1, 10, 1, 2),
 			scatter: !0
 		},
 		{
 			level: 3,
-			pairs: aw(1, 10, 1, 4),
+			pairs: yw(1, 10, 1, 4),
 			scatter: !0
 		}
 	];
 	for (let { level: n, pairs: r, scatter: i } of t) r.forEach(([t, r], a) => {
-		let [o, s] = iw(t, r);
+		let [o, s] = vw(t, r);
 		for (let c of [!1, !0]) {
-			let l = (a + +!!c) % 2 == 0, u = l ? o : s, d = l ? s : o, f = ow(t, u, i, a), p = ow(r, d, i, a + 1), ee = c ? {
+			let l = (a + +!!c) % 2 == 0, u = l ? o : s, d = l ? s : o, f = bw(t, u, i, a), p = bw(r, d, i, a + 1), ee = c ? {
 				en: "FEWER",
 				fr: "MOINS"
 			} : {
@@ -41304,7 +41684,7 @@ function sw() {
 				count: r
 			};
 			e.push({
-				...z(n, {
+				...R(n, {
 					prompt: `Which has ${ee.en}?`,
 					options: [te, ne]
 				}, {
@@ -41318,21 +41698,21 @@ function sw() {
 			});
 		}
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sameOrNot.ts
-var cw = {
+var Sw = {
 	leftover: "sameOrNot.feedback.leftover",
 	spread: "sameOrNot.feedback.spread",
 	kindDoesNotMatter: "sameOrNot.feedback.kindDoesNotMatter"
-}, lw = {
+}, Cw = {
 	en: "Same number?",
 	fr: "Le même nombre ?"
-}, uw = {
+}, ww = {
 	en: ["Same", "Not same"],
 	fr: ["Pareil", "Pas pareil"]
-}, dw = [
+}, Tw = [
 	{
 		level: 1,
 		max: 5,
@@ -41355,12 +41735,12 @@ var cw = {
 		sameKind: !1
 	}
 ];
-function fw() {
+function Ew() {
 	let e = [];
-	for (let { level: t, max: n, low: r, high: i, sameKind: a } of dw) {
+	for (let { level: t, max: n, low: r, high: i, sameKind: a } of Tw) {
 		let o = 0;
 		for (let s = 1; s <= n; s++) for (let c = s + r; c <= Math.min(n, s + i); c++) for (let n of [0, 1]) {
-			let r = B[(s * 3 + c + n * 5) % B.length], i = n === 1 && a ? r : B[(s * 3 + c + n * 5 + 1 + s % 3) % B.length], l = (o + n) % 2 == 1, u = (e, n) => {
+			let r = z[(s * 3 + c + n * 5) % z.length], i = n === 1 && a ? r : z[(s * 3 + c + n * 5 + 1 + s % 3) % z.length], l = (o + n) % 2 == 1, u = (e, n) => {
 				let a = {
 					type: "counters",
 					groups: [{
@@ -41371,23 +41751,23 @@ function fw() {
 						count: l ? e : n
 					}],
 					operator: "vs"
-				}, o = e === n, s = o ? [null, r !== i && t === 3 ? cw.kindDoesNotMatter : cw.spread] : [cw.leftover, null];
-				return Y(t, lw, uw, +!o, a, s);
+				}, o = e === n, s = o ? [null, r !== i && t === 3 ? Sw.kindDoesNotMatter : Sw.spread] : [Sw.leftover, null];
+				return H(t, Cw, ww, +!o, a, s);
 			};
 			e.push(u(s, c));
 			let d = o % 2 == 0 ? s : c;
 			e.push(u(d, d)), o++;
 		}
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameTheRule.ts
-var pw = {
+var Dw = {
 	showRule: "nameGroup.fb.showRule",
 	sameColourNotKind: "nameGroup.fb.sameColourNotKind",
 	sameKindNotColour: "nameGroup.fb.sameKindNotColour"
-}, mw = {
+}, Ow = {
 	fruit: [
 		"🍎",
 		"🍌",
@@ -41452,7 +41832,7 @@ var pw = {
 		"🍅",
 		"🍆"
 	]
-}, hw = {
+}, kw = {
 	red: [
 		"🍎",
 		"🍓",
@@ -41485,109 +41865,109 @@ var pw = {
 		"🎾",
 		"🍩"
 	]
-}, gw = (e) => Object.keys(mw).find((t) => mw[t].includes(e)), _w = (e) => Object.keys(hw).filter((t) => hw[t].includes(e)), vw = Object.keys(mw), yw = Object.keys(hw), bw = (e, t, n) => Array.from({ length: n }, (n, r) => e[(t + r) % e.length]), xw = (e, t, n) => {
+}, Aw = (e) => Object.keys(Ow).find((t) => Ow[t].includes(e)), jw = (e) => Object.keys(kw).filter((t) => kw[t].includes(e)), Mw = Object.keys(Ow), Nw = Object.keys(kw), Pw = (e, t, n) => Array.from({ length: n }, (n, r) => e[(t + r) % e.length]), Fw = (e, t, n) => {
 	let r = e.filter((e) => !t.includes(e));
 	return r[n % r.length];
-}, Sw = (e) => ({
+}, Iw = (e) => ({
 	emoji: e,
 	count: 1
 });
-function Cw(e, t, n, r) {
-	return Y(e, t, { en: r.map((e) => e.emoji) }, 0, {
+function Lw(e, t, n, r) {
+	return H(e, t, { en: r.map((e) => e.emoji) }, 0, {
 		type: "pick-group",
-		groups: r.map((e) => Sw(e.emoji)),
+		groups: r.map((e) => Iw(e.emoji)),
 		...n && { prompts: n.map((e) => ({ emoji: e })) },
 		reveal: "none"
 	}, r.map((e) => e.feedback));
 }
-var ww = {
+var Rw = {
 	en: "What goes with these?",
 	fr: "Qu'est-ce qui va avec ?"
-}, Tw = {
+}, zw = {
 	en: "Which one does not belong?",
 	fr: "Lequel ne va pas avec les autres ?"
 };
-function Ew() {
+function Bw() {
 	let e = [];
-	return vw.forEach((t, n) => {
+	return Mw.forEach((t, n) => {
 		for (let r of [0, 2]) {
-			let i = bw(mw[t], r, 3), a = xw(mw[t], i, r), o = mw[vw[(n + 3 + r) % vw.length]][(n + r) % 6];
-			e.push(Cw(1, ww, i, [{
+			let i = Pw(Ow[t], r, 3), a = Fw(Ow[t], i, r), o = Ow[Mw[(n + 3 + r) % Mw.length]][(n + r) % 6];
+			e.push(Lw(1, Rw, i, [{
 				emoji: a,
 				feedback: null
 			}, {
 				emoji: o,
-				feedback: pw.showRule
+				feedback: Dw.showRule
 			}]));
 		}
-	}), yw.forEach((t, n) => {
+	}), Nw.forEach((t, n) => {
 		for (let r of [
 			0,
 			1,
 			2,
 			3
 		]) {
-			let i = bw(hw[t], r, 3), a = xw(hw[t], i, r), o = new Set(i.map(gw)), s = Object.values(mw).flat().filter((e) => o.has(gw(e)) && !_w(e).includes(t)), c = s[(n * 3 + r) % s.length], l = yw[(n + 1 + r % 3) % yw.length], u = xw(hw[l].filter((e) => !_w(e).includes(t) && e !== c), [], r);
-			e.push(Cw(2, ww, i, [
+			let i = Pw(kw[t], r, 3), a = Fw(kw[t], i, r), o = new Set(i.map(Aw)), s = Object.values(Ow).flat().filter((e) => o.has(Aw(e)) && !jw(e).includes(t)), c = s[(n * 3 + r) % s.length], l = Nw[(n + 1 + r % 3) % Nw.length], u = Fw(kw[l].filter((e) => !jw(e).includes(t) && e !== c), [], r);
+			e.push(Lw(2, Rw, i, [
 				{
 					emoji: a,
 					feedback: null
 				},
 				{
 					emoji: c,
-					feedback: pw.sameKindNotColour
+					feedback: Dw.sameKindNotColour
 				},
 				{
 					emoji: u,
-					feedback: pw.showRule
+					feedback: Dw.showRule
 				}
 			]));
 		}
-	}), vw.forEach((t, n) => {
+	}), Mw.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = bw(mw[t], r, 3), a = xw(mw[t], i, r), o = _w(a).find((e) => e !== "round"), s = o ? hw[o].find((e) => gw(e) !== t && !i.includes(e)) : void 0, c = mw[vw[(n + 2 + r) % vw.length]][(n + r) % 6], l = [
+			let i = Pw(Ow[t], r, 3), a = Fw(Ow[t], i, r), o = jw(a).find((e) => e !== "round"), s = o ? kw[o].find((e) => Aw(e) !== t && !i.includes(e)) : void 0, c = Ow[Mw[(n + 2 + r) % Mw.length]][(n + r) % 6], l = [
 				{
 					emoji: a,
 					feedback: null
 				},
 				...s ? [{
 					emoji: s,
-					feedback: pw.sameColourNotKind
+					feedback: Dw.sameColourNotKind
 				}] : [],
 				{
 					emoji: c,
-					feedback: pw.showRule
+					feedback: Dw.showRule
 				}
 			];
-			new Set(l.map((e) => e.emoji)).size === l.length && l.length >= 2 && e.push(Cw(3, ww, i, l));
+			new Set(l.map((e) => e.emoji)).size === l.length && l.length >= 2 && e.push(Lw(3, Rw, i, l));
 		}
-	}), vw.forEach((t, n) => {
-		let r = bw(mw[t], n, 3), i = _w(r[0]).find((e) => e !== "round"), a = (i ? hw[i].find((e) => gw(e) !== t) : void 0) ?? mw[vw[(n + 4) % vw.length]][n % 6];
-		e.push(Cw(3, Tw, null, [{
+	}), Mw.forEach((t, n) => {
+		let r = Pw(Ow[t], n, 3), i = jw(r[0]).find((e) => e !== "round"), a = (i ? kw[i].find((e) => Aw(e) !== t) : void 0) ?? Ow[Mw[(n + 4) % Mw.length]][n % 6];
+		e.push(Lw(3, zw, null, [{
 			emoji: a,
 			feedback: null
 		}, ...r.map((e) => ({
 			emoji: e,
-			feedback: pw.showRule
+			feedback: Dw.showRule
 		}))]));
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numeralFormation.ts
-var Dw = {
+var Vw = {
 	sixNine: "pickRightWay.feedback.sixNine",
 	digitOrder: "pickRightWay.feedback.digitOrder",
 	lookalike: "pickRightWay.feedback.lookalike"
-}, Ow = (e) => ({
-	en: `Find ${ub(e).en}.`,
-	fr: `Trouve le ${ub(e).fr}.`
-}), kw = (e, t) => e === 6 && t === 9 || e === 9 && t === 6, Aw = (e) => Number(String(e).split("").reverse().join(""));
-function jw(e) {
-	return Math.floor(e / 10) * 10 + mC[e % 10][0];
+}, Hw = (e) => ({
+	en: `Find ${$y(e).en}.`,
+	fr: `Trouve le ${$y(e).fr}.`
+}), Uw = (e, t) => e === 6 && t === 9 || e === 9 && t === 6, Ww = (e) => Number(String(e).split("").reverse().join(""));
+function Gw(e) {
+	return Math.floor(e / 10) * 10 + OC[e % 10][0];
 }
-function Mw() {
+function Kw() {
 	let e = [], t = (t, n, r) => {
-		e.push(Y(t, Ow(n), { en: [n, ...r].map(String) }, 0, void 0, [null, ...r.map((e) => kw(n, e) ? Dw.sixNine : t === 3 && e === Aw(n) ? Dw.digitOrder : Dw.lookalike)]));
+		e.push(H(t, Hw(n), { en: [n, ...r].map(String) }, 0, void 0, [null, ...r.map((e) => Uw(n, e) ? Vw.sixNine : t === 3 && e === Ww(n) ? Vw.digitOrder : Vw.lookalike)]));
 	};
 	for (let e of [
 		6,
@@ -41598,14 +41978,14 @@ function Mw() {
 		8,
 		1,
 		7
-	]) t(1, e, [mC[e][0]]);
-	for (let e = 0; e <= 9; e++) t(2, e, [...mC[e]]);
-	for (let e = 12; e <= 20; e++) e === 20 ? t(3, e, [26, 25]) : t(3, e, [Aw(e), jw(e)]);
-	return X(e);
+	]) t(1, e, [OC[e][0]]);
+	for (let e = 0; e <= 9; e++) t(2, e, [...OC[e]]);
+	for (let e = 12; e <= 20; e++) e === 20 ? t(3, e, [26, 25]) : t(3, e, [Ww(e), Gw(e)]);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/numeralTwins.ts
-var Nw = {
+var qw = {
 	0: [
 		6,
 		8,
@@ -41656,27 +42036,27 @@ var Nw = {
 		4,
 		0
 	]
-}, Pw = [
+}, Jw = [
 	[6, 9],
 	[2, 5],
 	[3, 8],
 	[1, 7],
 	[0, 6]
-], Fw = (e, t) => {
+], Yw = (e, t) => {
 	let [n, r] = e < t ? [e, t] : [t, e];
-	return Pw.some(([e, t]) => e === n && t === r) ? `numeralTwins.hint.${n}-${r}` : null;
-}, Iw = {
+	return Jw.some(([e, t]) => e === n && t === r) ? `numeralTwins.hint.${n}-${r}` : null;
+}, Xw = {
 	en: "Same number?",
 	fr: "Le même nombre ?"
-}, Lw = (e) => String.fromCharCode(65296 + e), Rw = (e) => ({
+}, Zw = (e) => String.fromCharCode(65296 + e), Qw = (e) => ({
 	type: "counters",
 	groups: [{
 		emoji: "⚫",
 		count: e
 	}]
 });
-function zw(e, t, n) {
-	if (e === 3) return Nw[t][n];
+function $w(e, t, n) {
+	if (e === 3) return qw[t][n];
 	if (e === 1) {
 		let e = [
 			1,
@@ -41693,7 +42073,7 @@ function zw(e, t, n) {
 		5
 	][n]) % 10;
 }
-function Bw() {
+function eT() {
 	let e = [];
 	for (let t of [
 		1,
@@ -41721,51 +42101,51 @@ function Bw() {
 		for (let r of n) for (let n = 0; n < 3; n++) {
 			if (n === 2 && r === 0) continue;
 			let i = (r + n) % 2 == 1, a = (e, a) => {
-				let o = n === 1 ? Lw(e) : String(e), [s, c] = i ? [o, String(r)] : [String(r), o], l = `${s}  ${c}\n\n`, u = a ? "numeralTwins.feedback.same" : Fw(r, e) ?? "numeralTwins.feedback.diff";
+				let o = n === 1 ? Zw(e) : String(e), [s, c] = i ? [o, String(r)] : [String(r), o], l = `${s}  ${c}\n\n`, u = a ? "numeralTwins.feedback.same" : Yw(r, e) ?? "numeralTwins.feedback.diff";
 				return {
 					grade: t,
 					en: {
-						statement: `${l}${Iw.en}`,
+						statement: `${l}${Xw.en}`,
 						isTrue: a
 					},
 					fr: {
-						statement: `${l}${Iw.fr}`,
+						statement: `${l}${Xw.fr}`,
 						isTrue: a
 					},
-					...n === 2 && r > 0 && { scene: Rw(r) },
+					...n === 2 && r > 0 && { scene: Qw(r) },
 					feedbackKey: u
 				};
 			};
-			e.push(a(r, !0), a(zw(t, r, n), !1));
+			e.push(a(r, !0), a($w(t, r, n), !1));
 		}
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/ordinals.ts
-var Vw = {
+var tT = {
 	countFromFlag: "ordinals.feedback.countFromFlag",
 	neighbour: "ordinals.feedback.neighbour",
 	fromEnd: "ordinals.feedback.fromEnd",
 	ends: "ordinals.feedback.ends",
 	countAll: "ordinals.feedback.countAll",
 	countFlag: "ordinals.feedback.countFlag"
-}, Hw = [
+}, nT = [
 	"1st",
 	"2nd",
 	"3rd",
 	"4th",
 	"5th"
-], Uw = [
+], rT = [
 	"1er",
 	"2e",
 	"3e",
 	"4e",
 	"5e"
-], Ww = {
+], iT = {
 	en: "last",
 	fr: "dernier"
-}, Gw = "🚩", Kw = [
+}, aT = "🚩", oT = [
 	[
 		"🐱",
 		"🐶",
@@ -41791,11 +42171,11 @@ var Vw = {
 		"🍐"
 	]
 ];
-function qw(e, t, n) {
-	let r = Kw[e % Kw.length];
+function sT(e, t, n) {
+	let r = oT[e % oT.length];
 	return Array.from({ length: t }, (e, t) => r[(n + t) % r.length]);
 }
-function Jw(e, t) {
+function cT(e, t) {
 	let n = e.map((e) => ({
 		emoji: e,
 		count: 1
@@ -41803,21 +42183,21 @@ function Jw(e, t) {
 	return {
 		type: "counters",
 		groups: t ? [...n.reverse(), {
-			emoji: Gw,
+			emoji: aT,
 			count: 1
 		}] : [{
-			emoji: Gw,
+			emoji: aT,
 			count: 1
 		}, ...n]
 	};
 }
-function Yw(e, t, n) {
-	return n && e === t ? Ww : {
-		en: Hw[e - 1],
-		fr: Uw[e - 1]
+function lT(e, t, n) {
+	return n && e === t ? iT : {
+		en: nT[e - 1],
+		fr: rT[e - 1]
 	};
 }
-function Xw(e, t, n) {
+function uT(e, t, n) {
 	let r = [
 		t + 1 - e,
 		...[e - 1, e + 1].filter((e) => e >= 1 && e <= t),
@@ -41825,10 +42205,10 @@ function Xw(e, t, n) {
 	];
 	return [...new Set(r)].filter((t) => t !== e).slice(0, n);
 }
-function Zw(e, t, n) {
-	return e === 1 && t === n || e === n && t === 1 ? Vw.ends : t === n + 1 - e ? Vw.fromEnd : Math.abs(t - e) === 1 ? Vw.neighbour : Vw.countFromFlag;
+function dT(e, t, n) {
+	return e === 1 && t === n || e === n && t === 1 ? tT.ends : t === n + 1 - e ? tT.fromEnd : Math.abs(t - e) === 1 ? tT.neighbour : tT.countFromFlag;
 }
-var Qw = [
+var fT = [
 	{
 		level: 1,
 		size: 3,
@@ -41845,28 +42225,28 @@ var Qw = [
 		flagRight: (e) => e % 2 == 1
 	}
 ];
-function $w() {
+function pT() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Qw) for (let i = 0; i < 6; i++) {
-		let a = qw(i % 3, n, i);
+	for (let { level: t, size: n, flagRight: r } of fT) for (let i = 0; i < 6; i++) {
+		let a = sT(i % 3, n, i);
 		for (let o = 1; o <= n; o++) {
-			let s = Yw(o, n, !0), c = Xw(o, n, t === 1 ? 2 : 3);
-			e.push(Y(t, {
+			let s = lT(o, n, !0), c = uT(o, n, t === 1 ? 2 : 3);
+			e.push(H(t, {
 				en: `Which one is ${s.en}? Start at the flag.`,
 				fr: `Lequel est le ${s.fr} ? Commence au drapeau.`
-			}, { en: [o, ...c].map((e) => a[e - 1]) }, 0, Jw(a, r(i)), [null, ...c.map((e) => Zw(o, e, n))]));
+			}, { en: [o, ...c].map((e) => a[e - 1]) }, 0, cT(a, r(i)), [null, ...c.map((e) => dT(o, e, n))]));
 		}
 	}
-	return X(e);
+	return U(e);
 }
-function eT() {
+function mT() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Qw) for (let i = 0; i < 6; i++) {
-		let a = qw(i % 3, n, i), o = Jw(a, r(i)), s = (i + t) % n + 1, c = Yw(s, n, !0), l = Xw(s, n, 2);
-		e.push(Y(t, {
+	for (let { level: t, size: n, flagRight: r } of fT) for (let i = 0; i < 6; i++) {
+		let a = sT(i % 3, n, i), o = cT(a, r(i)), s = (i + t) % n + 1, c = lT(s, n, !0), l = uT(s, n, 2);
+		e.push(H(t, {
 			en: `Which one is ${c.en}?`,
 			fr: `Lequel est le ${c.fr} ?`
-		}, { en: [s, ...l].map((e) => a[e - 1]) }, 0, o, [null, ...l.map((e) => Zw(s, e, n))])), e.push(Y(t, {
+		}, { en: [s, ...l].map((e) => a[e - 1]) }, 0, o, [null, ...l.map((e) => dT(s, e, n))])), e.push(H(t, {
 			en: "How many are in line?",
 			fr: "Combien y en a-t-il dans la file ?"
 		}, { en: [
@@ -41875,35 +42255,35 @@ function eT() {
 			String(n - 1)
 		] }, 0, o, [
 			null,
-			Vw.countFlag,
-			Vw.countAll
+			tT.countFlag,
+			tT.countAll
 		]));
 	}
-	return X(e);
+	return U(e);
 }
-var tT = [
+var hT = [
 	"🟩",
 	"🟦",
 	"🟨",
 	"🟥"
-], nT = "⬜";
-function rT() {
+], gT = "⬜";
+function _T() {
 	let e = [];
-	for (let { level: t, size: n, flagRight: r } of Qw) for (let i = 0; i < 4; i++) for (let a = 1; a <= n; a++) {
-		let o = tT[(i + a) % tT.length], s = Array.from({ length: n }, (e, t) => t + 1 === a ? o : nT), c = Xw(a, n, 2), l = (e) => Yw(e, n, t === 3);
-		e.push(Y(t, {
+	for (let { level: t, size: n, flagRight: r } of fT) for (let i = 0; i < 4; i++) for (let a = 1; a <= n; a++) {
+		let o = hT[(i + a) % hT.length], s = Array.from({ length: n }, (e, t) => t + 1 === a ? o : gT), c = uT(a, n, 2), l = (e) => lT(e, n, t === 3);
+		e.push(H(t, {
 			en: "Which place is coloured? Start at the flag.",
 			fr: "Quelle place est coloriée ? Commence au drapeau."
 		}, {
 			en: [a, ...c].map((e) => l(e).en),
 			fr: [a, ...c].map((e) => l(e).fr)
-		}, 0, Jw(s, r(i)), [null, ...c.map((e) => Zw(a, e, n))]));
+		}, 0, cT(s, r(i)), [null, ...c.map((e) => dT(a, e, n))]));
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/orderBySize.ts
-var iT = [
+var vT = [
 	"🔴",
 	"🟦",
 	"⭐",
@@ -41911,10 +42291,10 @@ var iT = [
 	"🔺",
 	"🟪"
 ];
-function aT(e, t) {
+function yT(e, t) {
 	return e.repeat(t);
 }
-function oT() {
+function bT() {
 	let e = [], t = {
 		1: {
 			en: "small",
@@ -41933,7 +42313,7 @@ function oT() {
 		1,
 		2,
 		3
-	]) iT.forEach((r, i) => {
+	]) vT.forEach((r, i) => {
 		let a = [
 			[
 				1,
@@ -41950,8 +42330,8 @@ function oT() {
 				3,
 				1
 			]
-		], o = a[i % a.length], s = o.map((e) => aT(r, e)), c = aT(r, 2), l = s.filter((e) => e !== c), u = n === 1 ? s.join("   ") : s.join(" "), d = n >= 2 ? `\n(${t[o[0]].en} / ${t[o[1]].en} / ${t[o[2]].en})` : "", f = n >= 2 ? `\n(${t[o[0]].fr} / ${t[o[1]].fr} / ${t[o[2]].fr})` : "";
-		e.push(z(n, {
+		], o = a[i % a.length], s = o.map((e) => yT(r, e)), c = yT(r, 2), l = s.filter((e) => e !== c), u = n === 1 ? s.join("   ") : s.join(" "), d = n >= 2 ? `\n(${t[o[0]].en} / ${t[o[1]].en} / ${t[o[2]].en})` : "", f = n >= 2 ? `\n(${t[o[0]].fr} / ${t[o[1]].fr} / ${t[o[2]].fr})` : "";
+		e.push(R(n, {
 			prompt: `${u}${d}\n\nWhich one goes in the middle when ordered by size?`,
 			options: [c, ...l]
 		}, {
@@ -41959,11 +42339,11 @@ function oT() {
 			options: [c, ...l]
 		}));
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/patterns.ts
-var sT = [
+var xT = [
 	"🔵",
 	"🟥",
 	"🔺",
@@ -41972,7 +42352,7 @@ var sT = [
 	"🌙",
 	"🍎",
 	"🐟"
-], cT = {
+], ST = {
 	1: [[0, 1]],
 	2: [[
 		0,
@@ -41988,38 +42368,38 @@ var sT = [
 		1,
 		2
 	]]
-}, lT = {
+}, CT = {
 	1: [7, 8],
 	2: [10, 11],
 	3: [10, 11]
 };
-function uT(e) {
+function wT(e) {
 	let t = [];
 	for (let n = 0; n < e.length; n += 5) t.push(e.slice(n, n + 5).join(" "));
 	return t.join("\n");
 }
-function dT() {
+function TT() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n = 0; n < sT.length; n++) for (let r of cT[t]) for (let i of [
+	]) for (let n = 0; n < xT.length; n++) for (let r of ST[t]) for (let i of [
 		1,
 		2,
 		3
-	]) for (let a of lT[t]) {
-		let o = Math.max(...r) + 1, s = Array.from({ length: o }, (e, t) => sT[(n + t * i) % sT.length]), c = (e) => s[r[e % r.length]], l = Array.from({ length: a }, (e, t) => c(t)), u = c(a), d = s.filter((e) => e !== u), f = sT.filter((e) => !s.includes(e)).slice(0, 3 - d.length), p = uT([...l, "❓"]);
-		e.push(R(t, {
+	]) for (let a of CT[t]) {
+		let o = Math.max(...r) + 1, s = Array.from({ length: o }, (e, t) => xT[(n + t * i) % xT.length]), c = (e) => s[r[e % r.length]], l = Array.from({ length: a }, (e, t) => c(t)), u = c(a), d = s.filter((e) => e !== u), f = xT.filter((e) => !s.includes(e)).slice(0, 3 - d.length), p = wT([...l, "❓"]);
+		e.push(jy(t, {
 			en: `${p}\n\nWhich one comes next?`,
 			fr: `${p}\n\nQuelle forme vient ensuite ?`
 		}, u, [...d, ...f]));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/partsOfDay.ts
-var fT = [
+var ET = [
 	{
 		glyph: "🥣",
 		en: "eating breakfast",
@@ -42068,7 +42448,7 @@ var fT = [
 		fr: "regarder les étoiles",
 		part: "night"
 	}
-], pT = {
+], DT = {
 	morning: {
 		en: "Morning",
 		fr: "Matin"
@@ -42085,12 +42465,12 @@ var fT = [
 		en: "Night",
 		fr: "Nuit"
 	}
-}, mT = "☀️", hT = "🌙";
-function gT() {
+}, OT = "☀️", kT = "🌙";
+function AT() {
 	let e = [];
-	for (let t of fT) {
-		let n = t.part !== "night", r = n ? mT : hT, i = n ? hT : mT;
-		e.push(z(1, {
+	for (let t of ET) {
+		let n = t.part !== "night", r = n ? OT : kT, i = n ? kT : OT;
+		e.push(R(1, {
 			prompt: `${t.glyph} ${t.en}\n\nDoes this happen when it's sunny or when it's dark?`,
 			options: [r, i]
 		}, {
@@ -42103,9 +42483,9 @@ function gT() {
 		"afternoon",
 		"evening"
 	];
-	for (let n of fT.filter((e) => t.includes(e.part))) {
-		let r = t.map((e) => pT[e].en), i = t.map((e) => pT[e].fr), a = t.indexOf(n.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
-		e.push(z(2, {
+	for (let n of ET.filter((e) => t.includes(e.part))) {
+		let r = t.map((e) => DT[e].en), i = t.map((e) => DT[e].fr), a = t.indexOf(n.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
+		e.push(R(2, {
 			prompt: `${n.glyph} ${n.en}\n\nWhich part of the day is this?`,
 			options: o
 		}, {
@@ -42119,9 +42499,9 @@ function gT() {
 		"evening",
 		"night"
 	];
-	for (let t of fT) {
-		let r = n.map((e) => pT[e].en), i = n.map((e) => pT[e].fr), a = n.indexOf(t.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
-		e.push(z(3, {
+	for (let t of ET) {
+		let r = n.map((e) => DT[e].en), i = n.map((e) => DT[e].fr), a = n.indexOf(t.part), o = [r[a], ...r.filter((e, t) => t !== a)], s = [i[a], ...i.filter((e, t) => t !== a)];
+		e.push(R(3, {
 			prompt: `${t.glyph} ${t.en}\n\nWhich part of the day is this?`,
 			options: o
 		}, {
@@ -42129,11 +42509,11 @@ function gT() {
 			options: s
 		}));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/position.ts
-var _T = {
+var jT = {
 	on: {
 		en: "on",
 		fr: "sur"
@@ -42162,7 +42542,7 @@ var _T = {
 		en: "below",
 		fr: "en dessous de"
 	}
-}, vT = {
+}, MT = {
 	1: [
 		"on",
 		"under",
@@ -42179,7 +42559,7 @@ var _T = {
 		"above",
 		"below"
 	]
-}, yT = {
+}, NT = {
 	1: ["on", "under"],
 	2: ["in", "next"],
 	3: [
@@ -42187,7 +42567,7 @@ var _T = {
 		"above",
 		"below"
 	]
-}, bT = [
+}, PT = [
 	{
 		emoji: "🐱",
 		en: "cat",
@@ -42218,51 +42598,51 @@ var _T = {
 		en: "rabbit",
 		fr: "le lapin"
 	}
-], xT = "📦", ST = "🪑", CT = "\n \n \n";
-function wT(e) {
+], FT = "📦", IT = "🪑", LT = "\n \n \n";
+function RT(e) {
 	let t = "🟫🟫🟫";
 	return `${t}\n🟫${e}🟫\n${t}`;
 }
-function TT(e, t, n, r) {
+function zT(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
 		case "next": return `${t}  ${n}`;
-		case "in": return wT(t);
+		case "in": return RT(t);
 		case "between": return `${n} ${t} ${r}`;
-		case "above": return `${t}${CT}${n}`;
-		case "below": return `${n}${CT}${t}`;
+		case "above": return `${t}${LT}${n}`;
+		case "below": return `${n}${LT}${t}`;
 	}
 }
-function ET() {
+function BT() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of yT[t]) {
-		let r = n === "in" ? [[xT, ST]] : [[xT, ST], [ST, xT]];
-		for (let i of bT) for (let [a, o] of r) {
-			let r = TT(n, i.emoji, a, o), s = [n, ...vT[t].filter((e) => e !== n)];
-			e.push(z(t, {
+	]) for (let n of NT[t]) {
+		let r = n === "in" ? [[FT, IT]] : [[FT, IT], [IT, FT]];
+		for (let i of PT) for (let [a, o] of r) {
+			let r = zT(n, i.emoji, a, o), s = [n, ...MT[t].filter((e) => e !== n)];
+			e.push(R(t, {
 				prompt: `${r}\n\nWhere is the ${i.en}?`,
-				options: s.map((e) => _T[e].en)
+				options: s.map((e) => jT[e].en)
 			}, {
 				prompt: `${r}\n\nOù est ${i.fr} ?`,
-				options: s.map((e) => _T[e].fr)
+				options: s.map((e) => jT[e].fr)
 			}));
 		}
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/shapes.ts
-var DT = [
+var VT = [
 	"circle",
 	"square",
 	"triangle",
 	"rectangle"
-], OT = {
+], HT = {
 	circle: {
 		en: "circle",
 		fr: "cercle"
@@ -42279,7 +42659,7 @@ var DT = [
 		en: "rectangle",
 		fr: "rectangle"
 	}
-}, kT = {
+}, UT = {
 	1: {
 		circle: [
 			"🔴",
@@ -42346,24 +42726,24 @@ var DT = [
 			"▭"
 		]
 	}
-}, AT = [(e) => ({
+}, WT = [(e) => ({
 	en: `Find the ${e.en}.`,
 	fr: `Trouve le ${e.fr}.`
 }), (e) => ({
 	en: `Tap the ${e.en}.`,
 	fr: `Touche le ${e.fr}.`
 })];
-function jT() {
+function GT() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of DT) for (let r = 0; r < 3; r++) {
-		let i = (e) => kT[t][e][r], a = DT.filter((e) => e !== n).map(i);
-		for (let r of AT) {
-			let o = r(OT[n]), s = [i(n), ...a];
-			e.push(z(t, {
+	]) for (let n of VT) for (let r = 0; r < 3; r++) {
+		let i = (e) => UT[t][e][r], a = VT.filter((e) => e !== n).map(i);
+		for (let r of WT) {
+			let o = r(HT[n]), s = [i(n), ...a];
+			e.push(R(t, {
 				prompt: o.en,
 				options: s
 			}, {
@@ -42372,9 +42752,9 @@ function jT() {
 			}));
 		}
 	}
-	return U(e);
+	return V(e);
 }
-var MT = {
+var KT = {
 	1: [
 		"📱",
 		"🚪",
@@ -42405,7 +42785,7 @@ var MT = {
 		"🪟",
 		"✉️"
 	]
-}, NT = {
+}, qT = {
 	1: [
 		"🔵",
 		"🔴",
@@ -42436,77 +42816,77 @@ var MT = {
 		"🔻",
 		"⭐"
 	]
-}, PT = [{
+}, JT = [{
 	en: "Is this a rectangle?",
 	fr: "Est-ce un rectangle ?"
 }, {
 	en: "Is this shape a rectangle?",
 	fr: "Cette forme est-elle un rectangle ?"
 }];
-function FT() {
+function YT() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) MT[t].forEach((n, r) => {
-		let i = PT[r % 2];
-		e.push(Ay(t, {
+	]) KT[t].forEach((n, r) => {
+		let i = JT[r % 2];
+		e.push(Iy(t, {
 			en: `${n}\n\n${i.en}`,
 			fr: `${n}\n\n${i.fr}`
 		}, !0));
-	}), NT[t].forEach((n, r) => {
-		let i = PT[(r + 1) % 2];
-		e.push(Ay(t, {
+	}), qT[t].forEach((n, r) => {
+		let i = JT[(r + 1) % 2];
+		e.push(Iy(t, {
 			en: `${n}\n\n${i.en}`,
 			fr: `${n}\n\n${i.fr}`
 		}, !1));
 	});
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/showTheNumber.ts
-var IT = 4, LT = 60, RT = {
+var XT = 4, ZT = 60, QT = {
 	recount: "activity.show-the-number.hint.recount",
 	longerNotMore: "activity.show-the-number.hint.longer-not-more",
 	tensFirst: "activity.show-the-number.hint.tens-first"
 };
-function zT(e, t, n, r) {
-	if (!n) return Ny(Array.from({ length: e }, () => t), Py);
+function $T(e, t, n, r) {
+	if (!n) return By(Array.from({ length: e }, () => t), Vy);
 	let i = [];
-	for (let n = e, a = 0; n > 0; n -= 5, a++) i.push(sC(Math.min(5, n), t, r + a));
-	return i.join(Py);
+	for (let n = e, a = 0; n > 0; n -= 5, a++) i.push(xC(Math.min(5, n), t, r + a));
+	return i.join(Vy);
 }
-function BT(e, t) {
-	return e >= 11 && t <= 10 ? RT.tensFirst : Math.abs(t - e) === 1 ? RT.recount : t > e ? RT.longerNotMore : RT.recount;
+function eE(e, t) {
+	return e >= 11 && t <= 10 ? QT.tensFirst : Math.abs(t - e) === 1 ? QT.recount : t > e ? QT.longerNotMore : QT.recount;
 }
-function VT() {
+function tE() {
 	let e = [], t = (e) => ({
 		en: `Which group shows ${e}?`,
 		fr: `Quel groupe montre ${e} ?`
 	}), n = (n, r, i, a, o) => {
-		let s = (e) => B[(r + a * 3 + e * 5) % B.length], c = [r, ...i], l = c.map((e, t) => zT(e, s(t), o, a + t));
-		e.push(Y(n, t(r), { en: l }, 0, {
+		let s = (e) => z[(r + a * 3 + e * 5) % z.length], c = [r, ...i], l = c.map((e, t) => $T(e, s(t), o, a + t));
+		e.push(H(n, t(r), { en: l }, 0, {
 			type: "pick-group",
 			groups: c.map((e, t) => ({
 				emoji: s(t),
 				count: e
 			}))
-		}, c.map((e, t) => t === 0 ? null : BT(r, e))));
+		}, c.map((e, t) => t === 0 ? null : eE(r, e))));
 	}, r = (e, t = 1) => Array.from({ length: e - t + 1 }, (e, n) => t + n);
-	for (let e = 1; e <= 20; e++) if (e <= 5 && Oy(e, r(5), 2, IT, (t) => t.every((t) => Math.abs(t - e) >= 2)).forEach((t, r) => n(1, e, t, r, !1)), e <= 10 && Oy(e, r(10), 3, IT, (t) => t.some((t) => Math.abs(t - e) === 1)).forEach((t, r) => n(2, e, t, r, !1)), e >= 6) {
+	for (let e = 1; e <= 20; e++) if (e <= 5 && Py(e, r(5), 2, XT, (t) => t.every((t) => Math.abs(t - e) >= 2)).forEach((t, r) => n(1, e, t, r, !1)), e <= 10 && Py(e, r(10), 3, XT, (t) => t.some((t) => Math.abs(t - e) === 1)).forEach((t, r) => n(2, e, t, r, !1)), e >= 6) {
 		let t = r(20);
-		Oy(e, t, e >= 14 ? 2 : 3, IT, (t) => t.every((t) => Math.abs(t - e) <= 4) && t.some((t) => Math.abs(t - e) === 1) && e + t.reduce((e, t) => e + t, 0) <= LT).forEach((t, r) => n(3, e, t, r, !0));
+		Py(e, t, e >= 14 ? 2 : 3, XT, (t) => t.every((t) => Math.abs(t - e) <= 4) && t.some((t) => Math.abs(t - e) === 1) && e + t.reduce((e, t) => e + t, 0) <= ZT).forEach((t, r) => n(3, e, t, r, !0));
 	}
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/nameTheThing.ts
-var HT = {
+var nE = {
 	coneVsCylinder: "solids.name.fb.coneVsCylinder",
 	cubeVsSphere: "solids.name.fb.cubeVsSphere",
 	tryAgain: "solids.name.fb.tryAgain"
-}, UT = {
+}, rE = {
 	sphere: {
 		en: "sphere",
 		fr: "sphère",
@@ -42527,14 +42907,14 @@ var HT = {
 		fr: "cône",
 		emoji: "🍦"
 	}
-}, WT = (e, t) => e === "cone" && t === "cylinder" || e === "cylinder" && t === "cone" ? HT.coneVsCylinder : e === "cube" && t === "sphere" || e === "sphere" && t === "cube" ? HT.cubeVsSphere : HT.tryAgain, GT = [
+}, iE = (e, t) => e === "cone" && t === "cylinder" || e === "cylinder" && t === "cone" ? nE.coneVsCylinder : e === "cube" && t === "sphere" || e === "sphere" && t === "cube" ? nE.cubeVsSphere : nE.tryAgain, aE = [
 	["cube", "sphere"],
 	["cube", "cone"],
 	["sphere", "cylinder"],
 	["cone", "cylinder"],
 	["sphere", "cone"],
 	["cube", "cylinder"]
-], KT = [
+], oE = [
 	[
 		"cube",
 		"sphere",
@@ -42555,12 +42935,12 @@ var HT = {
 		"cylinder",
 		"cone"
 	]
-], qT = [
+], sE = [
 	"cube",
 	"sphere",
 	"cylinder",
 	"cone"
-], JT = [
+], cE = [
 	(e) => ({
 		en: `Find the ${e.en}.`,
 		fr: `Trouve le ${e.fr}.`
@@ -42574,26 +42954,26 @@ var HT = {
 		fr: `Lequel est le ${e.fr} ?`
 	})
 ];
-function YT(e, t, n, r) {
-	let i = [t, ...n], a = UT[t];
-	return Y(e, JT[r % JT.length](a), {
-		en: i.map((e) => UT[e].en),
-		fr: i.map((e) => UT[e].fr)
+function lE(e, t, n, r) {
+	let i = [t, ...n], a = rE[t];
+	return H(e, cE[r % cE.length](a), {
+		en: i.map((e) => rE[e].en),
+		fr: i.map((e) => rE[e].fr)
 	}, 0, {
 		type: "pick-group",
 		groups: i.map((e) => ({
-			emoji: UT[e].emoji,
+			emoji: rE[e].emoji,
 			count: 1,
 			glyph: `solid:${e}`
 		})),
 		reveal: "none"
-	}, [null, ...n.map((e) => WT(t, e))]);
+	}, [null, ...n.map((e) => iE(t, e))]);
 }
-function XT() {
+function uE() {
 	let e = [];
-	return GT.forEach(([t, n], r) => {
-		e.push(YT(1, t, [n], r), YT(1, n, [t], r + 1));
-	}), e.push(Y(1, {
+	return aE.forEach(([t, n], r) => {
+		e.push(lE(1, t, [n], r), lE(1, n, [t], r + 1));
+	}), e.push(H(1, {
 		en: "Find the ball.",
 		fr: "Trouve la balle."
 	}, {
@@ -42602,29 +42982,29 @@ function XT() {
 	}, 0, {
 		type: "pick-group",
 		groups: [{
-			emoji: UT.sphere.emoji,
+			emoji: rE.sphere.emoji,
 			count: 1,
 			glyph: "solid:sphere"
 		}, {
-			emoji: UT.cube.emoji,
+			emoji: rE.cube.emoji,
 			count: 1,
 			glyph: "solid:cube"
 		}],
 		reveal: "none"
-	}, [null, HT.cubeVsSphere])), KT.forEach((t, n) => {
+	}, [null, nE.cubeVsSphere])), oE.forEach((t, n) => {
 		t.forEach((r, i) => {
-			e.push(YT(2, r, t.filter((e) => e !== r).reverse().slice(0, 2), n + i));
+			e.push(lE(2, r, t.filter((e) => e !== r).reverse().slice(0, 2), n + i));
 		});
-	}), qT.forEach((t, n) => {
-		JT.forEach((r, i) => {
-			let a = qT.filter((e) => e !== t);
-			e.push(YT(3, t, i === 1 ? a.reverse() : a, i + n));
+	}), sE.forEach((t, n) => {
+		cE.forEach((r, i) => {
+			let a = sE.filter((e) => e !== t);
+			e.push(lE(3, t, i === 1 ? a.reverse() : a, i + n));
 		});
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/solids.ts
-var ZT = [
+var dE = [
 	{
 		solid: {
 			en: "ball",
@@ -42674,11 +43054,11 @@ var ZT = [
 		}
 	}
 ];
-function QT() {
+function fE() {
 	let e = [], t = {
-		1: ZT.slice(0, 2),
-		2: ZT,
-		3: ZT
+		1: dE.slice(0, 2),
+		2: dE,
+		3: dE
 	}, n = {
 		en: "Solid (3D)",
 		fr: "Solide (3D)"
@@ -42698,7 +43078,7 @@ function QT() {
 		3
 	]) for (let o of t[a]) for (let t of [!0, !1]) for (let s of i) {
 		let i = t ? o.solid : o.flat, c = t ? n : r, l = t ? r : n, u = a === 3 ? ` (${t ? o.flat.en : o.solid.en}?)` : "";
-		e.push(z(a, {
+		e.push(R(a, {
 			prompt: `${i.glyph}${u}\n\n${s.en}`,
 			options: [c.en, l.en]
 		}, {
@@ -42706,16 +43086,16 @@ function QT() {
 			options: [c.fr, l.fr]
 		}));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/solidMatch.ts
-var $T = {
+var pE = {
 	cubeVsSquare: "math.p.solidmatch.hint.cubeVsSquare",
 	cylinderVsRect: "math.p.solidmatch.hint.cylinderVsRect",
 	coneVsTriangle: "math.p.solidmatch.hint.coneVsTriangle",
 	sphereRolls: "math.p.solidmatch.hint.sphereRolls"
-}, eE = {
+}, mE = {
 	cube: [
 		{
 			emoji: "🎲",
@@ -42784,19 +43164,19 @@ var $T = {
 			fr: "chapeau de fête"
 		}
 	]
-}, tE = {
+}, hE = {
 	emoji: "🖼️",
 	en: "picture frame",
 	fr: "cadre"
-}, nE = {
-	cube: $T.cubeVsSquare,
-	sphere: $T.sphereRolls,
-	cylinder: $T.cylinderVsRect,
-	cone: $T.coneVsTriangle
+}, gE = {
+	cube: pE.cubeVsSquare,
+	sphere: pE.sphereRolls,
+	cylinder: pE.cylinderVsRect,
+	cone: pE.coneVsTriangle
 };
-function rE(e, t, n, r, i) {
-	let a = [eE[t][n % 3], ...r.map((e, t) => e === "flat" ? tE : eE[e][(n + t + 1) % 3])];
-	return Y(e, i % 2 == 0 ? {
+function _E(e, t, n, r, i) {
+	let a = [mE[t][n % 3], ...r.map((e, t) => e === "flat" ? hE : mE[e][(n + t + 1) % 3])];
+	return H(e, i % 2 == 0 ? {
 		en: "Which looks like this?",
 		fr: "Lequel ressemble à ceci ?"
 	} : {
@@ -42813,11 +43193,11 @@ function rE(e, t, n, r, i) {
 		})),
 		prompts: [{ glyph: `solid:${t}` }],
 		reveal: "none"
-	}, [null, ...r.map(() => nE[t])]);
+	}, [null, ...r.map(() => gE[t])]);
 }
-function iE() {
+function vE() {
 	let e = [];
-	for (let [t, n] of [["cube", "sphere"], ["sphere", "cube"]]) for (let r = 0; r < 3; r++) e.push(rE(1, t, r, [n], r), rE(1, t, r, [n], r + 1));
+	for (let [t, n] of [["cube", "sphere"], ["sphere", "cube"]]) for (let r = 0; r < 3; r++) e.push(_E(1, t, r, [n], r), _E(1, t, r, [n], r + 1));
 	for (let [t, n, r] of [
 		[
 			"cube",
@@ -42834,7 +43214,7 @@ function iE() {
 			"cube",
 			"sphere"
 		]
-	]) for (let i = 0; i < 3; i++) e.push(rE(2, t, i, [n, r], i), rE(2, t, i + 1, [r, n], i + 1));
+	]) for (let i = 0; i < 3; i++) e.push(_E(2, t, i, [n, r], i), _E(2, t, i + 1, [r, n], i + 1));
 	let t = [
 		"cube",
 		"sphere",
@@ -42843,32 +43223,32 @@ function iE() {
 	];
 	t.forEach((n, r) => {
 		let i = t.filter((e) => e !== n);
-		for (let t = 0; t < 3; t++) e.push(rE(3, n, t, t % 2 == 0 ? i : [...i].reverse(), r + t));
+		for (let t = 0; t < 3; t++) e.push(_E(3, n, t, t % 2 == 0 ? i : [...i].reverse(), r + t));
 	});
-	for (let t = 0; t < 3; t++) e.push(rE(3, "cube", t, [
+	for (let t = 0; t < 3; t++) e.push(_E(3, "cube", t, [
 		"flat",
 		"sphere",
 		"cone"
-	], t), rE(3, "cone", t, [
+	], t), _E(3, "cone", t, [
 		"flat",
 		"cylinder",
 		"sphere"
 	], t));
-	return X(e);
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/whatToMeasure.ts
-var aE = {
+var yE = {
 	longVsTall: "measure.what.hint.longVsTall",
 	heavyVsBig: "measure.what.hint.heavyVsBig",
 	capacityVsWeight: "measure.what.hint.capacityVsWeight",
 	tryAgain: "measure.what.hint.tryAgain"
-}, oE = [
+}, bE = [
 	"length",
 	"height",
 	"weight",
 	"capacity"
-], sE = {
+], xE = {
 	length: {
 		emoji: "📏",
 		en: "ruler across",
@@ -42889,7 +43269,7 @@ var aE = {
 		en: "cup of water",
 		fr: "verre d'eau"
 	}
-}, cE = {
+}, SE = {
 	length: {
 		en: "How long is it?",
 		fr: "Quelle est sa longueur ?"
@@ -42906,7 +43286,7 @@ var aE = {
 		en: "How much does it hold?",
 		fr: "Combien peut-il contenir ?"
 	}
-}, lE = {
+}, CE = {
 	length: [
 		{
 			emoji: "🐍",
@@ -43036,13 +43416,13 @@ var aE = {
 		}
 	]
 };
-function uE(e, t) {
+function wE(e, t) {
 	let n = (e) => e === "length" || e === "height";
-	return n(e) && n(t) ? aE.longVsTall : e === "weight" && t === "capacity" || e === "capacity" && t === "weight" ? aE.capacityVsWeight : e === "weight" ? aE.heavyVsBig : aE.tryAgain;
+	return n(e) && n(t) ? yE.longVsTall : e === "weight" && t === "capacity" || e === "capacity" && t === "weight" ? yE.capacityVsWeight : e === "weight" ? yE.heavyVsBig : yE.tryAgain;
 }
-function dE(e, t, n, r) {
-	let i = lE[t][n % 6], a = [t, ...r].map((e) => sE[e]);
-	return Y(e, cE[t], {
+function TE(e, t, n, r) {
+	let i = CE[t][n % 6], a = [t, ...r].map((e) => xE[e]);
+	return H(e, SE[t], {
 		en: a.map((e) => e.en),
 		fr: a.map((e) => e.fr)
 	}, 0, {
@@ -43053,11 +43433,11 @@ function dE(e, t, n, r) {
 		})),
 		prompts: [{ emoji: i.emoji }],
 		reveal: "none"
-	}, [null, ...r.map((e) => uE(t, e))]);
+	}, [null, ...r.map((e) => wE(t, e))]);
 }
-function fE(e, t, n) {
-	let r = [lE[e][t % 6], ...n.map((e, n) => lE[e][(t + n) % 6])];
-	return Y(3, {
+function EE(e, t, n) {
+	let r = [CE[e][t % 6], ...n.map((e, n) => CE[e][(t + n) % 6])];
+	return H(3, {
 		en: "Which one needs this?",
 		fr: "Lequel a besoin de ceci ?"
 	}, {
@@ -43069,40 +43449,40 @@ function fE(e, t, n) {
 			emoji: e.emoji,
 			count: 1
 		})),
-		prompts: [{ emoji: sE[e].emoji }],
+		prompts: [{ emoji: xE[e].emoji }],
 		reveal: "none"
-	}, [null, ...n.map((t) => uE(e, t))]);
+	}, [null, ...n.map((t) => wE(e, t))]);
 }
-function pE() {
+function DE() {
 	let e = [];
-	for (let t = 0; t < 6; t++) e.push(dE(1, "length", t, ["weight"]), dE(1, "weight", t, ["length"])), t < 3 && e.push(dE(1, "height", t, ["capacity"]), dE(1, "capacity", t, ["height"]));
-	return oE.forEach((t) => {
-		let n = oE.filter((e) => e !== t);
-		for (let r = 0; r < 6; r++) e.push(dE(2, t, r, r % 2 == 0 ? n : [...n].reverse()));
-	}), oE.forEach((t, n) => {
-		let r = oE.filter((e) => e !== t);
-		for (let i = 0; i < 4; i++) e.push(fE(t, i, [r[(n + i) % 3], r[(n + i + 1) % 3]]));
-	}), X(e);
+	for (let t = 0; t < 6; t++) e.push(TE(1, "length", t, ["weight"]), TE(1, "weight", t, ["length"])), t < 3 && e.push(TE(1, "height", t, ["capacity"]), TE(1, "capacity", t, ["height"]));
+	return bE.forEach((t) => {
+		let n = bE.filter((e) => e !== t);
+		for (let r = 0; r < 6; r++) e.push(TE(2, t, r, r % 2 == 0 ? n : [...n].reverse()));
+	}), bE.forEach((t, n) => {
+		let r = bE.filter((e) => e !== t);
+		for (let i = 0; i < 4; i++) e.push(EE(t, i, [r[(n + i) % 3], r[(n + i + 1) % 3]]));
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/factsWithinFive.ts
-var mE = {
+var OE = {
 	ignoredSecond: "factsFive.feedback.ignoredSecond",
 	offByOne: "factsFive.feedback.offByOne",
 	mixedOp: "factsFive.feedback.mixedOp",
 	reveal: "factsFive.feedback.reveal"
-}, hE = [
+}, kE = [
 	["🔴", "🔵"],
 	["🍎", "🍐"],
 	["⭐", "🌙"]
-], gE = (e, t, n) => e === "add" ? t + n : t - n;
-function _E(e, t, n, r) {
-	return r === t && n > 0 ? mE.ignoredSecond : r === gE(e === "add" ? "take" : "add", t, n) ? mE.mixedOp : Math.abs(r - gE(e, t, n)) === 1 ? mE.offByOne : mE.reveal;
+], AE = (e, t, n) => e === "add" ? t + n : t - n;
+function jE(e, t, n, r) {
+	return r === t && n > 0 ? OE.ignoredSecond : r === AE(e === "add" ? "take" : "add", t, n) ? OE.mixedOp : Math.abs(r - AE(e, t, n)) === 1 ? OE.offByOne : OE.reveal;
 }
-function vE(e, t, n, r) {
-	let i = gE(e, t, n), a = [
+function ME(e, t, n, r) {
+	let i = AE(e, t, n), a = [
 		t,
-		gE(e === "add" ? "take" : "add", t, n),
+		AE(e === "add" ? "take" : "add", t, n),
 		i + 1,
 		i - 1,
 		i + 2,
@@ -43113,8 +43493,8 @@ function vE(e, t, n, r) {
 	for (let e of a) if (e >= 0 && e <= 5 && e !== i && !o.includes(e) && o.push(e), o.length === r) break;
 	return o;
 }
-function yE(e, t, n, r, i, a) {
-	let o = gE(t, n, r), s = vE(t, n, r, 3), [c, l] = hE[i % hE.length], u = t === "add" ? {
+function NE(e, t, n, r, i, a) {
+	let o = AE(t, n, r), s = ME(t, n, r, 3), [c, l] = kE[i % kE.length], u = t === "add" ? {
 		en: `${n} and ${r} more. How many?`,
 		fr: `${n} et ${r} en plus. Combien ?`
 	} : {
@@ -43132,10 +43512,10 @@ function yE(e, t, n, r, i, a) {
 		operator: t === "add" ? "+" : "-",
 		...a === "cover" && { flashMs: 2e3 }
 	};
-	return Y(e, u, { en: [o, ...s].map(String) }, 0, d, [null, ...s.map((e) => _E(t, n, r, e))]);
+	return H(e, u, { en: [o, ...s].map(String) }, 0, d, [null, ...s.map((e) => jE(t, n, r, e))]);
 }
-function bE() {
-	let e = [], t = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(yE(t, "add", n, a, i + o, r)))), n = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(yE(t, "take", n, a, i + o, r))));
+function PE() {
+	let e = [], t = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(NE(t, "add", n, a, i + o, r)))), n = (t, n, r, i) => n.forEach(([n, a], o) => i.forEach((i) => e.push(NE(t, "take", n, a, i + o, r))));
 	return t(1, [
 		[1, 1],
 		[1, 2],
@@ -43176,19 +43556,19 @@ function bE() {
 		[3, 2],
 		[1, 4],
 		[4, 1]
-	], "bare", [0]), X(e);
+	], "bare", [0]), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/teenNumbers.ts
-var xE = {
+var FE = {
 	forgotTen: "activity.teen-numbers.hint.forgot-ten",
 	onlyExtras: "activity.teen-numbers.hint.only-extras",
 	recount: "activity.teen-numbers.hint.recount",
 	wholeNotExtras: "activity.teen-numbers.hint.whole-not-extras"
-}, SE = ["🟦", "🟥"];
-function CE(e, t, n, r) {
+}, IE = ["🟦", "🟥"];
+function LE(e, t, n, r) {
 	let i = 10 + t;
-	return Y(e, {
+	return H(e, {
 		en: "Ten and some more. How many in all?",
 		fr: "Dix et encore des jetons. Combien en tout ?"
 	}, { en: [
@@ -43203,13 +43583,13 @@ function CE(e, t, n, r) {
 		...r && { flashMs: 2e3 }
 	}, [
 		null,
-		xE.forgotTen,
-		xE.onlyExtras,
-		xE.recount
+		FE.forgotTen,
+		FE.onlyExtras,
+		FE.recount
 	]);
 }
-function wE(e, t, n, r) {
-	return Y(e, {
+function RE(e, t, n, r) {
+	return H(e, {
 		en: "Ten and how many more?",
 		fr: "Dix et combien de plus ?"
 	}, { en: [
@@ -43224,37 +43604,37 @@ function wE(e, t, n, r) {
 		...r && { flashMs: 2e3 }
 	}, [
 		null,
-		xE.wholeNotExtras,
-		xE.recount,
-		xE.recount
+		FE.wholeNotExtras,
+		FE.recount,
+		FE.recount
 	]);
 }
-function TE() {
+function zE() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) SE.forEach((n) => e.push(CE(1, t, n, !1)));
+	]) IE.forEach((n) => e.push(LE(1, t, n, !1)));
 	for (let t of [
 		4,
 		5,
 		6
-	]) SE.forEach((n) => e.push(CE(2, t, n, !1), wE(2, t, n, !1)));
+	]) IE.forEach((n) => e.push(LE(2, t, n, !1), RE(2, t, n, !1)));
 	for (let t of [
 		7,
 		8,
 		9
-	]) SE.forEach((n) => e.push(CE(3, t, n, !0), wE(3, t, n, !0)));
-	return X(e);
+	]) IE.forEach((n) => e.push(LE(3, t, n, !0), RE(3, t, n, !0)));
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/explainAnswer.ts
-var EE = {
+var BE = {
 	lineUp: "ea.fb.lineUp",
 	matchNotCount: "ea.fb.matchNotCount",
 	showClue: "ea.fb.showClue"
-}, DE = {
+}, VE = {
 	counted: {
 		en: "I counted",
 		fr: "J'ai compté"
@@ -43276,27 +43656,27 @@ var EE = {
 		fr: "J'ai deviné"
 	}
 };
-function OE(e, t) {
-	return t === "looksBigger" ? EE.lineUp : t === "counted" && e === "matched" ? EE.matchNotCount : EE.showClue;
+function HE(e, t) {
+	return t === "looksBigger" ? BE.lineUp : t === "counted" && e === "matched" ? BE.matchNotCount : BE.showClue;
 }
-function kE(e, t, n, r, i) {
+function UE(e, t, n, r, i) {
 	let a = [n, ...r];
-	return Y(e, t, {
-		en: a.map((e) => DE[e].en),
-		fr: a.map((e) => DE[e].fr)
-	}, 0, i, [null, ...r.map((e) => OE(n, e))]);
+	return H(e, t, {
+		en: a.map((e) => VE[e].en),
+		fr: a.map((e) => VE[e].fr)
+	}, 0, i, [null, ...r.map((e) => HE(n, e))]);
 }
-var AE = (e, t, n) => {
+var WE = (e, t, n) => {
 	let r = t.filter((t) => t !== e);
 	return n % 3 == 0 ? [r[0], r[1]] : n % 3 == 1 ? [r[1], r[2]] : [r[2], r[0]];
-}, jE = [
+}, GE = [
 	"counted",
 	"matched",
 	"repeats",
 	"looksBigger",
 	"guessed"
 ];
-function ME() {
+function KE() {
 	let e = [], t = [
 		"matched",
 		"looksBigger",
@@ -43317,10 +43697,10 @@ function ME() {
 	];
 	n.forEach(([n, i], a) => {
 		let [o, s] = r[a % 3];
-		e.push(kE(1, {
+		e.push(UE(1, {
 			en: "The first group has more. Why?",
 			fr: "Le premier groupe en a plus. Pourquoi ?"
-		}, "counted", AE("counted", ["counted", ...t], a), {
+		}, "counted", WE("counted", ["counted", ...t], a), {
 			type: "counters",
 			groups: [{
 				emoji: o,
@@ -43347,10 +43727,10 @@ function ME() {
 		"🪑"
 	];
 	return i.forEach(([t, n], r) => {
-		e.push(kE(2, {
+		e.push(UE(2, {
 			en: "One for each child. How?",
 			fr: "Un pour chaque enfant. Comment ?"
-		}, "matched", AE("matched", jE.filter((e) => e !== "repeats"), r), {
+		}, "matched", WE("matched", GE.filter((e) => e !== "repeats"), r), {
 			type: "counters",
 			groups: [{
 				emoji: "🧒",
@@ -43388,21 +43768,21 @@ function ME() {
 		]
 	].forEach((t, n) => {
 		let r = Array.from({ length: 5 }, (e, n) => t[n % t.length]);
-		e.push(kE(3, {
+		e.push(UE(3, {
 			en: "How do you know what's next?",
 			fr: "Comment sais-tu la suite ?"
-		}, "repeats", AE("repeats", jE.filter((e) => e !== "looksBigger"), n), {
+		}, "repeats", WE("repeats", GE.filter((e) => e !== "looksBigger"), n), {
 			type: "counters",
 			groups: r.map((e) => ({
 				emoji: e,
 				count: 1
 			}))
 		}));
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/sidesCorners.ts
-var NE = [
+var qE = [
 	{
 		en: "triangle",
 		fr: "triangle",
@@ -43445,30 +43825,30 @@ var NE = [
 		sides: 0,
 		corners: 0
 	}
-], PE = {
-	1: NE.filter((e) => e.sides === 3 || e.sides === 4),
-	2: NE.filter((e) => e.sides > 0),
-	3: NE
-}, FE = [{
+], JE = {
+	1: qE.filter((e) => e.sides === 3 || e.sides === 4),
+	2: qE.filter((e) => e.sides > 0),
+	3: qE
+}, YE = [{
 	en: "How many sides does this shape have",
 	fr: "Combien de côtés cette forme a-t-elle"
 }, {
 	en: "Count the sides of this shape",
 	fr: "Compte les côtés de cette forme"
 }];
-function IE() {
+function XE() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) for (let n of PE[t]) for (let r of FE) e.push(jy(t, {
+	]) for (let n of JE[t]) for (let r of YE) e.push(Ly(t, {
 		en: `${n.glyph}\n\n${r.en}`,
 		fr: `${n.glyph}\n\n${r.fr}`
 	}, n.sides));
-	return U(e);
+	return V(e);
 }
-function LE() {
+function ZE() {
 	let e = [], t = {
 		en: "Sides",
 		fr: "Côtés"
@@ -43480,9 +43860,9 @@ function LE() {
 		1,
 		2,
 		3
-	]) for (let i of PE[r]) for (let a of [!0, !1]) {
+	]) for (let i of JE[r]) for (let a of [!0, !1]) {
 		let o = a ? i.sides : i.corners, s = a ? t : n, c = a ? n : t;
-		e.push(z(r, {
+		e.push(R(r, {
 			prompt: `${i.glyph} has ${o}. Is that its sides or its corners?`,
 			options: [s.en, c.en]
 		}, {
@@ -43490,24 +43870,24 @@ function LE() {
 			options: [s.fr, c.fr]
 		}));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/oddOneOut.ts
-var RE = {
+var QE = {
 	wrongSameGroup: "oddOneOut.fb.wrongSameGroup",
 	wrongIrrelevantAttr: "oddOneOut.fb.wrongIrrelevantAttr"
-}, zE = {
+}, $E = {
 	en: "Which one does not belong?",
 	fr: "Lequel ne va pas avec les autres ?"
-}, BE = [
+}, eD = [
 	"🔴",
 	"🔵",
 	"🟢",
 	"🟡",
 	"🟣",
 	"🟠"
-], VE = {
+], tD = {
 	circle: "⚫",
 	square: "⬛",
 	triangle: "🔺",
@@ -43515,8 +43895,8 @@ var RE = {
 	pentagon: "⬟",
 	hexagon: "⬢"
 };
-function HE(e, t) {
-	return Y(e, zE, { en: t.map((e, t) => `${e.emoji} ${t + 1}`) }, 0, {
+function nD(e, t) {
+	return H(e, $E, { en: t.map((e, t) => `${e.emoji} ${t + 1}`) }, 0, {
 		type: "pick-group",
 		groups: t.map((e) => ({
 			emoji: e.emoji,
@@ -43524,25 +43904,25 @@ function HE(e, t) {
 			...e.glyph && { glyph: e.glyph }
 		})),
 		reveal: "none"
-	}, t.map((e, t) => t === 0 ? null : e.turned ? RE.wrongIrrelevantAttr : RE.wrongSameGroup));
+	}, t.map((e, t) => t === 0 ? null : e.turned ? QE.wrongIrrelevantAttr : QE.wrongSameGroup));
 }
-var UE = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, WE = (e, t = 0) => ({
-	emoji: VE[e],
-	glyph: UE(e, t),
+var rD = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, iD = (e, t = 0) => ({
+	emoji: tD[e],
+	glyph: rD(e, t),
 	turned: t !== 0
-}), GE = [
+}), aD = [
 	"circle",
 	"square",
 	"triangle",
 	"star",
 	"pentagon",
 	"hexagon"
-], KE = [
+], oD = [
 	"triangle",
 	"star",
 	"pentagon",
 	"hexagon"
-], qE = [
+], sD = [
 	[
 		0,
 		25,
@@ -43568,39 +43948,39 @@ var UE = (e, t = 0) => t === 0 ? `shape:${e}` : `shape:${e}:r${t}`, WE = (e, t =
 		135
 	]
 ];
-function JE() {
+function cD() {
 	let e = [];
-	return BE.forEach((t, n) => {
+	return eD.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = BE[(n + r) % BE.length];
-			e.push(HE(1, [
+			let i = eD[(n + r) % eD.length];
+			e.push(nD(1, [
 				{ emoji: i },
 				{ emoji: t },
 				{ emoji: t },
 				{ emoji: t }
 			]));
 		}
-	}), GE.forEach((t, n) => {
+	}), aD.forEach((t, n) => {
 		for (let r of [1, 3]) {
-			let i = GE[(n + r) % GE.length];
-			e.push(HE(2, [
-				WE(i),
-				WE(t),
-				WE(t),
-				WE(t)
+			let i = aD[(n + r) % aD.length];
+			e.push(nD(2, [
+				iD(i),
+				iD(t),
+				iD(t),
+				iD(t)
 			]));
 		}
-	}), KE.forEach((t, n) => {
-		let r = GE.filter((e) => e !== t);
+	}), oD.forEach((t, n) => {
+		let r = aD.filter((e) => e !== t);
 		for (let i = 0; i < 3; i++) {
-			let a = r[(n + i * 2) % r.length], o = qE[(n + i) % qE.length];
-			e.push(HE(3, [WE(a), ...o.map((e) => WE(t, e))]));
+			let a = r[(n + i * 2) % r.length], o = sD[(n + i) % sD.length];
+			e.push(nD(3, [iD(a), ...o.map((e) => iD(t, e))]));
 		}
-	}), X(e);
+	}), U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/storyProblems.ts
-function YE() {
+function lD() {
 	let e = [], t = {
 		1: 5,
 		2: 8,
@@ -43625,38 +44005,27 @@ function YE() {
 	}
 	return e;
 }
-function XE(e, t) {
-	let n = B[(e.start + e.change) % B.length];
+function uD(e, t) {
+	let n = z[(e.start + e.change) % z.length];
 	return t === "en" ? e.join ? e.telegraphed ? `You have ${e.start} ${n}. You get ${e.change} more.` : `You have ${e.start} ${n}. Later, ${e.change} more show up.` : e.telegraphed ? `You have ${e.start} ${n}. You give away ${e.change}.` : `You have ${e.start} ${n}. Later, ${e.change} go away.` : e.join ? e.telegraphed ? `Tu as ${e.start} ${n}. Tu en reçois ${e.change} de plus.` : `Tu as ${e.start} ${n}. Plus tard, ${e.change} de plus arrivent.` : e.telegraphed ? `Tu as ${e.start} ${n}. Tu en donnes ${e.change}.` : `Tu as ${e.start} ${n}. Plus tard, ${e.change} s'en vont.`;
 }
-function ZE() {
+function dD() {
 	let e = [];
-	for (let t of YE()) {
+	for (let t of lD()) {
 		let n = t.join ? "+" : "−", r = t.join ? "−" : "+";
-		e.push(z(t.level, {
-			prompt: `${XE(t, "en")}\n\nDo you ADD or TAKE AWAY?`,
+		e.push(R(t.level, {
+			prompt: `${uD(t, "en")}\n\nDo you ADD or TAKE AWAY?`,
 			options: [n, r]
 		}, {
-			prompt: `${XE(t, "fr")}\n\nTu AJOUTES ou tu ENLÈVES ?`,
+			prompt: `${uD(t, "fr")}\n\nTu AJOUTES ou tu ENLÈVES ?`,
 			options: [n, r]
 		}));
 	}
-	return U(e);
-}
-function QE() {
-	let e = [];
-	for (let t of YE()) {
-		let n = t.join ? t.start + t.change : t.start - t.change;
-		e.push(jy(t.level, {
-			en: `${XE(t, "en")}\n\nHow many ${t.join ? "do you have now" : "are left"}`,
-			fr: `${XE(t, "fr")}\n\n${t.join ? "Combien en as-tu maintenant" : "Combien en reste-t-il"}`
-		}, n));
-	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/zero.ts
-var $E = {
+var fD = {
 	1: [
 		3,
 		3,
@@ -43672,45 +44041,45 @@ var $E = {
 		5
 	]
 };
-function eD() {
+function pD() {
 	let e = [];
 	for (let t of [
 		1,
 		2,
 		3
-	]) $E[t].forEach((n, r) => {
+	]) fD[t].forEach((n, r) => {
 		for (let i = n; i >= 0; i--) {
-			let a = B[(n * 3 + i + r) % B.length], o = i === 0 ? `🧺 (empty, was ${a})` : `🧺 ${H(i, a)}`;
-			e.push(R(t, {
+			let a = z[(n * 3 + i + r) % z.length], o = i === 0 ? `🧺 (empty, was ${a})` : `🧺 ${B(i, a)}`;
+			e.push(jy(t, {
 				en: `${o}\n\nHow many are left in the basket?`,
 				fr: `${o}\n\nCombien en reste-t-il dans le panier ?`
-			}, String(i), V(i, [], 0, Math.max(n + 2, 6), i + r)));
+			}, String(i), zy(i, [], 0, Math.max(n + 2, 6), i + r)));
 		}
 	});
-	return U(e);
+	return V(e);
 }
-var tD = {
+var mD = {
 	oneNotZero: "isZero.feedback.oneNotZero",
 	emptyMeansZero: "isZero.feedback.emptyMeansZero",
 	zeroFirst: "isZero.feedback.zeroFirst"
-}, nD = [
+}, hD = [
 	"🧺",
 	"📦",
 	"🪣",
 	"🥡"
-], rD = (e) => e.count === 0 ? e.emoji : e.emoji.repeat(e.count), iD = (e) => e === 1 ? tD.oneNotZero : tD.emptyMeansZero;
-function aD() {
+], gD = (e) => e.count === 0 ? e.emoji : e.emoji.repeat(e.count), _D = (e) => e === 1 ? mD.oneNotZero : mD.emptyMeansZero;
+function vD() {
 	let e = [], t = {
 		en: "Tap the basket with 0.",
 		fr: "Touche le panier avec 0."
 	};
-	nD.forEach((n, r) => {
+	hD.forEach((n, r) => {
 		for (let i of [
 			1,
 			2,
 			3
 		]) {
-			let a = B[(r * 3 + i) % B.length];
+			let a = z[(r * 3 + i) % z.length];
 			for (let r of [!0, !1]) {
 				let o = [{
 					emoji: n,
@@ -43719,10 +44088,10 @@ function aD() {
 					emoji: a,
 					count: i
 				}];
-				r || o.reverse(), e.push(Y(1, t, { en: o.map(rD) }, o.findIndex((e) => e.count === 0), {
+				r || o.reverse(), e.push(H(1, t, { en: o.map(gD) }, o.findIndex((e) => e.count === 0), {
 					type: "pick-group",
 					groups: o
-				}, o.map((e) => e.count === 0 ? null : iD(e.count))));
+				}, o.map((e) => e.count === 0 ? null : _D(e.count))));
 			}
 		}
 	}), [
@@ -43738,26 +44107,26 @@ function aD() {
 			2
 		]) {
 			let o = [{
-				emoji: B[i * 2 % B.length],
+				emoji: z[i * 2 % z.length],
 				count: n
 			}, {
-				emoji: B[(i * 2 + 5) % B.length],
+				emoji: z[(i * 2 + 5) % z.length],
 				count: r
 			}];
 			o.splice(a, 0, {
-				emoji: nD[(i + a) % nD.length],
+				emoji: hD[(i + a) % hD.length],
 				count: 0
-			}), e.push(Y(2, t, { en: o.map(rD) }, a, {
+			}), e.push(H(2, t, { en: o.map(gD) }, a, {
 				type: "pick-group",
 				groups: o
-			}, o.map((e) => e.count === 0 ? null : iD(e.count))));
+			}, o.map((e) => e.count === 0 ? null : _D(e.count))));
 		}
-	}), nD.forEach((t) => {
+	}), hD.forEach((t) => {
 		for (let n of [
 			["1", "3"],
 			["2", "4"],
 			["1", "5"]
-		]) e.push(Y(2, {
+		]) e.push(H(2, {
 			en: "Which numeral is for an empty basket?",
 			fr: "Quel chiffre va avec un panier vide ?"
 		}, { en: ["0", ...n] }, 0, {
@@ -43766,7 +44135,7 @@ function aD() {
 				emoji: t,
 				count: 0
 			}]
-		}, [null, ...n.map((e) => e === "1" ? tD.oneNotZero : tD.emptyMeansZero)]));
+		}, [null, ...n.map((e) => e === "1" ? mD.oneNotZero : mD.emptyMeansZero)]));
 	});
 	for (let t of [
 		["1", "5"],
@@ -43774,7 +44143,7 @@ function aD() {
 		["2", "5"],
 		["1", "4"],
 		["3", "5"]
-	]) e.push(Y(3, {
+	]) e.push(H(3, {
 		en: "Which numeral goes at the ? on the line?",
 		fr: "Quel chiffre va au ? sur la droite ?"
 	}, { en: ["0", ...t] }, 0, {
@@ -43784,12 +44153,12 @@ function aD() {
 		step: 1,
 		marked: [],
 		unknown: 0
-	}, [null, ...t.map(() => tD.zeroFirst)]));
-	return X(e);
+	}, [null, ...t.map(() => mD.zeroFirst)]));
+	return U(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/banks/yesterdayTodayTomorrow.ts
-var oD = [
+var yD = [
 	"Monday",
 	"Tuesday",
 	"Wednesday",
@@ -43797,7 +44166,7 @@ var oD = [
 	"Friday",
 	"Saturday",
 	"Sunday"
-], sD = [
+], bD = [
 	"lundi",
 	"mardi",
 	"mercredi",
@@ -43805,7 +44174,7 @@ var oD = [
 	"vendredi",
 	"samedi",
 	"dimanche"
-], cD = {
+], xD = {
 	yesterday: {
 		en: "Yesterday",
 		fr: "Hier"
@@ -43819,7 +44188,7 @@ var oD = [
 		fr: "Demain"
 	}
 };
-function lD() {
+function SD() {
 	let e = [], t = [
 		"🎂 birthday",
 		"⚽ football",
@@ -43846,16 +44215,16 @@ function lD() {
 				i,
 				r,
 				a
-			].map((e, t) => t === n ? `[${oD[e]}]` : oD[e]).join(" → "), s = [
+			].map((e, t) => t === n ? `[${yD[e]}]` : yD[e]).join(" → "), s = [
 				i,
 				r,
 				a
-			].map((e, t) => t === n ? `[${sD[e]}]` : sD[e]).join(" → "), c = cD[t], l = [
+			].map((e, t) => t === n ? `[${bD[e]}]` : bD[e]).join(" → "), c = xD[t], l = [
 				"yesterday",
 				"today",
 				"tomorrow"
-			].filter((e) => e !== t).map((e) => cD[e]);
-			e.push(z(1, {
+			].filter((e) => e !== t).map((e) => xD[e]);
+			e.push(R(1, {
 				prompt: `${o}\n\nWhat do we call the highlighted day?`,
 				options: [c.en, ...l.map((e) => e.en)]
 			}, {
@@ -43871,12 +44240,12 @@ function lD() {
 			"yesterday",
 			"today",
 			"tomorrow"
-		][r % 3], u = `${oD[i]} → ${oD[r]} → ${oD[a]}\n${o} is on ${oD[c]}.`, d = `${sD[i]} → ${sD[r]} → ${sD[a]}\n${s} est ${sD[c]}.`, f = cD[l], p = [
+		][r % 3], u = `${yD[i]} → ${yD[r]} → ${yD[a]}\n${o} is on ${yD[c]}.`, d = `${bD[i]} → ${bD[r]} → ${bD[a]}\n${s} est ${bD[c]}.`, f = xD[l], p = [
 			"yesterday",
 			"today",
 			"tomorrow"
-		].filter((e) => e !== l).map((e) => cD[e]);
-		e.push(z(2, {
+		].filter((e) => e !== l).map((e) => xD[e]);
+		e.push(R(2, {
 			prompt: `${u}\n\nWhen is the event?`,
 			options: [f.en, ...p.map((e) => e.en)]
 		}, {
@@ -43891,12 +44260,12 @@ function lD() {
 				a,
 				r,
 				i
-			], s = o.map((e, t) => t === 2 - n ? `[${oD[e]}]` : oD[e]).join(" → "), c = o.map((e, t) => t === 2 - n ? `[${sD[e]}]` : sD[e]).join(" → "), l = cD[t], u = [
+			], s = o.map((e, t) => t === 2 - n ? `[${yD[e]}]` : yD[e]).join(" → "), c = o.map((e, t) => t === 2 - n ? `[${bD[e]}]` : bD[e]).join(" → "), l = xD[t], u = [
 				"yesterday",
 				"today",
 				"tomorrow"
-			].filter((e) => e !== t).map((e) => cD[e]);
-			e.push(z(3, {
+			].filter((e) => e !== t).map((e) => xD[e]);
+			e.push(R(3, {
 				prompt: `${s}\n\nWhat do we call the highlighted day?`,
 				options: [l.en, ...u.map((e) => e.en)]
 			}, {
@@ -43905,1150 +44274,1150 @@ function lD() {
 			}));
 		});
 	}
-	return U(e);
+	return V(e);
 }
-function uD() {
+function CD() {
 	let e = [];
 	for (let t = 0; t < 7; t++) {
 		let n = (t + 6) % 7, r = (t + 1) % 7;
-		e.push(My(1, {
-			en: `Today is ${oD[t]}. Yesterday was ___.`,
-			fr: `Aujourd'hui, c'est ${sD[t]}. Hier, c'était ___.`
+		e.push(Ry(1, {
+			en: `Today is ${yD[t]}. Yesterday was ___.`,
+			fr: `Aujourd'hui, c'est ${bD[t]}. Hier, c'était ___.`
 		}, {
-			en: oD[n],
-			fr: sD[n]
-		})), e.push(My(2, {
-			en: `Today is ${oD[t]}. Tomorrow will be ___.`,
-			fr: `Aujourd'hui, c'est ${sD[t]}. Demain, ce sera ___.`
+			en: yD[n],
+			fr: bD[n]
+		})), e.push(Ry(2, {
+			en: `Today is ${yD[t]}. Tomorrow will be ___.`,
+			fr: `Aujourd'hui, c'est ${bD[t]}. Demain, ce sera ___.`
 		}, {
-			en: oD[r],
-			fr: sD[r]
+			en: yD[r],
+			fr: bD[r]
 		}));
 		let i = t % 2 == 0, a = i ? r : n;
-		e.push(My(3, {
-			en: `Today is ${oD[t]}. ${i ? "Tomorrow" : "Yesterday"} ${i ? "will be" : "was"} ___.`,
-			fr: `Aujourd'hui, c'est ${sD[t]}. ${i ? "Demain, ce sera" : "Hier, c'était"} ___.`
+		e.push(Ry(3, {
+			en: `Today is ${yD[t]}. ${i ? "Tomorrow" : "Yesterday"} ${i ? "will be" : "was"} ___.`,
+			fr: `Aujourd'hui, c'est ${bD[t]}. ${i ? "Demain, ce sera" : "Hier, c'était"} ___.`
 		}, {
-			en: oD[a],
-			fr: sD[a]
+			en: yD[a],
+			fr: bD[a]
 		}));
 	}
-	return U(e);
+	return V(e);
 }
 //#endregion
 //#region packages/syllabus-content-p/src/content.ts
-var dD = g({
+var wD = g({
 	pluginId: "preschool-flash-dots",
-	competencyId: dv.id,
-	bank: pC()
-}), fD = g({
-	pluginId: "preschool-number-hunt",
-	competencyId: fv.id,
-	bank: SC()
-}), pD = C({
-	pluginId: "preschool-numeral-twins",
-	competencyId: fv.id,
-	bank: Bw()
-}), mD = g({
-	pluginId: "preschool-show-the-number",
-	competencyId: pv.id,
-	bank: VT()
-}), hD = g({
-	pluginId: "preschool-which-has-more",
-	competencyId: mv.id,
-	bank: sw()
-}), gD = g({
-	pluginId: "preschool-same-or-not",
-	competencyId: mv.id,
-	bank: fw()
-}), _D = g({
-	pluginId: "preschool-bigger-number",
-	competencyId: hv.id,
-	bank: $x()
-}), vD = g({
-	pluginId: "preschool-bigger-smaller-same",
-	competencyId: hv.id,
-	bank: tS()
-}), yD = _({
-	pluginId: "preschool-all-together",
 	competencyId: gv.id,
-	bank: Vy()
-}), bD = g({
-	pluginId: "preschool-how-many-altogether",
-	competencyId: gv.id,
-	bank: Uy()
-}), xD = _({
-	pluginId: "preschool-how-many-left",
-	competencyId: _v.id,
-	bank: Wy()
-}), SD = g({
-	pluginId: "preschool-which-picture",
-	competencyId: _v.id,
-	bank: Gy()
-}), CD = g({
-	pluginId: "preschool-shape-hunt",
-	competencyId: vv.id,
-	bank: jT()
-}), wD = C({
-	pluginId: "preschool-is-it-a-rectangle",
-	competencyId: vv.id,
-	bank: FT()
+	bank: DC()
 }), TD = g({
-	pluginId: "preschool-where-is-the-ball",
-	competencyId: yv.id,
-	bank: ET()
-}), ED = g({
-	pluginId: "preschool-longer-or-shorter",
-	competencyId: bv.id,
-	bank: ew()
+	pluginId: "preschool-number-hunt",
+	competencyId: _v.id,
+	bank: IC()
+}), ED = C({
+	pluginId: "preschool-numeral-twins",
+	competencyId: _v.id,
+	bank: eT()
 }), DD = g({
-	pluginId: "preschool-heavy-or-light",
-	competencyId: bv.id,
-	bank: ZC()
+	pluginId: "preschool-show-the-number",
+	competencyId: vv.id,
+	bank: tE()
 }), OD = g({
-	pluginId: "preschool-holds-more",
-	competencyId: bv.id,
-	bank: QC()
+	pluginId: "preschool-which-has-more",
+	competencyId: yv.id,
+	bank: xw()
 }), kD = g({
-	pluginId: "preschool-what-comes-next",
-	competencyId: xv.id,
-	bank: dT()
+	pluginId: "preschool-same-or-not",
+	competencyId: yv.id,
+	bank: Ew()
 }), AD = g({
-	pluginId: "preschool-days-in-order",
-	competencyId: Sv.id,
-	bank: xS()
+	pluginId: "preschool-bigger-number",
+	competencyId: bv.id,
+	bank: gS()
 }), jD = g({
-	pluginId: "preschool-day-after",
-	competencyId: Sv.id,
-	bank: SS()
+	pluginId: "preschool-bigger-smaller-same",
+	competencyId: bv.id,
+	bank: vS()
 }), MD = g({
-	pluginId: "preschool-how-many-all-together",
-	competencyId: Cv.id,
-	bank: Ux()
-}), ND = C({
-	pluginId: "preschool-how-many-last-tag",
-	competencyId: Cv.id,
-	bank: Wx()
+	pluginId: "preschool-all-together",
+	competencyId: xv.id,
+	bank: ab()
+}), ND = g({
+	pluginId: "preschool-how-many-altogether",
+	competencyId: xv.id,
+	bank: ob()
 }), PD = g({
-	pluginId: "preschool-hidden-bag",
-	competencyId: wv.id,
-	bank: dS()
-}), FD = h({
-	pluginId: "preschool-neighbour-houses",
-	competencyId: Tv.id,
-	bank: Vx()
+	pluginId: "preschool-how-many-left",
+	competencyId: Sv.id,
+	bank: lb()
+}), FD = g({
+	pluginId: "preschool-which-picture",
+	competencyId: Sv.id,
+	bank: Gy()
 }), ID = g({
-	pluginId: "preschool-pick-the-right-way",
-	competencyId: Ev.id,
-	bank: Mw()
-}), LD = g({
-	pluginId: "preschool-empty-basket",
-	competencyId: Dv.id,
-	bank: eD()
+	pluginId: "preschool-shape-hunt",
+	competencyId: Cv.id,
+	bank: GT()
+}), LD = C({
+	pluginId: "preschool-is-it-a-rectangle",
+	competencyId: Cv.id,
+	bank: YT()
 }), RD = g({
-	pluginId: "preschool-is-zero-a-number",
-	competencyId: Dv.id,
-	bank: aD()
+	pluginId: "preschool-where-is-the-ball",
+	competencyId: wv.id,
+	bank: BT()
 }), zD = g({
-	pluginId: "preschool-still-the-same",
+	pluginId: "preschool-longer-or-shorter",
+	competencyId: Tv.id,
+	bank: mw()
+}), BD = g({
+	pluginId: "preschool-heavy-or-light",
+	competencyId: Tv.id,
+	bank: dw()
+}), VD = g({
+	pluginId: "preschool-holds-more",
+	competencyId: Tv.id,
+	bank: fw()
+}), HD = g({
+	pluginId: "preschool-what-comes-next",
+	competencyId: Ev.id,
+	bank: TT()
+}), UD = g({
+	pluginId: "preschool-days-in-order",
+	competencyId: Dv.id,
+	bank: RS()
+}), WD = g({
+	pluginId: "preschool-day-after",
+	competencyId: Dv.id,
+	bank: zS()
+}), GD = g({
+	pluginId: "preschool-how-many-all-together",
+	competencyId: Ov.id,
+	bank: oS()
+}), KD = C({
+	pluginId: "preschool-how-many-last-tag",
 	competencyId: Ov.id,
 	bank: sS()
-}), BD = g({
-	pluginId: "preschool-which-row-has-more",
-	competencyId: Ov.id,
-	bank: lS()
-}), VD = g({
-	pluginId: "preschool-who-is-nth",
+}), qD = g({
+	pluginId: "preschool-hidden-bag",
 	competencyId: kv.id,
-	bank: $w()
-}), HD = g({
-	pluginId: "preschool-ordinal-or-count",
-	competencyId: kv.id,
-	bank: eT()
-}), UD = g({
-	pluginId: "preschool-colour-the-nth",
-	competencyId: kv.id,
-	bank: rT()
-}), WD = h({
-	pluginId: "preschool-two-hands",
+	bank: OS()
+}), JD = h({
+	pluginId: "preschool-neighbour-houses",
 	competencyId: Av.id,
-	bank: wS()
-}), GD = g({
-	pluginId: "preschool-another-way",
-	competencyId: Av.id,
-	bank: TS()
-}), KD = g({
-	pluginId: "preschool-story-plus-or-minus",
-	competencyId: jv.id,
-	bank: ZE()
-}), qD = _({
-	pluginId: "preschool-solve-it",
-	competencyId: jv.id,
-	bank: QE()
-}), JD = g({
-	pluginId: "preschool-solid-or-flat",
-	competencyId: Mv.id,
-	bank: QT()
+	bank: iS()
 }), YD = g({
-	pluginId: "preschool-name-the-thing",
-	competencyId: Mv.id,
-	bank: XT()
+	pluginId: "preschool-pick-the-right-way",
+	competencyId: jv.id,
+	bank: Kw()
 }), XD = g({
-	pluginId: "preschool-solid-match",
+	pluginId: "preschool-empty-basket",
 	competencyId: Mv.id,
-	bank: iE()
-}), ZD = _({
-	pluginId: "preschool-count-the-sides",
-	competencyId: Nv.id,
-	bank: IE()
+	bank: pD()
+}), ZD = g({
+	pluginId: "preschool-is-zero-a-number",
+	competencyId: Mv.id,
+	bank: vD()
 }), QD = g({
-	pluginId: "preschool-sides-or-corners",
+	pluginId: "preschool-still-the-same",
 	competencyId: Nv.id,
-	bank: LE()
+	bank: wS()
 }), $D = g({
-	pluginId: "preschool-robot-says",
-	competencyId: Pv.id,
-	bank: rw()
+	pluginId: "preschool-which-row-has-more",
+	competencyId: Nv.id,
+	bank: ES()
 }), eO = g({
-	pluginId: "preschool-goes-in-the-middle",
-	competencyId: Fv.id,
-	bank: oT()
+	pluginId: "preschool-who-is-nth",
+	competencyId: Pv.id,
+	bank: pT()
 }), tO = g({
-	pluginId: "preschool-odd-one-out",
-	competencyId: Iv.id,
-	bank: JE()
+	pluginId: "preschool-ordinal-or-count",
+	competencyId: Pv.id,
+	bank: mT()
 }), nO = g({
-	pluginId: "preschool-name-the-group",
-	competencyId: Lv.id,
-	bank: Ew()
+	pluginId: "preschool-colour-the-nth",
+	competencyId: Pv.id,
+	bank: _T()
 }), rO = g({
-	pluginId: "preschool-fill-the-gap",
-	competencyId: Rv.id,
-	bank: WC()
+	pluginId: "preschool-two-hands",
+	competencyId: Fv.id,
+	bank: mb()
 }), iO = g({
-	pluginId: "preschool-when-does-it-happen",
-	competencyId: zv.id,
-	bank: gT()
+	pluginId: "preschool-another-way",
+	competencyId: Fv.id,
+	bank: hb()
 }), aO = g({
-	pluginId: "preschool-yesterday-today-tomorrow",
-	competencyId: Bv.id,
-	bank: lD()
-}), oO = h({
-	pluginId: "preschool-what-day-was-it",
-	competencyId: Bv.id,
-	bank: uD()
+	pluginId: "preschool-story-plus-or-minus",
+	competencyId: Iv.id,
+	bank: dD()
+}), oO = g({
+	pluginId: "preschool-solve-it",
+	competencyId: Iv.id,
+	bank: fb()
 }), sO = g({
-	pluginId: "preschool-count-in-order-5",
-	competencyId: Vv.id,
-	bank: Jy(5)
+	pluginId: "preschool-solid-or-flat",
+	competencyId: Lv.id,
+	bank: fE()
 }), cO = g({
-	pluginId: "preschool-count-in-order-10",
-	competencyId: Vv.id,
-	bank: Jy(10)
+	pluginId: "preschool-name-the-thing",
+	competencyId: Lv.id,
+	bank: uE()
 }), lO = g({
-	pluginId: "preschool-one-to-one",
-	competencyId: Hv.id,
-	bank: Xy()
-}), uO = g({
-	pluginId: "preschool-give-n",
-	competencyId: Uv.id,
-	bank: Qy()
+	pluginId: "preschool-solid-match",
+	competencyId: Lv.id,
+	bank: vE()
+}), uO = _({
+	pluginId: "preschool-count-the-sides",
+	competencyId: Rv.id,
+	bank: XE()
 }), dO = g({
-	pluginId: "preschool-routine-order",
-	competencyId: Wv.id,
-	bank: Tb()
+	pluginId: "preschool-sides-or-corners",
+	competencyId: Rv.id,
+	bank: ZE()
 }), fO = g({
-	pluginId: "preschool-name-shapes",
-	competencyId: Gv.id,
-	bank: Kb()
+	pluginId: "preschool-robot-says",
+	competencyId: zv.id,
+	bank: _w()
 }), pO = g({
-	pluginId: "preschool-match-shapes",
-	competencyId: Kv.id,
-	bank: nx()
+	pluginId: "preschool-goes-in-the-middle",
+	competencyId: Bv.id,
+	bank: bT()
 }), mO = g({
-	pluginId: "preschool-roll-or-stack",
-	competencyId: qv.id,
-	bank: rx()
+	pluginId: "preschool-odd-one-out",
+	competencyId: Vv.id,
+	bank: cD()
 }), hO = g({
-	pluginId: "preschool-quantity-words",
-	competencyId: Jv.id,
-	bank: xb()
+	pluginId: "preschool-name-the-group",
+	competencyId: Hv.id,
+	bank: Bw()
 }), gO = g({
-	pluginId: "preschool-count-to-thirty",
-	competencyId: Yv.id,
-	bank: eb()
+	pluginId: "preschool-fill-the-gap",
+	competencyId: Uv.id,
+	bank: iw()
 }), _O = g({
-	pluginId: "preschool-count-backward",
-	competencyId: Xv.id,
-	bank: tb()
+	pluginId: "preschool-when-does-it-happen",
+	competencyId: Wv.id,
+	bank: AT()
 }), vO = g({
-	pluginId: "preschool-take-n",
-	competencyId: Zv.id,
-	bank: $y()
-}), yO = g({
-	pluginId: "preschool-one-more-less",
-	competencyId: Qv.id,
-	bank: nb()
+	pluginId: "preschool-yesterday-today-tomorrow",
+	competencyId: Gv.id,
+	bank: SD()
+}), yO = h({
+	pluginId: "preschool-what-day-was-it",
+	competencyId: Gv.id,
+	bank: CD()
 }), bO = g({
-	pluginId: "preschool-compare-groups",
-	competencyId: $v.id,
-	bank: ob()
+	pluginId: "preschool-count-in-order-5",
+	competencyId: Kv.id,
+	bank: yb(5)
 }), xO = g({
-	pluginId: "preschool-number-track",
-	competencyId: ey.id,
-	bank: sb()
+	pluginId: "preschool-count-in-order-10",
+	competencyId: Kv.id,
+	bank: yb(10)
 }), SO = g({
-	pluginId: "preschool-ten-frame",
-	competencyId: ty.id,
-	bank: qS()
+	pluginId: "preschool-one-to-one",
+	competencyId: qv.id,
+	bank: xb()
 }), CO = g({
-	pluginId: "preschool-teen-numbers",
-	competencyId: ny.id,
-	bank: TE()
+	pluginId: "preschool-give-n",
+	competencyId: Jv.id,
+	bank: db()
 }), wO = g({
-	pluginId: "preschool-act-out-add-take",
-	competencyId: ry.id,
-	bank: gx()
+	pluginId: "preschool-routine-order",
+	competencyId: Yv.id,
+	bank: Wb()
 }), TO = g({
-	pluginId: "preschool-make-ten",
-	competencyId: iy.id,
-	bank: ux()
+	pluginId: "preschool-name-shapes",
+	competencyId: Xv.id,
+	bank: dx()
 }), EO = g({
-	pluginId: "preschool-facts-within-five",
-	competencyId: ay.id,
-	bank: bE()
+	pluginId: "preschool-match-shapes",
+	competencyId: Zv.id,
+	bank: xx()
 }), DO = g({
-	pluginId: "preschool-doubles",
-	competencyId: oy.id,
-	bank: _x()
-}), OO = g({
-	pluginId: "preschool-number-sentences",
-	competencyId: sy.id,
-	bank: vx()
-}), kO = g({
-	pluginId: "preschool-fair-shares",
-	competencyId: cy.id,
-	bank: yx()
-}), AO = g({
-	pluginId: "preschool-pattern-translate",
-	competencyId: ly.id,
-	bank: kb()
-}), jO = g({
-	pluginId: "preschool-pairs",
-	competencyId: uy.id,
+	pluginId: "preschool-roll-or-stack",
+	competencyId: Qv.id,
 	bank: Sx()
+}), OO = g({
+	pluginId: "preschool-quantity-words",
+	competencyId: $v.id,
+	bank: Bb()
+}), kO = g({
+	pluginId: "preschool-count-to-thirty",
+	competencyId: ey.id,
+	bank: Sb()
+}), AO = g({
+	pluginId: "preschool-count-backward",
+	competencyId: ty.id,
+	bank: Cb()
+}), jO = g({
+	pluginId: "preschool-take-n",
+	competencyId: ny.id,
+	bank: ub()
 }), MO = g({
-	pluginId: "preschool-what-to-measure",
-	competencyId: dy.id,
-	bank: pE()
+	pluginId: "preschool-one-more-less",
+	competencyId: ry.id,
+	bank: wb()
 }), NO = g({
-	pluginId: "preschool-measuring-tools",
-	competencyId: fy.id,
-	bank: Ax()
+	pluginId: "preschool-compare-groups",
+	competencyId: iy.id,
+	bank: Ob()
 }), PO = g({
-	pluginId: "preschool-order-objects",
-	competencyId: py.id,
-	bank: jx()
+	pluginId: "preschool-number-track",
+	competencyId: ay.id,
+	bank: kb()
 }), FO = g({
-	pluginId: "preschool-how-long",
-	competencyId: my.id,
-	bank: Fx()
+	pluginId: "preschool-ten-frame",
+	competencyId: oy.id,
+	bank: sC()
 }), IO = g({
-	pluginId: "preschool-money-play",
-	competencyId: hy.id,
-	bank: Ab()
+	pluginId: "preschool-teen-numbers",
+	competencyId: sy.id,
+	bank: zE()
 }), LO = g({
-	pluginId: "preschool-bigger-shape",
-	competencyId: gy.id,
-	bank: ix()
+	pluginId: "preschool-act-out-add-take",
+	competencyId: cy.id,
+	bank: Fx()
 }), RO = g({
-	pluginId: "preschool-shapes-around",
-	competencyId: _y.id,
-	bank: ax()
+	pluginId: "preschool-make-ten",
+	competencyId: ly.id,
+	bank: kx()
 }), zO = g({
-	pluginId: "preschool-routes",
-	competencyId: vy.id,
-	bank: sx()
+	pluginId: "preschool-facts-within-five",
+	competencyId: uy.id,
+	bank: PE()
 }), BO = g({
-	pluginId: "preschool-copy-build",
-	competencyId: yy.id,
-	bank: lx()
+	pluginId: "preschool-doubles",
+	competencyId: dy.id,
+	bank: Ix()
 }), VO = g({
-	pluginId: "preschool-sort-and-count",
-	competencyId: by.id,
-	bank: Nb()
+	pluginId: "preschool-number-sentences",
+	competencyId: fy.id,
+	bank: Lx()
 }), HO = g({
-	pluginId: "preschool-picture-graph",
-	competencyId: xy.id,
-	bank: Ib()
+	pluginId: "preschool-fair-shares",
+	competencyId: py.id,
+	bank: _b()
 }), UO = g({
-	pluginId: "preschool-explain-answer",
-	competencyId: Sy.id,
-	bank: ME()
+	pluginId: "preschool-pattern-translate",
+	competencyId: my.id,
+	bank: Jb()
 }), WO = g({
-	pluginId: "preschool-enough-for-all",
-	competencyId: Cy.id,
+	pluginId: "preschool-pairs",
+	competencyId: hy.id,
 	bank: zx()
 }), GO = g({
-	pluginId: "preschool-estimate",
-	competencyId: wy.id,
-	bank: Bx()
+	pluginId: "preschool-what-to-measure",
+	competencyId: gy.id,
+	bank: DE()
 }), KO = g({
-	pluginId: "count-the-teens",
-	competencyId: Yv.id,
-	bank: NS()
+	pluginId: "preschool-measuring-tools",
+	competencyId: _y.id,
+	bank: qx()
 }), qO = g({
-	pluginId: "dot-pattern-snap",
-	competencyId: dv.id,
-	bank: PS()
+	pluginId: "preschool-order-objects",
+	competencyId: vy.id,
+	bank: Jx()
 }), JO = g({
-	pluginId: "ten-frame-flash",
-	competencyId: dv.id,
-	bank: IS()
+	pluginId: "preschool-how-long",
+	competencyId: yy.id,
+	bank: Qx()
 }), YO = g({
-	pluginId: "same-in-a-circle",
-	competencyId: Ov.id,
-	bank: RS()
+	pluginId: "preschool-money-play",
+	competencyId: by.id,
+	bank: Yb()
 }), XO = g({
-	pluginId: "grab-a-handful",
-	competencyId: Zv.id,
-	bank: EC()
+	pluginId: "preschool-bigger-shape",
+	competencyId: xy.id,
+	bank: Cx()
 }), ZO = g({
-	pluginId: "pop-up-one-more",
-	competencyId: Qv.id,
-	bank: DC()
+	pluginId: "preschool-shapes-around",
+	competencyId: Sy.id,
+	bank: wx()
 }), QO = g({
-	pluginId: "preschool-count-on-from",
-	competencyId: wv.id,
-	bank: kC()
+	pluginId: "preschool-routes",
+	competencyId: Cy.id,
+	bank: Ex()
 }), $O = g({
-	pluginId: "rocket-countdown",
-	competencyId: Xv.id,
-	bank: AC()
+	pluginId: "preschool-copy-build",
+	competencyId: wy.id,
+	bank: Ox()
 }), ek = g({
-	pluginId: "line-up-the-cards",
-	competencyId: ey.id,
-	bank: jC()
+	pluginId: "preschool-sort-and-count",
+	competencyId: Ty.id,
+	bank: Qb()
 }), tk = g({
-	pluginId: "missing-card-hard",
-	competencyId: ey.id,
-	bank: MC()
+	pluginId: "preschool-picture-graph",
+	competencyId: Ey.id,
+	bank: tx()
 }), nk = g({
-	pluginId: "number-showdown",
-	competencyId: hv.id,
-	bank: NC()
+	pluginId: "preschool-explain-answer",
+	competencyId: Dy.id,
+	bank: KE()
 }), rk = g({
-	pluginId: "decompose-to-ten",
-	competencyId: Av.id,
-	bank: PC()
+	pluginId: "preschool-enough-for-all",
+	competencyId: Oy.id,
+	bank: nS()
 }), ik = g({
-	pluginId: "trace-the-numeral",
-	competencyId: Ev.id,
-	bank: IC()
+	pluginId: "preschool-estimate",
+	competencyId: ky.id,
+	bank: rS()
 }), ak = g({
-	pluginId: "trace-the-teens",
-	competencyId: Ev.id,
-	bank: RC()
+	pluginId: "count-the-teens",
+	competencyId: ey.id,
+	bank: qS()
 }), ok = g({
-	pluginId: "tens-staircase",
-	competencyId: Yv.id,
-	bank: BC()
+	pluginId: "dot-pattern-snap",
+	competencyId: gv.id,
+	bank: JS()
 }), sk = g({
-	pluginId: "skip-count-hops",
-	competencyId: Yv.id,
-	bank: VC()
-}), ck = g({
-	pluginId: "fill-the-frame",
-	competencyId: ty.id,
+	pluginId: "ten-frame-flash",
+	competencyId: gv.id,
 	bank: XS()
-}), lk = g({
-	pluginId: "make-ten-friends",
-	competencyId: ty.id,
+}), ck = g({
+	pluginId: "same-in-a-circle",
+	competencyId: Nv.id,
 	bank: QS()
+}), lk = g({
+	pluginId: "grab-a-handful",
+	competencyId: ny.id,
+	bank: BC()
 }), uk = g({
-	pluginId: "which-frame-is-right",
-	competencyId: ty.id,
-	bank: nC()
+	pluginId: "pop-up-one-more",
+	competencyId: ry.id,
+	bank: VC()
 }), dk = g({
-	pluginId: "hide-the-counters",
+	pluginId: "preschool-count-on-from",
+	competencyId: kv.id,
+	bank: UC()
+}), fk = g({
+	pluginId: "rocket-countdown",
 	competencyId: ty.id,
-	bank: aC()
-}), fk = {
+	bank: WC()
+}), pk = g({
+	pluginId: "line-up-the-cards",
+	competencyId: ay.id,
+	bank: GC()
+}), mk = g({
+	pluginId: "missing-card-hard",
+	competencyId: ay.id,
+	bank: KC()
+}), hk = g({
+	pluginId: "number-showdown",
+	competencyId: bv.id,
+	bank: qC()
+}), gk = g({
+	pluginId: "decompose-to-ten",
+	competencyId: Fv.id,
+	bank: JC()
+}), _k = g({
+	pluginId: "trace-the-numeral",
+	competencyId: jv.id,
+	bank: XC()
+}), vk = g({
+	pluginId: "trace-the-teens",
+	competencyId: jv.id,
+	bank: QC()
+}), yk = g({
+	pluginId: "tens-staircase",
+	competencyId: ey.id,
+	bank: ew()
+}), bk = g({
+	pluginId: "skip-count-hops",
+	competencyId: ey.id,
+	bank: tw()
+}), xk = g({
+	pluginId: "fill-the-frame",
+	competencyId: oy.id,
+	bank: uC()
+}), Sk = g({
+	pluginId: "make-ten-friends",
+	competencyId: oy.id,
+	bank: fC()
+}), Ck = g({
+	pluginId: "which-frame-is-right",
+	competencyId: oy.id,
+	bank: gC()
+}), wk = g({
+	pluginId: "hide-the-counters",
+	competencyId: oy.id,
+	bank: yC()
+}), Tk = {
 	"preschool-count-in-order-5": 1,
 	"preschool-count-in-order-10": 2
 };
-function pk(e, t, n) {
+function Ek(e, t, n) {
 	let r = e;
 	return {
 		...t,
 		pluginId: r.plugin.id,
-		...fk[r.plugin.id] === void 0 ? {} : { weight: fk[r.plugin.id] },
+		...Tk[r.plugin.id] === void 0 ? {} : { weight: Tk[r.plugin.id] },
 		competency: n,
 		competencies: [n],
 		createSession: r.createSession,
 		createMasterySignal: r.createMasterySignal
 	};
 }
-var mk = [
-	[
-		dD,
-		"Flash Dots",
-		"🎲",
-		dv
-	],
-	[
-		fD,
-		"Number Hunt",
-		"🔍",
-		fv
-	],
-	[
-		pD,
-		"Numeral Twins",
-		"👯",
-		fv
-	],
-	[
-		mD,
-		"Show the Number",
-		"🖐️",
-		pv
-	],
-	[
-		hD,
-		"Which Has More?",
-		"⚖️",
-		mv
-	],
-	[
-		gD,
-		"Same or Not?",
-		"🟰",
-		mv
-	],
-	[
-		_D,
-		"Bigger Number",
-		"🔢",
-		hv
-	],
-	[
-		vD,
-		"Bigger, Smaller or Same",
-		"↔️",
-		hv
-	],
-	[
-		yD,
-		"All Together",
-		"➕",
-		gv
-	],
-	[
-		bD,
-		"How Many Altogether?",
-		"🧺",
-		gv
-	],
-	[
-		xD,
-		"How Many Left?",
-		"➖",
-		_v
-	],
-	[
-		SD,
-		"Which Picture?",
-		"🖼️",
-		_v
-	],
-	[
-		CD,
-		"Shape Hunt",
-		"🔷",
-		vv
-	],
+var Dk = [
 	[
 		wD,
-		"Is It a Rectangle?",
-		"▭",
-		vv
+		"Flash Dots",
+		"🎲",
+		gv
 	],
 	[
 		TD,
-		"Where Is the Ball?",
-		"⚽",
-		yv
+		"Number Hunt",
+		"🔍",
+		_v
 	],
 	[
 		ED,
-		"Longer or Shorter?",
-		"📏",
-		bv
+		"Numeral Twins",
+		"👯",
+		_v
 	],
 	[
 		DD,
-		"Heavy or Light?",
-		"🪨",
-		bv
+		"Show the Number",
+		"🖐️",
+		vv
 	],
 	[
 		OD,
-		"Holds More?",
-		"🥛",
-		bv
+		"Which Has More?",
+		"⚖️",
+		yv
 	],
 	[
 		kD,
-		"What Comes Next?",
-		"🔴",
-		xv
+		"Same or Not?",
+		"🟰",
+		yv
 	],
 	[
 		AD,
-		"Days in Order",
-		"📅",
-		Sv
+		"Bigger Number",
+		"🔢",
+		bv
 	],
 	[
 		jD,
-		"Day After",
-		"🗓️",
-		Sv
+		"Bigger, Smaller or Same",
+		"↔️",
+		bv
 	],
 	[
 		MD,
-		"How Many All Together?",
-		"🧮",
-		Cv
+		"All Together",
+		"➕",
+		xv
 	],
 	[
 		ND,
-		"How Many?",
-		"🔢",
-		Cv
+		"How Many Altogether?",
+		"🧺",
+		xv
 	],
 	[
 		PD,
-		"Hidden Bag",
-		"🎒",
-		wv
+		"How Many Left?",
+		"➖",
+		Sv
 	],
 	[
 		FD,
-		"Neighbour Houses",
-		"🏠",
-		Tv
+		"Which Picture?",
+		"🖼️",
+		Sv
 	],
 	[
 		ID,
-		"Pick the Right Way",
-		"✍️",
-		Ev
+		"Shape Hunt",
+		"🔷",
+		Cv
 	],
 	[
 		LD,
-		"Empty Basket",
-		"🧺",
-		Dv
+		"Is It a Rectangle?",
+		"▭",
+		Cv
 	],
 	[
 		RD,
-		"Is Zero a Number?",
-		"0️⃣",
-		Dv
+		"Where Is the Ball?",
+		"⚽",
+		wv
 	],
 	[
 		zD,
-		"Still the Same?",
-		"⚖️",
-		Ov
+		"Longer or Shorter?",
+		"📏",
+		Tv
 	],
 	[
 		BD,
-		"Which Row Has More?",
-		"📏",
-		Ov
+		"Heavy or Light?",
+		"🪨",
+		Tv
 	],
 	[
 		VD,
-		"Who Is Nth?",
-		"🥇",
-		kv
+		"Holds More?",
+		"🥛",
+		Tv
 	],
 	[
 		HD,
-		"Ordinal or Count?",
-		"🔟",
-		kv
+		"What Comes Next?",
+		"🔴",
+		Ev
 	],
 	[
 		UD,
-		"Colour the Nth",
-		"🖍️",
-		kv
+		"Days in Order",
+		"📅",
+		Dv
 	],
 	[
 		WD,
-		"Two Hands",
-		"🙌",
-		Av
+		"Day After",
+		"🗓️",
+		Dv
 	],
 	[
 		GD,
-		"Another Way",
-		"🔀",
-		Av
+		"How Many All Together?",
+		"🧮",
+		Ov
 	],
 	[
 		KD,
-		"Story + Objects",
-		"📖",
-		jv
+		"How Many?",
+		"🔢",
+		Ov
 	],
 	[
 		qD,
-		"Solve It",
-		"🧠",
-		jv
+		"Hidden Bag",
+		"🎒",
+		kv
 	],
 	[
 		JD,
-		"Solid or Flat?",
-		"🧊",
-		Mv
+		"Neighbour Houses",
+		"🏠",
+		Av
 	],
 	[
 		YD,
-		"Name the Thing",
-		"🏷️",
-		Mv
+		"Pick the Right Way",
+		"✍️",
+		jv
 	],
 	[
 		XD,
-		"Solid Match",
-		"🧩",
+		"Empty Basket",
+		"🧺",
 		Mv
 	],
 	[
 		ZD,
-		"Count the Sides",
-		"🔺",
-		Nv
+		"Is Zero a Number?",
+		"0️⃣",
+		Mv
 	],
 	[
 		QD,
-		"Sides or Corners?",
-		"📐",
+		"Still the Same?",
+		"⚖️",
 		Nv
 	],
 	[
 		$D,
-		"Robot Says",
-		"🤖",
-		Pv
+		"Which Row Has More?",
+		"📏",
+		Nv
 	],
 	[
 		eO,
-		"Which Goes in the Middle?",
-		"↔️",
-		Fv
+		"Who Is Nth?",
+		"🥇",
+		Pv
 	],
 	[
 		tO,
-		"Odd One Out",
-		"🚫",
-		Iv
+		"Ordinal or Count?",
+		"🔟",
+		Pv
 	],
 	[
 		nO,
-		"Name the Group",
+		"Colour the Nth",
+		"🖍️",
+		Pv
+	],
+	[
+		rO,
+		"Two Hands",
+		"🙌",
+		Fv
+	],
+	[
+		iO,
+		"Another Way",
+		"🔀",
+		Fv
+	],
+	[
+		aO,
+		"Story + Objects",
+		"📖",
+		Iv
+	],
+	[
+		oO,
+		"Solve It",
+		"🧠",
+		Iv
+	],
+	[
+		sO,
+		"Solid or Flat?",
+		"🧊",
+		Lv
+	],
+	[
+		cO,
+		"Name the Thing",
 		"🏷️",
 		Lv
 	],
 	[
-		rO,
-		"Fill the Gap",
-		"🧩",
-		Rv
-	],
-	[
-		iO,
-		"When Does It Happen?",
-		"🌗",
-		zv
-	],
-	[
-		aO,
-		"Yesterday, Today, Tomorrow",
-		"📆",
-		Bv
-	],
-	[
-		oO,
-		"What Day Was It?",
-		"🗓️",
-		Bv
-	],
-	[
-		sO,
-		"Count in Order (1-5)",
-		"🔢",
-		Vv
-	],
-	[
-		cO,
-		"Count in Order (1-10)",
-		"🔢",
-		Vv
-	],
-	[
 		lO,
-		"Touch Once",
-		"👆",
-		Hv
+		"Solid Match",
+		"🧩",
+		Lv
 	],
 	[
 		uO,
-		"Give Me Some",
-		"🎁",
-		Uv
+		"Count the Sides",
+		"🔺",
+		Rv
 	],
 	[
 		dO,
-		"First, Next, Last",
-		"🌅",
-		Wv
+		"Sides or Corners?",
+		"📐",
+		Rv
 	],
 	[
 		fO,
-		"Name That Shape",
-		"🔵",
-		Gv
+		"Robot Says",
+		"🤖",
+		zv
 	],
 	[
 		pO,
-		"Same Shape",
-		"🧩",
-		Kv
+		"Which Goes in the Middle?",
+		"↔️",
+		Bv
 	],
 	[
 		mO,
-		"Roll or Stack?",
-		"🎳",
-		qv
+		"Odd One Out",
+		"🚫",
+		Vv
 	],
 	[
 		hO,
-		"Say It with Words",
-		"💬",
-		Jv
+		"Name the Group",
+		"🏷️",
+		Hv
 	],
 	[
 		gO,
-		"Count Further",
-		"🔟",
-		Yv
+		"Fill the Gap",
+		"🧩",
+		Uv
 	],
 	[
 		_O,
-		"Countdown",
-		"🚀",
-		Xv
+		"When Does It Happen?",
+		"🌗",
+		Wv
 	],
 	[
 		vO,
-		"Take Exactly",
-		"🧺",
-		Zv
+		"Yesterday, Today, Tomorrow",
+		"📆",
+		Gv
 	],
 	[
 		yO,
-		"One More, One Less",
-		"↕️",
-		Qv
+		"What Day Was It?",
+		"🗓️",
+		Gv
 	],
 	[
 		bO,
-		"Greater, Less, Equal",
-		"⚖️",
-		$v
+		"Count in Order (1-5)",
+		"🔢",
+		Kv
 	],
 	[
 		xO,
-		"Number Track",
-		"🛤️",
-		ey
+		"Count in Order (1-10)",
+		"🔢",
+		Kv
 	],
 	[
 		SO,
-		"Flash and Tell",
-		"🟦",
-		ty
+		"Touch Once",
+		"👆",
+		qv
 	],
 	[
 		CO,
-		"Ten and More",
-		"🔟",
-		ny
+		"Give Me Some",
+		"🎁",
+		Jv
 	],
 	[
 		wO,
-		"Add or Take?",
-		"🎭",
-		ry
+		"First, Next, Last",
+		"🌅",
+		Yv
 	],
 	[
 		TO,
-		"Make Ten",
-		"🔟",
-		iy
-	],
-	[
-		EO,
-		"Quick Facts",
-		"⚡",
-		ay
-	],
-	[
-		DO,
-		"Doubles",
-		"👯",
-		oy
-	],
-	[
-		OO,
-		"Number Sentences",
-		"📝",
-		sy
-	],
-	[
-		kO,
-		"Fair Shares",
-		"🍪",
-		cy
-	],
-	[
-		AO,
-		"Same Pattern",
-		"🔁",
-		ly
-	],
-	[
-		jO,
-		"Pairs, None Left",
-		"🧦",
-		uy
-	],
-	[
-		MO,
-		"What Do We Measure?",
-		"📐",
-		dy
-	],
-	[
-		NO,
-		"Pick the Tool",
-		"⚖️",
-		fy
-	],
-	[
-		PO,
-		"Line Them Up",
-		"📏",
-		py
-	],
-	[
-		FO,
-		"Which Takes Longer?",
-		"⏳",
-		my
-	],
-	[
-		IO,
-		"Shop Play",
-		"🛒",
-		hy
-	],
-	[
-		LO,
-		"Build a Bigger Shape",
-		"🏗️",
-		gy
-	],
-	[
-		RO,
-		"Shapes Around Us",
-		"🌍",
-		_y
-	],
-	[
-		zO,
-		"Follow the Route",
-		"🧭",
-		vy
-	],
-	[
-		BO,
-		"Copy the Build",
-		"🧱",
-		yy
-	],
-	[
-		VO,
-		"Sort and Count",
-		"🗂️",
-		by
-	],
-	[
-		HO,
-		"Picture Graph",
-		"📊",
-		xy
-	],
-	[
-		UO,
-		"How Do You Know?",
-		"🗣️",
-		Sy
-	],
-	[
-		WO,
-		"Enough for Everyone?",
-		"🥛",
-		Cy
-	],
-	[
-		GO,
-		"Guess and Check",
-		"🎯",
-		wy
-	],
-	[
-		KO,
-		"Count the Teens",
-		"🔢",
-		Yv
-	],
-	[
-		qO,
-		"Dot Pattern Snap",
-		"🎲",
-		dv
-	],
-	[
-		JO,
-		"Ten-Frame Flash",
-		"🟦",
-		dv
-	],
-	[
-		YO,
-		"Same in a Circle",
-		"⭕",
-		Ov
-	],
-	[
-		XO,
-		"Grab a Handful",
-		"🤲",
-		Zv
-	],
-	[
-		ZO,
-		"Pop-Up One More",
-		"🎈",
-		Qv
-	],
-	[
-		QO,
-		"Count On From",
-		"👣",
-		wv
-	],
-	[
-		$O,
-		"Rocket Countdown",
-		"🚀",
+		"Name That Shape",
+		"🔵",
 		Xv
 	],
 	[
-		ek,
-		"Line Up the Cards",
-		"🃏",
+		EO,
+		"Same Shape",
+		"🧩",
+		Zv
+	],
+	[
+		DO,
+		"Roll or Stack?",
+		"🎳",
+		Qv
+	],
+	[
+		OO,
+		"Say It with Words",
+		"💬",
+		$v
+	],
+	[
+		kO,
+		"Count Further",
+		"🔟",
 		ey
+	],
+	[
+		AO,
+		"Countdown",
+		"🚀",
+		ty
+	],
+	[
+		jO,
+		"Take Exactly",
+		"🧺",
+		ny
+	],
+	[
+		MO,
+		"One More, One Less",
+		"↕️",
+		ry
+	],
+	[
+		NO,
+		"Greater, Less, Equal",
+		"⚖️",
+		iy
+	],
+	[
+		PO,
+		"Number Track",
+		"🛤️",
+		ay
+	],
+	[
+		FO,
+		"Flash and Tell",
+		"🟦",
+		oy
+	],
+	[
+		IO,
+		"Ten and More",
+		"🔟",
+		sy
+	],
+	[
+		LO,
+		"Add or Take?",
+		"🎭",
+		cy
+	],
+	[
+		RO,
+		"Make Ten",
+		"🔟",
+		ly
+	],
+	[
+		zO,
+		"Quick Facts",
+		"⚡",
+		uy
+	],
+	[
+		BO,
+		"Doubles",
+		"👯",
+		dy
+	],
+	[
+		VO,
+		"Number Sentences",
+		"📝",
+		fy
+	],
+	[
+		HO,
+		"Fair Shares",
+		"🍪",
+		py
+	],
+	[
+		UO,
+		"Same Pattern",
+		"🔁",
+		my
+	],
+	[
+		WO,
+		"Pairs, None Left",
+		"🧦",
+		hy
+	],
+	[
+		GO,
+		"What Do We Measure?",
+		"📐",
+		gy
+	],
+	[
+		KO,
+		"Pick the Tool",
+		"⚖️",
+		_y
+	],
+	[
+		qO,
+		"Line Them Up",
+		"📏",
+		vy
+	],
+	[
+		JO,
+		"Which Takes Longer?",
+		"⏳",
+		yy
+	],
+	[
+		YO,
+		"Shop Play",
+		"🛒",
+		by
+	],
+	[
+		XO,
+		"Build a Bigger Shape",
+		"🏗️",
+		xy
+	],
+	[
+		ZO,
+		"Shapes Around Us",
+		"🌍",
+		Sy
+	],
+	[
+		QO,
+		"Follow the Route",
+		"🧭",
+		Cy
+	],
+	[
+		$O,
+		"Copy the Build",
+		"🧱",
+		wy
+	],
+	[
+		ek,
+		"Sort and Count",
+		"🗂️",
+		Ty
 	],
 	[
 		tk,
-		"Missing Card, Hard",
-		"🧩",
-		ey
+		"Picture Graph",
+		"📊",
+		Ey
 	],
 	[
 		nk,
-		"Number Showdown",
-		"⚔️",
-		hv
+		"How Do You Know?",
+		"🗣️",
+		Dy
 	],
 	[
 		rk,
-		"Decompose to Ten",
-		"🧮",
-		Av
+		"Enough for Everyone?",
+		"🥛",
+		Oy
 	],
 	[
 		ik,
-		"Trace the Numeral",
-		"✏️",
-		Ev
+		"Guess and Check",
+		"🎯",
+		ky
 	],
 	[
 		ak,
-		"Trace the Teens",
-		"🖍️",
-		Ev
+		"Count the Teens",
+		"🔢",
+		ey
 	],
 	[
 		ok,
-		"Tens Staircase",
-		"🪜",
-		Yv
+		"Dot Pattern Snap",
+		"🎲",
+		gv
 	],
 	[
 		sk,
-		"Skip-Count Hops",
-		"🐸",
-		Yv
+		"Ten-Frame Flash",
+		"🟦",
+		gv
 	],
 	[
 		ck,
-		"Fill the Frame",
-		"🏠",
-		ty
+		"Same in a Circle",
+		"⭕",
+		Nv
 	],
 	[
 		lk,
-		"Make Ten Friends",
-		"🚌",
-		ty
+		"Grab a Handful",
+		"🤲",
+		ny
 	],
 	[
 		uk,
-		"Which Frame Is Right?",
-		"🖼️",
-		ty
+		"Pop-Up One More",
+		"🎈",
+		ry
 	],
 	[
 		dk,
+		"Count On From",
+		"👣",
+		kv
+	],
+	[
+		fk,
+		"Rocket Countdown",
+		"🚀",
+		ty
+	],
+	[
+		pk,
+		"Line Up the Cards",
+		"🃏",
+		ay
+	],
+	[
+		mk,
+		"Missing Card, Hard",
+		"🧩",
+		ay
+	],
+	[
+		hk,
+		"Number Showdown",
+		"⚔️",
+		bv
+	],
+	[
+		gk,
+		"Decompose to Ten",
+		"🧮",
+		Fv
+	],
+	[
+		_k,
+		"Trace the Numeral",
+		"✏️",
+		jv
+	],
+	[
+		vk,
+		"Trace the Teens",
+		"🖍️",
+		jv
+	],
+	[
+		yk,
+		"Tens Staircase",
+		"🪜",
+		ey
+	],
+	[
+		bk,
+		"Skip-Count Hops",
+		"🐸",
+		ey
+	],
+	[
+		xk,
+		"Fill the Frame",
+		"🏠",
+		oy
+	],
+	[
+		Sk,
+		"Make Ten Friends",
+		"🚌",
+		oy
+	],
+	[
+		Ck,
+		"Which Frame Is Right?",
+		"🖼️",
+		oy
+	],
+	[
+		wk,
 		"Hide the Counters",
 		"🍃",
-		ty
+		oy
 	]
-], hk = mk.map(([e]) => e.plugin), gk = mk.map(([e]) => e.plugin.id), _k = mk.map(([e, t, n, r], i) => pk(e, {
-	key: gk[i],
+], Ok = Dk.map(([e]) => e.plugin), kk = Dk.map(([e]) => e.plugin.id), Ak = Dk.map(([e, t, n, r], i) => Ek(e, {
+	key: kk[i],
 	label: t,
 	icon: n
-}, r)), vk = {
+}, r)), jk = {
 	id: "math.addition.mental",
 	nameKey: "competency.math.addition.mental.name",
 	descriptionKey: "competency.math.addition.mental.description",
@@ -45064,7 +45433,7 @@ var mk = [
 		kind: "competency",
 		id: "math.addition.baseline-concrete"
 	}]
-}, yk = {
+}, Mk = {
 	id: "math.subtraction.mental",
 	nameKey: "competency.math.subtraction.mental.name",
 	descriptionKey: "competency.math.subtraction.mental.description",
@@ -45087,7 +45456,7 @@ var mk = [
 			id: "math.addition.baseline-concrete"
 		}
 	]
-}, bk = {
+}, Nk = {
 	id: "math.multiplication.mental",
 	nameKey: "competency.math.multiplication.mental.name",
 	descriptionKey: "competency.math.multiplication.mental.description",
@@ -45100,7 +45469,7 @@ var mk = [
 		kind: "activity",
 		id: "math.multiplication.mental"
 	}]
-}, xk = {
+}, Pk = {
 	id: "math.division.mental",
 	nameKey: "competency.math.division.mental.name",
 	descriptionKey: "competency.math.division.mental.description",
@@ -45116,7 +45485,7 @@ var mk = [
 		kind: "competency",
 		id: "math.multiplication.mental"
 	}]
-}, Sk = {
+}, Fk = {
 	id: "math.number-sense.baseline-counting",
 	nameKey: "competency.math.number-sense.baseline-counting.name",
 	descriptionKey: "competency.math.number-sense.baseline-counting.description",
@@ -45129,7 +45498,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.baseline-counting"
 	}]
-}, Ck = {
+}, Ik = {
 	id: "math.number-sense.baseline-subitizing",
 	nameKey: "competency.math.number-sense.baseline-subitizing.name",
 	descriptionKey: "competency.math.number-sense.baseline-subitizing.description",
@@ -45142,7 +45511,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.baseline-subitizing"
 	}]
-}, wk = {
+}, Lk = {
 	id: "math.number-sense.baseline-digits",
 	nameKey: "competency.math.number-sense.baseline-digits.name",
 	descriptionKey: "competency.math.number-sense.baseline-digits.description",
@@ -45155,7 +45524,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.baseline-digits"
 	}]
-}, Tk = {
+}, Rk = {
 	id: "math.comparing-ordering.baseline-groups",
 	nameKey: "competency.math.comparing-ordering.baseline-groups.name",
 	descriptionKey: "competency.math.comparing-ordering.baseline-groups.description",
@@ -45168,7 +45537,7 @@ var mk = [
 		kind: "activity",
 		id: "math.comparing-ordering.baseline-groups"
 	}]
-}, Ek = {
+}, zk = {
 	id: "math.addition.baseline-concrete",
 	nameKey: "competency.math.addition.baseline-concrete.name",
 	descriptionKey: "competency.math.addition.baseline-concrete.description",
@@ -45181,7 +45550,7 @@ var mk = [
 		kind: "activity",
 		id: "math.addition.baseline-concrete"
 	}]
-}, Dk = {
+}, Bk = {
 	id: "math.measurement.baseline-comparison",
 	nameKey: "competency.math.measurement.baseline-comparison.name",
 	descriptionKey: "competency.math.measurement.baseline-comparison.description",
@@ -45194,7 +45563,7 @@ var mk = [
 		kind: "activity",
 		id: "math.measurement.baseline-comparison"
 	}]
-}, Ok = {
+}, Vk = {
 	id: "math.time.baseline-day-order",
 	nameKey: "competency.math.time.baseline-day-order.name",
 	descriptionKey: "competency.math.time.baseline-day-order.description",
@@ -45207,7 +45576,7 @@ var mk = [
 		kind: "activity",
 		id: "math.time.baseline-day-order"
 	}]
-}, kk = {
+}, Hk = {
 	id: "math.time.baseline-days-of-week",
 	nameKey: "competency.math.time.baseline-days-of-week.name",
 	descriptionKey: "competency.math.time.baseline-days-of-week.description",
@@ -45220,7 +45589,7 @@ var mk = [
 		kind: "activity",
 		id: "math.time.baseline-days-of-week"
 	}]
-}, Ak = {
+}, Uk = {
 	id: "math.geometry.baseline-shapes",
 	nameKey: "competency.math.geometry.baseline-shapes.name",
 	descriptionKey: "competency.math.geometry.baseline-shapes.description",
@@ -45233,7 +45602,7 @@ var mk = [
 		kind: "activity",
 		id: "math.geometry.baseline-shapes"
 	}]
-}, jk = {
+}, Wk = {
 	id: "math.geometry.baseline-position",
 	nameKey: "competency.math.geometry.baseline-position.name",
 	descriptionKey: "competency.math.geometry.baseline-position.description",
@@ -45246,7 +45615,7 @@ var mk = [
 		kind: "activity",
 		id: "math.geometry.baseline-position"
 	}]
-}, Mk = {
+}, Gk = {
 	id: "math.number-sense.counting-range",
 	nameKey: "competency.math.number-sense.counting-range.name",
 	descriptionKey: "competency.math.number-sense.counting-range.description",
@@ -45259,7 +45628,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.counting-range"
 	}]
-}, Nk = {
+}, Kk = {
 	id: "math.number-sense.skip-counting",
 	nameKey: "competency.math.number-sense.skip-counting.name",
 	descriptionKey: "competency.math.number-sense.skip-counting.description",
@@ -45272,7 +45641,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.skip-counting"
 	}]
-}, Pk = {
+}, qk = {
 	id: "math.number-sense.odd-even",
 	nameKey: "competency.math.number-sense.odd-even.name",
 	descriptionKey: "competency.math.number-sense.odd-even.description",
@@ -45284,7 +45653,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.odd-even"
 	}]
-}, Fk = {
+}, Jk = {
 	id: "math.number-sense.ordinals",
 	nameKey: "competency.math.number-sense.ordinals.name",
 	descriptionKey: "competency.math.number-sense.ordinals.description",
@@ -45297,7 +45666,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.ordinals"
 	}]
-}, Ik = {
+}, Yk = {
 	id: "math.number-sense.negative-numbers",
 	nameKey: "competency.math.number-sense.negative-numbers.name",
 	descriptionKey: "competency.math.number-sense.negative-numbers.description",
@@ -45310,7 +45679,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.negative-numbers"
 	}]
-}, Lk = {
+}, Xk = {
 	id: "math.number-sense.primes-factors",
 	nameKey: "competency.math.number-sense.primes-factors.name",
 	descriptionKey: "competency.math.number-sense.primes-factors.description",
@@ -45323,7 +45692,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.primes-factors"
 	}]
-}, Rk = {
+}, Zk = {
 	id: "math.number-sense.squares",
 	nameKey: "competency.math.number-sense.squares.name",
 	descriptionKey: "competency.math.number-sense.squares.description",
@@ -45336,7 +45705,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.squares"
 	}]
-}, zk = {
+}, Qk = {
 	id: "math.number-sense.roman-numerals",
 	nameKey: "competency.math.number-sense.roman-numerals.name",
 	descriptionKey: "competency.math.number-sense.roman-numerals.description",
@@ -45348,7 +45717,7 @@ var mk = [
 		kind: "activity",
 		id: "math.number-sense.roman-numerals"
 	}]
-}, Bk = {
+}, $k = {
 	id: "math.place-value.understanding",
 	nameKey: "competency.math.place-value.understanding.name",
 	descriptionKey: "competency.math.place-value.understanding.description",
@@ -45361,7 +45730,7 @@ var mk = [
 		kind: "activity",
 		id: "math.place-value.understanding"
 	}]
-}, Vk = {
+}, eA = {
 	id: "math.place-value.powers-of-ten",
 	nameKey: "competency.math.place-value.powers-of-ten.name",
 	descriptionKey: "competency.math.place-value.powers-of-ten.description",
@@ -45374,7 +45743,7 @@ var mk = [
 		kind: "activity",
 		id: "math.place-value.powers-of-ten"
 	}]
-}, Hk = {
+}, tA = {
 	id: "math.place-value.rounding",
 	nameKey: "competency.math.place-value.rounding.name",
 	descriptionKey: "competency.math.place-value.rounding.description",
@@ -45387,7 +45756,7 @@ var mk = [
 		kind: "activity",
 		id: "math.place-value.rounding"
 	}]
-}, Uk = {
+}, nA = {
 	id: "math.place-value.multiply-divide-ten",
 	nameKey: "competency.math.place-value.multiply-divide-ten.name",
 	descriptionKey: "competency.math.place-value.multiply-divide-ten.description",
@@ -45400,20 +45769,7 @@ var mk = [
 		kind: "activity",
 		id: "math.place-value.multiply-divide-ten"
 	}]
-}, Wk = [
-	vk,
-	yk,
-	bk,
-	xk,
-	Sk,
-	Ck,
-	wk,
-	Tk,
-	Ek,
-	Dk,
-	Ok,
-	kk,
-	Ak,
+}, rA = [
 	jk,
 	Mk,
 	Nk,
@@ -45427,19 +45783,32 @@ var mk = [
 	Vk,
 	Hk,
 	Uk,
+	Wk,
+	Gk,
+	Kk,
+	qk,
+	Jk,
+	Yk,
+	Xk,
+	Zk,
+	Qk,
+	$k,
+	eA,
+	tA,
+	nA,
 	...Le,
-	...ui,
-	...Cc,
-	...hd,
-	...km,
-	...sv,
-	...Ty
-], Gk = n([{
+	...hi,
+	...Oc,
+	...bd,
+	...Pm,
+	...fv,
+	...Ay
+], iA = n([{
 	id: "mathematics",
 	nameKey: "subject.mathematics.name"
-}], Wk, Wk.map((e) => e.id));
-if (!Gk.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(Gk.errors)}`);
-var Kk = [
+}], rA, rA.map((e) => e.id));
+if (!iA.valid) throw Error(`curriculum.ts: invalid competency model: ${JSON.stringify(iA.errors)}`);
+var aA = [
 	{
 		areaKey: "number-sense",
 		nameKey: "curriculum.area.number-sense",
@@ -45531,16 +45900,16 @@ var Kk = [
 		label: "Problem solving"
 	}
 ];
-function qk(e) {
+function oA(e) {
 	let [t, n] = e.id.split(".");
-	if (t === "math") return Kk.some((e) => e.areaKey === n) ? n : void 0;
+	if (t === "math") return aA.some((e) => e.areaKey === n) ? n : void 0;
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/types.ts
-var Jk = "math.time.baseline-day-order", Yk = "math.time.baseline-days-of-week";
+var sA = "math.time.baseline-day-order", cA = "math.time.baseline-days-of-week";
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/rng.ts
-function Xk(e) {
+function lA(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -45548,17 +45917,17 @@ function Xk(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Zk(e, t, n) {
+function uA(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/generate.ts
-var Qk = [
+var dA = [
 	"morning",
 	"afternoon",
 	"evening",
 	"night"
-], $k = [
+], fA = [
 	"Monday",
 	"Tuesday",
 	"Wednesday",
@@ -45567,58 +45936,58 @@ var Qk = [
 	"Saturday",
 	"Sunday"
 ];
-function eA(e) {
+function pA(e) {
 	return e === "P" || e === 1;
 }
-function tA(e, t) {
-	let n = Zk(e, 0, t - 1), r = Zk(e, 0, t - 1);
-	for (; r === n;) r = Zk(e, 0, t - 1);
+function mA(e, t) {
+	let n = uA(e, 0, t - 1), r = uA(e, 0, t - 1);
+	for (; r === n;) r = uA(e, 0, t - 1);
 	return [n, r];
 }
-function nA(e, t, n) {
-	let [r, i] = tA(n, Qk.length), a = Math.min(r, i), o = {
+function hA(e, t, n) {
+	let [r, i] = mA(n, dA.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: Qk[r]
+		label: dA[r]
 	}, s = {
 		id: "b",
-		label: Qk[i]
+		label: dA[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-day-order-${e}-${t}`,
 		kind: "day-order",
 		grade: e,
-		competencyId: Jk,
+		competencyId: sA,
 		prompt: "Which comes first in the day?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function rA(e, t, n) {
-	let [r, i] = tA(n, $k.length), a = Math.min(r, i), o = {
+function gA(e, t, n) {
+	let [r, i] = mA(n, fA.length), a = Math.min(r, i), o = {
 		id: "a",
-		label: $k[r]
+		label: fA[r]
 	}, s = {
 		id: "b",
-		label: $k[i]
+		label: fA[i]
 	};
 	return {
 		id: `baseline-calendar-time-basics-days-of-week-${e}-${t}`,
 		kind: "days-of-week",
 		grade: e,
-		competencyId: Yk,
+		competencyId: cA,
 		prompt: "Which comes first in the week?",
 		options: [o, s],
 		correctOptionId: a === r ? "a" : "b"
 	};
 }
-function iA(e, t) {
-	if (!eA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = Xk(t);
-	return n() < .5 ? nA(e, t, n) : rA(e, t, n);
+function _A(e, t) {
+	if (!pA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = lA(t);
+	return n() < .5 ? hA(e, t, n) : gA(e, t, n);
 }
 //#endregion
 //#region packages/baseline-calendar-time-basics/src/plugin.ts
-function aA(e) {
+function vA(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -45628,7 +45997,7 @@ function aA(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function oA(e, t, n, r, i, a) {
+function yA(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -45636,36 +46005,36 @@ function oA(e, t, n, r, i, a) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: aA(e).correctAnswer,
+		correctAnswer: vA(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function sA(e, t) {
-	let n = Xk(t), r = [];
+function bA(e, t) {
+	let n = lA(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(iA(e, t));
+		r.push(_A(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var cA = {
+var xA = {
 	id: "baseline-calendar-time-basics",
-	competencyIds: [Jk, Yk],
+	competencyIds: [sA, cA],
 	generateQuestion(e, t) {
-		return iA(e, t);
+		return _A(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: aA
-}, lA = "math.addition.baseline-concrete";
+	toPresentation: vA
+}, SA = "math.addition.baseline-concrete";
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/rng.ts
-function uA(e) {
+function CA(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -45673,53 +46042,53 @@ function uA(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function dA(e, t, n) {
+function wA(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/generate.ts
-var fA = [
+var TA = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function pA(e) {
+function EA(e) {
 	return e === "P" || e === 1;
 }
-function mA(e, t, n) {
-	let r = dA(n, 1, 5), i = dA(n, 1, 5);
+function DA(e, t, n) {
+	let r = wA(n, 1, 5), i = wA(n, 1, 5);
 	return {
 		id: `baseline-concrete-addition-subtraction-add-${e}-${t}`,
 		grade: e,
 		operator: "+",
 		leftCount: r,
 		rightCount: i,
-		emoji: fA[dA(n, 0, fA.length - 1)],
+		emoji: TA[wA(n, 0, TA.length - 1)],
 		correctAnswer: r + i
 	};
 }
-function hA(e, t, n) {
-	let r = dA(n, 2, 10), i = dA(n, 1, r - 1);
+function OA(e, t, n) {
+	let r = wA(n, 2, 10), i = wA(n, 1, r - 1);
 	return {
 		id: `baseline-concrete-addition-subtraction-sub-${e}-${t}`,
 		grade: e,
 		operator: "-",
 		leftCount: r,
 		rightCount: i,
-		emoji: fA[dA(n, 0, fA.length - 1)],
+		emoji: TA[wA(n, 0, TA.length - 1)],
 		correctAnswer: r - i
 	};
 }
-function gA(e, t) {
-	if (!pA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = uA(t);
-	return n() < .5 ? mA(e, t, n) : hA(e, t, n);
+function kA(e, t) {
+	if (!EA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = CA(t);
+	return n() < .5 ? DA(e, t, n) : OA(e, t, n);
 }
 //#endregion
 //#region packages/baseline-concrete-addition-subtraction/src/plugin.ts
-function _A(e) {
+function AA(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -45739,44 +46108,44 @@ function _A(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function vA(e, t, n, r, i, a) {
+function jA(e, t, n, r, i, a) {
 	return {
-		competencyId: lA,
+		competencyId: SA,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: _A(e).correctAnswer,
+		correctAnswer: AA(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function yA(e, t) {
-	let n = uA(t), r = [];
+function MA(e, t) {
+	let n = CA(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(gA(e, t));
+		r.push(kA(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var bA = {
+var NA = {
 	id: "baseline-concrete-addition-subtraction",
-	competencyIds: [lA],
+	competencyIds: [SA],
 	generateQuestion(e, t) {
-		return gA(e, t);
+		return kA(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: _A
-}, xA = "math.number-sense.baseline-counting", SA = "math.number-sense.baseline-subitizing", CA = "math.number-sense.baseline-digits", wA = "math.comparing-ordering.baseline-groups";
+	toPresentation: AA
+}, PA = "math.number-sense.baseline-counting", FA = "math.number-sense.baseline-subitizing", IA = "math.number-sense.baseline-digits", LA = "math.comparing-ordering.baseline-groups";
 //#endregion
 //#region packages/baseline-counting-quantities/src/rng.ts
-function TA(e) {
+function RA(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -45784,33 +46153,33 @@ function TA(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function EA(e, t, n) {
+function zA(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/generate.ts
-var DA = [
+var BA = [
 	"🍎",
 	"⭐",
 	"🔵",
 	"🚗",
 	"🐳"
 ];
-function OA(e) {
+function VA(e) {
 	return e === "P" || e === 1;
 }
-function kA(e) {
-	return DA[EA(e, 0, DA.length - 1)];
+function HA(e) {
+	return BA[zA(e, 0, BA.length - 1)];
 }
-function AA(e, t) {
+function UA(e, t) {
 	let n = /* @__PURE__ */ new Set();
 	for (; n.size < 3;) {
-		let r = EA(e, 0, 9);
+		let r = zA(e, 0, 9);
 		r !== t && n.add(r);
 	}
 	let r = [t, ...n];
 	for (let t = r.length - 1; t > 0; t--) {
-		let n = EA(e, 0, t), i = r[t];
+		let n = zA(e, 0, t), i = r[t];
 		r[t] = r[n], r[n] = i;
 	}
 	return {
@@ -45821,52 +46190,52 @@ function AA(e, t) {
 		correctOptionId: `digit-${t}`
 	};
 }
-function jA(e, t, n) {
-	let r = EA(n, 1, 20);
+function WA(e, t, n) {
+	let r = zA(n, 1, 20);
 	return {
 		id: `baseline-counting-quantities-counting-${e}-${t}`,
 		kind: "counting",
 		grade: e,
-		competencyId: xA,
+		competencyId: PA,
 		count: r,
-		emoji: kA(n),
+		emoji: HA(n),
 		correctAnswer: r
 	};
 }
-function MA(e, t, n) {
-	let r = EA(n, 1, 5);
+function GA(e, t, n) {
+	let r = zA(n, 1, 5);
 	return {
 		id: `baseline-counting-quantities-subitizing-${e}-${t}`,
 		kind: "subitizing",
 		grade: e,
-		competencyId: SA,
+		competencyId: FA,
 		count: r,
-		emoji: kA(n),
+		emoji: HA(n),
 		correctAnswer: r
 	};
 }
-function NA(e, t, n) {
-	let r = EA(n, 0, 9), i = kA(n), { options: a, correctOptionId: o } = AA(n, r);
+function KA(e, t, n) {
+	let r = zA(n, 0, 9), i = HA(n), { options: a, correctOptionId: o } = UA(n, r);
 	return {
 		id: `baseline-counting-quantities-digit-${e}-${t}`,
 		kind: "digit",
 		grade: e,
-		competencyId: CA,
+		competencyId: IA,
 		count: r,
 		emoji: i,
 		options: a,
 		correctOptionId: o
 	};
 }
-function PA(e, t, n) {
-	let r = EA(n, 1, 10), i = EA(n, 1, 10);
-	for (; i === r;) i = EA(n, 1, 10);
-	let a = kA(n), o = kA(n), s = r > i ? "left" : "right";
+function qA(e, t, n) {
+	let r = zA(n, 1, 10), i = zA(n, 1, 10);
+	for (; i === r;) i = zA(n, 1, 10);
+	let a = HA(n), o = HA(n), s = r > i ? "left" : "right";
 	return {
 		id: `baseline-counting-quantities-compare-groups-${e}-${t}`,
 		kind: "compare-groups",
 		grade: e,
-		competencyId: wA,
+		competencyId: LA,
 		leftCount: r,
 		rightCount: i,
 		leftEmoji: a,
@@ -45881,20 +46250,20 @@ function PA(e, t, n) {
 		correctOptionId: s
 	};
 }
-function FA(e, t) {
-	if (!OA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = TA(t);
-	switch (EA(n, 0, 3)) {
-		case 0: return jA(e, t, n);
-		case 1: return MA(e, t, n);
-		case 2: return NA(e, t, n);
-		default: return PA(e, t, n);
+function JA(e, t) {
+	if (!VA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = RA(t);
+	switch (zA(n, 0, 3)) {
+		case 0: return WA(e, t, n);
+		case 1: return GA(e, t, n);
+		case 2: return KA(e, t, n);
+		default: return qA(e, t, n);
 	}
 }
 //#endregion
 //#region packages/baseline-counting-quantities/src/plugin.ts
-var IA = 1500;
-function LA(e) {
+var YA = 1500;
+function XA(e) {
 	return e.kind === "counting" ? {
 		presentation: {
 			kind: "equation",
@@ -45916,7 +46285,7 @@ function LA(e) {
 				type: "ten-frame",
 				filled: e.count,
 				emoji: e.emoji,
-				flashMs: IA
+				flashMs: YA
 			}
 		},
 		correctAnswer: e.correctAnswer
@@ -45956,7 +46325,7 @@ function LA(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function RA(e, t, n, r, i, a) {
+function ZA(e, t, n, r, i, a) {
 	return {
 		competencyId: e.competencyId,
 		grade: e.grade,
@@ -45964,32 +46333,32 @@ function RA(e, t, n, r, i, a) {
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: LA(e).correctAnswer,
+		correctAnswer: XA(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function zA(e, t) {
-	let n = TA(t), r = [];
+function QA(e, t) {
+	let n = RA(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(FA(e, t));
+		r.push(JA(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var BA = {
+var $A = {
 	id: "baseline-counting-quantities",
 	competencyIds: [
-		xA,
-		SA,
-		CA,
-		wA
+		PA,
+		FA,
+		IA,
+		LA
 	],
 	generateQuestion(e, t) {
-		return FA(e, t);
+		return JA(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -45999,11 +46368,11 @@ var BA = {
 			case "compare-groups": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation: LA
-}, VA = "math.measurement.baseline-comparison";
+	toPresentation: XA
+}, ej = "math.measurement.baseline-comparison";
 //#endregion
 //#region packages/baseline-direct-comparison/src/rng.ts
-function HA(e) {
+function tj(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46011,12 +46380,12 @@ function HA(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function UA(e, t, n) {
+function nj(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/generate.ts
-var WA = {
+var rj = {
 	length: [
 		"🐛 the worm",
 		"🐍 the snake",
@@ -46035,26 +46404,26 @@ var WA = {
 		"🧴 the bottle",
 		"🛁 the bathtub"
 	]
-}, GA = [
+}, ij = [
 	"length",
 	"weight",
 	"capacity"
-], KA = {
+], aj = {
 	length: "Which one is longer?",
 	weight: "Which one is heavier?",
 	capacity: "Which one holds more?"
 };
-function qA(e) {
+function oj(e) {
 	return e === "P" || e === 1;
 }
-function JA(e, t) {
-	let n = UA(e, 0, t.length - 1), r = UA(e, 0, t.length - 1);
-	for (; r === n;) r = UA(e, 0, t.length - 1);
+function sj(e, t) {
+	let n = nj(e, 0, t.length - 1), r = nj(e, 0, t.length - 1);
+	for (; r === n;) r = nj(e, 0, t.length - 1);
 	return [t[n], t[r]];
 }
-function YA(e, t) {
-	if (!qA(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = HA(t), r = GA[UA(n, 0, GA.length - 1)], [i, a] = JA(n, WA[r]), o = n() < .5, s = {
+function cj(e, t) {
+	if (!oj(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = tj(t), r = ij[nj(n, 0, ij.length - 1)], [i, a] = sj(n, rj[r]), o = n() < .5, s = {
 		id: "a",
 		label: i
 	}, c = {
@@ -46065,14 +46434,14 @@ function YA(e, t) {
 		id: `baseline-direct-comparison-${r}-${e}-${t}`,
 		grade: e,
 		attribute: r,
-		prompt: KA[r],
+		prompt: aj[r],
 		options: [s, c],
 		correctOptionId: o ? "a" : "b"
 	};
 }
 //#endregion
 //#region packages/baseline-direct-comparison/src/plugin.ts
-function XA(e) {
+function lj(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -46082,44 +46451,44 @@ function XA(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function ZA(e, t, n, r, i, a) {
+function uj(e, t, n, r, i, a) {
 	return {
-		competencyId: VA,
+		competencyId: ej,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: XA(e).correctAnswer,
+		correctAnswer: lj(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function QA(e, t) {
-	let n = HA(t), r = [];
+function dj(e, t) {
+	let n = tj(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(YA(e, t));
+		r.push(cj(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var $A = {
+var fj = {
 	id: "baseline-direct-comparison",
-	competencyIds: [VA],
+	competencyIds: [ej],
 	generateQuestion(e, t) {
-		return YA(e, t);
+		return cj(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: XA
-}, ej = "math.geometry.baseline-position";
+	toPresentation: lj
+}, pj = "math.geometry.baseline-position";
 //#endregion
 //#region packages/baseline-positional-language/src/rng.ts
-function tj(e) {
+function mj(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46127,38 +46496,38 @@ function tj(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function nj(e, t, n) {
+function hj(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-positional-language/src/generate.ts
-var rj = [
+var gj = [
 	"🐱 the cat",
 	"🐶 the dog",
 	"⭐ the star",
 	"🧸 the toy"
-], ij = [
+], _j = [
 	"📦 the box",
 	"🪑 the chair",
 	"🛏️ the bed",
 	"🌳 the tree"
-], aj = [
+], vj = [
 	"on",
 	"under",
 	"behind",
 	"between",
 	"next-to"
-], oj = {
+], yj = {
 	on: "on",
 	under: "under",
 	behind: "behind",
 	between: "between",
 	"next-to": "next to"
 };
-function sj(e) {
+function bj(e) {
 	return e === "P" || e === 1;
 }
-function cj(e, t, n, r) {
+function xj(e, t, n, r) {
 	switch (e) {
 		case "on": return `${t}\n${n}`;
 		case "under": return `${n}\n${t}`;
@@ -46167,35 +46536,35 @@ function cj(e, t, n, r) {
 		case "between": return `${n}  ${t}  ${r}`;
 	}
 }
-function lj(e) {
-	let t = [...aj];
+function Sj(e) {
+	let t = [...vj];
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = nj(e, 0, n), i = t[n];
+		let r = hj(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function uj(e, t) {
-	if (!sj(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = tj(t), r = aj[nj(n, 0, aj.length - 1)], i = rj[nj(n, 0, rj.length - 1)], a = nj(n, 0, ij.length - 1), o = nj(n, 0, ij.length - 1);
-	for (; o === a;) o = nj(n, 0, ij.length - 1);
-	let s = ij[a], c = ij[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = lj(n).map((e) => ({
+function Cj(e, t) {
+	if (!bj(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = mj(t), r = vj[hj(n, 0, vj.length - 1)], i = gj[hj(n, 0, gj.length - 1)], a = hj(n, 0, _j.length - 1), o = hj(n, 0, _j.length - 1);
+	for (; o === a;) o = hj(n, 0, _j.length - 1);
+	let s = _j[a], c = _j[o], l = i.split(" ")[0], u = s.split(" ")[0], d = c.split(" ")[0], f = Sj(n).map((e) => ({
 		id: `position-${e}`,
-		label: oj[e]
+		label: yj[e]
 	}));
 	return {
 		id: `baseline-positional-language-${e}-${t}`,
 		grade: e,
 		position: r,
 		subjectLabel: i,
-		scene: cj(r, l, u, d),
+		scene: xj(r, l, u, d),
 		options: f,
 		correctOptionId: `position-${r}`
 	};
 }
 //#endregion
 //#region packages/baseline-positional-language/src/plugin.ts
-function dj(e) {
+function wj(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -46205,44 +46574,44 @@ function dj(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function fj(e, t, n, r, i, a) {
+function Tj(e, t, n, r, i, a) {
 	return {
-		competencyId: ej,
+		competencyId: pj,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: dj(e).correctAnswer,
+		correctAnswer: wj(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function pj(e, t) {
-	let n = tj(t), r = [];
+function Ej(e, t) {
+	let n = mj(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(uj(e, t));
+		r.push(Cj(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var mj = {
+var Dj = {
 	id: "baseline-positional-language",
-	competencyIds: [ej],
+	competencyIds: [pj],
 	generateQuestion(e, t) {
-		return uj(e, t);
+		return Cj(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: dj
-}, hj = "math.geometry.baseline-shapes";
+	toPresentation: wj
+}, Oj = "math.geometry.baseline-shapes";
 //#endregion
 //#region packages/baseline-shape-recognition/src/rng.ts
-function gj(e) {
+function kj(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46250,12 +46619,12 @@ function gj(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function _j(e, t, n) {
+function Aj(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/generate.ts
-var vj = [
+var jj = [
 	{
 		name: "circle",
 		emoji: "🔵"
@@ -46273,20 +46642,20 @@ var vj = [
 		emoji: "▭"
 	}
 ];
-function yj(e) {
+function Mj(e) {
 	return e === "P" || e === 1;
 }
-function bj(e) {
-	let t = vj.map((e) => e.name);
+function Nj(e) {
+	let t = jj.map((e) => e.name);
 	for (let n = t.length - 1; n > 0; n--) {
-		let r = _j(e, 0, n), i = t[n];
+		let r = Aj(e, 0, n), i = t[n];
 		t[n] = t[r], t[r] = i;
 	}
 	return t;
 }
-function xj(e, t) {
-	if (!yj(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
-	let n = gj(t), r = vj[_j(n, 0, vj.length - 1)], i = bj(n).map((e) => ({
+function Pj(e, t) {
+	if (!Mj(e)) throw Error(`invalid grade: ${e} (must be exactly 1 or "P")`);
+	let n = kj(t), r = jj[Aj(n, 0, jj.length - 1)], i = Nj(n).map((e) => ({
 		id: `shape-${e}`,
 		label: e
 	}));
@@ -46301,7 +46670,7 @@ function xj(e, t) {
 }
 //#endregion
 //#region packages/baseline-shape-recognition/src/plugin.ts
-function Sj(e) {
+function Fj(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -46311,44 +46680,44 @@ function Sj(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function Cj(e, t, n, r, i, a) {
+function Ij(e, t, n, r, i, a) {
 	return {
-		competencyId: hj,
+		competencyId: Oj,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Sj(e).correctAnswer,
+		correctAnswer: Fj(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function wj(e, t) {
-	let n = gj(t), r = [];
+function Lj(e, t) {
+	let n = kj(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(xj(e, t));
+		r.push(Pj(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Tj = {
+var Rj = {
 	id: "baseline-shape-recognition",
-	competencyIds: [hj],
+	competencyIds: [Oj],
 	generateQuestion(e, t) {
-		return xj(e, t);
+		return Pj(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: Sj
+	toPresentation: Fj
 };
 //#endregion
 //#region packages/mental-addition/src/rng.ts
-function Ej(e) {
+function zj(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46356,59 +46725,59 @@ function Ej(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Dj(e, t, n) {
+function Bj(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-addition/src/generate.ts
-function Oj(e) {
+function Vj(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function kj(e) {
-	let t = Dj(e, 0, 9);
+function Hj(e) {
+	let t = Bj(e, 0, 9);
 	return {
 		operandA: t,
-		operandB: Dj(e, 0, 9 - t)
+		operandB: Bj(e, 0, 9 - t)
 	};
 }
-function Aj(e) {
-	let t = Dj(e, 1, 9);
+function Uj(e) {
+	let t = Bj(e, 1, 9);
 	return {
 		operandA: t,
-		operandB: Dj(e, Math.max(1, 10 - t), 9)
+		operandB: Bj(e, Math.max(1, 10 - t), 9)
 	};
 }
-function jj(e) {
-	let t = Dj(e, 0, 9), n = Dj(e, 0, 9 - t);
+function Wj(e) {
+	let t = Bj(e, 0, 9), n = Bj(e, 0, 9 - t);
 	return {
-		operandA: Dj(e, 1, 9) * 10 + n,
+		operandA: Bj(e, 1, 9) * 10 + n,
 		operandB: t
 	};
 }
-function Mj(e) {
-	let t = Dj(e, 1, 9);
+function Gj(e) {
+	let t = Bj(e, 1, 9);
 	return {
-		onesA: Dj(e, Math.max(0, 10 - t), 9),
+		onesA: Bj(e, Math.max(0, 10 - t), 9),
 		onesB: t
 	};
 }
-function Nj(e) {
-	let { onesA: t, onesB: n } = Mj(e), r = Dj(e, 1, 9), i = Dj(e, 1, 9);
+function Kj(e) {
+	let { onesA: t, onesB: n } = Gj(e), r = Bj(e, 1, 9), i = Bj(e, 1, 9);
 	return {
 		operandA: r * 10 + t,
 		operandB: i * 10 + n
 	};
 }
-function Pj(e) {
-	let { onesA: t, onesB: n } = Mj(e), r = Dj(e, 0, 9), i = Dj(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = Dj(e, +!a, 9);
+function qj(e) {
+	let { onesA: t, onesB: n } = Gj(e), r = Bj(e, 0, 9), i = Bj(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = Bj(e, +!a, 9);
 	return {
 		operandA: i,
-		operandB: (a ? Dj(e, 1, 9) : 0) * 100 + o * 10 + n
+		operandB: (a ? Bj(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function Fj(e, t) {
-	if (!Oj(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Ej(t), { operandA: r, operandB: i } = e === 1 ? kj(n) : e === 2 ? Aj(n) : e === 3 ? jj(n) : e === 4 ? Nj(n) : Pj(n);
+function Jj(e, t) {
+	if (!Vj(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = zj(t), { operandA: r, operandB: i } = e === 1 ? Hj(n) : e === 2 ? Uj(n) : e === 3 ? Wj(n) : e === 4 ? Kj(n) : qj(n);
 	return {
 		id: `mental-addition-${e}-${t}`,
 		grade: e,
@@ -46419,8 +46788,8 @@ function Fj(e, t) {
 }
 //#endregion
 //#region packages/mental-addition/src/plugin.ts
-var Ij = "math.addition.mental";
-function Lj(e) {
+var Yj = "math.addition.mental";
+function Xj(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -46429,44 +46798,44 @@ function Lj(e) {
 		correctAnswer: e.correctSum
 	};
 }
-function Rj(e, t, n, r, i, a) {
+function Zj(e, t, n, r, i, a) {
 	return {
-		competencyId: Ij,
+		competencyId: Yj,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Lj(e).correctAnswer,
+		correctAnswer: Xj(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function zj(e, t) {
-	let n = Ej(t), r = [];
+function Qj(e, t) {
+	let n = zj(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Fj(e, t));
+		r.push(Jj(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Bj = {
+var $j = {
 	id: "mental-addition",
-	competencyIds: [Ij],
+	competencyIds: [Yj],
 	generateQuestion(e, t) {
-		return Fj(e, t);
+		return Jj(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctSum };
 	},
-	toPresentation: Lj
+	toPresentation: Xj
 };
 //#endregion
 //#region packages/mental-division/src/rng.ts
-function Vj(e) {
+function eM(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46474,29 +46843,29 @@ function Vj(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function Hj(e, t, n) {
+function tM(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-division/src/generate.ts
-function Uj(e) {
+function nM(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function Wj(e, t) {
+function rM(e, t) {
 	return {
-		divisor: Hj(e, 1, t),
-		correctQuotient: Hj(e, 0, t)
+		divisor: tM(e, 1, t),
+		correctQuotient: tM(e, 0, t)
 	};
 }
-function Gj(e) {
+function iM(e) {
 	return {
-		divisor: Hj(e, 1, 9),
-		correctQuotient: Hj(e, 11, 20)
+		divisor: tM(e, 1, 9),
+		correctQuotient: tM(e, 11, 20)
 	};
 }
-function Kj(e, t) {
-	if (!Uj(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Vj(t), { divisor: r, correctQuotient: i } = e === 1 ? Wj(n, 2) : e === 2 ? Wj(n, 5) : e === 3 ? Wj(n, 10) : e === 4 ? Wj(n, 12) : Gj(n);
+function aM(e, t) {
+	if (!nM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = eM(t), { divisor: r, correctQuotient: i } = e === 1 ? rM(n, 2) : e === 2 ? rM(n, 5) : e === 3 ? rM(n, 10) : e === 4 ? rM(n, 12) : iM(n);
 	return {
 		id: `mental-division-${e}-${t}`,
 		grade: e,
@@ -46507,8 +46876,8 @@ function Kj(e, t) {
 }
 //#endregion
 //#region packages/mental-division/src/plugin.ts
-var qj = "math.division.mental";
-function Jj(e) {
+var oM = "math.division.mental";
+function sM(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -46517,44 +46886,44 @@ function Jj(e) {
 		correctAnswer: e.correctQuotient
 	};
 }
-function Yj(e, t, n, r, i, a) {
+function cM(e, t, n, r, i, a) {
 	return {
-		competencyId: qj,
+		competencyId: oM,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: Jj(e).correctAnswer,
+		correctAnswer: sM(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function Xj(e, t) {
-	let n = Vj(t), r = [];
+function lM(e, t) {
+	let n = eM(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(Kj(e, t));
+		r.push(aM(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var Zj = {
+var uM = {
 	id: "mental-division",
-	competencyIds: [qj],
+	competencyIds: [oM],
 	generateQuestion(e, t) {
-		return Kj(e, t);
+		return aM(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctQuotient };
 	},
-	toPresentation: Jj
+	toPresentation: sM
 };
 //#endregion
 //#region packages/mental-multiplication/src/rng.ts
-function Qj(e) {
+function dM(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46562,29 +46931,29 @@ function Qj(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function $j(e, t, n) {
+function fM(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-multiplication/src/generate.ts
-function eM(e) {
+function pM(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function tM(e, t) {
+function mM(e, t) {
 	return {
-		factorA: $j(e, 0, t),
-		factorB: $j(e, 0, t)
+		factorA: fM(e, 0, t),
+		factorB: fM(e, 0, t)
 	};
 }
-function nM(e) {
+function hM(e) {
 	return {
-		factorA: $j(e, 11, 20),
-		factorB: $j(e, 0, 9)
+		factorA: fM(e, 11, 20),
+		factorB: fM(e, 0, 9)
 	};
 }
-function rM(e, t) {
-	if (!eM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = Qj(t), { factorA: r, factorB: i } = e === 1 ? tM(n, 2) : e === 2 ? tM(n, 5) : e === 3 ? tM(n, 10) : e === 4 ? tM(n, 12) : nM(n);
+function gM(e, t) {
+	if (!pM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = dM(t), { factorA: r, factorB: i } = e === 1 ? mM(n, 2) : e === 2 ? mM(n, 5) : e === 3 ? mM(n, 10) : e === 4 ? mM(n, 12) : hM(n);
 	return {
 		id: `mental-multiplication-${e}-${t}`,
 		grade: e,
@@ -46595,8 +46964,8 @@ function rM(e, t) {
 }
 //#endregion
 //#region packages/mental-multiplication/src/plugin.ts
-var iM = "math.multiplication.mental";
-function aM(e) {
+var _M = "math.multiplication.mental";
+function vM(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -46605,44 +46974,44 @@ function aM(e) {
 		correctAnswer: e.correctProduct
 	};
 }
-function oM(e, t, n, r, i, a) {
+function yM(e, t, n, r, i, a) {
 	return {
-		competencyId: iM,
+		competencyId: _M,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: aM(e).correctAnswer,
+		correctAnswer: vM(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function sM(e, t) {
-	let n = Qj(t), r = [];
+function bM(e, t) {
+	let n = dM(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(rM(e, t));
+		r.push(gM(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var cM = {
+var xM = {
 	id: "mental-multiplication",
-	competencyIds: [iM],
+	competencyIds: [_M],
 	generateQuestion(e, t) {
-		return rM(e, t);
+		return gM(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctProduct };
 	},
-	toPresentation: aM
+	toPresentation: vM
 };
 //#endregion
 //#region packages/mental-subtraction/src/rng.ts
-function lM(e) {
+function SM(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46650,59 +47019,59 @@ function lM(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function uM(e, t, n) {
+function Q(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/mental-subtraction/src/generate.ts
-function dM(e) {
+function CM(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function fM(e) {
-	let t = uM(e, 0, 9);
+function wM(e) {
+	let t = Q(e, 0, 9);
 	return {
 		correctDifference: t,
-		subtrahend: uM(e, 0, 9 - t)
+		subtrahend: Q(e, 0, 9 - t)
 	};
 }
-function pM(e) {
-	let t = uM(e, 1, 9);
+function TM(e) {
+	let t = Q(e, 1, 9);
 	return {
 		correctDifference: t,
-		subtrahend: uM(e, Math.max(1, 10 - t), 9)
+		subtrahend: Q(e, Math.max(1, 10 - t), 9)
 	};
 }
-function mM(e) {
-	let t = uM(e, 0, 9), n = uM(e, 0, 9 - t);
+function EM(e) {
+	let t = Q(e, 0, 9), n = Q(e, 0, 9 - t);
 	return {
-		correctDifference: uM(e, 1, 9) * 10 + n,
+		correctDifference: Q(e, 1, 9) * 10 + n,
 		subtrahend: t
 	};
 }
-function hM(e) {
-	let t = uM(e, 1, 9);
+function DM(e) {
+	let t = Q(e, 1, 9);
 	return {
-		onesDiff: uM(e, Math.max(0, 10 - t), 9),
+		onesDiff: Q(e, Math.max(0, 10 - t), 9),
 		onesSubtrahend: t
 	};
 }
-function gM(e) {
-	let { onesDiff: t, onesSubtrahend: n } = hM(e), r = uM(e, 1, 9), i = uM(e, 1, 9);
+function OM(e) {
+	let { onesDiff: t, onesSubtrahend: n } = DM(e), r = Q(e, 1, 9), i = Q(e, 1, 9);
 	return {
 		correctDifference: r * 10 + t,
 		subtrahend: i * 10 + n
 	};
 }
-function _M(e) {
-	let { onesDiff: t, onesSubtrahend: n } = hM(e), r = uM(e, 0, 9), i = uM(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = uM(e, +!a, 9);
+function kM(e) {
+	let { onesDiff: t, onesSubtrahend: n } = DM(e), r = Q(e, 0, 9), i = Q(e, 1, 9) * 100 + r * 10 + t, a = e() < .5, o = Q(e, +!a, 9);
 	return {
 		correctDifference: i,
-		subtrahend: (a ? uM(e, 1, 9) : 0) * 100 + o * 10 + n
+		subtrahend: (a ? Q(e, 1, 9) : 0) * 100 + o * 10 + n
 	};
 }
-function vM(e, t) {
-	if (!dM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = lM(t), { correctDifference: r, subtrahend: i } = e === 1 ? fM(n) : e === 2 ? pM(n) : e === 3 ? mM(n) : e === 4 ? gM(n) : _M(n);
+function AM(e, t) {
+	if (!CM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = SM(t), { correctDifference: r, subtrahend: i } = e === 1 ? wM(n) : e === 2 ? TM(n) : e === 3 ? EM(n) : e === 4 ? OM(n) : kM(n);
 	return {
 		id: `mental-subtraction-${e}-${t}`,
 		grade: e,
@@ -46713,8 +47082,8 @@ function vM(e, t) {
 }
 //#endregion
 //#region packages/mental-subtraction/src/plugin.ts
-var yM = "math.subtraction.mental";
-function bM(e) {
+var jM = "math.subtraction.mental";
+function MM(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -46723,44 +47092,44 @@ function bM(e) {
 		correctAnswer: e.correctDifference
 	};
 }
-function xM(e, t, n, r, i, a) {
+function NM(e, t, n, r, i, a) {
 	return {
-		competencyId: yM,
+		competencyId: jM,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: bM(e).correctAnswer,
+		correctAnswer: MM(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function SM(e, t) {
-	let n = lM(t), r = [];
+function PM(e, t) {
+	let n = SM(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(vM(e, t));
+		r.push(AM(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var CM = {
+var FM = {
 	id: "mental-subtraction",
-	competencyIds: [yM],
+	competencyIds: [jM],
 	generateQuestion(e, t) {
-		return vM(e, t);
+		return AM(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctDifference };
 	},
-	toPresentation: bM
-}, wM = "math.number-sense.counting-range";
+	toPresentation: MM
+}, IM = "math.number-sense.counting-range";
 //#endregion
 //#region packages/number-sense-counting-range/src/rng.ts
-function TM(e) {
+function LM(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46768,22 +47137,22 @@ function TM(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function EM(e, t, n) {
+function RM(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/generate.ts
-function DM(e) {
+function zM(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 4;
 }
-var OM = {
+var BM = {
 	1: 100,
 	2: 1e3,
 	3: 1e4,
 	4: 1e6
 };
-function kM(e, t, n, r) {
-	let i = EM(r, 0, n - 1);
+function VM(e, t, n, r) {
+	let i = RM(r, 0, n - 1);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
 		grade: e,
@@ -46792,8 +47161,8 @@ function kM(e, t, n, r) {
 		numericAnswer: i + 1
 	};
 }
-function AM(e, t, n, r) {
-	let i = EM(r, 1, n);
+function HM(e, t, n, r) {
+	let i = RM(r, 1, n);
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
 		grade: e,
@@ -46802,9 +47171,9 @@ function AM(e, t, n, r) {
 		numericAnswer: i - 1
 	};
 }
-function jM(e, t, n, r) {
-	let i = EM(r, 0, n), a = EM(r, 0, n);
-	for (; a === i;) a = EM(r, 0, n);
+function UM(e, t, n, r) {
+	let i = RM(r, 0, n), a = RM(r, 0, n);
+	for (; a === i;) a = RM(r, 0, n);
 	let o = i > a ? "a" : "b";
 	return {
 		id: `number-sense-counting-range-${e}-${t}`,
@@ -46821,18 +47190,18 @@ function jM(e, t, n, r) {
 		correctOptionId: o
 	};
 }
-function MM(e, t) {
-	if (!DM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
-	let n = OM[e], r = TM(t);
-	switch (EM(r, 0, 2)) {
-		case 0: return kM(e, t, n, r);
-		case 1: return AM(e, t, n, r);
-		default: return jM(e, t, n, r);
+function WM(e, t) {
+	if (!zM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..4)`);
+	let n = BM[e], r = LM(t);
+	switch (RM(r, 0, 2)) {
+		case 0: return VM(e, t, n, r);
+		case 1: return HM(e, t, n, r);
+		default: return UM(e, t, n, r);
 	}
 }
 //#endregion
 //#region packages/number-sense-counting-range/src/plugin.ts
-function NM(e) {
+function GM(e) {
 	if (e.kind === "compare") return {
 		presentation: {
 			kind: "choice",
@@ -46850,44 +47219,44 @@ function NM(e) {
 		correctAnswer: e.numericAnswer
 	};
 }
-function PM(e, t, n, r, i, a) {
+function KM(e, t, n, r, i, a) {
 	return {
-		competencyId: wM,
+		competencyId: IM,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: NM(e).correctAnswer,
+		correctAnswer: GM(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function FM(e, t) {
-	let n = TM(t), r = [];
+function qM(e, t) {
+	let n = LM(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(MM(e, t));
+		r.push(WM(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var IM = {
+var JM = {
 	id: "number-sense-counting-range",
-	competencyIds: [wM],
+	competencyIds: [IM],
 	generateQuestion(e, t) {
-		return MM(e, t);
+		return WM(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation: NM
-}, LM = "math.number-sense.negative-numbers";
+	toPresentation: GM
+}, YM = "math.number-sense.negative-numbers";
 //#endregion
 //#region packages/number-sense-negative-numbers/src/rng.ts
-function RM(e) {
+function XM(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -46895,16 +47264,16 @@ function RM(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function zM(e, t, n) {
+function ZM(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/generate.ts
-function BM(e) {
+function QM(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function VM(e, t, n, r) {
-	let i = zM(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
+function $M(e, t, n, r) {
+	let i = ZM(n, r[0], r[1]), a = n() < .5 ? "after" : "before", o = a === "after" ? i + 1 : i - 1;
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
 		grade: e,
@@ -46913,9 +47282,9 @@ function VM(e, t, n, r) {
 		numericAnswer: o
 	};
 }
-function HM(e, t, n, r, i) {
-	let a = zM(n, i[0], i[1]), o = zM(n, i[0], i[1]);
-	for (; o === a;) o = zM(n, i[0], i[1]);
+function eN(e, t, n, r, i) {
+	let a = ZM(n, i[0], i[1]), o = ZM(n, i[0], i[1]);
+	for (; o === a;) o = ZM(n, i[0], i[1]);
 	let s = r === "temperature" ? `Which is colder, ${a}° or ${o}°?` : `Who owes more money: someone who owes $${Math.abs(a)} or someone who owes $${Math.abs(o)}?`, c = (e) => r === "temperature" ? `${e}°` : `owes $${Math.abs(e)}`, l = a < o ? "a" : "b";
 	return {
 		id: `number-sense-negative-numbers-${e}-${t}`,
@@ -46932,20 +47301,20 @@ function HM(e, t, n, r, i) {
 		correctOptionId: l
 	};
 }
-function UM(e, t) {
-	if (!BM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = RM(t);
-	if (e === 1) return VM(e, t, n, [-10, 10]);
-	if (e === 2) return VM(e, t, n, [-20, 20]);
-	if (e === 3) return HM(e, t, n, "temperature", [-20, 20]);
-	if (e === 4) return HM(e, t, n, "debt", [-50, -1]);
-	if (n() < .5) return VM(e, t, n, [-100, 100]);
+function tN(e, t) {
+	if (!QM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = XM(t);
+	if (e === 1) return $M(e, t, n, [-10, 10]);
+	if (e === 2) return $M(e, t, n, [-20, 20]);
+	if (e === 3) return eN(e, t, n, "temperature", [-20, 20]);
+	if (e === 4) return eN(e, t, n, "debt", [-50, -1]);
+	if (n() < .5) return $M(e, t, n, [-100, 100]);
 	let r = n() < .5 ? "temperature" : "debt";
-	return HM(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
+	return eN(e, t, n, r, r === "debt" ? [-50, -1] : [-100, 100]);
 }
 //#endregion
 //#region packages/number-sense-negative-numbers/src/plugin.ts
-function WM(e) {
+function nN(e) {
 	return e.kind === "compare" ? {
 		presentation: {
 			kind: "choice",
@@ -46961,44 +47330,44 @@ function WM(e) {
 		correctAnswer: e.numericAnswer
 	};
 }
-function GM(e, t, n, r, i, a) {
+function rN(e, t, n, r, i, a) {
 	return {
-		competencyId: LM,
+		competencyId: YM,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: WM(e).correctAnswer,
+		correctAnswer: nN(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function KM(e, t) {
-	let n = RM(t), r = [];
+function iN(e, t) {
+	let n = XM(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(UM(e, t));
+		r.push(tN(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var qM = {
+var aN = {
 	id: "number-sense-negative-numbers",
-	competencyIds: [LM],
+	competencyIds: [YM],
 	generateQuestion(e, t) {
-		return UM(e, t);
+		return tN(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "compare" ? { correct: t === e.correctOptionId } : { correct: t === e.numericAnswer };
 	},
-	toPresentation: WM
-}, JM = "math.number-sense.odd-even";
+	toPresentation: nN
+}, oN = "math.number-sense.odd-even";
 //#endregion
 //#region packages/number-sense-odd-even/src/rng.ts
-function YM(e) {
+function sN(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47006,30 +47375,30 @@ function YM(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function XM(e, t, n) {
+function cN(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/generate.ts
-function ZM(e) {
+function lN(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var QM = {
+var uN = {
 	1: 20,
 	2: 100,
 	3: 1e3,
 	4: 1e4,
 	5: 1e4
 };
-function $M(e) {
+function dN(e) {
 	return e % 2 == 0 ? "even" : "odd";
 }
-function eN(e, t, n) {
+function fN(e, t, n) {
 	let r = t === "even" ? 0 : 1;
-	return r + 2 * XM(e, 0, Math.floor((n - r) / 2) + 1 - 1);
+	return r + 2 * cN(e, 0, Math.floor((n - r) / 2) + 1 - 1);
 }
-function tN(e, t, n) {
-	let r = QM[e], i = XM(n, 0, r);
+function pN(e, t, n) {
+	let r = uN[e], i = cN(n, 0, r);
 	return {
 		id: `number-sense-odd-even-${e}-${t}`,
 		grade: e,
@@ -47042,16 +47411,16 @@ function tN(e, t, n) {
 			id: "even",
 			label: "Even"
 		}],
-		correctOptionId: $M(i)
+		correctOptionId: dN(i)
 	};
 }
-function nN(e, t, n) {
+function mN(e, t, n) {
 	let r = n() < .5 ? "odd" : "even", i = r === "odd" ? "even" : "odd", a = [];
 	for (; a.length < 3;) {
-		let e = eN(n, r, 1e4);
+		let e = fN(n, r, 1e4);
 		a.includes(e) || a.push(e);
 	}
-	let o = eN(n, i, 1e4), s = [
+	let o = fN(n, i, 1e4), s = [
 		{
 			value: a[0],
 			isOddOneOut: !1
@@ -47070,7 +47439,7 @@ function nN(e, t, n) {
 		}
 	];
 	for (let e = s.length - 1; e > 0; e--) {
-		let t = XM(n, 0, e), r = s[e];
+		let t = cN(n, 0, e), r = s[e];
 		s[e] = s[t], s[t] = r;
 	}
 	let c = [
@@ -47094,14 +47463,14 @@ function nN(e, t, n) {
 		correctOptionId: l
 	};
 }
-function rN(e, t) {
-	if (!ZM(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = YM(t);
-	return e === 5 && n() < .5 ? nN(e, t, n) : tN(e, t, n);
+function hN(e, t) {
+	if (!lN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = sN(t);
+	return e === 5 && n() < .5 ? mN(e, t, n) : pN(e, t, n);
 }
 //#endregion
 //#region packages/number-sense-odd-even/src/plugin.ts
-function iN(e) {
+function gN(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -47111,44 +47480,44 @@ function iN(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function aN(e, t, n, r, i, a) {
+function _N(e, t, n, r, i, a) {
 	return {
-		competencyId: JM,
+		competencyId: oN,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: iN(e).correctAnswer,
+		correctAnswer: gN(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function oN(e, t) {
-	let n = YM(t), r = [];
+function vN(e, t) {
+	let n = sN(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(rN(e, t));
+		r.push(hN(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var sN = {
+var yN = {
 	id: "number-sense-odd-even",
-	competencyIds: [JM],
+	competencyIds: [oN],
 	generateQuestion(e, t) {
-		return rN(e, t);
+		return hN(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: iN
-}, cN = "math.number-sense.ordinals";
+	toPresentation: gN
+}, bN = "math.number-sense.ordinals";
 //#endregion
 //#region packages/number-sense-ordinals/src/ordinal.ts
-function lN(e) {
+function xN(e) {
 	let t = e % 100;
 	if (t >= 11 && t <= 13) return `${e}th`;
 	switch (e % 10) {
@@ -47160,7 +47529,7 @@ function lN(e) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/rng.ts
-function uN(e) {
+function SN(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47168,31 +47537,31 @@ function uN(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function dN(e, t, n) {
+function CN(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/generate.ts
-var fN = {
+var wN = {
 	1: 5,
 	2: 10,
 	3: 20,
 	4: 50,
 	5: 100
 };
-function pN(e) {
+function TN(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function mN(e, t) {
+function EN(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = dN(t, 0, e), i = n[e];
+		let r = CN(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function hN(e, t) {
-	let n = mN(e, t), r = n.map((e, t) => ({
+function DN(e, t) {
+	let n = EN(e, t), r = n.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e.label
 	}));
@@ -47201,7 +47570,7 @@ function hN(e, t) {
 		correctOptionId: r[n.findIndex((e) => e.correct)].id
 	};
 }
-function gN(e, t) {
+function ON(e, t) {
 	let n = [
 		e - 1,
 		e + 1,
@@ -47213,7 +47582,7 @@ function gN(e, t) {
 	for (let a of n) a >= 1 && a <= t && a !== e && !r.has(a) && (r.add(a), i.push(a));
 	return i;
 }
-function _N(e, t, n, r) {
+function kN(e, t, n, r) {
 	let i = new Set(t), a = [];
 	for (let t of e) {
 		if (a.length >= r) break;
@@ -47222,9 +47591,9 @@ function _N(e, t, n, r) {
 	for (let e = 1; e <= n && a.length < r; e++) i.has(e) || (a.push(e), i.add(e));
 	return a;
 }
-function vN(e, t, n, r) {
-	let i = _N(gN(e, t), /* @__PURE__ */ new Set([e]), t, 3);
-	return hN([{
+function AN(e, t, n, r) {
+	let i = kN(ON(e, t), /* @__PURE__ */ new Set([e]), t, 3);
+	return DN([{
 		label: r(e),
 		correct: !0
 	}, ...i.map((e) => ({
@@ -47232,9 +47601,9 @@ function vN(e, t, n, r) {
 		correct: !1
 	}))], n);
 }
-function yN(e, t) {
-	if (!pN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = fN[e], r = uN(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = dN(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? vN(a, n, r, lN) : vN(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${lN(a)}?`;
+function jN(e, t) {
+	if (!TN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = wN[e], r = SN(t), i = r() < .5 ? "number-to-word" : "word-to-number", a = CN(r, 1, n), { options: o, correctOptionId: s } = i === "number-to-word" ? AN(a, n, r, xN) : AN(a, n, r, String), c = i === "number-to-word" ? `What is the ordinal (position) word for ${a}?` : `Which number is ${xN(a)}?`;
 	return {
 		id: `number-sense-ordinals-${e}-${t}`,
 		grade: e,
@@ -47246,7 +47615,7 @@ function yN(e, t) {
 }
 //#endregion
 //#region packages/number-sense-ordinals/src/plugin.ts
-function bN(e) {
+function MN(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -47256,44 +47625,44 @@ function bN(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function xN(e, t, n, r, i, a) {
+function NN(e, t, n, r, i, a) {
 	return {
-		competencyId: cN,
+		competencyId: bN,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: bN(e).correctAnswer,
+		correctAnswer: MN(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function SN(e, t) {
-	let n = uN(t), r = [];
+function PN(e, t) {
+	let n = SN(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(yN(e, t));
+		r.push(jN(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var CN = {
+var FN = {
 	id: "number-sense-ordinals",
-	competencyIds: [cN],
+	competencyIds: [bN],
 	generateQuestion(e, t) {
-		return yN(e, t);
+		return jN(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: bN
-}, wN = "math.number-sense.primes-factors";
+	toPresentation: MN
+}, IN = "math.number-sense.primes-factors";
 //#endregion
 //#region packages/number-sense-primes-factors/src/rng.ts
-function TN(e) {
+function LN(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47301,46 +47670,46 @@ function TN(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function EN(e, t, n) {
+function RN(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/generate.ts
-function DN(e) {
+function zN(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function ON(e) {
+function BN(e) {
 	if (e < 2) return !1;
 	for (let t = 2; t * t <= e; t++) if (e % t === 0) return !1;
 	return !0;
 }
-function kN(e, t) {
-	return t === 0 ? e : kN(t, e % t);
+function VN(e, t) {
+	return t === 0 ? e : VN(t, e % t);
 }
-function AN(e, t) {
-	return e * t / kN(e, t);
+function HN(e, t) {
+	return e * t / VN(e, t);
 }
-var jN = {
+var UN = {
 	1: 20,
 	2: 50,
 	5: 50
-}, MN = {
+}, WN = {
 	3: 50,
 	4: 100,
 	5: 100
 };
-function NN(e, t) {
+function GN(e, t) {
 	let n = [];
 	for (let e = 2; e < t; e++) t % e === 0 && n.push(e);
-	return n.length === 0 ? EN(e, 2, t - 1) : n[EN(e, 0, n.length - 1)];
+	return n.length === 0 ? RN(e, 2, t - 1) : n[RN(e, 0, n.length - 1)];
 }
-function PN(e, t) {
-	let n = EN(e, 2, t - 1), r = 0;
-	for (; t % n === 0 && r < 20;) n = EN(e, 2, t - 1), r++;
+function KN(e, t) {
+	let n = RN(e, 2, t - 1), r = 0;
+	for (; t % n === 0 && r < 20;) n = RN(e, 2, t - 1), r++;
 	return n;
 }
-function FN(e, t, n) {
-	let r = EN(n, 2, jN[e] ?? 50);
+function qN(e, t, n) {
+	let r = RN(n, 2, UN[e] ?? 50);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -47353,12 +47722,12 @@ function FN(e, t, n) {
 			id: "no",
 			label: "No"
 		}],
-		correctOptionId: ON(r) ? "yes" : "no",
+		correctOptionId: BN(r) ? "yes" : "no",
 		n: r
 	};
 }
-function IN(e, t, n) {
-	let r = EN(n, 4, (MN[e] ?? 100) - 1), i = n() < .5 ? NN(n, r) : PN(n, r);
+function JN(e, t, n) {
+	let r = RN(n, 4, (WN[e] ?? 100) - 1), i = n() < .5 ? GN(n, r) : KN(n, r);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
@@ -47374,31 +47743,31 @@ function IN(e, t, n) {
 		correctOptionId: r % i === 0 ? "yes" : "no"
 	};
 }
-function LN(e, t, n) {
-	let r = EN(n, 2, 12), i = EN(n, 2, 12);
-	for (; i === r;) i = EN(n, 2, 12);
+function YN(e, t, n) {
+	let r = RN(n, 2, 12), i = RN(n, 2, 12);
+	for (; i === r;) i = RN(n, 2, 12);
 	return {
 		id: `number-sense-primes-factors-${e}-${t}`,
 		grade: e,
 		kind: "common-multiple",
 		prompt: `What is the smallest common multiple of ${r} and ${i}?`,
-		numericAnswer: AN(r, i)
+		numericAnswer: HN(r, i)
 	};
 }
-function RN(e, t) {
-	if (!DN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = TN(t);
-	if (e === 1 || e === 2) return FN(e, t, n);
-	if (e === 3 || e === 4) return IN(e, t, n);
-	switch (EN(n, 0, 2)) {
-		case 0: return FN(e, t, n);
-		case 1: return IN(e, t, n);
-		default: return LN(e, t, n);
+function XN(e, t) {
+	if (!zN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = LN(t);
+	if (e === 1 || e === 2) return qN(e, t, n);
+	if (e === 3 || e === 4) return JN(e, t, n);
+	switch (RN(n, 0, 2)) {
+		case 0: return qN(e, t, n);
+		case 1: return JN(e, t, n);
+		default: return YN(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-primes-factors/src/plugin.ts
-function zN(e) {
+function ZN(e) {
 	if (e.kind === "common-multiple") {
 		let t = e.prompt.match(/of (\d+) and (\d+)/);
 		return {
@@ -47418,44 +47787,44 @@ function zN(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function BN(e, t, n, r, i, a) {
+function QN(e, t, n, r, i, a) {
 	return {
-		competencyId: wN,
+		competencyId: IN,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: zN(e).correctAnswer,
+		correctAnswer: ZN(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function VN(e, t) {
-	let n = TN(t), r = [];
+function $N(e, t) {
+	let n = LN(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(RN(e, t));
+		r.push(XN(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var HN = {
+var eP = {
 	id: "number-sense-primes-factors",
-	competencyIds: [wN],
+	competencyIds: [IN],
 	generateQuestion(e, t) {
-		return RN(e, t);
+		return XN(e, t);
 	},
 	validateAnswer(e, t) {
 		return e.kind === "common-multiple" ? { correct: t === e.numericAnswer } : { correct: t === e.correctOptionId };
 	},
-	toPresentation: zN
-}, UN = "math.number-sense.roman-numerals";
+	toPresentation: ZN
+}, tP = "math.number-sense.roman-numerals";
 //#endregion
 //#region packages/number-sense-roman-numerals/src/rng.ts
-function WN(e) {
+function nP(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47463,12 +47832,12 @@ function WN(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function GN(e, t, n) {
+function rP(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/generate.ts
-var KN = [
+var iP = [
 	[1e3, "M"],
 	[900, "CM"],
 	[500, "D"],
@@ -47483,33 +47852,33 @@ var KN = [
 	[4, "IV"],
 	[1, "I"]
 ];
-function qN(e) {
+function aP(e) {
 	let t = e, n = "";
-	for (let [e, r] of KN) for (; t >= e;) n += r, t -= e;
+	for (let [e, r] of iP) for (; t >= e;) n += r, t -= e;
 	return n;
 }
-function JN(e) {
+function oP(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var YN = {
+var sP = {
 	1: [1, 10],
 	2: [1, 50],
 	3: [1, 100],
 	4: [1, 500],
 	5: [1, 1e3]
 };
-function XN(e, t) {
+function cP(e, t) {
 	return e <= 3 || t() < .5 ? "read" : "write";
 }
-function ZN(e, t) {
+function lP(e, t) {
 	let n = e.slice();
 	for (let e = n.length - 1; e > 0; e--) {
-		let r = GN(t, 0, e), i = n[e];
+		let r = rP(t, 0, e), i = n[e];
 		n[e] = n[r], n[r] = i;
 	}
 	return n;
 }
-function QN(e, t, n, r) {
+function uP(e, t, n, r) {
 	let i = /* @__PURE__ */ new Set();
 	for (let a of [
 		1,
@@ -47533,31 +47902,31 @@ function QN(e, t, n, r) {
 	for (; i.size < r && a <= n;) a !== e && i.add(a), a++;
 	return Array.from(i).slice(0, r);
 }
-function $N(e, t, n) {
-	let [r, i] = t, a = ZN([e, ...QN(e, r, i, 3)], n), o = a.map((e, t) => ({
+function dP(e, t, n) {
+	let [r, i] = t, a = lP([e, ...uP(e, r, i, 3)], n), o = a.map((e, t) => ({
 		id: `opt-${t}`,
 		label: String(e)
 	})), s = a.indexOf(e);
 	return {
-		prompt: `Which number does the Roman numeral ${qN(e)} represent?`,
+		prompt: `Which number does the Roman numeral ${aP(e)} represent?`,
 		options: o,
 		correctOptionId: `opt-${s}`
 	};
 }
-function eP(e, t, n) {
-	let [r, i] = t, a = QN(e, r, i, 3), o = ZN([qN(e), ...a.map(qN)], n), s = o.map((e, t) => ({
+function fP(e, t, n) {
+	let [r, i] = t, a = uP(e, r, i, 3), o = lP([aP(e), ...a.map(aP)], n), s = o.map((e, t) => ({
 		id: `opt-${t}`,
 		label: e
-	})), c = o.indexOf(qN(e));
+	})), c = o.indexOf(aP(e));
 	return {
 		prompt: `Which Roman numeral represents ${e}?`,
 		options: s,
 		correctOptionId: `opt-${c}`
 	};
 }
-function tP(e, t) {
-	if (!JN(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = WN(t), r = YN[e], i = XN(e, n), a = GN(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? $N(a, r, n) : eP(a, r, n);
+function pP(e, t) {
+	if (!oP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = nP(t), r = sP[e], i = cP(e, n), a = rP(n, r[0], r[1]), { prompt: o, options: s, correctOptionId: c } = i === "read" ? dP(a, r, n) : fP(a, r, n);
 	return {
 		id: `number-sense-roman-numerals-${e}-${t}`,
 		grade: e,
@@ -47569,7 +47938,7 @@ function tP(e, t) {
 }
 //#endregion
 //#region packages/number-sense-roman-numerals/src/plugin.ts
-function nP(e) {
+function mP(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -47579,44 +47948,44 @@ function nP(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function rP(e, t, n, r, i, a) {
+function hP(e, t, n, r, i, a) {
 	return {
-		competencyId: UN,
+		competencyId: tP,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: nP(e).correctAnswer,
+		correctAnswer: mP(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function iP(e, t) {
-	let n = WN(t), r = [];
+function gP(e, t) {
+	let n = nP(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(tP(e, t));
+		r.push(pP(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var aP = {
+var _P = {
 	id: "number-sense-roman-numerals",
-	competencyIds: [UN],
+	competencyIds: [tP],
 	generateQuestion(e, t) {
-		return tP(e, t);
+		return pP(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: nP
+	toPresentation: mP
 };
 //#endregion
 //#region packages/number-sense-skip-counting/src/rng.ts
-function oP(e) {
+function vP(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47624,39 +47993,39 @@ function oP(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function sP(e, t, n) {
+function yP(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/generate.ts
-function cP(e) {
+function bP(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function lP() {
+function xP() {
 	return {
 		step: 2,
 		maxRange: 20
 	};
 }
-function uP() {
+function SP() {
 	return {
 		step: 2,
 		maxRange: 50
 	};
 }
-function dP() {
+function CP() {
 	return {
 		step: 5,
 		maxRange: 100
 	};
 }
-function fP() {
+function wP() {
 	return {
 		step: 10,
 		maxRange: 200
 	};
 }
-function pP(e) {
+function TP(e) {
 	let t = [
 		2,
 		5,
@@ -47665,13 +48034,13 @@ function pP(e) {
 		50
 	];
 	return {
-		step: t[sP(e, 0, t.length - 1)],
+		step: t[yP(e, 0, t.length - 1)],
 		maxRange: 500
 	};
 }
-function mP(e, t) {
-	if (!cP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = oP(t), { step: r, maxRange: i } = e === 1 ? lP() : e === 2 ? uP() : e === 3 ? dP() : e === 4 ? fP() : pP(n), a = sP(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
+function EP(e, t) {
+	if (!bP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = vP(t), { step: r, maxRange: i } = e === 1 ? xP() : e === 2 ? SP() : e === 3 ? CP() : e === 4 ? wP() : TP(n), a = yP(n, 0, (i - r * 4) / r) * r, o = a, s = a + r, c = a + r * 2, l = a + r * 3;
 	return {
 		id: `number-sense-skip-counting-${e}-${t}`,
 		grade: e,
@@ -47687,8 +48056,8 @@ function mP(e, t) {
 }
 //#endregion
 //#region packages/number-sense-skip-counting/src/plugin.ts
-var hP = "math.number-sense.skip-counting";
-function gP(e) {
+var DP = "math.number-sense.skip-counting";
+function OP(e) {
 	let [t] = e.sequence;
 	return {
 		presentation: {
@@ -47706,44 +48075,44 @@ function gP(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function _P(e, t, n, r, i, a) {
+function kP(e, t, n, r, i, a) {
 	return {
-		competencyId: hP,
+		competencyId: DP,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: gP(e).correctAnswer,
+		correctAnswer: OP(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function vP(e, t) {
-	let n = oP(t), r = [];
+function AP(e, t) {
+	let n = vP(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(mP(e, t));
+		r.push(EP(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var yP = {
+var jP = {
 	id: "number-sense-skip-counting",
-	competencyIds: [hP],
+	competencyIds: [DP],
 	generateQuestion(e, t) {
-		return mP(e, t);
+		return EP(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: gP
+	toPresentation: OP
 };
 //#endregion
 //#region packages/number-sense-squares/src/rng.ts
-function bP(e) {
+function MP(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47751,21 +48120,21 @@ function bP(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function xP(e, t, n) {
+function NP(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/number-sense-squares/src/generate.ts
-function SP(e) {
+function PP(e) {
 	return typeof e == "number" && Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var CP = [{
+var FP = [{
 	id: "yes",
 	label: "Yes"
 }, {
 	id: "no",
 	label: "No"
-}], wP = {
+}], IP = {
 	1: {
 		baseMin: 1,
 		baseMax: 5,
@@ -47784,7 +48153,7 @@ var CP = [{
 		numberMin: 1,
 		numberMax: 144
 	}
-}, TP = {
+}, LP = {
 	4: {
 		baseMin: 1,
 		baseMax: 8
@@ -47794,25 +48163,25 @@ var CP = [{
 		baseMax: 12
 	}
 };
-function EP(e) {
+function RP(e) {
 	return Number.isInteger(Math.sqrt(e));
 }
-function DP(e, t, n) {
-	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = wP[e], s = n() < .5 ? (() => {
-		let e = xP(n, r, i);
+function zP(e, t, n) {
+	let { baseMin: r, baseMax: i, numberMin: a, numberMax: o } = IP[e], s = n() < .5 ? (() => {
+		let e = NP(n, r, i);
 		return e * e;
-	})() : xP(n, a, o), c = EP(s) ? "yes" : "no";
+	})() : NP(n, a, o), c = RP(s) ? "yes" : "no";
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
 		kind: "recognize",
 		prompt: `Is ${s} a square number?`,
-		options: CP,
+		options: FP,
 		correctOptionId: c
 	};
 }
-function OP(e, t, n) {
-	let { baseMin: r, baseMax: i } = TP[e], a = xP(n, r, i);
+function BP(e, t, n) {
+	let { baseMin: r, baseMax: i } = LP[e], a = NP(n, r, i);
 	return {
 		id: `number-sense-squares-${e}-${t}`,
 		grade: e,
@@ -47821,21 +48190,21 @@ function OP(e, t, n) {
 		numericAnswer: a * a
 	};
 }
-function kP(e, t) {
-	if (!SP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = bP(t);
+function VP(e, t) {
+	if (!PP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = MP(t);
 	switch (e) {
 		case 1:
 		case 2:
-		case 3: return DP(e, t, n);
+		case 3: return zP(e, t, n);
 		case 4:
-		case 5: return OP(e, t, n);
+		case 5: return BP(e, t, n);
 	}
 }
 //#endregion
 //#region packages/number-sense-squares/src/plugin.ts
-var AP = "math.number-sense.squares";
-function jP(e) {
+var HP = "math.number-sense.squares";
+function UP(e) {
 	if (e.kind === "recall") {
 		let t = Math.sqrt(e.numericAnswer);
 		return {
@@ -47855,35 +48224,35 @@ function jP(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function MP(e, t, n, r, i, a) {
+function WP(e, t, n, r, i, a) {
 	return {
-		competencyId: AP,
+		competencyId: HP,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: jP(e).correctAnswer,
+		correctAnswer: UP(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function NP(e, t) {
-	let n = bP(t), r = [];
+function GP(e, t) {
+	let n = MP(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(kP(e, t));
+		r.push(VP(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var PP = {
+var KP = {
 	id: "number-sense-squares",
-	competencyIds: [AP],
+	competencyIds: [HP],
 	generateQuestion(e, t) {
-		return kP(e, t);
+		return VP(e, t);
 	},
 	validateAnswer(e, t) {
 		switch (e.kind) {
@@ -47891,11 +48260,11 @@ var PP = {
 			case "recognize": return { correct: t === e.correctOptionId };
 		}
 	},
-	toPresentation: jP
+	toPresentation: UP
 };
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/rng.ts
-function FP(e) {
+function qP(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -47903,94 +48272,94 @@ function FP(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function IP(e, t, n) {
+function JP(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/generate.ts
-function LP(e) {
+function YP(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function RP(e) {
+function XP(e) {
 	return `${Math.floor(e / 10)}.${e % 10}`;
 }
-function zP(e) {
-	let t = IP(e, 1, 999);
+function ZP(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 10`,
 		correctAnswer: t * 10
 	};
 }
-function BP(e) {
-	let t = IP(e, 1, 999);
+function QP(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 100`,
 		correctAnswer: t * 100
 	};
 }
-function VP(e) {
-	let t = IP(e, 1, 999);
+function $P(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "×",
 		equation: `${t} × 1000`,
 		correctAnswer: t * 1e3
 	};
 }
-function HP(e) {
-	let t = e() < .5 ? 10 : 100, n = IP(e, 1, 999);
+function eF(e) {
+	let t = e() < .5 ? 10 : 100, n = JP(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${n * t} ÷ ${t}`,
 		correctAnswer: n
 	};
 }
-function UP(e) {
-	let t = IP(e, 1, 999);
+function tF(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${t * 1e3} ÷ 1000`,
 		correctAnswer: t
 	};
 }
-function WP(e) {
-	let t = IP(e, 1, 999);
+function nF(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${RP(t)} × 10`,
+		equation: `${XP(t)} × 10`,
 		correctAnswer: t
 	};
 }
-function GP(e) {
-	let t = IP(e, 1, 999);
+function rF(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "×",
-		equation: `${RP(t)} × 100`,
+		equation: `${XP(t)} × 100`,
 		correctAnswer: t * 10
 	};
 }
-function KP(e) {
-	let t = IP(e, 1, 999);
+function iF(e) {
+	let t = JP(e, 1, 999);
 	return {
 		operator: "÷",
 		equation: `${t * 10} ÷ 10`,
 		correctAnswer: t
 	};
 }
-var qP = [
-	UP,
-	WP,
-	GP,
-	KP
+var aF = [
+	tF,
+	nF,
+	rF,
+	iF
 ];
-function JP(e) {
-	let t = qP[IP(e, 0, qP.length - 1)];
+function oF(e) {
+	let t = aF[JP(e, 0, aF.length - 1)];
 	return t(e);
 }
-function YP(e, t) {
-	if (!LP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = FP(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? zP(n) : e === 2 ? BP(n) : e === 3 ? VP(n) : e === 4 ? HP(n) : JP(n);
+function sF(e, t) {
+	if (!YP(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = qP(t), { operator: r, equation: i, correctAnswer: a } = e === 1 ? ZP(n) : e === 2 ? QP(n) : e === 3 ? $P(n) : e === 4 ? eF(n) : oF(n);
 	return {
 		id: `place-value-multiply-divide-ten-${e}-${t}`,
 		grade: e,
@@ -48001,8 +48370,8 @@ function YP(e, t) {
 }
 //#endregion
 //#region packages/place-value-multiply-divide-ten/src/plugin.ts
-var XP = "math.place-value.multiply-divide-ten";
-function ZP(e) {
+var cF = "math.place-value.multiply-divide-ten";
+function lF(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -48011,44 +48380,44 @@ function ZP(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function QP(e, t, n, r, i, a) {
+function uF(e, t, n, r, i, a) {
 	return {
-		competencyId: XP,
+		competencyId: cF,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: ZP(e).correctAnswer,
+		correctAnswer: lF(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function $P(e, t) {
-	let n = FP(t), r = [];
+function dF(e, t) {
+	let n = qP(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(YP(e, t));
+		r.push(sF(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var eF = {
+var fF = {
 	id: "place-value-multiply-divide-ten",
-	competencyIds: [XP],
+	competencyIds: [cF],
 	generateQuestion(e, t) {
-		return YP(e, t);
+		return sF(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: ZP
+	toPresentation: lF
 };
 //#endregion
 //#region packages/place-value-powers-of-ten/src/rng.ts
-function tF(e) {
+function pF(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -48056,54 +48425,54 @@ function tF(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function nF(e, t, n) {
+function mF(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/generate.ts
-function rF(e) {
+function hF(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var iF = [
+var gF = [
 	1,
 	10,
 	100,
 	1e3
 ];
-function aF(e) {
+function _F(e) {
 	return {
-		operand: nF(e, 1, 99),
+		operand: mF(e, 1, 99),
 		magnitude: 1
 	};
 }
-function oF(e) {
+function vF(e) {
 	return {
-		operand: nF(e, 10, 999),
+		operand: mF(e, 10, 999),
 		magnitude: 10
 	};
 }
-function sF(e) {
+function yF(e) {
 	return {
-		operand: nF(e, 100, 9999),
+		operand: mF(e, 100, 9999),
 		magnitude: 100
 	};
 }
-function cF(e) {
+function bF(e) {
 	return {
-		operand: nF(e, 1e3, 99999),
+		operand: mF(e, 1e3, 99999),
 		magnitude: 1e3
 	};
 }
-function lF(e) {
-	let t = iF[nF(e, 0, iF.length - 1)];
+function xF(e) {
+	let t = gF[mF(e, 0, gF.length - 1)];
 	return {
-		operand: nF(e, t, 999999),
+		operand: mF(e, t, 999999),
 		magnitude: t
 	};
 }
-function uF(e, t) {
-	if (!rF(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = tF(t), { operand: r, magnitude: i } = e === 1 ? aF(n) : e === 2 ? oF(n) : e === 3 ? sF(n) : e === 4 ? cF(n) : lF(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
+function SF(e, t) {
+	if (!hF(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = pF(t), { operand: r, magnitude: i } = e === 1 ? _F(n) : e === 2 ? vF(n) : e === 3 ? yF(n) : e === 4 ? bF(n) : xF(n), a = n() < .5 ? "+" : "-", o = a === "+" ? r + i : r - i;
 	return {
 		id: `place-value-powers-of-ten-${e}-${t}`,
 		grade: e,
@@ -48116,8 +48485,8 @@ function uF(e, t) {
 }
 //#endregion
 //#region packages/place-value-powers-of-ten/src/plugin.ts
-var dF = "math.place-value.powers-of-ten";
-function fF(e) {
+var CF = "math.place-value.powers-of-ten";
+function wF(e) {
 	return {
 		presentation: {
 			kind: "equation",
@@ -48126,44 +48495,44 @@ function fF(e) {
 		correctAnswer: e.correctAnswer
 	};
 }
-function pF(e, t, n, r, i, a) {
+function TF(e, t, n, r, i, a) {
 	return {
-		competencyId: dF,
+		competencyId: CF,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: fF(e).correctAnswer,
+		correctAnswer: wF(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function mF(e, t) {
-	let n = tF(t), r = [];
+function EF(e, t) {
+	let n = pF(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(uF(e, t));
+		r.push(SF(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var hF = {
+var DF = {
 	id: "place-value-powers-of-ten",
-	competencyIds: [dF],
+	competencyIds: [CF],
 	generateQuestion(e, t) {
-		return uF(e, t);
+		return SF(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctAnswer };
 	},
-	toPresentation: fF
-}, gF = "math.place-value.rounding";
+	toPresentation: wF
+}, OF = "math.place-value.rounding";
 //#endregion
 //#region packages/place-value-rounding/src/rng.ts
-function _F(e) {
+function kF(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -48171,30 +48540,30 @@ function _F(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function vF(e, t, n) {
+function AF(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-rounding/src/generate.ts
-function yF(e) {
+function jF(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-function bF(e, t) {
+function MF(e, t) {
 	let n = e % t, r = e - n;
 	return n * 2 >= t ? r + t : r;
 }
-function xF(e, t) {
+function NF(e, t) {
 	return e - e % t;
 }
-function SF(e, t) {
+function PF(e, t) {
 	let n = e % t;
 	return n === 0 ? e : e - n + t;
 }
-function CF(e, t) {
+function FF(e, t) {
 	let n = String(e).padStart(t + 1, "0");
 	return `${n.slice(0, -t)}.${n.slice(-t)}`;
 }
-function wF(e, t, n) {
+function IF(e, t, n) {
 	let r = /* @__PURE__ */ new Set([e]), i = [];
 	for (let e of t) if (!r.has(e) && (r.add(e), i.push(e), i.length === 3)) return i;
 	let a = 1;
@@ -48204,7 +48573,7 @@ function wF(e, t, n) {
 	}
 	return i;
 }
-function TF(e, t, n, r, i, a) {
+function LF(e, t, n, r, i, a) {
 	let o = [{
 		label: i,
 		isCorrect: !0
@@ -48213,7 +48582,7 @@ function TF(e, t, n, r, i, a) {
 		isCorrect: !1
 	}))];
 	for (let e = o.length - 1; e > 0; e--) {
-		let t = vF(n, 0, e), r = o[e];
+		let t = AF(n, 0, e), r = o[e];
 		o[e] = o[t], o[t] = r;
 	}
 	let s = "", c = o.map((e, t) => {
@@ -48231,32 +48600,32 @@ function TF(e, t, n, r, i, a) {
 		correctOptionId: s
 	};
 }
-var EF = {
+var RF = {
 	1: 999,
 	2: 9999,
 	3: 99999
-}, DF = {
+}, zF = {
 	1: 10,
 	2: 100,
 	3: 1e3
-}, OF = {
+}, BF = {
 	1: "10",
 	2: "100",
 	3: "1,000"
 };
-function kF(e, t, n) {
-	let r = DF[e], i = vF(n, 0, EF[e]), a = bF(i, r), o = String(a), s = wF(o, [
-		xF(i, r),
-		SF(i, r),
+function VF(e, t, n) {
+	let r = zF[e], i = AF(n, 0, RF[e]), a = MF(i, r), o = String(a), s = IF(o, [
+		NF(i, r),
+		PF(i, r),
 		i,
 		a - r,
 		a + r,
 		a - 2 * r,
 		a + 2 * r
 	].filter((e) => e >= 0).map(String), (e) => String(a + (e + 2) * r));
-	return TF(e, t, n, `Round ${i} to the nearest ${OF[e]}.`, o, s);
+	return LF(e, t, n, `Round ${i} to the nearest ${BF[e]}.`, o, s);
 }
-var AF = {
+var HF = {
 	4: {
 		maxScaled: 999,
 		sourceDecimalPlaces: 2,
@@ -48269,29 +48638,29 @@ var AF = {
 		targetDecimalPlaces: 2,
 		precisionLabel: "2"
 	}
-}, jF = 10;
-function MF(e, t, n) {
-	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = AF[e], s = vF(n, 0, r), c = CF(s, i), l = bF(s, jF) / jF, u = CF(l, a), d = xF(s, jF) / jF, f = SF(s, jF) / jF, p = wF(u, [
-		CF(d, a),
-		CF(f, a),
+}, UF = 10;
+function WF(e, t, n) {
+	let { maxScaled: r, sourceDecimalPlaces: i, targetDecimalPlaces: a, precisionLabel: o } = HF[e], s = AF(n, 0, r), c = FF(s, i), l = MF(s, UF) / UF, u = FF(l, a), d = NF(s, UF) / UF, f = PF(s, UF) / UF, p = IF(u, [
+		FF(d, a),
+		FF(f, a),
 		c,
 		...[
 			l - 1,
 			l + 1,
 			l - 2,
 			l + 2
-		].filter((e) => e >= 0).map((e) => CF(e, a))
-	], (e) => CF(l + e + 2, a));
-	return TF(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
+		].filter((e) => e >= 0).map((e) => FF(e, a))
+	], (e) => FF(l + e + 2, a));
+	return LF(e, t, n, `Round ${c} to ${o} decimal place${o === "1" ? "" : "s"}.`, u, p);
 }
-function NF(e, t) {
-	if (!yF(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = _F(t);
-	return e === 1 || e === 2 || e === 3 ? kF(e, t, n) : MF(e, t, n);
+function GF(e, t) {
+	if (!jF(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = kF(t);
+	return e === 1 || e === 2 || e === 3 ? VF(e, t, n) : WF(e, t, n);
 }
 //#endregion
 //#region packages/place-value-rounding/src/plugin.ts
-function PF(e) {
+function KF(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -48301,44 +48670,44 @@ function PF(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function FF(e, t, n, r, i, a) {
+function qF(e, t, n, r, i, a) {
 	return {
-		competencyId: gF,
+		competencyId: OF,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: PF(e).correctAnswer,
+		correctAnswer: KF(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function IF(e, t) {
-	let n = _F(t), r = [];
+function JF(e, t) {
+	let n = kF(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(NF(e, t));
+		r.push(GF(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var LF = {
+var YF = {
 	id: "place-value-rounding",
-	competencyIds: [gF],
+	competencyIds: [OF],
 	generateQuestion(e, t) {
-		return NF(e, t);
+		return GF(e, t);
 	},
 	validateAnswer(e, t) {
 		return { correct: t === e.correctOptionId };
 	},
-	toPresentation: PF
-}, RF = "math.place-value.understanding";
+	toPresentation: KF
+}, XF = "math.place-value.understanding";
 //#endregion
 //#region packages/place-value-understanding/src/rng.ts
-function zF(e) {
+function ZF(e) {
 	let t = e >>> 0;
 	return function() {
 		t = t + 1831565813 >>> 0;
@@ -48346,117 +48715,117 @@ function zF(e) {
 		return e = Math.imul(e ^ e >>> 15, e | 1), e ^= e + Math.imul(e ^ e >>> 7, e | 61), ((e ^ e >>> 14) >>> 0) / 4294967296;
 	};
 }
-function BF(e, t, n) {
+function QF(e, t, n) {
 	return t + Math.floor(e() * (n - t + 1));
 }
 //#endregion
 //#region packages/place-value-understanding/src/generate.ts
-function VF(e) {
+function $F(e) {
 	return Number.isInteger(e) && e >= 1 && e <= 5;
 }
-var HF = {
+var eI = {
 	name: "units",
 	value: 1,
 	decimals: 0
-}, UF = {
+}, tI = {
 	name: "tens",
 	value: 10,
 	decimals: 0
-}, WF = {
+}, nI = {
 	name: "hundreds",
 	value: 100,
 	decimals: 0
-}, GF = {
+}, rI = {
 	name: "thousands",
 	value: 1e3,
 	decimals: 0
-}, KF = {
+}, iI = {
 	name: "ten-thousands",
 	value: 1e4,
 	decimals: 0
-}, qF = {
+}, aI = {
 	name: "hundred-thousands",
 	value: 1e5,
 	decimals: 0
-}, JF = {
+}, oI = {
 	name: "millions",
 	value: 1e6,
 	decimals: 0
-}, YF = {
+}, sI = {
 	name: "ones",
 	value: 1,
 	decimals: 0
-}, XF = {
+}, cI = {
 	name: "tenths",
 	value: .1,
 	decimals: 1
-}, ZF = {
+}, lI = {
 	name: "hundredths",
 	value: .01,
 	decimals: 2
-}, QF = {
+}, uI = {
 	name: "thousandths",
 	value: .001,
 	decimals: 3
-}, $F = {
-	1: [HF, UF],
+}, dI = {
+	1: [eI, tI],
 	2: [
-		HF,
-		UF,
-		WF
+		eI,
+		tI,
+		nI
 	],
 	3: [
-		HF,
-		UF,
-		WF,
-		GF
+		eI,
+		tI,
+		nI,
+		rI
 	],
 	4: [
-		HF,
-		UF,
-		WF,
-		GF,
-		KF,
-		qF,
-		JF
+		eI,
+		tI,
+		nI,
+		rI,
+		iI,
+		aI,
+		oI
 	]
-}, eI = [
-	QF,
-	ZF,
-	XF,
-	YF
-], tI = [
-	QF,
-	ZF,
-	XF
-], nI = {
+}, fI = [
+	uI,
+	lI,
+	cI,
+	sI
+], pI = [
+	uI,
+	lI,
+	cI
+], mI = {
 	1: {
-		composePlaces: $F[1],
-		scopePlaces: $F[1],
+		composePlaces: dI[1],
+		scopePlaces: dI[1],
 		isDecimal: !1
 	},
 	2: {
-		composePlaces: $F[2],
-		scopePlaces: $F[2],
+		composePlaces: dI[2],
+		scopePlaces: dI[2],
 		isDecimal: !1
 	},
 	3: {
-		composePlaces: $F[3],
-		scopePlaces: $F[3],
+		composePlaces: dI[3],
+		scopePlaces: dI[3],
 		isDecimal: !1
 	},
 	4: {
-		composePlaces: $F[4],
-		scopePlaces: $F[4],
+		composePlaces: dI[4],
+		scopePlaces: dI[4],
 		isDecimal: !1
 	},
 	5: {
-		composePlaces: eI,
-		scopePlaces: tI,
+		composePlaces: fI,
+		scopePlaces: pI,
 		isDecimal: !0
 	}
 };
-function rI(e, t) {
+function hI(e, t) {
 	let n = [
 		1,
 		2,
@@ -48469,15 +48838,15 @@ function rI(e, t) {
 		9
 	];
 	for (let t = n.length - 1; t > 0; t--) {
-		let r = BF(e, 0, t), i = n[t];
+		let r = QF(e, 0, t), i = n[t];
 		n[t] = n[r], n[r] = i;
 	}
 	return n.slice(0, t);
 }
-function iI(e, t) {
+function gI(e, t) {
 	return t.decimals === 0 ? String(e * t.value) : `0.${"0".repeat(t.decimals - 1)}${e}`;
 }
-function aI(e, t) {
+function _I(e, t) {
 	if (!e.isDecimal) {
 		let n = t.reduce((t, n, r) => t + n * e.composePlaces[r].value, 0);
 		return String(n);
@@ -48485,16 +48854,16 @@ function aI(e, t) {
 	let [n, r, i, a] = t;
 	return `${a}.${i}${r}${n}`;
 }
-function oI(e) {
+function vI(e) {
 	return e.length === 1 ? e[0] : `${e.slice(0, -1).join(", ")} and ${e[e.length - 1]}`;
 }
-function sI(e, t, n) {
+function yI(e, t, n) {
 	let r = t.map((e, t) => ({
 		label: e,
 		isCorrect: t === n
 	}));
 	for (let t = r.length - 1; t > 0; t--) {
-		let n = BF(e, 0, t), i = r[t];
+		let n = QF(e, 0, t), i = r[t];
 		r[t] = r[n], r[n] = i;
 	}
 	let i = "";
@@ -48509,13 +48878,13 @@ function sI(e, t, n) {
 		correctOptionId: i
 	};
 }
-function cI(e, t, n, r) {
+function bI(e, t, n, r) {
 	let i = e[t], a = n.get(i.name), o = [], s = /* @__PURE__ */ new Set([r]);
 	function c(e) {
 		o.length >= 3 || s.has(e) || (s.add(e), o.push(e));
 	}
-	c(String(a)), t > 0 && c(iI(a, e[t - 1])), t < e.length - 1 && c(iI(a, e[t + 1]));
-	for (let [e, t] of n) e !== i.name && c(iI(t, i));
+	c(String(a)), t > 0 && c(gI(a, e[t - 1])), t < e.length - 1 && c(gI(a, e[t + 1]));
+	for (let [e, t] of n) e !== i.name && c(gI(t, i));
 	for (let e of [
 		1,
 		-1,
@@ -48523,16 +48892,16 @@ function cI(e, t, n, r) {
 		-2
 	]) {
 		let t = a + e;
-		t >= 1 && t <= 9 && c(iI(t, i));
+		t >= 1 && t <= 9 && c(gI(t, i));
 	}
-	for (let e = 1; e <= 9 && o.length < 3; e++) c(iI(e, i));
+	for (let e = 1; e <= 9 && o.length < 3; e++) c(gI(e, i));
 	return o;
 }
-function lI(e, t, n) {
+function xI(e, t, n) {
 	let r = [], i = /* @__PURE__ */ new Set([n]), a = t.length;
 	function o(t) {
 		if (r.length >= 3) return;
-		let n = aI(e, t);
+		let n = _I(e, t);
 		i.has(n) || (i.add(n), r.push(n));
 	}
 	for (let e = 0; e < a - 1; e++) {
@@ -48564,8 +48933,8 @@ function lI(e, t, n) {
 	}
 	return r;
 }
-function uI(e, t, n, r) {
-	let i = rI(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = aI(r, i), s = BF(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = iI(a.get(c.name), c), { options: u, correctOptionId: d } = sI(n, [l, ...cI(r.scopePlaces, s, a, l)], 0);
+function SI(e, t, n, r) {
+	let i = hI(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = _I(r, i), s = QF(n, 0, r.scopePlaces.length - 1), c = r.scopePlaces[s], l = gI(a.get(c.name), c), { options: u, correctOptionId: d } = yI(n, [l, ...bI(r.scopePlaces, s, a, l)], 0);
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -48581,8 +48950,8 @@ function uI(e, t, n, r) {
 		selectedPlace: c
 	};
 }
-function dI(e, t, n, r) {
-	let i = rI(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = aI(r, i), { options: s, correctOptionId: c } = sI(n, [o, ...lI(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${oI(d)}?`;
+function CI(e, t, n, r) {
+	let i = hI(n, r.composePlaces.length), a = new Map(r.composePlaces.map((e, t) => [e.name, i[t]])), o = _I(r, i), { options: s, correctOptionId: c } = yI(n, [o, ...xI(r, i, o)], 0), l = [...r.composePlaces].reverse(), u = [...i].reverse(), d = l.map((e, t) => `${u[t]} ${e.name}`), f = `Which number ${r.isDecimal ? "is" : "has"} ${vI(d)}?`;
 	return {
 		question: {
 			id: `place-value-understanding-${e}-${t}`,
@@ -48597,17 +48966,17 @@ function dI(e, t, n, r) {
 		digitsByPlaceName: a
 	};
 }
-function fI(e, t) {
-	if (!VF(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
-	let n = zF(t), r = n() < .5 ? "digit-value" : "compose", i = nI[e];
-	return r === "digit-value" ? uI(e, t, n, i) : dI(e, t, n, i);
+function wI(e, t) {
+	if (!$F(e)) throw Error(`invalid grade: ${e} (must be an integer in 1..5)`);
+	let n = ZF(t), r = n() < .5 ? "digit-value" : "compose", i = mI[e];
+	return r === "digit-value" ? SI(e, t, n, i) : CI(e, t, n, i);
 }
-function pI(e, t) {
-	return fI(e, t).question;
+function TI(e, t) {
+	return wI(e, t).question;
 }
 //#endregion
 //#region packages/place-value-understanding/src/plugin.ts
-function mI(e) {
+function EI(e) {
 	return {
 		presentation: {
 			kind: "choice",
@@ -48617,132 +48986,75 @@ function mI(e) {
 		correctAnswer: e.correctOptionId
 	};
 }
-function hI(e, t, n, r, i, a) {
+function DI(e, t, n, r, i, a) {
 	return {
-		competencyId: RF,
+		competencyId: XF,
 		grade: e.grade,
 		correct: t,
 		timeMs: n,
 		timestamp: r,
 		questionId: e.id,
-		correctAnswer: mI(e).correctAnswer,
+		correctAnswer: EI(e).correctAnswer,
 		submittedAnswer: i,
 		...a && { endReason: a }
 	};
 }
-function gI(e, t) {
-	let n = zF(t), r = [];
+function OI(e, t) {
+	let n = ZF(t), r = [];
 	for (let t = 0; t < 10; t++) {
 		let t = Math.floor(n() * 4294967295);
-		r.push(pI(e, t));
+		r.push(TI(e, t));
 	}
 	return {
 		grade: e,
 		questions: r
 	};
 }
-var _I = {
-	id: "place-value-understanding",
-	competencyIds: [RF],
-	generateQuestion(e, t) {
-		return pI(e, t);
-	},
-	validateAnswer(e, t) {
-		return { correct: t === e.correctOptionId };
-	},
-	toPresentation: mI
-};
-//#endregion
-//#region node_modules/@learncoreskills/plugin-engine/dist/src/registry.js
-function vI(e, t) {
-	let n = [], r = new Set(t.map((e) => e.id)), i = /* @__PURE__ */ new Set();
-	for (let t of e) i.has(t.id) && n.push({
-		kind: "duplicate-plugin-id",
-		id: t.id
-	}), i.add(t.id);
-	for (let t of e) for (let e of t.competencyIds) r.has(e) || n.push({
-		kind: "unknown-competency-reference",
-		pluginId: t.id,
-		competencyId: e
-	});
-	return {
-		valid: n.length === 0,
-		errors: n
-	};
-}
-function yI(e) {
-	switch (e.kind) {
-		case "duplicate-plugin-id": return `duplicate plugin id: "${e.id}"`;
-		case "unknown-competency-reference": return `plugin "${e.pluginId}" references unknown competency id: "${e.competencyId}"`;
-	}
-}
-function bI(e, t) {
-	let n = vI(e, t);
-	if (!n.valid) {
-		let e = n.errors.map(yI).join("; ");
-		throw Error(`Invalid plugin registry: ${e}`);
-	}
-	let r = new Map(e.map((e) => [e.id, e]));
-	return {
-		getPlugin(e) {
-			return r.get(e);
-		},
-		getPluginsForCompetency(t) {
-			return e.filter((e) => e.competencyIds.includes(t));
-		},
-		all() {
-			return [...e];
-		}
-	};
-}
 //#endregion
 //#region src/pluginRegistry.ts
-var xI = bI([
-	Bj,
-	CM,
-	cM,
-	Zj,
-	BA,
-	bA,
+var kI = Ke([
+	$j,
+	FM,
+	xM,
+	uM,
 	$A,
-	cA,
-	Tj,
-	mj,
-	IM,
-	yP,
-	sN,
-	CN,
-	qM,
-	HN,
-	PP,
-	aP,
-	_I,
-	hF,
-	LF,
-	eF,
-	...Kn,
-	...Wn,
-	...cs,
-	...os,
-	...ql,
-	...lp,
-	...Jh,
-	...cv,
-	...hk
+	NA,
+	fj,
+	xA,
+	Rj,
+	Dj,
+	JM,
+	jP,
+	yN,
+	FN,
+	aN,
+	eP,
+	KP,
+	_P,
+	{
+		id: "place-value-understanding",
+		competencyIds: [XF],
+		generateQuestion(e, t) {
+			return TI(e, t);
+		},
+		validateAnswer(e, t) {
+			return { correct: t === e.correctOptionId };
+		},
+		toPresentation: EI
+	},
+	DF,
+	YF,
+	fF,
+	...Zn,
+	...Yn,
+	...ps,
+	...ds,
+	...Ql,
+	...mp,
+	...$h,
+	...pv,
+	...Ok
 ], [
-	vk,
-	yk,
-	bk,
-	xk,
-	Sk,
-	Ck,
-	wk,
-	Tk,
-	Ek,
-	Dk,
-	Ok,
-	kk,
-	Ak,
 	jk,
 	Mk,
 	Nk,
@@ -48756,18 +49068,31 @@ var xI = bI([
 	Vk,
 	Hk,
 	Uk,
+	Wk,
+	Gk,
+	Kk,
+	qk,
+	Jk,
+	Yk,
+	Xk,
+	Zk,
+	Qk,
+	$k,
+	eA,
+	tA,
+	nA,
 	...Le,
-	...ui,
-	...Cc,
-	...hd,
-	...km,
-	...sv,
-	...Ty
+	...hi,
+	...Oc,
+	...bd,
+	...Pm,
+	...fv,
+	...Ay
 ]);
 //#endregion
 //#region src/exerciseDefinitions.ts
 function $(e, t) {
-	let n = xI.getPlugin(e);
+	let n = kI.getPlugin(e);
 	return {
 		grade: t.grade,
 		questions: t.questions.map((e) => {
@@ -48783,264 +49108,264 @@ function $(e, t) {
 		})
 	};
 }
-var SI = {
+var AI = {
 	key: "addition",
 	label: "Addition",
 	icon: "➕",
 	pluginId: "mental-addition",
-	competency: vk,
-	competencies: [vk],
+	competency: jk,
+	competencies: [jk],
 	createSession(e, t) {
-		return $("mental-addition", zj(e, t));
+		return $("mental-addition", Qj(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Rj(e, t, n, r, i, a)
-}, CI = {
+	createMasterySignal: (e, t, n, r, i, a) => Zj(e, t, n, r, i, a)
+}, jI = {
 	key: "subtraction",
 	label: "Subtraction",
 	icon: "➖",
 	pluginId: "mental-subtraction",
-	competency: yk,
-	competencies: [yk],
+	competency: Mk,
+	competencies: [Mk],
 	createSession(e, t) {
-		return $("mental-subtraction", SM(e, t));
+		return $("mental-subtraction", PM(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => xM(e, t, n, r, i, a)
-}, wI = {
+	createMasterySignal: (e, t, n, r, i, a) => NM(e, t, n, r, i, a)
+}, MI = {
 	key: "multiplication",
 	label: "Multiplication",
 	icon: "✖️",
 	pluginId: "mental-multiplication",
-	competency: bk,
-	competencies: [bk],
+	competency: Nk,
+	competencies: [Nk],
 	createSession(e, t) {
-		return $("mental-multiplication", sM(e, t));
+		return $("mental-multiplication", bM(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => oM(e, t, n, r, i, a)
-}, TI = {
+	createMasterySignal: (e, t, n, r, i, a) => yM(e, t, n, r, i, a)
+}, NI = {
 	key: "division",
 	label: "Division",
 	icon: "➗",
 	pluginId: "mental-division",
-	competency: xk,
-	competencies: [xk],
+	competency: Pk,
+	competencies: [Pk],
 	createSession(e, t) {
-		return $("mental-division", Xj(e, t));
+		return $("mental-division", lM(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Yj(e, t, n, r, i, a)
-}, EI = {
+	createMasterySignal: (e, t, n, r, i, a) => cM(e, t, n, r, i, a)
+}, PI = {
 	key: "baseline-counting-quantities",
 	label: "Counting & Quantities",
 	icon: "🔢",
 	pluginId: "baseline-counting-quantities",
-	competency: Sk,
+	competency: Fk,
 	competencies: [
-		Sk,
-		Ck,
-		wk,
-		Tk
+		Fk,
+		Ik,
+		Lk,
+		Rk
 	],
 	competencyLabels: {
-		[Sk.id]: "Counting to 20",
-		[Ck.id]: "Subitizing to 5",
-		[wk.id]: "Recognising digits",
-		[Tk.id]: "Comparing groups"
+		[Fk.id]: "Counting to 20",
+		[Ik.id]: "Subitizing to 5",
+		[Lk.id]: "Recognising digits",
+		[Rk.id]: "Comparing groups"
 	},
 	createSession(e, t) {
-		return $("baseline-counting-quantities", zA(e, t));
+		return $("baseline-counting-quantities", QA(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => RA(e, t, n, r, i, a)
-}, DI = {
+	createMasterySignal: (e, t, n, r, i, a) => ZA(e, t, n, r, i, a)
+}, FI = {
 	key: "baseline-concrete-addition-subtraction",
 	label: "Concrete Addition & Subtraction",
 	icon: "🍎",
 	pluginId: "baseline-concrete-addition-subtraction",
-	competency: Ek,
-	competencies: [Ek],
+	competency: zk,
+	competencies: [zk],
 	createSession(e, t) {
-		return $("baseline-concrete-addition-subtraction", yA(e, t));
+		return $("baseline-concrete-addition-subtraction", MA(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => vA(e, t, n, r, i, a)
-}, OI = {
+	createMasterySignal: (e, t, n, r, i, a) => jA(e, t, n, r, i, a)
+}, II = {
 	key: "baseline-direct-comparison",
 	label: "Direct Comparison",
 	icon: "⚖️",
 	pluginId: "baseline-direct-comparison",
-	competency: Dk,
-	competencies: [Dk],
+	competency: Bk,
+	competencies: [Bk],
 	createSession(e, t) {
-		return $("baseline-direct-comparison", QA(e, t));
+		return $("baseline-direct-comparison", dj(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => ZA(e, t, n, r, i, a)
-}, kI = {
+	createMasterySignal: (e, t, n, r, i, a) => uj(e, t, n, r, i, a)
+}, LI = {
 	key: "baseline-calendar-time-basics",
 	label: "Calendar & Time Basics",
 	icon: "📅",
 	pluginId: "baseline-calendar-time-basics",
-	competency: Ok,
-	competencies: [Ok, kk],
+	competency: Vk,
+	competencies: [Vk, Hk],
 	competencyLabels: {
-		[Ok.id]: "Order of the day",
-		[kk.id]: "Days of the week"
+		[Vk.id]: "Order of the day",
+		[Hk.id]: "Days of the week"
 	},
 	createSession(e, t) {
-		return $("baseline-calendar-time-basics", sA(e, t));
+		return $("baseline-calendar-time-basics", bA(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => oA(e, t, n, r, i, a)
-}, AI = {
+	createMasterySignal: (e, t, n, r, i, a) => yA(e, t, n, r, i, a)
+}, RI = {
 	key: "baseline-shape-recognition",
 	label: "Shape Recognition",
 	icon: "🔺",
 	pluginId: "baseline-shape-recognition",
-	competency: Ak,
-	competencies: [Ak],
+	competency: Uk,
+	competencies: [Uk],
 	createSession(e, t) {
-		return $("baseline-shape-recognition", wj(e, t));
+		return $("baseline-shape-recognition", Lj(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => Cj(e, t, n, r, i, a)
-}, jI = {
+	createMasterySignal: (e, t, n, r, i, a) => Ij(e, t, n, r, i, a)
+}, zI = {
 	key: "baseline-positional-language",
 	label: "Positional Language",
 	icon: "📍",
 	pluginId: "baseline-positional-language",
-	competency: jk,
-	competencies: [jk],
+	competency: Wk,
+	competencies: [Wk],
 	createSession(e, t) {
-		return $("baseline-positional-language", pj(e, t));
+		return $("baseline-positional-language", Ej(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => fj(e, t, n, r, i, a)
-}, MI = {
+	createMasterySignal: (e, t, n, r, i, a) => Tj(e, t, n, r, i, a)
+}, BI = {
 	key: "number-sense-counting-range",
 	label: "Counting & Number Range",
 	icon: "🔢",
 	pluginId: "number-sense-counting-range",
-	competency: Mk,
-	competencies: [Mk],
+	competency: Gk,
+	competencies: [Gk],
 	createSession(e, t) {
-		return $("number-sense-counting-range", FM(e, t));
+		return $("number-sense-counting-range", qM(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => PM(e, t, n, r, i, a)
-}, NI = {
+	createMasterySignal: (e, t, n, r, i, a) => KM(e, t, n, r, i, a)
+}, VI = {
 	key: "number-sense-skip-counting",
 	label: "Skip Counting",
 	icon: "➡️",
 	pluginId: "number-sense-skip-counting",
-	competency: Nk,
-	competencies: [Nk],
+	competency: Kk,
+	competencies: [Kk],
 	createSession(e, t) {
-		return $("number-sense-skip-counting", vP(e, t));
+		return $("number-sense-skip-counting", AP(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => _P(e, t, n, r, i, a)
-}, PI = {
+	createMasterySignal: (e, t, n, r, i, a) => kP(e, t, n, r, i, a)
+}, HI = {
 	key: "number-sense-odd-even",
 	label: "Odd & Even",
 	icon: "🔀",
 	pluginId: "number-sense-odd-even",
-	competency: Pk,
-	competencies: [Pk],
+	competency: qk,
+	competencies: [qk],
 	createSession(e, t) {
-		return $("number-sense-odd-even", oN(e, t));
+		return $("number-sense-odd-even", vN(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => aN(e, t, n, r, i, a)
-}, FI = {
+	createMasterySignal: (e, t, n, r, i, a) => _N(e, t, n, r, i, a)
+}, UI = {
 	key: "number-sense-ordinals",
 	label: "Ordinal Numbers",
 	icon: "🥇",
 	pluginId: "number-sense-ordinals",
-	competency: Fk,
-	competencies: [Fk],
+	competency: Jk,
+	competencies: [Jk],
 	createSession(e, t) {
-		return $("number-sense-ordinals", SN(e, t));
+		return $("number-sense-ordinals", PN(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => xN(e, t, n, r, i, a)
-}, II = {
+	createMasterySignal: (e, t, n, r, i, a) => NN(e, t, n, r, i, a)
+}, WI = {
 	key: "number-sense-negative-numbers",
 	label: "Negative Numbers",
 	icon: "🌡️",
 	pluginId: "number-sense-negative-numbers",
-	competency: Ik,
-	competencies: [Ik],
+	competency: Yk,
+	competencies: [Yk],
 	createSession(e, t) {
-		return $("number-sense-negative-numbers", KM(e, t));
+		return $("number-sense-negative-numbers", iN(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => GM(e, t, n, r, i, a)
-}, LI = {
+	createMasterySignal: (e, t, n, r, i, a) => rN(e, t, n, r, i, a)
+}, GI = {
 	key: "number-sense-primes-factors",
 	label: "Primes & Factors",
 	icon: "🧮",
 	pluginId: "number-sense-primes-factors",
-	competency: Lk,
-	competencies: [Lk],
+	competency: Xk,
+	competencies: [Xk],
 	createSession(e, t) {
-		return $("number-sense-primes-factors", VN(e, t));
+		return $("number-sense-primes-factors", $N(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => BN(e, t, n, r, i, a)
-}, RI = {
+	createMasterySignal: (e, t, n, r, i, a) => QN(e, t, n, r, i, a)
+}, KI = {
 	key: "number-sense-squares",
 	label: "Square Numbers",
 	icon: "⬜",
 	pluginId: "number-sense-squares",
-	competency: Rk,
-	competencies: [Rk],
+	competency: Zk,
+	competencies: [Zk],
 	createSession(e, t) {
-		return $("number-sense-squares", NP(e, t));
+		return $("number-sense-squares", GP(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => MP(e, t, n, r, i, a)
-}, zI = {
+	createMasterySignal: (e, t, n, r, i, a) => WP(e, t, n, r, i, a)
+}, qI = {
 	key: "number-sense-roman-numerals",
 	label: "Roman Numerals",
 	icon: "🏛️",
 	pluginId: "number-sense-roman-numerals",
-	competency: zk,
-	competencies: [zk],
+	competency: Qk,
+	competencies: [Qk],
 	createSession(e, t) {
-		return $("number-sense-roman-numerals", iP(e, t));
+		return $("number-sense-roman-numerals", gP(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => rP(e, t, n, r, i, a)
-}, BI = {
+	createMasterySignal: (e, t, n, r, i, a) => hP(e, t, n, r, i, a)
+}, JI = {
 	key: "place-value-understanding",
 	label: "Place Value Understanding",
 	icon: "🔟",
 	pluginId: "place-value-understanding",
-	competency: Bk,
-	competencies: [Bk],
+	competency: $k,
+	competencies: [$k],
 	createSession(e, t) {
-		return $("place-value-understanding", gI(e, t));
+		return $("place-value-understanding", OI(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => hI(e, t, n, r, i, a)
-}, VI = {
+	createMasterySignal: (e, t, n, r, i, a) => DI(e, t, n, r, i, a)
+}, YI = {
 	key: "place-value-powers-of-ten",
 	label: "Add/Subtract Powers of Ten",
 	icon: "➕",
 	pluginId: "place-value-powers-of-ten",
-	competency: Vk,
-	competencies: [Vk],
+	competency: eA,
+	competencies: [eA],
 	createSession(e, t) {
-		return $("place-value-powers-of-ten", mF(e, t));
+		return $("place-value-powers-of-ten", EF(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => pF(e, t, n, r, i, a)
-}, HI = {
+	createMasterySignal: (e, t, n, r, i, a) => TF(e, t, n, r, i, a)
+}, XI = {
 	key: "place-value-rounding",
 	label: "Rounding",
 	icon: "🔵",
 	pluginId: "place-value-rounding",
-	competency: Hk,
-	competencies: [Hk],
+	competency: tA,
+	competencies: [tA],
 	createSession(e, t) {
-		return $("place-value-rounding", IF(e, t));
+		return $("place-value-rounding", JF(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => FF(e, t, n, r, i, a)
-}, UI = {
+	createMasterySignal: (e, t, n, r, i, a) => qF(e, t, n, r, i, a)
+}, ZI = {
 	key: "place-value-multiply-divide-ten",
 	label: "Multiply/Divide by Powers of Ten",
 	icon: "✖️",
 	pluginId: "place-value-multiply-divide-ten",
-	competency: Uk,
-	competencies: [Uk],
+	competency: nA,
+	competencies: [nA],
 	createSession(e, t) {
-		return $("place-value-multiply-divide-ten", $P(e, t));
+		return $("place-value-multiply-divide-ten", dF(e, t));
 	},
-	createMasterySignal: (e, t, n, r, i, a) => QP(e, t, n, r, i, a)
-}, WI = [...qn, ...Gn].map((e) => ({
+	createMasterySignal: (e, t, n, r, i, a) => uF(e, t, n, r, i, a)
+}, QI = [...Qn, ...Xn].map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49049,7 +49374,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), GI = [...ls, ...ss].map((e) => ({
+})), $I = [...ms, ...fs].map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49058,7 +49383,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), KI = Jl.map((e) => ({
+})), eL = $l.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49067,7 +49392,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), qI = up.map((e) => ({
+})), tL = hp.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49076,7 +49401,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), JI = Yh.map((e) => ({
+})), nL = eg.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49085,7 +49410,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), YI = uv.map((e) => ({
+})), rL = hv.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49094,7 +49419,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t, n)),
 	createMasterySignal: e.createMasterySignal
-})), XI = _k.map((e) => ({
+})), iL = Ak.map((e) => ({
 	key: e.key,
 	label: e.label,
 	icon: e.icon,
@@ -49104,15 +49429,7 @@ var SI = {
 	competencies: e.competencies,
 	createSession: (t, n) => $(e.pluginId, e.createSession(t === "P" ? 1 : t, n)),
 	createMasterySignal: (t, n, r, i, a, o) => e.createMasterySignal(t, n, r, i, a, o)
-})), ZI = [
-	SI,
-	CI,
-	wI,
-	TI,
-	EI,
-	DI,
-	OI,
-	kI,
+})), aL = [
 	AI,
 	jI,
 	MI,
@@ -49127,14 +49444,22 @@ var SI = {
 	VI,
 	HI,
 	UI,
-	...WI,
-	...GI,
-	...KI,
-	...qI,
-	...JI,
-	...YI,
-	...XI
-], QI = {
+	WI,
+	GI,
+	KI,
+	qI,
+	JI,
+	YI,
+	XI,
+	ZI,
+	...QI,
+	...$I,
+	...eL,
+	...tL,
+	...nL,
+	...rL,
+	...iL
+], oL = {
 	levels: [
 		{
 			ageBand: "4–6",
@@ -67886,7 +68211,7 @@ var SI = {
 		}
 	],
 	version: 1
-}, $I = {
+}, sL = {
 	levels: {
 		K: { intro: {
 			en: "Ages 4–6: playing with numbers up to 10, shapes, sizes and patterns through hands-on games.",
@@ -68079,7 +68404,7 @@ var SI = {
 			}
 		}
 	}
-}, eL = {
+}, cL = {
 	"biggest-by-exponent": "biggest-by-exponent",
 	"count-the-teens": "count-the-teens",
 	"decompose-to-ten": "decompose-to-ten",
@@ -68530,7 +68855,7 @@ var SI = {
 	"trace-the-teens": "trace-the-teens",
 	"which-digits-count": "which-digits-count",
 	"which-frame-is-right": "which-frame-is-right"
-}, tL = {
+}, lL = {
 	"K-NS-1": {
 		title: "Compter jusqu'à 30",
 		description: "Dit les nombres dans l'ordre de 1 à 30, sans en oublier (« 1, 2, 3 … 20 … 30 »).",
@@ -68997,7 +69322,7 @@ var SI = {
 			"puzzle-try-again": "Un casse-tête qui se résout de plusieurs façons."
 		}
 	}
-}, nL = {
+}, uL = {
 	"G1-NS-1": {
 		title: "Compter en avançant jusqu'à 120 depuis n'importe quel nombre",
 		description: "Compte en avançant jusqu'à 120 en partant de n'importe quel nombre, pas seulement de 0 ou de 1. Exemple : part de 67 et dit « 67, 68, 69, 70… ».",
@@ -69676,7 +70001,7 @@ var SI = {
 		description: "Vérifie avec une deuxième méthode. Exemple : additionne pour vérifier une soustraction.",
 		ideas: { "spot-the-wrong-answer": "chasse à l'erreur : une marionnette résout une histoire, l'enfant décide et corrige" }
 	}
-}, rL = {
+}, dL = {
 	"G2-NS-1": {
 		title: "Compter jusqu'à 1000 en passant les centaines",
 		description: "Compte en avant et en arrière en passant une centaine (398, 399, 400, 401), à partir de n'importe quel nombre à 3 chiffres.",
@@ -70621,7 +70946,7 @@ var SI = {
 			"spot-the-wrong-answer": "trouve la réponse qui échoue aux deux vérifications"
 		}
 	}
-}, iL = {
+}, fL = {
 	"G3-NS-1": {
 		title: "Lire et écrire les nombres jusqu'à 10 000",
 		description: "Lit 6 205 à voix haute et écrit « quatre mille neuf » 4 009, en gérant les zéros au milieu du nombre.",
@@ -71378,7 +71703,7 @@ var SI = {
 		description: "Utilise un tableau pour trouver toutes les tenues avec 3 hauts et 2 jupes.",
 		ideas: { "all-the-outfits-table": "remplis un tableau de combinaisons ; jeu de combinaisons" }
 	}
-}, aL = {
+}, pL = {
 	"G4-NS-1": {
 		title: "Lire et écrire les nombres jusqu'aux millions",
 		description: "Lit et écrit 3 070 400 comme « trois millions soixante-dix mille quatre cents » et inversement.",
@@ -72180,7 +72505,7 @@ var SI = {
 			"counterexample-challenge": "trouver l'exemple qui contredit une affirmation (énigme)"
 		}
 	}
-}, oL = {
+}, mL = {
 	"G5-NS-1": {
 		title: "Lire et écrire les nombres jusqu'aux milliards",
 		description: "Lit et écrit un nombre en lettres et en chiffres avec les bons groupes (8 431 000 se lit huit millions quatre cent trente et un mille).",
@@ -73069,7 +73394,7 @@ var SI = {
 			"when-not-to-use-calculator": "choisis les cas où le calcul mental bat la calculatrice"
 		}
 	}
-}, sL = {
+}, hL = {
 	"G6-NS-1": {
 		title: "Multiplier des entiers : les règles des signes",
 		description: "Multiplie deux entiers relatifs avec les règles des signes (−4 × −3 = 12, −4 × 3 = −12).",
@@ -73874,7 +74199,7 @@ var SI = {
 			"teach-it-back": "Explique une méthode à un camarade virtuel."
 		}
 	}
-}, cL = {
+}, gL = {
 	"K-NS-1": {
 		meaning: "Saying the number words in order to thirty is the first step towards counting, and it is a memory skill before it is a maths skill. A child learns a fixed sequence of words, rather like the verses of a song, and has to say them one after the other without leaving any out. Thirty is a useful target for kindergarten because the sequence changes character along the way: one to nine are all new words, ten to nineteen follow their own irregular pattern, and from twenty onwards the pattern becomes regular, with a tens word followed by a ones word. Once a child can say the sequence smoothly, every later counting skill has something to stand on. This skill does not yet ask the child to count objects; it only asks for the words, in the right order, without skipping.",
 		examples: [
@@ -73953,7 +74278,7 @@ var SI = {
 			"Chanting without any connection to quantity. Pair the chant with real objects, such as groups of two socks or five counters, so that the numbers mean something."
 		]
 	}
-}, lL = {}, uL = {}, dL = {}, fL = {}, pL = {}, mL = {}, hL = {
+}, _L = {}, vL = {}, yL = {}, bL = {}, xL = {}, SL = {}, CL = {
 	"K-NS-1": {
 		meaning: "Dire les mots-nombres dans l'ordre jusqu'à trente est le premier pas vers le dénombrement, et c'est d'abord une habileté de mémoire avant d'être une habileté mathématique. L'enfant apprend une suite fixe de mots, un peu comme les couplets d'une chanson, et doit les dire l'un après l'autre sans en oublier. Trente est un objectif utile en maternelle parce que la suite change de visage en chemin : de un à neuf, ce sont des mots tous nouveaux; de dix à dix-neuf, ils suivent leur propre schéma irrégulier; à partir de vingt, le schéma devient régulier, avec un mot de dizaine suivi d'un mot d'unité. Quand l'enfant peut dire la suite avec aisance, toutes les habiletés de comptage qui suivent ont un appui. Cette compétence ne demande pas encore de compter des objets : elle demande seulement les mots, dans le bon ordre, sans en sauter.",
 		examples: [
@@ -74032,7 +74357,7 @@ var SI = {
 			"Réciter sans aucun lien avec la quantité. Associez la récitation à de vrais objets, comme des groupes de deux chaussettes ou de cinq jetons, pour que les nombres aient un sens."
 		]
 	}
-}, gL = {}, _L = {}, vL = {}, yL = {}, bL = {}, xL = {}, SL = {
+}, wL = {}, TL = {}, EL = {}, DL = {}, OL = {}, kL = {}, AL = {
 	en: {
 		meaning: "What this skill means",
 		examples: "Things to try",
@@ -74044,8 +74369,8 @@ var SI = {
 		mistakes: "Erreurs fréquentes"
 	}
 };
-function CL(e, t) {
-	let n = SL[t];
+function jL(e, t) {
+	let n = AL[t];
 	return [
 		`## ${n.meaning}`,
 		e.meaning,
@@ -74055,59 +74380,59 @@ function CL(e, t) {
 		...e.commonMistakes.map((e) => `- ${e}`)
 	].join("\n\n");
 }
-function wL(e) {
+function ML(e) {
 	return e.replace(/```[\s\S]*?```/g, " ").replace(/~~~[\s\S]*?~~~/g, " ").replace(/`[^`\n]*`/g, " ").replace(/<[^>]*>/g, " ").replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^[ \t]{0,3}#{1,6}[ \t]+/gm, "").replace(/^[ \t]*(?:[-*+]|\d+[.)])[ \t]+/gm, "").replace(/^[ \t]*>+[ \t]?/gm, "").replace(/https?:\/\/\S+/g, " ").replace(/[*_~|]+/g, " ").split(/\s+/).filter((e) => /[\p{L}\p{N}]/u.test(e)).length;
 }
-function TL(e, t) {
-	return wL(CL(e, t));
+function NL(e, t) {
+	return ML(jL(e, t));
 }
 //#endregion
 //#region src/syllabus/index.ts
-var EL = {
+var PL = {
 	en: {
-		K: cL,
-		G1: lL,
-		G2: uL,
-		G3: dL,
-		G4: fL,
-		G5: pL,
-		G6: mL
+		K: gL,
+		G1: _L,
+		G2: vL,
+		G3: yL,
+		G4: bL,
+		G5: xL,
+		G6: SL
 	},
 	fr: {
-		K: hL,
-		G1: gL,
-		G2: _L,
-		G3: vL,
-		G4: yL,
-		G5: bL,
-		G6: xL
+		K: CL,
+		G1: wL,
+		G2: TL,
+		G3: EL,
+		G4: DL,
+		G5: OL,
+		G6: kL
 	}
-}, DL = {
-	K: tL,
-	G1: nL,
-	G2: rL,
-	G3: iL,
-	G4: aL,
-	G5: oL,
-	G6: sL
-}, OL = QI, kL = $I.levels, AL = $I.topics;
-function jL(e, t) {
+}, FL = {
+	K: lL,
+	G1: uL,
+	G2: dL,
+	G3: fL,
+	G4: pL,
+	G5: mL,
+	G6: hL
+}, IL = oL, LL = sL.levels, RL = sL.topics;
+function zL(e, t) {
 	let n = {
 		slug: t.slug,
 		role: t.role,
 		status: t.status
 	};
 	if (t.status === "built") {
-		let e = eL[t.slug];
+		let e = cL[t.slug];
 		e !== void 0 && (n.exerciseKey = e);
 	} else n.idea = {
 		en: t.idea ?? "",
-		fr: DL[e.level][e.id]?.ideas?.[t.slug] ?? ""
+		fr: FL[e.level][e.id]?.ideas?.[t.slug] ?? ""
 	};
 	return t.decision && (n.decision = t.decision), t.regrade && (n.regrade = t.regrade), n;
 }
-function ML(e) {
-	let t = DL[e.level][e.id], n = {
+function BL(e) {
+	let t = FL[e.level][e.id], n = {
 		id: e.id,
 		level: e.level,
 		topic: e.topic,
@@ -74122,59 +74447,59 @@ function ML(e) {
 		},
 		referenceRows: e.referenceRows,
 		prerequisites: e.prerequisites,
-		activities: e.activities.map((t) => jL(e, t))
+		activities: e.activities.map((t) => zL(e, t))
 	};
 	e.label && (n.label = e.label);
 	let r = {};
 	for (let t of ["en", "fr"]) {
-		let n = EL[t][e.level][e.id];
+		let n = PL[t][e.level][e.id];
 		n !== void 0 && (r[t] = n);
 	}
 	return Object.keys(r).length > 0 && (n.enrichment = r), n;
 }
-var NL = {
+var VL = {
 	version: 1,
-	levels: OL.levels.map((e) => ({
+	levels: IL.levels.map((e) => ({
 		id: e.id,
 		ageBand: e.ageBand,
 		gating: e.gating,
-		intro: kL[e.id].intro
+		intro: LL[e.id].intro
 	})),
-	topics: OL.topics.map((e) => ({
+	topics: IL.topics.map((e) => ({
 		code: e.code,
 		group: e.group,
-		name: AL[e.code].name,
-		description: AL[e.code].description
+		name: RL[e.code].name,
+		description: RL[e.code].description
 	})),
-	skills: OL.skills.map(ML)
-}, PL = new Map(NL.skills.map((e) => [e.id, e]));
-function FL(e) {
-	return PL.get(e);
+	skills: IL.skills.map(BL)
+}, HL = new Map(VL.skills.map((e) => [e.id, e]));
+function UL(e) {
+	return HL.get(e);
 }
-function IL(e) {
-	return NL.skills.filter((t) => t.level === e);
+function WL(e) {
+	return VL.skills.filter((t) => t.level === e);
 }
-function LL(e, t) {
-	return NL.skills.filter((n) => n.level === e && n.topic === t);
+function GL(e, t) {
+	return VL.skills.filter((n) => n.level === e && n.topic === t);
 }
-function RL(e) {
-	let t = new Set(IL(e).map((e) => e.topic));
-	return NL.topics.filter((e) => t.has(e.code));
+function KL(e) {
+	let t = new Set(WL(e).map((e) => e.topic));
+	return VL.topics.filter((e) => t.has(e.code));
 }
-function zL(e) {
-	return NL.levels.find((t) => t.id === e);
+function qL(e) {
+	return VL.levels.find((t) => t.id === e);
 }
-function BL(e) {
-	return NL.topics.find((t) => t.code === e);
+function JL(e) {
+	return VL.topics.find((t) => t.code === e);
 }
 //#endregion
 //#region src/skillsReference.ts
-function VL(e) {
+function YL(e) {
 	let t = {};
-	for (let n of NL.skills) (t[n.level] ??= []).push(e(n));
+	for (let n of VL.skills) (t[n.level] ??= []).push(e(n));
 	return t;
 }
-var HL = {
+var XL = {
 	K: [],
 	G1: [],
 	G2: [],
@@ -74182,37 +74507,37 @@ var HL = {
 	G4: [],
 	G5: [],
 	G6: [],
-	...VL((e) => e.id)
-}, UL = {
-	en: VL((e) => e.description.en),
-	fr: VL((e) => e.description.fr)
+	...YL((e) => e.id)
+}, ZL = {
+	en: YL((e) => e.description.en),
+	fr: YL((e) => e.description.fr)
 };
 //#endregion
 //#region src/skillsTitles.ts
-function WL(e) {
+function QL(e) {
 	let t = {};
-	for (let n of NL.skills) (t[n.level] ??= []).push(n.title[e]);
+	for (let n of VL.skills) (t[n.level] ??= []).push(n.title[e]);
 	return t;
 }
-var GL = {
-	en: WL("en"),
-	fr: WL("fr")
-}, KL = !1;
-function qL() {
-	KL ||= !0;
+var $L = {
+	en: QL("en"),
+	fr: QL("fr")
+}, eR = !1;
+function tR() {
+	eR ||= !0;
 }
-var JL = () => ({
+var nR = () => ({
 	subjectId: "math",
-	competencies: Wk,
-	plugins: xI.all(),
-	exercises: ZI,
-	mathematicsAreas: Kk,
-	getMathematicsAreaForCompetency: qk,
-	skillsReference: UL,
-	skillReferenceIds: HL,
-	skillsTitles: GL,
-	syllabus: NL,
-	register: qL
+	competencies: rA,
+	plugins: kI.all(),
+	exercises: aL,
+	mathematicsAreas: aA,
+	getMathematicsAreaForCompetency: oA,
+	skillsReference: ZL,
+	skillReferenceIds: XL,
+	skillsTitles: $L,
+	syllabus: VL,
+	register: tR
 });
 //#endregion
-export { Wk as allCompetencies, Tk as baselineCompareGroupsCompetency, Ek as baselineConcreteArithmeticCompetency, Sk as baselineCountingCompetency, Ok as baselineDayOrderCompetency, kk as baselineDaysOfWeekCompetency, wk as baselineDigitsCompetency, Dk as baselineDirectComparisonCompetency, jk as baselinePositionCompetency, Ak as baselineShapesCompetency, Ck as baselineSubitizingCompetency, JL as default, CL as enrichmentMarkdown, TL as enrichmentWordCount, qk as getMathematicsAreaForCompetency, zL as levelById, ZI as mathExercises, xI as mathPluginRegistry, Kk as mathematicsAreas, vk as mentalAdditionCompetency, xk as mentalDivisionCompetency, bk as mentalMultiplicationCompetency, yk as mentalSubtractionCompetency, Mk as numberSenseCountingRangeCompetency, Ik as numberSenseNegativeNumbersCompetency, Pk as numberSenseOddEvenCompetency, Fk as numberSenseOrdinalsCompetency, Lk as numberSensePrimesFactorsCompetency, zk as numberSenseRomanNumeralsCompetency, Nk as numberSenseSkipCountingCompetency, Rk as numberSenseSquaresCompetency, Uk as placeValueMultiplyDivideTenCompetency, Vk as placeValuePowersOfTenCompetency, Hk as placeValueRoundingCompetency, Bk as placeValueUnderstandingCompetency, wL as readableWordCount, FL as skillById, HL as skillReferenceIds, IL as skillsForLevel, LL as skillsForTopic, UL as skillsReference, GL as skillsTitles, NL as syllabus, BL as topicByCode, RL as topicsForLevel };
+export { rA as allCompetencies, Rk as baselineCompareGroupsCompetency, zk as baselineConcreteArithmeticCompetency, Fk as baselineCountingCompetency, Vk as baselineDayOrderCompetency, Hk as baselineDaysOfWeekCompetency, Lk as baselineDigitsCompetency, Bk as baselineDirectComparisonCompetency, Wk as baselinePositionCompetency, Uk as baselineShapesCompetency, Ik as baselineSubitizingCompetency, nR as default, jL as enrichmentMarkdown, NL as enrichmentWordCount, oA as getMathematicsAreaForCompetency, qL as levelById, aL as mathExercises, kI as mathPluginRegistry, aA as mathematicsAreas, jk as mentalAdditionCompetency, Pk as mentalDivisionCompetency, Nk as mentalMultiplicationCompetency, Mk as mentalSubtractionCompetency, Gk as numberSenseCountingRangeCompetency, Yk as numberSenseNegativeNumbersCompetency, qk as numberSenseOddEvenCompetency, Jk as numberSenseOrdinalsCompetency, Xk as numberSensePrimesFactorsCompetency, Qk as numberSenseRomanNumeralsCompetency, Kk as numberSenseSkipCountingCompetency, Zk as numberSenseSquaresCompetency, nA as placeValueMultiplyDivideTenCompetency, eA as placeValuePowersOfTenCompetency, tA as placeValueRoundingCompetency, $k as placeValueUnderstandingCompetency, ML as readableWordCount, UL as skillById, XL as skillReferenceIds, WL as skillsForLevel, GL as skillsForTopic, ZL as skillsReference, $L as skillsTitles, VL as syllabus, JL as topicByCode, KL as topicsForLevel };
