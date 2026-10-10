@@ -110,3 +110,13 @@ Alongside the rebuilt games, five new ones fill gaps in what young children are 
 | Robot moves | Lines up two to four arrow cards, presses Go, and watches the robot hop to the star, around a rock at the hardest level |
 
 Each starts gently and grows over three levels, gives its own short hint for each common mistake, and works in English and French from the start. With reduced motion turned on, the robot simply appears at its new square.
+
+## Forty more play-first games for the core preschool skills
+
+The youngest skills now have a real choice of games to play. Twenty-seven core skills, from taking snacks away to telling the morning from the evening, each offer at least two play-first games, and almost all of them offer three, so a child who has had enough of one can try another way into the same idea.
+
+**What is new.** Feed a mouse a few snacks and see what is left. Thread beads in a pattern, or copy a clap-and-stomp rhythm with two big buttons (no microphone, nothing to record). Sort the laundry, pair up shoes at the shop, and fill a basket that is bigger or smaller than another. Match shapes onto their grey shadows, stack a tower of things that do not roll, and tap the toy that is in, on, under or next to the box. Line up two ribbons at the start to see which is longer, tip a balance, and put a story, a day or the sky in order.
+
+**Kind to small hands.** Every game can be played by tapping as well as dragging. Targets are large, a wrong try shows the right answer with no penalty, and a hint appears after two misses. Games that show something moving, such as the balance or the size train, simply show the final picture when reduced motion is on. Each one has a replay-sound button and works in English and French from the start.
+
+Two skills, counting and sorting the groups and using maths words in play, still have two games each. A third is planned for each.

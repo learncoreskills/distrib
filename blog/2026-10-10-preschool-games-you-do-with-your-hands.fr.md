@@ -110,3 +110,13 @@ Cinq jeux de mesure partagent maintenant une petite scène où l'enfant met une 
 | Le robot avance | Aligne deux à quatre flèches, appuie sur Go et regarde le robot sauter jusqu'à l'étoile, en contournant un rocher au niveau le plus difficile |
 
 Chacun commence doucement et grandit sur trois niveaux, donne un indice précis pour chaque erreur courante, et existe en français et en anglais dès le départ. Avec le mouvement réduit, le robot apparaît simplement sur sa nouvelle case.
+
+## Quarante autres jeux à jouer pour les compétences de base de la maternelle
+
+Les plus petits ont maintenant un vrai choix de jeux. Vingt-sept compétences de base, de retirer des goûters jusqu'à distinguer le matin du soir, proposent chacune au moins deux jeux à manipuler, et presque toutes en proposent trois : un enfant lassé d'un jeu peut essayer une autre porte d'entrée vers la même idée.
+
+**Ce qui est nouveau.** Donner quelques goûters à une souris et voir ce qu'il reste. Enfiler des perles en suivant un motif, ou copier un rythme « frappe-tape » avec deux gros boutons (pas de micro, rien n'est enregistré). Trier le linge, assembler des paires de chaussures à la boutique, remplir un panier plus grand ou plus petit qu'un autre. Poser des formes sur leur ombre grise, empiler une tour de solides qui ne roulent pas, toucher le jouet qui est dans, sur, sous ou à côté de la boîte. Aligner deux rubans au départ pour voir lequel est le plus long, faire pencher une balance, remettre dans l'ordre une histoire, une journée ou le ciel.
+
+**Doux pour les petites mains.** Chaque jeu se joue en touchant autant qu'en glissant. Les zones à toucher sont grandes, un mauvais essai montre la bonne réponse sans pénalité, et un indice apparaît après deux erreurs. Quand une animation est en mouvement, comme la balance ou le train des tailles, l'image finale s'affiche simplement si le mouvement réduit est activé. Chaque jeu a un bouton pour réécouter la consigne et existe en français et en anglais dès le départ.
+
+Deux compétences, compter les groupes triés et employer les mots des maths en jouant, n'ont encore que deux jeux chacune. Un troisième est prévu pour chacune.
