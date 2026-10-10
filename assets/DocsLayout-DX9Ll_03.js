@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-utim-D9d.js";import{t}from"./BuildInfo-Bke18eR3.js";import"./index-Us0nOtwO.js";var n=e();function r({children:e}){return(0,n.jsxs)(`div`,{className:`docs-theme`,children:[(0,n.jsx)(`main`,{className:`docs-main`,children:e}),(0,n.jsx)(t,{})]})}export{r as DocsLayout};
