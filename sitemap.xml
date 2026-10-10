@@ -595,6 +595,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/product-primary-skills-framework"/>
   </url>
   <url>
+    <loc>https://learncoreskills.com/en/docs/product-maternelle-maths-scope</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/product-maternelle-maths-scope"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/product-maternelle-maths-scope"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/fr/docs/product-maternelle-maths-scope</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/product-maternelle-maths-scope"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/docs/product-maternelle-maths-scope"/>
+  </url>
+  <url>
     <loc>https://learncoreskills.com/en/docs/product-vision</loc>
     <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/docs/product-vision"/>
@@ -713,6 +725,20 @@
     <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/en/blog/2026-10-10-preschool-games-you-do-with-your-hands.en</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog/2026-10-10-preschool-games-you-do-with-your-hands.en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog/2026-10-10-preschool-games-you-do-with-your-hands.fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learncoreskills.com/en/blog/2026-10-10-preschool-games-you-do-with-your-hands.en"/>
+  </url>
+  <url>
+    <loc>https://learncoreskills.com/fr/blog/2026-10-10-preschool-games-you-do-with-your-hands.fr</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://learncoreskills.com/fr/blog/2026-10-10-preschool-games-you-do-with-your-hands.fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://learncoreskills.com/en/blog/2026-10-10-preschool-games-you-do-with-your-hands.en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://learncoreskills.com/en/blog/2026-10-10-preschool-games-you-do-with-your-hands.en"/>
   </url>
   <url>
     <loc>https://learncoreskills.com/en/blog/2026-10-09-grade-1-place-value.en</loc>
