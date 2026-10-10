@@ -435,7 +435,8 @@
     "math.mathematical-reasoning.preschool-picture-graph",
     "math.problem-solving.preschool-explain-answer",
     "math.problem-solving.preschool-enough-for-all",
-    "math.problem-solving.preschool-estimate"
+    "math.problem-solving.preschool-estimate",
+    "math.problem-solving.preschool-try-another-way"
   ],
-  "builtAt": "2026-10-10T08:48:40.041Z"
+  "builtAt": "2026-10-10T13:49:20.290Z"
 }
