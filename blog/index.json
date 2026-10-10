@@ -350,7 +350,33 @@
       "topics": [],
       "words": 643,
       "reviewed": false
+    },
+    {
+      "id": "2026-10-10-preschool-games-you-do-with-your-hands.en",
+      "date": "2026-10-10",
+      "title": "Thirty preschool games now let children move the things they are counting",
+      "summary": "Many of the youngest children's number games used to be small quizzes: read a sentence, look at a row of pictures, tap a word. Thirty of them have been rebuilt so that the child does the maths with…",
+      "contentUrl": "2026-10-10-preschool-games-you-do-with-your-hands.en.md",
+      "slug": "preschool-games-you-do-with-your-hands",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 2263,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-10-preschool-games-you-do-with-your-hands.fr",
+      "date": "2026-10-10",
+      "title": "Trente jeux pour les tout-petits : les enfants déplacent maintenant ce qu'ils comptent",
+      "summary": "Beaucoup de jeux de nombres pour les plus jeunes ressemblaient à de petits questionnaires : lire une phrase, regarder une rangée d'images, toucher un mot. Trente d'entre eux ont été refaits pour que…",
+      "contentUrl": "2026-10-10-preschool-games-you-do-with-your-hands.fr.md",
+      "slug": "preschool-games-you-do-with-your-hands",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 2353,
+      "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-09T21:20:17.376Z"
+  "generatedAt": "2026-10-10T13:43:52.590Z"
 }
