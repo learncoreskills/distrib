@@ -26,6 +26,11 @@
       "contentUrl": "product-primary-skills-framework.md"
     },
     {
+      "id": "product-maternelle-maths-scope",
+      "title": "Maternelle (K) mathematics: scope and work list",
+      "contentUrl": "product-maternelle-maths-scope.md"
+    },
+    {
       "id": "product-vision",
       "title": "Primary Learning Platform",
       "contentUrl": "product-vision.md"
@@ -71,5 +76,5 @@
       "contentUrl": "architecture-0007-frontend-framework-react.md"
     }
   ],
-  "generatedAt": "2026-10-09T22:40:56.834Z"
+  "generatedAt": "2026-10-10T13:44:03.338Z"
 }
