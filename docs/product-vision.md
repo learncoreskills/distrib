@@ -126,7 +126,7 @@ Playful, colorful, game-like — never a bare form or a spreadsheet-style quiz.
 * Never boring or homework-like: avoid dense text, long instructions, or a plain
   input-box-and-submit-button look. A child should want to keep playing.
 * Playful MUST NOT mean stressful or exclusionary: no visible timer/countdown pressure (see
-  `docs/features/_archive/002-mental-addition-exercise/spec.md` FR-007), and basic accessibility (contrast,
+  `specs/002-mental-addition-exercise/spec.md` FR-007), and basic accessibility (contrast,
   readable type, never a color-only signal for correct/incorrect) still applies.
 
 ### Parent/teacher-facing UI (dashboards, profile & account management, reports)
@@ -145,7 +145,7 @@ This section fixes the visual *intent*, not a finished design spec. Concrete des
 (palette, type scale, illustration/mascot style, component library) are a UI implementation
 detail, to be defined once Phase 1 UI work starts (see `docs/architecture/decisions/`), and each
 feature spec's own "UI/visual design" is out of scope by convention (e.g.
-`docs/features/_archive/002-mental-addition-exercise/spec.md`) — this is the philosophy that later design work must
+`specs/002-mental-addition-exercise/spec.md`) — this is the philosophy that later design work must
 be consistent with.
 
 ---
@@ -326,4 +326,4 @@ Everything else should support it.
   `docs/product/PRIMARY-SKILLS-FRAMEWORK.md`
 * Technical architecture: `docs/architecture/ARCHITECTURE.md`
 * Mastery algorithm: `specs/003-mastery-engine/spec.md`
-* Exercise plugin contract: `docs/features/_archive/004-exercise-plugin-engine/spec.md`
+* Exercise plugin contract: `specs/004-exercise-plugin-engine/spec.md`

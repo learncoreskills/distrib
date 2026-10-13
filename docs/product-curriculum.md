@@ -59,7 +59,7 @@ different national curricula.
       found.
 * [x] Cross-reference each competency with which exercise plugin(s) train it — done: every
       competency has at least one `scoreInputs` entry naming an activity plugin (see
-      `docs/features/_archive/004-exercise-plugin-engine/spec.md` for the plugin contract).
+      `specs/004-exercise-plugin-engine/spec.md` for the plugin contract).
 * [ ] Decide whether curriculum is age-banded, level-banded, or both. Still open — not something
       the syllabus-research skill can resolve on its own; needs a product decision.
 * [ ] Activity *quality*, not just coverage, is an ongoing concern: several competencies whose

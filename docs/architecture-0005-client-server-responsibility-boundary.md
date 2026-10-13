@@ -84,5 +84,5 @@ POST /mastery/compute
 ## Related
 * ADR-0002 (Backend Stack)
 * ADR-0003 (Client/Server Split & Hosting)
-* `specs/001-competency-model/spec.md`, `docs/features/_archive/002-mental-addition-exercise/spec.md`,
-  `specs/003-mastery-engine/spec.md`, `docs/features/_archive/004-exercise-plugin-engine/spec.md`
+* `specs/001-competency-model/spec.md`, `specs/002-mental-addition-exercise/spec.md`,
+  `specs/003-mastery-engine/spec.md`, `specs/004-exercise-plugin-engine/spec.md`

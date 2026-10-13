@@ -30,7 +30,7 @@ There is no backend in V1. Everything runs in the browser:
   no React (or Angular) dependency, each independently unit-tested (95%+ coverage,
   `0004-testing-and-quality-gates.md`).
 
-Per `docs/features/_archive/029-independent-deployment`, the exercise packages (`packages/exercises/*`) are no
+Per `specs/029-independent-deployment`, the exercise packages (`packages/exercises/*`) are no
 longer part of this repo or this build — they moved to their own sibling repo (`subject-math`) as
 the mathematics **subject**, discovered and loaded by the framework at runtime rather than
 statically imported. The framework (`apps/web`) ships with zero subject code compiled in; the
@@ -82,7 +82,7 @@ Exercises must be modular.
 
 Adding an exercise should not require rewriting the core mastery engine.
 
-See `docs/features/_archive/004-exercise-plugin-engine/spec.md` for the plugin contract.
+See `specs/004-exercise-plugin-engine/spec.md` for the plugin contract.
 
 ## Testability
 
@@ -126,7 +126,7 @@ The architecture must be designed with GDPR/privacy requirements in mind.
 * [ ] Define local storage format/schema for progress data (export/import) —
       implementation-level choice (e.g. IndexedDB vs. localStorage, JSON
       export shape), not yet a spec-blocking product decision.
-* [x] Resolved 2026-09-26 (`docs/features/_archive/029-independent-deployment`): the framework, the mathematics
+* [x] Resolved 2026-09-26 (`specs/029-independent-deployment`): the framework, the mathematics
       subject, the blog, and the docs/parent-facing documentation area are now four
       independently built and deployed units (previously one combined `apps/web` build), each
       published to its own path under `learncoreskills/distrib` by its own repo's own CI. The
