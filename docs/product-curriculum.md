@@ -1,5 +1,7 @@
 # Mathematics Curriculum (MVP)
 
+> **Since 2026-10-16 (feature 057) the authoritative skill list is the detailed syllabus** in [`../syllabus-detailed/`](../syllabus-detailed/README.md) (804 skills, 16 topics, levels K, G1-G6), shipped as a dataset in the `mathematics` subject. It supersedes `../syllabus/` and the PK-G5 lists below. `MATH-COMPETENCY-REFERENCE.md` is to be rewritten from it (separate `syllabus-research` run).
+
 > Status: the competency tree is now fully built out in code. `PRIMARY-SKILLS-FRAMEWORK.md`
 > section B lists 162 individual, grade-tagged mathematics competencies (P through G5); as of
 > 2026-09-26 every one of those 162 has a matching implemented competency in the `mathematics`
