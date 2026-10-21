@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-labelledby="t-2">
+<title id="t-2">Blocks showing 3,462 split into 3 thousands, 4 hundreds, 6 tens and 2 ones</title>
+<rect width="640" height="260" rx="16" fill="#ffffff"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#1a1a2e" font-size="18" text-anchor="middle">
+<g stroke="#1a1a2e" stroke-width="2">
+<rect x="20" y="30" width="60" height="60" fill="#fde68a"/>
+<rect x="90" y="30" width="60" height="60" fill="#fde68a"/>
+<rect x="160" y="30" width="60" height="60" fill="#fde68a"/>
+<rect x="250" y="30" width="36" height="36" fill="#bfdbfe"/>
+<rect x="294" y="30" width="36" height="36" fill="#bfdbfe"/>
+<rect x="338" y="30" width="36" height="36" fill="#bfdbfe"/>
+<rect x="382" y="30" width="36" height="36" fill="#bfdbfe"/>
+<rect x="440" y="30" width="12" height="60" fill="#bbf7d0"/>
+<rect x="458" y="30" width="12" height="60" fill="#bbf7d0"/>
+<rect x="476" y="30" width="12" height="60" fill="#bbf7d0"/>
+<rect x="494" y="30" width="12" height="60" fill="#bbf7d0"/>
+<rect x="512" y="30" width="12" height="60" fill="#bbf7d0"/>
+<rect x="530" y="30" width="12" height="60" fill="#bbf7d0"/>
+<circle cx="580" cy="60" r="10" fill="#fecaca"/>
+<circle cx="608" cy="60" r="10" fill="#fecaca"/>
+</g>
+<text x="120" y="125">3 x 1,000</text>
+<text x="334" y="125">4 x 100</text>
+<text x="490" y="125">6 x 10</text>
+<text x="594" y="125">2 x 1</text>
+<text x="320" y="190" font-size="30" font-weight="bold">3,000 + 400 + 60 + 2</text>
+<text x="320" y="235" font-size="22">= 3,462</text>
+</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" role="img" aria-labelledby="t-3">
+<title id="t-3">Une horloge à aiguilles indiquant trois heures et demie : la grande aiguille des minutes pointe vers le 6 et la petite aiguille des heures est à mi-chemin entre le 3 et le 4</title>
+<rect width="640" height="300" rx="16" fill="#ffffff" stroke="#d0d5dd"/>
+<circle cx="170" cy="150" r="120" fill="#ffffff" stroke="#1d2939" stroke-width="5"/>
+<g font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#1d2939">
+<text x="217.5" y="76">1</text><text x="252" y="110">2</text><text x="265" y="158">3</text><text x="252" y="206">4</text><text x="217.5" y="240">5</text><text x="170" y="253">6</text><text x="122.5" y="240">7</text><text x="88" y="206">8</text><text x="75" y="158">9</text><text x="88" y="110">10</text><text x="122.5" y="76">11</text><text x="170" y="63">12</text>
+</g>
+<line x1="170" y1="150" x2="170" y2="212" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round"/>
+<line x1="170" y1="150" x2="216" y2="162" stroke="#c2410c" stroke-width="9" stroke-linecap="round"/>
+<circle cx="170" cy="150" r="7" fill="#1d2939"/>
+<text x="340" y="105" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" fill="#1d2939">3:30</text>
+<g font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#1d2939">
+<text x="310" y="160"><tspan fill="#1d4ed8" font-weight="bold">grande aiguille</tspan> sur 6 : 6 × 5 = 30</text>
+<text x="310" y="198"><tspan fill="#c2410c" font-weight="bold">petite aiguille</tspan> entre 3 et 4</text>
+<text x="310" y="236">un demi-tour = une demi-heure</text>
+</g>
+</svg>

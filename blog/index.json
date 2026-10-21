@@ -1,0 +1,971 @@
+{
+  "entries": [
+    {
+      "id": "2026-09-12-kicking-off-the-project.en",
+      "date": "2026-09-12",
+      "title": "Day 1: laying the foundation before writing a line of code",
+      "summary": "The project's actual first day didn't produce anything a child could touch — no app, no exercises, not even a line of code. What it did produce was a plan clear enough that everything built over the…",
+      "contentUrl": "2026-09-12-kicking-off-the-project.en.md",
+      "slug": "kicking-off-the-project",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 461,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-13-dev-environment-and-v1.en",
+      "date": "2026-09-13",
+      "title": "Day 2: a real dev setup, and a first version kids can actually use",
+      "summary": "Day two started with a decision that had nothing to do with kids or math: getting a proper place to actually build the thing. By the end of the day, that unglamorous groundwork had turned into…",
+      "contentUrl": "2026-09-13-dev-environment-and-v1.en.md",
+      "slug": "dev-environment-and-v1",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 584,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-14-daily-practice-and-docs.en",
+      "date": "2026-09-14",
+      "title": "Day 3: a smarter daily practice, and a window into how it all works",
+      "summary": "Three things came together today: the app got noticeably better at deciding what a child should practice each day, parents and teachers got a proper way to see how the whole system works without…",
+      "contentUrl": "2026-09-14-daily-practice-and-docs.en.md",
+      "slug": "daily-practice-and-docs",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1479,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-15-a-chart-that-shows-the-whole-picture.en",
+      "date": "2026-09-15",
+      "title": "Day 4: a chart that shows a child's whole learning at a glance",
+      "summary": "A parent checking their child's progress until now had to read a list of percentages, one competency at a time, and do the mental work of turning that list into a picture. Today that picture got…",
+      "contentUrl": "2026-09-15-a-chart-that-shows-the-whole-picture.en.md",
+      "slug": "a-chart-that-shows-the-whole-picture",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 3828,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-16-making-setup-faster.en",
+      "date": "2026-09-16",
+      "title": "Day 5: making child setup faster and clearer",
+      "summary": "Before today, adding a new child to the app meant filling in their name, then scrolling down to find a separate grade selector somewhere below. Today that grade selector moved right into the form…",
+      "contentUrl": "2026-09-16-making-setup-faster.en.md",
+      "slug": "making-setup-faster",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 3329,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-21-the-rest-of-french.en",
+      "date": "2026-09-21",
+      "title": "Day 10: the rest of French",
+      "summary": "A few days ago this blog said the French gap had closed everywhere it could be found. That turned out to be true for the app's chrome—buttons, menus, status messages—but not for the thing families…",
+      "contentUrl": "2026-09-21-the-rest-of-french.en.md",
+      "slug": "the-rest-of-french",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 776,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-26-knowing-whats-running.en",
+      "date": "2026-09-26",
+      "title": "Day 11: knowing exactly what's running",
+      "summary": "Every page in the app has quietly carried a small date stamp at the bottom for a while now—a way to tell at a glance which version of the app you're looking at, useful mostly for us when something…",
+      "contentUrl": "2026-09-26-knowing-whats-running.en.md",
+      "slug": "knowing-whats-running",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 2777,
+      "reviewed": false
+    },
+    {
+      "id": "2026-09-27-before-grade-one.en",
+      "date": "2026-09-27",
+      "title": "Day 12: a first step for the youngest learners",
+      "summary": "Until now, the app has started at Kindergarten. Today it took a first, careful step further down the ladder, to children of five and six who are not yet in Grade 1: twenty-one small activities, all…",
+      "contentUrl": "2026-09-27-before-grade-one.en.md",
+      "slug": "before-grade-one",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1435,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-02-activities-that-move.en",
+      "date": "2026-10-02",
+      "title": "Activities that move: apples you can count, frogs that hop",
+      "summary": "Until today, a counting question in the app was a row of emoji characters glued together, like \"🍎🍎🍎🍎🍎🍎🍎 + 🍎🍎🍎\", and a child had to squint at it like text. Now those questions are drawn as…",
+      "contentUrl": "2026-10-02-activities-that-move.en.md",
+      "slug": "activities-that-move",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1008,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-03-syllabus-titles.en",
+      "date": "2026-10-03",
+      "title": "Syllabus rows now have a title and a description",
+      "summary": "Every skill in the Mathematics syllabus used to be one long sentence. Now each row has a short heading and, under it, the sentence that explains it. For the first pre-school skill, a parent sees…",
+      "contentUrl": "2026-10-03-syllabus-titles.en.md",
+      "slug": "syllabus-titles",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 146,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-04-a-leaner-skills-list-and-deeper-reports.en",
+      "date": "2026-10-04",
+      "title": "Fewer number skills, a report card you can open up, and tidier addresses",
+      "summary": "The pre-school Numbers topic went from 22 skills to 12, the parent progress report now opens level by level, and subjects, topics and skills share one look.",
+      "contentUrl": "2026-10-04-a-leaner-skills-list-and-deeper-reports.en.md",
+      "slug": "a-leaner-skills-list-and-deeper-reports",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1223,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-04-fewer-number-skills.en",
+      "date": "2026-10-04",
+      "title": "From 22 number skills to 12",
+      "summary": "The pre-school Numbers topic listed 22 skills, and many of them were the same skill at a different size: counting to 10 and counting to 30, giving 3 blocks and giving 12, reading numerals up to 5 and…",
+      "contentUrl": "2026-10-04-fewer-number-skills.en.md",
+      "slug": "fewer-number-skills",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 172,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-04-report-card-drilldown.en",
+      "date": "2026-10-04",
+      "title": "The progress report now opens up, level by level",
+      "summary": "The parent page's progress report used to give one overall percentage and two short lists, which told you how things stood but not where to look. Now each subject opens into its topics, each topic…",
+      "contentUrl": "2026-10-04-report-card-drilldown.en.md",
+      "slug": "report-card-drilldown",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 167,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-04-topics-and-cleaner-addresses.en",
+      "date": "2026-10-04",
+      "title": "Subjects, topics and skills now look alike — and have tidier web addresses",
+      "summary": "The three levels of the Mathematics section used to feel like three different apps. Now the Mathematics card on the home page, each topic card inside a grade, and the topic page itself all show the…",
+      "contentUrl": "2026-10-04-topics-and-cleaner-addresses.en.md",
+      "slug": "topics-and-cleaner-addresses",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 490,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-a-big-day-for-activities.en",
+      "date": "2026-10-07",
+      "title": "A big day: thirteen parent articles on early maths, clearer progress, and a Terms page",
+      "summary": "Today the site gained a new Articles section for parents and teachers, a birth-year profile, a score on every activity, and a plain-language Terms of use page. Here is what changed and why.",
+      "contentUrl": "2026-10-07-a-big-day-for-activities.en.md",
+      "slug": "a-big-day-for-activities",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 2778,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-a-big-day-for-activities.fr",
+      "date": "2026-10-07",
+      "title": "Une grosse journée : treize articles pour les parents sur les premiers pas en maths, une progression plus claire et une page de conditions d'utilisation",
+      "summary": "Aujourd'hui, le site s'est enrichi d'une section Articles pour les parents et les enseignants, d'un profil fondé sur l'année de naissance, d'un score pour chaque activité et d'une page de conditions…",
+      "contentUrl": "2026-10-07-a-big-day-for-activities.fr.md",
+      "slug": "a-big-day-for-activities",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 3171,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-analogue-clock.en",
+      "date": "2026-10-07",
+      "title": "Telling the time on an analogue clock, step by step",
+      "summary": "Digital clocks are everywhere, but reading an analogue clock teaches fractions, skip counting and the idea of time passing. Here is a sensible order for learning it, and games that help it stick.",
+      "contentUrl": "2026-10-07-analogue-clock.en.md",
+      "slug": "analogue-clock",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G1–G3",
+      "topics": [
+        "TIM"
+      ],
+      "words": 1242,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-analogue-clock.fr",
+      "date": "2026-10-07",
+      "title": "Lire l'heure sur une horloge à aiguilles, étape par étape",
+      "summary": "Les horloges numériques sont partout, mais lire une horloge à aiguilles fait travailler les fractions, le comptage par bonds et l'idée du temps qui passe. Voici un ordre d'apprentissage sensé et des jeux pour que cela reste.",
+      "contentUrl": "2026-10-07-analogue-clock.fr.md",
+      "slug": "analogue-clock",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "1re–3e année",
+      "topics": [
+        "TIM"
+      ],
+      "words": 1326,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-birth-year-and-clearer-progress.en",
+      "date": "2026-10-07",
+      "title": "Birth year instead of grade, a fuller parent overview, and a score on every activity",
+      "summary": "Three things that used to need a little effort from you now take care of themselves: the app works out your child's grade from their birth year, the parent area shows the whole picture from the very…",
+      "contentUrl": "2026-10-07-birth-year-and-clearer-progress.en.md",
+      "slug": "birth-year-and-clearer-progress",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 466,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-birth-year-and-clearer-progress.fr",
+      "date": "2026-10-07",
+      "title": "L'année de naissance au lieu de l'année scolaire, une vue d'ensemble plus complète pour les parents, et un score pour chaque activité",
+      "summary": "Trois choses qui demandaient un petit effort se font maintenant toutes seules : l'application calcule l'année scolaire de votre enfant à partir de son année de naissance, l'espace parent montre le…",
+      "contentUrl": "2026-10-07-birth-year-and-clearer-progress.fr.md",
+      "slug": "birth-year-and-clearer-progress",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 496,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-comparing-fractions.en",
+      "date": "2026-10-07",
+      "title": "Comparing fractions without a rule to memorise",
+      "summary": "Which is bigger, 3/8 or 2/5? Children can answer by reasoning about size instead of memorising cross-multiplication. Here are the benchmark and unit-fraction ideas that make comparing fractions make sense.",
+      "contentUrl": "2026-10-07-comparing-fractions.en.md",
+      "slug": "comparing-fractions",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G3–G5",
+      "topics": [
+        "FR"
+      ],
+      "words": 1167,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-comparing-fractions.fr",
+      "date": "2026-10-07",
+      "title": "Comparer des fractions sans règle à mémoriser",
+      "summary": "Lequel est le plus grand, 3/8 ou 2/5? L'enfant peut répondre en raisonnant sur la grandeur plutôt qu'en mémorisant le produit croisé. Voici les repères et les fractions unitaires qui donnent du sens à la comparaison de fractions.",
+      "contentUrl": "2026-10-07-comparing-fractions.fr.md",
+      "slug": "comparing-fractions",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "3e–5e année",
+      "topics": [
+        "FR"
+      ],
+      "words": 1264,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-fair-sharing-fractions.en",
+      "date": "2026-10-07",
+      "title": "Fractions start with fair sharing",
+      "summary": "Children meet fractions long before school: every time they split a snack. Starting from fair sharing, rather than from symbols, gives them a meaning for halves, quarters and thirds that lasts. Here is how to build it.",
+      "contentUrl": "2026-10-07-fair-sharing-fractions.en.md",
+      "slug": "fair-sharing-fractions",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G1–G3",
+      "topics": [
+        "FR"
+      ],
+      "words": 1125,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-fair-sharing-fractions.fr",
+      "date": "2026-10-07",
+      "title": "Les fractions commencent par le partage équitable",
+      "summary": "Les enfants rencontrent les fractions bien avant l'école : chaque fois qu'ils partagent une collation. Partir du partage équitable plutôt que des symboles donne aux moitiés, aux quarts et aux tiers un sens qui dure. Voici comment le construire.",
+      "contentUrl": "2026-10-07-fair-sharing-fractions.fr.md",
+      "slug": "fair-sharing-fractions",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "1re–3e année",
+      "topics": [
+        "FR"
+      ],
+      "words": 1213,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-measuring-at-home.en",
+      "date": "2026-10-07",
+      "title": "Measuring in the kitchen and the garden",
+      "summary": "Measurement is where numbers meet the real world. Comparing, using non-standard units and then rulers and cups gives children a feel for length, weight and capacity. Here are kitchen and garden activities that build it.",
+      "contentUrl": "2026-10-07-measuring-at-home.en.md",
+      "slug": "measuring-at-home",
+      "lang": "en",
+      "kind": "article",
+      "grade": "K–G3",
+      "topics": [
+        "MEA"
+      ],
+      "words": 1179,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-measuring-at-home.fr",
+      "date": "2026-10-07",
+      "title": "Mesurer dans la cuisine et au jardin",
+      "summary": "La mesure est l'endroit où les nombres rencontrent le monde réel. Comparer, utiliser des unités non conventionnelles, puis des règles et des tasses donne à l'enfant une idée de la longueur, de la masse et de la capacité. Voici des activités de cuisine et de jardin.",
+      "contentUrl": "2026-10-07-measuring-at-home.fr.md",
+      "slug": "measuring-at-home",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "Maternelle–3e année",
+      "topics": [
+        "MEA"
+      ],
+      "words": 1341,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-mental-strategies.en",
+      "date": "2026-10-07",
+      "title": "Beyond finger counting: mental addition and subtraction strategies",
+      "summary": "Fingers are a fine start, but children who stay with counting-by-ones hit a wall. Here are the mental strategies that replace it, why they work, and how to practise them in conversation at home.",
+      "contentUrl": "2026-10-07-mental-strategies.en.md",
+      "slug": "mental-strategies",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G1–G3",
+      "topics": [
+        "AS",
+        "MM"
+      ],
+      "words": 1255,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-mental-strategies.fr",
+      "date": "2026-10-07",
+      "title": "Au-delà des doigts : stratégies de calcul mental pour additionner et soustraire",
+      "summary": "Les doigts sont un bon point de départ, mais l'enfant qui reste au comptage un par un finit par se heurter à un mur. Voici les stratégies mentales qui prennent le relais, pourquoi elles fonctionnent et comment les exercer en conversation à la maison.",
+      "contentUrl": "2026-10-07-mental-strategies.fr.md",
+      "slug": "mental-strategies",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "1re–3e année",
+      "topics": [
+        "AS",
+        "MM"
+      ],
+      "words": 1354,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-money-at-home.en",
+      "date": "2026-10-07",
+      "title": "Coins, change and shopping maths at home",
+      "summary": "Money is one of the most meaningful places children meet place value, counting on and decimals. Here is how to turn pocket money, shopping trips and a toy shop into steady practice with coins and change.",
+      "contentUrl": "2026-10-07-money-at-home.en.md",
+      "slug": "money-at-home",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G1–G4",
+      "topics": [
+        "MON"
+      ],
+      "words": 1158,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-money-at-home.fr",
+      "date": "2026-10-07",
+      "title": "Pièces, monnaie et calcul d'achat à la maison",
+      "summary": "L'argent est l'un des meilleurs endroits où l'enfant rencontre la valeur de position, le surcomptage et les décimaux. Voici comment transformer l'argent de poche, les courses et un petit magasin en pratique régulière avec les pièces et la monnaie.",
+      "contentUrl": "2026-10-07-money-at-home.fr.md",
+      "slug": "money-at-home",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "1re–4e année",
+      "topics": [
+        "MON"
+      ],
+      "words": 1323,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-number-bonds.en",
+      "date": "2026-10-07",
+      "title": "Number bonds to 10 and 20 with everyday objects",
+      "summary": "Knowing that 10 is 6 and 4, or 7 and 3, is the quiet foundation of fast, confident mental arithmetic. Here is what number bonds are and how to build them at home with objects you already own.",
+      "contentUrl": "2026-10-07-number-bonds.en.md",
+      "slug": "number-bonds",
+      "lang": "en",
+      "kind": "article",
+      "grade": "K–G1",
+      "topics": [
+        "AS"
+      ],
+      "words": 1220,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-number-bonds.fr",
+      "date": "2026-10-07",
+      "title": "Décompositions de 10 et de 20 avec des objets du quotidien",
+      "summary": "Savoir que 10, c'est 6 et 4, ou 7 et 3, est la base discrète d'un calcul mental rapide et assuré. Voici ce que sont ces décompositions et comment les construire à la maison avec des objets que vous avez déjà.",
+      "contentUrl": "2026-10-07-number-bonds.fr.md",
+      "slug": "number-bonds",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "Maternelle–1re année",
+      "topics": [
+        "AS"
+      ],
+      "words": 1282,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-place-value.en",
+      "date": "2026-10-07",
+      "title": "Why 34 is not '3 and 4': helping children understand place value",
+      "summary": "Children who write 34 can still think of it as a 3 and a 4. Place value, the idea that a digit's position gives it a value, is one of the biggest conceptual steps in the early grades. Here is how to build it with real objects.",
+      "contentUrl": "2026-10-07-place-value.en.md",
+      "slug": "place-value",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G1–G2",
+      "topics": [
+        "PV"
+      ],
+      "words": 1147,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-place-value.fr",
+      "date": "2026-10-07",
+      "title": "Pourquoi 34 n'est pas « 3 et 4 » : aider l'enfant à comprendre la valeur de position",
+      "summary": "Un enfant peut écrire 34 correctement et pourtant n'y voir qu'un 3 à côté d'un 4. La valeur de position, l'idée que la place d'un chiffre lui donne sa valeur, est l'un des plus grands pas conceptuels des premières années. Voici comment la construire avec de vrais objets.",
+      "contentUrl": "2026-10-07-place-value.fr.md",
+      "slug": "place-value",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "1re–2e année",
+      "topics": [
+        "PV"
+      ],
+      "words": 1221,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-real-counting.en",
+      "date": "2026-10-07",
+      "title": "Real counting vs reciting numbers: what to look for before school",
+      "summary": "A child who can say 'one, two, three, four, five' is not necessarily counting. Here is how to tell the difference, and how to build real counting at home with everyday objects.",
+      "contentUrl": "2026-10-07-real-counting.en.md",
+      "slug": "real-counting",
+      "lang": "en",
+      "kind": "article",
+      "grade": "PK–K",
+      "topics": [
+        "NUM"
+      ],
+      "words": 1348,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-real-counting.fr",
+      "date": "2026-10-07",
+      "title": "Compter pour de vrai ou réciter la comptine des nombres : quoi observer avant l'école",
+      "summary": "Un enfant qui dit « un, deux, trois, quatre, cinq » ne compte pas forcément. Voici comment faire la différence et comment développer le vrai dénombrement à la maison, avec des objets du quotidien.",
+      "contentUrl": "2026-10-07-real-counting.fr.md",
+      "slug": "real-counting",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "Préscolaire–maternelle",
+      "topics": [
+        "NUM"
+      ],
+      "words": 1376,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-shapes-and-position.en",
+      "date": "2026-10-07",
+      "title": "Shapes, position and direction words for young children",
+      "summary": "Before children name a triangle or follow a map, they need words like 'above', 'between' and 'next to', and a feel for what makes a shape what it is. Here is how to build that language and thinking through play.",
+      "contentUrl": "2026-10-07-shapes-and-position.en.md",
+      "slug": "shapes-and-position",
+      "lang": "en",
+      "kind": "article",
+      "grade": "PK–G2",
+      "topics": [
+        "GEO",
+        "POS"
+      ],
+      "words": 1185,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-shapes-and-position.fr",
+      "date": "2026-10-07",
+      "title": "Formes, position et direction : les mots pour les jeunes enfants",
+      "summary": "Avant de nommer un triangle ou de suivre un plan, l'enfant a besoin de mots comme « au-dessus », « entre » et « à côté de », et d'une idée de ce qui fait qu'une forme est ce qu'elle est. Voici comment bâtir ce langage et cette pensée par le jeu.",
+      "contentUrl": "2026-10-07-shapes-and-position.fr.md",
+      "slug": "shapes-and-position",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "Préscolaire–2e année",
+      "topics": [
+        "GEO",
+        "POS"
+      ],
+      "words": 1355,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-subitising.en",
+      "date": "2026-10-07",
+      "title": "Seeing 'five' at a glance: why subitising matters",
+      "summary": "Some quantities can be recognised instantly, without counting. This skill, called subitising, quietly underpins addition, estimation and number sense. Here is how it develops and how to play with it at home.",
+      "contentUrl": "2026-10-07-subitising.en.md",
+      "slug": "subitising",
+      "lang": "en",
+      "kind": "article",
+      "grade": "PK–K",
+      "topics": [
+        "NUM"
+      ],
+      "words": 1150,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-subitising.fr",
+      "date": "2026-10-07",
+      "title": "Voir « cinq » d'un coup d'œil : pourquoi la subitisation compte",
+      "summary": "Certaines quantités se reconnaissent instantanément, sans compter. Cette habileté, la subitisation, soutient en silence l'addition, l'estimation et le sens du nombre. Voici comment elle se développe et comment la nourrir à la maison.",
+      "contentUrl": "2026-10-07-subitising.fr.md",
+      "slug": "subitising",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "Préscolaire–maternelle",
+      "topics": [
+        "NUM"
+      ],
+      "words": 1212,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-terms-page-and-crawlable-home.en",
+      "date": "2026-10-07",
+      "title": "A Terms of use page, and a home page that search engines can read",
+      "summary": "The site now has a Terms of use page next to Privacy, About and Contact, in English and French, linked from the footer on every screen. The plain-HTML copy of the home page, which crawlers read when…",
+      "contentUrl": "2026-10-07-terms-page-and-crawlable-home.en.md",
+      "slug": "terms-page-and-crawlable-home",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 468,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-terms-page-and-crawlable-home.fr",
+      "date": "2026-10-07",
+      "title": "Une page Conditions d'utilisation, et une page d'accueil lisible par les moteurs de recherche",
+      "summary": "Le site a maintenant une page Conditions d'utilisation à côté de Confidentialité, À propos et Contact, en français et en anglais, liée depuis le pied de page de chaque écran. La copie en HTML simple…",
+      "contentUrl": "2026-10-07-terms-page-and-crawlable-home.fr.md",
+      "slug": "terms-page-and-crawlable-home",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 518,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-times-tables.en",
+      "date": "2026-10-07",
+      "title": "Times tables: memorising and understanding, in that order?",
+      "summary": "Parents often ask whether children should memorise the times tables first or understand multiplication first. The best answer is both, in a particular order. Here is how understanding and recall support each other.",
+      "contentUrl": "2026-10-07-times-tables.en.md",
+      "slug": "times-tables",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G2–G4",
+      "topics": [
+        "MD"
+      ],
+      "words": 1145,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-times-tables.fr",
+      "date": "2026-10-07",
+      "title": "Les tables de multiplication : mémoriser ou comprendre, et dans quel ordre?",
+      "summary": "Les parents demandent souvent si l'enfant doit d'abord mémoriser les tables ou d'abord comprendre la multiplication. La meilleure réponse est : les deux, dans un certain ordre. Voici comment compréhension et mémoire s'épaulent.",
+      "contentUrl": "2026-10-07-times-tables.fr.md",
+      "slug": "times-tables",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "2e–4e année",
+      "topics": [
+        "MD"
+      ],
+      "words": 1273,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-trust-pages-and-parent-articles.en",
+      "date": "2026-10-07",
+      "title": "A clearer, calmer site for parents: new information pages, real articles, and ads kept well away from children",
+      "summary": "If you visited learnCoreSkills today you may have noticed a few quiet changes at the bottom of every page, and a new section in the blog. Behind them is one decision: the parts of this site that…",
+      "contentUrl": "2026-10-07-trust-pages-and-parent-articles.en.md",
+      "slug": "trust-pages-and-parent-articles",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 763,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-trust-pages-and-parent-articles.fr",
+      "date": "2026-10-07",
+      "title": "Un site plus clair et plus calme pour les parents : pages d'information, vrais articles et publicité tenue loin des enfants",
+      "summary": "Si vous avez visité learnCoreSkills aujourd'hui, vous avez peut-être remarqué quelques changements discrets au bas de chaque page, et une nouvelle section dans le blogue. Derrière eux se trouve une…",
+      "contentUrl": "2026-10-07-trust-pages-and-parent-articles.fr.md",
+      "slug": "trust-pages-and-parent-articles",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 823,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-07-word-problems.en",
+      "date": "2026-10-07",
+      "title": "Reading the maths in word problems",
+      "summary": "When a child can calculate but cannot solve a word problem, the trouble is usually reading, not arithmetic. Here are habits that help children see the story, choose the operation and check that the answer makes sense.",
+      "contentUrl": "2026-10-07-word-problems.en.md",
+      "slug": "word-problems",
+      "lang": "en",
+      "kind": "article",
+      "grade": "G2–G5",
+      "topics": [
+        "PSR"
+      ],
+      "words": 1174,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-07-word-problems.fr",
+      "date": "2026-10-07",
+      "title": "Lire les mathématiques cachées dans un problème écrit",
+      "summary": "Quand un enfant sait calculer mais ne réussit pas un problème écrit, la difficulté est le plus souvent la lecture, pas l'arithmétique. Voici des habitudes qui aident à voir l'histoire, à choisir l'opération et à vérifier que la réponse a du sens.",
+      "contentUrl": "2026-10-07-word-problems.fr.md",
+      "slug": "word-problems",
+      "lang": "fr",
+      "kind": "article",
+      "grade": "2e–5e année",
+      "topics": [
+        "PSR"
+      ],
+      "words": 1219,
+      "reviewed": true
+    },
+    {
+      "id": "2026-10-08-kindergarten-number-sense.en",
+      "date": "2026-10-08",
+      "title": "Kindergarten number sense, now a full path of 16 skills",
+      "summary": "Kindergarten children can now follow a complete, ordered path through number sense: sixteen skills, from saying the number words in order to the first steps of counting by tens. Each skill is short…",
+      "contentUrl": "2026-10-08-kindergarten-number-sense.en.md",
+      "slug": "kindergarten-number-sense",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 550,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-08-kindergarten-number-sense.fr",
+      "date": "2026-10-08",
+      "title": "Le sens du nombre à la maternelle, maintenant un parcours complet de 16 compétences",
+      "summary": "Les enfants de maternelle peuvent maintenant suivre un parcours complet et ordonné du sens du nombre : seize compétences, depuis la récitation des mots-nombres dans l'ordre jusqu'aux premiers pas du…",
+      "contentUrl": "2026-10-08-kindergarten-number-sense.fr.md",
+      "slug": "kindergarten-number-sense",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 623,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-grade-1-place-value.en",
+      "date": "2026-10-09",
+      "title": "Grade 1 place value gets ten new games, from bundling sticks to spotting a puppet's mistake",
+      "summary": "Grade 1 children now have ten new games for place value, the idea that in 47 the 4 means four tens and the 7 means seven ones. They move from bundling loose sticks into tens to checking whether a…",
+      "contentUrl": "2026-10-09-grade-1-place-value.en.md",
+      "slug": "grade-1-place-value",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 590,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-grade-1-place-value.fr",
+      "date": "2026-10-09",
+      "title": "La valeur de position en 1re année gagne dix nouveaux jeux, de la mise en fagots à la chasse à l'erreur",
+      "summary": "Les élèves de 1re année disposent maintenant de dix nouveaux jeux sur la valeur de position, l'idée que dans 47, le 4 veut dire quatre dizaines et le 7 sept unités. Ils vont de la mise en fagots de…",
+      "contentUrl": "2026-10-09-grade-1-place-value.fr.md",
+      "slug": "grade-1-place-value",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 631,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-place-value-ten-frames-and-progress.en",
+      "date": "2026-10-09",
+      "title": "Place value from the ten-frame to Grade 6, and progress that survives export",
+      "summary": "Kindergarten now teaches numbers to 10 on a ten-frame, Grade 1 has ten new place-value games, and a child's progress now comes back exactly as exported.",
+      "contentUrl": "2026-10-09-place-value-ten-frames-and-progress.en.md",
+      "slug": "place-value-ten-frames-and-progress",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1338,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-place-value-ten-frames-and-progress.fr",
+      "date": "2026-10-09",
+      "title": "La valeur de position, du cadre à dix cases à la 6e année, et une progression qui survit à l'export",
+      "summary": "La maternelle enseigne maintenant les nombres jusqu'à 10 sur un cadre à dix cases, la 1re année reçoit dix nouveaux jeux de valeur de position, et la progression d'un enfant revient exactement comme…",
+      "contentUrl": "2026-10-09-place-value-ten-frames-and-progress.fr.md",
+      "slug": "place-value-ten-frames-and-progress",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 1470,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-progress-that-survives-export.en",
+      "date": "2026-10-09",
+      "title": "Export a child's progress, import it back, and nothing is lost",
+      "summary": "A parent who exported a child's progress, deleted the profile and imported the file again could find the report looking different from before. That is fixed: progress now lives in one place, so what…",
+      "contentUrl": "2026-10-09-progress-that-survives-export.en.md",
+      "slug": "progress-that-survives-export",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 264,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-progress-that-survives-export.fr",
+      "date": "2026-10-09",
+      "title": "Exportez la progression d'un enfant, réimportez-la, et rien n'est perdu",
+      "summary": "Un parent qui exportait la progression d'un enfant, supprimait le profil puis réimportait le fichier pouvait constater que le rapport ne ressemblait plus à l'original. C'est corrigé : la progression…",
+      "contentUrl": "2026-10-09-progress-that-survives-export.fr.md",
+      "slug": "progress-that-survives-export",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 266,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-ten-frames-in-kindergarten.en",
+      "date": "2026-10-09",
+      "title": "Kindergarten place value now focuses on the ten-frame, with three new games",
+      "summary": "Kindergarten place value has been tidied up to do one thing well: helping children see the numbers up to 10 on a ten-frame, the little grid of two rows of five boxes. Three games now practise it, and…",
+      "contentUrl": "2026-10-09-ten-frames-in-kindergarten.en.md",
+      "slug": "ten-frames-in-kindergarten",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 552,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-09-ten-frames-in-kindergarten.fr",
+      "date": "2026-10-09",
+      "title": "La valeur de position à la maternelle se concentre sur le cadre à dix cases, avec trois nouveaux jeux",
+      "summary": "La valeur de position à la maternelle a été simplifiée pour bien faire une seule chose : aider les enfants à voir les nombres jusqu'à 10 sur un cadre à dix cases, cette petite grille de deux rangées…",
+      "contentUrl": "2026-10-09-ten-frames-in-kindergarten.fr.md",
+      "slug": "ten-frames-in-kindergarten",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 643,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-10-preschool-games-you-do-with-your-hands.en",
+      "date": "2026-10-10",
+      "title": "Thirty preschool games now let children move the things they are counting",
+      "summary": "Many of the youngest children's number games used to be small quizzes: read a sentence, look at a row of pictures, tap a word. Thirty of them have been rebuilt so that the child does the maths with…",
+      "contentUrl": "2026-10-10-preschool-games-you-do-with-your-hands.en.md",
+      "slug": "preschool-games-you-do-with-your-hands",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 2534,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-10-preschool-games-you-do-with-your-hands.fr",
+      "date": "2026-10-10",
+      "title": "Trente jeux pour les tout-petits : les enfants déplacent maintenant ce qu'ils comptent",
+      "summary": "Beaucoup de jeux de nombres pour les plus jeunes ressemblaient à de petits questionnaires : lire une phrase, regarder une rangée d'images, toucher un mot. Trente d'entre eux ont été refaits pour que…",
+      "contentUrl": "2026-10-10-preschool-games-you-do-with-your-hands.fr.md",
+      "slug": "preschool-games-you-do-with-your-hands",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 2638,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-a-help-centre-that-helps.en",
+      "date": "2026-10-21",
+      "title": "A help centre that actually helps: ten plain-language guides for parents and teachers",
+      "summary": "If you have ever opened a website's help section and found a pile of technical notes written for someone else, you will understand why we rebuilt ours. The Docs area is now a proper guide library:…",
+      "contentUrl": "2026-10-21-a-help-centre-that-helps.en.md",
+      "slug": "a-help-centre-that-helps",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 834,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-a-help-centre-that-helps.fr",
+      "date": "2026-10-21",
+      "title": "Un centre d'aide qui aide vraiment : dix guides en langage simple pour les parents et les enseignants",
+      "summary": "Si vous avez déjà ouvert la rubrique d'aide d'un site pour tomber sur un tas de notes techniques écrites pour quelqu'un d'autre, vous comprendrez pourquoi nous avons refait la nôtre. L'espace Docs…",
+      "contentUrl": "2026-10-21-a-help-centre-that-helps.fr.md",
+      "slug": "a-help-centre-that-helps",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 899,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-activities-in-topic-and-grade-folders.en",
+      "date": "2026-10-21",
+      "title": "Every maths activity now has a home: a topic, then a grade",
+      "summary": "Behind the scenes, our maths activities have moved into a tidier filing system. All 1,682 of them are being grouped by topic and then by grade, so \"Number sense, Grade 1\" is a place you can point to…",
+      "contentUrl": "2026-10-21-activities-in-topic-and-grade-folders.en.md",
+      "slug": "activities-in-topic-and-grade-folders",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 412,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-activities-in-topic-and-grade-folders.fr",
+      "date": "2026-10-21",
+      "title": "Chaque activité de maths a maintenant sa place : un sujet, puis une année",
+      "summary": "En coulisse, nos activités de mathématiques sont rangées plus proprement. Les 1 682 activités sont regroupées par sujet, puis par année scolaire : « Sens du nombre, 1re année » devient un endroit…",
+      "contentUrl": "2026-10-21-activities-in-topic-and-grade-folders.fr.md",
+      "slug": "activities-in-topic-and-grade-folders",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 413,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-grade-2-3-4-playable-activities.en",
+      "date": "2026-10-21",
+      "title": "Every Grade 2, 3 and 4 maths skill now has at least two games to play",
+      "summary": "Open any Grade 2, 3 or 4 maths skill in the app and you will now find at least two different activities to practise it, in both English and French. Across the three grades, that is 381 skills, and…",
+      "contentUrl": "2026-10-21-grade-2-3-4-playable-activities.en.md",
+      "slug": "grade-2-3-4-playable-activities",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 418,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-grade-2-3-4-playable-activities.fr",
+      "date": "2026-10-21",
+      "title": "Chaque habileté de maths de la 2e, 3e et 4e année offre maintenant au moins deux jeux",
+      "summary": "Ouvrez n'importe quelle habileté de mathématiques de 2e, 3e ou 4e année dans l'application : vous y trouverez désormais au moins deux activités différentes pour s'exercer, en français comme en…",
+      "contentUrl": "2026-10-21-grade-2-3-4-playable-activities.fr.md",
+      "slug": "grade-2-3-4-playable-activities",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 417,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-help-centre-folders-and-grades-2-to-4.en",
+      "date": "2026-10-21",
+      "title": "A clearer help centre, tidier maths activities, and two games for every Grade 2 to 4 skill",
+      "summary": "Three changes landed together: ten plain-language guides for parents and teachers, a topic-then-grade filing system for 1,682 maths activities, and at least two games for each of 381 skills in Grades…",
+      "contentUrl": "2026-10-21-help-centre-folders-and-grades-2-to-4.en.md",
+      "slug": "help-centre-folders-and-grades-2-to-4",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 1522,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-21-help-centre-folders-and-grades-2-to-4.fr",
+      "date": "2026-10-21",
+      "title": "Un centre d'aide plus clair, des activités de maths mieux rangées et deux jeux pour chaque habileté de la 2e à la 4e année",
+      "summary": "Trois changements arrivent ensemble : dix guides en langage simple pour les parents et les enseignants, un classement par sujet puis par année pour 1 682 activités de maths, et au moins deux jeux…",
+      "contentUrl": "2026-10-21-help-centre-folders-and-grades-2-to-4.fr.md",
+      "slug": "help-centre-folders-and-grades-2-to-4",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 1660,
+      "reviewed": false
+    }
+  ],
+  "generatedAt": "2026-10-21T22:20:50.842Z"
+}
