@@ -46884,7 +46884,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b47.o4": "p0,p1,p2,t0,p4,p5,t0,t1,t0",
 	"b47.o5": "p0,p1,p2,t2,p4,p5,t0,t1,t0"
 }, nne = {
-	label: "Ab bead string",
+	label: "Le collier de perles AB",
 	"b0.prompt": "Termine le collier.",
 	"b0.o0": "p0,p1,p2,p3,t0,t1",
 	"b0.o1": "p0,p1,p2,p3,t1,t1",
@@ -47344,7 +47344,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b23.o3": "p0,p1,p2,t1,t0,t1,t0,t1",
 	"b23.o4": "p0,p1,p2,t1,t1,t1,t0,t1"
 }, sne = {
-	label: "Abb clap stomp",
+	label: "Tape et frappe",
 	"b0.prompt": "Continue le rythme.",
 	"b0.o0": "p0,p1,p2,p3,p4,p5,t0,t1,t1",
 	"b0.o1": "p0,p1,p2,p3,p4,p5,t1,t1,t1",
@@ -47756,7 +47756,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b35.o5": "p0,p1,p2,p3,p4,p5,t2,t1,t2,t0",
 	"b35.o6": "p0,p1,p2,p3,p4,p5,t3,t1,t2,t0"
 }, fne = {
-	label: "Abc parade",
+	label: "Le défilé ABC",
 	"b0.prompt": "Continue le défilé.",
 	"b0.o0": "p0,p1,p2,p3,p4,p5,t0",
 	"b0.o1": "p0,p1,p2,p3,p4,p5,t2",
@@ -48070,7 +48070,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b1.o2": "110",
 	"b1.o3": "70"
 }, _ne = {
-	label: "About how many receipt",
+	label: "Environ combien sur le reçu",
 	"b0.prompt": "Un livre coûte 29 et un stylo 11. Environ combien au total ?",
 	"b0.o0": "40",
 	"b0.o1": "30",
@@ -48418,7 +48418,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o2": "RRRRUUUUU",
 	"b17.o3": "RRRRRUUUUU"
 }, Dne = {
-	label: "Across then up hop",
+	label: "Traverser puis monter",
 	"b0.prompt": "Saute jusqu'à (2, 1) : 2 vers la droite, puis 1 vers le haut.",
 	"b0.o0": "RRU",
 	"b0.o1": "RUU",
@@ -48613,7 +48613,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b3.o2": "12",
 	"b3.o3": "6"
 }, Mne = {
-	label: "Act it out stories",
+	label: "Jouer les histoires",
 	"b0.prompt": "Tu joues : 3 grenouilles sont sur une bûche, 2 autres sautent dessus. Combien de grenouilles maintenant ?",
 	"b0.o0": "5",
 	"b0.o1": "3",
@@ -48769,7 +48769,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o3": "p2,t1,t2,p0,p1,t0",
 	"b17.o4": "t0,p0,t2,t1,p1,p2"
 }, Lne = {
-	label: "Add or multiply sort",
+	label: "Additionner ou multiplier",
 	"b0.prompt": "Chaque carte montre deux exemples d'une règle. La règle multiplie-t-elle par le même nombre, ou ajoute-t-elle le même nombre ? Trie les cartes.",
 	"b0.o0": "t0,t1,p0,p1",
 	"b0.o1": "p0,t1,t0,p1",
@@ -48976,7 +48976,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o2": "g0,g1,g3,g2,g4",
 	"b11.o3": "g0,g1,g2,g3,g7"
 }, Hne = {
-	label: "Algebra tiles lab",
+	label: "Laboratoire des tuiles d'algèbre",
 	"b0.prompt": "Observe les tuiles de 3x + 2. Glisse un nombre dans chaque boîte.",
 	"b0.o0": "g0,g1,g2,g3,g3",
 	"b0.o1": "g0,g1,g3,g2,g3",
@@ -49147,7 +49147,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b14.o2": "g0,g1,g2,g1,g6,g1,g7,g4,g5",
 	"b14.o3": "g0,g1,g2,g1,g0,g1,g0,g4,g5"
 }, qne = {
-	label: "All outcomes add up",
+	label: "Tous les résultats",
 	"b0.prompt": "Toutes les chances ensemble font 1. Complète la chance manquante.",
 	"b0.o0": "g0,g1,g2,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g1,g5,g3,g4",
@@ -49311,7 +49311,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o1": "o0,o0,o2,o3,o4,o5",
 	"b11.o2": "o0,o1,o2,o3,o4,x0"
 }, Qne = {
-	label: "All the outcomes list",
+	label: "La liste des résultats",
 	"b0.prompt": "On lance deux pièces. Liste toutes les paires de résultats.",
 	"b0.o0": "o0,o1,o2,o3",
 	"b0.o1": "o0,o0,o2,o3",
@@ -49495,7 +49495,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o5": "o0,o1,o2,o4,o3,o5,o6,o7,o8",
 	"b11.o6": "o0,o1,o2,o3,o5,o4,o6,o7,o8"
 }, rre = {
-	label: "All the outfits lister",
+	label: "Tous les costumes",
 	"b0.prompt": "Liste toutes les tenues (un haut et un bas) dans l'ordre : toutes celles avec le premier haut, puis le deuxième.",
 	"b0.o0": "o0,o1,o2,o3",
 	"b0.o1": "o3,o2,o1,o0",
@@ -49775,7 +49775,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o5": "f0,f1,f2,f3,f4,a6,a5,a7,f8,a9,a10,a11,f12,a13,a14,a15",
 	"b17.o6": "f0,f1,f2,f3,f4,a7,a6,a5,f8,a9,a10,a11,f12,a13,a14,a15"
 }, cre = {
-	label: "All the outfits table",
+	label: "Le tableau des costumes",
 	"b0.prompt": "2 hauts et 2 jupes. Remplis le tableau avec toutes les tenues (haut et jupe).",
 	"b0.o0": "f0,f1,f2,f3,a4,a5,f6,a7,a8",
 	"b0.o1": "f0,f1,f2,f3,x0,a5,f6,a7,a8",
@@ -50024,7 +50024,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "never2,always1,sometimes0,never0,never1,always0",
 	"b11.o4": "always0,never0,sometimes0,always1,never1,never2"
 }, pre = {
-	label: "Always sometimes never cards",
+	label: "Toujours, parfois, jamais (cartes)",
 	"b0.prompt": "Essaie des exemples pour chaque affirmation. Est-elle toujours vraie, parfois vraie ou jamais vraie ?",
 	"b0.o0": "always0,sometimes0,never0",
 	"b0.o1": "never0,sometimes0,always0",
@@ -50189,7 +50189,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "a6,n6,m5,m1,a2,n2",
 	"b11.o4": "a6,n2,m5,m1,n6,a2"
 }, vre = {
-	label: "Always sometimes never sort",
+	label: "Toujours, parfois, jamais",
 	"b0.prompt": "Teste chaque affirmation avec des exemples. Est-elle toujours, parfois ou jamais vraie ?",
 	"b0.o0": "a1,a2,n1,n4",
 	"b0.o1": "n1,a2,a1,n4",
@@ -50365,7 +50365,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "lunch,school,teeth,recess,soccer,nap,sunrise,supper",
 	"b11.o4": "supper,school,teeth,recess,soccer,nap,lunch,sunrise"
 }, Cre = {
-	label: "Am or pm day sort",
+	label: "Le matin ou l'après-midi ?",
 	"b0.prompt": "C'est l'avant-midi (a.m.) ou l'après-midi et le soir (p.m.) ? Dépose chaque événement dans sa boîte.",
 	"b0.o0": "breakfast,school,supper,bedtime",
 	"b0.o1": "supper,school,breakfast,bedtime",
@@ -50511,7 +50511,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b1.o2": "Right",
 	"b1.o3": "Straight"
 }, Ore = {
-	label: "Angle builder",
+	label: "Construire un angle",
 	"b0.prompt": "Fais glisser une demi-droite à 90°. Quel type d'angle ?",
 	"b0.o0": "Droit",
 	"b0.o1": "Aigu",
@@ -50609,7 +50609,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b14.o2": "g0,g1,g2,g1,g3,g3,g3,g3,g4,g5,g6,g5,g8,g1,g9,g5,g3,g3,g3,g3,g10,g1,g11,g7",
 	"b14.o3": "g0,g1,g2,g1,g3,g3,g3,g3,g4,g5,g6,g7,g8,g1,g9,g7,g3,g3,g3,g3,g10,g1,g11,g7"
 }, Nre = {
-	label: "Angle chain puzzle",
+	label: "Le puzzle des angles",
 	"b0.prompt": "Deux parallèles sont coupées par une sécante. ∠3 = 110°. Saute le long de la chaîne ∠3 → ∠5 et complète l'angle à chaque saut. Les angles 1 à 4 sont sur la parallèle du haut et 5 à 8 sur celle du bas ; les numéros impairs sont à gauche de la sécante.",
 	"b0.o0": "g0,g1,g2,g1,g3,g3,g3,g3,g4,g5,g6,g1,g7,g8,g9,g1,g3,g3,g3,g3,g10,g1,g11,g1",
 	"b0.o1": "g0,g1,g2,g1,g3,g3,g3,g3,g4,g5,g6,g1,g7,g5,g9,g1,g3,g3,g3,g3,g10,g1,g11,g1",
@@ -50787,7 +50787,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b14.o2": "g0,g1,g2,g1,g3,g1,g3,g4,g5,g6,g3,g4,g8",
 	"b14.o3": "g0,g1,g2,g1,g3,g1,g3,g4,g5,g6,g3,g4,g9"
 }, Rre = {
-	label: "Angle chase",
+	label: "La chasse aux angles",
 	"b0.prompt": "Sur une droite, un angle mesure 70°. Trouve l'angle x voisin.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2,g3,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g2,g3,g0",
@@ -50977,7 +50977,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "p0:equal,p1:equal,p2:larger,p3:smaller,p4:larger",
 	"b11.o4": "p0:equal,p1:larger,p2:larger,p3:smaller,p4:larger"
 }, Ure = {
-	label: "Angle compare sort",
+	label: "Comparer les angles",
 	"b0.prompt": "Compare les coins de chaque forme avec un angle droit. Plus petits, pareils, ou plus grands ?",
 	"b0.o0": "p0:smaller,p1:equal,p2:larger",
 	"b0.o1": "p0:equal,p1:equal,p2:larger",
@@ -51157,7 +51157,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "reflex2,right0,obtuse0,straight0,reflex0,reflex1,acute0",
 	"b11.o4": "reflex2,reflex1,reflex0,straight0,obtuse0,right0,acute0"
 }, Jre = {
-	label: "Angle type sort",
+	label: "Les types d'angles",
 	"b0.prompt": "Trie chaque angle selon sa mesure.",
 	"b0.o0": "acute0,acute1,right0,obtuse0,obtuse1",
 	"b0.o1": "obtuse0,acute1,right0,acute0,obtuse1",
@@ -51295,7 +51295,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b1.o2": "27 + 81 = 54",
 	"b1.o3": "54 − 27 = 81"
 }, $re = {
-	label: "Answer checker two ways",
+	label: "Vérifier la réponse de deux façons",
 	"b0.prompt": "Réponse 35 + 19 = 54. Vérification : 54 est-il proche de 55 ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -51405,7 +51405,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "e0,e1,e2,e3",
 	"b11.o4": "e0,e3,e1,e2"
 }, iie = {
-	label: "Answer detective",
+	label: "L'enquêteur de réponses",
 	"b0.prompt": "Vérifie chaque réponse avec l'inverse. C'est juste, ou à corriger ?",
 	"b0.o0": "e0,e2,e1,e3",
 	"b0.o1": "e1,e2,e0,e3",
@@ -51635,7 +51635,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, lie = {
-	label: "Answer in the right ballpark",
+	label: "Dans le bon ordre de grandeur",
 	"b0.prompt": "Arrondis les nombres et compte les zéros. Associe chaque calcul à la taille de sa réponse.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -51898,7 +51898,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b14.o5": "t0,t1,t2,t3,t5,t4",
 	"b14.o6": "t0,t2,t3,t4,t5,t1"
 }, ON = {
-	label: "Arc triangle builder",
+	label: "Construire un triangle à arcs",
 	"b0.prompt": "Construis le triangle ABC avec AB = 6 cm, AC = 4 cm et BC = 5 cm. Mets les étapes dans l'ordre, en partant de l'extrémité gauche A.",
 	"b0.o0": "t0,t1,t2,t3",
 	"b0.o1": "t0,t3,t2,t1",
@@ -52265,7 +52265,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o1": "g0,g1,g2,g3,g2,g11,g5,g6,g7,g8,g9,g10",
 	"b17.o2": "g0,g1,g2,g3,g2,g5,g4,g6,g7,g8,g9,g10"
 }, BN = {
-	label: "Area model builder",
+	label: "Construire le modèle d'aire",
 	"b0.prompt": "Remplis les cases pour calculer 234 × 3 : chaque case est une partie du côté fois une partie du haut.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g8,g6,g7",
@@ -52699,7 +52699,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o5": "f0,f1,f2,f3,x2,a5,f6,a7,a8",
 	"b17.o6": "f0,f1,f2,f3,a4,a5,f6,a7,x2"
 }, Cie = {
-	label: "Area model multiplier",
+	label: "Multiplier avec l'aire",
 	"b0.prompt": "12 × 11 : remplis les quatre cases du modèle d'aire.",
 	"b0.o0": "f0,f1,f2,f3,a4,a5,f6,a7,a8",
 	"b0.o1": "f0,f1,f2,f3,a5,a4,f6,a7,a8",
@@ -53176,7 +53176,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b3.o2": "25",
 	"b3.o3": "19"
 }, Nie = {
-	label: "Array rows skip count",
+	label: "Rangées et comptage par bonds",
 	"b0.prompt": "Compte de 2 en 2 : 2, 4, 6, 8, ? Qu'est-ce qui vient ensuite ?",
 	"b0.o0": "10",
 	"b0.o1": "9",
@@ -53368,7 +53368,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o5": "f0,x2,f2,a3,f4",
 	"b17.o6": "f0,a1,f2,x2,f4"
 }, Rie = {
-	label: "Array to area",
+	label: "De la matrice à l'aire",
 	"b0.prompt": "Un tapis a 3 rangées de 4 carrés. Glisse les rangées, les carrés d'une rangée et l'aire.",
 	"b0.o0": "a0,f1,a2,f3,a4",
 	"b0.o1": "x0,f1,a2,f3,a4",
@@ -53621,7 +53621,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b11.o3": "t0,t1,t2,t3,d4,d6,d2,d5",
 	"b11.o4": "t0,t1,t2,t3,d4,d6,d2,d3"
 }, Uie = {
-	label: "Array to sentence",
+	label: "De la matrice à la phrase",
 	"b0.prompt": "Regarde le tableau. Écris : combien de rangées, combien dans chaque rangée, combien en tout.",
 	"b0.o0": "t0,t1,d2,d3,d6",
 	"b0.o1": "t0,t1,d3,d2,d6",
@@ -53814,7 +53814,7 @@ var Xte = { label: "New activity" }, Zte = { label: "Nouvelle activité" }, Qte 
 	"b17.o1": "n3,n4,n12",
 	"b17.o2": "n4,n3,n7"
 }, Jie = {
-	label: "Array turner",
+	label: "Le tourneur de matrices",
 	"b0.prompt": "Ce tableau a 2 lignes de 3 points. Tourne-le : construis 3 lignes de 2 points.",
 	"b0.o0": "dot,dot,dot,dot,dot,dot",
 	"b0.o1": "dot,dot,dot,dot,dot,_",
@@ -54268,7 +54268,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b14.o2": "v112,v108,v107",
 	"b14.o3": "v112,v106,v107"
 }, oae = {
-	label: "Back through ten frog",
+	label: "La grenouille et la dizaine",
 	"b0.prompt": "14 − 6 : saute d'abord en arrière jusqu'à la dizaine, puis saute le reste. Où tombe la grenouille ?",
 	"b0.o0": "v14,v10,v8",
 	"b0.o1": "v14,v8,v10",
@@ -54459,7 +54459,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b23.o0": "Yellow",
 	"b23.o1": "Red"
 }, dae = {
-	label: "Bag of colours guess",
+	label: "Devine la couleur",
 	"b0.prompt": "Regarde dans le sac. Quelle couleur vas-tu probablement sortir le plus souvent ?",
 	"b0.o0": "Rouge",
 	"b0.o1": "Bleu",
@@ -54634,7 +54634,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g9",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g10"
 }, gae = {
-	label: "Bag of marbles fraction",
+	label: "Le sac de billes",
 	"b0.prompt": "Un sac contient 5 🔴, 3 🔵, 2 🟢. Quelle est la chance de piocher 🔵 ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g7",
@@ -54780,7 +54780,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b1.o2": "Likely",
 	"b1.o3": "Maybe"
 }, xae = {
-	label: "Bag of same colour",
+	label: "Le sac de même couleur",
 	"b0.prompt": "Un sac ne contient que des balles rouges. Que vas-tu tirer ?",
 	"b0.o0": "Rouge",
 	"b0.o1": "Bleu",
@@ -54932,7 +54932,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b37.o0": "First",
 	"b37.o1": "Second"
 }, Eae = {
-	label: "Balance play",
+	label: "Jouer avec la balance",
 	"b0.prompt": "Quel côté descend ?",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -55149,7 +55149,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g2,g3,g4,g1,g0,g3,g10",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g2,g3,g4,g6,g0,g3,g11"
 }, jae = {
-	label: "Balance scale equation puzzle",
+	label: "Équilibrer l'égalité",
 	"b0.prompt": "Garde la balance en équilibre : fais l'opération contraire des deux côtés de n + 7 = 15, puis trouve n.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g3,g4,g6,g2,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g3,g4,g1,g2,g3,g10",
@@ -55330,7 +55330,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b3.o2": "Equal (=)",
 	"b3.o3": "Plus (+)"
 }, Iae = {
-	label: "Balance scale reasoning",
+	label: "Raisonner avec la balance",
 	"b0.prompt": "Sans calculer : 7 + 2 est-il plus grand, plus petit ou égal à 7 + 5 ?",
 	"b0.o0": "Plus petit",
 	"b0.o1": "Plus grand",
@@ -55438,7 +55438,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b11.o2": "g0,g1,g2,g1,g3,g4,g1,g11,g1,g6,g12",
 	"b11.o3": "g0,g1,g2,g1,g3,g4,g1,g5,g1,g6,g13"
 }, Vae = {
-	label: "Balance scales two step",
+	label: "Équilibrer en deux étapes",
 	"b0.prompt": "Résous 2x + 3 = 11. Garde la balance en équilibre : fais la même chose sur les deux plateaux, en défaisant d'abord le + ou le −, puis le ×.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g1,g5,g1,g6,g7",
 	"b0.o1": "g0,g1,g8,g1,g3,g9,g1,g5,g1,g6,g10",
@@ -55572,7 +55572,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b1.o2": "205 g",
 	"b1.o3": "25 g"
 }, Kae = {
-	label: "Balance the bag",
+	label: "Équilibrer le sac",
 	"b0.prompt": "Un sac équilibre 3 poids de 100 g. Combien pèse le sac ?",
 	"b0.o0": "300 g",
 	"b0.o1": "100 g",
@@ -55680,7 +55680,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b11.o3": "9|7",
 	"b11.o4": "6|10"
 }, Zae = {
-	label: "Balance the mystery box",
+	label: "Équilibrer la boîte mystère",
 	"b0.prompt": "□ + 5 = 12. La boîte □ contient toujours le même nombre. Mets des jetons dans la boîte mystère pour que les deux côtés soient égaux.",
 	"b0.o0": "9|7",
 	"b0.o1": "8|8",
@@ -55895,7 +55895,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b16.o3": "7|3|8",
 	"b16.o4": "0|10|8"
 }, noe = {
-	label: "Balance the scale",
+	label: "Équilibrer la balance",
 	"b0.prompt": "Le plateau de gauche contient 3. Fais contenir autant au plateau de droite.",
 	"b0.o0": "2|3|3",
 	"b0.o1": "3|2|3",
@@ -56117,7 +56117,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b10.o4": "c1,c2,c0",
 	"b10.o5": "x0,c1,c2"
 }, soe = {
-	label: "Ballpark bingo",
+	label: "Loto de l'ordre de grandeur",
 	"b0.prompt": "Estime chaque somme ou différence. Glisse la carte d'estimation sur le calcul qui lui correspond.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -56328,7 +56328,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b14.o3": "c4,c2,c5,c0,c3,c1",
 	"b14.o4": "c1,c0,c5,c2,c3,c4"
 }, foe = {
-	label: "Ballpark bouncer",
+	label: "Le videur d'ordre de grandeur",
 	"b0.prompt": "Arrondis les nombres et estime d'abord. Laisse entrer les réponses proches de l'estimation et refoule celles qui en sont loin.",
 	"b0.o0": "c0,c3,c1,c2",
 	"b0.o1": "c1,c3,c0,c2",
@@ -56516,7 +56516,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b11.o2": "b1,b4,c1,c4,d1,d4,e1,e2,e4,f1,f2,f4,g1,g2,g3,g4",
 	"b11.o3": "b4,c2,c4,d2,d4,e1,e2,e4,f1,f2,f4,g1,g2,g3,g4"
 }, _oe = {
-	label: "Bar chart scale builder",
+	label: "Construire l'échelle du diagramme",
 	"b0.prompt": "Construis le diagramme à bandes. Un carré vaut 1. 🍎 3  🍌 5  🍇 2  🍓 4",
 	"b0.o0": "b2,c2,c4,d1,d2,d4,e1,e2,e3,e4,f1,f2,f3,f4",
 	"b0.o1": "b2,c1,c2,c4,d1,d2,d4,e1,e2,e3,e4,f1,f2,f3,f4",
@@ -56689,7 +56689,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b11.o3": "t0,t1,t2,t3,d1,d6",
 	"b11.o4": "t0,t1,t2,t3,d1,d4"
 }, Soe = {
-	label: "Bar model builder",
+	label: "Construire le modèle en barres",
 	"b0.prompt": "La barre entière fait 10. Une partie fait 6. Construis la partie manquante.",
 	"b0.o0": "0|6|4",
 	"b0.o1": "1|5|4",
@@ -56892,7 +56892,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b17.o2": "f0,f1,f2,x1",
 	"b17.o3": "f0,f1,f2,x2"
 }, Doe = {
-	label: "Bar model match",
+	label: "Associer les modèles en barres",
 	"b0.prompt": "Chaque carré d'une barre vaut 1. Les barres montrent 8 et 5. Quelle est la différence ?",
 	"b0.o0": "f0,f1,f2,a3",
 	"b0.o1": "f0,f1,f2,x0",
@@ -57095,7 +57095,7 @@ var nae = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), rae = $({
 	"b14.o3": "b0,s0,h0,h1,b1,s1",
 	"b14.o4": "b0,s1,h0,h1,s0,b1"
 }, Moe = {
-	label: "Base and height hunt",
+	label: "La chasse à la base et à la hauteur",
 	"b0.prompt": "Un parallélogramme a des côtés et une hauteur tracés. Trie les nombres : base, hauteur perpendiculaire, ou côté penché qui ne sert pas.",
 	"b0.o0": "b0,h0,s0",
 	"b0.o1": "s0,h0,b0",
@@ -57717,7 +57717,7 @@ var ise = $({
 	"b1.o2": "77 €",
 	"b1.o3": "37 €"
 }, fse = {
-	label: "Basket total builder",
+	label: "Le total du panier",
 	"b0.prompt": "Articles : pomme 3 euros, pain 2 euros, lait 4 euros. Total ?",
 	"b0.o0": "9 €",
 	"b0.o1": "7 €",
@@ -57935,7 +57935,7 @@ var ise = $({
 	"b59.o0": "bed3,bed4",
 	"b59.o1": "bed3,bed2"
 }, _se = {
-	label: "Before after pairs",
+	label: "Avant et après",
 	"b0.prompt": "Qu'est-ce qui vient d'abord ?",
 	"b0.o0": "wash1,wash4",
 	"b0.o1": "wash4,wash1",
@@ -58315,7 +58315,7 @@ var ise = $({
 	"b35.o4": "bed4,bed1,bed3,bed2",
 	"b35.o5": "bed4,bed2,bed3,bed1"
 }, Sse = {
-	label: "Before now later",
+	label: "Avant, maintenant, plus tard",
 	"b0.prompt": "Qu'est-ce qui s'est passé avant ?",
 	"b0.o0": "wash1,wash2",
 	"b0.o1": "wash3,wash2",
@@ -58659,7 +58659,7 @@ var ise = $({
 	"b35.o3": "dog,box,rabbit,cat",
 	"b35.o4": "rabbit,box,cat,dog"
 }, Dse = {
-	label: "Behind or in front",
+	label: "Devant ou derrière ?",
 	"b0.prompt": "L’ours est derrière la boîte.",
 	"b0.o0": "bear,box,_",
 	"b0.o1": "_,box,bear",
@@ -59125,7 +59125,7 @@ var ise = $({
 	"b1.o2": "50",
 	"b1.o3": "1"
 }, Lse = {
-	label: "Benchmark body lengths",
+	label: "Longueurs de référence du corps",
 	"b0.prompt": "Un empan fait environ 15 cm. Combien d'empans pour une baguette de 60 cm ?",
 	"b0.o0": "4",
 	"b0.o1": "15",
@@ -59193,7 +59193,7 @@ var ise = $({
 	"b1.o2": "75%",
 	"b1.o3": "10%"
 }, Hse = {
-	label: "Benchmark percent line",
+	label: "La ligne des pourcentages de repère",
 	"b0.prompt": "Sur une droite de 0 à 100 %, où est 25 % ?",
 	"b0.o0": "Au quart du chemin",
 	"b0.o1": "À mi-chemin",
@@ -59297,7 +59297,7 @@ var ise = $({
 	"b17.o2": "f0,f1,f2,f3,x1",
 	"b17.o3": "f0,f1,f2,f3,x2"
 }, qse = {
-	label: "Best buy pair",
+	label: "La meilleure affaire",
 	"b0.prompt": "Qui est le moins cher, 3,50 $ ou 4,80 $ ? Pose l'étiquette dessus.",
 	"b0.o0": "m,_",
 	"b0.o1": "_,m",
@@ -59617,7 +59617,7 @@ var ise = $({
 	"b29.o5": "o0,o1,o2,o4,o3",
 	"b29.o6": "o1,o2,o3,o4,o0"
 }, Qse = {
-	label: "Best buy shelf",
+	label: "L'étagère des bonnes affaires",
 	"b0.prompt": "Chaque carte dit combien tu en as et le prix : nombre → prix. Classe les offres de la meilleure affaire (la moins chère à l'unité) à la plus chère.",
 	"b0.o0": "o0,o1,o2",
 	"b0.o1": "o2,o1,o0",
@@ -59960,7 +59960,7 @@ var ise = $({
 	"b14.o3": "b7,c6,d5,e4,f3,g2,h1",
 	"b14.o4": "b1,c3,d2,e4,e5,h6,h7"
 }, rce = {
-	label: "Best fit slider",
+	label: "La droite d'ajustement",
 	"b0.prompt": "Les points montrent une tendance. Colorie une droite d'ajustement : une case dans chaque colonne, avec à peu près autant de points au-dessus de la droite qu'en dessous.",
 	"b0.o0": "c6,d5,e4,f3,g2,h1",
 	"b0.o1": "a6,b5,c4,d3,e2,f1",
@@ -60168,7 +60168,7 @@ var ise = $({
 	"b14.o3": "line1,pie1,bar1,bar2,line2,pie2",
 	"b14.o4": "line1,pie2,bar1,bar2,pie1,line2"
 }, cce = {
-	label: "Best graph chooser",
+	label: "Le meilleur graphique",
 	"b0.prompt": "Quel graphique répond le mieux à chaque question ? Dépose la question sous le graphique.",
 	"b0.o0": "line0,line1,bar0,bar1",
 	"b0.o1": "bar0,line1,line0,bar1",
@@ -60501,7 +60501,7 @@ var ise = $({
 	"b1.o2": "Only sometimes",
 	"b1.o3": "Cannot tell"
 }, vce = {
-	label: "Biased sample survey spotter",
+	label: "Repérer un sondage biaisé",
 	"b0.prompt": "Une enquête interroge seulement les membres d'un club de sport sur la télé. Biaisée ?",
 	"b0.o0": "Oui",
 	"b0.o1": "No",
@@ -61796,7 +61796,7 @@ var ise = $({
 	"b27.o2": "÷ 100",
 	"b27.o3": "÷ 10"
 }, Uce = {
-	label: "Bigger or smaller sorter",
+	label: "Plus grand ou plus petit",
 	"b0.prompt": "÷ 100 rend-il 38 plus grand ou plus petit ?",
 	"b0.o0": "Plus petit",
 	"b0.o1": "Plus grand",
@@ -61994,7 +61994,7 @@ var ise = $({
 	"b1.o2": "Same",
 	"b1.o3": "Cannot tell"
 }, Jce = {
-	label: "Bigger slice battle",
+	label: "Bataille de la plus grande part",
 	"b0.prompt": "Laquelle est plus grande : 3/8 ou 5/8 ?",
 	"b0.o0": "5/8",
 	"b0.o1": "3/8",
@@ -62086,7 +62086,7 @@ var ise = $({
 	"b17.o0": "_,m",
 	"b17.o1": "m,_"
 }, $ce = {
-	label: "Bigger slice duel",
+	label: "Duel de la plus grande part",
 	"b0.prompt": "Qui est le plus grand, 3/8 ou 2/8 ? Glisse la couronne dessus.",
 	"b0.o0": "m,_",
 	"b0.o1": "_,m",
@@ -62318,7 +62318,7 @@ var ise = $({
 	"b26.o2": "2|7|8",
 	"b26.o3": "4|7|6"
 }, ile = {
-	label: "Bigger smaller basket",
+	label: "Le panier plus grand, plus petit",
 	"b0.prompt": "Mets-en plus dans l’autre panier.",
 	"b0.o0": "4|1|2",
 	"b0.o1": "6|1|0",
@@ -62723,7 +62723,7 @@ var mle = $({
 	"b11.o2": "t72,t16,t24,t36,t48",
 	"b11.o3": "t72,t36,t24,t16,t48"
 }, Sle = {
-	label: "Biggest tile",
+	label: "La plus grande tuile",
 	"b0.prompt": "Un sol mesure 12 sur 18. Un carreau carré le couvre exactement quand son côté divise 12 et 18. Trie les carreaux.",
 	"b0.o0": "t6,t2,t3,t4,t9",
 	"b0.o1": "t4,t2,t3,t6,t9",
@@ -63081,7 +63081,7 @@ var mle = $({
 	"b14.o3": "g0,g1,g2,g1,g1,g4,g5,g6,g7",
 	"b14.o4": "g0,g1,g2,g1,g3,g2,g5,g9,g7"
 }, Mle = {
-	label: "Binomial area lab",
+	label: "Laboratoire de l'aire binomiale",
 	"b0.prompt": "Construis le rectangle de (x + 2)(x + 3) : glisse l'aire de chaque tuile à sa place, puis lis les quatre parties.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g1,g3,g6,g5,g4,g7",
@@ -63395,7 +63395,7 @@ var mle = $({
 	"b35.o2": "124",
 	"b35.o3": "25"
 }, Lle = {
-	label: "Block builder trade mat",
+	label: "Le tapis d'échange de blocs",
 	"b0.prompt": "Le tapis montre 1 plaque de cent. Quel nombre est construit ?",
 	"b0.o0": "100",
 	"b0.o1": "1",
@@ -63722,7 +63722,7 @@ var mle = $({
 	"b19.o2": "Blue",
 	"b19.o3": "Green"
 }, Hle = {
-	label: "Block graph stack",
+	label: "Le graphique en blocs",
 	"b0.prompt": "Votes : rouge 3, bleu 2. Empile un bloc pour chaque vote.",
 	"b0.o0": "2|3|2",
 	"b0.o1": "3|2|2",
@@ -63912,7 +63912,7 @@ var mle = $({
 	"b1.o2": "7",
 	"b1.o3": "60"
 }, qle = {
-	label: "Block to bar switch",
+	label: "Des blocs aux barres",
 	"b0.prompt": "Un diagramme en blocs montre 4 blocs bleus pour les vélos. En barre, quelle hauteur ?",
 	"b0.o0": "4",
 	"b0.o1": "1",
@@ -64015,7 +64015,7 @@ var mle = $({
 	"b3.o2": "6",
 	"b3.o3": "8"
 }, Qle = {
-	label: "Block tower model",
+	label: "Modèle de tour de blocs",
 	"b0.prompt": "Une tour a 2 cubes sur 2 cubes. Combien de cubes ?",
 	"b0.o0": "4",
 	"b0.o1": "2",
@@ -64153,7 +64153,7 @@ var mle = $({
 	"b14.o3": "2|9|8",
 	"b14.o4": "2|11|6"
 }, rue = {
-	label: "Bond bubble pop",
+	label: "Éclater les bulles de paires",
 	"b0.prompt": "8 bulles en tout. 3 sont sur l'assiette de gauche. Mets les autres sur l'assiette de droite.",
 	"b0.o0": "0|3|5",
 	"b0.o1": "1|2|5",
@@ -64389,7 +64389,7 @@ var mle = $({
 	"b16.o3": "c0,c2",
 	"b16.o4": "c0,c5"
 }, cue = {
-	label: "Bond pairs memory",
+	label: "Mémoire des paires",
 	"b0.prompt": "Retourne les cartes et trouve les deux qui font 10. Touche-les.",
 	"b0.o0": "c0,c3",
 	"b0.o1": "c0",
@@ -64620,7 +64620,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b14.o1": "a,m,l",
 	"b14.o2": "l,a,m"
 }, hue = {
-	label: "Bracket bandit",
+	label: "Le bandit des parenthèses",
 	"b0.prompt": "Calcule 3 + 4 × 2 étape par étape. Trie les étapes : les justes et les erreurs.",
 	"b0.o0": "m,a,o",
 	"b0.o1": "o,a,m",
@@ -64794,7 +64794,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g0,g6,g7,g8,g4,g9,g3,g5,g10,g9,g6,g11",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g0,g6,g7,g8,g4,g9,g10,g5,g3,g9,g6,g12"
 }, bue = {
-	label: "Bracket bonanza",
+	label: "La fête des parenthèses",
 	"b0.prompt": "(3 + 4) × 2 : calcule d'abord les parenthèses, puis termine.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g5,g6,g7,g9,g3",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g10,g5,g6,g7,g9,g9",
@@ -64961,7 +64961,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g9",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g10"
 }, Tue = {
-	label: "Bracket boxes",
+	label: "Les boîtes à parenthèses",
 	"b0.prompt": "Développe 2(x + 3) : multiplie chaque terme de la parenthèse par le nombre à l'extérieur.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g4",
@@ -65190,7 +65190,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b17.o5": "f0,f1,x2,f3,f4,a5",
 	"b17.o6": "f0,f1,a2,f3,f4,x2"
 }, Aue = {
-	label: "Bracket first",
+	label: "Les parenthèses d'abord",
 	"b0.prompt": "Calcule 3 × (4 + 2). Les parenthèses d'abord.",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,a6",
@@ -65439,7 +65439,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "z1,c1,c2"
 }, Fue = {
-	label: "Bracket or not match",
+	label: "Avec parenthèses ou non ?",
 	"b0.prompt": "Calcule chaque expression et associe-la à sa valeur. Les parenthèses changent l'ordre !",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -65666,7 +65666,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b15.o4": "c1,c2,c0",
 	"b15.o5": "x0,c1,c2"
 }, Bue = {
-	label: "Bracket or not pairs",
+	label: "Avec parenthèses ou non ?",
 	"b0.prompt": "Calcule chaque opération. Glisse la carte-résultat sur l'opération qui lui correspond.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -65894,7 +65894,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b11.o3": "c5,c2,c4,c1,c3,c0",
 	"b11.o4": "c0,c1,c4,c2,c3,c5"
 }, Gue = {
-	label: "Bracket your negative",
+	label: "Mettre le négatif entre parenthèses",
 	"b0.prompt": "Des élèves mettent un nombre négatif dans une expression. Trie leurs réponses : justes, ou une parenthèse ou un signe a-t-il été oublié ?",
 	"b0.o0": "c0,c2,c1,c3",
 	"b0.o1": "c1,c2,c0,c3",
@@ -66150,7 +66150,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b27.o2": "DLLDLLU",
 	"b27.o3": "DLLDLLUUU"
 }, Xue = {
-	label: "Bridge builder",
+	label: "Le bâtisseur de ponts",
 	"b0.prompt": "Fais traverser la rivière au robot.",
 	"b0.o0": "DRRU",
 	"b0.o1": "RR",
@@ -66436,7 +66436,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b17.o3": "a73,j8,a70,j5,a65",
 	"b17.o4": "a73,j3,a64,j5,a65"
 }, tde = {
-	label: "Bridge down number line",
+	label: "Pont sur la droite numérique",
 	"b0.prompt": "41 - 6 : mets les deux sauts dans l'ordre. Pose-toi sur la dizaine, puis saute encore.",
 	"b0.o0": "j1,j5",
 	"b0.o1": "j5,j1",
@@ -66657,7 +66657,7 @@ var due = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), fue = $({
 	"b14.o2": "v94,v104,v103",
 	"b14.o3": "v94,v102,v103"
 }, ode = {
-	label: "Bridge the ten hops",
+	label: "Franchir la dizaine",
 	"b0.prompt": "8 + 5 : saute d'abord jusqu'à la dizaine, puis saute le reste. Où tombe la grenouille ?",
 	"b0.o0": "v8,v10,v13",
 	"b0.o1": "v8,v13,v10",
@@ -67593,7 +67593,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "1275 − 2375 = 3650",
 	"b1.o3": "3650 + 1275 = 2375"
 }, Cde = {
-	label: "Broken column hunt",
+	label: "La chasse à la colonne cassée",
 	"b0.prompt": "Une marionnette dit 4000 − 1200 = 2900. Vérifie avec +. Juste ou faux ?",
 	"b0.o0": "Faux : 2800",
 	"b0.o1": "Juste",
@@ -67901,7 +67901,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b89.o0": "First",
 	"b89.o1": "Second"
 }, Ode = {
-	label: "Build a longer",
+	label: "Construire plus long",
 	"b0.prompt": "Compte les blocs : lequel est le plus long ?",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -68680,7 +68680,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o3": "30",
 	"b14.o4": "12"
 }, Nde = {
-	label: "Build a pie from percentages",
+	label: "Construire un camembert",
 	"b0.prompt": "Un diagramme circulaire a des secteurs de 60 %, 40 %. En partant du haut, fais glisser le marqueur sur les 100 cases jusqu'à l'endroit où va le séparateur numéro 1.",
 	"b0.o0": "60",
 	"b0.o1": "100",
@@ -68844,7 +68844,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o0": "0|4|4|4",
 	"b11.o1": "1|3|4|4"
 }, Rde = {
-	label: "Build an unfair game",
+	label: "Construire un jeu injuste",
 	"b0.prompt": "Une roulette a 9 secteurs égaux. Colorie-les tous pour que le rouge deux fois plus probable que le bleu.",
 	"b0.o0": "0|6|3",
 	"b0.o1": "0|4|5",
@@ -69020,7 +69020,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, Ude = {
-	label: "Build and view",
+	label: "Construire et observer",
 	"b0.prompt": "Voici les solides vus de face. Glisse chaque vue plate sur son solide.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -69217,7 +69217,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g2,g3,g1,g4,g3,g1,g2,g5,g3,g3,g3,g6,g8,g4,g4",
 	"b14.o3": "g0,g1,g2,g3,g4,g2,g3,g1,g4,g3,g1,g2,g5,g9,g9,g9,g6,g7,g4,g4"
 }, Jde = {
-	label: "Build from views",
+	label: "Construire d'après les vues",
 	"b0.prompt": "Voici le plan vu de dessus : chaque nombre est une pile de cubes. Écris ce qu'on voit de face (la pile la plus haute de chaque colonne), puis compte tous les cubes.",
 	"b0.o0": "g0,g1,g2,g3,g2,g4,g5,g1,g4,g6,g7,g3",
 	"b0.o1": "g0,g1,g2,g3,g2,g4,g5,g1,g2,g6,g7,g3",
@@ -69408,7 +69408,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "1|6|2|4|4",
 	"b11.o4": "1|6|2|5|3"
 }, $de = {
-	label: "Build graph from data",
+	label: "Construire le graphique",
 	"b0.prompt": "La classe a voté : chats 3, chiens 5. Construis le graphique avec un bloc pour chaque vote.",
 	"b0.o0": "0|3|5",
 	"b0.o1": "1|2|5",
@@ -69694,7 +69694,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b29.o3": "base:tall,mid:block,top:block,up:base",
 	"b29.o4": "base:base,mid:ball,top:block,up:base"
 }, ife = {
-	label: "Build it again",
+	label: "Construire à nouveau",
 	"b0.prompt": "Construis la tour.",
 	"b0.o0": "base:base,top:block",
 	"b0.o1": "base:tall,top:block",
@@ -70128,7 +70128,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b29.o5": "2|10|9|8",
 	"b29.o6": "2|1|9|17"
 }, lfe = {
-	label: "Build it with blocks",
+	label: "Construire avec des blocs",
 	"b0.prompt": "Construis 12. Les barres sont les dizaines et les cubes les unités : glisse-les sur les tapis.",
 	"b0.o0": "3|3|1|2",
 	"b0.o1": "2|4|2|1",
@@ -70493,7 +70493,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o3": "9|3",
 	"b17.o4": "12|0"
 }, mfe = {
-	label: "Build the fraction",
+	label: "Construire la fraction",
 	"b0.prompt": "Construis 3/4. Chaque part vaut 1/4. Glisse les parts sur l'assiette.",
 	"b0.o0": "1|3",
 	"b0.o1": "2|2",
@@ -70868,7 +70868,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b45.o2": "8",
 	"b45.o3": "861"
 }, yfe = {
-	label: "Bundle the hundred",
+	label: "Regrouper la centaine",
 	"b0.prompt": "Voici 10 barres de dix. Dix dizaines font une centaine. Combien de centaines peux-tu regrouper ?",
 	"b0.o0": "1",
 	"b0.o1": "10",
@@ -71197,7 +71197,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b16.o1": "1|9|10|10",
 	"b16.o2": "10|0|10|10"
 }, wfe = {
-	label: "Bundle the sticks",
+	label: "Regrouper les bâtonnets",
 	"b0.prompt": "Voici 10 bâtonnets seuls. Glisse-les dans le lien pour faire un fagot de dix.",
 	"b0.o0": "0|10",
 	"b0.o1": "1|9",
@@ -71389,7 +71389,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o3": "w2,r1,w0,w1,r0",
 	"b14.o4": "r0,w0,r1,w1,w2"
 }, kfe = {
-	label: "Calculator keystroke detective",
+	label: "L'enquêteur de la calculatrice",
 	"b0.prompt": "Je veux 12 ÷ (3 + 1) = 3. Vérifie chaque suite de touches : lesquelles donnent le bon résultat, et lesquelles un mauvais ?",
 	"b0.o0": "r0,w0,w1",
 	"b0.o1": "w0,r0,w1",
@@ -71717,7 +71717,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b35.o4": "beach,football,art",
 	"b35.o5": "beach,art,football"
 }, Pfe = {
-	label: "Calendar corner",
+	label: "Le coin du calendrier",
 	"b0.prompt": "Le football, c'était hier. La natation, c'est aujourd'hui.",
 	"b0.o0": "football,swimming",
 	"b0.o1": "swimming,football",
@@ -72073,7 +72073,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o5": "f0,f1,f2,f3,x2,f5,a6,f7,a8",
 	"b17.o6": "f0,f1,f2,f3,a4,f5,a6,f7,x2"
 }, zfe = {
-	label: "Calendar day count",
+	label: "Compter les jours du calendrier",
 	"b0.prompt": "2023 : pas une année bissextile. Combien de jours l'année a-t-elle ?",
 	"b0.o0": "f0,f1,f2,f3,a4,f5",
 	"b0.o1": "f0,f1,f2,f3,x0,f5",
@@ -72273,7 +72273,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o1": "g0,g1,g9,g3,g2,g4,g5,g3,g0,g6",
 	"b11.o2": "g0,g1,g2,g3,g10,g4,g5,g3,g6,g11"
 }, Wfe = {
-	label: "Calendar jump",
+	label: "Saut dans le calendrier",
 	"b0.prompt": "Nous sommes le 3 et le mois a 30 jours. Quelle est la date dans 2 semaines ?",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g6,g3,g2",
@@ -72430,7 +72430,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b3.o2": "Sunday",
 	"b3.o3": "Wednesday"
 }, Yfe = {
-	label: "Calendar treasure dates",
+	label: "Les dates du trésor",
 	"b0.prompt": "Sur un calendrier, le 1er du mois est un lundi. Quel jour est le 8 ?",
 	"b0.o0": "Lundi",
 	"b0.o1": "Dimanche",
@@ -72508,7 +72508,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "Only with a card",
 	"b1.o3": "Cannot tell"
 }, epe = {
-	label: "Can i afford it",
+	label: "Est-ce que je peux me le payer ?",
 	"b0.prompt": "Un panier coûte environ 40 $ à l'estimation. Tu as 50 $. Peux-tu le payer ?",
 	"b0.o0": "Oui, probablement",
 	"b0.o1": "Non, certainement pas",
@@ -72618,7 +72618,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "y199-305-480,n250-340-460,y315-275-405,n360-290-395",
 	"b11.o4": "y199-305-480,n360-290-395,n250-340-460,y315-275-405"
 }, ape = {
-	label: "Can i buy it",
+	label: "Est-ce que je peux l'acheter ?",
 	"b0.prompt": "Tu as 10,00 $. Peux-tu acheter tout ce qui est sur chaque liste ? Trie les listes.",
 	"b0.o0": "y320-400,y200-700,n650-550,n450-600",
 	"b0.o1": "n650-550,y200-700,y320-400,n450-600",
@@ -72806,7 +72806,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "g0,g1,g2,g3,g7",
 	"b11.o4": "g0,g1,g2,g3,g8"
 }, upe = {
-	label: "Can or box",
+	label: "Canette ou boîte",
 	"b0.prompt": "Qui contient le plus : une boîte de 4 cm sur 4 cm sur 4 cm, ou une boîte de conserve de rayon 2 cm et de hauteur 4 cm ? Calcule les deux volumes avec 3,14, puis glisse le signe.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g6,g3,g4",
@@ -72981,7 +72981,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "i8,i1,i2,i3,i4,i5,i6,i7,i0",
 	"b11.o4": "i0,i6,i2,i3,i4,i5,i1,i7,i8"
 }, hpe = {
-	label: "Carroll table fill",
+	label: "Remplir le tableau de Carroll",
 	"b0.prompt": "Mets chaque objet dans la case où les mots de sa ligne et de sa colonne sont vrais.",
 	"b0.o0": "i0,i1,i2,i3",
 	"b0.o1": "i3,i1,i2,i0",
@@ -73228,7 +73228,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o5": "f0,x2,a2,a3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,a16,a17,a18,a19",
 	"b17.o6": "f0,a1,a2,a3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,a16,a17,a18,x2"
 }, bpe = {
-	label: "Carry the crate",
+	label: "Porter la caisse",
 	"b0.prompt": "345 + 278 : additionne colonne par colonne. Glisse les retenues et le résultat.",
 	"b0.o0": "f0,f1,a2,a3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,a17,a18,a19",
 	"b0.o1": "f0,f1,x0,a3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,a17,a18,a19",
@@ -73491,7 +73491,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o2": "g0,g1,g1,g1,g1,g0,g0,g0,g2,g3,g4,g5,g6,g0,g7,g2,g1,g8,g0,g10,g1,g10,g8,g7",
 	"b14.o3": "g0,g10,g10,g10,g10,g0,g0,g0,g2,g3,g4,g5,g6,g0,g7,g2,g1,g8,g0,g1,g9,g1,g10,g7"
 }, Tpe = {
-	label: "Cashier counter",
+	label: "La caisse",
 	"b0.prompt": "Deux articles coûtent 3,45\xA0$ et 2,80\xA0$. Additionne-les en colonnes (montants en cents).",
 	"b0.o0": "g0,g1,g2,g0,g0,g3,g4,g5,g6,g7,g8,g2,g0,g9,g7,g5",
 	"b0.o1": "g0,g2,g2,g0,g0,g3,g4,g5,g6,g7,g8,g2,g0,g5,g7,g5",
@@ -73700,7 +73700,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o2": "f0,f1,x1",
 	"b17.o3": "f0,f1,x2"
 }, Ape = {
-	label: "Cents dollars swap",
+	label: "Échanger centimes et dollars",
 	"b0.prompt": "3,00 $ font combien de cents ?",
 	"b0.o0": "f0,f1,a2,f3",
 	"b0.o1": "f0,f1,x0,f3",
@@ -73894,7 +73894,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "c1,i0,p0,p2,c2,i1",
 	"b11.o4": "c1,i1,p0,p2,i0,c2"
 }, Fpe = {
-	label: "Certain or impossible sort",
+	label: "Certain ou impossible ?",
 	"b0.prompt": "Ça arrive toujours, ça pourrait arriver, ou ça n'arrive jamais ? Dépose chaque événement dans sa boîte.",
 	"b0.o0": "c0,c1,i0,i1",
 	"b0.o1": "i0,c1,c0,i1",
@@ -74098,7 +74098,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b19.o2": "g0,g1,g2,g3,g4,g3,g5,g6,g9",
 	"b19.o3": "g0,g1,g2,g3,g10,g3,g11,g6,g12"
 }, Bpe = {
-	label: "Chain the change",
+	label: "Enchaîner la monnaie",
 	"b0.prompt": "Un prix varie de +10 %, puis de +10 %. Trouve le multiplicateur de chaque étape et celui de toute la chaîne.",
 	"b0.o0": "g0,g0,g1,g2,g3,g2,g3,g4,g5",
 	"b0.o1": "g0,g0,g1,g2,g3,g2,g3,g4,g6",
@@ -74326,7 +74326,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o5": "impossible2,unlikely2,even2,certain2,likely2",
 	"b11.o6": "unlikely2,even2,likely2,certain2,impossible2"
 }, Gpe = {
-	label: "Chance word line",
+	label: "La ligne des mots de chance",
 	"b0.prompt": "Mets chaque événement à sa place sur la ligne, de impossible à certain.",
 	"b0.o0": "impossible0,even0,certain0",
 	"b0.o1": "certain0,even0,impossible0",
@@ -74544,7 +74544,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g3,g10",
 	"b17.o3": "g0,g1,g2,g3,g11,g5,g6,g7,g4,g3,g12"
 }, Xpe = {
-	label: "Change check till",
+	label: "Vérifier la monnaie",
 	"b0.prompt": "Deux articles coûtent 8,50\xA0$ et 5,25\xA0$. Tu paies 20,00\xA0$. Calcule le total, puis vérifie la monnaie.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g0,g5,g6,g7,g4,g3,g9",
@@ -74738,7 +74738,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o1": "g0,g1,g2,g3,g4,g1,g7,g3,g6,g1,g5,g3,g8,g9,g10,g11,g12,g2,g13",
 	"b14.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g3,g8,g9,g10,g11,g2,g12,g13"
 }, tme = {
-	label: "Change count back",
+	label: "Compter la monnaie à rebours",
 	"b0.prompt": "Un article coûte 3,65\xA0$ et tu paies 5,00\xA0$. Compte par bonds pour trouver la monnaie.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g3,g8,g9,g10,g11,g2,g12",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g7,g3,g6,g1,g5,g3,g8,g9,g10,g11,g2,g12",
@@ -74950,7 +74950,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o3": "e3,e1,e2,e0",
 	"b17.o4": "e3,e2,e1,e0"
 }, ome = {
-	label: "Change detective",
+	label: "L'enquêteur de la monnaie",
 	"b0.prompt": "Arrondis d'abord chaque prix. Chaque estimation de facture est-elle bonne, ou beaucoup trop loin ?",
 	"b0.o0": "e0,e1,e2,e3",
 	"b0.o1": "e2,e1,e0,e3",
@@ -75132,7 +75132,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "47 − 43 = 90",
 	"b1.o3": "43 + 90 = 47"
 }, dme = {
-	label: "Check it two ways",
+	label: "Vérifier de deux façons",
 	"b0.prompt": "Vérifie 37 + 28 = 65 par estimation. Est-ce proche de 60 + 30 ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -75234,7 +75234,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "c4,c1,c2,c3,c0",
 	"b11.o4": "c0,c2,c1,c3,c4"
 }, gme = {
-	label: "Check your x",
+	label: "Vérifier ton x",
 	"b0.prompt": "Mets chaque valeur à la place de x dans 5x − 2 = 18. Trie les valeurs : lesquelles sont des solutions ?",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -75413,7 +75413,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g7",
 	"b14.o3": "g0,g1,g2,g3,g4,g8"
 }, xme = {
-	label: "Chessboard grains",
+	label: "Les grains de l'échiquier",
 	"b0.prompt": "Les grains doublent à chaque case de l'échiquier. Dépose les nombres de grains qui manquent.",
 	"b0.o0": "g0,g1,g2,g1,g3,g1,g4,g1,g5",
 	"b0.o1": "g0,g1,g2,g1,g4,g1,g3,g1,g5",
@@ -75558,7 +75558,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "Times (×)",
 	"b1.o3": "Share (÷)"
 }, Eme = {
-	label: "Choose the operation",
+	label: "Choisir l'opération",
 	"b0.prompt": "Mia a 9 autocollants et en achète 5 de plus. Quelle opération ?",
 	"b0.o0": "Plus (+)",
 	"b0.o1": "Moins (−)",
@@ -75668,7 +75668,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o1": "g0,g1,g2,g3,g6,g5,g4,g3,g7,g6",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g3,g7,g9"
 }, jme = {
-	label: "Chunking by tens",
+	label: "Regrouper par dizaines",
 	"b0.prompt": "Combien de groupes de 20 dans 240 ? Prends d'abord un gros morceau de groupes, puis le reste.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g7,g6",
 	"b0.o1": "g0,g1,g2,g3,g6,g5,g4,g3,g7,g6",
@@ -75843,7 +75843,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g7,g4,g3,g10",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g0,g7,g0,g3,g11"
 }, Ime = {
-	label: "Circle cut and unroll",
+	label: "Couper et dérouler le cercle",
 	"b0.prompt": "Découpe un disque de 1 cm de rayon en parts et dispose-les en rectangle. Ses côtés font environ 3,14 × r et r, donc aire = 3,14 × r × r.",
 	"b0.o0": "g0,g1,g2,g1,g2,g3,g0",
 	"b0.o1": "g0,g1,g2,g1,g4,g3,g5",
@@ -76028,7 +76028,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g5,g6",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g9,g7,g8,g5,g11"
 }, Vme = {
-	label: "Circle in a box measure",
+	label: "Le cercle dans la boîte",
 	"b0.prompt": "Un cercle remplit exactement une boîte carrée. La boîte mesure 10 cm de large. Trouve le diamètre, puis le rayon.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g1,g3,g6,g5,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g1,g3,g6,g5,g1",
@@ -76264,7 +76264,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, Kme = {
-	label: "Circle label and measure",
+	label: "Les parties du cercle",
 	"b0.prompt": "Lis chaque description et dépose dessus le nom de la partie du cercle.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -76448,7 +76448,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "Arc",
 	"b1.o3": "Chord"
 }, Zme = {
-	label: "Circle parts label match",
+	label: "Associer les parties du cercle",
 	"b0.prompt": "Quelle partie passe par le centre d'un bord à l'autre ?",
 	"b0.o0": "Diamètre",
 	"b0.o1": "Rayon",
@@ -76546,7 +76546,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g1,g2,g7,g4",
 	"b11.o3": "g0,g1,g2,g3,g8,g5,g6,g1,g2,g7,g4"
 }, nhe = {
-	label: "Circumference estimate check",
+	label: "Vérifier l'estimation du périmètre",
 	"b0.prompt": "Un cercle a un diamètre de 2 cm. Estime d'abord sa circonférence avec 3, puis calcule-la avec 3,14.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g1,g2,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g9,g5,g6,g1,g2,g7,g10",
@@ -77380,7 +77380,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "A whole turn",
 	"b1.o3": "Three quarters"
 }, _he = {
-	label: "Clock hand turns",
+	label: "Les tours de l'aiguille",
 	"b0.prompt": "L'aiguille passe de 12 à 3. Quelle fraction de tour est-ce ?",
 	"b0.o0": "Un quart de tour",
 	"b0.o1": "Un demi-tour",
@@ -77562,7 +77562,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b17.o5": "f0,a3,f2,a1,f4,f5,a6,f7",
 	"b17.o6": "f0,a6,f2,a3,f4,f5,a1,f7"
 }, She = {
-	label: "Clock jump line",
+	label: "La ligne des sauts d'horloge",
 	"b0.prompt": "Combien de temps de 3:15 à 3:50 ? Glisse les deux sauts et le total en minutes.",
 	"b0.o0": "f0,a1,f2,a3,f4,f5,a6,f7",
 	"b0.o1": "f0,x0,f2,a3,f4,f5,a6,f7",
@@ -77844,7 +77844,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b12.o5": "c5,c1,c2,c3,c4,c0",
 	"b12.o6": "c0,c2,c1,c3,c4,c5"
 }, Dhe = {
-	label: "Clock match snap",
+	label: "Associer les horloges",
 	"b0.prompt": "Associe chaque horloge à son heure en chiffres.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -79028,7 +79028,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o3": "8:00",
 	"b11.o4": "10:00"
 }, Lhe = {
-	label: "Clock remainders",
+	label: "Les restes sur l'horloge",
 	"b0.prompt": "L'horloge indique 9 h. Que montrera-t-elle 5 heures plus tard ? Règle les aiguilles.",
 	"b0.o0": "2:00",
 	"b0.o1": "5:00",
@@ -79154,7 +79154,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "180° clockwise",
 	"b1.o3": "360° clockwise"
 }, Hhe = {
-	label: "Clock turn match",
+	label: "Associer les tours d'horloge",
 	"b0.prompt": "Un quart de tour horaire et trois quarts antihoraires arrivent au même endroit. Vrai ?",
 	"b0.o0": "Vrai",
 	"b0.o1": "Faux",
@@ -79288,7 +79288,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, qhe = {
-	label: "Clock twins match",
+	label: "Les horloges jumelles",
 	"b0.prompt": "Le lever de soleil, c'est le matin ; le coucher de soleil, l'après-midi ou le soir. Associe chaque heure sur 12 heures à sa jumelle sur 24 heures.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -79458,7 +79458,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "South",
 	"b1.o3": "North"
 }, Qhe = {
-	label: "Clockwise or not sort",
+	label: "Dans le sens horaire ou non",
 	"b0.prompt": "Tourne dans le sens des aiguilles d'une montre. Quelle est la direction ?",
 	"b0.o0": "Sens horaire",
 	"b0.o1": "Sens antihoraire",
@@ -79586,7 +79586,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o3": "l0,m0,e0,e1,l1,m1",
 	"b14.o4": "l0,m1,e0,e1,m0,l1"
 }, rge = {
-	label: "Closest to half sorter",
+	label: "Proche de la moitié",
 	"b0.prompt": "Chaque nombre est-il plus petit qu'un demi, égal à un demi, ou plus grand ? Trie les cartes.",
 	"b0.o0": "l0,l1,m0,m1",
 	"b0.o1": "m0,l1,l0,m1",
@@ -79750,7 +79750,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "g",
 	"b1.o3": "ml"
 }, cge = {
-	label: "Cm or m pick",
+	label: "Centimètres ou mètres ?",
 	"b0.prompt": "Quelle unité convient à la longueur d'un crayon ?",
 	"b0.o0": "cm",
 	"b0.o1": "m",
@@ -80100,7 +80100,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b12.o1": "o0,o0,o2,o3",
 	"b12.o2": "o0,o1,o2,x0"
 }, vge = {
-	label: "Coin and dice outcomes",
+	label: "Tous les résultats",
 	"b0.prompt": "On lance une pièce. Liste toutes les façons dont elle peut tomber.",
 	"b0.o0": "o0,o1",
 	"b0.o1": "o0,o0",
@@ -80222,7 +80222,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b1.o2": "Two 2-cent coins",
 	"b1.o3": "One 1-cent coin"
 }, Cge = {
-	label: "Coin combinations same amount",
+	label: "Des pièces, même somme",
 	"b0.prompt": "Payer 10 centimes : quelles pièces font cela ?",
 	"b0.o0": "Dix pièces de 1 centime",
 	"b0.o1": "Deux pièces de 1 centime",
@@ -80386,7 +80386,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b29.o1": "c10",
 	"b29.o2": "c2"
 }, Oge = {
-	label: "Coin match shop",
+	label: "La boutique des pièces",
 	"b0.prompt": "Associe chaque pièce à son nombre.",
 	"b0.o0": "c1,c2",
 	"b0.o1": "c2,c1",
@@ -86836,7 +86836,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b15.o718": "c1,n100,n50,n20,c2,c10",
 	"b15.o719": "c1,n100,n50,n20,c10,c2"
 }, Nge = {
-	label: "Coin memory",
+	label: "Mémoire des pièces",
 	"b0.prompt": "Trouve la pièce de chaque nombre.",
 	"b0.o0": "c1,c2,c5",
 	"b0.o1": "c1,c5,c2",
@@ -93265,7 +93265,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b14.o4": "c1,c5,c50,c2,c1",
 	"b14.o5": "c1,c50,c2,c5,c1"
 }, Rge = {
-	label: "Coin purse fill",
+	label: "Remplir le porte-monnaie",
 	"b0.prompt": "Fais 9 avec exactement 3 pièces. Remplis la bourse.",
 	"b0.o0": "c5,c2,c2",
 	"b0.o1": "c2,c5,c1",
@@ -93506,7 +93506,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b16.o1": "🪙5",
 	"b16.o2": "🪙2"
 }, Uge = {
-	label: "Coin row race",
+	label: "La course des pièces",
 	"b0.prompt": "Fais 6 avec des pièces 🪙2. Aligne-les dans la rangée.",
 	"b0.o0": "3|3",
 	"b0.o1": "4|2",
@@ -94102,7 +94102,7 @@ var mde = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), hde = $({
 	"b18.o1": "One of the pair",
 	"b18.o2": "The other of the pair"
 }, Jge = {
-	label: "Coin snap",
+	label: "Pièces en vitesse",
 	"b0.prompt": "Ces deux-là disent-elles la même chose ? SNAP si oui !",
 	"b0.o0": "SNAP ! Pareilles",
 	"b0.o1": "Pas pareilles",
@@ -95112,7 +95112,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "100",
 	"b1.o3": "5"
 }, x_e = {
-	label: "Column and blocks link",
+	label: "Colonne et blocs",
 	"b0.prompt": "Dans une colonne, une « retenue » correspond à quel mouvement de blocs ?",
 	"b0.o0": "Grouper dix unités en une dizaine",
 	"b0.o1": "Enlever les centaines",
@@ -95270,7 +95270,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o5": "t0,t1,t2,t3,d1,d1,d2,d6",
 	"b14.o6": "t0,t1,t2,t3,d1,d1,d2,d4"
 }, E_e = {
-	label: "Column carry machine",
+	label: "La machine à retenues",
 	"b0.prompt": "La machine additionne 27 + 15. Écris la retenue et la réponse.",
 	"b0.o0": "t0,t1,t2,t3,d1,d4,d2",
 	"b0.o1": "t0,t1,t2,t3,_,d3,d2",
@@ -95524,7 +95524,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b17.o2": "g0,g1,g1,g1,g1,g0,g0,g0,g2,g2,g2,g2,g3,g0,g4,g4,g4,g4,g0,g6,g5,g5,g5,g5",
 	"b17.o3": "g0,g6,g6,g6,g6,g0,g0,g0,g2,g2,g2,g2,g3,g0,g4,g4,g4,g4,g0,g1,g4,g4,g4,g5"
 }, j_e = {
-	label: "Column regroup blocks",
+	label: "Regrouper en colonne",
 	"b0.prompt": "Additionne 358 + 264 en colonnes. Écris 1 au-dessus d'une colonne qui reçoit une retenue, puis la réponse.",
 	"b0.o0": "g0,g1,g1,g0,g0,g2,g3,g4,g5,g6,g7,g8,g0,g7,g6,g6",
 	"b0.o1": "g0,g9,g9,g0,g0,g2,g3,g4,g5,g6,g7,g8,g0,g3,g1,g6",
@@ -95748,7 +95748,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o3": "c2,c0,c3,c1",
 	"b14.o4": "c2,c1,c0,c3"
 }, I_e = {
-	label: "Column slip hunt",
+	label: "La chasse aux erreurs de colonne",
 	"b0.prompt": "Vérifie chaque calcul de décimaux. Trie-les : alignés et justes, ou avec une erreur.",
 	"b0.o0": "c0,c2,c1,c3",
 	"b0.o1": "c1,c2,c0,c3",
@@ -96002,7 +96002,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, V_e = {
-	label: "Column why",
+	label: "Pourquoi en colonne ?",
 	"b0.prompt": "Découpe 12 × 13 en un modèle d'aire de quatre morceaux. Associe chaque morceau à son aire : ce sont les produits partiels de la multiplication posée.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -96578,7 +96578,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b23.o5": "f0,f1,f2,f4,f3",
 	"b23.o6": "f1,f2,f3,f4,f0"
 }, Z_e = {
-	label: "Common denominator lineup",
+	label: "Alignement au même dénominateur",
 	"b0.prompt": "Écris les fractions avec un dénominateur commun, puis range-les de la plus petite à la plus grande.",
 	"b0.o0": "f0,f1,f2,f3",
 	"b0.o1": "f3,f2,f1,f0",
@@ -96913,7 +96913,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, nve = {
-	label: "Common denominator matcher",
+	label: "Parts de même taille",
 	"b0.prompt": "Découpe chaque paire de fractions en parts de même taille. Associe chaque paire à sa version de même taille.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -97179,7 +97179,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b17.o3": "f20,f32,f1,f2,f4,f8,f5,f10,f16,f40",
 	"b17.o4": "f40,f32,f1,f2,f4,f8,f5,f10,f20,f16"
 }, sve = {
-	label: "Common factor venn sort",
+	label: "Diagramme de Venn des diviseurs",
 	"b0.prompt": "Trie les facteurs de 6 et de 8 : seulement 6, les deux, ou seulement 8.",
 	"b0.o0": "f3,f6,f1,f2,f4,f8",
 	"b0.o1": "f4,f6,f1,f2,f3,f8",
@@ -98254,7 +98254,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b11.o1": "g0,g1,g2,g3,g4,g5,g6,g17,g8,g9,g10,g11,g12,g13,g14,g15",
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g15,g8,g9,g10,g11,g12,g13,g14,g7"
 }, Sve = {
-	label: "Compare two groups double bars",
+	label: "Comparer deux groupes",
 	"b0.prompt": "Un diagramme à bandes double montre deux groupes. Pour chaque ligne, trouve de combien la plus longue barre dépasse l'autre.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g7,g11,g12,g7,g13",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g14,g8,g9,g10,g7,g11,g12,g7,g13",
@@ -98388,7 +98388,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b9.o0": "g0,g1,g2,g3,g4,g5",
 	"b9.o1": "g0,g1,g2,g3,g7,g8"
 }, Dve = {
-	label: "Compass circle",
+	label: "Le compas et le cercle",
 	"b0.prompt": "Associe chaque lettre du cercle au nom de la partie qu'elle marque : O est le milieu, r va jusqu'au bord, d traverse, C fait tout le tour.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -98504,7 +98504,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "16 cm",
 	"b1.o3": "2 cm"
 }, Mve = {
-	label: "Compass circle pattern",
+	label: "Motif au compas",
 	"b0.prompt": "Tracer des cercles de même rayon, centre sur le bord de l'autre, donne ?",
 	"b0.o0": "Un motif de fleur",
 	"b0.o1": "Un carré",
@@ -99120,7 +99120,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "North",
 	"b1.o3": "South"
 }, Hve = {
-	label: "Compass rose run",
+	label: "La rose des vents",
 	"b0.prompt": "Face au nord, tu tournes à droite. Vers où fais-tu face ?",
 	"b0.o0": "Est",
 	"b0.o1": "Ouest",
@@ -99263,7 +99263,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o5": "pb1,pb2,pb3,pb5,pb4",
 	"b14.o6": "pb2,pb3,pb4,pb5,pb1"
 }, qve = {
-	label: "Compass studio",
+	label: "L'atelier du compas",
 	"b0.prompt": "Construis la médiatrice du segment PQ. Mets les étapes dans l'ordre.",
 	"b0.o0": "pb1,pb2,pb3,pb4,pb5",
 	"b0.o1": "pb1,pb5,pb4,pb3,pb2",
@@ -99508,7 +99508,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, Qve = {
-	label: "Compatible numbers match",
+	label: "Nombres compatibles",
 	"b0.prompt": "Remplace chaque nombre par un nombre ami, divise, et associe la division à son estimation.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -99931,7 +99931,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b12.o5": "c0,c3,c2,c1",
 	"b12.o6": "c0,c1,c3,c2"
 }, cye = {
-	label: "Complex match",
+	label: "Associer les complexes",
 	"b0.prompt": "Chaque carte est une fraction sur une fraction. Associe-la à sa valeur simple : divise la fraction du dessus par celle du dessous.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -100104,7 +100104,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "9",
 	"b1.o3": "24"
 }, pye = {
-	label: "Compound box builder",
+	label: "Construire la boîte composée",
 	"b0.prompt": "Deux pavés de 12 et 8 cubes sont accolés. Volume total ?",
 	"b0.o0": "20",
 	"b0.o1": "96",
@@ -100207,7 +100207,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b3.o2": "Wavy",
 	"b3.o3": "Round"
 }, vye = {
-	label: "Connect the dots ruler",
+	label: "Relier les points à la règle",
 	"b0.prompt": "Relie deux points avec une règle. Quelle forme tracés-tu ?",
 	"b0.o0": "Une ligne droite",
 	"b0.o1": "Une courbe",
@@ -100970,7 +100970,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "Only with a taxi",
 	"b1.o3": "Cannot tell"
 }, Nye = {
-	label: "Connection catcher",
+	label: "L'attrapeur de liens",
 	"b0.prompt": "Le train A arrive à 10 h 20. La correspondance part à 10 h 35. Y a-t-il le temps ?",
 	"b0.o0": "Oui, 15 minutes",
 	"b0.o1": "No",
@@ -101082,7 +101082,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b12.o3": "g0,g1,g2,g1,g3,g1,g4,g5,g6,g7,g1,g10",
 	"b12.o4": "g0,g1,g2,g1,g3,g1,g4,g5,g11,g7,g1,g8"
 }, Rye = {
-	label: "Consecutive sum lab",
+	label: "Laboratoire des sommes consécutives",
 	"b0.prompt": "Additionne 2 nombres consécutifs\xA0: n + (n + 1). Écris le total comme un nombre de n plus une constante.",
 	"b0.o0": "g0,g1,g2,g3,g4,g0,g1,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g0,g1,g6",
@@ -101310,7 +101310,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, Uye = {
-	label: "Conversion chain builder",
+	label: "La chaîne de conversions",
 	"b0.prompt": "Chaque conversion demande une chaîne de facteurs. Associe la conversion à la chaîne qui change une unité en l'autre.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -101494,7 +101494,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "50",
 	"b1.o3": "0.05"
 }, Jye = {
-	label: "Conversion table builder",
+	label: "Construire le tableau de conversion",
 	"b0.prompt": "Dans un tableau de conversion grammes-kilogrammes, 1000 g = ? kg",
 	"b0.o0": "1",
 	"b0.o1": "10",
@@ -101562,7 +101562,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b1.o2": "7 kg",
 	"b1.o3": "340 g"
 }, $ye = {
-	label: "Convert then solve",
+	label: "Convertir puis résoudre",
 	"b0.prompt": "Un ruban fait 2 m et un morceau 50 cm. Longueur totale en cm ?",
 	"b0.o0": "250 cm",
 	"b0.o1": "52 cm",
@@ -102320,7 +102320,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b11.o3": "y0,n0,y1,n1",
 	"b11.o4": "y0,n1,n0,y1"
 }, mbe = {
-	label: "Corner checker",
+	label: "Le vérificateur de coins",
 	"b0.prompt": "Vérifie les coins avec un coin de page. La forme a-t-elle un angle droit ?",
 	"b0.o0": "y0,y1,n0,n1",
 	"b0.o1": "n0,y1,y0,n1",
@@ -102711,7 +102711,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b5.o2": "4",
 	"b5.o3": "0"
 }, wbe = {
-	label: "Corner pop",
+	label: "Les coins qui sautent",
 	"b0.prompt": "Quelle forme a des coins ? Éclate-la !",
 	"b0.o0": "carré",
 	"b0.o1": "cercle",
@@ -103785,7 +103785,7 @@ var Zge = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qge = $({
 	"b3.o2": "200",
 	"b3.o3": "50"
 }, exe = {
-	label: "Count down code",
+	label: "Le code à rebours",
 	"b0.prompt": "Le cadenas compte à rebours : 10, 9, 8, ? Quel chiffre l'ouvre ?",
 	"b0.o0": "7",
 	"b0.o1": "6",
@@ -106414,7 +106414,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b1.o2": "20",
 	"b1.o3": "30"
 }, Wxe = {
-	label: "Counterexample challenge",
+	label: "Défi du contre-exemple",
 	"b0.prompt": "Affirmation : tous les nombres premiers sont impairs. Quel nombre contredit-la ?",
 	"b0.o0": "2",
 	"b0.o1": "3",
@@ -107257,7 +107257,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o2": "23",
 	"b17.o3": "26"
 }, eSe = {
-	label: "Cover the floor",
+	label: "Couvrir le sol",
 	"b0.prompt": "Chaque carré mesure 1 cm². Touche chaque carré pour compter. Combien de cm² la forme couvre-t-elle ?",
 	"b0.o0": "6",
 	"b0.o1": "7",
@@ -107488,7 +107488,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, aSe = {
-	label: "Cross lines explorer",
+	label: "L'explorateur de droites sécantes",
 	"b0.prompt": "Deux droites se croisent. Chaque place montre un angle connu et dit quel angle trouver : l'angle opposé ou l'angle voisin. Dépose le bon angle sur chaque place.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -107729,7 +107729,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g8,g7",
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g9,g7"
 }, uSe = {
-	label: "Cross multiply duel",
+	label: "Duel de produits en croix",
 	"b0.prompt": "1/2 contre 2/3 : multiplie chaque numérateur par le dénominateur de l'AUTRE fraction, puis dépose le symbole qui compare les fractions.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g8,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g10,g9",
@@ -107935,7 +107935,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g6,g1,g7,g3,g4,g8,g6",
 	"b14.o3": "g0,g1,g9,g3,g4,g5,g6,g1,g10,g3,g4,g8,g0"
 }, hSe = {
-	label: "Cross why explorer",
+	label: "Pourquoi en croix ?",
 	"b0.prompt": "Mets 1/2 et 2/3 sur le même dénominateur, 6. Écris les nouveaux numérateurs, puis dépose la plus grande fraction à la fin.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g1,g7,g3,g4,g8,g6",
 	"b0.o1": "g0,g1,g7,g3,g4,g5,g6,g1,g2,g3,g4,g8,g6",
@@ -108144,7 +108144,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g2,g5,g1,g2,g7,g1,g2",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g2,g5,g1,g6,g7,g1,g2"
 }, bSe = {
-	label: "Crossing lines angle pairs",
+	label: "Droites sécantes",
 	"b0.prompt": "Deux droites se croisent. L'angle A mesure 40°. C est opposé à A ; B et D sont voisins. Trouve C, B et D.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g1,g6,g7,g1,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g6,g5,g1,g2,g7,g1,g2",
@@ -108587,7 +108587,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b9.o2": "g7,g1,g7,g1,g7,g2,g3,g4,g5,g2,g7",
 	"b9.o3": "g0,g1,g0,g1,g0,g2,g3,g4,g5,g2,g8"
 }, ASe = {
-	label: "Cube stack builder",
+	label: "Construire la pile de cubes",
 	"b0.prompt": "Un cube est construit avec 8 blocs. Combien de blocs le long d'une arête ? Écris l'arête trois fois, puis la racine cubique ∛8.",
 	"b0.o0": "g0,g1,g0,g1,g0,g2,g3,g4,g5,g2,g0",
 	"b0.o1": "g6,g1,g6,g1,g6,g2,g3,g4,g5,g2,g6",
@@ -108752,7 +108752,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o1": "g0,g1,g2,g3,g2,g3,g5,g1,g4,g5,g2",
 	"b17.o2": "g0,g1,g2,g3,g2,g3,g2,g1,g5,g8,g4"
 }, FSe = {
-	label: "Cube stack counter",
+	label: "Compter la pile de cubes",
 	"b0.prompt": "2³ veut dire 2 × 2 × 2. Écris les trois facteurs et la valeur.",
 	"b0.o0": "g0,g1,g2,g3,g2,g3,g2,g1,g4",
 	"b0.o1": "g0,g1,g2,g3,g2,g3,g5,g1,g4",
@@ -109066,7 +109066,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b33.o2": "4",
 	"b33.o3": "10"
 }, BSe = {
-	label: "Cubes to balance",
+	label: "Des cubes pour équilibrer",
 	"b0.prompt": "Pomme pèse autant que 2 cubes. Mets des cubes sur l'autre plateau jusqu'à l'équilibre.",
 	"b0.o0": "3|2|1",
 	"b0.o1": "4|1|1",
@@ -109568,7 +109568,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b14.o2": "g0,g1,g0,g2,g3,g0,g4,g5,g6,g0,g2,g0,g8",
 	"b14.o3": "g0,g1,g0,g2,g3,g0,g4,g5,g6,g0,g0,g2,g7"
 }, XSe = {
-	label: "Data set mode range cards",
+	label: "Cartes mode et étendue",
 	"b0.prompt": "Voici une série de données. Trouve la valeur qui apparaît le plus souvent, la plus grande et la plus petite valeur, et l'étendue.",
 	"b0.o0": "g0,g1,g1,g2,g3,g4,g1,g2,g0,g5",
 	"b0.o1": "g0,g1,g1,g2,g3,g4,g2,g1,g0,g6",
@@ -109747,7 +109747,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b11.o3": "jun,nov,feb,dec,aug,apr",
 	"b11.o4": "feb,aug,dec,apr,nov,jun"
 }, tCe = {
-	label: "Days in each month",
+	label: "Les jours de chaque mois",
 	"b0.prompt": "Combien de jours a chaque mois ? Dépose-le dans la bonne boîte.",
 	"b0.o0": "apr,jun,jan,mar",
 	"b0.o1": "jan,jun,apr,mar",
@@ -110648,7 +110648,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b23.o4": "d0,d1,d3,d2",
 	"b23.o5": "d1,d2,d3,d0"
 }, xCe = {
-	label: "Decimal duel cards",
+	label: "Duel de décimaux",
 	"b0.prompt": "Range les décimaux du plus petit au plus grand.",
 	"b0.o0": "d0,d1,d2,d3",
 	"b0.o1": "d3,d2,d1,d0",
@@ -110948,7 +110948,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o2": "g0,g1,g2,g6,g4",
 	"b17.o3": "g0,g1,g2,g7,g4"
 }, ECe = {
-	label: "Decimal hours converter",
+	label: "Heures décimales",
 	"b0.prompt": "1,5 heures font combien de minutes ? Rappelle-toi qu'une heure a 60 minutes.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g5,g4",
@@ -111180,7 +111180,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o2": "_,_,_,_,_,_,_,_,m,_,_",
 	"b17.o3": "_,m,_,_,_,_,_,_,_,_,_"
 }, jCe = {
-	label: "Decimal number line jump",
+	label: "Sauts sur la droite des décimaux",
 	"b0.prompt": "Où va 0,3 sur la droite de 0 à 1 ? Pose l'épingle sur le repère le plus proche.",
 	"b0.o0": "_,_,_,m,_,_,_,_,_,_,_",
 	"b0.o1": "_,_,_,_,m,_,_,_,_,_,_",
@@ -111372,7 +111372,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b11.o1": "m0,m1,m4,m3,m2,m5",
 	"b11.o2": "m0,m1,x1,m3,m4,m5"
 }, ICe = {
-	label: "Decimal number line pins",
+	label: "Épingles décimales",
 	"b0.prompt": "Place les repères manquants sur la droite de 0,0 à 0,5 : tous les pas ont la même taille.",
 	"b0.o0": "m0,m1,m2,m3,m4,m5",
 	"b0.o1": "m0,m3,m2,m1,m4,m5",
@@ -111913,7 +111913,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b27.o2": "6.908",
 	"b27.o3": "6.958"
 }, VCe = {
-	label: "Decimal order duel",
+	label: "Duel de rangement des décimaux",
 	"b0.prompt": "Lequel est le plus grand : 0,63 ou 0,6 ?",
 	"b0.o0": "0,63",
 	"b0.o1": "0,6",
@@ -112802,7 +112802,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b27.o2": "8.306",
 	"b27.o3": "3.86"
 }, ZCe = {
-	label: "Decimal place value chart",
+	label: "Tableau des décimales",
 	"b0.prompt": "Un tableau montre : unités 6, dixièmes 3, centièmes 4. Quel est ce nombre ?",
 	"b0.o0": "6,34",
 	"b0.o1": "6,43",
@@ -113419,7 +113419,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b27.o2": "0.06",
 	"b27.o3": "6.03"
 }, nwe = {
-	label: "Decimal place value hundredths",
+	label: "Les centièmes",
 	"b0.prompt": "Dans 4,89, quelle est la valeur du chiffre 9 ?",
 	"b0.o0": "0,09",
 	"b0.o1": "9",
@@ -113731,7 +113731,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o5": "x2,f1,a2,a3",
 	"b17.o6": "a0,f1,a2,x2"
 }, swe = {
-	label: "Decimal place value mat",
+	label: "Tapis de numération décimale",
 	"b0.prompt": "Construis 2,7 sur le tableau.",
 	"b0.o0": "a0,f1,a2",
 	"b0.o1": "x0,f1,a2",
@@ -114203,7 +114203,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g5,g4,g6",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g6,g5,g4"
 }, _we = {
-	label: "Decimal times whole grid",
+	label: "Décimal fois entier",
 	"b0.prompt": "0,3 × 4 : d'abord 3 × 4 avec des entiers, puis écris la réponse dans le tableau de numération.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g5,g4",
@@ -114980,7 +114980,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b27.o2": "3.766",
 	"b27.o3": "3.765"
 }, Dwe = {
-	label: "Decimal zoom line",
+	label: "Zoom sur la droite des décimaux",
 	"b0.prompt": "Une droite graduée va de 9,7 à 9,8 en 10 pas égaux. Le point est sur la graduation 6. Quel est ce nombre ?",
 	"b0.o0": "9,76",
 	"b0.o1": "10,3",
@@ -116509,7 +116509,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b17.o1": "g0,g1,g2,g3,g10,g5,g6,g1,g2,g3,g9,g5,g6",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g11,g1,g2,g3,g7,g5,g6"
 }, Lwe = {
-	label: "Denominator match builder",
+	label: "Renommer et additionner",
 	"b0.prompt": "1/2 + 1/4 : renomme celle qui a les plus grandes parts pour que les deux utilisent 4, puis travaille avec les hauts.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g1,g2,g3,g7,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g9,g5,g6,g1,g2,g3,g4,g5,g6",
@@ -116697,7 +116697,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, Hwe = {
-	label: "Derived fact match",
+	label: "Associer les faits dérivés",
 	"b0.prompt": "Chaque calcul de dizaines naît d'un calcul que tu connais. Dépose chaque réponse sur son calcul.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -116843,7 +116843,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b1.o2": "3 right",
 	"b1.o3": "3 left"
 }, rR = {
-	label: "Describe the move coordinates",
+	label: "Décrire le déplacement",
 	"b0.prompt": "Un point passe de (1, 1) à (4, 1). Quel déplacement ?",
 	"b0.o0": "3 vers la droite",
 	"b0.o1": "3 up",
@@ -116961,7 +116961,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b14.o1": "d-par,d-rhombus,d-square,d-rect",
 	"b14.o2": "d-par,d-square,d-rhombus,d-rect"
 }, lR = {
-	label: "Diagonal detective",
+	label: "L'enquêteur des diagonales",
 	"b0.prompt": "Imagine les deux diagonales de chaque forme. Trie les formes selon ce que font leurs diagonales.",
 	"b0.o0": "d-square,d-rect,d-rhombus,d-par,d-kite",
 	"b0.o1": "d-rhombus,d-rect,d-square,d-par,d-kite",
@@ -117255,7 +117255,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b1.o2": "66",
 	"b1.o3": "34"
 }, xR = {
-	label: "Difference bracket",
+	label: "Le tableau des différences",
 	"b0.prompt": "L'accolade marque la différence entre 15 et 8. Quelle est-elle ?",
 	"b0.o0": "7",
 	"b0.o1": "8",
@@ -117344,7 +117344,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b11.o1": "g0,g1,g2,g3,g4,g5,g7",
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g8"
 }, DR = {
-	label: "Difference detective",
+	label: "L'enquêteur des différences",
 	"b0.prompt": "La suite est 4, 7, 10, 13. Trouve le pas d, puis le terme zéro : le terme un pas avant le premier.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0",
@@ -117469,7 +117469,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b1.o2": "52 cm",
 	"b1.o3": "80 cm"
 }, NR = {
-	label: "Difference jump line",
+	label: "Sauts de différence",
 	"b0.prompt": "Saute de 30 cm à 45 cm. Quelle est la différence ?",
 	"b0.o0": "15 cm",
 	"b0.o1": "30 cm",
@@ -117757,7 +117757,7 @@ var bxe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), xxe = $({
 	"b1.o2": "905",
 	"b1.o3": "950"
 }, GR = {
-	label: "Digit card biggest number",
+	label: "Le plus grand nombre avec les cartes",
 	"b0.prompt": "Avec les cartes 4, 7, 2, forme le plus grand nombre à 3 chiffres.",
 	"b0.o0": "742",
 	"b0.o1": "247",
@@ -118295,7 +118295,7 @@ var iz = $({
 	"b27.o2": "1,740",
 	"b27.o3": "1.74"
 }, sz = {
-	label: "Digit shift machine",
+	label: "La machine à décaler",
 	"b0.prompt": "On fait passer 83,1 par × 100 puis × 1 000. Qu'est-ce qui sort ?",
 	"b0.o0": "8 310 000",
 	"b0.o1": "8 310",
@@ -118912,7 +118912,7 @@ var iz = $({
 	"b27.o2": "188",
 	"b27.o3": "1,781"
 }, Jwe = {
-	label: "Digit slide",
+	label: "Glisser les chiffres",
 	"b0.prompt": "Fais glisser chaque chiffre de 67 de une place vers la gauche. Quel nombre obtiens-tu (67 × 10) ?",
 	"b0.o0": "670",
 	"b0.o1": "6\xA0700",
@@ -119529,7 +119529,7 @@ var iz = $({
 	"b27.o2": "37.2",
 	"b27.o3": "372"
 }, $we = {
-	label: "Digit slider machine",
+	label: "La machine à curseurs",
 	"b0.prompt": "La machine à glisser déplace chaque chiffre de 9 400 de 2 places vers la droite (÷ 100). Que sort-il ?",
 	"b0.o0": "94",
 	"b0.o1": "9,4",
@@ -119907,7 +119907,7 @@ var iz = $({
 	"b41.o2": "80",
 	"b41.o3": "880"
 }, iTe = {
-	label: "Digit spotlight",
+	label: "Projecteur sur les chiffres",
 	"b0.prompt": "Le projecteur est sur les centaines. Dans 243, que vaut le chiffre 2 ?",
 	"b0.o0": "200",
 	"b0.o1": "2",
@@ -120595,7 +120595,7 @@ var iz = $({
 	"b27.o2": "7,579",
 	"b27.o3": "6,456"
 }, lTe = {
-	label: "Digit spotlight 4 digit",
+	label: "Projecteur sur les chiffres",
 	"b0.prompt": "Projecteur sur 6\xA0521. Quel chiffre vaut 6\xA0000 ?",
 	"b0.o0": "6",
 	"b0.o1": "1",
@@ -120838,7 +120838,7 @@ var iz = $({
 	"b24.o0": "tensValue,onesValue",
 	"b24.o1": "onesValue,tensValue"
 }, mTe = {
-	label: "Digit value detective",
+	label: "L'enquêteur de la valeur des chiffres",
 	"b0.prompt": "Dans 24, le 2 est à la place des dizaines. Glisse le 2 vers sa valeur.",
 	"b0.o0": "digit,_",
 	"b0.o1": "_,digit",
@@ -121115,7 +121115,7 @@ var iz = $({
 	"e38.c3": "the 3 in 32,517",
 	"e38.c0": "the 3 in 3,705,165"
 }, yTe = {
-	label: "Digit Value Sort",
+	label: "Trier par valeur des chiffres",
 	"prompt.ascending": "Quelle liste est rangée du plus petit au plus grand ?",
 	"prompt.descending": "Quelle liste est rangée du plus grand au plus petit ?",
 	"e0.c0": "le 1 dans 269 671",
@@ -121781,7 +121781,7 @@ var wTe = $({
 	"b27.o2": "70",
 	"b27.o3": "700"
 }, DTe = {
-	label: "Digit worth cards",
+	label: "Cartes de valeur des chiffres",
 	"b0.prompt": "Dans 5\xA0218, le 2 est à la place des centaines. Quelle carte-valeur lui correspond ?",
 	"b0.o0": "200",
 	"b0.o1": "2",
@@ -121979,7 +121979,7 @@ var wTe = $({
 	"b1.o2": "Half past ten",
 	"b1.o3": "Ten o'clock"
 }, MTe = {
-	label: "Digital analogue match",
+	label: "Associer numérique et analogique",
 	"b0.prompt": "L'heure digitale 4:25 s'écrit en lettres ?",
 	"b0.o0": "Quatre heures vingt-cinq",
 	"b0.o1": "Moins vingt-cinq quatre",
@@ -122507,7 +122507,7 @@ var wTe = $({
 	"b17.o2": "1:30",
 	"b17.o3": "6:00"
 }, LTe = {
-	label: "Digital twin writer",
+	label: "Le jumeau numérique",
 	"b0.prompt": "Lis l'horloge. Quelle heure en chiffres est la même ?",
 	"b0.o0": "2:00",
 	"b0.o1": "3:00",
@@ -122731,7 +122731,7 @@ var wTe = $({
 	"b17.o3": "i2,d1,d2,i0,i1,d0",
 	"b17.o4": "d0,i0,d2,d1,i1,i2"
 }, HTe = {
-	label: "Direct or inverse",
+	label: "Directe ou inverse",
 	"b0.prompt": "Chaque carte montre des couples x → y. Est-ce y ÷ x qui reste le même (directe) ou x × y (inverse) ? Trie les cartes.",
 	"b0.o0": "d0,d1,i0,i1",
 	"b0.o1": "i0,d1,d0,i1",
@@ -122993,7 +122993,7 @@ var wTe = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, qTe = {
-	label: "Discount ladder",
+	label: "L'échelle des remises",
 	"b0.prompt": "Un article coûte 80,00\xA0$. Monte l'échelle des remises : associe chaque remise au prix à payer.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -123222,7 +123222,7 @@ var wTe = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g2,g1,g5,g3,g5,g6,g7,g6,g3,g10",
 	"b14.o3": "g0,g1,g2,g3,g5,g2,g1,g5,g3,g4,g6,g7,g6,g3,g8"
 }, QTe = {
-	label: "Distance across zero",
+	label: "Distance à travers zéro",
 	"b0.prompt": "Quelle est la distance entre (−5) et 3 ? Marche jusqu'à zéro et au-delà : dépose les deux trajets, puis la distance, dans les cases.",
 	"b0.o0": "g0,g1,g2,g3,g4,g2,g1,g5,g3,g5,g6,g7,g6,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g2,g1,g5,g3,g5,g6,g7,g6,g3,g9",
@@ -123371,7 +123371,7 @@ var wTe = $({
 	"b1.o2": "Pareil",
 	"b1.o3": "Impossible à dire"
 }, rEe = {
-	label: "Distance from zero walk",
+	label: "La marche depuis zéro",
 	"b0.prompt": "Un marcheur est à −6. Quelle est sa distance à 0 ?",
 	"b0.o0": "6",
 	"b0.o1": "−6",
@@ -123478,7 +123478,7 @@ var wTe = $({
 	"b14.o1": "small,split,sign",
 	"b14.o2": "sign,small,split"
 }, cEe = {
-	label: "Distribute detective",
+	label: "L'enquêteur de distributivité",
 	"b0.prompt": "Des astuces de calcul mental pour 6 × 9. Trie-les : celles qui marchent et celles qui sont cassées.",
 	"b0.o0": "split,small,sign",
 	"b0.o1": "small,split,sign",
@@ -123666,7 +123666,7 @@ var wTe = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g6,g5,g2,g3,g0",
 	"b14.o3": "g0,g1,g2,g3,g7,g7,g5,g2,g3,g0"
 }, pEe = {
-	label: "Divide and check machine",
+	label: "Diviser et vérifier",
 	"b0.prompt": "La machine : divise (−12) par 3, puis multiplie en retour pour vérifier. Glisse la réponse dans les deux cases.",
 	"b0.o0": "g0,g1,g2,g3,g4,g4,g5,g2,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g6,g6,g5,g2,g3,g0",
@@ -123860,7 +123860,7 @@ var wTe = $({
 	"b14.o2": "g0,g1,g4",
 	"b14.o3": "g0,g1,g5"
 }, vEe = {
-	label: "Divisibility detective",
+	label: "L'enquêteur de divisibilité",
 	"b0.prompt": "Je suis divisible par 2 et par 5, et je suis entre 31 et 49. Qui suis-je ?",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g1,g3",
@@ -124058,7 +124058,7 @@ var wTe = $({
 	"b14.o3": "a1233,d1182,b1160,b1230,c1710,c2340,a1296,d1189",
 	"b14.o4": "a1233,d1189,b1160,b1230,c1710,c2340,d1182,a1296"
 }, CEe = {
-	label: "Divisible or not sorter",
+	label: "Divisible ou non",
 	"b0.prompt": "Utilise les critères de divisibilité par 2 et par 5, sans diviser. Dépose chaque nombre dans sa case.",
 	"b0.o0": "a18,b85,c40,d51",
 	"b0.o1": "d51,b85,c40,a18",
@@ -124274,7 +124274,7 @@ var wTe = $({
 	"b17.o3": "n1254,n2908,n6437,n8665,n5375,n3246",
 	"b17.o4": "n6437,n5375,n8665,n3246,n2908,n1254"
 }, OEe = {
-	label: "Divisible sort chutes",
+	label: "Les glissières de divisibilité",
 	"b0.prompt": "Fais glisser chaque nombre dans le bon toboggan : divisible par 2 seulement, 5 seulement, 2 et 5, ou ni l'un ni l'autre.",
 	"b0.o0": "n24,n75,n65,n30,n40,n37",
 	"b0.o1": "n37,n75,n65,n30,n40,n24",
@@ -124498,7 +124498,7 @@ var wTe = $({
 	"b17.o2": "x1,f1,f2,f3,f4",
 	"b17.o3": "x2,f1,f2,f3,f4"
 }, NEe = {
-	label: "Division detective",
+	label: "L'enquêteur de divisions",
 	"b0.prompt": "Quel nombre va dans la boîte ? ☐ ÷ 2 = 6",
 	"b0.o0": "a0,f1,f2,f3,f4",
 	"b0.o1": "x0,f1,f2,f3,f4",
@@ -124659,7 +124659,7 @@ var wTe = $({
 	"b1.o2": "16",
 	"b1.o3": "20"
 }, REe = {
-	label: "Division from the table",
+	label: "La division à partir du tableau",
 	"b0.prompt": "20 ÷ 5 = ?",
 	"b0.o0": "4",
 	"b0.o1": "5",
@@ -124793,7 +124793,7 @@ var wTe = $({
 	"b15.o3": "b2:dot,c2:dot,d2:dot,d3:dot",
 	"b15.o4": "a3:dot,b3:dot,c3:dot,c4:dot"
 }, UEe = {
-	label: "Dot paper twin",
+	label: "Jumeau sur papier pointé",
 	"b0.prompt": "Copie la figure sur ton papier pointé.",
 	"b0.o0": "a1:dot,a2:dot,a3:dot",
 	"b0.o1": "b1:dot,b2:dot,b3:dot",
@@ -125334,7 +125334,7 @@ var wTe = $({
 	"b24.o2": "6",
 	"b24.o3": "8"
 }, JEe = {
-	label: "Dot pattern snap",
+	label: "Motif de points en vitesse",
 	"b0.prompt": "⚀\n\nQuel nombre est-ce ?",
 	"b0.o0": "1",
 	"b0.o1": "2",
@@ -125517,7 +125517,7 @@ var wTe = $({
 	"b1.o2": "Guess",
 	"b1.o3": "Ignore one bar"
 }, $Ee = {
-	label: "Double bar question cards",
+	label: "Cartes de questions sur les barres doubles",
 	"b0.prompt": "Quel groupe est le plus grand dans le double diagramme de natation ?",
 	"b0.o0": "Le groupe avec la barre la plus haute",
 	"b0.o1": "La barre la plus courte",
@@ -125585,7 +125585,7 @@ var wTe = $({
 	"b1.o2": "24",
 	"b1.o3": "16"
 }, iDe = {
-	label: "Double for four",
+	label: "Le double pour quatre",
 	"b0.prompt": "4 × 6 = ?",
 	"b0.o0": "24",
 	"b0.o1": "20",
@@ -125677,7 +125677,7 @@ var wTe = $({
 	"b17.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g7,g8",
 	"b17.o1": "g0,g1,g2,g3,g4,g1,g9,g3,g6,g7,g8"
 }, lDe = {
-	label: "Double half machine",
+	label: "La machine double-moitié",
 	"b0.prompt": "4 × 5 : prends la moitié d'un nombre et double l'autre pour faciliter le calcul.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g4,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g7,g3,g4,g6",
@@ -125976,7 +125976,7 @@ var wTe = $({
 	"b36.o0": "Even",
 	"b36.o1": "Odd"
 }, mDe = {
-	label: "Double it split",
+	label: "Doubler et partager",
 	"b0.prompt": "Partage les 2 jetons en deux groupes égaux. Si tu ne peux pas, dis-le.",
 	"b0.o0": "0|1|1|0",
 	"b0.o1": "0|2|0|0",
@@ -126346,7 +126346,7 @@ var wTe = $({
 	"b24.o2": "11",
 	"b24.o3": "9"
 }, yDe = {
-	label: "Double mirror dominoes",
+	label: "Dominos miroirs",
 	"b0.prompt": "Le miroir montre 2 points d'un côté d'un domino. Touche les points qui montrent le double.",
 	"b0.o0": "4",
 	"b0.o1": "2",
@@ -126572,7 +126572,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "28",
 	"b1.o3": "40"
 }, EDe = {
-	label: "Double the double count",
+	label: "Compter le double du double",
 	"b0.prompt": "Compte de 4 en 4 : 4, 8, 12, ? Qu'est-ce qui suit ?",
 	"b0.o0": "16",
 	"b0.o1": "14",
@@ -126727,7 +126727,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b18.o2": "t0,t1,t2,t3,d3,d4",
 	"b18.o3": "t0,t1,t2,t3,d4,d3"
 }, jDe = {
-	label: "Double trouble mirror",
+	label: "Le miroir du double",
 	"b0.prompt": "Double de 3 : fais que le côté copie soit pareil au côté miroir.",
 	"b0.o0": "2|3|3",
 	"b0.o1": "3|2|3",
@@ -127002,7 +127002,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o5": "r3,r4,r5,r7,r6,r8,r9,r10",
 	"b14.o6": "r3,r4,r5,r6,r8,r7,r9,r10"
 }, IDe = {
-	label: "Doubling ladder",
+	label: "L'échelle des doubles",
 	"b0.prompt": "Monte à l'échelle des puissances de 2 : chaque barreau est le double du précédent. Place les nombres sur leurs barreaux.",
 	"b0.o0": "r1,r2,r3,r4,r5",
 	"b0.o1": "r1,r5,r4,r3,r2",
@@ -127190,7 +127190,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "Hexagon",
 	"b1.o3": "Oval"
 }, VDe = {
-	label: "Draw on dot grid",
+	label: "Dessiner sur le quadrillage à points",
 	"b0.prompt": "Dessine une forme à 4 côtés égaux sur la grille de points. Quelle forme ?",
 	"b0.o0": "Carré",
 	"b0.o1": "Triangle",
@@ -127258,7 +127258,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "45°",
 	"b1.o3": "180°"
 }, KDe = {
-	label: "Draw parallel perpendicular tool",
+	label: "Tracer parallèles et perpendiculaires",
 	"b0.prompt": "Une droite perpendiculaire fait quel angle avec la droite ?",
 	"b0.o0": "90°",
 	"b0.o1": "45°",
@@ -127557,7 +127557,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o2": "g0,g0,g0,g0,g0,g1,g1,g1,g2,g3,g4,g5,g6,g3,g8,g9,g6,g11",
 	"b14.o3": "g0,g0,g0,g0,g0,g1,g1,g1,g2,g3,g4,g5,g6,g7,g8,g9,g6,g12"
 }, nOe = {
-	label: "Draw the bar first",
+	label: "Dessine la barre d'abord",
 	"b0.prompt": "1/2 des bonbons sont rouges et 8 sont bleus. Dessine d'abord la barre : les parts rouges, puis les parts bleues. Puis trouve une part et le tout.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g7,g8,g6,g9",
 	"b0.o1": "g1,g0,g2,g3,g4,g5,g6,g3,g7,g8,g6,g9",
@@ -127702,7 +127702,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "355",
 	"b1.o3": "845"
 }, sOe = {
-	label: "Draw the blocks subtract",
+	label: "Dessiner les blocs pour soustraire",
 	"b0.prompt": "364 − 122 = ?",
 	"b0.o0": "242",
 	"b0.o1": "252",
@@ -127770,7 +127770,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "6",
 	"b1.o3": "4"
 }, fOe = {
-	label: "Draw the net",
+	label: "Dessiner le patron",
 	"b0.prompt": "Le patron d'un pavé droit a combien de rectangles ?",
 	"b0.o0": "6",
 	"b0.o1": "4",
@@ -127916,7 +127916,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b17.o3": "1|4|5",
 	"b17.o4": "3|3|4"
 }, _Oe = {
-	label: "Draw the pictogram",
+	label: "Dessiner le pictogramme",
 	"b0.prompt": "Chaque ⭐ vaut 5. Dessine 20.",
 	"b0.o0": "3|4",
 	"b0.o1": "4|3",
@@ -128421,7 +128421,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b64.o3": "10|5",
 	"b64.o4": "15|0"
 }, SOe = {
-	label: "Draw the story",
+	label: "Dessiner l'histoire",
 	"b0.prompt": "1 canards. 1 de plus. Dessine tout.",
 	"b0.o0": "2|2",
 	"b0.o1": "1|3",
@@ -128878,7 +128878,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "speed0,time0,dist0,dist1,speed1,time1",
 	"b11.o4": "speed0,time1,dist0,dist1,time0,speed1"
 }, DOe = {
-	label: "Dst triangle sort",
+	label: "Trier les triangles",
 	"b0.prompt": "Chaque histoire cache une inconnue (❓). Dépose-la sous la formule qui la trouve.",
 	"b0.o0": "speed0,dist0,time0",
 	"b0.o1": "time0,dist0,speed0",
@@ -129030,7 +129030,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o1": "g0,g1,g13,g3,g4,g1,g5,g3,g6,g1,g7,g3,g8,g9,g10,g11,g12",
 	"b11.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g3,g8,g9,g10,g15,g12"
 }, MOe = {
-	label: "Elapsed time number line",
+	label: "Durée sur la droite numérique",
 	"b0.prompt": "Combien de minutes s'écoulent de 2:50 à 3:20 ? Va d'abord à l'heure suivante, puis jusqu'à la fin.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g7,g8,g9",
 	"b0.o1": "g0,g1,g10,g3,g4,g1,g5,g3,g6,g7,g8,g9",
@@ -129636,7 +129636,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o3": "s8,s4,s12,s6,s7,s10",
 	"b14.o4": "s8,s10,s12,s6,s4,s7"
 }, qOe = {
-	label: "Enough evidence sort",
+	label: "Assez de preuves ?",
 	"b0.prompt": "Lis chaque indice et trie-le\xA0: prouve-t-il que l'affirmation est vraie, prouve-t-il qu'elle est fausse, ou n'est-il pas suffisant\xA0?",
 	"b0.o0": "s5,s1,s2",
 	"b0.o1": "s1,s5,s2",
@@ -129849,7 +129849,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b16.o3": "k0,k2,k1,k3",
 	"b16.o4": "k0,k3,k2,k1"
 }, QOe = {
-	label: "Enough or short",
+	label: "Assez ou pas assez ?",
 	"b0.prompt": "Le jouet coûte 8. Qui a assez, et qui n'en a pas assez ?",
 	"b0.o0": "k1,k2,k0,k3",
 	"b0.o1": "k0,k2,k1,k3",
@@ -130116,7 +130116,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b27.o2": "2|3|3|3|4|2",
 	"b27.o3": "4|3|3|3|3|1"
 }, rke = {
-	label: "Equal groups bags",
+	label: "Sacs de même taille",
 	"b0.prompt": "Mets 1 dans chaque sac.",
 	"b0.o0": "1|1|0",
 	"b0.o1": "2|0|0",
@@ -130360,7 +130360,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "1|4|4|3|4|4",
 	"b11.o4": "1|4|4|4|3|4"
 }, cke = {
-	label: "Equal groups stories",
+	label: "Histoires de groupes égaux",
 	"b0.prompt": "2 sacs avec 3 bonbons dans chaque sac. Remplis chaque sac.",
 	"b0.o0": "0|3|3",
 	"b0.o1": "1|2|3",
@@ -130694,7 +130694,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "Only if round",
 	"b1.o3": "Cannot tell"
 }, vke = {
-	label: "Equal or not split",
+	label: "Égal ou pas ?",
 	"b0.prompt": "Une forme est coupée en 4 morceaux d'aspects différents mais de même taille. Sont-ils égaux ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -130847,7 +130847,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Cke = {
-	label: "Equal quotient pairs",
+	label: "Quotients égaux",
 	"b0.prompt": "Multiplie les deux nombres par la même puissance de dix. Associe chaque division de décimaux à la division d'entiers qui a la même réponse.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -131074,7 +131074,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o3": "t0,t1,t2,t3,d2,d9,t4,t5",
 	"b14.o4": "t0,t1,t2,t3,d4,d0,t4,t5"
 }, Oke = {
-	label: "Equal sides scale",
+	label: "Côtés égaux",
 	"b0.prompt": "3 + 4 = ? + 2. Rends les deux côtés égaux.",
 	"b0.o0": "t0,t1,t2,t3,d5,t4,t5",
 	"b0.o1": "t0,t1,t2,t3,d7,t4,t5",
@@ -131242,7 +131242,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g1,g4,g9",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g1,g4,g10"
 }, Nke = {
-	label: "Equation from story",
+	label: "Une équation à partir d'une histoire",
 	"b0.prompt": "Un nombre plus 7 donne 15. Construis l'équation avec n pour le nombre, puis résous-la.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g3,g6",
 	"b0.o1": "g0,g7,g2,g3,g4,g5,g0,g3,g6",
@@ -131442,7 +131442,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b17.o2": "4|12|13",
 	"b17.o3": "1|15|13"
 }, Rke = {
-	label: "Equation sorter",
+	label: "Rendre l'égalité vraie",
 	"b0.prompt": "5 = 2 + 2 n'est pas vrai. Ajoute ou enlève des jetons à droite pour que ce soit vrai.",
 	"b0.o0": "2|5|5",
 	"b0.o1": "3|4|5",
@@ -131658,7 +131658,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "sign3,unit3,place3,place0,carry3,carry0,sign0,unit0",
 	"b11.o4": "sign3,unit0,place3,place0,carry3,carry0,unit3,sign0"
 }, Uke = {
-	label: "Error type sort",
+	label: "Trier les types d'erreurs",
 	"b0.prompt": "Chaque carte est un calcul qui cache une erreur. Trie les cartes dans la case qui nomme le genre d'erreur.",
 	"b0.o0": "sign0,sign1,place0,place1",
 	"b0.o1": "place0,sign1,sign0,place1",
@@ -131864,7 +131864,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o3": "g0,g1,g2,g3,g6",
 	"b14.o4": "g0,g1,g7,g3,g4"
 }, Jke = {
-	label: "Estimate before you press",
+	label: "Estimer avant d'appuyer",
 	"b0.prompt": "38 × 21 : prédis d'abord avec des nombres arrondis faciles, puis appuie pour l'exact. Dépose ta prédiction et la réponse exacte.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g4,g3,g2",
@@ -132081,7 +132081,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o2": "g0,g1,g3,g1,g3",
 	"b14.o3": "g0,g1,g4,g1,g3"
 }, $ke = {
-	label: "Estimate between points",
+	label: "Entre les points",
 	"b0.prompt": "Un graphique linéaire montre 14 à 8 h et 20 à 10 h. Estime la valeur à 9 h, aux 1/2 du segment.",
 	"b0.o0": "g0,g1,g2,g1,g3",
 	"b0.o1": "g0,g1,g0,g1,g3",
@@ -132292,7 +132292,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o2": "e5",
 	"b14.o3": "c5"
 }, iAe = {
-	label: "Estimate from the line",
+	label: "Estimer sur la droite",
 	"b0.prompt": "Ces points sont alignés, mais le point en x = 3 manque. Lis la droite et colorie le point manquant.",
 	"b0.o0": "e4",
 	"b0.o1": "e3",
@@ -132503,7 +132503,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b14.o3": "t0,t1,t2,t3,d4,d0",
 	"b14.o4": "t0,t1,t2,t3,d5,d1"
 }, lAe = {
-	label: "Estimate then add",
+	label: "Estimer puis additionner",
 	"b0.prompt": "À peu près combien font 21 + 38 ? Arrondis d'abord, puis écris l'estimation.",
 	"b0.o0": "t0,t1,t2,t3,d6,d0",
 	"b0.o1": "t0,t1,t2,t3,d5,d9",
@@ -132702,7 +132702,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "e0,e2,e1,e3",
 	"b11.o4": "e0,e3,e2,e1"
 }, mAe = {
-	label: "Estimate then error",
+	label: "Estimer puis l'erreur",
 	"b0.prompt": "Chaque carte montre une estimation ↔ la vraie valeur. L'erreur (en pourcentage de la vraie valeur) est-elle de 10 % ou moins, ou plus ? Trie les cartes.",
 	"b0.o0": "e0,e1,e2,e3",
 	"b0.o1": "e2,e1,e0,e3",
@@ -132874,7 +132874,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o2": "mm0,m0,cm0,mm1",
 	"b11.o3": "m0,cm0,mm1,mm0"
 }, yAe = {
-	label: "Estimate then measure lab",
+	label: "Quelle unité ?",
 	"b0.prompt": "Quelle unité utiliserais-tu pour mesurer chaque chose ? Estime d'abord.",
 	"b0.o0": "cm0,cm1,m0,km0",
 	"b0.o1": "km0,cm1,m0,cm0",
@@ -133038,7 +133038,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "g0,g1,g11,g3,g4,g5,g6,g4,g1,g2,g3,g6,g5,g7,g6,g1,g2,g3,g7,g5,g8,g9,g1,g7,g10,g10,g10,g10",
 	"b11.o4": "g0,g1,g6,g3,g4,g5,g2,g4,g1,g2,g3,g6,g5,g7,g6,g1,g2,g3,g7,g5,g8,g9,g1,g7,g10,g10,g10,g10"
 }, wAe = {
-	label: "Euclid rectangles",
+	label: "Rectangles d'Euclide",
 	"b0.prompt": "Pave un rectangle de 12 sur 8 avec les plus grands carrés possibles, puis pave la bande qui reste de la même façon. Quand il ne reste rien, le dernier carré donne le PGCD.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g4,g1,g7,g3,g6,g5,g8,g9,g1,g6,g10,g10,g10,g10",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g4,g1,g7,g3,g6,g5,g8,g9,g1,g7,g10,g10,g10,g10",
@@ -133254,7 +133254,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b17.o3": "0|2|4",
 	"b17.o4": "0|4|2"
 }, kAe = {
-	label: "Even odd sort",
+	label: "Paires ou reste ?",
 	"b0.prompt": "Par deux, ou un reste ?",
 	"b0.o0": "0|2|2",
 	"b0.o1": "1|1|2",
@@ -133478,7 +133478,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "m27x3,m27x8,m45x2,m21x7,m35x9,m18x9",
 	"b11.o4": "m18x9,m21x7,m45x2,m27x8,m35x9,m27x3"
 }, PAe = {
-	label: "Even or odd product predict",
+	label: "Prédire le produit",
 	"b0.prompt": "Le produit sera-t-il pair ou impair ? Devine, puis dépose chaque calcul dans sa boîte.",
 	"b0.o0": "m2x5,m10x3,m2x7,m3x5,m1x7,m3x3",
 	"b0.o1": "m3x5,m10x3,m2x7,m2x5,m1x7,m3x3",
@@ -133624,7 +133624,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b1.o2": "Three 20-cent coins",
 	"b1.o3": "One 1-euro coin"
 }, zAe = {
-	label: "Exact change bag",
+	label: "Le sac de monnaie exacte",
 	"b0.prompt": "Monnaie de 3 euros : quelles pièces donnent exactement cela ?",
 	"b0.o0": "Trois pièces de 1 euro",
 	"b0.o1": "Deux pièces de 1 euro",
@@ -133806,7 +133806,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b17.o5": "f0,x2,a2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,a16,a17,a18,a19",
 	"b17.o6": "f0,a1,a2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,a16,a17,a18,x2"
 }, WAe = {
-	label: "Exchange station",
+	label: "La station d'échange",
 	"b0.prompt": "452 − 178 : échange où il le faut. Glisse les nouveaux chiffres du haut et le résultat.",
 	"b0.o0": "f0,f1,a2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,a17,a18,a19",
 	"b0.o1": "f0,f1,x0,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,a17,a18,a19",
@@ -134066,7 +134066,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "c5,c2,c4,c1,c3,c0",
 	"b11.o4": "c0,c1,c4,c2,c3,c5"
 }, YAe = {
-	label: "Expand slip hunt",
+	label: "La chasse aux erreurs de développement",
 	"b0.prompt": "Des élèves ont développé ces parenthèses. Trie-les : chacune est-elle juste, ou un terme ou un signe a-t-il glissé ?",
 	"b0.o0": "c0,c2,c1,c3",
 	"b0.o1": "c1,c2,c0,c3",
@@ -134652,7 +134652,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b11.o3": "m0,m2,m1",
 	"b11.o4": "m1,m2,m0"
 }, oje = {
-	label: "Explain it to a friend",
+	label: "Explique à un ami",
 	"b0.prompt": "Explique 48 + 37 par parties à un ami : mets les étapes dans l'ordre.",
 	"b0.o0": "m0,m1,m2",
 	"b0.o1": "m2,m1,m0",
@@ -134866,7 +134866,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b19.o1": "7 - 2 = 4",
 	"b19.o2": "7 + 2 = 9"
 }, dje = {
-	label: "Explain it to the puppet",
+	label: "Explique à la marionnette",
 	"b0.prompt": "Les jetons montrent une somme. Quelle phrase de nombres dit ce qu'ils montrent ?",
 	"b0.o0": "4 + 2 = 6",
 	"b0.o1": "4 - 2 = 2",
@@ -135078,7 +135078,7 @@ var SDe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), CDe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g11,g7,g8,g1,g9",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g12,g1,g9"
 }, gje = {
-	label: "Explore divisible by 8 and 11",
+	label: "Critères de divisibilité par 8 et 11",
 	"b0.prompt": "1\xA0232 est-il divisible par 8 ? Divise seulement les trois derniers chiffres par 8, puis donne le verdict.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g1,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g1,g10",
@@ -135707,7 +135707,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b25.o2": "6",
 	"b25.o3": "10"
 }, Dje = {
-	label: "Exponent tower tens",
+	label: "La tour des puissances de dix",
 	"b0.prompt": "100 000 = 10 puissance combien ?",
 	"b0.o0": "10⁵",
 	"b0.o1": "10⁴",
@@ -135980,7 +135980,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Mje = {
-	label: "Expression story match",
+	label: "Des mots aux lettres",
 	"b0.prompt": "Chaque phrase cache un nombre. Associe-la à l'expression où la lettre n remplace ce nombre.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -136229,7 +136229,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "g3,g1,g2,g0,g4,g7,g5,g6,g0,g8,g4",
 	"b17.o3": "g3,g1,g2,g0,g4,g0,g5,g6,g7,g8,g4"
 }, Lje = {
-	label: "Expression tower puzzle",
+	label: "Le puzzle des parenthèses",
 	"b0.prompt": "Place une paire de parenthèses pour que la réponse soit 20. Un point veut dire pas de parenthèse à cet endroit.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g8,g9",
 	"b0.o1": "g3,g1,g2,g3,g4,g3,g6,g7,g3,g8,g9",
@@ -136617,7 +136617,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o3": "a1-5,a3-5,a3-6,a4-5,a3-7,a4-6",
 	"b14.o4": "a1-5,a4-6,a3-6,a4-5,a3-5,a3-7"
 }, qje = {
-	label: "F or z hunt",
+	label: "La chasse au F ou au Z",
 	"b0.prompt": "Deux parallèles sont coupées par une sécante. Chaque carte nomme un coin sur la parallèle du haut (première flèche) et un coin sur celle du bas (seconde flèche) : ↖ haut gauche, ↗ haut droit, ↙ bas gauche, ↘ bas droit. Trie les paires selon la lettre qu'elles dessinent.",
 	"b0.o0": "a1-5,a2-6,a3-6,a4-5",
 	"b0.o1": "a3-6,a2-6,a1-5,a4-5",
@@ -136781,7 +136781,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "8",
 	"b1.o3": "6"
 }, Qje = {
-	label: "Faces of the solid",
+	label: "Les faces du solide",
 	"b0.prompt": "Une pyramide à base carrée a combien de faces triangulaires ?",
 	"b0.o0": "4",
 	"b0.o1": "1",
@@ -137119,7 +137119,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o0": "g0,g1,g2,g3,g4,g2,g1,g0,g3,g4,g4,g5,g0,g3,g2,g4,g5,g2,g3,g0",
 	"b17.o1": "g0,g1,g2,g3,g4,g2,g1,g2,g3,g4,g4,g5,g0,g3,g0,g4,g5,g0,g3,g0"
 }, cMe = {
-	label: "Fact family match",
+	label: "Familles de faits",
 	"b0.prompt": "7 × 8 = 56 : complète les nombres manquants des trois autres faits de la famille.",
 	"b0.o0": "g0,g1,g2,g3,g4,g2,g1,g0,g3,g4,g4,g5,g0,g3,g2,g4,g5,g2,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g4,g2,g1,g2,g3,g4,g4,g5,g0,g3,g0,g4,g5,g0,g3,g0",
@@ -137951,7 +137951,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "20",
 	"b1.o3": "17"
 }, vMe = {
-	label: "Fact flash race",
+	label: "Course des faits éclair",
 	"b0.prompt": "9 + 7 = ?",
 	"b0.o0": "16",
 	"b0.o1": "15",
@@ -138048,7 +138048,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o0": "t0,t1,t2,t3,d9,d0",
 	"b14.o1": "t0,t1,t2,t3,d9,d1"
 }, CMe = {
-	label: "Fact grows tens",
+	label: "Faits qui grandissent par dizaines",
 	"b0.prompt": "Tu sais que 3 + 4 = 7. Maintenant 30 + 40.",
 	"b0.o0": "t0,t1,t2,t3,d7,d0",
 	"b0.o1": "t0,t1,t2,t3,d8,d0",
@@ -138209,7 +138209,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o2": "g0,g1,g2,g3,g2,g3,g2,g4,g8",
 	"b11.o3": "g0,g1,g9,g3,g2,g3,g2,g4,g10"
 }, OMe = {
-	label: "Factor count predictor",
+	label: "Prédire le nombre de diviseurs",
 	"b0.prompt": "6 = 2 × 3. Chaque diviseur utilise chaque nombre premier 0, 1, ... jusqu'à son exposant de fois. Prédis combien de diviseurs a 6 : ajoute 1 à chaque exposant, puis multiplie.",
 	"b0.o0": "g0,g1,g2,g3,g2,g4,g5",
 	"b0.o1": "g0,g1,g6,g3,g6,g4,g6",
@@ -138419,7 +138419,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o3": "f5,n6,f15,m90,m135,f9,n27",
 	"b17.o4": "f5,n27,f15,m90,m135,n6,f9"
 }, NMe = {
-	label: "Factor or multiple sorter",
+	label: "Diviseur ou multiple ?",
 	"b0.prompt": "Trie les nombres : facteurs de 6, multiples de 6, ou ni l'un ni l'autre.",
 	"b0.o0": "f2,f3,m12,m18,n5,n7",
 	"b0.o1": "n5,f3,m12,m18,f2,n7",
@@ -138941,7 +138941,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o5": "f0,x2,f2,a3,f4,a5",
 	"b17.o6": "f0,a1,f2,a3,f4,x2"
 }, UMe = {
-	label: "Factor pair sweep",
+	label: "Balayage des couples de diviseurs",
 	"b0.prompt": "Tous les couples de facteurs de 12, dans l'ordre. Glisse les couples manquants.",
 	"b0.o0": "f0,a1,f2",
 	"b0.o1": "f0,x0,f2",
@@ -139172,7 +139172,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o1": "g0,g1,g7,g3,g8,g5,g9",
 	"b17.o2": "g0,g1,g2,g3,g6,g5,g4"
 }, JMe = {
-	label: "Factor peel simplifier",
+	label: "Simplifier en épluchant les facteurs",
 	"b0.prompt": "Écris 6/8 sous sa forme la plus simple : divise le haut et le bas par le plus grand nombre qui divise les deux.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g6,g5,g4",
@@ -139355,7 +139355,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o1": "g0,g1,g4,g3,g2,g2,g1,g5,g3,g2,g6,g1,g7,g3,g2,g8,g1,g9,g3,g2,g10,g1,g11,g3,g2",
 	"b17.o2": "g0,g1,g2,g3,g2,g4,g1,g5,g3,g2,g6,g1,g7,g3,g2,g8,g1,g9,g3,g2,g10,g1,g12,g3,g2"
 }, $Me = {
-	label: "Factor rainbow",
+	label: "L'arc-en-ciel des diviseurs",
 	"b0.prompt": "Complète toutes les paires de facteurs de 12 : chaque ligne multiplie jusqu'à 12.",
 	"b0.o0": "g0,g1,g2,g3,g2,g4,g1,g5,g3,g2,g6,g1,g7,g3,g2",
 	"b0.o1": "g5,g1,g2,g3,g2,g4,g1,g0,g3,g2,g6,g1,g7,g3,g2",
@@ -139569,7 +139569,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g5,g3,g6,g3,g7,g3,g8",
 	"b17.o4": "g0,g1,g2,g3,g4,g1,g2,g3,g5,g3,g6,g3,g7,g3,g7"
 }, iNe = {
-	label: "Factor tree builder",
+	label: "Construire l'arbre des facteurs",
 	"b0.prompt": "12 est coupé en 3 × 4. Continue à couper jusqu'à n'avoir que des nombres premiers, et écris-les du plus petit au plus grand.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g5,g3,g2",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g2,g3,g5",
@@ -139771,7 +139771,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g9,g3,g7,g3,g8",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g10,g3,g7,g3,g8"
 }, lNe = {
-	label: "Factor tree forest",
+	label: "La forêt des arbres de facteurs",
 	"b0.prompt": "12 se coupe en 3 × 4. Continue à couper jusqu'à n'avoir que des nombres premiers, puis écris 12 avec des exposants, du plus petit nombre premier au plus grand.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g2",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g2,g3,g6",
@@ -139965,7 +139965,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o3": "fw2,fs3,fs4,fw6,fw1,fs2",
 	"b14.o4": "fs2,fw6,fs4,fs3,fw1,fw2"
 }, mNe = {
-	label: "Fair average or not",
+	label: "Moyenne équitable ou non",
 	"b0.prompt": "Chaque carte demande une moyenne. Une moyenne simple convient-elle, ou certaines valeurs comptent-elles plus et il faut une moyenne pondérée ?",
 	"b0.o0": "fs2,fs3,fw2,fw3",
 	"b0.o1": "fw2,fs3,fs2,fw3",
@@ -140171,7 +140171,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o3": "0|2|4",
 	"b11.o4": "1|3|2"
 }, yNe = {
-	label: "Fair cut or not",
+	label: "Partage équitable ou non ?",
 	"b0.prompt": "Chaque partage est-il juste ou inégal ?",
 	"b0.o0": "0|2|2",
 	"b0.o1": "4|0|0",
@@ -140355,7 +140355,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o1": "g0,g1,g2,g5,g3,g5,g4,g6",
 	"b14.o2": "g0,g1,g2,g1,g3,g1,g4,g7"
 }, wNe = {
-	label: "Fair game designer",
+	label: "Concevoir un jeu équitable",
 	"b0.prompt": "Une roue a 8 secteurs égaux. 🅰️ gagne sur 3 d'entre eux. Rends le jeu équitable : sur combien de secteurs 🅱️ gagne-t-il, et combien restent pour personne (⚪) ?",
 	"b0.o0": "g0,g1,g2,g1,g3,g4",
 	"b0.o1": "g0,g1,g2,g5,g3,g6",
@@ -140623,7 +140623,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b25.o3": "1|4|3|0",
 	"b25.o4": "8|0|0|0"
 }, kNe = {
-	label: "Fair halves sort",
+	label: "Moitiés équitables",
 	"b0.prompt": "Partage les objets équitablement sur les deux assiettes.",
 	"b0.o0": "0|2|2|0",
 	"b0.o1": "0|3|1|0",
@@ -141253,7 +141253,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "Only sometimes",
 	"b1.o3": "Cannot tell"
 }, zNe = {
-	label: "Fair or not sort",
+	label: "Équitable ou non",
 	"b0.prompt": "Un dé équilibré à six faces : chaque face est-elle équiprobable ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -141381,7 +141381,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o3": "f0,r0,f1,r1",
 	"b14.o4": "f0,r1,r0,f1"
 }, WNe = {
-	label: "Fair or rigged detective",
+	label: "L'enquêteur du dé truqué",
 	"b0.prompt": "Chaque carte est le décompte de 60 lancers d'un dé : de la face 1 à la face 6. Trie les dés qui ont l'air équitables et ceux qui ont l'air truqués.",
 	"b0.o0": "f0,f1,r0,r1",
 	"b0.o1": "r0,f1,f0,r1",
@@ -141587,7 +141587,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o3": "f0,r2,f1,r3",
 	"b11.o4": "f0,r3,r2,f1"
 }, YNe = {
-	label: "Fair or rigged dice",
+	label: "Dés équitables ou truqués",
 	"b0.prompt": "Voici les décomptes de chaque dé lancé plusieurs fois (faces 1 à 6). Chaque dé est-il juste ou truqué ? Trie les cartes.",
 	"b0.o0": "f0,f1,r2,r3",
 	"b0.o1": "r2,f1,f0,r3",
@@ -141793,7 +141793,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o3": "u0,f0,f1,f2,u3,u4,f4,u1",
 	"b14.o4": "u1,f0,f1,f2,u3,u4,u0,f4"
 }, ePe = {
-	label: "Fair or unfair sorter",
+	label: "Équitable ou injuste",
 	"b0.prompt": "Dans un jeu équitable, les deux joueurs ont la même chance de gagner. Trie les jeux en équitables et inéquitables.",
 	"b0.o0": "f0,f1,u0,u1",
 	"b0.o1": "u0,f1,f0,u1",
@@ -141999,7 +141999,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o3": "h0,q0,h2,h3,h1,q1",
 	"b11.o4": "h0,q1,h2,h3,q0,h1"
 }, aPe = {
-	label: "Fair share cutter",
+	label: "Le partage équitable",
 	"b0.prompt": "Chaque morceau vient du même carré. Est-ce une moitié ou un quart du carré ? Trie les morceaux.",
 	"b0.o0": "h0,h1,q0,q1",
 	"b0.o1": "q0,h1,h0,q1",
@@ -142180,7 +142180,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b3.o2": "10",
 	"b3.o3": "20"
 }, uPe = {
-	label: "Fair share picnic",
+	label: "Le pique-nique équitable",
 	"b0.prompt": "8 bonbons sont partagés équitablement entre 2 amis. Combien chacun ?",
 	"b0.o0": "4",
 	"b0.o1": "2",
@@ -142287,7 +142287,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o2": "1|4|5|5|5",
 	"b11.o3": "0|17|1|1|1"
 }, hPe = {
-	label: "Fair share spinner builder",
+	label: "Construire une roue équitable",
 	"b0.prompt": "Une roulette a 6 secteurs égaux et 2 couleurs. Répartis les secteurs pour faire une roulette équitable.",
 	"b0.o0": "0|3|3",
 	"b0.o1": "0|4|2",
@@ -142451,7 +142451,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o2": "g0,g1,g1,g1,g1,g2,g2,g3,g1,g0,g0,g2,g2",
 	"b14.o3": "g0,g1,g1,g1,g1,g2,g2,g3,g1,g2,g0,g0,g0"
 }, bPe = {
-	label: "Fair spinner designer",
+	label: "Concevoir une roue équitable",
 	"b0.prompt": "Cette roue n'est pas encore équitable : les couleurs n'ont pas le même nombre de secteurs. Remplis les secteurs vides pour que chaque couleur en ait autant.",
 	"b0.o0": "g0,g0,g0,g1,g2,g1,g1",
 	"b0.o1": "g0,g0,g0,g1,g2,g0,g0",
@@ -142586,7 +142586,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "0,20",
 	"b1.o3": "0,07"
 }, TPe = {
-	label: "Fdp card match",
+	label: "Associer les cartes fraction, décimal, pourcentage",
 	"b0.prompt": "Quel pourcentage correspond à 0,4 ?",
 	"b0.o0": "40 %",
 	"b0.o1": "4 %",
@@ -142792,7 +142792,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b23.o5": "r0,r1,r2,r4,r3",
 	"b23.o6": "r1,r2,r3,r4,r0"
 }, APe = {
-	label: "Fdp ranking ladder",
+	label: "L'échelle de classement",
 	"b0.prompt": "Monte l'échelle : mets les fractions, les décimaux et les pourcentages dans l'ordre, du plus petit au plus grand.",
 	"b0.o0": "r0,r1,r2",
 	"b0.o1": "r2,r1,r0",
@@ -143064,7 +143064,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o2": "g0,g1,g8,g3,g4,g12,g5,g6",
 	"b11.o3": "g7,g1,g8,g3,g4,g5,g9,g6"
 }, FPe = {
-	label: "Fence budget puzzle",
+	label: "La clôture et le budget",
 	"b0.prompt": "Tu as 16 m de clôture et tu dois tout l'utiliser. En mètres entiers : quel jardin a la plus grande aire ?",
 	"b0.o0": "g0,g1,g0,g2,g3,g4,g5",
 	"b0.o1": "g8,g1,g4,g2,g3,g8,g5",
@@ -143228,7 +143228,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g11,g8",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g12,g8"
 }, BPe = {
-	label: "Fence the circle",
+	label: "Clôturer le cercle",
 	"b0.prompt": "Un bassin rond a un diamètre de 4 m. Quelle longueur de bordure faut-il pour en faire le tour ? Utilise 3,14.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g6,g5",
@@ -143433,7 +143433,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "f0,f1,f2,f3,f4,f5,f6,f7,x1,f9",
 	"b17.o3": "f0,f1,f2,f3,f4,f5,f6,f7,x2,f9"
 }, GPe = {
-	label: "Fence the garden",
+	label: "Clôturer le jardin",
 	"b0.prompt": "Le jardin mesure 3 m de long et 2 m de large. Place des panneaux de 1 m le long de chaque côté. Combien de panneaux font tout le tour ?",
 	"b0.o0": "2|3|2|3|2",
 	"b0.o1": "2|3|2|2|3",
@@ -143668,7 +143668,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o3": "mo30,w7,d24,m60,s60,y12,w52",
 	"b14.o4": "w52,s60,d24,m60,w7,y12,mo30"
 }, XPe = {
-	label: "Fermi chain builder",
+	label: "Construire la chaîne de Fermi",
 	"b0.prompt": "Combien de minutes dans une journée ? Construis la chaîne : trie les cartes dans celles que tu multiplies et celles dont tu n'as pas besoin.",
 	"b0.o0": "d24,m60,w7,y12",
 	"b0.o1": "w7,m60,d24,y12",
@@ -143882,7 +143882,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o2": "g0,g1,g2,g1,g3,g4,g7",
 	"b14.o3": "g8,g1,g2,g1,g3,g4,g9"
 }, tFe = {
-	label: "Fermi quest",
+	label: "La quête de Fermi",
 	"b0.prompt": "Un livre a environ 212 pages et une étagère contient environ 38 livres. Environ combien y a-t-il de pages sur une étagère ? Arrondis chaque donnée à 1 chiffre significatif, puis multiplie.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -144111,7 +144111,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o4": "c2,c20,c5,c20,c50,c1",
 	"b14.o5": "c2,c20,c5,c50,c20,c1"
 }, oFe = {
-	label: "Fewest coin challenge",
+	label: "Le moins de pièces",
 	"b0.prompt": "Fais 15 avec le moins de pièces possible. La bourse n'a que 2 places.",
 	"b0.o0": "c10,c5",
 	"b0.o1": "c10,c2",
@@ -144290,7 +144290,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "100",
 	"b1.o3": "410"
 }, dFe = {
-	label: "Fifty coin count",
+	label: "Compter jusqu'à cinquante",
 	"b0.prompt": "Trois piles de 50 pièces chacune. Combien de pièces en tout ?",
 	"b0.o0": "150",
 	"b0.o1": "53",
@@ -144508,7 +144508,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b35.o2": "9",
 	"b35.o3": "3"
 }, gFe = {
-	label: "Fill the frame",
+	label: "Remplir le cadre",
 	"b0.prompt": "1 lapins sont dedans. La maison en veut 3. Combien doivent encore entrer ?",
 	"b0.o0": "2",
 	"b0.o1": "1",
@@ -144784,7 +144784,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b3.o2": "250",
 	"b3.o3": "350"
 }, xFe = {
-	label: "Fill the gap sequence",
+	label: "Compléter la suite",
 	"b0.prompt": "4, 8, ?, 16, 20. Quel est le terme caché ?",
 	"b0.o0": "12",
 	"b0.o1": "10",
@@ -144952,7 +144952,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o5": "p0,n7,p1,n13,p2,n9",
 	"b14.o6": "p0,n7,p1,n12,p2,n13"
 }, EFe = {
-	label: "Fill the survey table",
+	label: "Le tableau du sondage",
 	"b0.prompt": "Compte les images de chaque rangée. Dépose le nombre dans le tableau.",
 	"b0.o0": "p0,n3,p1,n5,p2,n2",
 	"b0.o1": "p0,n5,p1,n3,p2,n2",
@@ -145206,7 +145206,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g8,g4,g13,g10",
 	"b17.o3": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g8,g4,g5,g10"
 }, jFe = {
-	label: "Fill the tank capacity",
+	label: "Remplir le réservoir",
 	"b0.prompt": "Un réservoir mesure 10 cm de long, 10 cm de large et 10 cm de haut. Combien de cm³ fait-il, et combien de litres contient-il ?",
 	"b0.o0": "g0,g1,g0,g1,g0,g2,g3,g4,g5,g3,g2,g6,g7",
 	"b0.o1": "g0,g1,g0,g1,g0,g2,g8,g4,g5,g3,g2,g9,g7",
@@ -145388,7 +145388,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b11.o1": "g0,g1,g2,g3,g4,g5,g6,g15,g8,g9,g10,g11,g3,g12,g13,g14",
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g14,g8,g9,g13,g11,g3,g12,g10,g7"
 }, IFe = {
-	label: "Fill the two way table",
+	label: "Remplir le tableau à double entrée",
 	"b0.prompt": "Des élèves avec un chat ou un chien, garçons et filles. Complète les nombres manquants : chaque ligne et chaque colonne s'additionne jusqu'à son total.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11,g3,g12,g12,g13",
 	"b0.o1": "g0,g1,g2,g3,g4,g10,g6,g7,g8,g9,g10,g11,g3,g12,g12,g13",
@@ -145510,7 +145510,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b1.o2": "Adding 9 and 1",
 	"b1.o3": "Adding two odd numbers"
 }, VFe = {
-	label: "Find a counter example",
+	label: "Trouver un contre-exemple",
 	"b0.prompt": "Affirmation : tous les nombres impairs sont premiers. Quel nombre la contredit ?",
 	"b0.o0": "9",
 	"b0.o1": "3",
@@ -145638,7 +145638,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "g0,g1,g2,g3,g4,g3,g5,g1,g8",
 	"b17.o3": "g0,g1,g2,g3,g4,g3,g5,g1,g9"
 }, KFe = {
-	label: "Find the crossed angle",
+	label: "Trouver l'angle croisé",
 	"b0.prompt": "Deux droites se croisent. Un angle mesure 72°. L'angle x lui est opposé. Trouve x.",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g1,g3",
@@ -145861,7 +145861,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g12,g7,g8,g1,g13",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g2,g7,g8,g1,g14"
 }, ZFe = {
-	label: "Find the k",
+	label: "Trouve le k",
 	"b0.prompt": "Une machine mystère suit y = kx. Elle a changé 2 en 6. Trouve k, puis prévois ce qu'elle fait de 5.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g1,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g10,g7,g8,g1,g11",
@@ -146276,7 +146276,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b53.o3": "next",
 	"b53.o4": "box"
 }, nIe = {
-	label: "Find the toy",
+	label: "Trouver le jouet",
 	"b0.prompt": "Touche celui qui est sur la boîte.",
 	"b0.o0": "on",
 	"b0.o1": "under",
@@ -146686,7 +146686,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b17.o2": "g0,g1,g2,g3,g9,g5,g4,g6,g7,g3,g10",
 	"b17.o3": "g0,g1,g2,g3,g0,g5,g4,g6,g7,g3,g9"
 }, sIe = {
-	label: "Find the whole bar puzzle",
+	label: "Reconstituer la barre",
 	"b0.prompt": "La partie coloriée d'une barre est 1/4 du tout, et elle vaut 6. Trouve un morceau, puis reconstruis toute la barre.",
 	"b0.o0": "g0,g1,g2,g3,g0,g4,g0,g5,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g0,g4,g0,g5,g6,g3,g0",
@@ -147696,7 +147696,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b14.o0": "The stick",
 	"b14.o1": "The door"
 }, _Ie = {
-	label: "Fit through the door",
+	label: "Passer par la porte",
 	"b0.prompt": "Place le bâton contre la porte. Lequel est le plus long ?",
 	"b0.o0": "Le bâton",
 	"b0.o1": "La porte",
@@ -147850,7 +147850,7 @@ var DB = (e) => `1/${EB(e)}`, OB = [
 	"b12.o3": "f2_2,f0_1,f0_2,f1_0,f1_1,f1_2,f2_0,f2_1,f0_0",
 	"b12.o4": "f0_0,f2_0,f0_2,f1_0,f1_1,f1_2,f0_1,f2_1,f2_2"
 }, SIe = {
-	label: "Five faces of a fraction",
+	label: "Les cinq visages d'une fraction",
 	"b0.prompt": "Une fraction a plusieurs visages : une division, un décimal, un pourcentage, un rapport, une image. Trie les cartes sous la fraction qu'elles montrent.",
 	"b0.o0": "f0_0,f0_1,f1_0,f1_1",
 	"b0.o1": "f1_0,f0_1,f0_0,f1_1",
@@ -148625,7 +148625,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b65.o3": "p0,p1,p2,p3,p4,t1,p6,p7,t2",
 	"b65.o4": "p0,p1,p2,p3,p4,t3,p6,p7,t2"
 }, PIe = {
-	label: "Fix the pattern",
+	label: "Réparer la suite",
 	"b0.prompt": "Répare le motif.",
 	"b0.o0": "p0,p1,p2,t1,p4,p5",
 	"b0.o1": "p0,p1,p2,t0,p4,p5",
@@ -149101,7 +149101,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o3": "g0,g1,g2,g8,g4,g5",
 	"b11.o4": "g0,g1,g2,g9,g4,g5"
 }, zIe = {
-	label: "Fix the student",
+	label: "Corriger l'élève",
 	"b0.prompt": "Un élève a écrit la ligne de gauche. Écris la réponse corrigée, puis choisis la raison qui explique la correction.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g6",
@@ -149307,7 +149307,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b14.o3": "square1,pentagon0,pentagon1,hexagon2,pentagon2,hexagon1",
 	"b14.o4": "square1,hexagon1,pentagon1,hexagon2,pentagon0,pentagon2"
 }, WIe = {
-	label: "Flexible frame",
+	label: "Le cadre flexible",
 	"b0.prompt": "Chaque cadre est fait de baguettes jointes aux coins, avec des barres de coin à coin. Pousse dessus : garde-t-il sa forme ? Trie les cadres.",
 	"b0.o0": "triangle0,square1,square0,pentagon1",
 	"b0.o1": "square0,square1,triangle0,pentagon1",
@@ -149543,7 +149543,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b16.o3": "DDLLLUUL",
 	"b16.o4": "DURRRDDR"
 }, YIe = {
-	label: "Floor robot obstacle course",
+	label: "Parcours du robot",
 	"b0.prompt": "Programme le robot jusqu'au jeton. Contourne les rochers.",
 	"b0.o0": "DRRUR",
 	"b0.o1": "DRRU",
@@ -149759,7 +149759,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b16.o0": "No, different",
 	"b16.o1": "Yes, the same"
 }, eLe = {
-	label: "Fold and compare",
+	label: "Plier et comparer",
 	"b0.prompt": "Plie la forme en 2 parts égales. Dépose un pli dessus.",
 	"b0.o0": "v",
 	"b0.o1": "ol",
@@ -149936,7 +149936,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o3": "many2,one1,two0,two1,many0,many1,one0",
 	"b11.o4": "one0,many0,two0,two1,one1,many1,many2"
 }, aLe = {
-	label: "Fold and find mirrors",
+	label: "Plier et trouver les miroirs",
 	"b0.prompt": "Combien d'axes de symétrie a chaque forme ? Trie-les.",
 	"b0.o0": "one0,two0,many0,many1",
 	"b0.o1": "many0,two0,one0,many1",
@@ -150115,7 +150115,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, uLe = {
-	label: "Fold and match halves",
+	label: "La même quantité",
 	"b0.prompt": "Chaque barre montre une quantité. Dépose dessus la fraction qui montre la même quantité.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -150311,7 +150311,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b15.o2": "e4:dot",
 	"b15.o3": "e2:dot"
 }, hLe = {
-	label: "Fold and mirror butterfly",
+	label: "Papillon miroir",
 	"b0.prompt": "Le trait épais est le pli. Place le jumeau miroir de l'étoile de l'autre côté.",
 	"b0.o0": "b5:dot",
 	"b0.o1": "b6:dot",
@@ -150555,7 +150555,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b14.o5": "h,du",
 	"b14.o6": "h,dd"
 }, bLe = {
-	label: "Fold halves quarters",
+	label: "Plier en quarts",
 	"b0.prompt": "Plie en quarts.",
 	"b0.o0": "v,h",
 	"b0.o1": "v,v",
@@ -150949,7 +150949,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b53.o2": "v",
 	"b53.o3": "dd"
 }, TLe = {
-	label: "Fold the half",
+	label: "Plier en deux",
 	"b0.prompt": "Plie en deux.",
 	"b0.o0": "v",
 	"b0.o1": "ol",
@@ -151328,7 +151328,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b18.o3": "LLL",
 	"b18.o4": "LLLLL"
 }, ALe = {
-	label: "Follow my steps",
+	label: "Suis mes pas",
 	"b0.prompt": "Fais 1 pas en avant. Touche les cartes de pas.",
 	"b0.o0": "R",
 	"b0.o1": "RR",
@@ -151507,7 +151507,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "0,05 l",
 	"b1.o3": "50 l"
 }, FLe = {
-	label: "Foot mile pint guess",
+	label: "Devine : pied, mille, pinte",
 	"b0.prompt": "Un pied fait environ combien de centimètres ?",
 	"b0.o0": "30 cm",
 	"b0.o1": "3 cm",
@@ -151629,7 +151629,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g11",
 	"b17.o3": "g0,g1,g2,g3,g12,g5,g4,g6,g7,g3,g12"
 }, BLe = {
-	label: "Formula machine",
+	label: "La machine à formules",
 	"b0.prompt": "Donne à la machine la formule A = l × w, avec l = 7 et w = 4 et lis le résultat.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -152145,7 +152145,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b27.o2": "4",
 	"b27.o3": "1"
 }, XLe = {
-	label: "Four digit place peek",
+	label: "Regarder les rangs à quatre chiffres",
 	"b0.prompt": "Jette un œil à 6\xA0521. Quel chiffre est à la place des milliers ?",
 	"b0.o0": "6",
 	"b0.o1": "1",
@@ -152405,7 +152405,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b14.o3": "c3,c8,i6",
 	"b14.o4": "g3,g8"
 }, tRe = {
-	label: "Four quadrant battleship",
+	label: "La bataille des coordonnées",
 	"b0.prompt": "L'étoile est l'origine (0, 0). Trouve les bateaux en (1, 2), (3, 1) : colorie la case de chaque bateau.",
 	"b0.o0": "c6,d8",
 	"b0.o1": "b6,d7",
@@ -152626,7 +152626,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g2,g3,g11,g3,g12",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g2,g3,g9,g3,g10"
 }, oRe = {
-	label: "Fraction balance signs",
+	label: "Signes avec des fractions",
 	"b0.prompt": "Mets −1/2 + 3/4 sur la balance. Réécris les deux fractions sur le même dénominateur, garde leurs signes, puis combine.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g3,g5",
 	"b0.o1": "g0,g1,g2,g3,g6,g1,g2,g3,g7",
@@ -152787,7 +152787,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "1/6",
 	"b1.o3": "5/1"
 }, dRe = {
-	label: "Fraction bar match",
+	label: "Associer les barres de fractions",
 	"b0.prompt": "Une barre a 4 parts dont 3 coloriées. Quelle fraction correspond ?",
 	"b0.o0": "3/4",
 	"b0.o1": "4/3",
@@ -152871,7 +152871,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o1": "g0,g1,g2,g11,g4,g5,g2,g12,g13,g8",
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g2,g14,g14,g8"
 }, gRe = {
-	label: "Fraction bar story",
+	label: "L'histoire des barres de fractions",
 	"b0.prompt": "Un ruban mesure 12 cm. 3/4 est peint en bleu. Quelle est la longueur de la partie bleue ? Imagine la barre : 4 parts égales.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g2,g7",
@@ -153049,7 +153049,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o5": "c0,c2,c1,c3,c4",
 	"b11.o6": "c0,c3,c2,c1,c4"
 }, xRe = {
-	label: "Fraction card match",
+	label: "Associer les fractions",
 	"b0.prompt": "Associe chaque image à sa fraction.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -153265,7 +153265,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o4": "f0,f1,f2,f4,f3",
 	"b11.o5": "f1,f3,f2,f4,f0"
 }, ERe = {
-	label: "Fraction duel cards",
+	label: "La ligne des fractions",
 	"b0.prompt": "Mets les fractions dans l'ordre sur la ligne, de la plus petite à la plus grande. Une moitié y est déjà.",
 	"b0.o0": "f0,f1,f2,f3,f4",
 	"b0.o1": "f4,f3,f2,f1,f0",
@@ -153465,7 +153465,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b16.o2": "g0,g1,g2,g3,g10,g5,g6,g3,g7,g8,g5,g6",
 	"b16.o3": "g0,g1,g2,g3,g4,g5,g6,g3,g8,g7,g5,g6"
 }, jRe = {
-	label: "Fraction groups builder",
+	label: "Groupes de fractions",
 	"b0.prompt": "3 groupes de 1/4 : multiplie le haut par 3 et garde le bas.",
 	"b0.o0": "g0,g1,g2,g3,g2,g4,g2,g4,g2,g3,g0,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g2,g4,g2,g4,g2,g3,g0,g5,g7",
@@ -153696,7 +153696,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o5": "f0,f1,a2,a4,a3,f5",
 	"b17.o6": "f0,f1,a3,a4,a2,f5"
 }, IRe = {
-	label: "Fraction hop past one",
+	label: "Sauter au-delà de un",
 	"b0.prompt": "Saute par pas de 1/2. Remplis les fractions où tu atterris.",
 	"b0.o0": "f0,f1,f2,a3,f4,f5",
 	"b0.o1": "f0,f1,f2,x0,f4,f5",
@@ -153933,7 +153933,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o1": "_,_,_,_,_,_,m",
 	"b17.o2": "_,_,_,_,m,_,_"
 }, VRe = {
-	label: "Fraction line lander",
+	label: "L'atterrissage sur la droite des fractions",
 	"b0.prompt": "Où va 1/2 sur la droite ? La droite est coupée en moitiés entre deux nombres entiers. Place l'épingle.",
 	"b0.o0": "_,m,_",
 	"b0.o1": "_,_,m",
@@ -154223,7 +154223,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b23.o5": "q0,q1,q2,q4,q3",
 	"b23.o6": "q1,q2,q3,q4,q0"
 }, KRe = {
-	label: "Fraction number line sorter",
+	label: "Au-delà d'une droite",
 	"b0.prompt": "Dépose les fractions et les nombres mixtes sur la droite, du plus petit au plus grand.",
 	"b0.o0": "q0,q1,q2,q3,q4",
 	"b0.o1": "q0,q3,q2,q1,q4",
@@ -154525,7 +154525,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g3,g2",
 	"b17.o3": "g0,g1,g2,g3,g4,g3,g8"
 }, ZRe = {
-	label: "Fraction of a crowd",
+	label: "Une fraction de la foule",
 	"b0.prompt": "3/5 de 20 personnes dans une foule. Trouve d'abord une part, puis prends-en 3.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g9",
@@ -154689,7 +154689,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "21",
 	"b1.o3": "42"
 }, nze = {
-	label: "Fraction of a quantity check",
+	label: "Vérifier la fraction d'une quantité",
 	"b0.prompt": "Combien vaut 3/5 de 40 ?",
 	"b0.o0": "24",
 	"b0.o1": "8",
@@ -154757,7 +154757,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "6",
 	"b1.o3": "18"
 }, sze = {
-	label: "Fraction of a set shop",
+	label: "La boutique des fractions d'un ensemble",
 	"b0.prompt": "Combien vaut 3/4 de 20 ?",
 	"b0.o0": "15",
 	"b0.o1": "5",
@@ -154885,7 +154885,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g9,g3,g11",
 	"b17.o3": "g0,g1,g2,g3,g12,g5,g13,g3,g14"
 }, fze = {
-	label: "Fraction of fraction folds",
+	label: "Fraction d'une fraction",
 	"b0.prompt": "Plie la feuille en 1/3, puis prends 1/2 de cette part. Écris 1/2 × 1/3 avec le haut et le bas.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g7,g5,g8",
@@ -155133,7 +155133,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o4": "f1-8,f1-6,f1-3,f1-5",
 	"b17.o5": "f1-6,f1-5,f1-3,f1-8"
 }, _ze = {
-	label: "Fraction order line",
+	label: "Ranger les fractions",
 	"b0.prompt": "Mets les fractions dans l'ordre, de la plus petite à la plus grande.",
 	"b0.o0": "f2-8,f3-8,f5-8",
 	"b0.o1": "f5-8,f3-8,f2-8",
@@ -155375,7 +155375,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o5": "f1,f3,f5,f7,f6",
 	"b11.o6": "f3,f5,f6,f7,f1"
 }, Sze = {
-	label: "Fraction order train",
+	label: "Le train des fractions",
 	"b0.prompt": "Mets les fractions dans l'ordre, la plus petite en tête du train.",
 	"b0.o0": "f1,f2,f3",
 	"b0.o1": "f3,f2,f1",
@@ -155820,7 +155820,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o5": "z,f1,f2,f3,f4,f6,f5,f7,f8,f9,o",
 	"b11.o6": "z,f1,f2,f3,f4,f5,f8,f7,f6,f9,o"
 }, Mze = {
-	label: "Fraction ruler slider",
+	label: "La règle des fractions",
 	"b0.prompt": "Place les fractions sur la règle entre 0 et 1. La règle est coupée en 4 parts égales.",
 	"b0.o0": "z,f1,f2,f3,o",
 	"b0.o1": "z,f3,f2,f1,o",
@@ -156017,7 +156017,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g6,g5,g6",
 	"b17.o3": "g0,g1,g2,g3,g8,g5,g6"
 }, Lze = {
-	label: "Fraction split puzzle",
+	label: "Partager une fraction",
 	"b0.prompt": "Décompose 5/8 en somme : trouve la part qui manque.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g7,g5,g6",
@@ -156217,7 +156217,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g7",
 	"b17.o2": "g0,g1,g2,g3,g8,g5,g6"
 }, Hze = {
-	label: "Fraction strip add",
+	label: "Additionner avec des bandes",
 	"b0.prompt": "2/8 + 3/8 : des parts de même taille, donc on travaille avec les hauts.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g7",
@@ -156417,7 +156417,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g5,g1,g5,g3,g7",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g5"
 }, qze = {
-	label: "Fraction strip division",
+	label: "Division avec des bandes",
 	"b0.prompt": "Combien de bandes de 1/4 entrent dans 3/4 ? Réécris les deux avec le même dénominateur, puis divise les numérateurs.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5,g1,g4,g3,g4",
@@ -156623,7 +156623,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b14.o2": "t0,t1,t2,t3,d7,t4",
 	"b14.o3": "t0,t1,t2,t3,d8,t4"
 }, Qze = {
-	label: "Fraction strip join",
+	label: "Assembler les bandes",
 	"b0.prompt": "1/4 + 2/4 : fais glisser toutes les parts sur une seule bande.",
 	"b0.o0": "0|0|3",
 	"b0.o1": "1|0|2",
@@ -156825,7 +156825,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g7",
 	"b17.o2": "g0,g1,g2,g3,g8,g1,g9,g3,g6"
 }, rBe = {
-	label: "Fraction sum race",
+	label: "Course des fractions de dénominateurs différents",
 	"b0.prompt": "Calcule 1/2 + 1/3. Réécris les deux avec le même dénominateur, additionne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g7",
@@ -157057,7 +157057,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o5": "f0,f1,f2,f3,x2,f5,a6",
 	"b17.o6": "f0,f1,f2,f3,a4,f5,x2"
 }, cBe = {
-	label: "Fraction take away",
+	label: "Soustraire des fractions",
 	"b0.prompt": "Il y a 5/6 d'une pizza. Enlève 2/6. Déplace les parts que tu enlèves.",
 	"b0.o0": "3|2",
 	"b0.o1": "4|1",
@@ -157299,7 +157299,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g5,g10",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g11,g5,g12"
 }, pBe = {
-	label: "Fraction to decimal machine",
+	label: "La machine fraction-décimal",
 	"b0.prompt": "Donne 1/2 à la machine : divise 1 par 2 pour avoir le décimal, puis écris-le en pourcentage.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g5,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g8,g5,g9",
@@ -157517,7 +157517,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, vBe = {
-	label: "Fraction to decimal match",
+	label: "Fraction ou décimal",
 	"b0.prompt": "Quel décimal est pareil que chaque fraction ? Glisse les cartes.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -157675,7 +157675,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "7/4",
 	"b1.o3": "4/8"
 }, CBe = {
-	label: "Fraction train past one",
+	label: "Le train des fractions au-delà de un",
 	"b0.prompt": "Compte les quarts : 1/4, 2/4, 3/4, 4/4. Qu'est-ce qui suit ?",
 	"b0.o0": "5/4",
 	"b0.o1": "1/4",
@@ -157803,7 +157803,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b14.o3": "w0_15_18,w2_6_18,w1_18_24,w1_9_12,w0_10_12,w2_2_6",
 	"b14.o4": "w0_15_18,w2_2_6,w1_18_24,w1_9_12,w2_6_18,w0_10_12"
 }, OBe = {
-	label: "Fraction wall find the match",
+	label: "Trouver le bon morceau du mur",
 	"b0.prompt": "Sur le mur de fractions, des fractions égales sont des barres de même longueur. Trie les barres sous la fraction à laquelle elles sont égales.",
 	"b0.o0": "w0_2_4,w0_4_8,w1_2_8,w1_4_16",
 	"b0.o1": "w1_2_8,w0_4_8,w0_2_4,w1_4_16",
@@ -158017,7 +158017,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b11.o2": "x0,c1",
 	"b11.o3": "x1,c1"
 }, NBe = {
-	label: "Fraction wall match",
+	label: "Associer le mur des fractions",
 	"b0.prompt": "Quelles fractions sont égales ? Glisse chaque carte sur la fraction qui lui correspond.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -158171,7 +158171,7 @@ var AIe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jIe = $({
 	"b1.o2": "3/8",
 	"b1.o3": "1/8"
 }, RBe = {
-	label: "Fraction wall twins",
+	label: "Jumeaux du mur des fractions",
 	"b0.prompt": "Sur un mur de fractions, quelle barre a la même longueur que 1/2 ?",
 	"b0.o0": "2/4",
 	"b0.o1": "1/4",
@@ -158514,7 +158514,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b1.o2": "35",
 	"b1.o3": "37"
 }, XBe = {
-	label: "Frog lands on multiples",
+	label: "La grenouille atterrit sur les multiples",
 	"b0.prompt": "Une grenouille saute de 3 en 3 depuis 0. Sur quelle pierre tombe-t-elle ?",
 	"b0.o0": "9",
 	"b0.o1": "10",
@@ -158688,7 +158688,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b23.o5": "c0,c2,c1,c3,c4",
 	"b23.o6": "c0,c3,c2,c1,c4"
 }, tVe = {
-	label: "Full half empty fill",
+	label: "Remplir jusqu'en haut",
 	"b0.prompt": "Associe chaque récipient au mot qui dit à quel point il est rempli.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -158928,7 +158928,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b11.o2": "g0,g1,g6,g1,g7,g1,g2,g1,g5",
 	"b11.o3": "g0,g1,g2,g1,g3,g1,g6,g1,g5"
 }, oVe = {
-	label: "Function machine build",
+	label: "Construire la machine",
 	"b0.prompt": "Construis une machine qui transforme x en 2x + 1. Glisse ses étapes dans le bon ordre.",
 	"b0.o0": "g0,g1,g2,g1,g3,g1,g4",
 	"b0.o1": "g0,g1,g3,g1,g2,g1,g4",
@@ -159092,7 +159092,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b11.o2": "g0,g6,g2,g14,g4,g2,g15,g1,g2,g16",
 	"b11.o3": "g0,g1,g2,g3,g4,g2,g5,g6,g2,g17"
 }, dVe = {
-	label: "Function machine reverse",
+	label: "La machine à rebours",
 	"b0.prompt": "Une machine fait ×2, puis +5 et donne 17. Remonte pour retrouver ce qui est entré.",
 	"b0.o0": "g0,g1,g2,g3,g4,g2,g5",
 	"b0.o1": "g0,g6,g2,g7,g8,g2,g9",
@@ -159248,7 +159248,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b12.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g16,g10,g11,g12,g13,g7,g14,g14,g14",
 	"b12.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11,g12,g13,g15,g14,g14,g14"
 }, gVe = {
-	label: "Function machine tables",
+	label: "La machine à fonctions",
 	"b0.prompt": "Une machine change chaque entrée de la même façon. Remplis les sorties manquantes, puis écris la règle de la machine.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g4,g5,g7,g8,g9,g10,g11,g3,g12,g12,g12",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g4,g5,g8,g8,g9,g10,g11,g3,g12,g12,g12",
@@ -159413,7 +159413,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b22.o0": "The bottle",
 	"b22.o1": "The jug"
 }, xVe = {
-	label: "G1 capacity pouring",
+	label: "Verser et comparer",
 	"b0.prompt": "Lequel contient plus ?",
 	"b0.o0": "Celui de gauche",
 	"b0.o1": "Celui de droite",
@@ -159610,7 +159610,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b13.o5": "r9,r7,r6,r4,r5",
 	"b13.o6": "r7,r6,r5,r4,r9"
 }, EVe = {
-	label: "G1 compare order length",
+	label: "Mettre en ligne",
 	"b0.prompt": "Mets-les dans l'ordre, le plus court en premier, sur la même ligne de départ.",
 	"b0.o0": "r2,r5,r8",
 	"b0.o1": "r8,r5,r2",
@@ -159811,7 +159811,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b14.o3": "mouse,car,cat",
 	"b14.o4": "cat,car,mouse"
 }, jVe = {
-	label: "G1 mass balance",
+	label: "L'heure de la balance",
 	"b0.prompt": "Lequel est le plus lourd ?",
 	"b0.o0": "Celui de gauche",
 	"b0.o1": "Celui de droite",
@@ -160070,7 +160070,7 @@ var KBe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), qBe = $({
 	"b32.o0": "The hand",
 	"b32.o1": "The cube"
 }, IVe = {
-	label: "G1 nonstandard units",
+	label: "Compter les unités",
 	"b0.prompt": "Le crayon mesure une chaîne de trombones. Touche-les un par un. Combien y en a-t-il ?",
 	"b0.o0": "3",
 	"b0.o1": "2",
@@ -160586,7 +160586,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b1.o2": "105",
 	"b1.o3": "75"
 }, JVe = {
-	label: "G2 add four 2digit",
+	label: "Additionner quatre nombres à deux chiffres",
 	"b0.prompt": "12 + 23 + 14 + 11 = ?",
 	"b0.o0": "60",
 	"b0.o1": "59",
@@ -160730,7 +160730,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b14.o4": "t0,t1,t2,t3,d5,d2,d3",
 	"b14.o5": "t0,t1,t2,t3,d5,d2,d1"
 }, $Ve = {
-	label: "G2 add within 1000 models",
+	label: "Sommes avec des blocs",
 	"b0.prompt": "Compte les blocs des deux tas. Écris le total.",
 	"b0.o0": "t0,t1,t2,t3,d3,d7,d7",
 	"b0.o1": "t0,t1,t2,t3,d3,d8,d7",
@@ -160910,7 +160910,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b1.o2": "12 + 30 = 40",
 	"b1.o3": "18 + 18 = 30"
 }, iHe = {
-	label: "G2 check subtraction with addition",
+	label: "Vérifier la soustraction par l'addition",
 	"b0.prompt": "Un enfant vérifie 12 − 5 = 7 par 7 + 5 = 12. La vérification est-elle juste ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -161013,7 +161013,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b3.o2": "6",
 	"b3.o3": "10"
 }, lHe = {
-	label: "G2 count halves quarters",
+	label: "Compter les moitiés et les quarts",
 	"b0.prompt": "Compte par demis : 0, ½, 1, ?, 2. Quel nombre manque-t-il ?",
 	"b0.o0": "1½",
 	"b0.o1": "1¼",
@@ -161166,7 +161166,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b17.o4": "f0,f1,f2,a3,f4,f5,f6,x1",
 	"b17.o5": "f0,f1,f2,a7,f4,f5,f6,a3"
 }, mHe = {
-	label: "G3 bar model comparison times as many",
+	label: "Barres : fois plus",
 	"b0.prompt": "La barre longue montre combien de fois plus que la barre courte ? Glisse le nombre.",
 	"b0.o0": "f0,f1,f2,f3,a4",
 	"b0.o1": "f0,f1,f2,f3,x0",
@@ -161411,7 +161411,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b17.o5": "f0,f1,f2,x2,f4,a5",
 	"b17.o6": "f0,f1,f2,a3,f4,x2"
 }, yHe = {
-	label: "G3 finds machine rule",
+	label: "Trouver la règle de la machine",
 	"b0.prompt": "Quelle est la règle de la machine ? Glisse la carte de la règle.",
 	"b0.o0": "f0,f1,f2,a3",
 	"b0.o1": "f0,f1,f2,x0",
@@ -161695,7 +161695,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b17.o5": "f0,f1,f2,f3,x2,a5",
 	"b17.o6": "f0,f1,f2,f3,a4,x2"
 }, wHe = {
-	label: "Gap finder",
+	label: "Le chercheur d'écarts",
 	"b0.prompt": "La première barre vaut 15 et la seconde 9. Combien de plus ou de moins la première a-t-elle ?",
 	"b0.o0": "f0,f1,f2,f3,a4,a5",
 	"b0.o1": "f0,f1,f2,f3,x0,a5",
@@ -162176,7 +162176,7 @@ var zVe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), BVe = $({
 	"b11.o2": "g5,g1,g2,g3,g4,g3,g0,g1,g6",
 	"b11.o3": "g8,g1,g2,g3,g9,g3,g10,g1,g6"
 }, PHe = {
-	label: "Gear meet",
+	label: "La rencontre des engrenages",
 	"b0.prompt": "L'engrenage A a 2 dents et l'engrenage B en a 3. Deux dents marquées se touchent maintenant. Après combien de dents les repères se touchent-ils de nouveau pour la première fois ? Complète aussi les tours de chaque engrenage.",
 	"b0.o0": "g0,g1,g2,g3,g4,g3,g2,g1,g0",
 	"b0.o1": "g2,g1,g2,g3,g4,g3,g0,g1,g0",
@@ -163228,7 +163228,7 @@ var HHe = [
 	"b51.o2": "Put 2 back",
 	"b51.o3": "Grab 3 more"
 }, KHe = {
-	label: "Grab a handful",
+	label: "Prendre une poignée",
 	"b0.prompt": "Tu veux exactement 5 🚗. Dans ta main 🤲 il y a :\n\n🚗🚗🚗🚗🚗\n\nCompte-les. Que fais-tu ?",
 	"b0.o0": "Garde-les : c'est exactement ça",
 	"b0.o1": "Remets-en 1",
@@ -163581,7 +163581,7 @@ var HHe = [
 	"b3.o2": "4",
 	"b3.o3": "26"
 }, ZHe = {
-	label: "Graph question quest",
+	label: "La quête des questions de graphiques",
 	"b0.prompt": "Diagramme : pommes 8, poires 3, prunes 5. Quel est le total ?",
 	"b0.o0": "16",
 	"b0.o1": "3",
@@ -163659,7 +163659,7 @@ var HHe = [
 	"b1.o2": "Tally of nothing",
 	"b1.o3": "Table with one row"
 }, nUe = {
-	label: "Graph type matchmaker",
+	label: "Associer le type de graphique",
 	"b0.prompt": "Histoire : nombre de votes pour chaque sport. Meilleur graphique ?",
 	"b0.o0": "Diagramme en barres",
 	"b0.o1": "Graphique en ligne",
@@ -163753,7 +163753,7 @@ var HHe = [
 	"b13.o1": "l,gt,r",
 	"b13.o2": "l,eq,r"
 }, sUe = {
-	label: "Greater lesser equal flip",
+	label: "Plus grand, plus petit ou égal",
 	"b0.prompt": "Ne calcule pas ! Regarde les deux côtés et dépose le bon signe.",
 	"b0.o0": "l,lt,r",
 	"b0.o1": "l,gt,r",
@@ -163883,7 +163883,7 @@ var HHe = [
 	"b1.o2": "A 5-cent coin",
 	"b1.o3": "A 10-cent coin"
 }, fUe = {
-	label: "Greedy coin hint",
+	label: "Indice de la pièce gourmande",
 	"b0.prompt": "Pour payer 65 centimes, par quoi commences-tu ?",
 	"b0.o0": "Une pièce de 50 centimes",
 	"b0.o1": "Une pièce de 1 centime",
@@ -163951,7 +163951,7 @@ var HHe = [
 	"b1.o2": "C5",
 	"b1.o3": "B4"
 }, _Ue = {
-	label: "Grid battle places",
+	label: "Bataille sur la grille",
 	"b0.prompt": "Place un pion en A2. Quelle est la même case ?",
 	"b0.o0": "Colonne A, ligne 2",
 	"b0.o1": "Colonne 2, ligne A",
@@ -164019,7 +164019,7 @@ var HHe = [
 	"b1.o2": "448",
 	"b1.o3": "418"
 }, SUe = {
-	label: "Grid method builder",
+	label: "Construire la méthode en grille",
 	"b0.prompt": "23 × 4 = ?",
 	"b0.o0": "92",
 	"b0.o1": "82",
@@ -164087,7 +164087,7 @@ var HHe = [
 	"b1.o2": "16",
 	"b1.o3": "1600"
 }, DUe = {
-	label: "Grid method tiles",
+	label: "Tuiles de la méthode en grille",
 	"b0.prompt": "20 × 3 = ?",
 	"b0.o0": "60",
 	"b0.o1": "23",
@@ -164202,7 +164202,7 @@ var HHe = [
 	"b14.o2": "LLLLUUUU",
 	"b14.o3": "LRRRDDDD"
 }, MUe = {
-	label: "Grid token route",
+	label: "Le trajet du robot",
 	"b0.prompt": "Écris les déplacements : aligne les cartes flèches pour que le robot atteigne la cible, puis appuie sur Vas-y.",
 	"b0.o0": "RRR",
 	"b0.o1": "RR",
@@ -164366,7 +164366,7 @@ var HHe = [
 	"b11.o1": "g0,g3,g2,g5,g4,g1,g6",
 	"b11.o2": "g0,g5,g2,g3,g4,g1,g6"
 }, LUe = {
-	label: "Group by three reader",
+	label: "Lecteur des groupes de trois",
 	"b0.prompt": "Nomme chaque tranche de 3\xA0000\xA0000\xA0000 : glisse milliard, million ou mille à côté.",
 	"b0.o0": "g0,g1,g2,g2,g2",
 	"b0.o1": "g0,g3,g2,g2,g2",
@@ -164679,7 +164679,7 @@ var HHe = [
 	"b57.o1": "g0,g3",
 	"b57.o2": "g0"
 }, HUe = {
-	label: "Groups of snap",
+	label: "Groupes en vitesse !",
 	"b0.prompt": "Touche chaque groupe de 2.",
 	"b0.o0": "g0,g1",
 	"b0.o1": "g1",
@@ -165058,7 +165058,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o3": "g0,g7,g2,g5,g4,g3,g6,g1",
 	"b14.o4": "g0,g3,g2,g1,g4,g7,g6,g5"
 }, YUe = {
-	label: "Grow the tree",
+	label: "Faire pousser l'arbre",
 	"b0.prompt": "Tire une bille : la rouge a une chance de 1/2 et la bleue de 1/2. Puis tourne la roue : gagner a une chance de 1/3 et perdre de 2/3. Donne à chaque feuille de l'arbre sa chance.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3",
 	"b0.o1": "g0,g6,g2,g6,g4,g6,g5,g6",
@@ -165240,7 +165240,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b12.o1": "g0,g1,g7,g8,g4",
 	"b12.o2": "g0,g1,g6,g9,g4"
 }, eWe = {
-	label: "Growing matchstick patterns",
+	label: "Motifs d'allumettes qui grandissent",
 	"b0.prompt": "Triangles en rangée : la forme 1 utilise 3 bâtonnets, la forme 2 en utilise 5, la forme 3 en utilise 7. Construis la forme 4.",
 	"b0.o0": "4|9",
 	"b0.o1": "6|7",
@@ -165632,7 +165632,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o3": "g0,g1,g0,g2,g8,g4,g5",
 	"b11.o4": "g0,g1,g0,g2,g9,g4,g5"
 }, uWe = {
-	label: "Guess and square",
+	label: "Deviner et mettre au carré",
 	"b0.prompt": "Tu cherches √20. Ton essai est 4. Élève-le au carré, puis décide : monter l'essai ou le baisser ?",
 	"b0.o0": "g0,g1,g0,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g0,g2,g7,g4,g5",
@@ -166144,7 +166144,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b1.o2": "Triple then add 2",
 	"b1.o3": "Halve then add 3"
 }, bWe = {
-	label: "Guess my rule table",
+	label: "Devine ma règle",
 	"b0.prompt": "Tableau : ENTRÉE 1 → SORTIE 4, ENTRÉE 2 → SORTIE 7. Quelle règle en deux étapes convient ?",
 	"b0.o0": "Multiplier par 3 puis ajouter 1",
 	"b0.o1": "Multiplier par 3 puis soustraire 1",
@@ -166247,7 +166247,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b3.o2": "Ask a friend",
 	"b3.o3": "Skip it"
 }, TWe = {
-	label: "Guess the clips",
+	label: "Devine les pinces",
 	"b0.prompt": "Devine combien de trombones fait le livre. Puis vérifie. Quelle est la meilleure estimation ?",
 	"b0.o0": "Un nombre raisonnable comme 10",
 	"b0.o1": "1000",
@@ -166367,7 +166367,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, AWe = {
-	label: "Guess then measure",
+	label: "Deviner la longueur",
 	"b0.prompt": "Pense à la vraie longueur de chaque chose. Dépose dessus la meilleure estimation.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -166573,7 +166573,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g5,g6,g3,g8",
 	"b17.o3": "g0,g1,g2,g3,g9,g5,g6,g3,g10"
 }, FWe = {
-	label: "Half a rectangle triangle",
+	label: "La moitié d'un rectangle",
 	"b0.prompt": "Un triangle a une base de 6 et une hauteur de 4. Copie-le pour faire un rectangle, puis prends la moitié pour avoir l'aire du triangle.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g3,g4",
@@ -166767,7 +166767,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o1": "t0,t1,t2,t3,d6,t4",
 	"b14.o2": "t0,t1,t2,t3,d4,t4"
 }, BWe = {
-	label: "Half hour train trip",
+	label: "Le voyage en train d'une demi-heure",
 	"b0.prompt": "Le train part à la première horloge et arrive à la seconde. Combien d'heures dure le voyage ?",
 	"b0.o0": "t0,t1,t2,t3,d1,d½,t4",
 	"b0.o1": "t0,t1,t2,t3,d2,d½,t4",
@@ -166901,7 +166901,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b1.o2": "44",
 	"b1.o3": "168"
 }, GWe = {
-	label: "Half it hunt",
+	label: "La chasse à la moitié",
 	"b0.prompt": "La moitié de 16 est ?",
 	"b0.o0": "8",
 	"b0.o1": "4",
@@ -167826,7 +167826,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b20.o2": "f7_16,f14_25,f8_16,f10_20,f9_20",
 	"b20.o3": "f14_25,f10_20,f8_16,f9_20,f7_16"
 }, tGe = {
-	label: "Half or more sort",
+	label: "Moitié ou plus",
 	"b0.prompt": "Chaque fraction est-elle plus petite qu'une moitié, exactement une moitié, ou plus grande qu'une moitié ?",
 	"b0.o0": "f2_5,f3_8,f5_8,f3_4",
 	"b0.o1": "f5_8,f3_8,f2_5,f3_4",
@@ -168053,7 +168053,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o3": "0|2|4",
 	"b11.o4": "1|3|2"
 }, oGe = {
-	label: "Half or not",
+	label: "Moitié ou pas ?",
 	"b0.prompt": "Quelles formes montrent des moitiés ?",
 	"b0.o0": "0|2|2",
 	"b0.o1": "4|0|0",
@@ -168746,7 +168746,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o3": "10:30",
 	"b17.o4": "6:55"
 }, dGe = {
-	label: "Half past clock set",
+	label: "Régler l'heure et demie",
 	"b0.prompt": "Règle l'horloge sur 3:30. Mets la grande aiguille sur le 6.",
 	"b0.o0": "3:30",
 	"b0.o1": "3:00",
@@ -168957,7 +168957,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b13.o1": "c1,c0,c3,c2",
 	"b13.o2": "c1,c3,c0,c2"
 }, gGe = {
-	label: "Half quarter decimal cards",
+	label: "Cartes moitiés et quarts",
 	"b0.prompt": "Quel décimal est chaque fraction ? Glisse les cartes.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -169149,7 +169149,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o3": "h7,h6,h4,h5,h3",
 	"b11.o4": "h7,h5,h4,h6,h3"
 }, xGe = {
-	label: "Half step staircase",
+	label: "L'escalier des demi-pas",
 	"b0.prompt": "Chaque marche est une moitié plus haute. Dépose les nombres sur les marches.",
 	"b0.o0": "h0,h1,h2,h3,h4",
 	"b0.o1": "h0,h1,h4,h3,h2",
@@ -169334,7 +169334,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b3.o2": "6",
 	"b3.o3": "18"
 }, EGe = {
-	label: "Half symbol read",
+	label: "Lire le symbole de moitié",
 	"b0.prompt": "Légende : 1 🙂 = 4 enfants. Trois 🙂 et demi montrent combien d'enfants ?",
 	"b0.o0": "14",
 	"b0.o1": "12",
@@ -169592,7 +169592,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b29.o4": "0|5|0",
 	"b29.o5": "3|1|1"
 }, jGe = {
-	label: "Half the set",
+	label: "Partager les goûters",
 	"b0.prompt": "Mets autant sur chaque assiette.",
 	"b0.o0": "0|2|2",
 	"b0.o1": "0|3|1",
@@ -170188,7 +170188,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o5": "c0,c2,c1,c3,c4",
 	"b17.o6": "c0,c3,c2,c1,c4"
 }, VGe = {
-	label: "Halve the halve",
+	label: "Diviser la moitié",
 	"b0.prompt": "Prends la moitié, puis encore la moitié. Associe chaque pourcentage de la quantité à sa réponse.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -170469,7 +170469,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o3": "t0,t1,t2,t3,d9,d2",
 	"b14.o4": "t0,t1,t2,t3,d2,d8"
 }, KGe = {
-	label: "Halving machine",
+	label: "La machine à moitiés",
 	"b0.prompt": "La machine partage 8 en deux moitiés. Fais deux moitiés égales.",
 	"b0.o0": "0|4|4",
 	"b0.o1": "1|3|4",
@@ -170726,7 +170726,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, ZGe = {
-	label: "Handshake triangle numbers",
+	label: "Poignées de main",
 	"b0.prompt": "Dans chaque groupe, chacun serre la main de tous les autres une fois. Associe chaque groupe à son nombre de poignées de main.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -170967,7 +170967,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o2": "a20,c60,b30,a40",
 	"b14.o3": "c60,b30,a40,a20"
 }, nKe = {
-	label: "Hcf lcm word puzzles",
+	label: "Se retrouver",
 	"b0.prompt": "Deux bus quittent la gare ensemble. L'un revient toutes les 2 minutes, l'autre toutes les 3. Trie les minutes où ils sont de retour. Quand se retrouvent-ils pour la première fois ?",
 	"b0.o0": "a2,a4,b3,c6",
 	"b0.o1": "c6,a4,b3,a2",
@@ -171171,7 +171171,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o2": "0|2|3|3",
 	"b17.o3": "0|2|2|4"
 }, sKe = {
-	label: "Heavy light bins",
+	label: "Lourd ou léger : les bacs",
 	"b0.prompt": "Trie le lourd et le léger.",
 	"b0.o0": "0|2|2",
 	"b0.o1": "1|1|2",
@@ -171382,7 +171382,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o3": "a8,d4,e3",
 	"b14.o4": "a5,a7,a9"
 }, fKe = {
-	label: "Height vs armspan",
+	label: "Taille et envergure",
 	"b0.prompt": "L'étoile est la taille 100 cm et l'envergure 100 cm. Chaque case vaut 5 cm. La taille va en horizontal, l'envergure en vertical. Colorie un point pour chaque enfant (taille, envergure) : (120, 115), (135, 140).",
 	"b0.o0": "a8,f5",
 	"b0.o1": "b9,e4",
@@ -171581,7 +171581,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b3.o2": "56",
 	"b3.o3": "72"
 }, _Ke = {
-	label: "Hidden array rows",
+	label: "Rangées cachées",
 	"b0.prompt": "3 × ? = 12. Combien de rangées sont cachées ?",
 	"b0.o0": "4",
 	"b0.o1": "3",
@@ -171737,7 +171737,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o3": "4|8|8",
 	"b17.o4": "0|12|8"
 }, SKe = {
-	label: "Hidden number stories",
+	label: "Histoires de nombres cachés",
 	"b0.prompt": "2 jetons et 3 jetons vont sous le gobelet. Combien y en a-t-il sous le gobelet ? Mets-les-y.",
 	"b0.o0": "2|5|2|3",
 	"b0.o1": "3|4|2|3",
@@ -172006,7 +172006,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b20.o1": "3|7|16|8",
 	"b20.o2": "1|9|16|8"
 }, DKe = {
-	label: "Hidden start puzzles",
+	label: "Le début caché",
 	"b0.prompt": "Il y avait des jetons. On en a enlevé 2 et il en reste 3. Construis le tas de départ caché.",
 	"b0.o0": "2|5|2|3",
 	"b0.o1": "4|3|2|3",
@@ -172252,7 +172252,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, MKe = {
-	label: "Hidden third thing",
+	label: "La troisième chose cachée",
 	"b0.prompt": "Chaque paire de choses augmente ensemble, mais aucune ne cause l'autre. Glisse le facteur caché qui fait varier les deux sur sa paire.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -172915,7 +172915,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b59.o2": "2",
 	"b59.o3": "3"
 }, HKe = {
-	label: "Hide the counters",
+	label: "Cacher les jetons",
 	"b0.prompt": "Il y a 2 coccinelles en tout. Tu en vois 1. Les autres se cachent sous les feuilles. Combien sont cachés ?",
 	"b0.o0": "1",
 	"b0.o1": "2",
@@ -174366,7 +174366,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o2": "h0,s0,v0,v1,v2,h1",
 	"b11.o3": "s0,v2,v1,v0,h1,h0"
 }, rqe = {
-	label: "Horizon and plumb",
+	label: "L'horizon et le fil à plomb",
 	"b0.prompt": "Trie les lignes : horizontales, verticales ou penchées.",
 	"b0.o0": "h0,h1,v0,v1",
 	"b0.o1": "v0,h1,h0,v1",
@@ -174502,7 +174502,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b1.o2": "10 °C",
 	"b1.o3": "50 °C"
 }, cqe = {
-	label: "Hot or cold sort",
+	label: "Chaud ou froid",
 	"b0.prompt": "Quelle température fait fondre un glaçon ?",
 	"b0.o0": "Au-dessus de 0 °C",
 	"b0.o1": "En dessous de 0 °C",
@@ -174570,7 +174570,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b1.o2": "11 o'clock",
 	"b1.o3": "6 o'clock"
 }, pqe = {
-	label: "Hour hop line",
+	label: "La ligne des sauts d'heures",
 	"b0.prompt": "Saut d'une heure à la fois depuis 3 h. Où après 2 sauts ?",
 	"b0.o0": "5 heures",
 	"b0.o1": "4 heures",
@@ -175621,7 +175621,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o1": "t0,t1,t2,t3,d3,t4",
 	"b14.o2": "t0,t1,t2,t3,d1,t4"
 }, Rqe = {
-	label: "How long timeline",
+	label: "Frise du temps",
 	"b0.prompt": "L'activité commence à la première horloge et finit à la seconde. Combien d'heures a-t-elle duré ?",
 	"b0.o0": "t0,t1,t2,t3,d2,t4",
 	"b0.o1": "t0,t1,t2,t3,d4,t4",
@@ -175920,7 +175920,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b37.o0": "The apple",
 	"b37.o1": "The teddy"
 }, Uqe = {
-	label: "How many cubes weigh",
+	label: "Combien de cubes ?",
 	"b0.prompt": "La balance est en équilibre. Combien de cubes pèse l'objet ?",
 	"b0.o0": "2",
 	"b0.o1": "1",
@@ -176243,7 +176243,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Jqe = {
-	label: "How many fit tracks",
+	label: "Combien en tiennent ?",
 	"b0.prompt": "On donne la longueur d'une piste et celle d'un morceau. Compte combien de morceaux entrent sur la piste et associe chacun à son nombre.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -176431,7 +176431,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b1.o2": "365",
 	"b1.o3": "7"
 }, $qe = {
-	label: "How many in a year",
+	label: "Combien en une année",
 	"b0.prompt": "Combien de mois dans une année ?",
 	"b0.o0": "12",
 	"b0.o1": "10",
@@ -176694,7 +176694,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b44.o2": "10",
 	"b44.o3": "2"
 }, iJe = {
-	label: "How many left",
+	label: "Tape et retire",
 	"b0.prompt": "Enlève 1. Combien en reste-t-il ?",
 	"b0.o0": "1",
 	"b0.o1": "2",
@@ -177005,7 +177005,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b11.o1": "t0,t1,t2,t3,t4,t5,d6",
 	"b11.o2": "t0,t1,t2,t3,t4,t5,d4"
 }, lJe = {
-	label: "How many more bars",
+	label: "Questions sur les graphiques",
 	"b0.prompt": "Combien y a-t-il de chats et de chiens en tout ?",
 	"b0.o0": "t0,t1,t2,t3,d7",
 	"b0.o1": "t0,t1,t2,t3,d1",
@@ -177192,7 +177192,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g5,g7",
 	"b17.o3": "g0,g1,g2,g3,g8,g5,g8"
 }, mJe = {
-	label: "How many quarters",
+	label: "Combien de quarts",
 	"b0.prompt": "Calcule −1/2 ÷ 1/4. Compte d'abord combien de morceaux de 1/4 entrent dans 1/2 (sans signes), puis donne son signe à la réponse.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g4",
@@ -177414,7 +177414,7 @@ var GUe = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), KUe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g7",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g8"
 }, yJe = {
-	label: "How many quarters fit",
+	label: "Combien en tiennent ?",
 	"b0.prompt": "Combien de verres de 0,5 l remplissent une carafe de 3,0 l ? Passe aux entiers, puis divise.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6",
 	"b0.o1": "g0,g1,g2,g3,g5,g1,g4,g3,g6",
@@ -178115,7 +178115,7 @@ var jJe = $({
 	"b27.o2": "40.519",
 	"b27.o3": "40.5"
 }, PJe = {
-	label: "How precise is enough",
+	label: "Quelle précision suffit ?",
 	"b0.prompt": "Le partage d'une addition donne 41,6601 euros chacun. Quelle écriture est raisonnable ?",
 	"b0.o0": "41,66",
 	"b0.o1": "41,6601",
@@ -178422,7 +178422,7 @@ var jJe = $({
 	"b17.o5": "f0,f1,x2,f3,a4,f5,a6",
 	"b17.o6": "f0,f1,a2,f3,a4,f5,x2"
 }, zJe = {
-	label: "Hundred bridge hop",
+	label: "Saut du pont de la centaine",
 	"b0.prompt": "96 + 7 : passe par la centaine. Complète les sauts et le résultat.",
 	"b0.o0": "f0,f1,a2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,x0,f3,a4,f5,a6",
@@ -178795,7 +178795,7 @@ var jJe = $({
 	"b37.o2": "593",
 	"b37.o3": "504"
 }, WJe = {
-	label: "Hundred chart ten moves",
+	label: "Dix déplacements sur la table de cent",
 	"b0.prompt": "Tu es sur 46 dans le tableau des nombres. Déplace-toi d'une ligne vers le bas. Quel nombre ?",
 	"b0.o0": "56",
 	"b0.o1": "47",
@@ -179593,7 +179593,7 @@ var jJe = $({
 	"b16.o3": "86",
 	"b16.o4": "84"
 }, YJe = {
-	label: "Hundred grid painter",
+	label: "Curseur sur la grille de cent",
 	"b0.prompt": "Fais glisser le jeton jusqu'au carré qui montre 40 % de la grille : 40 sur 100.",
 	"b0.o0": "40",
 	"b0.o1": "50",
@@ -180094,7 +180094,7 @@ var jJe = $({
 	"b13.o3": "51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,90",
 	"b13.o4": "53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89"
 }, aYe = {
-	label: "Hundred square patterns",
+	label: "Motifs sur la grille de cent",
 	"b0.prompt": "Colorie tous les nombres pairs.",
 	"b0.o0": "10,12,14,16,18,2,20,4,6,8",
 	"b0.o1": "1,11,13,15,17,19,3,5,7,9",
@@ -180329,7 +180329,7 @@ var jJe = $({
 	"b14.o5": "v315,v325,v345,v355,v365,v335,v375",
 	"b14.o6": "v315,v325,v376,v345,v355,v365,v375"
 }, uYe = {
-	label: "Hundred stairs sequence",
+	label: "L'escalier de cent",
 	"b0.prompt": "Les marches montent de 100 en 100. Dépose les nombres manquants sur les marches.",
 	"b0.o0": "v100,v200,v300,v400,v500,v600",
 	"b0.o1": "v100,v200,v500,v400,v300,v600",
@@ -180673,7 +180673,7 @@ var jJe = $({
 	"b35.o2": "698",
 	"b35.o3": "598"
 }, hYe = {
-	label: "Hundred tower builder",
+	label: "Construire la tour de cent",
 	"b0.prompt": "La tour contient 100. Ajoute un bloc de cent. Combien y a-t-il maintenant dans la tour ?",
 	"b0.o0": "200",
 	"b0.o1": "110",
@@ -180998,7 +180998,7 @@ var jJe = $({
 	"b14.o5": "v697,v698,v699,v700,v702,v701,v703",
 	"b14.o6": "v697,v699,v700,v701,v702,v698,v703"
 }, bYe = {
-	label: "Hundreds odometer count",
+	label: "Le compteur",
 	"b0.prompt": "Le compteur avance : 97, 98, ... Dépose les nombres manquants sur les pierres.",
 	"b0.o0": "v97,v98,v99,v100,v101,v102",
 	"b0.o1": "v97,v98,v101,v100,v99,v102",
@@ -181270,7 +181270,7 @@ var jJe = $({
 	"b17.o5": "f0,f1,f2,x2,a4,f5",
 	"b17.o6": "f0,f1,f2,a3,x2,f5"
 }, TYe = {
-	label: "Hundredths grid count",
+	label: "Compter sur la grille des centièmes",
 	"b0.prompt": "La grille a 100 carrés. Colorie 3/100 de la grille : les 3 premiers carrés.",
 	"b0.o0": "1,2,3",
 	"b0.o1": "1,2,3,4",
@@ -181877,7 +181877,7 @@ var jJe = $({
 	"b27.o2": "106",
 	"b27.o3": "6"
 }, AYe = {
-	label: "Hundredths magnifier",
+	label: "La loupe des centièmes",
 	"b0.prompt": "Laquelle est la forme développée de 3,89 ?",
 	"b0.o0": "3 + 0,8 + 0,09",
 	"b0.o1": "3 + 0,08 + 0,9",
@@ -182075,7 +182075,7 @@ var jJe = $({
 	"b1.o2": "8",
 	"b1.o3": "12"
 }, FYe = {
-	label: "Ice cream scoop combos",
+	label: "Combinaisons de boules de glace",
 	"b0.prompt": "3 parfums, 2 boules, parfums différents. Combien de cônes ?",
 	"b0.o0": "3",
 	"b0.o1": "2",
@@ -182188,7 +182188,7 @@ var jJe = $({
 	"b14.o2": "g0,g1,g2,g3,g8,g3,g9",
 	"b14.o3": "g0,g1,g2,g3,g10,g3,g11"
 }, BYe = {
-	label: "Index law machine",
+	label: "La machine des lois des exposants",
 	"b0.prompt": "2² × 2³ : écris tous les facteurs, puis dépose la puissance que la machine fabrique.",
 	"b0.o0": "g0,g1,g2,g3,g4,g3,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g3,g6",
@@ -182397,7 +182397,7 @@ var jJe = $({
 	"b14.o3": "c4,c3,c0,c2,c1,c5",
 	"b14.o4": "c5,c3,c0,c2,c4,c1"
 }, GYe = {
-	label: "Index law slip hunt",
+	label: "La chasse aux erreurs d'exposants",
 	"b0.prompt": "Chasse les erreurs : trie ces produits de puissances en justes et en faux.",
 	"b0.o0": "c0,c3,c1,c2",
 	"b0.o1": "c1,c3,c0,c2",
@@ -182621,7 +182621,7 @@ var jJe = $({
 	"b14.o3": "UUU",
 	"b14.o4": "DDDDDDDDDDDDDDD"
 }, XYe = {
-	label: "Integer lift game",
+	label: "Le jeu des entiers à soulever",
 	"b0.prompt": "L'ascenseur est à l'étage −3. La carte dit +5. Appuie sur les boutons pour arriver au bon étage.",
 	"b0.o0": "UUUUU",
 	"b0.o1": "UUUU",
@@ -182863,7 +182863,7 @@ var jJe = $({
 	"b17.o3": "e1,e0,e2,e3",
 	"b17.o4": "e1,e3,e0,e2"
 }, tXe = {
-	label: "Inverse check detective",
+	label: "L'enquêteur de l'opération inverse",
 	"b0.prompt": "Défais chaque calcul pour le vérifier. Dépose-le dans « C'est juste » ou « Il y a une erreur ».",
 	"b0.o0": "e0,e2,e1,e3",
 	"b0.o1": "e1,e2,e0,e3",
@@ -183098,7 +183098,7 @@ var jJe = $({
 	"b13.o3": "t0,f2,t1,f3",
 	"b13.o4": "t0,f3,f2,t1"
 }, oXe = {
-	label: "Investigation report",
+	label: "Rapport d'enquête",
 	"b0.prompt": "Décompte : pomme 4, banane 2, raisin 5. Construis le graphique : glisse un bloc par vote sur la bonne colonne.",
 	"b0.o0": "2|4|2|5",
 	"b0.o1": "2|5|1|5",
@@ -183339,7 +183339,7 @@ var jJe = $({
 	"b19.o3": "p0,p1,p3,p2",
 	"b19.o4": "p0,p2,p3,p1"
 }, dXe = {
-	label: "Is point nine nine one",
+	label: "Est-ce que 0,991 ?",
 	"b0.prompt": "0,999… est-il vraiment égal à 1 ? Remets les étapes de la preuve dans l'ordre, de ce qu'on sait jusqu'à la conclusion.",
 	"b0.o0": "p0,p1,p2,p3",
 	"b0.o1": "p0,p3,p2,p1",
@@ -183705,7 +183705,7 @@ var jJe = $({
 	"b35.o3": "3|17",
 	"b35.o4": "10|10"
 }, gXe = {
-	label: "Jar guess",
+	label: "Devine le bocal",
 	"b0.prompt": "Compte les haricots hors du bocal.",
 	"b0.o0": "0|3",
 	"b0.o1": "1|2",
@@ -184047,7 +184047,7 @@ var jJe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g2,g1,g7,g3,g8,g5,g6,g7,g1,g9,g3,g10,g5,g11,g18,g13,g19,g5",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g2,g1,g7,g3,g8,g5,g6,g7,g1,g9,g3,g10,g5,g11,g20,g13,g14,g5"
 }, xXe = {
-	label: "Journey duration calculator",
+	label: "Les arrêts du trajet",
 	"b0.prompt": "Un voyage part à 08:30 et s'arrête 2 fois. Calcule les minutes de chaque étape, puis la durée totale.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g2,g1,g7,g3,g8,g5,g9,g10,g11,g12,g5",
 	"b0.o1": "g0,g1,g2,g3,g13,g5,g6,g2,g1,g7,g3,g14,g5,g9,g10,g11,g12,g5",
@@ -184293,7 +184293,7 @@ var jJe = $({
 	"b14.o5": "t0,d7,d0,d0,t1",
 	"b14.o6": "t0,d4,d5,d1,t1"
 }, EXe = {
-	label: "Jug fill reader",
+	label: "Lire le remplissage du pichet",
 	"b0.prompt": "Le pichet contient 1 litre (1000 ml). Combien de millilitres y a-t-il dedans ?",
 	"b0.o0": "t0,d2,d5,d0,t1",
 	"b0.o1": "t0,d3,d5,d0,t1",
@@ -184479,7 +184479,7 @@ var jJe = $({
 	"b1.o2": "Same",
 	"b1.o3": "Cannot tell"
 }, jXe = {
-	label: "Justify the bigger",
+	label: "Justifie le plus grand",
 	"b0.prompt": "Quelle fraction est plus grande, et pourquoi : 2/5 ou 2/9 ? Même numérateur.",
 	"b0.o0": "2/5, car les parts sont plus grandes",
 	"b0.o1": "2/9, car 9 est plus grand",
@@ -184613,7 +184613,7 @@ var jJe = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, IXe = {
-	label: "Kg g l ml matchup",
+	label: "Associer les unités",
 	"b0.prompt": "Associe chaque quantité à la quantité égale dans la plus petite unité.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -184843,7 +184843,7 @@ var jJe = $({
 	"b14.o3": "5|6",
 	"b14.o4": "1|10"
 }, VXe = {
-	label: "Kitchen scale reader",
+	label: "La balance de cuisine",
 	"b0.prompt": "Chaque sac pèse 1 kg. Charge la balance jusqu'à ce qu'elle indique 2 kg.",
 	"b0.o0": "3|2",
 	"b0.o1": "4|1",
@@ -185035,7 +185035,7 @@ var jJe = $({
 	"b11.o2": "k0,o0,t0,t1,k1",
 	"b11.o3": "o0,t1,t0,k1,k0"
 }, KXe = {
-	label: "Kite and trapezoid spot",
+	label: "Repérer le cerf-volant et le trapèze",
 	"b0.prompt": "Trie les formes : cerfs-volants, trapèzes, ou ni l'un ni l'autre.",
 	"b0.o0": "k0,k1,t0,t1",
 	"b0.o1": "t0,k1,k0,t1",
@@ -185213,7 +185213,7 @@ var jJe = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g6,g1,g7,g3,g4",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g1,g7,g3,g9"
 }, ZXe = {
-	label: "Known fact derive puzzle",
+	label: "Trouver un fait à partir d'un autre",
 	"b0.prompt": "Tu sais que 4 × 3 = 12. Utilise-le pour calculer 4 × 30.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g1,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g1,g6,g3,g8",
@@ -185423,7 +185423,7 @@ var jJe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g13,g1,g9,g7,g14",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g1,g9,g7,g15"
 }, nZe = {
-	label: "L shape garden planner",
+	label: "Le jardin en L",
 	"b0.prompt": "Un jardin est un rectangle de 10 m sur 6 m dont un coin de 4 m sur 3 m est enlevé. Trouve l'aire du L.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g3,g8,g6,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g3,g8,g6,g10",
@@ -185701,7 +185701,7 @@ var jJe = $({
 	"b17.o5": "f0,f1,f2,f3,a6,f5,a4,f7,a8",
 	"b17.o6": "f0,f1,f2,f3,a8,f5,a6,f7,a4"
 }, sZe = {
-	label: "L shape split",
+	label: "Partager la forme en L",
 	"b0.prompt": "Une forme en L se coupe en un rectangle de 3 sur 2 cm et un rectangle de 2 sur 2 cm. Glisse les deux aires et le total.",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,a6,f7,a8",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,a6,f7,a8",
@@ -185957,7 +185957,7 @@ var jJe = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, fZe = {
-	label: "Label the bars",
+	label: "Nommer les barres",
 	"b0.prompt": "Sondage : chats 3, chiens 6. Dépose chaque animal sur sa barre.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -186133,7 +186133,7 @@ var jJe = $({
 	"b14.o1": "g1,g0,g2,g2,g2,g2,g2,g2",
 	"b14.o2": "g0,g2,g1,g2,g2,g2,g2,g2"
 }, _Ze = {
-	label: "Lakh crore reader",
+	label: "Le tableau des lakhs et des crores",
 	"b0.prompt": "Écris « sept lakh cinquante mille » dans le tableau de numération.",
 	"b0.o0": "g0,g1,g2,g2,g2,g2",
 	"b0.o1": "g1,g0,g2,g2,g2,g2",
@@ -186271,7 +186271,7 @@ var jJe = $({
 	"b1.o2": "10 times table",
 	"b1.o3": "3 times table"
 }, SZe = {
-	label: "Last digit clues",
+	label: "Indices du chiffre des unités",
 	"b0.prompt": "Un produit de la table finit par 0. De quelle table peut-il venir ?",
 	"b0.o0": "table de 5",
 	"b0.o1": "table de 3",
@@ -186381,7 +186381,7 @@ var jJe = $({
 	"b11.o3": "n927,n892,n306,n415,n663,n540",
 	"b11.o4": "n540,n415,n306,n892,n663,n927"
 }, DZe = {
-	label: "Last digit odd even sort",
+	label: "Trier par chiffre des unités",
 	"b0.prompt": "Regarde le dernier chiffre. Le nombre est-il pair ou impair ? Dépose-le dans sa boîte.",
 	"b0.o0": "n12,n30,n46,n17,n25,n43",
 	"b0.o1": "n17,n30,n46,n12,n25,n43",
@@ -186569,7 +186569,7 @@ var jJe = $({
 	"b11.o3": "n73,n48,n62,n90,n35,n57,n26,n89",
 	"b11.o4": "n89,n48,n62,n90,n35,n57,n73,n26"
 }, MZe = {
-	label: "Last digit sorter",
+	label: "Trier par chiffre des unités",
 	"b0.prompt": "Regarde le dernier chiffre. Envoie chaque nombre dans la boîte des pairs ou des impairs.",
 	"b0.o0": "n12,n20,n17,n25",
 	"b0.o1": "n17,n20,n12,n25",
@@ -187065,7 +187065,7 @@ var jJe = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g3,g11,g9",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g3,g12,g9"
 }, HZe = {
-	label: "Layer counter",
+	label: "Compter les couches",
 	"b0.prompt": "Une couche contient 6 cubes et la boîte entière en contient 30. Combien de couches cela fait-il ? Vérifie en les empilant de nouveau.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g2,g7,g4,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g8,g5,g6,g2,g7,g8,g3,g0",
@@ -187918,7 +187918,7 @@ var jJe = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, QZe = {
-	label: "Lean the rectangle",
+	label: "Incliner le rectangle",
 	"b0.prompt": "Glisse chaque carte-nom sur la forme qu'elle nomme.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -188124,7 +188124,7 @@ var jJe = $({
 	"b11.o3": "y1987,y1988,y1985,y1986,y1984,y1989",
 	"b11.o4": "y1989,y1988,y1985,y1986,y1987,y1984"
 }, rQe = {
-	label: "Leap year detective",
+	label: "L'enquêteur des années bissextiles",
 	"b0.prompt": "Quelles années sont bissextiles ? Trie les années.",
 	"b0.o0": "y2020,y2024,y2021,y2022,y2023",
 	"b0.o1": "y2021,y2024,y2020,y2022,y2023",
@@ -188760,7 +188760,7 @@ var jJe = $({
 	"b15.o3": "R,L,R,R,L,R",
 	"b15.o4": "R,L,L,L,L,R"
 }, pQe = {
-	label: "Left right simon",
+	label: "Simon gauche-droite",
 	"b0.prompt": "Simon dit : gauche, droite. Appuie sur les mains dans le même ordre.",
 	"b0.o0": "L,R",
 	"b0.o1": "R,R",
@@ -188950,7 +188950,7 @@ var jJe = $({
 	"b17.o0": "g0,g1,g2,g3,g4,g1,g5,g6",
 	"b17.o1": "g0,g1,g2,g3,g7,g1,g5,g6"
 }, vQe = {
-	label: "Length ladder converter",
+	label: "L'échelle des longueurs",
 	"b0.prompt": "Convertis 2 m en cm : multiplie par la bonne puissance de dix.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g8,g1,g2,g5,g5,g6",
@@ -189078,7 +189078,7 @@ var jJe = $({
 	"b1.o2": "2 hours",
 	"b1.o3": "30 minutes"
 }, CQe = {
-	label: "Lesson timetable gap",
+	label: "Le trou dans l'emploi du temps",
 	"b0.prompt": "Une leçon finit à 10 h, la suivante commence à 10 h 30. Écart ?",
 	"b0.o0": "une demi-heure",
 	"b0.o1": "une heure",
@@ -189208,7 +189208,7 @@ var jJe = $({
 	"b11.o5": "l1,l2,l3,l0",
 	"b11.o6": "x0,l1,l2,l3"
 }, OQe = {
-	label: "Letters prove it",
+	label: "Prouver avec des lettres",
 	"b0.prompt": "Prouve\xA0: la somme de deux nombres pairs est paire. Mets les lignes de la preuve dans l'ordre. Une carte est une étape fausse\xA0: laisse-la de côté.",
 	"b0.o0": "l0,l1,l2",
 	"b0.o1": "l2,l1,l0",
@@ -189419,7 +189419,7 @@ var jJe = $({
 	"b14.o2": "g0,g1,g2,g1,g3,g1,g4,g1,g5,g1,g6,g7,g13,g9,g10,g7,g0",
 	"b14.o3": "g0,g1,g2,g1,g3,g1,g4,g1,g5,g1,g6,g7,g8,g9,g10,g7,g3"
 }, NQe = {
-	label: "Level the towers mean",
+	label: "Égaliser les tours",
 	"b0.prompt": "Des tours de blocs mesurent 3, 5, 7 de haut. Déplace des blocs jusqu'à ce que toutes les tours soient égales. Quelle est la hauteur de chaque tour ?",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g5,g6,g0,g4,g2",
 	"b0.o1": "g0,g1,g2,g1,g3,g4,g5,g6,g0,g4,g7",
@@ -189610,7 +189610,7 @@ var jJe = $({
 	"b11.o3": "c5,c2,c4,c1,c3,c0",
 	"b11.o4": "c0,c1,c4,c2,c3,c5"
 }, RQe = {
-	label: "Like terms sorter",
+	label: "Trier les termes semblables",
 	"b0.prompt": "Trie chaque tuile dans un sac. Quelles tuiles sont semblables à 4x : mêmes lettres, mêmes puissances ?",
 	"b0.o0": "c0,c2,c1,c3",
 	"b0.o1": "c1,c2,c0,c3",
@@ -189756,7 +189756,7 @@ var jJe = $({
 	"b1.o2": "Certain",
 	"b1.o3": "Impossible"
 }, UQe = {
-	label: "Likely bag guess",
+	label: "Deviner le sac le plus probable",
 	"b0.prompt": "Un sac a 8 rouges et 2 bleus. Quelle couleur est probable ?",
 	"b0.o0": "Rouge",
 	"b0.o1": "Bleu",
@@ -189884,7 +189884,7 @@ var jJe = $({
 	"b14.o3": "c0-0,c2-0,c1-0,c1-1,c0-1,c2-1",
 	"b14.o4": "c0-0,c2-1,c1-0,c1-1,c2-0,c0-1"
 }, JQe = {
-	label: "Line and point fill",
+	label: "Droite et point",
 	"b0.prompt": "Additionne les angles de chaque carte. Dépose-la sur une droite (180°), un tour complet autour d'un point (360°).",
 	"b0.o0": "c0-0,c0-1,c1-0,c1-1",
 	"b0.o1": "c1-0,c0-1,c0-0,c1-1",
@@ -190090,7 +190090,7 @@ var jJe = $({
 	"b11.o3": "LUUU",
 	"b11.o4": "ULUU"
 }, $Qe = {
-	label: "Line drawing challenge",
+	label: "Défi du tracé de droites",
 	"b0.prompt": "Trace une ligne horizontale de 4 carrés. Pars du point et termine sur l'étoile.",
 	"b0.o0": "RRRR",
 	"b0.o1": "RRR",
@@ -190263,7 +190263,7 @@ var jJe = $({
 	"b11.o2": "point0,line0,segment0,ray0,ray1,ray2,point1",
 	"b11.o3": "line0,ray2,ray1,ray0,segment0,point1,point0"
 }, i$e = {
-	label: "Line family sort",
+	label: "La famille des droites",
 	"b0.prompt": "Trie chaque dessin : point, segment, demi-droite ou droite ?",
 	"b0.o0": "segment0,segment1,ray0,line0",
 	"b0.o1": "line0,segment1,ray0,segment0",
@@ -190394,7 +190394,7 @@ var jJe = $({
 	"b1.o2": "It stayed flat",
 	"b1.o3": "It jumped up and down"
 }, l$e = {
-	label: "Line graph story writer",
+	label: "Raconter une histoire avec un graphique linéaire",
 	"b0.prompt": "Un graphique en ligne de la taille d'une plante monte chaque semaine. Quelle légende convient ?",
 	"b0.o0": "Elle a grandi régulièrement chaque semaine",
 	"b0.o1": "Elle a rétréci chaque semaine",
@@ -190462,7 +190462,7 @@ var jJe = $({
 	"b1.o2": "5",
 	"b1.o3": "6"
 }, m$e = {
-	label: "Line plot difference puzzles",
+	label: "Puzzles de différences sur le diagramme en points",
 	"b0.prompt": "Diagramme en points : 1/2 a 4 croix, 1 1/2 a 2 croix. Quel est le total de croix ?",
 	"b0.o0": "6",
 	"b0.o1": "4",
@@ -190925,7 +190925,7 @@ var jJe = $({
 	"b119.o0": "First",
 	"b119.o1": "Second"
 }, C$e = {
-	label: "Line up the ends",
+	label: "Aligner les extrémités",
 	"b0.prompt": "Lequel est le plus long ? Aligne-les.",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -191404,7 +191404,7 @@ var jJe = $({
 	"b17.o2": "g0,g1,g1,g1,g0,g0,g1,g2,g2,g2,g3,g4,g2,g2,g2,g0,g8,g6,g6,g6",
 	"b17.o3": "g0,g7,g7,g7,g0,g0,g1,g2,g2,g2,g3,g4,g2,g2,g2,g0,g5,g2,g2,g6"
 }, O$e = {
-	label: "Line up the point",
+	label: "Aligner le point",
 	"b0.prompt": "3,4 + 2,7 : aligne les chiffres par place, écris les retenues, puis la réponse.",
 	"b0.o0": "g0,g1,g0,g0,g2,g3,g4,g5,g6,g0,g7,g1",
 	"b0.o1": "g0,g8,g0,g0,g2,g3,g4,g5,g6,g0,g9,g1",
@@ -191616,7 +191616,7 @@ var jJe = $({
 	"b17.o2": "g0,g0,g1,g1,g1,g0,g2,g3,g3,g3,g4,g5,g6,g1,g7,g0,g5,g6,g1,g7",
 	"b17.o3": "g0,g0,g3,g3,g3,g0,g2,g3,g3,g3,g4,g5,g6,g1,g7,g0,g1,g3,g7,g5"
 }, N$e = {
-	label: "Line up the point columns",
+	label: "Aligner le point en colonnes",
 	"b0.prompt": "12,5 + 3,75 : complète avec des zéros pour avoir 2 chiffres après la virgule, puis calcule en colonnes. Écris les retenues, puis la réponse.",
 	"b0.o0": "g0,g1,g2,g1,g0,g0,g2,g3,g4,g1,g5,g0,g6,g7,g4,g0,g2,g8,g3,g4",
 	"b0.o1": "g0,g1,g1,g1,g0,g0,g2,g3,g4,g1,g5,g0,g6,g7,g4,g0,g2,g4,g3,g4",
@@ -191802,7 +191802,7 @@ var jJe = $({
 	"b10.o5": "p12,p13,p14,p23,p34,p24",
 	"b10.o6": "p12,p14,p23,p24,p34,p13"
 }, R$e = {
-	label: "List it in order",
+	label: "Ranger dans l'ordre",
 	"b0.prompt": "Liste toutes les paires de 1, 2, 3. Dépose les paires manquantes dans la liste, dans l'ordre.",
 	"b0.o0": "p12,p13,p23",
 	"b0.o1": "p12,p23,p13",
@@ -192016,7 +192016,7 @@ var jJe = $({
 	"b17.o3": "A,E,C,D,B,F",
 	"b17.o4": "A,F,C,D,E,B"
 }, U$e = {
-	label: "Long division error hunt",
+	label: "Chasse aux erreurs de division posée",
 	"b0.prompt": "Voici 925 ÷ 25 résolu étape par étape. Trie les étapes : les justes et les erreurs.",
 	"b0.o0": "A,C,D,E,B",
 	"b0.o1": "B,C,D,E,A",
@@ -192257,7 +192257,7 @@ var jJe = $({
 	"b14.o3": "t0,t1,d4,t2",
 	"b14.o4": "t0,t1,d2,t2"
 }, J$e = {
-	label: "Longer by how much",
+	label: "De combien plus long ?",
 	"b0.prompt": "De combien le premier ruban est-il plus long ? Écris la différence en centimètres.",
 	"b0.o0": "t0,t1,d3,t2",
 	"b0.o1": "t0,t1,d7,t2",
@@ -192480,7 +192480,7 @@ var jJe = $({
 	"b14.o3": "g0,g0,g1,g6,g3,g4,g5",
 	"b14.o4": "g0,g0,g1,g8,g3,g8,g5"
 }, $$e = {
-	label: "Longest side limit",
+	label: "Le plus long côté",
 	"b0.prompt": "Deux côtés d'un triangle mesurent 3 cm et 5 cm. Le troisième côté est un nombre entier de cm. Complète le plus court et le plus long possible.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g7,g4,g8,g6",
@@ -192677,7 +192677,7 @@ var jJe = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g11",
 	"b14.o3": "g0,g1,g2,g3,g12,g5,g6,g7,g13"
 }, i1e = {
-	label: "Look for a pattern puzzles",
+	label: "Puzzles de motifs",
 	"b0.prompt": "Regarde la suite 5, 8, 11, 14, ... Quel est le terme suivant ? Quel est le terme à la position 10 ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g9,g5,g6,g7,g10",
@@ -192874,7 +192874,7 @@ var jJe = $({
 	"b14.o3": "p14_21,p5_6,p11_12,p8_12,p12_18,p7_9",
 	"b14.o4": "p7_9,p8_12,p11_12,p5_6,p12_18,p14_21"
 }, l1e = {
-	label: "Lowest terms fraction wall",
+	label: "Vérifier la forme irréductible",
 	"b0.prompt": "Vérifie chaque fraction sur le mur : est-elle déjà irréductible, ou peut-elle se simplifier ?",
 	"b0.o0": "p3_4,p2_3,p6_8,p10_15",
 	"b0.o1": "p6_8,p2_3,p3_4,p10_15",
@@ -193098,7 +193098,7 @@ var jJe = $({
 	"b14.o3": "c70-100,c470-1000,c6-10,c80-100,c20-100,c520-1000",
 	"b14.o4": "c520-1000,c80-100,c6-10,c470-1000,c20-100,c70-100"
 }, m1e = {
-	label: "Lucky streak detective",
+	label: "L'enquêteur de la série chanceuse",
 	"b0.prompt": "Une pièce équilibrée devrait tomber sur face environ une fois sur deux. Chaque carte montre les faces sur les lancers. Est-ce du simple hasard, ou est-ce suspect ?",
 	"b0.o0": "c4-10,c7-10,c0-10,c80-100",
 	"b0.o1": "c0-10,c7-10,c4-10,c80-100",
@@ -193297,7 +193297,7 @@ var jJe = $({
 	"b3.o2": "20",
 	"b3.o3": "25"
 }, y1e = {
-	label: "Make it balance cards",
+	label: "Équilibrer avec des cartes",
 	"b0.prompt": "Quelle carte rend 4 + 4 égal à 2 + ? ?",
 	"b0.o0": "6",
 	"b0.o1": "4",
@@ -193830,7 +193830,7 @@ var jJe = $({
 	"b3.o2": "14",
 	"b3.o3": "16"
 }, k1e = {
-	label: "Make ten card race",
+	label: "Course des cartes pour faire dix",
 	"b0.prompt": "9 + 4 = ?",
 	"b0.o0": "13",
 	"b0.o1": "12",
@@ -193960,7 +193960,7 @@ var jJe = $({
 	"b17.o2": "12",
 	"b17.o3": "14"
 }, P1e = {
-	label: "Make ten frames",
+	label: "Cadres de dix",
 	"b0.prompt": "9 + 4 : le cadre contient 9. Glisse des jetons de la pile pour le remplir jusqu'à 10. Combien en reste-t-il dans la pile ?",
 	"b0.o0": "3|10",
 	"b0.o1": "4|9",
@@ -194246,7 +194246,7 @@ var jJe = $({
 	"b31.o2": "0",
 	"b31.o3": "4"
 }, z1e = {
-	label: "Make ten friends",
+	label: "Les amis de dix",
 	"b0.prompt": "Le bus a 10 places. 5 🧒 sont montés. Combien de places vides ?",
 	"b0.o0": "5",
 	"b0.o1": "6",
@@ -194657,7 +194657,7 @@ var jJe = $({
 	"b43.o2": "9",
 	"b43.o3": "918"
 }, W1e = {
-	label: "Many ways to build",
+	label: "Plusieurs façons de construire",
 	"b0.prompt": "352 = 3 centaines + 4 dizaines + ? unités",
 	"b0.o0": "12",
 	"b0.o1": "2",
@@ -194998,7 +194998,7 @@ var jJe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g8,g4",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g9,g4"
 }, Y1e = {
-	label: "Map distance measurer",
+	label: "Mesurer les distances sur la carte",
 	"b0.prompt": "Sur une carte, 1 cm représente 10 m. Un chemin mesure 3 cm sur la carte. Quelle est sa longueur réelle ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g7,g4",
@@ -195198,7 +195198,7 @@ var jJe = $({
 	"b11.o3": "t0,t1,t2,t3,t4,t5,dE,d6",
 	"b11.o4": "t0,t1,t2,t3,t4,t5,dE,d4"
 }, e0e = {
-	label: "Map landmark refs",
+	label: "Repères sur la carte",
 	"b0.prompt": "Où est l'école sur la carte ? Écris sa référence : la lettre, puis le nombre.",
 	"b0.o0": "t0,t1,t2,t3,dB,d3",
 	"b0.o1": "t0,t1,t2,t3,d3,dB",
@@ -195415,7 +195415,7 @@ var jJe = $({
 	"b17.o3": "c6:t5",
 	"b17.o4": "a6:t5"
 }, a0e = {
-	label: "Map square finder",
+	label: "Trouver la case sur la carte",
 	"b0.prompt": "Place le bâtiment sur la case A2.",
 	"b0.o0": "a2:t0",
 	"b0.o1": "b1:t0",
@@ -195676,7 +195676,7 @@ var jJe = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, u0e = {
-	label: "Match area to product",
+	label: "Associer l'aire au produit",
 	"b0.prompt": "Chaque rectangle a deux côtés entre parenthèses. Associe chaque produit à la somme de ses quatre morceaux d'aire.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -195919,7 +195919,7 @@ var jJe = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g12,g8,g9,g10,g11",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g0"
 }, h0e = {
-	label: "Matchstick pattern rule",
+	label: "La règle des allumettes",
 	"b0.prompt": "Les figures 1, 2, 3 et 4 d'un motif d'allumettes utilisent 3, 5, 7, 9 allumettes. Trouve la règle pour la figure n.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g11",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g11,g8,g9,g10,g7",
@@ -196124,7 +196124,7 @@ var jJe = $({
 	"b11.o3": "3|0|1|2|2|1",
 	"b11.o4": "1|0|3|2|2|1"
 }, b0e = {
-	label: "Measure and plot leaves",
+	label: "Mesurer et tracer les feuilles",
 	"b0.prompt": "Longueur des feuilles en cm : 2½, 3, 2½, 2. Glisse une croix sur le diagramme pour chaque feuille.",
 	"b0.o0": "2|1|2|1",
 	"b0.o1": "2|0|3|1",
@@ -196366,7 +196366,7 @@ var jJe = $({
 	"b17.o5": "b3,b1,b4,b2,b0",
 	"b17.o6": "b1,b4,b0,b2,b3"
 }, T0e = {
-	label: "Measure order lineup",
+	label: "Ranger par mesure",
 	"b0.prompt": "Mets les mesures dans l'ordre, du plus court au plus long.",
 	"b0.o0": "b2,b0,b1",
 	"b0.o1": "b1,b0,b2",
@@ -196595,7 +196595,7 @@ var jJe = $({
 	"b17.o0": "g0,g1,g2",
 	"b17.o1": "g2,g1,g0"
 }, A0e = {
-	label: "Measure sum lab",
+	label: "Laboratoire des sommes de mesures",
 	"b0.prompt": "Additionne 2,4 m et 1,5 m. Écris la réponse dans le tableau de numération.",
 	"b0.o0": "g0,g1",
 	"b0.o1": "g1,g0",
@@ -196728,7 +196728,7 @@ var jJe = $({
 	"b1.o2": "20 cm",
 	"b1.o3": "8 cm"
 }, F0e = {
-	label: "Measure the segment trail",
+	label: "Mesurer le chemin de segments",
 	"b0.prompt": "Un chemin a 3 segments de 2 cm. Quelle est la longueur totale ?",
 	"b0.o0": "6 cm",
 	"b0.o1": "5 cm",
@@ -196796,7 +196796,7 @@ var jJe = $({
 	"b1.o2": "2 cm",
 	"b1.o3": "2000 cm"
 }, B0e = {
-	label: "Measure the trail",
+	label: "Mesurer le chemin",
 	"b0.prompt": "Un bureau fait 1 mètre et 20 cm. Combien de cm, à peu près ?",
 	"b0.o0": "120 cm",
 	"b0.o1": "12 cm",
@@ -197004,7 +197004,7 @@ var K0e = {
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g6,g5,g0,g2,g4,g1,g3,g8,g2",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g1,g4,g2,g0,g5,g6,g8,g9"
 }, $0e = {
-	label: "Median line up queue",
+	label: "La file de la médiane",
 	"b0.prompt": "5 enfants font la queue avec ces nombres de livres lus : 4, 9, 2, 7, 5. Range-les du plus petit au plus grand, puis trouve la médiane.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2,g0,g4,g3,g1,g6,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g1,g2,g3,g4,g6,g2",
@@ -197195,7 +197195,7 @@ var K0e = {
 	"b13.o1": "d9,d8,d9,d9",
 	"b13.o2": "d9,d9,d0,d1"
 }, i2e = {
-	label: "Meet ten thousand",
+	label: "Rencontrer les dizaines de milliers",
 	"b0.prompt": "4 milliers, 2 centaines, 7 dizaines, 3 unités. Écris le nombre sur le tableau.",
 	"b0.o0": "d4,d2,d7,d3",
 	"b0.o1": "d4,d7,d2,d3",
@@ -197520,7 +197520,7 @@ var S2e = [
 	"b14.o5": "v451,v461,v471,v481,v501,v491",
 	"b14.o6": "v451,v471,v481,v491,v501,v461"
 }, E2e = {
-	label: "Mental hundreds hop",
+	label: "Sauts de centaines de tête",
 	"b0.prompt": "345 + 200 : saute 2 centaines.",
 	"b0.o0": "v345,v445,v545",
 	"b0.o1": "v345,v545,v445",
@@ -197702,7 +197702,7 @@ var S2e = [
 	"b1.o2": "400",
 	"b1.o3": "509"
 }, j2e = {
-	label: "Mental mix challenge",
+	label: "Défi de calcul mental mixte",
 	"b0.prompt": "326 + 40 + 2 = ?",
 	"b0.o0": "368",
 	"b0.o1": "366",
@@ -197870,7 +197870,7 @@ var S2e = [
 	"b17.o3": "h0,h1,p0,h2",
 	"b17.o4": "p0,h2,h1,h0"
 }, B2e = {
-	label: "Mental or paper sort",
+	label: "De tête ou à l'écrit ?",
 	"b0.prompt": "Quels calculs sont rapides dans la tête, et lesquels demandent du papier ?",
 	"b0.o0": "h0,p0,p1,p2",
 	"b0.o1": "p0,h0,p1,p2",
@@ -198178,7 +198178,7 @@ var Z2e = [
 	"b14.o3": "c2,h1,h2,p0,p1,p2,c0,c1,h0",
 	"b14.o4": "h0,c0,h2,p0,p1,p2,h1,c1,c2"
 }, t4e = {
-	label: "Method matchmaker",
+	label: "Associer les méthodes",
 	"b0.prompt": "Choisis le meilleur outil pour chaque calcul : ta tête, le papier ou la calculatrice. Vérifie la réponse de la calculatrice avec une estimation.",
 	"b0.o0": "h0,h1,p0,p1",
 	"b0.o1": "p0,h1,h0,p1",
@@ -198407,7 +198407,7 @@ var Z2e = [
 	"b17.o3": "_,_,m,_,_,_,_,_,_,_,_",
 	"b17.o4": "_,_,_,_,_,_,_,_,_,_,m"
 }, o4e = {
-	label: "Midpoint finder",
+	label: "Trouver le milieu",
 	"b0.prompt": "Quel nombre est à mi-chemin entre 0 et 10000 ?",
 	"b0.o0": "f0,a1,f2",
 	"b0.o1": "f0,x0,f2",
@@ -198620,7 +198620,7 @@ var Z2e = [
 	"b14.o2": "t0,t1,d6,d8,d0",
 	"b14.o3": "t0,t1,d6,d9,d1"
 }, d4e = {
-	label: "Midpoint five rule",
+	label: "La règle de la moitié",
 	"b0.prompt": "Arrondis 23 à la dizaine la plus proche. Écris-le.",
 	"b0.o0": "t0,t1,d2,d0",
 	"b0.o1": "t0,t1,d3,d0",
@@ -198798,7 +198798,7 @@ var Z2e = [
 	"b11.o2": "g0,g1,g2,g3,g9,g5,g6,g7,g3,g10",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g11"
 }, g4e = {
-	label: "Midpoint hunt",
+	label: "La chasse au milieu",
 	"b0.prompt": "Chasse le milieu de 4 et 10 : additionne-les, puis prends la moitié de la somme. Dépose les deux réponses dans les cases.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g4",
@@ -198932,7 +198932,7 @@ var Z2e = [
 	"b1.o2": "16",
 	"b1.o3": "30"
 }, x4e = {
-	label: "Minus nine minus eight",
+	label: "Moins neuf, moins huit",
 	"b0.prompt": "Utilise −10 puis +1 : 15 − 9 = ?",
 	"b0.o0": "6",
 	"b0.o1": "5",
@@ -199054,7 +199054,7 @@ var Z2e = [
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g7,g8,g1,g11,g3",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g7,g5,g1,g9,g3"
 }, E4e = {
-	label: "Minutes to hours and minutes",
+	label: "Des minutes aux heures et minutes",
 	"b0.prompt": "Une leçon dure 1 h 20 min, puis il y a encore 25 min. Combien de temps en tout ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g3,g6,g0,g1,g7,g3",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g3,g6,g0,g1,g8,g3",
@@ -199254,7 +199254,7 @@ var Z2e = [
 	"b11.o3": "5|3|4",
 	"b11.o4": "5|0|7"
 }, j4e = {
-	label: "Mirror doubles",
+	label: "Doubles papillon",
 	"b0.prompt": "Les ailes doivent être pareilles.",
 	"b0.o0": "3|3|2",
 	"b0.o1": "3|2|3",
@@ -199418,7 +199418,7 @@ var Z2e = [
 	"b11.o1": "h1,i1,i2,j2,j3",
 	"b11.o2": "f4,f5,g5,g6,h6"
 }, I4e = {
-	label: "Mirror grid shapes",
+	label: "Formes miroirs sur quadrillage",
 	"b0.prompt": "Reflète la forme dans l'axe de symétrie vertical. Colorie son image de l'autre côté.",
 	"b0.o0": "b5,b6,c6",
 	"b0.o1": "b6,b7,c6",
@@ -199608,7 +199608,7 @@ var Z2e = [
 	"b19.o2": "11|9",
 	"b19.o3": "9|11"
 }, V4e = {
-	label: "Mirror halves",
+	label: "Une moitié de papillon",
 	"b0.prompt": "Mets la moitié sur l'aile.",
 	"b0.o0": "1|1",
 	"b0.o1": "2|0",
@@ -199819,7 +199819,7 @@ var Z2e = [
 	"b14.o2": "e3,e4,f4",
 	"b14.o3": "g4,h3,h4"
 }, K4e = {
-	label: "Mirror line grid reflector",
+	label: "Le miroir sur quadrillage",
 	"b0.prompt": "La longue barre verticale est la droite miroir. Fais la symétrie de la forme marquée et colorie l'image.",
 	"b0.o0": "g8",
 	"b0.o1": "c8",
@@ -199962,7 +199962,7 @@ var Z2e = [
 	"b1.o2": "y = 3",
 	"b1.o3": "x = 6"
 }, Z4e = {
-	label: "Mirror line mystery",
+	label: "Mystère de la droite de symétrie",
 	"b0.prompt": "Une figure et son image sont symétriques par rapport à quel type de droite ?",
 	"b0.o0": "Une droite verticale ou horizontale",
 	"b0.o1": "Une ligne courbe",
@@ -200051,7 +200051,7 @@ var Z2e = [
 	"b10.o1": "e3:t",
 	"b10.o2": "h4:t"
 }, n3e = {
-	label: "Mirror point hop",
+	label: "Saut du point miroir",
 	"b0.prompt": "Reflète le cercle dans l'axe de symétrie : mets l'étoile là où va son image.",
 	"b0.o0": "b6:t",
 	"b0.o1": "b4:t",
@@ -200220,7 +200220,7 @@ var Z2e = [
 	"b14.o2": "c1",
 	"b14.o3": "a3"
 }, s3e = {
-	label: "Mirror point hunt",
+	label: "La chasse au point miroir",
 	"b0.prompt": "Le point (2, 3) est marqué. Fais sa symétrie par rapport à l'axe des y (l'étoile est l'origine) et colorie son image.",
 	"b0.o0": "b3",
 	"b0.o1": "h7",
@@ -200427,7 +200427,7 @@ var Z2e = [
 	"b17.o2": "g0,g1,g6,g1,g2,g3,g4",
 	"b17.o3": "g0,g1,g2,g1,g6,g3,g4"
 }, f3e = {
-	label: "Missing angle triangle puzzle",
+	label: "L'angle manquant du triangle",
 	"b0.prompt": "Un triangle a des angles de 50° et 60°. Trouve le troisième angle.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g1,g6,g4,g5",
@@ -200670,7 +200670,7 @@ var Z2e = [
 	"b1.o2": "1+1",
 	"b1.o3": "2+5"
 }, x3e = {
-	label: "Missing combo finder",
+	label: "Trouver la combinaison manquante",
 	"b0.prompt": "Une liste de totaux à 2 pièces : 1+2, 1+3, 2+3. Quelle combinaison manque ?",
 	"b0.o0": "1+4",
 	"b0.o1": "2+2",
@@ -200798,7 +200798,7 @@ var Z2e = [
 	"b17.o2": "f0,f1,f2,f3,f4,f5,f6,x1,f8,f9,f10",
 	"b17.o3": "f0,f1,f2,f3,f4,f5,f6,x2,f8,f9,f10"
 }, E3e = {
-	label: "Missing labels scale",
+	label: "Les étiquettes manquantes",
 	"b0.prompt": "Seuls deux repères sont étiquetés (en g). Trouve le pas, puis lis l'épingle.",
 	"b0.o0": "f0,f1,f2,f3,f4,a5,f6,f7,f8,f9,f10",
 	"b0.o1": "f0,f1,f2,f3,f4,x0,f6,f7,f8,f9,f10",
@@ -200997,7 +200997,7 @@ var Z2e = [
 	"b3.o2": "56",
 	"b3.o3": "114"
 }, j3e = {
-	label: "Missing number fix it",
+	label: "Réparer le nombre manquant",
 	"b0.prompt": "Répare l'égalité : 6 + ? = 10. Quel nombre la répare ?",
 	"b0.o0": "4",
 	"b0.o1": "6",
@@ -201111,7 +201111,7 @@ var Z2e = [
 	"b13.o2": "g9,g1,g2,g3,g4,g5,g6,g7,g8",
 	"b13.o3": "g8,g1,g2,g3,g4,g5,g6,g7,g0"
 }, I3e = {
-	label: "Missing outcome hunt",
+	label: "La chasse au résultat manquant",
 	"b0.prompt": "On joue avec une pièce (👑 ou 🔢) et une roue à deux couleurs. La liste doit montrer chaque issue une seule fois, dans l'ordre : le premier événement d'abord. Glisse les issues manquantes dans la liste.",
 	"b0.o0": "g0,g1,g2,g3",
 	"b0.o1": "g1,g1,g2,g3",
@@ -201286,7 +201286,7 @@ var Z2e = [
 	"b3.o2": "33",
 	"b3.o3": "9"
 }, V3e = {
-	label: "Missing part bag",
+	label: "Le sac de la partie manquante",
 	"b0.prompt": "9 jetons. 4 sont dans le sac. Combien sont cachés ?",
 	"b0.o0": "5",
 	"b0.o1": "4",
@@ -201406,7 +201406,7 @@ var Z2e = [
 	"b11.o3": "n5,o3,n1,n2,o4",
 	"b11.o4": "o4,n1,o3,n2,n5"
 }, K3e = {
-	label: "Missing piece problems",
+	label: "Problèmes de la pièce manquante",
 	"b0.prompt": "Peux-tu répondre à chaque question ? Trie les questions.",
 	"b0.o0": "o0,o3,n1,n2",
 	"b0.o1": "n1,o3,o0,n2",
@@ -201569,7 +201569,7 @@ var Z2e = [
 	"b11.o1": "g0,g1,g2,g3,g8,g4,g6",
 	"b11.o2": "g0,g1,g2,g3,g4,g10,g6"
 }, Z3e = {
-	label: "Missing side detective",
+	label: "L'enquêteur du côté manquant",
 	"b0.prompt": "Un rectangle a une aire de 24 cm² et un côté de 4 cm. Trouve l'autre côté.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g7,g5",
@@ -201690,7 +201690,7 @@ var Z2e = [
 	"b1.o2": "It is not a number",
 	"b1.o3": "Cannot tell"
 }, n6e = {
-	label: "Missing solution hunt",
+	label: "La chasse à la solution manquante",
 	"b0.prompt": "Façons de faire 6 avec deux pièces 1, 2 ou 3 : (1,5) (2,4) (3,3). Laquelle manque ?",
 	"b0.o0": "Aucune : (1,5) n'est pas valable",
 	"b0.o1": "(4,2)",
@@ -201994,7 +201994,7 @@ var Z2e = [
 	"b1.o2": "1 3/4",
 	"b1.o3": "2 3/4"
 }, f6e = {
-	label: "Mixed number borrow",
+	label: "Emprunter avec les nombres mixtes",
 	"b0.prompt": "3 − 1 1/2 = ?",
 	"b0.o0": "1 1/2",
 	"b0.o1": "2 1/2",
@@ -202140,7 +202140,7 @@ var Z2e = [
 	"b17.o3": "a1,r,b,d,a2,c",
 	"b17.o4": "a1,c,b,d,r,a2"
 }, _6e = {
-	label: "Mixed number error hunt",
+	label: "La chasse aux erreurs de nombres mixtes",
 	"b0.prompt": "Voici 1 1/2 + 2 1/3 résolu étape par étape. Trie les étapes : les justes et les erreurs.",
 	"b0.o0": "a1,a2,b,d,c",
 	"b0.o1": "c,a2,b,d,a1",
@@ -202375,7 +202375,7 @@ var Z2e = [
 	"b17.o1": "g0,g1,g5,g3,g4",
 	"b17.o2": "g0,g1,g6,g3,g4"
 }, S6e = {
-	label: "Mixed number stack",
+	label: "La pile de nombres mixtes",
 	"b0.prompt": "Écris 7/4 sous forme de nombre mixte : les entiers d'abord, puis la part qui reste.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g3,g2,g4,g5",
@@ -202606,7 +202606,7 @@ var Z2e = [
 	"b14.o4": "t0,t1,t2,t3,t4,t5,d8,d6",
 	"b14.o5": "t0,t1,t2,t3,t4,t5,d8,d4"
 }, D6e = {
-	label: "Money coin shop scene",
+	label: "Totaux de la boutique",
 	"b0.prompt": "Quel est le total de tout ce qu'il y a dans le panier ? Écris-le.",
 	"b0.o0": "t0,t1,t2,t3,d3,d7",
 	"b0.o1": "t0,t1,t2,t3,d1,d2",
@@ -202844,7 +202844,7 @@ var Z2e = [
 	"b17.o2": "g0,g1,g2,g3,g6",
 	"b17.o3": "g0,g1,g2,g3,g7"
 }, M6e = {
-	label: "Money times whole machine",
+	label: "La machine argent fois entier",
 	"b0.prompt": "Un article coûte 2,50\xA0$. Glisse le total pour 4 articles.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -203008,7 +203008,7 @@ var Z2e = [
 	"b1.o2": "April",
 	"b1.o3": "September"
 }, L6e = {
-	label: "Month length rhyme",
+	label: "La comptine des mois",
 	"b0.prompt": "Trente jours ont septembre, avril, juin et ?",
 	"b0.o0": "novembre",
 	"b0.o1": "décembre",
@@ -203129,7 +203129,7 @@ var Z2e = [
 	"b18.o2": "6",
 	"b18.o3": "4"
 }, H6e = {
-	label: "More or fewer detective",
+	label: "L'enquêteur du plus et du moins",
 	"b0.prompt": "Quelle barre en a le plus ? Touche-la.",
 	"b0.o0": "La première barre",
 	"b0.o1": "La seconde barre",
@@ -203759,7 +203759,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b15.o3": "12,18,24,30,36,42,48,54,60,66,72,78,84,90,96",
 	"b15.o4": "12,18,24,30,36,42,48,54,6,60,66,72,78,84,90"
 }, e8e = {
-	label: "Multiple hopper",
+	label: "Le sauteur de multiples",
 	"b0.prompt": "Saute de 2 en 2 depuis zéro. Colorie chaque nombre où tu atterris.",
 	"b0.o0": "10,12,14,16,18,2,20,22,24,26,28,30,4,6,8",
 	"b0.o1": "10,12,14,16,18,2,20,22,24,26,28,3,30,4,6,8",
@@ -203994,7 +203994,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b17.o3": "100,36,45,54,63,72,81,90,99",
 	"b17.o4": "45,54,63,72,81,90,99"
 }, a8e = {
-	label: "Multiple hunt",
+	label: "La chasse aux multiples",
 	"b0.prompt": "Colorie tous les multiples de 2.",
 	"b0.o0": "10,12,14,16,18,2,20,4,6,8",
 	"b0.o1": "12,15,18,3,6,9",
@@ -204205,7 +204205,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o3": "n82,n45,n81,n28,n46,n27",
 	"b11.o4": "n27,n28,n81,n45,n46,n82"
 }, u8e = {
-	label: "Multiple or not bingo",
+	label: "Multiple ou pas ? Bingo",
 	"b0.prompt": "Est-ce un multiple de 2 ? Dépose chaque nombre dans la bonne boîte.",
 	"b0.o0": "n8,n14,n20,n7,n13,n19",
 	"b0.o1": "n7,n14,n20,n8,n13,n19",
@@ -204411,7 +204411,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b14.o3": "10,100,15,20,25,30,35,40,45,5,50,55,60,65,70,75,80,85,90,95,99",
 	"b14.o4": "10,100,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95"
 }, h8e = {
-	label: "Multiples hundred chart",
+	label: "Les multiples sur la table de cent",
 	"b0.prompt": "Colorie tous les multiples de 2 : compte de 2 en 2.",
 	"b0.o0": "10,12,14,16,18,2,20,22,24,26,28,30,4,6,8",
 	"b0.o1": "12,15,18,21,24,27,3,30,6,9",
@@ -204620,7 +204620,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b17.o2": "g0,g1,g2,g3,g9,g5,g10",
 	"b17.o3": "g0,g1,g2,g3,g11,g5,g12"
 }, b8e = {
-	label: "Multiplier machine",
+	label: "La machine à multiplier",
 	"b0.prompt": "Ton nombre est 40. La variation est +20 %. Choisis le multiplicateur, puis la nouvelle valeur.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g7,g5,g8",
@@ -204842,7 +204842,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b17.o2": "x1,f1,f2,f3,f4",
 	"b17.o3": "x2,f1,f2,f3,f4"
 }, T8e = {
-	label: "Mystery box multiply",
+	label: "La boîte mystère à multiplier",
 	"b0.prompt": "Quel nombre va dans la boîte ? ☐ × 2 = 12",
 	"b0.o0": "a0,f1,f2,f3,f4",
 	"b0.o1": "x0,f1,f2,f3,f4",
@@ -205330,7 +205330,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g8,g7",
 	"b11.o3": "g0,g1,g2,g3,g4,g9,g6,g7"
 }, F8e = {
-	label: "Mystery machine guess",
+	label: "La machine mystère",
 	"b0.prompt": "Chaque paire montre ce qui est entré dans la machine et ce qui en est sorti. Trouve la règle : multiplie, puis ajoute ou retranche.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g7,g6,g5",
@@ -205464,7 +205464,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "1800",
 	"b1.o3": "100"
 }, B8e = {
-	label: "Mystery point on line",
+	label: "Le point mystère sur la droite",
 	"b0.prompt": "Repères : 0, 500, 1000. La marque est au quart depuis 0. Quel nombre ?",
 	"b0.o0": "250",
 	"b0.o1": "125",
@@ -205532,7 +205532,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "(1, 1)",
 	"b1.o3": "(3, 3)"
 }, G8e = {
-	label: "Mystery polygon points",
+	label: "Les sommets du polygone mystère",
 	"b0.prompt": "Un rectangle a les sommets (1,1), (4,1), (4,3). Quel est le quatrième sommet ?",
 	"b0.o0": "(1, 3)",
 	"b0.o1": "(3, 1)",
@@ -205632,7 +205632,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o1": "x0,i4,i1,x1,i2,i3,x2,i0",
 	"b11.o2": "x0,i0,i4,x1,i2,i3,x2,i1"
 }, X8e = {
-	label: "Mystery rule sort",
+	label: "Trier la règle mystère",
 	"b0.prompt": "Deux exemples montrent une règle secrète. Qu'ont-ils en commun ? Trie les cartes pour qu'elles leur ressemblent.",
 	"b0.o0": "x0,i0,i1,x1,i2,i3",
 	"b0.o1": "x0,i2,i1,x1,i0,i3",
@@ -206036,7 +206036,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, o5e = {
-	label: "Mystery shape twenty questions",
+	label: "La forme mystère",
 	"b0.prompt": "Lis chaque indice et trouve la forme mystère qu'il décrit. Dépose la forme sur son indice.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -206500,7 +206500,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b13.o3": "cone:cone,cube:cone,cuboid:cuboid,cylinder:cylinder",
 	"b13.o4": "cone:cone,cube:cube,cuboid:cuboid,cylinder:cube"
 }, g5e = {
-	label: "Mystery solid bag",
+	label: "Le sac du solide mystère",
 	"b0.prompt": "Touche les formes dans le sac. Dépose chacune sur son nom.",
 	"b0.o0": "cuboid:cuboid,sphere:sphere",
 	"b0.o1": "cuboid:cuboid,sphere:cuboid",
@@ -206640,7 +206640,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "E",
 	"b1.o3": "G"
 }, x5e = {
-	label: "Name the cell",
+	label: "Nommer la case",
 	"b0.prompt": "L'étoile est en colonne D, ligne 3. Quelle est la case ?",
 	"b0.o0": "D3",
 	"b0.o1": "3D",
@@ -206761,7 +206761,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, E5e = {
-	label: "Name the piece",
+	label: "Nommer la pièce",
 	"b0.prompt": "Chaque forme est coupée en parts égales. Glisse la fraction qui nomme une part.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -207154,7 +207154,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "52",
 	"b1.o3": "49"
 }, I5e = {
-	label: "Near doubles detective",
+	label: "L'enquêteur des presque-doubles",
 	"b0.prompt": "17 + 18 ressemble à double 17 plus 1. Combien cela fait-il ?",
 	"b0.o0": "35",
 	"b0.o1": "34",
@@ -207287,7 +207287,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b18.o2": "g0,g1,g2,g3,g0,g1,g6,g5,g4,g3,g6,g7,g6,g6",
 	"b18.o3": "g0,g1,g2,g3,g0,g1,g4,g5,g6,g3,g6,g7,g10,g6"
 }, V5e = {
-	label: "Near ten jump",
+	label: "Saut vers la dizaine proche",
 	"b0.prompt": "47 + 29 : saute au nombre rond 30, puis ajuste.",
 	"b0.o0": "g0,g1,g2,g3,g0,g1,g4,g5,g6,g3,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g0,g1,g4,g5,g9,g3,g7,g8",
@@ -207875,7 +207875,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b27.o2": "18.3",
 	"b27.o3": "18.35"
 }, K5e = {
-	label: "Nearest hundredth hopper",
+	label: "Sauter au centième le plus proche",
 	"b0.prompt": "16,628 se trouve entre 16,62 et 16,63. De quel centième est-il le plus proche ?",
 	"b0.o0": "16,63",
 	"b0.o1": "16,62",
@@ -208492,7 +208492,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b27.o2": "5,419",
 	"b27.o3": "5,403"
 }, Z5e = {
-	label: "Nearest ten sort",
+	label: "Trier à la dizaine la plus proche",
 	"b0.prompt": "Quel nombre s'arrondit à 640 à la dizaine la plus proche ?",
 	"b0.o0": "641",
 	"b0.o1": "631",
@@ -208724,7 +208724,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b14.o1": "g0,g1,g2,g3,g5",
 	"b14.o2": "g0,g1,g2,g3,g6"
 }, n7e = {
-	label: "Negative sub sprint",
+	label: "Sprint des soustractions négatives",
 	"b0.prompt": "Remplace x par −3 dans 2x + 1. Remplis chaque étape, signes compris.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g9,g5,g4,g6,g7,g3,g10",
@@ -208888,7 +208888,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b14.o1": "n-cylinder0,n-cuboid0,n-cuboid1,n-prism0,n-tetra0,n-cube0",
 	"b14.o2": "n-cylinder0,n-tetra0,n-prism0,n-cuboid1,n-cuboid0,n-cube0"
 }, s7e = {
-	label: "Net fold tester",
+	label: "Tester le patron pliable",
 	"b0.prompt": "Chaque patron est fait de faces. Compte-les et nomme-les, puis dépose le patron sous le solide qu'il forme.",
 	"b0.o0": "n-cube0,n-prism0,n-pyramid0",
 	"b0.o1": "n-pyramid0,n-prism0,n-cube0",
@@ -209508,7 +209508,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b12.o3": "11,12,14,15,18,23,3,8",
 	"b12.o4": "1,11,12,13,14,15,18,23,3,8"
 }, f7e = {
-	label: "Next shape builder",
+	label: "La forme suivante",
 	"b0.prompt": "Les rangées grandissent : ■, ■■, et ensuite ? Colorie la rangée suivante sur la ligne 1 de la grille, depuis la gauche.",
 	"b0.o0": "1,2,3",
 	"b0.o1": "1,2",
@@ -209654,7 +209654,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g2,g1,g8,g3,g6,g5,g9,g7,g10,g11,g11,g3,g12,g5,g13,g7",
 	"b11.o1": "g0,g1,g2,g3,g14,g5,g6,g7,g2,g1,g8,g3,g6,g5,g9,g7,g10,g11,g11,g3,g12,g5,g13,g7"
 }, _7e = {
-	label: "Night train duration",
+	label: "Le train de nuit",
 	"b0.prompt": "Un train de nuit part à 22:00 et arrive à 06:00 le lendemain matin. Coupe le trajet à minuit, puis additionne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g2,g1,g8,g3,g9,g5,g6,g7,g10,g11,g11,g3,g12,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g13,g5,g6,g7,g2,g1,g8,g3,g9,g5,g6,g7,g10,g11,g11,g3,g12,g5,g6,g7",
@@ -209787,7 +209787,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o1": "g0,g1,g0,g1,g0,g1,g0,g1,g0,g1,g0,g2,g3,g4,g3",
 	"b11.o2": "g0,g1,g0,g1,g0,g1,g0,g1,g0,g1,g0,g2,g5,g4,g6"
 }, S7e = {
-	label: "Nines check clock",
+	label: "Vérifier avec les neuf sur l'horloge",
 	"b0.prompt": "Trouve la racine numérique de 4\xA0527 : additionne ses chiffres, puis continue à additionner les chiffres du résultat jusqu'à ce qu'il n'en reste qu'un.",
 	"b0.o0": "g0,g1,g2,g1,g3,g1,g4,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g2,g1,g3,g1,g4,g5,g6,g7,g6",
@@ -209954,7 +209954,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g4,g9,g10,g14",
 	"b11.o4": "g0,g1,g2,g3,g4,g5,g6,g15,g8,g4,g9,g10,g16"
 }, D7e = {
-	label: "Nth term matchsticks",
+	label: "Le n-ième terme aux allumettes",
 	"b0.prompt": "Les figures 1 à 4 d'un motif d'allumettes utilisent 4, 7, 10, 13 allumettes. Trouve la règle pour la figure n, puis utilise-la pour la figure 50.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g4,g9,g10,g11",
 	"b0.o1": "g0,g1,g2,g3,g4,g8,g6,g7,g5,g4,g9,g10,g12",
@@ -210100,7 +210100,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "6400",
 	"b1.o3": "64"
 }, M7e = {
-	label: "Number dictation cheque",
+	label: "Dictée de nombres",
 	"b0.prompt": "Écris en chiffres : deux cent sept.",
 	"b0.o0": "207",
 	"b0.o1": "270",
@@ -210495,7 +210495,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b26.prompt": "Start at 1,397. Hop −10, +10, −100. Where do you land?",
 	"b27.prompt": "Start at 2,004. Hop −10, +10, +1. Where do you land?"
 }, H7e = {
-	label: "Number hop",
+	label: "Sauts de nombres",
 	"b0.prompt": "Pars de 8\xA0279. Saute −1\xA0000, −1\xA0000. Où atterris-tu ?",
 	"b1.prompt": "Pars de 7\xA0971. Saute −10, −10, −10. Où atterris-tu ?",
 	"b2.prompt": "Pars de 4\xA0430. Saute +1\xA0000, +1\xA0000, +1\xA0000, +1\xA0000. Où atterris-tu ?",
@@ -210745,7 +210745,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b1.o2": "−2",
 	"b1.o3": "1"
 }, $7e = {
-	label: "Number line sort race",
+	label: "Course de rangement sur la droite numérique",
 	"b0.prompt": "Trie sur la droite du plus petit au plus grand : −1, 0,5, 1/4, 2. Premier ?",
 	"b0.o0": "−1",
 	"b0.o1": "1/4",
@@ -210855,7 +210855,7 @@ var G6e = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), K6e = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, i9e = {
-	label: "Number name match",
+	label: "Associer les nombres et leurs noms",
 	"b0.prompt": "Dépose chaque nom de nombre sur le nombre qu'il dit.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -218472,7 +218472,7 @@ var dnt = $({
 	"b39.o0": "Even",
 	"b39.o1": "Odd"
 }, Wnt = {
-	label: "Odd even pairing trains",
+	label: "Le train des pairs et impairs",
 	"b0.prompt": "Assieds les passagers deux par deux. Y en a-t-il un debout ?",
 	"b0.o0": "0|2|0",
 	"b0.o1": "1|1|0",
@@ -218756,7 +218756,7 @@ var dnt = $({
 	"b1.o2": "Cylinder",
 	"b1.o3": "Cone"
 }, Ynt = {
-	label: "Odd one out shape",
+	label: "L'intrus",
 	"b0.prompt": "Quelle forme ne suit pas la règle « a des coins » : triangle, carré, cercle ?",
 	"b0.o0": "Cercle",
 	"b0.o1": "Triangle",
@@ -219551,7 +219551,7 @@ var dnt = $({
 	"b35.o2": "698",
 	"b35.o3": "598"
 }, ert = {
-	label: "Odometer 100 more",
+	label: "Le compteur : cent de plus",
 	"b0.prompt": "Le compteur indique 100. Tourne la roue des centaines d'un cran vers le haut. Que lit-on maintenant ?",
 	"b0.o0": "200",
 	"b0.o1": "110",
@@ -220209,7 +220209,7 @@ var dnt = $({
 	"b27.o2": "8,409",
 	"b27.o3": "8,508"
 }, art = {
-	label: "Odometer roll",
+	label: "Le compteur qui tourne",
 	"b0.prompt": "Le compteur affiche 2\xA0732. Fais tourner la molette des centaines d'un cran vers le bas (−100). Que lit-on maintenant ?",
 	"b0.o0": "2\xA0632",
 	"b0.o1": "1\xA0732",
@@ -220759,7 +220759,7 @@ var dnt = $({
 	"b37.o2": "18",
 	"b37.o3": "2"
 }, hrt = {
-	label: "One more one less",
+	label: "Un de plus, un de moins",
 	"b0.prompt": "Un de plus. Combien maintenant ?",
 	"b0.o0": "2",
 	"b0.o1": "1",
@@ -221069,7 +221069,7 @@ var dnt = $({
 	"b23.o0": "g0,g1,g2,g3,g4,g5,g0,g1,g6,g5,g7",
 	"b23.o1": "g0,g1,g2,g3,g4,g5,g0,g1,g9,g5,g10"
 }, brt = {
-	label: "Operation order race",
+	label: "Course de l'ordre des opérations",
 	"b0.prompt": "3 + 4 × 2 : quelle partie vient d'abord ? Écris-la, puis la réponse.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g1,g6,g5,g7,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g1,g8,g5,g7,g2",
@@ -221292,7 +221292,7 @@ var dnt = $({
 	"b14.o3": "p-45° · 45°,p-75° · 90°,p-60° · 120°,p-145° · 35°,p-120° · 120°,p-105° · 60°",
 	"b14.o4": "p-45° · 45°,p-105° · 60°,p-60° · 120°,p-145° · 35°,p-75° · 90°,p-120° · 120°"
 }, Trt = {
-	label: "Opposite or not",
+	label: "Opposé ou pas ?",
 	"b0.prompt": "Deux droites se croisent et font quatre angles, nommés tout autour du croisement. Trie chaque paire : les angles opposés se font face, les angles voisins se touchent le long d'une droite.",
 	"b0.o0": "p-N · S,p-E · W,p-N · E,p-S · W",
 	"b0.o1": "p-N · E,p-E · W,p-N · S,p-S · W",
@@ -221483,7 +221483,7 @@ var dnt = $({
 	"b14.o0": "st0,st1",
 	"b14.o1": "st1,st0"
 }, Art = {
-	label: "Order chain builder",
+	label: "Construire la chaîne ordonnée",
 	"b0.prompt": "5 + 2 × 3 : mets les étapes dans l'ordre où tu les ferais.",
 	"b0.o0": "st0,st1",
 	"b0.o1": "st1,st0",
@@ -221704,7 +221704,7 @@ var dnt = $({
 	"b19.o3": "e1,e0,e2,e3",
 	"b19.o4": "e1,e3,e0,e2"
 }, Frt = {
-	label: "Order of operations error hunt",
+	label: "Chasse aux erreurs de priorité",
 	"b0.prompt": "Vérifie chaque ligne avec la priorité des opérations. Est-elle correcte ou une erreur ?",
 	"b0.o0": "e0,e2,e1,e3",
 	"b0.o1": "e1,e2,e0,e3",
@@ -222052,7 +222052,7 @@ var dnt = $({
 	"b23.o5": "t0,t1,t2,t4,t3,t5",
 	"b23.o6": "t0,t1,t2,t3,t5,t4"
 }, Brt = {
-	label: "Order the rationals",
+	label: "Ranger les rationnels",
 	"b0.prompt": "Glisse les cartes dans l'ordre, du plus petit au plus grand.",
 	"b0.o0": "t0,t1,t2,t3",
 	"b0.o1": "t3,t2,t1,t0",
@@ -222385,7 +222385,7 @@ var dnt = $({
 	"b17.o5": "f0,x2,f2,a3",
 	"b17.o6": "f0,a1,f2,x2"
 }, Grt = {
-	label: "Outcome lister",
+	label: "Lister les résultats",
 	"b0.prompt": "Un dé a six faces. Dresse la liste de tous les résultats d'un lancer.",
 	"b0.o0": "f0,f1,a2,f3,f4,f5",
 	"b0.o1": "f0,f1,x0,f3,f4,f5",
@@ -222582,7 +222582,7 @@ var dnt = $({
 	"b11.o1": "T0,B0,T0,B0,T0,B2,T1,B0,T1,B1,T1,B2",
 	"b11.o2": "T0,B0,T0,_,T0,B2,T1,B0,T1,B1,T1,B2"
 }, Xrt = {
-	label: "Outfit maker",
+	label: "Le créateur de costumes",
 	"b0.prompt": "2 hauts et 2 bas. Fais toutes les tenues : mets chaque bas à côté de chaque haut.",
 	"b0.o0": "T0,B0,T0,B1,T1,B0,T1,B1",
 	"b0.o1": "T0,B0,T0,B0,T1,B0,T1,B1",
@@ -222749,7 +222749,7 @@ var dnt = $({
 	"b14.o2": "g0,g1,g2,g3,g0,g5,g6,g3,g9",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g6,g3,g10"
 }, tit = {
-	label: "Outlier mean trap",
+	label: "Le piège de la valeur aberrante",
 	"b0.prompt": "Les valeurs 1, 2, 3 ont une moyenne de 2. Ajoute maintenant la valeur extrême 18. Trouve le nouveau total et la nouvelle moyenne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g3,g7",
@@ -222984,7 +222984,7 @@ var dnt = $({
 	"b17.o5": "f0,f1,f2,f3,x2,f5,a6",
 	"b17.o6": "f0,f1,f2,f3,a4,f5,x2"
 }, oit = {
-	label: "Over the whole wall",
+	label: "Sur tout le mur",
 	"b0.prompt": "3/4 + 2/4 : place les 5 parts sur les pizzas. Remplis la première pizza, le reste va sur la suivante.",
 	"b0.o0": "0|4|1",
 	"b0.o1": "0|5|0",
@@ -223223,7 +223223,7 @@ var dnt = $({
 	"b11.o4": "g0,g1,g2,g1,g3,g4,g9",
 	"b11.o5": "g0,g1,g2,g1,g3,g4,g10"
 }, dit = {
-	label: "Overlap circles hcf",
+	label: "Cercles chevauchants : PGCD",
 	"b0.prompt": "12 = 2² × 3 et 18 = 2 × 3². Mets les nombres premiers communs dans la zone commune, puis multiplie-les : c'est le PGCD.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g0,g3,g5",
@@ -223416,7 +223416,7 @@ var dnt = $({
 	"b12.o3": "g0,g1,g0,g1,g2,g1,g2,g1,g0,g4,g8",
 	"b12.o4": "g0,g1,g0,g1,g2,g1,g2,g1,g3,g4,g9"
 }, git = {
-	label: "Overlap circles lcm",
+	label: "Cercles chevauchants : PPCM",
 	"b0.prompt": "8 = 2³ et 12 = 2² × 3. Construis le PPCM : prends chaque nombre premier avec la plus grande puissance qu'il a dans l'un des deux nombres, puis multiplie.",
 	"b0.o0": "g0,g1,g0,g1,g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g0,g1,g0,g1,g2,g3,g5",
@@ -223808,7 +223808,7 @@ var dnt = $({
 	"b17.o2": "g0,g1,g2,g1,g3,g1,g4,g5,g12,g7,g8,g9,g10",
 	"b17.o3": "g0,g1,g2,g1,g3,g1,g4,g5,g6,g7,g13,g9,g10"
 }, Eit = {
-	label: "Overnight train planner",
+	label: "Le train de nuit",
 	"b0.prompt": "Un train part à 20:00, et le voyage dure 6 h en tout. À quelle heure arrive-t-il, et est-ce le même jour (+0) ou le lendemain (+1) ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g9",
@@ -224032,7 +224032,7 @@ var dnt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g4,g5,g11,g8",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g4,g5,g12,g8"
 }, jit = {
-	label: "Pace it out estimator",
+	label: "Estimer au pas",
 	"b0.prompt": "Un pas mesure environ 50 cm. Une longueur fait 6 pas. Estime-la en cm, puis en m.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g4,g5,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g9,g4,g5,g10,g8",
@@ -224276,7 +224276,7 @@ var dnt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Iit = {
-	label: "Pair relationship spotter",
+	label: "Repérer le lien",
 	"b0.prompt": "Chaque tableau montre des paires (premier → second). Trouve ce qu'on fait au premier nombre à chaque fois, et associe le lien.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -224570,7 +224570,7 @@ var dnt = $({
 	"b27.o2": "2|8",
 	"b27.o3": "3|7"
 }, Vit = {
-	label: "Pair up partners",
+	label: "Les partenaires de danse",
 	"b0.prompt": "Forme les partenaires de danse.",
 	"b0.o0": "0|4",
 	"b0.o1": "1|3",
@@ -224982,7 +224982,7 @@ var dnt = $({
 	"b37.o3": "n13,n14,n10,n17,n11,n18",
 	"b37.o4": "n18,n17,n10,n14,n11,n13"
 }, Kit = {
-	label: "Pair up party",
+	label: "La fête des paires",
 	"b0.prompt": "Forme des paires de danse. Qui reste seul ?",
 	"b0.o0": "0|2|1",
 	"b0.o1": "1|2|0",
@@ -225319,7 +225319,7 @@ var dnt = $({
 	"b14.o3": "g0,g1,g2,g3,g4,g4,g4,g4,g5,g3,g6,g7,g8,g7,g9,g1,g4,g4,g4,g4,g10,g3,g11,g7",
 	"b14.o4": "g0,g1,g2,g3,g4,g4,g4,g4,g5,g3,g6,g7,g8,g7,g9,g3,g4,g4,g4,g4,g10,g1,g11,g7"
 }, Zit = {
-	label: "Parallel lines explorer",
+	label: "L'explorateur de droites parallèles",
 	"b0.prompt": "Deux parallèles sont coupées par une sécante. ∠1 = 65°. Complète ∠5 (correspondant, forme en F). Les angles 1 à 4 sont sur la parallèle du haut et 5 à 8 sur celle du bas ; les numéros impairs sont à gauche de la sécante.",
 	"b0.o0": "g0,g1,g2,g3,g4,g4,g4,g4,g5,g3,g6,g3,g7,g1,g8,g3,g4,g4,g4,g4,g9,g3,g10,g3",
 	"b0.o1": "g0,g1,g2,g3,g4,g4,g4,g4,g5,g3,g6,g3,g7,g11,g8,g3,g4,g4,g4,g4,g9,g3,g10,g3",
@@ -225490,7 +225490,7 @@ var dnt = $({
 	"b11.o2": "parallel0,neither0,perpendicular0,perpendicular1,perpendicular2,parallel1",
 	"b11.o3": "neither0,perpendicular2,perpendicular1,perpendicular0,parallel1,parallel0"
 }, nat = {
-	label: "Parallel perpendicular hunt",
+	label: "Parallèles ou perpendiculaires ?",
 	"b0.prompt": "Trie chaque paire de droites : parallèles, perpendiculaires, ou ni l'un ni l'autre ?",
 	"b0.o0": "parallel0,perpendicular0,perpendicular1,neither0",
 	"b0.o1": "neither0,perpendicular0,perpendicular1,parallel0",
@@ -225711,7 +225711,7 @@ var dnt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, sat = {
-	label: "Part to whole restorer",
+	label: "Retrouver le tout",
 	"b0.prompt": "Chaque indice donne une fraction d'une quantité mystère et sa valeur. Associe-le au tout.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -225900,7 +225900,7 @@ var dnt = $({
 	"b1.o2": "766",
 	"b1.o3": "736"
 }, fat = {
-	label: "Partial product lanes",
+	label: "Couloirs des produits partiels",
 	"b0.prompt": "Produits partiels de 45 × 12 : 450 et 90. Total ?",
 	"b0.o0": "540",
 	"b0.o1": "520",
@@ -226028,7 +226028,7 @@ var dnt = $({
 	"b17.o2": "g0,g1,g2,g3,g6,g0,g1,g5,g3,g4,g7,g7,g8,g3,g9",
 	"b17.o3": "g0,g1,g2,g3,g4,g0,g1,g5,g3,g6,g7,g7,g8,g3,g12"
 }, _at = {
-	label: "Partial products grid",
+	label: "Produits partiels",
 	"b0.prompt": "Calcule 348 × 26 avec des produits partiels : multiplie par les unités, puis par les dizaines, puis additionne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g0,g1,g5,g3,g6,g7,g7,g8,g3,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g0,g1,g5,g3,g10,g7,g7,g8,g3,g11",
@@ -226306,7 +226306,7 @@ var dnt = $({
 	"b17.o5": "f0,x2,f2,a3,f4,a5",
 	"b17.o6": "f0,a1,f2,a3,f4,x2"
 }, Sat = {
-	label: "Partial products sum race",
+	label: "Course des produits partiels",
 	"b0.prompt": "12 × 11 a quatre produits partiels. Additionne-les deux par deux, puis trouve le total.",
 	"b0.o0": "f0,a1,f2,a3,f4,a5",
 	"b0.o1": "f0,x0,f2,a3,f4,a5",
@@ -227115,7 +227115,7 @@ var dnt = $({
 	"b17.o2": "65",
 	"b17.o3": "63"
 }, Dat = {
-	label: "Partition and jump",
+	label: "Partager et sauter",
 	"b0.prompt": "23 + 10 : saute 1 dizaine. Où atterris-tu ?",
 	"b0.o0": "33",
 	"b0.o1": "24",
@@ -227420,7 +227420,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o5": "f0,f1,x2,f3,a4,f5,a6",
 	"b17.o6": "f0,f1,a2,f3,a4,f5,x2"
 }, Pat = {
-	label: "Partition or compensate",
+	label: "Partager ou compenser",
 	"b0.prompt": "23 + 14 : décompose 14 en dizaines et unités. Complète les étapes et le résultat.",
 	"b0.o0": "f0,f1,a2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,x0,f3,a4,f5,a6",
@@ -228057,7 +228057,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b27.o2": "1 + 60 + 100",
 	"b27.o3": "60 + 1,000 + 1"
 }, zat = {
-	label: "Partition puzzle",
+	label: "Puzzle de décomposition",
 	"b0.prompt": "Quelles pièces construisent 6\xA0521 ?",
 	"b0.o0": "6\xA0000 + 500 + 20 + 1",
 	"b0.o1": "6 + 5 + 2 + 1",
@@ -228415,7 +228415,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b37.o2": "918",
 	"b37.o3": "48"
 }, Wat = {
-	label: "Partition swap puzzle",
+	label: "Puzzle de décomposition permutée",
 	"b0.prompt": "352 fait 3 centaines, 5 dizaines, 2 unités. Échange une dizaine. Combien d'unités maintenant ?",
 	"b0.o0": "12",
 	"b0.o1": "2",
@@ -228757,7 +228757,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o5": "f0,f1,x2,f3,a4",
 	"b17.o6": "f0,f1,a2,f3,x2"
 }, Yat = {
-	label: "Parts of one over b",
+	label: "Parts d'unité fractionnaire",
 	"b0.prompt": "3/4, c'est combien de parts, et de quelle taille ?",
 	"b0.o0": "f0,f1,a2,f3,a4",
 	"b0.o1": "f0,f1,x0,f3,a4",
@@ -228970,7 +228970,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b11.o1": "g0,g1,g14,g3,g4,g1,g15,g6,g16,g7,g7,g17,g3,g10,g18,g8,g19,g9,g11",
 	"b11.o2": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g7,g9,g8,g3,g10,g8,g8,g7,g9,g11"
 }, eot = {
-	label: "Party shopping list",
+	label: "Liste de courses de la fête",
 	"b0.prompt": "Liste de fête : 2 articles à 2,50\xA0$ et 3 articles à 1,00\xA0$. Trouve chaque total et la facture.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g8,g8,g9",
 	"b0.o1": "g0,g1,g12,g3,g4,g1,g13,g6,g14,g15,g15,g9",
@@ -229358,7 +229358,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b13.o3": "g0,g10,g2,g3,g4,g5,g6,g7",
 	"b13.o4": "g0,g1,g2,g3,g4,g11,g6,g7"
 }, uot = {
-	label: "Pattern claim lab",
+	label: "Laboratoire des affirmations sur les motifs",
 	"b0.prompt": "Affirmation\xA0: «\xA0n + 3 est toujours pair\xA0». Calcule la valeur pour chaque n, puis décide.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g8",
@@ -229573,7 +229573,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o2": "p0,p1,x81,p3,p4,p5",
 	"b17.o3": "p0,p1,x79,p3,p4,p5"
 }, hot = {
-	label: "Pattern detective",
+	label: "L'enquêteur de motifs",
 	"b0.prompt": "Compte en avançant. Complète les trous.",
 	"b0.o0": "p0,p1,p2,p3,p4,p5",
 	"b0.o1": "p0,p1,p2,p3,p5,p4",
@@ -229794,7 +229794,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o3": "100,22,35,48,61,74,87",
 	"b14.o4": "22,35,48,61,74,87,9"
 }, bot = {
-	label: "Pattern feature hunt",
+	label: "La chasse aux caractéristiques",
 	"b0.prompt": "Pars de 5 et ajoute 5 chaque fois. Colorie tous les nombres de la suite jusqu'à 40.",
 	"b0.o0": "10,15,20,25,30,35,40,5",
 	"b0.o1": "10,11,15,20,25,30,35,40,5",
@@ -230131,7 +230131,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b35.o3": "t1,t1,t1",
 	"b35.o4": "t2,t0,t2"
 }, Tot = {
-	label: "Pattern gallery",
+	label: "Un motif pour un ami",
 	"b0.prompt": "Commence un motif AB.",
 	"b0.o0": "t0,t1,t0",
 	"b0.o1": "t0,t0,t0",
@@ -230487,7 +230487,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b11.o5": "t0,t1,t2,x1,t4,t5",
 	"b11.o6": "t0,t1,t2,x2,t4,t5"
 }, Aot = {
-	label: "Pattern machine builder",
+	label: "La machine à motifs",
 	"b0.prompt": "Règle : pars de 5 et ajoute 3 chaque fois. Complète les termes suivants de la suite.",
 	"b0.o0": "t0,t1,t2,t3,t4,t5",
 	"b0.o1": "t0,t1,t2,t5,t4,t3",
@@ -232053,7 +232053,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o4": "A,B,C,A,B,A,A,B",
 	"b17.o5": "A,B,C,A,B,B,A,B"
 }, Got = {
-	label: "Pattern train builder",
+	label: "Le train de motifs",
 	"b0.prompt": "Termine le train. Quels wagons viennent ensuite ?",
 	"b0.o0": "A,B,A,B,A,B",
 	"b0.o1": "A,B,A,B,B,A",
@@ -232417,7 +232417,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b1.o2": "0,44 €",
 	"b1.o3": "11 €"
 }, tst = {
-	label: "Per 100g label race",
+	label: "Course des étiquettes pour 100 g",
 	"b0.prompt": "Un paquet de 250 g coûte 3 €. Prix pour 100 g ?",
 	"b0.o0": "1,20 €",
 	"b0.o1": "0,75 €",
@@ -232542,7 +232542,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g10,g1,g7,g3,g11",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g3,g12"
 }, ost = {
-	label: "Percent by building blocks",
+	label: "Pourcentages avec des blocs",
 	"b0.prompt": "Trouve 15 % de 40. Construis-le avec des blocs : 15 % = 10 % + 5 %.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g4,g1,g7,g3,g9",
@@ -232754,7 +232754,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g10",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g11"
 }, dst = {
-	label: "Percent detective",
+	label: "L'enquêteur de pourcentages",
 	"b0.prompt": "20 % d'un nombre mystère vaut 8. Trouve 10 %, puis le nombre entier (100 %).",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g8,g3,g6,g1,g9",
@@ -232968,7 +232968,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g3,g4,g7,g8,g12",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g3,g4,g7,g8,g13"
 }, gst = {
-	label: "Percent error dartboard",
+	label: "Cible des erreurs de pourcentage",
 	"b0.prompt": "Tu as estimé 50 et la vraie valeur est 40. De combien te trompes-tu ? Trouve l'écart, divise par la vraie valeur, puis lis-le en pourcentage.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g4,g7,g8,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g3,g4,g10,g8,g11",
@@ -233197,7 +233197,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, xst = {
-	label: "Percent fraction decimal match",
+	label: "La même quantité",
 	"b0.prompt": "Associe chaque fraction ou décimal au pourcentage qui nomme la même quantité.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -233367,7 +233367,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b1.o2": "2.4",
 	"b1.o3": "42"
 }, Est = {
-	label: "Percent from ten percent builder",
+	label: "Pourcentages à partir de dix pour cent",
 	"b0.prompt": "Combien vaut 30 % de 50 ?",
 	"b0.o0": "15",
 	"b0.o1": "30",
@@ -233542,7 +233542,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o5": "c0,c2,c1,c3,c4",
 	"b17.o6": "c0,c3,c2,c1,c4"
 }, jst = {
-	label: "Percent to multiplier match",
+	label: "Pourcentage et coefficient multiplicateur",
 	"b0.prompt": "Chaque variation a son multiplicateur. Associe chaque variation au nombre par lequel on multiplie.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -233789,7 +233789,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b10.o3": "p0,p5,p2,p3,p4,p1,p6",
 	"b10.o4": "p0,p6,p2,p3,p4,p5,p1"
 }, Ist = {
-	label: "Perfect power test",
+	label: "Test de la puissance parfaite",
 	"b0.prompt": "Regarde seulement les exposants. Un nombre est un carré parfait quand tous ses exposants sont pairs. Dépose chaque carte dans sa case.",
 	"b0.o0": "p0,p1,p2,p3",
 	"b0.o1": "p2,p1,p0,p3",
@@ -233986,7 +233986,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o3": "g0,g1,g2,g3,g10,g1,g4,g6,g7",
 	"b14.o4": "g0,g1,g2,g3,g11,g1,g5,g6,g7"
 }, Vst = {
-	label: "Photocopier puzzle",
+	label: "Le puzzle de la photocopieuse",
 	"b0.prompt": "Un photocopieur change chaque longueur avec un facteur 2. Un rectangle de 2 sur 3 entre dedans. Remplis les nouvelles longueurs, puis le nombre par lequel l'aire est multipliée.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g6,g0",
@@ -234225,7 +234225,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o3": "i9,i1,i2,i3,i4,i5,i6,i7,i8,i0",
 	"b17.o4": "i0,i7,i2,i3,i4,i5,i6,i1,i8,i9"
 }, Kst = {
-	label: "Pictogram build",
+	label: "Construire le pictogramme",
 	"b0.prompt": "Construis le pictogramme : mets une image pour chacun dans sa colonne.",
 	"b0.o0": "i0,i1,i2,i3,i4",
 	"b0.o1": "i3,i1,i2,i0,i4",
@@ -234467,7 +234467,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o3": "5|2",
 	"b14.o4": "1|6"
 }, Zst = {
-	label: "Pictogram key builder",
+	label: "Construire la légende du pictogramme",
 	"b0.prompt": "Chaque 🚗 vaut 2 voitures. Montre 6 voitures avec des symboles.",
 	"b0.o0": "3|3",
 	"b0.o1": "4|2",
@@ -234701,7 +234701,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, nct = {
-	label: "Picture proof match",
+	label: "Preuve en images",
 	"b0.prompt": "Chaque case est une image de points, un groupe par rangée. Dépose dessus l'affirmation que l'image prouve.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -234918,7 +234918,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o2": "g0,g1,g2,g3,g6,g5,g4,g7,g8",
 	"b14.o3": "g0,g1,g2,g3,g12,g5,g6,g7,g8"
 }, sct = {
-	label: "Pie from fractions strip",
+	label: "Plier la bande",
 	"b0.prompt": "Une bande de 12 carrés est pliée en tarte avec des secteurs de 1/2, 1/3, 1/6. Combien de carrés chaque secteur reçoit-il ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g6,g9,g4,g7,g8",
@@ -235145,7 +235145,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, fct = {
-	label: "Pie slice percent match",
+	label: "Parts de camembert",
 	"b0.prompt": "Chaque part de tarte est donnée en fraction de la tarte entière. Associe-la à son pourcentage.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -235363,7 +235363,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b11.o3": "g0,g7,g2,g3,g8",
 	"b11.o4": "g0,g9,g2,g3,g10"
 }, _ct = {
-	label: "Pizza or two",
+	label: "Une pizza ou deux",
 	"b0.prompt": "Qui a le plus de pizza : une pizza de rayon 10 cm, ou une pizza de rayon 20 cm ? Calcule chaque aire avec 3,14, puis glisse le signe.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g6,g3,g4",
@@ -235571,7 +235571,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b17.o4": "f0,f1,f2,f3,a4,f5,x1",
 	"b17.o5": "f0,f1,f2,f3,a6,f5,a4"
 }, Sct = {
-	label: "Pizza pieces add",
+	label: "Additionner les parts de pizza",
 	"b0.prompt": "Anna a 3/8 d'une pizza et Ben a 2/8. Mets toutes les parts sur une assiette. Cela fait combien de parts de 1/8 ?",
 	"b0.o0": "0|0|5",
 	"b0.o1": "3|2|0",
@@ -235825,7 +235825,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b15.o2": "cut,du",
 	"b15.o3": "cut,dd"
 }, Dct = {
-	label: "Pizza quarters",
+	label: "Pizza pour quatre",
 	"b0.prompt": "Coupe pour quatre amis.",
 	"b0.o0": "v,h",
 	"b0.o1": "v,v",
@@ -236009,7 +236009,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b1.o2": "160°",
 	"b1.o3": "120°"
 }, Mct = {
-	label: "Pizza slice angles",
+	label: "Les angles des parts de pizza",
 	"b0.prompt": "Quatre parts autour d'un point : 90°, 90°, 120°. Part manquante ?",
 	"b0.o0": "60°",
 	"b0.o1": "90°",
@@ -236110,7 +236110,7 @@ var Aat = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jat = $({
 	"b11.o0": "c3x0,c8x0,c10x0",
 	"b11.o1": "c10x0,c8x0,c3x0"
 }, Lct = {
-	label: "Pizza slice names",
+	label: "Nommer les parts de pizza",
 	"b0.prompt": "Une part est coloriée. Dépose chaque barre dans la boîte de sa fraction unitaire.",
 	"b0.o0": "c2x0,c2x1,c3x0,c3x1",
 	"b0.o1": "c3x0,c2x1,c2x0,c3x1",
@@ -236585,7 +236585,7 @@ var Xct = $({
 	"b20.o2": "d7,d1",
 	"b20.o3": "d1,d2"
 }, $ct = {
-	label: "Place value mat flip",
+	label: "Retourner le tapis de numération",
 	"b0.prompt": "Le tapis montre 1 barre et 2 cubes. Glisse les chiffres vers les dizaines et les unités.",
 	"b0.o0": "d1,d2",
 	"b0.o1": "d2,d1",
@@ -237467,7 +237467,7 @@ var slt = $({
 	"b31.o2": "572",
 	"b31.o3": "527"
 }, ult = {
-	label: "Place value mystery number",
+	label: "Le nombre mystère de la numération",
 	"b0.prompt": "Nombre mystère : le 3 vaut 300 et le 5 vaut 50. Il n'y a pas d'unités. Quel nombre suis-je ?",
 	"b0.o0": "350",
 	"b0.o1": "530",
@@ -238155,7 +238155,7 @@ var Rlt = $({
 	"b11.o4": "l1,l2,l0",
 	"b11.o5": "x1,l1,l2"
 }, Vlt = {
-	label: "Plan my trip",
+	label: "Planifier mon voyage",
 	"b0.prompt": "Planifie le trajet : mets les étapes dans l'ordre pour ne jamais partir avant d'être arrivé. Une étape peut ne pas convenir.",
 	"b0.o0": "l0,l1,l2",
 	"b0.o1": "l2,l1,l0",
@@ -238483,7 +238483,7 @@ var Zlt = $({
 	"b17.o2": "f0,f1,f2,f3,f4,f5,x1",
 	"b17.o3": "f0,f1,f2,f3,f4,f5,x2"
 }, eut = {
-	label: "Plot reader puzzle",
+	label: "Puzzle de lecture de diagramme",
 	"b0.prompt": "Le diagramme montre la longueur de feuilles en cm. Combien de feuilles mesurent 2½ cm ?",
 	"b0.o0": "f0,f1,f2,f3,a4",
 	"b0.o1": "f0,f1,f2,f3,x0",
@@ -238841,7 +238841,7 @@ var Zlt = $({
 	"b1.o2": "18",
 	"b1.o3": "19"
 }, uut = {
-	label: "Plus nine shortcut",
+	label: "Le raccourci de plus neuf",
 	"b0.prompt": "Utilise +10 puis −1 : 9 + 6 = ?",
 	"b0.o0": "15",
 	"b0.o1": "14",
@@ -238963,7 +238963,7 @@ var Zlt = $({
 	"b13.o3": "t6,j4,j6,j7,t3,t4,j3,t7",
 	"b13.o4": "t7,j4,j6,j7,t3,t4,t6,j3"
 }, hut = {
-	label: "Plus or minus story sort",
+	label: "Plus ou moins : trier les histoires",
 	"b0.prompt": "L'histoire ajoute-t-elle ou enlève-t-elle ? Trie les histoires.",
 	"b0.o0": "j0,j1,t0,t1",
 	"b0.o1": "t0,j1,j0,t1",
@@ -239229,7 +239229,7 @@ var Zlt = $({
 	"b17.o5": "x2,a1",
 	"b17.o6": "a0,x2"
 }, but = {
-	label: "Point meaning sort",
+	label: "Trier le sens du point",
 	"b0.prompt": "Lis 3,45 $. Combien de dollars et combien de cents ?",
 	"b0.o0": "a0,a1",
 	"b0.o1": "x0,a1",
@@ -240736,7 +240736,7 @@ var Zlt = $({
 	"b69.o2": "18",
 	"b69.o3": "2"
 }, Aut = {
-	label: "Pop up one more",
+	label: "Bulles : un de plus",
 	"b0.prompt": "🎈 Pop ! 0 apparaît.\n\nTouche la carte « un de plus ».",
 	"b0.o0": "1",
 	"b0.o1": "0",
@@ -241902,7 +241902,7 @@ var Zlt = $({
 	"b17.o1": "g0,g4,g2",
 	"b17.o2": "g0,g3,g2"
 }, Gut = {
-	label: "Pound or kilo guess",
+	label: "Livre ou kilo ?",
 	"b0.prompt": "Utilise les équivalents approchés. Lequel est le plus grand, 2 lb ou 1 kg ? Glisse le bon signe entre eux.",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g4,g2",
@@ -242391,7 +242391,7 @@ var Zlt = $({
 	"b1.o2": "20 ml",
 	"b1.o3": "2 ml"
 }, tdt = {
-	label: "Pour to the mark",
+	label: "Verser jusqu'au repère",
 	"b0.prompt": "Verse jusqu'à la marque de 300 ml. 300 ml est-ce plus ou moins qu'un litre ?",
 	"b0.o0": "Moins",
 	"b0.o1": "Plus",
@@ -242524,7 +242524,7 @@ var Zlt = $({
 	"b14.o4": "p0,p1,p3,p2",
 	"b14.o5": "p1,p2,p3,p0"
 }, odt = {
-	label: "Power first spotter",
+	label: "Qu'est-ce qui vient en premier ?",
 	"b0.prompt": "Calcule (2 + 3) × 4 − 5. Mets les étapes dans l'ordre où tu les ferais.",
 	"b0.o0": "p0,p1,p2",
 	"b0.o1": "p2,p1,p0",
@@ -242693,7 +242693,7 @@ var Zlt = $({
 	"b1.o2": "2⁷",
 	"b1.o3": "14"
 }, ddt = {
-	label: "Power notation match",
+	label: "Associer les puissances",
 	"b0.prompt": "Quelle expression signifie 5 × 5 × 5 ?",
 	"b0.o0": "5³",
 	"b0.o1": "5²",
@@ -242841,7 +242841,7 @@ var Zlt = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, gdt = {
-	label: "Power order puzzle",
+	label: "Puzzle de l'ordre des puissances",
 	"b0.prompt": "Les mêmes nombres avec des parenthèses à des endroits différents donnent des valeurs différentes. Associe chaque expression à sa valeur.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -243164,7 +243164,7 @@ var Zlt = $({
 	"b26.prompt": "4,700 ÷ 100 = ?",
 	"b27.prompt": "21.8 × 10 = ?"
 }, xdt = {
-	label: "Powers of ten slider",
+	label: "Curseur des puissances de dix",
 	"b0.prompt": "62,8 × 1 000 = ?",
 	"b1.prompt": "50 × 10 = ?",
 	"b2.prompt": "41 × 100 = ?",
@@ -243242,7 +243242,7 @@ var Zlt = $({
 	"b1.o2": "10",
 	"b1.o3": "0,1"
 }, Ddt = {
-	label: "Powers of ten zoom",
+	label: "Zoom sur les puissances de dix",
 	"b0.prompt": "10⁻² en décimal vaut ?",
 	"b0.o0": "0,01",
 	"b0.o1": "0,1",
@@ -243370,7 +243370,7 @@ var Zlt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g2,g6",
 	"b17.o3": "g0,g1,g0,g3,g4,g9,g6"
 }, Mdt = {
-	label: "Predict then roll lab",
+	label: "Laboratoire des deux dés",
 	"b0.prompt": "Lance deux dés et additionne-les. Combien des 36 paires font un total de 2 ? Sur 100 lancers, environ combien de fois t'y attends-tu ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g7,g6",
@@ -244258,7 +244258,7 @@ var Zlt = $({
 	"b151.o2": "2|8",
 	"b151.o3": "0|10"
 }, Ldt = {
-	label: "Preschool act out add take",
+	label: "Ajouter ou retirer ?",
 	"b0.prompt": "Ajoute 1.",
 	"b0.o0": "2|0",
 	"b0.o1": "1|1",
@@ -246064,7 +246064,7 @@ var Zlt = $({
 	"b179.o2": "9|0|1",
 	"b179.o3": "1|0|9"
 }, Hdt = {
-	label: "Preschool all together",
+	label: "Tous ensemble",
 	"b0.prompt": "Mets-les tous ensemble.",
 	"b0.o0": "0|0|2",
 	"b0.o1": "0|1|1",
@@ -247301,7 +247301,7 @@ var Zlt = $({
 	"b46.o1": "9|1",
 	"b46.o2": "1|9"
 }, qdt = {
-	label: "Preschool another way",
+	label: "Une autre façon",
 	"b0.prompt": "Trouve une autre façon.",
 	"b0.o0": "2|3",
 	"b0.o1": "1|4",
@@ -247718,7 +247718,7 @@ var Zlt = $({
 	"b23.o3": "a:sq,b:ci,c:sq,d:sq",
 	"b23.o4": "a:sq,b:tr,c:sq,d:sq"
 }, nft = {
-	label: "Preschool bigger shape",
+	label: "Construire une plus grande forme",
 	"b0.prompt": "Remplis la forme.",
 	"b0.o0": "a:sq,b:sq",
 	"b0.o1": "a:ci,b:sq",
@@ -248182,7 +248182,7 @@ var Zlt = $({
 	"b51.o1": "1st",
 	"b51.o2": "4th"
 }, dft = {
-	label: "Preschool colour the nth",
+	label: "Colorier le n-ième",
 	"b0.prompt": "Quelle place est coloriée ? Commence au drapeau.",
 	"b0.o0": "1er",
 	"b0.o1": "3e",
@@ -248752,7 +248752,7 @@ var Zlt = $({
 	"b36.o3": "a1:s,a2:k,a3:c,b1:t,b2:t,b3:k",
 	"b36.o4": "a1:c,a2:k,a3:c,b1:t,b2:t,b3:c"
 }, bft = {
-	label: "Preschool copy build",
+	label: "Copier la construction",
 	"b0.prompt": "Colorie les mêmes cases.",
 	"b0.o0": "a1",
 	"b0.o1": "a1,a2",
@@ -249140,7 +249140,7 @@ var Zlt = $({
 	"b14.o2": "1 2 3 4 4 5 6 7 8 9 10",
 	"b14.o3": "1 2 3 5 4 6 7 8 9 10"
 }, kft = {
-	label: "Preschool count in order 10",
+	label: "Compter dans l'ordre (1 à 10)",
 	"b0.prompt": "Compte jusqu'à 6. Quel comptage est juste ?",
 	"b0.o0": "1 2 3 4 5 6",
 	"b0.o1": "1 3 4 5 6",
@@ -249561,7 +249561,7 @@ var Mft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Nft = $({
 	"b5.o2": "1 2 3 4 4 5",
 	"b5.o3": "1 2 3 5 4"
 }, Ift = {
-	label: "Preschool count in order 5",
+	label: "Compter dans l'ordre (1 à 5)",
 	"b0.prompt": "Compte jusqu'à 3. Quel comptage est juste ?",
 	"b0.o0": "1 2 3",
 	"b0.o1": "1 3",
@@ -249894,7 +249894,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b31.o1": "pentagon",
 	"b31.o2": "diamond"
 }, qft = {
-	label: "Preschool count the sides",
+	label: "Compter les côtés",
 	"b0.prompt": "Touche chaque côté.",
 	"b0.o0": "s1,s2,s3",
 	"b0.o1": "s2,s3",
@@ -250467,7 +250467,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b59.o2": "_,_,_,_,yesterday,_,today",
 	"b59.o3": "_,_,_,yesterday,_,_,today"
 }, npt = {
-	label: "Preschool day after",
+	label: "Le jour d'après",
 	"b0.prompt": "Où est demain ?",
 	"b0.o0": "today,tomorrow,_,_,_",
 	"b0.o1": "today,_,tomorrow,_,_",
@@ -250908,7 +250908,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b25.o2": "d3,d2,d1,d0,d6",
 	"b25.o3": "d1,d0,d6,d2,d3"
 }, spt = {
-	label: "Preschool days in order",
+	label: "Les jours dans l'ordre",
 	"b0.prompt": "Quel jour manque ?",
 	"b0.o0": "d0,d1,d2,d3,d4",
 	"b0.o1": "d5,d1,d2,d3,d4",
@@ -251257,7 +251257,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b34.o3": "1|11",
 	"b34.o4": "4|8"
 }, fpt = {
-	label: "Preschool doubles",
+	label: "Les doubles",
 	"b0.prompt": "Fais pareil !",
 	"b0.o0": "2|1|1",
 	"b0.o1": "3|1|0",
@@ -251765,7 +251765,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b65.o1": "5",
 	"b65.o2": "1"
 }, _pt = {
-	label: "Preschool empty basket",
+	label: "Le panier vide",
 	"b0.prompt": "Combien en reste-t-il ?",
 	"b0.o0": "2",
 	"b0.o1": "3",
@@ -252254,7 +252254,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b48.o1": "3|1|1|1|1|1|1|1|0",
 	"b48.o2": "4|1|1|1|1|1|1|0|0"
 }, Spt = {
-	label: "Preschool enough for all",
+	label: "Assez pour tout le monde ?",
 	"b0.prompt": "Donne une assiette à chaque ami.",
 	"b0.o0": "0|1|0",
 	"b0.o1": "1|0|0",
@@ -252606,7 +252606,7 @@ var zft = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Bft = $({
 	"b33.o0": "Close",
 	"b33.o1": "Not close"
 }, Dpt = {
-	label: "Preschool estimate",
+	label: "Deviner et vérifier",
 	"b0.prompt": "Quelle pile en a plus ?",
 	"b0.o0": "Gauche",
 	"b0.o1": "Droite",
@@ -252887,7 +252887,7 @@ var Apt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jpt = $({
 	"b23.o1": "I matched them",
 	"b23.o2": "I guessed"
 }, Ppt = {
-	label: "Preschool explain answer",
+	label: "Comment le sais-tu ?",
 	"b0.prompt": "Le premier groupe en a plus. Pourquoi ?",
 	"b0.o0": "J'ai compté",
 	"b0.o1": "Je les ai associés",
@@ -253229,7 +253229,7 @@ var Apt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jpt = $({
 	"b42.o2": "3",
 	"b42.o3": "0"
 }, zpt = {
-	label: "Preschool facts within five",
+	label: "Calculs rapides jusqu'à cinq",
 	"b0.prompt": "1 et 1 en plus. Combien ?",
 	"b0.o0": "2",
 	"b0.o1": "1",
@@ -255525,7 +255525,7 @@ var Apt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jpt = $({
 	"b23.o2": "r1,r2,r0",
 	"b23.o3": "r2,r0,r1"
 }, lmt = {
-	label: "Preschool goes in the middle",
+	label: "Lequel va au milieu ?",
 	"b0.prompt": "Lequel va au milieu ?",
 	"b0.o0": "e0,t0,e2",
 	"b0.o1": "e0,t1,e2",
@@ -260843,7 +260843,7 @@ var Apt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jpt = $({
 	"b119.o3": "r1,r2",
 	"b119.o4": "r1,r2,r3,square"
 }, Zmt = {
-	label: "Preschool is it a rectangle",
+	label: "Est-ce un rectangle ?",
 	"b0.prompt": "Touche les rectangles.",
 	"b0.o0": "r1",
 	"b0.o1": "pentagon",
@@ -261767,7 +261767,7 @@ var Apt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), jpt = $({
 	"b55.o1": "3",
 	"b55.o2": "5"
 }, nht = {
-	label: "Preschool is zero a number",
+	label: "Zéro est-il un nombre ?",
 	"b0.prompt": "Touche le panier avec 0.",
 	"b0.o0": "🧺",
 	"b0.o1": "⭐",
@@ -264462,7 +264462,7 @@ var aht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), oht = $({
 	"b30.o3": "circle:h5,hexagon:h1,rect:h2,square:h3,triangle:h4",
 	"b30.o4": "circle:h1,hexagon:h2,rect:h5,square:h3,triangle:h4"
 }, yht = {
-	label: "Preschool match shapes",
+	label: "Même forme",
 	"b0.prompt": "Trouve le jumeau.",
 	"b0.o0": "twin:shelf",
 	"b0.o1": "other:shelf",
@@ -264750,7 +264750,7 @@ var aht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), oht = $({
 	"b29.o0": "First",
 	"b29.o1": "Second"
 }, wht = {
-	label: "Preschool measuring tools",
+	label: "Choisis l'outil",
 	"b0.prompt": "🐍 ✏️\nLequel est plus long ?\nComment comparer ?",
 	"b0.o0": "Aligner les bouts",
 	"b0.o1": "Utiliser une balance",
@@ -265016,7 +265016,7 @@ var aht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), oht = $({
 	"b23.o3": "2|6",
 	"b23.o4": "1|7"
 }, kht = {
-	label: "Preschool money play",
+	label: "Jeu de la boutique",
 	"b0.prompt": "Paie 1 pièce.",
 	"b0.o0": "1|1",
 	"b0.o1": "2|0",
@@ -265291,7 +265291,7 @@ var aht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), oht = $({
 	"b25.o1": "rectangle",
 	"b25.o2": "triangle"
 }, Pht = {
-	label: "Preschool name shapes",
+	label: "Nomme cette forme",
 	"b0.prompt": "Touche le cercle.",
 	"b0.o0": "cercle",
 	"b0.o1": "carré",
@@ -265653,7 +265653,7 @@ var Lht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Rht = $({
 	"b36.o2": "sphere",
 	"b36.o3": "cylinder"
 }, Kht = {
-	label: "Preschool name the thing",
+	label: "Nomme l'objet",
 	"b0.prompt": "Trouve le cube.",
 	"b0.o0": "cube",
 	"b0.o1": "sphère",
@@ -267298,7 +267298,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b55.o2": "0|8",
 	"b55.o3": "3|5"
 }, lgt = {
-	label: "Preschool number sentences",
+	label: "Phrases avec des nombres",
 	"b0.prompt": "1 + 1 = ?",
 	"b0.o0": "0|0|2",
 	"b0.o1": "0|1|1",
@@ -267841,7 +267841,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b141.statement": "9  9\n\nSame number?",
 	"b142.statement": "0  9\n\nSame number?"
 }, vgt = {
-	label: "Preschool numeral twins",
+	label: "Chiffres jumeaux",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "1  1\n\nLe même nombre ?",
@@ -268225,7 +268225,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b38.o3": "c",
 	"b38.o4": "d"
 }, wgt = {
-	label: "Preschool odd one out",
+	label: "L'intrus",
 	"b0.prompt": "Lequel ne va pas avec les autres ?",
 	"b0.o0": "odd",
 	"b0.o1": "a",
@@ -268892,7 +268892,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b75.o2": "18|2",
 	"b75.o3": "17|3"
 }, kgt = {
-	label: "Preschool one more less",
+	label: "Un de plus, un de moins",
 	"b0.prompt": "Un de plus.",
 	"b0.o0": "2|2",
 	"b0.o1": "1|3",
@@ -270019,7 +270019,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b31.o4": "r4,r3,r1,r2,r0",
 	"b31.o5": "r4,r3,r2,r0,r1"
 }, zgt = {
-	label: "Preschool order objects",
+	label: "Mettre en ligne",
 	"b0.prompt": "Du plus court au plus long.",
 	"b0.o0": "r0,r1,r2",
 	"b0.o1": "r2,r1,r0",
@@ -270955,7 +270955,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b131.o2": "4",
 	"b131.o3": "6"
 }, Wgt = {
-	label: "Preschool ordinal or count",
+	label: "Ordinal ou quantité ?",
 	"b0.prompt": "Touche le 1er.",
 	"b0.o0": "p1",
 	"b0.o1": "p3",
@@ -271947,7 +271947,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b50.o2": "1|1|15",
 	"b50.o3": "9|8|0"
 }, Ygt = {
-	label: "Preschool pairs",
+	label: "Des paires, aucun reste",
 	"b0.prompt": "Range les paires.",
 	"b0.o0": "0|2",
 	"b0.o1": "1|1",
@@ -272507,7 +272507,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b43.o3": "k0,k0,k0,k0,k0,k0",
 	"b43.o4": "k0,k0,k1,k0,k0,k1"
 }, e_t = {
-	label: "Preschool pattern translate",
+	label: "Même motif",
 	"b0.prompt": "Fais la même suite.",
 	"b0.o0": "k0,k1,k0,k1",
 	"b0.o1": "k1,k0,k0,k1",
@@ -273238,7 +273238,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b26.o1": "26",
 	"b26.o2": "25"
 }, a_t = {
-	label: "Preschool pick the right way",
+	label: "Choisis le bon sens",
 	"b0.prompt": "Trouve le six.",
 	"b0.o0": "6",
 	"b0.o1": "9",
@@ -274689,7 +274689,7 @@ var Yht = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Xht = $({
 	"b47.o1": "All",
 	"b47.o2": "None"
 }, h_t = {
-	label: "Preschool quantity words",
+	label: "Le dire avec des mots",
 	"b0.prompt": "Lequel en a plus ?",
 	"b0.o0": "🍎",
 	"b0.o1": "🐥🐥🐥",
@@ -279972,7 +279972,7 @@ var avt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ovt = $({
 	"b47.o2": "drum",
 	"b47.o3": "basketball"
 }, mvt = {
-	label: "Preschool solid match",
+	label: "Associer les solides",
 	"b0.prompt": "Lequel ressemble à ceci ?",
 	"b0.o0": "dé",
 	"b0.o1": "globe",
@@ -282797,7 +282797,7 @@ var _vt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), vvt = $({
 	"b459.o2": "1",
 	"b459.o3": "10"
 }, Evt = {
-	label: "Preschool solve it",
+	label: "Résous-le",
 	"b0.prompt": "1 de plus arrivent. Combien maintenant ?",
 	"b0.o0": "2",
 	"b0.o1": "1",
@@ -289554,7 +289554,7 @@ var _vt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), vvt = $({
 	"b29.o2": "10",
 	"b29.o3": "8"
 }, tyt = {
-	label: "Preschool teen numbers",
+	label: "Dix et plus",
 	"b0.prompt": "Dix et encore des jetons. Combien en tout ?",
 	"b0.o0": "11",
 	"b0.o1": "10",
@@ -290155,7 +290155,7 @@ var _vt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), vvt = $({
 	"b83.o2": "2",
 	"b83.o3": "0"
 }, oyt = {
-	label: "Preschool ten frame",
+	label: "Éclair et dis-le",
 	"b0.prompt": "Combien d'étoiles le magicien a-t-il cachées ?",
 	"b0.o0": "1",
 	"b0.o1": "2",
@@ -290745,7 +290745,7 @@ var _vt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), vvt = $({
 	"b29.o2": "d2,d8",
 	"b29.o3": "d8,d0"
 }, dyt = {
-	label: "Preschool trace the numeral",
+	label: "Écrire le chiffre",
 	"b0.prompt": "✏️ Dans quel sens ton crayon part-il d'abord pour écrire 1 ?",
 	"b0.o0": "Tout droit vers le bas",
 	"b0.o1": "Vers la droite",
@@ -293500,7 +293500,7 @@ var _vt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), vvt = $({
 	"b57.o1": "bread",
 	"b57.o2": "sunflower"
 }, jyt = {
-	label: "Preschool what to measure",
+	label: "Que mesure-t-on ?",
 	"b0.prompt": "Quelle est sa longueur ?",
 	"b0.o0": "règle en travers",
 	"b0.o1": "balance",
@@ -296607,7 +296607,7 @@ var Pyt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Fyt = $({
 	"b149.o0": "⭐ ⭐  ⭐    ⭐ ⭐  ⭐    ⭐ ⭐   ⭐",
 	"b149.o1": "🐟    🐟 🐟   🐟 🐟  🐟   🐟 🐟  🐟    🐟"
 }, Jyt = {
-	label: "Preschool which has more",
+	label: "Lequel en a le plus ?",
 	"b0.prompt": "Lequel en a PLUS ?",
 	"b0.o0": "🧁🧁🧁🧁",
 	"b0.o1": "🐸",
@@ -297557,7 +297557,7 @@ var Zyt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Qyt = $({
 	"b89.o2": "🦋🦋🦋🦋🦋  🦋🦋🦋🦋🦋",
 	"b89.o3": "🦋🦋"
 }, tbt = {
-	label: "Preschool which picture",
+	label: "Quelle image ?",
 	"b0.prompt": "🍎🍎\n\nEnlève 1. Quelle image reste ?",
 	"b0.o0": "🍎",
 	"b0.o1": "🍎🍎",
@@ -298513,7 +298513,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b77.o2": "🍇",
 	"b77.o3": "🍎"
 }, fbt = {
-	label: "Preschool who is nth",
+	label: "Qui est le n-ième ?",
 	"b0.prompt": "Lequel est le 1er ? Commence au drapeau.",
 	"b0.o0": "🐱",
 	"b0.o1": "🐰",
@@ -299454,7 +299454,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o5": "x2,f1,a2",
 	"b17.o6": "a0,f1,x2"
 }, Sbt = {
-	label: "Price tag writer",
+	label: "Écrire les étiquettes de prix",
 	"b0.prompt": "Écris 3 dollars et 40 cents sous forme de prix.",
 	"b0.o0": "a0,f1,a2",
 	"b0.o1": "x0,f1,a2",
@@ -299700,7 +299700,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o1": "g0,g1,g2,g3,g4,g5,g13,g3,g14,g7,g14,g10,g11",
 	"b14.o2": "g0,g1,g2,g3,g6,g5,g4,g3,g7,g8,g10,g9,g11"
 }, Dbt = {
-	label: "Price times quantity shop",
+	label: "Prix fois quantité",
 	"b0.prompt": "3 articles coûtent 1,20\xA0$ chacun. Multiplie les dollars et les cents séparément, puis additionne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g0,g7,g8,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g11,g3,g12,g8,g8,g9",
@@ -299919,7 +299919,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Mbt = {
-	label: "Prime factor fingerprint",
+	label: "L'empreinte des facteurs premiers",
 	"b0.prompt": "Chaque nombre a sa propre empreinte de facteurs premiers. Associe chaque nombre à son empreinte.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -300144,7 +300144,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b10.o3": "n147,n89,n97,n133,n143,n83",
 	"b10.o4": "n83,n133,n97,n89,n143,n147"
 }, Lbt = {
-	label: "Prime or break",
+	label: "Premier ou pas ?",
 	"b0.prompt": "Chaque nombre est au bout d'une branche d'un arbre de facteurs. S'il est premier, on s'arrête. Sinon, on le coupe encore. Dépose chaque carte sur la bonne branche.",
 	"b0.o0": "n2,n3,n4,n6",
 	"b0.o1": "n4,n3,n2,n6",
@@ -300344,7 +300344,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "n77,n67,n71,n73,n93,n99,n61,n87",
 	"b14.o4": "n87,n67,n71,n73,n93,n99,n77,n61"
 }, Hbt = {
-	label: "Prime or composite sorter",
+	label: "Premier ou composé",
 	"b0.prompt": "Trie les nombres en premiers et en composés. Un nombre composé a toujours un facteur autre que 1 et lui-même.",
 	"b0.o0": "n2,n3,n5,n4,n8,n10",
 	"b0.o1": "n4,n3,n5,n2,n8,n10",
@@ -300568,7 +300568,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "29,31,37,41,43,47,53,59,61,67,71,73,79,83,89",
 	"b14.o4": "23,29,31,37,41,43,47,53,59,61,67,71,73,79,83"
 }, qbt = {
-	label: "Prime sieve race",
+	label: "Course du crible",
 	"b0.prompt": "Barre tous les multiples de 2 ou 3 jusqu'à 30, mais garde 2 et 3 eux-mêmes. Colorie les nombres que tu barres.",
 	"b0.o0": "10,12,14,15,16,18,20,21,22,24,26,27,28,30,4,6,8,9",
 	"b0.o1": "10,12,14,15,16,18,2,20,21,22,24,26,27,28,30,4,6,8,9",
@@ -300761,7 +300761,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "rect00,none30,tri10,tri11,circ20,circ21,rect01,none31",
 	"b11.o4": "rect00,none31,tri10,tri11,circ20,circ21,none30,rect01"
 }, Qbt = {
-	label: "Prism or not sort",
+	label: "Prisme ou pas ?",
 	"b0.prompt": "Un prisme garde la même forme sur toute sa longueur. Dépose chaque solide dans la bonne boîte : prisme ou pas un prisme.",
 	"b0.o0": "rect00,circ00,none10,none11",
 	"b0.o1": "none10,circ00,rect00,none11",
@@ -300937,7 +300937,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g4,g1,g6,g3,g11,g8",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g4,g1,g6,g3,g12,g8"
 }, rxt = {
-	label: "Prism stack",
+	label: "La pile de prismes",
 	"b0.prompt": "Un pavé mesure 3 cubes de long, 5 de large et 4 de haut. Remplis une couche, puis empile les couches pour trouver le volume.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g1,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g8,g5,g8,g1,g6,g3,g9",
@@ -301151,7 +301151,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, cxt = {
-	label: "Probability card match",
+	label: "Associer les cartes de probabilité",
 	"b0.prompt": "Chaque carte montre un sac de billes et la couleur que tu espères tirer. Glisse la chance, en fraction simplifiée, sur son sac.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -301515,7 +301515,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b29.o5": "e0,e1,e2,e4,e3",
 	"b29.o6": "e1,e2,e3,e4,e0"
 }, pxt = {
-	label: "Probability line sorter",
+	label: "La ligne des chances",
 	"b0.prompt": "Place les événements sur la droite de 0 (impossible) à 1 (certain), du moins probable au plus probable.",
 	"b0.o0": "e0,e1,e2",
 	"b0.o1": "e2,e1,e0",
@@ -301799,7 +301799,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "147",
 	"b1.o3": "1470"
 }, vxt = {
-	label: "Product magnitude check",
+	label: "Vérifier l'ordre de grandeur du produit",
 	"b0.prompt": "Estime 4 × 21. Quelle réponse est absurde ?",
 	"b0.o0": "8",
 	"b0.o1": "80",
@@ -301909,7 +301909,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g6,g10,g11,g12",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g2,g3,g4"
 }, Cxt = {
-	label: "Proportion table fill",
+	label: "Compléter le tableau de proportionnalité",
 	"b0.prompt": "y est proportionnel à x. Trouve k avec la première colonne, puis complète le reste de la ligne des y.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g10,g11,g12",
@@ -302536,7 +302536,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "165",
 	"b14.o4": "163"
 }, Oxt = {
-	label: "Protractor reader",
+	label: "Le bras du rapporteur",
 	"b0.prompt": "Fais glisser le bras du rapporteur pour ouvrir un angle de 30°.",
 	"b0.o0": "30",
 	"b0.o1": "40",
@@ -302767,7 +302767,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "b0,b1,b2,b4,b3",
 	"b14.o6": "b1,b2,b3,b4,b0"
 }, Nxt = {
-	label: "Protractor triangle builder",
+	label: "Construire le triangle",
 	"b0.prompt": "Trace un triangle avec un côté de 6 cm et des angles de 50° (extrémité gauche) et 60° (extrémité droite). Mets les étapes dans l'ordre.",
 	"b0.o0": "b0,b1,b2,b3",
 	"b0.o1": "b3,b2,b1,b0",
@@ -303011,7 +303011,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "g9,g1,g2,g10,g1,g2,g4,g2,g4,g5,g11,g1",
 	"b14.o4": "g12,g1,g2,g13,g1,g2,g4,g2,g4,g5,g8,g1"
 }, Rxt = {
-	label: "Prove it with dots",
+	label: "Prouver avec des points",
 	"b0.prompt": "3 et 5 sont impairs\xA0: chacun est des paires de points plus un point seul. Remplis les cases pour voir combien de paires font 3 + 5.",
 	"b0.o0": "g0,g1,g2,g3,g1,g2,g4,g2,g4,g5,g6,g1",
 	"b0.o1": "g0,g1,g2,g3,g1,g2,g4,g2,g4,g5,g7,g1",
@@ -303452,7 +303452,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b16.o3": "p0,p1,p2,t-13",
 	"b16.o4": "p0,p1,spare,t-ok"
 }, Jxt = {
-	label: "Purse total puzzle",
+	label: "Le total du porte-monnaie",
 	"b0.prompt": "Mets les pièces dans le plateau, la plus grosse d'abord, puis choisis le total.",
 	"b0.o0": "p0,p1,t-ok",
 	"b0.o1": "p1,p0,t-ok",
@@ -303994,7 +303994,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g1,g3,g4,g11,g6,g7,g8,g5,g4,g12",
 	"b17.o3": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g8,g5,g4,g13"
 }, iSt = {
-	label: "Quad angle tear and fit",
+	label: "Les angles du quadrilatère",
 	"b0.prompt": "Un quadrilatère a des angles de 90°, 80° et 100°. Additionne-les, puis complète avec le dernier angle pour faire 360°.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g8,g5,g4,g0",
 	"b0.o1": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g8,g5,g4,g3",
@@ -304385,7 +304385,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g0",
 	"b17.o2": "g0,g1,g2,g3,g9,g5,g4,g6,g7,g3,g10"
 }, mSt = {
-	label: "Quarter and three quarters shop",
+	label: "La boutique des quarts",
 	"b0.prompt": "Un panneau annonce 25 % de 40 $. Calcule combien cela fait.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g3,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g2,g3,g4",
@@ -304531,7 +304531,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "Half past",
 	"b1.o3": "O'clock"
 }, ySt = {
-	label: "Quarter clock match",
+	label: "Associer les quarts d'heure",
 	"b0.prompt": "La grande aiguille est sur 3. Quelle heure est-il ?",
 	"b0.o0": "Et quart",
 	"b0.o1": "Et demie",
@@ -306105,7 +306105,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b75.o2": "4|6",
 	"b75.o3": "10|0"
 }, YSt = {
-	label: "Quick twenty",
+	label: "Course rapide",
 	"b0.prompt": "1 + 1",
 	"b0.o0": "2|2",
 	"b0.o1": "1|3",
@@ -306582,7 +306582,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b18.o3": "brush,school,story",
 	"b18.o4": "story,school,brush"
 }, eCt = {
-	label: "Race the sand timer",
+	label: "Lequel prend le plus de temps ?",
 	"b0.prompt": "Lance les deux. Lequel dure plus longtemps ?",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -306845,7 +306845,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b33.o4": "clap,school,bath",
 	"b33.o5": "clap,bath,school"
 }, aCt = {
-	label: "Race the timer",
+	label: "Course contre la minuterie",
 	"b0.prompt": "Lance les deux. Lequel finit en premier ?",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -307129,7 +307129,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g1,g2,g6,g7,g1,g9",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g1,g2,g6,g7,g1,g10"
 }, uCt = {
-	label: "Radius diameter flipper",
+	label: "Rayon et diamètre",
 	"b0.prompt": "Un cercle a un rayon de 4 cm. Quel est son diamètre ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g1,g6,g7,g2,g1,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g1,g6,g7,g2,g1,g2",
@@ -307323,7 +307323,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "ok0,dbl0,dia0,dia1,ok1,dbl1",
 	"b11.o4": "ok0,dbl1,dia0,dia1,dbl0,ok1"
 }, hCt = {
-	label: "Radius or diameter hunt",
+	label: "La chasse au rayon ou au diamètre",
 	"b0.prompt": "Le cercle a un rayon de 3 cm. Chaque élève a calculé l'aire. Trie les calculs : juste, a pris le diamètre, ou a doublé au lieu d'élever au carré.",
 	"b0.o0": "ok0,dia0,dbl0",
 	"b0.o1": "dbl0,dia0,ok0",
@@ -307534,7 +307534,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b13.o5": "c0,c3,c2,c1",
 	"b13.o6": "c0,c1,c3,c2"
 }, bCt = {
-	label: "Rate per one cards",
+	label: "Cartes de taux pour une unité",
 	"b0.prompt": "Chaque carte dit combien de 🍎 coûtent combien de 🪙. Associe chaque carte au prix d'UN seul 🍎.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -307807,7 +307807,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o4": "c1,c2,c0",
 	"b17.o5": "z1,c1,c2"
 }, TCt = {
-	label: "Ratio recipe split",
+	label: "Partager la recette",
 	"b0.prompt": "Un mélange avec la farine, le sucre et le beurre pèse 60 g selon le rapport 1 : 2 : 3. Associe chaque ingrédient à sa quantité en grammes.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -308063,7 +308063,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g0,g4,g5,g1,g8",
 	"b17.o3": "g0,g1,g2,g3,g0,g4,g5,g1,g9"
 }, ACt = {
-	label: "Ratio simplifier",
+	label: "Simplifier le rapport",
 	"b0.prompt": "Écris 3 : 12 sous la forme 1 : n. Divise les deux termes par le premier nombre.",
 	"b0.o0": "g0,g1,g2,g3,g0,g4,g5,g1,g6",
 	"b0.o1": "g0,g1,g2,g3,g2,g4,g5,g1,g7",
@@ -308278,7 +308278,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g8",
 	"b17.o3": "g0,g1,g2,g9,g4,g5"
 }, FCt = {
-	label: "Ratio simplify race",
+	label: "Simplifier le rapport",
 	"b0.prompt": "Simplifie le rapport 6:4 : trouve le plus grand nombre qui divise chaque terme, puis divise.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g6",
@@ -308513,7 +308513,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, BCt = {
-	label: "Ratio tower match",
+	label: "Les tours de rapports",
 	"b0.prompt": "Compte chaque couleur d'une tour, du rouge au bleu (au vert). Associe chaque tour à sa carte de rapport.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -308723,7 +308723,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g2,g6,g4,g7,g2,g12",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g2,g13,g4,g7,g2,g14"
 }, GCt = {
-	label: "Rational arithmetic relay",
+	label: "Relais des calculs rationnels",
 	"b0.prompt": "Relais ! La mesure part de −3,5 °C. Chaque étape monte (+) ou descend (−). Dépose chaque nouvelle mesure dans sa case.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2,g6",
 	"b0.o1": "g0,g1,g2,g7,g4,g5,g2,g8",
@@ -308967,7 +308967,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o9": "g0,g6,g2,g3,g4",
 	"b11.o10": "g0,g6,g5,g3,g4"
 }, XCt = {
-	label: "Rational jump walk",
+	label: "La marche des rationnels",
 	"b0.prompt": "Saute ! La grenouille part de −1/2 et le drapeau est en 3/4. Dépose deux sauts dans les cases pour qu'elle atterrisse sur le drapeau.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g5,g3,g4",
@@ -309215,7 +309215,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "p0,p1,p2,p3,p4,p11,p6,p7,p8,p9,p10,p5,p12",
 	"b11.o4": "p0,p5,p2,p3,p4,p11,p6,p7,p8,p9,p10,p1,p12"
 }, twt = {
-	label: "Rational line lander",
+	label: "L'atterrissage sur la droite des rationnels",
 	"b0.prompt": "Dépose les cartes sur leurs graduations. À gauche, c'est plus petit, à droite plus grand, et la droite continue après zéro.",
 	"b0.o0": "p0,p1,p2,p3,p4,p5,p6,p7,p8",
 	"b0.o1": "p0,p5,p2,p3,p4,p1,p6,p7,p8",
@@ -309406,7 +309406,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "a2,g3",
 	"b14.o4": "g2,i3"
 }, owt = {
-	label: "Ray and measure",
+	label: "La demi-droite et la mesure",
 	"b0.prompt": "L'étoile est le centre O. Le cercle est (1, 1), en comptant vers la droite puis vers le haut depuis O. Agrandis-le avec un facteur d'échelle 2 et colorie l'image.",
 	"b0.o0": "h3",
 	"b0.o1": "g4",
@@ -309812,7 +309812,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b54.o2": "90",
 	"b54.o3": "17"
 }, dwt = {
-	label: "Read the blocks",
+	label: "Lire les blocs",
 	"b0.prompt": "Regarde les barres de dix et les cubes sur le tapis. Quel nombre les blocs montrent-ils ?",
 	"b0.o0": "11",
 	"b0.o1": "10",
@@ -310183,7 +310183,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b3.o2": "2",
 	"b3.o3": "10"
 }, gwt = {
-	label: "Read the dot plot",
+	label: "Lire le diagramme en points",
 	"b0.prompt": "Sur un diagramme en points, la colonne la plus haute a 4 points. Que montre-t-elle ?",
 	"b0.o0": "La valeur la plus fréquente",
 	"b0.o1": "La plus petite valeur",
@@ -310261,7 +310261,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "42",
 	"b1.o3": "30"
 }, xwt = {
-	label: "Read the minute hand",
+	label: "Lire la grande aiguille",
 	"b0.prompt": "La grande aiguille est sur 2. Combien de minutes après l'heure ?",
 	"b0.o0": "10",
 	"b0.o1": "2",
@@ -310551,7 +310551,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b51.o3": "0|5|3|5|1",
 	"b51.o4": "0|5|3|4|2"
 }, Ewt = {
-	label: "Real object graph",
+	label: "Graphique des cubes",
 	"b0.prompt": "Empile les cubes par couleur.",
 	"b0.o0": "0|1|2",
 	"b0.o1": "1|1|1",
@@ -310957,7 +310957,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, jwt = {
-	label: "Reason card match",
+	label: "Associer les cartes de raisonnement",
 	"b0.prompt": "Chaque place montre un angle x calculé et la position de x dans la figure. Dépose dessus la carte de la raison qui explique le calcul.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -311201,7 +311201,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "line-oneEighty,opposite-ninety,coInt-threeSixty,triangle-threeSixty,alt-equal,point-equal",
 	"b14.o4": "line-oneEighty,point-equal,coInt-threeSixty,triangle-threeSixty,opposite-ninety,alt-equal"
 }, Iwt = {
-	label: "Reason or wrong",
+	label: "Raisonnement ou erreur ?",
 	"b0.prompt": "Un élève a écrit ces raisons sur les angles. Chasse les erreurs : trie chaque phrase en valable ou fausse.",
 	"b0.o0": "line-oneEighty,point-threeSixty,line-threeSixty,point-oneEighty",
 	"b0.o1": "line-threeSixty,point-threeSixty,line-oneEighty,point-oneEighty",
@@ -311425,7 +311425,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "l0,l2,l4,l5,l1,l3",
 	"b14.o4": "l0,l3,l4,l5,l2,l1"
 }, Vwt = {
-	label: "Receipt error hunt",
+	label: "La chasse aux erreurs du ticket",
 	"b0.prompt": "Un magasin a imprimé ce ticket de caisse. Vérifie chaque ligne en la calculant toi-même. Trie les lignes justes et les lignes fausses.",
 	"b0.o0": "l0,l2,l3,l1",
 	"b0.o1": "l1,l2,l3,l0",
@@ -311607,7 +311607,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o1": "g5,g1,g2,g3,g1,g4,g7,g1",
 	"b11.o2": "g0,g1,g2,g6,g1,g4,g7,g1"
 }, Kwt = {
-	label: "Recipe and ribbon problems",
+	label: "Recette et ruban",
 	"b0.prompt": "Un ruban fait 2 m. On coupe 3 morceaux de 40 cm. Combien de cm reste-t-il ?",
 	"b0.o0": "g0,g1,g2,g3,g1,g4,g5,g6,g1",
 	"b0.o1": "g9,g1,g2,g3,g1,g4,g10,g10,g1",
@@ -311746,7 +311746,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b12.o1": "g0,g1,g2,g3,g7,g5,g6,g4",
 	"b12.o2": "g0,g1,g2,g3,g4,g8,g6,g4"
 }, Zwt = {
-	label: "Recipe mixed totals",
+	label: "Totaux de la recette",
 	"b0.prompt": "Une recette utilise 1 1/4 tasses et 2 2/4 tasses : additionne les quantités.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g4,g5,g6,g3,g4,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g4,g5,g6,g3,g7,g4,g5,g6",
@@ -311924,7 +311924,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g5,g8,g1,g6",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g1,g6"
 }, nTt = {
-	label: "Recipe ratio mixer",
+	label: "Le mélangeur de recette",
 	"b0.prompt": "Une recette utilise 2 tasses de farine pour 3 muffins. Fais-la plus grande : multiplie les deux quantités par le même nombre pour garder le même goût.",
 	"b0.o0": "g0,g1,g2,g3,g0,g4,g5,g1,g6",
 	"b0.o1": "g0,g1,g2,g3,g2,g4,g6,g1,g6",
@@ -312125,7 +312125,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o1": "g0,g1,g5,g3,g6",
 	"b17.o2": "g0,g1,g2,g3,g6"
 }, sTt = {
-	label: "Recipe scaler trap",
+	label: "Le piège de la recette",
 	"b0.prompt": "Un élève a transformé la recette 2:3 en 4:5 en ajoutant 2 à chaque terme. Le goût change ! Corrige : multiplie les deux termes par le même facteur.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -312311,7 +312311,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "n0,y0,y1",
 	"b11.o4": "n1,y0,y1"
 }, fTt = {
-	label: "Rectangle club",
+	label: "Le club des rectangles",
 	"b0.prompt": "Touche tous les rectangles. Les carrés comptent aussi !",
 	"b0.o0": "y0,y1",
 	"b0.o1": "y1",
@@ -312475,7 +312475,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o1": "g3,g1,g2,g1,g3,g1,g2,g1,g5,g1,g6,g7,g8,g9",
 	"b11.o2": "g0,g1,g2,g1,g3,g1,g4,g1,g5,g1,g6,g7,g12,g2"
 }, _Tt = {
-	label: "Rectilinear perimeter trace",
+	label: "Tracer le périmètre",
 	"b0.prompt": "Un jardin en L : le côté du bas mesure 6 m, le côté de gauche 4 m, et un coin de 2 m sur 1 m manque. Fais tout le tour et additionne tous les côtés.",
 	"b0.o0": "g0,g1,g2,g1,g3,g1,g4,g1,g5,g1,g0,g6,g3,g7",
 	"b0.o1": "g3,g1,g2,g1,g3,g1,g2,g1,g5,g1,g0,g6,g3,g7",
@@ -312638,7 +312638,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g6,g6,g5,g4,g7",
 	"b17.o3": "g0,g1,g2,g3,g5,g6,g6,g4,g7"
 }, STt = {
-	label: "Recurring detective",
+	label: "L'enquêteur des décimales périodiques",
 	"b0.prompt": "Divise 1 par 2, un chiffre à la fois. La division s'arrête toute seule : écris tous les chiffres.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -312828,7 +312828,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g0,g6,g2,g1,g4,g5,g0,g6,g2,g7,g4",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g0,g1,g2,g6,g4,g5,g0,g1,g2,g6,g4"
 }, DTt = {
-	label: "Reflect in axes coordinates",
+	label: "Symétrie par rapport aux axes",
 	"b0.prompt": "Fais la symétrie du point (3, 2) par rapport à l'axe des y. Écris les nouvelles coordonnées.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g6,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g1,g2,g7,g4",
@@ -313018,7 +313018,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o1": "g0,g1,g2,g1,g3,g4,g5,g0,g1,g3,g6,g1,g2,g4,g10,g1,g2,g4,g8,g3,g9,g9",
 	"b17.o2": "g0,g1,g2,g1,g3,g4,g5,g0,g1,g3,g6,g1,g2,g4,g7,g1,g2,g4,g3,g8,g9,g9"
 }, MTt = {
-	label: "Regroup factors race",
+	label: "Course des facteurs regroupés",
 	"b0.prompt": "2 × 7 × 5 : multiplie d'abord la paire amie 2 × 5, puis termine.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g5,g0,g1,g3,g6,g1,g2,g4,g7,g1,g2,g4,g2,g8",
 	"b0.o1": "g0,g1,g2,g1,g3,g4,g5,g0,g1,g3,g6,g1,g2,g4,g9,g1,g2,g4,g2,g8",
@@ -313323,7 +313323,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b37.o2": "10",
 	"b37.o3": "7"
 }, LTt = {
-	label: "Regroup shuffle",
+	label: "Regrouper en mélangeant",
 	"b0.prompt": "Échange une dizaine contre dix unités. 42 = 3 dizaines + ? unités",
 	"b0.o0": "12",
 	"b0.o1": "2",
@@ -313609,7 +313609,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b3.o2": "55",
 	"b3.o3": "46"
 }, HTt = {
-	label: "Regroup the blocks",
+	label: "Regrouper les blocs",
 	"b0.prompt": "27 + 6 = ?",
 	"b0.o0": "33",
 	"b0.o1": "32",
@@ -313729,7 +313729,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "irr2,reg1,reg2,irr0,irr1,reg0",
 	"b11.o4": "reg0,irr0,reg2,reg1,irr1,irr2"
 }, qTt = {
-	label: "Regular or not checker",
+	label: "Régulier ou pas ?",
 	"b0.prompt": "Les formes régulières ont tous leurs côtés et tous leurs angles égaux. Trie les formes.",
 	"b0.o0": "reg0,reg1,irr0,irr1",
 	"b0.o1": "irr0,reg1,reg0,irr1",
@@ -313899,7 +313899,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "r1,d1,f1,f3,r3,d3",
 	"b11.o4": "r1,d3,f1,f3,d1,r3"
 }, QTt = {
-	label: "Remainder in the story",
+	label: "Le reste dans l'histoire",
 	"b0.prompt": "Chaque histoire partage quelque chose et a un reste. Trie les histoires selon la façon d'écrire la réponse : avec un reste, en fraction ou en décimal.",
 	"b0.o0": "r1,r2,d1",
 	"b0.o1": "d1,r2,r1",
@@ -314065,7 +314065,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o3": "remainder-sort-stories.s3,remainder-sort-stories.s10,remainder-sort-stories.s8,remainder-sort-stories.s2,remainder-sort-stories.s11",
 	"b11.o4": "remainder-sort-stories.s3,remainder-sort-stories.s11,remainder-sort-stories.s8,remainder-sort-stories.s10,remainder-sort-stories.s2"
 }, rEt = {
-	label: "Remainder sort stories",
+	label: "Histoires de restes",
 	"b0.prompt": "Résous chaque histoire dans ta tête, puis dépose-la selon ce qu'on fait du reste : arrondir au-dessus, le laisser, ou le donner.",
 	"b0.o0": "remainder-sort-stories.s1,remainder-sort-stories.s2,remainder-sort-stories.s5,remainder-sort-stories.s6",
 	"b0.o1": "remainder-sort-stories.s5,remainder-sort-stories.s2,remainder-sort-stories.s1,remainder-sort-stories.s6",
@@ -314264,7 +314264,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g9,g3,g6,g1,g10",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g11"
 }, cEt = {
-	label: "Reverse the sale",
+	label: "Inverser la vente",
 	"b0.prompt": "Après 50 % de remise, un jouet coûte 20. Tu as payé 50 % du prix de départ. Trouve 5 % de ce prix, puis le prix de départ (100 %).",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g8",
@@ -314527,7 +314527,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o4": "f0,f1,f2,f3,a4,f5,x1,f7",
 	"b17.o5": "f0,f1,f2,f3,a6,f5,a4,f7"
 }, pEt = {
-	label: "Ribbon cut lengths",
+	label: "Couper le ruban",
 	"b0.prompt": "1 m 20 cm + 2 m 30 cm. Combien de m et combien de cm ?",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,a6,f7",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,a6,f7",
@@ -314733,7 +314733,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "40 cm",
 	"b1.o3": "150 cm"
 }, vEt = {
-	label: "Ribbon cut puzzle",
+	label: "Puzzle du ruban coupé",
 	"b0.prompt": "Un ruban fait 20 cm. Il te faut un morceau 8 cm plus court. Quelle est la longueur à couper ?",
 	"b0.o0": "8 cm",
 	"b0.o1": "12 cm",
@@ -314861,7 +314861,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o3": "g13,g10,g9,g14,g11,g15",
 	"b14.o4": "g15,g14,g9,g10,g11,g13"
 }, CEt = {
-	label: "Rigged or fair",
+	label: "Truqué ou équitable ?",
 	"b0.prompt": "Chaque carte est un jeu entre 🅰️ et 🅱️. Compte les façons de gagner de chacun. Le jeu est-il équitable, ou est-il truqué ?",
 	"b0.o0": "g1,g2,g3,g4",
 	"b0.o1": "g3,g2,g1,g4",
@@ -315025,7 +315025,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "Obtuse angle",
 	"b1.o3": "Reflex angle"
 }, OEt = {
-	label: "Right angle room hunt",
+	label: "La chasse aux angles droits dans la pièce",
 	"b0.prompt": "Où trouve-t-on un angle droit dans la classe ?",
 	"b0.o0": "Coin de la table",
 	"b0.o1": "Milieu d'un ballon",
@@ -315267,7 +315267,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b35.o2": "DL",
 	"b35.o3": "LLU"
 }, NEt = {
-	label: "Robot dance moves",
+	label: "Les pas de danse du robot",
 	"b0.prompt": "Danse : avance, avance !",
 	"b0.o0": "RR",
 	"b0.o1": "LL",
@@ -315699,7 +315699,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b35.o2": "LUU",
 	"b35.o3": "LUULL"
 }, REt = {
-	label: "Robot grid moves",
+	label: "Déplacements du robot sur la grille",
 	"b0.prompt": "Programme le robot jusqu’à l’étoile.",
 	"b0.o0": "RR",
 	"b0.o1": "R",
@@ -316000,7 +316000,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o1": "m,start,_,_",
 	"b17.o2": "_,start,m,_"
 }, UEt = {
-	label: "Robot turn commands",
+	label: "Commandes de rotation du robot",
 	"b0.prompt": "Le robot regarde vers le nord. Il fait un quart de tour vers la droite. Vers où regarde-t-il maintenant ? Place le robot.",
 	"b0.o0": "start,m,_,_",
 	"b0.o1": "start,_,_,m",
@@ -316173,7 +316173,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o1": "g0,g1,g2,g3,g6",
 	"b14.o2": "g0,g1,g2,g3,g5"
 }, JEt = {
-	label: "Robot turn routes",
+	label: "Les virages du robot",
 	"b0.prompt": "Le robot regarde la flèche. Fais-le tourner de 90° dans le sens horaire. Où regarde-t-il maintenant ?",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g6",
@@ -316348,7 +316348,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o2": "s1,a2",
 	"b14.o3": "s1,a3"
 }, $Et = {
-	label: "Robot turn trainer",
+	label: "L'entraîneur de virages du robot",
 	"b0.prompt": "Le robot regarde ⬆️ (vers le haut). Fais-lui faire un quart de tour dans le sens des aiguilles d'une montre ↻. Dans quelle direction regarde-t-il maintenant ?",
 	"b0.o0": "s0,a1",
 	"b0.o1": "s0,a0",
@@ -316627,7 +316627,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b14.o5": "r12000,r1200,r120,r12,r24",
 	"b14.o6": "r1200,r120,r24,r12,r12000"
 }, cDt = {
-	label: "Roll it many times",
+	label: "Lancer plusieurs fois",
 	"b0.prompt": "La théorie donne 1/2 comme chance de l'événement « une pièce tombe sur face ». Chaque carte montre les réussites sur les essais d'une série. Range les séries de la plus proche de la théorie à la plus éloignée.",
 	"b0.o0": "r1000,r100,r10",
 	"b0.o1": "r10,r100,r1000",
@@ -317508,7 +317508,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, CDt = {
-	label: "Roman face clock",
+	label: "Horloge aux chiffres romains",
 	"b0.prompt": "La petite aiguille pointe un chiffre romain. Glisse l'heure sur chaque chiffre.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -317866,7 +317866,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o2": "g0,g1,g9,g3,g2,g3,g4,g3,g5,g6,g10",
 	"b11.o3": "g0,g1,g2,g3,g2,g3,g4,g3,g5,g6,g11"
 }, NDt = {
-	label: "Root by factors",
+	label: "La racine par les facteurs",
 	"b0.prompt": "√36 = √(2² × 3²). Groupe les nombres premiers égaux par deux et garde un nombre premier de chaque groupe, puis multiplie-les.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g7",
@@ -318059,7 +318059,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b11.o5": "c0,c2,c1,c3,c4",
 	"b11.o6": "c0,c3,c2,c1,c4"
 }, RDt = {
-	label: "Root match up",
+	label: "Associer les racines",
 	"b0.prompt": "Associe chaque racine cubique à sa réponse : quel nombre utilisé trois fois donne le nombre sous la racine ?",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -318258,7 +318258,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b10.o3": "n196,n200,n125,n216,n729,n225,n300",
 	"b10.o4": "n196,n300,n125,n216,n729,n200,n225"
 }, UDt = {
-	label: "Root or not wall",
+	label: "Racine ou pas ?",
 	"b0.prompt": "Quels nombres sont des carrés parfaits ? Un carré parfait est un entier multiplié par lui-même. Dépose chaque carte sur le mur.",
 	"b0.o0": "n9,n16,n10,n12",
 	"b0.o1": "n10,n16,n9,n12",
@@ -318434,7 +318434,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b10.o3": "g0,g1,g2,g1,g4",
 	"b10.o4": "g3,g1,g2,g1,g0"
 }, JDt = {
-	label: "Root squeeze",
+	label: "Presser la racine",
 	"b0.prompt": "√20 n'est pas un nombre entier. Coince-la entre deux entiers voisins.",
 	"b0.o0": "g0,g1,g2,g1,g3",
 	"b0.o1": "g3,g1,g2,g1,g4",
@@ -318688,7 +318688,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b17.o5": "f0,f1,f2,f3,x2,f5,f6,f7,a8",
 	"b17.o6": "f0,f1,f2,f3,a4,f5,f6,f7,x2"
 }, $Dt = {
-	label: "Round and multiply guess",
+	label: "Arrondir et multiplier",
 	"b0.prompt": "Environ combien font 49 × 6 ? Arrondis 49, puis multiplie.",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,f6,f7,a8",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,f6,f7,a8",
@@ -319325,7 +319325,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b27.o2": "3,090 → 3,000",
 	"b27.o3": "2,551 → 2,550"
 }, iOt = {
-	label: "Round it right",
+	label: "Arrondis bien",
 	"b0.prompt": "Lequel est bien arrondi à la centaine la plus proche ?",
 	"b0.o0": "670 → 700",
 	"b0.o1": "594 → 500",
@@ -319523,7 +319523,7 @@ var ibt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), abt = $({
 	"b1.o2": "76",
 	"b1.o3": "61"
 }, lOt = {
-	label: "Round or not sort",
+	label: "Arrondi ou pas ?",
 	"b0.prompt": "Quel nombre s'arrondit à 30 ?",
 	"b0.o0": "32",
 	"b0.o1": "36",
@@ -319758,7 +319758,7 @@ var bOt = $({
 	"b17.o2": "g0,g1,g4",
 	"b17.o3": "g0,g1,g5"
 }, COt = {
-	label: "Round the headline",
+	label: "Arrondir le titre",
 	"b0.prompt": "Une vidéo a été regardée 4\xA0862 fois. Arrondis-le au millier près pour le titre.",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g1,g3",
@@ -319970,7 +319970,7 @@ var bOt = $({
 	"b10.o5": "c0,c3,c2,c1",
 	"b10.o6": "c0,c1,c3,c2"
 }, OOt = {
-	label: "Round the price tag",
+	label: "Arrondir l'étiquette",
 	"b0.prompt": "Associe chaque étiquette au nombre entier le plus proche.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -320192,7 +320192,7 @@ var bOt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g5,g6,g9",
 	"b17.o3": "g0,g1,g2,g3,g0,g1,g2,g6,g7"
 }, NOt = {
-	label: "Round then calc estimator",
+	label: "Arrondir puis estimer",
 	"b0.prompt": "Estime 38 × 21 : arrondis chaque nombre à un nombre facile, puis calcule.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g6,g8",
@@ -320380,7 +320380,7 @@ var bOt = $({
 	"b17.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g7,g8,g8,g8",
 	"b17.o1": "g0,g1,g2,g3,g8,g1,g2,g5,g8,g7,g8,g8,g8"
 }, ROt = {
-	label: "Round then multiply bet",
+	label: "Arrondir puis parier",
 	"b0.prompt": "Estime 48 × 6 : arrondis 48 à 10 près, puis multiplie.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g7,g7",
 	"b0.o1": "g0,g1,g2,g3,g7,g1,g2,g5,g7,g7,g7",
@@ -320563,7 +320563,7 @@ var bOt = $({
 	"b14.o3": "t0,t1,t2,t3,d1,d6,d0",
 	"b14.o4": "t0,t1,t2,t3,d2,d0,d1"
 }, UOt = {
-	label: "Round then times",
+	label: "Arrondir puis multiplier",
 	"b0.prompt": "À peu près combien font 19 × 2 ? Arrondis d'abord le grand nombre.",
 	"b0.o0": "t0,t1,t2,t3,d4,d0",
 	"b0.o1": "t0,t1,t2,t3,d3,d8",
@@ -321141,7 +321141,7 @@ var bOt = $({
 	"b27.o2": "To the nearest whole number",
 	"b27.o3": "To the nearest thousand"
 }, JOt = {
-	label: "Round to fit the job",
+	label: "Arrondir pour la tâche",
 	"b0.prompt": "La route mesure 27,790 km. Un panneau routier indique des kilomètres entiers. Jusqu'où faut-il arrondir ?",
 	"b0.o0": "À l'unité près",
 	"b0.o1": "Au millième près",
@@ -321758,7 +321758,7 @@ var bOt = $({
 	"b27.o2": "7,100",
 	"b27.o3": "7,052"
 }, $Ot = {
-	label: "Round to ten hill",
+	label: "La colline des dizaines",
 	"b0.prompt": "637 est sur la colline entre 630 et 640. Vers quelle dizaine la bille roule-t-elle ?",
 	"b0.o0": "640",
 	"b0.o1": "630",
@@ -322004,7 +322004,7 @@ var bOt = $({
 	"b12.o3": "n632,n635,n634,n637",
 	"b12.o4": "n632,n637,n635,n634"
 }, ikt = {
-	label: "Round to ten hop",
+	label: "Arrondir à la dizaine la plus proche",
 	"b0.prompt": "Vers quelle dizaine saute chaque nombre ? Dépose-le sur 20 ou 30.",
 	"b0.o0": "n21,n23,n27,n29",
 	"b0.o1": "n27,n23,n21,n29",
@@ -322575,7 +322575,7 @@ var bOt = $({
 	"b27.o2": "700,000",
 	"b27.o3": "668,000"
 }, lkt = {
-	label: "Round to the landmark",
+	label: "Arrondir au repère",
 	"b0.prompt": "8 132 roule sur une colline entre les repères 8 100 et 8 200. Arrondis à la centaine la plus proche : où s'arrête-t-il ?",
 	"b0.o0": "8 100",
 	"b0.o1": "8 200",
@@ -323192,7 +323192,7 @@ var bOt = $({
 	"b27.o2": "hundred thousands",
 	"b27.o3": "tens"
 }, mkt = {
-	label: "Rounding place chooser",
+	label: "Choisir le rang d'arrondi",
 	"b0.prompt": "8 132 a été arrondi à 8 100. À quel rang l'a-t-on arrondi ?",
 	"b0.o0": "centaines",
 	"b0.o1": "milliers",
@@ -323420,7 +323420,7 @@ var bOt = $({
 	"b11.o2": "f0,f1,f2,f3,f4,L",
 	"b11.o3": "f0,f1,f2,f3,f4,R"
 }, ykt = {
-	label: "Route debug robot",
+	label: "Corriger le trajet du robot",
 	"b0.prompt": "Le robot doit finir 2 à droite et 1 vers le bas de son départ. Il manque une flèche. Répare le parcours !",
 	"b0.o0": "f0,R,f2",
 	"b0.o1": "f0,U,f2",
@@ -323614,7 +323614,7 @@ var bOt = $({
 	"b17.o2": "LRUURR",
 	"b17.o3": "RRUURRR"
 }, wkt = {
-	label: "Route describer",
+	label: "Décrire le trajet",
 	"b0.prompt": "Va 2 pas au nord, puis 3 pas à l'est. Guide le robot avec les cartes flèches.",
 	"b0.o0": "UURRR",
 	"b0.o1": "UURR",
@@ -323778,7 +323778,7 @@ var bOt = $({
 	"b1.o2": "2 − 6",
 	"b1.o3": "2 ÷ 6"
 }, kkt = {
-	label: "Rows times columns link",
+	label: "Lignes fois colonnes",
 	"b0.prompt": "Quelle multiplication correspond à 3 rangées de 4 ?",
 	"b0.o0": "3 × 4",
 	"b0.o1": "3 + 3",
@@ -323960,7 +323960,7 @@ var bOt = $({
 	"b17.o5": "f0,f1,f2,f3,x2,a5",
 	"b17.o6": "f0,f1,f2,f3,a4,x2"
 }, Pkt = {
-	label: "Rule in a sentence",
+	label: "La règle en une phrase",
 	"b0.prompt": "3, 6, 9, 12, … Dis la règle : où commence-t-elle et que se passe-t-il à chaque fois ?",
 	"b0.o0": "f0,f1,f2,f3,a4,a5",
 	"b0.o1": "f0,f1,f2,f3,x0,a5",
@@ -324231,7 +324231,7 @@ var bOt = $({
 	"b17.o2": "i0,o0,i1,o1,x13,o2",
 	"b17.o3": "i0,o0,i1,o1,x11,o2"
 }, zkt = {
-	label: "Rule machine peek",
+	label: "La machine à règles",
 	"b0.prompt": "Regarde les nombres passer dans la machine. Que sort-il ?",
 	"b0.o0": "i0,o0,i1,o1,i2,o2",
 	"b0.o1": "i0,o0,i1,o1,i2,x10",
@@ -324430,7 +324430,7 @@ var bOt = $({
 	"b11.o3": "l0,l2,l1,l3",
 	"b11.o4": "l0,l3,l2,l1"
 }, Wkt = {
-	label: "Rule or not sort",
+	label: "Règle ou pas ?",
 	"b0.prompt": "Règle : pars de 5 et ajoute 3 chaque fois. Quelles listes suivent la règle ?",
 	"b0.o0": "l0,l1,l2,l3",
 	"b0.o1": "l2,l1,l0,l3",
@@ -324656,7 +324656,7 @@ var bOt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Ykt = {
-	label: "Rule to term machine",
+	label: "De la règle au terme",
 	"b0.prompt": "Mets la position à la place de n dans chaque règle. Associe chaque règle et sa position au terme obtenu.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -324900,7 +324900,7 @@ var bOt = $({
 	"b17.o2": "f0,f1,f2,f3,x1,f5,f6,f7,f8,f9,f10",
 	"b17.o3": "f0,f1,f2,f3,x2,f5,f6,f7,f8,f9,f10"
 }, eAt = {
-	label: "Ruler and jug reader",
+	label: "La règle et le pichet",
 	"b0.prompt": "L'échelle monte de 5 mm à chaque repère. Que lit-on à l'épingle ?",
 	"b0.o0": "f0,f1,f2,f3,f4,f5,f6,a7,f8,f9,f10",
 	"b0.o1": "f0,f1,f2,f3,f4,f5,f6,x0,f8,f9,f10",
@@ -325118,7 +325118,7 @@ var bOt = $({
 	"b12.o1": "t0,t1,t2,t3,d9,t4",
 	"b12.o2": "t0,t1,t2,t3,d7,t4"
 }, aAt = {
-	label: "Ruler as number line",
+	label: "La règle comme droite numérique",
 	"b0.prompt": "Les repères montent de 1 en 1. Dépose les repères manquants sur la règle.",
 	"b0.o0": "v0,v1,v2,v3,v4,v5,v6,v7",
 	"b0.o1": "v0,v1,v6,v5,v4,v3,v2,v7",
@@ -325311,7 +325311,7 @@ var bOt = $({
 	"b3.o2": "Only sometimes",
 	"b3.o3": "Only with crayons"
 }, uAt = {
-	label: "Ruler line draw",
+	label: "Tracer avec la règle",
 	"b0.prompt": "Quel outil t'aide à tracer une ligne droite ?",
 	"b0.o0": "Règle",
 	"b0.o1": "Tasse",
@@ -325389,7 +325389,7 @@ var bOt = $({
 	"b1.o2": "(1,1), (1,2), (2,1)",
 	"b1.o3": "(1,1), (3,2), (2,3)"
 }, hAt = {
-	label: "Ruler line up",
+	label: "Aligner à la règle",
 	"b0.prompt": "Trois points sont alignés le long de la règle. Sont-ils sur une droite ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -325475,7 +325475,7 @@ var bOt = $({
 	"b11.o1": "a1,a2,a3,b1,b2,b3,b4,b5",
 	"b11.o2": "b1,b2,b3,b4,b5"
 }, bAt = {
-	label: "Ruler measure line plot",
+	label: "Diagramme en points à la règle",
 	"b0.prompt": "Longueurs de crayons en unités : 1, 1 1/2, 1 1/2, 2. Empile une croix au-dessus du repère pour chaque crayon. Les repères du bas sont 1, 1¼, 1½, 1¾ et 2.",
 	"b0.o0": "a3,b1,b3,b5",
 	"b0.o1": "a2,b2,b4,b5",
@@ -325631,7 +325631,7 @@ var bOt = $({
 	"b14.o1": "t0,d8,t1",
 	"b14.o2": "t0,d6,t1"
 }, TAt = {
-	label: "Ruler snap measure",
+	label: "Mesure à la règle en un clin d'œil",
 	"b0.prompt": "Quelle est la longueur du ruban ? Écris-la en centimètres.",
 	"b0.o0": "t0,d3,t1",
 	"b0.o1": "t0,d4,t1",
@@ -325877,7 +325877,7 @@ var bOt = $({
 	"b17.o5": "c0,c2,c1,c3,c4",
 	"b17.o6": "c0,c3,c2,c1,c4"
 }, AAt = {
-	label: "Sale detective",
+	label: "L'enquêteur des soldes",
 	"b0.prompt": "Chaque panneau montre une variation en pourcentage et le prix APRÈS. Associe-le au prix AVANT.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -326146,7 +326146,7 @@ var bOt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g8",
 	"b17.o3": "g0,g1,g2,g3,g9,g5,g0,g6,g4,g3,g10"
 }, FAt = {
-	label: "Sale price calculator shop",
+	label: "La boutique des prix soldés",
 	"b0.prompt": "Un panneau annonce 50 % de remise sur un article à 40,00\xA0$. Calcule la remise, puis le prix soldé.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g7",
@@ -326391,7 +326391,7 @@ var bOt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, BAt = {
-	label: "Sale sign puzzle",
+	label: "Les panneaux de soldes",
 	"b0.prompt": "Chaque panneau montre un prix et une variation en pourcentage. Associe-le au nouveau prix.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -326597,7 +326597,7 @@ var bOt = $({
 	"b11.o1": "g0,g1,g10,g3,g1,g11,g5,g1,g12,g7,g1,g13",
 	"b11.o2": "g0,g1,g8,g3,g1,g6,g5,g1,g4,g7,g1,g2"
 }, GAt = {
-	label: "Same area different fence",
+	label: "Même aire, nouvelle clôture",
 	"b0.prompt": "Tous ces rectangles ont une aire de 12 m². Trouve la clôture (le périmètre) dont chacun a besoin.",
 	"b0.o0": "g0,g1,g2,g3,g1,g4,g5,g1,g6",
 	"b0.o1": "g0,g1,g8,g3,g1,g9,g5,g1,g10",
@@ -326747,7 +326747,7 @@ var bOt = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, XAt = {
-	label: "Same area different look",
+	label: "Même aire, nouvelle forme",
 	"b0.prompt": "Quels morceaux sont la même part du carré ? Glisse chaque carte sur son jumeau.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -326879,7 +326879,7 @@ var bOt = $({
 	"b1.o2": "2 × 6",
 	"b1.o3": "Pareil"
 }, tjt = {
-	label: "Same area different perimeter",
+	label: "Même aire, périmètre différent",
 	"b0.prompt": "Un carré 4 sur 4 a une aire de 16. Quel rectangle a une aire de 16 mais un plus grand périmètre ?",
 	"b0.o0": "2 by 8",
 	"b0.o1": "4 by 4",
@@ -326985,7 +326985,7 @@ var bOt = $({
 	"b14.o1": "g0,g1,g2,g1,g3,g4,g7,g8,g7",
 	"b14.o2": "g0,g1,g2,g1,g3,g4,g9,g6,g5"
 }, ojt = {
-	label: "Same data three graphs",
+	label: "Mêmes données, deux graphiques",
 	"b0.prompt": "Les barres du diagramme sont 50, 30, 20. Montre les mêmes données en diagramme circulaire : donne chaque valeur en pourcentage du total.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g8,g7,g6",
@@ -327099,7 +327099,7 @@ var bOt = $({
 	num: "{n}",
 	prompt: "They moved around. How many are there now?"
 }, ujt = {
-	label: "Pareil en cercle",
+	label: "Pareil dans un cercle",
 	num: "{n}",
 	prompt: "Ils ont bougé. Combien y en a-t-il maintenant ?"
 }, djt = /* @__PURE__ */ n({ default: () => fjt }), U$ = [
@@ -327264,7 +327264,7 @@ var bOt = $({
 	"b14.o4": "g0,g1,g2,g3,g4,g5,g1,g6,g2,g9,g10",
 	"b14.o5": "g0,g1,g2,g3,g4,g5,g1,g6,g2,g8,g9"
 }, hjt = {
-	label: "Same mean different spread",
+	label: "Même moyenne, dispersion différente",
 	"b0.prompt": "La série A est 4, 5, 6 : sa moyenne est 5. Termine la série B pour qu'elle ait la même moyenne mais une étendue de 6.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g2,g5",
@@ -327475,7 +327475,7 @@ var bOt = $({
 	"b11.o3": "x0,x1,x5,x3,x4,x2",
 	"b11.o4": "x5,x4,x3,x2,x1,x0"
 }, bjt = {
-	label: "Same share different shape",
+	label: "Même part, forme différente",
 	"b0.prompt": "Trie les formes selon leur découpage.",
 	"b0.o0": "x0,x1,x2,x3",
 	"b0.o1": "x2,x1,x0,x3",
@@ -327677,7 +327677,7 @@ var bOt = $({
 	"b14.o3": "s11-9-10,s3-4-9,s9-10-12,s8-11-11,s10-11-9,s5-6-12",
 	"b14.o4": "s11-9-10,s5-6-12,s9-10-12,s8-11-11,s3-4-9,s10-11-9"
 }, Tjt = {
-	label: "Same triangle sorter",
+	label: "Trier les triangles identiques",
 	"b0.prompt": "Un triangle a des côtés de 3, 4, 5 cm. Trie chaque carte : le même triangle (peu importe l'ordre des côtés) ou un autre triangle.",
 	"b0.o0": "s5-3-4,s4-5-3,s3-4-6,s3-4-4",
 	"b0.o1": "s3-4-6,s4-5-3,s5-3-4,s3-4-4",
@@ -327873,7 +327873,7 @@ var bOt = $({
 	"b14.o1": "a1,a10,a2,a3,a4,a5,a6,a7,a8,a9,b1,b10,b2,b3,b4,b5,b6,b7,b8,b9,c1,c10,c2,c3,c4,c5,c6,c7,c8,c9,d1,d10,d2,d3,d4,d5,d6,d7,d8,d9,e1,e10,e2,e3,e4,e5,e6,e7,e8,e9,f1,f10,f2,f3,f4,f5,f6,f7,f8,f9,g1,g10,g2,g3,g4,g5,g6,g7,g8,g9,h1,h10,h2,h3,h4,h5,h6,h7,h8,h9,i1,i10,i2,i3,i4,i5,i6,i7,i8,i9,j1,j10,j2,j3,j4,j5,j6,j7,j8,j9",
 	"b14.o2": "c1,c2,c3,c4,c5,d1,d2,d3,d4,d5,e1,e2,e3,e4,e5,f1,f2,f3,f4,f5,g1,g2,g3,g4,g5,h1,h2,h3,h4,h5,i1,i2,i3,i4,i5,j1,j2,j3,j4,j5"
 }, Ajt = {
-	label: "Scale a room plan",
+	label: "Mettre une pièce à l'échelle",
 	"b0.prompt": "Un carré représente 1 m. Une pièce mesure 4 m de long et 3 m de large. Colorie la pièce à l'échelle, en partant du bas à gauche.",
 	"b0.o0": "h1,h2,h3,h4,i1,i2,i3,i4,j1,j2,j3,j4",
 	"b0.o1": "g1,g2,g3,h1,h2,h3,i1,i2,i3,j1,j2,j3",
@@ -328083,7 +328083,7 @@ var bOt = $({
 	"b17.o2": "_,_,m,_,_,_,_,_,_,_,_",
 	"b17.o3": "_,_,_,_,_,m,_,_,_,_,_"
 }, Fjt = {
-	label: "Scale bar builder",
+	label: "Construire l'échelle graphique",
 	"b0.prompt": "L'échelle monte de 5 en 5. Dessine une barre pour 35 : pose le drapeau en haut de la barre.",
 	"b0.o0": "_,_,_,m,_,_,_,_,_,_,_",
 	"b0.o1": "_,_,m,_,_,_,_,_,_,_,_",
@@ -328400,7 +328400,7 @@ var bOt = $({
 	"b26.prompt": "77.9 ÷ 0.1 = ?",
 	"b27.prompt": "9 ÷ 0.01 = ?"
 }, Bjt = {
-	label: "Scale down slider",
+	label: "Curseur de réduction",
 	"b0.prompt": "79 × 0,01 = ?",
 	"b1.prompt": "83 × 0,01 = ?",
 	"b2.prompt": "38 × 0,1 = ?",
@@ -328558,7 +328558,7 @@ var bOt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, Kjt = {
-	label: "Scale ratio match",
+	label: "Associer l'échelle",
 	"b0.prompt": "Chaque case donne une échelle et une longueur mesurée sur la carte. Associe-la à la distance réelle.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -328808,7 +328808,7 @@ var bOt = $({
 	"b11.o5": "m0,m2,m3,m4,m1,m5",
 	"b11.o6": "m0,x1,m2,m3,m4,m5"
 }, Zjt = {
-	label: "Scale reader dials",
+	label: "Lire la balance à cadran",
 	"b0.prompt": "Cette graduation va de 0 à 10 g en 5 divisions égales. Complète les valeurs manquantes.",
 	"b0.o0": "m0,m1,m2,m3,m4,m5",
 	"b0.o1": "m0,m4,m3,m2,m1,m5",
@@ -329036,7 +329036,7 @@ var bOt = $({
 	"b19.o2": "g0,g1,g2,g1,g4",
 	"b19.o3": "g0,g3,g2,g3,g4"
 }, nMt = {
-	label: "Scatter builder",
+	label: "Construire le nuage de points",
 	"b0.prompt": "Les deux grandeurs sont « heures d'étude » et « note au contrôle ». La première peut faire varier la seconde. Glisse chacune sur son axe : la première en horizontal (x), le résultat en vertical (y).",
 	"b0.o0": "hours,score",
 	"b0.o1": "score,hours",
@@ -329258,7 +329258,7 @@ var bOt = $({
 	"b14.o3": "h15,h10,h7,h12,h8,h19",
 	"b14.o4": "h19,h10,h7,h12,h15,h8"
 }, sMt = {
-	label: "Schedule the call",
+	label: "Planifier l'appel",
 	"b0.prompt": "En hiver, Londres a 1 heure de retard sur Paris. Un appel convient quand les deux villes sont entre 08 h et 19 h 59. Trie les heures de Paris.",
 	"b0.o0": "h12,h18,h6,h8,h20,h22",
 	"b0.o1": "h6,h18,h12,h8,h20,h22",
@@ -329450,7 +329450,7 @@ var bOt = $({
 	"b13.o3": "blink,film,snack,wash,sleep",
 	"b13.o4": "blink,sleep,snack,film,wash"
 }, fMt = {
-	label: "Seconds minutes hours sort",
+	label: "Secondes, minutes, heures",
 	"b0.prompt": "Ça prend des secondes ou des heures ? Trie les activités.",
 	"b0.o0": "blink,sleep",
 	"b0.o1": "sleep,blink",
@@ -329642,7 +329642,7 @@ var bOt = $({
 	"b14.o3": "n5,s5,s0,s1,n3,n4,s4,n0",
 	"b14.o4": "n0,s5,s0,s1,n3,n4,n5,s4"
 }, _Mt = {
-	label: "Sense check stamp",
+	label: "Vérifier le bon sens",
 	"b0.prompt": "Chaque réponse est-elle raisonnable ? Compare-la avec la vie réelle et tamponne-la raisonnable ou non.",
 	"b0.o0": "s0,s1,n1,n2",
 	"b0.o1": "n1,s1,s0,n2",
@@ -329848,7 +329848,7 @@ var bOt = $({
 	"b11.o3": "o0,n2,o1,n3",
 	"b11.o4": "o0,n3,n2,o1"
 }, SMt = {
-	label: "Sensible or silly",
+	label: "Raisonnable ou absurde ?",
 	"b0.prompt": "Estime chaque réponse. A-t-elle du sens, ou est-elle absurde ? Trie les calculs.",
 	"b0.o0": "o0,o1,n2,n3",
 	"b0.o1": "n2,o1,o0,n3",
@@ -330199,7 +330199,7 @@ var bOt = $({
 	"b46.o2": "n17,minus,n4,eq,n14",
 	"b46.o3": "n17,minus,n13,eq,n4"
 }, DMt = {
-	label: "Sentence builder",
+	label: "Construire la phrase",
 	"b0.prompt": "Construis la phrase de l'histoire.",
 	"b0.o0": "n1,plus,n1,eq,n2",
 	"b0.o1": "n1,minus,n1,eq,n2",
@@ -330600,7 +330600,7 @@ var bOt = $({
 	"b17.o5": "f0,f1,x2,f3,a4,a5",
 	"b17.o6": "f0,f1,a2,f3,a4,x2"
 }, MMt = {
-	label: "Sequence detective",
+	label: "L'enquêteur de suites",
 	"b0.prompt": "Complète les nombres qui manquent dans la suite.",
 	"b0.o0": "f0,f1,f2,a3,f4,f5",
 	"b0.o1": "f0,f1,f2,x0,f4,f5",
@@ -330841,7 +330841,7 @@ var bOt = $({
 	"b14.o2": "v95,d91,v85,v80,v75,v70",
 	"b14.o3": "v95,d81,v85,v80,v75,v70"
 }, LMt = {
-	label: "Sequence rule detective",
+	label: "L'enquêteur de la règle",
 	"b0.prompt": "Trouve la règle, puis complète les trous. Certains nombres du plateau cassent la règle !",
 	"b0.o0": "v2,v4,v6,v8,v10,v12",
 	"b0.o1": "v2,v4,v10,v8,v6,v12",
@@ -331065,7 +331065,7 @@ var bOt = $({
 	"b14.o5": "v45,v50,v60,v70,v65,r5,v75,v55",
 	"b14.o6": "v45,v50,r6,v60,v65,v70,v75,r5"
 }, HMt = {
-	label: "Sequence train",
+	label: "Le train des suites",
 	"b0.prompt": "Complète les trous de la suite, puis choisis sa règle.",
 	"b0.o0": "v2,v4,v6,v8,v10,r2",
 	"b0.o1": "v2,v4,v6,r2,v10,v8",
@@ -331817,7 +331817,7 @@ var bOt = $({
 	"b18.o3": "12:35",
 	"b18.o4": "7:30"
 }, qMt = {
-	label: "Set the clock hour",
+	label: "Régler l'heure",
 	"b0.prompt": "Règle l'horloge sur 1:00. Mets la petite aiguille sur le 1.",
 	"b0.o0": "1:00",
 	"b0.o1": "12:00",
@@ -332537,7 +332537,7 @@ var bOt = $({
 	"b17.o3": "7:15",
 	"b17.o4": "5:15"
 }, QMt = {
-	label: "Set the clock quarter",
+	label: "L'horloge des quarts d'heure",
 	"b0.prompt": "Règle l'horloge sur 3:15. Mets la grande aiguille sur le 3.",
 	"b0.o0": "3:15",
 	"b0.o1": "3:30",
@@ -332842,7 +332842,7 @@ var lNt = $({
 	"b13.o2": "3",
 	"b13.o3": "1"
 }, fNt = {
-	label: "Shade three quarters",
+	label: "Colorier trois quarts",
 	"b0.prompt": "Colorie un quart. Mets des parts dans le plateau des parts coloriées.",
 	"b0.o0": "3|1",
 	"b0.o1": "4|0",
@@ -333068,7 +333068,7 @@ var lNt = $({
 	"b21.o3": "ball:solid,box:solid,cone:solid,leaf:solid,plate:flat",
 	"b21.o4": "ball:solid,box:solid,cone:flat,leaf:flat,plate:flat"
 }, _Nt = {
-	label: "Shadow guess",
+	label: "Devine l'ombre",
 	"b0.prompt": "Plat ou solide ? Devine par l’ombre.",
 	"b0.o0": "ball:solid,coin:flat",
 	"b0.o1": "ball:solid,coin:solid",
@@ -333376,7 +333376,7 @@ var lNt = $({
 	"b29.o4": "rectangle",
 	"b29.o5": "hexagon"
 }, SNt = {
-	label: "Shape bingo",
+	label: "Loto des formes",
 	"b0.prompt": "Couvre le cercle.",
 	"b0.o0": "cercle",
 	"b0.o1": "carré",
@@ -333688,7 +333688,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o2": "s-kite,s-rhombus,s-square,s-trap,s-rect",
 	"b14.o3": "s-kite,s-trap,s-square,s-rhombus,s-rect"
 }, kNt = {
-	label: "Shape family tree builder",
+	label: "L'arbre généalogique des formes",
 	"b0.prompt": "Chaque forme appartient à une famille. Trie les formes : celles de la famille et celles qui n'en font pas partie.",
 	"b0.o0": "s-square,s-rect,s-rhombus,s-par",
 	"b0.o1": "s-rhombus,s-rect,s-square,s-par",
@@ -334405,7 +334405,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g14,g16,g17",
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g12,g11,g13"
 }, WNt = {
-	label: "Shape pattern predictor",
+	label: "Prédire le motif de formes",
 	"b0.prompt": "Chaque forme est faite de tuiles. Regarde les trois premières formes et remplis le nombre de tuiles dont les trois suivantes ont besoin.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g5,g8,g9,g10,g11",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g7,g3,g5,g8,g12,g13,g14",
@@ -334577,7 +334577,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o2": "g5:dot",
 	"b11.o3": "d6:dot"
 }, YNt = {
-	label: "Shape recipe draw",
+	label: "Dessiner la recette de la forme",
 	"b0.prompt": "Un rectangle de 3 de large et 2 de haut a trois coins placés. Place le quatrième coin.",
 	"b0.o0": "d5:dot",
 	"b0.o1": "d4:dot",
@@ -334754,7 +334754,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b13.o3": "book",
 	"b13.o4": "window"
 }, ePt = {
-	label: "Shape scavenger hunt",
+	label: "La chasse aux formes",
 	"b0.prompt": "Trouve quelque chose qui a la forme d'une sphère.",
 	"b0.o0": "sphere",
 	"b0.o1": "cuboid",
@@ -335389,7 +335389,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b12.o3": "x5,x1,x2,x3,x4,x0",
 	"b12.o4": "x0,x3,x2,x1,x4,x5"
 }, hPt = {
-	label: "Shape splitter",
+	label: "Couper la forme",
 	"b0.prompt": "Coupe la forme en 2 parts égales. Dépose un trait dessus.",
 	"b0.o0": "v",
 	"b0.o1": "ol",
@@ -335525,7 +335525,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "Circle and oval",
 	"b1.o3": "Two squares"
 }, bPt = {
-	label: "Shape twins",
+	label: "Formes jumelles",
 	"b0.prompt": "Quelle forme partage 4 angles droits avec un rectangle ?",
 	"b0.o0": "Carré",
 	"b0.o1": "Triangle",
@@ -335653,7 +335653,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g6",
 	"b17.o3": "g0,g1,g2,g3,g7"
 }, TPt = {
-	label: "Share a slice fairly",
+	label: "Partager une part équitablement",
 	"b0.prompt": "Une part vaut 1/3 d'un gâteau. Partage-la également entre 2 amis. Quelle est la taille de chaque morceau ?",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -335866,7 +335866,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b13.o3": "t0,t1,t2,t3,d3,d1",
 	"b13.o4": "t0,t1,t2,t3,d2,d9"
 }, APt = {
-	label: "Share in four groups",
+	label: "Partager en quatre groupes",
 	"b0.prompt": "Trouve un quart de 12 : partage-les en 4 groupes égaux.",
 	"b0.o0": "0|3|3|3|3",
 	"b0.o1": "1|2|3|3|3",
@@ -336040,7 +336040,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b16.o0": "group",
 	"b16.o1": "share"
 }, FPt = {
-	label: "Share or group sort",
+	label: "Partager ou grouper ?",
 	"b0.prompt": "12 biscuits sont partagés en parts égales entre 2 assiettes. Est-ce un partage ou un regroupement ? Glisse la carte.",
 	"b0.o0": "share",
 	"b0.o1": "group",
@@ -336501,7 +336501,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g1,g1,g3,g4,g1,g5,g6,g0,g0,g0,g7,g8",
 	"b17.o3": "g0,g1,g1,g2,g1,g3,g4,g1,g5,g6,g0,g0,g0,g7,g1"
 }, GPt = {
-	label: "Share out long division",
+	label: "Partager : division posée",
 	"b0.prompt": "Partage 756 en 3 parts égales, place par place. Écris le quotient au-dessus et le reste.",
 	"b0.o0": "g0,g1,g2,g1,g3,g4,g2,g5,g0,g0,g6,g7",
 	"b0.o1": "g0,g1,g2,g8,g3,g4,g2,g5,g0,g0,g6,g7",
@@ -336725,7 +336725,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g3,g8",
 	"b17.o3": "g0,g1,g2,g3,g9,g3,g5"
 }, XPt = {
-	label: "Share pizzas fairly",
+	label: "Partager les pizzas équitablement",
 	"b0.prompt": "Partage 3 pizzas également entre 4 amis. Combien chaque ami reçoit-il ?",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g2,g3,g5",
@@ -336946,7 +336946,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g8,g11",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g6,g8,g9"
 }, tFt = {
-	label: "Share the leftover",
+	label: "Partager le reste",
 	"b0.prompt": "Partage 13 également en 4. Écris les parts entières et le reste, puis montre ce qui reste en fraction.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g8,g9",
 	"b0.o1": "g0,g1,g2,g3,g6,g5,g4,g7,g6,g8,g10",
@@ -337107,7 +337107,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "5",
 	"b1.o3": "2"
 }, oFt = {
-	label: "Share the leftovers",
+	label: "Partager les restes",
 	"b0.prompt": "17 partagés en groupes de 5. Combien de restes ?",
 	"b0.o0": "2",
 	"b0.o1": "3",
@@ -337235,7 +337235,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g9,g7,g8,g7,g6,g3,g0",
 	"b17.o3": "g0,g1,g13,g3,g4,g5,g6,g7,g8,g7,g9,g3,g0"
 }, dFt = {
-	label: "Share the prize ratio",
+	label: "Partager le prix",
 	"b0.prompt": "Partage un prix de 20 selon le rapport 3:1. Compte les parts égales, trouve une part, puis chaque part du prix.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7,g4,g3,g0",
 	"b0.o1": "g0,g1,g8,g3,g9,g5,g0,g7,g9,g3,g0",
@@ -337465,7 +337465,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "f0,f1,x1",
 	"b17.o3": "f0,f1,x2"
 }, gFt = {
-	label: "Share the stickers fractions",
+	label: "Partager les autocollants",
 	"b0.prompt": "Tu as 8 autocollants. Donne à Mia 1/2 d'entre eux.",
 	"b0.o0": "4|4",
 	"b0.o1": "5|3",
@@ -337701,7 +337701,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, xFt = {
-	label: "Shared factor match",
+	label: "Facteur commun",
 	"b0.prompt": "Associe chaque paire de nombres au plus grand nombre qui divise les deux.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -337937,7 +337937,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, EFt = {
-	label: "Shared multiple grid",
+	label: "Le plus petit multiple commun",
 	"b0.prompt": "Associe chaque paire de nombres au plus petit nombre divisible par les deux.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -338167,7 +338167,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g5,g1,g2,g3,g7",
 	"b17.o3": "g0,g1,g2,g3,g8"
 }, jFt = {
-	label: "Shear the rectangle",
+	label: "Cisailler le rectangle",
 	"b0.prompt": "Un parallélogramme a une base de 6, un côté penché de 5 et une hauteur de 4. Glisse une tranche pour faire un rectangle, puis donne son aire.",
 	"b0.o0": "g0,g1,g2,g3,g4",
 	"b0.o1": "g0,g1,g5,g3,g6",
@@ -338750,7 +338750,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b27.o2": "480",
 	"b27.o3": "470"
 }, IFt = {
-	label: "Shift or zero trap",
+	label: "Le piège du décalage ou du zéro",
 	"b0.prompt": "Quelle égalité est juste ? Attention au piège du zéro.",
 	"b0.o0": "380 ÷ 10 = 38",
 	"b0.o1": "380 ÷ 10 = 3 800",
@@ -339166,7 +339166,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b47.o3": "4|1|1|1|1|1",
 	"b47.o4": "0|2|2|2|2|1"
 }, VFt = {
-	label: "Shoe shop pairs",
+	label: "Les paires de la boutique de chaussures",
 	"b0.prompt": "Mets les chaussures par deux.",
 	"b0.o0": "0|2",
 	"b0.o1": "2|0",
@@ -339602,7 +339602,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o5": "f0,x2,f2,a3,f4,f5,a6",
 	"b17.o6": "f0,a1,f2,a3,f4,f5,x2"
 }, KFt = {
-	label: "Shop till change",
+	label: "La monnaie de la caisse",
 	"b0.prompt": "Un article coûte 3,40 $ et tu paies 5,00 $. Compte en avançant pour rendre la monnaie.",
 	"b0.o0": "f0,a1,f2,a3,f4,f5,a6",
 	"b0.o1": "f0,x0,f2,a3,f4,f5,a6",
@@ -339860,7 +339860,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o2": "g0,g1,g2,g3,g7,g5,g0,g6,g4,g3,g4,g5,g7,g8,g9,g3,g10",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g7,g5,g7,g8,g9,g3,g12"
 }, ZFt = {
-	label: "Shop trip puzzles",
+	label: "Puzzles de course",
 	"b0.prompt": "Mia a 40 $. Elle dépense 1/2 de cet argent pour un livre. Puis elle dépense 50 % de ce qui reste pour le déjeuner. Combien lui reste-t-il à la fin ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g4,g5,g4,g7,g8,g3,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g6,g4,g3,g4,g5,g4,g7,g8,g3,g10",
@@ -340064,7 +340064,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "f0,f1,f2,f3,x1",
 	"b17.o3": "f0,f1,f2,f3,x2"
 }, nIt = {
-	label: "Shopping basket total",
+	label: "Total du panier",
 	"b0.prompt": "2,50 $ + 3,25 $ = ?",
 	"b0.o0": "f0,f1,f2,f3,a4",
 	"b0.o1": "f0,f1,f2,f3,x0",
@@ -340296,7 +340296,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o4": "t0,t1,t2,t3,t4,t5,t6,t7,d1,d2,d0",
 	"b14.o5": "t0,t1,t2,t3,t4,t5,t6,t7,d1,d3,d1"
 }, sIt = {
-	label: "Shopping list total",
+	label: "Total de la liste de courses",
 	"b0.prompt": "Additionne la liste de courses. Écris le total.",
 	"b0.o0": "t0,t1,t2,t3,t4,t5,d7,d6",
 	"b0.o1": "t0,t1,t2,t3,t4,t5,d3,d5",
@@ -340582,7 +340582,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o5": "f0,x2,a2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,a13,a14",
 	"b17.o6": "f0,a1,a2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,a13,x2"
 }, fIt = {
-	label: "Short division stack",
+	label: "La pile de division",
 	"b0.prompt": "372 ÷ 6 : divise chiffre par chiffre. Glisse les chiffres du résultat et les restes que tu fais passer.",
 	"b0.o0": "f0,f1,f2,a3,a4,f5,f6,f7,f8,f9,f10,f11,f12,a13,a14",
 	"b0.o1": "f0,f1,f2,x0,a4,f5,f6,f7,f8,f9,f10,f11,f12,a13,a14",
@@ -340800,7 +340800,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "1 037 remainder 1",
 	"b1.o3": "1 017 remainder 1"
 }, _It = {
-	label: "Short division stairs",
+	label: "L'escalier de la division",
 	"b0.prompt": "3 417 ÷ 3 = ? reste ?",
 	"b0.o0": "1 139 reste 0",
 	"b0.o1": "1 139 reste 1",
@@ -340868,7 +340868,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "1",
 	"b1.o3": "5"
 }, SIt = {
-	label: "Shortest route challenge",
+	label: "Défi du plus court chemin",
 	"b0.prompt": "De A1 à C1 avec le moins de déplacements. Quel trajet est le plus court ?",
 	"b0.o0": "2 déplacements à droite",
 	"b0.o1": "4 déplacements en haut",
@@ -341016,7 +341016,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b21.o2": "0|1|4|0",
 	"b21.o3": "1|4|0|0"
 }, DIt = {
-	label: "Show me how",
+	label: "Montre-moi comment",
 	"b0.prompt": "Montre comment tu le sais.",
 	"b0.o0": "0|5|0|0",
 	"b0.o1": "0|0|5|0",
@@ -341245,7 +341245,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o2": "f5,f6,f7,g5,g6,g7,h5,h6,h7,i5,i6,i7,j5,j6,j7",
 	"b14.o3": "e7,e8,e9,f7,f8,f9,g7,g8,g9,h7,h8,h9,i7,i8,i9,j7,j8,j9"
 }, MIt = {
-	label: "Shrink ray",
+	label: "Le rayon réducteur",
 	"b0.prompt": "Le coin de la case de l'étoile est le centre. Réduis la figure avec un facteur d'échelle ½\xA0: chaque bloc de 2 sur 2 devient un bloc de 1 sur 1, plus près du centre. Colorie la nouvelle figure.",
 	"b0.o0": "i2",
 	"b0.o1": "h3",
@@ -341502,7 +341502,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b22.o3": "s1,s2,s4",
 	"b22.o4": "s1,s2,s3"
 }, LIt = {
-	label: "Side tapper",
+	label: "Le tapeur de côtés",
 	"b0.prompt": "Touche chaque côté une fois.",
 	"b0.o0": "s1,s2,s3",
 	"b0.o1": "s2,s3",
@@ -341752,7 +341752,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, HIt = {
-	label: "Sides and corners count",
+	label: "Compter les côtés et les coins",
 	"b0.prompt": "Compte les côtés. Dépose chaque forme sur son nombre.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -342370,7 +342370,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o3": "11,19,27,35,43,51,59",
 	"b11.o4": "11,19,27,3,35,43,51"
 }, qIt = {
-	label: "Sieve and pattern hunt",
+	label: "Crible et chasse aux motifs",
 	"b0.prompt": "Colorie tous les nombres jusqu'à 24 qui laissent le reste 1 quand on les divise par 3. Cherche la régularité !",
 	"b0.o0": "1,10,13,16,19,22,4,7",
 	"b0.o1": "1,10,13,16,19,22,3,4,7",
@@ -342581,7 +342581,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o3": "11,13,17,19,23,29,3,31,37,41,43,47,5,53,59,7",
 	"b17.o4": "11,13,17,19,2,23,29,3,31,37,41,43,47,5,53,7"
 }, QIt = {
-	label: "Sieve sweep",
+	label: "Balayage du crible",
 	"b0.prompt": "Balaie les nombres qui ont plus de deux facteurs. Colorie seulement les nombres premiers jusqu'à 20.",
 	"b0.o0": "11,13,17,19,2,3,5,7",
 	"b0.o1": "1,11,13,17,19,2,3,5,7",
@@ -342776,7 +342776,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g2,g6,g4,g7,g2,g11",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g2,g10,g4,g7,g2,g11"
 }, rLt = {
-	label: "Sign chain relay",
+	label: "Relais des signes",
 	"b0.prompt": "Course de relais ! Chaque coureur part de la réponse du précédent. Dépose le résultat de chaque étape dans sa case.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2,g6",
 	"b0.o1": "g0,g1,g2,g7,g4,g5,g2,g8",
@@ -342966,7 +342966,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o3": "s4,r3,r5,s0,s1,r2",
 	"b14.o4": "r2,s0,r5,r3,s1,s4"
 }, cLt = {
-	label: "Sign fraction slip hunt",
+	label: "La chasse aux erreurs de signes avec fractions",
 	"b0.prompt": "Un élève a calculé ces produits et quotients de fractions signées. Trie-les : les calculs justes et les erreurs.",
 	"b0.o0": "r0,r2,s1,s3",
 	"b0.o1": "s1,r2,r0,s3",
@@ -343148,7 +343148,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o1": "g0,g1,g2,g3,g4,g5,g1,g2,g3,g6,g7,g1,g2,g3,g7,g8,g1,g2,g3,g6,g10,g1,g2,g3,g4,g12,g1,g2,g3,g14",
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g1,g2,g3,g6,g7,g1,g2,g3,g7,g8,g1,g2,g3,g7,g10,g1,g2,g3,g9,g12,g1,g2,g3,g11"
 }, pLt = {
-	label: "Sign pattern detective",
+	label: "L'enquêteur des motifs de signes",
 	"b0.prompt": "Enquête : chaque ligne descend d'un cran dans la table de −2. Continue la suite et glisse les réponses manquantes dans les cases.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g1,g2,g3,g6,g7,g1,g2,g3,g7,g8,g1,g2,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g1,g2,g3,g6,g7,g1,g2,g3,g7,g8,g1,g2,g3,g6",
@@ -343315,7 +343315,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g7",
 	"b14.o3": "g0,g1,g2,g3,g6,g7"
 }, vLt = {
-	label: "Sign rules tug of war",
+	label: "Bras de fer des règles de signes",
 	"b0.prompt": "Tir à la corde ! Le signe de (−4) × (−3) décide quelle équipe gagne. Glisse le signe, puis le nombre, dans les cases.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g6,g5",
@@ -343506,7 +343506,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o3": "r0,s0,r1,s1",
 	"b11.o4": "r0,s1,s0,r1"
 }, CLt = {
-	label: "Sign slip hunt",
+	label: "La chasse aux erreurs de signes",
 	"b0.prompt": "À la chasse ! Quatre élèves ont divisé. Dépose les divisions justes dans la case verte et celles dont le signe a glissé dans la case du bug.",
 	"b0.o0": "r0,r1,s0,s1",
 	"b0.o1": "s0,r1,r0,s1",
@@ -343682,7 +343682,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o2": "g0,g1,g2,g3,g17,g5,g1,g6,g3,g5,g7,g8,g9,g3,g10,g11,g8,g12,g3,g13,g14,g1,g15,g3,g16",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g5,g7,g8,g9,g3,g10,g11,g8,g12,g3,g13,g14,g1,g15,g3,g20"
 }, OLt = {
-	label: "Sign sprint",
+	label: "Sprint des signes",
 	"b0.prompt": "Sprint ! Dépose la réponse de chaque calcul signé dans sa case. Attention aux signes.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g1,g6,g3,g7,g8,g1,g0,g3,g9",
 	"b0.o1": "g0,g1,g2,g3,g10,g5,g1,g6,g3,g11,g8,g1,g0,g3,g12",
@@ -343885,7 +343885,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b12.o5": "c0,c3,c2,c1",
 	"b12.o6": "c0,c1,c3,c2"
 }, NLt = {
-	label: "Signed decimal mixer",
+	label: "Mélanger les décimaux signés",
 	"b0.prompt": "Estime d'abord, puis associe chaque calcul à son résultat. Le signe d'abord, puis la grandeur, et attention à la virgule.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -344127,7 +344127,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b12.o5": "c0,c3,c2,c1",
 	"b12.o6": "c0,c1,c3,c2"
 }, RLt = {
-	label: "Signed fraction walk",
+	label: "La marche des fractions signées",
 	"b0.prompt": "Chaque carte est un trajet sur la droite numérique : un départ, puis des sauts (plus va à droite, moins va à gauche). Associe chaque trajet à l'endroit où il finit.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -344360,7 +344360,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o3": "p1x3x4x12,p6x8x3x5,p10x5x2x1,p9x12x3x4,p2x3x4x6,p2x3x4x5",
 	"b14.o4": "p1x3x4x12,p2x3x4x5,p10x5x2x1,p9x12x3x4,p6x8x3x5,p2x3x4x6"
 }, ULt = {
-	label: "Similar or not",
+	label: "Semblables ou pas ?",
 	"b0.prompt": "Chaque carte montre les côtés d'un rectangle, ancienne puis nouvelle taille. Trie-la\xA0: le nouveau rectangle est-il un agrandissement ou une réduction de l'ancien, ou est-il déformé\xA0?",
 	"b0.o0": "p2x3x4x6,p1x2x3x6,p2x3x4x5,p2x3x3x5",
 	"b0.o1": "p2x3x4x5,p1x2x3x6,p2x3x4x6,p2x3x3x5",
@@ -344566,7 +344566,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o3": "c5,c2,c4,c1,c3,c0",
 	"b11.o4": "c0,c1,c4,c2,c3,c5"
 }, JLt = {
-	label: "Simplify slip hunt",
+	label: "La chasse aux erreurs de simplification",
 	"b0.prompt": "Un élève a réduit ces expressions. Trie-les : chacune est-elle juste ou une erreur ?",
 	"b0.o0": "c0,c2,c1,c3",
 	"b0.o1": "c1,c2,c0,c3",
@@ -344765,7 +344765,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g8",
 	"b17.o3": "g0,g1,g2,g9,g4,g5"
 }, $Lt = {
-	label: "Simplify with common factors",
+	label: "Simplifier avec les facteurs communs",
 	"b0.prompt": "Simplifie 6/8 jusqu'à la forme irréductible : trouve le plus grand facteur commun, puis divise le haut et le bas.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g4,g6",
@@ -345405,7 +345405,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b80.o4": "r4,r3,r1,r2,r0",
 	"b80.o5": "r4,r3,r2,r0,r1"
 }, iRt = {
-	label: "Size train",
+	label: "Le train des tailles",
 	"b0.prompt": "Du plus petit au plus grand.",
 	"b0.o0": "r0,r1,r2",
 	"b0.o1": "r2,r1,r0",
@@ -346100,7 +346100,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b45.o0": "First",
 	"b45.o1": "Second"
 }, lRt = {
-	label: "Size word match",
+	label: "Associer les mots de taille",
 	"b0.prompt": "Touche le plein.",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -346425,7 +346425,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b51.o0": "First",
 	"b51.o1": "Second"
 }, mRt = {
-	label: "Size word sort",
+	label: "Trier les mots de taille",
 	"b0.prompt": "Touche le long.",
 	"b0.o0": "Premier",
 	"b0.o1": "Deuxième",
@@ -346738,7 +346738,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o5": "f0,f1,x2,f3,a4,a5",
 	"b17.o6": "f0,f1,a2,f3,a4,x2"
 }, yRt = {
-	label: "Skip count frog",
+	label: "La grenouille qui compte par bonds",
 	"b0.prompt": "La grenouille saute de 4 à chaque fois. Remplis les nénuphars où elle atterrit.",
 	"b0.o0": "f0,f1,f2,a3,f4,f5",
 	"b0.o1": "f0,f1,f2,x0,f4,f5",
@@ -347102,7 +347102,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o5": "v58,v61,v64,v67,v73,v70,v76",
 	"b14.o6": "v58,v64,v67,v70,v73,v61,v76"
 }, ORt = {
-	label: "Skip count rhythm track",
+	label: "Compter par bonds en rythme",
 	"b0.prompt": "Compte de 2 en 2 à partir de 0. Dépose les nombres manquants sur la piste.",
 	"b0.o0": "v0,v2,v4,v6,v8,v10",
 	"b0.o1": "v0,v2,v8,v6,v4,v10",
@@ -347296,7 +347296,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "77",
 	"b1.o3": "70"
 }, NRt = {
-	label: "Skip count stepping stones",
+	label: "Compter par bonds sur les pierres",
 	"b0.prompt": "Saute à reculons de 2 en 2 depuis 10. Quelle est la pierre suivante ?",
 	"b0.o0": "8",
 	"b0.o1": "12",
@@ -347408,7 +347408,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b15.o3": "dress,pyjamas,play,stars",
 	"b15.o4": "dress,play,stars,pyjamas"
 }, RRt = {
-	label: "Sky clock order",
+	label: "L'horloge du ciel",
 	"b0.prompt": "Qu'est-ce qui vient d'abord ?",
 	"b0.o0": "morning,afternoon",
 	"b0.o1": "afternoon,morning",
@@ -347586,7 +347586,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g5,g6,g7,g1,g8,g5,g13,g10",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g1,g8,g5,g14,g10"
 }, URt = {
-	label: "Slice the prism",
+	label: "Couper le prisme",
 	"b0.prompt": "Un prisme à base triangulaire a un triangle de 6 cm² et mesure 10 cm de long. Fais glisser le triangle sur sa longueur pour trouver le volume.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g8,g7",
@@ -347743,7 +347743,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o1": "d4,e4,f4,f5,f6",
 	"b11.o2": "d5,d6,d7,e5,f5"
 }, JRt = {
-	label: "Slide the shape",
+	label: "Faire glisser la forme",
 	"b0.prompt": "Fais glisser la forme de 3 carrés vers la droite. Colorie où elle atterrit, sans la tourner.",
 	"b0.o0": "a4,a5,b4",
 	"b0.o1": "d1,d2,e1",
@@ -347922,7 +347922,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o3": "b3,b4,c4",
 	"b14.o4": "f6,f7,g7"
 }, $Rt = {
-	label: "Slide to target grid",
+	label: "Glisser jusqu'à la cible",
 	"b0.prompt": "Fais glisser la forme marquée de 3 à droite. Colorie les carrés où elle arrive.",
 	"b0.o0": "g5",
 	"b0.o1": "d2",
@@ -348138,7 +348138,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g9",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g10"
 }, izt = {
-	label: "Slow snail rates",
+	label: "Les taux de l'escargot",
 	"b0.prompt": "Un escargot avance de 1/2 m en 1/4 d'heure. Combien de mètres avance-t-il en 1 heure entière ? Trouve d'abord combien de 1/4 entrent dans 1, puis multiplie.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g2,g5,g2,g6,g7,g3,g9",
@@ -348302,7 +348302,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b1.o2": "Pareil",
 	"b1.o3": "Impossible à dire"
 }, lzt = {
-	label: "Smaller or bigger product sorter",
+	label: "Produit plus petit ou plus grand",
 	"b0.prompt": "1/2 × 6 donne-t-il un nombre plus petit ou plus grand que 6 ?",
 	"b0.o0": "Plus petit",
 	"b0.o1": "Plus grand",
@@ -348592,7 +348592,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b44.o2": "0|10",
 	"b44.o3": "3|7"
 }, mzt = {
-	label: "Snack nibbles",
+	label: "Les grignotages",
 	"b0.prompt": "Donne 1 à la souris.",
 	"b0.o0": "1|1",
 	"b0.o1": "2|0",
@@ -348985,7 +348985,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b5.o2": "cube",
 	"b5.o3": "cylinder"
 }, yzt = {
-	label: "Solid bingo",
+	label: "Loto des solides",
 	"b0.prompt": "Couvre le solide de un ballon.",
 	"b0.o0": "sphère",
 	"b0.o1": "cube",
@@ -349085,7 +349085,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o1": "g0,g1,g7,g3,g4,g5,g4",
 	"b11.o2": "g0,g1,g4,g3,g4,g5,g2"
 }, wzt = {
-	label: "Solid sorter",
+	label: "Compter les solides",
 	"b0.prompt": "Compte les faces (côtés plats), les arêtes (là où deux faces se rejoignent) et les sommets (coins) indiqués par les icônes.",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g1,g3",
@@ -349243,7 +349243,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o3": "c0,c2,c1",
 	"b11.o4": "c1,c2,c0"
 }, kzt = {
-	label: "Solid sticker count",
+	label: "Compter les autocollants des solides",
 	"b0.prompt": "Compte les faces de chaque solide. Dépose son nombre dessus.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -349501,7 +349501,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b25.o3": "cube,cylinder,pyramid",
 	"b25.o4": "cube,cuboid,cylinder"
 }, Pzt = {
-	label: "Solids roll bins",
+	label: "Les solides qui roulent",
 	"b0.prompt": "Touche ce qui roule.",
 	"b0.o0": "sphere",
 	"b0.o1": "cube",
@@ -349755,7 +349755,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o2": "p2x1,p1x0,p1x1,p2x0,p0x0",
 	"b11.o3": "p2x1,p2x0,p1x1,p1x0,p0x0"
 }, zzt = {
-	label: "Sort shapes by properties",
+	label: "Trier les formes par propriétés",
 	"b0.prompt": "Trie les formes selon leurs côtés. Dépose chacune dans la bonne boîte.",
 	"b0.o0": "p0x0,p0x1,p1x0,p1x1",
 	"b0.o1": "p1x0,p0x1,p0x0,p1x1",
@@ -349954,7 +349954,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o3": "0|2|3|3|2",
 	"b17.o4": "0|2|3|2|3"
 }, Wzt = {
-	label: "Sort the laundry",
+	label: "Trier le linge",
 	"b0.prompt": "Trie le linge.",
 	"b0.o0": "0|2|2",
 	"b0.o1": "1|1|2",
@@ -350191,7 +350191,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b19.o3": "green,green,green,green,green,green",
 	"b19.o4": "blue,red,blue,green,red,green"
 }, Yzt = {
-	label: "Sound to colour",
+	label: "Du son à la couleur",
 	"b0.prompt": "Mains : rouge. Pied : bleu.",
 	"b0.o0": "red,blue,red,blue",
 	"b0.o1": "blue,red,blue,red",
@@ -350431,7 +350431,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g11",
 	"b17.o3": "g0,g1,g2,g3,g12,g5,g4,g6,g7,g3,g13"
 }, eBt = {
-	label: "Speed and rate race",
+	label: "Course des vitesses",
 	"b0.prompt": "Une voiture jouet parcourt 60 km en 2 heures à vitesse constante. Trouve sa vitesse, puis prévois la distance parcourue en 5 heures.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g9,g5,g4,g6,g7,g3,g10",
@@ -350641,7 +350641,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, aBt = {
-	label: "Speed converter race",
+	label: "Course des conversions de vitesse",
 	"b0.prompt": "Associe chaque vitesse en km/h à la même vitesse en m/s. Divise par 3,6 pour passer des km/h aux m/s.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -350833,7 +350833,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b11.o3": "u2,u0,u1,f0",
 	"b11.o4": "u2,u1,u0,f0"
 }, uBt = {
-	label: "Spinner fairness lab",
+	label: "Laboratoire de l'équité",
 	"b0.prompt": "Chaque rangée de secteurs colorés est une roulette à secteurs égaux. Est-elle équitable ou non ?",
 	"b0.o0": "f0,f1,u0,u1",
 	"b0.o1": "u0,f1,f0,u1",
@@ -351024,7 +351024,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b14.o2": "g0,g0,g0,g0,g0,g0,g1,g1,g1,g2,g2,g2,g3,g4,g5,g9",
 	"b14.o3": "g0,g0,g0,g0,g0,g0,g1,g1,g1,g2,g2,g2,g3,g4,g5,g10"
 }, hBt = {
-	label: "Spinner fraction maker",
+	label: "Les chances de la roue",
 	"b0.prompt": "Une roue a 4 secteurs égaux, montrés par des carrés colorés. Quelle est la chance de tomber sur 🟥 ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g8",
@@ -351208,7 +351208,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b3.o2": "Maybe",
 	"b3.o3": "Cannot tell"
 }, bBt = {
-	label: "Spinner guess",
+	label: "Devine la roue",
 	"b0.prompt": "Une roue n'a que des secteurs rouges. Prédis : sur quelle couleur tombera-t-elle ?",
 	"b0.o0": "Rouge",
 	"b0.o1": "Bleu",
@@ -351725,7 +351725,7 @@ var TNt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), ENt = $({
 	"b17.o1": "🟡",
 	"b17.o2": "🟢"
 }, TBt = {
-	label: "Spinner lab",
+	label: "Laboratoire de la roue",
 	"b0.prompt": "Quelle couleur a le plus de chances de sortir ? Touche-la.",
 	"b0.o0": "🔴",
 	"b0.o1": "🔵",
@@ -351886,7 +351886,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b1.o2": "0 only",
 	"b1.o3": "Only 1"
 }, MBt = {
-	label: "Spinner outcomes match",
+	label: "Associer les résultats de la roue",
 	"b0.prompt": "Une toupie a rouge, bleu, vert. Quel résultat n'y est pas ?",
 	"b0.o0": "Jaune",
 	"b0.o1": "Rouge",
@@ -351999,7 +351999,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o2": "s2,a2",
 	"b14.o3": "s2,a3"
 }, LBt = {
-	label: "Spinner turn code",
+	label: "Le code de la roue",
 	"b0.prompt": "Le robot regarde ⬆️ (vers le haut). Fais-lui faire trois quarts de tour dans le sens des aiguilles d'une montre ↻. Dans quelle direction regarde-t-il maintenant ?",
 	"b0.o0": "s0,a3",
 	"b0.o1": "s0,a0",
@@ -352262,7 +352262,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o5": "f0,f1,x2,f3,a4,f5,a6",
 	"b17.o6": "f0,f1,a2,f3,a4,f5,x2"
 }, HBt = {
-	label: "Split and multiply",
+	label: "Décomposer et multiplier",
 	"b0.prompt": "4 × 12 : décompose 12 en 10 et 2. Glisse chaque partie et le résultat.",
 	"b0.o0": "f0,f1,a2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,x0,f3,a4,f5,a6",
@@ -352480,7 +352480,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b1.o2": "118",
 	"b1.o3": "88"
 }, qBt = {
-	label: "Split and multiply builder",
+	label: "Construire : décomposer et multiplier",
 	"b0.prompt": "7 × 15 = 7 × 10 + 7 × 5. Total ?",
 	"b0.o0": "105",
 	"b0.o1": "95",
@@ -352608,7 +352608,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g1,g2,g3,g8,g5,g7,g3,g9",
 	"b17.o3": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g1,g2,g3,g7,g5,g8,g3,g12"
 }, QBt = {
-	label: "Split and multiply race",
+	label: "Décomposer et multiplier",
 	"b0.prompt": "Calcule 23 × 3 dans ta tête : sépare 23 en 20 + 3, multiplie chaque partie, puis additionne.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g2,g1,g2,g3,g6,g5,g7,g3,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g2,g5,g2,g1,g2,g3,g9,g5,g7,g3,g10",
@@ -352802,7 +352802,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o1": "g0,g1,g3,g2",
 	"b14.o2": "g3,g2,g1,g0"
 }, rVt = {
-	label: "Split the bill",
+	label: "Partager l'addition",
 	"b0.prompt": "Une addition de 12,60\xA0$ est partagée en parts égales entre 3 personnes. Combien paie chaque personne ? Écris-le en dollars et en cents.",
 	"b0.o0": "g0,g1,g2",
 	"b0.o1": "g0,g2,g1",
@@ -352954,7 +352954,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o1": "g0,g1,g2,g3,g4,g1,g5,g6,g11,g8,g12",
 	"b11.o2": "g0,g1,g5,g3,g4,g1,g2,g6,g7,g8,g8"
 }, cVt = {
-	label: "Split the l shape",
+	label: "Partager la forme en L",
 	"b0.prompt": "Une pièce en L est un rectangle de 4 m sur 2 m collé à un rectangle de 2 m sur 3 m. Trouve l'aire totale.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g6,g7,g8",
 	"b0.o1": "g0,g1,g5,g3,g4,g1,g9,g6,g7,g7",
@@ -353076,7 +353076,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b1.o2": "Only sometimes",
 	"b1.o3": "Cannot tell"
 }, pVt = {
-	label: "Spot the flawed method",
+	label: "Repérer la méthode fausse",
 	"b0.prompt": "Un camarade écrit 40 + 35 = 75 mais calcule 4 + 3 = 7 et obtient 70 + 5 ? Quelle est l'erreur ?",
 	"b0.o0": "Les dizaines mal additionnées à 70 + 5",
 	"b0.o1": "Rien n'est faux",
@@ -353189,7 +353189,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g4",
 	"b14.o4": "g0,g1,g2,g3,g4,g5,g6,g7,g8,g9,g10,g8"
 }, vVt = {
-	label: "Spot the slip worked solution",
+	label: "Repérer l'erreur",
 	"b0.prompt": "Cette solution rédigée a une étape qui se trompe. Vérifie chaque ligne, puis écris le numéro de la première étape fausse.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g2",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g0",
@@ -353398,7 +353398,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o2": "n16",
 	"b17.o3": "n19"
 }, CVt = {
-	label: "Spot the wrong answer",
+	label: "Repérer la mauvaise réponse",
 	"b0.prompt": "La marionnette dit 8 - 3 = 6. Vérifie en comptant à rebours, puis mets le bon nombre.",
 	"b0.o0": "n5",
 	"b0.o1": "n6",
@@ -353600,7 +353600,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o3": "g0,g10,g2,g3,g4,g5,g2",
 	"b11.o4": "g0,g11,g2,g3,g4,g12,g2"
 }, OVt = {
-	label: "Sprinter vs cyclist",
+	label: "Coureur contre cycliste",
 	"b0.prompt": "Le sprinter court 60 m en 10 s. Le cycliste roule 100 m en 20 s. Calcule chaque vitesse, puis glisse le signe : qui est le plus rapide ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g2",
 	"b0.o1": "g0,g1,g2,g7,g4,g5,g2",
@@ -353792,7 +353792,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b15.o2": "0|10|8|9",
 	"b15.o3": "0|27|0|0"
 }, NVt = {
-	label: "Square and cube builder",
+	label: "Construire carrés et cubes",
 	"b0.prompt": "Colorie un carré de 2 cases de large et 2 de haut, depuis le coin en haut à gauche. Les cases coloriées montrent 2².",
 	"b0.o0": "a1,a2,b1,b2",
 	"b0.o1": "a1,a2,a3,b1,b2,b3",
@@ -354030,7 +354030,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o5": "c0,c2,c1,c3,c4",
 	"b14.o6": "c0,c3,c2,c1,c4"
 }, RVt = {
-	label: "Square and cube flashmatch",
+	label: "Association puissances",
 	"b0.prompt": "Associe chaque carte puissance à sa valeur.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -354263,7 +354263,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o2": "g0,g1,g2,g3,g6",
 	"b14.o3": "g0,g1,g2,g3,g7"
 }, UVt = {
-	label: "Square count grow",
+	label: "Les carrés qui grandissent",
 	"b0.prompt": "Une figure couvre 4 carrés. Fais des copies plus grandes dont chaque longueur est 2, 3 fois plus longue. Combien de carrés couvre chaque copie\xA0?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g6,g7",
@@ -354469,7 +354469,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o1": "g0,g1,g2,g3,g2,g3,g2,g1,g5",
 	"b17.o2": "g0,g1,g2,g3,g2,g3,g2,g1,g6"
 }, JVt = {
-	label: "Square cube staircase",
+	label: "Carrés et cubes en escalier",
 	"b0.prompt": "2² veut dire 2 fois lui-même. Construis le carré et lis son nombre.",
 	"b0.o0": "g0,g1,g2,g3,g2,g1,g4",
 	"b0.o1": "g0,g1,g2,g3,g2,g1,g5",
@@ -354659,7 +354659,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o2": "g7,g1,g7,g2,g3,g4,g5,g2,g7",
 	"b11.o3": "g0,g1,g0,g2,g3,g4,g5,g2,g3"
 }, $Vt = {
-	label: "Square garden",
+	label: "Le jardin carré",
 	"b0.prompt": "9 carreaux forment un grand jardin carré. Complète son côté, puis la racine : √9 est la longueur d'un côté.",
 	"b0.o0": "g0,g1,g0,g2,g3,g4,g5,g2,g0",
 	"b0.o1": "g6,g1,g6,g2,g3,g4,g5,g2,g6",
@@ -354834,7 +354834,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o3": "p0:no,p1:yes,p2:no,p3:no",
 	"b11.o4": "p0:no,p1:yes,p2:yes,p3:yes"
 }, iHt = {
-	label: "Square is a rectangle",
+	label: "Le carré est un rectangle",
 	"b0.prompt": "Chaque forme est-elle un rectangle ? Mets-la dans la bonne boîte.",
 	"b0.o0": "p0:yes,p1:no,p2:yes,p3:no",
 	"b0.o1": "p0:no,p1:no,p2:yes,p3:no",
@@ -355065,7 +355065,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o5": "c0,c3,c2,c1",
 	"b14.o6": "c0,c1,c3,c2"
 }, lHt = {
-	label: "Square memory pairs",
+	label: "Mémoire des carrés",
 	"b0.prompt": "Trouve les paires : associe chaque puissance à sa valeur. Une carte n'a pas de paire.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -355320,7 +355320,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, mHt = {
-	label: "Square metres floor plan",
+	label: "Plan de sol",
 	"b0.prompt": "Chaque pièce est dessinée sur le plan avec ses côtés en mètres. Associe-la à l'aire de son sol.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c1,c0,c2,c3",
@@ -355550,7 +355550,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o3": "100,121,16,25,36,4,49,64,81,9",
 	"b14.o4": "1,100,16,25,36,4,49,64,81,9"
 }, yHt = {
-	label: "Square number spotter",
+	label: "Repérer les carrés",
 	"b0.prompt": "Colorie tous les carrés parfaits jusqu'à 30 : un nombre fois lui-même.",
 	"b0.o0": "1,16,25,4,9",
 	"b0.o1": "1,16,25,4,8,9",
@@ -355761,7 +355761,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b14.o3": "g0,g1,g2,g3,g1,g4,g5,g1,g6,g7,g1,g8,g9,g1,g12",
 	"b14.o4": "g0,g1,g13,g3,g1,g4,g5,g1,g6,g7,g1,g8,g9,g1,g10"
 }, wHt = {
-	label: "Square sprint",
+	label: "Sprint des carrés",
 	"b0.prompt": "Dépose la bonne réponse sur chaque ligne : des carrés et des cubes, l'un après l'autre.",
 	"b0.o0": "g0,g1,g2,g3,g1,g4,g5,g1,g6",
 	"b0.o1": "g0,g1,g4,g3,g1,g2,g5,g1,g6",
@@ -355953,7 +355953,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b11.o2": "g0,g1,g2,g1,g2,g3,g4,g1,g5,g6,g3,g11,g8",
 	"b11.o3": "g0,g1,g12,g1,g12,g3,g13,g1,g5,g6,g3,g14,g8"
 }, kHt = {
-	label: "Stack of coins",
+	label: "La pile de pièces",
 	"b0.prompt": "Chaque pièce couvre 3 cm² et la pile fait 10 pièces de haut. Empile les disques pour trouver le volume du cylindre.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g8,g7",
@@ -356132,7 +356132,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o2": "0|2|3|3",
 	"b17.o3": "0|2|2|4"
 }, PHt = {
-	label: "Stack the tower",
+	label: "Empiler la tour",
 	"b0.prompt": "Construis la tour.",
 	"b0.o0": "0|2|2",
 	"b0.o1": "1|1|2",
@@ -356343,7 +356343,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o2": "g0,g1,g2,g1,g3,g4,g12,g6,g7,g1,g2,g1,g8,g4,g13,g9,g14",
 	"b17.o3": "g0,g1,g2,g1,g3,g4,g5,g6,g7,g1,g2,g1,g8,g4,g5,g9,g15"
 }, zHt = {
-	label: "Stack the unit cubes",
+	label: "Empiler les cubes",
 	"b0.prompt": "Une boîte mesure 4 cubes de long, 3 de large et 2 de haut. Combien de cubes unités remplissent une couche, et combien remplissent la boîte ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g1,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g8,g5,g4,g1,g6,g3,g9",
@@ -356549,7 +356549,7 @@ var OBt = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), kBt = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g1,g2,g5,g4,g1,g9,g1,g9",
 	"b17.o2": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g1,g10,g1,g11"
 }, WHt = {
-	label: "Stacked fraction solver",
+	label: "Résoudre les fractions empilées",
 	"b0.prompt": "Simplifie (1/2) / (1/4). Lis-la comme une division, inverse la fraction du dessous, multiplie et simplifie.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g2,g5,g6,g1,g7,g1,g8",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g2,g5,g4,g1,g9,g1,g9",
@@ -356816,7 +356816,7 @@ var l2 = "yes", eUt = $({
 	"b1.o2": "32",
 	"b1.o3": "38"
 }, rUt = {
-	label: "Step by step split",
+	label: "Décomposer pas à pas",
 	"b0.prompt": "Étape 1 : 20 + 13 = 33. Étape 2 : 33 − 9. Quelle est la réponse ?",
 	"b0.o0": "24",
 	"b0.o1": "42",
@@ -356919,7 +356919,7 @@ var l2 = "yes", eUt = $({
 	"b3.o2": "67",
 	"b3.o3": "50"
 }, cUt = {
-	label: "Step rule match",
+	label: "Associer la règle",
 	"b0.prompt": "La règle est « ajouter 3 ». Qu'est-ce qui vient après 6 ?",
 	"b0.o0": "9",
 	"b0.o1": "8",
@@ -357044,7 +357044,7 @@ var l2 = "yes", eUt = $({
 	"b14.o3": "0|8|7|7",
 	"b14.o4": "2|8|8|4"
 }, pUt = {
-	label: "Stick triangle lab",
+	label: "Laboratoire des triangles en bâtonnets",
 	"b0.prompt": "Place des baguettes pour faire un triangle : 5 sur la base, 3 sur le côté gauche et 4 sur le côté droit.",
 	"b0.o0": "2|5|3|4",
 	"b0.o1": "2|3|5|4",
@@ -357245,7 +357245,7 @@ var l2 = "yes", eUt = $({
 	"b15.o2": "15|0|0|0|0|0",
 	"b15.o3": "1|2|3|3|3|3"
 }, vUt = {
-	label: "Sticker sheet groups",
+	label: "Groupes d'autocollants",
 	"b0.prompt": "Répartis 4 autocollants sur 2 feuilles pour que chaque feuille ait le même nombre. Combien sur chacune ?",
 	"b0.o0": "0|2|2",
 	"b0.o1": "0|3|1",
@@ -357645,7 +357645,7 @@ var l2 = "yes", eUt = $({
 	"b41.o7": "bed1,bed2,shoes4,bed4",
 	"b41.o8": "bed1,bed2,bed3,shoes4"
 }, CUt = {
-	label: "Story strip order",
+	label: "Ranger les bandes de l'histoire",
 	"b0.prompt": "Qu'est-ce qui vient d'abord ? Ensuite ?",
 	"b0.o0": "wash2,wash3,wash4",
 	"b0.o1": "wash4,wash3,wash2",
@@ -358046,7 +358046,7 @@ var l2 = "yes", eUt = $({
 	"b14.o2": "d5,d6,d+,d3,d6,t0,t1",
 	"b14.o3": "d5,d6,d+,d3,d4,t0,t1"
 }, OUt = {
-	label: "Story to number sentence",
+	label: "De l'histoire à la phrase numérique",
 	"b0.prompt": "Sam a 14 pommes et en donne 6. Écris la phrase mathématique.",
 	"b0.o0": "d1,d4,d−,d6,t0,t1",
 	"b0.o1": "d1,d4,d+,d6,t0,t1",
@@ -358256,7 +358256,7 @@ var l2 = "yes", eUt = $({
 	"b14.o3": "sp1,sz1,sn1,sn2,sp2,sz2",
 	"b14.o4": "sp1,sz2,sn1,sn2,sz1,sp2"
 }, NUt = {
-	label: "Story to scatter",
+	label: "De l'histoire au nuage de points",
 	"b0.prompt": "Chaque carte est une situation avec deux grandeurs mesurées. Quelle tendance son nuage de points montrerait-il : positive, négative ou aucune ?",
 	"b0.o0": "sp1,sp2,sn1,sn2",
 	"b0.o1": "sn1,sp2,sp1,sn2",
@@ -358528,7 +358528,7 @@ var l2 = "yes", eUt = $({
 	"b25.o3": "n5,minus,n8,eq,n13",
 	"b25.o4": "n13,minus,n8,eq,n6"
 }, RUt = {
-	label: "Story to sentence match",
+	label: "De l'histoire à la phrase",
 	"b0.prompt": "2 oiseaux. 3 de plus arrivent. Fais la phrase de nombres.",
 	"b0.o0": "n2,plus,n3,eq,n5",
 	"b0.o1": "n2,minus,n3,eq,n5",
@@ -358800,7 +358800,7 @@ var l2 = "yes", eUt = $({
 	"b15.o1": "c5,t4,p5,p3,j6",
 	"b15.o2": "c5,p3,p5,t4,j6"
 }, UUt = {
-	label: "Story type detective",
+	label: "L'enquêteur des histoires",
 	"b0.prompt": "Quelle sorte d'histoire est-ce ? Trie les histoires.",
 	"b0.o0": "j0,j1,t0,t2",
 	"b0.o1": "t0,j1,j0,t2",
@@ -358972,7 +358972,7 @@ var l2 = "yes", eUt = $({
 	"b11.o0": "g0,g1,g2,g1,g3,g1,g4,g5,g6,g7,g8",
 	"b11.o1": "g0,g1,g2,g1,g3,g1,g4,g5,g10,g11,g8"
 }, JUt = {
-	label: "Straight line missing angle",
+	label: "L'angle manquant",
 	"b0.prompt": "Ces angles sont sur une droite. Trouve l'angle manquant.",
 	"b0.o0": "g0,g1,g2,g3,g4,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g8,g5,g5,g6",
@@ -359147,7 +359147,7 @@ var l2 = "yes", eUt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, $Ut = {
-	label: "Strategy picker",
+	label: "Choisir la stratégie",
 	"b0.prompt": "Choisis la meilleure stratégie mentale pour chaque calcul.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -359375,7 +359375,7 @@ var l2 = "yes", eUt = $({
 	"b15.o3": "3|2|11|8",
 	"b15.o4": "2|3|12|7"
 }, iWt = {
-	label: "Straws and clay build",
+	label: "Construire avec pailles et pâte",
 	"b0.prompt": "Construis l'armature de un cube. Combien de pailles pour les arêtes et de boules de pâte pour les sommets ?",
 	"b0.o0": "2|2|12|8",
 	"b0.o1": "1|2|13|8",
@@ -359567,7 +359567,7 @@ var l2 = "yes", eUt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g7,g1,g2,g6,g4,g10,g1",
 	"b11.o3": "g0,g1,g2,g3,g4,g5,g1,g2,g6,g4,g5,g1"
 }, lWt = {
-	label: "String around it",
+	label: "La ficelle autour",
 	"b0.prompt": "Un cercle a un diamètre de 4 cm. Dépose chaque mesure sur son nom : rayon, diamètre ou circonférence.",
 	"b0.o0": "r,d,c",
 	"b0.o1": "c,d,r",
@@ -360042,7 +360042,7 @@ var l2 = "yes", eUt = $({
 	"b13.o0": "The first",
 	"b13.o1": "The second"
 }, mWt = {
-	label: "String stick compare",
+	label: "Comparer ficelle et bâton",
 	"b0.prompt": "Utilise la ficelle. Lequel est le plus long ?",
 	"b0.o0": "Le premier",
 	"b0.o1": "Le second",
@@ -360169,7 +360169,7 @@ var l2 = "yes", eUt = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g7,g8,g3,g9,g3,g6,g7,g14",
 	"b11.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g7,g8,g3,g9,g3,g6,g7,g15"
 }, yWt = {
-	label: "Substitution scavenger",
+	label: "La chasse à la substitution",
 	"b0.prompt": "Remplace l par 5 et w par 3 dans P = 2l + 2w. Remplis chaque étape.",
 	"b0.o0": "g0,g1,g2,g3,g0,g1,g4,g5,g6,g3,g7,g5,g8",
 	"b0.o1": "g0,g1,g2,g3,g0,g1,g4,g5,g9,g3,g10,g5,g11",
@@ -360736,7 +360736,7 @@ var l2 = "yes", eUt = $({
 	"b17.o2": "8",
 	"b17.o3": "2"
 }, wWt = {
-	label: "Subtract through ten",
+	label: "Soustraire en passant par dix",
 	"b0.prompt": "13 - 4 : un cadre plein et 3 en plus. Enlève d'abord les 3 en plus pour arriver à 10, puis 1 de plus. Combien en reste-t-il ?",
 	"b0.o0": "9",
 	"b0.o1": "10",
@@ -360887,7 +360887,7 @@ var l2 = "yes", eUt = $({
 	"b1.o2": "8 100 − 2 345 = 6 755",
 	"b1.o3": "8 100 − 2 345 = 5 855"
 }, kWt = {
-	label: "Subtraction error hunt",
+	label: "La chasse aux erreurs de soustraction",
 	"b0.prompt": "Un calcul 5 000 − 1 234 = 3 766. Est-ce juste ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non, c'est 3 776",
@@ -360955,7 +360955,7 @@ var l2 = "yes", eUt = $({
 	"b1.o2": "8",
 	"b1.o3": "33"
 }, PWt = {
-	label: "Subtraction lighthouse",
+	label: "Le phare de la soustraction",
 	"b0.prompt": "15 − 8 = ?",
 	"b0.o0": "7",
 	"b0.o1": "8",
@@ -361023,7 +361023,7 @@ var l2 = "yes", eUt = $({
 	"b1.o2": "56",
 	"b1.o3": "64"
 }, zWt = {
-	label: "Sum bridge puzzle",
+	label: "Puzzle du pont de sommes",
 	"b0.prompt": "Quelle paire de deux nombres à 2 chiffres fait 50 sans retenue ?",
 	"b0.o0": "21 et 29",
 	"b0.o1": "18 et 33",
@@ -361166,7 +361166,7 @@ var l2 = "yes", eUt = $({
 	"b14.o5": "t6,t9,t10,t2,t3",
 	"b14.o6": "t9,t10,t3,t2,t6"
 }, WWt = {
-	label: "Sum frequency chart",
+	label: "Tableau des fréquences des sommes",
 	"b0.prompt": "On lance deux dés et on les additionne. Range ces sommes de la plus probable à la moins probable. Compte les paires de dés qui font chaque somme.",
 	"b0.o0": "t7,t5,t2",
 	"b0.o1": "t2,t5,t7",
@@ -361385,7 +361385,7 @@ var l2 = "yes", eUt = $({
 	"b14.o1": "a3,e4,g5,i7,j9",
 	"b14.o2": "a3,e4,g5,i7,j9,k13,m3"
 }, YWt = {
-	label: "Sum ten pairs grid",
+	label: "Grille des paires qui font dix",
 	"b0.prompt": "Chaque carré est une paire (a, b) : a se compte en travers et b en hauteur à partir de 0. Colorie toutes les paires où a + b = 6.",
 	"b0.o0": "a1,b2,c3,d4,e5,f6,g7",
 	"b0.o1": "a1,b2,c3,d4,e5,f6",
@@ -361631,7 +361631,7 @@ var l2 = "yes", eUt = $({
 	"b35.o0": "school,pyjamas",
 	"b35.o1": "pyjamas,school"
 }, eGt = {
-	label: "Sun moon sort",
+	label: "Soleil ou lune",
 	"b0.prompt": "Soleil ou lune ?",
 	"b0.o0": "play,sleep",
 	"b0.o1": "sleep,play",
@@ -361872,7 +361872,7 @@ var l2 = "yes", eUt = $({
 	"b3.o2": "Never",
 	"b3.o3": "Cannot tell"
 }, aGt = {
-	label: "Sure maybe never sort",
+	label: "Sûr, peut-être, jamais",
 	"b0.prompt": "Le soleil se lèvera demain. Certain, possible ou impossible ?",
 	"b0.o0": "Certain",
 	"b0.o1": "Possible",
@@ -361950,7 +361950,7 @@ var l2 = "yes", eUt = $({
 	"b1.o2": "What is your dream?",
 	"b1.o3": "Explain gravity"
 }, uGt = {
-	label: "Survey question picker",
+	label: "Choisir la question du sondage",
 	"b0.prompt": "Quelle question d'enquête donne des réponses claires à compter ?",
 	"b0.o0": "Fruit préféré parmi 3 choix",
 	"b0.o1": "Que penses-tu de la vie ?",
@@ -362126,7 +362126,7 @@ var l2 = "yes", eUt = $({
 	"b17.o5": "ask,guess,plan,chart,collect,say",
 	"b17.o6": "ask,guess,plan,collect,say,chart"
 }, hGt = {
-	label: "Survey sticker wall",
+	label: "Le mur des autocollants du sondage",
 	"b0.prompt": "Mets les étapes du sondage dans l'ordre, la première étape d'abord.",
 	"b0.o0": "ask,collect,chart,say",
 	"b0.o1": "say,chart,collect,ask",
@@ -362376,7 +362376,7 @@ var l2 = "yes", eUt = $({
 	"b11.o5": "c0,c3,c2,c1",
 	"b11.o6": "c0,c1,c3,c2"
 }, bGt = {
-	label: "Survey to graph studio",
+	label: "L'atelier des sondages et graphiques",
 	"b0.prompt": "Associe chaque histoire de données au graphique qui la montre le mieux.",
 	"b0.o0": "c0,c1",
 	"b0.o1": "c1,c0",
@@ -362578,7 +362578,7 @@ var l2 = "yes", eUt = $({
 	"b17.o2": "n4,n7,n12",
 	"b17.o3": "n11,n7,n4"
 }, TGt = {
-	label: "Swap and check towers",
+	label: "Échanger et vérifier les tours",
 	"b0.prompt": "Construis 3 + 5 : 3 cubes dans la première tour, 5 dans la seconde. Échange-les et le total reste le même.",
 	"b0.o0": "0|3|5",
 	"b0.o1": "0|5|3",
@@ -362792,7 +362792,7 @@ var l2 = "yes", eUt = $({
 	"b19.o1": "bigger",
 	"b19.o2": "same"
 }, AGt = {
-	label: "Swap the digits",
+	label: "Échanger les chiffres",
 	"b0.prompt": "Les cartes montrent 12. Échange-les : glisse les chiffres pour construire le nouveau nombre.",
 	"b0.o0": "d2,d1",
 	"b0.o1": "d1,d2",
@@ -363421,7 +363421,7 @@ var l2 = "yes", eUt = $({
 	"b23.o2": "79",
 	"b23.o3": "970"
 }, FGt = {
-	label: "Swap the zero",
+	label: "Échanger le zéro",
 	"b0.prompt": "Lequel de ces nombres a un zéro à la place des dizaines ?",
 	"b0.o0": "305",
 	"b0.o1": "350",
@@ -363580,7 +363580,7 @@ var l2 = "yes", eUt = $({
 	"b0.prompt": "12 + 5 = ?",
 	"b1.prompt": "18 - 9 = ?"
 }, BGt = {
-	label: "Add & Subtract within 20",
+	label: "Additionner et soustraire jusqu'à 20",
 	"b0.prompt": "12 + 5 = ?",
 	"b1.prompt": "18 - 9 = ?"
 }, VGt = /* @__PURE__ */ n({ default: () => UGt }), HGt = RGt, UGt = $({
@@ -363669,7 +363669,7 @@ var l2 = "yes", eUt = $({
 	"b9.prompt": "90 − 10 = ?",
 	"b10.prompt": "19 + 10 = ?"
 }, KGt = {
-	label: "Add or Subtract 10 in Your Head",
+	label: "Ajouter ou retirer 10 de tête",
 	"b0.prompt": "23 + 10 = ?",
 	"b1.prompt": "45 + 10 = ?",
 	"b2.prompt": "51 − 10 = ?",
@@ -363761,7 +363761,7 @@ var l2 = "yes", eUt = $({
 	"b8.prompt": "53 + 40 = ?",
 	"b9.prompt": "35 + 50 = ?"
 }, QGt = {
-	label: "Adding to 2-Digit Numbers",
+	label: "Ajouter à un nombre à deux chiffres",
 	"b0.prompt": "34 + 5 = ?",
 	"b1.prompt": "21 + 6 = ?",
 	"b2.prompt": "52 + 4 = ?",
@@ -363918,7 +363918,7 @@ var l2 = "yes", eUt = $({
 	"b8.o1": "4",
 	"b8.o2": "1"
 }, iKt = {
-	label: "Building New Shapes",
+	label: "Construire de nouvelles formes",
 	"b0.prompt": "Deux carrés identiques sont placés côte à côte. Quelle forme font-ils ?",
 	"b0.o0": "Un rectangle",
 	"b0.o1": "Un cercle",
@@ -364109,7 +364109,7 @@ var l2 = "yes", eUt = $({
 	"b8.o1": "Possible",
 	"b8.o2": "Impossible"
 }, lKt = {
-	label: "Certain, Possible, Impossible",
+	label: "Certain, possible, impossible",
 	"b0.prompt": "Le soleil se lèvera demain. Est-ce certain, possible ou impossible ?",
 	"b0.o0": "Certain",
 	"b0.o1": "Possible",
@@ -364286,7 +364286,7 @@ var l2 = "yes", eUt = $({
 	"b7.o1": "9 + 9 = 16",
 	"b7.o2": "9 + 9 = 19"
 }, mKt = {
-	label: "Checking My Answer",
+	label: "Vérifier ma réponse autrement",
 	"b0.prompt": "Sam dit que 9 − 4 = 5. Quelle addition le vérifie ?",
 	"b0.o0": "5 + 4 = 9",
 	"b0.o1": "9 + 4 = 13",
@@ -364372,7 +364372,7 @@ var l2 = "yes", eUt = $({
 	"b1.o1": "Subtraction",
 	"b1.o2": "Neither"
 }, yKt = {
-	label: "Addition or Subtraction?",
+	label: "Addition ou soustraction ?",
 	"b0.prompt": "Maya avait 5 autocollants et en a reçu 3 de plus. Quelle opération donne son nouveau total ?",
 	"b0.o0": "Addition",
 	"b0.o1": "Soustraction",
@@ -364535,7 +364535,7 @@ var l2 = "yes", eUt = $({
 	"b8.o1": "Two seconds",
 	"b8.o2": "Two minutes"
 }, wKt = {
-	label: "How Long Does It Take?",
+	label: "Combien de temps ça prend ?",
 	"b0.prompt": "Qu'est-ce qui dure plus longtemps ?",
 	"b0.o0": "Manger son déjeuner",
 	"b0.o1": "Cligner des yeux",
@@ -364712,7 +364712,7 @@ var l2 = "yes", eUt = $({
 	"b7.o1": "The jug",
 	"b7.o2": "They hold the same"
 }, kKt = {
-	label: "Full, Half Full, Empty",
+	label: "Plein, à moitié plein, vide",
 	"b0.prompt": "Une tasse n'a pas d'eau. Quel mot convient ?",
 	"b0.o0": "Vide",
 	"b0.o1": "À moitié pleine",
@@ -364885,7 +364885,7 @@ var l2 = "yes", eUt = $({
 	"b7.o1": "22",
 	"b7.o2": "7"
 }, PKt = {
-	label: "Heavier, Lighter, Balances",
+	label: "Plus lourd, plus léger, équilibre",
 	"b0.prompt": "Sur une balance, le côté du livre descend et le côté du crayon monte. Lequel est le plus lourd ?",
 	"b0.o0": "Le livre",
 	"b0.o1": "Le crayon",
@@ -365103,7 +365103,7 @@ var zKt = $({
 	"b7.o1": "6",
 	"b7.o2": "3"
 }, HKt = {
-	label: "Copying on Dot or Square Paper",
+	label: "Recopier une figure sur quadrillage",
 	"b0.prompt": "Un carré sur du papier pointé a combien de coins à relier ?",
 	"b0.o0": "4",
 	"b0.o1": "3",
@@ -365224,7 +365224,7 @@ var zKt = $({
 	"b8.prompt": "You have 2 coins of 5 and 2 coins of 2 and 1 coin of 1. How many units is that in all?",
 	"b9.prompt": "You have 1 coin of 10 and 1 coin of 5 and 1 coin of 2 and 1 coin of 1. How many units is that in all?"
 }, qKt = {
-	label: "Counting Coins up to 20",
+	label: "Compter les pièces jusqu'à 20",
 	"b0.prompt": "Tu as 3 pièces de 2. Cela fait combien d'unités en tout ?",
 	"b1.prompt": "Tu as 4 pièces de 1. Cela fait combien d'unités en tout ?",
 	"b2.prompt": "Tu as 2 pièces de 5. Cela fait combien d'unités en tout ?",
@@ -365280,7 +365280,7 @@ var zKt = $({
 	"b1.o1": "Turn right",
 	"b1.o2": "Go forward"
 }, $Kt = {
-	label: "Describing a Route",
+	label: "Décrire un trajet",
 	"b0.prompt": "Tu fais face à la porte. Pour atteindre la fenêtre à ta gauche, de quel côté tournes-tu ?",
 	"b0.o0": "Tourne à gauche",
 	"b0.o1": "Tourne à droite",
@@ -365389,7 +365389,7 @@ var zKt = $({
 	"b10.prompt": "What is half of 16?",
 	"b11.prompt": "What is half of 10?"
 }, iqt = {
-	label: "Doubles and Halves",
+	label: "Doubles et moitiés",
 	"b0.prompt": "Le double de 2. Combien font 2 + 2 ?",
 	"b1.prompt": "Le double de 3. Combien font 3 + 3 ?",
 	"b2.prompt": "Le double de 4. Combien font 4 + 4 ?",
@@ -365488,7 +365488,7 @@ var zKt = $({
 	"b9.prompt": "7 + 8 = ?",
 	"b10.prompt": "8 + 9 = ?"
 }, uqt = {
-	label: "Doubles and Near Doubles",
+	label: "Doubles et presque doubles",
 	"b0.prompt": "3 + 3 = ?",
 	"b1.prompt": "4 + 4 = ?",
 	"b2.prompt": "5 + 5 = ?",
@@ -365610,7 +365610,7 @@ var zKt = $({
 	"b9.o0": "True",
 	"b9.o1": "False"
 }, gqt = {
-	label: "True or False Equations",
+	label: "Vrai ou faux : égalités",
 	"b0.prompt": "Vrai ou faux ? 6 = 6",
 	"b0.o0": "Vrai",
 	"b0.o1": "Faux",
@@ -365809,7 +365809,7 @@ var zKt = $({
 	"b9.o1": "Saturday",
 	"b9.o2": "Thursday"
 }, xqt = {
-	label: "Using a Calendar",
+	label: "Utiliser un calendrier",
 	"b0.prompt": "Sur un calendrier, le 1 est un lundi. Quel jour de la semaine est le 2 ?",
 	"b0.o0": "mardi",
 	"b0.o1": "mercredi",
@@ -365938,7 +365938,7 @@ var zKt = $({
 	"b8.prompt": "15 − ? = 9",
 	"b9.prompt": "? − 7 = 6"
 }, Eqt = {
-	label: "Find the Missing Number",
+	label: "Trouver le nombre manquant",
 	"b0.prompt": "8 + ? = 11",
 	"b1.prompt": "5 + ? = 9",
 	"b2.prompt": "6 + ? = 10",
@@ -366305,7 +366305,7 @@ var zKt = $({
 	"b8.o1": "5",
 	"b8.o2": "4"
 }, Lqt = {
-	label: "Half and Quarter of a Set",
+	label: "La moitié et le quart d'un ensemble",
 	"b0.prompt": "Lequel est la moitié de 8 pommes ?",
 	"b0.o0": "4",
 	"b0.o1": "2",
@@ -366496,7 +366496,7 @@ var zKt = $({
 	"b8.o1": "Your right side",
 	"b8.o2": "The middle"
 }, Hqt = {
-	label: "Left and Right",
+	label: "Gauche et droite",
 	"b0.prompt": "Tu écris de la main droite. Avec quelle main tiens-tu la feuille ?",
 	"b0.o0": "Gauche",
 	"b0.o1": "Droite",
@@ -366597,7 +366597,7 @@ var zKt = $({
 	"b4.prompt": "A leaf starts at the 6 cm mark and ends at the 14 cm mark on a ruler. How long is the leaf, in cm?",
 	"b5.prompt": "A ruler has a mark at every centimetre from 0 to 20. A shoelace starts at 0 and its tip lines up with the fifteenth mark after 0. How long is the shoelace, in cm?"
 }, qqt = {
-	label: "Measuring Length in cm",
+	label: "Mesurer en centimètres",
 	"b0.prompt": "Un crayon commence à la marque 2 cm et se termine à la marque 9 cm sur une règle. Quelle est la longueur du crayon, en cm ?",
 	"b1.prompt": "Un trombone commence à la marque 3 cm et se termine à la marque 5 cm sur une règle. Quelle est la longueur du trombone, en cm ?",
 	"b2.prompt": "Une règle a une marque à chaque centimètre de 0 à 10. Un ruban commence à 0 et sa pointe s'aligne avec la sixième marque après 0. Quelle est la longueur du ruban, en cm ?",
@@ -366736,7 +366736,7 @@ var zKt = $({
 	"b7.o1": "The tree",
 	"b7.o2": "The bench"
 }, $qt = {
-	label: "Finding Things on a Plan",
+	label: "Trouver des objets sur un plan",
 	"b0.prompt": "Sur le plan d'une chambre, le lit est dans le coin en haut à gauche. Où est le lit ?",
 	"b0.o0": "En haut à gauche",
 	"b0.o1": "En bas à droite",
@@ -366923,7 +366923,7 @@ var zKt = $({
 	"b8.o1": "Cube",
 	"b8.o2": "Pyramid"
 }, iJt = {
-	label: "3D Shapes Around Us",
+	label: "Les solides autour de nous",
 	"b0.prompt": "Un ballon a la forme de quel solide ?",
 	"b0.o0": "sphère",
 	"b0.o1": "cube",
@@ -367013,7 +367013,7 @@ var zKt = $({
 	"b1.o1": "Mass",
 	"b1.o2": "Time"
 }, lJt = {
-	label: "Measurement Vocabulary",
+	label: "Vocabulaire de la mesure",
 	"b0.prompt": "Quel mot décrit à quel point quelque chose est long ?",
 	"b0.o0": "Longueur",
 	"b0.o1": "Masse",
@@ -367120,7 +367120,7 @@ var mJt = $({
 	"b1.o1": "Sphere",
 	"b1.o2": "Cylinder"
 }, _Jt = {
-	label: "Naming 2D & 3D Shapes",
+	label: "Nommer les formes 2D et 3D",
 	"b0.prompt": "Quelle forme a 3 côtés droits ?",
 	"b0.o0": "Triangle",
 	"b0.o1": "Cercle",
@@ -367166,7 +367166,7 @@ var mJt = $({
 	"b0.prompt": "6 + ? = 10",
 	"b1.prompt": "What two numbers make 9? 9 = 2 + ?"
 }, SJt = {
-	label: "Number Bonds to 10",
+	label: "Décompositions jusqu'à 10",
 	"b0.prompt": "6 + ? = 10",
 	"b1.prompt": "Quels sont les deux nombres qui font 9 ? 9 = 2 + ?"
 }, CJt = /* @__PURE__ */ n({ default: () => TJt }), wJt = bJt, TJt = $({
@@ -367301,7 +367301,7 @@ var mJt = $({
 	"b7.o1": "The desk",
 	"b7.o2": "They are the same"
 }, OJt = {
-	label: "Ordering and Comparing Lengths",
+	label: "Ranger et comparer les longueurs",
 	"b0.prompt": "Un crayon de bois est plus long qu'une clé. Un crayon de cire est plus long que le crayon de bois. Lequel est le plus long ?",
 	"b0.o0": "La clé",
 	"b0.o1": "Le crayon de bois",
@@ -367454,7 +367454,7 @@ var mJt = $({
 	"b7.o1": "5 units",
 	"b7.o2": "8 units"
 }, NJt = {
-	label: "Do I Have Enough?",
+	label: "Ai-je assez d'argent ?",
 	"b0.prompt": "Un jouet coûte 5 unités. Tu as 7 unités. As-tu assez d'argent ?",
 	"b0.o0": "Oui, assez",
 	"b0.o1": "Non, pas assez",
@@ -367535,7 +367535,7 @@ var mJt = $({
 	"b2.prompt": "A pictogram shows 5 book pictures for Friday, each picture = 2 books. How many books were read on Friday?",
 	"b3.prompt": "A pictogram shows 3 star pictures for Tuesday, each picture = 2 stars. How many stars in total for Tuesday?"
 }, RJt = {
-	label: "Reading a Pictogram",
+	label: "Lire un pictogramme",
 	"b0.prompt": "Un pictogramme montre 3 images de pommes pour lundi, chaque image = 2 pommes. Combien de pommes ont été cueillies lundi ?",
 	"b1.prompt": "Un pictogramme montre 4 images d'étoiles pour mercredi, chaque image = 3 étoiles. Combien d'étoiles au total pour mercredi ?",
 	"b2.prompt": "Un pictogramme montre 5 images de livres pour vendredi, chaque image = 2 livres. Combien de livres ont été lus vendredi ?",
@@ -367700,7 +367700,7 @@ var mJt = $({
 	"b9.o1": "2 + 2",
 	"b9.o2": "5 + 1"
 }, WJt = {
-	label: "Coins and Their Values",
+	label: "Les pièces et leur valeur",
 	"b0.prompt": "Une pièce porte le nombre 1. Elle vaut combien d'unités ?",
 	"b0.o0": "1",
 	"b0.o1": "2",
@@ -367829,7 +367829,7 @@ var mJt = $({
 	"b8.prompt": "Use addition to help. 8 + ? = 15. So 15 − 8 = ?",
 	"b9.prompt": "Use addition to help. 12 + ? = 18. So 18 − 12 = ?"
 }, YJt = {
-	label: "Related Facts",
+	label: "Faits liés",
 	"b0.prompt": "3 + 4 = 7. Donc 7 − 3 = ?",
 	"b1.prompt": "2 + 5 = 7. Donc 7 − 2 = ?",
 	"b2.prompt": "6 + 3 = 9. Donc 9 − 6 = ?",
@@ -367972,7 +367972,7 @@ var mJt = $({
 	"b7.o1": "10 + 6 = 16",
 	"b7.o2": "6 − 10 = 4"
 }, tYt = {
-	label: "Match the Story to a Number Sentence",
+	label: "De l'histoire à la phrase numérique",
 	"b0.prompt": "Il y a 5 canards. 2 autres arrivent. Quelle phrase mathématique correspond ?",
 	"b0.o0": "5 + 2 = 7",
 	"b0.o1": "5 − 2 = 3",
@@ -368117,7 +368117,7 @@ var mJt = $({
 	"b5.o1": "A shape with 4 equal straight sides, tilted like a diamond",
 	"b5.o2": "A shape with no straight sides, very small, off to one side"
 }, oYt = {
-	label: "Shapes in Any Orientation",
+	label: "Formes dans tous les sens",
 	"b0.prompt": "Laquelle de ces formes est un triangle ?",
 	"b0.o0": "Une forme à 3 côtés droits, pointe vers le bas",
 	"b0.o1": "Une forme à 4 côtés droits égaux",
@@ -368254,7 +368254,7 @@ var mJt = $({
 	"b5.o1": "Sorted by size",
 	"b5.o2": "Sorted by colour"
 }, dYt = {
-	label: "Sorting by a Rule",
+	label: "Trier selon une règle",
 	"b0.prompt": "Un cercle rouge et un carré rouge sont dans un groupe. Un cercle bleu est dans un autre groupe. Quelle règle explique ce tri ?",
 	"b0.o0": "Trié par couleur",
 	"b0.o1": "Trié par forme",
@@ -368433,7 +368433,7 @@ var mJt = $({
 	"b8.o1": "Only straight lines",
 	"b8.o2": "No lines"
 }, gYt = {
-	label: "Straight or Curved?",
+	label: "Droites ou courbes ?",
 	"b0.prompt": "Quelle ligne est droite ?",
 	"b0.o0": "Le bord d'une règle",
 	"b0.o1": "Le bord d'une assiette",
@@ -368558,7 +368558,7 @@ var mJt = $({
 	"b8.prompt": "80 − 60 = ?",
 	"b9.prompt": "100 − 60 = ?"
 }, xYt = {
-	label: "Subtracting Tens",
+	label: "Soustraire des dizaines",
 	"b0.prompt": "30 − 10 = ?",
 	"b1.prompt": "60 − 20 = ?",
 	"b2.prompt": "50 − 30 = ?",
@@ -368649,7 +368649,7 @@ var mJt = $({
 	"b8.prompt": "Find a friendly pair first. 5 + 5 + 9 = ?",
 	"b9.prompt": "Find a friendly pair first. 1 + 9 + 7 = ?"
 }, DYt = {
-	label: "Swap and Group to Add",
+	label: "Échanger et grouper pour additionner",
 	"b0.prompt": "3 + 8 = 8 + ?",
 	"b1.prompt": "2 + 9 = 9 + ?",
 	"b2.prompt": "4 + 6 = 6 + ?",
@@ -368705,7 +368705,7 @@ var mJt = $({
 	"b1.o1": "Half past 7",
 	"b1.o2": "8 o'clock"
 }, NYt = {
-	label: "Telling Time: Hour & Half-Hour",
+	label: "L'heure et la demi-heure",
 	"b0.prompt": "La petite aiguille est sur 3 et la grande aiguille est sur 12. Quelle heure est-il ?",
 	"b0.o0": "3 heures",
 	"b0.o1": "3 heures et demie",
@@ -368802,7 +368802,7 @@ var mJt = $({
 	"b8.prompt": "Leo had some stickers. He got 8 more and now has 17. How many stickers did he have at the start?",
 	"b9.prompt": "Sam had 17 marbles. He gave some away and now has 9. How many did he give away?"
 }, RYt = {
-	label: "Find the Missing Part of a Story",
+	label: "Trouver la partie manquante d'une histoire",
 	"b0.prompt": "Mia a 3 bonbons. Elle en reçoit d'autres et en a maintenant 8. Combien en a-t-elle reçu ?",
 	"b1.prompt": "Mia a 5 bonbons. Elle en reçoit d'autres et en a maintenant 9. Combien en a-t-elle reçu ?",
 	"b2.prompt": "Sam avait 9 billes. Il en a donné et il lui en reste 4. Combien en a-t-il donné ?",
@@ -368842,7 +368842,7 @@ var mJt = $({
 	"b0.prompt": "34 + 8 = ?",
 	"b1.prompt": "71 - 6 = ?"
 }, WYt = {
-	label: "Mental Add & Subtract to 2-Digit",
+	label: "Calcul mental jusqu'à 2 chiffres",
 	"b0.prompt": "34 + 8 = ?",
 	"b1.prompt": "71 - 6 = ?"
 }, GYt = /* @__PURE__ */ n({ default: () => qYt }), KYt = HYt, qYt = $({
@@ -368874,7 +368874,7 @@ var mJt = $({
 	"b0.prompt": "37 + 26 = ?",
 	"b1.prompt": "82 - 47 = ?"
 }, XYt = {
-	label: "Add & Subtract with Regrouping",
+	label: "Additionner et soustraire avec retenues",
 	"b0.prompt": "37 + 26 = ?",
 	"b1.prompt": "82 - 47 = ?"
 }, ZYt = /* @__PURE__ */ n({ default: () => $Yt }), QYt = JYt, $Yt = $({
@@ -368908,7 +368908,7 @@ var mJt = $({
 	"b0.statement": "8 + 5 gives the same answer as 5 + 8.",
 	"b1.statement": "9 - 3 gives the same answer as 3 - 9."
 }, nXt = {
-	label: "Addition & Subtraction: Order Matters?",
+	label: "Addition et soustraction : l'ordre compte ?",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "8 + 5 donne le même résultat que 5 + 8.",
@@ -369002,7 +369002,7 @@ var mJt = $({
 	"b8.prompt": "347 + 10 = ?",
 	"b9.prompt": "610 - 10 = ?"
 }, cXt = {
-	label: "Add & Subtract 10 or 100",
+	label: "Ajouter ou retirer 10 ou 100",
 	"b0.prompt": "46 + 10 = ?",
 	"b1.prompt": "73 - 10 = ?",
 	"b2.prompt": "58 + 10 = ?",
@@ -369093,7 +369093,7 @@ var mJt = $({
 	"b8.prompt": "408 + 100 = ?",
 	"b9.prompt": "730 - 100 = ?"
 }, mXt = {
-	label: "Add & Subtract 100",
+	label: "Ajouter et retirer 100",
 	"b0.prompt": "300 + 100 = ?",
 	"b1.prompt": "700 + 100 = ?",
 	"b2.prompt": "500 - 100 = ?",
@@ -369166,7 +369166,7 @@ var mJt = $({
 	"b5.prompt": "83 - 50 = ?",
 	"b6.prompt": "58 + 40 = ?"
 }, bXt = {
-	label: "Mental Tens",
+	label: "Dizaines de tête",
 	"b0.prompt": "30 + 20 = ?",
 	"b1.prompt": "70 - 40 = ?",
 	"b2.prompt": "50 + 30 = ?",
@@ -369230,7 +369230,7 @@ var mJt = $({
 	"b4.prompt": "91 - 36 = ?",
 	"b5.prompt": "56 + 29 = ?"
 }, EXt = {
-	label: "Add & Subtract within 100",
+	label: "Additionner et soustraire jusqu'à 100",
 	"b0.prompt": "34 + 25 = ?",
 	"b1.prompt": "78 - 23 = ?",
 	"b2.prompt": "40 + 37 = ?",
@@ -369299,7 +369299,7 @@ var mJt = $({
 	"b5.prompt": "340 + 270 = ?",
 	"b6.prompt": "602 - 245 = ?"
 }, MXt = {
-	label: "Base-Ten Models to 1,000",
+	label: "Modèles de base dix jusqu'à 1 000",
 	"b0.prompt": "Une plaque vaut 100, une barre vaut 10. 2 plaques et 3 barres plus 4 plaques et 5 barres font quel nombre ?",
 	"b1.prompt": "Une plaque vaut 100, une barre vaut 10. 6 plaques et 4 barres plus 2 plaques et 3 barres font quel nombre ?",
 	"b2.prompt": "Une plaque vaut 100, une barre vaut 10. 1 plaque et 5 barres plus 4 plaques et 2 barres font quel nombre ?",
@@ -369363,7 +369363,7 @@ var mJt = $({
 	"b4.prompt": "14 + 23 + 18 + 15 = ?",
 	"b5.prompt": "26 + 17 + 30 + 19 = ?"
 }, RXt = {
-	label: "Adding Several 2-Digit Numbers",
+	label: "Additionner plusieurs nombres à deux chiffres",
 	"b0.prompt": "18 + 15 + 12 = ?",
 	"b1.prompt": "20 + 31 + 18 = ?",
 	"b2.prompt": "15 + 22 + 31 = ?",
@@ -369432,7 +369432,7 @@ var mJt = $({
 	"b5.prompt": "A graph shows 14 cars on Monday, 9 on Tuesday and 11 on Wednesday. How many cars is that in total?",
 	"b6.prompt": "A graph shows red got 18 votes and blue got 12 votes. How many more votes did red get?"
 }, WXt = {
-	label: "Questions from a Graph",
+	label: "Questions sur un graphique",
 	"b0.prompt": "Un graphique montre 5 chats et 3 chiens. Combien d'animaux cela fait-il en tout ?",
 	"b1.prompt": "Un graphique montre que le rouge a eu 7 votes et le bleu 4 votes. Combien de votes de plus le rouge a-t-il eus ?",
 	"b2.prompt": "Un graphique montre 6 pommes et 2 poires. Combien de pommes de plus que de poires y a-t-il ?",
@@ -369498,7 +369498,7 @@ var mJt = $({
 	"b4.statement": "5 x 4 is not equal to 4 x 5.",
 	"b5.statement": "An array of 4 rows of 5 dots and an array of 5 rows of 4 dots have different numbers of dots."
 }, XXt = {
-	label: "Arrays: 3 x 5 = 5 x 3",
+	label: "Tableaux : 3 x 5 = 5 x 3",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un tableau de 3 rangées de 5 peut être tourné pour faire 5 rangées de 3.",
@@ -369620,7 +369620,7 @@ var mJt = $({
 	"b5.o1": "80",
 	"b5.o2": "140"
 }, nZt = {
-	label: "Check Your Answer",
+	label: "Vérifier ma réponse",
 	"b0.prompt": "Vérifie 12 + 5 = 17 avec une soustraction. Laquelle fonctionne ?",
 	"b0.o0": "17 - 5 = 12",
 	"b0.o1": "17 + 5 = 22",
@@ -369771,7 +369771,7 @@ var mJt = $({
 	"b6.o1": ">",
 	"b6.o2": "="
 }, sZt = {
-	label: "Compare Without Calculating",
+	label: "Comparer sans calculer",
 	"b0.prompt": "Quel signe va dans la case ? 8 + 5 ☐ 8 + 4",
 	"b0.o0": "<",
 	"b0.o1": ">",
@@ -369912,7 +369912,7 @@ var mJt = $({
 	"b5.o1": "14",
 	"b5.o2": "15"
 }, fZt = {
-	label: "Number Patterns & Rules",
+	label: "Suites de nombres et règles",
 	"b0.prompt": "Trouve le nombre manquant : 10, 20, 30, ?, 50",
 	"b0.o0": "35",
 	"b0.o1": "40",
@@ -370007,7 +370007,7 @@ var mJt = $({
 	"b5.prompt": "How many edges does a triangular prism have?",
 	"b6.prompt": "How many rectangular faces does a triangular prism have?"
 }, _Zt = {
-	label: "Faces, Edges & Vertices",
+	label: "Faces, arêtes et sommets",
 	"b0.prompt": "Combien de faces a un pavé droit ?",
 	"b1.prompt": "Combien de faces a une pyramide à base carrée ?",
 	"b2.prompt": "Combien de sommets a un cube ?",
@@ -370119,7 +370119,7 @@ var mJt = $({
 	"b5.o1": "1 3/4",
 	"b5.o2": "2"
 }, CZt = {
-	label: "Counting in Halves & Quarters",
+	label: "Compter par moitiés et quarts",
 	"b0.prompt": "Compte en demis : 0, 1/2, 1, 1 1/2, ?",
 	"b0.o0": "2",
 	"b0.o1": "1 3/4",
@@ -370214,7 +370214,7 @@ var mJt = $({
 	"b5.prompt": "Count backwards in 10s: 83, 73, 63, ?",
 	"b6.prompt": "Count forwards in 2s: 47, 49, 51, ?"
 }, OZt = {
-	label: "Counting in Steps",
+	label: "Compter par bonds",
 	"b0.prompt": "Compte de 2 en 2 : 8, 10, 12, ?",
 	"b1.prompt": "Compte de 5 en 5 : 25, 30, 35, ?",
 	"b2.prompt": "Compte de 10 en 10 : 40, 50, 60, ?",
@@ -370251,7 +370251,7 @@ var mJt = $({
 	"b0.prompt": "Write the number: four hundred and twenty-six",
 	"b1.prompt": "Write the number: nine hundred and eight"
 }, PZt = {
-	label: "Counting to 1,000",
+	label: "Compter jusqu'à 1 000",
 	"b0.prompt": "Écris le nombre : quatre cent vingt-six",
 	"b1.prompt": "Écris le nombre : neuf cent huit"
 }, FZt = /* @__PURE__ */ n({ default: () => LZt }), IZt = MZt, LZt = $({
@@ -370283,7 +370283,7 @@ var mJt = $({
 	"b0.prompt": "How many sides does a hexagon have?",
 	"b1.prompt": "How many faces does a cube have?"
 }, BZt = {
-	label: "Counting Shape Properties",
+	label: "Compter les propriétés des formes",
 	"b0.prompt": "Combien de côtés a un hexagone ?",
 	"b1.prompt": "Combien de faces a un cube ?"
 }, VZt = /* @__PURE__ */ n({ default: () => UZt }), HZt = RZt, UZt = $({
@@ -370315,7 +370315,7 @@ var mJt = $({
 	"b0.prompt": "How many days are in one week?",
 	"b1.prompt": "How many weeks are in one year?"
 }, KZt = {
-	label: "Days, Weeks & Months",
+	label: "Jours, semaines, mois",
 	"b0.prompt": "Combien de jours y a-t-il dans une semaine ?",
 	"b1.prompt": "Combien de semaines y a-t-il dans une année ?"
 }, qZt = /* @__PURE__ */ n({ default: () => YZt }), JZt = WZt, YZt = $({
@@ -370436,7 +370436,7 @@ var mJt = $({
 	"b6.o1": "unlikely",
 	"b6.o2": "impossible"
 }, QZt = {
-	label: "Chance & Outcomes",
+	label: "Chances et résultats",
 	"b0.prompt": "Le soleil se lèvera demain. Est-ce certain, probable, peu probable ou impossible ?",
 	"b0.o0": "certain",
 	"b0.o1": "peu probable",
@@ -370580,7 +370580,7 @@ var rQt = $({
 	"b5.prompt": "How many vertices (corners) does a pentagon have?",
 	"b6.prompt": "How many vertices (corners) does a rectangle have?"
 }, oQt = {
-	label: "Sides & Corners of Shapes",
+	label: "Côtés et sommets des formes",
 	"b0.prompt": "Combien de côtés a un triangle ?",
 	"b1.prompt": "Combien de côtés a un quadrilatère ?",
 	"b2.prompt": "Combien de côtés a un pentagone ?",
@@ -370692,7 +370692,7 @@ var rQt = $({
 	"b5.o1": "South",
 	"b5.o2": "West"
 }, fQt = {
-	label: "Turns",
+	label: "Tours",
 	"b0.prompt": "Se tourner pour faire face à la direction opposée est quel type de tour ?",
 	"b0.o0": "un quart de tour",
 	"b0.o1": "un demi-tour",
@@ -370954,7 +370954,7 @@ var rQt = $({
 	"b41.o2": "200",
 	"b41.o3": "161"
 }, _Qt = {
-	label: "Digit Value in a 3-Digit Number",
+	label: "Valeur des chiffres d'un nombre à trois chiffres",
 	"b0.prompt": "Regarde les blocs. Dans 243, que vaut le chiffre 2 ?",
 	"b0.o0": "200",
 	"b0.o1": "2",
@@ -371205,7 +371205,7 @@ var rQt = $({
 	"b0.prompt": "Share 12 sweets equally between 3 children. How many does each get?",
 	"b1.prompt": "13 buns are put into boxes of 4. How many buns are left over?"
 }, SQt = {
-	label: "Division: Sharing & Remainders",
+	label: "Division : partage et restes",
 	"b0.prompt": "Partage 12 bonbons également entre 3 enfants. Combien chacun en reçoit-il ?",
 	"b1.prompt": "13 brioches sont mises dans des boîtes de 4. Combien de brioches restent-elles ?"
 }, CQt = /* @__PURE__ */ n({ default: () => TQt }), wQt = bQt, TQt = $({
@@ -371237,7 +371237,7 @@ var rQt = $({
 	"b0.prompt": "Double 14. What is the answer?",
 	"b1.prompt": "Half of 46. What is the answer?"
 }, OQt = {
-	label: "Doubles & Halves to 50",
+	label: "Doubles et moitiés jusqu'à 50",
 	"b0.prompt": "Double 14. Quel est le résultat ?",
 	"b1.prompt": "La moitié de 46. Quel est le résultat ?"
 }, kQt = /* @__PURE__ */ n({ default: () => jQt }), AQt = EQt, jQt = $({
@@ -371344,7 +371344,7 @@ var rQt = $({
 	"b5.o1": "A triangle",
 	"b5.o2": "A rectangle"
 }, PQt = {
-	label: "Shapes with Given Features",
+	label: "Dessiner des formes avec des critères",
 	"b0.prompt": "Tu traces 3 côtés droits qui se rejoignent. Quelle forme as-tu dessinée ?",
 	"b0.o0": "Un triangle",
 	"b0.o1": "Un carré",
@@ -371481,7 +371481,7 @@ var rQt = $({
 	"b5.o1": "4 cm",
 	"b5.o2": "30 cm"
 }, zQt = {
-	label: "Estimating Length",
+	label: "Estimer une longueur",
 	"b0.prompt": "Quelle est la meilleure estimation de la longueur d'un crayon ?",
 	"b0.o0": "15 cm",
 	"b0.o1": "15 m",
@@ -371618,7 +371618,7 @@ var rQt = $({
 	"b5.o1": "80",
 	"b5.o2": "180"
 }, WQt = {
-	label: "Estimating Sums",
+	label: "Estimer des sommes",
 	"b0.prompt": "Arrondis à la dizaine la plus proche pour estimer 28 + 31.",
 	"b0.o0": "50",
 	"b0.o1": "60",
@@ -371707,7 +371707,7 @@ var rQt = $({
 	"b4.prompt": "An ice-cream shop has 4 flavours and 2 types of cone. How many different ice creams can you make?",
 	"b5.prompt": "You have 3 tops and 4 skirts. How many different outfits can you make?"
 }, YQt = {
-	label: "How Many Combinations?",
+	label: "Combien de combinaisons ?",
 	"b0.prompt": "Tu as 2 chemises et 2 chapeaux. Combien de tenues différentes chemise-chapeau peux-tu faire ?",
 	"b1.prompt": "Un glacier a 3 parfums et 2 types de cornet. Combien de glaces différentes peux-tu composer ?",
 	"b2.prompt": "Tu as 3 chemises et 1 chapeau. Combien de tenues différentes peux-tu faire ?",
@@ -371818,7 +371818,7 @@ var rQt = $({
 	"b5.o1": "1 hour",
 	"b5.o2": "2 hours"
 }, t$t = {
-	label: "How Long Did It Take?",
+	label: "Combien de temps ça a pris ?",
 	"b0.prompt": "Une activité commence à 3 h 00 et finit à 5 h 00. Combien de temps a-t-elle duré ?",
 	"b0.o0": "1 heure",
 	"b0.o1": "2 heures",
@@ -371907,7 +371907,7 @@ var rQt = $({
 	"b4.prompt": "What is 3/4 of 12?",
 	"b5.prompt": "What is 3/4 of 8?"
 }, o$t = {
-	label: "Fractions of Amounts",
+	label: "Fractions de quantités",
 	"b0.prompt": "Combien font 1/2 de 8 ?",
 	"b1.prompt": "Combien font 1/3 de 6 ?",
 	"b2.prompt": "Combien font 1/2 de 10 ?",
@@ -371970,7 +371970,7 @@ var rQt = $({
 	"b4.prompt": "Tom jumps 245 cm and Ana jumps 230 cm. How much further did Tom jump, in cm?",
 	"b5.prompt": "Path A is 48 m long and path B is 29 m long. How much longer is path A, in m?"
 }, f$t = {
-	label: "How Much Longer?",
+	label: "De combien plus long ?",
 	"b0.prompt": "Un ruban mesure 15 cm et un autre 10 cm. De combien le premier est-il plus long, en cm ?",
 	"b1.prompt": "Un crayon mesure 12 cm et une gomme 4 cm. De combien le crayon est-il plus long, en cm ?",
 	"b2.prompt": "Une corde mesure 9 m et une autre 6 m. De combien la première est-elle plus longue, en m ?",
@@ -372006,7 +372006,7 @@ var rQt = $({
 	"b0.prompt": "7 + ? = 12",
 	"b1.prompt": "? - 6 = 15"
 }, v$t = {
-	label: "Finding the Missing Number",
+	label: "Trouver le nombre manquant",
 	"b0.prompt": "7 + ? = 12",
 	"b1.prompt": "? - 6 = 15"
 }, y$t = /* @__PURE__ */ n({ default: () => x$t }), b$t = g$t, x$t = $({
@@ -372071,7 +372071,7 @@ var rQt = $({
 	"b5.prompt": "An apple costs 47 cents and a pear costs 38 cents. What is the total, in cents?",
 	"b6.prompt": "A cake costs 72p. You pay 100p. How much change do you get, in pence?"
 }, w$t = {
-	label: "Totals & Change",
+	label: "Totaux et monnaie",
 	"b0.prompt": "Un jouet coûte 30 centimes et une balle 20 centimes. Quel est le total, en centimes ?",
 	"b1.prompt": "Un autocollant coûte 35 centimes. Tu paies 50 centimes. Combien te rend-on, en centimes ?",
 	"b2.prompt": "Un crayon coûte 25 pence et une gomme 15 pence. Quel est le total, en pence ?",
@@ -372135,7 +372135,7 @@ var rQt = $({
 	"b4.prompt": "Two bars both start at 0. Bar A ends at 15 and bar B ends at 9. What is the difference in their lengths?",
 	"b5.prompt": "On a number line, a bar starts at 25 and ends at 40. How long is the bar?"
 }, A$t = {
-	label: "Lengths on a Number Line",
+	label: "Longueurs sur une droite numérique",
 	"b0.prompt": "Sur une droite graduée, une barre commence à 0 et finit à 7. Quelle est sa longueur ?",
 	"b1.prompt": "Sur une droite graduée, une barre commence à 3 et finit à 8. Quelle est sa longueur ?",
 	"b2.prompt": "Sur une droite graduée, une barre commence à 4 et finit à 10. Quelle est sa longueur ?",
@@ -372236,7 +372236,7 @@ var rQt = $({
 	"b5.o0": "Yes",
 	"b5.o1": "No"
 }, I$t = {
-	label: "Line Segments & Straight Lines",
+	label: "Segments et points alignés",
 	"b0.prompt": "Quel outil utilises-tu pour tracer une ligne droite ?",
 	"b0.o0": "Une règle",
 	"b0.o1": "Des ciseaux",
@@ -372329,7 +372329,7 @@ var rQt = $({
 	"b5.prompt": "Coins are worth 1, 2, 5, 10, 20 and 50. What is the fewest number of coins that make 18?",
 	"b6.prompt": "Coins are worth 1, 2, 5, 10, 20 and 50. What is the fewest number of coins that make 65?"
 }, V$t = {
-	label: "Making Amounts with Coins",
+	label: "Faire une somme avec le moins de pièces",
 	"b0.prompt": "Tu as une pièce de 10. Une autre pièce fait 15 en tout. Quelle est sa valeur ?",
 	"b1.prompt": "Tu as une pièce de 20. Une autre pièce fait 25 en tout. Quelle est sa valeur ?",
 	"b2.prompt": "Tu as une pièce de 50. Une autre pièce fait 70 en tout. Quelle est sa valeur ?",
@@ -372366,7 +372366,7 @@ var rQt = $({
 	"b0.prompt": "A scale's pointer stops exactly on the 300 g mark. What is the mass, in g?",
 	"b1.prompt": "A jug's water level is exactly on the 450 ml mark. What is the capacity, in ml?"
 }, q$t = {
-	label: "Measuring Mass & Capacity",
+	label: "Mesurer masse et capacité",
 	"b0.prompt": "L'aiguille de la balance s'arrête exactement sur 300 g. Quelle est la masse, en g ?",
 	"b1.prompt": "Le niveau d'eau du récipient est exactement sur 450 ml. Quelle est la contenance, en ml ?"
 }, J$t = /* @__PURE__ */ n({ default: () => X$t }), Y$t = G$t, X$t = $({
@@ -372473,7 +372473,7 @@ var rQt = $({
 	"b5.o1": "m",
 	"b5.o2": "mm"
 }, $$t = {
-	label: "Measuring Length",
+	label: "Mesurer une longueur",
 	"b0.prompt": "Quelle unité convient le mieux pour la longueur d'un crayon ?",
 	"b0.o0": "cm",
 	"b0.o1": "m",
@@ -372562,7 +372562,7 @@ var rQt = $({
 	"b4.prompt": "23 children make teams of 4. How many children are left without a team?",
 	"b5.prompt": "19 marbles are shared equally between 6 children. How many marbles are left over?"
 }, i1t = {
-	label: "What Is Left Over?",
+	label: "Qu'est-ce qui reste ?",
 	"b0.prompt": "7 bonbons sont partagés également entre 2 enfants. Combien en reste-t-il ?",
 	"b1.prompt": "10 autocollants sont mis en groupes de 3. Combien en reste-t-il ?",
 	"b2.prompt": "14 perles sont mises dans des sacs de 5. Combien de perles restent-elles ?",
@@ -372614,7 +372614,7 @@ var rQt = $({
 	"b1.o1": "100",
 	"b1.o2": "1000"
 }, u1t = {
-	label: "Metric Units & Relationships",
+	label: "Unités métriques et leurs liens",
 	"b0.prompt": "Combien de centimètres y a-t-il dans 1 mètre ?",
 	"b0.o0": "10",
 	"b0.o1": "100",
@@ -372695,7 +372695,7 @@ var rQt = $({
 	"b5.statement": "Subtracting a number from itself always gives 0.",
 	"b6.statement": "If a + b = 12, then b + a = 12."
 }, h1t = {
-	label: "Always, Sometimes, Never?",
+	label: "Toujours, parfois, jamais ?",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un nombre pair + un nombre pair donne toujours un nombre pair.",
@@ -372743,7 +372743,7 @@ var rQt = $({
 	"b0.prompt": "14 + ? = 20",
 	"b1.prompt": "What two numbers make 17? 17 = 9 + ?"
 }, x1t = {
-	label: "Number Bonds to 20",
+	label: "Décompositions jusqu'à 20",
 	"b0.prompt": "14 + ? = 20",
 	"b1.prompt": "Quels sont les deux nombres qui font 17 ? 17 = 9 + ?"
 }, S1t = /* @__PURE__ */ n({ default: () => w1t }), C1t = y1t, w1t = $({
@@ -372850,7 +372850,7 @@ var rQt = $({
 	"b5.o1": "20 + 16",
 	"b5.o2": "18 + 18"
 }, D1t = {
-	label: "Odd, Even & Doubles",
+	label: "Pairs, impairs et doubles",
 	"b0.prompt": "Quel nombre est pair ?",
 	"b0.o0": "17",
 	"b0.o1": "24",
@@ -373166,7 +373166,7 @@ var I1t = $({
 	"b31.o2": "31",
 	"b31.o3": "61"
 }, z1t = {
-	label: "Partitioning in Different Ways",
+	label: "Décomposer de différentes façons",
 	"b0.prompt": "45 = 3 dizaines + ? unités",
 	"b0.o0": "15",
 	"b0.o1": "5",
@@ -373537,7 +373537,7 @@ var I1t = $({
 	"b35.o2": "701",
 	"b35.o3": "702"
 }, W1t = {
-	label: "Partitioning 3-Digit Numbers",
+	label: "Décomposer des nombres à trois chiffres",
 	"b0.prompt": "Lis les blocs. Quel nombre montrent-ils ?",
 	"b0.o0": "100",
 	"b0.o1": "1",
@@ -373791,7 +373791,7 @@ var I1t = $({
 	"b5.prompt": "In a pictogram, 1 symbol = 10 children. The row for swimming has 4 symbols. How many children chose swimming?",
 	"b6.prompt": "In a pictogram, 1 symbol = 5 children. How many symbols show 20 children?"
 }, Y1t = {
-	label: "Pictograms & Bar Graphs",
+	label: "Pictogrammes et diagrammes en barres",
 	"b0.prompt": "Dans un pictogramme, 1 symbole = 1 enfant. La ligne des chats a 4 symboles. Combien d'enfants ont choisi les chats ?",
 	"b1.prompt": "Dans un pictogramme, 1 symbole = 1 enfant. La ligne des chiens a 6 symboles. Combien d'enfants ont choisi les chiens ?",
 	"b2.prompt": "Un graphique en blocs montre 5 blocs au-dessus de « rouge ». Combien d'enfants ont choisi le rouge ?",
@@ -373903,7 +373903,7 @@ var I1t = $({
 	"b5.o1": "750",
 	"b5.o2": "790"
 }, t0t = {
-	label: "Number Line to 1,000",
+	label: "Placer des nombres jusqu'à 1 000",
 	"b0.prompt": "Une droite graduée de 0 à 1000 est marquée tous les 100. Une flèche montre la 4e marque après 0. Quel est ce nombre ?",
 	"b0.o0": "40",
 	"b0.o1": "400",
@@ -373992,7 +373992,7 @@ var I1t = $({
 	"b4.prompt": "The red line is 5 small marks above 30. Each small mark is 1 °C. What is the temperature, in °C?",
 	"b5.prompt": "The red line is 3 small marks above 20. Each small mark is 2 °C. What is the temperature, in °C?"
 }, o0t = {
-	label: "Reading a Thermometer",
+	label: "Lire un thermomètre",
 	"b0.prompt": "Le trait rouge d'un thermomètre s'arrête sur la marque 20. Quelle est la température, en °C ?",
 	"b1.prompt": "Le trait rouge d'un thermomètre s'arrête sur la marque 10. Quelle est la température, en °C ?",
 	"b2.prompt": "Le trait rouge d'un thermomètre s'arrête sur la marque 35. Quelle est la température, en °C ?",
@@ -374103,7 +374103,7 @@ var I1t = $({
 	"b5.o1": "3/4",
 	"b5.o2": "3/3"
 }, f0t = {
-	label: "Reading & Writing Fractions",
+	label: "Lire et écrire des fractions",
 	"b0.prompt": "1 part égale sur 2 est coloriée. Quelle fraction est coloriée ?",
 	"b0.o0": "1/2",
 	"b0.o1": "1/3",
@@ -374254,7 +374254,7 @@ var I1t = $({
 	"b6.o1": "792",
 	"b6.o2": "709"
 }, _0t = {
-	label: "Numbers in Digits, Words & Expanded Form",
+	label: "Nombres en chiffres, en lettres, décomposés",
 	"b0.prompt": "Quel nombre est « trois cent quinze » ?",
 	"b0.o0": "315",
 	"b0.o1": "350",
@@ -374322,7 +374322,7 @@ var I1t = $({
 	"b0.statement": "A square has at least one line of symmetry.",
 	"b1.statement": "Folding a symmetrical figure along its line of symmetry always makes the two halves match exactly."
 }, S0t = {
-	label: "Lines of Symmetry",
+	label: "Axes de symétrie",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un carré a au moins un axe de symétrie.",
@@ -374394,7 +374394,7 @@ var I1t = $({
 	"b4.statement": "Folding a sheet of paper in half and then in half again makes a right-angle corner.",
 	"b5.statement": "A right angle is smaller than a square corner."
 }, O0t = {
-	label: "Right Angles",
+	label: "Angles droits",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un coin de carré est un angle droit.",
@@ -374468,7 +374468,7 @@ var I1t = $({
 	"b4.prompt": "A line plot has 2 dots above 3 cm and 4 dots above 4 cm. How many more objects are 4 cm long than 3 cm long?",
 	"b5.prompt": "A line plot has 5 dots above 8 cm, 2 dots above 9 cm and 1 dot above 10 cm. How many objects were measured in total?"
 }, P0t = {
-	label: "Line Plots",
+	label: "Diagrammes en points",
 	"b0.prompt": "Un diagramme à points a 3 points au-dessus de 5 cm. Combien d'objets mesurent 5 cm ?",
 	"b1.prompt": "Un diagramme à points a 2 points au-dessus de 4 cm et 3 points au-dessus de 5 cm. Combien d'objets ont été mesurés en tout ?",
 	"b2.prompt": "Un diagramme à points a 4 points au-dessus de 6 cm et 1 point au-dessus de 7 cm. Combien d'objets mesurent 6 cm ?",
@@ -374520,7 +374520,7 @@ var I1t = $({
 	"b1.o1": "6 + 4",
 	"b1.o2": "6 - 4"
 }, B0t = {
-	label: "One-Step Word Problems",
+	label: "Problèmes à une étape",
 	"b0.prompt": "Il y a 8 oiseaux sur une clôture. 3 s'envolent. Quelle opération donne combien il en reste ?",
 	"b0.o0": "8 - 3",
 	"b0.o1": "8 + 3",
@@ -374599,7 +374599,7 @@ var I1t = $({
 	"b5.prompt": "A shop has 50 apples. It sells 17 in the morning and 22 in the afternoon. How many apples are left?",
 	"b6.prompt": "A book has 90 pages. Tim reads 28 pages on Monday and 35 on Tuesday. How many pages are left?"
 }, G0t = {
-	label: "Two-Step Problems",
+	label: "Problèmes à deux étapes",
 	"b0.prompt": "Sam a 20 autocollants. Il en reçoit 15 de plus puis en donne 10. Combien d'autocollants a-t-il maintenant ?",
 	"b1.prompt": "Un bus transporte 30 personnes. 12 montent puis 5 descendent. Combien de personnes y a-t-il dans le bus maintenant ?",
 	"b2.prompt": "Mia a 40 billes. Elle en perd 10 puis en trouve 6. Combien de billes a-t-elle maintenant ?",
@@ -374663,7 +374663,7 @@ var I1t = $({
 	"b4.prompt": "A rectangle is split into 5 rows with 6 equal squares in each row. How many squares are there?",
 	"b5.prompt": "A rectangle has 6 rows and 3 columns of equal squares. How many squares are there?"
 }, Z0t = {
-	label: "Rows & Columns of Squares",
+	label: "Lignes et colonnes de carrés",
 	"b0.prompt": "Un rectangle est partagé en 2 rangées de 3 carrés égaux. Combien y a-t-il de carrés ?",
 	"b1.prompt": "Un rectangle est partagé en 3 rangées de 4 carrés égaux. Combien y a-t-il de carrés ?",
 	"b2.prompt": "Un rectangle est partagé en 2 rangées de 5 carrés égaux. Combien y a-t-il de carrés ?",
@@ -374728,7 +374728,7 @@ var I1t = $({
 	"b4.statement": "A cake cut into 3 parts where one part is very small shows thirds.",
 	"b5.statement": "A square cut into 4 equal parts must always be cut into 4 small squares."
 }, r2t = {
-	label: "Equal Shares",
+	label: "Partages égaux des formes",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Couper un carré en 2 parts égales donne des moitiés.",
@@ -374775,7 +374775,7 @@ var I1t = $({
 	"b0.prompt": "A tally chart shows |||| | for pets counted. How many pets is that?",
 	"b1.prompt": "A bar chart bar for 'Apples' reaches the 9 mark on the scale. How many apples does the bar show?"
 }, l2t = {
-	label: "Tally Charts & Bar Charts",
+	label: "Tableaux de pointage et diagrammes en barres",
 	"b0.prompt": "Un tableau de pointage montre |||| | pour des animaux comptés. Combien d'animaux est-ce ?",
 	"b1.prompt": "La barre 'Pommes' d'un diagramme en barres atteint la marque 9 sur l'échelle. Combien de pommes la barre montre-t-elle ?"
 }, u2t = /* @__PURE__ */ n({ default: () => f2t }), d2t = s2t, f2t = $({
@@ -374823,7 +374823,7 @@ var I1t = $({
 	"b1.o1": "1/3",
 	"b1.o2": "1/5"
 }, h2t = {
-	label: "Thirds, Quarters & Fifths",
+	label: "Tiers, quarts, cinquièmes",
 	"b0.prompt": "Un gâteau est coupé en 3 parts égales. Comment s'appelle une part ?",
 	"b0.o0": "Un tiers",
 	"b0.o1": "Un quart",
@@ -374885,7 +374885,7 @@ var I1t = $({
 	"b1.o1": "14 minutes",
 	"b1.o2": "35 minutes"
 }, b2t = {
-	label: "Telling Time: 5 Minutes & Quarter Hour",
+	label: "Lire l'heure : 5 minutes et quart d'heure",
 	"b0.prompt": "La grande aiguille est sur le 3. Combien de minutes après l'heure est-il ?",
 	"b0.o0": "5 minutes",
 	"b0.o1": "15 minutes",
@@ -374931,7 +374931,7 @@ var I1t = $({
 	"b0.prompt": "5 x 4 = ?",
 	"b1.prompt": "How many 2s make 18? 18 ÷ 2 = ?"
 }, T2t = {
-	label: "2, 5 & 10 Times Tables",
+	label: "Tables de 2, 5 et 10",
 	"b0.prompt": "5 x 4 = ?",
 	"b1.prompt": "Combien de fois 2 dans 18 ? 18 ÷ 2 = ?"
 }, E2t = /* @__PURE__ */ n({ default: () => O2t }), D2t = C2t, O2t = $({
@@ -375052,7 +375052,7 @@ var I1t = $({
 	"b6.o1": "$2.50",
 	"b6.o2": "$2.50¢"
 }, j2t = {
-	label: "Money Symbols & Amounts",
+	label: "Symboles monétaires et sommes",
 	"b0.prompt": "Quel symbole est utilisé pour l'euro ?",
 	"b0.o0": "€",
 	"b0.o1": "$",
@@ -375151,7 +375151,7 @@ var I1t = $({
 	"b5.prompt": "100 - 70 = ?",
 	"b6.prompt": "? + 20 = 100"
 }, I2t = {
-	label: "From 3 + 7 to 30 + 70",
+	label: "De 3 + 7 à 30 + 70",
 	"b0.prompt": "4 + 6 = 10, donc 40 + 60 = ?",
 	"b1.prompt": "5 + 5 = 10, donc 50 + 50 = ?",
 	"b2.prompt": "8 + 2 = 10, donc 80 + 20 = ?",
@@ -375263,7 +375263,7 @@ var I1t = $({
 	"b5.o1": "What is 12 x 7?",
 	"b5.o2": "What is half of 7?"
 }, H2t = {
-	label: "Bar Models",
+	label: "Modèles en barres",
 	"b0.prompt": "Dans un schéma en barres, le tout est 9 et une partie est 4. Quelle opération donne l'autre partie ?",
 	"b0.o0": "9 - 4",
 	"b0.o1": "9 + 4",
@@ -375400,7 +375400,7 @@ var I1t = $({
 	"b5.o1": "6 + 2",
 	"b5.o2": "6 x 6"
 }, q2t = {
-	label: "Groups & Arrays as Multiplication",
+	label: "Groupes égaux et tableaux",
 	"b0.prompt": "Quelle multiplication correspond à 4 + 4 + 4 (3 groupes de 4) ?",
 	"b0.o0": "3 x 4",
 	"b0.o1": "4 x 4",
@@ -375537,7 +375537,7 @@ var I1t = $({
 	"b5.o1": "up 2, right 1",
 	"b5.o2": "right 2, up 2"
 }, Q2t = {
-	label: "Moves on a Grid",
+	label: "Déplacements sur un quadrillage",
 	"b0.prompt": "Un jeton est sur B2. Il monte d'une case. Sur quelle case est-il maintenant ?",
 	"b0.o0": "B3",
 	"b0.o1": "B1",
@@ -375599,7 +375599,7 @@ var I1t = $({
 	"b1.prompt": "7/8 - 3/8 = ___.",
 	"b1.answer": "4/8"
 }, Y4 = {
-	label: "Add & Subtract Fractions",
+	label: "Additionner et soustraire des fractions",
 	"b0.prompt": "1/5 + 2/5 = ___.",
 	"b0.answer": "3/5",
 	"b1.prompt": "7/8 - 3/8 = ___.",
@@ -375644,7 +375644,7 @@ var i4t = $({
 	"b0.prompt": "245 + 387 = ?",
 	"b1.prompt": "603 - 258 = ?"
 }, s4t = {
-	label: "Column Addition & Subtraction",
+	label: "Addition et soustraction posées",
 	"b0.prompt": "245 + 387 = ?",
 	"b1.prompt": "603 - 258 = ?"
 }, c4t = /* @__PURE__ */ n({ default: () => u4t }), l4t = a4t, u4t = $({
@@ -375676,7 +375676,7 @@ var i4t = $({
 	"b0.prompt": "34 + 28 = ?",
 	"b1.prompt": "71 - 39 = ?"
 }, p4t = {
-	label: "Mental Add & Subtract: Two 2-Digit Numbers",
+	label: "Calcul mental : deux nombres à deux chiffres",
 	"b0.prompt": "34 + 28 = ?",
 	"b1.prompt": "71 - 39 = ?"
 }, m4t = /* @__PURE__ */ n({ default: () => g4t }), h4t = d4t, g4t = $({
@@ -375867,7 +375867,7 @@ var i4t = $({
 	"b26.prompt": "2,694 + 10 = ?",
 	"b27.prompt": "8,509 − 10 = ?"
 }, y4t = {
-	label: "Adding & Subtracting 1, 10, 100, 1000",
+	label: "Ajouter et retirer 1, 10, 100, 1 000",
 	"b0.prompt": "2\xA0732 − 100 = ?",
 	"b1.prompt": "8\xA0519 − 1 = ?",
 	"b2.prompt": "2\xA0357 + 100 = ?",
@@ -375958,7 +375958,7 @@ var i4t = $({
 	"b5.prompt": "An apple costs 45 cents and a juice costs 80 cents. How many cents in total?",
 	"b6.prompt": "You pay 500 cents for a snack that costs 275 cents. How many cents of change?"
 }, T4t = {
-	label: "Money Totals & Change",
+	label: "Sommes d'argent et monnaie",
 	"b0.prompt": "Un stylo coûte 3 $ et une règle coûte 4 $. Combien de dollars au total ?",
 	"b1.prompt": "Tu paies 10 $ pour un livre de 6 $. Combien de dollars de monnaie reçois-tu ?",
 	"b2.prompt": "50 cents + 20 cents = ? cents",
@@ -376046,7 +376046,7 @@ var i4t = $({
 	"b8.prompt": "63 ÷ 7 = ?",
 	"b9.prompt": "10 x 10 = ?"
 }, j4t = {
-	label: "All Times Tables to 10 x 10",
+	label: "Toutes les tables jusqu'à 10 x 10",
 	"b0.prompt": "2 x 9 = ?",
 	"b1.prompt": "10 x 7 = ?",
 	"b2.prompt": "4 x 9 = ?",
@@ -376102,7 +376102,7 @@ var i4t = $({
 	"b1.o1": "6",
 	"b1.o2": "14"
 }, L4t = {
-	label: "Comparing Data in Tables",
+	label: "Comparer des données dans un tableau",
 	"b0.prompt": "Un tableau montre : Pommes 8, Poires 5, Bananes 11. Quel fruit est le plus nombreux ?",
 	"b0.o0": "Bananes",
 	"b0.o1": "Pommes",
@@ -376181,7 +376181,7 @@ var i4t = $({
 	"b5.prompt": "A stall has 17 apples and 9 pears. 6 more pears arrive. How many more apples than pears now?",
 	"b6.prompt": "A graph shows 15 fiction books and 8 comics. 4 comics are borrowed. How many comics are left?"
 }, H4t = {
-	label: "More, Fewer & Total",
+	label: "Plus, moins et total",
 	"b0.prompt": "Un tableau montre 8 chats et 5 chiens. Combien de chats de plus que de chiens ?",
 	"b1.prompt": "Un tableau montre 8 chats et 5 chiens. Combien d'animaux au total ?",
 	"b2.prompt": "Un graphique montre 12 voitures rouges et 9 voitures bleues. Combien de voitures bleues de moins que de rouges ?",
@@ -376218,7 +376218,7 @@ var i4t = $({
 	"b0.prompt": "8 + 5 = ? (bridge through 10: 8 + 2 + 3)",
 	"b1.prompt": "96 + 7 = ? (bridge through 100: 96 + 4 + 3)"
 }, J4t = {
-	label: "Bridging Through 10 & 100",
+	label: "Passer la dizaine et la centaine",
 	"b0.prompt": "8 + 5 = ? (passer par 10 : 8 + 2 + 3)",
 	"b1.prompt": "96 + 7 = ? (passer par 100 : 96 + 4 + 3)"
 }, Y4t = /* @__PURE__ */ n({ default: () => Z4t }), X4t = K4t, Z4t = $({
@@ -376250,7 +376250,7 @@ var i4t = $({
 	"b0.prompt": "A film starts at 2:10 and ends at 2:45. How many minutes long is it?",
 	"b1.prompt": "A lesson runs from 9:05 to 9:50. How many minutes long is it?"
 }, e3t = {
-	label: "Calculating Duration",
+	label: "Calculer une durée",
 	"b0.prompt": "Un film commence à 14h10 et se termine à 14h45. Combien de minutes dure-t-il ?",
 	"b1.prompt": "Un cours dure de 9h05 à 9h50. Combien de minutes dure-t-il ?"
 }, t3t = /* @__PURE__ */ n({ default: () => r3t }), n3t = Q4t, r3t = $({
@@ -376284,7 +376284,7 @@ var i4t = $({
 	"b0.statement": "To check that 82 - 35 = 47, you can add 47 + 35 and see if it makes 82.",
 	"b1.statement": "To check that 91 - 46 = 45, adding 45 + 46 should make 91."
 }, o3t = {
-	label: "Checking Subtraction with Addition",
+	label: "Vérifier une soustraction par l'addition",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Pour vérifier que 82 - 35 = 47, on peut calculer 47 + 35 et voir si ça fait 82.",
@@ -376329,7 +376329,7 @@ var i4t = $({
 	"b0.statement": "A square is also a rectangle, because it has four right angles.",
 	"b1.statement": "A rhombus always has four right angles."
 }, f3t = {
-	label: "Classifying Quadrilaterals",
+	label: "Classer les quadrilatères",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un carré est aussi un rectangle, car il a quatre angles droits.",
@@ -376386,7 +376386,7 @@ var i4t = $({
 	"e1.l3": "Right-angled",
 	"e1.r3": "One angle measures exactly 90°, and the other two angles add up to 90°."
 }, v3t = {
-	label: "Classifying Triangles",
+	label: "Classer les triangles",
 	"e0.l0": "Équilatéral",
 	"e0.r0": "Les trois côtés ont la même longueur.",
 	"e0.l1": "Isocèle",
@@ -376481,7 +376481,7 @@ var i4t = $({
 	"b5.prompt": "A bottle holds 1,000 ml. 350 ml are used. How many millilitres are left?",
 	"b6.prompt": "A rope is 2 m long. 45 cm are cut off. How many centimetres are left?"
 }, w3t = {
-	label: "Adding & Comparing Measures",
+	label: "Ajouter et comparer des mesures",
 	"b0.prompt": "Un crayon mesure 12 cm et une règle mesure 30 cm. De combien de centimètres la règle est-elle plus longue ?",
 	"b1.prompt": "Un sac pèse 3 kg et un autre pèse 4 kg. Combien de kilogrammes au total ?",
 	"b2.prompt": "Un pichet contient 5 litres. On en verse 2. Combien de litres reste-t-il ?",
@@ -376593,7 +376593,7 @@ var i4t = $({
 	"b5.o1": "2/5",
 	"b5.o2": "They are equal"
 }, A3t = {
-	label: "Comparing Fractions",
+	label: "Comparer des fractions",
 	"b0.prompt": "Laquelle est la plus grande : 3/8 ou 5/8 ?",
 	"b0.o0": "5/8",
 	"b0.o1": "3/8",
@@ -376744,7 +376744,7 @@ var i4t = $({
 	"b6.o1": "Blue",
 	"b6.o2": "They are equally likely"
 }, F3t = {
-	label: "Chance & Likelihood",
+	label: "Chances et probabilité",
 	"b0.prompt": "Un sac contient 5 balles rouges et 1 balle bleue. Quelle couleur as-tu le plus de chances de piocher ?",
 	"b0.o0": "Rouge",
 	"b0.o1": "Bleue",
@@ -376885,7 +376885,7 @@ var i4t = $({
 	"b5.o1": "Shop B ($3 each)",
 	"b5.o2": "They are the same"
 }, B3t = {
-	label: "Comparing Prices",
+	label: "Comparer les prix",
 	"b0.prompt": "Un stylo coûte 2 $ et un cahier coûte 5 $. Lequel coûte le plus cher ?",
 	"b0.o0": "Le cahier",
 	"b0.o1": "Le stylo",
@@ -376980,7 +376980,7 @@ var i4t = $({
 	"b5.prompt": "Machine: 4 → 12, 6 → 18, 7 → ___.",
 	"b6.prompt": "Machine: 5 → 12, 8 → 15, 10 → ___."
 }, G3t = {
-	label: "Function Machines",
+	label: "Machines à fonctions",
 	"b0.prompt": "Une machine ajoute 4. Entrée 6, sortie ___.",
 	"b1.prompt": "Une machine multiplie par 3. Entrée 5, sortie ___.",
 	"b2.prompt": "Une machine soustrait 2. Entrée 9, sortie ___.",
@@ -377023,7 +377023,7 @@ var i4t = $({
 	"b0.prompt": "3, 6, 9, 12, ___",
 	"b1.prompt": "50, 43, 36, 29, ___"
 }, Z3t = {
-	label: "Number Sequences & Rules",
+	label: "Suites de nombres et règles",
 	"b0.prompt": "3, 6, 9, 12, ___",
 	"b1.prompt": "50, 43, 36, 29, ___"
 }, Q3t = /* @__PURE__ */ n({ default: () => e6t }), $3t = Y3t, e6t = $({
@@ -377061,7 +377061,7 @@ var i4t = $({
 	"b0.prompt": "Convert 250 cm to metres. How many metres is that?",
 	"b1.prompt": "Convert 1.4 kg to grams. How many grams is that?"
 }, r6t = {
-	label: "Converting Metric Units",
+	label: "Convertir les unités métriques",
 	"b0.prompt": "Convertis 250 cm en mètres. Combien de mètres cela fait-il ?",
 	"b1.prompt": "Convertis 1,4 kg en grammes. Combien de grammes cela fait-il ?"
 }, i6t = /* @__PURE__ */ n({ default: () => o6t }), a6t = t6t, o6t = $({
@@ -377132,7 +377132,7 @@ var i4t = $({
 	"b6.prompt": "240 minutes is how many hours?",
 	"b7.prompt": "How many days are in a leap year?"
 }, l6t = {
-	label: "Hours, Minutes & Seconds",
+	label: "Heures, minutes et secondes",
 	"b0.prompt": "Combien de minutes y a-t-il dans 1 heure ?",
 	"b1.prompt": "Combien de minutes y a-t-il dans 2 heures ?",
 	"b2.prompt": "Combien de secondes y a-t-il dans 1 minute ?",
@@ -377215,7 +377215,7 @@ var i4t = $({
 	"b7.prompt": "72, 64, 56, ___ (counting back in 8s)",
 	"b8.prompt": "50, 100, 150, ___"
 }, h6t = {
-	label: "Counting in Multiples",
+	label: "Compter par multiples",
 	"b0.prompt": "4, 8, 12, 16, ___",
 	"b1.prompt": "25, 50, 75, ___",
 	"b2.prompt": "6, 12, 18, 24, ___",
@@ -377293,7 +377293,7 @@ var i4t = $({
 	"b6.prompt": "0.8, 0.7, 0.6, ___",
 	"b6.answer": "0.5"
 }, n3 = {
-	label: "Counting in Tenths",
+	label: "Compter par dixièmes",
 	"b0.prompt": "1/10, 2/10, 3/10, ___",
 	"b0.answer": "4/10",
 	"b1.prompt": "5/10, 6/10, 7/10, ___",
@@ -377507,7 +377507,7 @@ var S6t = $({
 	"b26.prompt": "3,702 = 3,000 + ? + 0 + 2. What is the missing number?",
 	"b27.prompt": "8,760 = 8,000 + 700 + ? + 0. What is the missing number?"
 }, T6t = {
-	label: "Digit Values & Partitioning",
+	label: "Valeur des chiffres et décomposition",
 	"b0.prompt": "Quelle est la valeur du 5 dans 5\xA0219 ?",
 	"b1.prompt": "Quelle est la valeur du 2 dans 2\xA0387 ?",
 	"b2.prompt": "Quelle est la valeur du 5 dans 5\xA0879 ?",
@@ -377598,7 +377598,7 @@ var S6t = $({
 	"b5.prompt": "63 ÷ 7 = ? (think: 7 x ? = 63)",
 	"b6.prompt": "48 ÷ 6 = ? (think: 6 x ? = 48)"
 }, j6t = {
-	label: "Division from Multiplication Facts",
+	label: "Diviser avec la multiplication",
 	"b0.prompt": "8 x ? = 32. Que vaut ? (donc 32 ÷ 8 = ?)",
 	"b1.prompt": "5 x ? = 35. Que vaut ? ",
 	"b2.prompt": "3 x ? = 18. Que vaut ? ",
@@ -377680,7 +377680,7 @@ var S6t = $({
 	"b7.prompt": "250 ÷ 8 = 31 remainder ?",
 	"b8.prompt": "What is the whole-number part of 59 ÷ 8?"
 }, L6t = {
-	label: "Division with Remainders",
+	label: "Division avec reste",
 	"b0.prompt": "17 ÷ 5 = 3 reste ?",
 	"b1.prompt": "13 ÷ 4 = 3 reste ?",
 	"b2.prompt": "22 ÷ 5 = 4 reste ?",
@@ -377735,7 +377735,7 @@ var S6t = $({
 	"b1.o1": "27 x 3",
 	"b1.o2": "27 - 3"
 }, U6t = {
-	label: "Bar Models for Word Problems",
+	label: "Modèles en barres pour les problèmes",
 	"b0.prompt": "Un modèle en barre montre un tout de 24 divisé en deux parties, une partie vaut 9. Quelle opération donne l'autre partie ?",
 	"b0.o0": "24 - 9",
 	"b0.o1": "24 + 9",
@@ -377856,7 +377856,7 @@ var S6t = $({
 	"b5.o1": "500",
 	"b5.o2": "300"
 }, J6t = {
-	label: "Estimating by Rounding",
+	label: "Estimer en arrondissant",
 	"b0.prompt": "Arrondis à la dizaine pour estimer 48 + 31.",
 	"b0.o0": "80",
 	"b0.o1": "70",
@@ -378007,7 +378007,7 @@ var S6t = $({
 	"b6.o1": "10 centimetres",
 	"b6.o2": "10 kilometres"
 }, $6t = {
-	label: "Estimating Measures",
+	label: "Estimer des mesures",
 	"b0.prompt": "Quelle est environ la hauteur d'une porte de classe ?",
 	"b0.o0": "2 mètres",
 	"b0.o1": "2 centimètres",
@@ -378148,7 +378148,7 @@ var S6t = $({
 	"b5.o1": "Counted back from 82",
 	"b5.o2": "Added 82 and 37"
 }, i8t = {
-	label: "Explaining & Comparing Methods",
+	label: "Expliquer et comparer des méthodes",
 	"b0.prompt": "Ana calcule 27 + 15 comme 27 + 10 = 37, puis 37 + 5 = 42. Ben calcule 20 + 10 = 30, 7 + 5 = 12, puis 30 + 12 = 42. Laquelle est vraie ?",
 	"b0.o0": "Les deux méthodes sont correctes et donnent le même résultat",
 	"b0.o1": "Seule Ana a raison",
@@ -378257,7 +378257,7 @@ var S6t = $({
 	"b7.statement": "In the 9 times table up to 9 x 10, the digits of each answer add up to 9 (for example 27: 2 + 7 = 9).",
 	"b8.statement": "The 4 times table can have an odd answer."
 }, l8t = {
-	label: "Patterns in Number Tables",
+	label: "Motifs dans les tableaux de nombres",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un nombre pair multiplié par n'importe quel nombre entier donne toujours un résultat pair.",
@@ -378340,7 +378340,7 @@ var S6t = $({
 	"b5.prompt": "A rectangular mat is 9 m long and 3 m wide. What is its area in m²?",
 	"b6.prompt": "A rectangle has 7 rows and 6 columns of 1 cm² squares. What is its area in cm²?"
 }, h8t = {
-	label: "Area by Counting Squares",
+	label: "Aire en comptant les carreaux",
 	"b0.prompt": "Un rectangle est recouvert par 3 rangées de 4 carrés. Combien de carrés le recouvrent ?",
 	"b1.prompt": "Une forme recouvre 2 rangées de 5 carrés de 1 cm². Quelle est son aire en cm² ?",
 	"b2.prompt": "Un rectangle a 4 rangées et 3 colonnes de carrés de 1 cm². Quelle est son aire en cm² ?",
@@ -378377,7 +378377,7 @@ var S6t = $({
 	"b1.prompt": "6/8 simplified to its lowest terms is ___.",
 	"b1.answer": "3/4"
 }, l3 = {
-	label: "Equivalent Fractions & Simplifying",
+	label: "Fractions équivalentes et simplification",
 	"b0.prompt": "2/4 simplifié à sa forme la plus simple est ___.",
 	"b0.answer": "1/2",
 	"b1.prompt": "6/8 simplifié à sa forme la plus simple est ___.",
@@ -378455,7 +378455,7 @@ var S8t = $({
 	"b5.prompt": "What is 3/4 of 12?",
 	"b6.prompt": "A bag has 20 sweets. Mia eats 1/4 of them. How many are left?"
 }, T8t = {
-	label: "Quarters of a Number",
+	label: "Quarts d'un nombre",
 	"b0.prompt": "Combien font 1/4 de 8 ?",
 	"b1.prompt": "Combien font 1/4 de 12 ?",
 	"b2.prompt": "Combien font 1/4 de 20 ?",
@@ -378508,7 +378508,7 @@ var S8t = $({
 	"b1.o1": "At 0",
 	"b1.o2": "Halfway between 0 and 1"
 }, j8t = {
-	label: "Fractions on a Number Line",
+	label: "Fractions sur une droite numérique",
 	"b0.prompt": "Une droite numérique va de 0 à 1. Quelle marque montre 1/2 ?",
 	"b0.o0": "La marque exactement à mi-chemin entre 0 et 1",
 	"b0.o1": "La marque à 0",
@@ -378629,7 +378629,7 @@ var S8t = $({
 	"b5.o1": "Two rails of a straight track",
 	"b5.o2": "The opposite edges of a ruler"
 }, I8t = {
-	label: "Parallel & Perpendicular Lines",
+	label: "Droites parallèles et perpendiculaires",
 	"b0.prompt": "Quelles droites ne se rencontrent jamais, même en les prolongeant ?",
 	"b0.o0": "Les droites parallèles",
 	"b0.o1": "Les droites perpendiculaires",
@@ -378707,7 +378707,7 @@ var S8t = $({
 	"b1.o1": "Smaller than a right angle",
 	"b1.o2": "Exactly a right angle"
 }, V8t = {
-	label: "Identifying Right Angles",
+	label: "Reconnaître les angles droits",
 	"b0.prompt": "Lequel de ces angles est un angle droit ?",
 	"b0.o0": "Un angle de exactement 90°",
 	"b0.o1": "Un angle de 45°",
@@ -378828,7 +378828,7 @@ var S8t = $({
 	"b5.o1": "Yes",
 	"b5.o2": "No, about 2 litres is expected"
 }, K8t = {
-	label: "Does the Answer Make Sense?",
+	label: "La réponse est-elle logique ?",
 	"b0.prompt": "Sam dit que 48 + 31 = 179. En arrondissant, on obtient 50 + 30 = 80. La réponse de Sam est-elle sensée ?",
 	"b0.o0": "Non, elle est beaucoup trop grande",
 	"b0.o1": "Oui",
@@ -378890,7 +378890,7 @@ var S8t = $({
 	"b0.prompt": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter, in cm?",
 	"b1.prompt": "An L-shape is made from a 6 cm x 4 cm rectangle with a 2 cm x 2 cm corner cut out. Its perimeter is 24 cm. What is the perimeter, in cm?"
 }, Z8t = {
-	label: "Measuring Perimeter",
+	label: "Mesurer le périmètre",
 	"b0.prompt": "Un rectangle mesure 8 cm de long et 3 cm de large. Quel est son périmètre, en cm ?",
 	"b1.prompt": "Une forme en L est formée d'un rectangle 6 cm x 4 cm avec un coin de 2 cm x 2 cm retiré. Son périmètre est 24 cm. Quel est le périmètre, en cm ?"
 }, Q8t = /* @__PURE__ */ n({ default: () => e5t }), $8t = Y8t, e5t = $({
@@ -378924,7 +378924,7 @@ var S8t = $({
 	"b0.statement": "6 x 4 gives the same answer as 4 x 6.",
 	"b1.statement": "12 ÷ 3 gives the same answer as 3 ÷ 12."
 }, r5t = {
-	label: "Multiplication & Division: Order Matters?",
+	label: "Multiplication et division : l'ordre compte ?",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "6 x 4 donne le même résultat que 4 x 6.",
@@ -379294,7 +379294,7 @@ var S8t = $({
 	"b54.prompt": "841 × 10 = ?",
 	"b55.prompt": "88 × 10 = ?"
 }, l5t = {
-	label: "Mental x10 & x100",
+	label: "Multiplier par 10 et 100 de tête",
 	"b0.prompt": "55 × 100 = ?",
 	"b1.prompt": "103 × 10 = ?",
 	"b2.prompt": "83 × 100 = ?",
@@ -379419,7 +379419,7 @@ var S8t = $({
 	"b6.prompt": "6 x 80 = ?",
 	"b7.prompt": "9 x 50 = ?"
 }, h5t = {
-	label: "Multiplying by Multiples of 10",
+	label: "Multiplier par des multiples de 10",
 	"b0.prompt": "3 x 20 = ?",
 	"b1.prompt": "5 x 30 = ?",
 	"b2.prompt": "2 x 40 = ?",
@@ -379457,7 +379457,7 @@ var S8t = $({
 	"b0.prompt": "23 x 4 = ?",
 	"b1.prompt": "37 x 6 = ?"
 }, x5t = {
-	label: "Written Multiplication",
+	label: "Multiplication posée",
 	"b0.prompt": "23 x 4 = ?",
 	"b1.prompt": "37 x 6 = ?"
 }, S5t = /* @__PURE__ */ n({ default: () => w5t }), C5t = y5t, w5t = $({
@@ -379564,7 +379564,7 @@ var S8t = $({
 	"b5.o1": "9,900",
 	"b5.o2": "9,990"
 }, D5t = {
-	label: "Number Lines to 10,000",
+	label: "Droites numériques jusqu'à 10 000",
 	"b0.prompt": "Une droite graduée montre 0 et 1 000. La marque du milieu n'a pas d'étiquette. Quel nombre est-ce ?",
 	"b0.o0": "500",
 	"b0.o1": "250",
@@ -379701,7 +379701,7 @@ var S8t = $({
 	"b5.o1": "Collect the votes again",
 	"b5.o2": "Ask a new question first"
 }, M5t = {
-	label: "Planning an Investigation",
+	label: "Préparer une enquête",
 	"b0.prompt": "Tu veux savoir quel animal tes camarades préfèrent. Que fais-tu en premier ?",
 	"b0.o0": "Poser une question claire",
 	"b0.o1": "Dessiner le graphique",
@@ -379763,7 +379763,7 @@ var S8t = $({
 	"b0.prompt": "A bar for 'Oranges' reaches the 12 mark on a bar chart scale. How many oranges does the bar show?",
 	"b1.prompt": "A pictogram uses one symbol for 5 pets. A row shows 3 whole symbols. How many pets is that?"
 }, L5t = {
-	label: "Bar Charts & Pictograms",
+	label: "Diagrammes en barres et pictogrammes",
 	"b0.prompt": "La barre 'Oranges' d'un diagramme en barres atteint la marque 12. Combien d'oranges la barre montre-t-elle ?",
 	"b1.prompt": "Un pictogramme utilise un symbole pour 5 animaux. Une ligne montre 3 symboles entiers. Combien d'animaux cela fait-il ?"
 }, R5t = /* @__PURE__ */ n({ default: () => B5t }), z5t = F5t, B5t = $({
@@ -379795,7 +379795,7 @@ var S8t = $({
 	"b0.prompt": "A price tag reads $3.50. How many cents is that in total?",
 	"b1.prompt": "A ribbon measures 2.75 m. How many centimetres is that?"
 }, U5t = {
-	label: "Reading Decimals in Prices & Measurements",
+	label: "Lire les décimaux dans les prix et les mesures",
 	"b0.prompt": "Une étiquette indique 3,50 $. Combien de centimes cela fait-il au total ?",
 	"b1.prompt": "Un ruban mesure 2,75 m. Combien de centimètres cela fait-il ?"
 }, W5t = /* @__PURE__ */ n({ default: () => K5t }), G5t = V5t, K5t = $({
@@ -379854,7 +379854,7 @@ var S8t = $({
 	"b4.prompt": "On the same ribbon line plot (3 Xs at 1/4 m, 4 Xs at 1/2 m, 2 Xs at 3/4 m), how many more ribbons are 1/2 m than 3/4 m?",
 	"b5.prompt": "On the same ribbon line plot (3 Xs at 1/4 m, 4 Xs at 1/2 m, 2 Xs at 3/4 m), how many ribbons were measured in total?"
 }, Y5t = {
-	label: "Line Plots",
+	label: "Diagrammes en points",
 	"b0.prompt": "Un diagramme en points des longueurs de feuilles a 2 X à 1/2 cm, 3 X à 1 cm et 1 X à 1 1/2 cm. Combien de feuilles ont été mesurées ?",
 	"b1.prompt": "Sur le même diagramme, combien de feuilles mesurent exactement 1 cm ? (2 X à 1/2 cm, 3 X à 1 cm, 1 X à 1 1/2 cm)",
 	"b2.prompt": "Un diagramme en points de longueurs de crayons a 2 X à 5 cm, 4 X à 5 1/2 cm et 1 X à 6 cm. Combien de crayons mesurent 5 1/2 cm ?",
@@ -379979,7 +379979,7 @@ var S8t = $({
 	"b6.o1": "LX",
 	"b6.o2": "XXXX"
 }, t7t = {
-	label: "Roman Numerals",
+	label: "Chiffres romains jusqu'à 100",
 	"b0.prompt": "Quel chiffre romain est en haut d'un cadran d'horloge (12) ?",
 	"b0.o0": "XII",
 	"b0.o1": "XI",
@@ -380134,7 +380134,7 @@ var S8t = $({
 	"b6.o1": "49",
 	"b6.o2": "45"
 }, o7t = {
-	label: "Reading Scales",
+	label: "Lire une échelle graduée",
 	"b0.prompt": "Une graduation compte 0, 2, 4, 6, ... La flèche est à la 3e marque après 0. Que montre-t-elle ?",
 	"b0.o0": "6",
 	"b0.o1": "3",
@@ -380200,7 +380200,7 @@ var S8t = $({
 	"b0.prompt": "Write the number: three thousand, two hundred and fifteen",
 	"b1.prompt": "Write the number: nine thousand and six"
 }, d7t = {
-	label: "Numbers to 10,000",
+	label: "Nombres jusqu'à 10 000",
 	"b0.prompt": "Écris le nombre : trois mille deux cent quinze",
 	"b1.prompt": "Écris le nombre : neuf mille six"
 }, f7t = /* @__PURE__ */ n({ default: () => m7t }), p7t = l7t, m7t = $({
@@ -380265,7 +380265,7 @@ var S8t = $({
 	"b5.prompt": "Quick! 6 x 8 = ?",
 	"b6.prompt": "Quick! 72 ÷ 8 = ?"
 }, _7t = {
-	label: "Quick Table Facts",
+	label: "Faits des tables, en vitesse",
 	"b0.prompt": "Vite ! 6 x 5 = ?",
 	"b1.prompt": "Vite ! 4 x 7 = ?",
 	"b2.prompt": "Vite ! 9 x 3 = ?",
@@ -380391,7 +380391,7 @@ var S8t = $({
 	"b6.o1": "A circle in the middle",
 	"b6.o2": "No lines inside"
 }, C7t = {
-	label: "3D Shapes & Views",
+	label: "Solides et vues",
 	"b0.prompt": "Quel solide a 6 faces carrées ?",
 	"b0.o0": "Cube",
 	"b0.o1": "Sphère",
@@ -380490,7 +380490,7 @@ var S8t = $({
 	"b5.prompt": "The minute hand of a clock moves from 12 to 6. How many right angles has it turned through?",
 	"b6.prompt": "The minute hand moves from 12 round to 9. How many right angles has it turned through?"
 }, O7t = {
-	label: "Turns & Right Angles",
+	label: "Tours et angles droits",
 	"b0.prompt": "Un quart de tour fait combien d'angles droits ?",
 	"b1.prompt": "Un demi-tour fait combien d'angles droits ?",
 	"b2.prompt": "Un tour complet fait combien d'angles droits ?",
@@ -380686,7 +380686,7 @@ var S8t = $({
 	"b26.prompt": "Round 1,239 to the nearest 10.",
 	"b27.prompt": "Round 7,052 to the nearest 10."
 }, P7t = {
-	label: "Rounding to 10",
+	label: "Arrondir à la dizaine",
 	"b0.prompt": "Arrondis 637 à la dizaine la plus proche.",
 	"b1.prompt": "Arrondis 553 à la dizaine la plus proche.",
 	"b2.prompt": "Arrondis 201 à la dizaine la plus proche.",
@@ -380903,7 +380903,7 @@ var S8t = $({
 	"b26.prompt": "Round 3,064 to the nearest 100.",
 	"b27.prompt": "Round 7,213 to the nearest 100."
 }, B7t = {
-	label: "Rounding to 100",
+	label: "Arrondir à la centaine",
 	"b0.prompt": "Arrondis 670 à la centaine la plus proche.",
 	"b1.prompt": "Arrondis 594 à la centaine la plus proche.",
 	"b2.prompt": "Arrondis 274 à la centaine la plus proche.",
@@ -383336,7 +383336,7 @@ var S8t = $({
 	"b476.o2": "9",
 	"b476.o3": "11"
 }, K7t = {
-	label: "Missing Number Equations",
+	label: "Équations à nombre manquant",
 	"b0.prompt": "☐ x 2 = 4. Que vaut ☐ ?",
 	"b0.o0": "2",
 	"b0.o1": "8",
@@ -385762,7 +385762,7 @@ var S8t = $({
 	"b0.prompt": "A shop has 40 apples. It sells 15, then receives a delivery of 8 more. How many apples now?",
 	"b1.prompt": "Tickets cost $4 each. Sam buys 5 tickets and pays with a $50 note. How much change does Sam get?"
 }, Z7t = {
-	label: "Two-Step Word Problems",
+	label: "Problèmes à deux étapes",
 	"b0.prompt": "Un magasin a 40 pommes. Il en vend 15, puis reçoit une livraison de 8 de plus. Combien de pommes maintenant ?",
 	"b1.prompt": "Les billets coûtent 4 $ chacun. Sam en achète 5 et paie avec un billet de 50 $. Combien de monnaie Sam reçoit-il ?"
 }, Q7t = /* @__PURE__ */ n({ default: () => e9t }), $7t = Y7t, e9t = $({
@@ -385883,7 +385883,7 @@ var S8t = $({
 	"b6.o1": "Yes, there are 4 parts",
 	"b6.o2": "Yes, a square has 4 sides"
 }, r9t = {
-	label: "Equal Parts of Shapes",
+	label: "Parts égales des formes",
 	"b0.prompt": "Un carré est partagé en 4 parts égales. Comment s'appelle chaque part ?",
 	"b0.o0": "Un quart (1/4)",
 	"b0.o1": "Une moitié (1/2)",
@@ -386024,7 +386024,7 @@ var S8t = $({
 	"b5.o1": "How many packs he bought",
 	"b5.o2": "The colour of the cards"
 }, c9t = {
-	label: "Missing or Extra Information",
+	label: "Informations manquantes ou inutiles",
 	"b0.prompt": "Tom a 8 autocollants et 5 crayons. Il donne 3 autocollants. Combien d'autocollants lui reste-t-il ? Quelle information n'est PAS nécessaire ?",
 	"b0.o0": "Il a 5 crayons",
 	"b0.o1": "Il a 8 autocollants",
@@ -386102,7 +386102,7 @@ var S8t = $({
 	"b1.o1": "3:20 am",
 	"b1.o2": "5:20 pm"
 }, p9t = {
-	label: "Telling Time to the Minute",
+	label: "Lire l'heure à la minute",
 	"b0.prompt": "Une horloge analogique affiche 4h37. Comment cela s'écrit-il en chiffres ?",
 	"b0.o0": "4:37",
 	"b0.o1": "3:47",
@@ -386148,7 +386148,7 @@ var S8t = $({
 	"b0.prompt": "3 x 7 = ?",
 	"b1.prompt": "8 x 6 = ?"
 }, v9t = {
-	label: "3, 4 & 8 Times Tables",
+	label: "Tables de 3, 4 et 8",
 	"b0.prompt": "3 x 7 = ?",
 	"b1.prompt": "8 x 6 = ?"
 }, y9t = /* @__PURE__ */ n({ default: () => x9t }), b9t = g9t, x9t = $({
@@ -386225,7 +386225,7 @@ var S8t = $({
 	"b7.prompt": "72 ÷ 9 = ?",
 	"b8.prompt": "56 ÷ 7 = ?"
 }, w9t = {
-	label: "6, 7 & 9 Times Tables",
+	label: "Tables de 6, 7 et 9",
 	"b0.prompt": "6 x 4 = ?",
 	"b1.prompt": "7 x 3 = ?",
 	"b2.prompt": "9 x 5 = ?",
@@ -386339,7 +386339,7 @@ var S8t = $({
 	"b5.o1": "6",
 	"b5.o2": "1"
 }, A9t = {
-	label: "Understanding Fractions",
+	label: "Comprendre les fractions",
 	"b0.prompt": "Une pizza est coupée en 4 parts égales. Quelle fraction représente une part ?",
 	"b0.o0": "1/4",
 	"b0.o1": "1/2",
@@ -386417,7 +386417,7 @@ var S8t = $({
 	"b1.o1": "North",
 	"b1.o2": "South"
 }, F9t = {
-	label: "Compass Directions & Turns",
+	label: "Points cardinaux et tours",
 	"b0.prompt": "Face au Nord, tu fais un quart de tour dans le sens des aiguilles d'une montre. Quelle direction regardes-tu maintenant ?",
 	"b0.o0": "Est",
 	"b0.o1": "Ouest",
@@ -386538,7 +386538,7 @@ var S8t = $({
 	"b5.o1": "C4",
 	"b5.o2": "D2"
 }, B9t = {
-	label: "Grid References & Routes",
+	label: "Coordonnées et trajets",
 	"b0.prompt": "Sur une grille de carte, une référence donne d'abord la lettre de la colonne, puis le numéro de la rangée. Laquelle est la colonne D, rangée 4 ?",
 	"b0.o0": "D4",
 	"b0.o1": "4D",
@@ -386627,7 +386627,7 @@ var S8t = $({
 	"b4.prompt": "How many different pairs of whole numbers (1 or more) add up to 10, counting 3 + 7 and 7 + 3 as the same?",
 	"b5.prompt": "A meal has 3 sandwiches, 2 drinks and 2 fruits to choose from (one of each). How many different meals are there?"
 }, G9t = {
-	label: "Organised Lists",
+	label: "Listes organisées",
 	"b0.prompt": "Un t-shirt peut être rouge ou bleu. Un short peut être noir ou blanc. Combien de tenues différentes peux-tu composer ?",
 	"b1.prompt": "Une glace a 2 parfums et 3 nappages. Combien de glaces différentes peux-tu composer avec 1 parfum et 1 nappage ?",
 	"b2.prompt": "Combien de paires différentes de nombres entiers (0 ou plus) ont pour somme 5, en comptant 1 + 4 et 4 + 1 comme identiques ?",
@@ -386696,7 +386696,7 @@ var S8t = $({
 	"b5.prompt": "475 cents is $4 and how many cents?",
 	"b6.prompt": "309 cents is $3 and how many cents?"
 }, Z9t = {
-	label: "Money in Decimals",
+	label: "L'argent en écriture décimale",
 	"b0.prompt": "4,05 $ font combien de cents ?",
 	"b1.prompt": "3 dollars et 20 cents font combien de cents au total ?",
 	"b2.prompt": "5 dollars font combien de cents ?",
@@ -386733,7 +386733,7 @@ var S8t = $({
 	"b0.prompt": "12.45 + 3.60 = ?",
 	"b1.prompt": "20.30 - 8.75 = ?"
 }, ren = {
-	label: "Adding & Subtracting Decimals",
+	label: "Additionner et soustraire des décimaux",
 	"b0.prompt": "12,45 + 3,60 = ?",
 	"b1.prompt": "20,30 - 8,75 = ?"
 }, ien = /* @__PURE__ */ n({ default: () => oen }), aen = ten, oen = $({
@@ -386765,7 +386765,7 @@ var S8t = $({
 	"b0.prompt": "4,002 - 1,586 = ?",
 	"b1.prompt": "5,000 - 2,347 = ?"
 }, len = {
-	label: "Adding & Subtracting Across Zeros",
+	label: "Additions et soustractions avec des zéros",
 	"b0.prompt": "4 002 - 1 586 = ?",
 	"b1.prompt": "5 000 - 2 347 = ?"
 }, uen = /* @__PURE__ */ n({ default: () => fen }), den = sen, fen = $({
@@ -386824,7 +386824,7 @@ var S8t = $({
 	"b5.prompt": "1 1/2 + 1 1/4 = ___",
 	"b5.answer": "2 3/4"
 }, O3 = {
-	label: "Adding and Subtracting Fractions",
+	label: "Additionner et soustraire des fractions",
 	"b0.prompt": "1/5 + 2/5 = ___",
 	"b0.answer": "3/5",
 	"b1.prompt": "5/8 − 2/8 = ___",
@@ -386879,7 +386879,7 @@ var gen = $({
 	"b0.statement": "Angles on a straight line always add up to 180°.",
 	"b1.statement": "If three angles around a point measure 100°, 150° and 100°, they add up to 360°."
 }, yen = {
-	label: "Angles on a Line & Around a Point",
+	label: "Angles sur une droite et autour d'un point",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Les angles sur une droite totalisent toujours 180°.",
@@ -386922,7 +386922,7 @@ var gen = $({
 	"b0.prompt": "A rectangle is 9 cm long and 4 cm wide. What is its area, in cm²?",
 	"b1.prompt": "An L-shape is made of a 6 cm x 5 cm rectangle with a 2 cm x 3 cm rectangle removed from one corner. What is its area, in cm²?"
 }, Ten = {
-	label: "Area of Rectangles & Compound Shapes",
+	label: "Aire des rectangles et figures composées",
 	"b0.prompt": "Un rectangle mesure 9 cm de long et 4 cm de large. Quelle est son aire, en cm² ?",
 	"b1.prompt": "Une forme en L est formée d'un rectangle 6 cm x 5 cm auquel on retire un rectangle 2 cm x 3 cm dans un coin. Quelle est son aire, en cm² ?"
 }, Een = /* @__PURE__ */ n({ default: () => Oen }), Den = Cen, Oen = $({
@@ -386954,7 +386954,7 @@ var gen = $({
 	"b0.prompt": "A train leaves at 23:40 and arrives at 00:15. How many minutes is the journey?",
 	"b1.prompt": "A bus leaves at 21:50 and the timetable says the journey takes 55 minutes. What time does it arrive?"
 }, jen = {
-	label: "Durations Crossing Hours & Midnight",
+	label: "Durées à cheval sur l'heure et minuit",
 	"b0.prompt": "Un train part à 23h40 et arrive à 00h15. Combien de minutes dure le trajet ?",
 	"b1.prompt": "Un bus part à 21h50 et l'horaire indique que le trajet dure 55 minutes. À quelle heure arrive-t-il ? (Réponds en minutes après minuit, par exemple 22h45 = 1365)"
 }, Men = /* @__PURE__ */ n({ default: () => Pen }), Nen = ken, Pen = $({
@@ -387013,7 +387013,7 @@ var gen = $({
 	"b4.prompt": "2,400 ÷ 6 = ?",
 	"b5.prompt": "50 × 80 = ?"
 }, Len = {
-	label: "Mental Tens and Hundreds",
+	label: "Dizaines et centaines de tête",
 	"b0.prompt": "20 × 30 = ?",
 	"b1.prompt": "800 ÷ 4 = ?",
 	"b2.prompt": "40 × 6 = ?",
@@ -387124,7 +387124,7 @@ var gen = $({
 	"b5.o1": "About 30",
 	"b5.o2": "About 3,000"
 }, Uen = {
-	label: "Checking Your Answer",
+	label: "Vérifier son résultat",
 	"b0.prompt": "Quelle soustraction vérifie 36 + 29 = 65 ?",
 	"b0.o0": "65 − 29 = 36",
 	"b0.o1": "65 + 29 = 94",
@@ -387261,7 +387261,7 @@ var gen = $({
 	"b5.o1": "equilateral",
 	"b5.o2": "scalene"
 }, Jen = {
-	label: "Classifying Triangles",
+	label: "Classer les triangles",
 	"b0.prompt": "Un triangle a 3 côtés égaux. Comment s'appelle-t-il ?",
 	"b0.o0": "équilatéral",
 	"b0.o1": "isocèle",
@@ -387398,7 +387398,7 @@ var gen = $({
 	"b5.o1": "2.54",
 	"b5.o2": "2.04"
 }, $en = {
-	label: "Comparing Decimals",
+	label: "Comparer les décimaux",
 	"b0.prompt": "Lequel est le plus grand : 0,6 ou 0,4 ?",
 	"b0.o0": "0,6",
 	"b0.o1": "0,4",
@@ -387476,7 +387476,7 @@ var gen = $({
 	"b1.o1": "1/2",
 	"b1.o2": "3/4"
 }, itn = {
-	label: "Comparing Fractions",
+	label: "Comparer des fractions",
 	"b0.prompt": "Quelle fraction est la plus grande : 2/3 ou 3/5 ?",
 	"b0.o0": "2/3",
 	"b0.o1": "3/5",
@@ -387597,7 +387597,7 @@ var gen = $({
 	"b5.o1": "12:30 pm",
 	"b5.o2": "0:30 pm"
 }, ltn = {
-	label: "12-Hour and 24-Hour Time",
+	label: "Heures sur 12 et sur 24",
 	"b0.prompt": "Quelle est 2:00 pm en format 24 heures ?",
 	"b0.o0": "14:00",
 	"b0.o1": "12:00",
@@ -387659,7 +387659,7 @@ var gen = $({
 	"b1.prompt": "2 3/4 as an improper fraction is ___.",
 	"b1.answer": "11/4"
 }, I3 = {
-	label: "Improper Fractions & Mixed Numbers",
+	label: "Fractions impropres et nombres mixtes",
 	"b0.prompt": "7/2 en nombre fractionnaire est ___.",
 	"b0.answer": "3 1/2",
 	"b1.prompt": "2 3/4 en fraction impropre est ___.",
@@ -387733,7 +387733,7 @@ var htn = $({
 	"b4.statement": "89 is a prime number.",
 	"b5.statement": "91 is a prime number."
 }, vtn = {
-	label: "Prime or Composite?",
+	label: "Premier ou composé ?",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "7 est un nombre premier.",
@@ -387855,7 +387855,7 @@ var htn = $({
 	"b5.o1": "10",
 	"b5.o2": "10 remainder 5"
 }, wtn = {
-	label: "What About the Remainder?",
+	label: "Que faire du reste ?",
 	"b0.prompt": "30 enfants voyagent dans des voitures de 4 places. Combien de voitures faut-il ?",
 	"b0.o0": "8",
 	"b0.o1": "7",
@@ -387992,7 +387992,7 @@ var htn = $({
 	"b5.o1": "1/2",
 	"b5.o2": "3/4"
 }, ktn = {
-	label: "Splitting Fractions",
+	label: "Décomposer une fraction",
 	"b0.prompt": "Quelle somme donne 3/5 ?",
 	"b0.o0": "1/5 + 2/5",
 	"b0.o1": "1/5 + 1/5",
@@ -388081,7 +388081,7 @@ var htn = $({
 	"b4.prompt": "How many vertices does a square-based pyramid have?",
 	"b5.prompt": "How many edges does a triangular-based pyramid have?"
 }, Ptn = {
-	label: "Prisms and Pyramids",
+	label: "Prismes et pyramides",
 	"b0.prompt": "Combien de faces un cube a-t-il ?",
 	"b1.prompt": "Combien de sommets un cube a-t-il ?",
 	"b2.prompt": "Combien d'arêtes un cube a-t-il ?",
@@ -388133,7 +388133,7 @@ var htn = $({
 	"b1.o1": "Multiply by 2",
 	"b1.o2": "Add 5"
 }, Btn = {
-	label: "Table Rules",
+	label: "Règles du tableau",
 	"b0.prompt": "Un tableau montre : Entrée 1, 2, 3, 4 -> Sortie 3, 6, 9, 12. Quelle est la règle ?",
 	"b0.o0": "Multiplier par 3",
 	"b0.o1": "Ajouter 3",
@@ -388208,7 +388208,7 @@ var htn = $({
 	"b4.statement": "A shape with 5 equal sides and 5 equal angles is a regular pentagon.",
 	"b5.statement": "A triangle with sides 3 cm, 4 cm and 5 cm is a regular polygon."
 }, Gtn = {
-	label: "Regular or Irregular?",
+	label: "Polygones réguliers ou non ?",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un carré est un polygone régulier.",
@@ -388320,7 +388320,7 @@ var htn = $({
 	"b4.prompt": "A line plot shows 6 leaves of 1/2 cm and 4 leaves of 3/4 cm. What is their total length in cm?",
 	"b5.prompt": "On a line plot the longest string is 3/4 m and the shortest is 1/4 m. How much longer is the longest, in m? Give your answer as a decimal."
 }, rnn = {
-	label: "Line Plots with Fractions",
+	label: "Diagrammes en points avec fractions",
 	"b0.prompt": "Un diagramme linéaire montre 6 tiges de 1/2 cm chacune. Quelle est leur longueur totale en cm ?",
 	"b1.prompt": "Un diagramme linéaire montre 3 rubans de 1/4 m et 2 rubans de 1/2 m. Combien y a-t-il de rubans ?",
 	"b2.prompt": "Un diagramme linéaire montre 8 haricots de 1/4 cm chacun. Quelle est leur longueur totale en cm ?",
@@ -388372,7 +388372,7 @@ var htn = $({
 	"b1.o1": "The plant shrank",
 	"b1.o2": "Growth sped up"
 }, lnn = {
-	label: "Line Graphs & Trends",
+	label: "Graphiques linéaires et tendances",
 	"b0.prompt": "Un graphique linéaire de température monte régulièrement de 9h à 15h. Quelle tendance cela montre-t-il ?",
 	"b0.o0": "La température augmente",
 	"b0.o1": "La température diminue",
@@ -388434,7 +388434,7 @@ var htn = $({
 	"b1.o1": "1 gram",
 	"b1.o2": "100 kilograms"
 }, mnn = {
-	label: "Estimating Length, Mass & Volume",
+	label: "Estimer longueur, masse et volume",
 	"b0.prompt": "Quelle est la meilleure estimation pour la longueur d'une porte de classe ?",
 	"b0.o0": "2 mètres",
 	"b0.o1": "20 centimètres",
@@ -388555,7 +388555,7 @@ var htn = $({
 	"b5.o1": "About 120",
 	"b5.o2": "About 12,000"
 }, ynn = {
-	label: "Estimate First",
+	label: "Estimer d'abord",
 	"b0.prompt": "Estime 39 × 2.",
 	"b0.o0": "Environ 80",
 	"b0.o1": "Environ 60",
@@ -388692,7 +388692,7 @@ var htn = $({
 	"b5.o1": "7.60",
 	"b5.o2": "6.40"
 }, wnn = {
-	label: "Estimating Cost and Change",
+	label: "Estimer le coût et la monnaie",
 	"b0.prompt": "Des articles coûtent 1,95 et 3,10. Environ combien coûtent-ils en tout ?",
 	"b0.o0": "Environ 5",
 	"b0.o1": "Environ 4",
@@ -388756,7 +388756,7 @@ var htn = $({
 	"b0.statement": "A good explanation of your method says the steps in order, so someone else could follow along.",
 	"b1.statement": "Saying just the final answer, with no steps, is enough to explain your method to someone else."
 }, knn = {
-	label: "Explaining Your Method",
+	label: "Expliquer ma méthode",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Une bonne explication de sa méthode donne les étapes dans l'ordre, afin qu'une autre personne puisse suivre.",
@@ -389622,7 +389622,7 @@ var htn = $({
 	"b51.o2": "30,000,000",
 	"b51.o3": "300,000"
 }, Fnn = {
-	label: "Place Value to Millions",
+	label: "Numération jusqu'au million",
 	"b0.prompt": "Dans 14 852, quelle est la valeur du chiffre 2 ?",
 	"b0.o0": "2",
 	"b0.o1": "20",
@@ -389995,7 +389995,7 @@ var htn = $({
 	"b5.o1": "27",
 	"b5.o2": "24"
 }, Bnn = {
-	label: "Factor Pairs and Multiples",
+	label: "Couples de diviseurs et multiples",
 	"b0.prompt": "Quelle paire de nombres a pour produit 12 ?",
 	"b0.o0": "3 et 4",
 	"b0.o1": "2 et 5",
@@ -390057,7 +390057,7 @@ var htn = $({
 	"b0.prompt": "What is 3/5 of 40?",
 	"b1.prompt": "What is 5/6 of 72?"
 }, Gnn = {
-	label: "Fraction of a Quantity",
+	label: "Fraction d'une quantité",
 	"b0.prompt": "Combien font 3/5 de 40 ?",
 	"b1.prompt": "Combien font 5/6 de 72 ?"
 }, Knn = /* @__PURE__ */ n({ default: () => Jnn }), qnn = Unn, Jnn = $({
@@ -390116,7 +390116,7 @@ var htn = $({
 	"b4.prompt": "How many lines of symmetry does a regular pentagon have?",
 	"b5.prompt": "How many lines of symmetry does a regular hexagon have?"
 }, Znn = {
-	label: "Lines of Symmetry",
+	label: "Axes de symétrie",
 	"b0.prompt": "Combien d'axes de symétrie une forme de cerf-volant a-t-elle ?",
 	"b1.prompt": "Combien d'axes de symétrie un rectangle (qui n'est pas un carré) a-t-il ?",
 	"b2.prompt": "Combien d'axes de symétrie un triangle équilatéral a-t-il ?",
@@ -390152,7 +390152,7 @@ var htn = $({
 	"b0.prompt": "Data set: 4, 7, 4, 9, 4, 2. What is the mode?",
 	"b1.prompt": "Data set: 12, 5, 19, 8, 15. What is the range?"
 }, rrn = {
-	label: "Mode & Range",
+	label: "Mode et étendue",
 	"b0.prompt": "Ensemble de données : 4, 7, 4, 9, 4, 2. Quel est le mode ?",
 	"b1.prompt": "Ensemble de données : 12, 5, 19, 8, 15. Quelle est l'étendue ?"
 }, irn = /* @__PURE__ */ n({ default: () => orn }), arn = trn, orn = $({
@@ -390211,7 +390211,7 @@ var htn = $({
 	"b5.prompt": "Simplify 10/25 = ___",
 	"b5.answer": "2/5"
 }, J3 = {
-	label: "Equivalent Fractions",
+	label: "Fractions équivalentes",
 	"b0.prompt": "1/2 = ___/8",
 	"b0.answer": "4",
 	"b1.prompt": "2/3 = ___/6",
@@ -390291,7 +390291,7 @@ var urn = $({
 	"b4.prompt": "The pattern 3, 8, 13, 18, ... adds 5 each time. What is the 6th number?",
 	"b5.prompt": "The square numbers go 1, 4, 9, 16, 25, ... What comes next?"
 }, prn = {
-	label: "Patterns from Rules",
+	label: "Suites à partir d'une règle",
 	"b0.prompt": "Règle : commence à 4 et ajoute 3 à chaque fois. 4, 7, 10, 13, ... Quel est le nombre suivant ?",
 	"b1.prompt": "Règle : commence à 50 et retire 5 à chaque fois. 50, 45, 40, ... Quel est le nombre suivant ?",
 	"b2.prompt": "Règle : commence à 2 et double à chaque fois. 2, 4, 8, 16, ... Quel est le nombre suivant ?",
@@ -390402,7 +390402,7 @@ var urn = $({
 	"b5.o1": "2",
 	"b5.o2": "0"
 }, yrn = {
-	label: "Lines, Rays and Segments",
+	label: "Droites, demi-droites et segments",
 	"b0.prompt": "Un chemin droit avec deux extrémités s'appelle un...",
 	"b0.o0": "segment",
 	"b0.o1": "demi-droite",
@@ -390466,7 +390466,7 @@ var urn = $({
 	"b0.statement": "6 x 9 = 54",
 	"b1.statement": "96 ÷ 8 = 11"
 }, wrn = {
-	label: "True or False: Table Facts",
+	label: "Vrai ou faux : faits des tables",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "6 x 9 = 54",
@@ -390509,7 +390509,7 @@ var urn = $({
 	"b0.prompt": "7 x 8 = ?",
 	"b1.prompt": "108 ÷ 9 = ?"
 }, Arn = {
-	label: "Instant Table Facts",
+	label: "Faits des tables, en un instant",
 	"b0.prompt": "7 x 8 = ?",
 	"b1.prompt": "108 ÷ 9 = ?"
 }, jrn = /* @__PURE__ */ n({ default: () => Nrn }), Mrn = Orn, Nrn = $({
@@ -390568,7 +390568,7 @@ var urn = $({
 	"b4.prompt": "How many mm are in 7 cm?",
 	"b5.prompt": "5 l 500 ml = ? ml"
 }, Irn = {
-	label: "Metric Conversions",
+	label: "Conversions métriques",
 	"b0.prompt": "1 km = ? m",
 	"b1.prompt": "Combien de cm y a-t-il dans 3 m ?",
 	"b2.prompt": "2 kg = ? g",
@@ -390604,7 +390604,7 @@ var urn = $({
 	"b0.prompt": "9 x 11 = ?",
 	"b1.prompt": "144 ÷ 12 = ?"
 }, Hrn = {
-	label: "Times Tables to 12x12",
+	label: "Tables jusqu'à 12 x 12",
 	"b0.prompt": "9 x 11 = ?",
 	"b1.prompt": "144 ÷ 12 = ?"
 }, Urn = /* @__PURE__ */ n({ default: () => Grn }), Wrn = Brn, Grn = $({
@@ -390711,7 +390711,7 @@ var urn = $({
 	"b5.o1": "2",
 	"b5.o2": "3"
 }, Jrn = {
-	label: "Outcomes and Chance",
+	label: "Résultats et équiprobabilité",
 	"b0.prompt": "On lance une pièce une fois. Quels sont les résultats possibles ?",
 	"b0.o0": "Pile ou face",
 	"b0.o1": "Pile seulement",
@@ -390848,7 +390848,7 @@ var urn = $({
 	"b5.o1": "20",
 	"b5.o2": "30"
 }, $rn = {
-	label: "Counterexamples",
+	label: "Conjectures et contre-exemples",
 	"b0.prompt": "Affirmation : « Tous les nombres pairs sont des multiples de 4. » Quel nombre est un contre-exemple ?",
 	"b0.o0": "6",
 	"b0.o1": "8",
@@ -390910,7 +390910,7 @@ var urn = $({
 	"b0.prompt": "A protractor reading shows an angle starting at 0° and ending at 47°. What is the angle, in degrees?",
 	"b1.prompt": "You need to draw an angle of 132° with a protractor. What number do you mark on the scale?"
 }, iin = {
-	label: "Measuring Angles with a Protractor",
+	label: "Mesurer un angle au rapporteur",
 	"b0.prompt": "Un rapporteur montre un angle commençant à 0° et se terminant à 47°. Quel est l'angle, en degrés ?",
 	"b1.prompt": "Tu dois tracer un angle de 132° avec un rapporteur. Quel nombre marques-tu sur l'échelle ?"
 }, ain = /* @__PURE__ */ n({ default: () => sin }), oin = nin, sin = $({
@@ -391101,7 +391101,7 @@ var urn = $({
 	"b26.prompt": "337 ÷ 100 = ?",
 	"b27.prompt": "372 × 10 = ?"
 }, uin = {
-	label: "Times and Divide by 10, 100, 1000",
+	label: "Multiplier et diviser par 10, 100, 1 000",
 	"b0.prompt": "9 400 ÷ 100 = ?",
 	"b1.prompt": "50 × 1 000 = ?",
 	"b2.prompt": "18 × 100 = ?",
@@ -391186,7 +391186,7 @@ var urn = $({
 	"b5.prompt": "2 × 4/11 = ___",
 	"b5.answer": "8/11"
 }, e6 = {
-	label: "Fraction Times Whole Number",
+	label: "Fraction fois un entier",
 	"b0.prompt": "3 × 1/7 = ___",
 	"b0.answer": "3/7",
 	"b1.prompt": "2 × 1/5 = ___",
@@ -391239,7 +391239,7 @@ var _in = $({
 	"b0.prompt": "213 x 4 = ?",
 	"b1.prompt": "348 x 6 = ?"
 }, bin = {
-	label: "3-Digit by 1-Digit Multiplication",
+	label: "Multiplier un nombre à trois chiffres",
 	"b0.prompt": "213 x 4 = ?",
 	"b1.prompt": "348 x 6 = ?"
 }, xin = /* @__PURE__ */ n({ default: () => Cin }), Sin = vin, Cin = $({
@@ -391346,7 +391346,7 @@ var _in = $({
 	"b5.o1": "acute",
 	"b5.o2": "reflex"
 }, Ein = {
-	label: "Naming Angles",
+	label: "Nommer les angles",
 	"b0.prompt": "Un angle de 90° s'appelle un angle...",
 	"b0.o0": "droit",
 	"b0.o1": "aigu",
@@ -391483,7 +391483,7 @@ var _in = $({
 	"b5.o1": "8 cm",
 	"b5.o2": "2 cm"
 }, jin = {
-	label: "Parts of a Circle",
+	label: "Parties du cercle",
 	"b0.prompt": "La distance du centre d'un cercle à son bord s'appelle le...",
 	"b0.o0": "rayon",
 	"b0.o1": "diamètre",
@@ -391561,7 +391561,7 @@ var _in = $({
 	"b1.o1": "6 units",
 	"b1.o2": "8 units"
 }, Iin = {
-	label: "Coordinates in the First Quadrant",
+	label: "Coordonnées dans le premier quadrant",
 	"b0.prompt": "Un point est à 3 à droite et 5 en haut de l'origine. Quelles sont ses coordonnées ?",
 	"b0.o0": "(3, 5)",
 	"b0.o1": "(5, 3)",
@@ -391682,7 +391682,7 @@ var _in = $({
 	"b5.o1": "Do you like school?",
 	"b5.o2": "Is the bus fast?"
 }, Vin = {
-	label: "Choosing a Graph",
+	label: "Choisir un graphique",
 	"b0.prompt": "Quel graphique montre le mieux combien d'enfants ont choisi chaque fruit préféré ?",
 	"b0.o0": "Un diagramme en barres",
 	"b0.o1": "Un graphique linéaire",
@@ -391771,7 +391771,7 @@ var _in = $({
 	"b4.prompt": "A double bar chart shows swimmers. Girls: Monday 5, Tuesday 9. Boys: Monday 8, Tuesday 6. How many girls swam on the two days together?",
 	"b5.prompt": "In a bar chart, each square stands for 5 pupils. A bar is 7 squares tall. How many pupils does it show?"
 }, Kin = {
-	label: "Reading Bar Charts",
+	label: "Lire les diagrammes en barres",
 	"b0.prompt": "Un diagramme en barres montre 6 chats, 9 chiens et 4 poissons. Combien y a-t-il de chiens de plus que de poissons ?",
 	"b1.prompt": "Un diagramme en barres montre 8 pommes, 5 poires et 3 prunes. Combien y a-t-il de fruits en tout ?",
 	"b2.prompt": "Un diagramme en barres montre les livres lus : lundi 4, mardi 7, mercredi 3. Combien de livres ont été lus mardi et mercredi ensemble ?",
@@ -391882,7 +391882,7 @@ var _in = $({
 	"b5.o1": "2015",
 	"b5.o2": "2035"
 }, Qin = {
-	label: "Roman Numerals",
+	label: "Chiffres romains jusqu'à 1 000",
 	"b0.prompt": "Quel nombre est XIV ?",
 	"b0.o0": "14",
 	"b0.o1": "16",
@@ -391944,7 +391944,7 @@ var _in = $({
 	"b0.prompt": "A scale has marks at 0, 10 and 20 with two unlabelled marks evenly spaced between them. What number does the first unlabelled mark show?",
 	"b1.prompt": "A measuring jug has marks at 0 ml, 100 ml and 200 ml with four unlabelled marks evenly spaced between 100 and 200. What does the second unlabelled mark after 100 show?"
 }, ran = {
-	label: "Reading Unlabelled Scales",
+	label: "Lire une échelle non graduée",
 	"b0.prompt": "Une échelle a des marques à 0, 10 et 20 avec deux marques non étiquetées également espacées entre elles. Quel nombre montre la première marque non étiquetée ?",
 	"b1.prompt": "Un verre doseur a des marques à 0 ml, 100 ml et 200 ml avec quatre marques non étiquetées également espacées entre 100 et 200. Que montre la deuxième marque non étiquetée après 100 ?"
 }, ian = /* @__PURE__ */ n({ default: () => oan }), aan = tan, oan = $({
@@ -392003,7 +392003,7 @@ var _in = $({
 	"b4.prompt": "The 13:45 bus arrives at 15:20. How many minutes is the journey?",
 	"b5.prompt": "A journey has a 25-minute bus ride, a 10-minute wait and a 1 hour 5 minute train ride. How many minutes is the whole journey?"
 }, lan = {
-	label: "Timetables and Journeys",
+	label: "Horaires et trajets",
 	"b0.prompt": "Horaire : École 08:00, Musée 08:20. Combien de minutes entre l'école et le musée ?",
 	"b1.prompt": "Horaire : Marché 09:10, Pont 09:25. Combien de minutes entre le marché et le pont ?",
 	"b2.prompt": "Horaire : Bibliothèque 10:05, Piscine 10:40. Combien de minutes entre la bibliothèque et la piscine ?",
@@ -392066,7 +392066,7 @@ var _in = $({
 	"b4.prompt": "Two-way table. Swim: girls 12, boys 15. Dance: girls 18, boys 7. Chess: girls 9, boys 11. How many children chose dance?",
 	"b5.prompt": "Two-way table. Swim: girls 12, boys 15. Dance: girls 18, boys 7. Chess: girls 9, boys 11. How many more girls than boys are there in total?"
 }, han = {
-	label: "Two-Way Tables",
+	label: "Tableaux à double entrée",
 	"b0.prompt": "Tableau à double entrée. À pied : filles 8, garçons 6. Bus : filles 5, garçons 7. Combien d'enfants vont à pied ?",
 	"b1.prompt": "Tableau à double entrée. À pied : filles 8, garçons 6. Bus : filles 5, garçons 7. Combien y a-t-il de garçons en tout ?",
 	"b2.prompt": "Tableau à double entrée. À pied : filles 8, garçons 6. Bus : filles 5, garçons 7. Combien d'enfants de plus vont à pied qu'en bus ?",
@@ -392102,7 +392102,7 @@ var _in = $({
 	"b0.prompt": "Write the number: four hundred twelve thousand, six hundred",
 	"b1.prompt": "Write the number: two million, thirty thousand and five"
 }, xan = {
-	label: "Numbers to a Million",
+	label: "Nombres jusqu'au million",
 	"b0.prompt": "Écris le nombre : quatre cent douze mille six cents",
 	"b1.prompt": "Écris le nombre : deux millions trente mille cinq"
 }, San = /* @__PURE__ */ n({ default: () => wan }), Can = yan, wan = $({
@@ -392209,7 +392209,7 @@ var _in = $({
 	"b5.o1": "(3, 2)",
 	"b5.o2": "(5, 4)"
 }, Dan = {
-	label: "Mirror Reflections",
+	label: "Symétries sur quadrillage",
 	"b0.prompt": "Un point est en (1, 2). On le réfléchit dans la droite miroir verticale x = 3. Où arrive-t-il ?",
 	"b0.o0": "(5, 2)",
 	"b0.o1": "(1, 4)",
@@ -392271,7 +392271,7 @@ var _in = $({
 	"b0.prompt": "356 + 99 = ? (think: +100 then -1)",
 	"b1.prompt": "482 - 199 = ? (think: -200 then +1)"
 }, Man = {
-	label: "Mental Rounding & Compensation",
+	label: "Arrondir et compenser de tête",
 	"b0.prompt": "356 + 99 = ? (pense : +100 puis -1)",
 	"b1.prompt": "482 - 199 = ? (pense : -200 puis +1)"
 }, Nan = /* @__PURE__ */ n({ default: () => Fan }), Pan = Aan, Fan = $({
@@ -392330,7 +392330,7 @@ var _in = $({
 	"b4.prompt": "Round 45.49 to the nearest whole number.",
 	"b5.prompt": "Round 19.75 to the nearest whole number."
 }, Ran = {
-	label: "Rounding Decimals",
+	label: "Arrondir des décimaux",
 	"b0.prompt": "Arrondis 3,4 à l'unité près.",
 	"b1.prompt": "Arrondis 6,7 à l'unité près.",
 	"b2.prompt": "Arrondis 8,2 à l'unité près.",
@@ -392441,7 +392441,7 @@ var _in = $({
 	"b5.o1": "9 hundredths",
 	"b5.o2": "5 tenths"
 }, Wan = {
-	label: "Decimal Digit Values",
+	label: "Valeur des chiffres décimaux",
 	"b0.prompt": "Dans 5,37, quelle est la valeur du chiffre 3 ?",
 	"b0.o0": "3 dixièmes",
 	"b0.o1": "3 centièmes",
@@ -392530,7 +392530,7 @@ var _in = $({
 	"b4.prompt": "A path is 3/4 km long. Mia walks it 4 times. How many km does she walk?",
 	"b5.prompt": "A bag of 3.2 kg of rice is shared equally between 4 families. How many kg does each family get? Give your answer as a decimal."
 }, Yan = {
-	label: "Measurement Problems",
+	label: "Problèmes de mesure",
 	"b0.prompt": "Un sac contient 2 kg de farine. On en utilise 750 g. Combien de grammes reste-t-il ?",
 	"b1.prompt": "Une carafe contient 1 l. On verse 4 tasses de 200 ml. Combien de ml reste-t-il dans la carafe ?",
 	"b2.prompt": "Un ruban de 2,5 m est coupé en 5 morceaux égaux. Quelle est la longueur de chaque morceau en cm ?",
@@ -392566,7 +392566,7 @@ var _in = $({
 	"b0.prompt": "A rope is 5 metres long. It is cut into pieces of 40 cm each. How many whole pieces can be cut?",
 	"b1.prompt": "A recipe needs 250 g of flour per batch. How many whole batches can be made from a 2 kg bag?"
 }, ton = {
-	label: "Multi-Step Problems with Units",
+	label: "Problèmes à plusieurs étapes avec unités",
 	"b0.prompt": "Une corde mesure 5 mètres de long. Elle est coupée en morceaux de 40 cm chacun. Combien de morceaux entiers peut-on couper ?",
 	"b1.prompt": "Une recette nécessite 250 g de farine par lot. Combien de lots entiers peut-on faire avec un sac de 2 kg ?"
 }, non = /* @__PURE__ */ n({ default: () => ion }), ron = $an, ion = $({
@@ -392625,7 +392625,7 @@ var _in = $({
 	"b4.prompt": "3 items cost 4.20 each. You pay with 20. How much change do you get?",
 	"b5.prompt": "A bill of 36.60 is shared equally between 4 friends. How much does each friend pay?"
 }, son = {
-	label: "Shopping Problems",
+	label: "Problèmes de courses",
 	"b0.prompt": "2 livres coûtent 3,50 chacun et un stylo coûte 1,25. Quel est le coût total ?",
 	"b1.prompt": "Un article coûte 6,40. Tu paies avec 10. Combien de monnaie reçois-tu ?",
 	"b2.prompt": "3 pommes coûtent 0,40 chacune. Quel est le coût total ?",
@@ -392736,7 +392736,7 @@ var _in = $({
 	"b5.o1": "16 times as much",
 	"b5.o2": "32 times as much"
 }, pon = {
-	label: "Times As Many or More Than?",
+	label: "Combien de fois plus ?",
 	"b0.prompt": "Ann a 4 autocollants. Ben en a 3 fois plus qu'Ann. Combien Ben en a-t-il ?",
 	"b0.o0": "12",
 	"b0.o1": "7",
@@ -392814,7 +392814,7 @@ var _in = $({
 	"b1.o1": "Between 0.5 and 0.6",
 	"b1.o2": "Between 0 and 0.1"
 }, von = {
-	label: "Tenths & Hundredths as Decimals",
+	label: "Dixièmes et centièmes en décimaux",
 	"b0.prompt": "Quel décimal correspond à 7/10 ?",
 	"b0.o0": "0,7",
 	"b0.o1": "0,07",
@@ -392876,7 +392876,7 @@ var _in = $({
 	"b1.o1": "Its left-right orientation",
 	"b1.o2": "Its position"
 }, Con = {
-	label: "Translating & Reflecting Shapes",
+	label: "Translater et symétriser sur quadrillage",
 	"b0.prompt": "Une forme en (2, 2) est translatée de 3 à droite et 1 en haut. Quelles sont ses nouvelles coordonnées ?",
 	"b0.o0": "(5, 3)",
 	"b0.o1": "(1, 5)",
@@ -392922,7 +392922,7 @@ var _in = $({
 	"b0.prompt": "A triangle has angles of 60° and 70°. What is the third angle, in degrees?",
 	"b1.prompt": "A triangle has angles of 35° and 95°. What is the third angle, in degrees?"
 }, Oon = {
-	label: "Triangle Angle Sum",
+	label: "Somme des angles d'un triangle",
 	"b0.prompt": "Un triangle a des angles de 60° et 70°. Quel est le troisième angle, en degrés ?",
 	"b1.prompt": "Un triangle a des angles de 35° et 95°. Quel est le troisième angle, en degrés ?"
 }, kon = /* @__PURE__ */ n({ default: () => jon }), Aon = Eon, jon = $({
@@ -392970,7 +392970,7 @@ var _in = $({
 	"b1.o1": "6%",
 	"b1.o2": "16%"
 }, Pon = {
-	label: "Percentage as Out of 100",
+	label: "Pourcentage : sur 100",
 	"b0.prompt": "Que signifie 45 % ?",
 	"b0.o0": "45 sur 100",
 	"b0.o1": "45 sur 10",
@@ -393043,7 +393043,7 @@ var _in = $({
 	"b4.prompt": "Ali and Bea have 56 stickers together. Ali has 3 times as many as Bea (4 equal parts in the bar). How many does Bea have?",
 	"b5.prompt": "3/8 of a bar is red and the red part is 24. What is the whole bar?"
 }, zon = {
-	label: "Bar Models",
+	label: "Modèles en barres",
 	"b0.prompt": "La barre de Tom a 1 case, qui vaut 5. La barre de Sam a 4 cases de la même taille. Combien Sam en a-t-il ?",
 	"b1.prompt": "Une barre de 8 cases égales représente un total de 40. Combien vaut chaque case ?",
 	"b2.prompt": "La barre d'Anna est 3 fois plus longue que celle de Ben. La barre de Ben mesure 7 cm. Quelle est la longueur de la barre d'Anna en cm ?",
@@ -393192,7 +393192,7 @@ var _in = $({
 	"b5.o1": "North",
 	"b5.o2": "East"
 }, Zon = {
-	label: "Compass Points and Turns",
+	label: "Points cardinaux et tours",
 	"b0.prompt": "Tu regardes vers le nord et tu tournes de 90° dans le sens des aiguilles d'une montre. Vers où regardes-tu ?",
 	"b0.o0": "L'est",
 	"b0.o1": "L'ouest",
@@ -393281,7 +393281,7 @@ var _in = $({
 	"b4.prompt": "50 × 2 × 9 = ?",
 	"b5.prompt": "6 × 98 = 6 × 100 − 6 × 2 = ?"
 }, nsn = {
-	label: "Smart Multiplying",
+	label: "Multiplier astucieusement",
 	"b0.prompt": "25 × 4 × 3 = ?",
 	"b1.prompt": "2 × 7 × 5 = ?",
 	"b2.prompt": "5 × 8 × 2 = ?",
@@ -393346,7 +393346,7 @@ var _in = $({
 	"b4.statement": "3,470 is divisible by 5 and by 10.",
 	"b5.statement": "2,019 is divisible by 2."
 }, csn = {
-	label: "Divisibility Rules 2, 5, 10",
+	label: "Critères de divisibilité 2, 5, 10",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "130 est divisible par 10.",
@@ -393420,7 +393420,7 @@ var _in = $({
 	"b4.prompt": "18 × 50 = 9 × 100 = ?",
 	"b5.prompt": "32 × 25 = 16 × 50 = 8 × 100 = ?"
 }, msn = {
-	label: "Double and Halve",
+	label: "Doubler et diviser par deux",
 	"b0.prompt": "Le double de 36 = ?",
 	"b1.prompt": "La moitié de 90 = ?",
 	"b2.prompt": "16 × 5 : la moitié de 16 est 8, puis 8 × 10 = ?",
@@ -393483,7 +393483,7 @@ var _in = $({
 	"b4.prompt": "A rectangle has a perimeter of 30 cm and a length of 9 cm. What is its width in cm?",
 	"b5.prompt": "A 6 cm by 4 cm rectangle and an 8 cm by 3 cm rectangle both have an area of 24 cm². What is the perimeter of the 8 cm by 3 cm rectangle in cm?"
 }, bsn = {
-	label: "Perimeter and Missing Sides",
+	label: "Périmètre et côtés manquants",
 	"b0.prompt": "Un rectangle mesure 5 cm de long et 3 cm de large. Quel est son périmètre en cm ?",
 	"b1.prompt": "Un carré a des côtés de 7 cm. Quel est son périmètre en cm ?",
 	"b2.prompt": "Un rectangle mesure 8 cm de long et 2 cm de large. Quel est son périmètre en cm ?",
@@ -393519,7 +393519,7 @@ var _in = $({
 	"b0.prompt": "☐ + 17 = 42. What number goes in the box?",
 	"b1.prompt": "6 x ☐ = 54. What number goes in the box?"
 }, Esn = {
-	label: "Solving for an Unknown Box",
+	label: "Résoudre pour une case inconnue",
 	"b0.prompt": "☐ + 17 = 42. Quel nombre va dans la case ?",
 	"b1.prompt": "6 x ☐ = 54. Quel nombre va dans la case ?"
 }, Dsn = /* @__PURE__ */ n({ default: () => ksn }), Osn = wsn, ksn = $({
@@ -393553,7 +393553,7 @@ var _in = $({
 	"b0.statement": "Listing pairs of numbers that add to 10 in order (0+10, 1+9, 2+8, ...) helps you find every possible pair without missing one.",
 	"b1.statement": "If a problem asks for all the ways to make 15p with 5p and 10p coins, finding just one way is enough — there is never more than one solution."
 }, Msn = {
-	label: "Finding All Solutions Systematically",
+	label: "Trouver toutes les solutions",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Lister les paires de nombres qui font 10 dans l'ordre (0+10, 1+9, 2+8, ...) aide à trouver toutes les paires possibles sans en manquer une.",
@@ -393596,7 +393596,7 @@ var _in = $({
 	"b1.prompt": "3/4 - 1/6 = ___.",
 	"b1.answer": "7/12"
 }, h6 = {
-	label: "Adding & Subtracting Unlike Fractions",
+	label: "Additionner et soustraire des fractions",
 	"b0.prompt": "1/2 + 1/3 = ___.",
 	"b0.answer": "5/6",
 	"b1.prompt": "3/4 - 1/6 = ___.",
@@ -393641,7 +393641,7 @@ var zsn = $({
 	"b0.prompt": "348.6 + 27.35 = ?",
 	"b1.prompt": "902.4 - 356.78 = ?"
 }, Hsn = {
-	label: "Column Addition & Subtraction with Decimals",
+	label: "Addition et soustraction posées de décimaux",
 	"b0.prompt": "348,6 + 27,35 = ?",
 	"b1.prompt": "902,4 - 356,78 = ?"
 }, Usn = /* @__PURE__ */ n({ default: () => Gsn }), Wsn = Bsn, Gsn = $({
@@ -393673,7 +393673,7 @@ var zsn = $({
 	"b0.prompt": "(4 + 3) x 5 = ?",
 	"b1.prompt": "20 - (2 x 6) + 3 = ?"
 }, Jsn = {
-	label: "Order of Operations",
+	label: "Ordre des opérations",
 	"b0.prompt": "(4 + 3) x 5 = ?",
 	"b1.prompt": "20 - (2 x 6) + 3 = ?"
 }, Ysn = /* @__PURE__ */ n({ default: () => Zsn }), Xsn = Ksn, Zsn = $({
@@ -393732,7 +393732,7 @@ var zsn = $({
 	"b4.prompt": "A 7 cm by 3 cm rectangle is joined to a 4 cm by 3 cm rectangle to make one long rectangle 11 cm by 3 cm. What is its perimeter in cm?",
 	"b5.prompt": "An 8 cm by 6 cm rectangle has a 3 cm by 3 cm square cut from one corner. What is the perimeter of the L-shape in cm?"
 }, ecn = {
-	label: "Area and Perimeter of Compound Shapes",
+	label: "Aire et périmètre de figures composées",
 	"b0.prompt": "Une figure est formée de deux rectangles accolés : 6 cm sur 4 cm et 3 cm sur 4 cm. Quelle est son aire totale en cm² ?",
 	"b1.prompt": "Une figure en L est un rectangle de 8 cm sur 6 cm dont on a enlevé un coin de 3 cm sur 2 cm. Quelle est son aire en cm² ?",
 	"b2.prompt": "Deux rectangles, 5 cm sur 2 cm et 3 cm sur 2 cm, sont accolés pour former une figure. Quelle est son aire en cm² ?",
@@ -393795,7 +393795,7 @@ var zsn = $({
 	"b4.prompt": "A triangle has base 8 cm and height 7 cm. What is its area in cm²?",
 	"b5.prompt": "A triangle has base 14 cm and height 5 cm. What is its area in cm²?"
 }, ocn = {
-	label: "Area of Triangles and Parallelograms",
+	label: "Aire des triangles et des parallélogrammes",
 	"b0.prompt": "Un parallélogramme a une base de 8 cm et une hauteur de 5 cm. Quelle est son aire en cm² ?",
 	"b1.prompt": "Un parallélogramme a une base de 12 cm et une hauteur de 3 cm. Quelle est son aire en cm² ?",
 	"b2.prompt": "Un parallélogramme a une base de 9 cm et une hauteur de 6 cm. Quelle est son aire en cm² ?",
@@ -393831,7 +393831,7 @@ var zsn = $({
 	"b0.prompt": "Find the mean of: 4, 8, 6, 2.",
 	"b1.prompt": "Find the mean of: 10, 15, 20, 25, 30."
 }, fcn = {
-	label: "Calculating the Mean",
+	label: "Calculer la moyenne",
 	"b0.prompt": "Trouve la moyenne de : 4, 8, 6, 2.",
 	"b1.prompt": "Trouve la moyenne de : 10, 15, 20, 25, 30."
 }, pcn = /* @__PURE__ */ n({ default: () => hcn }), mcn = ucn, hcn = $({
@@ -393863,7 +393863,7 @@ var zsn = $({
 	"b0.prompt": "A $40 jacket is reduced by 20%. What is the new price, in dollars?",
 	"b1.prompt": "A $150 bike price increases by 10%. What is the new price, in dollars?"
 }, vcn = {
-	label: "Percentage Increase & Decrease",
+	label: "Augmentation et diminution en pourcentage",
 	"b0.prompt": "Une veste à 40 $ est réduite de 20 %. Quel est le nouveau prix, en dollars ?",
 	"b1.prompt": "Le prix d'un vélo à 150 $ augmente de 10 %. Quel est le nouveau prix, en dollars ?"
 }, ycn = /* @__PURE__ */ n({ default: () => xcn }), bcn = gcn, xcn = $({
@@ -393886,12 +393886,34 @@ var zsn = $({
 	{
 		key: "b0",
 		tier: 1,
-		correctValue: 1.3
+		correctValue: 1.3,
+		scene: {
+			type: "counters",
+			operator: "+",
+			groups: [{
+				emoji: "🟩",
+				count: 6
+			}, {
+				emoji: "🟦",
+				count: 7
+			}]
+		}
 	},
 	{
 		key: "b1",
 		tier: 1,
-		correctValue: 1.3
+		correctValue: 1.3,
+		scene: {
+			type: "counters",
+			operator: "+",
+			groups: [{
+				emoji: "🟩",
+				count: 8
+			}, {
+				emoji: "🟦",
+				count: 5
+			}]
+		}
 	},
 	{
 		key: "b2",
@@ -393901,7 +393923,18 @@ var zsn = $({
 	{
 		key: "b3",
 		tier: 2,
-		correctValue: 2.7
+		correctValue: 2.7,
+		scene: {
+			type: "counters",
+			operator: "+",
+			groups: [{
+				emoji: "🟩",
+				count: 9
+			}, {
+				emoji: "🟦",
+				count: 18
+			}]
+		}
 	},
 	{
 		key: "b4",
@@ -393922,7 +393955,7 @@ var zsn = $({
 	"b4.prompt": "1.5 × 6 = ?",
 	"b5.prompt": "0.25 × 8 = ?"
 }, wcn = {
-	label: "Mental Decimals",
+	label: "Décimaux de tête",
 	"b0.prompt": "0,6 + 0,7 = ?",
 	"b1.prompt": "0,8 + 0,5 = ?",
 	"b2.prompt": "2,5 × 4 = ?",
@@ -393939,11 +393972,15 @@ var zsn = $({
 		let n = Ecn.filter((t) => t.tier === e), r = n[Z(t, 0, n.length - 1)];
 		return {
 			entryKey: r.key,
-			correctValue: r.correctValue
+			correctValue: r.correctValue,
+			...r.scene !== void 0 && { scene: r.scene }
 		};
 	},
 	present(e, t) {
-		return { prompt: t(`${String(e.entryKey)}.prompt`) };
+		return {
+			prompt: t(`${String(e.entryKey)}.prompt`),
+			...e.scene !== void 0 && { scene: e.scene }
+		};
 	}
 }), Ocn = [{
 	key: "b0",
@@ -393958,7 +393995,7 @@ var zsn = $({
 	"b0.prompt": "A cuboid is 4 cm x 3 cm x 5 cm. What is its volume, in cm³?",
 	"b1.prompt": "A box holds 2,000 cm³ of water. How many litres is that?"
 }, Acn = {
-	label: "Volume of a Cuboid",
+	label: "Volume d'un pavé droit",
 	"b0.prompt": "Un parallélépipède mesure 4 cm x 3 cm x 5 cm. Quel est son volume, en cm³ ?",
 	"b1.prompt": "Une boîte contient 2 000 cm³ d'eau. Combien de litres cela fait-il ?"
 }, jcn = /* @__PURE__ */ n({ default: () => Ncn }), Mcn = Ocn, Ncn = $({
@@ -394019,7 +394056,7 @@ var zsn = $({
 	"b4.statement": "Every parallelogram is a rectangle.",
 	"b5.statement": "Every square is a parallelogram."
 }, Icn = {
-	label: "Shape Families",
+	label: "Les familles de formes",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Tout carré est un rectangle.",
@@ -394141,7 +394178,7 @@ var zsn = $({
 	"b5.o1": "Few trials can differ from the prediction, so roll more",
 	"b5.o2": "Predictions are always wrong"
 }, Hcn = {
-	label: "Predictions and Experiments",
+	label: "Prévisions et expériences",
 	"b0.prompt": "On lance 20 fois une pièce équilibrée. À peu près combien de « pile » prévois-tu ?",
 	"b0.o0": "5",
 	"b0.o1": "10",
@@ -394278,7 +394315,7 @@ var zsn = $({
 	"b5.o1": "8 for €2.00",
 	"b5.o2": "They cost the same"
 }, qcn = {
-	label: "Best Buy",
+	label: "Le meilleur prix",
 	"b0.prompt": "Lequel est moins cher à la pièce : 2 pour 3 € ou 1,75 € la pièce ?",
 	"b0.o0": "2 pour 3 €",
 	"b0.o1": "1,75 € la pièce",
@@ -394415,7 +394452,7 @@ var zsn = $({
 	"b5.o1": "1.1",
 	"b5.o2": "1.09"
 }, Qcn = {
-	label: "Ordering Decimals",
+	label: "Ranger les nombres décimaux",
 	"b0.prompt": "Lequel est plus grand : 0,45 ou 0,5 ?",
 	"b0.o0": "0,45",
 	"b0.o1": "0,5",
@@ -394552,7 +394589,7 @@ var zsn = $({
 	"b5.o1": "3/2, 1 1/4, 1 3/4",
 	"b5.o2": "1 3/4, 3/2, 1 1/4"
 }, rln = {
-	label: "Comparing Fractions",
+	label: "Comparer des fractions",
 	"b0.prompt": "Quelle fraction est la plus grande ?",
 	"b0.o0": "1/2",
 	"b0.o1": "3/4",
@@ -394630,7 +394667,7 @@ var zsn = $({
 	"b1.o1": "0.35",
 	"b1.o2": "0.53"
 }, cln = {
-	label: "Fractions, Decimals & Percentages",
+	label: "Fractions, décimaux et pourcentages",
 	"b0.prompt": "Quel pourcentage correspond à 1/4 ?",
 	"b0.o0": "25 %",
 	"b0.o1": "40 %",
@@ -394676,7 +394713,7 @@ var zsn = $({
 	"b0.prompt": "Convert 3,450 mm to metres. How many metres is that?",
 	"b1.prompt": "Convert 2.6 litres to centilitres. How many centilitres is that?"
 }, pln = {
-	label: "Converting Metric Units (Two Steps)",
+	label: "Convertir des unités de mesure en deux étapes",
 	"b0.prompt": "Convertis 3 450 mm en mètres. Combien de mètres cela fait-il ?",
 	"b1.prompt": "Convertis 2,6 litres en centilitres. Combien de centilitres cela fait-il ?"
 }, mln = /* @__PURE__ */ n({ default: () => gln }), hln = dln, gln = $({
@@ -394708,7 +394745,7 @@ var zsn = $({
 	"b0.prompt": "How many seconds are in 4 minutes?",
 	"b1.prompt": "How many days are in 3 years (not counting leap years)?"
 }, yln = {
-	label: "Converting Time Units",
+	label: "Convertir des unités de temps",
 	"b0.prompt": "Combien de secondes y a-t-il dans 4 minutes ?",
 	"b1.prompt": "Combien de jours y a-t-il dans 3 ans (sans compter les années bissextiles) ?"
 }, bln = /* @__PURE__ */ n({ default: () => Sln }), xln = _ln, Sln = $({
@@ -394853,7 +394890,7 @@ var zsn = $({
 	"b5.o1": "6",
 	"b5.o2": "8"
 }, jln = {
-	label: "Dividing with Unit Fractions",
+	label: "Diviser avec des fractions unitaires",
 	"b0.prompt": "⅓ ÷ 2 = ?",
 	"b0.o0": "1/6",
 	"b0.o1": "2/3",
@@ -394917,7 +394954,7 @@ var zsn = $({
 	"b0.statement": "To draw a triangle with a 5 cm side and a 40° angle accurately, you need both a ruler and a protractor.",
 	"b1.statement": "Compasses are used to draw a straight line of an exact length."
 }, Iln = {
-	label: "Accurate Shape Drawing",
+	label: "Tracer une figure avec précision",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Pour tracer avec précision un triangle avec un côté de 5 cm et un angle de 40°, tu as besoin d'une règle et d'un rapporteur.",
@@ -394962,7 +394999,7 @@ var zsn = $({
 	"b0.statement": "Before calculating 198 x 5 exactly, rounding to 200 x 5 = 1000 gives a sensible estimate.",
 	"b1.statement": "If your estimate is 40 and your calculator shows 4000 for the same problem, your calculated answer is probably right and the estimate is wrong."
 }, Hln = {
-	label: "Estimating Before Calculating",
+	label: "Estimer avant de calculer",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Avant de calculer exactement 198 x 5, arrondir à 200 x 5 = 1000 donne une estimation raisonnable.",
@@ -395482,7 +395519,7 @@ var zsn = $({
 	"b27.o2": "0.2",
 	"b27.o3": "0.002"
 }, eun = {
-	label: "Decimal Place Value",
+	label: "Numération après la virgule",
 	"b0.prompt": "Dans 6,34, que vaut le chiffre 3 ?",
 	"b0.o0": "0,3",
 	"b0.o1": "3",
@@ -395660,7 +395697,7 @@ var zsn = $({
 	"b0.prompt": "What is 15% of 60?",
 	"b1.prompt": "What is 32% of 250?"
 }, aun = {
-	label: "Any Percentage of a Quantity",
+	label: "Un pourcentage quelconque d'une quantité",
 	"b0.prompt": "Combien font 15 % de 60 ?",
 	"b1.prompt": "Combien font 32 % de 250 ?"
 }, oun = /* @__PURE__ */ n({ default: () => cun }), sun = run, cun = $({
@@ -395692,7 +395729,7 @@ var zsn = $({
 	"b0.prompt": "What is 25% of 84? (do it mentally)",
 	"b1.prompt": "What is 75% of 120? (do it mentally)"
 }, dun = {
-	label: "Mental Percentages",
+	label: "Pourcentages courants de tête",
 	"b0.prompt": "Combien font 25 % de 84 ? (calcule-le mentalement)",
 	"b1.prompt": "Combien font 75 % de 120 ? (calcule-le mentalement)"
 }, fun = /* @__PURE__ */ n({ default: () => mun }), pun = lun, mun = $({
@@ -395789,7 +395826,7 @@ var zsn = $({
 	"b4.prompt": "What is the median of 2, 10, 4, 8?",
 	"b5.prompt": "What is the median of 12, 5, 9, 20, 7, 3?"
 }, Cun = {
-	label: "Median, Mode and Range",
+	label: "Médiane, mode et étendue",
 	"b0.prompt": "Quelle est l'étendue de 3, 8, 5, 12, 7 ?",
 	"b1.prompt": "Quel est le mode de 2, 4, 4, 6, 7, 4, 9 ?",
 	"b2.prompt": "Quelle est l'étendue de 14, 9, 20, 11 ?",
@@ -395827,7 +395864,7 @@ var zsn = $({
 	"b0.statement": "If your answer doesn't match the expected result, checking each step of your working can help you find exactly where the mistake happened.",
 	"b1.statement": "The best way to deal with a wrong answer is always to start the whole problem over from scratch, without checking any of your working first."
 }, kun = {
-	label: "Finding Your Own Mistake",
+	label: "Trouver sa propre erreur",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Si ta réponse ne correspond pas au résultat attendu, vérifier chaque étape de ton travail peut t'aider à trouver exactement où l'erreur s'est produite.",
@@ -395945,7 +395982,7 @@ var zsn = $({
 	"b5.o1": "(3, 6)",
 	"b5.o2": "(6, 3)"
 }, Fun = {
-	label: "Pairs for Two Unknowns",
+	label: "Couples pour deux inconnues",
 	"b0.prompt": "Quel couple (a, b) vérifie a + b = 10 ?",
 	"b0.o0": "(6, 4)",
 	"b0.o1": "(7, 2)",
@@ -396034,7 +396071,7 @@ var zsn = $({
 	"b4.prompt": "Three angles of a quadrilateral are 110°, 70° and 95°. What is the fourth angle in degrees?",
 	"b5.prompt": "Two straight lines cross. One angle is 125°. How many degrees is the angle vertically opposite to it?"
 }, Bun = {
-	label: "Missing Angles",
+	label: "Angles manquants",
 	"b0.prompt": "Deux angles d'un triangle mesurent 60° et 70°. Combien mesure le troisième angle, en degrés ?",
 	"b1.prompt": "Deux angles d'un triangle mesurent 90° et 35°. Combien mesure le troisième angle, en degrés ?",
 	"b2.prompt": "Deux droites se coupent. Un angle mesure 48°. Combien mesure l'angle opposé par le sommet, en degrés ?",
@@ -396097,7 +396134,7 @@ var zsn = $({
 	"b4.prompt": "Rule A: start at 0 and add 3 (0, 3, 6, 9, 12). Rule B: start at 1 and add 2 (1, 3, 5, 7, 9). Pair the terms. When A is 12, what is B?",
 	"b5.prompt": "Rule A: start at 0 and add 4. Rule B: start at 0 and add 8. Each pair (A, B) is plotted as a point on a graph. The point for A = 12 is (12, ?). What is the missing number?"
 }, Kun = {
-	label: "Two Patterns, Paired",
+	label: "Deux suites, termes appariés",
 	"b0.prompt": "Règle A : on part de 0 et on ajoute 2 à chaque fois (0, 2, 4, 6). Règle B : on part de 0 et on ajoute 4 à chaque fois (0, 4, 8, 12). Associe les termes. Quand A vaut 6, que vaut B ?",
 	"b1.prompt": "Règle A : on part de 0 et on ajoute 3. Règle B : on part de 0 et on ajoute 6. Associe les termes. Quand A vaut 9, que vaut B ?",
 	"b2.prompt": "Règle A : on part de 0 et on ajoute 5. Règle B : on part de 0 et on ajoute 10. Associe les termes. Quand A vaut 15, que vaut B ?",
@@ -396133,7 +396170,7 @@ var zsn = $({
 	"b0.prompt": "It is 14:00 where you are. A friend's city is 5 hours behind. What time is it there? (answer in 24-hour format as a number, e.g. 09:00 = 900)",
 	"b1.prompt": "It is 09:00 where you are. A friend's city is 8 hours ahead. What time is it there? (answer in 24-hour format as a number, e.g. 17:00 = 1700)"
 }, Qun = {
-	label: "Time Zones",
+	label: "Fuseaux horaires",
 	"b0.prompt": "Il est 14h00 chez toi. La ville d'un ami est 5 heures en retard. Quelle heure est-il là-bas ? (réponds au format 24h comme un nombre, par exemple 09h00 = 900)",
 	"b1.prompt": "Il est 09h00 chez toi. La ville d'un ami est 8 heures en avance. Quelle heure est-il là-bas ? (réponds au format 24h comme un nombre, par exemple 17h00 = 1700)"
 }, $un = /* @__PURE__ */ n({ default: () => tdn }), edn = Xun, tdn = $({
@@ -396167,7 +396204,7 @@ var zsn = $({
 	"b0.statement": "Knowing your own hand span lets you estimate the length of a table without a ruler.",
 	"b1.statement": "A single average pace length is a reliable way to estimate a long distance, like the length of a playground."
 }, idn = {
-	label: "Body-Ruler Estimation",
+	label: "Estimer avec son corps comme règle",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Connaître l'envergure de sa propre main permet d'estimer la longueur d'une table sans règle.",
@@ -396226,7 +396263,7 @@ var zsn = $({
 	"b1.o1": "6 squares",
 	"b1.o2": "1 triangle and 1 rectangle"
 }, udn = {
-	label: "Nets of Solids",
+	label: "Patrons de solides",
 	"b0.prompt": "Combien de faces carrées a le patron d'un cube ?",
 	"b0.o0": "6",
 	"b0.o1": "4",
@@ -396347,7 +396384,7 @@ var zsn = $({
 	"b5.o1": "2 1/5",
 	"b5.o2": "5 1/2"
 }, hdn = {
-	label: "Fractions as Division",
+	label: "La fraction comme division",
 	"b0.prompt": "Quelle division est égale à ¾ ?",
 	"b0.o0": "4 ÷ 3",
 	"b0.o1": "3 ÷ 4",
@@ -396411,7 +396448,7 @@ var zsn = $({
 	"b0.statement": "If a question asks for the number of children in a class and your answer is 340, you should check your working, because that answer is not reasonable.",
 	"b1.statement": "Once you get an answer from a calculation, there is no need to check it against the original question."
 }, bdn = {
-	label: "Judging a Reasonable Answer",
+	label: "Juger si une réponse est raisonnable",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Si une question demande le nombre d'enfants dans une classe et que ta réponse est 340, tu dois vérifier ton travail, car cette réponse n'est pas raisonnable.",
@@ -396456,7 +396493,7 @@ var zsn = $({
 	"b0.statement": "531 is divisible by 3, because 5 + 3 + 1 = 9, and 9 is divisible by 3.",
 	"b1.statement": "The number 4,530 is divisible by both 9 and 10."
 }, Edn = {
-	label: "Divisibility Tests",
+	label: "Critères de divisibilité",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "531 est divisible par 3, car 5 + 3 + 1 = 9, et 9 est divisible par 3.",
@@ -396515,7 +396552,7 @@ var zsn = $({
 	"b1.o1": "45 grams",
 	"b1.o2": "4.5 kilograms"
 }, Mdn = {
-	label: "Imperial & Metric Units",
+	label: "Unités impériales et métriques",
 	"b0.prompt": "Environ, un mile correspond le mieux à quelle distance métrique ?",
 	"b0.o0": "1,6 kilomètre",
 	"b0.o1": "160 mètres",
@@ -396561,7 +396598,7 @@ var zsn = $({
 	"b0.prompt": "3.6 x 4 = ?",
 	"b1.prompt": "9.6 ÷ 4 = ?"
 }, Ldn = {
-	label: "Multiplying & Dividing Decimals",
+	label: "Multiplier et diviser des décimaux",
 	"b0.prompt": "3,6 x 4 = ?",
 	"b1.prompt": "9,6 ÷ 4 = ?"
 }, Rdn = /* @__PURE__ */ n({ default: () => Bdn }), zdn = Fdn, Bdn = $({
@@ -396593,7 +396630,7 @@ var zsn = $({
 	"b0.prompt": "2,314 x 12 = ?",
 	"b1.prompt": "3,608 x 24 = ?"
 }, Udn = {
-	label: "Long Multiplication",
+	label: "Multiplication posée à deux chiffres",
 	"b0.prompt": "2 314 x 12 = ?",
 	"b1.prompt": "3 608 x 24 = ?"
 }, Wdn = /* @__PURE__ */ n({ default: () => Kdn }), Gdn = Vdn, Kdn = $({
@@ -396625,7 +396662,7 @@ var zsn = $({
 	"b0.prompt": "2/5 x 15 = ?",
 	"b1.prompt": "1/2 x 1/4 = ? (answer as a decimal)"
 }, Ydn = {
-	label: "Multiplying Fractions",
+	label: "Multiplier des fractions",
 	"b0.prompt": "2/5 x 15 = ?",
 	"b1.prompt": "1/2 x 1/4 = ? (réponds en décimal)"
 }, Xdn = /* @__PURE__ */ n({ default: () => Qdn }), Zdn = qdn, Qdn = $({
@@ -396657,7 +396694,7 @@ var zsn = $({
 	"b0.prompt": "34 x 6 = ? (do it mentally)",
 	"b1.prompt": "58 x 7 = ? (do it mentally)"
 }, tfn = {
-	label: "Mental Multiplication",
+	label: "Multiplication mentale",
 	"b0.prompt": "34 x 6 = ? (calcule-le mentalement)",
 	"b1.prompt": "58 x 7 = ? (calcule-le mentalement)"
 }, nfn = /* @__PURE__ */ n({ default: () => ifn }), rfn = $dn, ifn = $({
@@ -396705,7 +396742,7 @@ var zsn = $({
 	"b1.o1": "3 cm",
 	"b1.o2": "6 cm"
 }, sfn = {
-	label: "Parts of a Circle",
+	label: "Parties du cercle",
 	"b0.prompt": "La distance entre le centre d'un cercle et son bord s'appelle :",
 	"b0.o0": "Le rayon",
 	"b0.o1": "Le diamètre",
@@ -396778,7 +396815,7 @@ var zsn = $({
 	"b4.prompt": "A diver at −15 m swims up to −6 m. How many metres did the diver rise?",
 	"b5.prompt": "At 3 am it is −8 °C. At noon it is 5 °C. What is the difference in degrees?"
 }, ffn = {
-	label: "Negatives and Intervals",
+	label: "Négatifs et intervalles autour de zéro",
 	"b0.prompt": "La température passe de −4 °C à 7 °C. De combien de degrés monte-t-elle ?",
 	"b1.prompt": "La température passe de −3 °C à 5 °C. De combien de degrés monte-t-elle ?",
 	"b2.prompt": "La température passe de 6 °C à −2 °C. De combien de degrés baisse-t-elle ?",
@@ -396889,7 +396926,7 @@ var zsn = $({
 	"b5.o1": "7,849 × 36",
 	"b5.o2": "18,426 ÷ 37"
 }, vfn = {
-	label: "Choose Your Method",
+	label: "Choisir sa méthode",
 	"b0.prompt": "Quel calcul se fait le mieux dans la tête ?",
 	"b0.o0": "200 + 500",
 	"b0.o1": "4 386 + 2 759",
@@ -396978,7 +397015,7 @@ var zsn = $({
 	"b4.prompt": "A coach leaves at 23:15 and arrives at 01:45 the next day. How many minutes is the journey?",
 	"b5.prompt": "A flight departs at 21:40 and lands at 00:25 the next day. How many minutes is the flight?"
 }, Cfn = {
-	label: "Planning a Journey",
+	label: "Planifier un trajet",
 	"b0.prompt": "Un bus part à 08:15 et arrive à 09:05. Combien de minutes dure le trajet ?",
 	"b1.prompt": "Un train part à 10:40 et arrive à 11:25. Combien de minutes dure le trajet ?",
 	"b2.prompt": "Le trajet 1 dure 35 minutes, tu attends 10 minutes, puis le trajet 2 dure 20 minutes. Combien de minutes dure le voyage entier ?",
@@ -397030,7 +397067,7 @@ var zsn = $({
 	"b1.o1": "Top-right",
 	"b1.o2": "Bottom-left"
 }, kfn = {
-	label: "Coordinates in Four Quadrants",
+	label: "Coordonnées dans les quatre quadrants",
 	"b0.prompt": "Le point (-3, 4) se trouve dans quel quadrant ?",
 	"b0.o0": "En haut à gauche",
 	"b0.o1": "En haut à droite",
@@ -397103,7 +397140,7 @@ var zsn = $({
 	"b4.prompt": "On a line graph a plant is 6 cm on Day 2 and 12 cm on Day 4, growing steadily. Estimate its height on Day 3 in cm.",
 	"b5.prompt": "On a line graph a town has 40 people in 1990 and 60 in 2000, rising in a straight line. Estimate the number in 1995."
 }, Pfn = {
-	label: "Reading Line Graphs",
+	label: "Lire des graphiques linéaires",
 	"b0.prompt": "Un graphique linéaire montre deux plantes. Au jour 2, la plante A mesure 6 cm et la plante B mesure 7 cm. De combien de cm la plante B est-elle plus grande ?",
 	"b1.prompt": "Un graphique linéaire montre les ventes de deux magasins. Le magasin A a vendu 12 articles lundi et 15 mardi. Combien d'articles de plus le magasin A a-t-il vendus mardi que lundi ?",
 	"b2.prompt": "Un graphique linéaire montre deux villes à 14 h : la ville A est à 18 °C et la ville B à 14 °C. Quel est l'écart en degrés ?",
@@ -397214,7 +397251,7 @@ var zsn = $({
 	"b5.o1": "1,000",
 	"b5.o2": "10,000"
 }, Bfn = {
-	label: "Numbers to Ten Million",
+	label: "Nombres jusqu'à dix millions",
 	"b0.prompt": "Quel nombre est le plus grand ?",
 	"b0.o0": "3 450,200",
 	"b0.o1": "3 540,200",
@@ -397292,7 +397329,7 @@ var zsn = $({
 	"b1.o1": "25%",
 	"b1.o2": "75%"
 }, Gfn = {
-	label: "Reading Pie Charts",
+	label: "Lire un diagramme circulaire",
 	"b0.prompt": "Un diagramme circulaire est divisé en 4 secteurs égaux. Quelle fraction représente chaque secteur ?",
 	"b0.o0": "1/4",
 	"b0.o1": "1/2",
@@ -397413,7 +397450,7 @@ var zsn = $({
 	"b5.o1": "5 × 0.5 = 2.5",
 	"b5.o2": "2 × 10 = 20"
 }, Xfn = {
-	label: "Counterexamples",
+	label: "Réfuter avec un contre-exemple",
 	"b0.prompt": "Quel nombre est un contre-exemple à « tous les nombres impairs sont premiers » ?",
 	"b0.o0": "3",
 	"b0.o1": "7",
@@ -397502,7 +397539,7 @@ var zsn = $({
 	"b4.prompt": "A bottle holds 2.5 l. What is its volume in cm³?",
 	"b5.prompt": "A tank has a volume of 3000 cm³. How many litres does it hold?"
 }, tpn = {
-	label: "Millilitres and Cubic Centimetres",
+	label: "Millilitres et centimètres cubes",
 	"b0.prompt": "Un cube de 1 cm de côté contient combien de millilitres d'eau ?",
 	"b1.prompt": "Un récipient a un volume de 25 cm³. Combien de ml contient-il ?",
 	"b2.prompt": "Un réservoir contient 400 ml. Quel est son volume en cm³ ?",
@@ -397554,7 +397591,7 @@ var zsn = $({
 	"b1.o1": "In the same place",
 	"b1.o2": "Reflected, not rotated"
 }, spn = {
-	label: "Rotating Shapes",
+	label: "Faire tourner une figure",
 	"b0.prompt": "Une forme est tournée de 90° dans le sens horaire autour d'un point. Qu'est-ce qui reste identique ?",
 	"b0.o0": "Sa distance par rapport au point",
 	"b0.o1": "Son orientation",
@@ -398039,7 +398076,7 @@ var zsn = $({
 	"b27.o2": "18.5",
 	"b27.o3": "20"
 }, fpn = {
-	label: "Rounding Decimals",
+	label: "Arrondir des décimaux",
 	"b0.prompt": "Arrondis 16,628 au centième près.",
 	"b0.o0": "16,63",
 	"b0.o1": "16,62",
@@ -398292,7 +398329,7 @@ var zsn = $({
 	"b5.o1": "7/10",
 	"b5.o2": "5/12"
 }, _pn = {
-	label: "Simplifying Fractions",
+	label: "Simplifier les fractions",
 	"b0.prompt": "Écris 6/8 sous forme irréductible.",
 	"b0.o0": "3/4",
 	"b0.o1": "2/3",
@@ -398381,7 +398418,7 @@ var zsn = $({
 	"b4.prompt": "Sam reads 3/5 of a 150-page book on Monday and 20% of the book on Tuesday. How many pages are left?",
 	"b5.prompt": "Jo has €18.60, spends a third of it, then saves half of what is left. How many euros does Jo save?"
 }, Spn = {
-	label: "Multi-Step Problems",
+	label: "Problèmes à plusieurs étapes",
 	"b0.prompt": "Un livre coûte 12,50 € et un stylo 2,75 €. Tu paies avec 20 €. Combien de monnaie reçois-tu, en euros ?",
 	"b1.prompt": "Mia a 24 autocollants, en donne la moitié, puis en achète 5 de plus. Combien d'autocollants a-t-elle ?",
 	"b2.prompt": "Une émission de 60 minutes consacre un quart de son temps à des publicités. Pendant combien de minutes n'y a-t-il pas de publicité ?",
@@ -398417,7 +398454,7 @@ var zsn = $({
 	"b0.prompt": "Solve for x: x + 14 = 23.",
 	"b1.prompt": "Solve for y: 6y = 42."
 }, Opn = {
-	label: "One-Step Equations",
+	label: "Équations à une étape",
 	"b0.prompt": "Résous pour x : x + 14 = 23.",
 	"b1.prompt": "Résous pour y : 6y = 42."
 }, kpn = /* @__PURE__ */ n({ default: () => jpn }), Apn = Epn, jpn = $({
@@ -398465,7 +398502,7 @@ var zsn = $({
 	"b1.o1": "The box has 24 pencils",
 	"b1.o2": "There are 5 red pencils"
 }, Ppn = {
-	label: "Missing or Surplus Information",
+	label: "Informations manquantes ou en trop",
 	"b0.prompt": "Un problème dit : « Sam a 12 pommes et 5 oranges. Il donne quelques pommes. Combien de pommes a-t-il maintenant ? » Qu'est-ce qui manque ?",
 	"b0.o0": "Combien de pommes il a données",
 	"b0.o1": "Combien d'oranges il a",
@@ -398511,7 +398548,7 @@ var zsn = $({
 	"b0.prompt": "If 3 items cost $12, how much do 7 items cost, in dollars?",
 	"b1.prompt": "If 5 pens cost $9, how much do 15 pens cost, in dollars?"
 }, zpn = {
-	label: "Scaling Problems",
+	label: "Problèmes de proportionnalité",
 	"b0.prompt": "Si 3 articles coûtent 12 $, combien coûtent 7 articles, en dollars ?",
 	"b1.prompt": "Si 5 stylos coûtent 9 $, combien coûtent 15 stylos, en dollars ?"
 }, Bpn = /* @__PURE__ */ n({ default: () => Hpn }), Vpn = Lpn, Hpn = $({
@@ -398545,7 +398582,7 @@ var zsn = $({
 	"b0.statement": "A bar chart whose y-axis starts at 90 instead of 0 can make small differences look much bigger than they really are.",
 	"b1.statement": "Choosing only the three best years out of ten to display on a graph gives a fair, unbiased picture of the overall trend."
 }, Gpn = {
-	label: "Spotting Misleading Graphs",
+	label: "Repérer un graphique trompeur",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Un diagramme en barres dont l'axe des y commence à 90 au lieu de 0 peut faire paraître de petites différences bien plus grandes qu'elles ne le sont réellement.",
@@ -398663,7 +398700,7 @@ var zsn = $({
 	"b5.o1": "No, they cost €32",
 	"b5.o2": "Yes, they cost €8"
 }, Zpn = {
-	label: "Staying Within Budget",
+	label: "Rester dans le budget",
 	"b0.prompt": "Tu as 20 € à dépenser. Quel ensemble d'articles coûte au plus 20 € ?",
 	"b0.o0": "9,50 € + 6,25 € + 5,00 €",
 	"b0.o1": "8,00 € + 7,50 € + 4,25 €",
@@ -398727,7 +398764,7 @@ var zsn = $({
 	"b0.statement": "When you don't know a taught method for a problem, trying an approach, checking if it works, and adjusting is a sensible strategy.",
 	"b1.statement": "If a problem looks unfamiliar and you don't immediately know the method, the only sensible option is to leave it blank."
 }, nmn = {
-	label: "Tackling Unfamiliar Problems",
+	label: "Résoudre un problème inconnu",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Quand tu ne connais pas de méthode enseignée pour un problème, essayer une approche, vérifier si elle fonctionne, et ajuster est une stratégie sensée.",
@@ -398845,7 +398882,7 @@ var zsn = $({
 	"b5.o1": "(6, 3)",
 	"b5.o2": "(0, 1)"
 }, cmn = {
-	label: "Translate and Reflect",
+	label: "Translater et symétriser",
 	"b0.prompt": "Le point (3, 2) est translaté de 4 unités vers la droite. Où arrive-t-il ?",
 	"b0.o0": "(7, 2)",
 	"b0.o1": "(3, 6)",
@@ -398982,7 +399019,7 @@ var zsn = $({
 	"b5.o1": "60/10",
 	"b5.o2": "60/100"
 }, pmn = {
-	label: "Percent Means Out of 100",
+	label: "Le pourcentage : sur 100",
 	"b0.prompt": "Dans une grille de 100 carreaux, 35 carreaux sont coloriés. Quel pourcentage est colorié ?",
 	"b0.o0": "35 %",
 	"b0.o1": "65 %",
@@ -399109,7 +399146,7 @@ var zsn = $({
 	"b4.prompt": "Red to blue beads are in the ratio 3 : 2 and there are 15 red beads. How many blue beads are there?",
 	"b5.prompt": "A bar of 10 equal parts is 100%. Three parts together are 24. How much is the whole bar?"
 }, wmn = {
-	label: "Bar Models",
+	label: "Modèles en barres",
 	"b0.prompt": "Une barre est découpée en 5 parts égales. 3 parts valent ensemble 12. Combien vaut la barre entière ?",
 	"b1.prompt": "Une barre est découpée en 4 parts égales et chaque part vaut 7. Combien vaut la barre entière ?",
 	"b2.prompt": "Une barre représentant 40 est découpée en 8 parts égales. Combien vaut une part ?",
@@ -399147,7 +399184,7 @@ var zsn = $({
 	"b0.statement": "After using a calculator to find an answer, comparing it to a quick mental estimate helps catch a mistyped calculation.",
 	"b1.statement": "A calculator result should always be trusted completely, even if it looks wildly different from what you expected."
 }, Amn = {
-	label: "Using a Calculator Wisely",
+	label: "Bien utiliser la calculatrice",
 	true: "Vrai",
 	false: "Faux",
 	"b0.statement": "Après avoir utilisé une calculatrice pour trouver une réponse, la comparer à une estimation mentale rapide aide à repérer une erreur de frappe.",
@@ -399217,7 +399254,7 @@ var zsn = $({
 	"b4.prompt": "A path goes from (1, 2) to (4, 2) and then to (4, 6). How many units long is the path?",
 	"b5.prompt": "Two flags are at (3, 1) and (3, 9). How many units apart are they?"
 }, Imn = {
-	label: "Coordinates in the Real World",
+	label: "Coordonnées dans la vraie vie",
 	"b0.prompt": "Sur un plan de la ville, l'école est en (2, 3) et la bibliothèque en (2, 7). Quelle distance en unités les sépare ?",
 	"b1.prompt": "Le parc est en (1, 5) et le magasin en (6, 5). Quelle distance en unités les sépare ?",
 	"b2.prompt": "Un trésor est enterré en (4, 6). Tu pars de (0, 0), tu avances de 4 unités vers la droite, puis de combien d'unités vers le haut pour l'atteindre ?",
@@ -399269,7 +399306,7 @@ var zsn = $({
 	"b1.o1": "Impossible",
 	"b1.o2": "Unlikely"
 }, Hmn = {
-	label: "Language of Chance",
+	label: "Le vocabulaire des chances",
 	"b0.prompt": "Lancer une pièce équilibrée et obtenir face se décrit le mieux comme :",
 	"b0.o0": "Une chance sur deux",
 	"b0.o1": "Impossible",
@@ -399315,7 +399352,7 @@ var zsn = $({
 	"b0.prompt": "If n = 8, what is 3n + 2?",
 	"b1.prompt": "If x = 5, what is 2x² - 3?"
 }, qmn = {
-	label: "Algebraic Substitution",
+	label: "Substitution avec une lettre",
 	"b0.prompt": "Si n = 8, combien font 3n + 2 ?",
 	"b1.prompt": "Si x = 5, combien font 2x² - 3 ?"
 }, Jmn = /* @__PURE__ */ n({ default: () => Xmn }), Ymn = Gmn, Xmn = $({
@@ -399347,7 +399384,7 @@ var zsn = $({
 	"b0.prompt": "A map has a scale of 1 cm : 100 m. Two towns are 4 cm apart on the map. How many metres apart are they in real life?",
 	"b1.prompt": "A map has a scale of 1 cm : 100 m. A road is 2,500 m long in real life. How many cm is that on the map?"
 }, $mn = {
-	label: "Scale on Plans & Maps",
+	label: "Échelle sur un plan ou une carte",
 	"b0.prompt": "Une carte a une échelle de 1 cm : 100 m. Deux villes sont à 4 cm sur la carte. Combien de mètres les séparent en réalité ?",
 	"b1.prompt": "Une carte a une échelle de 1 cm : 100 m. Une route mesure 2 500 m en réalité. Combien de cm cela fait-il sur la carte ?"
 }, ehn = /* @__PURE__ */ n({ default: () => nhn }), thn = Zmn, nhn = $({
@@ -399454,7 +399491,7 @@ var zsn = $({
 	"b5.o1": "n − 20",
 	"b5.o2": "20 + n"
 }, ahn = {
-	label: "Expressions with a Letter",
+	label: "Expressions avec une lettre",
 	"b0.prompt": "Sam a n autocollants et en reçoit 5 de plus. Quelle expression donne son nombre d'autocollants ?",
 	"b0.o0": "n + 5",
 	"b0.o1": "5 × n",
@@ -399536,7 +399573,7 @@ var zsn = $({
 	"b1.o2": "3 cents",
 	"b1.o3": "40,3 €"
 }, uhn = {
-	label: "Symbol price tags",
+	label: "Étiquettes de prix à symboles",
 	"b0.prompt": "Une étiquette indique 5 euros. Quel symbole va avec le montant ?",
 	"b0.o0": "€",
 	"b0.o1": "$",
@@ -399664,7 +399701,7 @@ var zsn = $({
 	"b17.o2": "f0,f1,f2,f3,f4,x1",
 	"b17.o3": "f0,f1,f2,f3,f4,x2"
 }, hhn = {
-	label: "Symbol worth reader",
+	label: "Lire la valeur des symboles",
 	"b0.prompt": "Chaque ⭐ vaut 2. Quel est le total ?",
 	"b0.o0": "f0,f1,f2,f3,f4,a5",
 	"b0.o1": "f0,f1,f2,f3,f4,x0",
@@ -399843,7 +399880,7 @@ var zsn = $({
 	"b11.o1": "a6,b8,c5,d7,e6",
 	"b11.o2": "a7,b6,c8,d5,e7"
 }, bhn = {
-	label: "Symmetric completion",
+	label: "Complète le dessin",
 	"b0.prompt": "L'axe de symétrie se tient au milieu de la grille, entre les deux moitiés. Colorie l'image miroir des carrés de l'autre côté.",
 	"b0.o0": "a3,b4,c3",
 	"b0.o1": "a4,b3,c4",
@@ -399962,7 +399999,7 @@ var zsn = $({
 	"b1.o2": "Only if flat",
 	"b1.o3": "Cannot tell"
 }, Thn = {
-	label: "Symmetric or not",
+	label: "Symétrique ou pas ?",
 	"b0.prompt": "La lettre A est-elle symétrique selon son axe central ?",
 	"b0.o0": "Oui",
 	"b0.o1": "Non",
@@ -400087,7 +400124,7 @@ var zsn = $({
 	"b17.o1": "f0,f1,f2,f3,x0",
 	"b17.o2": "f0,f1,f2,f3,x1"
 }, Ahn = {
-	label: "Table gap puzzle",
+	label: "Le trou du tableau",
 	"b0.prompt": "Quel nombre va dans le trou ? 11 × 3 = ☐",
 	"b0.o0": "f0,f1,f2,f3,a4",
 	"b0.o1": "f0,f1,f2,f3,x0",
@@ -400338,7 +400375,7 @@ var zsn = $({
 	"b14.o5": "p45,p54,p63,p81,p72,p90",
 	"b14.o6": "p45,p54,p63,p72,p90,p81"
 }, Fhn = {
-	label: "Table pattern hunt",
+	label: "La chasse aux motifs du tableau",
 	"b0.prompt": "Cherche la régularité dans la table de 2 : dépose chaque réponse sur son barreau.",
 	"b0.o0": "p2,p4,p6,p8,p10,p12",
 	"b0.o1": "p12,p10,p8,p6,p4,p2",
@@ -400626,7 +400663,7 @@ var zsn = $({
 	"b19.o4": "f0,f1,f2,f3,a4,x1",
 	"b19.o5": "f0,f1,f2,f3,a5,a4"
 }, Bhn = {
-	label: "Table pattern spotter",
+	label: "Repérer les motifs du tableau",
 	"b0.prompt": "Sans calculer : la réponse sera-t-elle paire ou impaire ? Trie les cartes.",
 	"b0.o0": "c0,c1,c2,c3",
 	"b0.o1": "c2,c1,c0,c3",
@@ -400893,7 +400930,7 @@ var zsn = $({
 	"b12.o4": "p8,p6,p5,p3",
 	"b12.o5": "p6,p3,p5,p8"
 }, Ghn = {
-	label: "Table tennis 2 5 10",
+	label: "Tennis de table",
 	"b0.prompt": "Échange sur la table de 2 : dépose chaque réponse sur son barreau.",
 	"b0.o0": "p2,p4,p6,p8,p10",
 	"b0.o1": "p10,p8,p6,p4,p2",
@@ -401101,7 +401138,7 @@ var zsn = $({
 	"b3.o2": "17",
 	"b3.o3": "12"
 }, Xhn = {
-	label: "Table to graph match",
+	label: "Associer tableau et graphique",
 	"b0.prompt": "Le tableau dit : pommes 4, poires 2. Quelle barre est la plus haute ?",
 	"b0.o0": "Pommes",
 	"b0.o1": "Poires",
@@ -401239,7 +401276,7 @@ var zsn = $({
 	"b17.o2": "50",
 	"b17.o3": "40"
 }, tgn = {
-	label: "Table track runner",
+	label: "La piste des tables",
 	"b0.prompt": "Le coureur fait 2 sauts de 10 (2 × 10). Touche chaque atterrissage. Où finit-il ?",
 	"b0.o0": "20",
 	"b0.o1": "11",
@@ -401430,7 +401467,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b1.o2": "10/8",
 	"b1.o3": "1/8"
 }, cgn = {
-	label: "Take away slices",
+	label: "Retirer des parts",
 	"b0.prompt": "5/7 moins 2/7 font ?",
 	"b0.o0": "3/7",
 	"b0.o1": "7/7",
@@ -401533,7 +401570,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b3.o2": "10",
 	"b3.o3": "64"
 }, pgn = {
-	label: "Tally gate count",
+	label: "Compter au portique",
 	"b0.prompt": "Compte les voitures qui passent la barrière par cinq. Le compte affiche 2 paquets de cinq. Quel est le total ?",
 	"b0.o0": "10",
 	"b0.o1": "5",
@@ -401671,7 +401708,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b14.o3": "1|5|5|4|2",
 	"b14.o4": "1|5|5|5|1"
 }, vgn = {
-	label: "Tally the playground",
+	label: "Compter la cour de récréation",
 	"b0.prompt": "7 enfants ont descendu la glissade. Fais le pointage : remplis des barrières de cinq, puis mets le reste à part.",
 	"b0.o0": "0|5|2",
 	"b0.o1": "1|4|2",
@@ -401895,7 +401932,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b17.o2": "f0,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,x1",
 	"b17.o3": "f0,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,x2"
 }, Cgn = {
-	label: "Tally then compare",
+	label: "Compter puis comparer",
 	"b0.prompt": "On lance 12 fois un dé juste. Environ combien de fois chaque face devrait-elle sortir ?",
 	"b0.o0": "f0,f1,f2,f3,a4",
 	"b0.o1": "f0,f1,f2,f3,x0",
@@ -402095,7 +402132,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b10.o3": "a:ci,b:rc,c:sq,d:sq,e:sq,f:rc",
 	"b10.o4": "a:di,b:rc,c:sq,d:sq,e:sq,f:rc"
 }, Ogn = {
-	label: "Tangram house",
+	label: "La maison en tangram",
 	"b0.prompt": "Construis la maison. Place chaque pièce à sa place.",
 	"b0.o0": "a:tr,b:sq,c:rc",
 	"b0.o1": "a:sq,b:sq,c:rc",
@@ -402369,7 +402406,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b27.o3": "a:sq,b:sq,c:re,d:sq,e:sq",
 	"b27.o4": "a:sq,b:sq,c:sq,d:re,e:sq"
 }, Ngn = {
-	label: "Tangram two",
+	label: "Deux tangrams",
 	"b0.prompt": "Remplis le contour.",
 	"b0.o0": "a:tr,b:sq",
 	"b0.o1": "a:tr,b:tr",
@@ -402697,7 +402734,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b18.o4": "c1,c2,c0",
 	"b18.o5": "x0,c1,c2"
 }, Rgn = {
-	label: "Teach it back",
+	label: "Explique-le à ton tour",
 	"b0.prompt": "Chaque case est une ligne de calcul. Dépose dessus la phrase qui dit ce que fait cette ligne, comme pour l'expliquer à un camarade.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -403218,7 +403255,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b35.o7": "c1:teddy",
 	"b35.o8": "c3:teddy"
 }, Ugn = {
-	label: "Teddy room tidy",
+	label: "Ranger la chambre de l'ourson",
 	"b0.prompt": "Mets le nounours sur le tambour.",
 	"b0.o0": "a1:teddy",
 	"b0.o1": "a2:teddy",
@@ -403754,7 +403791,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b26.o2": "9",
 	"b26.o3": "10"
 }, Jgn = {
-	label: "Teen towers",
+	label: "Tours des nombres de 11 à 19",
 	"b0.prompt": "La tour a 1 barre de dix et 1 cubes seuls. Quel nombre annonce-t-elle ?",
 	"b0.o0": "11",
 	"b0.o1": "1",
@@ -404030,7 +404067,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b21.o2": "19|3",
 	"b21.o3": "21|1"
 }, $gn = {
-	label: "Teen train",
+	label: "Le train des nombres de 11 à 19",
 	"b0.prompt": "Fais un train de 11.",
 	"b0.o0": "11|2",
 	"b0.o1": "1|12",
@@ -404272,7 +404309,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b13.o2": "start,ten,total,rest",
 	"b13.o3": "start,total,rest,ten"
 }, i_n = {
-	label: "Tell how you know",
+	label: "Dis comment tu le sais",
 	"b0.prompt": "Mets les étapes dans l'ordre où tu les raconterais.",
 	"b0.o0": "start,add,total",
 	"b0.o1": "total,add,start",
@@ -404586,7 +404623,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b33.o3": "LUUURR",
 	"b33.o4": "RDDDL"
 }, l_n = {
-	label: "Tell the robot",
+	label: "Dis-le au robot",
 	"b0.prompt": "Mène le robot jusqu’à l’étoile.",
 	"b0.o0": "RR",
 	"b0.o1": "R",
@@ -404842,7 +404879,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b1.o2": "−8",
 	"b1.o3": "2"
 }, m_n = {
-	label: "Temperature gap across zero",
+	label: "L'écart de température autour de zéro",
 	"b0.prompt": "Combien de degrés entre −4 °C et 7 °C ?",
 	"b0.o0": "11",
 	"b0.o1": "3",
@@ -405737,7 +405774,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b17.o5": "f0,f1,a4,f3,a2,f5,a6",
 	"b17.o6": "f0,f1,a6,f3,a4,f5,a2"
 }, P_n = {
-	label: "Ten bridge hop",
+	label: "Le saut par la dizaine",
 	"b0.prompt": "8 + 6 : passe par la dizaine. Complète les sauts et le résultat.",
 	"b0.o0": "f0,f1,a2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,x0,f3,a4,f5,a6",
@@ -405931,7 +405968,12 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "ten-frame",
+			filled: 7,
+			emoji: "🔴"
+		}
 	},
 	{
 		key: "b1",
@@ -405942,7 +405984,12 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "ten-frame",
+			filled: 5,
+			emoji: "🔴"
+		}
 	},
 	{
 		key: "b2",
@@ -405953,7 +406000,12 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "ten-frame",
+			filled: 9,
+			emoji: "🔴"
+		}
 	},
 	{
 		key: "b3",
@@ -405964,7 +406016,12 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "ten-frame",
+			filled: 3,
+			emoji: "🔴"
+		}
 	}
 ], R_n = {
 	label: "Ten Frame Facts Puzzle",
@@ -405989,7 +406046,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b3.o2": "12",
 	"b3.o3": "5"
 }, z_n = {
-	label: "Ten frame facts puzzle",
+	label: "Le puzzle des faits du cadre de dix",
 	"b0.prompt": "7 − 4 = ?",
 	"b0.o0": "3",
 	"b0.o1": "2",
@@ -406021,7 +406078,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		return {
 			entryKey: r.key,
 			optionIds: [...r.ids],
-			correctId: r.ids[r.correctIndex]
+			correctId: r.ids[r.correctIndex],
+			...r.scene !== void 0 && { scene: r.scene }
 		};
 	},
 	present(e, t) {
@@ -406031,7 +406089,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			options: r.map((e) => ({
 				id: e,
 				label: t(`${n.key}.o${String(n.ids.indexOf(e))}`)
-			}))
+			})),
+			...e.scene !== void 0 && { scene: e.scene }
 		};
 	}
 }), H_n = [
@@ -406048,7 +406107,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 6,
-			emoji: "🔴"
+			emoji: "🔴",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406064,7 +406124,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 6,
-			emoji: "🔵"
+			emoji: "🔵",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406080,7 +406141,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 7,
-			emoji: "🔴"
+			emoji: "🔴",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406096,7 +406158,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 7,
-			emoji: "🔵"
+			emoji: "🔵",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406112,7 +406175,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 8,
-			emoji: "🔴"
+			emoji: "🔴",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406128,7 +406192,8 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 		scene: {
 			type: "ten-frame",
 			filled: 8,
-			emoji: "🔵"
+			emoji: "🔵",
+			flashMs: 1500
 		}
 	},
 	{
@@ -406604,7 +406669,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b25.o2": "4",
 	"b25.o3": "5"
 }, W_n = {
-	label: "Ten frame flash",
+	label: "Flash du cadre de dix",
 	"b0.prompt": "Combien en tout ?",
 	"b0.o0": "6",
 	"b0.o1": "7",
@@ -406828,7 +406893,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b13.o1": "8|9|10",
 	"b13.o2": "27|0|0"
 }, Y_n = {
-	label: "Ten frame trade up",
+	label: "Échange contre une barre de dix",
 	"b0.prompt": "Le cadre de dix a 6 jetons. Touche pour le remplir jusqu'à 10, puis échange-le contre une barre de dix. Combien en plus ?",
 	"b0.o0": "4",
 	"b0.o1": "6",
@@ -407470,6 +407535,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 1
+			}, {
+				emoji: "🧊",
+				count: 8
+			}]
 		}
 	},
 	{
@@ -407486,6 +407561,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 9
+			}, {
+				emoji: "🧊",
+				count: 5
+			}]
 		}
 	},
 	{
@@ -407502,6 +407587,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 6
+			}, {
+				emoji: "🧊",
+				count: 3
+			}]
 		}
 	},
 	{
@@ -407518,6 +407613,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 4
+			}, {
+				emoji: "🧊",
+				count: 7
+			}]
 		}
 	},
 	{
@@ -407534,6 +407639,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 8
+			}, {
+				emoji: "🧊",
+				count: 2
+			}]
 		}
 	},
 	{
@@ -407550,6 +407665,16 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			b: "ten-lift-tower.noChange",
 			c: "ten-lift-tower.onesStay",
 			d: "ten-lift-tower.wrongWay"
+		},
+		scene: {
+			type: "counters",
+			groups: [{
+				emoji: "🧱",
+				count: 7
+			}, {
+				emoji: "🧊",
+				count: 6
+			}]
 		}
 	}
 ], ivn = {
@@ -407645,7 +407770,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b17.o2": "75",
 	"b17.o3": "86"
 }, avn = {
-	label: "Ten lift tower",
+	label: "La tour de dizaines",
 	"b0.prompt": "Monte une dizaine sur la tour de 30. Quel nombre est-ce maintenant ?",
 	"b0.o0": "40",
 	"b0.o1": "30",
@@ -407763,7 +407888,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 			...e.scene !== void 0 && { scene: e.scene }
 		};
 	}
-}), cvn = /*#__PURE__*/ JSON.parse("[{\"key\":\"b0\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":4},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b1\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":7},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv1.feedback.tenTens\"}},{\"key\":\"b2\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":5},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b3\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2},{\"emoji\":\"🧱\",\"count\":1},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b4\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧱\",\"count\":4},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b5\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧱\",\"count\":6},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b6\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧱\",\"count\":2},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b7\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧱\",\"count\":8},{\"emoji\":\"🧊\",\"count\":4}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b8\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6},{\"emoji\":\"🧱\",\"count\":3},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b9\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧱\",\"count\":5},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b10\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b11\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧱\",\"count\":9}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b12\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b13\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b14\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b15\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b16\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b17\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b18\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":8},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":4}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b19\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b20\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b21\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b22\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b23\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b24\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b25\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b26\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b27\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":8},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b28\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":9},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b29\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b30\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"}},{\"key\":\"b31\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.wrongDirection\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b32\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b33\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b34\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.wrongDirection\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b35\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"}},{\"key\":\"b36\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"}},{\"key\":\"b37\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"}}]"), lvn = {
+}), cvn = /*#__PURE__*/ JSON.parse("[{\"key\":\"b0\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":4},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b1\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":7},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv1.feedback.tenTens\"}},{\"key\":\"b2\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":5},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b3\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2},{\"emoji\":\"🧱\",\"count\":1},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b4\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧱\",\"count\":4},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b5\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧱\",\"count\":6},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b6\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧱\",\"count\":2},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b7\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧱\",\"count\":8},{\"emoji\":\"🧊\",\"count\":4}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b8\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6},{\"emoji\":\"🧱\",\"count\":3},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b9\",\"tier\":1,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧱\",\"count\":5},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.hundredsMoved\"}},{\"key\":\"b10\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b11\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧱\",\"count\":9}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b12\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b13\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b14\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":8}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b15\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b16\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b17\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b18\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":8},{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":4}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b19\",\"tier\":2,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b20\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b21\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b22\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧊\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b23\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧊\",\"count\":7}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b24\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧊\",\"count\":3}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b25\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b26\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":7},{\"emoji\":\"🧊\",\"count\":6}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b27\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":8},{\"emoji\":\"🧊\",\"count\":2}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b28\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":9},{\"emoji\":\"🧊\",\"count\":5}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b29\",\"tier\":3,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1}]},\"feedback\":{\"b\":\"g2pv6.feedback.wrongAmount\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.noBridge\"}},{\"key\":\"b30\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":8},{\"emoji\":\"🧊\",\"count\":5}]}},{\"key\":\"b31\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.wrongDirection\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":1},{\"emoji\":\"🧱\",\"count\":9}]}},{\"key\":\"b32\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":3},{\"emoji\":\"🧊\",\"count\":5}]}},{\"key\":\"b33\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":4},{\"emoji\":\"🧱\",\"count\":7}]}},{\"key\":\"b34\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.wrongDirection\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🧱\",\"count\":9},{\"emoji\":\"🧊\",\"count\":2}]}},{\"key\":\"b35\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":5},{\"emoji\":\"🧱\",\"count\":1}]}},{\"key\":\"b36\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongDirection\",\"d\":\"g2pv6.feedback.wrongAmount\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":2},{\"emoji\":\"🧱\",\"count\":8},{\"emoji\":\"🧊\",\"count\":8}]}},{\"key\":\"b37\",\"tier\":4,\"ids\":[\"a\",\"b\",\"c\",\"d\"],\"correctIndex\":0,\"feedback\":{\"b\":\"g2pv6.feedback.chainMiss\",\"c\":\"g2pv6.feedback.wrongAmount\",\"d\":\"g2pv6.feedback.hundredsMoved\"},\"scene\":{\"type\":\"counters\",\"groups\":[{\"emoji\":\"🟧\",\"count\":6},{\"emoji\":\"🧊\",\"count\":4}]}}]"), lvn = {
 	label: "Ten More, Ten Less Lift",
 	"b0.prompt": "The lift is at floor 46. Go up 10 floors. Which floor now?",
 	"b0.o0": "56",
@@ -407956,7 +408081,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b37.o2": "593",
 	"b37.o3": "504"
 }, uvn = {
-	label: "Ten more ten less lift",
+	label: "L'ascenseur : dix de plus, dix de moins",
 	"b0.prompt": "L'ascenseur est à l'étage 46. Monte de 10 étages. À quel étage ?",
 	"b0.o0": "56",
 	"b0.o1": "47",
@@ -409279,7 +409404,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"e19.l3": "one thousand",
 	"e19.r3": "10³"
 }, bvn = {
-	label: "Ten Power Match",
+	label: "Association des puissances de dix",
 	"e0.l0": "100 000",
 	"e0.r0": "10⁵",
 	"e0.l1": "1 000",
@@ -410244,7 +410369,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b35.o2": "9,000",
 	"b35.o3": "910"
 }, jvn = {
-	label: "Ten times ladder",
+	label: "L'échelle des fois dix",
 	"b0.prompt": "Chaque barreau vaut 10 fois le barreau du dessous. Tu es sur 1. Monte de 1 barreau : quelle valeur atteins-tu ?",
 	"b0.o0": "10",
 	"b0.o1": "100",
@@ -410960,7 +411085,7 @@ var ign = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), agn = $({
 	"b1.o2": "80",
 	"b1.o3": "130"
 }, Kvn = {
-	label: "Tens bonds to 100",
+	label: "Les dizaines qui font 100",
 	"b0.prompt": "Quelle dizaine fait 100 avec 40 ?",
 	"b0.o0": "60",
 	"b0.o1": "50",
@@ -413307,7 +413432,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "1.7",
 	"b1.o3": "0.17"
 }, Byn = {
-	label: "Tenth hop line",
+	label: "La grenouille et les dixièmes",
 	"b0.prompt": "Une grenouille saute par dixièmes depuis 0. Après 5 sauts, où est-elle ?",
 	"b0.o0": "5/10",
 	"b0.o1": "1/5",
@@ -413861,7 +413986,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "f0,f1,x1,f3,f4",
 	"b17.o3": "f0,f1,x2,f3,f4"
 }, tbn = {
-	label: "Tenths to hundredths zoom",
+	label: "Des dixièmes aux centièmes",
 	"b0.prompt": "Colorie 3/10 du carré de 100 : 3 colonnes entières en partant de la gauche. C'est pareil que 30/100.",
 	"b0.o0": "1,11,12,13,2,21,22,23,3,31,32,33,41,42,43,51,52,53,61,62,63,71,72,73,81,82,83,91,92,93",
 	"b0.o1": "1,11,12,13,14,2,21,22,23,24,3,31,32,33,34,4,41,42,43,44,51,52,53,54,61,62,63,64,71,72,73,74,81,82,83,84,91,92,93,94",
@@ -414091,7 +414216,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g3,g4",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g3,g10"
 }, obn = {
-	label: "Term fifty predictor",
+	label: "Le cinquantième terme",
 	"b0.prompt": "Un motif suit la règle T = 2 × n + 1. Quel est le terme à la position 10 ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g8,g5,g6,g3,g9",
@@ -414315,7 +414440,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o3": "r2,e1,e2,r0,r1,e0",
 	"b14.o4": "e0,r0,e2,e1,r1,r2"
 }, dbn = {
-	label: "Terminate or repeat sort",
+	label: "Décimal fini ou périodique",
 	"b0.prompt": "Sans diviser : quelles fractions ont un décimal qui s'arrête, et lesquelles un décimal qui se répète sans fin ? Simplifie d'abord, puis regarde le dénominateur.",
 	"b0.o0": "e0,e1,r0,r1",
 	"b0.o1": "r0,e1,e0,r1",
@@ -414814,7 +414939,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o1": "_,_,_,start,_,_,_,_,_,m,_",
 	"b17.o2": "m,_,_,start,_,_,_,_,_,_,_"
 }, xbn = {
-	label: "Thermometer hop",
+	label: "Sauts du thermomètre",
 	"b0.prompt": "Il fait 2 °C. Il fait 4 degrés de moins. Où s'arrête le repère rouge ?",
 	"b0.o0": "_,_,_,start,_,_,_,m,_,_,_",
 	"b0.o1": "_,_,_,start,_,_,m,_,_,_,_",
@@ -415013,7 +415138,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b12.o2": "UUUUUUUUUUUUU",
 	"b12.o3": "UUUUUUUU"
 }, Ebn = {
-	label: "Thermometer walk",
+	label: "Monter le thermomètre",
 	"b0.prompt": "Il fait −2 °C. Fais monter le thermomètre jusqu'à 3 °C, un degré à la fois.",
 	"b0.o0": "UUUUU",
 	"b0.o1": "UUUU",
@@ -415195,7 +415320,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o3": "t0,d4,d6,t1",
 	"b14.o4": "t0,d4,d4,t1"
 }, jbn = {
-	label: "Thermometer weather report",
+	label: "Bulletin météo",
 	"b0.prompt": "Chaque repère du thermomètre vaut 1 degré. Quelle est la température ?",
 	"b0.o0": "t0,d4,t1",
 	"b0.o1": "t0,d5,t1",
@@ -415403,7 +415528,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "8 + 14 = ?",
 	"b17.o3": "14 + ? = 8"
 }, Ibn = {
-	label: "Think add to subtract",
+	label: "Penser addition pour soustraire",
 	"b0.prompt": "8 - 3 : que dois-je ajouter à 3 pour atteindre 8 ? Glisse des jetons dans l'écart jusqu'à en avoir 8. Combien en as-tu ajouté ?",
 	"b0.o0": "0|3|5",
 	"b0.o1": "5|3|0",
@@ -415629,7 +415754,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o5": "c0,c2,c1,c3,c4",
 	"b11.o6": "c0,c3,c2,c1,c4"
 }, Vbn = {
-	label: "Think of a number",
+	label: "Pense à un nombre",
 	"b0.prompt": "Chaque énigme cache une équation, avec n pour le nombre. Associe chaque énigme à son équation.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -415905,7 +416030,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b27.o2": "161",
 	"b27.o3": "8"
 }, Kbn = {
-	label: "Thousand block stack",
+	label: "La pile de blocs de mille",
 	"b0.prompt": "La pile a 6 milliers, 5 centaines, 2 dizaines, 1 unités. Quel nombre les blocs forment-ils ?",
 	"b0.o0": "6\xA0521",
 	"b0.o1": "1\xA0256",
@@ -416105,7 +416230,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "500",
 	"b1.o3": "10"
 }, Zbn = {
-	label: "Thousand link match",
+	label: "Associer les mille",
 	"b0.prompt": "1 kilogramme vaut combien de grammes ?",
 	"b0.o0": "1000",
 	"b0.o1": "100",
@@ -416173,7 +416298,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "9000",
 	"b1.o3": "7300"
 }, nxn = {
-	label: "Thousand steps",
+	label: "Mille pas",
 	"b0.prompt": "Monte de 1000 en 1000 depuis 2000 : 2000, 3000, 4000, ? Qu'est-ce qui suit ?",
 	"b0.o0": "5000",
 	"b0.o1": "4100",
@@ -416331,7 +416456,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o4": "n7009,n7090,n7900,n7099",
 	"b17.o5": "n7090,n7099,n7900,n7009"
 }, sxn = {
-	label: "Thousands sorting race",
+	label: "Course de tri des milliers",
 	"b0.prompt": "Mets les nombres dans l'ordre, du plus petit au plus grand.",
 	"b0.o0": "n2150,n4380,n6720",
 	"b0.o1": "n6720,n4380,n2150",
@@ -416944,7 +417069,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b27.o2": "4",
 	"b27.o3": "4,890"
 }, fxn = {
-	label: "Thousandths magnifier",
+	label: "La loupe des millièmes",
 	"b0.prompt": "Zoome sur 0,6. Cela fait combien de millièmes ?",
 	"b0.o0": "600",
 	"b0.o1": "6",
@@ -417184,7 +417309,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o3": "1|8|8|7",
 	"b11.o4": "2|6|8|8"
 }, _xn = {
-	label: "Three and four array builder",
+	label: "Construire des tableaux de trois et de quatre",
 	"b0.prompt": "Construis un tableau : 3 rangées de 2 jetons.",
 	"b0.o0": "0|2|2|2",
 	"b0.o1": "1|1|2|2",
@@ -417925,7 +418050,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b15.o2": "11",
 	"b15.o3": "13"
 }, Sxn = {
-	label: "Three dice ten hunt",
+	label: "La chasse aux dix avec trois dés",
 	"b0.prompt": "Les dés montrent 2, 3, 4. Trouve deux dés qui font 5, puis additionne les trois. Quel est le total ?",
 	"b0.o0": "9",
 	"b0.o1": "5",
@@ -418180,7 +418305,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o5": "f0,f1,x2,f3,a4,f5,a6",
 	"b17.o6": "f0,f1,a2,f3,a4,f5,x2"
 }, Dxn = {
-	label: "Three factor shortcut",
+	label: "Le raccourci des trois facteurs",
 	"b0.prompt": "2 × 7 × 5 : multiplie d'abord 2 et 5. Glisse chaque étape.",
 	"b0.o0": "f0,f1,a2,f3,a4,f5,a6",
 	"b0.o1": "f0,f1,x0,f3,a4,f5,a6",
@@ -418492,7 +418617,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b24.o2": "6",
 	"b24.o3": "9"
 }, Mxn = {
-	label: "Three kinds of minus",
+	label: "Trois sortes de moins",
 	"b0.prompt": "Il y a 5 pommes. On en enlève 2. Glisse-les dehors. Combien en reste-t-il ?",
 	"b0.o0": "3|2",
 	"b0.o1": "5|0",
@@ -418749,7 +418874,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g8,g6,g7,g6,g4,g3,g0",
 	"b17.o3": "g0,g1,g11,g3,g12,g5,g12,g6,g13,g6,g0,g3,g0"
 }, Lxn = {
-	label: "Three part share",
+	label: "Partager en trois parts",
 	"b0.prompt": "Partage 60 selon le rapport 1 : 2 : 3. Additionne les parts, trouve une part, puis chaque part du total.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g4,g6,g7,g6,g8,g3,g0",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g9,g6,g10,g6,g11,g3,g0",
@@ -418962,7 +419087,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o3": "split,badSplit,comp,halve,badHalve",
 	"b14.o4": "split,badHalve,comp,badSplit,halve"
 }, Hxn = {
-	label: "Three way check",
+	label: "La vérification à trois",
 	"b0.prompt": "84 ÷ 4 : des amis ne sont pas d'accord. Défais l'opération pour tester chaque réponse : trie celles qui passent la vérification et celles qui échouent.",
 	"b0.o0": "s0,s1,s2",
 	"b0.o1": "s1,s0,s2",
@@ -419153,7 +419278,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o3": "g0,g1,g9,g3,g4,g5",
 	"b11.o4": "g0,g1,g2,g3,g4,g10"
 }, qxn = {
-	label: "Tile collector",
+	label: "Le collectionneur de tuiles",
 	"b0.prompt": "Rassemble les tuiles semblables de 3x + 4x et écris l'expression réduite. Les tuiles opposées s'annulent.",
 	"b0.o0": "g0,g1,g2,g3",
 	"b0.o1": "g0,g1,g4,g3",
@@ -419369,7 +419494,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "0|14|12",
 	"b17.o3": "14|12|0"
 }, Qxn = {
-	label: "Tile the floor",
+	label: "Carreler le sol",
 	"b0.prompt": "Un sol en L : la partie A fait 3 par 2 carreaux, la partie B fait 2 par 2. Mets les bons carreaux sur chaque partie.",
 	"b0.o0": "2|6|4",
 	"b0.o1": "2|4|6",
@@ -419596,7 +419721,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o1": "g0,g1,g2,g3,g5,g1,g5",
 	"b17.o2": "g0,g1,g2,g3,g0,g1,g0"
 }, rSn = {
-	label: "Tile the floor hcf",
+	label: "Carreler le sol",
 	"b0.prompt": "Un sol mesure 12 sur 18. Quel est le côté du plus grand carreau carré qui le couvre exactement ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g4",
 	"b0.o1": "g0,g1,g2,g3,g5,g1,g5",
@@ -419790,7 +419915,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o3": "1|5|5|4|5",
 	"b11.o4": "1|5|5|5|4"
 }, cSn = {
-	label: "Tile the rectangle",
+	label: "Carreler le rectangle",
 	"b0.prompt": "Pave un rectangle : 2 rangées de 3 carrés.",
 	"b0.o0": "0|3|3",
 	"b0.o1": "1|2|3",
@@ -419972,7 +420097,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b10.o3": "circle2:circle,rect1:rect,rect4:rect,square3:square,triangle0:rect,triangle5:triangle",
 	"b10.o4": "circle2:circle,rect1:circle,rect4:rect,square3:square,triangle0:triangle,triangle5:triangle"
 }, pSn = {
-	label: "Tilted shape sort",
+	label: "Trier les formes inclinées",
 	"b0.prompt": "Mets chaque forme dans la boîte de son nom. Tourner ne change pas une forme.",
 	"b0.o0": "circle0:circle,circle2:circle,triangle1:triangle,triangle3:triangle",
 	"b0.o1": "circle0:triangle,circle2:circle,triangle1:triangle,triangle3:triangle",
@@ -420290,7 +420415,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b25.o5": "p0:rect,p1:hexagon,p2:other,p3:other,p4:rect",
 	"b25.o6": "p0:other,p1:hexagon,p2:other,p3:other,p4:other"
 }, vSn = {
-	label: "Tilted shapes",
+	label: "Faire tourner la forme",
 	"b0.prompt": "Trie les formes penchées.",
 	"b0.o0": "p0:rect,p1:hexagon,p2:other",
 	"b0.o1": "p0:hexagon,p1:hexagon,p2:other",
@@ -420632,7 +420757,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g1,g2,g3,g4,g5",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g8,g8,g9,g10,g11"
 }, CSn = {
-	label: "Time difference ruler",
+	label: "La règle des différences d'heure",
 	"b0.prompt": "En hiver, Londres a 1 heure de retard sur Paris. Fais glisser la bande : écris les heures de Londres sous les heures de Paris.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g1,g2,g3",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g2,g3,g4,g7",
@@ -420850,7 +420975,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, OSn = {
-	label: "Time match three ways",
+	label: "Associer l'heure de trois façons",
 	"b0.prompt": "Dis chaque heure à voix haute. Glisse les mots sur l'heure en chiffres qui correspond.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -421068,7 +421193,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b12.o5": "minute,hour,week,year,month",
 	"b12.o6": "hour,week,month,year,minute"
 }, NSn = {
-	label: "Time unit ladder",
+	label: "L'échelle des unités de temps",
 	"b0.prompt": "Mets les unités de temps dans l'ordre, la plus courte en bas de l'échelle.",
 	"b0.o0": "minute,hour,day",
 	"b0.o1": "day,hour,minute",
@@ -421296,7 +421421,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b21.o2": "0|1|3|3",
 	"b21.o3": "0|1|2|4"
 }, RSn = {
-	label: "Time word sort",
+	label: "Trier les mots de temps",
 	"b0.prompt": "Avant ou après le déjeuner ?",
 	"b0.o0": "0|2|2",
 	"b0.o1": "1|1|2",
@@ -421577,7 +421702,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o5": "f0,x2,f2,a3,f4,f5,a6,f7",
 	"b17.o6": "f0,a1,f2,a3,f4,f5,x2,f7"
 }, USn = {
-	label: "Timeline across the hour",
+	label: "La frise de l'heure",
 	"b0.prompt": "Combien de temps de 3:50 à 4:20 ? Saute d'abord jusqu'à l'heure pile.",
 	"b0.o0": "f0,a1,f2,a3,f4,f5,a6,f7",
 	"b0.o1": "f0,x0,f2,a3,f4,f5,a6,f7",
@@ -421986,7 +422111,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "Plus (+)",
 	"b1.o3": "Minus (−)"
 }, $Sn = {
-	label: "Times or divide pick",
+	label: "Multiplier ou diviser ?",
 	"b0.prompt": "4 enfants ont chacun 2 autocollants. Quelle opération ?",
 	"b0.o0": "Fois (×)",
 	"b0.o1": "Partage (÷)",
@@ -422949,7 +423074,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "g0,g1,g2,g3,g7,g3,g5",
 	"b17.o3": "g0,g1,g2,g3,g4,g3,g8"
 }, mCn = {
-	label: "Times whole bar",
+	label: "Des barres qui s'additionnent",
 	"b0.prompt": "3 × 1/4 : imagine 3 barres de 1/4 mises bout à bout. Écris le total.",
 	"b0.o0": "g0,g1,g2,g3,g2,g4,g2,g4,g2,g3,g5",
 	"b0.o1": "g0,g1,g2,g3,g2,g4,g2,g4,g2,g3,g6",
@@ -424437,7 +424562,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b23.o2": "1",
 	"b23.o3": "6"
 }, zCn = {
-	label: "Trace the numeral",
+	label: "Trace le chiffre",
 	"b0.prompt": "✏️ Comment écrit-on 1 ?",
 	"b0.o0": "Pars du haut et descends tout droit.",
 	"b0.o1": "Descends puis va vers la droite, lève le crayon et descends sur le côté droit.",
@@ -425114,7 +425239,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b32.o2": "200",
 	"b32.o3": "0"
 }, WCn = {
-	label: "Trace the teens",
+	label: "Trace les nombres de 10 à 19",
 	"b0.prompt": "✏️ Tu écris 10.\n\nQuel chiffre écris-tu EN PREMIER ?",
 	"b0.o0": "1",
 	"b0.o1": "0",
@@ -425337,7 +425462,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "25",
 	"b1.o3": "31"
 }, YCn = {
-	label: "Trade a ten subtraction",
+	label: "Échanger une dizaine",
 	"b0.prompt": "41 − 17 = ?",
 	"b0.o0": "24",
 	"b0.o1": "34",
@@ -426423,7 +426548,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b33.o2": "URUU",
 	"b33.o3": "DLD"
 }, bwn = {
-	label: "Treasure map route",
+	label: "Le chemin du trésor",
 	"b0.prompt": "Route du trésor : Avance de 1.",
 	"b0.o0": "R",
 	"b0.o1": "RR",
@@ -427491,7 +427616,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b29.o5": "t0,t1,t2,t4,t3",
 	"b29.o6": "t1,t2,t3,t4,t0"
 }, Bwn = {
-	label: "Trials slider lab",
+	label: "Plus d'essais",
 	"b0.prompt": "Une pièce devrait tomber sur pile 50 % du temps. Chaque carte montre le nombre de lancers → le pourcentage de piles. Classe-les du plus éloigné de 50 % au plus proche.",
 	"b0.o0": "t0,t1,t2",
 	"b0.o1": "t2,t1,t0",
@@ -429011,7 +429136,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o3": "m0,f0,f1,f2,m3,m4,f4,m1",
 	"b14.o4": "m1,f0,f1,f2,m3,m4,m0,f4"
 }, xTn = {
-	label: "Truncated axis lens",
+	label: "Regard sur le graphique",
 	"b0.prompt": "Examine chaque graphique ou sondage. Est-il honnête, ou trompe-t-il ?",
 	"b0.o0": "f0,f1,m0,m1",
 	"b0.o1": "m0,f1,f0,m1",
@@ -429220,7 +429345,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o2": "g0,g1,g12,g3,g4,g1,g13,g3,g6,g1,g14,g8,g9,g1,g15",
 	"b14.o3": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g8,g9,g1,g16"
 }, ETn = {
-	label: "Try a simpler case",
+	label: "Essayer un cas plus simple",
 	"b0.prompt": "Une rangée de 10 carrés est faite d'allumettes. Un carré demande 4 allumettes ; un deuxième partage un côté, et ainsi de suite. Combien d'allumettes pour 10 carrés ? Essaie d'abord avec 1, 2 et 3 carrés.",
 	"b0.o0": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g8,g7,g1,g9",
 	"b0.o1": "g0,g1,g2,g3,g4,g1,g5,g3,g6,g1,g7,g8,g7,g1,g10",
@@ -429369,7 +429494,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "South",
 	"b1.o3": "North"
 }, ATn = {
-	label: "Turn and move maze",
+	label: "Le labyrinthe du robot",
 	"b0.prompt": "Un labyrinthe demande un virage puis des déplacements. Quel ordre marche ?",
 	"b0.o0": "Tourner à droite, puis avancer de 3",
 	"b0.o1": "Avancer de 3 pour toujours",
@@ -429482,7 +429607,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o2": "g0,g1,g2,g3,g4,g5,g0,g7,g2,g6,g4",
 	"b14.o3": "g0,g1,g2,g3,g4,g5,g0,g1,g2,g3,g4"
 }, FTn = {
-	label: "Turn it 90 explorer",
+	label: "Tourne le point",
 	"b0.prompt": "Fais tourner le point (3, 1) autour de l'origine d'un demi-tour (180°). Où arrive-t-il ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g0,g6,g2,g7,g4",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g0,g6,g2,g3,g4",
@@ -429905,7 +430030,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b15.o3": "qr,ql",
 	"b15.o4": "ql,qr"
 }, GTn = {
-	label: "Turn the puppet",
+	label: "Tourne la marionnette",
 	"b0.prompt": "La marionnette regarde ⬆️ (vers le haut). Tourne-la pour qu'elle regarde ⬇️ (vers le bas).",
 	"b0.o0": "half",
 	"b0.o1": "qr",
@@ -430055,7 +430180,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "13",
 	"b1.o3": "121"
 }, XTn = {
-	label: "Twelve pack division",
+	label: "Division par boîtes de douze",
 	"b0.prompt": "96 ÷ 12 = ?",
 	"b0.o0": "8",
 	"b0.o1": "9",
@@ -431883,7 +432008,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o5": "f0,f1,f2,f3,x2,f5,f6,f7,a8",
 	"b17.o6": "f0,f1,f2,f3,a4,f5,f6,f7,x2"
 }, IEn = {
-	label: "Two step chart quest",
+	label: "Le graphique en deux étapes",
 	"b0.prompt": "Le graphique montre 6 rouges, 5 bleus et 8 verts. Combien de rouges et bleus ensemble, et de combien diffère-t-on des verts ?",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,f6,f7,a8",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,f6,f7,a8",
@@ -432517,7 +432642,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o4": "t0,t1,t2,t3,t4,t5,d1,d3",
 	"b14.o5": "t0,t1,t2,t3,t4,t5,d1,d1"
 }, ZEn = {
-	label: "Two step shop story",
+	label: "La boutique en deux étapes",
 	"b0.prompt": "Max achète un stylo à 5 et un livre à 6. Il paie avec 20. Combien de monnaie ?",
 	"b0.o0": "t0,t1,t2,t3,t4,t5,d9",
 	"b0.o1": "t0,t1,t2,t3,t4,t5,d8",
@@ -434116,7 +434241,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o3": "u0,u2,u1",
 	"b14.o4": "u1,u2,u0"
 }, ODn = {
-	label: "Undo the steps machine",
+	label: "Défaire la machine",
 	"b0.prompt": "Une machine transforme un nombre n en 20. Elle fait ×3, puis +2. Mets les étapes contraires dans l'ordre qui permet de trouver n.",
 	"b0.o0": "u0,u1",
 	"b0.o1": "u1,u0",
@@ -435462,7 +435587,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o2": "g0,g1,g9,g3,g1,g4,g5,g6,g1,g10",
 	"b14.o3": "g0,g1,g2,g3,g1,g4,g5,g6,g1,g11"
 }, lOn = {
-	label: "Unit ladder climb",
+	label: "L'échelle des unités",
 	"b0.prompt": "Monte l'échelle de km à m. Écris le facteur de chaque barreau.",
 	"b0.o0": "g0,g1,g2,g3",
 	"b0.o1": "g0,g1,g4,g3",
@@ -435652,7 +435777,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o4": "c1,c2,c0",
 	"b11.o5": "x0,c1,c2"
 }, mOn = {
-	label: "Unit match memory",
+	label: "Mémoire des unités",
 	"b0.prompt": "Quelles quantités sont égales ? Glisse chaque carte sur la quantité qui lui est égale.",
 	"b0.o0": "c0,c1,c2",
 	"b0.o1": "c1,c0,c2",
@@ -436066,7 +436191,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o2": "t3x1,t1x0,t1x1,t2x0,t3x0,t0x0",
 	"b11.o3": "t3x1,t3x0,t2x0,t1x1,t1x0,t0x0"
 }, wOn = {
-	label: "Unit sort kitchen",
+	label: "Trier les unités de cuisine",
 	"b0.prompt": "Quelle unité convient le mieux à chaque chose ? Dépose-la dans la bonne boîte.",
 	"b0.o0": "t0x0,t0x1,t1x0,t1x1",
 	"b0.o1": "t1x0,t0x1,t0x0,t1x1",
@@ -436696,7 +436821,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o2": "i0,i5,i2,i3,i4,i1",
 	"b11.o3": "i5,i4,i3,i2,i1,i0"
 }, zOn = {
-	label: "Venn hoops sort",
+	label: "Trier dans les cerceaux",
 	"b0.prompt": "Trie les objets dans les deux cerceaux.",
 	"b0.o0": "i0,i1,i2,i3,i4,i5",
 	"b0.o1": "i3,i1,i2,i0,i4,i5",
@@ -436838,7 +436963,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "8",
 	"b1.o3": "4"
 }, WOn = {
-	label: "Vertex tap count",
+	label: "Compter les sommets",
 	"b0.prompt": "Combien de sommets a un triangle ?",
 	"b0.o0": "3",
 	"b0.o1": "2",
@@ -437153,7 +437278,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b14.o16": "d6,d0,d1,d2,d3,d5,d4",
 	"b14.o17": "d6,d1,d2,d3,d4,d5,d0"
 }, YOn = {
-	label: "Week song",
+	label: "La chanson de la semaine",
 	"b0.prompt": "Chante la semaine. Mets les jours dans l'ordre.",
 	"b0.o0": "d0,d1,d2,d3,d4,d5,d6",
 	"b0.o1": "d0,d6,d5,d4,d3,d2,d1",
@@ -438804,7 +438929,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g3,g8",
 	"b17.o3": "g0,g1,g2,g3,g4,g3,g9"
 }, Tkn = {
-	label: "What percent spinner",
+	label: "Quel pourcentage sur la roue ?",
 	"b0.prompt": "Quel pourcentage représente 3 sur 10 ? Écris la fraction, simplifie-la, puis donne le pourcentage.",
 	"b0.o0": "g0,g1,g2,g3,g4,g3,g5",
 	"b0.o1": "g0,g1,g2,g3,g6,g3,g7",
@@ -438998,7 +439123,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b11.o2": "g0,g1,g2,g3,g4,g1,g5,g6,g3,g7,g10",
 	"b11.o3": "g0,g1,g2,g3,g4,g1,g5,g6,g3,g7,g11"
 }, Akn = {
-	label: "Wheel roll pi",
+	label: "La roue et pi",
 	"b0.prompt": "Une roue de 2 cm de diamètre fait un tour complet et parcourt 6,28 cm. Divise la distance par le diamètre.",
 	"b0.o0": "g0,g1,g2,g3,g1,g4,g5",
 	"b0.o1": "g0,g1,g2,g3,g1,g4,g6",
@@ -439390,7 +439515,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "Both the same",
 	"b1.o3": "Neither"
 }, Bkn = {
-	label: "When not to use calculator",
+	label: "Quand éviter la calculatrice",
 	"b0.prompt": "Qu'est-ce qui est le plus rapide de tête : 25 × 4 ?",
 	"b0.o0": "Calcul mental",
 	"b0.o1": "Calculatrice",
@@ -439877,7 +440002,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b27.o2": "2",
 	"b27.o3": "0"
 }, Gkn = {
-	label: "Where did the zero go",
+	label: "Où est passé le zéro ?",
 	"b0.prompt": "60 × 10 = 600. De combien de places chaque chiffre se décale-t-il vers la gauche ?",
 	"b0.o0": "1",
 	"b0.o1": "10",
@@ -440289,7 +440414,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b1.o2": "A bar of 12 only",
 	"b1.o3": "A bar of 5 only"
 }, tAn = {
-	label: "Which bar fits",
+	label: "Quelle barre convient ?",
 	"b0.prompt": "Histoire : 7 rouges et 3 bleus font combien au total ? Quelle barre convient ?",
 	"b0.o0": "Un tout de 10 coupé en 7 et 3",
 	"b0.o1": "Un tout de 7 seulement",
@@ -441152,7 +441277,7 @@ var Eyn = (e) => Number(e.slice(e.lastIndexOf("-") + 1)), Dyn = $({
 	"b27.o2": "The tens digit",
 	"b27.o3": "The hundreds digit"
 }, gAn = {
-	label: "Which digit changes 4 digit",
+	label: "Quel chiffre change ? (4 chiffres)",
 	"b0.prompt": "2\xA0732 − 100. Quel chiffre change ?",
 	"b0.o0": "Le chiffre des centaines",
 	"b0.o1": "Plus d'un chiffre",
@@ -441813,7 +441938,7 @@ var wAn = $({
 	"b1.o2": "3/2",
 	"b1.o3": "2/4"
 }, LAn = {
-	label: "Which fraction is this",
+	label: "Quelle est cette fraction ?",
 	"b0.prompt": "Une marque à 1/4 sur la droite. Quelle fraction est à la marque ?",
 	"b0.o0": "1/4",
 	"b0.o1": "1/2",
@@ -442076,7 +442201,7 @@ var wAn = $({
 	"b44.o2": "🟢🟢🟢🟢⬜  ⬜⬜⬜⬜⬜",
 	"b44.o3": "🟢🟢🟢🟢🟢  ⬜⬜⬜⬜⬜"
 }, HAn = {
-	label: "Which frame is right",
+	label: "Quel cadre est le bon ?",
 	"b0.prompt": "Trouve le cadre qui montre 1.",
 	"b0.o0": "🟠⬜⬜⬜⬜",
 	"b0.o1": "⬜⬜⬜⬜⬜",
@@ -442477,7 +442602,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 600,
+			max: 700,
+			step: 50,
+			marked: [670]
+		}
 	},
 	{
 		key: "b1",
@@ -442488,7 +442620,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 500,
+			max: 600,
+			step: 50,
+			marked: [594]
+		}
 	},
 	{
 		key: "b2",
@@ -442499,7 +442638,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 200,
+			max: 300,
+			step: 50,
+			marked: [274]
+		}
 	},
 	{
 		key: "b3",
@@ -442510,7 +442656,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 100,
+			max: 200,
+			step: 50,
+			marked: [192]
+		}
 	},
 	{
 		key: "b4",
@@ -442521,7 +442674,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 800,
+			max: 900,
+			step: 50,
+			marked: [854]
+		}
 	},
 	{
 		key: "b5",
@@ -442532,7 +442692,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 800,
+			max: 900,
+			step: 50,
+			marked: [852]
+		}
 	},
 	{
 		key: "b6",
@@ -442543,7 +442710,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 700,
+			max: 800,
+			step: 50,
+			marked: [739]
+		}
 	},
 	{
 		key: "b7",
@@ -442554,7 +442728,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 200,
+			max: 300,
+			step: 50,
+			marked: [264]
+		}
 	},
 	{
 		key: "b8",
@@ -442565,7 +442746,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 200,
+			max: 300,
+			step: 50,
+			marked: [236]
+		}
 	},
 	{
 		key: "b9",
@@ -442576,7 +442764,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 700,
+			max: 800,
+			step: 50,
+			marked: [716]
+		}
 	},
 	{
 		key: "b10",
@@ -442587,7 +442782,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 800,
+			max: 900,
+			step: 50,
+			marked: [828]
+		}
 	},
 	{
 		key: "b11",
@@ -442598,7 +442800,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 600,
+			max: 700,
+			step: 50,
+			marked: [683]
+		}
 	},
 	{
 		key: "b12",
@@ -442609,7 +442818,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 500,
+			max: 600,
+			step: 50,
+			marked: [516]
+		}
 	},
 	{
 		key: "b13",
@@ -442620,7 +442836,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 800,
+			max: 900,
+			step: 50,
+			marked: [848]
+		}
 	},
 	{
 		key: "b14",
@@ -442631,7 +442854,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 9600,
+			max: 9700,
+			step: 50,
+			marked: [9637]
+		}
 	},
 	{
 		key: "b15",
@@ -442642,7 +442872,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 9800,
+			max: 9900,
+			step: 50,
+			marked: [9826]
+		}
 	},
 	{
 		key: "b16",
@@ -442653,7 +442890,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 4800,
+			max: 4900,
+			step: 50,
+			marked: [4824]
+		}
 	},
 	{
 		key: "b17",
@@ -442664,7 +442908,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 2200,
+			max: 2300,
+			step: 50,
+			marked: [2227]
+		}
 	},
 	{
 		key: "b18",
@@ -442675,7 +442926,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 4300,
+			max: 4400,
+			step: 50,
+			marked: [4367]
+		}
 	},
 	{
 		key: "b19",
@@ -442686,7 +442944,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 8400,
+			max: 8500,
+			step: 50,
+			marked: [8475]
+		}
 	},
 	{
 		key: "b20",
@@ -442697,7 +442962,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 7400,
+			max: 7500,
+			step: 50,
+			marked: [7423]
+		}
 	},
 	{
 		key: "b21",
@@ -442708,7 +442980,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 4600,
+			max: 4700,
+			step: 50,
+			marked: [4609]
+		}
 	},
 	{
 		key: "b22",
@@ -442719,7 +442998,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 8900,
+			max: 9e3,
+			step: 50,
+			marked: [8913]
+		}
 	},
 	{
 		key: "b23",
@@ -442730,7 +443016,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 5200,
+			max: 5300,
+			step: 50,
+			marked: [5243]
+		}
 	},
 	{
 		key: "b24",
@@ -442741,7 +443034,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 7e3,
+			max: 7100,
+			step: 50,
+			marked: [7052]
+		}
 	},
 	{
 		key: "b25",
@@ -442752,7 +443052,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 6900,
+			max: 7e3,
+			step: 50,
+			marked: [6968]
+		}
 	},
 	{
 		key: "b26",
@@ -442763,7 +443070,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 3e3,
+			max: 3100,
+			step: 50,
+			marked: [3064]
+		}
 	},
 	{
 		key: "b27",
@@ -442774,7 +443088,14 @@ var wAn = $({
 			"c",
 			"d"
 		],
-		correctIndex: 0
+		correctIndex: 0,
+		scene: {
+			type: "number-line",
+			min: 7200,
+			max: 7300,
+			step: 50,
+			marked: [7213]
+		}
 	}
 ], ZAn = {
 	label: "Which Hundred Snap",
@@ -442919,7 +443240,7 @@ var wAn = $({
 	"b27.o2": "7,210",
 	"b27.o3": "7,000"
 }, QAn = {
-	label: "Which hundred snap",
+	label: "Quelle centaine est la plus proche ?",
 	"b0.prompt": "670 est entre 600 et 700. Regarde le chiffre des dizaines : sur quelle centaine s'arrondit-il ?",
 	"b0.o0": "700",
 	"b0.o1": "600",
@@ -443071,12 +443392,14 @@ var wAn = $({
 		return {
 			entryKey: r.key,
 			optionIds: [...r.ids],
-			correctId: r.ids[r.correctIndex]
+			correctId: r.ids[r.correctIndex],
+			...r.scene !== void 0 && { scene: r.scene }
 		};
 	},
 	present(e, t) {
 		let n = t9.find((t) => t.key === e.entryKey), r = e.optionIds;
 		return {
+			...e.scene !== void 0 && { scene: e.scene },
 			prompt: t(`${n.key}.prompt`),
 			options: r.map((e) => ({
 				id: e,
@@ -444021,7 +444344,7 @@ var wAn = $({
 	"b11.o4": "f12,f8,f4,f6",
 	"b11.o5": "f8,f6,f4,f12"
 }, vjn = {
-	label: "Which pizza more",
+	label: "Quelle pizza est la plus grosse ?",
 	"b0.prompt": "Le même nombre de parts, mais des parts de tailles différentes. Mets les fractions dans l'ordre, la plus petite d'abord.",
 	"b0.o0": "f4,f3,f2",
 	"b0.o1": "f2,f3,f4",
@@ -446962,7 +447285,7 @@ var wAn = $({
 	"b21.o2": "2",
 	"b21.o3": "6"
 }, wMn = {
-	label: "Within ten flash race",
+	label: "Course éclair jusqu'à dix",
 	"b0.prompt": "1 + 2 = ? Touche la réponse sur le cadre de dix.",
 	"b0.o0": "3",
 	"b0.o1": "1",
@@ -447615,7 +447938,7 @@ var wAn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g6,g3,g9",
 	"b17.o3": "g0,g1,g2,g3,g10,g5,g6,g3,g11"
 }, zMn = {
-	label: "Workers and days",
+	label: "Ouvriers et jours",
 	"b0.prompt": "4 ouvriers construisent un mur en 6 jours. Combien de jours pour 8 ouvriers, au même rythme ? Trouve la taille du travail (ouvriers × jours), puis partage-la.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6,g3,g7",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g6,g3,g8",
@@ -447827,7 +448150,7 @@ var wAn = $({
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g8,g7",
 	"b17.o3": "g0,g1,g2,g3,g4,g5,g6,g9"
 }, WMn = {
-	label: "World clock sun map",
+	label: "Horloges du monde : soleil ou lune",
 	"b0.prompt": "En hiver, Londres a 1 heure de retard sur Paris. Quand il est 10 h à Paris, quelle heure est-il à Londres, et le soleil est-il levé (🌞) ou fait-il nuit (🌙) ?",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g8,g4,g5,g6",
@@ -448887,7 +449210,7 @@ var wAn = $({
 	"b1.o2": "0",
 	"b1.o3": "131"
 }, hNn = {
-	label: "Zero and one magic doors",
+	label: "Les portes magiques du zéro et du un",
 	"b0.prompt": "9 × 0 = ?",
 	"b0.o0": "0",
 	"b0.o1": "9",
@@ -449340,7 +449663,7 @@ var wAn = $({
 	"b17.o1": "g0,g1,g2,g3,g4,g5,g7",
 	"b17.o2": "g0,g1,g2,g3,g4,g5,g4"
 }, TNn = {
-	label: "Zero count sprint",
+	label: "Sprint des zéros",
 	"b0.prompt": "30 × 4 : trouve le calcul de base, puis remets les zéros.",
 	"b0.o0": "g0,g1,g2,g3,g4,g5,g6",
 	"b0.o1": "g0,g1,g2,g3,g4,g5,g7",
@@ -450543,7 +450866,7 @@ var wAn = $({
 	"b27.o2": "762",
 	"b27.o3": "8,382"
 }, BNn = {
-	label: "Zero placeholder spot",
+	label: "La place du zéro",
 	"b0.prompt": "Construis le nombre avec 5 milliers, 0 centaines, 1 dizaines, 8 unités. Quel nombre est-ce ?",
 	"b0.o0": "5\xA0018",
 	"b0.o1": "518",
@@ -451293,7 +451616,7 @@ var wAn = $({
 	"b17.o2": "f0,f1,f2,f3,x1,f5,f6,f7,f8,f9,f10",
 	"b17.o3": "f0,f1,f2,f3,x2,f5,f6,f7,f8,f9,f10"
 }, tPn = {
-	label: "Zoom line lander",
+	label: "Atterrissage sur la droite zoomée",
 	"b0.prompt": "La droite monte de 100 à chaque repère. Quel nombre est sur l'épingle ?",
 	"b0.o0": "f0,f1,f2,f3,a4,f5,f6,f7,f8,f9,f10",
 	"b0.o1": "f0,f1,f2,f3,x0,f5,f6,f7,f8,f9,f10",
