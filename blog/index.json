@@ -965,7 +965,33 @@
       "topics": [],
       "words": 1660,
       "reviewed": false
+    },
+    {
+      "id": "2026-10-30-explorer-atlas-a-map-of-learning.en",
+      "date": "2026-10-30",
+      "title": "The Explorer Atlas: a game-style map of what your child has learned",
+      "summary": "Your child now has a map of their own. Every topic is a world, every grade is a continent, and every activity is a country to discover, with stars to earn along the way. Parents get the very same…",
+      "contentUrl": "2026-10-30-explorer-atlas-a-map-of-learning.en.md",
+      "slug": "explorer-atlas-a-map-of-learning",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 696,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-30-explorer-atlas-a-map-of-learning.fr",
+      "date": "2026-10-30",
+      "title": "L'Atlas de l'explorateur : une carte, façon jeu, de tout ce que votre enfant a appris",
+      "summary": "Votre enfant a maintenant sa propre carte. Chaque sujet est un monde, chaque niveau est un continent et chaque activité est un pays à découvrir, avec des étoiles à gagner en chemin. Les parents…",
+      "contentUrl": "2026-10-30-explorer-atlas-a-map-of-learning.fr.md",
+      "slug": "explorer-atlas-a-map-of-learning",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 721,
+      "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-30T19:50:14.686Z"
+  "generatedAt": "2026-10-30T22:50:01.176Z"
 }
