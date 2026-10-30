@@ -1,0 +1,1 @@
+var e={adsEnabled:!0,publisherName:`learnCoreSkills`,region:`Europe / France`,contactEmail:`mail@learncoreskills.com`,donationUrl:``,adClient:`ca-pub-2503112416832365`,adSlot:`9683901947`,gtmId:`GTM-KFT8QMSL`};export{e as t};
