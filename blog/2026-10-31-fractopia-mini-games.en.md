@@ -110,3 +110,22 @@ The daily mental-math sheet used to be one sheet for everyone. Now there is one 
  4      the four operations, more x           9 x 12, 84 / 12
  5      negative whole numbers                (−7) + 12, (−3) x (−4)
  6      negative decimals, 1–2 digits         (−2.5) x 4, 0.1 − (−0.75)
+
+## Every activity is now a country, and every world has a map
+
+Open a world and you no longer meet a plain list: you meet an atlas. Every activity is now a fictive country with a name of its own, built from the world's theme and the land, or grade, it belongs to. "Tally Republic" is a Numeria country in the Kindergarten land, and "Crumb Empire" is a Fractopia country in Grade 4. Names are never repeated anywhere in the atlas, so a child can say "I finished Crumb Empire" and everyone knows exactly where. The real activity name is still there, on the country's welcome screen, so a parent can see what is being practised.
+
+**A map at the top of every world.** Above the list of lands sits a small map with seven islands, one per land, and one pin for each activity. A little boat floats at the land the child is working on, so the next step is easy to find. Each world draws its map differently, with its own layout, colours and scenery, so the maps feel as different as the worlds.
+
+**Explore it with a finger or a mouse.** Children can drag the map to move around, press + and − to zoom, or tap a land to zoom straight to it. A caption under the map names the country or land under the pointer, with the stars earned there. Tapping a pin opens that activity. Keyboard users can reach every land and pin, and the controls are labelled in English and French.
+
+```
+   ~ ~ ~   ~ ~ ~   ~ ~ ~
+  (K)  (1)   (2)    (3)
+     * *   *   * *    *      * = a pin per activity
+   (4)  [boat]  (5)  (6)
+   ~ ~ ~   ~ ~ ~   ~ ~ ~
+   Caption: Crumb Empire - 2 stars
+```
+
+Nothing about scoring, stars or progress has changed: this is a nicer way to find your way around, not a new way to be graded.

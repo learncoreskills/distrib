@@ -62,3 +62,22 @@ La feuille quotidienne de calcul mental était autrefois la même pour tous. Cha
  4       les quatre opérations, plus de x       9 x 12, 84 / 12
  5       nombres entiers négatifs               (−7) + 12, (−3) x (−4)
  6       décimaux négatifs, 1–2 chiffres        (−2,5) x 4, 0,1 − (−0,75)
+
+## Chaque activité est un pays, et chaque monde a sa carte
+
+Ouvre un monde et tu ne trouves plus une simple liste : tu trouves un atlas. Chaque activité est maintenant un pays imaginaire avec son propre nom, composé à partir du thème du monde et de la terre, ou année scolaire, à laquelle il appartient. « Tally Republic » est un pays de Numéria dans la terre de la maternelle, et « Crumb Empire » un pays de Fractopia en 4e année. Aucun nom ne se répète dans tout l'atlas : un enfant peut dire « j'ai fini Crumb Empire » et tout le monde sait de quoi il parle. Le vrai nom de l'activité reste affiché sur l'écran d'accueil du pays, pour qu'un parent voie ce qui est travaillé.
+
+**Une carte en haut de chaque monde.** Au-dessus de la liste des terres se trouve une petite carte avec sept îles, une par terre, et une épingle pour chaque activité. Un petit bateau flotte sur la terre où l'enfant travaille, donc la prochaine étape est facile à repérer. Chaque monde dessine sa carte autrement, avec sa disposition, ses couleurs et son décor : les cartes sont aussi différentes que les mondes.
+
+**À explorer du doigt ou à la souris.** On peut faire glisser la carte pour se déplacer, appuyer sur + et − pour zoomer, ou toucher une terre pour s'en approcher directement. Une légende sous la carte nomme le pays ou la terre sous le pointeur, avec les étoiles gagnées. Toucher une épingle ouvre l'activité. Au clavier, on peut atteindre chaque terre et chaque épingle, et les commandes sont étiquetées en français et en anglais.
+
+```
+   ~ ~ ~   ~ ~ ~   ~ ~ ~
+  (M)  (1)   (2)    (3)
+     * *   *   * *    *      * = une épingle par activité
+   (4)  [bateau]  (5)  (6)
+   ~ ~ ~   ~ ~ ~   ~ ~ ~
+   Légende : Crumb Empire - 2 étoiles
+```
+
+Rien ne change pour les points, les étoiles ou la progression : c'est une plus belle façon de s'orienter, pas une nouvelle façon d'être évalué.
