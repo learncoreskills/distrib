@@ -991,7 +991,33 @@
       "topics": [],
       "words": 721,
       "reviewed": false
+    },
+    {
+      "id": "2026-10-31-fractopia-mini-games.en",
+      "date": "2026-10-31",
+      "title": "Fractopia's activities are now real games, and no two rounds are the same",
+      "summary": "Every Fractions activity, from Crumb Meadow to Sugar Summit, is now a small animated game instead of a question with a row of buttons. You serve pizzas to a customer, send a frog hopping along lily…",
+      "contentUrl": "2026-10-31-fractopia-mini-games.en.md",
+      "slug": "fractopia-mini-games",
+      "lang": "en",
+      "kind": "news",
+      "topics": [],
+      "words": 163,
+      "reviewed": false
+    },
+    {
+      "id": "2026-10-31-fractopia-mini-games.fr",
+      "date": "2026-10-31",
+      "title": "Les activités de Fractopia sont de vrais jeux, et aucune partie ne se ressemble",
+      "summary": "Chaque activité de fractions, de la Prairie des Miettes au Sommet du Sucre, est maintenant un petit jeu animé plutôt qu'une question suivie de boutons. On sert des pizzas à un client, on fait sauter…",
+      "contentUrl": "2026-10-31-fractopia-mini-games.fr.md",
+      "slug": "fractopia-mini-games",
+      "lang": "fr",
+      "kind": "news",
+      "topics": [],
+      "words": 163,
+      "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-30T22:56:56.586Z"
+  "generatedAt": "2026-10-31T07:56:30.758Z"
 }
