@@ -23,3 +23,15 @@ Fractopia était le banc d'essai, et ça a marché : les jeux voyagent maintenan
   nombres        (éclater, trier,    (couleurs, mascotte,
   neufs           écrire, sauter…)     cloches, pièces…)
 ```
+
+## Blocopolis se joint à la fête
+
+Le quatrième monde est Blocopolis, la ville de la valeur de position, avec 93 activités de la maternelle à la 6e année. On construit des nombres avec des blocs d'unités, de dizaines et de centaines, on remplit des cadres de dix, on échange dix contre un, on déplace un chiffre d'une position, on place des décimaux sur une droite et on arrondit à la dizaine ou à un nombre de chiffres significatifs. Ce sont les mêmes neuf styles de jeu avec de nouveaux générateurs de questions, sans nouveau moteur, et c'est justement l'intérêt de l'avoir construit une seule fois.
+
+## Primoria, les grottes de cristal de la théorie des nombres
+
+Le cinquième monde à recevoir le même traitement est Primoria, où 72 activités de la maternelle à la 6e année reposent maintenant sur les mêmes neuf styles de jeu. Dans les grottes du haut, on forme des paires de cailloux et on trie les nombres entre « fait des paires » et « un reste seul », puis on apprend à dire pair et impair. Plus bas, on fait sauter une grenouille sur les multiples de 6, on attrape tous les facteurs de 36 au passage, on écrit le partenaire manquant dans 24 = 4 × ?, et on classe des cartes en facteur, multiple ou ni l'un ni l'autre.
+
+**Premiers, puissances et racines.** Les grottes profondes demandent d'attraper les nombres premiers parmi une douzaine de nombres qui flottent, de décider grâce aux derniers chiffres si un nombre se divise par 2, 5 ou 10, puis, plus tard, par les critères de 3, 4, 6 et 9. On écrit des carrés et des cubes, on coince une racine carrée entre deux nombres entiers, et on trouve un plus grand commun diviseur ou un plus petit commun multiple en lisant les facteurs premiers, comme deux autobus partis ensemble qui se retrouvent plus tard.
+
+**Toujours du neuf, dans les deux langues.** Chaque nombre est tiré au moment même : l'enfant qui attrape aujourd'hui les facteurs de 36 attrapera peut-être ceux de 48 demain. Les mots, les jours de la semaine et la façon d'écrire les nombres suivent la langue de l'enfant, en français comme en anglais.

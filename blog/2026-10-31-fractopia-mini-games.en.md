@@ -23,3 +23,15 @@ Fractopia was the test run, and it worked, so the games now travel. Numeria (num
    fresh        (pop, sort,       (colours, mascot,
   numbers        type, hop...)      bells, coins...)
 ```
+
+## Blockopolis joins in
+
+The fourth world is Blockopolis, the city of place value, with 93 activities from Kindergarten to Grade 6. Children build numbers from ones, tens and hundreds blocks, fill ten frames, trade ten for one, move a digit up or down a place, line up decimals, and round to the nearest ten or to a number of significant figures. It took the same nine game styles and a new set of question makers, with no new game engine, which is the point of building it once.
+
+## Primoria, the crystal caves of number theory
+
+The fifth world to get the treatment is Primoria, where 72 activities from Kindergarten to Grade 6 now run on the same nine game styles. In the lower caves children pair up pebbles and sort numbers into "pairs up" and "one left over", then learn to call them even and odd. Further down they hop a frog along the multiples of 6, catch every factor of 36 as it floats by, type the missing partner in 24 = 4 × ?, and sort cards into factor, multiple or neither.
+
+**Primes, powers and roots.** The deeper caves ask children to catch the primes among a dozen drifting numbers, decide by the last digits whether a number divides by 2, 5 or 10, and later by the tests for 3, 4, 6 and 9. They type squares and cubes, squeeze a square root between two whole numbers, and find a highest common factor or lowest common multiple by reading prime factors, the way two buses leaving together meet again.
+
+**Always new, in two languages.** Every number is rolled on the spot, so a child who catches the factors of 36 today may be catching those of 48 tomorrow. The words, the days of the week and the way numbers are written follow the child's language, in English and in French.
