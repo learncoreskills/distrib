@@ -35,3 +35,11 @@ The fifth world to get the treatment is Primoria, where 72 activities from Kinde
 **Primes, powers and roots.** The deeper caves ask children to catch the primes among a dozen drifting numbers, decide by the last digits whether a number divides by 2, 5 or 10, and later by the tests for 3, 4, 6 and 9. They type squares and cubes, squeeze a square root between two whole numbers, and find a highest common factor or lowest common multiple by reading prime factors, the way two buses leaving together meet again.
 
 **Always new, in two languages.** Every number is rolled on the spot, so a child who catches the factors of 36 today may be catching those of 48 tomorrow. The words, the days of the week and the way numbers are written follow the child's language, in English and in French.
+
+## Operon Isles, where plus, minus, times and share meet
+
+The sixth world is the Operon Isles, the islands of the four operations, and it is the biggest so far: 166 activities from Kindergarten to Grade 6, all running on the same nine game styles. The youngest children act out a story on Plus Pier, count what comes and what goes, pick the right sign, and pair numbers that make ten. By Minus Marina they are splitting numbers into tens and ones, jumping along a number line, and spotting which facts belong in the same family.
+
+**From carrying to long division.** Further out, children add and subtract in columns and decide whether they need to trade, hunt for the one answer with a slip, and judge which result is even possible by estimating first. They hop along times tables, catch every number in the 7 table, and check a division with a multiplication. In the Long Lagoon they split a product into place-value parts, divide by chunks, decide whether a remainder should be rounded up, left out or shared, and line up decimal points.
+
+**Order, brackets and powers.** The last islands ask what to work out first in 8 + 6 × 3, whether Mia is right about (4 + 6) × 3, where brackets change an answer, and how a product like (x + 2)(x + 3) looks as an area. Every sum is made fresh each time, so a child who solves 7 × 18 today meets a different one tomorrow, with the numbers written the English or French way.
