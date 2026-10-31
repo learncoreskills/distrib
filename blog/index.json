@@ -1002,22 +1002,22 @@
       "lang": "en",
       "kind": "news",
       "topics": [],
-      "words": 2121,
+      "words": 2095,
       "reviewed": false
     },
     {
       "id": "2026-10-31-fractopia-mini-games.fr",
       "date": "2026-10-31",
       "title": "Les activités de Fractopia sont de vrais jeux, et aucune partie ne se ressemble",
-      "summary": "Chaque activité de fractions, de la Prairie des Miettes au Sommet du Sucre, est maintenant un petit jeu animé plutôt qu'une question suivie de boutons. On sert des pizzas à un client, on fait sauter…",
+      "summary": "Chaque activité de fractions, de Crumb Meadow à Sugar Summit, est maintenant un petit jeu animé plutôt qu'une question suivie de boutons. On sert des pizzas à un client, on fait sauter une grenouille…",
       "contentUrl": "2026-10-31-fractopia-mini-games.fr.md",
       "slug": "fractopia-mini-games",
       "lang": "fr",
       "kind": "news",
       "topics": [],
-      "words": 1310,
+      "words": 1279,
       "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-31T20:53:53.786Z"
+  "generatedAt": "2026-10-31T22:33:50.423Z"
 }

@@ -1,6 +1,6 @@
 # Les activités de Fractopia sont de vrais jeux, et aucune partie ne se ressemble
 
-Chaque activité de fractions, de la Prairie des Miettes au Sommet du Sucre, est maintenant un petit jeu animé plutôt qu'une question suivie de boutons. On sert des pizzas à un client, on fait sauter une grenouille sur des nénuphars, on éclate des ballons, on attelle des wagons de fractions ou on règle une recette dans un four à fractions.
+Chaque activité de fractions, de Crumb Meadow à Sugar Summit, est maintenant un petit jeu animé plutôt qu'une question suivie de boutons. On sert des pizzas à un client, on fait sauter une grenouille sur des nénuphars, on éclate des ballons, on attelle des wagons de fractions ou on règle une recette dans un four à fractions.
 
 **Des nombres neufs à chaque fois.** Les questions venaient d'une liste fixe : un enfant pouvait retomber sur la même. Désormais chaque question est créée sur le moment, avec de nouvelles fractions, de nouveaux totaux et de nouvelles formes.
 
@@ -10,9 +10,9 @@ Chaque activité de fractions, de la Prairie des Miettes au Sommet du Sucre, est
 
 ## Le même traitement pour trois autres mondes
 
-Fractopia était le banc d'essai, et ça a marché : les jeux voyagent maintenant. Numéria (les nombres), Chronia (le temps) et Monnaïa (l'argent), soit 273 activités de la maternelle à la 6e année, ont été refaits avec neuf styles de jeu communs, et les autres mondes pourront suivre sans repartir de zéro.
+Fractopia était le banc d'essai, et ça a marché : les jeux voyagent maintenant. Numeria (les nombres), Chronia (le temps) et Mintopia (l'argent), soit 273 activités de la maternelle à la 6e année, ont été refaits avec neuf styles de jeu communs, et les autres mondes pourront suivre sans repartir de zéro.
 
-**Chaque monde a son identité.** À Numéria, on éclate des nombres comme des ballons et on fait sauter une grenouille sur des rivières qui sont des droites numériques. À Chronia, on sonne des cloches, on tourne les aiguilles d'une tour d'horloge et on charge un train du temps. À Monnaïa, on laisse tomber des pièces dans un tiroir-caisse, on tape des prix sur une caisse enregistreuse et on chasse les aubaines. Chaque pays d'un monde choisit ses couleurs, sa mascotte et sa façon de présenter les réponses : deux activités voisines ne se ressemblent jamais.
+**Chaque monde a son identité.** À Numeria, on éclate des nombres comme des ballons et on fait sauter une grenouille sur des rivières qui sont des droites numériques. À Chronia, on sonne des cloches, on tourne les aiguilles d'une tour d'horloge et on charge un train du temps. À Mintopia, on laisse tomber des pièces dans un tiroir-caisse, on tape des prix sur une caisse enregistreuse et on chasse les aubaines. Chaque pays d'un monde choisit ses couleurs, sa mascotte et sa façon de présenter les réponses : deux activités voisines ne se ressemblent jamais.
 
 **Plus de façons de jouer.** Au lieu de toucher un bouton sous une question, on écrit sur un clavier, on trie des cartes dans des bacs, on pose des pièces sur un plateau, on règle une horloge, on range des cartes dans un train ou on attrape chaque année bissextile au passage.
 
@@ -24,9 +24,9 @@ Fractopia était le banc d'essai, et ça a marché : les jeux voyagent maintenan
   neufs           écrire, sauter…)     cloches, pièces…)
 ```
 
-## Blocopolis se joint à la fête
+## Blockopolis se joint à la fête
 
-Le quatrième monde est Blocopolis, la ville de la valeur de position, avec 93 activités de la maternelle à la 6e année. On construit des nombres avec des blocs d'unités, de dizaines et de centaines, on remplit des cadres de dix, on échange dix contre un, on déplace un chiffre d'une position, on place des décimaux sur une droite et on arrondit à la dizaine ou à un nombre de chiffres significatifs. Ce sont les mêmes neuf styles de jeu avec de nouveaux générateurs de questions, sans nouveau moteur, et c'est justement l'intérêt de l'avoir construit une seule fois.
+Le quatrième monde est Blockopolis, la ville de la valeur de position, avec 93 activités de la maternelle à la 6e année. On construit des nombres avec des blocs d'unités, de dizaines et de centaines, on remplit des cadres de dix, on échange dix contre un, on déplace un chiffre d'une position, on place des décimaux sur une droite et on arrondit à la dizaine ou à un nombre de chiffres significatifs. Ce sont les mêmes neuf styles de jeu avec de nouveaux générateurs de questions, sans nouveau moteur, et c'est justement l'intérêt de l'avoir construit une seule fois.
 
 ## Primoria, les grottes de cristal de la théorie des nombres
 
@@ -65,7 +65,7 @@ La feuille quotidienne de calcul mental était autrefois la même pour tous. Cha
 
 ## Chaque activité est un pays, et chaque monde a sa carte
 
-Ouvre un monde et tu ne trouves plus une simple liste : tu trouves un atlas. Chaque activité est maintenant un pays imaginaire avec son propre nom, composé à partir du thème du monde et de la terre, ou année scolaire, à laquelle il appartient. « Tally Republic » est un pays de Numéria dans la terre de la maternelle, et « Crumb Empire » un pays de Fractopia en 4e année. Aucun nom ne se répète dans tout l'atlas : un enfant peut dire « j'ai fini Crumb Empire » et tout le monde sait de quoi il parle. Le vrai nom de l'activité reste affiché sur l'écran d'accueil du pays, pour qu'un parent voie ce qui est travaillé.
+Ouvre un monde et tu ne trouves plus une simple liste : tu trouves un atlas. Chaque activité est maintenant un pays imaginaire avec son propre nom, composé à partir du thème du monde et de la terre, ou année scolaire, à laquelle il appartient. « Tally Republic » est un pays de Numeria dans la terre de la maternelle, et « Crumb Empire » un pays de Fractopia en 4e année. Aucun nom ne se répète dans tout l'atlas : un enfant peut dire « j'ai fini Crumb Empire » et tout le monde sait de quoi il parle. Le vrai nom de l'activité reste affiché sur l'écran d'accueil du pays, pour qu'un parent voie ce qui est travaillé.
 
 **Une carte en haut de chaque monde.** Au-dessus de la liste des terres se trouve une petite carte avec sept îles, une par terre, et une épingle pour chaque activité. Un petit bateau flotte sur la terre où l'enfant travaille, donc la prochaine étape est facile à repérer. Chaque monde dessine sa carte autrement, avec sa disposition, ses couleurs et son décor : les cartes sont aussi différentes que les mondes.
 
