@@ -151,7 +151,7 @@ The sheet does not need a child profile, and nothing you do on it is saved. It i
 
 ## How to open it
 
-Open the menu at the top of the site and choose "Mental math sheet". The page shows the sheet straight away, with two buttons above it: "Print" and "New sheet".
+Open the menu at the top of the site and choose "Mental math sheet". The page shows the sheet straight away, with two buttons above it: "Print" and "New sheet". A "Grade" drop-down picks the level (K to 6).
 
 ## Printing it
 
@@ -502,7 +502,7 @@ La feuille ne demande aucun profil d'enfant, et rien de ce que vous y faites n'e
 
 ## Comment l'ouvrir
 
-Ouvrez le menu en haut du site et choisissez « Calcul mental ». La feuille s'affiche aussitôt, avec deux boutons au-dessus : « Imprimer » et « Nouvelle feuille ».
+Ouvrez le menu en haut du site et choisissez « Calcul mental ». La feuille s'affiche aussitôt, avec deux boutons au-dessus : « Imprimer » et « Nouvelle feuille ». Une liste déroulante « Niveau » permet de choisir le niveau (de K à 6).
 
 ## L'imprimer
 
