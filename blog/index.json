@@ -1002,7 +1002,7 @@
       "lang": "en",
       "kind": "news",
       "topics": [],
-      "words": 942,
+      "words": 1183,
       "reviewed": false
     },
     {
@@ -1015,9 +1015,9 @@
       "lang": "fr",
       "kind": "news",
       "topics": [],
-      "words": 1056,
+      "words": 1310,
       "reviewed": false
     }
   ],
-  "generatedAt": "2026-10-31T11:32:04.701Z"
+  "generatedAt": "2026-10-31T12:29:02.823Z"
 }

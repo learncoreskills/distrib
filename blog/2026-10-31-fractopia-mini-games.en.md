@@ -43,3 +43,22 @@ The sixth world is the Operon Isles, the islands of the four operations, and it 
 **From carrying to long division.** Further out, children add and subtract in columns and decide whether they need to trade, hunt for the one answer with a slip, and judge which result is even possible by estimating first. They hop along times tables, catch every number in the 7 table, and check a division with a multiplication. In the Long Lagoon they split a product into place-value parts, divide by chunks, decide whether a remainder should be rounded up, left out or shared, and line up decimal points.
 
 **Order, brackets and powers.** The last islands ask what to work out first in 8 + 6 × 3, whether Mia is right about (4 + 6) × 3, where brackets change an answer, and how a product like (x + 2)(x + 3) looks as an area. Every sum is made fresh each time, so a child who solves 7 × 18 today meets a different one tomorrow, with the numbers written the English or French way.
+
+
+## A printable mental-math sheet for every level
+
+The daily mental-math sheet used to be one sheet for everyone. Now there is one for each level, from kindergarten to grade 6, with seven levels in all. Kindergarten gets additions and subtractions within 20. Grade 1 goes up to 100, grade 2 to 1000 with multiplication added. Grades 3 and 4 keep the original four-operation sheet, and a fourth level adds more multiplication. The last two levels bring in negative numbers, and in the sixth, decimals with one or two digits after the comma, such as 0.1, 0.01 or −3.75.
+
+**Negatives and decimals, carefully.** A negative number is written in brackets, as in (−7) + 12 or (−3) × (−4), so a child can see where the sign belongs. Decimal answers are exact, and every division comes out even, so a child never meets a quotient that goes on forever.
+
+**One sheet per level, each day.** Each level gets its own sheet for the day, and it stays the same all day. Press New sheet for another.
+
+```
+ Level  Questions                              Example
+ K      within 20: + and −                    13 + 6, 18 − 5
+ 1      within 100: + and −                   47 + 38, 90 − 27
+ 2      within 1000: +, − and x               347 + 512, 36 x 7
+ 3      the four operations                   7 x 8, 56 / 7
+ 4      the four operations, more x           9 x 12, 84 / 12
+ 5      negative whole numbers                (−7) + 12, (−3) x (−4)
+ 6      negative decimals, 1–2 digits         (−2.5) x 4, 0.1 − (−0.75)

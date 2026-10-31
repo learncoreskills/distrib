@@ -43,3 +43,22 @@ Le sixième monde est celui des îles Opéron, les îles des quatre opérations,
 **De la retenue à la division longue.** Plus loin, les enfants additionnent et soustraient en colonnes et décident s'il faut échanger, cherchent l'unique réponse qui contient une erreur et jugent quel résultat est possible en estimant d'abord. Ils sautent le long des tables de multiplication, attrapent tous les nombres de la table de 7 et vérifient une division par une multiplication. Dans la Lagune des Longs Calculs, ils découpent un produit en valeurs de position, divisent par morceaux, décident si un reste doit être arrondi, laissé de côté ou partagé, et alignent les virgules des nombres décimaux.
 
 **Priorités, parenthèses et puissances.** Les dernières îles demandent ce qu'il faut calculer en premier dans 8 + 6 × 3, si Mia a raison pour (4 + 6) × 3, où les parenthèses changent une réponse, et à quoi ressemble un produit comme (x + 2)(x + 3) sous forme d'aire. Chaque calcul est tiré au moment même : l'enfant qui résout 7 × 18 aujourd'hui en rencontrera un autre demain, avec les nombres écrits à la française ou à l'anglaise.
+
+
+## Une feuille de calcul mental imprimable pour chaque niveau
+
+La feuille quotidienne de calcul mental était autrefois la même pour tous. Chaque niveau a maintenant la sienne, de la maternelle à la 6e année, soit sept niveaux. La maternelle travaille additions et soustractions jusqu'à 20. La 1re année va jusqu'à 100, la 2e jusqu'à 1000 avec la multiplication en plus. Les 3e et 4e années gardent la feuille d'origine avec les quatre opérations, et un quatrième niveau ajoute davantage de multiplications. Les deux derniers niveaux introduisent les nombres négatifs, et le sixième des nombres décimaux à un ou deux chiffres après la virgule, comme 0,1, 0,01 ou −3,75.
+
+**Négatifs et décimales, avec soin.** Un nombre négatif s'écrit entre parenthèses, comme (−7) + 12 ou (−3) × (−4), pour que l'enfant voie où va le signe. Les réponses décimales sont exactes et chaque division tombe juste, si bien qu'un enfant ne rencontre jamais un quotient qui ne finit pas.
+
+**Une feuille par niveau, chaque jour.** Chaque niveau a sa feuille du jour, qui reste la même toute la journée. Appuyez sur Nouvelle feuille pour en obtenir une autre.
+
+```
+ Niveau  Questions                              Exemple
+ K       jusqu'à 20 : + et −                    13 + 6, 18 − 5
+ 1       jusqu'à 100 : + et −                   47 + 38, 90 − 27
+ 2       jusqu'à 1000 : +, − et x               347 + 512, 36 x 7
+ 3       les quatre opérations                  7 x 8, 56 / 7
+ 4       les quatre opérations, plus de x       9 x 12, 84 / 12
+ 5       nombres entiers négatifs               (−7) + 12, (−3) x (−4)
+ 6       décimaux négatifs, 1–2 chiffres        (−2,5) x 4, 0,1 − (−0,75)
