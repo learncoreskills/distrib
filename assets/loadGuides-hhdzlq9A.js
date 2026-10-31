@@ -133,44 +133,44 @@ Your child's profile and progress are not tied to a language. If you play a skil
 Your language choice is remembered in your browser, so that the next time you open the site by its plain address, it opens in the language you used last. As with the profiles, that memory is stored on your device only. If you clear your browser data, the site returns to its default language and you can choose again in a couple of seconds.
 
 **Related:** [Getting started in five minutes](/en/docs/first-steps) · [Using it in class](/en/docs/using-in-class)
-`,i=`---
-title: "The printable mental-maths sheet"
-summary: "A fresh sheet of 100 mental-maths questions, with answers on a separate page, ready to print for the kitchen table, homework or a quick classroom warm-up."
-lang: en
-slug: printable-mental-maths
-category: practise
-order: 4
----
-## What you get
-
-The mental-maths page produces a printable sheet of 100 exercises. They mix addition, subtraction, multiplication and division, and each one is written out as a short calculation with a blank to fill in, such as "12 + 7 = _______".
-
-At the top of the sheet there is room to write the date, the start time, the end time and a score out of 100. These blanks make it easy to time a child and to see over several days whether they are getting quicker or more accurate. After the exercises comes a separate answers page, so a parent or teacher can mark the sheet quickly.
-
-The sheet does not need a child profile, and nothing you do on it is saved. It is simply a page to print.
-
-## How to open it
-
-Open the menu at the top of the site and choose "Mental math sheet". The page shows the sheet straight away, with two buttons above it: "Print" and "New sheet". A "Grade" drop-down picks the level (K to 6).
-
-## Printing it
-
-Press "Print". Your browser opens its normal print window, where you can pick a printer, or choose to save the sheet as a PDF if you prefer to keep a copy. Check the preview before printing. The exercises and the answers are separate sections, so you can print only the first page for the child and keep the answers for yourself.
-
-## One sheet a day, or a new one when you want
-
-The same sheet is shown all day, which is handy if everyone in the family or the class should work on the same one. When the date changes, you get a different sheet. If you want another sheet right now, press "New sheet" and a fresh set of exercises appears. That way you can print one for practice and another for a quick check later.
-
-## Ideas for using it
-
-- Set a friendly target time and let the child note the start and end times themselves.
-- Ask them to do the easy ones first, then return to the harder ones.
-- Mark the sheet together using the answers page, and talk about the ones that were tricky.
-- Use it as a calm five-minute start to a lesson or homework session.
-
-The sheet is a complement to the on-screen activities, not a replacement. It trains quick recall, while the activities build understanding. A mix of both works well.
-
-**Related:** [How activities work](/en/docs/how-activities-work) · [Using it in class](/en/docs/using-in-class)
+`,i=`---\r
+title: "The printable mental-maths sheet"\r
+summary: "A fresh sheet of 100 mental-maths questions, with answers on a separate page, ready to print for the kitchen table, homework or a quick classroom warm-up."\r
+lang: en\r
+slug: printable-mental-maths\r
+category: practise\r
+order: 4\r
+---\r
+## What you get\r
+\r
+The mental-maths page produces a printable sheet of 100 exercises. They mix addition, subtraction, multiplication and division, and each one is written out as a short calculation with a blank to fill in, such as "12 + 7 = _______".\r
+\r
+At the top of the sheet there is room to write the date, the start time, the end time and a score out of 100. These blanks make it easy to time a child and to see over several days whether they are getting quicker or more accurate. After the exercises comes a separate answers page, so a parent or teacher can mark the sheet quickly.\r
+\r
+The sheet does not need a child profile, and nothing you do on it is saved. It is simply a page to print.\r
+\r
+## How to open it\r
+\r
+Open the menu at the top of the site and choose "Mental math sheet". The page shows the sheet straight away, with two buttons above it: "Print" and "New sheet". A "Grade" drop-down picks the level (K to 6).\r
+\r
+## Printing it\r
+\r
+Press "Print". Your browser opens its normal print window, where you can pick a printer, or choose to save the sheet as a PDF if you prefer to keep a copy. Check the preview before printing. The exercises and the answers are separate sections, so you can print only the first page for the child and keep the answers for yourself.\r
+\r
+## One sheet a day, or a new one when you want\r
+\r
+The same sheet is shown all day, which is handy if everyone in the family or the class should work on the same one. When the date changes, you get a different sheet. If you want another sheet right now, press "New sheet" and a fresh set of exercises appears. That way you can print one for practice and another for a quick check later.\r
+\r
+## Ideas for using it\r
+\r
+- Set a friendly target time and let the child note the start and end times themselves.\r
+- Ask them to do the easy ones first, then return to the harder ones.\r
+- Mark the sheet together using the answers page, and talk about the ones that were tricky.\r
+- Use it as a calm five-minute start to a lesson or homework session.\r
+\r
+The sheet is a complement to the on-screen activities, not a replacement. It trains quick recall, while the activities build understanding. A mix of both works well.\r
+\r
+**Related:** [How activities work](/en/docs/how-activities-work) · [Using it in class](/en/docs/using-in-class)\r
 `,a=`---
 title: "Privacy at home"
 summary: "No accounts, no emails from children, and results that stay on your device. A plain summary of who sees what, including the ads parents may notice."
@@ -484,44 +484,44 @@ Le profil et la progression de votre enfant ne sont pas liés à une langue. Si 
 Votre choix de langue est mémorisé dans votre navigateur : la prochaine fois que vous ouvrirez le site par son adresse simple, il s'affichera dans la dernière langue utilisée. Comme pour les profils, cette mémoire reste uniquement sur votre appareil. Si vous effacez les données du navigateur, le site revient à sa langue par défaut et vous pouvez choisir de nouveau en quelques secondes.
 
 **Related:** [Démarrer en cinq minutes](/fr/docs/first-steps) · [Utiliser le site en classe](/fr/docs/using-in-class)
-`,m=`---
-title: "La feuille de calcul mental à imprimer"
-summary: "Une nouvelle feuille de 100 calculs mentaux, avec les réponses sur une page à part, prête à imprimer pour la table de cuisine, les devoirs ou un échauffement en classe."
-lang: fr
-slug: printable-mental-maths
-category: practise
-order: 4
----
-## Ce que vous obtenez
-
-La page de calcul mental produit une feuille imprimable de 100 exercices. Ils mélangent addition, soustraction, multiplication et division, et chacun est présenté comme un petit calcul avec un espace à remplir, comme « 12 + 7 = _______ ».
-
-En haut de la feuille, il y a de la place pour écrire la date, l'heure de début, l'heure de fin et un score sur 100. Ces espaces permettent de chronométrer facilement un enfant et de voir, au fil des jours, s'il devient plus rapide ou plus précis. Après les exercices vient une page de réponses distincte, pour qu'un parent ou un enseignant corrige rapidement la feuille.
-
-La feuille ne demande aucun profil d'enfant, et rien de ce que vous y faites n'est enregistré. C'est simplement une page à imprimer.
-
-## Comment l'ouvrir
-
-Ouvrez le menu en haut du site et choisissez « Calcul mental ». La feuille s'affiche aussitôt, avec deux boutons au-dessus : « Imprimer » et « Nouvelle feuille ». Une liste déroulante « Niveau » permet de choisir le niveau (de K à 6).
-
-## L'imprimer
-
-Appuyez sur « Imprimer ». Votre navigateur ouvre sa fenêtre d'impression habituelle, où vous pouvez choisir une imprimante, ou enregistrer la feuille en PDF si vous préférez en garder une copie. Vérifiez l'aperçu avant d'imprimer. Les exercices et les réponses forment deux sections distinctes : vous pouvez donc n'imprimer que la première page pour l'enfant et garder les réponses pour vous.
-
-## Une feuille par jour, ou une nouvelle à la demande
-
-La même feuille s'affiche toute la journée, ce qui est pratique si toute la famille ou toute la classe doit travailler sur la même. Quand la date change, une autre feuille apparaît. Si vous en voulez une autre tout de suite, appuyez sur « Nouvelle feuille » : de nouveaux exercices s'affichent. Vous pouvez ainsi en imprimer une pour s'exercer et une autre pour un petit contrôle plus tard.
-
-## Idées d'utilisation
-
-- Fixez un temps cible raisonnable et laissez l'enfant noter lui-même l'heure de début et de fin.
-- Demandez-lui de faire d'abord les calculs faciles, puis de revenir aux plus difficiles.
-- Corrigez la feuille ensemble avec la page de réponses et parlez des calculs qui ont posé problème.
-- Servez-vous-en comme d'un début de séance tranquille de cinq minutes, avant une leçon ou les devoirs.
-
-La feuille complète les activités à l'écran sans les remplacer. Elle entraîne le rappel rapide des faits numériques, tandis que les activités construisent la compréhension. Un mélange des deux fonctionne bien.
-
-**Related:** [Comment fonctionnent les activités](/fr/docs/how-activities-work) · [Utiliser le site en classe](/fr/docs/using-in-class)
+`,m=`---\r
+title: "La feuille de calcul mental à imprimer"\r
+summary: "Une nouvelle feuille de 100 calculs mentaux, avec les réponses sur une page à part, prête à imprimer pour la table de cuisine, les devoirs ou un échauffement en classe."\r
+lang: fr\r
+slug: printable-mental-maths\r
+category: practise\r
+order: 4\r
+---\r
+## Ce que vous obtenez\r
+\r
+La page de calcul mental produit une feuille imprimable de 100 exercices. Ils mélangent addition, soustraction, multiplication et division, et chacun est présenté comme un petit calcul avec un espace à remplir, comme « 12 + 7 = _______ ».\r
+\r
+En haut de la feuille, il y a de la place pour écrire la date, l'heure de début, l'heure de fin et un score sur 100. Ces espaces permettent de chronométrer facilement un enfant et de voir, au fil des jours, s'il devient plus rapide ou plus précis. Après les exercices vient une page de réponses distincte, pour qu'un parent ou un enseignant corrige rapidement la feuille.\r
+\r
+La feuille ne demande aucun profil d'enfant, et rien de ce que vous y faites n'est enregistré. C'est simplement une page à imprimer.\r
+\r
+## Comment l'ouvrir\r
+\r
+Ouvrez le menu en haut du site et choisissez « Calcul mental ». La feuille s'affiche aussitôt, avec deux boutons au-dessus : « Imprimer » et « Nouvelle feuille ». Une liste déroulante « Niveau » permet de choisir le niveau (de K à 6).\r
+\r
+## L'imprimer\r
+\r
+Appuyez sur « Imprimer ». Votre navigateur ouvre sa fenêtre d'impression habituelle, où vous pouvez choisir une imprimante, ou enregistrer la feuille en PDF si vous préférez en garder une copie. Vérifiez l'aperçu avant d'imprimer. Les exercices et les réponses forment deux sections distinctes : vous pouvez donc n'imprimer que la première page pour l'enfant et garder les réponses pour vous.\r
+\r
+## Une feuille par jour, ou une nouvelle à la demande\r
+\r
+La même feuille s'affiche toute la journée, ce qui est pratique si toute la famille ou toute la classe doit travailler sur la même. Quand la date change, une autre feuille apparaît. Si vous en voulez une autre tout de suite, appuyez sur « Nouvelle feuille » : de nouveaux exercices s'affichent. Vous pouvez ainsi en imprimer une pour s'exercer et une autre pour un petit contrôle plus tard.\r
+\r
+## Idées d'utilisation\r
+\r
+- Fixez un temps cible raisonnable et laissez l'enfant noter lui-même l'heure de début et de fin.\r
+- Demandez-lui de faire d'abord les calculs faciles, puis de revenir aux plus difficiles.\r
+- Corrigez la feuille ensemble avec la page de réponses et parlez des calculs qui ont posé problème.\r
+- Servez-vous-en comme d'un début de séance tranquille de cinq minutes, avant une leçon ou les devoirs.\r
+\r
+La feuille complète les activités à l'écran sans les remplacer. Elle entraîne le rappel rapide des faits numériques, tandis que les activités construisent la compréhension. Un mélange des deux fonctionne bien.\r
+\r
+**Related:** [Comment fonctionnent les activités](/fr/docs/how-activities-work) · [Utiliser le site en classe](/fr/docs/using-in-class)\r
 `,h=`---
 title: "La vie privée à la maison"
 summary: "Pas de compte, pas de courriel pour les enfants, des résultats qui restent sur votre appareil. Un résumé simple de qui voit quoi, y compris les annonces pour parents."

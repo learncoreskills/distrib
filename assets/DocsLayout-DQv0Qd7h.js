@@ -1,1 +1,0 @@
-import{a as e,n as t}from"./preload-helper-KdBb_qL5.js";import{C as n}from"./index-bJvwKz9h.js";var r=e(t(),1);function i({children:e}){return(0,r.jsxs)(`div`,{className:`docs-theme`,children:[(0,r.jsx)(`main`,{className:`docs-main`,children:e}),(0,r.jsx)(n,{})]})}export{i as DocsLayout};

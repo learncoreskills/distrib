@@ -148,7 +148,7 @@ plain report. One model feeds both, so a number never differs between the two vi
 |---|---|---|
 | Subject topic (16) | **World** | Own name, palette, emblem, background pattern, mascot |
 | Grade (K–G6) | **Continent** | Same biome ladder in every world (Sprout Meadow … Skybridge Summit) |
-| Activity | **Country** | Fictional name, stable per topic+grade; 0–3 stars |
+| Activity | **Country** | Named after its activity, unique within the world; 0–3 stars |
 
 ## User stories
 1. **Kid map (P1).** \`/:lang/atlas\` shows every world with stars, a progress ring, the explorer's rank,
@@ -158,6 +158,14 @@ plain report. One model feeds both, so a number never differs between the two vi
 3. **Parent logbook (P1).** The Parent Area shows, for the active child, the same worlds as a table:
    topic, world name, countries explored / mastered, average score, expandable per grade.
 4. **Consistency (P1).** Stars and percentages come from the same syllabus rows as the progress report.
+
+## Country names and skills (amendment)
+- A country's name is its activity's own title, so it is easy to recognise and relates to the topic. Within a world every
+  country name is unique: when two activities share a title, the later grade's country gets the grade added
+  ("Decimal Duel · G4"), then a number if it is still not unique.
+- A continent page groups its countries under the skill each one practises, in syllabus order, with the skill title as a
+  heading, so a parent can read the syllabus from the page. The tile shows only the country name, stars and the visit button.
+- The invented name stems and suffixes are gone.
 
 ## Rules
 - Stars per country: 0 = not played; 1 = played (<50%); 2 = 50–79%; 3 = mastered (≥80%).
